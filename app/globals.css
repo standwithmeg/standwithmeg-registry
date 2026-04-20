@@ -12,12 +12,8 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/* Dark mode disabled — app uses a light UI throughout.
+   Re-enable when a dark theme is intentionally designed. */
 
 body {
   background: var(--background);

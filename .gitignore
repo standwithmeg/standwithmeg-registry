@@ -39,3 +39,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Stray scripts from other NewSummitDigital projects that ended up in this folder
+lane_cpa_report.py
+uprise_audit_report.py
+uprise_proposal.py
+
+# Generated artifacts, not source
+outputs/
+state_data.json
