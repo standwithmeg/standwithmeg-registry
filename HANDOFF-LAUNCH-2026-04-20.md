@@ -224,7 +224,53 @@ Meg needs to:
 
 ## Next session starting point
 
-1. Read this file first
-2. Check `git status` in `website/` — see what's uncommitted
-3. Run `npx tsx --env-file=.env.local scripts/check-counts.ts` to verify Supabase is still at ~2,381 rows
-4. Confirm with Meg: is the site already live at a `*.pages.dev` URL? If yes, smoke-test. If no, start at "Cloudflare Pages setup Step 1" above.
+### Progress log — 2026-04-21
+
+**Done since original handoff:**
+
+- ✅ State-PDF symlink replaced with real files. Commit `d40e109` "Commit state PDFs into repo for Cloudflare Pages serving" pushed to `origin/main`. 34 PDFs + `index.json` now live at `website/public/state-reports/` (42 MB in repo).
+- ✅ Cloudflare Pages project **creation in progress** via dashboard (New Summit Digital account). Settings entered:
+  - Project name: `standwithmeg`
+  - Repo: `standwithmeg/My-Legal-Tool` (GitHub App installed on `standwithmeg` account, "All repositories")
+  - Production branch: `main`
+  - Root directory: `website`
+  - Build command: `npm install && npx @opennextjs/cloudflare@latest build`
+  - Build output: `.open-next/assets`
+  - Framework preset: None
+
+- 🔄 **Environment variables being pasted in**. 9 of 11 slots added with real values as of pause. The two skipped:
+  - `GOVINFO_API_KEY` — still a placeholder in `.env.local`, skip until real key
+  - `OPENAI_API_KEY` — empty in `.env.local`, skip
+  - `CLOUDFLARE_*` — local-only, don't add
+
+### Resume checklist (pick up here)
+
+1. **Verify Meg finished the env-var paste in Cloudflare.** Expected 10 variables total: `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY`, `ANTHROPIC_API_KEY`, `ADMIN_EMAILS`, `NEXT_PUBLIC_APP_URL` (= `https://my.standwithmeg.com`), `COURTLISTENER_API_KEY`, `GEMINI_API_KEY`, `NODE_VERSION` (= `20`). *(11th if Stripe/Google SMTP needed for launch — currently skipped.)*
+   - **Known gotcha**: on first pass Meg pasted the literal text `copy from .env.local` into several Value fields. Before Save and Deploy, eyeball each row — real values only.
+2. **Click Save and Deploy.** Build runs 3–6 min via OpenNext adapter on `@opennextjs/cloudflare@latest`. URL will be `standwithmeg.pages.dev`.
+3. **If build fails:** grab last ~30 lines of build log from Cloudflare Pages → Deployments → failed run. Fallback path: `npx @cloudflare/next-on-pages@1`, output dir `.vercel/output/static` — but Next 16 may not be supported there.
+4. **Smoke test on `*.pages.dev`** before custom domain:
+   - `/` landing loads
+   - `/survey` form renders + submits (test row)
+   - `/report?admin_preview=1` shows 2,381 families + state table with working PDF links (now that PDFs are in repo)
+   - `/admin` requires login
+5. **Custom domain**: attach `my.standwithmeg.com` in Cloudflare Pages → add CNAME in GoDaddy DNS pointing `my` → `standwithmeg.pages.dev`. GoDaddy, not Cloudflare — `standwithmeg.com` zone is NOT in Cloudflare. (Zones in CF: `aiauditengine.com`, `cookingwithmarlene.com`, `lanecpasolutions.com`, `upriseremodeling.com`.)
+6. **Flip availability flags**: `cd website && npx tsx --env-file=.env.local scripts/sync-state-reports.ts`
+7. **Meg disconnects GHL form** in GoDaddy Builder, swap to `https://my.standwithmeg.com/survey`.
+
+### Useful state verification commands
+
+```bash
+# Confirm we haven't lost data
+cd "/Volumes/2023 Big 18/standwithmeg/website" && npx tsx --env-file=.env.local scripts/check-counts.ts
+# Should show 2,287 + 94 = 2,381
+
+# Confirm the PDF commit is on origin
+cd "/Volumes/2023 Big 18/standwithmeg/website" && git log --oneline origin/main | head -3
+# Top commit should be d40e109 "Commit state PDFs into repo..."
+```
+
+### Cloudflare account reference
+- Account: New Summit Digital
+- Account ID: `eb33b313a206ede06b38767d7c8d64cc`
+- API token + account/zone IDs live in Meg's shell env (`.env.local` CLOUDFLARE_*) — note: token may lack Pages API perms (hit 9106 error), dashboard is the reliable path for now.
