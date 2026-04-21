@@ -233,7 +233,7 @@ Meg needs to:
   - Project name: `standwithmeg`
   - Repo: `standwithmeg/My-Legal-Tool` (GitHub App installed on `standwithmeg` account, "All repositories")
   - Production branch: `main`
-  - Root directory: `website`
+  - Root directory: **empty / `/`** (the repo root IS the Next.js app — no `website/` subdir inside the repo; the first deploy failed with `Cannot find cwd: /opt/buildhome/repo/website` until this was cleared)
   - Build command: `npm install && npx @opennextjs/cloudflare@latest build`
   - Build output: `.open-next/assets`
   - Framework preset: None
