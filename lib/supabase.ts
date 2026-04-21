@@ -28,7 +28,6 @@ export async function createServerSupabaseClient() {
             );
           } catch {
             // setAll is called from Server Components where cookies can't be mutated.
-            // Middleware handles the refresh in that case — this catch is intentional.
           }
         },
       },
