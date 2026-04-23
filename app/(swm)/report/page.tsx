@@ -9,10 +9,11 @@ const STORAGE_KEY = "swm_dashboard_access";
 export default function ImpactPage() {
   const [hasAccess, setHasAccess] = useState<boolean | null>(null); // null = checking
 
+  // SSR-safe one-time check of URL + localStorage on mount. Intentional:
+  // hasAccess starts null so server and client both render the spinner,
+  // then the client resolves to true/false after hydration.
+  /* eslint-disable react-hooks/set-state-in-effect */
   useEffect(() => {
-    // Admin preview bypass — when an admin navigates here from the admin
-    // dashboard with ?admin_preview=1, skip the gate entirely. The gate is
-    // only meant to friction scrapers, not the people running the movement.
     const params = new URLSearchParams(window.location.search);
     if (params.get("admin_preview") === "1") {
       setHasAccess(true);
@@ -33,6 +34,7 @@ export default function ImpactPage() {
     }
     setHasAccess(false);
   }, []);
+  /* eslint-enable react-hooks/set-state-in-effect */
 
   function handleGateComplete(data: { email: string; state_of_interest: string }) {
     const record = { ...data, granted_at: new Date().toISOString() };

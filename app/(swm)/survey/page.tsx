@@ -654,7 +654,7 @@ export default function SubmitPage() {
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <label className={labelCls} style={{ color: NAVY }}>
-                      How long "in the system"? <span className="text-red-700">*</span>
+                      How long &ldquo;in the system&rdquo;? <span className="text-red-700">*</span>
                     </label>
                     <select {...bind("duration")}>
                       <option value="">Select one</option>
@@ -735,7 +735,7 @@ export default function SubmitPage() {
                     <option value="I have always had an attorney">I have always had an attorney</option>
                     <option value="I had an attorney, but ran out of money/resources (Now Pro Se)">I had an attorney, but ran out of money/resources (Now Pro Se)</option>
                     <option value="I have always been Pro Se by choice">I have always been Pro Se by choice</option>
-                    <option value="I have always been Pro Se because I couldn't afford a lawyer">I have always been Pro Se because I couldn't afford a lawyer</option>
+                    <option value="I have always been Pro Se because I couldn't afford a lawyer">I have always been Pro Se because I couldn&apos;t afford a lawyer</option>
                   </select>
                 </div>
 

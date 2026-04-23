@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type Dispatch, type SetStateAction } from "react";
 import { ThresholdBadge } from "./ThresholdBadge";
 import { StateQuoteModal } from "./StateQuoteModal";
 
@@ -48,6 +48,29 @@ function latestInState(iso: string) {
   return date.toLocaleDateString(undefined, { month: "short", day: "numeric" });
 }
 
+type SortHeaderProps = {
+  field: keyof StateRow;
+  label: string;
+  sortField: keyof StateRow;
+  sortDir: "asc" | "desc";
+  setSortField: Dispatch<SetStateAction<keyof StateRow>>;
+  setSortDir: Dispatch<SetStateAction<"asc" | "desc">>;
+};
+
+function SortHeader({ field, label, sortField, sortDir, setSortField, setSortDir }: SortHeaderProps) {
+  const active = sortField === field;
+  return (
+    <th className="px-3 py-3 text-left text-xs font-bold uppercase tracking-wide cursor-pointer select-none whitespace-nowrap transition-colors"
+      style={{ color: active ? GOLD : "rgba(245,245,245,0.45)" }}
+      onClick={() => {
+        if (active) setSortDir(d => d === "asc" ? "desc" : "asc");
+        else { setSortField(field); setSortDir("desc"); }
+      }}>
+      {label} {active ? (sortDir === "desc" ? "↓" : "↑") : ""}
+    </th>
+  );
+}
+
 export function StateTable({ byState, resources, commentCounts }: Props) {
   const [sortField, setSortField] = useState<keyof StateRow>("total_submissions");
   const [sortDir, setSortDir] = useState<"asc" | "desc">("desc");
@@ -74,19 +97,7 @@ export function StateTable({ byState, resources, commentCounts }: Props) {
     });
   }
 
-  function SortHeader({ field, label }: { field: keyof StateRow; label: string }) {
-    const active = sortField === field;
-    return (
-      <th className="px-3 py-3 text-left text-xs font-bold uppercase tracking-wide cursor-pointer select-none whitespace-nowrap transition-colors"
-        style={{ color: active ? GOLD : "rgba(245,245,245,0.45)" }}
-        onClick={() => {
-          if (active) setSortDir(d => d === "asc" ? "desc" : "asc");
-          else { setSortField(field); setSortDir("desc"); }
-        }}>
-        {label} {active ? (sortDir === "desc" ? "↓" : "↑") : ""}
-      </th>
-    );
-  }
+  const headerProps = { sortField, sortDir, setSortField, setSortDir };
 
   return (
     <>
@@ -106,17 +117,17 @@ export function StateTable({ byState, resources, commentCounts }: Props) {
           <table className="w-full">
             <thead>
               <tr style={{ backgroundColor: "rgba(30,58,95,0.6)", borderBottom: `1px solid rgba(201,162,39,0.2)` }}>
-                <SortHeader field="state" label="State" />
-                <SortHeader field="total_submissions" label="Families" />
+                <SortHeader field="state" label="State" {...headerProps} />
+                <SortHeader field="total_submissions" label="Families" {...headerProps} />
                 <th className="px-3 py-3 text-left text-xs font-bold uppercase tracking-wide whitespace-nowrap"
                   style={{ color: "rgba(245,245,245,0.45)" }}>Comments</th>
                 <th className="px-3 py-3 text-left text-xs font-bold uppercase tracking-wide whitespace-nowrap"
                   style={{ color: "rgba(245,245,245,0.45)" }}>Report</th>
-                <SortHeader field="total_financial_loss" label="Total Loss" />
-                <SortHeader field="avg_months_lost" label="Avg Mos. Lost" />
-                <SortHeader field="total_loss_count" label="No Contact" />
-                <SortHeader field="pro_se_count" label="Pro Se" />
-                <SortHeader field="last_submission_at" label="Latest" />
+                <SortHeader field="total_financial_loss" label="Total Loss" {...headerProps} />
+                <SortHeader field="avg_months_lost" label="Avg Mos. Lost" {...headerProps} />
+                <SortHeader field="total_loss_count" label="No Contact" {...headerProps} />
+                <SortHeader field="pro_se_count" label="Pro Se" {...headerProps} />
+                <SortHeader field="last_submission_at" label="Latest" {...headerProps} />
               </tr>
             </thead>
             <tbody>
