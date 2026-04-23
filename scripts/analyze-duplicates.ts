@@ -32,7 +32,7 @@ for (const r of rows) {
 
 let sameStateDupes = 0;
 let diffStateDupes = 0;
-let samples: Array<{ email: string; entries: Array<{ state: string; date: string }> }> = [];
+const samples: Array<{ email: string; entries: Array<{ state: string; date: string }> }> = [];
 
 for (const [email, entries] of byEmail) {
   if (entries.length < 2) continue;

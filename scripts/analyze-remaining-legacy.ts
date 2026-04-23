@@ -26,7 +26,7 @@ async function main() {
   const { data: legacy } = await sb.from("legacy_submissions")
     .select("email, state_of_occurrence, data_source").limit(500);
 
-  let inSheetNullEmail = 0, notInSheet = 0, inSheet = 0, noState = 0, noEmail = 0;
+  let notInSheet = 0, inSheet = 0, noState = 0, noEmail = 0;
   const stateBreakdown = new Map<string, number>();
   for (const r of legacy ?? []) {
     if (!r.state_of_occurrence) { noState++; continue; }
