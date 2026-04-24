@@ -95,14 +95,66 @@ const VALID_STATES = new Set([
   "TX","UT","VT","VA","WA","WV","WI","WY",
 ]);
 
+// ── ISO → full name normalization (matches migration 011) ────────
+// Expands 2-letter country codes at import time so the dashboard
+// renders human-readable country names instead of raw ISO codes.
+const ISO_COUNTRY_MAP: Record<string, string> = {
+  GB: "United Kingdom", UK: "United Kingdom", CA: "Canada",
+  AU: "Australia", NZ: "New Zealand", IE: "Ireland",
+  DE: "Germany", FR: "France", IT: "Italy", ES: "Spain",
+  NL: "Netherlands", BE: "Belgium", SE: "Sweden", NO: "Norway",
+  DK: "Denmark", FI: "Finland", CH: "Switzerland", AT: "Austria",
+  PT: "Portugal", GR: "Greece", PL: "Poland",
+  MX: "Mexico", BR: "Brazil", AR: "Argentina", CL: "Chile",
+  ZA: "South Africa", BW: "Botswana",
+  IN: "India", JP: "Japan", KR: "South Korea", CN: "China",
+  PH: "Philippines", TH: "Thailand", VN: "Vietnam", SG: "Singapore",
+  MY: "Malaysia", ID: "Indonesia",
+  AE: "United Arab Emirates", IL: "Israel", TR: "Turkey",
+  GG: "Guernsey", JE: "Jersey", IM: "Isle of Man",
+  AS: "American Samoa (US)", UM: "US Minor Outlying Islands",
+};
+
+function normalizeCountry(raw: string): string {
+  const up = raw.trim().toUpperCase();
+  if (ISO_COUNTRY_MAP[up]) return ISO_COUNTRY_MAP[up];
+  return raw.trim();
+}
+
+// ── Column-name fallback helper ──────────────────────────────────
+// The GHL export has changed column headers over time. Old exports:
+//   "OUTSITE OF THE STATES? ", "County"
+// Newer exports (2026-04 onward):
+//   "\xa0Are you outside of the United States?", "\xa0Enter the county where your case took place"
+// Accept either by trying each candidate and returning the first non-empty.
+function getCol(row: Record<string, string>, ...candidates: string[]): string {
+  for (const c of candidates) {
+    const v = row[c];
+    if (v !== undefined && v !== null && String(v).trim() !== "") {
+      return String(v);
+    }
+  }
+  return "";
+}
+
 // ── Main ─────────────────────────────────────────────────────────
 async function main() {
   const filePath = process.argv[2] || "/Volumes/2023 Big 18/standwithmeg/outputs/SWM_MASTER_LATEST.xlsx";
-  console.log(`Reading ${filePath}...`);
+  const dryRun   = process.argv.includes("--dry-run");
+  console.log(`Reading ${filePath}...${dryRun ? "  (DRY RUN — no DB writes)" : ""}`);
 
   const wb = XLSX.readFile(filePath);
   const sheet = wb.Sheets[wb.SheetNames[0]];
-  const rows = XLSX.utils.sheet_to_json<Record<string, string>>(sheet, { defval: "" });
+  // raw: false forces XLSX to format every cell as a string, so downstream
+  // .trim() calls don't blow up on numeric or date cells.
+  const rowsRaw = XLSX.utils.sheet_to_json<Record<string, unknown>>(sheet, { defval: "", raw: false });
+  const rows = rowsRaw.map(r => {
+    const out: Record<string, string> = {};
+    for (const [k, v] of Object.entries(r)) {
+      out[k] = v === null || v === undefined ? "" : String(v);
+    }
+    return out;
+  });
   console.log(`Found ${rows.length} rows.`);
 
   // Dedup policy: (email, state, system_affected, submission_minute) is the
@@ -232,10 +284,23 @@ async function main() {
     // and should still be counted. Going forward the form requires email
     // so these won't multiply.
 
-    const stateRaw = (row[COL.state] || "").trim().toUpperCase();
-    const outsideRaw = (row[COL.outsideUS] || "").trim();
+    const stateRaw = getCol(row, COL.state).trim().toUpperCase();
+    const outsideRawOrig = getCol(
+      row,
+      COL.outsideUS,
+      "\xa0Are you outside of the United States?",
+      "Are you outside of the United States?",
+    ).trim();
+    const outsideRaw = normalizeCountry(outsideRawOrig);
     const isUS = VALID_STATES.has(stateRaw);
-    const isInternational = !isUS && outsideRaw && outsideRaw !== "US";
+    // Junk values like "US", "" or timezone strings should not become countries
+    const isInternational =
+      !isUS &&
+      outsideRaw.length > 0 &&
+      outsideRaw !== "US" &&
+      !outsideRaw.startsWith("America/") &&
+      !outsideRaw.startsWith("Europe/") &&
+      !outsideRaw.startsWith("http");
 
     const attorney = num(row[COL.attorney]);
     const gal = num(row[COL.gal]);
@@ -260,7 +325,12 @@ async function main() {
       state_of_occurrence: isUS ? stateRaw : null,
       outside_us_country: isInternational ? outsideRaw : null,
       // NOT NULL columns — provide defaults for messy/legacy data
-      case_county: (row[COL.county] || "").trim() || "Unknown",
+      case_county: getCol(
+        row,
+        COL.county,
+        "\xa0Enter the county where your case took place",
+        "Enter the county where your case took place",
+      ).trim() || "Unknown",
       case_status: (row[COL.caseStatus] || "").trim() || "Unknown",
       number_of_kids: Math.max(0, Math.min(20, int(row[COL.numKids]) ?? 0)),
       system_affected: (row[COL.system] || "").trim() || "Unknown",
@@ -348,6 +418,10 @@ async function main() {
         data_source: "legacy_v1",
       };
 
+      if (dryRun) {
+        inserted++;
+        continue;
+      }
       const { error } = await supabase.from("legacy_submissions").insert(legacyRow);
       if (error) { errors++; } else { inserted++; }
       continue;
@@ -381,6 +455,10 @@ async function main() {
       // admin workflow and shouldn't reset on re-import.
       const { approved: _a, ip_hash: _i, ...updateFields } = record;
       void _a; void _i;
+      if (dryRun) {
+        updatedExisting++;
+        continue;
+      }
       const { error } = await supabase.from("survey_submissions")
         .update(updateFields).eq("id", existingId);
       if (error) {
@@ -393,15 +471,24 @@ async function main() {
     }
 
     // New row — batch insert
+    if (dryRun) {
+      console.log(
+        `  NEW: ${email.padEnd(38)} | ${(record.state_of_occurrence || record.outside_us_country || "?").toString().padEnd(10)} | ${record.first_name} ${record.last_name} | ${(record.system_affected || "").slice(0, 28).padEnd(28)} | ${record.created_at?.slice(0, 10)}`
+      );
+    }
     batch.push(record);
 
     if (batch.length >= 100) {
-      const { error } = await supabase.from("survey_submissions").insert(batch);
-      if (error) {
-        console.error(`Batch insert error:`, error.message);
-        errors += batch.length;
-      } else {
+      if (dryRun) {
         inserted += batch.length;
+      } else {
+        const { error } = await supabase.from("survey_submissions").insert(batch);
+        if (error) {
+          console.error(`Batch insert error:`, error.message);
+          errors += batch.length;
+        } else {
+          inserted += batch.length;
+        }
       }
       batch.length = 0;
       process.stdout.write(`\r  Inserted: ${inserted}, Updated: ${updatedExisting}, Skipped: ${skipped}, Errors: ${errors}`);
@@ -409,12 +496,16 @@ async function main() {
   }
 
   if (batch.length > 0) {
-    const { error } = await supabase.from("survey_submissions").insert(batch);
-    if (error) {
-      console.error(`Final batch error:`, error.message);
-      errors += batch.length;
-    } else {
+    if (dryRun) {
       inserted += batch.length;
+    } else {
+      const { error } = await supabase.from("survey_submissions").insert(batch);
+      if (error) {
+        console.error(`Final batch error:`, error.message);
+        errors += batch.length;
+      } else {
+        inserted += batch.length;
+      }
     }
   }
 
