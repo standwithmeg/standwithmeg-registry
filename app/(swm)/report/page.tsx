@@ -1,39 +1,33 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { AccessGate } from "./_components/AccessGate";
 import { DashboardView } from "./_components/DashboardView";
 
 const STORAGE_KEY = "swm_dashboard_access";
 
-export default function ImpactPage() {
-  const [hasAccess, setHasAccess] = useState(false);
-
-  // SSR-safe one-time check of URL + localStorage on mount. The server renders
-  // the access gate first so the public page has meaningful no-JS/SEO content.
-  /* eslint-disable react-hooks/set-state-in-effect */
-  useEffect(() => {
+// Synchronously determine access on first render. Runs on server as false
+// (so the HTML has meaningful no-JS/SEO content — the AccessGate). Runs on
+// client with access=true for returning visitors, BEFORE the browser paints.
+// This eliminates the ~50ms gate flash returning users used to see.
+function readAccessSync(): boolean {
+  if (typeof window === "undefined") return false;
+  try {
     const params = new URLSearchParams(window.location.search);
-    if (params.get("admin_preview") === "1") {
-      setHasAccess(true);
-      return;
-    }
+    if (params.get("admin_preview") === "1") return true;
+    const stored = window.localStorage.getItem(STORAGE_KEY);
+    if (!stored) return false;
+    const parsed = JSON.parse(stored);
+    return Boolean(parsed?.email && parsed?.granted_at);
+  } catch {
+    return false;
+  }
+}
 
-    try {
-      const stored = localStorage.getItem(STORAGE_KEY);
-      if (stored) {
-        const parsed = JSON.parse(stored);
-        if (parsed.email && parsed.granted_at) {
-          setHasAccess(true);
-          return;
-        }
-      }
-    } catch {
-      // invalid JSON — treat as no access
-    }
-    setHasAccess(false);
-  }, []);
-  /* eslint-enable react-hooks/set-state-in-effect */
+export default function ImpactPage() {
+  // Lazy initializer: runs once on first client render, before paint.
+  // Returning visitors see the dashboard immediately, no flash of the gate.
+  const [hasAccess, setHasAccess] = useState(readAccessSync);
 
   function handleGateComplete(data: { email: string; state_of_interest: string }) {
     const record = { ...data, granted_at: new Date().toISOString() };
@@ -41,9 +35,16 @@ export default function ImpactPage() {
     setHasAccess(true);
   }
 
-  if (!hasAccess) {
-    return <AccessGate onComplete={handleGateComplete} />;
-  }
-
-  return <DashboardView />;
+  // suppressHydrationWarning: the server always renders the gate (hasAccess
+  // starts false on SSR) but a returning user's client renders the dashboard.
+  // That mismatch is intentional and safe — client is the source of truth.
+  return (
+    <div suppressHydrationWarning>
+      {hasAccess ? (
+        <DashboardView />
+      ) : (
+        <AccessGate onComplete={handleGateComplete} />
+      )}
+    </div>
+  );
 }
