@@ -1,0 +1,132 @@
+"""
+Load survey rows from Supabase in the same tuple shape generate_state_pdf.py
+expects from the xlsx master workbook.
+
+This lets the PDF generator read directly from the live DB without needing
+the local master xlsx. Used by both local runs and the GitHub Actions
+nightly regeneration workflow.
+"""
+from __future__ import annotations
+import os
+from typing import Any
+from supabase import create_client, Client
+
+
+# Reverse-map the short-enum permission values stored in Postgres back to the
+# long descriptive strings that score_quote() in generate_state_pdf.py pattern-
+# matches against ('share away', 'first name', 'anonymous', 'do not share').
+PERMISSION_REVERSE = {
+    "public":     "Share away! I consent to the public use of all information provided.",
+    "anonymous":  "Use my quote anonymously for the project.",
+    "first_name": "Use my quote with my first name only.",
+    "data_only":  "For data purposes only (Do not share publicly).",
+}
+
+
+def _pro_se_string(v: Any) -> str:
+    """Match the xlsx wording so score_quote / state_stats string-matching works."""
+    if v is True:
+        return "Yes, I am Pro Se (Representing myself)"
+    if isinstance(v, str):
+        return v
+    return "No, I have an attorney"
+
+
+def _row_tuple(r: dict) -> list:
+    """
+    Build a 32-slot list that matches the xlsx column positions in COLS:
+      1:state, 2:atty_fees, 3:gal_fees, 4:therapy_fees, 5:reunif_fees,
+      6:other_fees, 7:lost_wages, 8:asset_loss, 9:first_name, 11:permission,
+      12:quote, 13:case_status, 14:system, 15:duration, 16:custody,
+      17:num_kids (used by children_impact), 18:pro_se, 19:legal_rep,
+      21:months_lost, 24:allegation, 30:county.
+    Slot 0 and any unused slots stay empty.
+    """
+    row = [""] * 32
+    row[1]  = (r.get("state_of_occurrence") or "") or ""
+    row[2]  = r.get("attorney_fees") or 0
+    row[3]  = r.get("gal_fees") or 0
+    row[4]  = r.get("therapy_eval_fees") or 0
+    row[5]  = r.get("reunification_fees") or 0
+    row[6]  = r.get("other_court_actors_fees") or 0
+    row[7]  = r.get("lost_wages") or 0
+    row[8]  = r.get("asset_liquidation_loss") or 0
+    row[9]  = r.get("first_name") or ""
+    row[11] = PERMISSION_REVERSE.get(
+        (r.get("permission_to_share") or "").strip().lower(),
+        r.get("permission_to_share") or "",
+    )
+    row[12] = r.get("impact_quote") or ""
+    row[13] = r.get("case_status") or ""
+    row[14] = r.get("system_affected") or ""
+    row[15] = r.get("time_in_system") or ""
+    row[16] = r.get("custody_status") or ""
+    row[17] = r.get("number_of_kids") or 0
+    row[18] = _pro_se_string(r.get("is_pro_se"))
+    row[19] = r.get("legal_rep_history") or ""
+    row[21] = r.get("months_lost_parenting_time") or 0
+    row[24] = r.get("allegation_type") or ""
+    row[30] = r.get("case_county") or ""
+    return row
+
+
+def _paginated_select(sb: Client, table: str, columns: str) -> list[dict]:
+    """Supabase caps each .select() at 1000 rows. Page through explicitly."""
+    out: list[dict] = []
+    page_size = 1000
+    offset = 0
+    while True:
+        resp = (
+            sb.table(table)
+            .select(columns)
+            .range(offset, offset + page_size - 1)
+            .execute()
+        )
+        batch = resp.data or []
+        if not batch:
+            break
+        out.extend(batch)
+        if len(batch) < page_size:
+            break
+        offset += page_size
+    return out
+
+
+# Column list needs to cover everything _row_tuple touches for BOTH tables.
+# legacy_submissions doesn't have permission_to_share or impact_quote, so
+# we request what exists and _row_tuple's .get() default covers the rest.
+_SURVEY_COLS = (
+    "state_of_occurrence,outside_us_country,attorney_fees,gal_fees,"
+    "therapy_eval_fees,reunification_fees,other_court_actors_fees,lost_wages,"
+    "asset_liquidation_loss,first_name,permission_to_share,impact_quote,"
+    "case_status,system_affected,time_in_system,custody_status,number_of_kids,"
+    "is_pro_se,legal_rep_history,months_lost_parenting_time,allegation_type,"
+    "case_county"
+)
+
+_LEGACY_COLS = (
+    "state_of_occurrence,outside_us_country,attorney_fees,gal_fees,"
+    "therapy_eval_fees,reunification_fees,other_court_actors_fees,lost_wages,"
+    "asset_liquidation_loss,first_name,"
+    "case_status,system_affected,time_in_system,custody_status,number_of_kids,"
+    "is_pro_se,legal_rep_history,months_lost_parenting_time,allegation_type,"
+    "case_county"
+)
+
+
+def load_rows_from_supabase() -> list[list]:
+    """Fetch every row from both tables and return them in xlsx-style tuples."""
+    url = os.environ.get("NEXT_PUBLIC_SUPABASE_URL") or os.environ.get("SUPABASE_URL")
+    key = os.environ.get("SUPABASE_SERVICE_ROLE_KEY")
+    if not url or not key:
+        raise RuntimeError(
+            "Missing NEXT_PUBLIC_SUPABASE_URL / SUPABASE_SERVICE_ROLE_KEY env vars"
+        )
+    sb: Client = create_client(url, key)
+
+    survey = _paginated_select(sb, "survey_submissions", _SURVEY_COLS)
+    legacy = _paginated_select(sb, "legacy_submissions", _LEGACY_COLS)
+
+    rows = [_row_tuple(r) for r in survey] + [_row_tuple(r) for r in legacy]
+    print(f"  Loaded {len(survey)} survey + {len(legacy)} legacy = {len(rows)} rows from Supabase")
+    return rows

@@ -5,6 +5,90 @@ import { useState, useEffect, useCallback } from "react";
 const GOLD  = "#C9A227";
 const BG    = "#0F1E30";  // deep dark navy for page background
 
+// Fires a workflow_dispatch on GitHub. The workflow regenerates one state
+// PDF (or all 30+ states when state is blank), commits to main, and Vercel
+// redeploys. UI shows queue confirmation — actual completion takes ~3 min.
+async function dispatchRegenerate(state: string): Promise<string> {
+  const res = await fetch("/api/admin/regenerate-state-pdf", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ state }),
+  });
+  const json = await res.json().catch(() => ({}));
+  if (!res.ok) {
+    throw new Error(json.error || `HTTP ${res.status}`);
+  }
+  return json.message || "Regeneration queued.";
+}
+
+function RegenerateStateButton({ state }: { state: string }) {
+  const [status, setStatus] = useState<"idle" | "pending" | "done" | "error">("idle");
+  const [msg, setMsg] = useState("");
+  async function click(e: React.MouseEvent) {
+    e.stopPropagation();
+    if (status === "pending") return;
+    setStatus("pending");
+    setMsg("");
+    try {
+      const m = await dispatchRegenerate(state);
+      setStatus("done");
+      setMsg(m);
+      setTimeout(() => setStatus("idle"), 6000);
+    } catch (err) {
+      setStatus("error");
+      setMsg(err instanceof Error ? err.message : "Failed");
+      setTimeout(() => setStatus("idle"), 6000);
+    }
+  }
+  const label = status === "pending" ? "..." : status === "done" ? "queued" : status === "error" ? "failed" : "Regen PDF";
+  const color = status === "done" ? "#22c55e" : status === "error" ? "#ef4444" : GOLD;
+  return (
+    <button
+      type="button"
+      onClick={click}
+      disabled={status === "pending"}
+      title={msg || `Regenerate ${state}.pdf from live Supabase data`}
+      className="text-xs px-2 py-1 rounded-md font-bold transition-opacity hover:opacity-80 disabled:opacity-50"
+      style={{ backgroundColor: "rgba(201,162,39,0.15)", color, border: `1px solid ${color}40` }}
+    >
+      {label}
+    </button>
+  );
+}
+
+function RegenerateAllButton() {
+  const [status, setStatus] = useState<"idle" | "pending" | "done" | "error">("idle");
+  const [msg, setMsg] = useState("");
+  async function click() {
+    if (status === "pending") return;
+    if (!window.confirm("Regenerate PDFs for every state with 30+ submissions? Takes ~5-10 min.")) return;
+    setStatus("pending");
+    try {
+      const m = await dispatchRegenerate("");
+      setStatus("done");
+      setMsg(m);
+      setTimeout(() => setStatus("idle"), 8000);
+    } catch (err) {
+      setStatus("error");
+      setMsg(err instanceof Error ? err.message : "Failed");
+      setTimeout(() => setStatus("idle"), 8000);
+    }
+  }
+  const label = status === "pending" ? "Queuing..." : status === "done" ? "Queued ✓" : status === "error" ? "Failed" : "Regenerate all 30+ PDFs";
+  return (
+    <button
+      type="button"
+      onClick={click}
+      disabled={status === "pending"}
+      title={msg || "Queue a workflow run that regenerates every 30+ state PDF"}
+      className="text-xs px-3 py-2 rounded-lg font-bold transition-opacity hover:opacity-80 disabled:opacity-50"
+      style={{ backgroundColor: "rgba(201,162,39,0.15)", color: GOLD, border: `1px solid rgba(201,162,39,0.4)` }}
+    >
+      {label}
+    </button>
+  );
+}
+
 type StateRow = {
   state: string;
   is_us: boolean;
@@ -532,6 +616,7 @@ export default function AdminPage() {
                 Click column headers to sort. {stats.by_state.filter(r => r.is_us).length} US states · {stats.by_state.filter(r => !r.is_us).length} international · Latest in State shows the most recent submission from that location.
               </p>
             </div>
+            <RegenerateAllButton />
           </div>
 
           <div className="overflow-x-auto">
@@ -547,6 +632,8 @@ export default function AdminPage() {
                   <SortHeader field="total_loss_count" label="No Contact" />
                   <SortHeader field="pro_se_count" label="Pro Se" />
                   <SortHeader field="last_submission_at" label="Latest in State" />
+                  <th className="px-3 py-3 text-left text-xs font-bold uppercase tracking-wide whitespace-nowrap"
+                    style={{ color: "rgba(245,245,245,0.45)" }}>PDF</th>
                 </tr>
               </thead>
               <tbody>
@@ -587,11 +674,18 @@ export default function AdminPage() {
                     >
                       {latestInState(row.last_submission_at)}
                     </td>
+                    <td className="px-3 py-3 text-sm">
+                      {row.is_us && row.total_submissions >= 30 ? (
+                        <RegenerateStateButton state={row.state} />
+                      ) : (
+                        <span style={{ color: "rgba(245,245,245,0.15)" }}>—</span>
+                      )}
+                    </td>
                   </tr>
                 ))}
                 {sortedStates().length === 0 && (
                   <tr>
-                    <td colSpan={9} className="px-6 py-12 text-center text-sm" style={{ color: "rgba(245,245,245,0.3)" }}>
+                    <td colSpan={10} className="px-6 py-12 text-center text-sm" style={{ color: "rgba(245,245,245,0.3)" }}>
                       No submissions yet. Share /survey to start collecting data.
                     </td>
                   </tr>
