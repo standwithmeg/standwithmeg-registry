@@ -127,6 +127,26 @@ export function AccessGate({ onComplete }: Props) {
               before accessing the dashboard.
             </p>
 
+            <div className="rounded-xl p-4"
+              style={{ backgroundColor: "rgba(185,28,28,0.12)", border: "1px solid rgba(185,28,28,0.35)" }}>
+              <p className="text-sm font-black text-white mb-1">Have your own family court or child welfare story?</p>
+              <p className="text-xs mb-3" style={{ color: "rgba(245,245,245,0.55)" }}>
+                Add your experience first so your state count and future reports reflect what happened to your family.
+              </p>
+              <a href="/survey"
+                className="block w-full text-center py-3 rounded-lg font-bold text-sm text-white transition-colors bg-red-700 hover:bg-red-600">
+                Share Your Story →
+              </a>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <div className="h-px flex-1" style={{ backgroundColor: "rgba(255,255,255,0.1)" }} />
+              <span className="text-[11px] uppercase tracking-widest font-bold" style={{ color: "rgba(245,245,245,0.35)" }}>
+                or continue to data
+              </span>
+              <div className="h-px flex-1" style={{ backgroundColor: "rgba(255,255,255,0.1)" }} />
+            </div>
+
             {/* Email */}
             <div>
               <label className="block text-sm font-semibold mb-1.5" style={{ color: "rgba(245,245,245,0.8)" }}>

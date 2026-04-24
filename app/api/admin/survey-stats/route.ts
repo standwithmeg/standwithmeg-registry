@@ -1,12 +1,6 @@
 import { createServerSupabaseClient } from "../../../../lib/supabase";
 import { createAdminSupabaseClient } from "../../../../lib/supabase-admin";
-
-// Admin emails — set ADMIN_EMAILS in .env.local as a comma-separated list
-// e.g. ADMIN_EMAILS=meg@standwithmeg.com,other@example.com
-function isAdminEmail(email: string): boolean {
-  const admins = (process.env.ADMIN_EMAILS || "").split(",").map(e => e.trim().toLowerCase());
-  return admins.includes(email.toLowerCase());
-}
+import { isAdminEmail } from "../../../../lib/require-auth";
 
 export async function GET() {
   try {
@@ -24,23 +18,11 @@ export async function GET() {
     // so the dashboard reflects the full movement/master dataset.
     // Recent submissions and approval workflow stay on survey_submissions only.
     const [
-      surveyCountResult,
-      legacyCountResult,
       byStateResult,
       recentResult,
       surveyFinancialCountResult,
       legacyFinancialCountResult,
     ] = await Promise.all([
-      // Live + imported submissions count
-      adminSupabase
-        .from("survey_submissions")
-        .select("id", { count: "exact", head: true }),
-
-      // Early-form legacy records count
-      adminSupabase
-        .from("legacy_submissions")
-        .select("id", { count: "exact", head: true }),
-
       // Combined by-state stats (survey_submissions + legacy_submissions)
       // Financial totals are computed here in SQL — used for both the state
       // table and the headline financial cards to guarantee consistency.
@@ -76,7 +58,14 @@ export async function GET() {
     // card is guaranteed to match the column totals in the table.
     // PostgREST aggregate syntax (.sum()) does not reliably aggregate generated
     // columns — computing from the already-fetched view rows is more robust.
-    const byStateRows = (byStateResult.data ?? []) as Array<{ total_financial_loss: number | null }>;
+    const byStateRows = (byStateResult.data ?? []) as Array<{
+      total_submissions: number | null;
+      total_financial_loss: number | null;
+    }>;
+    const totalSubmissions = byStateRows.reduce(
+      (sum, r) => sum + (Number(r.total_submissions) || 0),
+      0
+    );
     const totalLoss = byStateRows.reduce(
       (sum, r) => sum + (Number(r.total_financial_loss) || 0),
       0
@@ -89,7 +78,7 @@ export async function GET() {
     const avgLoss = countWithFinancials > 0 ? totalLoss / countWithFinancials : 0;
 
     return Response.json({
-      total:    (surveyCountResult.count ?? 0) + (legacyCountResult.count ?? 0),
+      total:    totalSubmissions,
       by_state:  byStateResult.data ?? [],
       recent:    recentResult.data  ?? [],
       financials: {

@@ -1,10 +1,6 @@
 import { createServerSupabaseClient } from "../../../../lib/supabase";
 import { createAdminSupabaseClient } from "../../../../lib/supabase-admin";
-
-function isAdminEmail(email: string): boolean {
-  const admins = (process.env.ADMIN_EMAILS || "").split(",").map(e => e.trim().toLowerCase());
-  return admins.includes(email.toLowerCase());
-}
+import { isAdminEmail } from "../../../../lib/require-auth";
 
 // Public-display permission values — data-only submissions are never returned.
 // These must match the short enum values stored by the submit form.

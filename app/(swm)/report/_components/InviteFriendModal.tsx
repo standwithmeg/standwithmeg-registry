@@ -2,8 +2,6 @@
 
 import { useState } from "react";
 
-const GOLD = "#C9A227";
-
 type Props = { onClose: () => void };
 
 export function InviteFriendModal({ onClose }: Props) {

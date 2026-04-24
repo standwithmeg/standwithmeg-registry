@@ -94,7 +94,7 @@ type FormData = {
 };
 
 const EMPTY: FormData = {
-  outside_us: "",
+  outside_us: "no",
   outside_us_country: "",
   state: "",
   county: "",
@@ -242,10 +242,6 @@ export default function SubmitPage() {
   }
 
   const outsideUS = form.outside_us === "yes";
-  const step0Valid = outsideUS
-    ? form.outside_us_country.trim().length > 0 && form.county.trim().length > 0
-    : form.state.length > 0 && form.county.trim().length > 0;
-
   // Mirrors server-side validation in app/api/survey/route.ts. Broken up by
   // step so the user sees every missing field on a step together before
   // moving on, not one-at-a-time and not all at the end.
@@ -1162,11 +1158,11 @@ export default function SubmitPage() {
                     If your state is not listed yet, your submission helps move it closer.
                   </p>
                   <a
-                    href="PLACEHOLDER_STATE_REPORT_URL"
+                    href="/report"
                     className="inline-block w-full text-center py-3 rounded-xl font-black text-sm transition-colors"
                     style={{ backgroundColor: "rgba(30,58,95,0.06)", border: `1.5px solid ${NAVY}`, color: NAVY }}
                   >
-                    Request Your State Report →
+                    View State Reports and Dashboard →
                   </a>
                 </div>
 
@@ -1182,7 +1178,9 @@ export default function SubmitPage() {
                     more families, please consider making a donation.
                   </p>
                   <a
-                    href="PLACEHOLDER_DONATE_URL"
+                    href="https://paypal.me/StandwithMeg"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="block w-full text-center py-3.5 rounded-xl font-black text-sm text-white transition-colors bg-red-700 hover:bg-red-600"
                   >
                     Donate Now

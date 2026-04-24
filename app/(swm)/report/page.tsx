@@ -7,11 +7,10 @@ import { DashboardView } from "./_components/DashboardView";
 const STORAGE_KEY = "swm_dashboard_access";
 
 export default function ImpactPage() {
-  const [hasAccess, setHasAccess] = useState<boolean | null>(null); // null = checking
+  const [hasAccess, setHasAccess] = useState(false);
 
-  // SSR-safe one-time check of URL + localStorage on mount. Intentional:
-  // hasAccess starts null so server and client both render the spinner,
-  // then the client resolves to true/false after hydration.
+  // SSR-safe one-time check of URL + localStorage on mount. The server renders
+  // the access gate first so the public page has meaningful no-JS/SEO content.
   /* eslint-disable react-hooks/set-state-in-effect */
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -40,16 +39,6 @@ export default function ImpactPage() {
     const record = { ...data, granted_at: new Date().toISOString() };
     localStorage.setItem(STORAGE_KEY, JSON.stringify(record));
     setHasAccess(true);
-  }
-
-  // Still checking localStorage
-  if (hasAccess === null) {
-    return (
-      <div className="min-h-screen flex items-center justify-center" style={{ backgroundColor: "#0F1E30" }}>
-        <div className="w-8 h-8 rounded-full border-2 border-t-transparent animate-spin"
-          style={{ borderColor: "#C9A227 transparent #C9A227 #C9A227" }} />
-      </div>
-    );
   }
 
   if (!hasAccess) {

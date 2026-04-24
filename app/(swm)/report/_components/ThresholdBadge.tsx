@@ -47,6 +47,11 @@ export function ThresholdBadge({ count, commentCount, resourceUrl, reportAvailab
       <span className="text-xs whitespace-nowrap" style={{ color: "rgba(245,245,245,0.35)" }}>
         {count}/{THRESHOLD}
       </span>
+      {commentCount > 0 && (
+        <span className="text-xs whitespace-nowrap text-green-400">
+          {commentCount} voice{commentCount === 1 ? "" : "s"}
+        </span>
+      )}
     </div>
   );
 }

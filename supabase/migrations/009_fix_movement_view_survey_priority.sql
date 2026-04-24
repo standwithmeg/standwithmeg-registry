@@ -1,24 +1,19 @@
 -- ============================================================
--- Migration 006 — Dedup movement_stats_by_state across legacy+survey
+-- Migration 009 — Fix movement_stats_by_state dedupe priority
 --
--- Prior behavior: UNION ALL counted the same family twice if they
--- appeared in both legacy_submissions (old GHL snapshot) AND
--- survey_submissions (current sheet). After the import policy
--- became "dedup by (email, state)" the view needs to match.
---
--- New policy: a (normalized email, state) pair is counted at most once.
--- Survey rows win over legacy rows for the same pair — they have newer
--- data and can be approved/updated.
+-- Migration 006 intended survey_submissions to win when the same
+-- (email, state) appears in both survey_submissions and legacy_submissions.
+-- The previous ordering could choose legacy first. This also treats blank
+-- emails as missing so anonymous/blank-email rows do not collapse together.
 -- ============================================================
 
 create or replace view movement_stats_by_state as
 with combined as (
-  -- Survey rows — authoritative, admin-editable
   select
     coalesce(state_of_occurrence, outside_us_country) as state,
     (state_of_occurrence is not null)                 as is_us,
     nullif(lower(trim(email)), '')                    as email_key,
-    total_financial_loss::bigint                       as total_financial_loss,
+    total_financial_loss::bigint                      as total_financial_loss,
     months_lost_parenting_time,
     custody_status,
     is_pro_se                                         as is_pro_se_bool,
@@ -29,12 +24,11 @@ with combined as (
 
   union all
 
-  -- Legacy rows — historical imports
   select
     coalesce(state_of_occurrence, outside_us_country) as state,
     (state_of_occurrence is not null)                 as is_us,
     nullif(lower(trim(email)), '')                    as email_key,
-    total_financial_loss::bigint                       as total_financial_loss,
+    total_financial_loss::bigint                      as total_financial_loss,
     months_lost_parenting_time,
     custody_status,
     (is_pro_se ilike 'yes%')                          as is_pro_se_bool,
@@ -45,9 +39,6 @@ with combined as (
   where state_of_occurrence is not null
      or outside_us_country  is not null
 ),
--- Collapse to one row per (email_key, state). When a family exists in both
--- tables for the same state, prefer the survey row. Rows with no email each
--- count as their own family (can't dedup anonymous-email rows).
 deduped as (
   select distinct on (coalesce(email_key, row_id::text || '-' || state), state)
     state, is_us, total_financial_loss, months_lost_parenting_time,

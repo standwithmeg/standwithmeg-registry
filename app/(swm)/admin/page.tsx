@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useCallback } from "react";
 
-const NAVY  = "#1E3A5F";
 const GOLD  = "#C9A227";
 const BG    = "#0F1E30";  // deep dark navy for page background
 

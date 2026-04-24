@@ -1,4 +1,5 @@
 import { createServerSupabaseClient } from "../../../lib/supabase";
+import { isAdminEmail } from "../../../lib/require-auth";
 
 export async function POST(request: Request) {
   try {
@@ -20,10 +21,14 @@ export async function POST(request: Request) {
       return Response.json({ error: error.message }, { status: 401 });
     }
 
+    if (!data.user.email || !isAdminEmail(data.user.email)) {
+      await supabase.auth.signOut();
+      return Response.json({ error: "This account is not authorized for admin access." }, { status: 403 });
+    }
+
     return Response.json({
       success: true,
       user: { id: data.user.id, email: data.user.email },
-      session: data.session,
     });
   } catch (err) {
     console.error("Login error:", err);

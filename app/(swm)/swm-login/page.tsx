@@ -3,7 +3,6 @@
 import { useState } from "react";
 
 // Brand colors — not in Tailwind defaults
-const NAVY  = "#1E3A5F";
 const GOLD  = "#C9A227";
 
 export default function SwmLogin() {
@@ -27,9 +26,6 @@ export default function SwmLogin() {
       if (!res.ok) {
         setError(data.error || "Login failed.");
       } else {
-        if (data.session?.access_token) {
-          localStorage.setItem("sb_access_token", data.session.access_token);
-        }
         const params = new URLSearchParams(window.location.search);
         window.location.href = params.get("next") || "/admin";
       }

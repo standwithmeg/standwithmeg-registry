@@ -13,6 +13,8 @@ const VALID_STATES = new Set([
   "TX","UT","VT","VA","WA","WV","WI","WY",
 ]);
 
+const VALID_SHARE_PERMISSIONS = new Set(["public", "anonymous", "first_name", "data_only"]);
+
 export async function POST(request: Request) {
   try {
     const body = await request.json();
@@ -141,7 +143,9 @@ export async function POST(request: Request) {
     if (!impact_quote) return Response.json({ error: "Impact quote is required." }, { status: 400 });
 
     const permission_to_share = String(body.permission_to_share || "").trim();
-    if (!permission_to_share) return Response.json({ error: "Permission to share is required." }, { status: 400 });
+    if (!VALID_SHARE_PERMISSIONS.has(permission_to_share)) {
+      return Response.json({ error: "A valid permission to share option is required." }, { status: 400 });
+    }
 
     const first_name = String(body.first_name || "").trim();
     if (!first_name) return Response.json({ error: "First name is required." }, { status: 400 });
@@ -257,14 +261,18 @@ export async function GET() {
   try {
     const adminSupabase = createAdminSupabaseClient();
 
-    const [surveyCount, legacyCount, byStateResult] = await Promise.all([
-      adminSupabase.from("survey_submissions").select("id", { count: "exact", head: true }),
-      adminSupabase.from("legacy_submissions").select("id", { count: "exact", head: true }),
+    const [byStateResult] = await Promise.all([
       adminSupabase.from("movement_stats_by_state").select("*"),
     ]);
 
+    const byStateRows = (byStateResult.data ?? []) as Array<{ total_submissions: number | null }>;
+    const total = byStateRows.reduce(
+      (sum, row) => sum + (Number(row.total_submissions) || 0),
+      0
+    );
+
     return Response.json({
-      total: (surveyCount.count ?? 0) + (legacyCount.count ?? 0),
+      total,
       by_state: byStateResult.data ?? [],
     });
   } catch (err) {

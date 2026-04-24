@@ -84,7 +84,6 @@ export function DashboardView() {
   const usStates = byState.filter(r => r.is_us);
   const intlCountries = byState.filter(r => !r.is_us);
   const totalLoss = byState.reduce((sum, r) => sum + (Number(r.total_financial_loss) || 0), 0);
-  const totalNoContact = byState.reduce((sum, r) => sum + (r.total_loss_count || 0), 0);
   const statesOver30 = usStates.filter(r => r.total_submissions >= 30).length;
 
   if (loading) {

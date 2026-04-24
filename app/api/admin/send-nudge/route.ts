@@ -1,10 +1,6 @@
 import { createServerSupabaseClient } from "../../../../lib/supabase";
+import { isAdminEmail } from "../../../../lib/require-auth";
 import nodemailer from "nodemailer";
-
-function isAdminEmail(email: string): boolean {
-  const admins = (process.env.ADMIN_EMAILS || "").split(",").map(e => e.trim().toLowerCase());
-  return admins.includes(email.toLowerCase());
-}
 
 /**
  * POST /api/admin/send-nudge

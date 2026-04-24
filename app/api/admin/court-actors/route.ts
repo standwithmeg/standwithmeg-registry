@@ -1,10 +1,6 @@
 import { createServerSupabaseClient } from "../../../../lib/supabase";
 import { createAdminSupabaseClient } from "../../../../lib/supabase-admin";
-
-function isAdminEmail(email: string): boolean {
-  const admins = (process.env.ADMIN_EMAILS || "").split(",").map(e => e.trim().toLowerCase());
-  return admins.includes(email.toLowerCase());
-}
+import { isAdminEmail } from "../../../../lib/require-auth";
 
 /**
  * Admin-only: returns EVERY named court actor (no threshold), plus aggregate
