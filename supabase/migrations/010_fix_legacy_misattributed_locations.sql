@@ -29,7 +29,7 @@ update legacy_submissions
 set state_of_occurrence = null,
     outside_us_country  = 'Canada'
 where lower(email) = 'kathyfroese3@gmail.com'
-  and county = 'Canada';
+  and case_county = 'Canada';
 
 -- 4. Rhianna Harman — Ohio (Guernsey county). outside="GG" is garbage.
 update legacy_submissions
