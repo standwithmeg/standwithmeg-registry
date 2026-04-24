@@ -148,7 +148,14 @@ export function StateTable({ byState, resources, commentCounts }: Props) {
                     <td className="px-3 py-3 text-sm font-bold text-white">{row.total_submissions}</td>
                     <td className="px-3 py-3 text-sm">
                       {commentCount > 0 ? (
-                        <span className="font-semibold text-green-400">{commentCount}</span>
+                        <button
+                          type="button"
+                          onClick={e => { e.stopPropagation(); setQuoteState(row); }}
+                          className="font-semibold text-green-400 underline-offset-2 hover:underline focus:outline-none focus:underline cursor-pointer"
+                          aria-label={`Read ${commentCount} ${commentCount === 1 ? "voice" : "voices"} from ${row.state}`}
+                        >
+                          {commentCount}
+                        </button>
                       ) : (
                         <span style={{ color: "rgba(245,245,245,0.25)" }}>0</span>
                       )}
