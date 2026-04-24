@@ -55,7 +55,11 @@ where lower(email) = 'sarskaggs@yahoo.com'
 -- 7. Defensive view update — normalize state and country by upper(trim())
 --    so future rows with "al ", "Al", "ca " do not split into separate
 --    rows on the dashboard.
-create or replace view movement_stats_by_state as
+--    DROP + CREATE (not CREATE OR REPLACE) because the column type for
+--    "state" changes from bpchar (char(2)) to text, which CREATE OR
+--    REPLACE disallows.
+drop view if exists movement_stats_by_state;
+create view movement_stats_by_state as
 with combined as (
   select
     coalesce(nullif(upper(trim(state_of_occurrence)), ''),
