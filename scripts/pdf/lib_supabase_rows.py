@@ -114,8 +114,63 @@ _LEGACY_COLS = (
 )
 
 
+def _iso_epoch(iso) -> int:
+    """Parse an ISO timestamp to a sortable int (seconds). 0 for None/invalid.
+    Used only for dedup tiebreak ordering (newest wins)."""
+    if not iso:
+        return 0
+    try:
+        from datetime import datetime
+        s = str(iso).replace("Z", "+00:00")
+        return int(datetime.fromisoformat(s).timestamp())
+    except Exception:
+        return 0
+
+
+def _dedup_key(r: dict, anon_id: int) -> tuple:
+    """
+    Mirror migration 009's (email_key, state) dedup from the
+    movement_stats_by_state view so PDF counts match the public dashboard
+    exactly. Blank-email rows each get a synthetic unique key so they are
+    not collapsed with other anonymous rows in the same state.
+    """
+    raw_state   = (r.get("state_of_occurrence") or "").strip().upper()
+    raw_country = (r.get("outside_us_country")  or "").strip()
+    state = raw_state or raw_country
+    email = (r.get("email") or "").strip().lower()
+    email_key = email if email else f"__anon_{anon_id}__"
+    return (email_key, state)
+
+
+def _dedup(survey: list[dict], legacy: list[dict]) -> list[dict]:
+    """
+    Collapse (email_key, state) duplicates across both tables.
+    survey_submissions wins over legacy_submissions (migration 009's
+    source_priority 0 vs 1). Within the same priority, newer created_at
+    wins. Preserves one row per unique family+state.
+    """
+    tagged: list[dict] = []
+    for i, r in enumerate(survey):
+        tagged.append({**r, "_src": 0, "_idx": i})
+    for i, r in enumerate(legacy, start=len(survey)):
+        tagged.append({**r, "_src": 1, "_idx": i})
+
+    # Sort: source_priority asc (survey first), then created_at desc (newest first)
+    tagged.sort(key=lambda r: (r["_src"], -_iso_epoch(r.get("created_at"))))
+
+    seen: set[tuple] = set()
+    out: list[dict] = []
+    for r in tagged:
+        k = _dedup_key(r, r["_idx"])
+        if k in seen:
+            continue
+        seen.add(k)
+        out.append(r)
+    return out
+
+
 def load_rows_from_supabase() -> list[list]:
-    """Fetch every row from both tables and return them in xlsx-style tuples."""
+    """Fetch every row from both tables, dedup (email,state), return xlsx-style tuples."""
     url = os.environ.get("NEXT_PUBLIC_SUPABASE_URL") or os.environ.get("SUPABASE_URL")
     key = os.environ.get("SUPABASE_SERVICE_ROLE_KEY")
     if not url or not key:
@@ -124,9 +179,17 @@ def load_rows_from_supabase() -> list[list]:
         )
     sb: Client = create_client(url, key)
 
-    survey = _paginated_select(sb, "survey_submissions", _SURVEY_COLS)
-    legacy = _paginated_select(sb, "legacy_submissions", _LEGACY_COLS)
+    # Need email + created_at for dedup on top of the PDF display columns
+    survey_cols = _SURVEY_COLS + ",email,created_at"
+    legacy_cols = _LEGACY_COLS + ",email,created_at"
 
-    rows = [_row_tuple(r) for r in survey] + [_row_tuple(r) for r in legacy]
-    print(f"  Loaded {len(survey)} survey + {len(legacy)} legacy = {len(rows)} rows from Supabase")
+    survey = _paginated_select(sb, "survey_submissions", survey_cols)
+    legacy = _paginated_select(sb, "legacy_submissions", legacy_cols)
+
+    deduped = _dedup(survey, legacy)
+    rows = [_row_tuple(r) for r in deduped]
+    print(
+        f"  Loaded {len(survey)} survey + {len(legacy)} legacy = "
+        f"{len(survey) + len(legacy)} raw rows, deduped to {len(rows)} unique"
+    )
     return rows
