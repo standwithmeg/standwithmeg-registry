@@ -131,6 +131,25 @@ def normalize_custody(v):
     s = safe_str(v)
     return CUSTODY_NORM.get(s, s)
 
+_CASE_STATUS_NORM = {
+    'unknown': 'Not provided',
+    'currently involved / "stuck"': 'Active case: stuck or delayed',
+    'i am currently stuck in an active case (prolonged, delayed, or no resolution)': 'Active case: stuck or delayed',
+    'active - progress': 'Active case: progress being made',
+    'case closed (within the last 2 years)': 'Case closed: within last 2 years',
+    'case closed (more than 2 years ago)': 'Case closed: more than 2 years ago',
+    'experienced as a child': 'Experienced as a child',
+    'i experienced this as a child in family court or cps': 'Experienced as a child',
+    'i experienced this as a child in family court or child welfare / child protection agency': 'Experienced as a child',
+    'not in court but still affected': 'Not in court but still affected',
+}
+
+def normalize_case_status(v):
+    s = safe_str(v)
+    if not s:
+        return ''
+    return _CASE_STATUS_NORM.get(s.lower(), s)
+
 def load_survey(path):
     wb = openpyxl.load_workbook(str(path), read_only=True)
     ws = wb[SHEET_NAME] if SHEET_NAME in wb.sheetnames else wb.active
@@ -188,6 +207,8 @@ def state_stats(rows):
             c = Counter(normalize_county(r[COLS[k]]) for r in rows if normalize_county(r[COLS[k]]))
         elif k == 'system':
             c = Counter(normalize_system(r[COLS[k]]) for r in rows if normalize_system(r[COLS[k]]))
+        elif k == 'case_status':
+            c = Counter(normalize_case_status(r[COLS[k]]) for r in rows if normalize_case_status(r[COLS[k]]))
         else:
             c = Counter(safe_str(r[COLS[k]]) for r in rows if safe_str(r[COLS[k]]))
         return c.most_common(t)
@@ -321,8 +342,9 @@ def _get_asset_loss_vals(rows):
     return vals
 
 
-def build_template_context(state_abbr, rows):
+def build_template_context(state_abbr, rows, court_actors=None):
     """Build the full dict of template variables for a state."""
+    court_actors = court_actors or []
     d = state_stats(rows)
     n = d['total']
     kids = children_impact(rows)
@@ -465,7 +487,9 @@ def build_template_context(state_abbr, rows):
         voice_pages.append(page)
 
     num_voice_pages = len(voice_pages)
-    total_pages = 4 + num_voice_pages + 1  # cover + glance + financial + who-geo-alleg + voices... + methodology
+    actor_page_count = 1 if court_actors else 0
+    voices_start_page = 5 + actor_page_count
+    total_pages = 4 + actor_page_count + num_voice_pages + 1  # cover + glance + financial + who-geo-alleg + actors + voices... + methodology
 
     # State number (alphabetical order of state abbreviation)
     sorted_states = sorted(STATE_NAMES.keys())
@@ -479,6 +503,8 @@ def build_template_context(state_abbr, rows):
         'report_date': now.strftime('%B %d, %Y').replace(' 0', ' '),
         'report_month_year': now.strftime('%B %Y'),
         'total_pages': f"{total_pages:02d}",
+        'actor_page_number': 5,
+        'voices_start_page': voices_start_page,
 
         # Children
         'children_total': kids['total_children'],
@@ -518,6 +544,11 @@ def build_template_context(state_abbr, rows):
         'counties': _bar_items(d['counties'][:6], n),
         'allegations': _bar_items(d['allegations'][:5], n),
 
+        # Court actors
+        'court_actors': court_actors[:18],
+        'court_actor_count': len(court_actors),
+        'court_actor_threshold': 5,
+
         # Quotes
         'allegation_quote': allegation_quote,
         'voice_pages': voice_pages,
@@ -526,9 +557,9 @@ def build_template_context(state_abbr, rows):
     }
 
 
-def generate_pdf(state_abbr, rows, output_path=None, browser=None):
+def generate_pdf(state_abbr, rows, output_path=None, browser=None, court_actors=None):
     """Render the Jinja2 template and convert to PDF via Playwright."""
-    ctx = build_template_context(state_abbr, rows)
+    ctx = build_template_context(state_abbr, rows, court_actors=court_actors)
 
     env = Environment(loader=FileSystemLoader(str(TEMPLATE_DIR)))
     template = env.get_template('state_report.html.j2')
@@ -609,12 +640,14 @@ def main():
         sys.exit(1)
 
     if use_supabase:
-        from lib_supabase_rows import load_rows_from_supabase
+        from lib_supabase_rows import load_public_court_actors_from_supabase, load_rows_from_supabase
         print("Loading rows from Supabase (survey_submissions + legacy_submissions)")
         rows = load_rows_from_supabase()
+        public_actors_by_state = load_public_court_actors_from_supabase()
     else:
         print(f"Loading master workbook: {MASTER_PATH}")
         rows = load_survey(MASTER_PATH)
+        public_actors_by_state = {}
 
     by_state = build_states(rows)
     print(f"  {len(rows):,} total rows, {len(by_state)} states")
@@ -636,7 +669,7 @@ def main():
             print(f"  {state}: {len(sr)} submissions, below 30-family threshold; skipping")
             continue
         print(f"\n  Generating {STATE_NAMES.get(state, state)} ({state}) — {len(sr)} submissions")
-        generate_pdf(state, sr)
+        generate_pdf(state, sr, court_actors=public_actors_by_state.get(state, []))
         generated += 1
 
     print(f"\nDone. Generated {generated} PDF(s).")

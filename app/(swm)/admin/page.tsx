@@ -8,7 +8,9 @@ const BG    = "#0F1E30";  // deep dark navy for page background
 // Fires a workflow_dispatch on GitHub. The workflow regenerates one state
 // PDF (or all 30+ states when state is blank), commits to main, and Vercel
 // redeploys. UI shows queue confirmation — actual completion takes ~3 min.
-async function dispatchRegenerate(state: string): Promise<string> {
+type RegenerateResult = { message: string; workflow_url?: string };
+
+async function dispatchRegenerate(state: string): Promise<RegenerateResult> {
   const res = await fetch("/api/admin/regenerate-state-pdf", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -18,36 +20,38 @@ async function dispatchRegenerate(state: string): Promise<string> {
   if (!res.ok) {
     throw new Error(json.error || `HTTP ${res.status}`);
   }
-  return json.message || "Regeneration queued.";
+  return { message: json.message || "Regeneration queued.", workflow_url: json.workflow_url };
 }
 
 function RegenerateStateButton({ state }: { state: string }) {
   const [status, setStatus] = useState<"idle" | "pending" | "done" | "error">("idle");
   const [msg, setMsg] = useState("");
+  const [workflowUrl, setWorkflowUrl] = useState<string | null>(null);
   async function click(e: React.MouseEvent) {
     e.stopPropagation();
     if (status === "pending") return;
     setStatus("pending");
     setMsg("");
     try {
-      const m = await dispatchRegenerate(state);
+      const result = await dispatchRegenerate(state);
       setStatus("done");
-      setMsg(m);
-      setTimeout(() => setStatus("idle"), 6000);
+      setMsg(result.message);
+      setWorkflowUrl(result.workflow_url ?? null);
+      setTimeout(() => setStatus("idle"), 10 * 60 * 1000);
     } catch (err) {
       setStatus("error");
       setMsg(err instanceof Error ? err.message : "Failed");
       setTimeout(() => setStatus("idle"), 6000);
     }
   }
-  const label = status === "pending" ? "..." : status === "done" ? "queued" : status === "error" ? "failed" : "Regen PDF";
+  const label = status === "pending" ? "..." : status === "done" ? "Queued ✓" : status === "error" ? "failed" : "Regen PDF";
   const color = status === "done" ? "#22c55e" : status === "error" ? "#ef4444" : GOLD;
   return (
     <button
       type="button"
       onClick={click}
       disabled={status === "pending"}
-      title={msg || `Regenerate ${state}.pdf from live Supabase data`}
+      title={msg || (workflowUrl ? `Queued. Check ${workflowUrl}` : `Regenerate ${state}.pdf from live Supabase data`)}
       className="text-xs px-2 py-1 rounded-md font-bold transition-opacity hover:opacity-80 disabled:opacity-50"
       style={{ backgroundColor: "rgba(201,162,39,0.15)", color, border: `1px solid ${color}40` }}
     >
@@ -59,28 +63,30 @@ function RegenerateStateButton({ state }: { state: string }) {
 function RegenerateAllButton() {
   const [status, setStatus] = useState<"idle" | "pending" | "done" | "error">("idle");
   const [msg, setMsg] = useState("");
+  const [workflowUrl, setWorkflowUrl] = useState<string | null>(null);
   async function click() {
     if (status === "pending") return;
     if (!window.confirm("Regenerate PDFs for every state with 30+ submissions? Takes ~5-10 min.")) return;
     setStatus("pending");
     try {
-      const m = await dispatchRegenerate("");
+      const result = await dispatchRegenerate("");
       setStatus("done");
-      setMsg(m);
-      setTimeout(() => setStatus("idle"), 8000);
+      setMsg(result.message);
+      setWorkflowUrl(result.workflow_url ?? null);
+      setTimeout(() => setStatus("idle"), 10 * 60 * 1000);
     } catch (err) {
       setStatus("error");
       setMsg(err instanceof Error ? err.message : "Failed");
       setTimeout(() => setStatus("idle"), 8000);
     }
   }
-  const label = status === "pending" ? "Queuing..." : status === "done" ? "Queued ✓" : status === "error" ? "Failed" : "Regenerate all 30+ PDFs";
+  const label = status === "pending" ? "Queuing..." : status === "done" ? "Queued ✓ Check Actions" : status === "error" ? "Failed" : "Regenerate all 30+ PDFs";
   return (
     <button
       type="button"
       onClick={click}
       disabled={status === "pending"}
-      title={msg || "Queue a workflow run that regenerates every 30+ state PDF"}
+      title={msg || (workflowUrl ? `Queued. Check ${workflowUrl}` : "Queue a workflow run that regenerates every 30+ state PDF")}
       className="text-xs px-3 py-2 rounded-lg font-bold transition-opacity hover:opacity-80 disabled:opacity-50"
       style={{ backgroundColor: "rgba(201,162,39,0.15)", color: GOLD, border: `1px solid rgba(201,162,39,0.4)` }}
     >
@@ -705,6 +711,9 @@ export default function AdminPage() {
               <p className="text-xs mt-0.5" style={{ color: "rgba(245,245,245,0.4)" }}>
                 {adminActorAggs.length} unique names across {adminActors.length} reports · Public threshold: 5 families
               </p>
+              <p className="text-xs mt-1 max-w-3xl" style={{ color: "rgba(245,245,245,0.45)" }}>
+                Promote means you verified an auto-extracted name and marked it counted. It can help reach the public 5-family threshold, but it does not publish by itself. Names are grouped conservatively by normalized spelling; close misspellings still need manual review before launch.
+              </p>
             </div>
             {/* Segmented view selector */}
             <div className="flex items-center rounded-lg overflow-hidden"
@@ -845,10 +854,10 @@ export default function AdminPage() {
                                     <div className="flex items-center gap-1 flex-shrink-0">
                                       {isExtracted && (
                                         <button onClick={() => patchActor(a.id, "promote")} disabled={isActing}
-                                          title="Confirm this is a real named actor — counts toward public 5-family threshold"
+                                          title="Confirm this is a real named actor. It can count toward the public 5-family threshold."
                                           className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide transition-colors disabled:opacity-40"
                                           style={{ backgroundColor: "rgba(74,222,128,0.15)", color: "rgb(134,239,172)", border: "1px solid rgba(74,222,128,0.3)" }}>
-                                          {isActing ? "…" : "✓ Promote"}
+                                          {isActing ? "…" : "Mark Counted"}
                                         </button>
                                       )}
                                       {!isExtracted && (
@@ -856,7 +865,7 @@ export default function AdminPage() {
                                           title="Undo promotion — revert to extracted (won't count publicly)"
                                           className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide transition-colors disabled:opacity-40"
                                           style={{ backgroundColor: "rgba(255,255,255,0.06)", color: "rgba(245,245,245,0.5)", border: "1px solid rgba(255,255,255,0.12)" }}>
-                                          {isActing ? "…" : "↶ Demote"}
+                                          {isActing ? "…" : "Uncount"}
                                         </button>
                                       )}
                                       {a.reporter_email && (

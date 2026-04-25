@@ -1,6 +1,7 @@
 import { createServerSupabaseClient } from "../../../../lib/supabase";
 import { createAdminSupabaseClient } from "../../../../lib/supabase-admin";
 import { isAdminEmail } from "../../../../lib/require-auth";
+import { actorBucketKey } from "../../../../lib/court-actors";
 
 /**
  * Admin-only: returns EVERY named court actor (no threshold), plus aggregate
@@ -50,7 +51,9 @@ export async function GET() {
       from += pageSize;
     }
 
-    // Build aggregates: (lower(name), role, state) → count distinct submissions
+    // Build aggregates: normalized (name, role, state) → count distinct submissions.
+    // This merges casing, punctuation, common titles, and middle initials,
+    // but intentionally avoids risky fuzzy misspelling merges.
     type AggBucket = {
       role: string;
       name: string;
@@ -61,7 +64,8 @@ export async function GET() {
     const agg = new Map<string, AggBucket>();
     for (const r of rows) {
       if (!r.role || !r.name) continue;
-      const key = `${r.name.toLowerCase().trim()}|${r.role}|${r.state_code ?? ""}`;
+      const key = actorBucketKey(r.name, r.role, r.state_code);
+      if (!key.split("|")[0]) continue;
       if (!agg.has(key)) {
         agg.set(key, {
           role: r.role, name: r.name, state_code: r.state_code,

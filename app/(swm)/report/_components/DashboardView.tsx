@@ -37,6 +37,10 @@ type StateResource = {
   report_title: string | null;
 };
 
+type PublicActor = {
+  state_code: string | null;
+};
+
 function fmt$(n: number | null) {
   if (n == null || n === 0) return "—";
   return "$" + n.toLocaleString();
@@ -48,6 +52,7 @@ export function DashboardView() {
   const [quotes, setQuotes] = useState<PublicQuote[]>([]);
   const [resources, setResources] = useState<StateResource[]>([]);
   const [commentCounts, setCommentCounts] = useState<Record<string, number>>({});
+  const [courtActorCounts, setCourtActorCounts] = useState<Record<string, number>>({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [inviteOpen, setInviteOpen] = useState(false);
@@ -56,22 +61,30 @@ export function DashboardView() {
     setLoading(true);
     setError(null);
     try {
-      const [statsRes, quotesRes, resourcesRes, countsRes] = await Promise.all([
+      const [statsRes, quotesRes, resourcesRes, countsRes, actorsRes] = await Promise.all([
         fetch("/api/survey"),
         fetch("/api/survey/quotes"),
         fetch("/api/state-resources"),
         fetch("/api/survey/quote-counts"),
+        fetch("/api/survey/court-actors"),
       ]);
       const statsData = await statsRes.json();
       const quotesData = await quotesRes.json();
       const resourcesData = await resourcesRes.json().catch(() => ({ resources: [] }));
       const countsData = await countsRes.json().catch(() => ({ counts: {} }));
+      const actorsData = await actorsRes.json().catch(() => ({ actors: [] }));
       if (!statsRes.ok) { setError("Failed to load data."); return; }
       setTotal(statsData.total ?? 0);
       setByState(statsData.by_state ?? []);
       setQuotes(quotesData.quotes ?? []);
       setResources(resourcesData.resources ?? []);
       setCommentCounts(countsData.counts ?? {});
+      const actorCounts: Record<string, number> = {};
+      for (const actor of (actorsData.actors ?? []) as PublicActor[]) {
+        if (!actor.state_code) continue;
+        actorCounts[actor.state_code] = (actorCounts[actor.state_code] ?? 0) + 1;
+      }
+      setCourtActorCounts(actorCounts);
     } catch {
       setError("Network error.");
     } finally {
@@ -244,7 +257,7 @@ export function DashboardView() {
         </div>
 
         {/* State Table */}
-        <StateTable byState={byState} resources={resources} commentCounts={commentCounts} />
+        <StateTable byState={byState} resources={resources} commentCounts={commentCounts} courtActorCounts={courtActorCounts} />
 
         {/* Voices Section */}
         {quotes.length > 0 && (

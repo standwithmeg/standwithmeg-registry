@@ -1,10 +1,11 @@
 import { createAdminSupabaseClient } from "../../../../lib/supabase-admin";
+import { actorBucketKey } from "../../../../lib/court-actors";
 
 /**
  * Returns court actors named by 5+ different survey submissions (the
- * auto-publish threshold). Each name is matched case-insensitively on
- * (lower(name) + role + state_code) so "Judge John Smith" and
- * "judge john smith" count as the same person.
+ * auto-publish threshold). Names are matched conservatively on
+ * normalized name + role + state_code, so casing, punctuation, common
+ * titles, and middle initials do not split the same person.
  *
  * Never exposes: notes, submission_id, reporter identity.
  *
@@ -73,8 +74,9 @@ export async function GET(request: Request) {
     const buckets = new Map<string, Bucket>();
     for (const a of all) {
       if (!a.role || !a.name) continue;
-      const lowerName = a.name.toLowerCase().trim();
-      const key = `${lowerName}|${a.role}|${a.state_code ?? ""}`;
+      const normalizedName = actorBucketKey(a.name, a.role, a.state_code);
+      if (!normalizedName.split("|")[0]) continue;
+      const key = normalizedName;
       if (!buckets.has(key)) {
         buckets.set(key, {
           role: a.role,

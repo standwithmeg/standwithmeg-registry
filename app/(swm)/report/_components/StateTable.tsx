@@ -32,6 +32,7 @@ type Props = {
   byState: StateRow[];
   resources: StateResource[];
   commentCounts: Record<string, number>;
+  courtActorCounts: Record<string, number>;
 };
 
 function fmt$(n: number | null) {
@@ -71,7 +72,7 @@ function SortHeader({ field, label, sortField, sortDir, setSortField, setSortDir
   );
 }
 
-export function StateTable({ byState, resources, commentCounts }: Props) {
+export function StateTable({ byState, resources, commentCounts, courtActorCounts }: Props) {
   const [sortField, setSortField] = useState<keyof StateRow>("total_submissions");
   const [sortDir, setSortDir] = useState<"asc" | "desc">("desc");
   const [quoteState, setQuoteState] = useState<StateRow | null>(null);
@@ -120,7 +121,9 @@ export function StateTable({ byState, resources, commentCounts }: Props) {
                 <SortHeader field="state" label="State" {...headerProps} />
                 <SortHeader field="total_submissions" label="Families" {...headerProps} />
                 <th className="px-3 py-3 text-left text-xs font-bold uppercase tracking-wide whitespace-nowrap"
-                  style={{ color: "rgba(245,245,245,0.45)" }}>Comments</th>
+                  style={{ color: "rgba(245,245,245,0.45)" }}>Shareable Quotes</th>
+                <th className="px-3 py-3 text-left text-xs font-bold uppercase tracking-wide whitespace-nowrap"
+                  style={{ color: "rgba(245,245,245,0.45)" }}>Court Actors</th>
                 <th className="px-3 py-3 text-left text-xs font-bold uppercase tracking-wide whitespace-nowrap"
                   style={{ color: "rgba(245,245,245,0.45)" }}>Report</th>
                 <SortHeader field="total_financial_loss" label="Total Loss" {...headerProps} />
@@ -135,6 +138,7 @@ export function StateTable({ byState, resources, commentCounts }: Props) {
                 const res = row.is_us ? resourceMap.get(row.state) : undefined;
                 const isHighlighted = row.total_submissions >= THRESHOLD;
                 const commentCount = commentCounts[row.state] ?? 0;
+                const actorCount = courtActorCounts[row.state] ?? 0;
                 return (
                   <tr key={`${row.is_us ? "us" : "intl"}-${row.state}`}
                     className="transition-colors cursor-pointer"
@@ -152,9 +156,24 @@ export function StateTable({ byState, resources, commentCounts }: Props) {
                           type="button"
                           onClick={e => { e.stopPropagation(); setQuoteState(row); }}
                           className="font-semibold text-green-400 underline-offset-2 hover:underline focus:outline-none focus:underline cursor-pointer"
-                          aria-label={`Read ${commentCount} ${commentCount === 1 ? "voice" : "voices"} from ${row.state}`}
+                          aria-label={`Read ${commentCount} shareable ${commentCount === 1 ? "quote" : "quotes"} from ${row.state}`}
                         >
-                          {commentCount}
+                          {commentCount} shareable {commentCount === 1 ? "quote" : "quotes"}
+                        </button>
+                      ) : (
+                        <span style={{ color: "rgba(245,245,245,0.25)" }}>0</span>
+                      )}
+                    </td>
+                    <td className="px-3 py-3 text-sm">
+                      {actorCount > 0 ? (
+                        <button
+                          type="button"
+                          onClick={e => { e.stopPropagation(); setQuoteState(row); }}
+                          className="font-semibold underline-offset-2 hover:underline focus:outline-none focus:underline cursor-pointer"
+                          style={{ color: GOLD }}
+                          aria-label={`View ${actorCount} public court ${actorCount === 1 ? "actor" : "actors"} for ${row.state}`}
+                        >
+                          {actorCount} public
                         </button>
                       ) : (
                         <span style={{ color: "rgba(245,245,245,0.25)" }}>0</span>
@@ -180,7 +199,7 @@ export function StateTable({ byState, resources, commentCounts }: Props) {
               })}
               {sortedStates().length === 0 && (
                 <tr>
-                  <td colSpan={9} className="px-6 py-12 text-center text-sm" style={{ color: "rgba(245,245,245,0.3)" }}>
+                  <td colSpan={10} className="px-6 py-12 text-center text-sm" style={{ color: "rgba(245,245,245,0.3)" }}>
                     No data yet. Be the first to share your story.
                   </td>
                 </tr>

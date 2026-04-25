@@ -448,7 +448,7 @@
     border-bottom: 1px dotted rgba(15,30,48,0.12);
   }
   .grid-2 .bar-row {
-    grid-template-columns: 120px 1fr 34px 34px;
+    grid-template-columns: 150px 1fr 34px 34px;
     gap: 8px;
   }
   .grid-2 .bar-row .bar-label { font-size: 10px; }
@@ -456,9 +456,10 @@
   .bar-row .bar-label {
     color: var(--ink);
     font-weight: 500;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    overflow: visible;
+    text-overflow: clip;
+    white-space: normal;
+    line-height: 1.2;
     font-size: 10.5px;
   }
   .bar-row .bar-track {
@@ -572,6 +573,41 @@
     line-height: 1.55;
   }
   .footnote strong { color: var(--navy); }
+
+
+  .actor-table {
+    margin-top: 18px;
+    border-top: 2px solid var(--navy);
+    border-bottom: 2px solid var(--navy);
+  }
+  .actor-row {
+    display: grid;
+    grid-template-columns: 1.35fr 0.9fr 1.05fr 76px;
+    gap: 14px;
+    align-items: center;
+    padding: 10px 8px;
+    border-bottom: 1px solid var(--hairline);
+    font-size: 11px;
+  }
+  .actor-row:last-child { border-bottom: none; }
+  .actor-row.header {
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 9.5px;
+    color: var(--crimson);
+    font-weight: 600;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .actor-name { font-weight: 700; color: var(--navy); }
+  .actor-count {
+    font-family: var(--font-display);
+    font-weight: 700;
+    color: var(--crimson);
+    text-align: right;
+    white-space: nowrap;
+  }
 
   /* PULL QUOTE / VOICES */
   .pullquote {
@@ -846,7 +882,7 @@
     <div class="hstat">
       <div class="label">Children Impacted</div>
       <div class="value">{{ children_total }}</div>
-      <div class="note">{{ children_reporting }} of {{ total }} families reporting with kids</div>
+      <div class="note">{{ children_reporting }} of {{ total }} families reported child counts</div>
     </div>
     <div class="hstat">
       <div class="label">Median Attorney Fees</div>
@@ -868,7 +904,7 @@
   <div class="secondary-stats">
     <div class="sstat"><div class="label">Submissions</div><div class="value">{{ total }}</div></div>
     <div class="sstat"><div class="label">Avg Children / Family</div><div class="value">{{ avg_children }}</div></div>
-    <div class="sstat"><div class="label">Reporting Families</div><div class="value">{{ children_reporting }} of {{ total }}</div></div>
+    <div class="sstat"><div class="label">Families Reporting Children</div><div class="value">{{ children_reporting }} of {{ total }}</div></div>
     <div class="sstat"><div class="label">Counties Represented</div><div class="value">{{ counties_represented }}</div></div>
   </div>
 
@@ -932,6 +968,11 @@
       </tr>
     </tbody>
   </table>
+
+
+  <div class="footnote">
+    <strong>Median vs. mean:</strong> Median is the middle reported amount, so it better reflects the typical reporting family when a few very large expenses appear. Mean is the average across reporting families and can be pulled higher by outliers.
+  </div>
 
   {% if has_asset_footnote %}
   <div class="footnote">
@@ -1033,12 +1074,52 @@
   </div>
 </section>
 
+
+{# ━━━━━━━━━━━━━━ OPTIONAL PAGE 5 — COURT ACTORS ━━━━━━━━━━━━━━ #}
+{% if court_actors %}
+<section class="page">
+  <div class="runhead">
+    <div><span class="r-state">{{ state_name }}</span> · Family Court Data Report</div>
+    <div class="r-page">Stand With Meg · {{ "%02d"|format(actor_page_number) }} / {{ total_pages }}</div>
+  </div>
+
+  <h2 class="section-head"><span class="num">04</span>Named Court Actors · {{ state_name }}</h2>
+  <p class="lede" style="margin-bottom: 16px;">The names below are public-threshold matches from the Court Actors section of the survey. A name appears only after {{ court_actor_threshold }} or more independent families have named the same actor in {{ state_name }}. Reporter identities, notes, and single-family allegations are not published.</p>
+
+  <div class="actor-table">
+    <div class="actor-row header">
+      <div>Name</div>
+      <div>Role</div>
+      <div>Court / County</div>
+      <div style="text-align:right;">Families</div>
+    </div>
+    {% for actor in court_actors %}
+    <div class="actor-row">
+      <div class="actor-name">{{ actor.name }}</div>
+      <div>{{ actor.role }}</div>
+      <div>{{ actor.court_or_county or "—" }}</div>
+      <div class="actor-count">{{ actor.count }}</div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="footnote">
+    <strong>Public threshold rule:</strong> Stand With Meg groups names conservatively by normalized spelling, role, and state. Common titles, punctuation, casing, and middle initials are collapsed. Close misspellings are not automatically merged without admin review.
+  </div>
+
+  <div class="page-foot">
+    <div class="credit"><span class="star">★</span><span>A <strong>StandWithMeg.com</strong> Report · Family Rights Registry</span></div>
+    <div class="pg">{{ state_name }} · {{ "%02d"|format(actor_page_number) }} / {{ total_pages }}</div>
+  </div>
+</section>
+{% endif %}
+
 {# ━━━━━━━━━━━━━━ PAGES 6+ — PARENT VOICES ━━━━━━━━━━━━━━ #}
 {% for voice_page in voice_pages %}
 <section class="page">
   <div class="runhead">
     <div><span class="r-state">{{ state_name }}</span> · Family Court Data Report</div>
-    <div class="r-page">Stand With Meg · {{ "%02d"|format(5 + loop.index0) }} / {{ total_pages }}</div>
+    <div class="r-page">Stand With Meg · {{ "%02d"|format(voices_start_page + loop.index0) }} / {{ total_pages }}</div>
   </div>
 
   {% if loop.first %}
@@ -1081,7 +1162,7 @@
   {% endif %}
   <div class="page-foot">
     <div class="credit"><span class="star">★</span><span>A <strong>StandWithMeg.com</strong> Report · Family Rights Registry</span></div>
-    <div class="pg">{{ state_name }} · {{ "%02d"|format(5 + loop.index0) }} / {{ total_pages }}</div>
+    <div class="pg">{{ state_name }} · {{ "%02d"|format(voices_start_page + loop.index0) }} / {{ total_pages }}</div>
   </div>
 </section>
 {% endfor %}
@@ -1110,9 +1191,9 @@
 
   <div class="methodology">
     <h3>Methodology · Family Rights Registry</h3>
-    <p>Data in this report was collected April 2024 – {{ report_month_year }} through standwithmeg.com/family-rights-survey. Submissions are timestamped. Duplicate-submission heuristics (email + name + submission date) are applied before aggregation. Categorical responses from multi-select and short-answer fields are normalized monthly.</p>
+    <p>Data in this report was collected April 2024 – {{ report_month_year }} through standwithmeg.com/family-rights-survey. Submissions are timestamped. Duplicate-submission heuristics use normalized email + location, with direct survey rows preferred over legacy rows and the newest row retained within each source. Categorical responses from multi-select and short-answer fields are normalized monthly.</p>
     <p>When a respondent's financial entry differs from the population by more than three standard deviations, the mean is suppressed and only the median is reported. Lost-wage, attorney-fee, and asset-loss entries are self-reported and not corroborated against tax records or court filings.</p>
-    <p>Geographic reporting uses the county field as submitted, with light normalization (e.g. "Butte silverbow" → "Butte–Silver Bow"). Quotes carry one of three permission states: <em>Anonymous</em>, <em>First-name only</em>, or <em>Full attribution with consent to public use</em>.</p>
+    <p>Geographic reporting uses the county field as submitted, with light normalization (e.g. "Butte silverbow" → "Butte–Silver Bow"). Quotes carry one of three public permission states: <em>Anonymous</em>, <em>First-name only</em>, or <em>Full attribution with consent to public use</em>. Court actor names appear only after {{ court_actor_threshold }} independent families name the same actor.</p>
     <div class="site">standwithmeg.com · courage to stand, power to change</div>
   </div>
 

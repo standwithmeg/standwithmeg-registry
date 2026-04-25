@@ -8,6 +8,9 @@ nightly regeneration workflow.
 """
 from __future__ import annotations
 import os
+import re
+import unicodedata
+from collections import Counter, defaultdict
 from typing import Any
 from supabase import create_client, Client
 
@@ -21,6 +24,99 @@ PERMISSION_REVERSE = {
     "first_name": "Use my quote with my first name only.",
     "data_only":  "For data purposes only (Do not share publicly).",
 }
+
+PUBLIC_ACTOR_THRESHOLD = 5
+_ROLE_PREFIX_RE = re.compile(r"^(hon\.?|honorable|judge|justice|magistrate|commissioner|referee|attorney|atty\.?|gal|guardian ad litem|minor'?s counsel|minor counsel|dr\.?|doctor)\s+", re.I)
+_SUFFIX_RE = re.compile(r"\s+(jr\.?|sr\.?|ii|iii|iv|esq\.?|esquire)$", re.I)
+
+
+def _actor_name_key(name: Any) -> str:
+    text = unicodedata.normalize("NFKD", str(name or "").lower())
+    text = "".join(ch for ch in text if not unicodedata.combining(ch))
+    text = re.sub(r"[.,'\"]", " ", text)
+    text = re.sub(r"\s+", " ", text).strip()
+    text = _ROLE_PREFIX_RE.sub("", text)
+    text = _SUFFIX_RE.sub("", text)
+    text = re.sub(r"\s+[a-z]\s+", " ", text)
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def _most_common(counter: Counter):
+    return counter.most_common(1)[0][0] if counter else None
+
+
+def load_public_court_actors_from_supabase(state_filter: str | None = None) -> dict[str, list[dict]]:
+    """Return public-safe court actors grouped by state using the 5-family rule."""
+    url = os.environ.get("NEXT_PUBLIC_SUPABASE_URL") or os.environ.get("SUPABASE_URL")
+    key = os.environ.get("SUPABASE_SERVICE_ROLE_KEY")
+    if not url or not key:
+        raise RuntimeError(
+            "Missing NEXT_PUBLIC_SUPABASE_URL / SUPABASE_SERVICE_ROLE_KEY env vars"
+        )
+    sb: Client = create_client(url, key)
+
+    rows: list[dict] = []
+    page_size = 1000
+    offset = 0
+    while True:
+        q = (
+            sb.table("court_actors")
+            .select("role,name,court_or_county,state_code,submission_id")
+            .eq("source", "form_direct")
+        )
+        if state_filter:
+            q = q.eq("state_code", state_filter.upper())
+        resp = q.range(offset, offset + page_size - 1).execute()
+        batch = resp.data or []
+        if not batch:
+            break
+        rows.extend(batch)
+        if len(batch) < page_size:
+            break
+        offset += page_size
+
+    buckets: dict[tuple[str, str, str], dict] = {}
+    for row in rows:
+        state = str(row.get("state_code") or "").strip().upper()
+        role = str(row.get("role") or "").strip()
+        name = str(row.get("name") or "").strip()
+        name_key = _actor_name_key(name)
+        if not state or not role or not name_key:
+            continue
+        key_tuple = (state, role.lower(), name_key)
+        bucket = buckets.setdefault(
+            key_tuple,
+            {
+                "state_code": state,
+                "role_counts": Counter(),
+                "name_counts": Counter(),
+                "court_counts": Counter(),
+                "submissions": set(),
+            },
+        )
+        bucket["role_counts"][role] += 1
+        bucket["name_counts"][name] += 1
+        if row.get("court_or_county"):
+            bucket["court_counts"][str(row["court_or_county"]).strip()] += 1
+        if row.get("submission_id"):
+            bucket["submissions"].add(str(row["submission_id"]))
+
+    by_state: dict[str, list[dict]] = defaultdict(list)
+    for bucket in buckets.values():
+        count = len(bucket["submissions"])
+        if count < PUBLIC_ACTOR_THRESHOLD:
+            continue
+        state = bucket["state_code"]
+        by_state[state].append({
+            "role": _most_common(bucket["role_counts"]) or "Court Actor",
+            "name": _most_common(bucket["name_counts"]) or "Named actor",
+            "court_or_county": _most_common(bucket["court_counts"]),
+            "count": count,
+        })
+
+    for state, actors in by_state.items():
+        actors.sort(key=lambda a: (-a["count"], a["name"]))
+    return dict(by_state)
 
 
 def _pro_se_string(v: Any) -> str:
