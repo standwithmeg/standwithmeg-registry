@@ -1,6 +1,88 @@
 import { createServerSupabaseClient } from "../../../../lib/supabase";
 import { createAdminSupabaseClient } from "../../../../lib/supabase-admin";
 import { isAdminEmail } from "../../../../lib/require-auth";
+import type { SupabaseClient } from "@supabase/supabase-js";
+
+type FinancialRow = {
+  state_of_occurrence: string | null;
+  outside_us_country: string | null;
+  email: string | null;
+  total_financial_loss: number | string | null;
+  created_at: string | null;
+  _src?: number;
+  _idx?: number;
+};
+
+async function fetchAllFinancialRows(
+  supabase: SupabaseClient,
+  table: "survey_submissions" | "legacy_submissions"
+): Promise<FinancialRow[]> {
+  const rows: FinancialRow[] = [];
+  const pageSize = 1000;
+  let from = 0;
+
+  while (true) {
+    const { data, error } = await supabase
+      .from(table)
+      .select("state_of_occurrence,outside_us_country,email,total_financial_loss,created_at")
+      .range(from, from + pageSize - 1);
+
+    if (error) throw error;
+    if (!data || data.length === 0) break;
+
+    rows.push(...(data as FinancialRow[]));
+    if (data.length < pageSize) break;
+    from += pageSize;
+  }
+
+  return rows;
+}
+
+function rowState(row: FinancialRow): string {
+  const state = String(row.state_of_occurrence ?? "").trim().toUpperCase();
+  return state || String(row.outside_us_country ?? "").trim();
+}
+
+function createdMs(row: FinancialRow): number {
+  const t = row.created_at ? Date.parse(row.created_at) : 0;
+  return Number.isFinite(t) ? t : 0;
+}
+
+async function countDedupedFinancialRows(supabase: SupabaseClient): Promise<number> {
+  const [survey, legacy] = await Promise.all([
+    fetchAllFinancialRows(supabase, "survey_submissions"),
+    fetchAllFinancialRows(supabase, "legacy_submissions"),
+  ]);
+
+  const tagged = [
+    ...survey.map((row, idx) => ({ ...row, _src: 0, _idx: idx })),
+    ...legacy.map((row, idx) => ({ ...row, _src: 1, _idx: survey.length + idx })),
+  ].filter(row => rowState(row));
+
+  // Mirrors movement_stats_by_state: survey rows win over legacy rows for the
+  // same normalized (email, state); within a source, newest row wins.
+  tagged.sort((a, b) => {
+    const sourceCmp = (a._src ?? 0) - (b._src ?? 0);
+    if (sourceCmp !== 0) return sourceCmp;
+    return createdMs(b) - createdMs(a);
+  });
+
+  const seen = new Set<string>();
+  let count = 0;
+
+  for (const row of tagged) {
+    const state = rowState(row);
+    const email = String(row.email ?? "").trim().toLowerCase();
+    const key = `${email || `__anon_${row._idx}__`}|${state}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+
+    const loss = Number(row.total_financial_loss ?? 0);
+    if (loss > 0 && loss <= 5000000) count += 1;
+  }
+
+  return count;
+}
 
 export async function GET() {
   try {
@@ -20,8 +102,7 @@ export async function GET() {
     const [
       byStateResult,
       recentResult,
-      surveyFinancialCountResult,
-      legacyFinancialCountResult,
+      countWithFinancials,
     ] = await Promise.all([
       // Combined by-state stats (survey_submissions + legacy_submissions)
       // Financial totals are computed here in SQL — used for both the state
@@ -37,20 +118,10 @@ export async function GET() {
         .order("created_at", { ascending: false })
         .limit(50),
 
-      // Count rows with plausible financial data — same $5M threshold used in
-      // movement_stats_by_state so the avg card denominator stays consistent.
-      adminSupabase
-        .from("survey_submissions")
-        .select("id", { count: "exact", head: true })
-        .gt("total_financial_loss", 0)
-        .lte("total_financial_loss", 5000000),
-
-      // Same for legacy_submissions
-      adminSupabase
-        .from("legacy_submissions")
-        .select("id", { count: "exact", head: true })
-        .gt("total_financial_loss", 0)
-        .lte("total_financial_loss", 5000000),
+      // Deduped denominator for the average-loss card. This mirrors the
+      // movement_stats_by_state dedupe policy so the headline average is not
+      // distorted by survey+legacy duplicates.
+      countDedupedFinancialRows(adminSupabase),
     ]);
 
     // Derive total financial loss by summing across state rows from the view.
@@ -70,10 +141,6 @@ export async function GET() {
       (sum, r) => sum + (Number(r.total_financial_loss) || 0),
       0
     );
-
-    const countWithFinancials =
-      (surveyFinancialCountResult.count ?? 0) +
-      (legacyFinancialCountResult.count ?? 0);
 
     const avgLoss = countWithFinancials > 0 ? totalLoss / countWithFinancials : 0;
 

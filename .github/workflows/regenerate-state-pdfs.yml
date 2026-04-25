@@ -42,6 +42,8 @@ jobs:
           NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: |
+          rm -rf scripts/pdf/outputs/state_packets_pdf
+          mkdir -p scripts/pdf/outputs/state_packets_pdf
           cd scripts/pdf
           if [ -n "${{ github.event.inputs.state }}" ]; then
             echo "Regenerating single state: ${{ github.event.inputs.state }}"
@@ -54,10 +56,23 @@ jobs:
       - name: Copy generated PDFs into website/public/state-reports
         run: |
           mkdir -p public/state-reports
-          if [ -d scripts/pdf/outputs/state_packets_pdf ]; then
-            cp -v scripts/pdf/outputs/state_packets_pdf/*.pdf public/state-reports/
+          shopt -s nullglob
+          pdfs=(scripts/pdf/outputs/state_packets_pdf/*.pdf)
+          if [ ${#pdfs[@]} -gt 0 ]; then
+            cp -v "${pdfs[@]}" public/state-reports/
           else
-            echo "No PDFs produced (no states over threshold?)."
+            echo "No PDFs produced."
+          fi
+
+      - name: Sync public PDF index and prune stale PDFs
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: |
+          if [ -n "${{ github.event.inputs.state }}" ]; then
+            python scripts/pdf/sync_public_state_reports.py --prune
+          else
+            python scripts/pdf/sync_public_state_reports.py --prune --require-all
           fi
 
       - name: Commit and push if changed
@@ -67,7 +82,7 @@ jobs:
         run: |
           git config user.name  "Meghann Miller"
           git config user.email "founder@standwithmeg.com"
-          git add public/state-reports/*.pdf
+          git add public/state-reports
           if git diff --staged --quiet; then
             echo "No PDF changes — nothing to commit."
             exit 0

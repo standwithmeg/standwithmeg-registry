@@ -6,7 +6,7 @@
  * 3. Confirms the admin API (/api/admin/survey-stats) includes it in recent
  *    submissions (Note: admin API requires auth, so we query the DB directly
  *    using the service-role key, which is what admin API does server-side)
- * 4. Approves the row, confirms it's eligible for public display
+ * 4. Confirms the row is auto-approved when permission_to_share is public
  * 5. Confirms /api/survey/quotes returns the quote
  * 6. Confirms /api/survey total count and by_state bump by 1
  * 7. Cleans up — deletes the test row so your real data stays clean
@@ -94,7 +94,7 @@ async function main() {
       attorney_fees: 15000,
       lost_wages: 2000,
       total_financial_loss: 17500,
-      approved: false,
+      approved: true,
     };
     const mismatches: string[] = [];
     for (const [k, v] of Object.entries(expected)) {
@@ -115,10 +115,8 @@ async function main() {
     step("Appears in admin recent submissions", foundInRecent,
       foundInRecent ? "found within top 50 most recent" : "NOT found in top 50");
 
-    // ── 4. Approve the row ───────────────────────────────────────
-    const { error: approveErr } = await sb.from("survey_submissions")
-      .update({ approved: true }).eq("id", insertedId);
-    step("Approve row", !approveErr, approveErr ? approveErr.message : "approved=true");
+    // ── 4. Confirm auto-approval ─────────────────────────────────
+    step("Public-permission row is auto-approved", row?.approved === true, `approved=${row?.approved}`);
 
     // ── 5. /api/survey/quotes should include this quote ──────────
     const qRes = await fetch(`${BASE}/api/survey/quotes?state=CA&is_us=true`);

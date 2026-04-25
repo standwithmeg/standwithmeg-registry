@@ -5,11 +5,12 @@ Uses the same stat-computation logic as agent.py (state_stats, top_quotes,
 children_impact) and renders via Jinja2 + WeasyPrint.
 
 Usage:
-    python generate_state_pdf.py MT
-    python generate_state_pdf.py MT TX CA
+    python generate_state_pdf.py --source=supabase MT
+    python generate_state_pdf.py --source=supabase --all-30plus
+    python generate_state_pdf.py --source=xlsx MT
 """
 from __future__ import annotations
-import sys, statistics
+import os, sys, statistics
 from pathlib import Path
 from collections import Counter, defaultdict
 from datetime import datetime, timezone, timedelta
@@ -41,6 +42,11 @@ STATE_NAMES = {
     "WV":"West Virginia","WI":"Wisconsin","WY":"Wyoming","DC":"District of Columbia",
 }
 
+# Populate the state-token blocklist now that STATE_NAMES exists.
+_STATE_TOKENS = {abbr.upper() for abbr in STATE_NAMES.keys()} | {
+    name.upper() for name in STATE_NAMES.values()
+}
+
 STATE_COUNTIES = {
     "AL":67,"AK":30,"AZ":15,"AR":75,"CA":58,"CO":64,"CT":8,"DE":3,"FL":67,"GA":159,
     "HI":5,"ID":44,"IL":102,"IN":92,"IA":99,"KS":105,"KY":120,"LA":64,"ME":16,"MD":24,
@@ -51,10 +57,67 @@ STATE_COUNTIES = {
 
 CUSTODY_NORM = {"Yes": "50/50 Joint", "No": "No Contact / Total Loss of Access"}
 
+# Values that were entered into the County free-text field but are not
+# counties — usually they are answers to an adjacent yes/no question, the
+# state itself, or a country. They get filtered out of county aggregation
+# so the report doesn't claim "Yes" or "Canada" is a Kansas county.
+_COUNTY_JUNK = {
+    'YES', 'NO', 'UNSURE', 'UNKNOWN', 'N/A', 'NA', 'NONE', 'NULL',
+    'OTHER', 'INTERNATIONAL', 'INTERNATIONAL (LOCATION UNSPECIFIED)',
+}
+# Country names that show up in county fields when respondents are reporting
+# from outside the US. Keep this list short and explicit.
+_COUNTY_COUNTRY_JUNK = {
+    'CANADA', 'MEXICO', 'UK', 'UNITED KINGDOM', 'AUSTRALIA',
+    'GERMANY', 'FRANCE', 'IRELAND', 'NEW ZEALAND',
+}
+
+# _STATE_TOKENS — set of state abbreviations + full names used to reject
+# 'CA' or 'California' typed where Los Angeles was meant. Populated above
+# after STATE_NAMES is defined.
+
 def safe_str(v):
     if v is None: return ""
     s = str(v).strip()
     return "" if s in ['None', 'nan', 'N/A'] else s
+
+
+def normalize_county(v) -> str:
+    """
+    Whitespace-strip, title-case, and reject obvious non-county values.
+    Returns "" for any value that should not appear in the county tally.
+    """
+    s = safe_str(v)
+    if not s:
+        return ""
+    norm = " ".join(s.split())  # collapse internal whitespace
+    upper = norm.upper()
+    if upper in _COUNTY_JUNK or upper in _COUNTY_COUNTRY_JUNK:
+        return ""
+    if upper in _STATE_TOKENS:
+        return ""
+    # Title-case so "san diego" / "SAN DIEGO" / "San Diego " all collapse.
+    # Preserve a trailing 'County' suffix if present without doubling it.
+    title = norm.title()
+    # Drop trailing " County" so "Johnson" and "Johnson County" merge.
+    if title.endswith(" County"):
+        title = title[: -len(" County")]
+    return title
+
+
+# System-Affected normalization: merge raw enum strings (e.g. "family_court")
+# with their human-readable counterparts so the tally doesn't show two rows.
+_SYSTEM_NORM = {
+    'family_court': 'Family Court Only',
+    'cps': 'CPS (Child Protective Services) Only',
+    'both': 'Both Family Court and CPS',
+}
+
+def normalize_system(v) -> str:
+    s = safe_str(v)
+    if not s:
+        return ""
+    return _SYSTEM_NORM.get(s.strip().lower(), s)
 
 def safe_float(v):
     try:
@@ -121,17 +184,30 @@ def state_stats(rows):
     def top(k, t=8):
         if k == 'custody':
             c = Counter(normalize_custody(r[COLS[k]]) for r in rows if normalize_custody(r[COLS[k]]))
+        elif k == 'county':
+            c = Counter(normalize_county(r[COLS[k]]) for r in rows if normalize_county(r[COLS[k]]))
+        elif k == 'system':
+            c = Counter(normalize_system(r[COLS[k]]) for r in rows if normalize_system(r[COLS[k]]))
         else:
             c = Counter(safe_str(r[COLS[k]]) for r in rows if safe_str(r[COLS[k]]))
         return c.most_common(t)
     prose = sum(1 for r in rows if 'yes' in safe_str(r[COLS['pro_se']]).lower() or 'pro se' in safe_str(r[COLS['pro_se']]).lower())
     ran = sum(1 for r in rows if 'ran out' in safe_str(r[COLS['legal_rep']]).lower())
+    # Count all unique normalized counties for the cover-page stat. The
+    # top-N list is capped, so deriving counties_represented from len(top)
+    # would always max out at the cap.
+    unique_counties = {
+        normalize_county(r[COLS['county']])
+        for r in rows
+        if normalize_county(r[COLS['county']])
+    }
     return {
         'total': n, 'pro_se_pct': round(prose / n * 100, 1), 'ran_out_pct': round(ran / n * 100, 1),
         'financial': {k: fin(k) for k in ['atty_fees', 'gal_fees', 'therapy_fees', 'reunif_fees', 'other_fees', 'lost_wages', 'asset_loss']},
         'months_lost': fin('months_lost'),
         'case_status': top('case_status'), 'system': top('system'), 'duration': top('duration'),
         'custody': top('custody'), 'allegations': top('allegation', 10), 'counties': top('county', 10),
+        'counties_unique': len(unique_counties),
     }
 
 def children_impact(rows):
@@ -255,7 +331,7 @@ def build_template_context(state_abbr, rows):
     state_name = STATE_NAMES.get(state_abbr, state_abbr)
     now = datetime.now(timezone(timedelta(hours=-5)))
 
-    counties_represented = len(d['counties'])
+    counties_represented = d.get('counties_unique', len(d['counties']))
 
     # Expense table rows
     asset_vals = _get_asset_loss_vals(rows)
@@ -468,32 +544,52 @@ def generate_pdf(state_abbr, rows, output_path=None, browser=None):
     tmp.close()
 
     own_browser = browser is None
+    pw = None
+    used_renderer = "Playwright"
     try:
-        if own_browser:
-            pw = sync_playwright().start()
-            browser = pw.chromium.launch()
-        page = browser.new_page()
-        page.goto(f"file://{tmp.name}", wait_until="networkidle")
-        page.pdf(
-            path=str(output_path),
-            format="Letter",
-            print_background=True,
-            margin={"top": "0in", "bottom": "0in", "left": "0in", "right": "0in"},
-        )
-        page.close()
+        try:
+            if os.environ.get("SWM_PDF_RENDERER", "").lower() == "weasyprint":
+                raise RuntimeError("SWM_PDF_RENDERER=weasyprint")
+            else:
+                if own_browser:
+                    pw = sync_playwright().start()
+                    browser = pw.chromium.launch()
+                page = browser.new_page()
+                page.goto(f"file://{tmp.name}", wait_until="networkidle")
+                page.pdf(
+                    path=str(output_path),
+                    format="Letter",
+                    print_background=True,
+                    margin={"top": "0in", "bottom": "0in", "left": "0in", "right": "0in"},
+                )
+                page.close()
+        except Exception as playwright_err:
+            # Local Codex/macOS sandboxes can block Chromium's Mach port
+            # registration. GitHub Actions should use Playwright; this fallback
+            # keeps local external-drive runs usable when WeasyPrint is present.
+            if browser is not None and not own_browser:
+                raise
+            print(f"  Playwright failed, trying WeasyPrint fallback: {playwright_err}")
+            try:
+                from weasyprint import HTML
+            except Exception as import_err:
+                raise playwright_err from import_err
+            HTML(filename=tmp.name, base_url=str(TEMPLATE_DIR)).write_pdf(str(output_path))
+            used_renderer = "WeasyPrint"
     finally:
         Path(tmp.name).unlink(missing_ok=True)
-        if own_browser:
+        if own_browser and browser is not None:
             browser.close()
+        if own_browser and pw is not None:
             pw.stop()
 
-    print(f"  PDF written: {output_path} ({output_path.stat().st_size / 1024:.0f} KB)")
+    print(f"  PDF written: {output_path} ({output_path.stat().st_size / 1024:.0f} KB, {used_renderer})")
     return output_path
 
 
 def main():
     args = [a for a in sys.argv[1:]]
-    use_supabase = False
+    use_supabase = True
     only_30plus = False
     cleaned: list[str] = []
     for a in args:
@@ -530,15 +626,20 @@ def main():
     else:
         states = [s.strip().upper() for s in args]
 
+    generated = 0
     for state in states:
         if state not in by_state:
             print(f"  {state}: not found in data, skipping")
             continue
         sr = by_state[state]
+        if len(sr) < 30:
+            print(f"  {state}: {len(sr)} submissions, below 30-family threshold; skipping")
+            continue
         print(f"\n  Generating {STATE_NAMES.get(state, state)} ({state}) — {len(sr)} submissions")
         generate_pdf(state, sr)
+        generated += 1
 
-    print("\nDone.")
+    print(f"\nDone. Generated {generated} PDF(s).")
 
 
 if __name__ == "__main__":

@@ -1,23 +1,36 @@
-import { createAdminSupabaseClient } from "../../../lib/supabase-admin";
+import reportIndex from "../../../public/state-reports/index.json";
+
+type ReportIndexEntry = {
+  state: string;
+  submissions: number;
+  file: string;
+  size_kb: number;
+};
+
+const STATE_NAMES: Record<string, string> = {
+  AL: "Alabama", AK: "Alaska", AZ: "Arizona", AR: "Arkansas", CA: "California",
+  CO: "Colorado", CT: "Connecticut", DE: "Delaware", FL: "Florida", GA: "Georgia",
+  HI: "Hawaii", ID: "Idaho", IL: "Illinois", IN: "Indiana", IA: "Iowa",
+  KS: "Kansas", KY: "Kentucky", LA: "Louisiana", ME: "Maine", MD: "Maryland",
+  MA: "Massachusetts", MI: "Michigan", MN: "Minnesota", MS: "Mississippi", MO: "Missouri",
+  MT: "Montana", NE: "Nebraska", NV: "Nevada", NH: "New Hampshire", NJ: "New Jersey",
+  NM: "New Mexico", NY: "New York", NC: "North Carolina", ND: "North Dakota", OH: "Ohio",
+  OK: "Oklahoma", OR: "Oregon", PA: "Pennsylvania", RI: "Rhode Island", SC: "South Carolina",
+  SD: "South Dakota", TN: "Tennessee", TX: "Texas", UT: "Utah", VT: "Vermont",
+  VA: "Virginia", WA: "Washington", WV: "West Virginia", WI: "Wisconsin", WY: "Wyoming",
+};
 
 export async function GET() {
-  try {
-    const adminSupabase = createAdminSupabaseClient();
+  const resources = (reportIndex as ReportIndexEntry[])
+    .filter(entry => /^[A-Z]{2}$/.test(entry.state) && entry.submissions >= 30)
+    .map(entry => ({
+      state_code: entry.state,
+      state_name: STATE_NAMES[entry.state] ?? entry.state,
+      drive_folder_url: `/state-reports/${entry.state}.pdf`,
+      report_available: true,
+      report_title: `${entry.state} Family Rights Report`,
+      updated_at: null,
+    }));
 
-    const { data, error } = await adminSupabase
-      .from("state_resource_links")
-      .select("state_code, state_name, drive_folder_url, report_available, report_title, updated_at")
-      .order("state_code");
-
-    if (error) {
-      // Table may not exist yet — return empty array gracefully
-      console.error("GET /api/state-resources error (non-blocking):", error.message);
-      return Response.json({ resources: [] });
-    }
-
-    return Response.json({ resources: data ?? [] });
-  } catch (err) {
-    console.error("GET /api/state-resources error:", err);
-    return Response.json({ error: "Failed to load state resources." }, { status: 500 });
-  }
+  return Response.json({ resources });
 }

@@ -32,6 +32,21 @@ def _pro_se_string(v: Any) -> str:
     return "No, I have an attorney"
 
 
+def _num_or_blank(v: Any) -> Any:
+    """
+    Preserve NULL/empty values for numeric columns so generate_state_pdf.py's
+    safe_float() returns None and the row is excluded from medians/means.
+    Coercing NULL to 0 (the previous behavior) inflated the response count and
+    pulled medians toward $0 / 0 months because non-respondents were being
+    counted as zero-valued respondents.
+    """
+    if v is None:
+        return ""
+    if isinstance(v, str) and not v.strip():
+        return ""
+    return v
+
+
 def _row_tuple(r: dict) -> list:
     """
     Build a 32-slot list that matches the xlsx column positions in COLS:
@@ -41,30 +56,41 @@ def _row_tuple(r: dict) -> list:
       17:num_kids (used by children_impact), 18:pro_se, 19:legal_rep,
       21:months_lost, 24:allegation, 30:county.
     Slot 0 and any unused slots stay empty.
+
+    Numeric columns use _num_or_blank so NULLs are preserved as "" (which
+    safe_float treats as None) instead of collapsing to 0.
     """
     row = [""] * 32
     row[1]  = (r.get("state_of_occurrence") or "") or ""
-    row[2]  = r.get("attorney_fees") or 0
-    row[3]  = r.get("gal_fees") or 0
-    row[4]  = r.get("therapy_eval_fees") or 0
-    row[5]  = r.get("reunification_fees") or 0
-    row[6]  = r.get("other_court_actors_fees") or 0
-    row[7]  = r.get("lost_wages") or 0
-    row[8]  = r.get("asset_liquidation_loss") or 0
+    row[2]  = _num_or_blank(r.get("attorney_fees"))
+    row[3]  = _num_or_blank(r.get("gal_fees"))
+    row[4]  = _num_or_blank(r.get("therapy_eval_fees"))
+    row[5]  = _num_or_blank(r.get("reunification_fees"))
+    row[6]  = _num_or_blank(r.get("other_court_actors_fees"))
+    row[7]  = _num_or_blank(r.get("lost_wages"))
+    row[8]  = _num_or_blank(r.get("asset_liquidation_loss"))
     row[9]  = r.get("first_name") or ""
-    row[11] = PERMISSION_REVERSE.get(
-        (r.get("permission_to_share") or "").strip().lower(),
-        r.get("permission_to_share") or "",
-    )
-    row[12] = r.get("impact_quote") or ""
+    # Public PDFs should count every valid deduped family row, but quotes are
+    # only publishable after admin approval and explicit public-share consent.
+    # Legacy rows do not have an approval workflow, so they are counted but
+    # never contribute public quote text.
+    if r.get("_src") == 0 and r.get("approved") is True:
+        row[11] = PERMISSION_REVERSE.get(
+            (r.get("permission_to_share") or "").strip().lower(),
+            r.get("permission_to_share") or "",
+        )
+        row[12] = r.get("impact_quote") or ""
+    else:
+        row[11] = PERMISSION_REVERSE["data_only"]
+        row[12] = ""
     row[13] = r.get("case_status") or ""
     row[14] = r.get("system_affected") or ""
     row[15] = r.get("time_in_system") or ""
     row[16] = r.get("custody_status") or ""
-    row[17] = r.get("number_of_kids") or 0
+    row[17] = _num_or_blank(r.get("number_of_kids"))
     row[18] = _pro_se_string(r.get("is_pro_se"))
     row[19] = r.get("legal_rep_history") or ""
-    row[21] = r.get("months_lost_parenting_time") or 0
+    row[21] = _num_or_blank(r.get("months_lost_parenting_time"))
     row[24] = r.get("allegation_type") or ""
     row[30] = r.get("case_county") or ""
     return row
@@ -101,7 +127,7 @@ _SURVEY_COLS = (
     "asset_liquidation_loss,first_name,permission_to_share,impact_quote,"
     "case_status,system_affected,time_in_system,custody_status,number_of_kids,"
     "is_pro_se,legal_rep_history,months_lost_parenting_time,allegation_type,"
-    "case_county"
+    "case_county,approved"
 )
 
 _LEGACY_COLS = (
