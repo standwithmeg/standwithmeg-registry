@@ -30,8 +30,8 @@ export async function GET() {
       created_at: string;
       submission_id: string;
       survey_submissions:
-        | { email: string | null; first_name: string | null; last_name: string | null }
-        | { email: string | null; first_name: string | null; last_name: string | null }[]
+        | { email: string | null; first_name: string | null; last_name: string | null; state_of_occurrence: string | null }
+        | { email: string | null; first_name: string | null; last_name: string | null; state_of_occurrence: string | null }[]
         | null;
     };
 
@@ -42,9 +42,16 @@ export async function GET() {
     }
 
     function familyKey(row: Row): string {
-      const state = (row.state_code ?? "").trim().toUpperCase();
+      const state = actorState(row) ?? "";
       const email = joinedSubmission(row)?.email?.trim().toLowerCase();
       return email ? `${email}|${state}` : `submission:${row.submission_id}`;
+    }
+
+    function actorState(row: Row): string | null {
+      const direct = row.state_code?.trim().toUpperCase();
+      if (direct) return direct;
+      const joined = joinedSubmission(row)?.state_of_occurrence?.trim().toUpperCase();
+      return joined || null;
     }
 
     let from = 0;
@@ -53,7 +60,7 @@ export async function GET() {
     while (true) {
       const { data, error } = await adminSb
         .from("court_actors")
-        .select("id, role, name, court_or_county, state_code, notes, source, created_at, submission_id, survey_submissions(email, first_name, last_name)")
+        .select("id, role, name, court_or_county, state_code, notes, source, created_at, submission_id, survey_submissions(email, first_name, last_name, state_of_occurrence)")
         .order("created_at", { ascending: false })
         .range(from, from + pageSize - 1);
       if (error) {
@@ -79,11 +86,12 @@ export async function GET() {
     const agg = new Map<string, AggBucket>();
     for (const r of rows) {
       if (!r.role || !r.name) continue;
-      const key = actorBucketKey(r.name, r.role, r.state_code);
+      const state = actorState(r);
+      const key = actorBucketKey(r.name, r.role, state);
       if (!key.split("|")[0]) continue;
       if (!agg.has(key)) {
         agg.set(key, {
-          role: r.role, name: r.name, state_code: r.state_code,
+          role: r.role, name: r.name, state_code: state,
           families: new Set(), courts: new Map(),
         });
       }
@@ -110,7 +118,7 @@ export async function GET() {
         role: r.role,
         name: r.name,
         court_or_county: r.court_or_county,
-        state_code: r.state_code,
+        state_code: actorState(r),
         notes: r.notes,
         source: r.source ?? "form_direct",
         created_at: r.created_at,

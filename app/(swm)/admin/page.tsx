@@ -368,7 +368,7 @@ function auditStatusMeta(status: AuditStatus) {
     case "missing_pdf":
       return { label: "Missing PDF", color: "rgb(252,165,165)", bg: "rgba(185,28,28,0.18)", border: "rgba(185,28,28,0.38)" };
     case "count_mismatch":
-      return { label: "Count mismatch", color: "rgb(253,224,71)", bg: "rgba(234,179,8,0.16)", border: "rgba(234,179,8,0.35)" };
+      return { label: "Mismatch", color: "rgb(253,224,71)", bg: "rgba(234,179,8,0.16)", border: "rgba(234,179,8,0.35)" };
     case "stale_pdf":
       return { label: "Stale PDF", color: "rgb(251,146,60)", bg: "rgba(249,115,22,0.15)", border: "rgba(249,115,22,0.32)" };
     default:
@@ -706,12 +706,23 @@ export default function AdminPage() {
     });
   }
 
-  function SortHeader({ field, label }: { field: keyof StateRow; label: string }) {
+  function SortHeader({
+    field,
+    label,
+    className = "",
+    title,
+  }: {
+    field: keyof StateRow;
+    label: string;
+    className?: string;
+    title?: string;
+  }) {
     const active = sortField === field;
     return (
       <th
-        className="px-3 py-3 text-left text-xs font-bold uppercase tracking-wide cursor-pointer select-none whitespace-nowrap transition-colors"
+        className={`px-2 py-3 text-left text-[10px] font-bold uppercase tracking-wide cursor-pointer select-none transition-colors ${className}`}
         style={{ color: active ? GOLD : "rgba(245,245,245,0.45)" }}
+        title={title ?? label}
         onClick={() => {
           if (active) setSortDir(d => d === "asc" ? "desc" : "asc");
           else { setSortField(field); setSortDir("desc"); }
@@ -898,21 +909,21 @@ export default function AdminPage() {
             <RegenerateAllButton />
           </div>
 
-          <div className="overflow-x-auto">
-            <table className="w-full">
+          <div className="overflow-hidden">
+            <table className="w-full table-fixed text-xs">
               <thead>
                 <tr style={{ backgroundColor: "rgba(30,58,95,0.6)", borderBottom: `1px solid rgba(201,162,39,0.2)` }}>
-                  <SortHeader field="state" label="State" />
-                  <SortHeader field="total_submissions" label="Total" />
-                  <SortHeader field="approved_count" label="Approved" />
-                  <SortHeader field="avg_financial_loss" label="Avg Loss" />
-                  <SortHeader field="total_financial_loss" label="Total Loss" />
-                  <SortHeader field="avg_months_lost" label="Avg Mos. Lost" />
-                  <SortHeader field="total_loss_count" label="No Contact" />
-                  <SortHeader field="pro_se_count" label="Pro Se" />
-                  <SortHeader field="last_submission_at" label="Latest in State" />
-                  <th className="px-3 py-3 text-left text-xs font-bold uppercase tracking-wide whitespace-nowrap"
+                  <SortHeader field="state" label="State" className="w-[12%]" />
+                  <th className="w-[11%] px-2 py-3 text-left text-[10px] font-bold uppercase tracking-wide"
                     style={{ color: "rgba(245,245,245,0.45)" }}>PDF</th>
+                  <SortHeader field="total_submissions" label="Total" className="w-[8%]" />
+                  <SortHeader field="approved_count" label="Quotes" className="w-[8%]" title="Approved public quotes" />
+                  <SortHeader field="avg_financial_loss" label="Avg $" className="w-[11%]" title="Average reported loss" />
+                  <SortHeader field="total_financial_loss" label="Total $" className="w-[13%]" title="Total reported loss" />
+                  <SortHeader field="avg_months_lost" label="Mos." className="w-[9%]" title="Average months lost" />
+                  <SortHeader field="total_loss_count" label="No Contact" className="w-[10%]" />
+                  <SortHeader field="pro_se_count" label="Pro Se" className="w-[8%]" />
+                  <SortHeader field="last_submission_at" label="Latest" className="w-[10%]" title="Latest in State" />
                 </tr>
               </thead>
               <tbody>
@@ -926,9 +937,16 @@ export default function AdminPage() {
                     onMouseEnter={e => (e.currentTarget.style.backgroundColor = "rgba(201,162,39,0.06)")}
                     onMouseLeave={e => (e.currentTarget.style.backgroundColor = i % 2 === 0 ? "transparent" : "rgba(255,255,255,0.02)")}
                   >
-                    <td className="px-3 py-3 font-black text-sm" style={{ color: GOLD }}>{row.state}</td>
-                    <td className="px-3 py-3 text-sm font-bold text-white">{row.total_submissions}</td>
-                    <td className="px-3 py-3 text-sm">
+                    <td className="px-2 py-3 font-black text-xs break-words" style={{ color: GOLD }}>{row.state}</td>
+                    <td className="px-2 py-3 text-xs">
+                      {row.is_us && row.total_submissions >= 30 ? (
+                        <RegenerateStateButton state={row.state} />
+                      ) : (
+                        <span style={{ color: "rgba(245,245,245,0.15)" }}>—</span>
+                      )}
+                    </td>
+                    <td className="px-2 py-3 text-xs font-bold text-white">{row.total_submissions}</td>
+                    <td className="px-2 py-3 text-xs">
                       {row.approved_count > 0 ? (
                         <button
                           onClick={() => openQuoteModal(row)}
@@ -941,24 +959,17 @@ export default function AdminPage() {
                         <span style={{ color: "rgba(245,245,245,0.25)" }}>0</span>
                       )}
                     </td>
-                    <td className="px-3 py-3 text-sm" style={{ color: "rgba(245,245,245,0.6)" }}>{fmt$(row.avg_financial_loss)}</td>
-                    <td className="px-3 py-3 text-sm font-semibold text-red-400">{fmt$(row.total_financial_loss)}</td>
-                    <td className="px-3 py-3 text-sm" style={{ color: "rgba(245,245,245,0.6)" }}>{row.avg_months_lost ?? "—"}</td>
-                    <td className="px-3 py-3 text-sm" style={{ color: "rgba(245,245,245,0.6)" }}>{row.total_loss_count}</td>
-                    <td className="px-3 py-3 text-sm" style={{ color: "rgba(245,245,245,0.6)" }}>{row.pro_se_count}</td>
+                    <td className="px-2 py-3 text-xs break-words" style={{ color: "rgba(245,245,245,0.6)" }}>{fmt$(row.avg_financial_loss)}</td>
+                    <td className="px-2 py-3 text-xs font-semibold text-red-400 break-words">{fmt$(row.total_financial_loss)}</td>
+                    <td className="px-2 py-3 text-xs" style={{ color: "rgba(245,245,245,0.6)" }}>{row.avg_months_lost ?? "—"}</td>
+                    <td className="px-2 py-3 text-xs" style={{ color: "rgba(245,245,245,0.6)" }}>{row.total_loss_count}</td>
+                    <td className="px-2 py-3 text-xs" style={{ color: "rgba(245,245,245,0.6)" }}>{row.pro_se_count}</td>
                     <td
-                      className="px-3 py-3 text-xs font-semibold tabular-nums"
+                      className="px-2 py-3 text-xs font-semibold tabular-nums"
                       style={{ color: "rgba(245,245,245,0.4)" }}
                       title={exactTimestamp(row.last_submission_at)}
                     >
                       {latestInState(row.last_submission_at)}
-                    </td>
-                    <td className="px-3 py-3 text-sm">
-                      {row.is_us && row.total_submissions >= 30 ? (
-                        <RegenerateStateButton state={row.state} />
-                      ) : (
-                        <span style={{ color: "rgba(245,245,245,0.15)" }}>—</span>
-                      )}
                     </td>
                   </tr>
                 ))}
@@ -982,7 +993,7 @@ export default function AdminPage() {
             <div>
               <h2 className="font-black text-white text-base tracking-wide">Reporting Audit Spreadsheet</h2>
               <p className="text-xs mt-0.5" style={{ color: "rgba(245,245,245,0.4)" }}>
-                Public dashboard totals, PDF index counts, quote counts, and public court-actor counts in one admin-only table.
+                Public dashboard totals, PDF index counts, quote counts, and public court-actor counts. A flag means one state needs PDF/reporting review.
               </p>
             </div>
             <div className="flex items-center gap-2 flex-wrap justify-end">
@@ -1016,27 +1027,27 @@ export default function AdminPage() {
               {auditError}
             </div>
           ) : (
-            <div className="overflow-x-auto">
-              <table className="w-full">
+            <div className="overflow-hidden">
+              <table className="w-full table-fixed text-xs">
                 <thead>
                   <tr style={{ backgroundColor: "rgba(30,58,95,0.6)", borderBottom: `1px solid rgba(201,162,39,0.2)` }}>
                     {[
-                      "Status",
-                      "State",
-                      "Dashboard Families",
-                      "PDF Count",
-                      "Delta",
-                      "Quotes",
-                      "Court Actors",
-                      "Total Loss",
-                      "Avg Loss",
-                      "Avg Mos. Lost",
-                      "No Contact",
-                      "Pro Se",
-                      "Latest",
-                      "PDF",
-                    ].map(label => (
-                      <th key={label} className="px-3 py-3 text-left text-xs font-bold uppercase tracking-wide whitespace-nowrap"
+                      ["Status", "Reporting status", "w-[10%]"],
+                      ["State", "State or country", "w-[7%]"],
+                      ["PDF", "Open public PDF", "w-[8%]"],
+                      ["Live", "Dashboard families", "w-[6%]"],
+                      ["PDF #", "PDF index family count", "w-[6%]"],
+                      ["Δ", "PDF count minus dashboard count", "w-[5%]"],
+                      ["Quotes", "Shareable quotes", "w-[6%]"],
+                      ["Actors", "Public court actors", "w-[6%]"],
+                      ["Total $", "Total reported loss", "w-[12%]"],
+                      ["Mean $", "Average reported loss", "w-[10%]"],
+                      ["Mos.", "Average months lost", "w-[6%]"],
+                      ["No", "No-contact count", "w-[6%]"],
+                      ["Pro", "Pro se count", "w-[5%]"],
+                      ["Latest", "Latest submission", "w-[7%]"],
+                    ].map(([label, title, width]) => (
+                      <th key={label} title={title} className={`px-2 py-3 text-left text-[10px] font-bold uppercase tracking-wide ${width}`}
                         style={{ color: "rgba(245,245,245,0.45)" }}>
                         {label}
                       </th>
@@ -1053,33 +1064,14 @@ export default function AdminPage() {
                           borderBottom: "1px solid rgba(255,255,255,0.05)",
                           backgroundColor: i % 2 === 0 ? "transparent" : "rgba(255,255,255,0.02)",
                         }}>
-                        <td className="px-3 py-3">
-                          <span className="text-[11px] px-2 py-1 rounded font-bold uppercase tracking-wide whitespace-nowrap"
+                        <td className="px-2 py-3">
+                          <span className="text-[10px] px-1.5 py-1 rounded font-bold uppercase tracking-wide"
                             style={{ color: status.color, backgroundColor: status.bg, border: `1px solid ${status.border}` }}>
                             {status.label}
                           </span>
                         </td>
-                        <td className="px-3 py-3 font-black text-sm" style={{ color: GOLD }}>{row.state}</td>
-                        <td className="px-3 py-3 text-sm font-bold text-white">{fmtNum(row.dashboard_families)}</td>
-                        <td className="px-3 py-3 text-sm" style={{ color: row.pdf_available ? "rgba(245,245,245,0.72)" : "rgba(245,245,245,0.25)" }}>
-                          {fmtNum(row.pdf_index_families)}
-                        </td>
-                        <td className="px-3 py-3 text-sm font-semibold" style={{ color: delta === 0 ? "rgba(245,245,245,0.45)" : "rgb(253,224,71)" }}>
-                          {delta == null ? "—" : delta > 0 ? `+${delta}` : delta}
-                        </td>
-                        <td className="px-3 py-3 text-sm text-green-400 font-semibold">{fmtNum(row.shareable_quotes)}</td>
-                        <td className="px-3 py-3 text-sm font-semibold" style={{ color: GOLD }}>{fmtNum(row.public_court_actors)}</td>
-                        <td className="px-3 py-3 text-sm font-semibold text-red-400">{fmt$(row.total_reported_loss)}</td>
-                        <td className="px-3 py-3 text-sm" style={{ color: "rgba(245,245,245,0.6)" }}>{fmt$(row.avg_reported_loss)}</td>
-                        <td className="px-3 py-3 text-sm" style={{ color: "rgba(245,245,245,0.6)" }}>{row.avg_months_lost ?? "—"}</td>
-                        <td className="px-3 py-3 text-sm" style={{ color: "rgba(245,245,245,0.6)" }}>{fmtNum(row.no_contact_count)}</td>
-                        <td className="px-3 py-3 text-sm" style={{ color: "rgba(245,245,245,0.6)" }}>{fmtNum(row.pro_se_count)}</td>
-                        <td className="px-3 py-3 text-xs font-semibold tabular-nums"
-                          title={row.latest_submission_at ? exactTimestamp(row.latest_submission_at) : undefined}
-                          style={{ color: "rgba(245,245,245,0.4)" }}>
-                          {row.latest_submission_at ? latestInState(row.latest_submission_at) : "—"}
-                        </td>
-                        <td className="px-3 py-3 text-sm">
+                        <td className="px-2 py-3 font-black text-xs break-words" style={{ color: GOLD }}>{row.state}</td>
+                        <td className="px-2 py-3 text-xs">
                           {row.pdf_url ? (
                             <a href={row.pdf_url} target="_blank" rel="noopener noreferrer"
                               className="font-bold underline underline-offset-2"
@@ -1089,6 +1081,25 @@ export default function AdminPage() {
                           ) : (
                             <span style={{ color: "rgba(245,245,245,0.2)" }}>—</span>
                           )}
+                        </td>
+                        <td className="px-2 py-3 text-xs font-bold text-white">{fmtNum(row.dashboard_families)}</td>
+                        <td className="px-2 py-3 text-xs" style={{ color: row.pdf_available ? "rgba(245,245,245,0.72)" : "rgba(245,245,245,0.25)" }}>
+                          {fmtNum(row.pdf_index_families)}
+                        </td>
+                        <td className="px-2 py-3 text-xs font-semibold" title="PDF count minus dashboard count" style={{ color: delta === 0 ? "rgba(245,245,245,0.45)" : "rgb(253,224,71)" }}>
+                          {delta == null ? "—" : delta > 0 ? `+${delta}` : delta}
+                        </td>
+                        <td className="px-2 py-3 text-xs text-green-400 font-semibold">{fmtNum(row.shareable_quotes)}</td>
+                        <td className="px-2 py-3 text-xs font-semibold" style={{ color: GOLD }}>{fmtNum(row.public_court_actors)}</td>
+                        <td className="px-2 py-3 text-xs font-semibold text-red-400 break-words">{fmt$(row.total_reported_loss)}</td>
+                        <td className="px-2 py-3 text-xs break-words" style={{ color: "rgba(245,245,245,0.6)" }}>{fmt$(row.avg_reported_loss)}</td>
+                        <td className="px-2 py-3 text-xs" style={{ color: "rgba(245,245,245,0.6)" }}>{row.avg_months_lost ?? "—"}</td>
+                        <td className="px-2 py-3 text-xs" style={{ color: "rgba(245,245,245,0.6)" }}>{fmtNum(row.no_contact_count)}</td>
+                        <td className="px-2 py-3 text-xs" style={{ color: "rgba(245,245,245,0.6)" }}>{fmtNum(row.pro_se_count)}</td>
+                        <td className="px-2 py-3 text-xs font-semibold tabular-nums"
+                          title={row.latest_submission_at ? exactTimestamp(row.latest_submission_at) : undefined}
+                          style={{ color: "rgba(245,245,245,0.4)" }}>
+                          {row.latest_submission_at ? latestInState(row.latest_submission_at) : "—"}
                         </td>
                       </tr>
                     );
@@ -1145,13 +1156,17 @@ export default function AdminPage() {
             // Build { stateCode: { total: number, actors: AdminActor[] } } from flat list
             const byState = new Map<string, AdminActor[]>();
             for (const a of adminActors) {
-              const s = a.state_code ?? "—";
+              const s = a.state_code ?? "No state listed";
               if (!byState.has(s)) byState.set(s, []);
               byState.get(s)!.push(a);
             }
             const rows = [...byState.entries()]
               .map(([state, list]) => ({ state, list }))
-              .sort((a, b) => b.list.length - a.list.length);
+              .sort((a, b) => {
+                if (a.state === "No state listed") return 1;
+                if (b.state === "No state listed") return -1;
+                return b.list.length - a.list.length;
+              });
 
             if (rows.length === 0) {
               return (
@@ -1406,7 +1421,7 @@ export default function AdminPage() {
             style={{ borderColor: "rgba(255,255,255,0.08)", backgroundColor: "rgba(30,58,95,0.4)" }}>
             <h2 className="font-black text-white text-base tracking-wide">Recent Submissions</h2>
             <p className="text-xs mt-0.5" style={{ color: "rgba(245,245,245,0.4)" }}>
-              Click any submission to view full details. Approve to make quotes eligible for public display.
+              Click any submission to view full details. Approve only when a quote can be shown publicly; data-only/do-not-share submissions should stay private.
             </p>
           </div>
 

@@ -45,12 +45,24 @@ def _most_common(counter: Counter):
     return counter.most_common(1)[0][0] if counter else None
 
 
-def _actor_family_key(row: dict) -> str:
-    state = str(row.get("state_code") or "").strip().upper()
+def _joined_submission(row: dict) -> dict:
     joined = row.get("survey_submissions") or {}
     if isinstance(joined, list):
         joined = joined[0] if joined else {}
-    email = str(joined.get("email") or "").strip().lower() if isinstance(joined, dict) else ""
+    return joined if isinstance(joined, dict) else {}
+
+
+def _actor_state(row: dict) -> str:
+    direct = str(row.get("state_code") or "").strip().upper()
+    if direct:
+        return direct
+    return str(_joined_submission(row).get("state_of_occurrence") or "").strip().upper()
+
+
+def _actor_family_key(row: dict) -> str:
+    state = _actor_state(row)
+    joined = _joined_submission(row)
+    email = str(joined.get("email") or "").strip().lower()
     return f"{email}|{state}" if email else f"submission:{row.get('submission_id')}"
 
 
@@ -70,11 +82,9 @@ def load_public_court_actors_from_supabase(state_filter: str | None = None) -> d
     while True:
         q = (
             sb.table("court_actors")
-            .select("role,name,court_or_county,state_code,submission_id,survey_submissions(email)")
+            .select("role,name,court_or_county,state_code,submission_id,survey_submissions(email,state_of_occurrence)")
             .eq("source", "form_direct")
         )
-        if state_filter:
-            q = q.eq("state_code", state_filter.upper())
         resp = q.range(offset, offset + page_size - 1).execute()
         batch = resp.data or []
         if not batch:
@@ -86,7 +96,9 @@ def load_public_court_actors_from_supabase(state_filter: str | None = None) -> d
 
     buckets: dict[tuple[str, str, str], dict] = {}
     for row in rows:
-        state = str(row.get("state_code") or "").strip().upper()
+        state = _actor_state(row)
+        if state_filter and state != state_filter.upper():
+            continue
         role = str(row.get("role") or "").strip()
         name = str(row.get("name") or "").strip()
         name_key = _actor_name_key(name)

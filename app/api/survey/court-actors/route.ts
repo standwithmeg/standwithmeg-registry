@@ -24,14 +24,29 @@ type ActorRow = {
   court_or_county: string | null;
   state_code: string | null;
   submission_id: string;
-  survey_submissions: { email: string | null } | { email: string | null }[] | null;
+  survey_submissions:
+    | { email: string | null; state_of_occurrence: string | null }
+    | { email: string | null; state_of_occurrence: string | null }[]
+    | null;
 };
 
-function familyKey(row: ActorRow): string {
-  const state = (row.state_code ?? "").trim().toUpperCase();
+function joinedSubmission(row: ActorRow) {
   const submission = Array.isArray(row.survey_submissions)
     ? row.survey_submissions[0]
     : row.survey_submissions;
+  return submission ?? null;
+}
+
+function actorState(row: ActorRow): string | null {
+  const direct = row.state_code?.trim().toUpperCase();
+  if (direct) return direct;
+  const joined = joinedSubmission(row)?.state_of_occurrence?.trim().toUpperCase();
+  return joined || null;
+}
+
+function familyKey(row: ActorRow): string {
+  const state = actorState(row) ?? "";
+  const submission = joinedSubmission(row);
   const email = submission?.email?.trim().toLowerCase();
   return email ? `${email}|${state}` : `submission:${row.submission_id}`;
 }
@@ -39,7 +54,7 @@ function familyKey(row: ActorRow): string {
 export async function GET(request: Request) {
   try {
     const { searchParams } = new URL(request.url);
-    const stateFilter = searchParams.get("state");
+    const stateFilter = searchParams.get("state")?.trim().toUpperCase() || null;
 
     const sb = createAdminSupabaseClient();
 
@@ -52,10 +67,9 @@ export async function GET(request: Request) {
       // Public threshold only counts form_direct rows. Extracted rows
       // (regex / AI scans of legacy free-text) are admin-only signals;
       // they never surface names publicly on their own.
-      let q = sb.from("court_actors")
-        .select("role, name, court_or_county, state_code, submission_id, survey_submissions(email)")
+      const q = sb.from("court_actors")
+        .select("role, name, court_or_county, state_code, submission_id, survey_submissions(email, state_of_occurrence)")
         .eq("source", "form_direct");
-      if (stateFilter) q = q.eq("state_code", stateFilter.toUpperCase());
       const { data, error } = await q.range(from, from + pageSize - 1);
       if (error) {
         // Table may not exist yet — return empty list gracefully
@@ -84,7 +98,10 @@ export async function GET(request: Request) {
     const buckets = new Map<string, Bucket>();
     for (const a of all) {
       if (!a.role || !a.name) continue;
-      const normalizedName = actorBucketKey(a.name, a.role, a.state_code);
+      const state = actorState(a);
+      if (!state) continue;
+      if (stateFilter && state !== stateFilter) continue;
+      const normalizedName = actorBucketKey(a.name, a.role, state);
       if (!normalizedName.split("|")[0]) continue;
       const key = normalizedName;
       if (!buckets.has(key)) {
@@ -92,7 +109,7 @@ export async function GET(request: Request) {
           role: a.role,
           name: a.name,
           court_or_county: a.court_or_county,
-          state_code: a.state_code,
+          state_code: state,
           families: new Set(),
           casingCounts: new Map(),
           courtCounts: new Map(),

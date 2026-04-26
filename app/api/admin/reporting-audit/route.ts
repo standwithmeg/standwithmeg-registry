@@ -38,7 +38,10 @@ type ActorRow = {
   name: string;
   state_code: string | null;
   submission_id: string;
-  survey_submissions: { email: string | null } | { email: string | null }[] | null;
+  survey_submissions:
+    | { email: string | null; state_of_occurrence: string | null }
+    | { email: string | null; state_of_occurrence: string | null }[]
+    | null;
 };
 
 type AuditRow = {
@@ -68,15 +71,26 @@ async function requireAdmin() {
   return !error && !!user?.email && isAdminEmail(user.email);
 }
 
-function joinedEmail(row: ActorRow) {
+function joinedSubmission(row: ActorRow) {
   const joined = Array.isArray(row.survey_submissions)
     ? row.survey_submissions[0]
     : row.survey_submissions;
+  return joined ?? null;
+}
+
+function joinedEmail(row: ActorRow) {
+  const joined = joinedSubmission(row);
   return joined?.email?.trim().toLowerCase() ?? "";
 }
 
+function actorState(row: ActorRow) {
+  const direct = row.state_code?.trim().toUpperCase();
+  if (direct) return direct;
+  return joinedSubmission(row)?.state_of_occurrence?.trim().toUpperCase() || "";
+}
+
 function actorFamilyKey(row: ActorRow) {
-  const state = (row.state_code ?? "").trim().toUpperCase();
+  const state = actorState(row);
   const email = joinedEmail(row);
   return email ? `${email}|${state}` : `submission:${row.submission_id}`;
 }
@@ -150,7 +164,7 @@ async function fetchPublicActorCounts(adminSupabase: ReturnType<typeof createAdm
   while (true) {
     const { data, error } = await adminSupabase
       .from("court_actors")
-      .select("role,name,state_code,submission_id,survey_submissions(email)")
+      .select("role,name,state_code,submission_id,survey_submissions(email, state_of_occurrence)")
       .eq("source", "form_direct")
       .range(from, from + pageSize - 1);
 
@@ -164,7 +178,7 @@ async function fetchPublicActorCounts(adminSupabase: ReturnType<typeof createAdm
 
   const buckets = new Map<string, { state: string; families: Set<string> }>();
   for (const row of rows) {
-    const state = (row.state_code ?? "").trim().toUpperCase();
+    const state = actorState(row);
     if (!state || !row.role || !row.name) continue;
     const bucketKey = actorBucketKey(row.name, row.role, state);
     if (!bucketKey.split("|")[0]) continue;
