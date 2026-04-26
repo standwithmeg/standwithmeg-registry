@@ -13,15 +13,15 @@
   },
   {
     "state": "KS",
-    "submissions": 119,
+    "submissions": 120,
     "file": "/state-reports/KS.pdf",
-    "size_kb": 1173
+    "size_kb": 1177
   },
   {
     "state": "FL",
-    "submissions": 114,
+    "submissions": 116,
     "file": "/state-reports/FL.pdf",
-    "size_kb": 1179
+    "size_kb": 1178
   },
   {
     "state": "MO",
@@ -31,9 +31,9 @@
   },
   {
     "state": "OH",
-    "submissions": 102,
+    "submissions": 103,
     "file": "/state-reports/OH.pdf",
-    "size_kb": 1144
+    "size_kb": 1151
   },
   {
     "state": "PA",
@@ -55,9 +55,9 @@
   },
   {
     "state": "IL",
-    "submissions": 69,
+    "submissions": 70,
     "file": "/state-reports/IL.pdf",
-    "size_kb": 1143
+    "size_kb": 1148
   },
   {
     "state": "NY",
@@ -78,6 +78,12 @@
     "size_kb": 1163
   },
   {
+    "state": "CO",
+    "submissions": 54,
+    "file": "/state-reports/CO.pdf",
+    "size_kb": 1151
+  },
+  {
     "state": "GA",
     "submissions": 54,
     "file": "/state-reports/GA.pdf",
@@ -88,12 +94,6 @@
     "submissions": 54,
     "file": "/state-reports/IN.pdf",
     "size_kb": 1138
-  },
-  {
-    "state": "CO",
-    "submissions": 52,
-    "file": "/state-reports/CO.pdf",
-    "size_kb": 1146
   },
   {
     "state": "OK",
@@ -115,9 +115,15 @@
   },
   {
     "state": "OR",
-    "submissions": 42,
+    "submissions": 44,
     "file": "/state-reports/OR.pdf",
-    "size_kb": 1147
+    "size_kb": 1145
+  },
+  {
+    "state": "IA",
+    "submissions": 42,
+    "file": "/state-reports/IA.pdf",
+    "size_kb": 1120
   },
   {
     "state": "SC",
@@ -136,12 +142,6 @@
     "submissions": 40,
     "file": "/state-reports/AZ.pdf",
     "size_kb": 1172
-  },
-  {
-    "state": "IA",
-    "submissions": 40,
-    "file": "/state-reports/IA.pdf",
-    "size_kb": 1109
   },
   {
     "state": "MN",
@@ -184,5 +184,11 @@
     "submissions": 30,
     "file": "/state-reports/MD.pdf",
     "size_kb": 1141
+  },
+  {
+    "state": "WV",
+    "submissions": 30,
+    "file": "/state-reports/WV.pdf",
+    "size_kb": 1160
   }
 ]
