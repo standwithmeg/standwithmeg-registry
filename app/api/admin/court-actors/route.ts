@@ -29,8 +29,23 @@ export async function GET() {
       source: string | null;
       created_at: string;
       submission_id: string;
-      survey_submissions: { email: string | null; first_name: string | null; last_name: string | null } | null;
+      survey_submissions:
+        | { email: string | null; first_name: string | null; last_name: string | null }
+        | { email: string | null; first_name: string | null; last_name: string | null }[]
+        | null;
     };
+
+    function joinedSubmission(row: Row) {
+      return Array.isArray(row.survey_submissions)
+        ? row.survey_submissions[0] ?? null
+        : row.survey_submissions;
+    }
+
+    function familyKey(row: Row): string {
+      const state = (row.state_code ?? "").trim().toUpperCase();
+      const email = joinedSubmission(row)?.email?.trim().toLowerCase();
+      return email ? `${email}|${state}` : `submission:${row.submission_id}`;
+    }
 
     let from = 0;
     const pageSize = 1000;
@@ -51,14 +66,14 @@ export async function GET() {
       from += pageSize;
     }
 
-    // Build aggregates: normalized (name, role, state) → count distinct submissions.
+    // Build aggregates: normalized (name, role, state) -> count distinct families.
     // This merges casing, punctuation, common titles, and middle initials,
     // but intentionally avoids risky fuzzy misspelling merges.
     type AggBucket = {
       role: string;
       name: string;
       state_code: string | null;
-      submissions: Set<string>;
+      families: Set<string>;
       courts: Map<string, number>;
     };
     const agg = new Map<string, AggBucket>();
@@ -69,11 +84,11 @@ export async function GET() {
       if (!agg.has(key)) {
         agg.set(key, {
           role: r.role, name: r.name, state_code: r.state_code,
-          submissions: new Set(), courts: new Map(),
+          families: new Set(), courts: new Map(),
         });
       }
       const b = agg.get(key)!;
-      b.submissions.add(r.submission_id);
+      b.families.add(familyKey(r));
       if (r.court_or_county) b.courts.set(r.court_or_county, (b.courts.get(r.court_or_county) ?? 0) + 1);
     }
 
@@ -83,26 +98,29 @@ export async function GET() {
         name: b.name,
         state_code: b.state_code,
         court_or_county: [...b.courts.entries()].sort((a, b) => b[1] - a[1])[0]?.[0] ?? null,
-        count: b.submissions.size,
+        count: b.families.size,
       }))
       .sort((a, b) => b.count - a.count);
 
     // Flat list with reporter info
-    const actors = rows.map(r => ({
-      id: r.id,
-      role: r.role,
-      name: r.name,
-      court_or_county: r.court_or_county,
-      state_code: r.state_code,
-      notes: r.notes,
-      source: r.source ?? "form_direct",
-      created_at: r.created_at,
-      submission_id: r.submission_id,
-      reporter_email: r.survey_submissions?.email ?? null,
-      reporter_name: r.survey_submissions
-        ? [r.survey_submissions.first_name, r.survey_submissions.last_name].filter(Boolean).join(" ") || null
-        : null,
-    }));
+    const actors = rows.map(r => {
+      const submission = joinedSubmission(r);
+      return {
+        id: r.id,
+        role: r.role,
+        name: r.name,
+        court_or_county: r.court_or_county,
+        state_code: r.state_code,
+        notes: r.notes,
+        source: r.source ?? "form_direct",
+        created_at: r.created_at,
+        submission_id: r.submission_id,
+        reporter_email: submission?.email ?? null,
+        reporter_name: submission
+          ? [submission.first_name, submission.last_name].filter(Boolean).join(" ") || null
+          : null,
+      };
+    });
 
     return Response.json({ actors, aggregates });
   } catch (err) {

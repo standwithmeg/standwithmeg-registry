@@ -45,6 +45,15 @@ def _most_common(counter: Counter):
     return counter.most_common(1)[0][0] if counter else None
 
 
+def _actor_family_key(row: dict) -> str:
+    state = str(row.get("state_code") or "").strip().upper()
+    joined = row.get("survey_submissions") or {}
+    if isinstance(joined, list):
+        joined = joined[0] if joined else {}
+    email = str(joined.get("email") or "").strip().lower() if isinstance(joined, dict) else ""
+    return f"{email}|{state}" if email else f"submission:{row.get('submission_id')}"
+
+
 def load_public_court_actors_from_supabase(state_filter: str | None = None) -> dict[str, list[dict]]:
     """Return public-safe court actors grouped by state using the 5-family rule."""
     url = os.environ.get("NEXT_PUBLIC_SUPABASE_URL") or os.environ.get("SUPABASE_URL")
@@ -61,7 +70,7 @@ def load_public_court_actors_from_supabase(state_filter: str | None = None) -> d
     while True:
         q = (
             sb.table("court_actors")
-            .select("role,name,court_or_county,state_code,submission_id")
+            .select("role,name,court_or_county,state_code,submission_id,survey_submissions(email)")
             .eq("source", "form_direct")
         )
         if state_filter:
@@ -91,7 +100,7 @@ def load_public_court_actors_from_supabase(state_filter: str | None = None) -> d
                 "role_counts": Counter(),
                 "name_counts": Counter(),
                 "court_counts": Counter(),
-                "submissions": set(),
+                "families": set(),
             },
         )
         bucket["role_counts"][role] += 1
@@ -99,11 +108,11 @@ def load_public_court_actors_from_supabase(state_filter: str | None = None) -> d
         if row.get("court_or_county"):
             bucket["court_counts"][str(row["court_or_county"]).strip()] += 1
         if row.get("submission_id"):
-            bucket["submissions"].add(str(row["submission_id"]))
+            bucket["families"].add(_actor_family_key(row))
 
     by_state: dict[str, list[dict]] = defaultdict(list)
     for bucket in buckets.values():
-        count = len(bucket["submissions"])
+        count = len(bucket["families"])
         if count < PUBLIC_ACTOR_THRESHOLD:
             continue
         state = bucket["state_code"]

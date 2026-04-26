@@ -7,8 +7,24 @@ const BG    = "#0F1E30";  // deep dark navy for page background
 
 // Fires a workflow_dispatch on GitHub. The workflow regenerates one state
 // PDF (or all 30+ states when state is blank), commits to main, and Vercel
-// redeploys. UI shows queue confirmation — actual completion takes ~3 min.
-type RegenerateResult = { message: string; workflow_url?: string };
+// redeploys. UI polls GitHub after dispatch so admins can see whether it
+// queued, started, completed, or failed.
+type RegenerateStatus = "idle" | "pending" | "queued" | "running" | "done" | "error";
+type RegenerateResult = {
+  message?: string;
+  workflow_url?: string;
+  run_id?: number;
+  run_url?: string;
+  run_status?: string;
+  run_conclusion?: string | null;
+};
+
+const REGEN_POLL_INTERVAL_MS = 10_000;
+const REGEN_POLL_ATTEMPTS = 60;
+
+function sleep(ms: number) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 
 async function dispatchRegenerate(state: string): Promise<RegenerateResult> {
   const res = await fetch("/api/admin/regenerate-state-pdf", {
@@ -20,11 +36,72 @@ async function dispatchRegenerate(state: string): Promise<RegenerateResult> {
   if (!res.ok) {
     throw new Error(json.error || `HTTP ${res.status}`);
   }
-  return { message: json.message || "Regeneration queued.", workflow_url: json.workflow_url };
+  return {
+    message: json.message || "Regeneration queued.",
+    workflow_url: json.workflow_url,
+    run_id: json.run_id,
+    run_url: json.run_url,
+    run_status: json.run_status,
+    run_conclusion: json.run_conclusion,
+  };
+}
+
+async function fetchRegenerateStatus(runId: number): Promise<RegenerateResult> {
+  const res = await fetch(`/api/admin/regenerate-state-pdf?run_id=${encodeURIComponent(String(runId))}`);
+  const json = await res.json().catch(() => ({}));
+  if (!res.ok) {
+    throw new Error(json.error || `HTTP ${res.status}`);
+  }
+  return {
+    workflow_url: json.workflow_url,
+    run_id: json.run_id,
+    run_url: json.run_url,
+    run_status: json.run_status,
+    run_conclusion: json.run_conclusion,
+  };
+}
+
+function statusFromRun(result: RegenerateResult): RegenerateStatus {
+  if (result.run_status === "completed") {
+    return result.run_conclusion === "success" ? "done" : "error";
+  }
+  if (result.run_status === "in_progress") return "running";
+  if (result.run_status) return "queued";
+  return "queued";
+}
+
+function regenerateMessage(result: RegenerateResult, state: string) {
+  const target = state ? `${state}.pdf` : "all 30+ state PDFs";
+  if (result.run_status === "completed") {
+    return result.run_conclusion === "success"
+      ? `GitHub Actions finished regenerating ${target}. Vercel should redeploy after the commit.`
+      : `GitHub Actions ended with "${result.run_conclusion || "failed"}" for ${target}. Open the run for details.`;
+  }
+  if (result.run_status === "in_progress") {
+    return `GitHub Actions is running for ${target}.`;
+  }
+  if (result.run_status) {
+    return `GitHub Actions is ${result.run_status} for ${target}.`;
+  }
+  return result.message || `Regeneration queued for ${target}.`;
+}
+
+async function pollRegenerateRun(
+  runId: number,
+  state: string,
+  onUpdate: (result: RegenerateResult, status: RegenerateStatus, message: string) => void
+) {
+  for (let attempt = 0; attempt < REGEN_POLL_ATTEMPTS; attempt += 1) {
+    await sleep(REGEN_POLL_INTERVAL_MS);
+    const result = await fetchRegenerateStatus(runId);
+    const status = statusFromRun(result);
+    onUpdate(result, status, regenerateMessage(result, state));
+    if (status === "done" || status === "error") return;
+  }
 }
 
 function RegenerateStateButton({ state }: { state: string }) {
-  const [status, setStatus] = useState<"idle" | "pending" | "done" | "error">("idle");
+  const [status, setStatus] = useState<RegenerateStatus>("idle");
   const [msg, setMsg] = useState("");
   const [workflowUrl, setWorkflowUrl] = useState<string | null>(null);
   async function click(e: React.MouseEvent) {
@@ -34,34 +111,74 @@ function RegenerateStateButton({ state }: { state: string }) {
     setMsg("");
     try {
       const result = await dispatchRegenerate(state);
-      setStatus("done");
-      setMsg(result.message);
-      setWorkflowUrl(result.workflow_url ?? null);
-      setTimeout(() => setStatus("idle"), 10 * 60 * 1000);
+      const nextStatus = statusFromRun(result);
+      setStatus(nextStatus);
+      setMsg(regenerateMessage(result, state));
+      setWorkflowUrl(result.run_url ?? result.workflow_url ?? null);
+      if (result.run_id && nextStatus !== "done" && nextStatus !== "error") {
+        void pollRegenerateRun(result.run_id, state, (pollResult, pollStatus, pollMsg) => {
+          setStatus(pollStatus);
+          setMsg(pollMsg);
+          setWorkflowUrl(pollResult.run_url ?? pollResult.workflow_url ?? result.run_url ?? result.workflow_url ?? null);
+          if (pollStatus === "done" || pollStatus === "error") {
+            setTimeout(() => setStatus("idle"), 10 * 60 * 1000);
+          }
+        }).catch(err => {
+          setStatus("error");
+          setMsg(err instanceof Error ? err.message : "Failed to check workflow status.");
+          setTimeout(() => setStatus("idle"), 8000);
+        });
+      } else {
+        setTimeout(() => setStatus("idle"), 10 * 60 * 1000);
+      }
     } catch (err) {
       setStatus("error");
       setMsg(err instanceof Error ? err.message : "Failed");
       setTimeout(() => setStatus("idle"), 6000);
     }
   }
-  const label = status === "pending" ? "..." : status === "done" ? "Queued ✓" : status === "error" ? "failed" : "Regen PDF";
+  const label = status === "pending"
+    ? "..."
+    : status === "queued"
+    ? "Queued"
+    : status === "running"
+    ? "Running"
+    : status === "done"
+    ? "Done ✓"
+    : status === "error"
+    ? "failed"
+    : "Regen PDF";
   const color = status === "done" ? "#22c55e" : status === "error" ? "#ef4444" : GOLD;
   return (
-    <button
-      type="button"
-      onClick={click}
-      disabled={status === "pending"}
-      title={msg || (workflowUrl ? `Queued. Check ${workflowUrl}` : `Regenerate ${state}.pdf from live Supabase data`)}
-      className="text-xs px-2 py-1 rounded-md font-bold transition-opacity hover:opacity-80 disabled:opacity-50"
-      style={{ backgroundColor: "rgba(201,162,39,0.15)", color, border: `1px solid ${color}40` }}
-    >
-      {label}
-    </button>
+    <span className="inline-flex items-center gap-1">
+      <button
+        type="button"
+        onClick={click}
+        disabled={status === "pending" || status === "queued" || status === "running"}
+        title={msg || (workflowUrl ? `Check ${workflowUrl}` : `Regenerate ${state}.pdf from live Supabase data`)}
+        className="text-xs px-2 py-1 rounded-md font-bold transition-opacity hover:opacity-80 disabled:opacity-50"
+        style={{ backgroundColor: "rgba(201,162,39,0.15)", color, border: `1px solid ${color}40` }}
+      >
+        {label}
+      </button>
+      {workflowUrl && status !== "idle" && (
+        <a
+          href={workflowUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={e => e.stopPropagation()}
+          className="text-[10px] underline underline-offset-2"
+          style={{ color: "rgba(245,245,245,0.55)" }}
+        >
+          Actions
+        </a>
+      )}
+    </span>
   );
 }
 
 function RegenerateAllButton() {
-  const [status, setStatus] = useState<"idle" | "pending" | "done" | "error">("idle");
+  const [status, setStatus] = useState<RegenerateStatus>("idle");
   const [msg, setMsg] = useState("");
   const [workflowUrl, setWorkflowUrl] = useState<string | null>(null);
   async function click() {
@@ -70,28 +187,67 @@ function RegenerateAllButton() {
     setStatus("pending");
     try {
       const result = await dispatchRegenerate("");
-      setStatus("done");
-      setMsg(result.message);
-      setWorkflowUrl(result.workflow_url ?? null);
-      setTimeout(() => setStatus("idle"), 10 * 60 * 1000);
+      const nextStatus = statusFromRun(result);
+      setStatus(nextStatus);
+      setMsg(regenerateMessage(result, ""));
+      setWorkflowUrl(result.run_url ?? result.workflow_url ?? null);
+      if (result.run_id && nextStatus !== "done" && nextStatus !== "error") {
+        void pollRegenerateRun(result.run_id, "", (pollResult, pollStatus, pollMsg) => {
+          setStatus(pollStatus);
+          setMsg(pollMsg);
+          setWorkflowUrl(pollResult.run_url ?? pollResult.workflow_url ?? result.run_url ?? result.workflow_url ?? null);
+          if (pollStatus === "done" || pollStatus === "error") {
+            setTimeout(() => setStatus("idle"), 10 * 60 * 1000);
+          }
+        }).catch(err => {
+          setStatus("error");
+          setMsg(err instanceof Error ? err.message : "Failed to check workflow status.");
+          setTimeout(() => setStatus("idle"), 8000);
+        });
+      } else {
+        setTimeout(() => setStatus("idle"), 10 * 60 * 1000);
+      }
     } catch (err) {
       setStatus("error");
       setMsg(err instanceof Error ? err.message : "Failed");
       setTimeout(() => setStatus("idle"), 8000);
     }
   }
-  const label = status === "pending" ? "Queuing..." : status === "done" ? "Queued ✓ Check Actions" : status === "error" ? "Failed" : "Regenerate all 30+ PDFs";
+  const label = status === "pending"
+    ? "Queuing..."
+    : status === "queued"
+    ? "Queued in Actions"
+    : status === "running"
+    ? "Running in Actions"
+    : status === "done"
+    ? "Done ✓"
+    : status === "error"
+    ? "Failed"
+    : "Regenerate all 30+ PDFs";
   return (
-    <button
-      type="button"
-      onClick={click}
-      disabled={status === "pending"}
-      title={msg || (workflowUrl ? `Queued. Check ${workflowUrl}` : "Queue a workflow run that regenerates every 30+ state PDF")}
-      className="text-xs px-3 py-2 rounded-lg font-bold transition-opacity hover:opacity-80 disabled:opacity-50"
-      style={{ backgroundColor: "rgba(201,162,39,0.15)", color: GOLD, border: `1px solid rgba(201,162,39,0.4)` }}
-    >
-      {label}
-    </button>
+    <span className="inline-flex items-center gap-2">
+      <button
+        type="button"
+        onClick={click}
+        disabled={status === "pending" || status === "queued" || status === "running"}
+        title={msg || (workflowUrl ? `Check ${workflowUrl}` : "Queue a workflow run that regenerates every 30+ state PDF")}
+        className="text-xs px-3 py-2 rounded-lg font-bold transition-opacity hover:opacity-80 disabled:opacity-50"
+        style={{ backgroundColor: "rgba(201,162,39,0.15)", color: GOLD, border: `1px solid rgba(201,162,39,0.4)` }}
+      >
+        {label}
+      </button>
+      {workflowUrl && status !== "idle" && (
+        <a
+          href={workflowUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-xs underline underline-offset-2"
+          style={{ color: "rgba(245,245,245,0.6)" }}
+        >
+          Open run
+        </a>
+      )}
+    </span>
   );
 }
 
@@ -153,6 +309,39 @@ type Stats = {
   financials: { total_loss: number; avg_loss: number; count_with_financials: number };
 };
 
+type AuditStatus = "ok" | "not_eligible" | "missing_pdf" | "count_mismatch" | "stale_pdf";
+
+type ReportingAuditRow = {
+  state: string;
+  is_us: boolean;
+  dashboard_families: number;
+  report_eligible: boolean;
+  pdf_available: boolean;
+  pdf_index_families: number | null;
+  pdf_count_delta: number | null;
+  reporting_status: AuditStatus;
+  shareable_quotes: number;
+  public_court_actors: number;
+  total_reported_loss: number | null;
+  avg_reported_loss: number | null;
+  avg_months_lost: number | null;
+  no_contact_count: number;
+  pro_se_count: number;
+  latest_submission_at: string | null;
+  pdf_url: string | null;
+  pdf_size_kb: number | null;
+};
+
+type ReportingAuditSummary = {
+  total_rows: number;
+  eligible_states: number;
+  pdfs_available: number;
+  mismatches: number;
+  missing_pdfs: number;
+  stale_pdfs: number;
+  generated_at: string;
+};
+
 type QuoteRow = {
   id: string;
   first_name: string | null;
@@ -165,6 +354,26 @@ type QuoteRow = {
 function fmt$(n: number | null) {
   if (n == null || n === 0) return "—";
   return "$" + n.toLocaleString();
+}
+
+function fmtNum(n: number | null) {
+  if (n == null) return "—";
+  return n.toLocaleString();
+}
+
+function auditStatusMeta(status: AuditStatus) {
+  switch (status) {
+    case "ok":
+      return { label: "OK", color: "rgb(134,239,172)", bg: "rgba(74,222,128,0.14)", border: "rgba(74,222,128,0.28)" };
+    case "missing_pdf":
+      return { label: "Missing PDF", color: "rgb(252,165,165)", bg: "rgba(185,28,28,0.18)", border: "rgba(185,28,28,0.38)" };
+    case "count_mismatch":
+      return { label: "Count mismatch", color: "rgb(253,224,71)", bg: "rgba(234,179,8,0.16)", border: "rgba(234,179,8,0.35)" };
+    case "stale_pdf":
+      return { label: "Stale PDF", color: "rgb(251,146,60)", bg: "rgba(249,115,22,0.15)", border: "rgba(249,115,22,0.32)" };
+    default:
+      return { label: "Not eligible", color: "rgba(245,245,245,0.45)", bg: "rgba(255,255,255,0.06)", border: "rgba(255,255,255,0.12)" };
+  }
 }
 
 function timeAgo(iso: string) {
@@ -198,6 +407,42 @@ function displayName(row: RecentRow) {
   if (row.permission_to_share === "anonymous" || !row.first_name) return "Anonymous";
   if (row.permission_to_share === "first_name") return row.first_name[0] + ".";
   return row.first_name;
+}
+
+type NudgeTarget = {
+  email: string;
+  name: string;
+  subject: string;
+  body: string;
+  html: string;
+};
+
+function escapeHtml(text: string) {
+  return text
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
+function nudgeBodyToHtml(body: string) {
+  const paragraphs = body
+    .split(/\n{2,}/)
+    .map(part => part.trim())
+    .filter(Boolean)
+    .map(part => {
+      const escaped = escapeHtml(part)
+        .replace(
+          /https:\/\/my\.standwithmeg\.com\/survey/g,
+          '<a href="https://my.standwithmeg.com/survey" style="color:#B91C1C;font-weight:700;">https://my.standwithmeg.com/survey</a>'
+        )
+        .replace(/\n/g, "<br>");
+      return `<p>${escaped}</p>`;
+    })
+    .join("");
+
+  return `<div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.55;color:#1a1a1a;max-width:600px;">${paragraphs}</div>`;
 }
 
 export default function AdminPage() {
@@ -237,6 +482,9 @@ export default function AdminPage() {
   type ActorView = "by_state" | "patterns" | "all";
   const [actorView, setActorView] = useState<ActorView>("by_state");
   const [expandedState, setExpandedState] = useState<string | null>(null);
+  const [auditRows, setAuditRows] = useState<ReportingAuditRow[]>([]);
+  const [auditSummary, setAuditSummary] = useState<ReportingAuditSummary | null>(null);
+  const [auditError, setAuditError] = useState<string | null>(null);
 
   // Quote modal
   const [quoteModal, setQuoteModal] = useState<{ state: string; is_us: boolean; total: number } | null>(null);
@@ -261,27 +509,52 @@ export default function AdminPage() {
 
   function closeModal() { setQuoteModal(null); setModalQuotes([]); }
 
+  const applyActorData = useCallback((data: { actors?: AdminActor[]; aggregates?: AdminActorAgg[] }) => {
+    setAdminActors(data.actors ?? []);
+    setAdminActorAggs(data.aggregates ?? []);
+  }, []);
+
+  const refreshActors = useCallback(async () => {
+    const actorsRes = await fetch("/api/admin/court-actors");
+    const actorsData = await actorsRes.json().catch(() => ({ actors: [], aggregates: [] }));
+    if (!actorsRes.ok) {
+      throw new Error(actorsData.error || "Failed to reload court actors.");
+    }
+    applyActorData(actorsData);
+  }, [applyActorData]);
+
   const load = useCallback(async () => {
     setLoading(true);
     setError(null);
     try {
-      const [statsRes, actorsRes] = await Promise.all([
+      const [statsRes, actorsRes, auditRes] = await Promise.all([
         fetch("/api/admin/survey-stats"),
         fetch("/api/admin/court-actors"),
+        fetch("/api/admin/reporting-audit"),
       ]);
       const statsData = await statsRes.json();
       if (!statsRes.ok) { setError(statsData.error || "Failed to load stats."); return; }
       setStats(statsData);
 
       const actorsData = await actorsRes.json().catch(() => ({ actors: [], aggregates: [] }));
-      setAdminActors(actorsData.actors ?? []);
-      setAdminActorAggs(actorsData.aggregates ?? []);
+      applyActorData(actorsData);
+
+      const auditData = await auditRes.json().catch(() => ({ rows: [], summary: null }));
+      if (auditRes.ok) {
+        setAuditRows(auditData.rows ?? []);
+        setAuditSummary(auditData.summary ?? null);
+        setAuditError(null);
+      } else {
+        setAuditRows([]);
+        setAuditSummary(null);
+        setAuditError(auditData.error || "Failed to load reporting audit.");
+      }
     } catch {
       setError("Network error.");
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [applyActorData]);
 
   useEffect(() => { load(); }, [load]);
 
@@ -317,7 +590,9 @@ export default function AdminPage() {
         alert("Action failed: " + (data.error ?? res.statusText));
         return;
       }
-      await load();
+      await refreshActors();
+    } catch (err) {
+      alert("Action failed: " + (err instanceof Error ? err.message : "Network error."));
     } finally {
       setActorActing(null);
     }
@@ -327,9 +602,7 @@ export default function AdminPage() {
   // and paste into Gmail, Outlook, or whatever mail tool they use. We
   // avoid mailto: because it's flaky (requires a default mail client set
   // up and Chrome sometimes blocks it silently).
-  const [nudgeTarget, setNudgeTarget] = useState<{
-    email: string; name: string; subject: string; body: string; html: string;
-  } | null>(null);
+  const [nudgeTarget, setNudgeTarget] = useState<NudgeTarget | null>(null);
   const [nudgeCopied, setNudgeCopied] = useState<"none" | "email" | "subject" | "body" | "all">("none");
   const [nudgeSending, setNudgeSending] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [nudgeSendError, setNudgeSendError] = useState<string | null>(null);
@@ -346,7 +619,7 @@ export default function AdminPage() {
           to: nudgeTarget.email,
           subject: nudgeTarget.subject,
           body: nudgeTarget.body,
-          html: nudgeTarget.html,
+          html: nudgeBodyToHtml(nudgeTarget.body),
         }),
       });
       const json = await res.json();
@@ -366,7 +639,11 @@ export default function AdminPage() {
     if (!a.reporter_email) { alert("No email on file for this reporter."); return; }
     const greeting = a.reporter_name ? `Hi ${a.reporter_name.split(" ")[0]},` : "Hi,";
     const subject = "Stand With Meg — Quick follow-up on your submission";
-    const actorLine = `${a.role} ${a.name}${a.state_code ? ` in ${a.state_code}` : ""}`;
+    const actorName = a.name.trim();
+    const hasNamedActor = actorName && actorName.toLowerCase() !== "unknown";
+    const actorLine = hasNamedActor
+      ? `${a.role} ${actorName}${a.state_code ? ` in ${a.state_code}` : ""}`
+      : `an unnamed ${a.role}${a.state_code ? ` in ${a.state_code}` : ""}`;
     const body = [
       greeting,
       "",
@@ -385,23 +662,19 @@ export default function AdminPage() {
       "Stand With Meg · standwithmeg.com",
     ].join("\n");
 
-    // HTML version — used when sending via SMTP. Bolded call-to-action
-    // sits right next to the link so it's impossible to miss.
-    const html = `<div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;font-size:15px;line-height:1.55;color:#1a1a1a;max-width:600px;">
-      <p>${greeting}</p>
-      <p>Thank you again for sharing your story with Stand With Meg. When we read through your submission, you mentioned <strong>${actorLine}</strong>.</p>
-      <p>We recently added a dedicated Court Actors section to the survey so families can clearly name the judges, attorneys, GALs, and other officials involved in their case. We only publish a name once 5 different families have independently named that same person — your input helps us reach that threshold and surface real patterns.</p>
-      <p>Would you be willing to re-submit just the Court Actors section?<br>
-      <strong style="color:#B91C1C;">You don't need to redo the whole survey</strong> — you can skip the sections you've already filled.</p>
-      <p><a href="https://my.standwithmeg.com/survey" style="display:inline-block;background:#C9A227;color:#0F1E30;padding:10px 20px;border-radius:6px;font-weight:bold;text-decoration:none;">Re-submit Court Actors →</a></p>
-      <p>Any court actors you add will be linked to this round of reporting.</p>
-      <p>Thank you for everything you've already contributed. Your voice is part of a national record that's building real momentum.</p>
-      <p>— Meg<br>
-      <span style="color:#666;font-size:13px;">Stand With Meg · <a href="https://standwithmeg.com" style="color:#666;">standwithmeg.com</a></span></p>
-    </div>`;
-
     setNudgeCopied("none");
-    setNudgeTarget({ email: a.reporter_email, name: a.reporter_name || "", subject, body, html });
+    setNudgeTarget({ email: a.reporter_email, name: a.reporter_name || "", subject, body, html: nudgeBodyToHtml(body) });
+    setNudgeSending("idle");
+    setNudgeSendError(null);
+  }
+
+  function updateNudgeField(field: "email" | "subject" | "body", value: string) {
+    setNudgeTarget(prev => {
+      if (!prev) return prev;
+      const next = { ...prev, [field]: value };
+      return field === "body" ? { ...next, html: nudgeBodyToHtml(value) } : next;
+    });
+    setNudgeCopied("none");
     setNudgeSending("idle");
     setNudgeSendError(null);
   }
@@ -699,6 +972,138 @@ export default function AdminPage() {
               </tbody>
             </table>
           </div>
+        </div>
+
+        {/* ── Reporting Audit Spreadsheet ── */}
+        <div className="rounded-2xl overflow-hidden"
+          style={{ backgroundColor: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.1)" }}>
+          <div className="px-6 py-4 flex justify-between items-start gap-4 flex-wrap border-b"
+            style={{ borderColor: "rgba(255,255,255,0.08)", backgroundColor: "rgba(30,58,95,0.4)" }}>
+            <div>
+              <h2 className="font-black text-white text-base tracking-wide">Reporting Audit Spreadsheet</h2>
+              <p className="text-xs mt-0.5" style={{ color: "rgba(245,245,245,0.4)" }}>
+                Public dashboard totals, PDF index counts, quote counts, and public court-actor counts in one admin-only table.
+              </p>
+            </div>
+            <div className="flex items-center gap-2 flex-wrap justify-end">
+              {auditSummary && (
+                <div className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-wide">
+                  <span className="px-2 py-1 rounded" style={{ backgroundColor: "rgba(74,222,128,0.12)", color: "rgb(134,239,172)", border: "1px solid rgba(74,222,128,0.25)" }}>
+                    {auditSummary.eligible_states} eligible
+                  </span>
+                  <span className="px-2 py-1 rounded" style={{ backgroundColor: "rgba(201,162,39,0.12)", color: GOLD, border: "1px solid rgba(201,162,39,0.25)" }}>
+                    {auditSummary.pdfs_available} PDFs
+                  </span>
+                  {(auditSummary.mismatches + auditSummary.missing_pdfs + auditSummary.stale_pdfs) > 0 && (
+                    <span className="px-2 py-1 rounded" style={{ backgroundColor: "rgba(185,28,28,0.18)", color: "rgb(252,165,165)", border: "1px solid rgba(185,28,28,0.35)" }}>
+                      {auditSummary.mismatches + auditSummary.missing_pdfs + auditSummary.stale_pdfs} flags
+                    </span>
+                  )}
+                </div>
+              )}
+              <a
+                href="/api/admin/reporting-audit?format=csv"
+                className="text-xs px-3 py-2 rounded-lg font-bold transition-opacity hover:opacity-80"
+                style={{ backgroundColor: "rgba(201,162,39,0.15)", color: GOLD, border: `1px solid rgba(201,162,39,0.4)` }}
+              >
+                Download CSV for Google Sheets
+              </a>
+            </div>
+          </div>
+
+          {auditError ? (
+            <div className="px-6 py-8 text-sm" style={{ color: "rgb(252,165,165)" }}>
+              {auditError}
+            </div>
+          ) : (
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead>
+                  <tr style={{ backgroundColor: "rgba(30,58,95,0.6)", borderBottom: `1px solid rgba(201,162,39,0.2)` }}>
+                    {[
+                      "Status",
+                      "State",
+                      "Dashboard Families",
+                      "PDF Count",
+                      "Delta",
+                      "Quotes",
+                      "Court Actors",
+                      "Total Loss",
+                      "Avg Loss",
+                      "Avg Mos. Lost",
+                      "No Contact",
+                      "Pro Se",
+                      "Latest",
+                      "PDF",
+                    ].map(label => (
+                      <th key={label} className="px-3 py-3 text-left text-xs font-bold uppercase tracking-wide whitespace-nowrap"
+                        style={{ color: "rgba(245,245,245,0.45)" }}>
+                        {label}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {auditRows.map((row, i) => {
+                    const status = auditStatusMeta(row.reporting_status);
+                    const delta = row.pdf_count_delta;
+                    return (
+                      <tr key={`${row.is_us ? "us" : "intl"}-${row.state}`}
+                        style={{
+                          borderBottom: "1px solid rgba(255,255,255,0.05)",
+                          backgroundColor: i % 2 === 0 ? "transparent" : "rgba(255,255,255,0.02)",
+                        }}>
+                        <td className="px-3 py-3">
+                          <span className="text-[11px] px-2 py-1 rounded font-bold uppercase tracking-wide whitespace-nowrap"
+                            style={{ color: status.color, backgroundColor: status.bg, border: `1px solid ${status.border}` }}>
+                            {status.label}
+                          </span>
+                        </td>
+                        <td className="px-3 py-3 font-black text-sm" style={{ color: GOLD }}>{row.state}</td>
+                        <td className="px-3 py-3 text-sm font-bold text-white">{fmtNum(row.dashboard_families)}</td>
+                        <td className="px-3 py-3 text-sm" style={{ color: row.pdf_available ? "rgba(245,245,245,0.72)" : "rgba(245,245,245,0.25)" }}>
+                          {fmtNum(row.pdf_index_families)}
+                        </td>
+                        <td className="px-3 py-3 text-sm font-semibold" style={{ color: delta === 0 ? "rgba(245,245,245,0.45)" : "rgb(253,224,71)" }}>
+                          {delta == null ? "—" : delta > 0 ? `+${delta}` : delta}
+                        </td>
+                        <td className="px-3 py-3 text-sm text-green-400 font-semibold">{fmtNum(row.shareable_quotes)}</td>
+                        <td className="px-3 py-3 text-sm font-semibold" style={{ color: GOLD }}>{fmtNum(row.public_court_actors)}</td>
+                        <td className="px-3 py-3 text-sm font-semibold text-red-400">{fmt$(row.total_reported_loss)}</td>
+                        <td className="px-3 py-3 text-sm" style={{ color: "rgba(245,245,245,0.6)" }}>{fmt$(row.avg_reported_loss)}</td>
+                        <td className="px-3 py-3 text-sm" style={{ color: "rgba(245,245,245,0.6)" }}>{row.avg_months_lost ?? "—"}</td>
+                        <td className="px-3 py-3 text-sm" style={{ color: "rgba(245,245,245,0.6)" }}>{fmtNum(row.no_contact_count)}</td>
+                        <td className="px-3 py-3 text-sm" style={{ color: "rgba(245,245,245,0.6)" }}>{fmtNum(row.pro_se_count)}</td>
+                        <td className="px-3 py-3 text-xs font-semibold tabular-nums"
+                          title={row.latest_submission_at ? exactTimestamp(row.latest_submission_at) : undefined}
+                          style={{ color: "rgba(245,245,245,0.4)" }}>
+                          {row.latest_submission_at ? latestInState(row.latest_submission_at) : "—"}
+                        </td>
+                        <td className="px-3 py-3 text-sm">
+                          {row.pdf_url ? (
+                            <a href={row.pdf_url} target="_blank" rel="noopener noreferrer"
+                              className="font-bold underline underline-offset-2"
+                              style={{ color: GOLD }}>
+                              Open
+                            </a>
+                          ) : (
+                            <span style={{ color: "rgba(245,245,245,0.2)" }}>—</span>
+                          )}
+                        </td>
+                      </tr>
+                    );
+                  })}
+                  {auditRows.length === 0 && (
+                    <tr>
+                      <td colSpan={14} className="px-6 py-12 text-center text-sm" style={{ color: "rgba(245,245,245,0.3)" }}>
+                        No reporting audit rows loaded.
+                      </td>
+                    </tr>
+                  )}
+                </tbody>
+              </table>
+            </div>
+          )}
         </div>
 
         {/* ── Court Actors (Admin) ── */}
@@ -1103,7 +1508,7 @@ export default function AdminPage() {
               <div>
                 <div className="font-black text-white text-base leading-none">Nudge this family</div>
                 <div className="text-xs mt-1" style={{ color: "rgba(245,245,245,0.4)" }}>
-                  Copy this message into Gmail, Outlook, iMessage, or anywhere else.
+                  Edit the message, then send it from info@standwithmeg.com or copy it into your mail app.
                 </div>
               </div>
               <button onClick={() => setNudgeTarget(null)}
@@ -1132,10 +1537,13 @@ export default function AdminPage() {
                     {nudgeCopied === "email" ? "✓ Copied" : "Copy"}
                   </button>
                 </div>
-                <div className="rounded-lg px-4 py-2.5 text-sm text-white"
-                  style={{ backgroundColor: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.12)" }}>
-                  {nudgeTarget.email}
-                </div>
+                <input
+                  type="email"
+                  value={nudgeTarget.email}
+                  onChange={e => updateNudgeField("email", e.target.value)}
+                  className="w-full rounded-lg px-4 py-2.5 text-sm text-white outline-none"
+                  style={{ backgroundColor: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.12)" }}
+                />
               </div>
 
               {/* Subject */}
@@ -1152,10 +1560,13 @@ export default function AdminPage() {
                     {nudgeCopied === "subject" ? "✓ Copied" : "Copy"}
                   </button>
                 </div>
-                <div className="rounded-lg px-4 py-2.5 text-sm text-white"
-                  style={{ backgroundColor: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.12)" }}>
-                  {nudgeTarget.subject}
-                </div>
+                <input
+                  type="text"
+                  value={nudgeTarget.subject}
+                  onChange={e => updateNudgeField("subject", e.target.value)}
+                  className="w-full rounded-lg px-4 py-2.5 text-sm text-white outline-none"
+                  style={{ backgroundColor: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.12)" }}
+                />
               </div>
 
               {/* Body */}
@@ -1172,10 +1583,13 @@ export default function AdminPage() {
                     {nudgeCopied === "body" ? "✓ Copied" : "Copy"}
                   </button>
                 </div>
-                <div className="rounded-lg px-4 py-3 text-sm whitespace-pre-wrap"
-                  style={{ backgroundColor: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.1)", color: "rgba(245,245,245,0.8)", maxHeight: "300px", overflowY: "auto" }}>
-                  {nudgeTarget.body}
-                </div>
+                <textarea
+                  value={nudgeTarget.body}
+                  onChange={e => updateNudgeField("body", e.target.value)}
+                  rows={14}
+                  className="w-full rounded-lg px-4 py-3 text-sm outline-none resize-y"
+                  style={{ backgroundColor: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.1)", color: "rgba(245,245,245,0.85)", minHeight: "260px" }}
+                />
               </div>
             </div>
 
@@ -1189,9 +1603,15 @@ export default function AdminPage() {
                 </div>
               )}
               <div className="flex items-center gap-3">
-              <button
-                onClick={sendNudgeNow}
-                disabled={nudgeSending === "sending" || nudgeSending === "sent"}
+	              <button
+	                onClick={sendNudgeNow}
+	                disabled={
+	                  nudgeSending === "sending" ||
+	                  nudgeSending === "sent" ||
+	                  !nudgeTarget.email.trim() ||
+	                  !nudgeTarget.subject.trim() ||
+	                  !nudgeTarget.body.trim()
+	                }
                 className="flex-1 py-2.5 rounded-lg font-bold text-sm transition-colors disabled:opacity-70"
                 style={{
                   backgroundColor: nudgeSending === "sent" ? "rgba(74,222,128,0.2)" : "#C9A227",

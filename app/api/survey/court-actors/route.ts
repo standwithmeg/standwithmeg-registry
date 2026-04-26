@@ -24,7 +24,17 @@ type ActorRow = {
   court_or_county: string | null;
   state_code: string | null;
   submission_id: string;
+  survey_submissions: { email: string | null } | { email: string | null }[] | null;
 };
+
+function familyKey(row: ActorRow): string {
+  const state = (row.state_code ?? "").trim().toUpperCase();
+  const submission = Array.isArray(row.survey_submissions)
+    ? row.survey_submissions[0]
+    : row.survey_submissions;
+  const email = submission?.email?.trim().toLowerCase();
+  return email ? `${email}|${state}` : `submission:${row.submission_id}`;
+}
 
 export async function GET(request: Request) {
   try {
@@ -43,7 +53,7 @@ export async function GET(request: Request) {
       // (regex / AI scans of legacy free-text) are admin-only signals;
       // they never surface names publicly on their own.
       let q = sb.from("court_actors")
-        .select("role, name, court_or_county, state_code, submission_id")
+        .select("role, name, court_or_county, state_code, submission_id, survey_submissions(email)")
         .eq("source", "form_direct");
       if (stateFilter) q = q.eq("state_code", stateFilter.toUpperCase());
       const { data, error } = await q.range(from, from + pageSize - 1);
@@ -53,12 +63,12 @@ export async function GET(request: Request) {
         return Response.json({ actors: [] });
       }
       if (!data || data.length === 0) break;
-      all.push(...data);
+      all.push(...(data as unknown as ActorRow[]));
       if (data.length < pageSize) break;
       from += pageSize;
     }
 
-    // Bucket by (lowercase name + role + state). Count DISTINCT submissions
+    // Bucket by normalized (name + role + state). Count DISTINCT families
     // per bucket (not distinct rows — the threshold is "5 different families",
     // so one family naming the same person twice only counts once).
     type Bucket = {
@@ -66,7 +76,7 @@ export async function GET(request: Request) {
       name: string;           // preserves the most common casing seen
       court_or_county: string | null;
       state_code: string | null;
-      submissions: Set<string>;
+      families: Set<string>;
       casingCounts: Map<string, number>;
       courtCounts: Map<string, number>;
     };
@@ -83,13 +93,13 @@ export async function GET(request: Request) {
           name: a.name,
           court_or_county: a.court_or_county,
           state_code: a.state_code,
-          submissions: new Set(),
+          families: new Set(),
           casingCounts: new Map(),
           courtCounts: new Map(),
         });
       }
       const b = buckets.get(key)!;
-      b.submissions.add(a.submission_id);
+      b.families.add(familyKey(a));
       b.casingCounts.set(a.name, (b.casingCounts.get(a.name) ?? 0) + 1);
       if (a.court_or_county) {
         b.courtCounts.set(a.court_or_county, (b.courtCounts.get(a.court_or_county) ?? 0) + 1);
@@ -107,13 +117,13 @@ export async function GET(request: Request) {
     }
 
     const publicActors = [...buckets.values()]
-      .filter(b => b.submissions.size >= PUBLIC_THRESHOLD)
+      .filter(b => b.families.size >= PUBLIC_THRESHOLD)
       .map(b => ({
         role: b.role,
         name: mostFrequent(b.casingCounts) ?? b.name,
         court_or_county: mostFrequent(b.courtCounts),
         state_code: b.state_code,
-        count: b.submissions.size,
+        count: b.families.size,
       }))
       .sort((a, b) => b.count - a.count);
 
