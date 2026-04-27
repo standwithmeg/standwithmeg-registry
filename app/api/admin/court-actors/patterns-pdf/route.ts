@@ -5,7 +5,8 @@ import { actorBucketKey } from "../../../../../lib/court-actors";
 
 export const runtime = "nodejs";
 
-const DEFAULT_PUBLIC_THRESHOLD = 5;
+const DEFAULT_EXPORT_THRESHOLD = 1;
+const PUBLIC_NAMING_THRESHOLD = 5;
 
 type ActorRow = {
   role: string;
@@ -24,6 +25,7 @@ type PatternRow = {
   role: string;
   state: string;
   families: number;
+  needed_for_public: number;
   counties: string;
 };
 
@@ -129,6 +131,7 @@ async function fetchPatternRows(threshold: number, stateFilter: string | null): 
       role: mostFrequent(bucket.roleCounts) || "Court Actor",
       state: bucket.state,
       families: bucket.families.size,
+      needed_for_public: Math.max(0, PUBLIC_NAMING_THRESHOLD - bucket.families.size),
       counties: [...bucket.countyFamilies.entries()]
         .map(([county, families]) => ({ county, count: families.size }))
         .sort((a, b) => b.count - a.count || a.county.localeCompare(b.county))
@@ -183,54 +186,80 @@ function buildPdf(patterns: PatternRow[], threshold: number, stateFilter: string
   const pageHeight = 612;
   const margin = 42;
   const tableWidth = pageWidth - margin * 2;
+  const cream = "0.984 0.968 0.925";
+  const navy = "0.05 0.10 0.18";
+  const red = "0.72 0.09 0.09";
+  const gold = "0.78 0.62 0.15";
+  const muted = "0.31 0.36 0.43";
   const cols = {
-    actor: { x: margin, w: 188 },
-    role: { x: margin + 190, w: 96 },
-    state: { x: margin + 288, w: 42 },
-    families: { x: margin + 332, w: 54 },
-    counties: { x: margin + 388, w: tableWidth - 388 },
+    actor: { x: margin, w: 178 },
+    role: { x: margin + 180, w: 96 },
+    state: { x: margin + 278, w: 42 },
+    families: { x: margin + 322, w: 56 },
+    needed: { x: margin + 380, w: 74 },
+    counties: { x: margin + 456, w: tableWidth - 456 },
   };
   const pages: string[] = [];
   let ops = "";
   let y = pageHeight - margin;
+  const totalFamilyReports = patterns.reduce((sum, row) => sum + row.families, 0);
+  const publicReady = patterns.filter(row => row.needed_for_public === 0).length;
+  const statesCovered = new Set(patterns.map(row => row.state)).size;
+
+  function statBox(x: number, yTop: number, width: number, label: string, value: string, color = navy) {
+    ops += drawRect(x, yTop - 42, width, 42, "1 0.985 0.94");
+    ops += drawLine(x, yTop - 42, x + width, yTop - 42, gold, 1.2);
+    ops += drawText(x + 8, yTop - 16, value, 15, "F2", color);
+    ops += drawText(x + 8, yTop - 31, label, 7.5, "F2", muted);
+  }
 
   function tableHeader() {
-    ops += drawRect(margin, y - 20, tableWidth, 20, "0.08 0.12 0.18");
+    ops += drawRect(margin, y - 21, tableWidth, 21, navy);
     ops += drawText(cols.actor.x + 4, y - 14, "Court actor", 8, "F2", "1 1 1");
     ops += drawText(cols.role.x + 4, y - 14, "Role", 8, "F2", "1 1 1");
     ops += drawText(cols.state.x + 4, y - 14, "State", 8, "F2", "1 1 1");
     ops += drawText(cols.families.x + 4, y - 14, "Families", 8, "F2", "1 1 1");
+    ops += drawText(cols.needed.x + 4, y - 14, "Needs", 8, "F2", "1 1 1");
     ops += drawText(cols.counties.x + 4, y - 14, "County / court reports", 8, "F2", "1 1 1");
-    y -= 24;
+    y -= 25;
   }
 
   function pageHeader(firstPage: boolean) {
+    ops += drawRect(0, 0, pageWidth, pageHeight, cream);
+    ops += drawRect(0, pageHeight - 18, pageWidth, 18, navy);
+    ops += drawLine(margin, pageHeight - 31, pageWidth - margin, pageHeight - 31, gold, 1.3);
     if (firstPage) {
-      ops += drawText(margin, y, "Stand With Meg", 10, "F2", "0.72 0.09 0.09");
+      ops += drawText(margin, y, "Stand With Meg", 10, "F2", red);
       y -= 20;
-      ops += drawText(margin, y, "Named Court Actor Pattern Report", 21, "F2", "0.05 0.10 0.18");
+      ops += drawText(margin, y, "Named Court Actor Pattern Report", 21, "F2", navy);
       y -= 18;
       const scope = stateFilter ? `${stateFilter} only` : "all states";
       ops += drawText(
         margin,
         y,
-        `Shareable summary generated from counted survey court-actor rows (${scope}); public threshold: ${threshold}+ independent families.`,
+        `Admin pattern export from counted survey court-actor rows (${scope}); includes actors reported by ${threshold}+ independent family.`,
         9,
         "F1",
-        "0.25 0.25 0.25"
+        muted
       );
       y -= 14;
       ops += drawText(
         margin,
         y,
-        "Reporter names, emails, notes, and single-family allegations are intentionally excluded.",
+        `Public naming threshold remains ${PUBLIC_NAMING_THRESHOLD} independent families. Reporter names, emails, notes, and private details are excluded.`,
         9,
         "F1",
-        "0.25 0.25 0.25"
+        muted
       );
-      y -= 22;
+      y -= 18;
+      const boxWidth = 160;
+      statBox(margin, y, boxWidth, "ACTOR PATTERNS", String(patterns.length), navy);
+      statBox(margin + boxWidth + 10, y, boxWidth, "FAMILY REPORTS", String(totalFamilyReports), red);
+      statBox(margin + (boxWidth + 10) * 2, y, boxWidth, "AT PUBLIC THRESHOLD", String(publicReady), navy);
+      statBox(margin + (boxWidth + 10) * 3, y, boxWidth, "STATES", String(statesCovered), navy);
+      y -= 60;
     } else {
-      ops += drawText(margin, y, "Named Court Actor Pattern Report", 11, "F2", "0.05 0.10 0.18");
+      ops += drawText(margin, y, "Named Court Actor Pattern Report", 11, "F2", navy);
       y -= 18;
     }
     tableHeader();
@@ -245,13 +274,13 @@ function buildPdf(patterns: PatternRow[], threshold: number, stateFilter: string
   pageHeader(true);
 
   if (patterns.length === 0) {
-    ops += drawText(margin, y - 20, "No court actor patterns currently meet this threshold.", 12, "F2", "0.25 0.25 0.25");
+    ops += drawText(margin, y - 20, "No court actor patterns currently meet this threshold.", 12, "F2", muted);
     finishPage();
   } else {
     patterns.forEach((row, index) => {
       const actorLines = wrapText(row.name, 30);
       const roleLines = wrapText(row.role, 16);
-      const countyLines = wrapText(row.counties, 52);
+      const countyLines = wrapText(row.counties, 42);
       const lines = Math.max(actorLines.length, roleLines.length, countyLines.length, 1);
       const rowHeight = Math.max(30, lines * 11 + 12);
 
@@ -260,14 +289,16 @@ function buildPdf(patterns: PatternRow[], threshold: number, stateFilter: string
         pageHeader(false);
       }
 
-      if (index % 2 === 0) ops += drawRect(margin, y - rowHeight + 4, tableWidth, rowHeight, "0.975 0.975 0.96");
-      ops += drawLine(margin, y - rowHeight + 4, margin + tableWidth, y - rowHeight + 4, "0.82 0.82 0.82", 0.4);
+      if (index % 2 === 0) ops += drawRect(margin, y - rowHeight + 4, tableWidth, rowHeight, "1 0.985 0.94");
+      ops += drawLine(margin, y - rowHeight + 4, margin + tableWidth, y - rowHeight + 4, "0.82 0.78 0.70", 0.4);
 
       const textY = y - 10;
-      actorLines.forEach((line, i) => { ops += drawText(cols.actor.x + 4, textY - i * 11, line, 8.5, i === 0 ? "F2" : "F1", "0.05 0.10 0.18"); });
+      const needed = row.needed_for_public === 0 ? "Public" : `+${row.needed_for_public}`;
+      actorLines.forEach((line, i) => { ops += drawText(cols.actor.x + 4, textY - i * 11, line, 8.5, i === 0 ? "F2" : "F1", navy); });
       roleLines.forEach((line, i) => { ops += drawText(cols.role.x + 4, textY - i * 11, line, 8, "F1", "0.15 0.15 0.15"); });
-      ops += drawText(cols.state.x + 4, textY, row.state, 8.5, "F2", "0.72 0.09 0.09");
-      ops += drawText(cols.families.x + 4, textY, String(row.families), 8.5, "F2", "0.05 0.10 0.18");
+      ops += drawText(cols.state.x + 4, textY, row.state, 8.5, "F2", red);
+      ops += drawText(cols.families.x + 4, textY, String(row.families), 8.5, "F2", navy);
+      ops += drawText(cols.needed.x + 4, textY, needed, 8.5, "F2", row.needed_for_public === 0 ? red : gold);
       countyLines.forEach((line, i) => { ops += drawText(cols.counties.x + 4, textY - i * 11, line, 8, "F1", "0.15 0.15 0.15"); });
       y -= rowHeight;
     });
@@ -276,9 +307,9 @@ function buildPdf(patterns: PatternRow[], threshold: number, stateFilter: string
 
   const generated = new Date().toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
   const pageContents = pages.map((content, i) => {
-    const footer = drawLine(margin, 30, pageWidth - margin, 30, "0.82 0.82 0.82", 0.4)
-      + drawText(margin, 18, `Generated ${generated} from live Stand With Meg survey data`, 7, "F1", "0.45 0.45 0.45")
-      + drawText(pageWidth - margin - 60, 18, `Page ${i + 1} of ${pages.length}`, 7, "F1", "0.45 0.45 0.45");
+    const footer = drawLine(margin, 30, pageWidth - margin, 30, "0.82 0.78 0.70", 0.4)
+      + drawText(margin, 18, `Generated ${generated} from live Stand With Meg survey data`, 7, "F1", muted)
+      + drawText(pageWidth - margin - 60, 18, `Page ${i + 1} of ${pages.length}`, 7, "F1", muted);
     return content + footer;
   });
 
@@ -333,7 +364,7 @@ export async function GET(request: Request) {
     const parsedThreshold = Number.parseInt(searchParams.get("threshold") || "", 10);
     const threshold = Number.isFinite(parsedThreshold)
       ? Math.max(1, Math.min(100, parsedThreshold))
-      : DEFAULT_PUBLIC_THRESHOLD;
+      : DEFAULT_EXPORT_THRESHOLD;
     const state = searchParams.get("state")?.trim().toUpperCase() || null;
     const stateFilter = state && /^[A-Z]{2}$/.test(state) ? state : null;
 

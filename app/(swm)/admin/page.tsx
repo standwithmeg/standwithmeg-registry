@@ -467,6 +467,89 @@ function auditReviewSource(row: AuditReviewRow) {
   return row.source_table === "survey_submissions" ? "Current survey" : row.data_source || "Legacy import";
 }
 
+function auditReviewBoolean(value: string | boolean | null) {
+  if (value === true) return "Yes";
+  if (value === false) return "No";
+  if (value == null || value === "") return "—";
+  return String(value);
+}
+
+function auditReviewValue(value: string | number | boolean | null) {
+  if (value === null || value === undefined || value === "") return "—";
+  if (typeof value === "boolean") return value ? "Yes" : "No";
+  return String(value);
+}
+
+function auditReviewMoney(value: number | string | null) {
+  const amount = Number(value);
+  return Number.isFinite(amount) ? fmt$(amount) : "—";
+}
+
+function AuditReviewDetails({ row }: { row: AuditReviewRow }) {
+  const fields: Array<[string, string]> = [
+    ["Source", auditReviewSource(row)],
+    ["Source table", row.source_table],
+    ["Source ID", row.id],
+    ["Created", shortDate(row.created_at)],
+    ["Imported", shortDate(row.imported_at)],
+    ["Email", auditReviewValue(row.email)],
+    ["State", row.state],
+    ["County", auditReviewValue(row.case_county)],
+    ["Case status", auditReviewValue(row.case_status)],
+    ["Children", auditReviewValue(row.number_of_kids)],
+    ["System affected", auditReviewValue(row.system_affected)],
+    ["Time in system", auditReviewValue(row.time_in_system)],
+    ["Custody status", auditReviewValue(row.custody_status)],
+    ["Pro se", auditReviewBoolean(row.is_pro_se)],
+    ["Legal history", auditReviewValue(row.legal_rep_history)],
+    ["Months lost", auditReviewValue(row.months_lost_parenting_time)],
+    ["Total loss", auditReviewMoney(row.total_financial_loss)],
+    ["Permission", auditReviewValue(row.permission_to_share)],
+    ["Approved", row.approved === null ? "—" : row.approved ? "Yes" : "No"],
+    ["Dedupe family key", row.family_key],
+    ["Count status", row.dedupe_winner ? "Counted by current rule" : "Hidden by current dedupe rule"],
+  ];
+
+  return (
+    <details className="mt-3 rounded-lg overflow-hidden"
+      style={{ backgroundColor: "rgba(0,0,0,0.14)", border: "1px solid rgba(255,255,255,0.08)" }}>
+      <summary className="cursor-pointer px-3 py-2 text-[11px] font-bold uppercase tracking-wide"
+        style={{ color: GOLD }}>
+        View full survey fields
+      </summary>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-px"
+        style={{ backgroundColor: "rgba(255,255,255,0.06)" }}>
+        {fields.map(([label, value]) => (
+          <div key={`${row.source_table}-${row.id}-${label}`} className="px-3 py-2"
+            style={{ backgroundColor: "rgba(15,30,48,0.94)" }}>
+            <div className="text-[10px] uppercase tracking-wide font-bold"
+              style={{ color: "rgba(245,245,245,0.34)" }}>
+              {label}
+            </div>
+            <div className="mt-0.5 text-xs break-words"
+              style={{ color: "rgba(245,245,245,0.74)" }}>
+              {value}
+            </div>
+          </div>
+        ))}
+      </div>
+      {row.impact_quote && (
+        <div className="px-3 py-3"
+          style={{ backgroundColor: "rgba(15,30,48,0.94)", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
+          <div className="text-[10px] uppercase tracking-wide font-bold"
+            style={{ color: "rgba(245,245,245,0.34)" }}>
+            Full quote
+          </div>
+          <blockquote className="mt-1 text-xs italic"
+            style={{ color: "rgba(245,245,245,0.72)" }}>
+            &ldquo;{row.impact_quote}&rdquo;
+          </blockquote>
+        </div>
+      )}
+    </details>
+  );
+}
+
 type NudgeTarget = {
   email: string;
   name: string;
@@ -1465,11 +1548,11 @@ export default function AdminPage() {
                     Shareable pattern export
                   </div>
                   <div className="text-[11px] mt-0.5" style={{ color: "rgba(245,245,245,0.38)" }}>
-                    Includes counted actors with 5+ independent families. Reporter names, emails, and notes are excluded.
+                    Includes every counted actor pattern. The PDF shows how many more families are needed to reach the 5-family public threshold.
                   </div>
                 </div>
                 <a
-                  href="/api/admin/court-actors/patterns-pdf?threshold=5"
+                  href="/api/admin/court-actors/patterns-pdf?threshold=1"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-xs px-3 py-2 rounded-lg font-bold transition-opacity hover:opacity-80"
@@ -1798,6 +1881,8 @@ export default function AdminPage() {
                                         &ldquo;{row.impact_quote.slice(0, 260)}{row.impact_quote.length > 260 ? "…" : ""}&rdquo;
                                       </blockquote>
                                     )}
+
+                                    <AuditReviewDetails row={row} />
                                   </div>
 
                                   <div className="flex items-center gap-2 shrink-0">
@@ -1843,6 +1928,7 @@ export default function AdminPage() {
                               <span style={{ color: "rgba(245,245,245,0.35)" }}>hidden by dedupe</span>
                             )}
                           </div>
+                          <AuditReviewDetails row={row} />
                         </div>
                       ))}
                     </div>
