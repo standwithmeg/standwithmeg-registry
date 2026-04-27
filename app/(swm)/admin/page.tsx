@@ -1294,7 +1294,7 @@ export default function AdminPage() {
                   {auditRows.map((row, i) => {
                     const status = auditStatusMeta(row.reporting_status);
                     const delta = row.pdf_count_delta;
-                    const isFlagged = row.reporting_status !== "ok" && row.reporting_status !== "not_eligible";
+                    const canReview = row.dashboard_families > 0;
                     return (
                       <tr key={`${row.is_us ? "us" : "intl"}-${row.state}`}
                         style={{
@@ -1302,12 +1302,16 @@ export default function AdminPage() {
                           backgroundColor: i % 2 === 0 ? "transparent" : "rgba(255,255,255,0.02)",
                         }}>
                         <td className="px-2 py-3">
-                          {isFlagged ? (
+                          {canReview ? (
                             <button
                               type="button"
                               onClick={() => openAuditReview(row)}
                               className="text-[10px] px-1.5 py-1 rounded font-bold uppercase tracking-wide hover:opacity-80 transition-opacity"
-                              title={`Review ${row.state}: live ${row.dashboard_families}, PDF ${row.pdf_index_families ?? "missing"}`}
+                              title={
+                                row.reporting_status === "ok"
+                                  ? `Open source-row review for ${row.state}`
+                                  : `Review ${row.state}: live ${row.dashboard_families}, PDF ${row.pdf_index_families ?? "missing"}`
+                              }
                               style={{ color: status.color, backgroundColor: status.bg, border: `1px solid ${status.border}` }}
                             >
                               {status.label}
