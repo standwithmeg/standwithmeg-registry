@@ -367,6 +367,8 @@ type AuditReviewRow = {
   approved: boolean | null;
   family_key: string;
   dedupe_winner: boolean;
+  review_decision: "keep" | "delete" | null;
+  reviewed_at: string | null;
 };
 
 type AuditReviewGroup = {
@@ -512,6 +514,7 @@ function AuditReviewDetails({ row }: { row: AuditReviewRow }) {
     ["Approved", row.approved === null ? "—" : row.approved ? "Yes" : "No"],
     ["Dedupe family key", row.family_key],
     ["Count status", row.dedupe_winner ? "Counted by current rule" : "Hidden by current dedupe rule"],
+    ["Admin review", row.review_decision === "keep" ? `Kept${row.reviewed_at ? ` on ${shortDate(row.reviewed_at)}` : ""}` : "Not reviewed"],
   ];
 
   return (
@@ -634,7 +637,7 @@ export default function AdminPage() {
   const [auditReviewLoading, setAuditReviewLoading] = useState(false);
   const [auditReviewError, setAuditReviewError] = useState<string | null>(null);
   const [deletingAuditRow, setDeletingAuditRow] = useState<string | null>(null);
-  const [keptAuditRows, setKeptAuditRows] = useState<Set<string>>(() => new Set());
+  const [keepingAuditRow, setKeepingAuditRow] = useState<string | null>(null);
 
   // Quote modal
   const [quoteModal, setQuoteModal] = useState<{ state: string; is_us: boolean; total: number } | null>(null);
@@ -775,7 +778,7 @@ export default function AdminPage() {
       const res = await fetch("/api/admin/reporting-audit/review", {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ id: row.id, source_table: row.source_table }),
+        body: JSON.stringify({ id: row.id, source_table: row.source_table, state: row.state }),
       });
       const data = await res.json().catch(() => ({}));
       if (!res.ok) throw new Error(data.error || "Delete failed.");
@@ -787,12 +790,23 @@ export default function AdminPage() {
     }
   }
 
-  function keepAuditReviewRow(row: AuditReviewRow) {
-    setKeptAuditRows(prev => {
-      const next = new Set(prev);
-      next.add(auditRowKey(row));
-      return next;
-    });
+  async function keepAuditReviewRow(row: AuditReviewRow) {
+    const key = auditRowKey(row);
+    setKeepingAuditRow(key);
+    try {
+      const res = await fetch("/api/admin/reporting-audit/review", {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id: row.id, source_table: row.source_table, state: row.state, decision: "keep" }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) throw new Error(data.error || "Keep failed.");
+      await loadAuditReview(row.state);
+    } catch (err) {
+      window.alert(err instanceof Error ? err.message : "Keep failed.");
+    } finally {
+      setKeepingAuditRow(null);
+    }
   }
 
   // Promote an extracted actor row to form_direct (counts toward public
@@ -1902,11 +1916,12 @@ export default function AdminPage() {
                                     <button
                                       type="button"
                                       onClick={() => keepAuditReviewRow(row)}
+                                      disabled={keepingAuditRow === auditRowKey(row)}
                                       className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide transition-opacity hover:opacity-80"
                                       style={{ backgroundColor: "rgba(74,222,128,0.08)", color: "rgb(134,239,172)", border: "1px solid rgba(74,222,128,0.22)" }}
-                                      title="Keep this row in Supabase. This does not change current dashboard/PDF counts."
+                                      title="Save that you reviewed this row and want to keep it in Supabase. This does not change current dashboard/PDF counts."
                                     >
-                                      {keptAuditRows.has(auditRowKey(row)) ? "Kept" : "Keep"}
+                                      {keepingAuditRow === auditRowKey(row) ? "Saving…" : row.review_decision === "keep" ? "Kept" : "Keep"}
                                     </button>
                                     <button
                                       type="button"

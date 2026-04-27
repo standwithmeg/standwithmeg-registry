@@ -29,12 +29,14 @@ type ReviewRow = {
   approved: boolean | null;
   family_key: string;
   dedupe_winner: boolean;
+  review_decision: "keep" | "delete" | null;
+  reviewed_at: string | null;
 };
 
-async function requireAdmin() {
+async function requireAdminEmail() {
   const supabase = await createServerSupabaseClient();
   const { data: { user }, error } = await supabase.auth.getUser();
-  return !error && !!user?.email && isAdminEmail(user.email);
+  return !error && !!user?.email && isAdminEmail(user.email) ? user.email : null;
 }
 
 function normalizeState(value: string | null) {
@@ -106,6 +108,8 @@ async function fetchReviewRows(state: string): Promise<ReviewRow[]> {
       approved: row.approved as boolean | null,
       family_key: "",
       dedupe_winner: false,
+      review_decision: null,
+      reviewed_at: null,
     })),
     ...((legacyResult.data ?? []) as Array<Record<string, unknown>>).map(row => ({
       id: String(row.id),
@@ -132,10 +136,39 @@ async function fetchReviewRows(state: string): Promise<ReviewRow[]> {
       approved: null,
       family_key: "",
       dedupe_winner: false,
+      review_decision: null,
+      reviewed_at: null,
     })),
   ].filter(row => row.state === state);
 
   for (const row of rows) row.family_key = familyKey(row);
+
+  if (rows.length > 0) {
+    const { data: decisions, error: decisionsError } = await adminSupabase
+      .from("admin_review_decisions")
+      .select("source_table,source_id,decision,decided_at")
+      .in("source_id", rows.map(row => row.id));
+
+    // The app should still load before migration 013 is applied. Keep actions
+    // will return a clear error until the table exists.
+    if (!decisionsError) {
+      const bySource = new Map<string, { decision: "keep" | "delete"; decided_at: string | null }>();
+      for (const decision of (decisions ?? []) as Array<Record<string, unknown>>) {
+        bySource.set(`${decision.source_table}:${decision.source_id}`, {
+          decision: decision.decision as "keep" | "delete",
+          decided_at: decision.decided_at as string | null,
+        });
+      }
+      for (const row of rows) {
+        const decision = bySource.get(`${row.source_table}:${row.id}`);
+        if (!decision) continue;
+        row.review_decision = decision.decision;
+        row.reviewed_at = decision.decided_at;
+      }
+    } else if (decisionsError.code !== "42P01") {
+      console.error("admin_review_decisions select error:", decisionsError.message);
+    }
+  }
 
   const byFamily = new Map<string, ReviewRow[]>();
   for (const row of rows) {
@@ -155,7 +188,7 @@ async function fetchReviewRows(state: string): Promise<ReviewRow[]> {
 
 export async function GET(request: Request) {
   try {
-    if (!(await requireAdmin())) {
+    if (!(await requireAdminEmail())) {
       return Response.json({ error: "Not authorized." }, { status: 403 });
     }
 
@@ -201,16 +234,30 @@ export async function GET(request: Request) {
 
 export async function DELETE(request: Request) {
   try {
-    if (!(await requireAdmin())) {
+    const adminEmail = await requireAdminEmail();
+    if (!adminEmail) {
       return Response.json({ error: "Not authorized." }, { status: 403 });
     }
 
-    const { id, source_table } = await request.json();
+    const { id, source_table, state: bodyState } = await request.json();
     if (!id || (source_table !== "survey_submissions" && source_table !== "legacy_submissions")) {
       return Response.json({ error: "id and valid source_table are required." }, { status: 400 });
     }
 
     const adminSupabase = createAdminSupabaseClient();
+    const state = normalizeState(String(bodyState ?? ""));
+
+    await adminSupabase
+      .from("admin_review_decisions")
+      .upsert({
+        source_table,
+        source_id: id,
+        state: state || null,
+        decision: "delete",
+        decided_by: adminEmail,
+        decided_at: new Date().toISOString(),
+      }, { onConflict: "source_table,source_id" });
+
     const { error } = await adminSupabase
       .from(source_table as SourceTable)
       .delete()
@@ -225,5 +272,47 @@ export async function DELETE(request: Request) {
   } catch (err) {
     console.error("DELETE /api/admin/reporting-audit/review error:", err);
     return Response.json({ error: "Delete failed." }, { status: 500 });
+  }
+}
+
+export async function PATCH(request: Request) {
+  try {
+    const adminEmail = await requireAdminEmail();
+    if (!adminEmail) {
+      return Response.json({ error: "Not authorized." }, { status: 403 });
+    }
+
+    const { id, source_table, state, decision } = await request.json();
+    if (!id || (source_table !== "survey_submissions" && source_table !== "legacy_submissions")) {
+      return Response.json({ error: "id and valid source_table are required." }, { status: 400 });
+    }
+    if (decision !== "keep") {
+      return Response.json({ error: "Only keep decisions can be saved here." }, { status: 400 });
+    }
+
+    const adminSupabase = createAdminSupabaseClient();
+    const { error } = await adminSupabase
+      .from("admin_review_decisions")
+      .upsert({
+        source_table,
+        source_id: id,
+        state: normalizeState(String(state ?? "")) || null,
+        decision: "keep",
+        decided_by: adminEmail,
+        decided_at: new Date().toISOString(),
+      }, { onConflict: "source_table,source_id" });
+
+    if (error) {
+      console.error("PATCH /api/admin/reporting-audit/review error:", error);
+      const message = error.code === "42P01"
+        ? "The admin_review_decisions Supabase migration needs to be run before Keep can save."
+        : error.message;
+      return Response.json({ error: message }, { status: 500 });
+    }
+
+    return Response.json({ success: true });
+  } catch (err) {
+    console.error("PATCH /api/admin/reporting-audit/review error:", err);
+    return Response.json({ error: "Save failed." }, { status: 500 });
   }
 }
