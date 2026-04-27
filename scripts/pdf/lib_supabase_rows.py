@@ -38,7 +38,11 @@ def _actor_name_key(name: Any) -> str:
     text = _ROLE_PREFIX_RE.sub("", text)
     text = _SUFFIX_RE.sub("", text)
     text = re.sub(r"\s+[a-z]\s+", " ", text)
-    return re.sub(r"\s+", " ", text).strip()
+    text = re.sub(r"\s+", " ", text).strip()
+    return " ".join(
+        re.sub(r"([a-z])\1+", r"\1", token) if len(token) >= 5 else token
+        for token in text.split()
+    )
 
 
 def _most_common(counter: Counter):
@@ -94,7 +98,7 @@ def load_public_court_actors_from_supabase(state_filter: str | None = None) -> d
             break
         offset += page_size
 
-    buckets: dict[tuple[str, str, str], dict] = {}
+    buckets: dict[tuple[str, str], dict] = {}
     for row in rows:
         state = _actor_state(row)
         if state_filter and state != state_filter.upper():
@@ -104,7 +108,7 @@ def load_public_court_actors_from_supabase(state_filter: str | None = None) -> d
         name_key = _actor_name_key(name)
         if not state or not role or not name_key:
             continue
-        key_tuple = (state, role.lower(), name_key)
+        key_tuple = (state, name_key)
         bucket = buckets.setdefault(
             key_tuple,
             {

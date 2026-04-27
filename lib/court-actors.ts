@@ -15,6 +15,17 @@ export function actorNameKey(name: string): string {
     .trim();
 }
 
-export function actorBucketKey(name: string, role: string, stateCode: string | null | undefined): string {
-  return `${actorNameKey(name)}|${role.trim().toLowerCase()}|${stateCode ?? ""}`;
+function collapseRepeatedLetters(value: string): string {
+  return value
+    .split(" ")
+    .map(token => token.length >= 5 ? token.replace(/([a-z])\1+/g, "$1") : token)
+    .join(" ");
+}
+
+export function actorLooseNameKey(name: string): string {
+  return collapseRepeatedLetters(actorNameKey(name));
+}
+
+export function actorBucketKey(name: string, _role: string, stateCode: string | null | undefined): string {
+  return `${actorLooseNameKey(name)}|${stateCode ?? ""}`;
 }

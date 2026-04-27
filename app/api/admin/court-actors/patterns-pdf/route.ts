@@ -66,6 +66,13 @@ function mostFrequent(counter: Map<string, number>) {
   return best;
 }
 
+function roleSummary(roles: Map<string, number>) {
+  const sorted = [...roles.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+  if (sorted.length === 0) return "Court Actor";
+  if (sorted.length === 1) return sorted[0][0];
+  return `${sorted[0][0]} + ${sorted.length - 1} role${sorted.length === 2 ? "" : "s"}`;
+}
+
 async function fetchPatternRows(threshold: number, stateFilter: string | null): Promise<PatternRow[]> {
   const adminSupabase = createAdminSupabaseClient();
   const all: ActorRow[] = [];
@@ -128,7 +135,7 @@ async function fetchPatternRows(threshold: number, stateFilter: string | null): 
     .filter(bucket => bucket.families.size >= threshold)
     .map(bucket => ({
       name: mostFrequent(bucket.nameCounts) || "Named court actor",
-      role: mostFrequent(bucket.roleCounts) || "Court Actor",
+      role: roleSummary(bucket.roleCounts),
       state: bucket.state,
       families: bucket.families.size,
       needed_for_public: Math.max(0, PUBLIC_NAMING_THRESHOLD - bucket.families.size),

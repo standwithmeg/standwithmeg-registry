@@ -4,8 +4,9 @@ import { actorBucketKey } from "../../../../lib/court-actors";
 /**
  * Returns court actors named by 5+ different survey submissions (the
  * auto-publish threshold). Names are matched conservatively on
- * normalized name + role + state_code, so casing, punctuation, common
- * titles, and middle initials do not split the same person.
+ * normalized name + state_code, so casing, punctuation, common titles,
+ * middle initials, repeated-letter misspellings, and different role labels
+ * do not split the same person.
  *
  * Never exposes: notes, submission_id, reporter identity.
  *
@@ -82,7 +83,7 @@ export async function GET(request: Request) {
       from += pageSize;
     }
 
-    // Bucket by normalized (name + role + state). Count DISTINCT families
+    // Bucket by normalized (name + state). Count DISTINCT families
     // per bucket (not distinct rows — the threshold is "5 different families",
     // so one family naming the same person twice only counts once).
     type Bucket = {
@@ -91,6 +92,7 @@ export async function GET(request: Request) {
       court_or_county: string | null;
       state_code: string | null;
       families: Set<string>;
+      roleCounts: Map<string, number>;
       casingCounts: Map<string, number>;
       courtCounts: Map<string, number>;
     };
@@ -111,12 +113,14 @@ export async function GET(request: Request) {
           court_or_county: a.court_or_county,
           state_code: state,
           families: new Set(),
+          roleCounts: new Map(),
           casingCounts: new Map(),
           courtCounts: new Map(),
         });
       }
       const b = buckets.get(key)!;
       b.families.add(familyKey(a));
+      b.roleCounts.set(a.role, (b.roleCounts.get(a.role) ?? 0) + 1);
       b.casingCounts.set(a.name, (b.casingCounts.get(a.name) ?? 0) + 1);
       if (a.court_or_county) {
         b.courtCounts.set(a.court_or_county, (b.courtCounts.get(a.court_or_county) ?? 0) + 1);
@@ -133,10 +137,17 @@ export async function GET(request: Request) {
       return best;
     }
 
+    function roleSummary(roles: Map<string, number>) {
+      const sorted = [...roles.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+      if (sorted.length === 0) return "Court Actor";
+      if (sorted.length === 1) return sorted[0][0];
+      return `${sorted[0][0]} + ${sorted.length - 1} role${sorted.length === 2 ? "" : "s"}`;
+    }
+
     const publicActors = [...buckets.values()]
       .filter(b => b.families.size >= PUBLIC_THRESHOLD)
       .map(b => ({
-        role: b.role,
+        role: roleSummary(b.roleCounts),
         name: mostFrequent(b.casingCounts) ?? b.name,
         court_or_county: mostFrequent(b.courtCounts),
         state_code: b.state_code,

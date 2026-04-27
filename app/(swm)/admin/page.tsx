@@ -467,6 +467,10 @@ function auditReviewSource(row: AuditReviewRow) {
   return row.source_table === "survey_submissions" ? "Current survey" : row.data_source || "Legacy import";
 }
 
+function auditRowKey(row: AuditReviewRow) {
+  return `${row.source_table}:${row.id}`;
+}
+
 function auditReviewBoolean(value: string | boolean | null) {
   if (value === true) return "Yes";
   if (value === false) return "No";
@@ -630,6 +634,7 @@ export default function AdminPage() {
   const [auditReviewLoading, setAuditReviewLoading] = useState(false);
   const [auditReviewError, setAuditReviewError] = useState<string | null>(null);
   const [deletingAuditRow, setDeletingAuditRow] = useState<string | null>(null);
+  const [keptAuditRows, setKeptAuditRows] = useState<Set<string>>(() => new Set());
 
   // Quote modal
   const [quoteModal, setQuoteModal] = useState<{ state: string; is_us: boolean; total: number } | null>(null);
@@ -780,6 +785,14 @@ export default function AdminPage() {
     } finally {
       setDeletingAuditRow(null);
     }
+  }
+
+  function keepAuditReviewRow(row: AuditReviewRow) {
+    setKeptAuditRows(prev => {
+      const next = new Set(prev);
+      next.add(auditRowKey(row));
+      return next;
+    });
   }
 
   // Promote an extracted actor row to form_direct (counts toward public
@@ -1886,10 +1899,15 @@ export default function AdminPage() {
                                   </div>
 
                                   <div className="flex items-center gap-2 shrink-0">
-                                    <span className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide"
-                                      style={{ backgroundColor: "rgba(74,222,128,0.08)", color: "rgb(134,239,172)", border: "1px solid rgba(74,222,128,0.22)" }}>
-                                      Keep
-                                    </span>
+                                    <button
+                                      type="button"
+                                      onClick={() => keepAuditReviewRow(row)}
+                                      className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide transition-opacity hover:opacity-80"
+                                      style={{ backgroundColor: "rgba(74,222,128,0.08)", color: "rgb(134,239,172)", border: "1px solid rgba(74,222,128,0.22)" }}
+                                      title="Keep this row in Supabase. This does not change current dashboard/PDF counts."
+                                    >
+                                      {keptAuditRows.has(auditRowKey(row)) ? "Kept" : "Keep"}
+                                    </button>
                                     <button
                                       type="button"
                                       onClick={() => deleteAuditReviewRow(row)}

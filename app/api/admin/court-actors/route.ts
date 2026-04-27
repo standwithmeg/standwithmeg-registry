@@ -5,7 +5,7 @@ import { actorBucketKey } from "../../../../lib/court-actors";
 
 /**
  * Admin-only: returns EVERY named court actor (no threshold), plus aggregate
- * counts per unique (role, name, state) bucket. Includes reporter info
+ * counts per unique (name, state) bucket. Includes reporter info
  * (submission_id + email) so the admin can trace who named whom.
  */
 export async function GET() {
@@ -73,14 +73,16 @@ export async function GET() {
       from += pageSize;
     }
 
-    // Build aggregates: normalized (name, role, state) -> count distinct families.
-    // This merges casing, punctuation, common titles, and middle initials,
-    // but intentionally avoids risky fuzzy misspelling merges.
+    // Build aggregates: normalized (name, state) -> count distinct families.
+    // This merges casing, punctuation, common titles, middle initials, small
+    // repeated-letter misspellings, and different role labels for the same
+    // person in the same state.
     type AggBucket = {
-      role: string;
       name: string;
       state_code: string | null;
       families: Set<string>;
+      roles: Map<string, number>;
+      names: Map<string, number>;
       courts: Map<string, number>;
     };
     const agg = new Map<string, AggBucket>();
@@ -91,19 +93,44 @@ export async function GET() {
       if (!key.split("|")[0]) continue;
       if (!agg.has(key)) {
         agg.set(key, {
-          role: r.role, name: r.name, state_code: state,
-          families: new Set(), courts: new Map(),
+          name: r.name,
+          state_code: state,
+          families: new Set(),
+          roles: new Map(),
+          names: new Map(),
+          courts: new Map(),
         });
       }
       const b = agg.get(key)!;
       b.families.add(familyKey(r));
+      b.roles.set(r.role, (b.roles.get(r.role) ?? 0) + 1);
+      b.names.set(r.name, (b.names.get(r.name) ?? 0) + 1);
       if (r.court_or_county) b.courts.set(r.court_or_county, (b.courts.get(r.court_or_county) ?? 0) + 1);
+    }
+
+    function mostFrequent<T>(m: Map<T, number>): T | null {
+      let best: T | null = null;
+      let max = 0;
+      for (const [value, count] of m) {
+        if (count > max) {
+          best = value;
+          max = count;
+        }
+      }
+      return best;
+    }
+
+    function roleSummary(roles: Map<string, number>) {
+      const sorted = [...roles.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+      if (sorted.length === 0) return "Court Actor";
+      if (sorted.length === 1) return sorted[0][0];
+      return `${sorted[0][0]} + ${sorted.length - 1} role${sorted.length === 2 ? "" : "s"}`;
     }
 
     const aggregates = [...agg.values()]
       .map(b => ({
-        role: b.role,
-        name: b.name,
+        role: roleSummary(b.roles),
+        name: mostFrequent(b.names) ?? b.name,
         state_code: b.state_code,
         court_or_county: [...b.courts.entries()].sort((a, b) => b[1] - a[1])[0]?.[0] ?? null,
         count: b.families.size,
