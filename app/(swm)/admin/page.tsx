@@ -342,6 +342,51 @@ type ReportingAuditSummary = {
   generated_at: string;
 };
 
+type AuditReviewRow = {
+  id: string;
+  source_table: "survey_submissions" | "legacy_submissions";
+  data_source: string | null;
+  created_at: string | null;
+  imported_at: string | null;
+  state: string;
+  email: string | null;
+  first_name: string | null;
+  last_name: string | null;
+  case_county: string | null;
+  case_status: string | null;
+  number_of_kids: number | null;
+  system_affected: string | null;
+  time_in_system: string | null;
+  custody_status: string | null;
+  is_pro_se: string | boolean | null;
+  legal_rep_history: string | null;
+  months_lost_parenting_time: number | null;
+  total_financial_loss: number | string | null;
+  impact_quote: string | null;
+  permission_to_share: string | null;
+  approved: boolean | null;
+  family_key: string;
+  dedupe_winner: boolean;
+};
+
+type AuditReviewGroup = {
+  family_key: string;
+  email: string | null;
+  rows: AuditReviewRow[];
+};
+
+type AuditReviewData = {
+  state: string;
+  summary: {
+    raw_rows: number;
+    deduped_families: number;
+    duplicate_groups: number;
+    hidden_by_dedupe: number;
+  };
+  duplicate_groups: AuditReviewGroup[];
+  rows: AuditReviewRow[];
+};
+
 type QuoteRow = {
   id: string;
   first_name: string | null;
@@ -407,6 +452,19 @@ function displayName(row: RecentRow) {
   if (row.permission_to_share === "anonymous" || !row.first_name) return "Anonymous";
   if (row.permission_to_share === "first_name") return row.first_name[0] + ".";
   return row.first_name;
+}
+
+function shortDate(iso: string | null) {
+  if (!iso) return "No date";
+  return new Date(iso).toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" });
+}
+
+function auditReviewName(row: AuditReviewRow) {
+  return [row.first_name, row.last_name].filter(Boolean).join(" ") || "No name";
+}
+
+function auditReviewSource(row: AuditReviewRow) {
+  return row.source_table === "survey_submissions" ? "Current survey" : row.data_source || "Legacy import";
 }
 
 type NudgeTarget = {
@@ -485,6 +543,10 @@ export default function AdminPage() {
   const [auditRows, setAuditRows] = useState<ReportingAuditRow[]>([]);
   const [auditSummary, setAuditSummary] = useState<ReportingAuditSummary | null>(null);
   const [auditError, setAuditError] = useState<string | null>(null);
+  const [auditReview, setAuditReview] = useState<AuditReviewData | null>(null);
+  const [auditReviewLoading, setAuditReviewLoading] = useState(false);
+  const [auditReviewError, setAuditReviewError] = useState<string | null>(null);
+  const [deletingAuditRow, setDeletingAuditRow] = useState<string | null>(null);
 
   // Quote modal
   const [quoteModal, setQuoteModal] = useState<{ state: string; is_us: boolean; total: number } | null>(null);
@@ -523,6 +585,49 @@ export default function AdminPage() {
     applyActorData(actorsData);
   }, [applyActorData]);
 
+  const applyAuditData = useCallback((data: { rows?: ReportingAuditRow[]; summary?: ReportingAuditSummary | null }) => {
+    setAuditRows(data.rows ?? []);
+    setAuditSummary(data.summary ?? null);
+    setAuditError(null);
+  }, []);
+
+  const refreshStatsAndAudit = useCallback(async () => {
+    const [statsRes, auditRes] = await Promise.all([
+      fetch("/api/admin/survey-stats"),
+      fetch("/api/admin/reporting-audit"),
+    ]);
+    const statsData = await statsRes.json().catch(() => ({}));
+    if (statsRes.ok) setStats(statsData);
+    const auditData = await auditRes.json().catch(() => ({ rows: [], summary: null }));
+    if (auditRes.ok) {
+      applyAuditData(auditData);
+    } else {
+      setAuditRows([]);
+      setAuditSummary(null);
+      setAuditError(auditData.error || "Failed to load reporting audit.");
+    }
+  }, [applyAuditData]);
+
+  async function loadAuditReview(state: string) {
+    setAuditReviewLoading(true);
+    setAuditReviewError(null);
+    try {
+      const res = await fetch(`/api/admin/reporting-audit/review?state=${encodeURIComponent(state)}`);
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) throw new Error(data.error || "Failed to load review data.");
+      setAuditReview(data);
+    } catch (err) {
+      setAuditReviewError(err instanceof Error ? err.message : "Failed to load review data.");
+    } finally {
+      setAuditReviewLoading(false);
+    }
+  }
+
+  function openAuditReview(row: ReportingAuditRow) {
+    setAuditReview(null);
+    void loadAuditReview(row.state);
+  }
+
   const load = useCallback(async () => {
     setLoading(true);
     setError(null);
@@ -541,9 +646,7 @@ export default function AdminPage() {
 
       const auditData = await auditRes.json().catch(() => ({ rows: [], summary: null }));
       if (auditRes.ok) {
-        setAuditRows(auditData.rows ?? []);
-        setAuditSummary(auditData.summary ?? null);
-        setAuditError(null);
+        applyAuditData(auditData);
       } else {
         setAuditRows([]);
         setAuditSummary(null);
@@ -554,7 +657,7 @@ export default function AdminPage() {
     } finally {
       setLoading(false);
     }
-  }, [applyActorData]);
+  }, [applyActorData, applyAuditData]);
 
   useEffect(() => { load(); }, [load]);
 
@@ -570,6 +673,29 @@ export default function AdminPage() {
       await load();
     } finally {
       setApproving(null);
+    }
+  }
+
+  async function deleteAuditReviewRow(row: AuditReviewRow) {
+    const label = `${row.source_table === "survey_submissions" ? "current survey" : "legacy/import"} row for ${row.email || "no email"} in ${row.state}`;
+    if (!window.confirm(`Delete this ${label}? This permanently removes it from Supabase. If this is a real separate court matter, choose Cancel and keep it.`)) {
+      return;
+    }
+
+    setDeletingAuditRow(row.id);
+    try {
+      const res = await fetch("/api/admin/reporting-audit/review", {
+        method: "DELETE",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id: row.id, source_table: row.source_table }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) throw new Error(data.error || "Delete failed.");
+      await Promise.all([loadAuditReview(row.state), refreshStatsAndAudit()]);
+    } catch (err) {
+      window.alert(err instanceof Error ? err.message : "Delete failed.");
+    } finally {
+      setDeletingAuditRow(null);
     }
   }
 
@@ -1058,6 +1184,7 @@ export default function AdminPage() {
                   {auditRows.map((row, i) => {
                     const status = auditStatusMeta(row.reporting_status);
                     const delta = row.pdf_count_delta;
+                    const isFlagged = row.reporting_status !== "ok" && row.reporting_status !== "not_eligible";
                     return (
                       <tr key={`${row.is_us ? "us" : "intl"}-${row.state}`}
                         style={{
@@ -1065,10 +1192,22 @@ export default function AdminPage() {
                           backgroundColor: i % 2 === 0 ? "transparent" : "rgba(255,255,255,0.02)",
                         }}>
                         <td className="px-2 py-3">
-                          <span className="text-[10px] px-1.5 py-1 rounded font-bold uppercase tracking-wide"
-                            style={{ color: status.color, backgroundColor: status.bg, border: `1px solid ${status.border}` }}>
-                            {status.label}
-                          </span>
+                          {isFlagged ? (
+                            <button
+                              type="button"
+                              onClick={() => openAuditReview(row)}
+                              className="text-[10px] px-1.5 py-1 rounded font-bold uppercase tracking-wide hover:opacity-80 transition-opacity"
+                              title={`Review ${row.state}: live ${row.dashboard_families}, PDF ${row.pdf_index_families ?? "missing"}`}
+                              style={{ color: status.color, backgroundColor: status.bg, border: `1px solid ${status.border}` }}
+                            >
+                              {status.label}
+                            </button>
+                          ) : (
+                            <span className="text-[10px] px-1.5 py-1 rounded font-bold uppercase tracking-wide"
+                              style={{ color: status.color, backgroundColor: status.bg, border: `1px solid ${status.border}` }}>
+                              {status.label}
+                            </span>
+                          )}
                         </td>
                         <td className="px-2 py-3 font-black text-xs break-words" style={{ color: GOLD }}>{row.state}</td>
                         <td className="px-2 py-3 text-xs">
@@ -1319,6 +1458,26 @@ export default function AdminPage() {
 
           {actorView === "patterns" && (
             <div>
+              <div className="px-6 py-3 flex items-center justify-between gap-3 flex-wrap"
+                style={{ borderBottom: "1px solid rgba(255,255,255,0.06)", backgroundColor: "rgba(0,0,0,0.12)" }}>
+                <div>
+                  <div className="text-xs font-bold uppercase tracking-wide" style={{ color: "rgba(245,245,245,0.55)" }}>
+                    Shareable pattern export
+                  </div>
+                  <div className="text-[11px] mt-0.5" style={{ color: "rgba(245,245,245,0.38)" }}>
+                    Includes counted actors with 5+ independent families. Reporter names, emails, and notes are excluded.
+                  </div>
+                </div>
+                <a
+                  href="/api/admin/court-actors/patterns-pdf?threshold=5"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs px-3 py-2 rounded-lg font-bold transition-opacity hover:opacity-80"
+                  style={{ backgroundColor: "rgba(201,162,39,0.15)", color: GOLD, border: `1px solid rgba(201,162,39,0.4)` }}
+                >
+                  Download PDF
+                </a>
+              </div>
               {adminActorAggs.length === 0 && (
                 <div className="px-6 py-10 text-center text-sm" style={{ color: "rgba(245,245,245,0.3)" }}>
                   No court actors have been reported yet.
@@ -1506,6 +1665,194 @@ export default function AdminPage() {
         style={{ color: "rgba(245,245,245,0.2)", borderColor: "rgba(255,255,255,0.06)" }}>
         Stand With Meg &nbsp;·&nbsp; Courage to Stand, Power to Change &nbsp;·&nbsp; standwithmeg.com
       </footer>
+
+      {/* ── Reporting Review Modal — inspect mismatches before deleting anything ── */}
+      {(auditReview || auditReviewLoading || auditReviewError) && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4"
+          style={{ backgroundColor: "rgba(0,0,0,0.72)", backdropFilter: "blur(4px)" }}
+          onClick={e => { if (e.target === e.currentTarget) { setAuditReview(null); setAuditReviewError(null); } }}
+        >
+          <div className="relative w-full max-w-5xl max-h-[90vh] flex flex-col rounded-2xl overflow-hidden"
+            style={{ backgroundColor: "#0F1E30", border: `1px solid rgba(201,162,39,0.35)` }}>
+
+            <div className="px-6 py-4 flex items-center justify-between flex-shrink-0"
+              style={{ borderBottom: `1px solid rgba(201,162,39,0.2)`, backgroundColor: "rgba(30,58,95,0.6)" }}>
+              <div>
+                <div className="font-black text-white text-base leading-none">
+                  Review reporting data{auditReview?.state ? ` · ${auditReview.state}` : ""}
+                </div>
+                <div className="text-xs mt-1 max-w-3xl" style={{ color: "rgba(245,245,245,0.45)" }}>
+                  Same-email rows in the same state are counted as one family in dashboard/PDF totals. If a row is a real separate court matter, keep it. Delete only obvious duplicate imports, test rows, or wrong-state records.
+                </div>
+              </div>
+              <button onClick={() => { setAuditReview(null); setAuditReviewError(null); }}
+                className="w-8 h-8 rounded-lg flex items-center justify-center transition-colors hover:bg-white/10"
+                style={{ color: "rgba(245,245,245,0.5)" }} aria-label="Close">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+
+            <div className="overflow-y-auto flex-1 px-6 py-5 space-y-5">
+              {auditReviewLoading && (
+                <div className="py-12 text-center text-sm" style={{ color: "rgba(245,245,245,0.45)" }}>
+                  Loading review data…
+                </div>
+              )}
+
+              {auditReviewError && (
+                <div className="rounded-xl px-4 py-3 text-sm"
+                  style={{ backgroundColor: "rgba(185,28,28,0.14)", color: "rgb(252,165,165)", border: "1px solid rgba(185,28,28,0.35)" }}>
+                  {auditReviewError}
+                </div>
+              )}
+
+              {auditReview && (
+                <>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                    {[
+                      ["Raw rows", auditReview.summary.raw_rows],
+                      ["Deduped families", auditReview.summary.deduped_families],
+                      ["Same-email groups", auditReview.summary.duplicate_groups],
+                      ["Hidden by dedupe", auditReview.summary.hidden_by_dedupe],
+                    ].map(([label, value]) => (
+                      <div key={label} className="rounded-xl px-4 py-3"
+                        style={{ backgroundColor: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.1)" }}>
+                        <div className="text-[10px] uppercase tracking-wide font-bold" style={{ color: "rgba(245,245,245,0.4)" }}>{label}</div>
+                        <div className="text-2xl font-black mt-1" style={{ color: label === "Hidden by dedupe" && Number(value) > 0 ? GOLD : "white" }}>
+                          {value}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+
+                  {auditReview.duplicate_groups.length === 0 ? (
+                    <div className="rounded-xl px-4 py-4 text-sm"
+                      style={{ backgroundColor: "rgba(74,222,128,0.08)", color: "rgba(245,245,245,0.75)", border: "1px solid rgba(74,222,128,0.2)" }}>
+                      No same-email duplicate groups were found for {auditReview.state}. If the audit table still says mismatch, the most likely cause is a stale PDF/index. Regenerate that state PDF or regenerate all 30+ PDFs.
+                    </div>
+                  ) : (
+                    <div className="space-y-4">
+                      <div>
+                        <h3 className="font-black text-white text-sm">Rows grouped by same email and state</h3>
+                        <p className="text-xs mt-1" style={{ color: "rgba(245,245,245,0.45)" }}>
+                          The checked row is the one currently counted by the dedupe rule. Keep separate real cases; delete only rows you know are duplicate or wrong.
+                        </p>
+                      </div>
+
+                      {auditReview.duplicate_groups.map(group => (
+                        <div key={group.family_key} className="rounded-xl overflow-hidden"
+                          style={{ backgroundColor: "rgba(255,255,255,0.035)", border: "1px solid rgba(255,255,255,0.1)" }}>
+                          <div className="px-4 py-3 flex items-center justify-between gap-3 flex-wrap"
+                            style={{ backgroundColor: "rgba(30,58,95,0.45)", borderBottom: "1px solid rgba(255,255,255,0.08)" }}>
+                            <div>
+                              <div className="text-xs font-bold text-white">{group.email || "No email"}</div>
+                              <div className="text-[11px]" style={{ color: "rgba(245,245,245,0.4)" }}>
+                                {group.rows.length} rows · counted as 1 deduped family unless a future manual override is added
+                              </div>
+                            </div>
+                            <span className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide"
+                              style={{ backgroundColor: "rgba(234,179,8,0.16)", color: "rgb(253,224,71)", border: "1px solid rgba(234,179,8,0.35)" }}>
+                              Review
+                            </span>
+                          </div>
+
+                          <div>
+                            {group.rows.map(row => (
+                              <div key={`${row.source_table}-${row.id}`} className="px-4 py-4"
+                                style={{ borderTop: "1px solid rgba(255,255,255,0.05)" }}>
+                                <div className="flex items-start justify-between gap-4">
+                                  <div className="min-w-0 flex-1">
+                                    <div className="flex items-center gap-2 flex-wrap">
+                                      <span className="font-bold text-sm text-white">{auditReviewName(row)}</span>
+                                      <span className="text-[10px] px-1.5 py-0.5 rounded font-bold uppercase tracking-wide"
+                                        style={{
+                                          backgroundColor: row.source_table === "survey_submissions" ? "rgba(74,222,128,0.14)" : "rgba(59,130,246,0.14)",
+                                          color: row.source_table === "survey_submissions" ? "rgb(134,239,172)" : "rgb(147,197,253)",
+                                          border: row.source_table === "survey_submissions" ? "1px solid rgba(74,222,128,0.28)" : "1px solid rgba(59,130,246,0.25)",
+                                        }}>
+                                        {auditReviewSource(row)}
+                                      </span>
+                                      {row.dedupe_winner && (
+                                        <span className="text-[10px] px-1.5 py-0.5 rounded font-bold uppercase tracking-wide"
+                                          style={{ backgroundColor: "rgba(201,162,39,0.15)", color: GOLD, border: "1px solid rgba(201,162,39,0.35)" }}>
+                                          Counted
+                                        </span>
+                                      )}
+                                    </div>
+
+                                    <div className="mt-1 text-[11px] flex flex-wrap gap-x-3 gap-y-1" style={{ color: "rgba(245,245,245,0.48)" }}>
+                                      <span>{shortDate(row.created_at)}</span>
+                                      {row.case_county && <span>{row.case_county}</span>}
+                                      {row.case_status && <span>{row.case_status}</span>}
+                                      {row.system_affected && <span>{row.system_affected}</span>}
+                                      {row.total_financial_loss != null && <span>{fmt$(Number(row.total_financial_loss) || null)}</span>}
+                                      {row.months_lost_parenting_time != null && <span>{row.months_lost_parenting_time} months lost</span>}
+                                    </div>
+
+                                    {row.impact_quote && (
+                                      <blockquote className="mt-2 text-xs italic pl-3"
+                                        style={{ borderLeft: `2px solid rgba(201,162,39,0.35)`, color: "rgba(245,245,245,0.65)" }}>
+                                        &ldquo;{row.impact_quote.slice(0, 260)}{row.impact_quote.length > 260 ? "…" : ""}&rdquo;
+                                      </blockquote>
+                                    )}
+                                  </div>
+
+                                  <div className="flex items-center gap-2 shrink-0">
+                                    <span className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide"
+                                      style={{ backgroundColor: "rgba(74,222,128,0.08)", color: "rgb(134,239,172)", border: "1px solid rgba(74,222,128,0.22)" }}>
+                                      Keep
+                                    </span>
+                                    <button
+                                      type="button"
+                                      onClick={() => deleteAuditReviewRow(row)}
+                                      disabled={deletingAuditRow === row.id}
+                                      className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide transition-opacity hover:opacity-80 disabled:opacity-40"
+                                      style={{ backgroundColor: "rgba(185,28,28,0.14)", color: "rgb(252,165,165)", border: "1px solid rgba(185,28,28,0.35)" }}
+                                    >
+                                      {deletingAuditRow === row.id ? "Deleting…" : "Delete"}
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  <details className="rounded-xl overflow-hidden"
+                    style={{ backgroundColor: "rgba(255,255,255,0.025)", border: "1px solid rgba(255,255,255,0.08)" }}>
+                    <summary className="cursor-pointer px-4 py-3 text-sm font-bold text-white">
+                      Show all {auditReview.rows.length} source rows in {auditReview.state}
+                    </summary>
+                    <div className="divide-y divide-white/5">
+                      {auditReview.rows.map(row => (
+                        <div key={`all-${row.source_table}-${row.id}`} className="px-4 py-3 text-xs">
+                          <div className="flex items-center justify-between gap-3 flex-wrap">
+                            <div className="min-w-0">
+                              <span className="font-bold text-white">{auditReviewName(row)}</span>
+                              <span style={{ color: "rgba(245,245,245,0.4)" }}> · {row.email || "no email"} · {auditReviewSource(row)} · {shortDate(row.created_at)}</span>
+                            </div>
+                            {row.dedupe_winner ? (
+                              <span style={{ color: GOLD }}>counted</span>
+                            ) : (
+                              <span style={{ color: "rgba(245,245,245,0.35)" }}>hidden by dedupe</span>
+                            )}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </details>
+                </>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* ── Nudge Modal — pre-written email with copy buttons ── */}
       {nudgeTarget && (
