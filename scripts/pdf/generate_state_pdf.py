@@ -285,6 +285,7 @@ def top_quotes(rows, n=None):
     scored = []
     for r in rows:
         q = safe_str(r[COLS['quote']])
+        full_q = " ".join(q.split())
         p = safe_str(r[COLS['permission']])
         fn = safe_str(r[COLS['first_name']])
         if 'do not share' in p.lower() or 'data purposes' in p.lower():
@@ -293,9 +294,78 @@ def top_quotes(rows, n=None):
         if s > 0 and q:
             pl = p.lower()
             attr = fn if ('share away' in pl or 'first name' in pl) and fn not in ['None', '', 'nan'] else "Anonymous Parent"
-            scored.append({'quote': _trim_quote(q), 'score': s, 'attribution': attr, 'permission': p})
+            scored.append({
+                'quote': _trim_quote(q),
+                'full_quote': full_q,
+                'score': s,
+                'attribution': attr,
+                'permission': p,
+            })
     scored.sort(key=lambda x: x['score'], reverse=True)
     return scored if n is None else scored[:n]
+
+
+FULL_QUOTE_CHARS_PER_LINE = 92
+FULL_QUOTE_LINE_H = 15
+FULL_QUOTE_CARD_VPAD = 34
+FULL_QUOTE_CITE_LINE = 20
+FULL_QUOTE_GAP = 10
+FULL_QUOTE_PAGE_BUDGET = 730
+FULL_QUOTE_CHUNK_CHARS = 1700
+
+
+def _split_quote_text(text, max_chars=FULL_QUOTE_CHUNK_CHARS):
+    """Split unusually long quotes across appendix cards without truncating."""
+    text = " ".join(str(text or "").split())
+    if len(text) <= max_chars:
+        return [text] if text else []
+    chunks = []
+    remaining = text
+    while len(remaining) > max_chars:
+        cut = remaining[:max_chars].rsplit(" ", 1)[0].rstrip()
+        if len(cut) < max_chars * 0.6:
+            cut = remaining[:max_chars].rstrip()
+        chunks.append(cut)
+        remaining = remaining[len(cut):].strip()
+    if remaining:
+        chunks.append(remaining)
+    return chunks
+
+
+def _full_quote_card_height(text):
+    chars = len(text or "")
+    lines = max(1, -(-chars // FULL_QUOTE_CHARS_PER_LINE))
+    return lines * FULL_QUOTE_LINE_H + FULL_QUOTE_CITE_LINE + FULL_QUOTE_CARD_VPAD
+
+
+def full_quote_pages(quotes):
+    """Pack every approved/shareable full quote into appendix pages."""
+    cards = []
+    for q in quotes:
+        chunks = _split_quote_text(q.get('full_quote') or q.get('quote') or "")
+        for idx, chunk in enumerate(chunks):
+            attribution = q['attribution']
+            if len(chunks) > 1:
+                attribution = f"{attribution} ({idx + 1}/{len(chunks)})"
+            cards.append({
+                'quote': chunk,
+                'attribution': attribution,
+            })
+
+    pages = []
+    page = []
+    used = 0
+    for card in cards:
+        h = _full_quote_card_height(card['quote'])
+        if page and used + h + FULL_QUOTE_GAP > FULL_QUOTE_PAGE_BUDGET:
+            pages.append({'cards': page})
+            page = []
+            used = 0
+        page.append(card)
+        used += h + FULL_QUOTE_GAP
+    if page:
+        pages.append({'cards': page})
+    return pages
 
 
 def fmt_dollar(v):
@@ -423,7 +493,7 @@ def build_template_context(state_abbr, rows, court_actors=None):
     allegation_keywords = ['due process', 'evidence', 'gag order', 'unconstitutional', 'ex parte', 'denied']
     all_quotes = top_quotes(rows)
     for q in all_quotes:
-        ql = q['quote'].lower()
+        ql = (q.get('full_quote') or q['quote']).lower()
         if any(kw in ql for kw in allegation_keywords):
             allegation_quote = {
                 'quote': q['quote'],
@@ -487,9 +557,13 @@ def build_template_context(state_abbr, rows, court_actors=None):
         voice_pages.append(page)
 
     num_voice_pages = len(voice_pages)
+    full_comment_pages = full_quote_pages(all_quotes)
+    num_full_comment_pages = len(full_comment_pages)
     actor_page_count = 1 if court_actors else 0
     voices_start_page = 5 + actor_page_count
-    total_pages = 4 + actor_page_count + num_voice_pages + 1  # cover + glance + financial + who-geo-alleg + actors + voices... + methodology
+    full_comments_start_page = voices_start_page + num_voice_pages
+    methodology_page_number = full_comments_start_page + num_full_comment_pages
+    total_pages = methodology_page_number  # cover + glance + financial + who-geo-alleg + actors + voices + full comments + methodology
 
     # State number (alphabetical order of state abbreviation)
     sorted_states = sorted(STATE_NAMES.keys())
@@ -505,6 +579,8 @@ def build_template_context(state_abbr, rows, court_actors=None):
         'total_pages': f"{total_pages:02d}",
         'actor_page_number': 5,
         'voices_start_page': voices_start_page,
+        'full_comments_start_page': full_comments_start_page,
+        'methodology_page_number': methodology_page_number,
 
         # Children
         'children_total': kids['total_children'],
@@ -554,6 +630,8 @@ def build_template_context(state_abbr, rows, court_actors=None):
         'voice_pages': voice_pages,
         'total_publishable_quotes': total_publishable,
         'quotes_shown': quotes_shown,
+        'full_comment_pages': full_comment_pages,
+        'full_comments_total': total_publishable,
     }
 
 

@@ -679,6 +679,36 @@
     font-weight: 600;
   }
 
+  .full-comments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .full-comment-card {
+    background: #fff;
+    border-left: 3px solid var(--gold);
+    padding: 10px 12px 9px;
+    break-inside: avoid;
+  }
+  .full-comment-card blockquote {
+    margin: 0;
+    font-family: var(--font-editorial);
+    font-size: 11.2px;
+    line-height: 1.42;
+    color: var(--ink);
+  }
+  .full-comment-card cite {
+    display: block;
+    margin-top: 7px;
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.10em;
+    font-size: 8px;
+    color: var(--crimson);
+    font-weight: 700;
+    font-style: normal;
+  }
+
   .voices-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1124,7 +1154,7 @@
 
   {% if loop.first %}
   <h2 class="section-head"><span class="num">05</span>Parent Voices — {{ state_name }}</h2>
-  <p class="lede" style="margin-bottom: 18px;">Quotes appear as submitted. Long submissions are trimmed with <em>[…]</em> to fit the page; the full unedited quote is available in the online version of this report.</p>
+  <p class="lede" style="margin-bottom: 18px;">Selected voice excerpts appear here for readability. Every approved, shareable {{ state_name }} comment is printed in full in the appendix that follows.</p>
   {% else %}
   <h2 class="section-head"><span class="num">05</span>Parent Voices, continued</h2>
   {% endif %}
@@ -1157,7 +1187,7 @@
 
   {% if loop.last %}
   <p class="caption" style="margin-top: 16px; text-align: center;">
-    {{ total_publishable_quotes }} {{ state_name }} parents submitted ranked quotes. {{ quotes_shown }} appear in this report; the remainder are available at standwithmeg.com/{{ state_abbr|lower }}.
+    {{ total_publishable_quotes }} {{ state_name }} parents submitted approved, shareable comments. {{ quotes_shown }} selected excerpts appear here; the full comments begin on the next page.
   </p>
   {% endif %}
   <div class="page-foot">
@@ -1167,14 +1197,51 @@
 </section>
 {% endfor %}
 
+{# ━━━━━━━━━━━━━━ FULL PARENT COMMENTS APPENDIX ━━━━━━━━━━━━━━ #}
+{% for quote_page in full_comment_pages %}
+<section class="page">
+  <div class="runhead">
+    <div><span class="r-state">{{ state_name }}</span> · Family Court Data Report</div>
+    <div class="r-page">Stand With Meg · {{ "%02d"|format(full_comments_start_page + loop.index0) }} / {{ total_pages }}</div>
+  </div>
+
+  {% if loop.first %}
+  <h2 class="section-head"><span class="num">06</span>Full Parent Comments — {{ state_name }}</h2>
+  <p class="lede" style="margin-bottom: 14px;">The comments below are the full approved, publicly shareable survey comments from {{ state_name }} families. Data-only and do-not-share submissions are excluded from this public appendix.</p>
+  {% else %}
+  <h2 class="section-head"><span class="num">06</span>Full Parent Comments, continued</h2>
+  {% endif %}
+
+  <div class="full-comments-list">
+    {% for v in quote_page.cards %}
+    <div class="full-comment-card">
+      <blockquote>{{ v.quote }}</blockquote>
+      <cite>— {{ v.attribution }}</cite>
+    </div>
+    {% endfor %}
+  </div>
+
+  {% if loop.last %}
+  <p class="caption" style="margin-top: 12px; text-align: center;">
+    {{ full_comments_total }} full approved {{ state_name }} comments are included in this appendix.
+  </p>
+  {% endif %}
+
+  <div class="page-foot">
+    <div class="credit"><span class="star">★</span><span>A <strong>StandWithMeg.com</strong> Report · Family Rights Registry</span></div>
+    <div class="pg">{{ state_name }} · {{ "%02d"|format(full_comments_start_page + loop.index0) }} / {{ total_pages }}</div>
+  </div>
+</section>
+{% endfor %}
+
 {# ━━━━━━━━━━━━━━ LAST PAGE — METHODOLOGY / CLOSING ━━━━━━━━━━━━━━ #}
 <section class="page">
   <div class="runhead">
     <div><span class="r-state">{{ state_name }}</span> · Family Court Data Report</div>
-    <div class="r-page">Stand With Meg · {{ total_pages }} / {{ total_pages }}</div>
+    <div class="r-page">Stand With Meg · {{ "%02d"|format(methodology_page_number) }} / {{ total_pages }}</div>
   </div>
 
-  <h2 class="section-head"><span class="num">06</span>How to Read This Report</h2>
+  <h2 class="section-head"><span class="num">07</span>How to Read This Report</h2>
 
   <div class="grid-2">
     <div>
@@ -1205,7 +1272,7 @@
   </div>
   <div class="page-foot">
     <div class="credit"><span class="star">★</span><span>A <strong>StandWithMeg.com</strong> Report · Family Rights Registry</span></div>
-    <div class="pg">{{ state_name }} · {{ total_pages }} / {{ total_pages }}</div>
+    <div class="pg">{{ state_name }} · {{ "%02d"|format(methodology_page_number) }} / {{ total_pages }}</div>
   </div>
 </section>
 
