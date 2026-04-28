@@ -871,30 +871,51 @@ export default function AdminPage() {
     }
   }
 
-  function nudgeFamily(a: { reporter_email: string | null; reporter_name: string | null; role: string; name: string; state_code: string | null }) {
+  function nudgeFamily(a: AdminActor) {
     if (!a.reporter_email) { alert("No email on file for this reporter."); return; }
     const greeting = a.reporter_name ? `Hi ${a.reporter_name.split(" ")[0]},` : "Hi,";
-    const subject = "Stand With Meg — Quick follow-up on your submission";
+    const subject = "Stand With Meg — quick court actor follow-up";
     const actorName = a.name.trim();
-    const hasNamedActor = actorName && actorName.toLowerCase() !== "unknown";
+    const normalizedName = actorName.toLowerCase();
+    const hasNamedActor = Boolean(actorName) && !["unknown", "unnamed", "n/a", "na", "none", "?"].includes(normalizedName);
+    const role = a.role.trim();
+    const roleIsOther = !role || role.toLowerCase() === "other";
+    const hasNotes = Boolean(a.notes?.trim()) && a.notes!.trim().length >= 12;
+    const location = a.state_code ? ` in ${a.state_code}` : "";
     const actorLine = hasNamedActor
-      ? `${a.role} ${actorName}${a.state_code ? ` in ${a.state_code}` : ""}`
-      : `an unnamed ${a.role}${a.state_code ? ` in ${a.state_code}` : ""}`;
+      ? roleIsOther
+        ? `${actorName}${location}, but the role was marked "Other"`
+        : `${actorName} (${role})${location}`
+      : roleIsOther
+        ? `an unnamed court actor${location}`
+        : `an unnamed court actor listed as ${role}${location}`;
+    const missingItems = [
+      !hasNamedActor ? "the actor's name" : null,
+      roleIsOther ? "the actor's correct role or title" : null,
+      !hasNotes ? "one sentence about what that actor did or failed to do" : null,
+    ].filter(Boolean);
+    const followUpReason = missingItems.length > 0
+      ? `I am following up because this court actor entry is missing ${missingItems.join(", ")}.`
+      : "I am following up because we want the Court Actors section to be as accurate and useful as possible.";
     const body = [
       greeting,
       "",
-      `Thank you again for sharing your story with Stand With Meg. When we read through your submission, you mentioned ${actorLine}.`,
+      `Thank you again for sharing your story with Stand With Meg. When we read through your submission, we saw a court actor entry for ${actorLine}. ${followUpReason}`,
       "",
-      "We recently added a dedicated Court Actors section to the survey so families can clearly name the judges, attorneys, GALs, and other officials involved in their case. We only publish a name once 5 different families have independently named that same person — your input helps us reach that threshold and surface real patterns.",
+      "Could you update just the Court Actors section with the missing details? You do not need to redo the whole survey. You can skip anything you already filled out.",
       "",
-      "Would you be willing to re-submit just the Court Actors section here? **You don't need to redo the whole survey** — you can skip the sections you've already filled.",
+      "If you are adding a sentence about what happened, please keep it short and generic, with no personal identifying details. Examples: \"The judge denied my motion without a hearing,\" \"The GAL ignored evidence I submitted,\" or \"There was no due process before my children were removed.\" If the actor did something helpful or fair, you can include that too.",
+      "",
+      "Your name and email will never be published as the person who reported a court actor. Public court actor patterns only show aggregate family counts and pattern information, not who said what.",
+      "",
+      "We only publish a court actor's name publicly once 5 different families have independently named that same person, so accurate names, roles, counties, and short pattern notes help us find real patterns without exposing families.",
+      "",
+      "Survey link:",
       "https://my.standwithmeg.com/survey",
       "",
-      "Any court actors you add will be linked to this round of reporting.",
+      "Thank you for helping make the data stronger and safer for public reporting.",
       "",
-      "Thank you for everything you've already contributed. Your voice is part of a national record that's building real momentum.",
-      "",
-      "— Meg",
+      "Meg",
       "Stand With Meg · standwithmeg.com",
     ].join("\n");
 

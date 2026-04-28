@@ -160,6 +160,7 @@ const STORAGE_VERSION = "v2";
 const STORAGE_FORM   = `swm-survey-form-${STORAGE_VERSION}`;
 const STORAGE_DPC    = `swm-survey-dpc-${STORAGE_VERSION}`;
 const STORAGE_ACTORS = `swm-survey-actors-${STORAGE_VERSION}`;
+const ACTOR_NOTE_MIN_CHARS = 12;
 
 function readStorage<T>(key: string, fallback: T): T {
   if (typeof window === "undefined") return fallback;
@@ -271,6 +272,20 @@ export default function SubmitPage() {
       if (!form.allegation)               missing.push("Primary nature of allegations");
       if (dueProcessChecklist.length === 0) missing.push("Due process & fraud checklist (at least one)");
       if (!form.conflict_of_interest_awareness) missing.push("Conflict of interest awareness");
+      courtActors.forEach((actor, idx) => {
+        const hasAnyActorField = Boolean(
+          actor.role.trim() ||
+          actor.name.trim() ||
+          actor.court.trim() ||
+          actor.notes.trim()
+        );
+        if (!hasAnyActorField) return;
+        if (!actor.role.trim()) missing.push(`Court actor #${idx + 1} role`);
+        if (!actor.name.trim()) missing.push(`Court actor #${idx + 1} name`);
+        if (actor.notes.trim().length < ACTOR_NOTE_MIN_CHARS) {
+          missing.push(`Court actor #${idx + 1} reason/note`);
+        }
+      });
     }
 
     if (stepIndex === 3) {
@@ -338,7 +353,7 @@ export default function SubmitPage() {
             : null,
           // court actors — filtered so empty rows don't get sent
           court_actors: courtActors
-            .filter(a => a.role.trim() && a.name.trim())
+            .filter(a => a.role.trim() && a.name.trim() && a.notes.trim())
             .map(a => ({
               role:  a.role.trim(),
               name:  a.name.trim(),
@@ -874,7 +889,8 @@ export default function SubmitPage() {
                   <p className="text-xs text-gray-500 mb-3 leading-relaxed">
                     Add any judges, attorneys, GALs, evaluators, therapists, CPS workers, or others involved in your case.
                     Your identity stays private. A name only appears publicly once it has been independently reported by <strong>5 different families</strong>.
-                    Anything you add here is visible to Stand With Meg admins for pattern research.
+                    Anything you add here is visible to Stand With Meg admins for pattern research. If you add a court actor,
+                    please include one short factual sentence about what happened. It can be harmful, neutral, or positive.
                   </p>
 
                   {courtActors.length === 0 && (
@@ -916,10 +932,18 @@ export default function SubmitPage() {
                         onChange={e => updateActor(i, "court", e.target.value)}
                         className="w-full rounded-lg px-3 py-2 text-sm text-gray-900 bg-white mb-2"
                         style={{ border: "1px solid #E5E7EB" }} />
-                      <textarea rows={2} placeholder="Notes (optional — admin only, never public)" value={actor.notes}
+                      <textarea rows={3}
+                        placeholder="Required: one short factual sentence. Example: denied my motion without a hearing, ignored evidence, delayed reunification, or handled one issue fairly."
+                        value={actor.notes}
                         onChange={e => updateActor(i, "notes", e.target.value)}
+                        minLength={ACTOR_NOTE_MIN_CHARS}
+                        required
                         className="w-full rounded-lg px-3 py-2 text-sm text-gray-900 bg-white resize-none"
                         style={{ border: "1px solid #E5E7EB" }} />
+                      <p className="text-[11px] text-gray-400 mt-1 leading-relaxed">
+                        Required for each listed actor. Do not include private details about your children or case number.
+                        Your name/email will not be published with this actor report.
+                      </p>
                     </div>
                   ))}
 

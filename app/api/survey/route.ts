@@ -14,6 +14,7 @@ const VALID_STATES = new Set([
 ]);
 
 const VALID_SHARE_PERMISSIONS = new Set(["public", "anonymous", "first_name", "data_only"]);
+const ACTOR_NOTE_MIN_CHARS = 12;
 
 export async function POST(request: Request) {
   try {
@@ -150,6 +151,33 @@ export async function POST(request: Request) {
     const first_name = String(body.first_name || "").trim();
     if (!first_name) return Response.json({ error: "First name is required." }, { status: 400 });
 
+    // ── Court actors ─────────────────────────────────────────────
+    // Optional overall, but if a family names an actor, every actor row
+    // must include the role, name, and a short factual note. This keeps the
+    // admin/public pattern review useful and prevents empty actor records.
+    const incomingActors = Array.isArray(body.court_actors) ? body.court_actors : [];
+    const actorRows = [];
+    for (let i = 0; i < incomingActors.length; i += 1) {
+      const a = incomingActors[i] as { role?: string; name?: string; court?: string; notes?: string } | null;
+      const role  = String(a?.role  || "").trim();
+      const name  = String(a?.name  || "").trim();
+      const court = String(a?.court || "").trim() || null;
+      const notes = String(a?.notes || "").trim();
+      const hasAnyActorField = Boolean(role || name || court || notes);
+      if (!hasAnyActorField) continue;
+      if (!role || !name || notes.length < ACTOR_NOTE_MIN_CHARS) {
+        return Response.json({
+          error: `Court actor #${i + 1} needs a role, name, and one short reason/note.`,
+        }, { status: 400 });
+      }
+      actorRows.push({
+        role,
+        name,
+        court,
+        notes,
+      });
+    }
+
     // ── IP hash ────────────────────────────────────────────────────
     const forwarded = request.headers.get("x-forwarded-for");
     const ip = forwarded ? forwarded.split(",")[0].trim() : "unknown";
@@ -214,32 +242,17 @@ export async function POST(request: Request) {
       return Response.json({ error: "Failed to save submission. Please try again." }, { status: 500 });
     }
 
-    // ── Court actors ─────────────────────────────────────────────
-    // Accept a list of named court actors tied to this submission. Each
-    // row is lightly validated server-side: must have role + name, notes
-    // and court are optional free text. Failures here do NOT reject the
-    // submission — the quote already saved is more important to preserve.
-    if (Array.isArray(body.court_actors) && body.court_actors.length > 0) {
-      const actorRows = body.court_actors
-        .map((a: { role?: string; name?: string; court?: string; notes?: string }) => {
-          const role  = String(a?.role  || "").trim();
-          const name  = String(a?.name  || "").trim();
-          const court = String(a?.court || "").trim() || null;
-          const notes = String(a?.notes || "").trim() || null;
-          if (!role || !name) return null;
-          return {
-            submission_id: data.id,
-            role,
-            name,
-            court_or_county: court,
-            state_code: state_of_occurrence,
-            notes,
-          };
-        })
-        .filter(Boolean);
-
-      if (actorRows.length > 0) {
-        const { error: actorsErr } = await adminSupabase.from("court_actors").insert(actorRows);
+    if (actorRows.length > 0) {
+      const rowsToInsert = actorRows.map(a => ({
+        submission_id: data.id,
+        role: a.role,
+        name: a.name,
+        court_or_county: a.court,
+        state_code: state_of_occurrence,
+        notes: a.notes,
+      }));
+      if (rowsToInsert.length > 0) {
+        const { error: actorsErr } = await adminSupabase.from("court_actors").insert(rowsToInsert);
         if (actorsErr) {
           // Log but don't fail the whole submission
           console.error("court_actors insert error (non-blocking):", actorsErr.message);
