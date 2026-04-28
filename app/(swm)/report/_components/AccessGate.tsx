@@ -30,10 +30,13 @@ const ROLES = [
   ["public", "General Public"],
 ];
 
-type Props = { onComplete: (data: { email: string; state_of_interest: string }) => void };
+type Props = { onComplete: (data: { email: string; state_of_interest: string; first_name: string; last_name: string; organization?: string }) => void };
 
 export function AccessGate({ onComplete }: Props) {
   const [email, setEmail] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [organization, setOrganization] = useState("");
   const [state, setState] = useState("");
   const [role, setRole] = useState("");
   const [reason, setReason] = useState("");
@@ -43,8 +46,8 @@ export function AccessGate({ onComplete }: Props) {
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (!email || !role || !agreed) {
-      setError("Please complete all required fields and accept the terms.");
+    if (!email || !firstName.trim() || !lastName.trim() || !role || !agreed) {
+      setError("Please complete your name, email, role, and accept the terms.");
       return;
     }
     setLoading(true);
@@ -55,6 +58,9 @@ export function AccessGate({ onComplete }: Props) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           email,
+          first_name: firstName,
+          last_name: lastName,
+          organization: organization || null,
           state_of_interest: state || null,
           role,
           reason: reason || null,
@@ -66,7 +72,7 @@ export function AccessGate({ onComplete }: Props) {
         setError(data.error || "Something went wrong.");
         return;
       }
-      onComplete({ email, state_of_interest: state });
+      onComplete({ email, state_of_interest: state, first_name: firstName, last_name: lastName, organization: organization || undefined });
     } catch {
       setError("Network error. Please try again.");
     } finally {
@@ -145,6 +151,37 @@ export function AccessGate({ onComplete }: Props) {
                 or continue to data
               </span>
               <div className="h-px flex-1" style={{ backgroundColor: "rgba(255,255,255,0.1)" }} />
+            </div>
+
+            <div className="grid gap-4 md:grid-cols-2">
+              <div>
+                <label className="block text-sm font-semibold mb-1.5" style={{ color: "rgba(245,245,245,0.8)" }}>
+                  First Name <span className="text-red-400">*</span>
+                </label>
+                <input type="text" value={firstName} onChange={e => setFirstName(e.target.value)} required
+                  placeholder="First name"
+                  className="w-full rounded-lg px-4 py-3 text-white text-sm focus:outline-none"
+                  style={inputStyle} />
+              </div>
+              <div>
+                <label className="block text-sm font-semibold mb-1.5" style={{ color: "rgba(245,245,245,0.8)" }}>
+                  Last Name <span className="text-red-400">*</span>
+                </label>
+                <input type="text" value={lastName} onChange={e => setLastName(e.target.value)} required
+                  placeholder="Last name"
+                  className="w-full rounded-lg px-4 py-3 text-white text-sm focus:outline-none"
+                  style={inputStyle} />
+              </div>
+            </div>
+
+            <div>
+              <label className="block text-sm font-semibold mb-1.5" style={{ color: "rgba(245,245,245,0.8)" }}>
+                Organization / Outlet <span className="text-xs font-normal" style={{ color: "rgba(245,245,245,0.4)" }}>(optional)</span>
+              </label>
+              <input type="text" value={organization} onChange={e => setOrganization(e.target.value)}
+                placeholder="News outlet, organization, or group"
+                className="w-full rounded-lg px-4 py-3 text-white text-sm focus:outline-none"
+                style={inputStyle} />
             </div>
 
             {/* Email */}

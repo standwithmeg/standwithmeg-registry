@@ -29,7 +29,7 @@ export default function ImpactPage() {
   // Returning visitors see the dashboard immediately, no flash of the gate.
   const [hasAccess, setHasAccess] = useState(readAccessSync);
 
-  function handleGateComplete(data: { email: string; state_of_interest: string }) {
+  function handleGateComplete(data: { email: string; state_of_interest: string; first_name: string; last_name: string; organization?: string }) {
     const record = { ...data, granted_at: new Date().toISOString() };
     localStorage.setItem(STORAGE_KEY, JSON.stringify(record));
     setHasAccess(true);

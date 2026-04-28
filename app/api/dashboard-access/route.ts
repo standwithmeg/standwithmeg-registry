@@ -11,6 +11,10 @@ const VALID_ROLES = new Set([
   "public",
 ]);
 
+function cleanText(value: unknown, maxLength: number) {
+  return String(value || "").trim().replace(/\s+/g, " ").slice(0, maxLength);
+}
+
 export async function POST(request: Request) {
   try {
     const body = await request.json();
@@ -18,6 +22,16 @@ export async function POST(request: Request) {
     const email = String(body.email || "").trim().toLowerCase();
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return Response.json({ error: "A valid email address is required." }, { status: 400 });
+    }
+
+    const first_name = cleanText(body.first_name, 80);
+    if (!first_name) {
+      return Response.json({ error: "First name is required." }, { status: 400 });
+    }
+
+    const last_name = cleanText(body.last_name, 80);
+    if (!last_name) {
+      return Response.json({ error: "Last name is required." }, { status: 400 });
     }
 
     const role = String(body.role || "").trim();
@@ -30,6 +44,7 @@ export async function POST(request: Request) {
     }
 
     const state_of_interest = String(body.state_of_interest || "").trim() || null;
+    const organization = cleanText(body.organization, 160) || null;
     const reason = String(body.reason || "").trim() || null;
 
     // IP hash — same pattern as survey POST
@@ -41,7 +56,17 @@ export async function POST(request: Request) {
 
     const { error } = await adminSupabase
       .from("dashboard_access_log")
-      .insert({ email, state_of_interest, role, reason, agreed_terms: true, ip_hash });
+      .insert({
+        email,
+        first_name,
+        last_name,
+        organization,
+        state_of_interest,
+        role,
+        reason,
+        agreed_terms: true,
+        ip_hash,
+      });
 
     if (error) {
       // Log the error but still grant access — the gate should not block
