@@ -263,7 +263,7 @@ export default function SubmitPage() {
       if (form.number_of_kids === ""
           || isNaN(parseInt(form.number_of_kids, 10))
           || parseInt(form.number_of_kids, 10) < 0
-          || parseInt(form.number_of_kids, 10) > 20) missing.push("Number of children (0–20)");
+          || parseInt(form.number_of_kids, 10) > 20) missing.push("Number of children involved in this case (0-20)");
       if (!form.system)                   missing.push("System affected");
       if (!form.duration)                 missing.push("Time in system");
       if (!form.custody)                  missing.push("Custody status");
@@ -628,6 +628,13 @@ export default function SubmitPage() {
             {/* ── Step 1: Case Details ── */}
             {step === 1 && (
               <>
+                {error && (
+                  <div className="rounded-xl px-4 py-3 text-sm font-medium text-red-700"
+                    style={{ backgroundColor: "rgba(185,28,28,0.06)", border: "1.5px solid #B91C1C" }}>
+                    {error}
+                  </div>
+                )}
+
                 <div>
                   <label className={labelCls} style={{ color: NAVY }}>
                     System involved <span className="text-red-700">*</span>
@@ -657,7 +664,7 @@ export default function SubmitPage() {
 
                 <div>
                   <label className={labelCls} style={{ color: NAVY }}>
-                    How many kids do you have? <span className="text-red-700">*</span>
+                    If children are involved in this case, how many? <span className="text-red-700">*</span>
                   </label>
                   <input type="number" min="0" max="20" step="1" placeholder="e.g. 2" {...bind("number_of_kids")} />
                 </div>
@@ -953,13 +960,6 @@ export default function SubmitPage() {
                     + Add a Court Actor
                   </button>
                 </div>
-
-                {error && (
-                  <div className="rounded-xl px-4 py-3 text-sm font-medium text-red-700"
-                    style={{ backgroundColor: "rgba(185,28,28,0.06)", border: "1.5px solid #B91C1C" }}>
-                    {error}
-                  </div>
-                )}
 
                 <div className="flex gap-3 pt-2">
                   <button onClick={() => { setError(null); setStep(0); }}
