@@ -939,6 +939,12 @@ export default function SubmitPage() {
                         onChange={e => updateActor(i, "court", e.target.value)}
                         className="w-full rounded-lg px-3 py-2 text-sm text-gray-900 bg-white mb-2"
                         style={{ border: "1px solid #E5E7EB" }} />
+                      <label className="block text-xs font-bold uppercase tracking-wide text-gray-500 mb-1">
+                        What happened with this court actor?
+                        {(actor.role.trim() || actor.name.trim() || actor.court.trim() || actor.notes.trim()) && (
+                          <span className="text-red-700"> *</span>
+                        )}
+                      </label>
                       <textarea rows={3}
                         placeholder="Required: one short factual sentence. Example: denied my motion without a hearing, ignored evidence, delayed reunification, or handled one issue fairly."
                         value={actor.notes}

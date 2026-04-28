@@ -29,7 +29,7 @@ type ReviewRow = {
   approved: boolean | null;
   family_key: string;
   dedupe_winner: boolean;
-  review_decision: "keep" | "delete" | null;
+  review_decision: "keep" | "delete" | "count_separately" | null;
   reviewed_at: string | null;
 };
 
@@ -63,6 +63,27 @@ function sourcePriority(row: ReviewRow) {
 function familyKey(row: ReviewRow) {
   const email = normalizeEmail(row.email);
   return email ? `${email}|${row.state}` : `${row.source_table}:${row.id}`;
+}
+
+function countedFamilyCount(group: ReviewRow[]) {
+  const countSeparately = group.filter(row => row.review_decision === "count_separately").length;
+  const hasNormalDedupeRow = group.some(row => row.review_decision !== "count_separately");
+  return countSeparately + (hasNormalDedupeRow ? 1 : 0);
+}
+
+function markDedupeWinners(groups: Iterable<ReviewRow[]>) {
+  for (const group of groups) {
+    for (const row of group) row.dedupe_winner = false;
+
+    const separateRows = group.filter(row => row.review_decision === "count_separately");
+    for (const row of separateRows) row.dedupe_winner = true;
+
+    const normalRows = group
+      .filter(row => row.review_decision !== "count_separately")
+      .sort((a, b) => sourcePriority(a) - sourcePriority(b) || createdMs(b) - createdMs(a));
+
+    if (normalRows[0]) normalRows[0].dedupe_winner = true;
+  }
 }
 
 async function fetchReviewRows(state: string): Promise<ReviewRow[]> {
@@ -152,10 +173,10 @@ async function fetchReviewRows(state: string): Promise<ReviewRow[]> {
     // The app should still load before migration 013 is applied. Keep actions
     // will return a clear error until the table exists.
     if (!decisionsError) {
-      const bySource = new Map<string, { decision: "keep" | "delete"; decided_at: string | null }>();
+      const bySource = new Map<string, { decision: "keep" | "delete" | "count_separately"; decided_at: string | null }>();
       for (const decision of (decisions ?? []) as Array<Record<string, unknown>>) {
         bySource.set(`${decision.source_table}:${decision.source_id}`, {
-          decision: decision.decision as "keep" | "delete",
+          decision: decision.decision as "keep" | "delete" | "count_separately",
           decided_at: decision.decided_at as string | null,
         });
       }
@@ -177,10 +198,7 @@ async function fetchReviewRows(state: string): Promise<ReviewRow[]> {
     byFamily.set(row.family_key, group);
   }
 
-  for (const group of byFamily.values()) {
-    group.sort((a, b) => sourcePriority(a) - sourcePriority(b) || createdMs(b) - createdMs(a));
-    if (group[0]) group[0].dedupe_winner = true;
-  }
+  markDedupeWinners(byFamily.values());
 
   rows.sort((a, b) => createdMs(b) - createdMs(a));
   return rows;
@@ -214,14 +232,18 @@ export async function GET(request: Request) {
         rows: group.sort((a, b) => sourcePriority(a) - sourcePriority(b) || createdMs(b) - createdMs(a)),
       }))
       .sort((a, b) => b.rows.length - a.rows.length || String(a.email ?? "").localeCompare(String(b.email ?? "")));
+    const dedupedFamilies = [...groupsByFamily.values()].reduce(
+      (sum, group) => sum + countedFamilyCount(group),
+      0
+    );
 
     return Response.json({
       state,
       summary: {
         raw_rows: rows.length,
-        deduped_families: groupsByFamily.size,
+        deduped_families: dedupedFamilies,
         duplicate_groups: duplicateGroups.length,
-        hidden_by_dedupe: rows.length - groupsByFamily.size,
+        hidden_by_dedupe: rows.length - dedupedFamilies,
       },
       duplicate_groups: duplicateGroups,
       rows,
@@ -286,8 +308,8 @@ export async function PATCH(request: Request) {
     if (!id || (source_table !== "survey_submissions" && source_table !== "legacy_submissions")) {
       return Response.json({ error: "id and valid source_table are required." }, { status: 400 });
     }
-    if (decision !== "keep") {
-      return Response.json({ error: "Only keep decisions can be saved here." }, { status: 400 });
+    if (decision !== "keep" && decision !== "count_separately") {
+      return Response.json({ error: "Only keep or count_separately decisions can be saved here." }, { status: 400 });
     }
 
     const adminSupabase = createAdminSupabaseClient();
@@ -297,7 +319,7 @@ export async function PATCH(request: Request) {
         source_table,
         source_id: id,
         state: normalizeState(String(state ?? "")) || null,
-        decision: "keep",
+        decision,
         decided_by: adminEmail,
         decided_at: new Date().toISOString(),
       }, { onConflict: "source_table,source_id" });
@@ -305,7 +327,7 @@ export async function PATCH(request: Request) {
     if (error) {
       console.error("PATCH /api/admin/reporting-audit/review error:", error);
       const message = error.code === "42P01"
-        ? "The admin_review_decisions Supabase migration needs to be run before Keep can save."
+        ? "The admin_review_decisions Supabase migration needs to be run before review decisions can save."
         : error.message;
       return Response.json({ error: message }, { status: 500 });
     }

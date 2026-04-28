@@ -4,6 +4,7 @@ import { isAdminEmail } from "../../../../lib/require-auth";
 import type { SupabaseClient } from "@supabase/supabase-js";
 
 type FinancialRow = {
+  id: string;
   state_of_occurrence: string | null;
   outside_us_country: string | null;
   email: string | null;
@@ -11,6 +12,7 @@ type FinancialRow = {
   created_at: string | null;
   _src?: number;
   _idx?: number;
+  _table?: "survey_submissions" | "legacy_submissions";
 };
 
 async function fetchAllFinancialRows(
@@ -24,7 +26,7 @@ async function fetchAllFinancialRows(
   while (true) {
     const { data, error } = await supabase
       .from(table)
-      .select("state_of_occurrence,outside_us_country,email,total_financial_loss,created_at")
+      .select("id,state_of_occurrence,outside_us_country,email,total_financial_loss,created_at")
       .range(from, from + pageSize - 1);
 
     if (error) throw error;
@@ -36,6 +38,22 @@ async function fetchAllFinancialRows(
   }
 
   return rows;
+}
+
+async function fetchCountSeparatelyKeys(supabase: SupabaseClient): Promise<Set<string>> {
+  const { data, error } = await supabase
+    .from("admin_review_decisions")
+    .select("source_table,source_id")
+    .eq("decision", "count_separately");
+
+  // Keep older deployments usable before migration 013/014 is applied.
+  if (error?.code === "42P01") return new Set();
+  if (error) throw error;
+
+  return new Set(
+    ((data ?? []) as Array<{ source_table: string; source_id: string }>)
+      .map(row => `${row.source_table}:${row.source_id}`)
+  );
 }
 
 function rowState(row: FinancialRow): string {
@@ -53,10 +71,11 @@ async function countDedupedFinancialRows(supabase: SupabaseClient): Promise<numb
     fetchAllFinancialRows(supabase, "survey_submissions"),
     fetchAllFinancialRows(supabase, "legacy_submissions"),
   ]);
+  const countSeparatelyKeys = await fetchCountSeparatelyKeys(supabase);
 
   const tagged = [
-    ...survey.map((row, idx) => ({ ...row, _src: 0, _idx: idx })),
-    ...legacy.map((row, idx) => ({ ...row, _src: 1, _idx: survey.length + idx })),
+    ...survey.map((row, idx) => ({ ...row, _src: 0, _idx: idx, _table: "survey_submissions" as const })),
+    ...legacy.map((row, idx) => ({ ...row, _src: 1, _idx: survey.length + idx, _table: "legacy_submissions" as const })),
   ].filter(row => rowState(row));
 
   // Mirrors movement_stats_by_state: survey rows win over legacy rows for the
@@ -73,7 +92,10 @@ async function countDedupedFinancialRows(supabase: SupabaseClient): Promise<numb
   for (const row of tagged) {
     const state = rowState(row);
     const email = String(row.email ?? "").trim().toLowerCase();
-    const key = `${email || `__anon_${row._idx}__`}|${state}`;
+    const sourceKey = `${row._table}:${row.id}`;
+    const key = countSeparatelyKeys.has(sourceKey)
+      ? `__separate_${sourceKey}__|${state}`
+      : `${email || `__anon_${row._idx}__`}|${state}`;
     if (seen.has(key)) continue;
     seen.add(key);
 

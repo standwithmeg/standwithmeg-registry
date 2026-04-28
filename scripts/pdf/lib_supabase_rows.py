@@ -239,6 +239,28 @@ def _paginated_select(sb: Client, table: str, columns: str) -> list[dict]:
     return out
 
 
+def _load_count_separately_keys(sb: Client) -> set[str]:
+    """Rows manually marked as separate cases should bypass email/state dedupe."""
+    try:
+        resp = (
+            sb.table("admin_review_decisions")
+            .select("source_table,source_id")
+            .eq("decision", "count_separately")
+            .execute()
+        )
+    except Exception as exc:
+        text = str(exc)
+        if "admin_review_decisions" in text or "42P01" in text:
+            return set()
+        raise
+
+    return {
+        f"{row.get('source_table')}:{row.get('source_id')}"
+        for row in (resp.data or [])
+        if row.get("source_table") and row.get("source_id")
+    }
+
+
 # Column list needs to cover everything _row_tuple touches for BOTH tables.
 # legacy_submissions doesn't have permission_to_share or impact_quote, so
 # we request what exists and _row_tuple's .get() default covers the rest.
@@ -274,7 +296,7 @@ def _iso_epoch(iso) -> int:
         return 0
 
 
-def _dedup_key(r: dict, anon_id: int) -> tuple:
+def _dedup_key(r: dict, anon_id: int, count_separately_keys: set[str]) -> tuple:
     """
     Mirror migration 009's (email_key, state) dedup from the
     movement_stats_by_state view so PDF counts match the public dashboard
@@ -284,12 +306,16 @@ def _dedup_key(r: dict, anon_id: int) -> tuple:
     raw_state   = (r.get("state_of_occurrence") or "").strip().upper()
     raw_country = (r.get("outside_us_country")  or "").strip()
     state = raw_state or raw_country
+    source_key = f"{r.get('_table')}:{r.get('id')}"
+    if source_key in count_separately_keys:
+        return (f"__separate_{source_key}__", state)
+
     email = (r.get("email") or "").strip().lower()
     email_key = email if email else f"__anon_{anon_id}__"
     return (email_key, state)
 
 
-def _dedup(survey: list[dict], legacy: list[dict]) -> list[dict]:
+def _dedup(survey: list[dict], legacy: list[dict], count_separately_keys: set[str]) -> list[dict]:
     """
     Collapse (email_key, state) duplicates across both tables.
     survey_submissions wins over legacy_submissions (migration 009's
@@ -298,9 +324,9 @@ def _dedup(survey: list[dict], legacy: list[dict]) -> list[dict]:
     """
     tagged: list[dict] = []
     for i, r in enumerate(survey):
-        tagged.append({**r, "_src": 0, "_idx": i})
+        tagged.append({**r, "_src": 0, "_idx": i, "_table": "survey_submissions"})
     for i, r in enumerate(legacy, start=len(survey)):
-        tagged.append({**r, "_src": 1, "_idx": i})
+        tagged.append({**r, "_src": 1, "_idx": i, "_table": "legacy_submissions"})
 
     # Sort: source_priority asc (survey first), then created_at desc (newest first)
     tagged.sort(key=lambda r: (r["_src"], -_iso_epoch(r.get("created_at"))))
@@ -308,7 +334,7 @@ def _dedup(survey: list[dict], legacy: list[dict]) -> list[dict]:
     seen: set[tuple] = set()
     out: list[dict] = []
     for r in tagged:
-        k = _dedup_key(r, r["_idx"])
+        k = _dedup_key(r, r["_idx"], count_separately_keys)
         if k in seen:
             continue
         seen.add(k)
@@ -327,13 +353,14 @@ def load_rows_from_supabase() -> list[list]:
     sb: Client = create_client(url, key)
 
     # Need email + created_at for dedup on top of the PDF display columns
-    survey_cols = _SURVEY_COLS + ",email,created_at"
-    legacy_cols = _LEGACY_COLS + ",email,created_at"
+    survey_cols = _SURVEY_COLS + ",id,email,created_at"
+    legacy_cols = _LEGACY_COLS + ",id,email,created_at"
 
     survey = _paginated_select(sb, "survey_submissions", survey_cols)
     legacy = _paginated_select(sb, "legacy_submissions", legacy_cols)
+    count_separately_keys = _load_count_separately_keys(sb)
 
-    deduped = _dedup(survey, legacy)
+    deduped = _dedup(survey, legacy, count_separately_keys)
     rows = [_row_tuple(r) for r in deduped]
     print(
         f"  Loaded {len(survey)} survey + {len(legacy)} legacy = "

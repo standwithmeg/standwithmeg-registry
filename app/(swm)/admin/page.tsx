@@ -367,7 +367,7 @@ type AuditReviewRow = {
   approved: boolean | null;
   family_key: string;
   dedupe_winner: boolean;
-  review_decision: "keep" | "delete" | null;
+  review_decision: "keep" | "delete" | "count_separately" | null;
   reviewed_at: string | null;
 };
 
@@ -471,6 +471,12 @@ function auditReviewSource(row: AuditReviewRow) {
 
 function auditRowKey(row: AuditReviewRow) {
   return `${row.source_table}:${row.id}`;
+}
+
+function auditGroupCountedFamilies(group: AuditReviewGroup) {
+  const separateRows = group.rows.filter(row => row.review_decision === "count_separately").length;
+  const hasNormalDedupeRow = group.rows.some(row => row.review_decision !== "count_separately");
+  return separateRows + (hasNormalDedupeRow ? 1 : 0);
 }
 
 function auditReviewBoolean(value: string | boolean | null) {
@@ -585,6 +591,10 @@ function nudgeBodyToHtml(body: string) {
           /https:\/\/my\.standwithmeg\.com\/survey/g,
           '<a href="https://my.standwithmeg.com/survey" style="color:#B91C1C;font-weight:700;">https://my.standwithmeg.com/survey</a>'
         )
+        .replace(
+          /https:\/\/my\.standwithmeg\.com\/court-actor-update\?submission=[A-Za-z0-9%._~=-]+(?:&amp;actor=[A-Za-z0-9%._~=-]+)?/g,
+          match => `<a href="${match}" style="color:#B91C1C;font-weight:700;">${match}</a>`
+        )
         .replace(/\n/g, "<br>");
       return `<p>${escaped}</p>`;
     })
@@ -638,6 +648,7 @@ export default function AdminPage() {
   const [auditReviewError, setAuditReviewError] = useState<string | null>(null);
   const [deletingAuditRow, setDeletingAuditRow] = useState<string | null>(null);
   const [keepingAuditRow, setKeepingAuditRow] = useState<string | null>(null);
+  const [countingSeparatelyAuditRow, setCountingSeparatelyAuditRow] = useState<string | null>(null);
 
   // Quote modal
   const [quoteModal, setQuoteModal] = useState<{ state: string; is_us: boolean; total: number } | null>(null);
@@ -801,11 +812,35 @@ export default function AdminPage() {
       });
       const data = await res.json().catch(() => ({}));
       if (!res.ok) throw new Error(data.error || "Keep failed.");
-      await loadAuditReview(row.state);
+      await Promise.all([loadAuditReview(row.state), refreshStatsAndAudit()]);
     } catch (err) {
       window.alert(err instanceof Error ? err.message : "Keep failed.");
     } finally {
       setKeepingAuditRow(null);
+    }
+  }
+
+  async function countAuditReviewRowSeparately(row: AuditReviewRow) {
+    const label = `${row.source_table === "survey_submissions" ? "current survey" : "legacy/import"} row for ${row.email || "no email"} in ${row.state}`;
+    if (!window.confirm(`Count this ${label} as a separate real case/family? This will change dashboard, audit spreadsheet, and next PDF counts.`)) {
+      return;
+    }
+
+    const key = auditRowKey(row);
+    setCountingSeparatelyAuditRow(key);
+    try {
+      const res = await fetch("/api/admin/reporting-audit/review", {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id: row.id, source_table: row.source_table, state: row.state, decision: "count_separately" }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) throw new Error(data.error || "Count separately failed.");
+      await Promise.all([loadAuditReview(row.state), refreshStatsAndAudit()]);
+    } catch (err) {
+      window.alert(err instanceof Error ? err.message : "Count separately failed.");
+    } finally {
+      setCountingSeparatelyAuditRow(null);
     }
   }
 
@@ -897,12 +932,13 @@ export default function AdminPage() {
     const followUpReason = missingItems.length > 0
       ? `I am following up because this court actor entry is missing ${missingItems.join(", ")}.`
       : "I am following up because we want the Court Actors section to be as accurate and useful as possible.";
+    const updateUrl = `https://my.standwithmeg.com/court-actor-update?submission=${encodeURIComponent(a.submission_id)}&actor=${encodeURIComponent(a.id)}`;
     const body = [
       greeting,
       "",
       `Thank you again for sharing your story with Stand With Meg. When we read through your submission, we saw a court actor entry for ${actorLine}. ${followUpReason}`,
       "",
-      "Could you update just the Court Actors section with the missing details? You do not need to redo the whole survey. You can skip anything you already filled out.",
+      "Could you use this short Court Actor update form to add the missing details? It only asks for the email from your original survey and the court actor information. You do not need to redo the full survey.",
       "",
       "If you are adding a sentence about what happened, please keep it short and generic, with no personal identifying details. Examples: \"The judge denied my motion without a hearing,\" \"The GAL ignored evidence I submitted,\" or \"There was no due process before my children were removed.\" If the actor did something helpful or fair, you can include that too.",
       "",
@@ -910,8 +946,8 @@ export default function AdminPage() {
       "",
       "We only publish a court actor's name publicly once 5 different families have independently named that same person, so accurate names, roles, counties, and short pattern notes help us find real patterns without exposing families.",
       "",
-      "Survey link:",
-      "https://my.standwithmeg.com/survey",
+      "Court Actor update link:",
+      updateUrl,
       "",
       "Thank you for helping make the data stronger and safer for public reporting.",
       "",
@@ -1873,7 +1909,7 @@ export default function AdminPage() {
                       <div>
                         <h3 className="font-black text-white text-sm">Rows grouped by same email and state</h3>
                         <p className="text-xs mt-1" style={{ color: "rgba(245,245,245,0.45)" }}>
-                          The checked row is the one currently counted by the dedupe rule. Keep separate real cases; delete only rows you know are duplicate or wrong.
+                          The checked row is counted. Use Count separately only for a real second case or court matter; use Keep deduped when the row should stay but count with the same family.
                         </p>
                       </div>
 
@@ -1885,7 +1921,7 @@ export default function AdminPage() {
                             <div>
                               <div className="text-xs font-bold text-white">{group.email || "No email"}</div>
                               <div className="text-[11px]" style={{ color: "rgba(245,245,245,0.4)" }}>
-                                {group.rows.length} rows · counted as 1 deduped family unless a future manual override is added
+                                {group.rows.length} rows · counted as {auditGroupCountedFamilies(group)} {auditGroupCountedFamilies(group) === 1 ? "family" : "families"}
                               </div>
                             </div>
                             <span className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide"
@@ -1916,6 +1952,12 @@ export default function AdminPage() {
                                           Counted
                                         </span>
                                       )}
+                                      {row.review_decision === "count_separately" && (
+                                        <span className="text-[10px] px-1.5 py-0.5 rounded font-bold uppercase tracking-wide"
+                                          style={{ backgroundColor: "rgba(234,179,8,0.18)", color: "rgb(253,224,71)", border: "1px solid rgba(234,179,8,0.38)" }}>
+                                          Count separately
+                                        </span>
+                                      )}
                                     </div>
 
                                     <div className="mt-1 text-[11px] flex flex-wrap gap-x-3 gap-y-1" style={{ color: "rgba(245,245,245,0.48)" }}>
@@ -1944,9 +1986,23 @@ export default function AdminPage() {
                                       disabled={keepingAuditRow === auditRowKey(row)}
                                       className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide transition-opacity hover:opacity-80"
                                       style={{ backgroundColor: "rgba(74,222,128,0.08)", color: "rgb(134,239,172)", border: "1px solid rgba(74,222,128,0.22)" }}
-                                      title="Save that you reviewed this row and want to keep it in Supabase. This does not change current dashboard/PDF counts."
+                                      title="Keep this row in Supabase, but let the normal same-email/state dedupe rule count it with the family."
                                     >
-                                      {keepingAuditRow === auditRowKey(row) ? "Saving…" : row.review_decision === "keep" ? "Kept" : "Keep"}
+                                      {keepingAuditRow === auditRowKey(row) ? "Saving…" : row.review_decision === "keep" ? "Kept deduped" : "Keep deduped"}
+                                    </button>
+                                    <button
+                                      type="button"
+                                      onClick={() => countAuditReviewRowSeparately(row)}
+                                      disabled={countingSeparatelyAuditRow === auditRowKey(row)}
+                                      className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide transition-opacity hover:opacity-80 disabled:opacity-40"
+                                      style={{ backgroundColor: "rgba(234,179,8,0.12)", color: "rgb(253,224,71)", border: "1px solid rgba(234,179,8,0.35)" }}
+                                      title="Use this only when the row is a real separate case or court matter that should count separately."
+                                    >
+                                      {countingSeparatelyAuditRow === auditRowKey(row)
+                                        ? "Saving…"
+                                        : row.review_decision === "count_separately"
+                                          ? "Counting separately"
+                                          : "Count separately"}
                                     </button>
                                     <button
                                       type="button"
