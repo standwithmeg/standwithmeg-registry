@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { StateTable } from "./StateTable";
 import { InviteFriendModal } from "./InviteFriendModal";
+import { CourtActorPanel, type PublicActor } from "./CourtActorPanel";
 
 const GOLD = "#C9A227";
 const BG   = "#0F1E30";
@@ -37,10 +38,6 @@ type StateResource = {
   report_title: string | null;
 };
 
-type PublicActor = {
-  state_code: string | null;
-};
-
 function fmt$(n: number | null) {
   if (n == null || n === 0) return "—";
   return "$" + n.toLocaleString();
@@ -53,6 +50,8 @@ export function DashboardView() {
   const [resources, setResources] = useState<StateResource[]>([]);
   const [commentCounts, setCommentCounts] = useState<Record<string, number>>({});
   const [courtActorCounts, setCourtActorCounts] = useState<Record<string, number>>({});
+  const [publicActors, setPublicActors] = useState<PublicActor[]>([]);
+  const [actorThreshold, setActorThreshold] = useState(3);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [inviteOpen, setInviteOpen] = useState(false);
@@ -79,12 +78,17 @@ export function DashboardView() {
       setQuotes(quotesData.quotes ?? []);
       setResources(resourcesData.resources ?? []);
       setCommentCounts(countsData.counts ?? {});
+      const actors = (actorsData.actors ?? []) as PublicActor[];
       const actorCounts: Record<string, number> = {};
-      for (const actor of (actorsData.actors ?? []) as PublicActor[]) {
+      for (const actor of actors) {
         if (!actor.state_code) continue;
         actorCounts[actor.state_code] = (actorCounts[actor.state_code] ?? 0) + 1;
       }
       setCourtActorCounts(actorCounts);
+      setPublicActors(actors);
+      if (typeof actorsData.threshold === "number") {
+        setActorThreshold(actorsData.threshold);
+      }
     } catch {
       setError("Network error.");
     } finally {
@@ -255,6 +259,9 @@ export function DashboardView() {
             <div className="text-xs mt-2" style={{ color: "rgba(245,245,245,0.35)" }}>states with 30+ families</div>
           </div>
         </div>
+
+        {/* Named Court Actor Patterns — public, only actors named by 3+ different families */}
+        <CourtActorPanel actors={publicActors} threshold={actorThreshold} />
 
         {/* State Table */}
         <StateTable byState={byState} resources={resources} commentCounts={commentCounts} courtActorCounts={courtActorCounts} />

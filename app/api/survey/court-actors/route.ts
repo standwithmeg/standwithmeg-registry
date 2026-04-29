@@ -2,11 +2,12 @@ import { createAdminSupabaseClient } from "../../../../lib/supabase-admin";
 import { actorBucketKey } from "../../../../lib/court-actors";
 
 /**
- * Returns court actors named by 5+ different survey submissions (the
- * auto-publish threshold). Names are matched conservatively on
- * normalized name + state_code, so casing, punctuation, common titles,
- * middle initials, repeated-letter misspellings, and different role labels
- * do not split the same person.
+ * Returns court actors named by 3+ different families (the auto-publish
+ * threshold). Names are matched conservatively on normalized name +
+ * state_code, so casing, punctuation, common titles, middle initials,
+ * repeated-letter misspellings, and different role labels do not split the
+ * same person. Families are deduped by email + state, so one family naming
+ * the same person twice still only counts once.
  *
  * Never exposes: notes, submission_id, reporter identity.
  *
@@ -17,7 +18,7 @@ import { actorBucketKey } from "../../../../lib/court-actors";
  *   { actors: [{ role, name, court_or_county?, state_code, count }] }
  */
 
-const PUBLIC_THRESHOLD = 5;
+const PUBLIC_THRESHOLD = 3;
 
 type ActorRow = {
   role: string;
