@@ -141,10 +141,19 @@ export async function GET(request: Request) {
 
     // Dedup notes per family — one family writing the same note twice
     // appears once. Pick the longest non-empty note for each family.
-    // Strip internal extraction-source prefixes before any dedup or display.
+    //
+    // Skip notes whose stored text was tagged as AI/regex-extracted from a
+    // legacy free-text field. Those snippets were stored with a character
+    // cap and often end mid-word, so they should never be displayed
+    // publicly even if the row was later promoted to form_direct. The
+    // family still counts toward the public threshold via the actors
+    // endpoint — only the text is suppressed.
     const notesByFamily = new Map<string, { note: string; month: string | null }>();
     for (const row of matchingRows) {
-      const note = cleanPublicNote(row.notes);
+      const original = (row.notes ?? "").trim();
+      if (!original) continue;
+      if (EXTRACTED_PREFIX_RE.test(original)) continue;
+      const note = cleanPublicNote(original);
       if (!note) continue;
       const fk = familyKey(row);
       const month = isoMonth(row.created_at);

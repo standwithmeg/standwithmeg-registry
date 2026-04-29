@@ -849,8 +849,89 @@ export default function AdminPage() {
     }
   }
 
+  // Merge two duplicate survey rows into one. Backed by the smart-default
+  // logic in lib/audit-merge.ts; admin can override any per-field pick
+  // before committing.
+  type MergeFieldDiff = {
+    field: string;
+    label: string;
+    winnerValue: unknown;
+    loserValue: unknown;
+    defaultChoice: "winner" | "loser";
+    mergedValue: unknown;
+  };
+  type MergeRow = Record<string, unknown> & { id: string };
+  type MergePreview = {
+    state: string;
+    winner: MergeRow;
+    loser: MergeRow;
+    diffs: MergeFieldDiff[];
+    choices: Record<string, "winner" | "loser">;
+  };
+  const [mergePreview, setMergePreview] = useState<MergePreview | null>(null);
+  const [mergeLoading, setMergeLoading] = useState(false);
+  const [mergeError, setMergeError] = useState<string | null>(null);
+  const [mergeSaving, setMergeSaving] = useState(false);
+
+  async function openMergePreview(state: string, winnerId: string, loserId: string) {
+    setMergeLoading(true);
+    setMergeError(null);
+    try {
+      const params = new URLSearchParams({ winner: winnerId, loser: loserId });
+      const res = await fetch(`/api/admin/reporting-audit/merge?${params.toString()}`);
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        setMergeError(data.error || "Could not load merge preview.");
+        return;
+      }
+      const diffs: MergeFieldDiff[] = Array.isArray(data.diffs) ? data.diffs : [];
+      const choices: Record<string, "winner" | "loser"> = {};
+      for (const d of diffs) choices[d.field] = d.defaultChoice;
+      setMergePreview({
+        state,
+        winner: data.winner as MergeRow,
+        loser: data.loser as MergeRow,
+        diffs,
+        choices,
+      });
+    } catch (err) {
+      setMergeError(err instanceof Error ? err.message : "Network error.");
+    } finally {
+      setMergeLoading(false);
+    }
+  }
+
+  async function commitMerge() {
+    if (!mergePreview) return;
+    setMergeSaving(true);
+    setMergeError(null);
+    try {
+      const res = await fetch("/api/admin/reporting-audit/merge", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          winner_id: mergePreview.winner.id,
+          loser_id: mergePreview.loser.id,
+          state: mergePreview.state,
+          overrides: mergePreview.choices,
+        }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        setMergeError(data.error || "Merge failed.");
+        return;
+      }
+      setMergePreview(null);
+      await Promise.all([loadAuditReview(mergePreview.state), refreshStatsAndAudit()]);
+    } catch (err) {
+      setMergeError(err instanceof Error ? err.message : "Network error.");
+    } finally {
+      setMergeSaving(false);
+    }
+  }
+
   // Promote an extracted actor row to form_direct (counts toward public
-  // 5-family threshold). Demote reverses it. Delete removes bogus rows.
+  // threshold). Demote reverses it. Delete removes bogus rows.
   const [actorActing, setActorActing] = useState<string | null>(null);
   async function patchActor(id: string, action: "promote" | "demote" | "delete") {
     if (action === "delete" && !confirm("Remove this actor row permanently? This can't be undone.")) return;
@@ -1932,7 +2013,13 @@ export default function AdminPage() {
                         </p>
                       </div>
 
-                      {auditReview.duplicate_groups.map(group => (
+                      {auditReview.duplicate_groups.map(group => {
+                        const groupReviewed = group.rows.some(row => row.review_decision !== null);
+                        const surveyRows = group.rows.filter(row => row.source_table === "survey_submissions");
+                        const canMerge = group.rows.length === 2 && surveyRows.length === 2 && !!group.email;
+                        const winnerRow = group.rows.find(row => row.dedupe_winner) ?? group.rows[0];
+                        const loserRow = group.rows.find(row => row !== winnerRow);
+                        return (
                         <div key={group.family_key} className="rounded-xl overflow-hidden"
                           style={{ backgroundColor: "rgba(255,255,255,0.035)", border: "1px solid rgba(255,255,255,0.1)" }}>
                           <div className="px-4 py-3 flex items-center justify-between gap-3 flex-wrap"
@@ -1943,10 +2030,31 @@ export default function AdminPage() {
                                 {group.rows.length} rows · counted as {auditGroupCountedFamilies(group)} {auditGroupCountedFamilies(group) === 1 ? "family" : "families"}
                               </div>
                             </div>
-                            <span className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide"
-                              style={{ backgroundColor: "rgba(234,179,8,0.16)", color: "rgb(253,224,71)", border: "1px solid rgba(234,179,8,0.35)" }}>
-                              Review
-                            </span>
+                            <div className="flex items-center gap-2 flex-wrap">
+                              {canMerge && winnerRow && loserRow && (
+                                <button
+                                  type="button"
+                                  onClick={() => openMergePreview(auditReview.state, winnerRow.id, loserRow.id)}
+                                  disabled={mergeLoading}
+                                  className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide transition-opacity hover:opacity-80 disabled:opacity-40"
+                                  style={{ backgroundColor: "rgba(96,165,250,0.14)", color: "rgb(147,197,253)", border: "1px solid rgba(96,165,250,0.35)" }}
+                                  title="Merge these two rows into one record. The winner row keeps the smart-merged values; the loser row is deleted. Court actors attached to the loser are reassigned to the winner."
+                                >
+                                  {mergeLoading ? "Loading…" : "Merge group"}
+                                </button>
+                              )}
+                              {groupReviewed ? (
+                                <span className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide"
+                                  style={{ backgroundColor: "rgba(74,222,128,0.14)", color: "rgb(134,239,172)", border: "1px solid rgba(74,222,128,0.28)" }}>
+                                  Reviewed
+                                </span>
+                              ) : (
+                                <span className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide"
+                                  style={{ backgroundColor: "rgba(234,179,8,0.16)", color: "rgb(253,224,71)", border: "1px solid rgba(234,179,8,0.35)" }}>
+                                  Review
+                                </span>
+                              )}
+                            </div>
                           </div>
 
                           <div>
@@ -2038,7 +2146,8 @@ export default function AdminPage() {
                             ))}
                           </div>
                         </div>
-                      ))}
+                        );
+                      })}
                     </div>
                   )}
 
@@ -2562,6 +2671,179 @@ export default function AdminPage() {
           </div>
         </div>
       )}
+
+      {/* ── Merge Preview Modal — side-by-side per-field diff with override picks ── */}
+      {(mergePreview || mergeLoading || mergeError) && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4"
+          style={{ backgroundColor: "rgba(0,0,0,0.78)", backdropFilter: "blur(4px)" }}
+          onClick={e => {
+            if (e.target === e.currentTarget && !mergeSaving) {
+              setMergePreview(null);
+              setMergeError(null);
+            }
+          }}
+        >
+          <div className="relative w-full max-w-3xl rounded-2xl overflow-hidden flex flex-col"
+            style={{ backgroundColor: BG, border: "1px solid rgba(96,165,250,0.4)", maxHeight: "90vh" }}>
+
+            <div className="px-5 py-4 flex items-start justify-between gap-3"
+              style={{ borderBottom: "1px solid rgba(96,165,250,0.25)", backgroundColor: "rgba(30,58,95,0.6)" }}>
+              <div className="min-w-0">
+                <div className="font-black text-white text-base leading-tight">Merge duplicate rows</div>
+                <div className="text-xs mt-1" style={{ color: "rgba(245,245,245,0.55)" }}>
+                  {mergePreview?.winner.email as string ?? ""}{mergePreview?.state ? ` · ${mergePreview.state}` : ""}
+                  {mergePreview && (
+                    <span className="ml-2" style={{ color: "rgba(245,245,245,0.4)" }}>
+                      Pick a value per field. Defaults follow smart rules (longer text, max fee, more permissive permission).
+                    </span>
+                  )}
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={() => { if (!mergeSaving) { setMergePreview(null); setMergeError(null); } }}
+                disabled={mergeSaving}
+                className="w-8 h-8 rounded-lg flex items-center justify-center transition-colors hover:bg-white/10 flex-shrink-0 disabled:opacity-40"
+                style={{ color: "rgba(245,245,245,0.5)" }}
+                aria-label="Close"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+
+            <div className="overflow-y-auto px-5 py-4">
+              {mergeLoading && (
+                <div className="text-sm text-center py-8" style={{ color: "rgba(245,245,245,0.4)" }}>
+                  Loading merge preview…
+                </div>
+              )}
+
+              {!mergeLoading && mergeError && (
+                <div className="rounded-lg px-4 py-3 text-sm"
+                  style={{ backgroundColor: "rgba(185,28,28,0.14)", color: "rgb(252,165,165)", border: "1px solid rgba(185,28,28,0.4)" }}>
+                  {mergeError}
+                </div>
+              )}
+
+              {!mergeLoading && mergePreview && mergePreview.diffs.length === 0 && (
+                <div className="text-sm text-center py-8" style={{ color: "rgba(245,245,245,0.4)" }}>
+                  Both rows have identical values — nothing to merge. Use Delete instead if you want to remove the duplicate.
+                </div>
+              )}
+
+              {!mergeLoading && mergePreview && mergePreview.diffs.length > 0 && (
+                <div className="space-y-2">
+                  <div className="grid grid-cols-12 gap-2 text-[10px] font-bold uppercase tracking-wide px-2 py-1"
+                    style={{ color: "rgba(245,245,245,0.5)" }}>
+                    <div className="col-span-3">Field</div>
+                    <div className="col-span-4">Winner (kept)</div>
+                    <div className="col-span-4">Loser (deleted)</div>
+                    <div className="col-span-1 text-right">Use</div>
+                  </div>
+                  {mergePreview.diffs.map(diff => {
+                    const choice = mergePreview.choices[diff.field];
+                    return (
+                      <div key={diff.field} className="grid grid-cols-12 gap-2 text-xs rounded-lg px-2 py-2"
+                        style={{ backgroundColor: "rgba(255,255,255,0.035)", border: "1px solid rgba(255,255,255,0.08)" }}>
+                        <div className="col-span-3 font-bold text-white truncate" title={diff.field}>
+                          {diff.label}
+                        </div>
+                        <div
+                          className="col-span-4 break-words rounded px-2 py-1 cursor-pointer"
+                          onClick={() => setMergePreview(p => p ? { ...p, choices: { ...p.choices, [diff.field]: "winner" } } : p)}
+                          style={{
+                            backgroundColor: choice === "winner" ? "rgba(74,222,128,0.12)" : "transparent",
+                            border: choice === "winner" ? "1px solid rgba(74,222,128,0.4)" : "1px solid rgba(255,255,255,0.06)",
+                            color: "rgba(245,245,245,0.85)",
+                          }}>
+                          {formatMergeValue(diff.winnerValue)}
+                        </div>
+                        <div
+                          className="col-span-4 break-words rounded px-2 py-1 cursor-pointer"
+                          onClick={() => setMergePreview(p => p ? { ...p, choices: { ...p.choices, [diff.field]: "loser" } } : p)}
+                          style={{
+                            backgroundColor: choice === "loser" ? "rgba(74,222,128,0.12)" : "transparent",
+                            border: choice === "loser" ? "1px solid rgba(74,222,128,0.4)" : "1px solid rgba(255,255,255,0.06)",
+                            color: "rgba(245,245,245,0.85)",
+                          }}>
+                          {formatMergeValue(diff.loserValue)}
+                        </div>
+                        <div className="col-span-1 flex items-center justify-end gap-1">
+                          <button
+                            type="button"
+                            onClick={() => setMergePreview(p => p ? { ...p, choices: { ...p.choices, [diff.field]: "winner" } } : p)}
+                            className="px-1.5 py-0.5 rounded text-[10px] font-bold"
+                            style={{
+                              backgroundColor: choice === "winner" ? "rgba(74,222,128,0.2)" : "rgba(255,255,255,0.04)",
+                              color: choice === "winner" ? "rgb(134,239,172)" : "rgba(245,245,245,0.4)",
+                            }}
+                            title="Use winner's value"
+                          >A</button>
+                          <button
+                            type="button"
+                            onClick={() => setMergePreview(p => p ? { ...p, choices: { ...p.choices, [diff.field]: "loser" } } : p)}
+                            className="px-1.5 py-0.5 rounded text-[10px] font-bold"
+                            style={{
+                              backgroundColor: choice === "loser" ? "rgba(74,222,128,0.2)" : "rgba(255,255,255,0.04)",
+                              color: choice === "loser" ? "rgb(134,239,172)" : "rgba(245,245,245,0.4)",
+                            }}
+                            title="Use loser's value"
+                          >B</button>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
+            </div>
+
+            <div className="px-5 py-3 flex items-center justify-end gap-2"
+              style={{ borderTop: "1px solid rgba(255,255,255,0.06)", backgroundColor: "rgba(255,255,255,0.02)" }}>
+              <button
+                type="button"
+                onClick={() => { if (!mergeSaving) { setMergePreview(null); setMergeError(null); } }}
+                disabled={mergeSaving}
+                className="text-xs px-3 py-2 rounded font-bold transition-opacity hover:opacity-80 disabled:opacity-40"
+                style={{ backgroundColor: "rgba(255,255,255,0.06)", color: "rgba(245,245,245,0.7)", border: "1px solid rgba(255,255,255,0.12)" }}
+              >
+                Cancel
+              </button>
+              <button
+                type="button"
+                onClick={commitMerge}
+                disabled={!mergePreview || mergePreview.diffs.length === 0 || mergeSaving}
+                className="text-xs px-3 py-2 rounded font-bold transition-opacity hover:opacity-80 disabled:opacity-40"
+                style={{ backgroundColor: "rgba(96,165,250,0.18)", color: "rgb(147,197,253)", border: "1px solid rgba(96,165,250,0.45)" }}
+              >
+                {mergeSaving ? "Merging…" : "Merge into winner"}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
+}
+
+function formatMergeValue(v: unknown): string {
+  if (v === null || v === undefined) return "—";
+  if (typeof v === "string") {
+    const trimmed = v.trim();
+    if (trimmed.length === 0) return "—";
+    return trimmed.length > 220 ? trimmed.slice(0, 220) + "…" : trimmed;
+  }
+  if (typeof v === "number") {
+    return v.toLocaleString();
+  }
+  if (typeof v === "boolean") {
+    return v ? "Yes" : "No";
+  }
+  if (Array.isArray(v)) {
+    if (v.length === 0) return "—";
+    return v.map(x => String(x)).join(" · ");
+  }
+  return String(v);
 }
