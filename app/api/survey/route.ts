@@ -1,5 +1,9 @@
 import { createServerSupabaseClient } from "../../../lib/supabase";
 import { createAdminSupabaseClient } from "../../../lib/supabase-admin";
+import {
+  isUnitedStatesCountry,
+  normalizeOutsideCountryForReporting,
+} from "../../../lib/survey-location";
 import { createHash } from "crypto";
 
 // Public submissions come in anonymously from untrusted visitors, but the
@@ -29,6 +33,11 @@ export async function POST(request: Request) {
       const country = String(body.outside_us_country || "").trim();
       if (!country) {
         return Response.json({ error: "Country is required for international submissions." }, { status: 400 });
+      }
+      if (isUnitedStatesCountry(country)) {
+        return Response.json({
+          error: "If your case is in the United States, choose \"I am in the United States\" and select the state.",
+        }, { status: 400 });
       }
       outside_us_country = country;
     } else {
@@ -278,7 +287,11 @@ export async function GET() {
       adminSupabase.from("movement_stats_by_state").select("*"),
     ]);
 
-    const byStateRows = (byStateResult.data ?? []) as Array<{ total_submissions: number | null }>;
+    const byState = (byStateResult.data ?? []).map(row => {
+      const r = row as { is_us?: boolean; state?: string | null };
+      return r.is_us ? r : { ...r, state: normalizeOutsideCountryForReporting(r.state) };
+    });
+    const byStateRows = byState as Array<{ total_submissions: number | null }>;
     const total = byStateRows.reduce(
       (sum, row) => sum + (Number(row.total_submissions) || 0),
       0
@@ -286,7 +299,7 @@ export async function GET() {
 
     return Response.json({
       total,
-      by_state: byStateResult.data ?? [],
+      by_state: byState,
     });
   } catch (err) {
     console.error("GET /api/survey error:", err);

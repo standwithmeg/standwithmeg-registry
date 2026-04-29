@@ -1,6 +1,10 @@
 import { createServerSupabaseClient } from "../../../../lib/supabase";
 import { createAdminSupabaseClient } from "../../../../lib/supabase-admin";
 import { isAdminEmail } from "../../../../lib/require-auth";
+import {
+  normalizeOutsideCountryForReporting,
+  reportingLocationFromParts,
+} from "../../../../lib/survey-location";
 import type { SupabaseClient } from "@supabase/supabase-js";
 
 type FinancialRow = {
@@ -57,8 +61,7 @@ async function fetchCountSeparatelyKeys(supabase: SupabaseClient): Promise<Set<s
 }
 
 function rowState(row: FinancialRow): string {
-  const state = String(row.state_of_occurrence ?? "").trim().toUpperCase();
-  return state || String(row.outside_us_country ?? "").trim();
+  return reportingLocationFromParts(row.state_of_occurrence, row.outside_us_country);
 }
 
 function createdMs(row: FinancialRow): number {
@@ -151,7 +154,12 @@ export async function GET() {
     // card is guaranteed to match the column totals in the table.
     // PostgREST aggregate syntax (.sum()) does not reliably aggregate generated
     // columns — computing from the already-fetched view rows is more robust.
-    const byStateRows = (byStateResult.data ?? []) as Array<{
+    const normalizedByStateRows = (byStateResult.data ?? []).map(row => {
+      const r = row as { is_us?: boolean; state?: string | null };
+      return r.is_us ? r : { ...r, state: normalizeOutsideCountryForReporting(r.state) };
+    });
+
+    const byStateRows = normalizedByStateRows as Array<{
       total_submissions: number | null;
       total_financial_loss: number | null;
     }>;
@@ -168,7 +176,7 @@ export async function GET() {
 
     return Response.json({
       total:    totalSubmissions,
-      by_state:  byStateResult.data ?? [],
+      by_state:  normalizedByStateRows,
       recent:    recentResult.data  ?? [],
       financials: {
         total_loss:            Math.round(totalLoss),

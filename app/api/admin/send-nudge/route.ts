@@ -1,4 +1,5 @@
 import { createServerSupabaseClient } from "../../../../lib/supabase";
+import { createAdminSupabaseClient } from "../../../../lib/supabase-admin";
 import { isAdminEmail } from "../../../../lib/require-auth";
 import nodemailer from "nodemailer";
 
@@ -17,7 +18,7 @@ export async function POST(request: Request) {
       return Response.json({ error: "Not authorized." }, { status: 403 });
     }
 
-    const { to, subject, body, html } = await request.json();
+    const { to, subject, body, html, actor_id } = await request.json();
     if (!to || !subject || !body) {
       return Response.json({ error: "to, subject, body required." }, { status: 400 });
     }
@@ -54,7 +55,29 @@ export async function POST(request: Request) {
       ...(html ? { html } : {}),
     });
 
-    return Response.json({ success: true, messageId: info.messageId });
+    let nudgeTracked = false;
+    if (actor_id && typeof actor_id === "string") {
+      const adminSupabase = createAdminSupabaseClient();
+      const { error: trackError } = await adminSupabase
+        .from("court_actors")
+        .update({
+          nudge_sent_at: new Date().toISOString(),
+          nudge_sent_by: user.email,
+          nudge_sent_to: to,
+          nudge_last_subject: subject,
+        })
+        .eq("id", actor_id);
+
+      if (trackError) {
+        // Do not report the email as failed after SMTP succeeded. This can
+        // happen briefly if the deployment is live before migration 015 runs.
+        console.error("court actor nudge tracking error:", trackError.message);
+      } else {
+        nudgeTracked = true;
+      }
+    }
+
+    return Response.json({ success: true, messageId: info.messageId, nudgeTracked });
   } catch (err) {
     const msg = err instanceof Error ? err.message : "Failed.";
     console.error("POST /api/admin/send-nudge error:", err);

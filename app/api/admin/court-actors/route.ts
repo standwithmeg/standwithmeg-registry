@@ -29,6 +29,10 @@ export async function GET() {
       source: string | null;
       created_at: string;
       submission_id: string;
+      nudge_sent_at: string | null;
+      nudge_sent_by: string | null;
+      nudge_sent_to: string | null;
+      nudge_last_subject: string | null;
       survey_submissions:
         | { email: string | null; first_name: string | null; last_name: string | null; state_of_occurrence: string | null }
         | { email: string | null; first_name: string | null; last_name: string | null; state_of_occurrence: string | null }[]
@@ -57,13 +61,22 @@ export async function GET() {
     let from = 0;
     const pageSize = 1000;
     const rows: Row[] = [];
+    const baseSelect = "id, role, name, court_or_county, state_code, notes, source, created_at, submission_id, survey_submissions(email, first_name, last_name, state_of_occurrence)";
+    const nudgeSelect = "id, role, name, court_or_county, state_code, notes, source, created_at, submission_id, nudge_sent_at, nudge_sent_by, nudge_sent_to, nudge_last_subject, survey_submissions(email, first_name, last_name, state_of_occurrence)";
+    let includeNudgeColumns = true;
     while (true) {
       const { data, error } = await adminSb
         .from("court_actors")
-        .select("id, role, name, court_or_county, state_code, notes, source, created_at, submission_id, survey_submissions(email, first_name, last_name, state_of_occurrence)")
+        .select(includeNudgeColumns ? nudgeSelect : baseSelect)
         .order("created_at", { ascending: false })
         .range(from, from + pageSize - 1);
       if (error) {
+        if (includeNudgeColumns && error.code === "42703") {
+          includeNudgeColumns = false;
+          rows.length = 0;
+          from = 0;
+          continue;
+        }
         console.error("admin court-actors error:", error);
         return Response.json({ actors: [], aggregates: [] });
       }
@@ -150,6 +163,10 @@ export async function GET() {
         source: r.source ?? "form_direct",
         created_at: r.created_at,
         submission_id: r.submission_id,
+        nudge_sent_at: r.nudge_sent_at ?? null,
+        nudge_sent_by: r.nudge_sent_by ?? null,
+        nudge_sent_to: r.nudge_sent_to ?? null,
+        nudge_last_subject: r.nudge_last_subject ?? null,
         reporter_email: submission?.email ?? null,
         reporter_name: submission
           ? [submission.first_name, submission.last_name].filter(Boolean).join(" ") || null

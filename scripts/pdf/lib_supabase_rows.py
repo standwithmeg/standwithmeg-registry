@@ -28,20 +28,31 @@ PERMISSION_REVERSE = {
 PUBLIC_ACTOR_THRESHOLD = 5
 _ROLE_PREFIX_RE = re.compile(r"^(hon\.?|honorable|judge|justice|magistrate|commissioner|referee|attorney|atty\.?|gal|guardian ad litem|minor'?s counsel|minor counsel|dr\.?|doctor)\s+", re.I)
 _SUFFIX_RE = re.compile(r"\s+(jr\.?|sr\.?|ii|iii|iv|esq\.?|esquire)$", re.I)
+_GIVEN_NAME_ALIASES = {
+    # Conservative first-name aliases/misspellings observed in the court-actor data.
+    # Only the first token is rewritten, so distinct people with different last
+    # names stay separate.
+    "andy": "andrew",
+    "drew": "andrew",
+    "keven": "kevin",
+}
 
 
 def _actor_name_key(name: Any) -> str:
     text = unicodedata.normalize("NFKD", str(name or "").lower())
     text = "".join(ch for ch in text if not unicodedata.combining(ch))
-    text = re.sub(r"[.,'\"]", " ", text)
+    text = re.sub(r"[.,'\"`´‘’]", " ", text)
     text = re.sub(r"\s+", " ", text).strip()
     text = _ROLE_PREFIX_RE.sub("", text)
     text = _SUFFIX_RE.sub("", text)
     text = re.sub(r"\s+[a-z]\s+", " ", text)
     text = re.sub(r"\s+", " ", text).strip()
+    tokens = text.split()
+    if len(tokens) >= 2:
+        tokens[0] = _GIVEN_NAME_ALIASES.get(tokens[0], tokens[0])
     return " ".join(
         re.sub(r"([a-z])\1+", r"\1", token) if len(token) >= 5 else token
-        for token in text.split()
+        for token in tokens
     )
 
 

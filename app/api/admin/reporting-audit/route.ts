@@ -3,6 +3,7 @@ import { createServerSupabaseClient } from "../../../../lib/supabase";
 import { createAdminSupabaseClient } from "../../../../lib/supabase-admin";
 import { isAdminEmail } from "../../../../lib/require-auth";
 import { actorBucketKey } from "../../../../lib/court-actors";
+import { normalizeOutsideCountryForReporting } from "../../../../lib/survey-location";
 
 const PUBLIC_PERMISSIONS = ["public", "anonymous", "first_name"];
 const REPORT_THRESHOLD = 30;
@@ -145,7 +146,7 @@ async function fetchQuoteCounts(adminSupabase: ReturnType<typeof createAdminSupa
     if (!data || data.length === 0) break;
 
     for (const row of data as QuoteRow[]) {
-      const key = row.state_of_occurrence ?? row.outside_us_country;
+      const key = row.state_of_occurrence ?? normalizeOutsideCountryForReporting(row.outside_us_country);
       if (key) counts[key] = (counts[key] ?? 0) + 1;
     }
 
@@ -227,7 +228,9 @@ export async function GET(request: Request) {
 
     if (statsResult.error) throw statsResult.error;
 
-    const statsRows = (statsResult.data ?? []) as StateStatsRow[];
+    const statsRows = ((statsResult.data ?? []) as StateStatsRow[]).map(row =>
+      row.is_us ? row : { ...row, state: normalizeOutsideCountryForReporting(row.state) }
+    );
     const statsByState = new Map(statsRows.map(row => [row.state, row]));
     const reportsByState = new Map(
       (reportIndex as ReportIndexEntry[]).map(entry => [entry.state, entry])

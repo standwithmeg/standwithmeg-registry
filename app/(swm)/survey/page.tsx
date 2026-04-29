@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { isUnitedStatesCountry } from "../../../lib/survey-location";
 
 const NAVY = "#1E3A5F";
 const GOLD = "#C9A227";
@@ -251,7 +252,11 @@ export default function SubmitPage() {
 
     if (stepIndex === 0) {
       if (outsideUS) {
-        if (!form.outside_us_country.trim()) missing.push("Country");
+        const country = form.outside_us_country.trim();
+        if (!country) missing.push("Country");
+        else if (isUnitedStatesCountry(country)) {
+          return "If your case is in the United States, choose \"I am in the United States\" and select your state.";
+        }
       } else {
         if (!form.state) missing.push("State of occurrence");
       }

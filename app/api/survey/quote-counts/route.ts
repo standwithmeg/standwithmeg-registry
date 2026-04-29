@@ -1,4 +1,5 @@
 import { createAdminSupabaseClient } from "../../../../lib/supabase-admin";
+import { normalizeOutsideCountryForReporting } from "../../../../lib/survey-location";
 
 const PUBLIC_PERMISSIONS = ["public", "anonymous", "first_name"];
 
@@ -34,7 +35,7 @@ export async function GET() {
       if (!data || data.length === 0) break;
 
       for (const row of data) {
-        const key = row.state_of_occurrence ?? row.outside_us_country;
+        const key = row.state_of_occurrence ?? normalizeOutsideCountryForReporting(row.outside_us_country);
         if (!key) continue;
         counts[key] = (counts[key] ?? 0) + 1;
       }

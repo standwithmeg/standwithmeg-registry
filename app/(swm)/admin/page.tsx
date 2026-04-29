@@ -564,6 +564,7 @@ function AuditReviewDetails({ row }: { row: AuditReviewRow }) {
 }
 
 type NudgeTarget = {
+  actor_id?: string;
   email: string;
   name: string;
   subject: string;
@@ -625,6 +626,10 @@ export default function AdminPage() {
     source: string;
     created_at: string;
     submission_id: string;
+    nudge_sent_at: string | null;
+    nudge_sent_by: string | null;
+    nudge_sent_to: string | null;
+    nudge_last_subject: string | null;
     reporter_email: string | null;
     reporter_name: string | null;
   };
@@ -891,6 +896,7 @@ export default function AdminPage() {
           subject: nudgeTarget.subject,
           body: nudgeTarget.body,
           html: nudgeBodyToHtml(nudgeTarget.body),
+          actor_id: nudgeTarget.actor_id,
         }),
       });
       const json = await res.json();
@@ -900,6 +906,7 @@ export default function AdminPage() {
         return;
       }
       setNudgeSending("sent");
+      await refreshActors();
     } catch (e) {
       setNudgeSending("error");
       setNudgeSendError(e instanceof Error ? e.message : "Network error.");
@@ -956,7 +963,7 @@ export default function AdminPage() {
     ].join("\n");
 
     setNudgeCopied("none");
-    setNudgeTarget({ email: a.reporter_email, name: a.reporter_name || "", subject, body, html: nudgeBodyToHtml(body) });
+    setNudgeTarget({ actor_id: a.id, email: a.reporter_email, name: a.reporter_name || "", subject, body, html: nudgeBodyToHtml(body) });
     setNudgeSending("idle");
     setNudgeSendError(null);
   }
@@ -1538,6 +1545,10 @@ export default function AdminPage() {
                               {actors.map((a) => {
                                 const isExtracted = a.source !== "form_direct";
                                 const isActing = actorActing === a.id;
+                                const wasNudged = Boolean(a.nudge_sent_at);
+                                const nudgeTitle = wasNudged
+                                  ? `Last nudged ${new Date(a.nudge_sent_at!).toLocaleString()}${a.nudge_sent_to ? ` to ${a.nudge_sent_to}` : ""}. Click to send another follow-up.`
+                                  : "Email this family and ask them to use the Court Actor update form";
                                 return (
                                   <div key={a.id} className="flex items-start justify-between gap-3 py-2 pl-3 border-l-2"
                                     style={{ borderColor: "rgba(201,162,39,0.25)" }}>
@@ -1571,6 +1582,9 @@ export default function AdminPage() {
                                       </div>
                                       <div className="text-[11px] mt-0.5" style={{ color: "rgba(245,245,245,0.4)" }}>
                                         Reported by {a.reporter_name || "—"} ({a.reporter_email || "no email"}) · {timeAgo(a.created_at)}
+                                        {a.nudge_sent_at && (
+                                          <span style={{ color: "rgb(134,239,172)" }}> · Nudged {timeAgo(a.nudge_sent_at)}</span>
+                                        )}
                                       </div>
                                       {a.notes && (
                                         <div className="text-xs italic mt-1.5 px-2.5 py-1.5 rounded"
@@ -1600,10 +1614,12 @@ export default function AdminPage() {
                                       )}
                                       {a.reporter_email && (
                                         <button onClick={() => nudgeFamily(a)}
-                                          title="Email this family and ask them to re-submit via the Court Actors form"
+                                          title={nudgeTitle}
                                           className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide transition-colors"
-                                          style={{ backgroundColor: "rgba(201,162,39,0.15)", color: GOLD, border: "1px solid rgba(201,162,39,0.3)" }}>
-                                          ✉ Nudge
+                                          style={wasNudged
+                                            ? { backgroundColor: "rgba(74,222,128,0.12)", color: "rgb(134,239,172)", border: "1px solid rgba(74,222,128,0.28)" }
+                                            : { backgroundColor: "rgba(201,162,39,0.15)", color: GOLD, border: "1px solid rgba(201,162,39,0.3)" }}>
+                                          {wasNudged ? "✓ Nudged" : "✉ Nudge"}
                                         </button>
                                       )}
                                       <button onClick={() => patchActor(a.id, "delete")} disabled={isActing}
@@ -1730,6 +1746,9 @@ export default function AdminPage() {
                   </div>
                   <div className="text-[11px]" style={{ color: "rgba(245,245,245,0.4)" }}>
                     Reported by {a.reporter_name || "—"} ({a.reporter_email || "no email"})
+                    {a.nudge_sent_at && (
+                      <span style={{ color: "rgb(134,239,172)" }}> · Nudged {timeAgo(a.nudge_sent_at)}</span>
+                    )}
                   </div>
                   {a.notes && (
                     <div className="mt-1.5 text-xs italic px-3 py-2 rounded-md"
