@@ -33,6 +33,7 @@ type Props = {
   resources: StateResource[];
   commentCounts: Record<string, number>;
   courtActorCounts: Record<string, number>;
+  onCourtActorsClick?: (state: string) => void;
 };
 
 function fmt$(n: number | null) {
@@ -72,7 +73,7 @@ function SortHeader({ field, label, sortField, sortDir, setSortField, setSortDir
   );
 }
 
-export function StateTable({ byState, resources, commentCounts, courtActorCounts }: Props) {
+export function StateTable({ byState, resources, commentCounts, courtActorCounts, onCourtActorsClick }: Props) {
   const [sortField, setSortField] = useState<keyof StateRow>("total_submissions");
   const [sortDir, setSortDir] = useState<"asc" | "desc">("desc");
   const [quoteState, setQuoteState] = useState<StateRow | null>(null);
@@ -165,10 +166,10 @@ export function StateTable({ byState, resources, commentCounts, courtActorCounts
                       )}
                     </td>
                     <td className="px-3 py-3 text-sm">
-                      {actorCount > 0 ? (
+                      {actorCount > 0 && onCourtActorsClick ? (
                         <button
                           type="button"
-                          onClick={e => { e.stopPropagation(); setQuoteState(row); }}
+                          onClick={e => { e.stopPropagation(); onCourtActorsClick(row.state); }}
                           className="font-semibold underline-offset-2 hover:underline focus:outline-none focus:underline cursor-pointer"
                           style={{ color: GOLD }}
                           aria-label={`View ${actorCount} public court ${actorCount === 1 ? "actor" : "actors"} for ${row.state}`}
@@ -176,7 +177,7 @@ export function StateTable({ byState, resources, commentCounts, courtActorCounts
                           {actorCount} public
                         </button>
                       ) : (
-                        <span style={{ color: "rgba(245,245,245,0.25)" }}>0</span>
+                        <span style={{ color: "rgba(245,245,245,0.25)" }}>{actorCount}</span>
                       )}
                     </td>
                     <td className="px-3 py-3">

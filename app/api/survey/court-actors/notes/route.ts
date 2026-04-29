@@ -55,6 +55,22 @@ function familyKey(row: Row): string {
   return email ? `${email}|${state}` : `submission:${row.submission_id}`;
 }
 
+// Internal admin/source prefixes that get prepended when notes were
+// extracted from legacy free-text by AI / regex passes and later promoted.
+// Not appropriate to display publicly — strip the leading tag while
+// preserving the underlying family-written text.
+const EXTRACTED_PREFIX_RE = /^\s*\[\s*extracted[_\s-]*[a-z0-9]*\s*\]\s*/i;
+
+function cleanPublicNote(note: string | null | undefined): string {
+  if (!note) return "";
+  let cleaned = note;
+  // Loop in case more than one prefix was concatenated.
+  while (EXTRACTED_PREFIX_RE.test(cleaned)) {
+    cleaned = cleaned.replace(EXTRACTED_PREFIX_RE, "");
+  }
+  return cleaned.trim();
+}
+
 function isoMonth(iso: string | null): string | null {
   if (!iso) return null;
   const d = new Date(iso);
@@ -125,9 +141,10 @@ export async function GET(request: Request) {
 
     // Dedup notes per family — one family writing the same note twice
     // appears once. Pick the longest non-empty note for each family.
+    // Strip internal extraction-source prefixes before any dedup or display.
     const notesByFamily = new Map<string, { note: string; month: string | null }>();
     for (const row of matchingRows) {
-      const note = row.notes?.trim();
+      const note = cleanPublicNote(row.notes);
       if (!note) continue;
       const fk = familyKey(row);
       const month = isoMonth(row.created_at);

@@ -93,12 +93,97 @@ export function CourtActorPanel({ actors, threshold }: Props) {
   );
 }
 
+type ListModalProps = {
+  state: string;
+  actors: PublicActor[];
+  onClose: () => void;
+};
+
+export function CourtActorListModal({ state, actors, onClose }: ListModalProps) {
+  const [openActor, setOpenActor] = useState<PublicActor | null>(null);
+
+  return (
+    <>
+      <div className="fixed inset-0 z-50 flex items-center justify-center p-4"
+        style={{ backgroundColor: "rgba(0,0,0,0.7)", backdropFilter: "blur(4px)" }}
+        onClick={e => { if (e.target === e.currentTarget) onClose(); }}>
+        <div className="relative w-full max-w-2xl rounded-2xl overflow-hidden flex flex-col"
+          style={{ backgroundColor: BG, border: "1px solid rgba(201,162,39,0.35)", maxHeight: "85vh" }}>
+
+          <div className="px-6 py-4 flex items-start justify-between gap-4"
+            style={{ borderBottom: "1px solid rgba(201,162,39,0.2)", backgroundColor: "rgba(30,58,95,0.6)" }}>
+            <div className="min-w-0">
+              <div className="font-black text-white text-base leading-tight">
+                Named Court Actors — {state}
+              </div>
+              <div className="text-xs mt-1" style={{ color: "rgba(245,245,245,0.55)" }}>
+                {actors.length} {actors.length === 1 ? "person" : "people"} named by 3+ different families.
+                Click a card to read what families wrote — submitter identities are never shown.
+              </div>
+            </div>
+            <button onClick={onClose}
+              className="w-8 h-8 rounded-lg flex items-center justify-center transition-colors hover:bg-white/10 flex-shrink-0"
+              style={{ color: "rgba(245,245,245,0.5)" }} aria-label="Close">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+
+          <div className="overflow-y-auto px-6 py-4 space-y-3">
+            {actors.length === 0 && (
+              <div className="text-sm text-center py-8" style={{ color: "rgba(245,245,245,0.4)" }}>
+                No public court actor patterns yet for {state}.
+              </div>
+            )}
+            {actors.map((actor, i) => (
+              <button
+                type="button"
+                key={`${actor.state_code ?? "NA"}-${actor.name}-${i}`}
+                onClick={() => setOpenActor(actor)}
+                className="w-full text-left rounded-lg px-4 py-3 transition-colors hover:bg-white/5 focus:outline-none focus:ring-1 focus:ring-amber-300/40"
+                style={{ backgroundColor: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)" }}>
+                <div className="flex items-start justify-between gap-3">
+                  <div className="min-w-0">
+                    <div className="font-black text-white text-sm truncate">{actor.name}</div>
+                    <div className="text-xs mt-1 flex flex-wrap items-center gap-1.5"
+                      style={{ color: "rgba(245,245,245,0.55)" }}>
+                      <span>{actor.role}</span>
+                      {actor.court_or_county && <span>· {actor.court_or_county}</span>}
+                    </div>
+                  </div>
+                  <div className="text-xs font-bold whitespace-nowrap px-2.5 py-1 rounded-md"
+                    style={{ backgroundColor: "rgba(201,162,39,0.12)", color: GOLD, border: "1px solid rgba(201,162,39,0.25)" }}>
+                    {actor.count} {actor.count === 1 ? "family" : "families"}
+                  </div>
+                </div>
+                <div className="mt-2 text-[11px] font-semibold" style={{ color: GOLD }}>
+                  Read what families said →
+                </div>
+              </button>
+            ))}
+          </div>
+
+          <div className="px-6 py-3 text-[11px] leading-snug"
+            style={{ borderTop: "1px solid rgba(255,255,255,0.06)", color: "rgba(245,245,245,0.35)" }}>
+            These are submitted family reports and pattern signals, not court findings or independent legal determinations.
+          </div>
+        </div>
+      </div>
+
+      {openActor && (
+        <CourtActorNotesModal actor={openActor} onClose={() => setOpenActor(null)} />
+      )}
+    </>
+  );
+}
+
 type ModalProps = {
   actor: PublicActor;
   onClose: () => void;
 };
 
-function CourtActorNotesModal({ actor, onClose }: ModalProps) {
+export function CourtActorNotesModal({ actor, onClose }: ModalProps) {
   const [notes, setNotes] = useState<AnonymousNote[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -180,6 +265,13 @@ function CourtActorNotesModal({ actor, onClose }: ModalProps) {
           {!loading && !error && notes.length === 0 && (
             <div className="text-sm text-center py-8" style={{ color: "rgba(245,245,245,0.4)" }}>
               No written reports yet. {actor.count} {actor.count === 1 ? "family" : "families"} named this person but did not include a note.
+            </div>
+          )}
+
+          {!loading && !error && notes.length > 0 && notes.length < actor.count && (
+            <div className="text-xs text-center pb-1" style={{ color: "rgba(245,245,245,0.45)" }}>
+              Showing {notes.length} of {actor.count} family reports. {actor.count - notes.length}{" "}
+              {actor.count - notes.length === 1 ? "family" : "families"} named this person without a written note.
             </div>
           )}
 

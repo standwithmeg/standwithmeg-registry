@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { StateTable } from "./StateTable";
 import { InviteFriendModal } from "./InviteFriendModal";
-import { CourtActorPanel, type PublicActor } from "./CourtActorPanel";
+import { CourtActorPanel, CourtActorListModal, type PublicActor } from "./CourtActorPanel";
 
 const GOLD = "#C9A227";
 const BG   = "#0F1E30";
@@ -55,6 +55,7 @@ export function DashboardView() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [inviteOpen, setInviteOpen] = useState(false);
+  const [actorListState, setActorListState] = useState<string | null>(null);
 
   const load = useCallback(async () => {
     setLoading(true);
@@ -264,7 +265,13 @@ export function DashboardView() {
         <CourtActorPanel actors={publicActors} threshold={actorThreshold} />
 
         {/* State Table */}
-        <StateTable byState={byState} resources={resources} commentCounts={commentCounts} courtActorCounts={courtActorCounts} />
+        <StateTable
+          byState={byState}
+          resources={resources}
+          commentCounts={commentCounts}
+          courtActorCounts={courtActorCounts}
+          onCourtActorsClick={state => setActorListState(state)}
+        />
 
         {/* Voices Section */}
         {quotes.length > 0 && (
@@ -339,6 +346,14 @@ export function DashboardView() {
       </footer>
 
       {inviteOpen && <InviteFriendModal onClose={() => setInviteOpen(false)} />}
+
+      {actorListState && (
+        <CourtActorListModal
+          state={actorListState}
+          actors={publicActors.filter(a => a.state_code === actorListState)}
+          onClose={() => setActorListState(null)}
+        />
+      )}
     </div>
   );
 }
