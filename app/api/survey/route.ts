@@ -4,18 +4,12 @@ import {
   isUnitedStatesCountry,
   normalizeOutsideCountryForReporting,
 } from "../../../lib/survey-location";
+import { VALID_US_JURISDICTION_CODES } from "../../../lib/us-jurisdictions";
 import { createHash } from "crypto";
 
 // Public submissions come in anonymously from untrusted visitors, but the
 // server has already validated every field above. Use the admin client to
 // insert so the write isn't blocked by RLS on survey_submissions.
-
-const VALID_STATES = new Set([
-  "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA","HI","ID","IL","IN",
-  "IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV",
-  "NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN",
-  "TX","UT","VT","VA","WA","WV","WI","WY",
-]);
 
 const VALID_SHARE_PERMISSIONS = new Set(["public", "anonymous", "first_name", "data_only"]);
 const ACTOR_NOTE_MIN_CHARS = 12;
@@ -42,8 +36,8 @@ export async function POST(request: Request) {
       outside_us_country = country;
     } else {
       const state = String(body.state_of_occurrence || "").toUpperCase().trim();
-      if (!VALID_STATES.has(state)) {
-        return Response.json({ error: "A valid US state is required." }, { status: 400 });
+      if (!VALID_US_JURISDICTION_CODES.has(state)) {
+        return Response.json({ error: "A valid US state, district, or territory is required." }, { status: 400 });
       }
       state_of_occurrence = state;
     }

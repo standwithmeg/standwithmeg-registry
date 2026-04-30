@@ -2,22 +2,10 @@
 
 import { useState } from "react";
 import { isUnitedStatesCountry } from "../../../lib/survey-location";
+import { US_JURISDICTIONS } from "../../../lib/us-jurisdictions";
 
 const NAVY = "#1E3A5F";
 const GOLD = "#C9A227";
-
-const US_STATES: [string, string][] = [
-  ["AL","Alabama"],["AK","Alaska"],["AZ","Arizona"],["AR","Arkansas"],["CA","California"],
-  ["CO","Colorado"],["CT","Connecticut"],["DE","Delaware"],["FL","Florida"],["GA","Georgia"],
-  ["HI","Hawaii"],["ID","Idaho"],["IL","Illinois"],["IN","Indiana"],["IA","Iowa"],
-  ["KS","Kansas"],["KY","Kentucky"],["LA","Louisiana"],["ME","Maine"],["MD","Maryland"],
-  ["MA","Massachusetts"],["MI","Michigan"],["MN","Minnesota"],["MS","Mississippi"],["MO","Missouri"],
-  ["MT","Montana"],["NE","Nebraska"],["NV","Nevada"],["NH","New Hampshire"],["NJ","New Jersey"],
-  ["NM","New Mexico"],["NY","New York"],["NC","North Carolina"],["ND","North Dakota"],["OH","Ohio"],
-  ["OK","Oklahoma"],["OR","Oregon"],["PA","Pennsylvania"],["RI","Rhode Island"],["SC","South Carolina"],
-  ["SD","South Dakota"],["TN","Tennessee"],["TX","Texas"],["UT","Utah"],["VT","Vermont"],
-  ["VA","Virginia"],["WA","Washington"],["WV","West Virginia"],["WI","Wisconsin"],["WY","Wyoming"],
-];
 
 const COUNTRIES = [
   "Afghanistan","Albania","Algeria","Andorra","Angola","Antigua and Barbuda","Argentina",
@@ -538,7 +526,7 @@ export default function SubmitPage() {
                     Where are you located? <span className="text-red-700">*</span>
                   </label>
                   <div className="flex flex-col sm:flex-row gap-3 mt-1">
-                    {[["no", "I am in the United States"], ["yes", "I am outside the United States"]].map(([v, l]) => (
+                    {[["no", "I am in the United States, D.C., or a U.S. territory"], ["yes", "I am outside the United States"]].map(([v, l]) => (
                       <label key={v} className="flex items-center gap-2 cursor-pointer text-sm text-gray-700">
                         <input
                           type="radio"
@@ -563,11 +551,11 @@ export default function SubmitPage() {
                 {!outsideUS && (
                   <div>
                     <label className={labelCls} style={{ color: NAVY }}>
-                      State <span className="text-red-700">*</span>
+                      State / District / U.S. territory <span className="text-red-700">*</span>
                     </label>
                     <select {...bind("state")}>
-                      <option value="">Select your state</option>
-                      {US_STATES.map(([code, name]) => (
+                      <option value="">Select your location</option>
+                      {US_JURISDICTIONS.map(([code, name]) => (
                         <option key={code} value={code}>{name}</option>
                       ))}
                     </select>
@@ -600,12 +588,12 @@ export default function SubmitPage() {
 
                 <div>
                   <label className={labelCls} style={{ color: NAVY }}>
-                  {outsideUS ? "Province / Region / District" : "County"} <span className="text-red-700">*</span>
+                  {outsideUS ? "Province / Region / District" : "County / Parish / Borough"} <span className="text-red-700">*</span>
                   </label>
                   <p className="text-xs text-gray-400 mb-1">
                     {outsideUS
                       ? "Enter the local area name that best fits your country (e.g., province, region, district, or county)."
-                      : "County (not Country)"}
+                      : "County, parish, borough, or local court area (not country)"}
                   </p>
                   <input
                     type="text"
