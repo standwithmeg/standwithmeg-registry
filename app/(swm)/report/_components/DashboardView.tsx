@@ -204,6 +204,13 @@ export function DashboardView() {
               Know Someone Affected? Invite Them
             </button>
           </div>
+
+          {/* Mini donate ask — primes the gold Donate button above */}
+          <p className="text-xs md:text-sm mt-5 max-w-lg mx-auto italic leading-relaxed"
+            style={{ color: "rgba(201,162,39,0.7)" }}>
+            Without donations, I have to stop. If everyone reading this gave just{" "}
+            <strong style={{ color: GOLD }}>$5</strong>, I could keep going.
+          </p>
         </div>
       </header>
 
