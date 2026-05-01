@@ -177,12 +177,19 @@ export function DashboardView() {
             and child welfare systems across the country.
           </p>
 
-          {/* Hero CTAs: share personally or invite someone else */}
+          {/* Hero CTAs: share personally, donate, or invite someone else */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
             <a href="/survey"
               className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg font-bold text-sm transition-colors hover:opacity-90"
               style={{ backgroundColor: "#B91C1C", color: "white" }}>
               Share Your Story →
+            </a>
+            <a href="https://www.paypal.com/ncp/payment/USXFNK3MQ2WPS"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg font-bold text-sm transition-colors hover:opacity-90"
+              style={{ backgroundColor: GOLD, color: BG }}>
+              Donate →
             </a>
             <button onClick={() => setInviteOpen(true)}
               className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg font-bold text-sm transition-colors"
