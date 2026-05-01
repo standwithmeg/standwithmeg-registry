@@ -177,12 +177,19 @@ export function DashboardView() {
             and child welfare systems across the country.
           </p>
 
-          {/* Hero CTAs: share personally or invite someone else */}
+          {/* Hero CTAs: share personally, donate, or invite someone else */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
             <a href="/survey"
               className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg font-bold text-sm transition-colors hover:opacity-90"
               style={{ backgroundColor: "#B91C1C", color: "white" }}>
               Share Your Story →
+            </a>
+            <a href="https://www.paypal.com/ncp/payment/USXFNK3MQ2WPS"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg font-bold text-sm transition-colors hover:opacity-90"
+              style={{ backgroundColor: GOLD, color: BG }}>
+              Donate →
             </a>
             <button onClick={() => setInviteOpen(true)}
               className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg font-bold text-sm transition-colors"
@@ -197,6 +204,13 @@ export function DashboardView() {
               Know Someone Affected? Invite Them
             </button>
           </div>
+
+          {/* Mini donate ask — primes the gold Donate button above */}
+          <p className="text-xs md:text-sm mt-5 max-w-lg mx-auto italic leading-relaxed"
+            style={{ color: "rgba(201,162,39,0.7)" }}>
+            Without donations, I have to stop. If everyone reading this gave just{" "}
+            <strong style={{ color: GOLD }}>$5</strong>, I could keep going.
+          </p>
         </div>
       </header>
 
@@ -347,6 +361,45 @@ export function DashboardView() {
               <div className="text-lg font-black text-green-400">{quotes.length}+</div>
               <div className="text-xs" style={{ color: "rgba(245,245,245,0.4)" }}>public voices</div>
             </div>
+          </div>
+        </div>
+
+        {/* Donate */}
+        <div className="rounded-2xl overflow-hidden"
+          style={{ border: `1px solid rgba(201,162,39,0.4)` }}>
+          <div className="p-8 md:p-10 text-center"
+            style={{ backgroundColor: "rgba(201,162,39,0.10)" }}>
+            <div className="text-xs font-bold uppercase tracking-widest mb-3"
+              style={{ color: "rgba(201,162,39,0.7)" }}>
+              Why I&rsquo;m asking
+            </div>
+            <h3 className="text-2xl md:text-3xl font-black text-white mb-4 max-w-2xl mx-auto leading-tight">
+              Without donations, I have to stop.
+            </h3>
+            <p className="text-sm mb-4 max-w-xl mx-auto leading-relaxed" style={{ color: "rgba(245,245,245,0.7)" }}>
+              Stand With Meg runs on real money &mdash; hosting, document storage, the state
+              reports, the platform you&rsquo;re using right now. There&rsquo;s no foundation behind this.
+              No grants. No salary. Just me, paying out of pocket while raising my kids and
+              fighting my own case in court.
+            </p>
+            <p className="text-sm mb-6 max-w-xl mx-auto leading-relaxed" style={{ color: "rgba(245,245,245,0.75)" }}>
+              If everyone reading this gave just <strong className="text-white">$5</strong>, I could
+              keep going. That&rsquo;s all it would take. <strong className="text-white">$5 once</strong> helps.
+              <strong className="text-white"> $5 a month</strong> is what keeps this record alive
+              for the families who come after.
+            </p>
+            <a href="https://www.paypal.com/ncp/payment/USXFNK3MQ2WPS"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block text-base px-8 py-4 rounded-xl font-black tracking-wide transition-colors hover:opacity-90"
+              style={{ backgroundColor: GOLD, color: BG }}>
+              Donate via PayPal →
+            </a>
+            <p className="text-xs mt-5 max-w-md mx-auto leading-relaxed"
+              style={{ color: "rgba(245,245,245,0.4)" }}>
+              PayPal and major cards accepted. Worldwide donors welcome &mdash; works in 200+ countries.
+              Recurring monthly donations supported. Donations are not yet tax-deductible.
+            </p>
           </div>
         </div>
       </div>
