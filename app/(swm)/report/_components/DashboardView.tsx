@@ -349,6 +349,39 @@ export function DashboardView() {
             </div>
           </div>
         </div>
+
+        {/* Donate */}
+        <div className="rounded-2xl overflow-hidden"
+          style={{ border: `1px solid rgba(201,162,39,0.4)` }}>
+          <div className="p-8 md:p-10 text-center"
+            style={{ backgroundColor: "rgba(201,162,39,0.10)" }}>
+            <div className="text-xs font-bold uppercase tracking-widest mb-3"
+              style={{ color: "rgba(201,162,39,0.7)" }}>
+              Help keep this record alive
+            </div>
+            <h3 className="text-2xl font-black text-white mb-3 max-w-2xl mx-auto leading-tight">
+              There&rsquo;s no foundation behind this. There&rsquo;s just me and the families.
+            </h3>
+            <p className="text-sm mb-6 max-w-xl mx-auto" style={{ color: "rgba(245,245,245,0.65)" }}>
+              Stand With Meg is a one-woman, family-funded project. Hosting, document storage,
+              the state reports, and every line of code costs real money. Even <strong className="text-white">$5 once</strong> helps.
+              <strong className="text-white"> $5 a month</strong> is what makes this sustainable &mdash; the
+              difference between a project and a permanent record families can rely on.
+            </p>
+            <a href="https://www.paypal.com/ncp/payment/USXFNK3MQ2WPS"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block text-base px-8 py-4 rounded-xl font-black tracking-wide transition-colors hover:opacity-90"
+              style={{ backgroundColor: GOLD, color: BG }}>
+              Donate via PayPal →
+            </a>
+            <p className="text-xs mt-5 max-w-md mx-auto leading-relaxed"
+              style={{ color: "rgba(245,245,245,0.4)" }}>
+              PayPal and major cards accepted. Worldwide donors welcome &mdash; works in 200+ countries.
+              Recurring monthly donations supported. Donations are not yet tax-deductible.
+            </p>
+          </div>
+        </div>
       </div>
 
       {/* Footer */}
