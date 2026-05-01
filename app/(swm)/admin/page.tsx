@@ -623,6 +623,7 @@ export default function AdminPage() {
     name: string;
     court_or_county: string | null;
     state_code: string | null;
+    location_key: string | null;
     notes: string | null;
     source: string;
     created_at: string;
@@ -638,6 +639,7 @@ export default function AdminPage() {
     role: string;
     name: string;
     state_code: string | null;
+    location_key: string | null;
     court_or_county: string | null;
     count: number;
   };
@@ -1236,15 +1238,15 @@ export default function AdminPage() {
           <div className="rounded-2xl p-6"
             style={{ backgroundColor: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)" }}>
             <div className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: "rgba(245,245,245,0.45)" }}>
-              States Represented
+              Global Reach
             </div>
             <div className="text-4xl font-black text-white leading-none">
               {stats.by_state.filter(r => r.is_us).length}
             </div>
             <div className="text-xs mt-2" style={{ color: "rgba(245,245,245,0.35)" }}>
-              of 50 states
+              {stats.by_state.filter(r => r.is_us).length} US states
               {stats.by_state.filter(r => !r.is_us).length > 0 &&
-                ` · ${stats.by_state.filter(r => !r.is_us).length} ${stats.by_state.filter(r => !r.is_us).length === 1 ? "country" : "countries"}`}
+                ` · ${stats.by_state.filter(r => !r.is_us).length} ${stats.by_state.filter(r => !r.is_us).length === 1 ? "country" : "countries"} worldwide`}
             </div>
           </div>
 
@@ -1283,9 +1285,9 @@ export default function AdminPage() {
           <div className="px-6 py-4 flex justify-between items-center border-b"
             style={{ borderColor: "rgba(255,255,255,0.08)", backgroundColor: "rgba(30,58,95,0.4)" }}>
             <div>
-              <h2 className="font-black text-white text-base tracking-wide">Submissions by State</h2>
+              <h2 className="font-black text-white text-base tracking-wide">Submissions by Location</h2>
               <p className="text-xs mt-0.5" style={{ color: "rgba(245,245,245,0.4)" }}>
-                Click column headers to sort. {stats.by_state.filter(r => r.is_us).length} US states · {stats.by_state.filter(r => !r.is_us).length} international · Latest in State shows the most recent submission from that location.
+                Click column headers to sort. {stats.by_state.filter(r => r.is_us).length} US states · {stats.by_state.filter(r => !r.is_us).length} international countries · Latest in location shows the most recent submission from that location.
               </p>
             </div>
             <RegenerateAllButton />
@@ -1534,7 +1536,7 @@ export default function AdminPage() {
             <div className="flex items-center rounded-lg overflow-hidden"
               style={{ border: `1px solid rgba(201,162,39,0.3)`, backgroundColor: "rgba(255,255,255,0.04)" }}>
               {([
-                ["by_state", "By State"],
+                ["by_state", "By Location"],
                 ["patterns", "Patterns"],
                 ["all", "All Reports"],
               ] as [ActorView, string][]).map(([val, label]) => (
@@ -1550,20 +1552,20 @@ export default function AdminPage() {
             </div>
           </div>
 
-          {/* ── By State ── */}
+          {/* ── By Location ── */}
           {actorView === "by_state" && (() => {
-            // Build { stateCode: { total: number, actors: AdminActor[] } } from flat list
-            const byState = new Map<string, AdminActor[]>();
+            // Build { locationKey: { total: number, actors: AdminActor[] } } from flat list
+            const byLocation = new Map<string, AdminActor[]>();
             for (const a of adminActors) {
-              const s = a.state_code ?? "No state listed";
-              if (!byState.has(s)) byState.set(s, []);
-              byState.get(s)!.push(a);
+              const loc = a.location_key ?? a.state_code ?? "No location listed";
+              if (!byLocation.has(loc)) byLocation.set(loc, []);
+              byLocation.get(loc)!.push(a);
             }
-            const rows = [...byState.entries()]
-              .map(([state, list]) => ({ state, list }))
+            const rows = Array.from(byLocation.entries())
+              .map(([location, list]) => ({ location, list }))
               .sort((a, b) => {
-                if (a.state === "No state listed") return 1;
-                if (b.state === "No state listed") return -1;
+                if (a.location === "No location listed") return 1;
+                if (b.location === "No location listed") return -1;
                 return b.list.length - a.list.length;
               });
 
@@ -1578,8 +1580,8 @@ export default function AdminPage() {
             return (
               <div>
                 {rows.map((row, i) => {
-                  const isExpanded = expandedState === row.state;
-                  // Group expanded state's actors by county
+                  const isExpanded = expandedState === row.location;
+                  // Group expanded location's actors by county
                   const byCounty = new Map<string, AdminActor[]>();
                   if (isExpanded) {
                     for (const a of row.list) {
@@ -1588,13 +1590,13 @@ export default function AdminPage() {
                       byCounty.get(c)!.push(a);
                     }
                   }
-                  const countyGroups = [...byCounty.entries()].sort((a, b) => b[1].length - a[1].length);
+                  const countyGroups = Array.from(byCounty.entries()).sort((a, b) => b[1].length - a[1].length);
 
                   return (
-                    <div key={row.state} style={{ borderTop: i > 0 ? "1px solid rgba(255,255,255,0.05)" : "none" }}>
-                      {/* State row — click to expand */}
+                    <div key={row.location} style={{ borderTop: i > 0 ? "1px solid rgba(255,255,255,0.05)" : "none" }}>
+                      {/* Location row — click to expand */}
                       <button
-                        onClick={() => setExpandedState(isExpanded ? null : row.state)}
+                        onClick={() => setExpandedState(isExpanded ? null : row.location)}
                         className="w-full px-6 py-3 flex items-center justify-between gap-4 hover:bg-white/5 transition-colors text-left">
                         <div className="flex items-center gap-3">
                           <svg className={`w-4 h-4 transition-transform ${isExpanded ? "rotate-90" : ""}`}
@@ -1602,7 +1604,7 @@ export default function AdminPage() {
                             style={{ color: "rgba(245,245,245,0.4)" }}>
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                           </svg>
-                          <span className="font-black text-base" style={{ color: GOLD }}>{row.state}</span>
+                          <span className="font-black text-base" style={{ color: GOLD }}>{row.location}</span>
                         </div>
                         <span className="text-sm font-bold px-3 py-1 rounded-md"
                           style={{ backgroundColor: "rgba(201,162,39,0.15)", color: GOLD }}>
@@ -1764,8 +1766,8 @@ export default function AdminPage() {
                           style={{ backgroundColor: "rgba(255,255,255,0.08)", color: "rgba(245,245,245,0.7)" }}>
                           {agg.role}
                         </span>
-                        {agg.state_code && (
-                          <span className="text-xs" style={{ color: GOLD }}>{agg.state_code}</span>
+                        {agg.location_key && (
+                          <span className="text-xs" style={{ color: GOLD }}>{agg.location_key}</span>
                         )}
                         {agg.court_or_county && (
                           <span className="text-xs" style={{ color: "rgba(245,245,245,0.4)" }}>· {agg.court_or_county}</span>
@@ -1819,7 +1821,7 @@ export default function AdminPage() {
                           {a.source === "extracted_ai" ? "AI" : "Auto"}
                         </span>
                       )}
-                      {a.state_code && <span className="text-xs" style={{ color: GOLD }}>{a.state_code}</span>}
+                      {(a.location_key ?? a.state_code) && <span className="text-xs" style={{ color: GOLD }}>{a.location_key ?? a.state_code}</span>}
                       {a.court_or_county && <span className="text-xs" style={{ color: "rgba(245,245,245,0.4)" }}>· {a.court_or_county}</span>}
                     </div>
                     <span className="text-[11px]" style={{ color: "rgba(245,245,245,0.35)" }}>

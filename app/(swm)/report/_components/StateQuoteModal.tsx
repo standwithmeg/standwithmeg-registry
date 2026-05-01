@@ -33,6 +33,7 @@ type PublicActor = {
   name: string;
   court_or_county: string | null;
   state_code: string | null;
+  location_key: string | null;
   count: number;
 };
 
@@ -48,9 +49,7 @@ export function StateQuoteModal({ state, isUs, totalSubmissions, resource, onClo
       try {
         const [quotesRes, actorsRes] = await Promise.all([
           fetch(`/api/survey/quotes?state=${encodeURIComponent(state)}&is_us=${isUs}&include_counts=true`),
-          isUs
-            ? fetch(`/api/survey/court-actors?state=${encodeURIComponent(state)}`)
-            : Promise.resolve(new Response(JSON.stringify({ actors: [] }))),
+          fetch(`/api/survey/court-actors?location=${encodeURIComponent(state)}`),
         ]);
         const quotesData = await quotesRes.json();
         const actorsData = await actorsRes.json();

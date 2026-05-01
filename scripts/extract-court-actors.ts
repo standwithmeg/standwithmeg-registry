@@ -25,6 +25,7 @@
 import { createClient } from "@supabase/supabase-js";
 import Anthropic from "@anthropic-ai/sdk";
 import { writeFileSync, readFileSync, existsSync } from "fs";
+import { courtActorLocationKey } from "../lib/court-actors";
 
 // Fallback: tsx's --env-file has parsing quirks around comment lines, so
 // we also read .env.local ourselves and fill in anything missing.
@@ -62,6 +63,7 @@ const TEXT_FIELDS = [
 type Submission = {
   id: string;
   state_of_occurrence: string | null;
+  outside_us_country: string | null;
   case_county: string | null;
   impact_quote: string | null;
   conflict_description: string | null;
@@ -77,6 +79,7 @@ type Extracted = {
   name: string;
   court_or_county: string | null;
   state_code: string | null;
+  location_key: string | null;
   notes: string | null;
   source: "extracted_regex" | "extracted_ai";
   snippet: string; // for CSV/audit
@@ -214,6 +217,7 @@ function regexExtract(sub: Submission): Extracted[] {
           name: cleaned,
           court_or_county: sub.case_county || null,
           state_code: sub.state_of_occurrence,
+          location_key: courtActorLocationKey(sub.state_of_occurrence, sub.outside_us_country),
           notes: `[extracted] ${snippet.trim()}`,
           source: "extracted_regex",
           snippet,
@@ -232,9 +236,10 @@ function regexExtract(sub: Submission): Extracted[] {
   }
 
   const final: Extracted[] = [];
-  for (const [, group] of byRole) {
+  for (const entry of Array.from(byRole.entries())) {
+    const [, group] = entry;
     // Sort longest name first within each role
-    const sorted = [...group].sort((a, b) => b.name.length - a.name.length);
+    const sorted = Array.from(group).sort((a, b) => b.name.length - a.name.length);
     const keptNamesLower: string[] = [];
     for (const item of sorted) {
       const nameLower = item.name.toLowerCase();
@@ -335,6 +340,7 @@ async function aiExtract(sub: Submission): Promise<Extracted[]> {
       name: p.name,
       court_or_county: sub.case_county || null,
       state_code: sub.state_of_occurrence,
+      location_key: courtActorLocationKey(sub.state_of_occurrence, sub.outside_us_country),
       notes: `[AI-extracted from free-text]`,
       source: "extracted_ai" as const,
       snippet: text.slice(0, 200),
@@ -399,7 +405,7 @@ async function main() {
   let from = 0;
   while (true) {
     const { data, error } = await sb.from("survey_submissions")
-      .select("id, state_of_occurrence, case_county, impact_quote, conflict_description, other_allegation_details, allegation_root_cause, lost_milestones_description, allegation_other_detail")
+      .select("id, state_of_occurrence, outside_us_country, case_county, impact_quote, conflict_description, other_allegation_details, allegation_root_cause, lost_milestones_description, allegation_other_detail")
       .range(from, from + 999);
     if (error) throw error;
     if (!data || data.length === 0) break;
@@ -491,13 +497,16 @@ async function main() {
   // Top extracted names (quick sanity check)
   const byName = new Map<string, number>();
   for (const h of newHits) {
-    const k = `${h.role} — ${h.name}${h.state_code ? ` (${h.state_code})` : ""}`;
+    const k = `${h.role} — ${h.name}${h.location_key ? ` (${h.location_key})` : h.state_code ? ` (${h.state_code})` : ""}`;
     byName.set(k, (byName.get(k) ?? 0) + 1);
   }
-  const topNames = [...byName.entries()].sort((a, b) => b[1] - a[1]).slice(0, 15);
+  const topNames = Array.from(byName.entries()).sort((a, b) => b[1] - a[1]).slice(0, 15);
   if (topNames.length > 0) {
     console.log("Top 15 most-extracted names:");
-    for (const [name, count] of topNames) console.log(`  ${count.toString().padStart(3)}  ${name}`);
+    for (const entry of topNames) {
+      const [name, count] = entry;
+      console.log(`  ${count.toString().padStart(3)}  ${name}`);
+    }
     console.log();
   }
 

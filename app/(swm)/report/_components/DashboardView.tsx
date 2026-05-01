@@ -82,8 +82,9 @@ export function DashboardView() {
       const actors = (actorsData.actors ?? []) as PublicActor[];
       const actorCounts: Record<string, number> = {};
       for (const actor of actors) {
-        if (!actor.state_code) continue;
-        actorCounts[actor.state_code] = (actorCounts[actor.state_code] ?? 0) + 1;
+        const location = actor.location_key || actor.state_code;
+        if (!location) continue;
+        actorCounts[location] = (actorCounts[location] ?? 0) + 1;
       }
       setCourtActorCounts(actorCounts);
       setPublicActors(actors);
@@ -227,14 +228,14 @@ export function DashboardView() {
           <div className="rounded-2xl p-6"
             style={{ backgroundColor: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)" }}>
             <div className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: "rgba(245,245,245,0.45)" }}>
-              States Represented
+              Global Reach
             </div>
             <div className="text-4xl font-black text-white leading-none">
               {usStates.length}
             </div>
             <div className="text-xs mt-2" style={{ color: "rgba(245,245,245,0.35)" }}>
-              of 50 states
-              {intlCountries.length > 0 && ` · ${intlCountries.length} ${intlCountries.length === 1 ? "country" : "countries"}`}
+              {usStates.length} US states
+              {intlCountries.length > 0 && ` · ${intlCountries.length} ${intlCountries.length === 1 ? "country" : "countries"} worldwide`}
             </div>
           </div>
 
