@@ -1,12 +1,12 @@
 import { createServerSupabaseClient } from "../../../../../lib/supabase";
 import { createAdminSupabaseClient } from "../../../../../lib/supabase-admin";
 import { isAdminEmail } from "../../../../../lib/require-auth";
-import { actorBucketKey } from "../../../../../lib/court-actors";
+import { COURT_ACTOR_PUBLIC_THRESHOLD, actorBucketKey } from "../../../../../lib/court-actors";
 
 export const runtime = "nodejs";
 
 const DEFAULT_EXPORT_THRESHOLD = 1;
-const PUBLIC_NAMING_THRESHOLD = 5;
+const PUBLIC_NAMING_THRESHOLD = COURT_ACTOR_PUBLIC_THRESHOLD;
 
 type ActorRow = {
   role: string;

@@ -25,7 +25,7 @@ PERMISSION_REVERSE = {
     "data_only":  "For data purposes only (Do not share publicly).",
 }
 
-PUBLIC_ACTOR_THRESHOLD = 5
+PUBLIC_ACTOR_THRESHOLD = 3
 _ROLE_PREFIX_RE = re.compile(r"^(hon\.?|honorable|judge|justice|magistrate|commissioner|referee|attorney|atty\.?|gal|guardian ad litem|minor'?s counsel|minor counsel|dr\.?|doctor)\s+", re.I)
 _SUFFIX_RE = re.compile(r"\s+(jr\.?|sr\.?|ii|iii|iv|esq\.?|esquire)$", re.I)
 _GIVEN_NAME_ALIASES = {
@@ -82,7 +82,7 @@ def _actor_family_key(row: dict) -> str:
 
 
 def load_public_court_actors_from_supabase(state_filter: str | None = None) -> dict[str, list[dict]]:
-    """Return public-safe court actors grouped by state using the 5-family rule."""
+    """Return public-safe court actors grouped by state using the public threshold."""
     url = os.environ.get("NEXT_PUBLIC_SUPABASE_URL") or os.environ.get("SUPABASE_URL")
     key = os.environ.get("SUPABASE_SERVICE_ROLE_KEY")
     if not url or not key:

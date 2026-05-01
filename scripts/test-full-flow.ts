@@ -80,11 +80,11 @@ async function main() {
     step("Judge row has role+state+notes", foundJudge?.role === "Judge" && foundJudge?.state_code === "CA" && !!foundJudge?.notes,
       `role=${foundJudge?.role}, state=${foundJudge?.state_code}, notes=${foundJudge?.notes?.slice(0,30)}`);
 
-    // 6. Public court-actors API doesn't list this name (only 1 family, threshold is 5)
+    // 6. Public court-actors API doesn't list this name (only 1 family, below threshold)
     const pubRes = await fetch(`${BASE}/api/survey/court-actors?state=CA`);
     const pubData = await pubRes.json();
     const leaked = (pubData.actors ?? []).find((a: { name: string }) => a.name === TEST_JUDGE);
-    step("Public API respects 5-family threshold", !leaked,
+    step("Public API respects court actor threshold", !leaked,
       leaked ? "LEAKED — test judge visible publicly" : "judge correctly hidden (only 1 reporter)");
 
     // 7. Approved quote visible publicly

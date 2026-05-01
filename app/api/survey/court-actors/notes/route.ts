@@ -1,5 +1,5 @@
 import { createAdminSupabaseClient } from "../../../../../lib/supabase-admin";
-import { actorBucketKey } from "../../../../../lib/court-actors";
+import { COURT_ACTOR_PUBLIC_THRESHOLD, actorBucketKey } from "../../../../../lib/court-actors";
 
 /**
  * Returns the anonymized factual notes that families wrote about ONE named
@@ -19,8 +19,6 @@ import { actorBucketKey } from "../../../../../lib/court-actors";
  * Response:
  *   { notes: [{ note: string, month: "YYYY-MM" }], count: number }
  */
-
-const PUBLIC_THRESHOLD = 3;
 
 type Row = {
   role: string;
@@ -135,24 +133,19 @@ export async function GET(request: Request) {
     // Hard gate: only expose notes for actors who have already crossed the
     // public-display threshold. This makes probing /notes useless for
     // looking up a single family's submission.
-    if (families.size < PUBLIC_THRESHOLD) {
+    if (families.size < COURT_ACTOR_PUBLIC_THRESHOLD) {
       return Response.json({ notes: [], count: 0 });
     }
 
     // Dedup notes per family — one family writing the same note twice
     // appears once. Pick the longest non-empty note for each family.
     //
-    // Skip notes whose stored text was tagged as AI/regex-extracted from a
-    // legacy free-text field. Those snippets were stored with a character
-    // cap and often end mid-word, so they should never be displayed
-    // publicly even if the row was later promoted to form_direct. The
-    // family still counts toward the public threshold via the actors
-    // endpoint — only the text is suppressed.
+    // If an admin promotes an AI/regex-discovered row to counted, strip the
+    // internal source tag before showing the underlying family-written text.
     const notesByFamily = new Map<string, { note: string; month: string | null }>();
     for (const row of matchingRows) {
       const original = (row.notes ?? "").trim();
       if (!original) continue;
-      if (EXTRACTED_PREFIX_RE.test(original)) continue;
       const note = cleanPublicNote(original);
       if (!note) continue;
       const fk = familyKey(row);

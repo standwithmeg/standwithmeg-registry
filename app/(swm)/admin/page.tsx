@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
+import { COURT_ACTOR_PUBLIC_THRESHOLD } from "../../../lib/court-actors";
 
 const GOLD  = "#C9A227";
 const BG    = "#0F1E30";  // deep dark navy for page background
@@ -1032,7 +1033,7 @@ export default function AdminPage() {
       "",
       "Your name and email will never be published as the person who reported a court actor. Public court actor patterns only show aggregate family counts and pattern information, not who said what.",
       "",
-      "We only publish a court actor's name publicly once 5 different families have independently named that same person, so accurate names, roles, counties, and short pattern notes help us find real patterns without exposing families.",
+      `We only publish a court actor's name publicly once ${COURT_ACTOR_PUBLIC_THRESHOLD} different families have independently named that same person, so accurate names, roles, counties, and short pattern notes help us find real patterns without exposing families.`,
       "",
       "Court Actor update link:",
       updateUrl,
@@ -1523,10 +1524,10 @@ export default function AdminPage() {
             <div>
               <h2 className="font-black text-white text-base tracking-wide">Court Actors</h2>
               <p className="text-xs mt-0.5" style={{ color: "rgba(245,245,245,0.4)" }}>
-                {adminActorAggs.length} unique names across {adminActors.length} reports · Public threshold: 5 families
+                {adminActorAggs.length} counted names across {adminActors.length} reports · Public threshold: {COURT_ACTOR_PUBLIC_THRESHOLD} families
               </p>
               <p className="text-xs mt-1 max-w-3xl" style={{ color: "rgba(245,245,245,0.45)" }}>
-                Promote means you verified an auto-extracted name and marked it counted. It can help reach the public 5-family threshold, but it does not publish by itself. Names are grouped conservatively by normalized spelling; close misspellings still need manual review before launch.
+                Promote means you verified an auto-extracted name and marked it counted. Once a counted name reaches the public threshold, it appears on the public dashboard automatically. Names are grouped conservatively by normalized spelling; close misspellings still need manual review before launch.
               </p>
             </div>
             {/* Segmented view selector */}
@@ -1679,7 +1680,7 @@ export default function AdminPage() {
                                     <div className="flex items-center gap-1 flex-shrink-0">
                                       {isExtracted && (
                                         <button onClick={() => patchActor(a.id, "promote")} disabled={isActing}
-                                          title="Confirm this is a real named actor. It can count toward the public 5-family threshold."
+                                          title={`Confirm this is a real named actor. It can count toward the public ${COURT_ACTOR_PUBLIC_THRESHOLD}-family threshold.`}
                                           className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide transition-colors disabled:opacity-40"
                                           style={{ backgroundColor: "rgba(74,222,128,0.15)", color: "rgb(134,239,172)", border: "1px solid rgba(74,222,128,0.3)" }}>
                                           {isActing ? "…" : "Mark Counted"}
@@ -1733,7 +1734,7 @@ export default function AdminPage() {
                     Shareable pattern export
                   </div>
                   <div className="text-[11px] mt-0.5" style={{ color: "rgba(245,245,245,0.38)" }}>
-                    Includes every counted actor pattern. The PDF shows how many more families are needed to reach the 5-family public threshold.
+                    Includes every counted actor pattern. The PDF shows how many more families are needed to reach the {COURT_ACTOR_PUBLIC_THRESHOLD}-family public threshold.
                   </div>
                 </div>
                 <a
@@ -1752,7 +1753,7 @@ export default function AdminPage() {
                 </div>
               )}
               {adminActorAggs.slice(0, 50).map((agg, i) => {
-                const isPublic = agg.count >= 5;
+                const isPublic = agg.count >= COURT_ACTOR_PUBLIC_THRESHOLD;
                 return (
                   <div key={i} className="px-6 py-3 flex items-center justify-between gap-4"
                     style={{ borderTop: i > 0 ? "1px solid rgba(255,255,255,0.05)" : "none" }}>

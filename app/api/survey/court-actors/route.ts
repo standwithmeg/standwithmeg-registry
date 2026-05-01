@@ -1,5 +1,5 @@
 import { createAdminSupabaseClient } from "../../../../lib/supabase-admin";
-import { actorBucketKey } from "../../../../lib/court-actors";
+import { COURT_ACTOR_PUBLIC_THRESHOLD, actorBucketKey } from "../../../../lib/court-actors";
 
 /**
  * Returns court actors named by 3+ different families (the auto-publish
@@ -17,8 +17,6 @@ import { actorBucketKey } from "../../../../lib/court-actors";
  * Response:
  *   { actors: [{ role, name, court_or_county?, state_code, count }] }
  */
-
-const PUBLIC_THRESHOLD = 3;
 
 type ActorRow = {
   role: string;
@@ -85,7 +83,7 @@ export async function GET(request: Request) {
     }
 
     // Bucket by normalized (name + state). Count DISTINCT families
-    // per bucket (not distinct rows — the threshold is "5 different families",
+    // per bucket (not distinct rows — the threshold is different families,
     // so one family naming the same person twice only counts once).
     type Bucket = {
       role: string;
@@ -146,7 +144,7 @@ export async function GET(request: Request) {
     }
 
     const publicActors = [...buckets.values()]
-      .filter(b => b.families.size >= PUBLIC_THRESHOLD)
+      .filter(b => b.families.size >= COURT_ACTOR_PUBLIC_THRESHOLD)
       .map(b => ({
         role: roleSummary(b.roleCounts),
         name: mostFrequent(b.casingCounts) ?? b.name,
@@ -156,7 +154,7 @@ export async function GET(request: Request) {
       }))
       .sort((a, b) => b.count - a.count);
 
-    return Response.json({ actors: publicActors, threshold: PUBLIC_THRESHOLD });
+    return Response.json({ actors: publicActors, threshold: COURT_ACTOR_PUBLIC_THRESHOLD });
   } catch (err) {
     console.error("GET /api/survey/court-actors error:", err);
     return Response.json({ actors: [] });

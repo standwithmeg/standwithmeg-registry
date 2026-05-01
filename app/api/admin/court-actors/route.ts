@@ -1,7 +1,7 @@
 import { createServerSupabaseClient } from "../../../../lib/supabase";
 import { createAdminSupabaseClient } from "../../../../lib/supabase-admin";
 import { isAdminEmail } from "../../../../lib/require-auth";
-import { actorBucketKey } from "../../../../lib/court-actors";
+import { COURT_ACTOR_PUBLIC_THRESHOLD, actorBucketKey } from "../../../../lib/court-actors";
 
 /**
  * Admin-only: returns EVERY named court actor (no threshold), plus aggregate
@@ -100,6 +100,7 @@ export async function GET() {
     };
     const agg = new Map<string, AggBucket>();
     for (const r of rows) {
+      if ((r.source ?? "form_direct") !== "form_direct") continue;
       if (!r.role || !r.name) continue;
       const state = actorState(r);
       const key = actorBucketKey(r.name, r.role, state);
@@ -174,7 +175,7 @@ export async function GET() {
       };
     });
 
-    return Response.json({ actors, aggregates });
+    return Response.json({ actors, aggregates, threshold: COURT_ACTOR_PUBLIC_THRESHOLD });
   } catch (err) {
     console.error("GET /api/admin/court-actors error:", err);
     return Response.json({ error: "Failed." }, { status: 500 });
@@ -190,7 +191,7 @@ export async function GET() {
  *   { id: uuid, action: "delete"  }   // remove entirely (e.g. confirmed bogus)
  *
  * "promote" is the big one: once form_direct, the row counts toward the
- * public 5-family threshold. Meant to be used after the admin has
+ * public threshold. Meant to be used after the admin has
  * personally verified a name is real and worth surfacing.
  */
 export async function PATCH(request: Request) {

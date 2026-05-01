@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { COURT_ACTOR_PUBLIC_THRESHOLD } from "../../../lib/court-actors";
 import { isUnitedStatesCountry } from "../../../lib/survey-location";
 import { US_JURISDICTIONS } from "../../../lib/us-jurisdictions";
 
@@ -888,7 +889,7 @@ export default function SubmitPage() {
                   </label>
                   <p className="text-xs text-gray-500 mb-3 leading-relaxed">
                     Add any judges, attorneys, GALs, evaluators, therapists, CPS workers, or others involved in your case.
-                    Your identity stays private. A name only appears publicly once it has been independently reported by <strong>5 different families</strong>.
+                    Your identity stays private. A name only appears publicly once it has been independently reported by <strong>{COURT_ACTOR_PUBLIC_THRESHOLD} different families</strong>.
                     Anything you add here is visible to Stand With Meg admins for pattern research. If you add a court actor,
                     please include one short factual sentence about what happened. It can be harmful, neutral, or positive.
                   </p>

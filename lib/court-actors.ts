@@ -2,6 +2,8 @@ const ROLE_PREFIX_RE = /^(hon\.?|honorable|judge|justice|magistrate|commissioner
 const SUFFIX_RE = /\s+(jr\.?|sr\.?|ii|iii|iv|esq\.?|esquire)$/i;
 const NAME_PUNCT_RE = /[.,'"`´‘’]/g;
 
+export const COURT_ACTOR_PUBLIC_THRESHOLD = 3;
+
 // Conservative first-name aliases/misspellings observed in the court-actor data.
 // We only rewrite the first token, so distinct people with different last names
 // stay separate.

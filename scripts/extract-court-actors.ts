@@ -17,7 +17,7 @@
  *
  * All extracted rows get source='extracted_regex' or 'extracted_ai' so
  * they're flagged as machine-extracted and excluded from the public
- * 5-family threshold.
+ * threshold until an admin promotes them.
  *
  * Writes /tmp/court-actors-extraction-preview.csv for review.
  */
