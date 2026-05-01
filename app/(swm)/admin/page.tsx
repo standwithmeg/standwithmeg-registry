@@ -1234,19 +1234,29 @@ export default function AdminPage() {
             <div className="text-xs mt-2" style={{ color: "rgba(245,245,245,0.35)" }}>families documented</div>
           </div>
 
-          {/* States / Countries — white number */}
+          {/* States / Countries — white numbers, side-by-side */}
           <div className="rounded-2xl p-6"
             style={{ backgroundColor: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)" }}>
             <div className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: "rgba(245,245,245,0.45)" }}>
               Global Reach
             </div>
-            <div className="text-4xl font-black text-white leading-none">
-              {stats.by_state.filter(r => r.is_us).length}
-            </div>
-            <div className="text-xs mt-2" style={{ color: "rgba(245,245,245,0.35)" }}>
-              {stats.by_state.filter(r => r.is_us).length} US states
-              {stats.by_state.filter(r => !r.is_us).length > 0 &&
-                ` · ${stats.by_state.filter(r => !r.is_us).length} ${stats.by_state.filter(r => !r.is_us).length === 1 ? "country" : "countries"} worldwide`}
+            <div className="grid grid-cols-2 gap-3">
+              <div>
+                <div className="text-4xl font-black text-white leading-none">
+                  {stats.by_state.filter(r => r.is_us).length}
+                </div>
+                <div className="text-xs mt-2" style={{ color: "rgba(245,245,245,0.35)" }}>
+                  US states
+                </div>
+              </div>
+              <div>
+                <div className="text-4xl font-black text-white leading-none">
+                  {stats.by_state.filter(r => !r.is_us).length}
+                </div>
+                <div className="text-xs mt-2" style={{ color: "rgba(245,245,245,0.35)" }}>
+                  {stats.by_state.filter(r => !r.is_us).length === 1 ? "country" : "countries"} worldwide
+                </div>
+              </div>
             </div>
           </div>
 

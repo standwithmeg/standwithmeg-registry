@@ -230,12 +230,23 @@ export function DashboardView() {
             <div className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: "rgba(245,245,245,0.45)" }}>
               Global Reach
             </div>
-            <div className="text-4xl font-black text-white leading-none">
-              {usStates.length}
-            </div>
-            <div className="text-xs mt-2" style={{ color: "rgba(245,245,245,0.35)" }}>
-              {usStates.length} US states
-              {intlCountries.length > 0 && ` · ${intlCountries.length} ${intlCountries.length === 1 ? "country" : "countries"} worldwide`}
+            <div className="grid grid-cols-2 gap-3">
+              <div>
+                <div className="text-4xl font-black text-white leading-none">
+                  {usStates.length}
+                </div>
+                <div className="text-xs mt-2" style={{ color: "rgba(245,245,245,0.35)" }}>
+                  US states
+                </div>
+              </div>
+              <div>
+                <div className="text-4xl font-black text-white leading-none">
+                  {intlCountries.length}
+                </div>
+                <div className="text-xs mt-2" style={{ color: "rgba(245,245,245,0.35)" }}>
+                  {intlCountries.length === 1 ? "country" : "countries"} worldwide
+                </div>
+              </div>
             </div>
           </div>
 
