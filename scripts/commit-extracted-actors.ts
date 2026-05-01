@@ -123,18 +123,24 @@ async function main() {
   // Breakdown by source
   const bySource = new Map<string, number>();
   for (const r of filtered) bySource.set(r.source, (bySource.get(r.source) ?? 0) + 1);
-  for (const [s, n] of bySource) console.log(`  ${s}: ${n}`);
+  for (const entry of Array.from(bySource.entries())) {
+    const [s, n] = entry;
+    console.log(`  ${s}: ${n}`);
+  }
   console.log();
 
   // Top names
   const byName = new Map<string, number>();
   for (const r of filtered) {
-    const k = `${r.role} — ${r.name}${r.state_code ? ` (${r.state_code})` : ""}`;
+    const k = `${r.role} — ${r.name}${r.location_key ? ` (${r.location_key})` : r.state_code ? ` (${r.state_code})` : ""}`;
     byName.set(k, (byName.get(k) ?? 0) + 1);
   }
-  const top = [...byName.entries()].sort((a, b) => b[1] - a[1]).slice(0, 15);
-  console.log("Top 15 unique (name, role, state):");
-  for (const [n, c] of top) console.log(`  ${c.toString().padStart(3)}  ${n}`);
+  const top = Array.from(byName.entries()).sort((a, b) => b[1] - a[1]).slice(0, 15);
+  console.log("Top 15 unique (name, role, location):");
+  for (const entry of top) {
+    const [n, c] = entry;
+    console.log(`  ${c.toString().padStart(3)}  ${n}`);
+  }
   console.log();
 
   // Check for existing rows to avoid duplicates
@@ -162,6 +168,7 @@ async function main() {
     name: r.name,
     court_or_county: r.court_or_county || null,
     state_code: r.state_code || null,
+    location_key: r.location_key || r.state_code || null,  // fallback to state_code for compatibility
     notes: `[${r.source}] ${r.snippet || ""}`.slice(0, 500),
     source: r.source,
   }));

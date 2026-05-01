@@ -10,6 +10,7 @@ export type PublicActor = {
   name: string;
   court_or_county: string | null;
   state_code: string | null;
+  location_key: string | null;
   count: number;
 };
 

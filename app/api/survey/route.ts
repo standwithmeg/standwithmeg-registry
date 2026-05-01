@@ -5,6 +5,7 @@ import {
   normalizeOutsideCountryForReporting,
 } from "../../../lib/survey-location";
 import { VALID_US_JURISDICTION_CODES } from "../../../lib/us-jurisdictions";
+import { courtActorLocationKey } from "../../../lib/court-actors";
 import { createHash } from "crypto";
 
 // Public submissions come in anonymously from untrusted visitors, but the
@@ -13,6 +14,12 @@ import { createHash } from "crypto";
 
 const VALID_SHARE_PERMISSIONS = new Set(["public", "anonymous", "first_name", "data_only"]);
 const ACTOR_NOTE_MIN_CHARS = 12;
+
+function safeNumeric(v: unknown): number | null {
+  if (v === null || v === undefined || v === "") return null;
+  const n = parseFloat(String(v).replace(/[$,]/g, ""));
+  return isNaN(n) || n < 0 ? null : n;
+}
 
 export async function POST(request: Request) {
   try {
@@ -122,11 +129,6 @@ export async function POST(request: Request) {
     const lost_milestones_description = String(body.lost_milestones_description || "").trim() || null;
 
     // ── Financials ─────────────────────────────────────────────────
-    function safeNumeric(v: unknown): number | null {
-      if (v === null || v === undefined || v === "") return null;
-      const n = parseFloat(String(v).replace(/[$,]/g, ""));
-      return isNaN(n) || n < 0 ? null : n;
-    }
     const attorney_fees           = safeNumeric(body.attorney_fees);
     const gal_fees                = safeNumeric(body.gal_fees);
     const therapy_eval_fees       = safeNumeric(body.therapy_eval_fees);
@@ -246,12 +248,14 @@ export async function POST(request: Request) {
     }
 
     if (actorRows.length > 0) {
+      const location_key = courtActorLocationKey(state_of_occurrence, outside_us_country);
       const rowsToInsert = actorRows.map(a => ({
         submission_id: data.id,
         role: a.role,
         name: a.name,
         court_or_county: a.court,
         state_code: state_of_occurrence,
+        location_key: location_key,
         notes: a.notes,
       }));
       if (rowsToInsert.length > 0) {

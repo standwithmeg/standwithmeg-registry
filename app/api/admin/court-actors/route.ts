@@ -1,13 +1,77 @@
 import { createServerSupabaseClient } from "../../../../lib/supabase";
 import { createAdminSupabaseClient } from "../../../../lib/supabase-admin";
 import { isAdminEmail } from "../../../../lib/require-auth";
-import { COURT_ACTOR_PUBLIC_THRESHOLD, actorBucketKey } from "../../../../lib/court-actors";
+import { COURT_ACTOR_PUBLIC_THRESHOLD, actorBucketKeyWithLocation, courtActorLocationKey } from "../../../../lib/court-actors";
 
 /**
  * Admin-only: returns EVERY named court actor (no threshold), plus aggregate
- * counts per unique (name, state) bucket. Includes reporter info
+ * counts per unique (name, location) bucket. Includes reporter info
  * (submission_id + email) so the admin can trace who named whom.
  */
+
+type Row = {
+  id: string;
+  role: string;
+  name: string;
+  court_or_county: string | null;
+  state_code: string | null;
+  location_key: string | null;
+  notes: string | null;
+  source: string | null;
+  created_at: string;
+  submission_id: string;
+  nudge_sent_at: string | null;
+  nudge_sent_by: string | null;
+  nudge_sent_to: string | null;
+  nudge_last_subject: string | null;
+  survey_submissions:
+    | { email: string | null; first_name: string | null; last_name: string | null; state_of_occurrence: string | null; outside_us_country: string | null }
+    | { email: string | null; first_name: string | null; last_name: string | null; state_of_occurrence: string | null; outside_us_country: string | null }[]
+    | null;
+};
+
+function joinedSubmission(row: Row) {
+  return Array.isArray(row.survey_submissions)
+    ? row.survey_submissions[0] ?? null
+    : row.survey_submissions;
+}
+
+function actorLocation(row: Row): string | null {
+  // Prefer direct location_key if available (post-migration)
+  if (row.location_key?.trim()) {
+    return row.location_key.trim();
+  }
+  // Fallback: compute from submission data for compatibility
+  const submission = joinedSubmission(row);
+  return courtActorLocationKey(submission?.state_of_occurrence || null, submission?.outside_us_country || null);
+}
+
+function familyKey(row: Row): string {
+  const location = actorLocation(row) ?? "";
+  const email = joinedSubmission(row)?.email?.trim().toLowerCase();
+  return email ? `${email}|${location}` : `submission:${row.submission_id}`;
+}
+
+function mostFrequent<T>(m: Map<T, number>): T | null {
+  let best: T | null = null;
+  let max = 0;
+  for (const entry of Array.from(m.entries())) {
+    const [value, count] = entry;
+    if (count > max) {
+      best = value;
+      max = count;
+    }
+  }
+  return best;
+}
+
+function roleSummary(roles: Map<string, number>) {
+  const sorted = Array.from(roles.entries()).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+  if (sorted.length === 0) return "Court Actor";
+  if (sorted.length === 1) return sorted[0][0];
+  return `${sorted[0][0]} + ${sorted.length - 1} role${sorted.length === 2 ? "" : "s"}`;
+}
+
 export async function GET() {
   try {
     const supabase = await createServerSupabaseClient();
@@ -19,59 +83,39 @@ export async function GET() {
     const adminSb = createAdminSupabaseClient();
 
     // All actor rows + joined submission info
-    type Row = {
-      id: string;
-      role: string;
-      name: string;
-      court_or_county: string | null;
-      state_code: string | null;
-      notes: string | null;
-      source: string | null;
-      created_at: string;
-      submission_id: string;
-      nudge_sent_at: string | null;
-      nudge_sent_by: string | null;
-      nudge_sent_to: string | null;
-      nudge_last_subject: string | null;
-      survey_submissions:
-        | { email: string | null; first_name: string | null; last_name: string | null; state_of_occurrence: string | null }
-        | { email: string | null; first_name: string | null; last_name: string | null; state_of_occurrence: string | null }[]
-        | null;
-    };
-
-    function joinedSubmission(row: Row) {
-      return Array.isArray(row.survey_submissions)
-        ? row.survey_submissions[0] ?? null
-        : row.survey_submissions;
-    }
-
-    function familyKey(row: Row): string {
-      const state = actorState(row) ?? "";
-      const email = joinedSubmission(row)?.email?.trim().toLowerCase();
-      return email ? `${email}|${state}` : `submission:${row.submission_id}`;
-    }
-
-    function actorState(row: Row): string | null {
-      const direct = row.state_code?.trim().toUpperCase();
-      if (direct) return direct;
-      const joined = joinedSubmission(row)?.state_of_occurrence?.trim().toUpperCase();
-      return joined || null;
-    }
-
     let from = 0;
     const pageSize = 1000;
     const rows: Row[] = [];
-    const baseSelect = "id, role, name, court_or_county, state_code, notes, source, created_at, submission_id, survey_submissions(email, first_name, last_name, state_of_occurrence)";
-    const nudgeSelect = "id, role, name, court_or_county, state_code, notes, source, created_at, submission_id, nudge_sent_at, nudge_sent_by, nudge_sent_to, nudge_last_subject, survey_submissions(email, first_name, last_name, state_of_occurrence)";
+    const baseSelect = "id, role, name, court_or_county, state_code, notes, source, created_at, submission_id, survey_submissions(email, first_name, last_name, state_of_occurrence, outside_us_country)";
+    const nudgeSelect = "id, role, name, court_or_county, state_code, notes, source, created_at, submission_id, nudge_sent_at, nudge_sent_by, nudge_sent_to, nudge_last_subject, survey_submissions(email, first_name, last_name, state_of_occurrence, outside_us_country)";
+    const locationSelect = "id, role, name, court_or_county, state_code, location_key, notes, source, created_at, submission_id, nudge_sent_at, nudge_sent_by, nudge_sent_to, nudge_last_subject, survey_submissions(email, first_name, last_name, state_of_occurrence, outside_us_country)";
+    
     let includeNudgeColumns = true;
+    let includeLocationKey = true;
+    
     while (true) {
+      let selectString = baseSelect;
+      if (includeLocationKey && includeNudgeColumns) {
+        selectString = locationSelect;
+      } else if (includeNudgeColumns) {
+        selectString = nudgeSelect;
+      }
+      
       const { data, error } = await adminSb
         .from("court_actors")
-        .select(includeNudgeColumns ? nudgeSelect : baseSelect)
+        .select(selectString)
         .order("created_at", { ascending: false })
         .range(from, from + pageSize - 1);
+        
       if (error) {
-        if (includeNudgeColumns && error.code === "42703") {
+        if (includeLocationKey && error.code === "42703") {
+          // location_key column doesn't exist yet
+          includeLocationKey = false;
+          rows.length = 0;
+          from = 0;
+          continue;
+        } else if (includeNudgeColumns && error.code === "42703") {
+          // nudge columns don't exist yet
           includeNudgeColumns = false;
           rows.length = 0;
           from = 0;
@@ -81,34 +125,44 @@ export async function GET() {
         return Response.json({ actors: [], aggregates: [] });
       }
       if (!data || data.length === 0) break;
-      rows.push(...(data as unknown as Row[]));
+      
+      // Add null location_key to rows that don't have it
+      const processedData = (data as unknown as Row[]).map(row => ({
+        ...row,
+        location_key: includeLocationKey ? row.location_key : null
+      }));
+      
+      rows.push(...processedData);
       if (data.length < pageSize) break;
       from += pageSize;
     }
 
-    // Build aggregates: normalized (name, state) -> count distinct families.
+    // Build aggregates: normalized (name, location) -> count distinct families.
     // This merges casing, punctuation, common titles, middle initials, small
     // repeated-letter misspellings, and different role labels for the same
-    // person in the same state.
+    // person in the same location.
     type AggBucket = {
       name: string;
       state_code: string | null;
+      location_key: string | null;
       families: Set<string>;
       roles: Map<string, number>;
       names: Map<string, number>;
       courts: Map<string, number>;
     };
+    
     const agg = new Map<string, AggBucket>();
     for (const r of rows) {
       if ((r.source ?? "form_direct") !== "form_direct") continue;
       if (!r.role || !r.name) continue;
-      const state = actorState(r);
-      const key = actorBucketKey(r.name, r.role, state);
+      const location = actorLocation(r);
+      const key = actorBucketKeyWithLocation(r.name, r.role, location);
       if (!key.split("|")[0]) continue;
       if (!agg.has(key)) {
         agg.set(key, {
           name: r.name,
-          state_code: state,
+          state_code: r.state_code,
+          location_key: location,
           families: new Set(),
           roles: new Map(),
           names: new Map(),
@@ -122,31 +176,13 @@ export async function GET() {
       if (r.court_or_county) b.courts.set(r.court_or_county, (b.courts.get(r.court_or_county) ?? 0) + 1);
     }
 
-    function mostFrequent<T>(m: Map<T, number>): T | null {
-      let best: T | null = null;
-      let max = 0;
-      for (const [value, count] of m) {
-        if (count > max) {
-          best = value;
-          max = count;
-        }
-      }
-      return best;
-    }
-
-    function roleSummary(roles: Map<string, number>) {
-      const sorted = [...roles.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
-      if (sorted.length === 0) return "Court Actor";
-      if (sorted.length === 1) return sorted[0][0];
-      return `${sorted[0][0]} + ${sorted.length - 1} role${sorted.length === 2 ? "" : "s"}`;
-    }
-
-    const aggregates = [...agg.values()]
+    const aggregates = Array.from(agg.values())
       .map(b => ({
         role: roleSummary(b.roles),
         name: mostFrequent(b.names) ?? b.name,
         state_code: b.state_code,
-        court_or_county: [...b.courts.entries()].sort((a, b) => b[1] - a[1])[0]?.[0] ?? null,
+        location_key: b.location_key,
+        court_or_county: Array.from(b.courts.entries()).sort((a, b) => b[1] - a[1])[0]?.[0] ?? null,
         count: b.families.size,
       }))
       .sort((a, b) => b.count - a.count);
@@ -159,7 +195,8 @@ export async function GET() {
         role: r.role,
         name: r.name,
         court_or_county: r.court_or_county,
-        state_code: actorState(r),
+        state_code: r.state_code,
+        location_key: actorLocation(r),
         notes: r.notes,
         source: r.source ?? "form_direct",
         created_at: r.created_at,
