@@ -364,16 +364,22 @@ export function DashboardView() {
             style={{ backgroundColor: "rgba(201,162,39,0.10)" }}>
             <div className="text-xs font-bold uppercase tracking-widest mb-3"
               style={{ color: "rgba(201,162,39,0.7)" }}>
-              Help keep this record alive
+              Why I&rsquo;m asking
             </div>
-            <h3 className="text-2xl font-black text-white mb-3 max-w-2xl mx-auto leading-tight">
-              There&rsquo;s no foundation behind this. There&rsquo;s just me and the families.
+            <h3 className="text-2xl md:text-3xl font-black text-white mb-4 max-w-2xl mx-auto leading-tight">
+              Without donations, I have to stop.
             </h3>
-            <p className="text-sm mb-6 max-w-xl mx-auto" style={{ color: "rgba(245,245,245,0.65)" }}>
-              Stand With Meg is a one-woman, family-funded project. Hosting, document storage,
-              the state reports, and every line of code costs real money. Even <strong className="text-white">$5 once</strong> helps.
-              <strong className="text-white"> $5 a month</strong> is what makes this sustainable &mdash; the
-              difference between a project and a permanent record families can rely on.
+            <p className="text-sm mb-4 max-w-xl mx-auto leading-relaxed" style={{ color: "rgba(245,245,245,0.7)" }}>
+              Stand With Meg runs on real money &mdash; hosting, document storage, the state
+              reports, the platform you&rsquo;re using right now. There&rsquo;s no foundation behind this.
+              No grants. No salary. Just me, paying out of pocket while raising my kids and
+              fighting my own case in court.
+            </p>
+            <p className="text-sm mb-6 max-w-xl mx-auto leading-relaxed" style={{ color: "rgba(245,245,245,0.75)" }}>
+              If everyone reading this gave just <strong className="text-white">$5</strong>, I could
+              keep going. That&rsquo;s all it would take. <strong className="text-white">$5 once</strong> helps.
+              <strong className="text-white"> $5 a month</strong> is what keeps this record alive
+              for the families who come after.
             </p>
             <a href="https://www.paypal.com/ncp/payment/USXFNK3MQ2WPS"
               target="_blank"
