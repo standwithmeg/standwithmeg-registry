@@ -1,39 +1,39 @@
 [
   {
     "state": "CA",
-    "submissions": 229,
+    "submissions": 232,
     "file": "/state-reports/CA.pdf",
-    "size_kb": 1415
+    "size_kb": 1420
   },
   {
     "state": "TX",
     "submissions": 155,
     "file": "/state-reports/TX.pdf",
-    "size_kb": 1354
+    "size_kb": 1353
   },
   {
     "state": "FL",
-    "submissions": 140,
+    "submissions": 142,
     "file": "/state-reports/FL.pdf",
-    "size_kb": 1372
+    "size_kb": 1373
   },
   {
     "state": "KS",
-    "submissions": 134,
+    "submissions": 135,
     "file": "/state-reports/KS.pdf",
-    "size_kb": 1348
+    "size_kb": 1349
   },
   {
     "state": "OH",
-    "submissions": 120,
+    "submissions": 122,
     "file": "/state-reports/OH.pdf",
-    "size_kb": 1325
+    "size_kb": 1329
   },
   {
     "state": "MO",
-    "submissions": 117,
+    "submissions": 118,
     "file": "/state-reports/MO.pdf",
-    "size_kb": 1340
+    "size_kb": 1343
   },
   {
     "state": "PA",
@@ -43,9 +43,9 @@
   },
   {
     "state": "MI",
-    "submissions": 83,
+    "submissions": 85,
     "file": "/state-reports/MI.pdf",
-    "size_kb": 1308
+    "size_kb": 1307
   },
   {
     "state": "NC",
@@ -55,9 +55,9 @@
   },
   {
     "state": "IL",
-    "submissions": 77,
+    "submissions": 80,
     "file": "/state-reports/IL.pdf",
-    "size_kb": 1273
+    "size_kb": 1291
   },
   {
     "state": "VA",
@@ -69,19 +69,19 @@
     "state": "NY",
     "submissions": 70,
     "file": "/state-reports/NY.pdf",
-    "size_kb": 1323
+    "size_kb": 1322
   },
   {
     "state": "TN",
-    "submissions": 66,
+    "submissions": 67,
     "file": "/state-reports/TN.pdf",
-    "size_kb": 1286
+    "size_kb": 1288
   },
   {
     "state": "IN",
     "submissions": 62,
     "file": "/state-reports/IN.pdf",
-    "size_kb": 1263
+    "size_kb": 1262
   },
   {
     "state": "CO",
@@ -93,7 +93,7 @@
     "state": "OK",
     "submissions": 60,
     "file": "/state-reports/OK.pdf",
-    "size_kb": 1312
+    "size_kb": 1311
   },
   {
     "state": "GA",
@@ -103,21 +103,27 @@
   },
   {
     "state": "WA",
-    "submissions": 56,
+    "submissions": 58,
     "file": "/state-reports/WA.pdf",
-    "size_kb": 1337
+    "size_kb": 1331
+  },
+  {
+    "state": "IA",
+    "submissions": 54,
+    "file": "/state-reports/IA.pdf",
+    "size_kb": 1259
+  },
+  {
+    "state": "MA",
+    "submissions": 53,
+    "file": "/state-reports/MA.pdf",
+    "size_kb": 1306
   },
   {
     "state": "KY",
     "submissions": 52,
     "file": "/state-reports/KY.pdf",
     "size_kb": 1265
-  },
-  {
-    "state": "MA",
-    "submissions": 52,
-    "file": "/state-reports/MA.pdf",
-    "size_kb": 1300
   },
   {
     "state": "SC",
@@ -132,20 +138,14 @@
     "size_kb": 1291
   },
   {
-    "state": "IA",
-    "submissions": 48,
-    "file": "/state-reports/IA.pdf",
-    "size_kb": 1259
-  },
-  {
     "state": "AL",
-    "submissions": 46,
+    "submissions": 47,
     "file": "/state-reports/AL.pdf",
-    "size_kb": 1286
+    "size_kb": 1282
   },
   {
     "state": "AZ",
-    "submissions": 44,
+    "submissions": 45,
     "file": "/state-reports/AZ.pdf",
     "size_kb": 1306
   },
@@ -153,7 +153,7 @@
     "state": "MN",
     "submissions": 44,
     "file": "/state-reports/MN.pdf",
-    "size_kb": 1279
+    "size_kb": 1278
   },
   {
     "state": "NJ",
@@ -168,6 +168,18 @@
     "size_kb": 1288
   },
   {
+    "state": "WV",
+    "submissions": 37,
+    "file": "/state-reports/WV.pdf",
+    "size_kb": 1315
+  },
+  {
+    "state": "AR",
+    "submissions": 36,
+    "file": "/state-reports/AR.pdf",
+    "size_kb": 1251
+  },
+  {
     "state": "LA",
     "submissions": 36,
     "file": "/state-reports/LA.pdf",
@@ -180,21 +192,9 @@
     "size_kb": 1233
   },
   {
-    "state": "WV",
-    "submissions": 36,
-    "file": "/state-reports/WV.pdf",
-    "size_kb": 1314
-  },
-  {
-    "state": "AR",
-    "submissions": 35,
-    "file": "/state-reports/AR.pdf",
-    "size_kb": 1251
-  },
-  {
     "state": "MD",
-    "submissions": 32,
+    "submissions": 34,
     "file": "/state-reports/MD.pdf",
-    "size_kb": 1263
+    "size_kb": 1265
   }
 ]
