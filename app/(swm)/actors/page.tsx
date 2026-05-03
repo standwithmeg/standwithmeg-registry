@@ -4,6 +4,13 @@ import { useState } from "react";
 import { SubmitterGate } from "./_components/SubmitterGate";
 import { ActorsBrowser } from "./_components/ActorsBrowser";
 
+// Force the page shell to render dynamically and not be edge-cached. Without
+// this, Vercel was serving multi-minute-old cached HTML to visitors after
+// new deployments — which delayed UX changes from showing up. The actor data
+// is fetched client-side from /api/actors/all, so dynamic rendering of the
+// shell adds essentially zero latency.
+export const dynamic = "force-dynamic";
+
 const STORAGE_KEY = "swm_actors_access";
 
 type GateData = {
