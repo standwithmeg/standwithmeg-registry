@@ -40,6 +40,12 @@ export async function POST(request: Request) {
     const submissionId = cleanText(body.submission_id, 80);
     const actorId = cleanText(body.actor_id, 80);
     const email = cleanText(body.email, 254).toLowerCase();
+    // Optional override: when the visitor came from /actors → "On my case"
+    // for an actor in a specific state, the client forwards that state code
+    // so we tag the new row to the actor's state instead of inheriting the
+    // visitor's submission state. Validate strictly as a 2-letter US state.
+    const stateOverrideRaw = cleanText(body.state_code_override, 4).toUpperCase();
+    const stateOverride = /^[A-Z]{2}$/.test(stateOverrideRaw) ? stateOverrideRaw : null;
 
     if (!UUID_RE.test(submissionId)) {
       return Response.json({ error: "A valid submission link is required." }, { status: 400 });
@@ -123,7 +129,7 @@ export async function POST(request: Request) {
             name: first.name,
             court_or_county: first.court,
             notes: first.notes,
-            state_code: submissionRow.state_of_occurrence,
+            state_code: stateOverride ?? submissionRow.state_of_occurrence,
             source: "form_direct",
           })
           .eq("id", actorId)

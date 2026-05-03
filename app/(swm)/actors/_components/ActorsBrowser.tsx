@@ -503,7 +503,7 @@ function ClaimModal({
   visitorFirstName: string;
   onClose: () => void;
 }) {
-  const updateUrl = `/court-actor-update?submission=${encodeURIComponent(visitorSubmissionId)}&actor_name=${encodeURIComponent(actor.name)}&actor_role=${encodeURIComponent(actor.role.split(" + ")[0])}&actor_county=${encodeURIComponent(actor.county_breakdown.split(" (")[0] || "")}`;
+  const updateUrl = `/court-actor-update?submission=${encodeURIComponent(visitorSubmissionId)}&actor_name=${encodeURIComponent(actor.name)}&actor_role=${encodeURIComponent(actor.role.split(" + ")[0])}&actor_county=${encodeURIComponent(actor.county_breakdown.split(" (")[0] || "")}&actor_state=${encodeURIComponent(actor.state_code || "")}`;
   return (
     <div
       className="fixed inset-0 z-50 flex items-center justify-center px-4 py-8"
