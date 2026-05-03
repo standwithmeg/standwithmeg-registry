@@ -165,6 +165,52 @@ export function ActorsBrowser({ visitorEmail, visitorSubmissionId, visitorFirstN
           </div>
         )}
 
+        {/* How to use this page */}
+        <div
+          className="rounded-2xl p-5 md:p-6 mb-6"
+          style={{
+            backgroundColor: "rgba(201,162,39,0.08)",
+            border: `1px solid ${GOLD}`,
+          }}
+        >
+          <div className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: GOLD }}>
+            How to use this page
+          </div>
+          <ol className="space-y-3 text-white/90 text-sm md:text-base leading-relaxed">
+            <li className="flex gap-3">
+              <span
+                className="shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-black"
+                style={{ backgroundColor: GOLD, color: NAVY_DEEP }}
+              >1</span>
+              <div>
+                <span className="font-semibold text-white">Look for names you know from your own case.</span>{" "}
+                Use the <span className="font-mono text-white/80">Search</span> bar or the{" "}
+                <span className="font-mono text-white/80">State</span> filter below to narrow the list.
+              </div>
+            </li>
+            <li className="flex gap-3">
+              <span
+                className="shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-black"
+                style={{ backgroundColor: GOLD, color: NAVY_DEEP }}
+              >2</span>
+              <div>
+                <span className="font-semibold text-white">Click &ldquo;On my case&rdquo; on any actor you recognize.</span>{" "}
+                A short form opens with their name pre-filled — just confirm a few details and you&apos;re added. You don&apos;t have to redo the whole survey.
+              </div>
+            </li>
+            <li className="flex gap-3">
+              <span
+                className="shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-black"
+                style={{ backgroundColor: GOLD, color: NAVY_DEEP }}
+              >3</span>
+              <div>
+                <span className="font-semibold text-white">Don&apos;t see anyone you recognize?</span>{" "}
+                That&apos;s useful too — it usually means a name is one or two reports short of the public threshold. Sharing this page with anyone you know in family court is the fastest way to push it over.
+              </div>
+            </li>
+          </ol>
+        </div>
+
         {/* Filters */}
         <div
           className="rounded-2xl p-4 md:p-5 mb-6 grid grid-cols-1 md:grid-cols-12 gap-3"
@@ -324,8 +370,34 @@ export function ActorsBrowser({ visitorEmail, visitorSubmissionId, visitorFirstN
           </>
         )}
 
-        {/* Footer notes */}
-        <div className="mt-8 text-white/50 text-xs leading-relaxed">
+        {/* Footer CTA — what to do after you've finished browsing */}
+        <div
+          className="mt-8 rounded-2xl p-6 md:p-8"
+          style={{
+            backgroundColor: "rgba(15,30,48,0.7)",
+            border: "1px solid rgba(201,162,39,0.32)",
+          }}
+        >
+          <h2 className="text-xl md:text-2xl font-black text-white mb-3">
+            Didn&apos;t recognize anyone? Help us close the gap.
+          </h2>
+          <p className="text-white/80 text-sm md:text-base leading-relaxed mb-5 max-w-3xl">
+            Most named actors are one or two reports short of the public-naming threshold. The fastest way to make hidden patterns visible is to get this page in front of more family-court survivors.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <ShareLinkButton />
+            <a
+              href="/survey"
+              className="px-5 py-3 rounded-lg font-bold text-sm text-center hover:opacity-90 transition-opacity"
+              style={{ backgroundColor: "transparent", color: GOLD, border: `1.5px solid ${GOLD}` }}
+            >
+              Add new details to my own story →
+            </a>
+          </div>
+        </div>
+
+        {/* About */}
+        <div className="mt-6 text-white/50 text-xs leading-relaxed">
           <p className="mb-2">
             <span className="text-white/70 font-semibold">About this registry:</span> Submitter names, emails, and case details never appear on this page. Only aggregate patterns — actor name, role, state, county, and family count — are shown.
           </p>
@@ -345,6 +417,39 @@ export function ActorsBrowser({ visitorEmail, visitorSubmissionId, visitorFirstN
         />
       )}
     </div>
+  );
+}
+
+function ShareLinkButton() {
+  const [copied, setCopied] = useState(false);
+  async function handleClick() {
+    const url = "https://my.standwithmeg.com/actors";
+    try {
+      // Prefer native share sheet on mobile when available
+      if (typeof navigator !== "undefined" && (navigator as { share?: (data: { title: string; text: string; url: string }) => Promise<void> }).share) {
+        await (navigator as { share: (data: { title: string; text: string; url: string }) => Promise<void> }).share({
+          title: "Stand With Meg — Court Actor Registry",
+          text: "Family court actors named by 3+ families across the country. If you've been through family court, see if anyone on your case is here.",
+          url,
+        });
+        return;
+      }
+      // Fallback: copy to clipboard
+      await navigator.clipboard.writeText(url);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2200);
+    } catch {
+      // User cancelled or clipboard unavailable
+    }
+  }
+  return (
+    <button
+      onClick={handleClick}
+      className="px-5 py-3 rounded-lg font-bold text-sm transition-opacity hover:opacity-90"
+      style={{ backgroundColor: GOLD, color: NAVY_DEEP }}
+    >
+      {copied ? "Link copied ✓" : "Share this page"}
+    </button>
   );
 }
 
