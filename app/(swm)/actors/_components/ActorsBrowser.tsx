@@ -181,8 +181,8 @@ export function ActorsBrowser({ visitorEmail, visitorSubmissionId, visitorFirstN
               A short form opens — already filled in with their name, role, and county. <span className="font-semibold text-white">You only need to add one short sentence about what they did.</span> You will not have to redo your whole survey.
             </InstructionStep>
 
-            <InstructionStep number="3" title="Don&apos;t see anyone you know? Share the page">
-              Most actors are <span className="font-semibold text-white">just one or two more reports away</span> from being publicly named. Use the <span className="font-semibold text-white">Share this page</span> button at the bottom to send the link to anyone you know who has been through family court.
+            <InstructionStep number="3" title="Don&apos;t see anyone you know? Share the page anyway">
+              Most actors are <span className="font-semibold text-white">just one or two more reports away</span> from being publicly named. Use the <span className="font-semibold text-white">Share this page</span> button at the bottom to send the link to anyone you know who has been through family court. <span className="font-semibold text-white">Heads-up:</span> the people you share with will be asked to take the free 5-minute Stand With Meg survey before they can see the registry — that&apos;s how their case is added to the count, and how the next name crosses the public threshold.
             </InstructionStep>
 
           </div>
