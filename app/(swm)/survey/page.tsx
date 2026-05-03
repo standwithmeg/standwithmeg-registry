@@ -376,6 +376,16 @@ export default function SubmitPage() {
       const data = await res.json();
       if (!res.ok) { setError(data.error || "Submission failed."); setSubmitting(false); return; }
       try { sessionStorage.removeItem(STORAGE_FORM); sessionStorage.removeItem(STORAGE_DPC); sessionStorage.removeItem(STORAGE_ACTORS); } catch {}
+      // Auto-grant /actors access for the new submitter — they shouldn't have to
+      // re-prove they submitted by re-entering their email on the actors gate.
+      try {
+        localStorage.setItem("swm_actors_access", JSON.stringify({
+          email: form.email.trim().toLowerCase(),
+          submission_id: data.id,
+          first_name: form.first_name,
+          granted_at: new Date().toISOString(),
+        }));
+      } catch { /* localStorage unavailable */ }
       setSubmittedId(data.id);
       setStep(4);
     } catch {
