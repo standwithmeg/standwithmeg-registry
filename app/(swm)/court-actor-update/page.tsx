@@ -65,6 +65,21 @@ export default function CourtActorUpdatePage() {
         notes: "",
       }]);
     }
+
+    // Auto-fill the email field if the visitor has already verified at the
+    // /actors gate (they're signed in via the same email that owns this
+    // submission). This avoids making them type it twice. Visitors arriving
+    // from the admin nudge email — who haven't gone through the /actors gate —
+    // will still see a blank field as before.
+    try {
+      const stored = localStorage.getItem("swm_actors_access");
+      if (stored) {
+        const parsed = JSON.parse(stored);
+        if (parsed?.email && typeof parsed.email === "string") {
+          setEmail(parsed.email);
+        }
+      }
+    } catch { /* localStorage unavailable */ }
   }, []);
 
   const hasValidLink = useMemo(() => submissionId.length > 0, [submissionId]);
