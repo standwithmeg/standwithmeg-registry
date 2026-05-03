@@ -75,63 +75,109 @@ export function SubmitterGate({ onComplete }: Props) {
             Welcome to the Court Actor Registry
           </h1>
           <p className="text-white/80 text-sm md:text-base leading-relaxed">
-            This page lists every court actor named by Stand With Meg families. To browse it, please confirm the email you used on your registry submission.
+            This is a list of judges, GALs, attorneys, evaluators, and CPS workers named by Stand With Meg families. To protect the families in the registry, access is limited to people who have shared their own story.
           </p>
         </div>
 
         {!showRecovery ? (
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div>
-              <label htmlFor="email" className="block text-white/90 text-sm font-semibold mb-2">
-                Your registry submission email
-              </label>
-              <input
-                id="email"
-                type="email"
-                autoComplete="email"
-                inputMode="email"
-                value={email}
-                onChange={e => setEmail(e.target.value)}
-                placeholder="you@example.com"
-                className="w-full px-4 py-3 rounded-lg text-base"
-                style={{
-                  backgroundColor: "rgba(255,255,255,0.06)",
-                  border: "1px solid rgba(255,255,255,0.18)",
-                  color: "white",
-                }}
-                disabled={loading}
-                required
-              />
-            </div>
-
-            {error && (
-              <div
-                className="text-sm px-4 py-3 rounded-lg"
-                style={{ backgroundColor: "rgba(185,28,28,0.18)", color: "#FCA5A5", border: "1px solid rgba(185,28,28,0.5)" }}
-              >
-                {error}
-              </div>
-            )}
-
-            <button
-              type="submit"
-              disabled={loading}
-              className="w-full py-3 rounded-lg font-bold text-base transition-opacity disabled:opacity-50"
-              style={{ backgroundColor: GOLD, color: NAVY_DEEP }}
+          <div className="space-y-6">
+            {/* First-time visitor: prominent survey CTA */}
+            <div
+              className="rounded-xl p-5"
+              style={{
+                backgroundColor: "rgba(201,162,39,0.10)",
+                border: `1px solid ${GOLD}`,
+              }}
             >
-              {loading ? "Checking…" : "Enter Registry"}
-            </button>
-
-            <div className="text-center pt-2">
-              <button
-                type="button"
-                onClick={() => setShowRecovery(true)}
-                className="text-white/60 hover:text-white text-xs underline underline-offset-2"
+              <div
+                className="text-xs font-bold uppercase tracking-widest mb-2"
+                style={{ color: GOLD }}
               >
-                Haven&apos;t shared your story yet, or forgot which email you used?
-              </button>
+                First time here?
+              </div>
+              <p className="text-white text-base font-semibold leading-snug mb-2">
+                Someone shared this page with you?
+              </p>
+              <p className="text-white/80 text-sm leading-relaxed mb-4">
+                The registry is built from real family-court stories. To see it, please take the free 5-minute Stand With Meg survey first. As soon as you submit, you&apos;ll get immediate access.
+              </p>
+              <a
+                href="/survey"
+                className="block w-full py-3 rounded-lg font-bold text-base text-center"
+                style={{ backgroundColor: GOLD, color: NAVY_DEEP }}
+              >
+                Take the 5-Minute Survey →
+              </a>
             </div>
-          </form>
+
+            {/* Returning submitter: email lookup */}
+            <div className="pt-2">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="flex-1 h-px bg-white/10" />
+                <div className="text-white/50 text-xs font-semibold uppercase tracking-widest">
+                  Already shared your story?
+                </div>
+                <div className="flex-1 h-px bg-white/10" />
+              </div>
+
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div>
+                  <label htmlFor="email" className="block text-white/90 text-sm font-semibold mb-2">
+                    Enter the email you used on your survey
+                  </label>
+                  <input
+                    id="email"
+                    type="email"
+                    autoComplete="email"
+                    inputMode="email"
+                    value={email}
+                    onChange={e => setEmail(e.target.value)}
+                    placeholder="you@example.com"
+                    className="w-full px-4 py-3 rounded-lg text-base"
+                    style={{
+                      backgroundColor: "rgba(255,255,255,0.06)",
+                      border: "1px solid rgba(255,255,255,0.18)",
+                      color: "white",
+                    }}
+                    disabled={loading}
+                    required
+                  />
+                </div>
+
+                {error && (
+                  <div
+                    className="text-sm px-4 py-3 rounded-lg"
+                    style={{ backgroundColor: "rgba(185,28,28,0.18)", color: "#FCA5A5", border: "1px solid rgba(185,28,28,0.5)" }}
+                  >
+                    {error}
+                  </div>
+                )}
+
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className="w-full py-3 rounded-lg font-bold text-base transition-opacity disabled:opacity-50"
+                  style={{
+                    backgroundColor: "rgba(255,255,255,0.10)",
+                    color: "white",
+                    border: "1px solid rgba(255,255,255,0.25)",
+                  }}
+                >
+                  {loading ? "Checking…" : "Enter Registry"}
+                </button>
+
+                <div className="text-center">
+                  <button
+                    type="button"
+                    onClick={() => setShowRecovery(true)}
+                    className="text-white/50 hover:text-white text-xs underline underline-offset-2"
+                  >
+                    Forgot which email you used?
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
         ) : (
           <div className="space-y-4 text-white/90">
             <div
