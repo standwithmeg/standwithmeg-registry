@@ -128,19 +128,14 @@ export function ActorsBrowser({ visitorEmail, visitorSubmissionId, visitorFirstN
     >
       <div className="max-w-6xl mx-auto px-4 py-8 md:py-12">
 
-        {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-6">
-          <div>
-            <div
-              className="inline-block px-3 py-1 rounded-full text-xs font-bold tracking-widest mb-3"
-              style={{ backgroundColor: GOLD, color: NAVY_DEEP }}
-            >
-              COURT ACTOR REGISTRY
-            </div>
-            <h1 className="text-2xl md:text-4xl font-black text-white">Named Court Actor Patterns</h1>
-            <p className="text-white/70 text-sm md:text-base mt-2 max-w-2xl">
-              Every court actor named by Stand With Meg families. Names become public the moment three independent families name the same person in the same place.
-            </p>
+        {/* Header — minimal: just the registry badge + sign-in indicator. The
+            big "what to do" panel below is the real headline now. */}
+        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-5">
+          <div
+            className="inline-block px-3 py-1 rounded-full text-xs font-bold tracking-widest self-start"
+            style={{ backgroundColor: GOLD, color: NAVY_DEEP }}
+          >
+            COURT ACTOR REGISTRY
           </div>
           <div className="flex flex-col items-start md:items-end gap-1 text-xs text-white/60">
             <div>
@@ -155,7 +150,46 @@ export function ActorsBrowser({ visitorEmail, visitorSubmissionId, visitorFirstN
           </div>
         </div>
 
-        {/* Stats */}
+        {/* HOW TO USE — promoted to the visual headline. This is the first
+            thing every visitor sees after the gate. Designed to be impossible
+            to miss on mobile and desktop. */}
+        <div
+          className="rounded-2xl p-6 md:p-8 mb-6"
+          style={{
+            backgroundColor: "rgba(201,162,39,0.10)",
+            border: `2px solid ${GOLD}`,
+            boxShadow: "0 8px 32px rgba(0,0,0,0.25)",
+          }}
+        >
+          <h1
+            className="text-2xl md:text-4xl font-black mb-2"
+            style={{ color: GOLD }}
+          >
+            How to use this page
+          </h1>
+          <p className="text-white/85 text-base md:text-lg mb-6 leading-relaxed">
+            This is the registry of every court actor named by Stand With Meg families. <span className="font-semibold text-white">Pick the option below that fits you.</span>
+          </p>
+
+          <div className="space-y-5 md:space-y-6">
+
+            <InstructionStep number="1" title="Look for names you recognize">
+              Scroll the list below, or use the <span className="font-semibold text-white">Search</span> bar or the <span className="font-semibold text-white">State</span> dropdown to find judges, GALs, attorneys, evaluators, or CPS workers from your own case.
+            </InstructionStep>
+
+            <InstructionStep number="2" title="Click the gold &ldquo;On my case&rdquo; button next to anyone you recognize">
+              A short form opens — already filled in with their name, role, and county. <span className="font-semibold text-white">You only need to add one short sentence about what they did.</span> You will not have to redo your whole survey.
+            </InstructionStep>
+
+            <InstructionStep number="3" title="Don&apos;t see anyone you know? Share the page">
+              Most actors are <span className="font-semibold text-white">just one or two more reports away</span> from being publicly named. Use the <span className="font-semibold text-white">Share this page</span> button at the bottom to send the link to anyone you know who has been through family court.
+            </InstructionStep>
+
+          </div>
+        </div>
+
+        {/* Stats — moved BELOW the instructions. They're context, not the
+            primary action, so they read second. */}
         {stats && (
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
             <StatCard label="Family Reports" value={stats.total_reports.toLocaleString()} />
@@ -164,52 +198,6 @@ export function ActorsBrowser({ visitorEmail, visitorSubmissionId, visitorFirstN
             <StatCard label="States Represented" value={stats.states_count.toString()} />
           </div>
         )}
-
-        {/* How to use this page */}
-        <div
-          className="rounded-2xl p-5 md:p-6 mb-6"
-          style={{
-            backgroundColor: "rgba(201,162,39,0.08)",
-            border: `1px solid ${GOLD}`,
-          }}
-        >
-          <div className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: GOLD }}>
-            How to use this page
-          </div>
-          <ol className="space-y-3 text-white/90 text-sm md:text-base leading-relaxed">
-            <li className="flex gap-3">
-              <span
-                className="shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-black"
-                style={{ backgroundColor: GOLD, color: NAVY_DEEP }}
-              >1</span>
-              <div>
-                <span className="font-semibold text-white">Look for names you know from your own case.</span>{" "}
-                Use the <span className="font-mono text-white/80">Search</span> bar or the{" "}
-                <span className="font-mono text-white/80">State</span> filter below to narrow the list.
-              </div>
-            </li>
-            <li className="flex gap-3">
-              <span
-                className="shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-black"
-                style={{ backgroundColor: GOLD, color: NAVY_DEEP }}
-              >2</span>
-              <div>
-                <span className="font-semibold text-white">Click &ldquo;On my case&rdquo; on any actor you recognize.</span>{" "}
-                A short form opens with their name pre-filled — just confirm a few details and you&apos;re added. You don&apos;t have to redo the whole survey.
-              </div>
-            </li>
-            <li className="flex gap-3">
-              <span
-                className="shrink-0 w-6 h-6 rounded-full flex items-center justify-center text-xs font-black"
-                style={{ backgroundColor: GOLD, color: NAVY_DEEP }}
-              >3</span>
-              <div>
-                <span className="font-semibold text-white">Don&apos;t see anyone you recognize?</span>{" "}
-                That&apos;s useful too — it usually means a name is one or two reports short of the public threshold. Sharing this page with anyone you know in family court is the fastest way to push it over.
-              </div>
-            </li>
-          </ol>
-        </div>
 
         {/* Filters */}
         <div
@@ -416,6 +404,23 @@ export function ActorsBrowser({ visitorEmail, visitorSubmissionId, visitorFirstN
           onClose={() => setClaimActor(null)}
         />
       )}
+    </div>
+  );
+}
+
+function InstructionStep({ number, title, children }: { number: string; title: React.ReactNode; children: React.ReactNode }) {
+  return (
+    <div className="flex gap-4 md:gap-5">
+      <div
+        className="shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center text-lg md:text-xl font-black"
+        style={{ backgroundColor: GOLD, color: NAVY_DEEP }}
+      >
+        {number}
+      </div>
+      <div className="flex-1 min-w-0">
+        <div className="text-white font-bold text-base md:text-xl mb-1 leading-snug">{title}</div>
+        <div className="text-white/85 text-sm md:text-base leading-relaxed">{children}</div>
+      </div>
     </div>
   );
 }
