@@ -1181,6 +1181,36 @@ export default function SubmitPage() {
                   </div>
                 )}
 
+                {/* ── Court Actor Registry — primary next step. Fresh submitters
+                    just named actors on their case; this lets them immediately
+                    see whether anyone else has named the same person, and
+                    "claim" any matches with one tap. localStorage was already
+                    set above so the gate is auto-passed. ── */}
+                <div className="px-2 py-6 rounded-xl mx-0"
+                  style={{ borderBottom: `1px solid #F0F0F0`, backgroundColor: "rgba(201,162,39,0.06)" }}>
+                  <p className="text-xs font-black uppercase tracking-widest mb-2" style={{ color: GOLD }}>
+                    Now: Check the Court Actor Registry
+                  </p>
+                  <h3 className="text-base font-black mb-2" style={{ color: NAVY }}>
+                    See who else named the same judges, GALs, or attorneys.
+                  </h3>
+                  <p className="text-sm leading-relaxed text-gray-500 mb-4">
+                    Every court actor named by Stand With Meg families is now listed in one searchable registry.
+                    When 3+ families independently name the same person, their name goes public.
+                    You may recognize names from your own case &mdash; and you can add yourself to those reports with one tap.
+                  </p>
+                  <a
+                    href="/actors"
+                    className="inline-block w-full text-center py-3.5 rounded-xl font-black text-sm transition-colors"
+                    style={{ backgroundColor: GOLD, color: NAVY }}
+                  >
+                    Browse the Court Actor Registry &rarr;
+                  </a>
+                  <p className="text-xs text-gray-400 mt-3 leading-relaxed">
+                    You&rsquo;re already signed in &mdash; the registry will open without asking for your email again.
+                  </p>
+                </div>
+
                 {/* ── State Data Packet ── */}
                 <div className="px-2 py-6" style={{ borderBottom: `1px solid #F0F0F0` }}>
                   <p className="text-xs font-black uppercase tracking-widest mb-2" style={{ color: NAVY }}>
@@ -1196,7 +1226,7 @@ export default function SubmitPage() {
                     className="inline-block w-full text-center py-3 rounded-xl font-black text-sm transition-colors"
                     style={{ backgroundColor: "rgba(30,58,95,0.06)", border: `1.5px solid ${NAVY}`, color: NAVY }}
                   >
-                    View State Reports and Dashboard →
+                    View State Reports and Dashboard &rarr;
                   </a>
                 </div>
 
@@ -1229,7 +1259,7 @@ export default function SubmitPage() {
                   <ol className="space-y-3">
                     {[
                       `Go back and comment "MINE IS ADDED" so others can see this movement is real.`,
-                      "Share this registry with one other parent who needs their voice counted.",
+                      "Send my.standwithmeg.com/actors to one other family-court parent. Each share gets the next name closer to publicly visible.",
                       "Save your submission ID for your records.",
                     ].map((text, i) => (
                       <li key={i} className="flex items-start gap-3 text-sm text-gray-600 leading-relaxed">
