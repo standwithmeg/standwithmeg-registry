@@ -170,8 +170,10 @@ export async function GET() {
 
     const atThreshold = actors.filter(a => a.at_threshold).length;
     const states = new Set<string>();
+    const locations = new Set<string>();
     for (const a of actors) {
       if (a.state_code) states.add(a.state_code);
+      if (a.location_key) locations.add(a.location_key);
     }
 
     return Response.json({
@@ -180,6 +182,7 @@ export async function GET() {
       total_reports: totalReports,
       at_threshold: atThreshold,
       states_count: states.size,
+      locations_count: locations.size,
       threshold: COURT_ACTOR_PUBLIC_THRESHOLD,
     });
   } catch (err) {

@@ -43,11 +43,27 @@ function stateLabel(code: string | null): string {
   return STATE_LABEL[code] ?? code;
 }
 
+// Returns the human label for an actor's location: US state name when a
+// state_code is present, otherwise the literal country (location_key) so
+// non-US actors (Canada, UK, etc.) are visible by name instead of "Unknown".
+function locationLabel(actor: { state_code: string | null; location_key: string | null }): string {
+  if (actor.state_code) return stateLabel(actor.state_code);
+  if (actor.location_key?.trim()) return actor.location_key.trim();
+  return "Unknown";
+}
+
+function locationKeyLabel(key: string, actorsByLocation: Map<string, { state_code: string | null }>): string {
+  // If this location_key matches a US state code's actors, show the state name.
+  const sample = actorsByLocation.get(key);
+  if (sample?.state_code) return stateLabel(sample.state_code);
+  return key;
+}
+
 export function ActorsBrowser({ visitorEmail, visitorSubmissionId, visitorFirstName, onSignOut }: Props) {
   const [actors, setActors] = useState<Actor[] | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [stats, setStats] = useState<{ total_actors: number; total_reports: number; at_threshold: number; states_count: number } | null>(null);
+  const [stats, setStats] = useState<{ total_actors: number; total_reports: number; at_threshold: number; states_count: number; locations_count?: number } | null>(null);
 
   // Filters
   const [stateFilter, setStateFilter] = useState<string>("");
@@ -76,6 +92,7 @@ export function ActorsBrowser({ visitorEmail, visitorSubmissionId, visitorFirstN
           total_reports: data.total_reports,
           at_threshold: data.at_threshold,
           states_count: data.states_count,
+          locations_count: data.locations_count,
         });
         setLoading(false);
       } catch (err) {
@@ -88,11 +105,21 @@ export function ActorsBrowser({ visitorEmail, visitorSubmissionId, visitorFirstN
     return () => { cancelled = true; };
   }, []);
 
-  const allStates = useMemo(() => {
-    if (!actors) return [];
-    const s = new Set<string>();
-    for (const a of actors) if (a.state_code) s.add(a.state_code);
-    return Array.from(s).sort((a, b) => stateLabel(a).localeCompare(stateLabel(b)));
+  // Build the "location" filter options. Each option's value is the
+  // location_key (US state code OR country name); each option's label is
+  // resolved via locationKeyLabel using a sample actor from that bucket.
+  const allLocations = useMemo(() => {
+    if (!actors) return [] as Array<{ value: string; label: string }>;
+    const sampleByKey = new Map<string, { state_code: string | null }>();
+    for (const a of actors) {
+      if (!a.location_key) continue;
+      if (!sampleByKey.has(a.location_key)) {
+        sampleByKey.set(a.location_key, { state_code: a.state_code });
+      }
+    }
+    return Array.from(sampleByKey.keys())
+      .map(key => ({ value: key, label: locationKeyLabel(key, sampleByKey) }))
+      .sort((a, b) => a.label.localeCompare(b.label));
   }, [actors]);
 
   const allRoles = useMemo(() => {
@@ -110,11 +137,11 @@ export function ActorsBrowser({ visitorEmail, visitorSubmissionId, visitorFirstN
     if (!actors) return [];
     const q = search.trim().toLowerCase();
     return actors.filter(a => {
-      if (stateFilter && a.state_code !== stateFilter) return false;
+      if (stateFilter && a.location_key !== stateFilter) return false;
       if (roleFilter && !a.role.toLowerCase().includes(roleFilter.toLowerCase())) return false;
       if (thresholdOnly && !a.at_threshold) return false;
       if (q) {
-        const blob = `${a.name} ${a.role} ${stateLabel(a.state_code)} ${a.county_breakdown}`.toLowerCase();
+        const blob = `${a.name} ${a.role} ${locationLabel(a)} ${a.location_key ?? ""} ${a.county_breakdown}`.toLowerCase();
         if (!blob.includes(q)) return false;
       }
       return true;
@@ -220,7 +247,7 @@ export function ActorsBrowser({ visitorEmail, visitorSubmissionId, visitorFirstN
             <StatCard label="Family Reports" value={stats.total_reports.toLocaleString()} />
             <StatCard label="Actor Patterns" value={stats.total_actors.toLocaleString()} />
             <StatCard label="At Public Threshold" value={stats.at_threshold.toString()} accent />
-            <StatCard label="States Represented" value={stats.states_count.toString()} />
+            <StatCard label="States &amp; Countries" value={(stats.locations_count ?? stats.states_count).toString()} />
           </div>
         )}
 
@@ -235,7 +262,7 @@ export function ActorsBrowser({ visitorEmail, visitorSubmissionId, visitorFirstN
               type="text"
               value={search}
               onChange={e => setSearch(e.target.value)}
-              placeholder="Name, role, state, county…"
+              placeholder="Name, role, location, county…"
               className="w-full px-3 py-2 rounded-lg text-sm"
               style={{
                 backgroundColor: "rgba(255,255,255,0.06)",
@@ -245,7 +272,7 @@ export function ActorsBrowser({ visitorEmail, visitorSubmissionId, visitorFirstN
             />
           </div>
           <div className="md:col-span-3">
-            <label className="block text-xs font-semibold text-white/70 mb-1">State</label>
+            <label className="block text-xs font-semibold text-white/70 mb-1">State / Country</label>
             <select
               value={stateFilter}
               onChange={e => setStateFilter(e.target.value)}
@@ -256,8 +283,8 @@ export function ActorsBrowser({ visitorEmail, visitorSubmissionId, visitorFirstN
                 color: "white",
               }}
             >
-              <option value="">All states</option>
-              {allStates.map(s => <option key={s} value={s}>{stateLabel(s)}</option>)}
+              <option value="">All states &amp; countries</option>
+              {allLocations.map(loc => <option key={loc.value} value={loc.value}>{loc.label}</option>)}
             </select>
           </div>
           <div className="md:col-span-3">
@@ -295,7 +322,7 @@ export function ActorsBrowser({ visitorEmail, visitorSubmissionId, visitorFirstN
           <div className="text-red-300 text-center py-12">{error}</div>
         ) : filtered.length === 0 ? (
           <div className="text-white/60 text-center py-12">
-            No actors match these filters. Try clearing the search or changing the state/role.
+            No actors match these filters. Try clearing the search or changing the location/role.
           </div>
         ) : (
           <>
@@ -314,7 +341,7 @@ export function ActorsBrowser({ visitorEmail, visitorSubmissionId, visitorFirstN
                     <tr style={{ backgroundColor: "rgba(15,30,48,0.6)", borderBottom: "1px solid rgba(201,162,39,0.16)" }}>
                       <th className="px-4 py-3 text-left text-white/80 font-semibold">Court Actor</th>
                       <th className="px-4 py-3 text-left text-white/80 font-semibold">Role</th>
-                      <th className="px-4 py-3 text-left text-white/80 font-semibold">State</th>
+                      <th className="px-4 py-3 text-left text-white/80 font-semibold">State / Country</th>
                       <th className="px-4 py-3 text-left text-white/80 font-semibold">Families</th>
                       <th className="px-4 py-3 text-left text-white/80 font-semibold">Status</th>
                       <th className="px-4 py-3 text-left text-white/80 font-semibold">County / Court</th>
@@ -329,7 +356,7 @@ export function ActorsBrowser({ visitorEmail, visitorSubmissionId, visitorFirstN
                       >
                         <td className="px-4 py-3 text-white font-semibold">{a.name}</td>
                         <td className="px-4 py-3 text-white/80">{a.role}</td>
-                        <td className="px-4 py-3 text-white/80">{stateLabel(a.state_code)}</td>
+                        <td className="px-4 py-3 text-white/80">{locationLabel(a)}</td>
                         <td className="px-4 py-3 text-white font-bold">{a.family_count}</td>
                         <td className="px-4 py-3">
                           <ThresholdBadge actor={a} />
@@ -364,7 +391,7 @@ export function ActorsBrowser({ visitorEmail, visitorSubmissionId, visitorFirstN
                         <div className="text-white/50 text-[10px] uppercase tracking-wider">families</div>
                       </div>
                     </div>
-                    <div className="text-white/80 text-xs mb-1">{stateLabel(a.state_code)}</div>
+                    <div className="text-white/80 text-xs mb-1">{locationLabel(a)}</div>
                     <div className="text-white/60 text-xs mb-3">{a.county_breakdown}</div>
                     <div className="flex items-center justify-between gap-3">
                       <ThresholdBadge actor={a} />
