@@ -188,6 +188,31 @@ export function ActorsBrowser({ visitorEmail, visitorSubmissionId, visitorFirstN
           </div>
         </div>
 
+        {/* Mini donate ask — small, high-conversion strip while traffic spikes.
+            Placed above the stats so it's visible without scrolling. */}
+        <div
+          className="mb-6 rounded-xl p-4 md:p-5 flex flex-col sm:flex-row sm:items-center gap-3"
+          style={{
+            backgroundColor: "rgba(185,28,28,0.10)",
+            border: "1px solid rgba(185,28,28,0.45)",
+          }}
+        >
+          <p className="text-sm md:text-base text-white/85 leading-relaxed flex-1">
+            <span className="font-bold text-white">Without donations, I have to stop.</span>{" "}
+            This registry, the hosting, the state PDFs &mdash; it&rsquo;s all paid for out of pocket. If everyone reading this gave just{" "}
+            <strong className="text-white">$5</strong>, I could keep going.
+          </p>
+          <a
+            href="https://www.paypal.com/ncp/payment/USXFNK3MQ2WPS"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="shrink-0 inline-flex items-center justify-center px-5 py-3 rounded-lg font-bold text-sm hover:opacity-90 transition-opacity"
+            style={{ backgroundColor: "#B91C1C", color: "white" }}
+          >
+            Donate $5 →
+          </a>
+        </div>
+
         {/* Stats — moved BELOW the instructions. They're context, not the
             primary action, so they read second. */}
         {stats && (
@@ -372,8 +397,17 @@ export function ActorsBrowser({ visitorEmail, visitorSubmissionId, visitorFirstN
           <p className="text-white/80 text-sm md:text-base leading-relaxed mb-5 max-w-3xl">
             Most named actors are one or two reports short of the public-naming threshold. The fastest way to make hidden patterns visible is to get this page in front of more family-court survivors.
           </p>
-          <div className="flex flex-col sm:flex-row gap-3">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-3">
             <ShareLinkButton />
+            <a
+              href="https://www.paypal.com/ncp/payment/USXFNK3MQ2WPS"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-5 py-3 rounded-lg font-bold text-sm text-center hover:opacity-90 transition-opacity"
+              style={{ backgroundColor: "#B91C1C", color: "white" }}
+            >
+              Donate →
+            </a>
             <a
               href="/survey"
               className="px-5 py-3 rounded-lg font-bold text-sm text-center hover:opacity-90 transition-opacity"
@@ -381,6 +415,52 @@ export function ActorsBrowser({ visitorEmail, visitorSubmissionId, visitorFirstN
             >
               Add new details to my own story →
             </a>
+          </div>
+        </div>
+
+        {/* Why I'm asking — full donate panel, mirrors the /report dashboard */}
+        <div
+          className="mt-6 rounded-2xl overflow-hidden"
+          style={{ border: `1px solid rgba(201,162,39,0.4)` }}
+        >
+          <div
+            className="p-8 md:p-10 text-center"
+            style={{ backgroundColor: "rgba(201,162,39,0.10)" }}
+          >
+            <div
+              className="text-xs font-bold uppercase tracking-widest mb-3"
+              style={{ color: "rgba(201,162,39,0.7)" }}
+            >
+              Why I&rsquo;m asking
+            </div>
+            <h3 className="text-2xl md:text-3xl font-black text-white mb-4 max-w-2xl mx-auto leading-tight">
+              Without donations, I have to stop.
+            </h3>
+            <p className="text-sm mb-4 max-w-xl mx-auto leading-relaxed text-white/75">
+              Stand With Meg runs on real money &mdash; hosting, document storage, the state
+              reports, this registry you&rsquo;re using right now. There&rsquo;s no foundation behind this.
+              No grants. No salary. Just me, paying out of pocket while raising my kids and
+              fighting my own case in court.
+            </p>
+            <p className="text-sm mb-6 max-w-xl mx-auto leading-relaxed text-white/80">
+              If everyone reading this gave just <strong className="text-white">$5</strong>, I could
+              keep going. <strong className="text-white">$5 once</strong> helps.
+              <strong className="text-white"> $5 a month</strong> is what keeps this record alive
+              for the families who come after.
+            </p>
+            <a
+              href="https://www.paypal.com/ncp/payment/USXFNK3MQ2WPS"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block text-base px-8 py-4 rounded-xl font-black tracking-wide transition-colors hover:opacity-90"
+              style={{ backgroundColor: GOLD, color: NAVY_DEEP }}
+            >
+              Donate via PayPal →
+            </a>
+            <p className="text-xs mt-5 max-w-md mx-auto leading-relaxed text-white/40">
+              PayPal and major cards accepted. Worldwide donors welcome &mdash; works in 200+ countries.
+              Recurring monthly donations supported. Donations are not yet tax-deductible.
+            </p>
           </div>
         </div>
 
