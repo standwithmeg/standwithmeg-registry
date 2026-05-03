@@ -573,27 +573,37 @@ export default function SubmitPage() {
                   </div>
                 )}
 
-                {/* Country — shown when outside US */}
+                {/* Country — shown when outside US. Native <select> renders as a
+                    wheel picker on iOS and a full-screen dropdown on Android,
+                    which is what mobile users expect. The previous <datalist>
+                    autocomplete didn't surface a dropdown on iOS Safari, so
+                    visitors had to type the country freehand — bad for data
+                    quality (case/spelling drift) and bad UX. */}
                 {outsideUS && (
                   <div>
                     <label className={labelCls} style={{ color: NAVY }}>
                       Country <span className="text-red-700">*</span>
                     </label>
-                    <input
-                      type="text"
-                      list="swm-countries"
-                      placeholder="Start typing your country (e.g., Canada, United Kingdom, Australia)"
+                    <select
                       value={form.outside_us_country}
                       onChange={e => set("outside_us_country", e.target.value)}
-                      className="w-full rounded-lg px-4 py-2.5 text-sm text-gray-900 bg-white focus:outline-none"
-                      style={{ border: "1.5px solid #E5E7EB" }}
+                      className="w-full rounded-lg px-4 py-2.5 text-sm text-gray-900 bg-white focus:outline-none appearance-none"
+                      style={{
+                        border: "1.5px solid #E5E7EB",
+                        backgroundImage: "url(\"data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%236B7280' d='M6 8L0 0h12z'/%3E%3C/svg%3E\")",
+                        backgroundRepeat: "no-repeat",
+                        backgroundPosition: "right 14px center",
+                        paddingRight: "36px",
+                      }}
                       onFocus={e => (e.currentTarget.style.border = "1.5px solid #B91C1C")}
                       onBlur={e => (e.currentTarget.style.border = "1.5px solid #E5E7EB")}
-                      autoComplete="off"
-                    />
-                    <datalist id="swm-countries">
-                      {COUNTRIES.map(c => <option key={c} value={c} />)}
-                    </datalist>
+                      required
+                    >
+                      <option value="" disabled>Select your country…</option>
+                      {COUNTRIES.map(c => (
+                        <option key={c} value={c}>{c}</option>
+                      ))}
+                    </select>
                   </div>
                 )}
 
