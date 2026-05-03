@@ -609,6 +609,76 @@
     white-space: nowrap;
   }
 
+  /* COURT ACTOR CARDS — name, role, county header + anonymized family comments below */
+  .actor-cards { margin-top: 14px; }
+  .actor-card {
+    border-top: 1px solid var(--hairline);
+    padding: 14px 0 12px;
+    page-break-inside: avoid;
+  }
+  .actor-card:first-child {
+    border-top: 2px solid var(--navy);
+    padding-top: 14px;
+  }
+  .actor-card:last-child {
+    border-bottom: 2px solid var(--navy);
+    padding-bottom: 14px;
+  }
+  .actor-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+  .actor-card-header .name {
+    font-family: var(--font-display);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--navy);
+    letter-spacing: -0.005em;
+  }
+  .actor-card-header .meta {
+    font-size: 9.5px;
+    color: var(--ink-secondary, #555);
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    text-align: right;
+    flex-shrink: 0;
+  }
+  .actor-card-header .meta .families {
+    color: var(--crimson);
+    font-weight: 700;
+  }
+  .actor-comments {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .actor-comments li {
+    font-size: 10.5px;
+    line-height: 1.55;
+    color: #2a2a2a;
+    padding: 4px 0 4px 12px;
+    margin-bottom: 4px;
+    border-left: 2px solid var(--hairline);
+  }
+  .actor-comments li:last-child { margin-bottom: 0; }
+  .actor-comments .comment-text {
+    font-style: italic;
+    color: #1a1a1a;
+  }
+  .actor-comments .comment-county {
+    display: inline-block;
+    margin-left: 6px;
+    font-style: normal;
+    font-size: 9px;
+    color: var(--crimson);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 600;
+  }
+
   /* PULL QUOTE / VOICES */
   .pullquote {
     background: var(--navy);
@@ -897,11 +967,63 @@
   </div>
 </section>
 
-{# ━━━━━━━━━━━━━━ PAGE 2 — AT A GLANCE ━━━━━━━━━━━━━━ #}
+{# ━━━━━━━━━━━━━━ NAMED COURT ACTORS — paginates across multiple pages ━━━━━━━━━━━━━━ #}
+{% for actor_page in actor_pages %}
+{% set this_page_number = actor_start_page + loop.index0 %}
 <section class="page">
   <div class="runhead">
     <div><span class="r-state">{{ state_name }}</span> · Family Court Data Report</div>
-    <div class="r-page">Stand With Meg · 02 / {{ total_pages }}</div>
+    <div class="r-page">Stand With Meg · {{ "%02d"|format(this_page_number) }} / {{ total_pages }}</div>
+  </div>
+
+  {% if loop.first %}
+  <h2 class="section-head"><span class="num">{{ actor_section_num }}</span>Named Court Actors · {{ state_name }}</h2>
+  <p class="lede" style="margin-bottom: 18px;">A name appears below only after {{ court_actor_threshold }} or more independent families have named the same actor in {{ state_name }}. Submitter names, emails, and contact details are never published. Comments below are direct family reports — one per family — with all identifying information removed.</p>
+  {% else %}
+  <h2 class="section-head"><span class="num">{{ actor_section_num }}</span>Named Court Actors, continued</h2>
+  {% endif %}
+
+  <div class="actor-cards">
+    {% for actor in actor_page %}
+    <div class="actor-card">
+      <div class="actor-card-header">
+        <div class="name">{{ actor.name }}</div>
+        <div class="meta">
+          {{ actor.role }}{% if actor.court_or_county %} · {{ actor.court_or_county }}{% endif %} · <span class="families">{{ actor.count }} {% if actor.count == 1 %}family{% else %}families{% endif %}</span>
+        </div>
+      </div>
+      {% if actor.comments %}
+      <ul class="actor-comments">
+        {% for c in actor.comments %}
+        <li>
+          <span class="comment-text">"{{ c.note }}"</span>
+          {% if c.court_or_county and c.court_or_county != actor.court_or_county %}<span class="comment-county">{{ c.court_or_county }}</span>{% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+
+  {% if loop.last %}
+  <div class="footnote" style="margin-top: 16px;">
+    <strong>Public threshold rule:</strong> Names are grouped conservatively by normalized spelling, role, and location. Common titles, punctuation, casing, and middle initials collapse together. Close misspellings are not auto-merged without admin review. Only family-direct submissions count toward the public threshold.
+  </div>
+  {% endif %}
+
+  <div class="page-foot">
+    <div class="credit"><span class="star">★</span><span>A <strong>StandWithMeg.com</strong> Report · Family Rights Registry</span></div>
+    <div class="pg">{{ state_name }} · {{ "%02d"|format(this_page_number) }} / {{ total_pages }}</div>
+  </div>
+</section>
+{% endfor %}
+
+{# ━━━━━━━━━━━━━━ AT A GLANCE ━━━━━━━━━━━━━━ #}
+<section class="page">
+  <div class="runhead">
+    <div><span class="r-state">{{ state_name }}</span> · Family Court Data Report</div>
+    <div class="r-page">Stand With Meg · {{ "%02d"|format(glance_page_number) }} / {{ total_pages }}</div>
   </div>
 
   <div class="eyebrow">The Headline Numbers</div>
@@ -915,9 +1037,9 @@
       <div class="note">{{ children_reporting }} of {{ total }} families reported child counts</div>
     </div>
     <div class="hstat">
-      <div class="label">Median Attorney Fees</div>
-      <div class="value red">{{ atty_fees_median }}</div>
-      <div class="note">per reporting family</div>
+      <div class="label">Median Family Impact</div>
+      <div class="value red">{{ median_family_impact }}</div>
+      <div class="note">total cost across all expense categories</div>
     </div>
     <div class="hstat">
       <div class="label">Median Months Lost</div>
@@ -954,7 +1076,7 @@
   </div>
   <div class="page-foot">
     <div class="credit"><span class="star">★</span><span>A <strong>StandWithMeg.com</strong> Report · Family Rights Registry</span></div>
-    <div class="pg">{{ state_name }} · 02 / {{ total_pages }}</div>
+    <div class="pg">{{ state_name }} · {{ "%02d"|format(glance_page_number) }} / {{ total_pages }}</div>
   </div>
 </section>
 
@@ -962,10 +1084,10 @@
 <section class="page">
   <div class="runhead">
     <div><span class="r-state">{{ state_name }}</span> · Family Court Data Report</div>
-    <div class="r-page">Stand With Meg · 03 / {{ total_pages }}</div>
+    <div class="r-page">Stand With Meg · {{ "%02d"|format(financial_page_number) }} / {{ total_pages }}</div>
   </div>
 
-  <h2 class="section-head"><span class="num">02</span>The Cost of {{ state_name }} Family Court</h2>
+  <h2 class="section-head"><span class="num">{{ financial_section_num }}</span>The Cost of {{ state_name }} Family Court</h2>
 
   <p class="lede" style="margin-bottom: 18px;">Legal fees are the largest reported expense, but they are not the only one. Lost wages, evaluation costs, and reunification services compound the financial loss — pushing most families toward pro se representation once their savings run out.</p>
 
@@ -1033,7 +1155,7 @@
   </div>
   <div class="page-foot">
     <div class="credit"><span class="star">★</span><span>A <strong>StandWithMeg.com</strong> Report · Family Rights Registry</span></div>
-    <div class="pg">{{ state_name }} · 03 / {{ total_pages }}</div>
+    <div class="pg">{{ state_name }} · {{ "%02d"|format(financial_page_number) }} / {{ total_pages }}</div>
   </div>
 </section>
 
@@ -1041,10 +1163,10 @@
 <section class="page">
   <div class="runhead">
     <div><span class="r-state">{{ state_name }}</span> · Family Court Data Report</div>
-    <div class="r-page">Stand With Meg · 04 / {{ total_pages }}</div>
+    <div class="r-page">Stand With Meg · {{ "%02d"|format(who_page_number) }} / {{ total_pages }}</div>
   </div>
 
-  <h2 class="section-head"><span class="num">03</span>Who Is Reporting · {{ state_name }}</h2>
+  <h2 class="section-head"><span class="num">{{ who_section_num }}</span>Who Is Reporting · {{ state_name }}</h2>
   <p class="lede" style="margin-bottom: 14px; font-size: 13.5px;">Most families documenting in {{ state_name }} are currently active in, or recently closed out of, long-running cases. Nearly half have lost all contact with their children.</p>
 
   <div class="subsection">Case Status · System Affected</div>
@@ -1100,51 +1222,12 @@
 
   <div class="page-foot">
     <div class="credit"><span class="star">★</span><span>A <strong>StandWithMeg.com</strong> Report · Family Rights Registry</span></div>
-    <div class="pg">{{ state_name }} · 04 / {{ total_pages }}</div>
+    <div class="pg">{{ state_name }} · {{ "%02d"|format(who_page_number) }} / {{ total_pages }}</div>
   </div>
 </section>
 
 
-{# ━━━━━━━━━━━━━━ OPTIONAL PAGE 5 — COURT ACTORS ━━━━━━━━━━━━━━ #}
-{% if court_actors %}
-<section class="page">
-  <div class="runhead">
-    <div><span class="r-state">{{ state_name }}</span> · Family Court Data Report</div>
-    <div class="r-page">Stand With Meg · {{ "%02d"|format(actor_page_number) }} / {{ total_pages }}</div>
-  </div>
-
-  <h2 class="section-head"><span class="num">04</span>Named Court Actors · {{ state_name }}</h2>
-  <p class="lede" style="margin-bottom: 16px;">The names below are public-threshold matches from the Court Actors section of the survey. A name appears only after {{ court_actor_threshold }} or more independent families have named the same actor in {{ state_name }}. Reporter identities, notes, and single-family allegations are not published.</p>
-
-  <div class="actor-table">
-    <div class="actor-row header">
-      <div>Name</div>
-      <div>Role</div>
-      <div>Court / County</div>
-      <div style="text-align:right;">Families</div>
-    </div>
-    {% for actor in court_actors %}
-    <div class="actor-row">
-      <div class="actor-name">{{ actor.name }}</div>
-      <div>{{ actor.role }}</div>
-      <div>{{ actor.court_or_county or "—" }}</div>
-      <div class="actor-count">{{ actor.count }}</div>
-    </div>
-    {% endfor %}
-  </div>
-
-  <div class="footnote">
-    <strong>Public threshold rule:</strong> Stand With Meg groups names conservatively by normalized spelling, role, and state. Common titles, punctuation, casing, and middle initials are collapsed. Close misspellings are not automatically merged without admin review.
-  </div>
-
-  <div class="page-foot">
-    <div class="credit"><span class="star">★</span><span>A <strong>StandWithMeg.com</strong> Report · Family Rights Registry</span></div>
-    <div class="pg">{{ state_name }} · {{ "%02d"|format(actor_page_number) }} / {{ total_pages }}</div>
-  </div>
-</section>
-{% endif %}
-
-{# ━━━━━━━━━━━━━━ PAGES 6+ — PARENT VOICES ━━━━━━━━━━━━━━ #}
+{# ━━━━━━━━━━━━━━ PARENT VOICES ━━━━━━━━━━━━━━ #}
 {% for voice_page in voice_pages %}
 <section class="page">
   <div class="runhead">
@@ -1153,10 +1236,10 @@
   </div>
 
   {% if loop.first %}
-  <h2 class="section-head"><span class="num">05</span>Parent Voices — {{ state_name }}</h2>
+  <h2 class="section-head"><span class="num">{{ voices_section_num }}</span>Parent Voices — {{ state_name }}</h2>
   <p class="lede" style="margin-bottom: 18px;">Selected voice excerpts appear here for readability. Every approved, shareable {{ state_name }} comment is printed in full in the appendix that follows.</p>
   {% else %}
-  <h2 class="section-head"><span class="num">05</span>Parent Voices, continued</h2>
+  <h2 class="section-head"><span class="num">{{ voices_section_num }}</span>Parent Voices, continued</h2>
   {% endif %}
 
   {% if voice_page.pullquote %}
@@ -1206,10 +1289,10 @@
   </div>
 
   {% if loop.first %}
-  <h2 class="section-head"><span class="num">06</span>Full Parent Comments — {{ state_name }}</h2>
+  <h2 class="section-head"><span class="num">{{ full_comments_section_num }}</span>Full Parent Comments — {{ state_name }}</h2>
   <p class="lede" style="margin-bottom: 14px;">The comments below are the full approved, publicly shareable survey comments from {{ state_name }} families. Data-only and do-not-share submissions are excluded from this public appendix.</p>
   {% else %}
-  <h2 class="section-head"><span class="num">06</span>Full Parent Comments, continued</h2>
+  <h2 class="section-head"><span class="num">{{ full_comments_section_num }}</span>Full Parent Comments, continued</h2>
   {% endif %}
 
   <div class="full-comments-list">
@@ -1241,7 +1324,7 @@
     <div class="r-page">Stand With Meg · {{ "%02d"|format(methodology_page_number) }} / {{ total_pages }}</div>
   </div>
 
-  <h2 class="section-head"><span class="num">07</span>How to Read This Report</h2>
+  <h2 class="section-head"><span class="num">{{ methodology_section_num }}</span>How to Read This Report</h2>
 
   <div class="grid-2">
     <div>

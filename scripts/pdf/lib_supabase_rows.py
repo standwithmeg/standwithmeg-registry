@@ -74,15 +74,37 @@ def _actor_state(row: dict) -> str:
     return str(_joined_submission(row).get("state_of_occurrence") or "").strip().upper()
 
 
+def _actor_location(row: dict) -> str:
+    """Canonical grouping key for an actor: location_key (post-migration 019),
+    falling back to state_code, then state_of_occurrence, then outside_us_country.
+    Returns uppercased state abbrev for US, country name (uppercased) for international.
+    """
+    location_key = str(row.get("location_key") or "").strip().upper()
+    if location_key:
+        return location_key
+    state = str(row.get("state_code") or "").strip().upper()
+    if state:
+        return state
+    sub = _joined_submission(row)
+    state = str(sub.get("state_of_occurrence") or "").strip().upper()
+    if state:
+        return state
+    return str(sub.get("outside_us_country") or "").strip().upper()
+
+
 def _actor_family_key(row: dict) -> str:
-    state = _actor_state(row)
+    location = _actor_location(row)
     joined = _joined_submission(row)
     email = str(joined.get("email") or "").strip().lower()
-    return f"{email}|{state}" if email else f"submission:{row.get('submission_id')}"
+    return f"{email}|{location}" if email else f"submission:{row.get('submission_id')}"
 
 
 def load_public_court_actors_from_supabase(state_filter: str | None = None) -> dict[str, list[dict]]:
-    """Return public-safe court actors grouped by state using the public threshold."""
+    """Return public-safe court actors grouped by location (US state or country)
+    using the public threshold. Each actor includes an anonymized list of
+    family comments with county, suitable for direct rendering in the PDF.
+    Submitter identity (name, email) is never returned.
+    """
     url = os.environ.get("NEXT_PUBLIC_SUPABASE_URL") or os.environ.get("SUPABASE_URL")
     key = os.environ.get("SUPABASE_SERVICE_ROLE_KEY")
     if not url or not key:
@@ -97,7 +119,7 @@ def load_public_court_actors_from_supabase(state_filter: str | None = None) -> d
     while True:
         q = (
             sb.table("court_actors")
-            .select("role,name,court_or_county,state_code,submission_id,survey_submissions(email,state_of_occurrence)")
+            .select("role,name,court_or_county,state_code,location_key,notes,submission_id,survey_submissions(email,state_of_occurrence,outside_us_country)")
             .eq("source", "form_direct")
         )
         resp = q.range(offset, offset + page_size - 1).execute()
@@ -111,43 +133,66 @@ def load_public_court_actors_from_supabase(state_filter: str | None = None) -> d
 
     buckets: dict[tuple[str, str], dict] = {}
     for row in rows:
-        state = _actor_state(row)
-        if state_filter and state != state_filter.upper():
+        location = _actor_location(row)
+        if state_filter and location != state_filter.upper():
             continue
         role = str(row.get("role") or "").strip()
         name = str(row.get("name") or "").strip()
         name_key = _actor_name_key(name)
-        if not state or not role or not name_key:
+        if not location or not role or not name_key:
             continue
-        key_tuple = (state, name_key)
+        key_tuple = (location, name_key)
         bucket = buckets.setdefault(
             key_tuple,
             {
-                "state_code": state,
+                "location_key": location,
                 "role_counts": Counter(),
                 "name_counts": Counter(),
                 "court_counts": Counter(),
                 "families": set(),
+                # family_key -> {note, court_or_county} — keep best note per family
+                "family_notes": {},
             },
         )
         bucket["role_counts"][role] += 1
         bucket["name_counts"][name] += 1
-        if row.get("court_or_county"):
-            bucket["court_counts"][str(row["court_or_county"]).strip()] += 1
+        court = str(row.get("court_or_county") or "").strip()
+        if court:
+            bucket["court_counts"][court] += 1
+        family_key = _actor_family_key(row)
         if row.get("submission_id"):
-            bucket["families"].add(_actor_family_key(row))
+            bucket["families"].add(family_key)
+        # Track best note per family (longest non-empty wins, drops [extracted_*] markers)
+        note = str(row.get("notes") or "").strip()
+        if note and not note.startswith("[extracted_"):
+            existing = bucket["family_notes"].get(family_key)
+            if existing is None or len(note) > len(existing.get("note", "")):
+                bucket["family_notes"][family_key] = {
+                    "note": note,
+                    "court_or_county": court,
+                }
 
     by_state: dict[str, list[dict]] = defaultdict(list)
     for bucket in buckets.values():
         count = len(bucket["families"])
         if count < PUBLIC_ACTOR_THRESHOLD:
             continue
-        state = bucket["state_code"]
-        by_state[state].append({
+        location = bucket["location_key"]
+        # One comment per family, longest first, county preserved
+        comments = sorted(
+            [
+                {"note": fn["note"], "court_or_county": fn.get("court_or_county") or ""}
+                for fn in bucket["family_notes"].values()
+                if fn.get("note")
+            ],
+            key=lambda c: -len(c["note"]),
+        )
+        by_state[location].append({
             "role": _most_common(bucket["role_counts"]) or "Court Actor",
             "name": _most_common(bucket["name_counts"]) or "Named actor",
             "court_or_county": _most_common(bucket["court_counts"]),
             "count": count,
+            "comments": comments,
         })
 
     for state, actors in by_state.items():

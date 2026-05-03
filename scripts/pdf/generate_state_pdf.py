@@ -200,6 +200,41 @@ def state_stats(rows):
             'sum': round(sum(vals)),
             'n': len(vals),
         }
+
+    # True per-family total expense — sum every category for each family,
+    # then take the median of those sums. This is the honest "what the typical
+    # family actually paid in total" number. (The previous version summed the
+    # category medians, which overestimates because no single family hits the
+    # median of every category at once.)
+    EXPENSE_KEYS = ['atty_fees', 'gal_fees', 'therapy_fees', 'reunif_fees',
+                    'other_fees', 'lost_wages', 'asset_loss']
+
+    def family_totals():
+        totals = []
+        for r in rows:
+            t = 0.0
+            has_any = False
+            for k in EXPENSE_KEYS:
+                if COLS[k] >= len(r):
+                    continue
+                v = safe_float(r[COLS[k]])
+                cap = FIN_MAX.get(k)
+                if v is None or v < 0:
+                    continue
+                if cap is not None and v > cap:
+                    continue
+                t += v
+                has_any = True
+            if has_any:
+                totals.append(t)
+        if not totals:
+            return {'median': None, 'mean': None, 'sum': None, 'n': 0}
+        return {
+            'median': round(statistics.median(totals)),
+            'mean':   round(sum(totals) / len(totals)),
+            'sum':    round(sum(totals)),
+            'n':      len(totals),
+        }
     def top(k, t=8):
         if k == 'custody':
             c = Counter(normalize_custody(r[COLS[k]]) for r in rows if normalize_custody(r[COLS[k]]))
@@ -225,6 +260,7 @@ def state_stats(rows):
     return {
         'total': n, 'pro_se_pct': round(prose / n * 100, 1), 'ran_out_pct': round(ran / n * 100, 1),
         'financial': {k: fin(k) for k in ['atty_fees', 'gal_fees', 'therapy_fees', 'reunif_fees', 'other_fees', 'lost_wages', 'asset_loss']},
+        'family_total': family_totals(),
         'months_lost': fin('months_lost'),
         'case_status': top('case_status'), 'system': top('system'), 'duration': top('duration'),
         'custody': top('custody'), 'allegations': top('allegation', 10), 'counties': top('county', 10),
@@ -412,6 +448,46 @@ def _get_asset_loss_vals(rows):
     return vals
 
 
+def _paginate_court_actors(actors):
+    """Split the court_actor list into one or more page-sized chunks.
+
+    The Court Actors page now shows full anonymized comments per family, so
+    a single state can run several pages. Without pagination, long comments
+    overflow the fixed page height and bleed into the next section.
+
+    Heuristic: estimate content "weight" by total character count of comments
+    plus a fixed per-actor overhead. The first page has less budget because
+    it carries the section heading and lede; continuation pages have more.
+
+    Returns: list[list[dict]] where each inner list is one page's actors.
+    """
+    if not actors:
+        return []
+    PAGE_BUDGET_FIRST = 3800
+    PAGE_BUDGET_REST = 5200
+    PER_ACTOR_OVERHEAD = 80
+    PER_COMMENT_OVERHEAD = 35
+
+    pages: list[list[dict]] = []
+    current: list[dict] = []
+    current_weight = 0
+    for actor in actors:
+        weight = PER_ACTOR_OVERHEAD
+        for c in actor.get('comments', []):
+            weight += len(c.get('note', '')) + PER_COMMENT_OVERHEAD
+        budget = PAGE_BUDGET_FIRST if not pages else PAGE_BUDGET_REST
+        if current and (current_weight + weight > budget):
+            pages.append(current)
+            current = [actor]
+            current_weight = weight
+        else:
+            current.append(actor)
+            current_weight += weight
+    if current:
+        pages.append(current)
+    return pages
+
+
 def build_template_context(state_abbr, rows, court_actors=None):
     """Build the full dict of template variables for a state."""
     court_actors = court_actors or []
@@ -440,7 +516,6 @@ def build_template_context(state_abbr, rows, court_actors=None):
     ]
 
     expense_rows = []
-    median_sum = 0
     for label, key, footnote in expense_categories:
         fi = f[key]
         if key == 'asset_loss' and has_asset_outlier:
@@ -462,8 +537,10 @@ def build_template_context(state_abbr, rows, court_actors=None):
                 'footnote': footnote,
             }
         expense_rows.append(row)
-        if fi['median'] is not None:
-            median_sum += fi['median']
+
+    # Median Family Impact = median of per-family totals (NOT sum of category medians).
+    family_total = d.get('family_total') or {}
+    median_family_impact_value = family_total.get('median')
 
     asset_footnote_text = ""
     if has_asset_outlier:
@@ -559,11 +636,40 @@ def build_template_context(state_abbr, rows, court_actors=None):
     num_voice_pages = len(voice_pages)
     full_comment_pages = full_quote_pages(all_quotes)
     num_full_comment_pages = len(full_comment_pages)
-    actor_page_count = 1 if court_actors else 0
-    voices_start_page = 5 + actor_page_count
+
+    # Court Actors moved to Page 2 (right after cover) when present.
+    # The list paginates across multiple pages if comments are long, so
+    # actor_pages is a list of lists, one per page. When absent, the rest
+    # of the report shifts up.
+    actor_pages = _paginate_court_actors(court_actors[:18])
+    has_actors = bool(actor_pages)
+    actor_page_count = len(actor_pages)
+    actor_start_page = 2 if has_actors else None
+    glance_page_number = 2 + actor_page_count  # always lands directly after the cover + actor pages
+    financial_page_number = glance_page_number + 1
+    who_page_number = financial_page_number + 1
+    voices_start_page = who_page_number + 1
     full_comments_start_page = voices_start_page + num_voice_pages
     methodology_page_number = full_comments_start_page + num_full_comment_pages
-    total_pages = methodology_page_number  # cover + glance + financial + who-geo-alleg + actors + voices + full comments + methodology
+    total_pages = methodology_page_number  # cover + actor_pages + glance + financial + who + voices + full comments + methodology
+
+    # Section numbers shift when Court Actors becomes section 01.
+    if has_actors:
+        actor_section_num = "01"
+        glance_section_num = "02"
+        financial_section_num = "03"
+        who_section_num = "04"
+        voices_section_num = "05"
+        full_comments_section_num = "06"
+        methodology_section_num = "07"
+    else:
+        actor_section_num = None
+        glance_section_num = "01"
+        financial_section_num = "02"
+        who_section_num = "03"
+        voices_section_num = "04"
+        full_comments_section_num = "05"
+        methodology_section_num = "06"
 
     # State number (alphabetical order of state abbreviation)
     sorted_states = sorted(STATE_NAMES.keys())
@@ -577,10 +683,23 @@ def build_template_context(state_abbr, rows, court_actors=None):
         'report_date': now.strftime('%B %d, %Y').replace(' 0', ' '),
         'report_month_year': now.strftime('%B %Y'),
         'total_pages': f"{total_pages:02d}",
-        'actor_page_number': 5,
+        # Page numbers (dynamic so Court Actors can lead the report when present)
+        'actor_start_page': actor_start_page,
+        'actor_page_count': actor_page_count,
+        'glance_page_number': glance_page_number,
+        'financial_page_number': financial_page_number,
+        'who_page_number': who_page_number,
         'voices_start_page': voices_start_page,
         'full_comments_start_page': full_comments_start_page,
         'methodology_page_number': methodology_page_number,
+        # Section labels (also shift when Court Actors becomes section 01)
+        'actor_section_num': actor_section_num,
+        'glance_section_num': glance_section_num,
+        'financial_section_num': financial_section_num,
+        'who_section_num': who_section_num,
+        'voices_section_num': voices_section_num,
+        'full_comments_section_num': full_comments_section_num,
+        'methodology_section_num': methodology_section_num,
 
         # Children
         'children_total': kids['total_children'],
@@ -608,7 +727,7 @@ def build_template_context(state_abbr, rows, court_actors=None):
 
         # Financial table
         'expense_rows': expense_rows,
-        'median_family_impact': fmt_dollar(median_sum),
+        'median_family_impact': fmt_dollar(median_family_impact_value),
         'has_asset_footnote': has_asset_outlier,
         'asset_footnote_text': asset_footnote_text,
 
@@ -620,10 +739,11 @@ def build_template_context(state_abbr, rows, court_actors=None):
         'counties': _bar_items(d['counties'][:6], n),
         'allegations': _bar_items(d['allegations'][:5], n),
 
-        # Court actors
-        'court_actors': court_actors[:18],
+        # Court actors — public threshold is 3 families (PUBLIC_ACTOR_THRESHOLD in lib_supabase_rows.py)
+        # Pre-paginated into pages so long comments don't overflow.
+        'actor_pages': actor_pages,
         'court_actor_count': len(court_actors),
-        'court_actor_threshold': 5,
+        'court_actor_threshold': 3,
 
         # Quotes
         'allegation_quote': allegation_quote,
