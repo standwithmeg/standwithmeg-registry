@@ -48,6 +48,23 @@ export default function CourtActorUpdatePage() {
     const params = new URLSearchParams(window.location.search);
     setSubmissionId(params.get("submission") || "");
     setActorId(params.get("actor") || "");
+
+    // /actors browse → "On my case" deep-link pre-fill.
+    // The /actors page sends actor_name / actor_role / actor_county so the
+    // visitor lands on a partially-filled form instead of a blank one.
+    const prefName = params.get("actor_name") || "";
+    const prefRole = params.get("actor_role") || "";
+    const prefCounty = params.get("actor_county") || "";
+    if (prefName || prefRole || prefCounty) {
+      // Only consider role values that exist in our role list, otherwise leave blank
+      const roleMatch = ROLES.find(r => r.toLowerCase() === prefRole.toLowerCase()) || "";
+      setActors([{
+        role: roleMatch,
+        name: prefName,
+        court: prefCounty,
+        notes: "",
+      }]);
+    }
   }, []);
 
   const hasValidLink = useMemo(() => submissionId.length > 0, [submissionId]);
