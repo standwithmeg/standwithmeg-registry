@@ -39,6 +39,13 @@ export default function CourtActorUpdatePage() {
   const [submissionId, setSubmissionId] = useState("");
   const [actorId, setActorId] = useState("");
   const [email, setEmail] = useState("");
+  // When a visitor arrives via /actors → "On my case", the actor's state
+  // (e.g., "KS") is in the URL. We forward it to the API as a per-actor
+  // state override so the new court_actor row is bucketed under the actor's
+  // state, NOT the visitor's submission state. Without this, a CA family who
+  // recognizes a KS judge on /actors would have the new entry incorrectly
+  // tagged CA, splitting the actor across two state buckets.
+  const [stateOverride, setStateOverride] = useState<string>("");
   const [actors, setActors] = useState<ActorForm[]>([{ ...EMPTY_ACTOR }]);
   const [error, setError] = useState<string | null>(null);
   const [sent, setSent] = useState(false);
@@ -55,6 +62,11 @@ export default function CourtActorUpdatePage() {
     const prefName = params.get("actor_name") || "";
     const prefRole = params.get("actor_role") || "";
     const prefCounty = params.get("actor_county") || "";
+    const prefState = (params.get("actor_state") || "").trim().toUpperCase();
+    // Validate as a 2-letter US state code (or DC) before trusting it
+    if (/^[A-Z]{2}$/.test(prefState)) {
+      setStateOverride(prefState);
+    }
     if (prefName || prefRole || prefCounty) {
       // Only consider role values that exist in our role list, otherwise leave blank
       const roleMatch = ROLES.find(r => r.toLowerCase() === prefRole.toLowerCase()) || "";
@@ -126,6 +138,10 @@ export default function CourtActorUpdatePage() {
           submission_id: submissionId,
           actor_id: actorId || null,
           email,
+          // Forward the actor's state when the visitor came in via /actors,
+          // so the API tags the new court_actor row to the actor's state
+          // instead of inheriting the visitor's submission state.
+          state_code_override: stateOverride || null,
           court_actors: actors.map(actor => ({
             role: actor.role.trim(),
             name: actor.name.trim(),
