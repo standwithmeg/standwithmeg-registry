@@ -230,7 +230,7 @@ export function ActorsBrowser({ visitorEmail, visitorSubmissionId, visitorFirstN
             <strong className="text-white">$5</strong>, I could keep going.
           </p>
           <a
-            href="https://www.paypal.com/ncp/payment/USXFNK3MQ2WPS"
+            href="https://www.paypal.com/donate/?hosted_button_id=85ZM4KV4EVZEC"
             target="_blank"
             rel="noopener noreferrer"
             className="shrink-0 inline-flex items-center justify-center px-5 py-3 rounded-lg font-bold text-sm hover:opacity-90 transition-opacity"
@@ -427,7 +427,7 @@ export function ActorsBrowser({ visitorEmail, visitorSubmissionId, visitorFirstN
           <div className="flex flex-col sm:flex-row flex-wrap gap-3">
             <ShareLinkButton />
             <a
-              href="https://www.paypal.com/ncp/payment/USXFNK3MQ2WPS"
+              href="https://www.paypal.com/donate/?hosted_button_id=85ZM4KV4EVZEC"
               target="_blank"
               rel="noopener noreferrer"
               className="px-5 py-3 rounded-lg font-bold text-sm text-center hover:opacity-90 transition-opacity"
@@ -476,7 +476,7 @@ export function ActorsBrowser({ visitorEmail, visitorSubmissionId, visitorFirstN
               for the families who come after.
             </p>
             <a
-              href="https://www.paypal.com/ncp/payment/USXFNK3MQ2WPS"
+              href="https://www.paypal.com/donate/?hosted_button_id=85ZM4KV4EVZEC"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block text-base px-8 py-4 rounded-xl font-black tracking-wide transition-colors hover:opacity-90"

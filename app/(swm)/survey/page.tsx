@@ -1252,7 +1252,7 @@ export default function SubmitPage() {
                     more families, please consider making a donation.
                   </p>
                   <a
-                    href="https://www.paypal.com/ncp/payment/USXFNK3MQ2WPS"
+                    href="https://www.paypal.com/donate/?hosted_button_id=85ZM4KV4EVZEC"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block w-full text-center py-3.5 rounded-xl font-black text-sm text-white transition-colors bg-red-700 hover:bg-red-600"

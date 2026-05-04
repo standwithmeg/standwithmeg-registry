@@ -193,7 +193,7 @@ export function DashboardView() {
               }}>
               Track the Court Actors →
             </a>
-            <a href="https://www.paypal.com/ncp/payment/USXFNK3MQ2WPS"
+            <a href="https://www.paypal.com/donate/?hosted_button_id=85ZM4KV4EVZEC"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg font-bold text-sm transition-colors hover:opacity-90"
@@ -439,7 +439,7 @@ export function DashboardView() {
               <strong className="text-white"> $5 a month</strong> is what keeps this record alive
               for the families who come after.
             </p>
-            <a href="https://www.paypal.com/ncp/payment/USXFNK3MQ2WPS"
+            <a href="https://www.paypal.com/donate/?hosted_button_id=85ZM4KV4EVZEC"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block text-base px-8 py-4 rounded-xl font-black tracking-wide transition-colors hover:opacity-90"
