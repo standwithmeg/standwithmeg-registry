@@ -1242,7 +1242,7 @@ export default function SubmitPage() {
                     more families, please consider making a donation.
                   </p>
                   <a
-                    href="https://paypal.me/StandwithMeg"
+                    href="https://www.paypal.com/ncp/payment/USXFNK3MQ2WPS"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block w-full text-center py-3.5 rounded-xl font-black text-sm text-white transition-colors bg-red-700 hover:bg-red-600"
