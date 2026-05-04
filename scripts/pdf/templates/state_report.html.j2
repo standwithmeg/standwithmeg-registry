@@ -1123,7 +1123,7 @@
 
 
   <div class="footnote">
-    <strong>Median vs. mean:</strong> Median is the middle reported amount, so it better reflects the typical reporting family when a few very large expenses appear. Mean is the average across reporting families and can be pulled higher by outliers. <strong>Median Family Burden</strong> is the median of total reported expenses across families who reported costs in {{ family_burden_min_cats }} or more expense categories — a true median of real family totals, restricted to families who filled out enough of the financial section to characterize their case.
+    <strong>Median vs. mean:</strong> Median is the middle reported amount, so it better reflects the typical reporting family when a few very large expenses appear. Mean is the average across reporting families and can be pulled higher by outliers. <strong>Median Family Burden</strong> is the median of total reported expenses across families who reported costs in {{ family_burden_min_cats }} or more expense categories with a combined total of at least $1,000 — a true median of real family totals, restricted to families who filled out enough of the financial section to characterize their case and excluding obvious data-entry artifacts.
   </div>
 
   {% if has_asset_footnote %}

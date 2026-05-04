@@ -371,12 +371,64 @@ def _dedup_key(r: dict, anon_id: int, count_separately_keys: set[str]) -> tuple:
     return (email_key, state)
 
 
+_FINGERPRINT_FIELDS = (
+    "attorney_fees", "gal_fees", "therapy_eval_fees", "reunification_fees",
+    "other_court_actors_fees", "lost_wages", "asset_liquidation_loss",
+    "months_lost_parenting_time",
+)
+
+
+def _financial_fingerprint(r: dict) -> tuple | None:
+    """
+    Deterministic per-row signature across the financial fields, used as a
+    secondary dedup key for the legacy/survey identical-pair case (rows
+    with no email match but byte-identical financials).
+
+    Returns None when the row has no reportable financial signal — those
+    rows can't be confidently identified as the same submission as another
+    blank-financial row, so they bypass the secondary pass.
+    """
+    parts = []
+    has_signal = False
+    for f in _FINGERPRINT_FIELDS:
+        v = r.get(f)
+        if v in (None, "",):
+            parts.append(None)
+            continue
+        try:
+            n = float(v)
+        except (TypeError, ValueError):
+            parts.append(None)
+            continue
+        parts.append(round(n, 2))
+        if n > 0:
+            has_signal = True
+    if not has_signal:
+        return None
+    state = (r.get("state_of_occurrence") or "").strip().upper()
+    county = (r.get("case_county") or "").strip().lower()
+    return (state, county, tuple(parts))
+
+
 def _dedup(survey: list[dict], legacy: list[dict], count_separately_keys: set[str]) -> list[dict]:
     """
-    Collapse (email_key, state) duplicates across both tables.
-    survey_submissions wins over legacy_submissions (migration 009's
-    source_priority 0 vs 1). Within the same priority, newer created_at
-    wins. Preserves one row per unique family+state.
+    Collapse duplicates across both tables in two passes:
+
+      Pass 1 — (email_key, state) dedup. Mirrors migration 009's
+        movement_stats_by_state view so PDF counts match the public dashboard
+        exactly.
+
+      Pass 2 — financial fingerprint dedup. Some legacy/survey twin rows
+        share a byte-identical financial section but lack an email link
+        (one or both anonymous), so pass 1 sees them as distinct
+        synthetic-key rows. Pass 2 collapses them on
+        (state, county, expense vector). Conservative: only fires on rows
+        that have at least one non-zero financial field, never on
+        admin-flagged count_separately rows.
+
+    survey_submissions wins over legacy_submissions in both passes
+    (migration 009's source_priority 0 vs 1). Within the same priority,
+    newer created_at wins.
     """
     tagged: list[dict] = []
     for i, r in enumerate(survey):
@@ -388,12 +440,29 @@ def _dedup(survey: list[dict], legacy: list[dict], count_separately_keys: set[st
     tagged.sort(key=lambda r: (r["_src"], -_iso_epoch(r.get("created_at"))))
 
     seen: set[tuple] = set()
-    out: list[dict] = []
+    pass1: list[dict] = []
     for r in tagged:
         k = _dedup_key(r, r["_idx"], count_separately_keys)
         if k in seen:
             continue
         seen.add(k)
+        pass1.append(r)
+
+    # Pass 2 — financial fingerprint
+    seen_fp: set[tuple] = set()
+    out: list[dict] = []
+    for r in pass1:
+        source_key = f"{r.get('_table')}:{r.get('id')}"
+        if source_key in count_separately_keys:
+            out.append(r)
+            continue
+        fp = _financial_fingerprint(r)
+        if fp is None:
+            out.append(r)
+            continue
+        if fp in seen_fp:
+            continue
+        seen_fp.add(fp)
         out.append(r)
     return out
 

@@ -256,13 +256,23 @@ def state_stats(rows):
     # reported five-figure costs. Three is conservative — it admits any family
     # who answered enough of the financial section to characterize their case.
     BURDEN_MIN_NONZERO_CATS = 3
+    # Minimum total dollars a family must report across the seven expense
+    # categories to be included in the burden median. Catches obvious junk
+    # rows like "$1,$1,$1,$1,$1,$1,$0" (which would otherwise satisfy the 3+
+    # categories rule). Set conservatively low — a real but tiny case at
+    # $500 in attorney fees + $500 in lost wages still clears this when the
+    # third category brings the total above $1,000.
+    BURDEN_MIN_TOTAL = 1_000
 
     def median_family_burden():
         """
         Median total reported expense across the families that meaningfully
-        filled out the financial section. We count a family iff they reported
-        a non-zero amount in BURDEN_MIN_NONZERO_CATS or more of the seven
-        expense categories, then take the median of their per-family totals.
+        filled out the financial section. We count a family iff:
+          - they reported a non-zero amount in BURDEN_MIN_NONZERO_CATS or
+            more of the seven expense categories, AND
+          - their total reported across the seven categories is at least
+            BURDEN_MIN_TOTAL dollars (filters obvious typo / joke rows).
+        Then we take the median of their per-family totals.
 
         This is a *true* median of *real* family totals — no synthetic sum of
         category medians, and no assumption that every family experienced
@@ -286,17 +296,21 @@ def state_stats(rows):
                 valid_row = True
                 if v > 0:
                     nonzero += 1
-            if valid_row and nonzero >= BURDEN_MIN_NONZERO_CATS:
+            if (valid_row
+                    and nonzero >= BURDEN_MIN_NONZERO_CATS
+                    and t >= BURDEN_MIN_TOTAL):
                 totals.append(t)
         if not totals:
             return {'median': None, 'mean': None, 'sum': None, 'n': 0,
-                    'min_nonzero_cats': BURDEN_MIN_NONZERO_CATS}
+                    'min_nonzero_cats': BURDEN_MIN_NONZERO_CATS,
+                    'min_total': BURDEN_MIN_TOTAL}
         return {
             'median': round(statistics.median(totals)),
             'mean':   round(sum(totals) / len(totals)),
             'sum':    round(sum(totals)),
             'n':      len(totals),
             'min_nonzero_cats': BURDEN_MIN_NONZERO_CATS,
+            'min_total': BURDEN_MIN_TOTAL,
         }
 
     def top(k, t=8):
