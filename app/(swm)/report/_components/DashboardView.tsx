@@ -177,12 +177,21 @@ export function DashboardView() {
             and child welfare systems across the country.
           </p>
 
-          {/* Hero CTAs: share personally, donate, or invite someone else */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+          {/* Hero CTAs: share personally, browse the registry, donate, or invite someone else */}
+          <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3">
             <a href="/survey"
               className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg font-bold text-sm transition-colors hover:opacity-90"
               style={{ backgroundColor: "#B91C1C", color: "white" }}>
               Share Your Story →
+            </a>
+            <a href="/actors"
+              className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg font-bold text-sm transition-colors hover:opacity-90"
+              style={{
+                backgroundColor: "rgba(201,162,39,0.18)",
+                color: GOLD,
+                border: `1px solid ${GOLD}`,
+              }}>
+              Browse Court Actor Registry →
             </a>
             <a href="https://www.paypal.com/ncp/payment/USXFNK3MQ2WPS"
               target="_blank"
@@ -361,6 +370,48 @@ export function DashboardView() {
               <div className="text-lg font-black text-green-400">{quotes.length}+</div>
               <div className="text-xs" style={{ color: "rgba(245,245,245,0.4)" }}>public voices</div>
             </div>
+          </div>
+        </div>
+
+        {/* Court Actor Registry CTA — every actor named, gated for survey-takers */}
+        <div className="rounded-2xl overflow-hidden"
+          style={{ border: `1px solid ${GOLD}` }}>
+          <div className="p-8 md:p-10 text-center"
+            style={{
+              background:
+                "linear-gradient(180deg, rgba(201,162,39,0.14) 0%, rgba(201,162,39,0.06) 100%)",
+            }}>
+            <div className="text-xs font-bold uppercase tracking-widest mb-3"
+              style={{ color: "rgba(201,162,39,0.85)" }}>
+              Court Actor Registry
+            </div>
+            <h3 className="text-2xl md:text-3xl font-black text-white mb-4 max-w-2xl mx-auto leading-tight">
+              Browse the Court Actor Registry
+            </h3>
+            <p className="text-sm mb-2 max-w-xl mx-auto leading-relaxed"
+              style={{ color: "rgba(245,245,245,0.75)" }}>
+              Every judge, attorney, GAL, evaluator, and caseworker named by Stand With Meg
+              families. When <strong className="text-white">three or more families</strong>{" "}
+              independently name the same person, their name goes public.
+            </p>
+            <p className="text-sm mb-6 max-w-xl mx-auto leading-relaxed"
+              style={{ color: "rgba(245,245,245,0.6)" }}>
+              See if anyone on your case is here. If you&rsquo;ve already taken the survey,
+              you&rsquo;re already in.
+            </p>
+            <a href="/actors"
+              className="inline-block text-base px-8 py-4 rounded-xl font-black tracking-wide transition-colors hover:opacity-90"
+              style={{ backgroundColor: GOLD, color: BG }}>
+              Browse the Registry →
+            </a>
+            <p className="text-xs mt-5 max-w-md mx-auto leading-relaxed italic"
+              style={{ color: "rgba(245,245,245,0.4)" }}>
+              Access is limited to survey-takers. Haven&rsquo;t taken it yet? Start with{" "}
+              <a href="/survey" className="underline" style={{ color: "rgba(201,162,39,0.85)" }}>
+                Share Your Story
+              </a>
+              .
+            </p>
           </div>
         </div>
 
