@@ -236,10 +236,9 @@ def state_stats(rows):
 
     def estimated_family_impact(financial):
         """
-        Estimate the all-category family burden shown in the report by summing
-        each category's median reported amount. This keeps the headline aligned
-        with the expense table and avoids understating states/counties where
-        different families reported different cost categories.
+        Earlier headline metric: sum of per-category medians. Kept for backward
+        compatibility / the family_total fallback below. Public PDFs now use
+        median_family_burden() instead — see comment there.
         """
         medians = [
             financial[k]['median']
@@ -249,6 +248,56 @@ def state_stats(rows):
         if not medians:
             return {'median': None, 'n': 0}
         return {'median': round(sum(medians)), 'n': len(medians)}
+
+    # Minimum number of non-zero expense categories a family must report to
+    # contribute to the Median Family Burden headline. Below this, the row is
+    # almost always a half-filled or skipped financial section, and including
+    # those flat-zero rows pulls the median toward $0 even when peer families
+    # reported five-figure costs. Three is conservative — it admits any family
+    # who answered enough of the financial section to characterize their case.
+    BURDEN_MIN_NONZERO_CATS = 3
+
+    def median_family_burden():
+        """
+        Median total reported expense across the families that meaningfully
+        filled out the financial section. We count a family iff they reported
+        a non-zero amount in BURDEN_MIN_NONZERO_CATS or more of the seven
+        expense categories, then take the median of their per-family totals.
+
+        This is a *true* median of *real* family totals — no synthetic sum of
+        category medians, and no assumption that every family experienced
+        every category. Applies the same per-category sanity caps as fin().
+        """
+        totals = []
+        for r in rows:
+            t = 0.0
+            nonzero = 0
+            valid_row = False
+            for k in EXPENSE_KEYS:
+                if COLS[k] >= len(r):
+                    continue
+                v = safe_float(r[COLS[k]])
+                cap = FIN_MAX.get(k)
+                if v is None or v < 0:
+                    continue
+                if cap is not None and v > cap:
+                    continue
+                t += v
+                valid_row = True
+                if v > 0:
+                    nonzero += 1
+            if valid_row and nonzero >= BURDEN_MIN_NONZERO_CATS:
+                totals.append(t)
+        if not totals:
+            return {'median': None, 'mean': None, 'sum': None, 'n': 0,
+                    'min_nonzero_cats': BURDEN_MIN_NONZERO_CATS}
+        return {
+            'median': round(statistics.median(totals)),
+            'mean':   round(sum(totals) / len(totals)),
+            'sum':    round(sum(totals)),
+            'n':      len(totals),
+            'min_nonzero_cats': BURDEN_MIN_NONZERO_CATS,
+        }
 
     def top(k, t=8):
         if k == 'custody':
@@ -278,6 +327,7 @@ def state_stats(rows):
         'financial': financial,
         'family_total': family_totals(),
         'estimated_family_impact': estimated_family_impact(financial),
+        'family_burden': median_family_burden(),
         'months_lost': fin('months_lost'),
         'case_status': top('case_status'), 'system': top('system'), 'duration': top('duration'),
         'custody': top('custody'), 'allegations': top('allegation', 10), 'counties': top('county', 10),
@@ -555,11 +605,14 @@ def build_template_context(state_abbr, rows, court_actors=None):
             }
         expense_rows.append(row)
 
-    # Estimated Family Impact = sum of category medians. This matches the
-    # financial table and keeps the headline consistent across state or county
-    # row groups.
-    estimated_family_impact = d.get('estimated_family_impact') or {}
-    family_impact_value = estimated_family_impact.get('median')
+    # Median Family Burden = median of per-family expense totals across the
+    # subset of families that reported in BURDEN_MIN_NONZERO_CATS or more
+    # categories. This is a true median of real family totals, not a synthetic
+    # sum — see median_family_burden() in state_stats() for the full rationale.
+    family_burden = d.get('family_burden') or {}
+    family_impact_value = family_burden.get('median')
+    family_burden_n = family_burden.get('n') or 0
+    family_burden_min_cats = family_burden.get('min_nonzero_cats') or 3
 
     asset_footnote_text = ""
     if has_asset_outlier:
@@ -747,6 +800,8 @@ def build_template_context(state_abbr, rows, court_actors=None):
         # Financial table
         'expense_rows': expense_rows,
         'median_family_impact': fmt_dollar(family_impact_value),
+        'family_burden_n': family_burden_n,
+        'family_burden_min_cats': family_burden_min_cats,
         'has_asset_footnote': has_asset_outlier,
         'asset_footnote_text': asset_footnote_text,
 
