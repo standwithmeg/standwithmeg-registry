@@ -83,6 +83,7 @@ jobs:
         # (only authorized team members can trigger deploys) accepts the
         # commit. A generic bot@ email gets rejected with "not a member".
         run: |
+          set -euo pipefail
           git config user.name  "Meghann Miller"
           git config user.email "founder@standwithmeg.com"
           git add public/state-reports
@@ -92,4 +93,19 @@ jobs:
           fi
           changed=$(git diff --staged --name-only | wc -l | tr -d ' ')
           git commit -m "chore: auto-regenerate ${changed} state PDF(s) from live Supabase data"
-          git push
+
+          # Retry on push races. If main moved while we were regenerating
+          # (Vercel deploy commit, another PR merge, a parallel run), rebase
+          # our PDF-only commit on top of the latest main and try again.
+          for attempt in 1 2 3 4 5; do
+            if git push; then
+              echo "Push succeeded on attempt ${attempt}."
+              exit 0
+            fi
+            echo "Push rejected on attempt ${attempt}; rebasing on origin/main and retrying."
+            git fetch origin main
+            git rebase origin/main
+            sleep $((attempt * 3))
+          done
+          echo "Push still failing after 5 rebase attempts — giving up so the run is visible."
+          exit 1
