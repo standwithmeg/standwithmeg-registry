@@ -191,7 +191,7 @@ export function DashboardView() {
                 color: GOLD,
                 border: `1px solid ${GOLD}`,
               }}>
-              Browse Court Actor Registry →
+              Track the Court Actors →
             </a>
             <a href="https://www.paypal.com/ncp/payment/USXFNK3MQ2WPS"
               target="_blank"
@@ -386,7 +386,7 @@ export function DashboardView() {
               Court Actor Registry
             </div>
             <h3 className="text-2xl md:text-3xl font-black text-white mb-4 max-w-2xl mx-auto leading-tight">
-              Browse the Court Actor Registry
+              Track the Court Actors
             </h3>
             <p className="text-sm mb-2 max-w-xl mx-auto leading-relaxed"
               style={{ color: "rgba(245,245,245,0.75)" }}>
@@ -402,7 +402,7 @@ export function DashboardView() {
             <a href="/actors"
               className="inline-block text-base px-8 py-4 rounded-xl font-black tracking-wide transition-colors hover:opacity-90"
               style={{ backgroundColor: GOLD, color: BG }}>
-              Browse the Registry →
+              Track the Court Actors →
             </a>
             <p className="text-xs mt-5 max-w-md mx-auto leading-relaxed italic"
               style={{ color: "rgba(245,245,245,0.4)" }}>
