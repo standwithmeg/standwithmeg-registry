@@ -201,15 +201,13 @@ def state_stats(rows):
             'n': len(vals),
         }
 
-    # True per-family total expense — sum every category for each family,
-    # then take the median of those sums. This is the honest "what the typical
-    # family actually paid in total" number. (The previous version summed the
-    # category medians, which overestimates because no single family hits the
-    # median of every category at once.)
     EXPENSE_KEYS = ['atty_fees', 'gal_fees', 'therapy_fees', 'reunif_fees',
                     'other_fees', 'lost_wages', 'asset_loss']
 
     def family_totals():
+        # Row-level totals are still useful as an internal check, but they are
+        # too sensitive to sparse optional fields for the public all-category
+        # burden estimate.
         totals = []
         for r in rows:
             t = 0.0
@@ -235,6 +233,23 @@ def state_stats(rows):
             'sum':    round(sum(totals)),
             'n':      len(totals),
         }
+
+    def estimated_family_impact(financial):
+        """
+        Estimate the all-category family burden shown in the report by summing
+        each category's median reported amount. This keeps the headline aligned
+        with the expense table and avoids understating states/counties where
+        different families reported different cost categories.
+        """
+        medians = [
+            financial[k]['median']
+            for k in EXPENSE_KEYS
+            if financial.get(k, {}).get('median') is not None
+        ]
+        if not medians:
+            return {'median': None, 'n': 0}
+        return {'median': round(sum(medians)), 'n': len(medians)}
+
     def top(k, t=8):
         if k == 'custody':
             c = Counter(normalize_custody(r[COLS[k]]) for r in rows if normalize_custody(r[COLS[k]]))
@@ -257,10 +272,12 @@ def state_stats(rows):
         for r in rows
         if normalize_county(r[COLS['county']])
     }
+    financial = {k: fin(k) for k in EXPENSE_KEYS}
     return {
         'total': n, 'pro_se_pct': round(prose / n * 100, 1), 'ran_out_pct': round(ran / n * 100, 1),
-        'financial': {k: fin(k) for k in ['atty_fees', 'gal_fees', 'therapy_fees', 'reunif_fees', 'other_fees', 'lost_wages', 'asset_loss']},
+        'financial': financial,
         'family_total': family_totals(),
+        'estimated_family_impact': estimated_family_impact(financial),
         'months_lost': fin('months_lost'),
         'case_status': top('case_status'), 'system': top('system'), 'duration': top('duration'),
         'custody': top('custody'), 'allegations': top('allegation', 10), 'counties': top('county', 10),
@@ -538,9 +555,11 @@ def build_template_context(state_abbr, rows, court_actors=None):
             }
         expense_rows.append(row)
 
-    # Median Family Impact = median of per-family totals (NOT sum of category medians).
-    family_total = d.get('family_total') or {}
-    median_family_impact_value = family_total.get('median')
+    # Estimated Family Impact = sum of category medians. This matches the
+    # financial table and keeps the headline consistent across state or county
+    # row groups.
+    estimated_family_impact = d.get('estimated_family_impact') or {}
+    family_impact_value = estimated_family_impact.get('median')
 
     asset_footnote_text = ""
     if has_asset_outlier:
@@ -727,7 +746,7 @@ def build_template_context(state_abbr, rows, court_actors=None):
 
         # Financial table
         'expense_rows': expense_rows,
-        'median_family_impact': fmt_dollar(median_family_impact_value),
+        'median_family_impact': fmt_dollar(family_impact_value),
         'has_asset_footnote': has_asset_outlier,
         'asset_footnote_text': asset_footnote_text,
 
