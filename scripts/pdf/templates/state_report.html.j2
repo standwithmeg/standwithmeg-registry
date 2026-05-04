@@ -1037,9 +1037,9 @@
       <div class="note">{{ children_reporting }} of {{ total }} families reported child counts</div>
     </div>
     <div class="hstat">
-      <div class="label">Median Family Impact</div>
+      <div class="label">Estimated Family Impact</div>
       <div class="value red">{{ median_family_impact }}</div>
-      <div class="note">total cost across all expense categories</div>
+      <div class="note">sum of median reported expenses</div>
     </div>
     <div class="hstat">
       <div class="label">Median Months Lost</div>
@@ -1112,7 +1112,7 @@
       </tr>
       {% endfor %}
       <tr class="total-row">
-        <td class="headline">Estimated Median Family Impact</td>
+        <td class="headline">Estimated All-Category Family Impact</td>
         <td class="num">—</td>
         <td class="num">{{ median_family_impact }}</td>
         <td class="num">—</td>
@@ -1123,7 +1123,7 @@
 
 
   <div class="footnote">
-    <strong>Median vs. mean:</strong> Median is the middle reported amount, so it better reflects the typical reporting family when a few very large expenses appear. Mean is the average across reporting families and can be pulled higher by outliers.
+    <strong>Median vs. mean:</strong> Median is the middle reported amount, so it better reflects the typical reporting family when a few very large expenses appear. Mean is the average across reporting families and can be pulled higher by outliers. The estimated family impact sums the median reported amount in each expense category, so the headline reflects the all-category burden shown in the table.
   </div>
 
   {% if has_asset_footnote %}
@@ -1335,7 +1335,7 @@
     <div>
       <h3 style="font-family: var(--font-display); text-transform: uppercase; letter-spacing: 0.09em; font-weight: 600; font-size: 12px; color: var(--navy); margin: 0 0 10px;">What it isn't</h3>
       <p class="body-text">This is not a representative sample. Respondents self-select. The {{ total }} {{ state_name }} families reporting here are not the universe of {{ state_name }} families in court — they are the families who found the survey, trusted it enough to submit, and told us what happened to them.</p>
-      <p class="body-text" style="margin-top: 10px;">Financial figures are self-reported. We flag outliers and report medians when means are distorted (see page 3, note 1). Quotes are minimally edited.</p>
+      <p class="body-text" style="margin-top: 10px;">Financial figures are self-reported. We flag outliers and report medians when means are distorted (see page 3, note 1). The family-impact headline is an all-category estimate based on category medians. Quotes are minimally edited.</p>
     </div>
   </div>
 
