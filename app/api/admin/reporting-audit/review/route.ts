@@ -1,6 +1,7 @@
 import { createServerSupabaseClient } from "../../../../../lib/supabase";
 import { createAdminSupabaseClient } from "../../../../../lib/supabase-admin";
 import { isAdminEmail } from "../../../../../lib/require-auth";
+import { dedupeFamilyKey, isPlaceholderEmail } from "../../../../../lib/placeholder-emails";
 
 type SourceTable = "survey_submissions" | "legacy_submissions";
 
@@ -12,6 +13,7 @@ type ReviewRow = {
   imported_at: string | null;
   state: string;
   email: string | null;
+  is_placeholder_email: boolean;
   first_name: string | null;
   last_name: string | null;
   case_county: string | null;
@@ -61,8 +63,27 @@ function sourcePriority(row: ReviewRow) {
 }
 
 function familyKey(row: ReviewRow) {
+  // Placeholder emails (anonymous@anonymous.com, n/a, test@test.com, etc)
+  // are unsafe for automatic dedupe — multiple unrelated families use
+  // them, and the (email, state) key would silently collapse them. Use
+  // the shared helper so dedupe behavior matches across review API,
+  // SQL views (migration 022), and the Python PDF loader.
+  return dedupeFamilyKey({
+    email: row.email,
+    state: row.state,
+    sourceTable: row.source_table,
+    sourceId: row.id,
+  });
+}
+
+function placeholderGroupKey(row: ReviewRow): string | null {
+  // Used for the separate "placeholder email" review section. Rows that
+  // share the same placeholder email + state are grouped here so admin
+  // can still see and merge them by hand if they actually are one
+  // family — but they no longer auto-collide via familyKey().
   const email = normalizeEmail(row.email);
-  return email ? `${email}|${row.state}` : `${row.source_table}:${row.id}`;
+  if (!isPlaceholderEmail(email)) return null;
+  return `placeholder:${email}|${row.state}`;
 }
 
 function countedFamilyCount(group: ReviewRow[]) {
@@ -128,6 +149,7 @@ async function fetchReviewRows(state: string): Promise<ReviewRow[]> {
       permission_to_share: row.permission_to_share as string | null,
       approved: row.approved as boolean | null,
       family_key: "",
+      is_placeholder_email: isPlaceholderEmail(row.email as string | null),
       dedupe_winner: false,
       review_decision: null,
       reviewed_at: null,
@@ -156,6 +178,7 @@ async function fetchReviewRows(state: string): Promise<ReviewRow[]> {
       permission_to_share: row.permission_to_share as string | null,
       approved: null,
       family_key: "",
+      is_placeholder_email: isPlaceholderEmail(row.email as string | null),
       dedupe_winner: false,
       review_decision: null,
       reviewed_at: null,
@@ -237,6 +260,28 @@ export async function GET(request: Request) {
       0
     );
 
+    // Placeholder-email groups: surfaced separately so admin can see
+    // which "anonymous" rows share a placeholder address. By default
+    // these rows are NOT auto-deduped (each gets its own family_key),
+    // so they do not appear in duplicateGroups above. If two of them
+    // really are one family, admin can use Merge group to combine.
+    const placeholderBuckets = new Map<string, ReviewRow[]>();
+    for (const row of rows) {
+      const key = placeholderGroupKey(row);
+      if (!key) continue;
+      const list = placeholderBuckets.get(key) ?? [];
+      list.push(row);
+      placeholderBuckets.set(key, list);
+    }
+    const placeholderEmailGroups = [...placeholderBuckets.entries()]
+      .filter(([, group]) => group.length > 1)
+      .map(([family_key, group]) => ({
+        family_key,
+        email: group.find(row => row.email)?.email ?? null,
+        rows: group.sort((a, b) => sourcePriority(a) - sourcePriority(b) || createdMs(b) - createdMs(a)),
+      }))
+      .sort((a, b) => b.rows.length - a.rows.length || String(a.email ?? "").localeCompare(String(b.email ?? "")));
+
     return Response.json({
       state,
       summary: {
@@ -244,8 +289,10 @@ export async function GET(request: Request) {
         deduped_families: dedupedFamilies,
         duplicate_groups: duplicateGroups.length,
         hidden_by_dedupe: rows.length - dedupedFamilies,
+        placeholder_email_groups: placeholderEmailGroups.length,
       },
       duplicate_groups: duplicateGroups,
+      placeholder_email_groups: placeholderEmailGroups,
       rows,
     });
   } catch (err) {

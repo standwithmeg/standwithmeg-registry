@@ -351,6 +351,7 @@ type AuditReviewRow = {
   imported_at: string | null;
   state: string;
   email: string | null;
+  is_placeholder_email: boolean;
   first_name: string | null;
   last_name: string | null;
   case_county: string | null;
@@ -385,8 +386,10 @@ type AuditReviewData = {
     deduped_families: number;
     duplicate_groups: number;
     hidden_by_dedupe: number;
+    placeholder_email_groups?: number;
   };
   duplicate_groups: AuditReviewGroup[];
+  placeholder_email_groups?: AuditReviewGroup[];
   rows: AuditReviewRow[];
 };
 
@@ -2098,6 +2101,13 @@ export default function AdminPage() {
                                           Count separately
                                         </span>
                                       )}
+                                      {row.is_placeholder_email && (
+                                        <span className="text-[10px] px-1.5 py-0.5 rounded font-bold uppercase tracking-wide"
+                                          style={{ backgroundColor: "rgba(239,68,68,0.16)", color: "rgb(252,165,165)", border: "1px solid rgba(239,68,68,0.38)" }}
+                                          title="Placeholder email (anonymous@anonymous.com etc). Not auto-deduped — different families often share these.">
+                                          Placeholder email
+                                        </span>
+                                      )}
                                     </div>
 
                                     <div className="mt-1 text-[11px] flex flex-wrap gap-x-3 gap-y-1" style={{ color: "rgba(245,245,245,0.48)" }}>
@@ -2161,6 +2171,50 @@ export default function AdminPage() {
                         </div>
                         );
                       })}
+                    </div>
+                  )}
+
+                  {auditReview.placeholder_email_groups && auditReview.placeholder_email_groups.length > 0 && (
+                    <div className="space-y-3">
+                      <div className="rounded-xl px-4 py-3"
+                        style={{ backgroundColor: "rgba(239,68,68,0.10)", border: "1px solid rgba(239,68,68,0.32)" }}>
+                        <h3 className="font-black text-white text-sm">Rows sharing a placeholder email · {auditReview.state}</h3>
+                        <p className="text-xs mt-1" style={{ color: "rgba(245,245,245,0.7)" }}>
+                          These rows use placeholder addresses (anonymous@anonymous.com, n/a, test@test.com, etc).
+                          They are <strong>NOT auto-deduped</strong> — different families often share placeholder
+                          emails, so each row is counted separately by default. If two rows below really are the
+                          same family, use Merge group inside the same-email section after marking them with the
+                          same real email.
+                        </p>
+                      </div>
+
+                      {auditReview.placeholder_email_groups.map(group => (
+                        <div key={`placeholder-${group.family_key}`} className="rounded-xl overflow-hidden"
+                          style={{ backgroundColor: "rgba(255,255,255,0.025)", border: "1px solid rgba(239,68,68,0.22)" }}>
+                          <div className="px-4 py-3 flex items-center justify-between gap-3 flex-wrap"
+                            style={{ backgroundColor: "rgba(239,68,68,0.08)", borderBottom: "1px solid rgba(239,68,68,0.16)" }}>
+                            <div>
+                              <div className="text-xs font-bold text-white">{group.email || "(placeholder email)"}</div>
+                              <div className="text-[11px]" style={{ color: "rgba(245,245,245,0.5)" }}>
+                                {group.rows.length} rows · counted as {group.rows.length} families (placeholder, not auto-deduped)
+                              </div>
+                            </div>
+                          </div>
+                          <div className="divide-y divide-white/5">
+                            {group.rows.map(row => (
+                              <div key={`placeholder-row-${row.source_table}-${row.id}`} className="px-4 py-3 text-xs">
+                                <div className="flex items-center justify-between gap-3 flex-wrap">
+                                  <div className="min-w-0">
+                                    <span className="font-bold text-white">{auditReviewName(row)}</span>
+                                    <span style={{ color: "rgba(245,245,245,0.4)" }}> · {auditReviewSource(row)} · {shortDate(row.created_at)}</span>
+                                  </div>
+                                </div>
+                                <AuditReviewDetails row={row} />
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
                     </div>
                   )}
 
