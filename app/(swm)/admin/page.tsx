@@ -316,6 +316,8 @@ type ReportingAuditRow = {
   state: string;
   is_us: boolean;
   dashboard_families: number;
+  deduped_view_families: number | null;
+  delta_dashboard_vs_deduped: number | null;
   report_eligible: boolean;
   pdf_available: boolean;
   pdf_index_families: number | null;
@@ -655,6 +657,7 @@ export default function AdminPage() {
   const [auditSummary, setAuditSummary] = useState<ReportingAuditSummary | null>(null);
   const [auditError, setAuditError] = useState<string | null>(null);
   const [auditReview, setAuditReview] = useState<AuditReviewData | null>(null);
+  const [auditReviewContext, setAuditReviewContext] = useState<ReportingAuditRow | null>(null);
   const [auditReviewLoading, setAuditReviewLoading] = useState(false);
   const [auditReviewError, setAuditReviewError] = useState<string | null>(null);
   const [deletingAuditRow, setDeletingAuditRow] = useState<string | null>(null);
@@ -738,6 +741,7 @@ export default function AdminPage() {
 
   function openAuditReview(row: ReportingAuditRow) {
     setAuditReview(null);
+    setAuditReviewContext(row);
     void loadAuditReview(row.state);
   }
 
@@ -1958,7 +1962,7 @@ export default function AdminPage() {
         <div
           className="fixed inset-0 z-50 flex items-center justify-center p-4"
           style={{ backgroundColor: "rgba(0,0,0,0.72)", backdropFilter: "blur(4px)" }}
-          onClick={e => { if (e.target === e.currentTarget) { setAuditReview(null); setAuditReviewError(null); } }}
+          onClick={e => { if (e.target === e.currentTarget) { setAuditReview(null); setAuditReviewError(null); setAuditReviewContext(null); } }}
         >
           <div className="relative w-full max-w-5xl max-h-[90vh] flex flex-col rounded-2xl overflow-hidden"
             style={{ backgroundColor: "#0F1E30", border: `1px solid rgba(201,162,39,0.35)` }}>
@@ -1973,7 +1977,7 @@ export default function AdminPage() {
                   Same-email rows in the same state are counted as one family in dashboard/PDF totals. If a row is a real separate court matter, keep it. Delete only obvious duplicate imports, test rows, or wrong-state records.
                 </div>
               </div>
-              <button onClick={() => { setAuditReview(null); setAuditReviewError(null); }}
+              <button onClick={() => { setAuditReview(null); setAuditReviewError(null); setAuditReviewContext(null); }}
                 className="w-8 h-8 rounded-lg flex items-center justify-center transition-colors hover:bg-white/10"
                 style={{ color: "rgba(245,245,245,0.5)" }} aria-label="Close">
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1998,6 +2002,94 @@ export default function AdminPage() {
 
               {auditReview && (
                 <>
+                  {/* ── Reporting status panel — what does the mismatch number actually mean? ── */}
+                  {auditReviewContext && (() => {
+                    const ctx = auditReviewContext;
+                    const meta = auditStatusMeta(ctx.reporting_status);
+                    const dashCount = ctx.dashboard_families;
+                    const dedupedCount = ctx.deduped_view_families;
+                    const pdfCount = ctx.pdf_index_families;
+                    const dashVsDeduped = ctx.delta_dashboard_vs_deduped;
+                    const dashVsPdf = pdfCount === null ? null : dashCount - pdfCount;
+                    const numCard = (label: string, value: number | null, hint?: string) => (
+                      <div className="rounded-xl px-4 py-3"
+                        style={{ backgroundColor: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.12)" }}>
+                        <div className="text-[10px] uppercase tracking-wide font-bold" style={{ color: "rgba(245,245,245,0.4)" }}>{label}</div>
+                        <div className="text-2xl font-black mt-1 text-white">{value === null ? "—" : fmtNum(value)}</div>
+                        {hint && <div className="text-[10px] mt-1" style={{ color: "rgba(245,245,245,0.4)" }}>{hint}</div>}
+                      </div>
+                    );
+                    const deltaCard = (label: string, value: number | null, hint: string) => {
+                      const isMismatch = value !== null && value !== 0;
+                      return (
+                        <div className="rounded-xl px-4 py-3"
+                          style={{
+                            backgroundColor: isMismatch ? "rgba(234,179,8,0.10)" : "rgba(74,222,128,0.08)",
+                            border: `1px solid ${isMismatch ? "rgba(234,179,8,0.32)" : "rgba(74,222,128,0.22)"}`,
+                          }}>
+                          <div className="text-[10px] uppercase tracking-wide font-bold" style={{ color: "rgba(245,245,245,0.5)" }}>{label}</div>
+                          <div className="text-2xl font-black mt-1" style={{ color: isMismatch ? "rgb(253,224,71)" : "rgb(134,239,172)" }}>
+                            {value === null ? "—" : (value > 0 ? `+${fmtNum(value)}` : fmtNum(value))}
+                          </div>
+                          <div className="text-[10px] mt-1" style={{ color: "rgba(245,245,245,0.4)" }}>{hint}</div>
+                        </div>
+                      );
+                    };
+                    return (
+                      <div className="rounded-2xl px-5 py-4 space-y-4"
+                        style={{ backgroundColor: "rgba(30,58,95,0.32)", border: "1px solid rgba(201,162,39,0.22)" }}>
+                        <div className="flex items-center justify-between gap-3 flex-wrap">
+                          <div>
+                            <div className="text-[10px] uppercase tracking-wide font-bold" style={{ color: "rgba(245,245,245,0.45)" }}>Reporting status</div>
+                            <div className="text-base font-black text-white mt-0.5">{ctx.state} · {meta.label}</div>
+                          </div>
+                          <span className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide"
+                            style={{
+                              backgroundColor:
+                                ctx.reporting_status === "ok" ? "rgba(74,222,128,0.16)" :
+                                ctx.reporting_status === "count_mismatch" ? "rgba(234,179,8,0.18)" :
+                                ctx.reporting_status === "missing_pdf" ? "rgba(239,68,68,0.16)" :
+                                ctx.reporting_status === "stale_pdf" ? "rgba(96,165,250,0.16)" :
+                                "rgba(255,255,255,0.06)",
+                              color:
+                                ctx.reporting_status === "ok" ? "rgb(134,239,172)" :
+                                ctx.reporting_status === "count_mismatch" ? "rgb(253,224,71)" :
+                                ctx.reporting_status === "missing_pdf" ? "rgb(252,165,165)" :
+                                ctx.reporting_status === "stale_pdf" ? "rgb(147,197,253)" :
+                                "rgba(245,245,245,0.6)",
+                              border: "1px solid rgba(255,255,255,0.16)",
+                            }}>
+                            {ctx.reporting_status.replace("_", " ")}
+                          </span>
+                        </div>
+
+                        <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                          {numCard("Dashboard count", dashCount, "movement_stats_by_state · live")}
+                          {numCard("Deduped view count", dedupedCount, dedupedCount === null ? "view not deployed" : "movement_deduped_submissions · per-row dedup")}
+                          {numCard("PDF index count", pdfCount, pdfCount === null ? "no PDF for this state" : "public/state-reports/index.json")}
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                          {deltaCard("Δ Dashboard vs Deduped view", dashVsDeduped, "Non-zero = financial-fingerprint or count_separately divergence between the two views")}
+                          {deltaCard("Δ Dashboard vs PDF index", dashVsPdf, "Non-zero = PDF was generated against an older dashboard snapshot (stale PDF)")}
+                        </div>
+
+                        <div className="rounded-xl px-4 py-3 text-xs leading-relaxed"
+                          style={{ backgroundColor: "rgba(0,0,0,0.18)", color: "rgba(245,245,245,0.65)", border: "1px solid rgba(255,255,255,0.06)" }}>
+                          <strong style={{ color: "rgba(245,245,245,0.85)" }}>Three independent things can cause a mismatch:</strong>
+                          <ol className="list-decimal pl-5 mt-1 space-y-1">
+                            <li><strong>Same-email review</strong> — two rows in this state share the same email and need a manual keep / delete / count separately decision. Shown below in <em>Rows grouped by same email and state</em>.</li>
+                            <li><strong>Financial-fingerprint review</strong> — two rows share the same county + dollar amounts + months lost (likely dual imports or twins). These do not appear in the same-email section. They will be reviewed via the reconciliation export at <code>outputs/reconciliation/&lt;date&gt;/dedupe-candidates.html</code>, or a future financial-fingerprint section in this modal.</li>
+                            <li><strong>Stale PDF / index</strong> — the dashboard updated since the last PDF regeneration, so the PDF still shows an older count. Fixed by regenerating that state PDF or all PDFs once same-email and financial-fingerprint reviews are resolved.</li>
+                          </ol>
+                          <div className="mt-2" style={{ color: "rgba(245,245,245,0.45)" }}>
+                            Migration 020 (financial-fingerprint dedup) and migration 022 (placeholder-email dedup) are intentionally on hold until the financial-fingerprint candidate groups are reviewed. PDFs are not regenerated until both are applied.
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })()}
+
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                     {[
                       ["Raw rows", auditReview.summary.raw_rows],
