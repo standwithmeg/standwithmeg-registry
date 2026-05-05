@@ -3,6 +3,9 @@ import { requireAdmin } from "@/lib/require-auth";
 
 export const metadata: Metadata = {
   title: "Admin Dashboard | Stand With Meg",
+  alternates: {
+    canonical: "/admin",
+  },
   robots: {
     index: false,
     follow: false,

@@ -2,8 +2,8 @@ import { createAdminSupabaseClient } from "../../../../lib/supabase-admin";
 import { COURT_ACTOR_PUBLIC_THRESHOLD, actorBucketKeyWithLocation, courtActorLocationKey } from "../../../../lib/court-actors";
 
 /**
- * Returns court actors named by 3+ different families (the auto-publish
- * threshold). Names are matched conservatively on normalized name +
+ * Returns court actors named by enough different families to cross the
+ * shared auto-publish threshold. Names are matched conservatively on normalized name +
  * location_key, so casing, punctuation, common titles, middle initials,
  * repeated-letter misspellings, and different role labels do not split the
  * same person. Families are deduped by email + location, so one family naming
@@ -107,7 +107,10 @@ export async function GET(request: Request) {
           const { data: fallbackData, error: fallbackError } = await q.range(from, from + pageSize - 1);
           if (fallbackError) {
             console.error("GET /api/survey/court-actors (non-blocking):", fallbackError.message);
-            return Response.json({ actors: [] });
+            return Response.json(
+              { actors: [], threshold: COURT_ACTOR_PUBLIC_THRESHOLD, error: "Failed to load court actor patterns." },
+              { status: 500 }
+            );
           }
           if (!fallbackData || fallbackData.length === 0) break;
           // Add null location_key to fallback data
@@ -116,7 +119,10 @@ export async function GET(request: Request) {
           if (fallbackData.length < pageSize) break;
         } else {
           console.error("GET /api/survey/court-actors (non-blocking):", error.message);
-          return Response.json({ actors: [] });
+          return Response.json(
+            { actors: [], threshold: COURT_ACTOR_PUBLIC_THRESHOLD, error: "Failed to load court actor patterns." },
+            { status: 500 }
+          );
         }
       } else {
         if (!data || data.length === 0) break;
@@ -191,6 +197,9 @@ export async function GET(request: Request) {
     return Response.json({ actors: publicActors, threshold: COURT_ACTOR_PUBLIC_THRESHOLD });
   } catch (err) {
     console.error("GET /api/survey/court-actors error:", err);
-    return Response.json({ actors: [] });
+    return Response.json(
+      { actors: [], threshold: COURT_ACTOR_PUBLIC_THRESHOLD, error: "Failed to load court actor patterns." },
+      { status: 500 }
+    );
   }
 }

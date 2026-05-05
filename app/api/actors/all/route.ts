@@ -92,7 +92,10 @@ export async function GET() {
           const { data: fbData, error: fbError } = await fb.range(from, from + pageSize - 1);
           if (fbError) {
             console.error("GET /api/actors/all fallback error:", fbError.message);
-            return Response.json({ actors: [], total_actors: 0, total_reports: 0, at_threshold: 0, states_count: 0 });
+            return Response.json(
+              { actors: [], total_actors: 0, total_reports: 0, at_threshold: 0, states_count: 0, threshold: COURT_ACTOR_PUBLIC_THRESHOLD, error: "Failed to load court actors." },
+              { status: 500 }
+            );
           }
           if (!fbData || fbData.length === 0) break;
           const withNullLoc = (fbData as unknown as ActorRow[]).map(r => ({ ...r, location_key: null }));
@@ -100,7 +103,10 @@ export async function GET() {
           if (fbData.length < pageSize) break;
         } else {
           console.error("GET /api/actors/all error:", error.message);
-          return Response.json({ actors: [], total_actors: 0, total_reports: 0, at_threshold: 0, states_count: 0 });
+          return Response.json(
+            { actors: [], total_actors: 0, total_reports: 0, at_threshold: 0, states_count: 0, threshold: COURT_ACTOR_PUBLIC_THRESHOLD, error: "Failed to load court actors." },
+            { status: 500 }
+          );
         }
       } else {
         if (!data || data.length === 0) break;
@@ -170,10 +176,8 @@ export async function GET() {
 
     const atThreshold = actors.filter(a => a.at_threshold).length;
     const states = new Set<string>();
-    const locations = new Set<string>();
     for (const a of actors) {
       if (a.state_code) states.add(a.state_code);
-      if (a.location_key) locations.add(a.location_key);
     }
 
     return Response.json({
@@ -182,11 +186,13 @@ export async function GET() {
       total_reports: totalReports,
       at_threshold: atThreshold,
       states_count: states.size,
-      locations_count: locations.size,
       threshold: COURT_ACTOR_PUBLIC_THRESHOLD,
     });
   } catch (err) {
     console.error("GET /api/actors/all error:", err);
-    return Response.json({ actors: [], total_actors: 0, total_reports: 0, at_threshold: 0, states_count: 0 });
+    return Response.json(
+      { actors: [], total_actors: 0, total_reports: 0, at_threshold: 0, states_count: 0, threshold: COURT_ACTOR_PUBLIC_THRESHOLD, error: "Failed to load court actors." },
+      { status: 500 }
+    );
   }
 }

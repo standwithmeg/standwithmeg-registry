@@ -29,7 +29,10 @@ export async function GET() {
 
       if (error) {
         console.error("GET /api/survey/quote-counts error:", error);
-        return Response.json({ counts: {} });
+        return Response.json(
+          { counts: {}, error: "Failed to load quote counts." },
+          { status: 500 }
+        );
       }
 
       if (!data || data.length === 0) break;
@@ -47,6 +50,9 @@ export async function GET() {
     return Response.json({ counts });
   } catch (err) {
     console.error("GET /api/survey/quote-counts error:", err);
-    return Response.json({ counts: {} });
+    return Response.json(
+      { counts: {}, error: "Failed to load quote counts." },
+      { status: 500 }
+    );
   }
 }

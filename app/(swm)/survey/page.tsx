@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { COURT_ACTOR_PUBLIC_THRESHOLD } from "../../../lib/court-actors";
+import { DONATION_URL } from "../../../lib/site-links";
 import { isUnitedStatesCountry } from "../../../lib/survey-location";
 import { US_JURISDICTIONS } from "../../../lib/us-jurisdictions";
 
@@ -1206,7 +1207,7 @@ export default function SubmitPage() {
                   </h3>
                   <p className="text-sm leading-relaxed text-gray-500 mb-4">
                     Every court actor named by Stand With Meg families is now listed in one searchable registry.
-                    When 3+ families independently name the same person, their name goes public.
+                    When {COURT_ACTOR_PUBLIC_THRESHOLD}+ families independently name the same person, their name goes public.
                     You may recognize names from your own case &mdash; and you can add yourself to those reports with one tap.
                   </p>
                   <a
@@ -1252,7 +1253,7 @@ export default function SubmitPage() {
                     more families, please consider making a donation.
                   </p>
                   <a
-                    href="https://www.paypal.com/donate/?hosted_button_id=85ZM4KV4EVZEC"
+                    href={DONATION_URL}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block w-full text-center py-3.5 rounded-xl font-black text-sm text-white transition-colors bg-red-700 hover:bg-red-600"
