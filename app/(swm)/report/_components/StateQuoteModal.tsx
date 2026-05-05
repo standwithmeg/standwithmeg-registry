@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { COURT_ACTOR_PUBLIC_THRESHOLD } from "../../../../lib/court-actors";
 
 const GOLD = "#C9A227";
 
@@ -41,21 +42,40 @@ export function StateQuoteModal({ state, isUs, totalSubmissions, resource, onClo
   const [quotes, setQuotes] = useState<Quote[]>([]);
   const [dataOnlyCount, setDataOnlyCount] = useState(0);
   const [actors, setActors] = useState<PublicActor[]>([]);
+  const [actorThreshold, setActorThreshold] = useState(COURT_ACTOR_PUBLIC_THRESHOLD);
+  const [warning, setWarning] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     (async () => {
       setLoading(true);
+      setWarning(null);
       try {
         const [quotesRes, actorsRes] = await Promise.all([
           fetch(`/api/survey/quotes?state=${encodeURIComponent(state)}&is_us=${isUs}&include_counts=true`),
           fetch(`/api/survey/court-actors?location=${encodeURIComponent(state)}`),
         ]);
-        const quotesData = await quotesRes.json();
-        const actorsData = await actorsRes.json();
-        setQuotes(quotesData.quotes ?? []);
-        setDataOnlyCount(quotesData.data_only_count ?? 0);
-        setActors(actorsData.actors ?? []);
+        const quotesData = await quotesRes.json().catch(() => null);
+        const actorsData = await actorsRes.json().catch(() => null);
+        const warnings: string[] = [];
+        if (!quotesRes.ok || !quotesData) {
+          warnings.push("Public quotes could not load for this location.");
+        } else {
+          setQuotes(quotesData.quotes ?? []);
+          setDataOnlyCount(quotesData.data_only_count ?? 0);
+        }
+        if (!actorsRes.ok || !actorsData) {
+          warnings.push("Court actor patterns could not load for this location.");
+        } else {
+          setActors(actorsData.actors ?? []);
+          if (typeof actorsData.threshold === "number") {
+            setActorThreshold(actorsData.threshold);
+          }
+          if (typeof actorsData.warning === "string") {
+            warnings.push(actorsData.warning);
+          }
+        }
+        setWarning(warnings.join(" "));
       } finally {
         setLoading(false);
       }
@@ -106,6 +126,13 @@ export function StateQuoteModal({ state, isUs, totalSubmissions, resource, onClo
             </div>
           )}
 
+          {!loading && warning && (
+            <div className="rounded-lg px-4 py-3 text-xs leading-relaxed"
+              style={{ backgroundColor: "rgba(201,162,39,0.10)", border: "1px solid rgba(201,162,39,0.25)", color: "rgba(245,245,245,0.65)" }}>
+              {warning}
+            </div>
+          )}
+
           {!loading && quotes.map(q => (
             <div key={q.id} className="rounded-xl p-4"
               style={{ backgroundColor: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.07)" }}>
@@ -132,7 +159,7 @@ export function StateQuoteModal({ state, isUs, totalSubmissions, resource, onClo
             </div>
           )}
 
-          {/* Named Court Actors — visible once a name has been reported by 5+ families */}
+          {/* Named Court Actors */}
           {!loading && actors.length > 0 && (
             <div className="mt-6 rounded-xl overflow-hidden" style={{ border: "1px solid rgba(201,162,39,0.2)" }}>
               <div className="px-4 py-3"
@@ -141,7 +168,7 @@ export function StateQuoteModal({ state, isUs, totalSubmissions, resource, onClo
                   Named Court Actors in {state}
                 </div>
                 <div className="text-xs mt-0.5" style={{ color: "rgba(245,245,245,0.4)" }}>
-                  Court actors reported by 5+ independent families. Reporter identities are never shown.
+                  Court actors reported by {actorThreshold}+ independent families. Reporter identities are never shown.
                 </div>
               </div>
               <div>

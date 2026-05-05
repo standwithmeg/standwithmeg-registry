@@ -4,8 +4,8 @@ import { COURT_ACTOR_PUBLIC_THRESHOLD, actorBucketKey } from "../../../../../lib
 /**
  * Returns the anonymized factual notes that families wrote about ONE named
  * court actor — but only when that actor has crossed the public threshold
- * (≥ 3 different families naming them in the same state). This protects a
- * single submission's note from ever being exposed by probing this endpoint.
+ * (using the shared independent-family threshold in the same state). This
+ * protects a single submission's note from ever being exposed by probing this endpoint.
  *
  * Never returns: email, first_name, last_name, submission_id, ip_hash,
  * exact created_at timestamps. Each note is also deduped per family so

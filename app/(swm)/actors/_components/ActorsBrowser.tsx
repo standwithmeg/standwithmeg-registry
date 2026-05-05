@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { COURT_ACTOR_PUBLIC_THRESHOLD } from "../../../../lib/court-actors";
+import { DONATION_URL } from "../../../../lib/site-links";
 
 const GOLD = "#C9A227";
 const NAVY = "#0F1E30";
@@ -64,6 +66,7 @@ export function ActorsBrowser({ visitorEmail, visitorSubmissionId, visitorFirstN
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [stats, setStats] = useState<{ total_actors: number; total_reports: number; at_threshold: number; states_count: number; locations_count?: number } | null>(null);
+  const [threshold, setThreshold] = useState(COURT_ACTOR_PUBLIC_THRESHOLD);
 
   // Filters
   const [stateFilter, setStateFilter] = useState<string>("");
@@ -94,6 +97,9 @@ export function ActorsBrowser({ visitorEmail, visitorSubmissionId, visitorFirstN
           states_count: data.states_count,
           locations_count: data.locations_count,
         });
+        if (typeof data.threshold === "number") {
+          setThreshold(data.threshold);
+        }
         setLoading(false);
       } catch (err) {
         if (cancelled) return;
@@ -209,7 +215,7 @@ export function ActorsBrowser({ visitorEmail, visitorSubmissionId, visitorFirstN
             </InstructionStep>
 
             <InstructionStep number="3" title="Don&apos;t see anyone you know? Share the page anyway">
-              Most actors are <span className="font-semibold text-white">just one or two more reports away</span> from being publicly named. Use the <span className="font-semibold text-white">Share this page</span> button at the bottom to send the link to anyone you know who has been through family court. <span className="font-semibold text-white">Heads-up:</span> the people you share with will be asked to take the free 5-minute Stand With Meg survey before they can see the registry — that&apos;s how their case is added to the count, and how the next name crosses the public threshold.
+              Some actors are still below the <span className="font-semibold text-white">{threshold}-family public threshold</span>. Use the <span className="font-semibold text-white">Share this page</span> button at the bottom to send the link to anyone you know who has been through family court. <span className="font-semibold text-white">Heads-up:</span> the people you share with will be asked to take the free 5-minute Stand With Meg survey before they can see the registry — that&apos;s how their case is added to the count, and how the next name crosses the public threshold.
             </InstructionStep>
 
           </div>
@@ -230,7 +236,7 @@ export function ActorsBrowser({ visitorEmail, visitorSubmissionId, visitorFirstN
             <strong className="text-white">$5</strong>, I could keep going.
           </p>
           <a
-            href="https://www.paypal.com/donate/?hosted_button_id=85ZM4KV4EVZEC"
+            href={DONATION_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="shrink-0 inline-flex items-center justify-center px-5 py-3 rounded-lg font-bold text-sm hover:opacity-90 transition-opacity"
@@ -422,12 +428,12 @@ export function ActorsBrowser({ visitorEmail, visitorSubmissionId, visitorFirstN
             Didn&apos;t recognize anyone? Help us close the gap.
           </h2>
           <p className="text-white/80 text-sm md:text-base leading-relaxed mb-5 max-w-3xl">
-            Most named actors are one or two reports short of the public-naming threshold. The fastest way to make hidden patterns visible is to get this page in front of more family-court survivors.
+            Some named actors still need more independent family reports before they reach the {threshold}-family public-naming threshold. The fastest way to make hidden patterns visible is to get this page in front of more family-court survivors.
           </p>
           <div className="flex flex-col sm:flex-row flex-wrap gap-3">
-            <ShareLinkButton />
+            <ShareLinkButton threshold={threshold} />
             <a
-              href="https://www.paypal.com/donate/?hosted_button_id=85ZM4KV4EVZEC"
+              href={DONATION_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="px-5 py-3 rounded-lg font-bold text-sm text-center hover:opacity-90 transition-opacity"
@@ -476,7 +482,7 @@ export function ActorsBrowser({ visitorEmail, visitorSubmissionId, visitorFirstN
               for the families who come after.
             </p>
             <a
-              href="https://www.paypal.com/donate/?hosted_button_id=85ZM4KV4EVZEC"
+              href={DONATION_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block text-base px-8 py-4 rounded-xl font-black tracking-wide transition-colors hover:opacity-90"
@@ -497,7 +503,7 @@ export function ActorsBrowser({ visitorEmail, visitorSubmissionId, visitorFirstN
             <span className="text-white/70 font-semibold">About this registry:</span> Submitter names, emails, and case details never appear on this page. Only aggregate patterns — actor name, role, state, county, and family count — are shown.
           </p>
           <p>
-            <span className="text-white/70 font-semibold">Names go fully public</span> on the <a href="/report" className="underline" style={{ color: GOLD }}>main dashboard</a> once 3 different families have independently named the same person in the same place.
+            <span className="text-white/70 font-semibold">Names go fully public</span> on the <a href="/report" className="underline" style={{ color: GOLD }}>main dashboard</a> once {threshold} different families have independently named the same person in the same place.
           </p>
         </div>
       </div>
@@ -532,7 +538,7 @@ function InstructionStep({ number, title, children }: { number: string; title: R
   );
 }
 
-function ShareLinkButton() {
+function ShareLinkButton({ threshold }: { threshold: number }) {
   const [copied, setCopied] = useState(false);
   async function handleClick() {
     const url = "https://my.standwithmeg.com/actors";
@@ -541,7 +547,7 @@ function ShareLinkButton() {
       if (typeof navigator !== "undefined" && (navigator as { share?: (data: { title: string; text: string; url: string }) => Promise<void> }).share) {
         await (navigator as { share: (data: { title: string; text: string; url: string }) => Promise<void> }).share({
           title: "Stand With Meg — Court Actor Registry",
-          text: "Family court actors named by 3+ families across the country. If you've been through family court, see if anyone on your case is here.",
+          text: `Family court actors named by ${threshold}+ families across the country. If you've been through family court, see if anyone on your case is here.`,
           url,
         });
         return;

@@ -4,6 +4,8 @@ import { useState, useEffect, useCallback } from "react";
 import { StateTable } from "./StateTable";
 import { InviteFriendModal } from "./InviteFriendModal";
 import { CourtActorPanel, CourtActorListModal, type PublicActor } from "./CourtActorPanel";
+import { COURT_ACTOR_PUBLIC_THRESHOLD } from "../../../../lib/court-actors";
+import { DONATION_URL } from "../../../../lib/site-links";
 
 const GOLD = "#C9A227";
 const BG   = "#0F1E30";
@@ -38,6 +40,16 @@ type StateResource = {
   report_title: string | null;
 };
 
+type OptionalApiResult<T> = {
+  data: T | null;
+  warning: string | null;
+};
+
+type ApiWarning = {
+  key: string;
+  message: string;
+};
+
 function fmt$(n: number | null) {
   if (n == null || n === 0) return "—";
   return "$" + n.toLocaleString();
@@ -51,7 +63,8 @@ export function DashboardView() {
   const [commentCounts, setCommentCounts] = useState<Record<string, number>>({});
   const [courtActorCounts, setCourtActorCounts] = useState<Record<string, number>>({});
   const [publicActors, setPublicActors] = useState<PublicActor[]>([]);
-  const [actorThreshold, setActorThreshold] = useState(3);
+  const [actorThreshold, setActorThreshold] = useState(COURT_ACTOR_PUBLIC_THRESHOLD);
+  const [warnings, setWarnings] = useState<ApiWarning[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [inviteOpen, setInviteOpen] = useState(false);
@@ -60,6 +73,7 @@ export function DashboardView() {
   const load = useCallback(async () => {
     setLoading(true);
     setError(null);
+    setWarnings([]);
     try {
       const [statsRes, quotesRes, resourcesRes, countsRes, actorsRes] = await Promise.all([
         fetch("/api/survey"),
@@ -68,18 +82,42 @@ export function DashboardView() {
         fetch("/api/survey/quote-counts"),
         fetch("/api/survey/court-actors"),
       ]);
-      const statsData = await statsRes.json();
-      const quotesData = await quotesRes.json();
-      const resourcesData = await resourcesRes.json().catch(() => ({ resources: [] }));
-      const countsData = await countsRes.json().catch(() => ({ counts: {} }));
-      const actorsData = await actorsRes.json().catch(() => ({ actors: [] }));
+      const statsData = await statsRes.json().catch(() => null);
       if (!statsRes.ok) { setError("Failed to load data."); return; }
+      if (!statsData) { setError("Failed to read movement data."); return; }
+
+      const optionalWarnings: ApiWarning[] = [];
+      async function readOptional<T>(res: Response, key: string, label: string): Promise<OptionalApiResult<T>> {
+        let data: T | null = null;
+        try {
+          data = await res.json();
+        } catch {
+          optionalWarnings.push({ key, message: `${label} could not be read. The dashboard is showing the rest of the data.` });
+          return { data: null, warning: null };
+        }
+        const warning = typeof (data as { warning?: unknown })?.warning === "string"
+          ? (data as { warning: string }).warning
+          : null;
+        if (!res.ok) {
+          optionalWarnings.push({ key, message: `${label} could not load. The dashboard is showing the rest of the data.` });
+          return { data: null, warning };
+        }
+        if (warning) {
+          optionalWarnings.push({ key, message: warning });
+        }
+        return { data, warning };
+      }
+
+      const quotesData = (await readOptional<{ quotes?: PublicQuote[] }>(quotesRes, "quotes", "Public quotes")).data;
+      const resourcesData = (await readOptional<{ resources?: StateResource[] }>(resourcesRes, "resources", "State report links")).data;
+      const countsData = (await readOptional<{ counts?: Record<string, number> }>(countsRes, "quote-counts", "Quote counts")).data;
+      const actorsData = (await readOptional<{ actors?: PublicActor[]; threshold?: number }>(actorsRes, "court-actors", "Court actor patterns")).data;
       setTotal(statsData.total ?? 0);
       setByState(statsData.by_state ?? []);
-      setQuotes(quotesData.quotes ?? []);
-      setResources(resourcesData.resources ?? []);
-      setCommentCounts(countsData.counts ?? {});
-      const actors = (actorsData.actors ?? []) as PublicActor[];
+      setQuotes(quotesData?.quotes ?? []);
+      setResources(resourcesData?.resources ?? []);
+      setCommentCounts(countsData?.counts ?? {});
+      const actors = (actorsData?.actors ?? []) as PublicActor[];
       const actorCounts: Record<string, number> = {};
       for (const actor of actors) {
         const location = actor.location_key || actor.state_code;
@@ -88,9 +126,10 @@ export function DashboardView() {
       }
       setCourtActorCounts(actorCounts);
       setPublicActors(actors);
-      if (typeof actorsData.threshold === "number") {
+      if (typeof actorsData?.threshold === "number") {
         setActorThreshold(actorsData.threshold);
       }
+      setWarnings(optionalWarnings);
     } catch {
       setError("Network error.");
     } finally {
@@ -193,7 +232,7 @@ export function DashboardView() {
               }}>
               Track the Court Actors →
             </a>
-            <a href="https://www.paypal.com/donate/?hosted_button_id=85ZM4KV4EVZEC"
+            <a href={DONATION_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg font-bold text-sm transition-colors hover:opacity-90"
@@ -234,6 +273,22 @@ export function DashboardView() {
             Unauthorized reproduction, scraping, or commercial use is prohibited.
           </p>
         </div>
+
+        {warnings.length > 0 && (
+          <div className="rounded-xl px-5 py-3"
+            style={{ backgroundColor: "rgba(201,162,39,0.10)", border: "1px solid rgba(201,162,39,0.28)" }}>
+            <div className="text-xs font-black uppercase tracking-widest mb-1" style={{ color: GOLD }}>
+              Partial data loaded
+            </div>
+            <ul className="space-y-1">
+              {warnings.map(w => (
+                <li key={w.key} className="text-xs leading-relaxed" style={{ color: "rgba(245,245,245,0.65)" }}>
+                  {w.message}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
 
         {/* Stat Cards */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -296,7 +351,7 @@ export function DashboardView() {
           </div>
         </div>
 
-        {/* Named Court Actor Patterns — public, only actors named by 3+ different families */}
+        {/* Named Court Actor Patterns */}
         <CourtActorPanel actors={publicActors} threshold={actorThreshold} />
 
         {/* State Table */}
@@ -391,7 +446,7 @@ export function DashboardView() {
             <p className="text-sm mb-2 max-w-xl mx-auto leading-relaxed"
               style={{ color: "rgba(245,245,245,0.75)" }}>
               Every judge, attorney, GAL, evaluator, and caseworker named by Stand With Meg
-              families. When <strong className="text-white">three or more families</strong>{" "}
+              families. When <strong className="text-white">{actorThreshold} or more families</strong>{" "}
               independently name the same person, their name goes public.
             </p>
             <p className="text-sm mb-6 max-w-xl mx-auto leading-relaxed"
@@ -439,7 +494,7 @@ export function DashboardView() {
               <strong className="text-white"> $5 a month</strong> is what keeps this record alive
               for the families who come after.
             </p>
-            <a href="https://www.paypal.com/donate/?hosted_button_id=85ZM4KV4EVZEC"
+            <a href={DONATION_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block text-base px-8 py-4 rounded-xl font-black tracking-wide transition-colors hover:opacity-90"
@@ -467,6 +522,7 @@ export function DashboardView() {
         <CourtActorListModal
           state={actorListState}
           actors={publicActors.filter(a => a.state_code === actorListState)}
+          threshold={actorThreshold}
           onClose={() => setActorListState(null)}
         />
       )}

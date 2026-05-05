@@ -1,4 +1,5 @@
 import { createAdminSupabaseClient } from "../../../../lib/supabase-admin";
+import { courtActorLocationKey } from "../../../../lib/court-actors";
 
 const ACTOR_NOTE_MIN_CHARS = 12;
 const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
@@ -28,6 +29,7 @@ type SubmissionRow = {
   id: string;
   email: string | null;
   state_of_occurrence: string | null;
+  outside_us_country: string | null;
 };
 
 function cleanText(value: unknown, maxLength: number) {
@@ -84,7 +86,7 @@ export async function POST(request: Request) {
     const adminSupabase = createAdminSupabaseClient();
     const { data: submission, error: submissionError } = await adminSupabase
       .from("survey_submissions")
-      .select("id,email,state_of_occurrence")
+      .select("id,email,state_of_occurrence,outside_us_country")
       .eq("id", submissionId)
       .maybeSingle();
 
@@ -103,6 +105,9 @@ export async function POST(request: Request) {
         error: "That email does not match the original submission. Please use the same email you used on the survey.",
       }, { status: 403 });
     }
+
+    const rowState = stateOverride ?? submissionRow.state_of_occurrence;
+    const rowLocationKey = courtActorLocationKey(rowState, stateOverride ? null : submissionRow.outside_us_country);
 
     let updated = 0;
     let insertStart = 0;
@@ -129,7 +134,8 @@ export async function POST(request: Request) {
             name: first.name,
             court_or_county: first.court,
             notes: first.notes,
-            state_code: stateOverride ?? submissionRow.state_of_occurrence,
+            state_code: rowState,
+            location_key: rowLocationKey,
             source: "form_direct",
           })
           .eq("id", actorId)
@@ -149,7 +155,8 @@ export async function POST(request: Request) {
       role: actor.role,
       name: actor.name,
       court_or_county: actor.court,
-      state_code: submissionRow.state_of_occurrence,
+      state_code: rowState,
+      location_key: rowLocationKey,
       notes: actor.notes,
       source: "form_direct",
     }));

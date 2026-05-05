@@ -97,10 +97,11 @@ export function CourtActorPanel({ actors, threshold }: Props) {
 type ListModalProps = {
   state: string;
   actors: PublicActor[];
+  threshold: number;
   onClose: () => void;
 };
 
-export function CourtActorListModal({ state, actors, onClose }: ListModalProps) {
+export function CourtActorListModal({ state, actors, threshold, onClose }: ListModalProps) {
   const [openActor, setOpenActor] = useState<PublicActor | null>(null);
 
   return (
@@ -118,7 +119,7 @@ export function CourtActorListModal({ state, actors, onClose }: ListModalProps) 
                 Named Court Actors — {state}
               </div>
               <div className="text-xs mt-1" style={{ color: "rgba(245,245,245,0.55)" }}>
-                {actors.length} {actors.length === 1 ? "person" : "people"} named by 3+ different families.
+                {actors.length} {actors.length === 1 ? "person" : "people"} named by {threshold}+ different families.
                 Click a card to read what families wrote — submitter identities are never shown.
               </div>
             </div>
