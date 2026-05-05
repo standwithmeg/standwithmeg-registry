@@ -360,12 +360,20 @@ type AuditReviewRow = {
   case_status: string | null;
   number_of_kids: number | null;
   system_affected: string | null;
+  allegation_type: string | null;
   time_in_system: string | null;
   custody_status: string | null;
   is_pro_se: string | boolean | null;
   legal_rep_history: string | null;
   months_lost_parenting_time: number | null;
   total_financial_loss: number | string | null;
+  attorney_fees: number | null;
+  gal_fees: number | null;
+  therapy_eval_fees: number | null;
+  reunification_fees: number | null;
+  other_court_actors_fees: number | null;
+  lost_wages: number | null;
+  asset_liquidation_loss: number | null;
   impact_quote: string | null;
   permission_to_share: string | null;
   approved: boolean | null;
@@ -389,9 +397,11 @@ type AuditReviewData = {
     duplicate_groups: number;
     hidden_by_dedupe: number;
     placeholder_email_groups?: number;
+    financial_fingerprint_groups?: number;
   };
   duplicate_groups: AuditReviewGroup[];
   placeholder_email_groups?: AuditReviewGroup[];
+  financial_fingerprint_groups?: AuditReviewGroup[];
   rows: AuditReviewRow[];
 };
 
@@ -2263,6 +2273,161 @@ export default function AdminPage() {
                         </div>
                         );
                       })}
+                    </div>
+                  )}
+
+                  {auditReview.financial_fingerprint_groups && auditReview.financial_fingerprint_groups.length > 0 && (
+                    <div className="space-y-3">
+                      <div className="rounded-xl px-4 py-3"
+                        style={{ backgroundColor: "rgba(234,179,8,0.10)", border: "1px solid rgba(234,179,8,0.35)" }}>
+                        <h3 className="font-black text-white text-sm">Financial-fingerprint candidates · {auditReview.state}</h3>
+                        <p className="text-xs mt-1" style={{ color: "rgba(245,245,245,0.7)" }}>
+                          These rows share the same state + county + fee vector + months lost. Migration 020 (held)
+                          would auto-collapse each group to a single counted family. <strong>Review each group with
+                          case-type fields visible</strong> — identical financials can come from one person submitted
+                          twice (real duplicate) OR one person with two real cases like CPS + family court (mark
+                          Count separately). Same-email collisions and placeholder-email rows are excluded here so
+                          you do not review them twice.
+                        </p>
+                      </div>
+
+                      {auditReview.financial_fingerprint_groups.map(group => (
+                        <div key={`fp-${group.family_key}`} className="rounded-xl overflow-hidden"
+                          style={{ backgroundColor: "rgba(255,255,255,0.025)", border: "1px solid rgba(234,179,8,0.22)" }}>
+                          <div className="px-4 py-3 flex items-center justify-between gap-3 flex-wrap"
+                            style={{ backgroundColor: "rgba(234,179,8,0.06)", borderBottom: "1px solid rgba(234,179,8,0.16)" }}>
+                            <div className="min-w-0">
+                              <div className="text-xs font-bold text-white">
+                                Financial twin · {group.rows[0]?.case_county || "(no county)"}
+                              </div>
+                              <div className="text-[11px]" style={{ color: "rgba(245,245,245,0.5)" }}>
+                                {group.rows.length} rows · would collapse to 1 family under migration 020
+                              </div>
+                              <div className="text-[10px] mt-1 font-mono break-all" style={{ color: "rgba(245,245,245,0.32)" }}>
+                                {group.family_key}
+                              </div>
+                            </div>
+                          </div>
+
+                          <div className="divide-y divide-white/5">
+                            {group.rows.map(row => {
+                              const fees: Array<[string, number | null]> = [
+                                ["Atty", row.attorney_fees],
+                                ["GAL", row.gal_fees],
+                                ["Therapy", row.therapy_eval_fees],
+                                ["Reunif", row.reunification_fees],
+                                ["Other", row.other_court_actors_fees],
+                                ["Wages", row.lost_wages],
+                                ["Assets", row.asset_liquidation_loss],
+                              ];
+                              return (
+                                <div key={`fp-row-${row.source_table}-${row.id}`} className="px-4 py-4">
+                                  <div className="flex items-start justify-between gap-4 flex-wrap">
+                                    <div className="min-w-0 flex-1">
+                                      <div className="flex items-center gap-2 flex-wrap">
+                                        <span className="font-bold text-sm text-white">{auditReviewName(row)}</span>
+                                        <span className="text-[10px] px-1.5 py-0.5 rounded font-bold uppercase tracking-wide"
+                                          style={{
+                                            backgroundColor: row.source_table === "survey_submissions" ? "rgba(74,222,128,0.14)" : "rgba(59,130,246,0.14)",
+                                            color: row.source_table === "survey_submissions" ? "rgb(134,239,172)" : "rgb(147,197,253)",
+                                            border: row.source_table === "survey_submissions" ? "1px solid rgba(74,222,128,0.28)" : "1px solid rgba(59,130,246,0.25)",
+                                          }}>
+                                          {auditReviewSource(row)}
+                                        </span>
+                                        {row.review_decision === "count_separately" && (
+                                          <span className="text-[10px] px-1.5 py-0.5 rounded font-bold uppercase tracking-wide"
+                                            style={{ backgroundColor: "rgba(234,179,8,0.18)", color: "rgb(253,224,71)", border: "1px solid rgba(234,179,8,0.38)" }}>
+                                            Count separately
+                                          </span>
+                                        )}
+                                        {row.review_decision === "keep" && (
+                                          <span className="text-[10px] px-1.5 py-0.5 rounded font-bold uppercase tracking-wide"
+                                            style={{ backgroundColor: "rgba(74,222,128,0.14)", color: "rgb(134,239,172)", border: "1px solid rgba(74,222,128,0.28)" }}>
+                                            Kept deduped
+                                          </span>
+                                        )}
+                                        {row.is_placeholder_email && (
+                                          <span className="text-[10px] px-1.5 py-0.5 rounded font-bold uppercase tracking-wide"
+                                            style={{ backgroundColor: "rgba(239,68,68,0.16)", color: "rgb(252,165,165)", border: "1px solid rgba(239,68,68,0.38)" }}>
+                                            Placeholder email
+                                          </span>
+                                        )}
+                                      </div>
+                                      <div className="text-[11px] mt-1" style={{ color: "rgba(245,245,245,0.5)" }}>
+                                        {row.email || "no email"} · {shortDate(row.created_at)}
+                                      </div>
+
+                                      {/* Case-type fields — what determines if these are 2 real cases vs 1 dup */}
+                                      <div className="grid grid-cols-2 md:grid-cols-3 gap-2 mt-3">
+                                        {[
+                                          ["System affected", row.system_affected],
+                                          ["Allegation", row.allegation_type],
+                                          ["Custody", row.custody_status],
+                                          ["County", row.case_county],
+                                          ["# of kids", row.number_of_kids],
+                                          ["Time in system", row.time_in_system],
+                                        ].map(([label, value]) => (
+                                          <div key={`fp-case-${row.source_table}-${row.id}-${label}`} className="rounded px-2 py-1.5"
+                                            style={{ backgroundColor: "rgba(0,0,0,0.18)", border: "1px solid rgba(255,255,255,0.05)" }}>
+                                            <div className="text-[9px] uppercase tracking-wide font-bold" style={{ color: "rgba(245,245,245,0.35)" }}>{label}</div>
+                                            <div className="text-[11px] mt-0.5 break-words" style={{ color: "rgba(245,245,245,0.78)" }}>
+                                              {value === null || value === undefined || value === "" ? "—" : String(value)}
+                                            </div>
+                                          </div>
+                                        ))}
+                                      </div>
+
+                                      {/* Fee vector — should be identical across all rows in the group */}
+                                      <div className="flex flex-wrap gap-2 mt-3">
+                                        {fees.map(([label, val]) => (
+                                          <span key={`fp-fee-${row.source_table}-${row.id}-${label}`}
+                                            className="text-[10px] px-2 py-0.5 rounded font-mono"
+                                            style={{ backgroundColor: "rgba(255,255,255,0.04)", color: "rgba(245,245,245,0.55)", border: "1px solid rgba(255,255,255,0.08)" }}>
+                                            {label}: {val === null || val === undefined ? "—" : auditReviewMoney(val)}
+                                          </span>
+                                        ))}
+                                        <span className="text-[10px] px-2 py-0.5 rounded font-mono"
+                                          style={{ backgroundColor: "rgba(255,255,255,0.04)", color: "rgba(245,245,245,0.55)", border: "1px solid rgba(255,255,255,0.08)" }}>
+                                          Mo lost: {row.months_lost_parenting_time ?? "—"}
+                                        </span>
+                                      </div>
+
+                                      <AuditReviewDetails row={row} />
+                                    </div>
+
+                                    <div className="flex items-center gap-2 shrink-0">
+                                      <button
+                                        type="button"
+                                        onClick={() => keepAuditReviewRow(row)}
+                                        disabled={keepingAuditRow === auditRowKey(row)}
+                                        className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide transition-opacity hover:opacity-80"
+                                        style={{ backgroundColor: "rgba(74,222,128,0.08)", color: "rgb(134,239,172)", border: "1px solid rgba(74,222,128,0.22)" }}
+                                        title="Keep this row in Supabase and let the financial-fingerprint dedupe rule (migration 020) collapse it with its twin."
+                                      >
+                                        {keepingAuditRow === auditRowKey(row) ? "Saving…" : row.review_decision === "keep" ? "Kept deduped" : "Keep deduped"}
+                                      </button>
+                                      <button
+                                        type="button"
+                                        onClick={() => countAuditReviewRowSeparately(row)}
+                                        disabled={countingSeparatelyAuditRow === auditRowKey(row)}
+                                        className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide transition-opacity hover:opacity-80 disabled:opacity-40"
+                                        style={{ backgroundColor: "rgba(234,179,8,0.12)", color: "rgb(253,224,71)", border: "1px solid rgba(234,179,8,0.35)" }}
+                                        title="Use this when the rows are real separate cases (e.g. one CPS case and one family court case for the same family) and should not be collapsed."
+                                      >
+                                        {countingSeparatelyAuditRow === auditRowKey(row)
+                                          ? "Saving…"
+                                          : row.review_decision === "count_separately"
+                                            ? "Counting separately"
+                                            : "Count separately"}
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      ))}
                     </div>
                   )}
 
