@@ -132,9 +132,16 @@ export function ActorsBrowser({ visitorEmail, visitorSubmissionId, visitorFirstN
     if (!actors) return [];
     const s = new Set<string>();
     for (const a of actors) {
-      // Use the leading role token (before " + N role(s)")
-      const lead = a.role.split(" + ")[0];
-      if (lead) s.add(lead);
+      // The role label can now be either a single role, multiple roles
+      // joined by " / " (most common case after the multi-role rename),
+      // or "head / head + N more roles" for 4+. Strip the "+ N more
+      // roles" suffix first, then split on " / " to seed the filter
+      // dropdown with every distinct role.
+      const stripped = a.role.split(/\s+\+\s+\d+\s+more/)[0];
+      for (const part of stripped.split(/\s+\/\s+/)) {
+        const trimmed = part.trim();
+        if (trimmed) s.add(trimmed);
+      }
     }
     return Array.from(s).sort();
   }, [actors]);
@@ -621,7 +628,12 @@ function ClaimModal({
   visitorFirstName: string;
   onClose: () => void;
 }) {
-  const updateUrl = `/court-actor-update?submission=${encodeURIComponent(visitorSubmissionId)}&actor_name=${encodeURIComponent(actor.name)}&actor_role=${encodeURIComponent(actor.role.split(" + ")[0])}&actor_county=${encodeURIComponent(actor.county_breakdown.split(" (")[0] || "")}&actor_state=${encodeURIComponent(actor.state_code || "")}`;
+  // Strip "+ N more roles" suffix (4+ role case) then take the first
+  // " / "-separated role for the form pre-fill — the update form expects
+  // a single role value, and the most common role for this actor sorts
+  // first in the API's roleSummary().
+  const primaryRole = actor.role.split(/\s+\+\s+\d+\s+more/)[0].split(/\s+\/\s+/)[0].trim();
+  const updateUrl = `/court-actor-update?submission=${encodeURIComponent(visitorSubmissionId)}&actor_name=${encodeURIComponent(actor.name)}&actor_role=${encodeURIComponent(primaryRole)}&actor_county=${encodeURIComponent(actor.county_breakdown.split(" (")[0] || "")}&actor_state=${encodeURIComponent(actor.state_code || "")}`;
   return (
     <div
       className="fixed inset-0 z-50 flex items-center justify-center px-4 py-8"

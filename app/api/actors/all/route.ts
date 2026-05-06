@@ -60,10 +60,18 @@ function mostFrequent<T>(m: Map<T, number>): T | null {
 }
 
 function roleSummary(roles: Map<string, number>) {
+  // Show every role this actor has been named under, joined by " / ".
+  // Multi-role actors (e.g. an attorney who is also a GAL) are common in
+  // family court, and hiding the secondary role behind "+ 1 role" was
+  // misleading — readers could not tell that the same person shows up
+  // wearing more than one hat. Cap at 3 visible roles to keep card
+  // labels from overflowing; 4+ collapses to "top two + N more roles".
   const sorted = Array.from(roles.entries()).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
   if (sorted.length === 0) return "Court Actor";
-  if (sorted.length === 1) return sorted[0][0];
-  return `${sorted[0][0]} + ${sorted.length - 1} role${sorted.length === 2 ? "" : "s"}`;
+  if (sorted.length <= 3) return sorted.map(s => s[0]).join(" / ");
+  const head = sorted.slice(0, 2).map(s => s[0]).join(" / ");
+  const remaining = sorted.length - 2;
+  return `${head} + ${remaining} more role${remaining === 1 ? "" : "s"}`;
 }
 
 function countyBreakdown(courtCounts: Map<string, number>): string {
