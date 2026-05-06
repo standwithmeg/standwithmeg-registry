@@ -1051,12 +1051,17 @@ export default function SubmitPage() {
 
                 <div>
                   <label className={labelCls} style={{ color: NAVY }}>Permission to Share <span className="text-red-700">*</span></label>
+                  <p className="text-xs mt-1 mb-2" style={{ color: "#4B5563" }}>
+                    <strong style={{ color: NAVY }}>Your data is counted in every option below.</strong>{" "}
+                    Your numbers always add to the family count, financial totals, months-lost averages, and court-actor patterns.
+                    The choice here is only about whether your <em>quote</em> and <em>name</em> appear publicly on the dashboard and state reports.
+                  </p>
                   <div className="space-y-2.5 mt-2">
                     {[
-                      ["anonymous",  "Use my quote anonymously for the project.",          "e.g. \"— Anonymous, Kansas\""],
-                      ["first_name", "Use my quote with my first name only.",              "e.g. \"— Sarah, Kansas\""],
-                      ["data_only",  "For data purposes only (Do not share publicly).",    "Your story informs the data but won't be published."],
-                      ["public",     "Share away! I consent to the public use of all information provided.", "Your full name and story may be published."],
+                      ["anonymous",  "Show my quote anonymously — no name attached",        "Public dashboard shows: \"— Anonymous, Kansas\" · your quote appears, your name never does."],
+                      ["first_name", "Show my quote with my first name only",               "Public dashboard shows: \"— Sarah, Kansas\" · first name + quote appear, last name and identifying details never do."],
+                      ["public",     "Show my quote with my full name",                     "Public dashboard shows: \"— Sarah Steele, Kansas\" · full name + quote may be published."],
+                      ["data_only",  "Count my data only — do not show my quote anywhere",  "Your numbers are added to all totals. Your quote, name, and county never appear publicly. (Pick this only if you do NOT want your words displayed — your story still strengthens the data.)"],
                     ].map(([value, label, example]) => (
                       <label
                         key={value}
