@@ -316,6 +316,8 @@ type ReportingAuditRow = {
   state: string;
   is_us: boolean;
   dashboard_families: number;
+  deduped_view_families: number | null;
+  delta_dashboard_vs_deduped: number | null;
   report_eligible: boolean;
   pdf_available: boolean;
   pdf_index_families: number | null;
@@ -351,18 +353,27 @@ type AuditReviewRow = {
   imported_at: string | null;
   state: string;
   email: string | null;
+  is_placeholder_email: boolean;
   first_name: string | null;
   last_name: string | null;
   case_county: string | null;
   case_status: string | null;
   number_of_kids: number | null;
   system_affected: string | null;
+  allegation_type: string | null;
   time_in_system: string | null;
   custody_status: string | null;
   is_pro_se: string | boolean | null;
   legal_rep_history: string | null;
   months_lost_parenting_time: number | null;
   total_financial_loss: number | string | null;
+  attorney_fees: number | null;
+  gal_fees: number | null;
+  therapy_eval_fees: number | null;
+  reunification_fees: number | null;
+  other_court_actors_fees: number | null;
+  lost_wages: number | null;
+  asset_liquidation_loss: number | null;
   impact_quote: string | null;
   permission_to_share: string | null;
   approved: boolean | null;
@@ -385,8 +396,12 @@ type AuditReviewData = {
     deduped_families: number;
     duplicate_groups: number;
     hidden_by_dedupe: number;
+    placeholder_email_groups?: number;
+    financial_fingerprint_groups?: number;
   };
   duplicate_groups: AuditReviewGroup[];
+  placeholder_email_groups?: AuditReviewGroup[];
+  financial_fingerprint_groups?: AuditReviewGroup[];
   rows: AuditReviewRow[];
 };
 
@@ -652,8 +667,10 @@ export default function AdminPage() {
   const [auditSummary, setAuditSummary] = useState<ReportingAuditSummary | null>(null);
   const [auditError, setAuditError] = useState<string | null>(null);
   const [auditReview, setAuditReview] = useState<AuditReviewData | null>(null);
+  const [auditReviewContext, setAuditReviewContext] = useState<ReportingAuditRow | null>(null);
   const [auditReviewLoading, setAuditReviewLoading] = useState(false);
   const [auditReviewError, setAuditReviewError] = useState<string | null>(null);
+  const [auditReviewFinishing, setAuditReviewFinishing] = useState(false);
   const [deletingAuditRow, setDeletingAuditRow] = useState<string | null>(null);
   const [keepingAuditRow, setKeepingAuditRow] = useState<string | null>(null);
   const [countingSeparatelyAuditRow, setCountingSeparatelyAuditRow] = useState<string | null>(null);
@@ -735,7 +752,27 @@ export default function AdminPage() {
 
   function openAuditReview(row: ReportingAuditRow) {
     setAuditReview(null);
+    setAuditReviewContext(row);
     void loadAuditReview(row.state);
+  }
+
+  async function finishAuditReview() {
+    // Each individual Same family / Different case / Delete decision
+    // already PATCHes the database immediately, so this button is not
+    // what saves the work — it just gives an explicit "I'm done with
+    // this state" action that re-pulls the audit table to confirm the
+    // parent rows reflect the decisions, then closes the modal.
+    setAuditReviewFinishing(true);
+    try {
+      await refreshStatsAndAudit();
+    } catch (err) {
+      console.error("finishAuditReview refresh failed:", err);
+    } finally {
+      setAuditReviewFinishing(false);
+      setAuditReview(null);
+      setAuditReviewContext(null);
+      setAuditReviewError(null);
+    }
   }
 
   const load = useCallback(async () => {
@@ -830,7 +867,7 @@ export default function AdminPage() {
 
   async function countAuditReviewRowSeparately(row: AuditReviewRow) {
     const label = `${row.source_table === "survey_submissions" ? "current survey" : "legacy/import"} row for ${row.email || "no email"} in ${row.state}`;
-    if (!window.confirm(`Count this ${label} as a separate real case/family? This will change dashboard, audit spreadsheet, and next PDF counts.`)) {
+    if (!window.confirm(`Mark this ${label} as a Different case (real separate court matter — could be the same family with another case, or an unrelated family)? This will change dashboard, audit spreadsheet, and next PDF counts.`)) {
       return;
     }
 
@@ -843,10 +880,10 @@ export default function AdminPage() {
         body: JSON.stringify({ id: row.id, source_table: row.source_table, state: row.state, decision: "count_separately" }),
       });
       const data = await res.json().catch(() => ({}));
-      if (!res.ok) throw new Error(data.error || "Count separately failed.");
+      if (!res.ok) throw new Error(data.error || "Different case decision failed to save.");
       await Promise.all([loadAuditReview(row.state), refreshStatsAndAudit()]);
     } catch (err) {
-      window.alert(err instanceof Error ? err.message : "Count separately failed.");
+      window.alert(err instanceof Error ? err.message : "Different case decision failed to save.");
     } finally {
       setCountingSeparatelyAuditRow(null);
     }
@@ -1955,7 +1992,7 @@ export default function AdminPage() {
         <div
           className="fixed inset-0 z-50 flex items-center justify-center p-4"
           style={{ backgroundColor: "rgba(0,0,0,0.72)", backdropFilter: "blur(4px)" }}
-          onClick={e => { if (e.target === e.currentTarget) { setAuditReview(null); setAuditReviewError(null); } }}
+          onClick={e => { if (e.target === e.currentTarget) { setAuditReview(null); setAuditReviewError(null); setAuditReviewContext(null); } }}
         >
           <div className="relative w-full max-w-5xl max-h-[90vh] flex flex-col rounded-2xl overflow-hidden"
             style={{ backgroundColor: "#0F1E30", border: `1px solid rgba(201,162,39,0.35)` }}>
@@ -1967,10 +2004,10 @@ export default function AdminPage() {
                   Review reporting data{auditReview?.state ? ` · ${auditReview.state}` : ""}
                 </div>
                 <div className="text-xs mt-1 max-w-3xl" style={{ color: "rgba(245,245,245,0.45)" }}>
-                  Same-email rows in the same state are counted as one family in dashboard/PDF totals. If a row is a real separate court matter, keep it. Delete only obvious duplicate imports, test rows, or wrong-state records.
+                  For each duplicate group, decide: <strong>Same family</strong> (duplicate import — same family, same case, only one counts), <strong>Different case</strong> (real separate court matter — counts on its own; can be the same family with another case OR unrelated families), or <strong>Delete</strong> (obvious junk import / test row / wrong-state record).
                 </div>
               </div>
-              <button onClick={() => { setAuditReview(null); setAuditReviewError(null); }}
+              <button onClick={() => { setAuditReview(null); setAuditReviewError(null); setAuditReviewContext(null); }}
                 className="w-8 h-8 rounded-lg flex items-center justify-center transition-colors hover:bg-white/10"
                 style={{ color: "rgba(245,245,245,0.5)" }} aria-label="Close">
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1995,6 +2032,94 @@ export default function AdminPage() {
 
               {auditReview && (
                 <>
+                  {/* ── Reporting status panel — what does the mismatch number actually mean? ── */}
+                  {auditReviewContext && (() => {
+                    const ctx = auditReviewContext;
+                    const meta = auditStatusMeta(ctx.reporting_status);
+                    const dashCount = ctx.dashboard_families;
+                    const dedupedCount = ctx.deduped_view_families;
+                    const pdfCount = ctx.pdf_index_families;
+                    const dashVsDeduped = ctx.delta_dashboard_vs_deduped;
+                    const dashVsPdf = pdfCount === null ? null : dashCount - pdfCount;
+                    const numCard = (label: string, value: number | null, hint?: string) => (
+                      <div className="rounded-xl px-4 py-3"
+                        style={{ backgroundColor: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.12)" }}>
+                        <div className="text-[10px] uppercase tracking-wide font-bold" style={{ color: "rgba(245,245,245,0.4)" }}>{label}</div>
+                        <div className="text-2xl font-black mt-1 text-white">{value === null ? "—" : fmtNum(value)}</div>
+                        {hint && <div className="text-[10px] mt-1" style={{ color: "rgba(245,245,245,0.4)" }}>{hint}</div>}
+                      </div>
+                    );
+                    const deltaCard = (label: string, value: number | null, hint: string) => {
+                      const isMismatch = value !== null && value !== 0;
+                      return (
+                        <div className="rounded-xl px-4 py-3"
+                          style={{
+                            backgroundColor: isMismatch ? "rgba(234,179,8,0.10)" : "rgba(74,222,128,0.08)",
+                            border: `1px solid ${isMismatch ? "rgba(234,179,8,0.32)" : "rgba(74,222,128,0.22)"}`,
+                          }}>
+                          <div className="text-[10px] uppercase tracking-wide font-bold" style={{ color: "rgba(245,245,245,0.5)" }}>{label}</div>
+                          <div className="text-2xl font-black mt-1" style={{ color: isMismatch ? "rgb(253,224,71)" : "rgb(134,239,172)" }}>
+                            {value === null ? "—" : (value > 0 ? `+${fmtNum(value)}` : fmtNum(value))}
+                          </div>
+                          <div className="text-[10px] mt-1" style={{ color: "rgba(245,245,245,0.4)" }}>{hint}</div>
+                        </div>
+                      );
+                    };
+                    return (
+                      <div className="rounded-2xl px-5 py-4 space-y-4"
+                        style={{ backgroundColor: "rgba(30,58,95,0.32)", border: "1px solid rgba(201,162,39,0.22)" }}>
+                        <div className="flex items-center justify-between gap-3 flex-wrap">
+                          <div>
+                            <div className="text-[10px] uppercase tracking-wide font-bold" style={{ color: "rgba(245,245,245,0.45)" }}>Reporting status</div>
+                            <div className="text-base font-black text-white mt-0.5">{ctx.state} · {meta.label}</div>
+                          </div>
+                          <span className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide"
+                            style={{
+                              backgroundColor:
+                                ctx.reporting_status === "ok" ? "rgba(74,222,128,0.16)" :
+                                ctx.reporting_status === "count_mismatch" ? "rgba(234,179,8,0.18)" :
+                                ctx.reporting_status === "missing_pdf" ? "rgba(239,68,68,0.16)" :
+                                ctx.reporting_status === "stale_pdf" ? "rgba(96,165,250,0.16)" :
+                                "rgba(255,255,255,0.06)",
+                              color:
+                                ctx.reporting_status === "ok" ? "rgb(134,239,172)" :
+                                ctx.reporting_status === "count_mismatch" ? "rgb(253,224,71)" :
+                                ctx.reporting_status === "missing_pdf" ? "rgb(252,165,165)" :
+                                ctx.reporting_status === "stale_pdf" ? "rgb(147,197,253)" :
+                                "rgba(245,245,245,0.6)",
+                              border: "1px solid rgba(255,255,255,0.16)",
+                            }}>
+                            {ctx.reporting_status.replace("_", " ")}
+                          </span>
+                        </div>
+
+                        <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                          {numCard("Dashboard count", dashCount, "movement_stats_by_state · live")}
+                          {numCard("Deduped view count", dedupedCount, dedupedCount === null ? "view not deployed" : "movement_deduped_submissions · per-row dedup")}
+                          {numCard("PDF index count", pdfCount, pdfCount === null ? "no PDF for this state" : "public/state-reports/index.json")}
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                          {deltaCard("Δ Dashboard vs Deduped view", dashVsDeduped, "Non-zero = financial-fingerprint twins or Different case decisions diverging between the two views")}
+                          {deltaCard("Δ Dashboard vs PDF index", dashVsPdf, "Non-zero = PDF was generated against an older dashboard snapshot (stale PDF)")}
+                        </div>
+
+                        <div className="rounded-xl px-4 py-3 text-xs leading-relaxed"
+                          style={{ backgroundColor: "rgba(0,0,0,0.18)", color: "rgba(245,245,245,0.65)", border: "1px solid rgba(255,255,255,0.06)" }}>
+                          <strong style={{ color: "rgba(245,245,245,0.85)" }}>Three independent things can cause a mismatch:</strong>
+                          <ol className="list-decimal pl-5 mt-1 space-y-1">
+                            <li><strong>Same-email review</strong> — two rows in this state share the same email and need a manual <em>Same family / Different case / Delete</em> decision. Shown below in <em>Rows grouped by same email and state</em>.</li>
+                            <li><strong>Financial-fingerprint review</strong> — two rows share the same county + dollar amounts + months lost (likely dual imports or twins). These do not appear in the same-email section. They will be reviewed via the reconciliation export at <code>outputs/reconciliation/&lt;date&gt;/dedupe-candidates.html</code>, or a future financial-fingerprint section in this modal.</li>
+                            <li><strong>Stale PDF / index</strong> — the dashboard updated since the last PDF regeneration, so the PDF still shows an older count. Fixed by regenerating that state PDF or all PDFs once same-email and financial-fingerprint reviews are resolved.</li>
+                          </ol>
+                          <div className="mt-2" style={{ color: "rgba(245,245,245,0.45)" }}>
+                            Migration 020 (financial-fingerprint dedup) and migration 022 (placeholder-email dedup) are intentionally on hold until the financial-fingerprint candidate groups are reviewed. PDFs are not regenerated until both are applied.
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })()}
+
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                     {[
                       ["Raw rows", auditReview.summary.raw_rows],
@@ -2022,7 +2147,10 @@ export default function AdminPage() {
                       <div>
                         <h3 className="font-black text-white text-sm">Rows grouped by same email and state</h3>
                         <p className="text-xs mt-1" style={{ color: "rgba(245,245,245,0.45)" }}>
-                          The checked row is counted. Use Count separately only for a real second case or court matter; use Keep deduped when the row should stay but count with the same family.
+                          For each row decide:
+                          {" "}<strong style={{ color: "rgba(134,239,172,1)" }}>Same family</strong> (duplicate of its twin — same family, same case, only one counts),
+                          {" "}<strong style={{ color: "rgba(253,224,71,1)" }}>Different case</strong> (real separate court matter — counts on its own; can still be the same family with another case),
+                          {" "}or <strong style={{ color: "rgba(252,165,165,1)" }}>Delete</strong> (obvious junk import, test row, or wrong state — removes the row from Supabase).
                         </p>
                       </div>
 
@@ -2092,10 +2220,23 @@ export default function AdminPage() {
                                           Counted
                                         </span>
                                       )}
+                                      {row.review_decision === "keep" && (
+                                        <span className="text-[10px] px-1.5 py-0.5 rounded font-bold uppercase tracking-wide"
+                                          style={{ backgroundColor: "rgba(74,222,128,0.14)", color: "rgb(134,239,172)", border: "1px solid rgba(74,222,128,0.28)" }}>
+                                          Same family
+                                        </span>
+                                      )}
                                       {row.review_decision === "count_separately" && (
                                         <span className="text-[10px] px-1.5 py-0.5 rounded font-bold uppercase tracking-wide"
                                           style={{ backgroundColor: "rgba(234,179,8,0.18)", color: "rgb(253,224,71)", border: "1px solid rgba(234,179,8,0.38)" }}>
-                                          Count separately
+                                          Different case
+                                        </span>
+                                      )}
+                                      {row.is_placeholder_email && (
+                                        <span className="text-[10px] px-1.5 py-0.5 rounded font-bold uppercase tracking-wide"
+                                          style={{ backgroundColor: "rgba(239,68,68,0.16)", color: "rgb(252,165,165)", border: "1px solid rgba(239,68,68,0.38)" }}
+                                          title="Placeholder email (anonymous@anonymous.com etc). Not auto-deduped — different families often share these.">
+                                          Placeholder email
                                         </span>
                                       )}
                                     </div>
@@ -2126,9 +2267,9 @@ export default function AdminPage() {
                                       disabled={keepingAuditRow === auditRowKey(row)}
                                       className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide transition-opacity hover:opacity-80"
                                       style={{ backgroundColor: "rgba(74,222,128,0.08)", color: "rgb(134,239,172)", border: "1px solid rgba(74,222,128,0.22)" }}
-                                      title="Keep this row in Supabase, but let the normal same-email/state dedupe rule count it with the family."
+                                      title="Same family — this row + its twin are one family. Normal dedup applies, only one counts. Use this for confirmed duplicates."
                                     >
-                                      {keepingAuditRow === auditRowKey(row) ? "Saving…" : row.review_decision === "keep" ? "Kept deduped" : "Keep deduped"}
+                                      {keepingAuditRow === auditRowKey(row) ? "Saving…" : row.review_decision === "keep" ? "Same family ✓" : "Same family"}
                                     </button>
                                     <button
                                       type="button"
@@ -2136,13 +2277,13 @@ export default function AdminPage() {
                                       disabled={countingSeparatelyAuditRow === auditRowKey(row)}
                                       className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide transition-opacity hover:opacity-80 disabled:opacity-40"
                                       style={{ backgroundColor: "rgba(234,179,8,0.12)", color: "rgb(253,224,71)", border: "1px solid rgba(234,179,8,0.35)" }}
-                                      title="Use this only when the row is a real separate case or court matter that should count separately."
+                                      title="Different case — real separate court matter (CPS vs family court, different kids, etc). This row counts on its own. Can still be the same family — they just have more than one case."
                                     >
                                       {countingSeparatelyAuditRow === auditRowKey(row)
                                         ? "Saving…"
                                         : row.review_decision === "count_separately"
-                                          ? "Counting separately"
-                                          : "Count separately"}
+                                          ? "Different case ✓"
+                                          : "Different case"}
                                     </button>
                                     <button
                                       type="button"
@@ -2161,6 +2302,219 @@ export default function AdminPage() {
                         </div>
                         );
                       })}
+                    </div>
+                  )}
+
+                  {auditReview.financial_fingerprint_groups && auditReview.financial_fingerprint_groups.length > 0 && (
+                    <div className="space-y-3">
+                      <div className="rounded-xl px-4 py-3"
+                        style={{ backgroundColor: "rgba(234,179,8,0.10)", border: "1px solid rgba(234,179,8,0.35)" }}>
+                        <h3 className="font-black text-white text-sm">Financial-fingerprint candidates · {auditReview.state}</h3>
+                        <p className="text-xs mt-1" style={{ color: "rgba(245,245,245,0.7)" }}>
+                          These rows share the same state + county + fee vector + months lost. Migration 020 (held)
+                          would auto-collapse each group to a single counted family. <strong>Review each group with
+                          case-type fields visible</strong> — identical financials can come from one person submitted
+                          twice (mark <strong style={{ color: "rgba(134,239,172,1)" }}>Same family</strong>) OR one
+                          person with two real cases like CPS + family court (mark
+                          <strong style={{ color: "rgba(253,224,71,1)" }}> Different case</strong>). Use
+                          <strong style={{ color: "rgba(252,165,165,1)" }}> Delete</strong> for obvious junk — e.g.
+                          a legacy_v1_email_corrupted row that is just a dual-import twin of a current survey row.
+                          Same-email collisions and placeholder-email rows are excluded here so you do not review
+                          them twice.
+                        </p>
+                      </div>
+
+                      {auditReview.financial_fingerprint_groups.map(group => (
+                        <div key={`fp-${group.family_key}`} className="rounded-xl overflow-hidden"
+                          style={{ backgroundColor: "rgba(255,255,255,0.025)", border: "1px solid rgba(234,179,8,0.22)" }}>
+                          <div className="px-4 py-3 flex items-center justify-between gap-3 flex-wrap"
+                            style={{ backgroundColor: "rgba(234,179,8,0.06)", borderBottom: "1px solid rgba(234,179,8,0.16)" }}>
+                            <div className="min-w-0">
+                              <div className="text-xs font-bold text-white">
+                                Financial twin · {group.rows[0]?.case_county || "(no county)"}
+                              </div>
+                              <div className="text-[11px]" style={{ color: "rgba(245,245,245,0.5)" }}>
+                                {group.rows.length} rows · would collapse to 1 family under migration 020
+                              </div>
+                              <div className="text-[10px] mt-1 font-mono break-all" style={{ color: "rgba(245,245,245,0.32)" }}>
+                                {group.family_key}
+                              </div>
+                            </div>
+                          </div>
+
+                          <div className="divide-y divide-white/5">
+                            {group.rows.map(row => {
+                              const fees: Array<[string, number | null]> = [
+                                ["Atty", row.attorney_fees],
+                                ["GAL", row.gal_fees],
+                                ["Therapy", row.therapy_eval_fees],
+                                ["Reunif", row.reunification_fees],
+                                ["Other", row.other_court_actors_fees],
+                                ["Wages", row.lost_wages],
+                                ["Assets", row.asset_liquidation_loss],
+                              ];
+                              return (
+                                <div key={`fp-row-${row.source_table}-${row.id}`} className="px-4 py-4">
+                                  <div className="flex items-start justify-between gap-4 flex-wrap">
+                                    <div className="min-w-0 flex-1">
+                                      <div className="flex items-center gap-2 flex-wrap">
+                                        <span className="font-bold text-sm text-white">{auditReviewName(row)}</span>
+                                        <span className="text-[10px] px-1.5 py-0.5 rounded font-bold uppercase tracking-wide"
+                                          style={{
+                                            backgroundColor: row.source_table === "survey_submissions" ? "rgba(74,222,128,0.14)" : "rgba(59,130,246,0.14)",
+                                            color: row.source_table === "survey_submissions" ? "rgb(134,239,172)" : "rgb(147,197,253)",
+                                            border: row.source_table === "survey_submissions" ? "1px solid rgba(74,222,128,0.28)" : "1px solid rgba(59,130,246,0.25)",
+                                          }}>
+                                          {auditReviewSource(row)}
+                                        </span>
+                                        {row.review_decision === "count_separately" && (
+                                          <span className="text-[10px] px-1.5 py-0.5 rounded font-bold uppercase tracking-wide"
+                                            style={{ backgroundColor: "rgba(234,179,8,0.18)", color: "rgb(253,224,71)", border: "1px solid rgba(234,179,8,0.38)" }}>
+                                            Different case
+                                          </span>
+                                        )}
+                                        {row.review_decision === "keep" && (
+                                          <span className="text-[10px] px-1.5 py-0.5 rounded font-bold uppercase tracking-wide"
+                                            style={{ backgroundColor: "rgba(74,222,128,0.14)", color: "rgb(134,239,172)", border: "1px solid rgba(74,222,128,0.28)" }}>
+                                            Same family
+                                          </span>
+                                        )}
+                                        {row.is_placeholder_email && (
+                                          <span className="text-[10px] px-1.5 py-0.5 rounded font-bold uppercase tracking-wide"
+                                            style={{ backgroundColor: "rgba(239,68,68,0.16)", color: "rgb(252,165,165)", border: "1px solid rgba(239,68,68,0.38)" }}>
+                                            Placeholder email
+                                          </span>
+                                        )}
+                                      </div>
+                                      <div className="text-[11px] mt-1" style={{ color: "rgba(245,245,245,0.5)" }}>
+                                        {row.email || "no email"} · {shortDate(row.created_at)}
+                                      </div>
+
+                                      {/* Case-type fields — what determines if these are 2 real cases vs 1 dup */}
+                                      <div className="grid grid-cols-2 md:grid-cols-3 gap-2 mt-3">
+                                        {[
+                                          ["System affected", row.system_affected],
+                                          ["Allegation", row.allegation_type],
+                                          ["Custody", row.custody_status],
+                                          ["County", row.case_county],
+                                          ["# of kids", row.number_of_kids],
+                                          ["Time in system", row.time_in_system],
+                                        ].map(([label, value]) => (
+                                          <div key={`fp-case-${row.source_table}-${row.id}-${label}`} className="rounded px-2 py-1.5"
+                                            style={{ backgroundColor: "rgba(0,0,0,0.18)", border: "1px solid rgba(255,255,255,0.05)" }}>
+                                            <div className="text-[9px] uppercase tracking-wide font-bold" style={{ color: "rgba(245,245,245,0.35)" }}>{label}</div>
+                                            <div className="text-[11px] mt-0.5 break-words" style={{ color: "rgba(245,245,245,0.78)" }}>
+                                              {value === null || value === undefined || value === "" ? "—" : String(value)}
+                                            </div>
+                                          </div>
+                                        ))}
+                                      </div>
+
+                                      {/* Fee vector — should be identical across all rows in the group */}
+                                      <div className="flex flex-wrap gap-2 mt-3">
+                                        {fees.map(([label, val]) => (
+                                          <span key={`fp-fee-${row.source_table}-${row.id}-${label}`}
+                                            className="text-[10px] px-2 py-0.5 rounded font-mono"
+                                            style={{ backgroundColor: "rgba(255,255,255,0.04)", color: "rgba(245,245,245,0.55)", border: "1px solid rgba(255,255,255,0.08)" }}>
+                                            {label}: {val === null || val === undefined ? "—" : auditReviewMoney(val)}
+                                          </span>
+                                        ))}
+                                        <span className="text-[10px] px-2 py-0.5 rounded font-mono"
+                                          style={{ backgroundColor: "rgba(255,255,255,0.04)", color: "rgba(245,245,245,0.55)", border: "1px solid rgba(255,255,255,0.08)" }}>
+                                          Mo lost: {row.months_lost_parenting_time ?? "—"}
+                                        </span>
+                                      </div>
+
+                                      <AuditReviewDetails row={row} />
+                                    </div>
+
+                                    <div className="flex items-center gap-2 shrink-0">
+                                      <button
+                                        type="button"
+                                        onClick={() => keepAuditReviewRow(row)}
+                                        disabled={keepingAuditRow === auditRowKey(row)}
+                                        className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide transition-opacity hover:opacity-80"
+                                        style={{ backgroundColor: "rgba(74,222,128,0.08)", color: "rgb(134,239,172)", border: "1px solid rgba(74,222,128,0.22)" }}
+                                        title="Same family — this row + its twin are one family. Migration 020 (when applied) will collapse them to 1 counted family."
+                                      >
+                                        {keepingAuditRow === auditRowKey(row) ? "Saving…" : row.review_decision === "keep" ? "Same family ✓" : "Same family"}
+                                      </button>
+                                      <button
+                                        type="button"
+                                        onClick={() => countAuditReviewRowSeparately(row)}
+                                        disabled={countingSeparatelyAuditRow === auditRowKey(row)}
+                                        className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide transition-opacity hover:opacity-80 disabled:opacity-40"
+                                        style={{ backgroundColor: "rgba(234,179,8,0.12)", color: "rgb(253,224,71)", border: "1px solid rgba(234,179,8,0.35)" }}
+                                        title="Different case — real separate cases (e.g. one CPS case and one family court case for the same family, or unrelated families with identical financials). This row counts on its own and is bypassed by migration 020."
+                                      >
+                                        {countingSeparatelyAuditRow === auditRowKey(row)
+                                          ? "Saving…"
+                                          : row.review_decision === "count_separately"
+                                            ? "Different case ✓"
+                                            : "Different case"}
+                                      </button>
+                                      <button
+                                        type="button"
+                                        onClick={() => deleteAuditReviewRow(row)}
+                                        disabled={deletingAuditRow === row.id}
+                                        className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide transition-opacity hover:opacity-80 disabled:opacity-40"
+                                        style={{ backgroundColor: "rgba(185,28,28,0.14)", color: "rgb(252,165,165)", border: "1px solid rgba(185,28,28,0.35)" }}
+                                        title="Delete row — removes from Supabase. Use for obvious junk: a legacy_v1_email_corrupted row that is just a dual-import twin of a current survey row, test rows, or wrong-state imports."
+                                      >
+                                        {deletingAuditRow === row.id ? "Deleting…" : "Delete"}
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  {auditReview.placeholder_email_groups && auditReview.placeholder_email_groups.length > 0 && (
+                    <div className="space-y-3">
+                      <div className="rounded-xl px-4 py-3"
+                        style={{ backgroundColor: "rgba(239,68,68,0.10)", border: "1px solid rgba(239,68,68,0.32)" }}>
+                        <h3 className="font-black text-white text-sm">Rows sharing a placeholder email · {auditReview.state}</h3>
+                        <p className="text-xs mt-1" style={{ color: "rgba(245,245,245,0.7)" }}>
+                          These rows use placeholder addresses (anonymous@anonymous.com, n/a, test@test.com, etc).
+                          They are <strong>NOT auto-deduped</strong> — different families often share placeholder
+                          emails, so each row is counted separately by default. If two rows below really are the
+                          same family, use Merge group inside the same-email section after marking them with the
+                          same real email.
+                        </p>
+                      </div>
+
+                      {auditReview.placeholder_email_groups.map(group => (
+                        <div key={`placeholder-${group.family_key}`} className="rounded-xl overflow-hidden"
+                          style={{ backgroundColor: "rgba(255,255,255,0.025)", border: "1px solid rgba(239,68,68,0.22)" }}>
+                          <div className="px-4 py-3 flex items-center justify-between gap-3 flex-wrap"
+                            style={{ backgroundColor: "rgba(239,68,68,0.08)", borderBottom: "1px solid rgba(239,68,68,0.16)" }}>
+                            <div>
+                              <div className="text-xs font-bold text-white">{group.email || "(placeholder email)"}</div>
+                              <div className="text-[11px]" style={{ color: "rgba(245,245,245,0.5)" }}>
+                                {group.rows.length} rows · counted as {group.rows.length} families (placeholder, not auto-deduped)
+                              </div>
+                            </div>
+                          </div>
+                          <div className="divide-y divide-white/5">
+                            {group.rows.map(row => (
+                              <div key={`placeholder-row-${row.source_table}-${row.id}`} className="px-4 py-3 text-xs">
+                                <div className="flex items-center justify-between gap-3 flex-wrap">
+                                  <div className="min-w-0">
+                                    <span className="font-bold text-white">{auditReviewName(row)}</span>
+                                    <span style={{ color: "rgba(245,245,245,0.4)" }}> · {auditReviewSource(row)} · {shortDate(row.created_at)}</span>
+                                  </div>
+                                </div>
+                                <AuditReviewDetails row={row} />
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
                     </div>
                   )}
 
@@ -2191,6 +2545,55 @@ export default function AdminPage() {
                 </>
               )}
             </div>
+
+            {/* ── Sticky footer — explicit "done with this state" action ── */}
+            {auditReview && (() => {
+              const allGroups = [
+                ...auditReview.duplicate_groups,
+                ...(auditReview.financial_fingerprint_groups ?? []),
+                ...(auditReview.placeholder_email_groups ?? []),
+              ];
+              const totalGroups = allGroups.length;
+              const reviewedGroups = allGroups.filter(g => g.rows.some(r => r.review_decision !== null)).length;
+              const allReviewed = totalGroups > 0 && reviewedGroups === totalGroups;
+              const stateLabel = auditReview.state || "this state";
+              return (
+                <div className="px-6 py-3 flex items-center justify-between gap-3 flex-wrap flex-shrink-0"
+                  style={{ borderTop: "1px solid rgba(201,162,39,0.2)", backgroundColor: "rgba(15,30,48,0.94)" }}>
+                  <div className="text-xs" style={{ color: "rgba(245,245,245,0.55)" }}>
+                    {totalGroups === 0 ? (
+                      <>No review groups for {stateLabel}. Decisions auto-save as you click — close when ready.</>
+                    ) : (
+                      <>
+                        <strong style={{ color: "rgba(245,245,245,0.85)" }}>{reviewedGroups}</strong>
+                        <span> of </span>
+                        <strong style={{ color: "rgba(245,245,245,0.85)" }}>{totalGroups}</strong>
+                        <span> groups reviewed in {stateLabel}. Each Same family / Different case / Delete saves immediately — this button just refreshes the audit table and closes.</span>
+                      </>
+                    )}
+                  </div>
+                  <button
+                    type="button"
+                    onClick={finishAuditReview}
+                    disabled={auditReviewFinishing}
+                    className="text-xs px-4 py-2 rounded-lg font-bold uppercase tracking-wide transition-opacity hover:opacity-90 disabled:opacity-50"
+                    style={{
+                      backgroundColor: allReviewed ? "rgba(201,162,39,0.92)" : "rgba(201,162,39,0.18)",
+                      color: allReviewed ? "rgb(15,30,48)" : GOLD,
+                      border: `1px solid ${allReviewed ? "rgba(201,162,39,0.95)" : "rgba(201,162,39,0.45)"}`,
+                    }}
+                    title={allReviewed
+                      ? `All ${totalGroups} groups in ${stateLabel} reviewed. Refresh the audit table and close the modal.`
+                      : `Refresh the audit table and close. You can reopen ${stateLabel} any time to keep reviewing.`}>
+                    {auditReviewFinishing
+                      ? "Refreshing…"
+                      : allReviewed
+                        ? `Done with ${stateLabel} — save & close`
+                        : `Close ${stateLabel} & refresh`}
+                  </button>
+                </div>
+              );
+            })()}
           </div>
         </div>
       )}

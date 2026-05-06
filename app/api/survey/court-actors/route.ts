@@ -68,10 +68,14 @@ function mostFrequent<T>(m: Map<T, number>): T | null {
 }
 
 function roleSummary(roles: Map<string, number>) {
+  // Show every role this actor has been named under, joined by " / ".
+  // Mirrors app/api/actors/all/route.ts.
   const sorted = Array.from(roles.entries()).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
   if (sorted.length === 0) return "Court Actor";
-  if (sorted.length === 1) return sorted[0][0];
-  return `${sorted[0][0]} + ${sorted.length - 1} role${sorted.length === 2 ? "" : "s"}`;
+  if (sorted.length <= 3) return sorted.map(s => s[0]).join(" / ");
+  const head = sorted.slice(0, 2).map(s => s[0]).join(" / ");
+  const remaining = sorted.length - 2;
+  return `${head} + ${remaining} more role${remaining === 1 ? "" : "s"}`;
 }
 
 export async function GET(request: Request) {

@@ -49,6 +49,8 @@ type AuditRow = {
   state: string;
   is_us: boolean;
   dashboard_families: number;
+  deduped_view_families: number | null;
+  delta_dashboard_vs_deduped: number | null;
   report_eligible: boolean;
   pdf_available: boolean;
   pdf_index_families: number | null;
@@ -106,6 +108,8 @@ function toCsv(rows: AuditRow[]) {
   const columns: Array<[keyof AuditRow, string]> = [
     ["state", "State"],
     ["dashboard_families", "Dashboard Families"],
+    ["deduped_view_families", "Deduped View Families"],
+    ["delta_dashboard_vs_deduped", "Δ Dashboard vs Deduped"],
     ["report_eligible", "30+ Eligible"],
     ["pdf_available", "PDF Available"],
     ["pdf_index_families", "PDF Index Families"],
@@ -154,6 +158,36 @@ async function fetchQuoteCounts(adminSupabase: ReturnType<typeof createAdminSupa
     from += pageSize;
   }
 
+  return counts;
+}
+
+async function fetchDedupedViewCounts(
+  adminSupabase: ReturnType<typeof createAdminSupabaseClient>,
+): Promise<Record<string, number> | null> {
+  // Per-state row count from movement_deduped_submissions (migration 021).
+  // Returns null when the view does not exist yet, so the audit endpoint
+  // gracefully degrades to "deduped view not deployed" rather than 500'ing.
+  const counts: Record<string, number> = {};
+  const pageSize = 1000;
+  let from = 0;
+  while (true) {
+    const { data, error } = await adminSupabase
+      .from("movement_deduped_submissions")
+      .select("state")
+      .range(from, from + pageSize - 1);
+    if (error) {
+      // 42P01 = relation does not exist (view not deployed yet)
+      if (error.code === "42P01") return null;
+      throw error;
+    }
+    if (!data || data.length === 0) break;
+    for (const row of data as Array<{ state: string | null }>) {
+      const key = String(row.state ?? "").trim();
+      if (key) counts[key] = (counts[key] ?? 0) + 1;
+    }
+    if (data.length < pageSize) break;
+    from += pageSize;
+  }
   return counts;
 }
 
@@ -220,10 +254,11 @@ export async function GET(request: Request) {
     const wantsCsv = searchParams.get("format") === "csv";
     const adminSupabase = createAdminSupabaseClient();
 
-    const [statsResult, quoteCounts, actorCounts] = await Promise.all([
+    const [statsResult, quoteCounts, actorCounts, dedupedCounts] = await Promise.all([
       adminSupabase.from("movement_stats_by_state").select("*"),
       fetchQuoteCounts(adminSupabase),
       fetchPublicActorCounts(adminSupabase),
+      fetchDedupedViewCounts(adminSupabase),
     ]);
 
     if (statsResult.error) throw statsResult.error;
@@ -248,10 +283,14 @@ export async function GET(request: Request) {
         const report = reportsByState.get(state);
         const dashboardFamilies = Number(row?.total_submissions ?? 0);
         const pdfFamilies = report?.submissions ?? null;
+        const dedupedFamilies = dedupedCounts ? (dedupedCounts[state] ?? 0) : null;
         return {
           state,
           is_us: row?.is_us ?? /^[A-Z]{2}$/.test(state),
           dashboard_families: dashboardFamilies,
+          deduped_view_families: dedupedFamilies,
+          delta_dashboard_vs_deduped:
+            dedupedFamilies === null ? null : dashboardFamilies - dedupedFamilies,
           report_eligible: !!row?.is_us && dashboardFamilies >= REPORT_THRESHOLD,
           pdf_available: !!report,
           pdf_index_families: pdfFamilies,
