@@ -757,11 +757,11 @@ export default function AdminPage() {
   }
 
   async function finishAuditReview() {
-    // Each individual Keep / Count separately / Delete decision already
-    // PATCHes the database immediately, so this button is not what saves
-    // the work — it just gives an explicit "I'm done with this state"
-    // action that re-pulls the audit table to confirm the parent rows
-    // reflect the decisions, then closes the modal.
+    // Each individual Same family / Different family / Delete decision
+    // already PATCHes the database immediately, so this button is not
+    // what saves the work — it just gives an explicit "I'm done with
+    // this state" action that re-pulls the audit table to confirm the
+    // parent rows reflect the decisions, then closes the modal.
     setAuditReviewFinishing(true);
     try {
       await refreshStatsAndAudit();
@@ -867,7 +867,7 @@ export default function AdminPage() {
 
   async function countAuditReviewRowSeparately(row: AuditReviewRow) {
     const label = `${row.source_table === "survey_submissions" ? "current survey" : "legacy/import"} row for ${row.email || "no email"} in ${row.state}`;
-    if (!window.confirm(`Count this ${label} as a separate real case/family? This will change dashboard, audit spreadsheet, and next PDF counts.`)) {
+    if (!window.confirm(`Mark this ${label} as a Different family (real separate case/court matter)? This will change dashboard, audit spreadsheet, and next PDF counts.`)) {
       return;
     }
 
@@ -880,10 +880,10 @@ export default function AdminPage() {
         body: JSON.stringify({ id: row.id, source_table: row.source_table, state: row.state, decision: "count_separately" }),
       });
       const data = await res.json().catch(() => ({}));
-      if (!res.ok) throw new Error(data.error || "Count separately failed.");
+      if (!res.ok) throw new Error(data.error || "Different family decision failed to save.");
       await Promise.all([loadAuditReview(row.state), refreshStatsAndAudit()]);
     } catch (err) {
-      window.alert(err instanceof Error ? err.message : "Count separately failed.");
+      window.alert(err instanceof Error ? err.message : "Different family decision failed to save.");
     } finally {
       setCountingSeparatelyAuditRow(null);
     }
@@ -2004,7 +2004,7 @@ export default function AdminPage() {
                   Review reporting data{auditReview?.state ? ` · ${auditReview.state}` : ""}
                 </div>
                 <div className="text-xs mt-1 max-w-3xl" style={{ color: "rgba(245,245,245,0.45)" }}>
-                  Same-email rows in the same state are counted as one family in dashboard/PDF totals. If a row is a real separate court matter, keep it. Delete only obvious duplicate imports, test rows, or wrong-state records.
+                  For each duplicate group, decide: <strong>Same family</strong> (one family, one count), <strong>Different family</strong> (real separate case — counts on its own), or <strong>Delete</strong> (obvious junk import / test row / wrong-state record).
                 </div>
               </div>
               <button onClick={() => { setAuditReview(null); setAuditReviewError(null); setAuditReviewContext(null); }}
@@ -2100,7 +2100,7 @@ export default function AdminPage() {
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                          {deltaCard("Δ Dashboard vs Deduped view", dashVsDeduped, "Non-zero = financial-fingerprint or count_separately divergence between the two views")}
+                          {deltaCard("Δ Dashboard vs Deduped view", dashVsDeduped, "Non-zero = financial-fingerprint twins or Different family decisions diverging between the two views")}
                           {deltaCard("Δ Dashboard vs PDF index", dashVsPdf, "Non-zero = PDF was generated against an older dashboard snapshot (stale PDF)")}
                         </div>
 
@@ -2108,7 +2108,7 @@ export default function AdminPage() {
                           style={{ backgroundColor: "rgba(0,0,0,0.18)", color: "rgba(245,245,245,0.65)", border: "1px solid rgba(255,255,255,0.06)" }}>
                           <strong style={{ color: "rgba(245,245,245,0.85)" }}>Three independent things can cause a mismatch:</strong>
                           <ol className="list-decimal pl-5 mt-1 space-y-1">
-                            <li><strong>Same-email review</strong> — two rows in this state share the same email and need a manual keep / delete / count separately decision. Shown below in <em>Rows grouped by same email and state</em>.</li>
+                            <li><strong>Same-email review</strong> — two rows in this state share the same email and need a manual <em>Same family / Different family / Delete</em> decision. Shown below in <em>Rows grouped by same email and state</em>.</li>
                             <li><strong>Financial-fingerprint review</strong> — two rows share the same county + dollar amounts + months lost (likely dual imports or twins). These do not appear in the same-email section. They will be reviewed via the reconciliation export at <code>outputs/reconciliation/&lt;date&gt;/dedupe-candidates.html</code>, or a future financial-fingerprint section in this modal.</li>
                             <li><strong>Stale PDF / index</strong> — the dashboard updated since the last PDF regeneration, so the PDF still shows an older count. Fixed by regenerating that state PDF or all PDFs once same-email and financial-fingerprint reviews are resolved.</li>
                           </ol>
@@ -2147,7 +2147,10 @@ export default function AdminPage() {
                       <div>
                         <h3 className="font-black text-white text-sm">Rows grouped by same email and state</h3>
                         <p className="text-xs mt-1" style={{ color: "rgba(245,245,245,0.45)" }}>
-                          The checked row is counted. Use Count separately only for a real second case or court matter; use Keep deduped when the row should stay but count with the same family.
+                          For each row decide:
+                          {" "}<strong style={{ color: "rgba(134,239,172,1)" }}>Same family</strong> (this row + its twin = 1 family count, normal dedup applies),
+                          {" "}<strong style={{ color: "rgba(253,224,71,1)" }}>Different family</strong> (real separate case — this row counts on its own),
+                          {" "}or <strong style={{ color: "rgba(252,165,165,1)" }}>Delete</strong> (obvious junk import, test row, or wrong state — removes the row from Supabase).
                         </p>
                       </div>
 
@@ -2217,10 +2220,16 @@ export default function AdminPage() {
                                           Counted
                                         </span>
                                       )}
+                                      {row.review_decision === "keep" && (
+                                        <span className="text-[10px] px-1.5 py-0.5 rounded font-bold uppercase tracking-wide"
+                                          style={{ backgroundColor: "rgba(74,222,128,0.14)", color: "rgb(134,239,172)", border: "1px solid rgba(74,222,128,0.28)" }}>
+                                          Same family
+                                        </span>
+                                      )}
                                       {row.review_decision === "count_separately" && (
                                         <span className="text-[10px] px-1.5 py-0.5 rounded font-bold uppercase tracking-wide"
                                           style={{ backgroundColor: "rgba(234,179,8,0.18)", color: "rgb(253,224,71)", border: "1px solid rgba(234,179,8,0.38)" }}>
-                                          Count separately
+                                          Different family
                                         </span>
                                       )}
                                       {row.is_placeholder_email && (
@@ -2258,9 +2267,9 @@ export default function AdminPage() {
                                       disabled={keepingAuditRow === auditRowKey(row)}
                                       className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide transition-opacity hover:opacity-80"
                                       style={{ backgroundColor: "rgba(74,222,128,0.08)", color: "rgb(134,239,172)", border: "1px solid rgba(74,222,128,0.22)" }}
-                                      title="Keep this row in Supabase, but let the normal same-email/state dedupe rule count it with the family."
+                                      title="Same family — this row + its twin are one family. Normal dedup applies, only one counts. Use this for confirmed duplicates."
                                     >
-                                      {keepingAuditRow === auditRowKey(row) ? "Saving…" : row.review_decision === "keep" ? "Kept deduped" : "Keep deduped"}
+                                      {keepingAuditRow === auditRowKey(row) ? "Saving…" : row.review_decision === "keep" ? "Same family ✓" : "Same family"}
                                     </button>
                                     <button
                                       type="button"
@@ -2268,13 +2277,13 @@ export default function AdminPage() {
                                       disabled={countingSeparatelyAuditRow === auditRowKey(row)}
                                       className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide transition-opacity hover:opacity-80 disabled:opacity-40"
                                       style={{ backgroundColor: "rgba(234,179,8,0.12)", color: "rgb(253,224,71)", border: "1px solid rgba(234,179,8,0.35)" }}
-                                      title="Use this only when the row is a real separate case or court matter that should count separately."
+                                      title="Different family — real separate case or court matter (CPS vs family court, different kids, etc). This row counts as its own family."
                                     >
                                       {countingSeparatelyAuditRow === auditRowKey(row)
                                         ? "Saving…"
                                         : row.review_decision === "count_separately"
-                                          ? "Counting separately"
-                                          : "Count separately"}
+                                          ? "Different family ✓"
+                                          : "Different family"}
                                     </button>
                                     <button
                                       type="button"
@@ -2305,9 +2314,13 @@ export default function AdminPage() {
                           These rows share the same state + county + fee vector + months lost. Migration 020 (held)
                           would auto-collapse each group to a single counted family. <strong>Review each group with
                           case-type fields visible</strong> — identical financials can come from one person submitted
-                          twice (real duplicate) OR one person with two real cases like CPS + family court (mark
-                          Count separately). Same-email collisions and placeholder-email rows are excluded here so
-                          you do not review them twice.
+                          twice (mark <strong style={{ color: "rgba(134,239,172,1)" }}>Same family</strong>) OR one
+                          person with two real cases like CPS + family court (mark
+                          <strong style={{ color: "rgba(253,224,71,1)" }}> Different family</strong>). Use
+                          <strong style={{ color: "rgba(252,165,165,1)" }}> Delete</strong> for obvious junk — e.g.
+                          a legacy_v1_email_corrupted row that is just a dual-import twin of a current survey row.
+                          Same-email collisions and placeholder-email rows are excluded here so you do not review
+                          them twice.
                         </p>
                       </div>
 
@@ -2357,13 +2370,13 @@ export default function AdminPage() {
                                         {row.review_decision === "count_separately" && (
                                           <span className="text-[10px] px-1.5 py-0.5 rounded font-bold uppercase tracking-wide"
                                             style={{ backgroundColor: "rgba(234,179,8,0.18)", color: "rgb(253,224,71)", border: "1px solid rgba(234,179,8,0.38)" }}>
-                                            Count separately
+                                            Different family
                                           </span>
                                         )}
                                         {row.review_decision === "keep" && (
                                           <span className="text-[10px] px-1.5 py-0.5 rounded font-bold uppercase tracking-wide"
                                             style={{ backgroundColor: "rgba(74,222,128,0.14)", color: "rgb(134,239,172)", border: "1px solid rgba(74,222,128,0.28)" }}>
-                                            Kept deduped
+                                            Same family
                                           </span>
                                         )}
                                         {row.is_placeholder_email && (
@@ -2422,9 +2435,9 @@ export default function AdminPage() {
                                         disabled={keepingAuditRow === auditRowKey(row)}
                                         className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide transition-opacity hover:opacity-80"
                                         style={{ backgroundColor: "rgba(74,222,128,0.08)", color: "rgb(134,239,172)", border: "1px solid rgba(74,222,128,0.22)" }}
-                                        title="Keep this row in Supabase and let the financial-fingerprint dedupe rule (migration 020) collapse it with its twin."
+                                        title="Same family — this row + its twin are one family. Migration 020 (when applied) will collapse them to 1 counted family."
                                       >
-                                        {keepingAuditRow === auditRowKey(row) ? "Saving…" : row.review_decision === "keep" ? "Kept deduped" : "Keep deduped"}
+                                        {keepingAuditRow === auditRowKey(row) ? "Saving…" : row.review_decision === "keep" ? "Same family ✓" : "Same family"}
                                       </button>
                                       <button
                                         type="button"
@@ -2432,13 +2445,23 @@ export default function AdminPage() {
                                         disabled={countingSeparatelyAuditRow === auditRowKey(row)}
                                         className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide transition-opacity hover:opacity-80 disabled:opacity-40"
                                         style={{ backgroundColor: "rgba(234,179,8,0.12)", color: "rgb(253,224,71)", border: "1px solid rgba(234,179,8,0.35)" }}
-                                        title="Use this when the rows are real separate cases (e.g. one CPS case and one family court case for the same family) and should not be collapsed."
+                                        title="Different family — real separate cases (e.g. one CPS case and one family court case for the same person, or unrelated families with identical financials). This row counts as its own family and is bypassed by migration 020."
                                       >
                                         {countingSeparatelyAuditRow === auditRowKey(row)
                                           ? "Saving…"
                                           : row.review_decision === "count_separately"
-                                            ? "Counting separately"
-                                            : "Count separately"}
+                                            ? "Different family ✓"
+                                            : "Different family"}
+                                      </button>
+                                      <button
+                                        type="button"
+                                        onClick={() => deleteAuditReviewRow(row)}
+                                        disabled={deletingAuditRow === row.id}
+                                        className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide transition-opacity hover:opacity-80 disabled:opacity-40"
+                                        style={{ backgroundColor: "rgba(185,28,28,0.14)", color: "rgb(252,165,165)", border: "1px solid rgba(185,28,28,0.35)" }}
+                                        title="Delete row — removes from Supabase. Use for obvious junk: a legacy_v1_email_corrupted row that is just a dual-import twin of a current survey row, test rows, or wrong-state imports."
+                                      >
+                                        {deletingAuditRow === row.id ? "Deleting…" : "Delete"}
                                       </button>
                                     </div>
                                   </div>
@@ -2545,7 +2568,7 @@ export default function AdminPage() {
                         <strong style={{ color: "rgba(245,245,245,0.85)" }}>{reviewedGroups}</strong>
                         <span> of </span>
                         <strong style={{ color: "rgba(245,245,245,0.85)" }}>{totalGroups}</strong>
-                        <span> groups reviewed in {stateLabel}. Each Keep / Count separately / Delete saves immediately — this button just refreshes the audit table and closes.</span>
+                        <span> groups reviewed in {stateLabel}. Each Same family / Different family / Delete saves immediately — this button just refreshes the audit table and closes.</span>
                       </>
                     )}
                   </div>
