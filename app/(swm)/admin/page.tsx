@@ -670,6 +670,7 @@ export default function AdminPage() {
   const [auditReviewContext, setAuditReviewContext] = useState<ReportingAuditRow | null>(null);
   const [auditReviewLoading, setAuditReviewLoading] = useState(false);
   const [auditReviewError, setAuditReviewError] = useState<string | null>(null);
+  const [auditReviewFinishing, setAuditReviewFinishing] = useState(false);
   const [deletingAuditRow, setDeletingAuditRow] = useState<string | null>(null);
   const [keepingAuditRow, setKeepingAuditRow] = useState<string | null>(null);
   const [countingSeparatelyAuditRow, setCountingSeparatelyAuditRow] = useState<string | null>(null);
@@ -753,6 +754,25 @@ export default function AdminPage() {
     setAuditReview(null);
     setAuditReviewContext(row);
     void loadAuditReview(row.state);
+  }
+
+  async function finishAuditReview() {
+    // Each individual Keep / Count separately / Delete decision already
+    // PATCHes the database immediately, so this button is not what saves
+    // the work — it just gives an explicit "I'm done with this state"
+    // action that re-pulls the audit table to confirm the parent rows
+    // reflect the decisions, then closes the modal.
+    setAuditReviewFinishing(true);
+    try {
+      await refreshStatsAndAudit();
+    } catch (err) {
+      console.error("finishAuditReview refresh failed:", err);
+    } finally {
+      setAuditReviewFinishing(false);
+      setAuditReview(null);
+      setAuditReviewContext(null);
+      setAuditReviewError(null);
+    }
   }
 
   const load = useCallback(async () => {
@@ -2502,6 +2522,55 @@ export default function AdminPage() {
                 </>
               )}
             </div>
+
+            {/* ── Sticky footer — explicit "done with this state" action ── */}
+            {auditReview && (() => {
+              const allGroups = [
+                ...auditReview.duplicate_groups,
+                ...(auditReview.financial_fingerprint_groups ?? []),
+                ...(auditReview.placeholder_email_groups ?? []),
+              ];
+              const totalGroups = allGroups.length;
+              const reviewedGroups = allGroups.filter(g => g.rows.some(r => r.review_decision !== null)).length;
+              const allReviewed = totalGroups > 0 && reviewedGroups === totalGroups;
+              const stateLabel = auditReview.state || "this state";
+              return (
+                <div className="px-6 py-3 flex items-center justify-between gap-3 flex-wrap flex-shrink-0"
+                  style={{ borderTop: "1px solid rgba(201,162,39,0.2)", backgroundColor: "rgba(15,30,48,0.94)" }}>
+                  <div className="text-xs" style={{ color: "rgba(245,245,245,0.55)" }}>
+                    {totalGroups === 0 ? (
+                      <>No review groups for {stateLabel}. Decisions auto-save as you click — close when ready.</>
+                    ) : (
+                      <>
+                        <strong style={{ color: "rgba(245,245,245,0.85)" }}>{reviewedGroups}</strong>
+                        <span> of </span>
+                        <strong style={{ color: "rgba(245,245,245,0.85)" }}>{totalGroups}</strong>
+                        <span> groups reviewed in {stateLabel}. Each Keep / Count separately / Delete saves immediately — this button just refreshes the audit table and closes.</span>
+                      </>
+                    )}
+                  </div>
+                  <button
+                    type="button"
+                    onClick={finishAuditReview}
+                    disabled={auditReviewFinishing}
+                    className="text-xs px-4 py-2 rounded-lg font-bold uppercase tracking-wide transition-opacity hover:opacity-90 disabled:opacity-50"
+                    style={{
+                      backgroundColor: allReviewed ? "rgba(201,162,39,0.92)" : "rgba(201,162,39,0.18)",
+                      color: allReviewed ? "rgb(15,30,48)" : GOLD,
+                      border: `1px solid ${allReviewed ? "rgba(201,162,39,0.95)" : "rgba(201,162,39,0.45)"}`,
+                    }}
+                    title={allReviewed
+                      ? `All ${totalGroups} groups in ${stateLabel} reviewed. Refresh the audit table and close the modal.`
+                      : `Refresh the audit table and close. You can reopen ${stateLabel} any time to keep reviewing.`}>
+                    {auditReviewFinishing
+                      ? "Refreshing…"
+                      : allReviewed
+                        ? `Done with ${stateLabel} — save & close`
+                        : `Close ${stateLabel} & refresh`}
+                  </button>
+                </div>
+              );
+            })()}
           </div>
         </div>
       )}
