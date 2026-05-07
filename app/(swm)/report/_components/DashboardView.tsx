@@ -237,7 +237,7 @@ export function DashboardView() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg font-bold text-sm transition-colors hover:opacity-90"
               style={{ backgroundColor: GOLD, color: BG }}>
-              Donate →
+              Donate to Keep This Public →
             </a>
             <button onClick={() => setInviteOpen(true)}
               className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg font-bold text-sm transition-colors"
@@ -256,8 +256,7 @@ export function DashboardView() {
           {/* Mini donate ask — primes the gold Donate button above */}
           <p className="text-xs md:text-sm mt-5 max-w-lg mx-auto italic leading-relaxed"
             style={{ color: "rgba(201,162,39,0.7)" }}>
-            Without donations, I have to stop. If everyone reading this gave just{" "}
-            <strong style={{ color: GOLD }}>$5</strong>, I could keep going.
+            Donations help keep the Stand With Meg registry, public dashboard, state reports, and family-submitted documentation online, searchable, and free for the families who need it.
           </p>
         </div>
       </header>
@@ -477,29 +476,23 @@ export function DashboardView() {
             style={{ backgroundColor: "rgba(201,162,39,0.10)" }}>
             <div className="text-xs font-bold uppercase tracking-widest mb-3"
               style={{ color: "rgba(201,162,39,0.7)" }}>
-              Why I&rsquo;m asking
+              Why donations matter
             </div>
             <h3 className="text-2xl md:text-3xl font-black text-white mb-4 max-w-2xl mx-auto leading-tight">
-              Without donations, I have to stop.
+              Keep this record public and free.
             </h3>
             <p className="text-sm mb-4 max-w-xl mx-auto leading-relaxed" style={{ color: "rgba(245,245,245,0.7)" }}>
-              Stand With Meg runs on real money &mdash; hosting, document storage, the state
-              reports, the platform you&rsquo;re using right now. There&rsquo;s no foundation behind this.
-              No grants. No salary. Just me, paying out of pocket while raising my kids and
-              fighting my own case in court.
+              Donations help keep the Stand With Meg registry, public dashboard, state reports, and family-submitted documentation online, searchable, and free for the families who need it.
             </p>
             <p className="text-sm mb-6 max-w-xl mx-auto leading-relaxed" style={{ color: "rgba(245,245,245,0.75)" }}>
-              If everyone reading this gave just <strong className="text-white">$5</strong>, I could
-              keep going. That&rsquo;s all it would take. <strong className="text-white">$5 once</strong> helps.
-              <strong className="text-white"> $5 a month</strong> is what keeps this record alive
-              for the families who come after.
+              Stand With Meg runs on hosting, document storage, and the platform powering the state reports and public dashboard. Recurring contributions are what keep this record online and accessible to the families who come after.
             </p>
             <a href={DONATION_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block text-base px-8 py-4 rounded-xl font-black tracking-wide transition-colors hover:opacity-90"
               style={{ backgroundColor: GOLD, color: BG }}>
-              Donate via PayPal →
+              Support the Registry →
             </a>
             <p className="text-xs mt-5 max-w-md mx-auto leading-relaxed"
               style={{ color: "rgba(245,245,245,0.4)" }}>

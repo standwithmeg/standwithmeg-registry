@@ -238,9 +238,8 @@ export function ActorsBrowser({ visitorEmail, visitorSubmissionId, visitorFirstN
           }}
         >
           <p className="text-sm md:text-base text-white/85 leading-relaxed flex-1">
-            <span className="font-bold text-white">Without donations, I have to stop.</span>{" "}
-            This registry, the hosting, the state PDFs &mdash; it&rsquo;s all paid for out of pocket. If everyone reading this gave just{" "}
-            <strong className="text-white">$5</strong>, I could keep going.
+            <span className="font-bold text-white">Keep the actor registry public.</span>{" "}
+            Donations help keep the court actor registry public, searchable, and available to families documenting repeated patterns across courts, counties, and agencies.
           </p>
           <a
             href={DONATION_URL}
@@ -249,7 +248,7 @@ export function ActorsBrowser({ visitorEmail, visitorSubmissionId, visitorFirstN
             className="shrink-0 inline-flex items-center justify-center px-5 py-3 rounded-lg font-bold text-sm hover:opacity-90 transition-opacity"
             style={{ backgroundColor: "#B91C1C", color: "white" }}
           >
-            Donate $5 →
+            Help Keep the Actor Registry Public →
           </a>
         </div>
 
@@ -446,7 +445,7 @@ export function ActorsBrowser({ visitorEmail, visitorSubmissionId, visitorFirstN
               className="px-5 py-3 rounded-lg font-bold text-sm text-center hover:opacity-90 transition-opacity"
               style={{ backgroundColor: "#B91C1C", color: "white" }}
             >
-              Donate →
+              Support the Actor Registry →
             </a>
             <a
               href="/survey"
@@ -471,22 +470,16 @@ export function ActorsBrowser({ visitorEmail, visitorSubmissionId, visitorFirstN
               className="text-xs font-bold uppercase tracking-widest mb-3"
               style={{ color: "rgba(201,162,39,0.7)" }}
             >
-              Why I&rsquo;m asking
+              Why donations matter
             </div>
             <h3 className="text-2xl md:text-3xl font-black text-white mb-4 max-w-2xl mx-auto leading-tight">
-              Without donations, I have to stop.
+              Keep this record public and free.
             </h3>
             <p className="text-sm mb-4 max-w-xl mx-auto leading-relaxed text-white/75">
-              Stand With Meg runs on real money &mdash; hosting, document storage, the state
-              reports, this registry you&rsquo;re using right now. There&rsquo;s no foundation behind this.
-              No grants. No salary. Just me, paying out of pocket while raising my kids and
-              fighting my own case in court.
+              Donations help keep the court actor registry public, searchable, and available to families documenting repeated patterns across courts, counties, and agencies.
             </p>
             <p className="text-sm mb-6 max-w-xl mx-auto leading-relaxed text-white/80">
-              If everyone reading this gave just <strong className="text-white">$5</strong>, I could
-              keep going. <strong className="text-white">$5 once</strong> helps.
-              <strong className="text-white"> $5 a month</strong> is what keeps this record alive
-              for the families who come after.
+              Stand With Meg runs on hosting, document storage, and the platform powering the state reports, public dashboard, and this actor registry. Recurring contributions are what keep this record online and accessible to the families who come after.
             </p>
             <a
               href={DONATION_URL}
@@ -495,7 +488,7 @@ export function ActorsBrowser({ visitorEmail, visitorSubmissionId, visitorFirstN
               className="inline-block text-base px-8 py-4 rounded-xl font-black tracking-wide transition-colors hover:opacity-90"
               style={{ backgroundColor: GOLD, color: NAVY_DEEP }}
             >
-              Donate via PayPal →
+              Keep This Record Public →
             </a>
             <p className="text-xs mt-5 max-w-md mx-auto leading-relaxed text-white/40">
               PayPal and major cards accepted. Worldwide donors welcome &mdash; works in 200+ countries.
