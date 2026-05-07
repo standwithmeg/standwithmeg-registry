@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Family Rights Survey",
   description:
-    "Share your family court or child welfare experience with the Stand With Meg Family Rights Registry. Anonymous, first-name, public, and data-only options are available.",
+    "Share your family court or child welfare story in the Stand With Meg registry. Choose anonymous, first-name, public, or data-only options.",
   alternates: {
     canonical: "/survey",
   },
