@@ -92,11 +92,79 @@ def _actor_location(row: dict) -> str:
     return str(sub.get("outside_us_country") or "").strip().upper()
 
 
-def _actor_family_key(row: dict) -> str:
+def _actor_family_key(row: dict, review_map: dict[str, str] | None = None) -> str | None:
+    """Family-dedupe key for one court_actors row. Mirrors resolveFamilyKey
+    in lib/court-actors.ts so PDF counts match /api/survey/court-actors.
+
+    Returns None when the row is admin-marked as 'duplicate' — caller skips it.
+    Returns 'row:<id>' when admin-marked 'count_separately' so it survives
+    the email|location dedupe.
+    Otherwise: 'lower(email)|location' if email present, else
+    'submission:<submission_id>'.
+    """
+    if review_map is not None and row.get("id") in review_map:
+        decision = review_map[row["id"]]
+        if decision == "duplicate":
+            return None
+        if decision == "count_separately":
+            return f"row:{row['id']}"
     location = _actor_location(row)
     joined = _joined_submission(row)
     email = str(joined.get("email") or "").strip().lower()
     return f"{email}|{location}" if email else f"submission:{row.get('submission_id')}"
+
+
+def _load_court_actor_alias_resolver(sb: Client) -> dict[str, dict]:
+    """Load same_actor alias decisions and return a lookup map keyed by
+    '<name_key>|<location_key>' -> {canonical_name, canonical_role}.
+
+    Mirrors AliasResolver in lib/court-actor-similarity.ts. Returns an
+    empty map (not None) when the table is missing so the caller can run
+    pre-migration unaffected.
+    """
+    try:
+        resp = (
+            sb.table("court_actor_alias_decisions")
+            .select("location_key,decision,canonical_name,canonical_role,name_keys")
+            .eq("decision", "same_actor")
+            .execute()
+        )
+    except Exception as exc:
+        text = str(exc)
+        if "court_actor_alias_decisions" in text or "42P01" in text or "PGRST205" in text:
+            return {}
+        raise
+
+    out: dict[str, dict] = {}
+    for d in (resp.data or []):
+        canonical_name = d.get("canonical_name")
+        if not canonical_name:
+            continue
+        location_key = d.get("location_key") or ""
+        for nk in (d.get("name_keys") or []):
+            if not nk:
+                continue
+            out[f"{nk}|{location_key}"] = {
+                "canonical_name": canonical_name,
+                "canonical_role": d.get("canonical_role"),
+            }
+    return out
+
+
+def _load_court_actor_row_review_map(sb: Client) -> dict[str, str]:
+    """Load row_id -> decision map. Empty map (not None) if table missing."""
+    try:
+        resp = sb.table("court_actor_row_review").select("row_id,decision").execute()
+    except Exception as exc:
+        text = str(exc)
+        if "court_actor_row_review" in text or "42P01" in text or "PGRST205" in text:
+            return {}
+        raise
+    return {
+        r["row_id"]: r["decision"]
+        for r in (resp.data or [])
+        if r.get("row_id") and r.get("decision")
+    }
 
 
 def load_public_court_actors_from_supabase(state_filter: str | None = None) -> dict[str, list[dict]]:
@@ -119,7 +187,7 @@ def load_public_court_actors_from_supabase(state_filter: str | None = None) -> d
     while True:
         q = (
             sb.table("court_actors")
-            .select("role,name,court_or_county,state_code,location_key,notes,submission_id,survey_submissions(email,state_of_occurrence,outside_us_country)")
+            .select("id,role,name,court_or_county,state_code,location_key,notes,submission_id,survey_submissions(email,state_of_occurrence,outside_us_country)")
             .eq("source", "form_direct")
         )
         resp = q.range(offset, offset + page_size - 1).execute()
@@ -131,6 +199,11 @@ def load_public_court_actors_from_supabase(state_filter: str | None = None) -> d
             break
         offset += page_size
 
+    # Admin-decision overlays. Both functions return {} (not None) when the
+    # underlying table is missing, so this stays safe pre-migration.
+    alias_resolver = _load_court_actor_alias_resolver(sb)
+    review_map = _load_court_actor_row_review_map(sb)
+
     buckets: dict[tuple[str, str], dict] = {}
     for row in rows:
         location = _actor_location(row)
@@ -141,7 +214,19 @@ def load_public_court_actors_from_supabase(state_filter: str | None = None) -> d
         name_key = _actor_name_key(name)
         if not location or not role or not name_key:
             continue
-        key_tuple = (location, name_key)
+
+        # Skip rows the admin marked as 'duplicate' — testimony is preserved
+        # in court_actors but contributes nothing to public counts.
+        family_key = _actor_family_key(row, review_map)
+        if family_key is None:
+            continue
+
+        # Apply approved 'same_actor' alias decisions: roll close-name variants
+        # in this location into the canonical bucket and display.
+        alias_hit = alias_resolver.get(f"{name_key}|{location}")
+        effective_name = alias_hit["canonical_name"] if alias_hit else name
+        effective_name_key = _actor_name_key(effective_name)
+        key_tuple = (location, effective_name_key)
         bucket = buckets.setdefault(
             key_tuple,
             {
@@ -155,11 +240,12 @@ def load_public_court_actors_from_supabase(state_filter: str | None = None) -> d
             },
         )
         bucket["role_counts"][role] += 1
-        bucket["name_counts"][name] += 1
+        # When alias decision applies, the canonical spelling is what gets
+        # tracked for casing — mirrors lib/court-actors.ts buildPublicCourtActors.
+        bucket["name_counts"][effective_name] += 1
         court = str(row.get("court_or_county") or "").strip()
         if court:
             bucket["court_counts"][court] += 1
-        family_key = _actor_family_key(row)
         if row.get("submission_id"):
             bucket["families"].add(family_key)
         # Track best note per family (longest non-empty wins, drops [extracted_*] markers)
