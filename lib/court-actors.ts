@@ -73,6 +73,48 @@ type PublicCourtActor = {
   count: number;
 };
 
+/**
+ * Row-level review decision (court_actor_row_review.decision).
+ *   duplicate        — exclude row from family counts; still visible.
+ *   count_separately — force this row to count as its own family-key.
+ *   null/undefined   — normal: row counts using email|location dedupe.
+ */
+export type CourtActorRowReviewDecision = "duplicate" | "count_separately" | null | undefined;
+
+/**
+ * Compute the family-dedupe key for a court_actors row.
+ *   - returns null when the row is marked duplicate (caller should skip).
+ *   - returns `row:<id>` when count_separately so it survives email dedupe.
+ *   - otherwise falls back to `lower(email)|location_key`, then to
+ *     `submission:<submission_id>` if no email is on file.
+ *
+ * Public/admin counting routes call this once per row before bucketing.
+ */
+export function resolveFamilyKey(args: {
+  row_id: string;
+  reporter_email: string | null | undefined;
+  submission_id: string;
+  location_key: string | null;
+  review_decision?: CourtActorRowReviewDecision;
+}): string | null {
+  if (args.review_decision === "duplicate") return null;
+  if (args.review_decision === "count_separately") return `row:${args.row_id}`;
+  const email = args.reporter_email?.trim()?.toLowerCase();
+  if (email) return `${email}|${args.location_key ?? ""}`;
+  return `submission:${args.submission_id}`;
+}
+
+// Minimal alias resolver shape — kept here so lib/court-actors.ts has no
+// dependency on lib/court-actor-similarity.ts (which imports back from
+// this file). Concrete implementation lives in the similarity module.
+export interface CourtActorAliasResolver {
+  resolve(rawName: string, locationKey: string | null): {
+    canonical_name_key: string;
+    canonical_name: string;
+    canonical_role: string | null;
+  } | null;
+}
+
 export function buildPublicCourtActors(actors: Array<{
   role: string;
   name: string;
@@ -80,7 +122,7 @@ export function buildPublicCourtActors(actors: Array<{
   state_code: string | null;
   location_key: string | null;
   submission_id: string;
-}>): PublicCourtActor[] {
+}>, resolver?: CourtActorAliasResolver): PublicCourtActor[] {
   type Bucket = {
     role: string;
     name: string;
@@ -94,18 +136,20 @@ export function buildPublicCourtActors(actors: Array<{
   };
 
   const buckets = new Map<string, Bucket>();
-  
+
   for (const a of actors) {
     if (!a.role || !a.name || !a.location_key) continue;
-    
-    const normalizedName = actorBucketKeyWithLocation(a.name, a.role, a.location_key);
+
+    const aliasHit = resolver?.resolve(a.name, a.location_key) ?? null;
+    const effectiveName = aliasHit?.canonical_name ?? a.name;
+    const normalizedName = actorBucketKeyWithLocation(effectiveName, a.role, a.location_key);
     if (!normalizedName.split("|")[0]) continue;
-    
+
     const key = normalizedName;
     if (!buckets.has(key)) {
       buckets.set(key, {
-        role: a.role,
-        name: a.name,
+        role: aliasHit?.canonical_role ?? a.role,
+        name: effectiveName,
         court_or_county: a.court_or_county,
         state_code: a.state_code,
         location_key: a.location_key,
@@ -115,11 +159,14 @@ export function buildPublicCourtActors(actors: Array<{
         courtCounts: new Map(),
       });
     }
-    
+
     const b = buckets.get(key)!;
     b.families.add(a.submission_id);
     b.roleCounts.set(a.role, (b.roleCounts.get(a.role) ?? 0) + 1);
-    b.casingCounts.set(a.name, (b.casingCounts.get(a.name) ?? 0) + 1);
+    // Track casing using the original reporter name so the most-common
+    // spelling still wins when no canonical override is present.
+    const casingName = aliasHit?.canonical_name ?? a.name;
+    b.casingCounts.set(casingName, (b.casingCounts.get(casingName) ?? 0) + 1);
     if (a.court_or_county) {
       b.courtCounts.set(a.court_or_county, (b.courtCounts.get(a.court_or_county) ?? 0) + 1);
     }
