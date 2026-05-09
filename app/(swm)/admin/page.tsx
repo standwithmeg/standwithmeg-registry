@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { COURT_ACTOR_PUBLIC_THRESHOLD } from "../../../lib/court-actors";
+import { PossibleMatchesPanel } from "./_components/PossibleMatchesPanel";
 
 const GOLD  = "#C9A227";
 const BG    = "#0F1E30";  // deep dark navy for page background
@@ -660,7 +661,7 @@ export default function AdminPage() {
   };
   const [adminActors, setAdminActors] = useState<AdminActor[]>([]);
   const [adminActorAggs, setAdminActorAggs] = useState<AdminActorAgg[]>([]);
-  type ActorView = "by_state" | "patterns" | "all";
+  type ActorView = "by_state" | "patterns" | "possible_matches" | "all";
   const [actorView, setActorView] = useState<ActorView>("by_state");
   const [expandedState, setExpandedState] = useState<string | null>(null);
   const [auditRows, setAuditRows] = useState<ReportingAuditRow[]>([]);
@@ -1585,6 +1586,7 @@ export default function AdminPage() {
               {([
                 ["by_state", "By Location"],
                 ["patterns", "Patterns"],
+                ["possible_matches", "Possible Matches"],
                 ["all", "All Reports"],
               ] as [ActorView, string][]).map(([val, label]) => (
                 <button key={val} onClick={() => { setActorView(val); setExpandedState(null); }}
@@ -1838,6 +1840,10 @@ export default function AdminPage() {
                 );
               })}
             </div>
+          )}
+
+          {actorView === "possible_matches" && (
+            <PossibleMatchesPanel />
           )}
 
           {actorView === "all" && (

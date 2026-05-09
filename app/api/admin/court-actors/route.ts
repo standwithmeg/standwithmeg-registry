@@ -1,7 +1,46 @@
 import { createServerSupabaseClient } from "../../../../lib/supabase";
 import { createAdminSupabaseClient } from "../../../../lib/supabase-admin";
 import { isAdminEmail } from "../../../../lib/require-auth";
-import { COURT_ACTOR_PUBLIC_THRESHOLD, actorBucketKeyWithLocation, courtActorLocationKey } from "../../../../lib/court-actors";
+import { COURT_ACTOR_PUBLIC_THRESHOLD, actorBucketKeyWithLocation, courtActorLocationKey, resolveFamilyKey, type CourtActorRowReviewDecision } from "../../../../lib/court-actors";
+import { AliasResolver, type AliasDecisionRow } from "../../../../lib/court-actor-similarity";
+
+type AdminClient = ReturnType<typeof createAdminSupabaseClient>;
+
+async function loadAliasResolver(sb: AdminClient): Promise<AliasResolver | null> {
+  const { data, error } = await sb
+    .from("court_actor_alias_decisions")
+    .select("cluster_key, location_key, decision, canonical_name, canonical_role, name_keys")
+    .eq("decision", "same_actor");
+  if (error) {
+    const missing = error.code === "42P01"
+      || error.code === "42703"
+      || error.code === "PGRST205"
+      || /Could not find the table/i.test(error.message ?? "");
+    if (missing) return null;
+    console.error("court_actor_alias_decisions select error:", error.message);
+    return null;
+  }
+  return new AliasResolver((data ?? []) as AliasDecisionRow[]);
+}
+
+async function loadRowReviewMap(sb: AdminClient): Promise<Map<string, CourtActorRowReviewDecision>> {
+  const { data, error } = await sb
+    .from("court_actor_row_review")
+    .select("row_id, decision");
+  if (error) {
+    const missing = error.code === "42P01"
+      || error.code === "PGRST205"
+      || /Could not find the table/i.test(error.message ?? "");
+    if (missing) return new Map();
+    console.error("court_actor_row_review select error:", error.message);
+    return new Map();
+  }
+  const map = new Map<string, CourtActorRowReviewDecision>();
+  for (const r of (data ?? []) as Array<{ row_id: string; decision: CourtActorRowReviewDecision }>) {
+    map.set(r.row_id, r.decision);
+  }
+  return map;
+}
 
 /**
  * Admin-only: returns EVERY named court actor (no threshold), plus aggregate
@@ -46,10 +85,15 @@ function actorLocation(row: Row): string | null {
   return courtActorLocationKey(submission?.state_of_occurrence || null, submission?.outside_us_country || null);
 }
 
-function familyKey(row: Row): string {
-  const location = actorLocation(row) ?? "";
-  const email = joinedSubmission(row)?.email?.trim().toLowerCase();
-  return email ? `${email}|${location}` : `submission:${row.submission_id}`;
+function familyKey(row: Row, reviewMap: Map<string, CourtActorRowReviewDecision>): string | null {
+  const location = actorLocation(row) ?? null;
+  return resolveFamilyKey({
+    row_id: row.id,
+    reporter_email: joinedSubmission(row)?.email ?? null,
+    submission_id: row.submission_id,
+    location_key: location,
+    review_decision: reviewMap.get(row.id) ?? null,
+  });
 }
 
 function mostFrequent<T>(m: Map<T, number>): T | null {
@@ -93,10 +137,10 @@ export async function GET() {
     const baseSelect = "id, role, name, court_or_county, state_code, notes, source, created_at, submission_id, survey_submissions(email, first_name, last_name, state_of_occurrence, outside_us_country)";
     const nudgeSelect = "id, role, name, court_or_county, state_code, notes, source, created_at, submission_id, nudge_sent_at, nudge_sent_by, nudge_sent_to, nudge_last_subject, survey_submissions(email, first_name, last_name, state_of_occurrence, outside_us_country)";
     const locationSelect = "id, role, name, court_or_county, state_code, location_key, notes, source, created_at, submission_id, nudge_sent_at, nudge_sent_by, nudge_sent_to, nudge_last_subject, survey_submissions(email, first_name, last_name, state_of_occurrence, outside_us_country)";
-    
+
     let includeNudgeColumns = true;
     let includeLocationKey = true;
-    
+
     while (true) {
       let selectString = baseSelect;
       if (includeLocationKey && includeNudgeColumns) {
@@ -104,13 +148,13 @@ export async function GET() {
       } else if (includeNudgeColumns) {
         selectString = nudgeSelect;
       }
-      
+
       const { data, error } = await adminSb
         .from("court_actors")
         .select(selectString)
         .order("created_at", { ascending: false })
         .range(from, from + pageSize - 1);
-        
+
       if (error) {
         if (includeLocationKey && error.code === "42703") {
           // location_key column doesn't exist yet
@@ -129,13 +173,13 @@ export async function GET() {
         return Response.json({ actors: [], aggregates: [] });
       }
       if (!data || data.length === 0) break;
-      
+
       // Add null location_key to rows that don't have it
       const processedData = (data as unknown as Row[]).map(row => ({
         ...row,
         location_key: includeLocationKey ? row.location_key : null
       }));
-      
+
       rows.push(...processedData);
       if (data.length < pageSize) break;
       from += pageSize;
@@ -144,7 +188,11 @@ export async function GET() {
     // Build aggregates: normalized (name, location) -> count distinct families.
     // This merges casing, punctuation, common titles, middle initials, small
     // repeated-letter misspellings, and different role labels for the same
-    // person in the same location.
+    // person in the same location. Approved 'same_actor' alias decisions
+    // additionally roll close-spelling variants into the canonical name.
+    const aliasResolver = await loadAliasResolver(adminSb);
+    const rowReviewMap = await loadRowReviewMap(adminSb);
+
     type AggBucket = {
       name: string;
       state_code: string | null;
@@ -154,17 +202,21 @@ export async function GET() {
       names: Map<string, number>;
       courts: Map<string, number>;
     };
-    
+
     const agg = new Map<string, AggBucket>();
     for (const r of rows) {
       if ((r.source ?? "form_direct") !== "form_direct") continue;
       if (!r.role || !r.name) continue;
+      const fk = familyKey(r, rowReviewMap);
+      if (fk === null) continue;
       const location = actorLocation(r);
-      const key = actorBucketKeyWithLocation(r.name, r.role, location);
+      const aliasHit = aliasResolver?.resolve(r.name, location) ?? null;
+      const effectiveName = aliasHit?.canonical_name ?? r.name;
+      const key = actorBucketKeyWithLocation(effectiveName, r.role, location);
       if (!key.split("|")[0]) continue;
       if (!agg.has(key)) {
         agg.set(key, {
-          name: r.name,
+          name: effectiveName,
           state_code: r.state_code,
           location_key: location,
           families: new Set(),
@@ -174,9 +226,10 @@ export async function GET() {
         });
       }
       const b = agg.get(key)!;
-      b.families.add(familyKey(r));
+      b.families.add(fk);
       b.roles.set(r.role, (b.roles.get(r.role) ?? 0) + 1);
-      b.names.set(r.name, (b.names.get(r.name) ?? 0) + 1);
+      const casingName = aliasHit?.canonical_name ?? r.name;
+      b.names.set(casingName, (b.names.get(casingName) ?? 0) + 1);
       if (r.court_or_county) b.courts.set(r.court_or_county, (b.courts.get(r.court_or_county) ?? 0) + 1);
     }
 
@@ -194,6 +247,8 @@ export async function GET() {
     // Flat list with reporter info
     const actors = rows.map(r => {
       const submission = joinedSubmission(r);
+      const review = rowReviewMap.get(r.id) ?? null;
+      const fk = familyKey(r, rowReviewMap);
       return {
         id: r.id,
         role: r.role,
@@ -213,6 +268,8 @@ export async function GET() {
         reporter_name: submission
           ? [submission.first_name, submission.last_name].filter(Boolean).join(" ") || null
           : null,
+        review_decision: review,
+        counts_publicly: fk !== null && (r.source ?? "form_direct") === "form_direct",
       };
     });
 
