@@ -1,5 +1,8 @@
 import { createAdminSupabaseClient } from "../../../../../lib/supabase-admin";
-import { COURT_ACTOR_PUBLIC_THRESHOLD, actorBucketKey } from "../../../../../lib/court-actors";
+import { COURT_ACTOR_PUBLIC_THRESHOLD, actorBucketKey, resolveFamilyKey, type CourtActorRowReviewDecision } from "../../../../../lib/court-actors";
+import { AliasResolver, type AliasDecisionRow } from "../../../../../lib/court-actor-similarity";
+
+type AdminClient = ReturnType<typeof createAdminSupabaseClient>;
 
 /**
  * Returns the anonymized factual notes that families wrote about ONE named
@@ -21,6 +24,7 @@ import { COURT_ACTOR_PUBLIC_THRESHOLD, actorBucketKey } from "../../../../../lib
  */
 
 type Row = {
+  id: string;
   role: string;
   name: string;
   court_or_county: string | null;
@@ -47,10 +51,51 @@ function actorState(row: Row): string | null {
   return joined || null;
 }
 
-function familyKey(row: Row): string {
+async function loadAliasResolver(sb: AdminClient): Promise<AliasResolver | null> {
+  const { data, error } = await sb
+    .from("court_actor_alias_decisions")
+    .select("cluster_key, location_key, decision, canonical_name, canonical_role, name_keys")
+    .eq("decision", "same_actor");
+  if (error) {
+    const missing = error.code === "42P01"
+      || error.code === "42703"
+      || error.code === "PGRST205"
+      || /Could not find the table/i.test(error.message ?? "");
+    if (missing) return null;
+    console.error("court_actor_alias_decisions select error:", error.message);
+    return null;
+  }
+  return new AliasResolver((data ?? []) as AliasDecisionRow[]);
+}
+
+async function loadRowReviewMap(sb: AdminClient): Promise<Map<string, CourtActorRowReviewDecision>> {
+  const { data, error } = await sb
+    .from("court_actor_row_review")
+    .select("row_id, decision");
+  if (error) {
+    const missing = error.code === "42P01"
+      || error.code === "PGRST205"
+      || /Could not find the table/i.test(error.message ?? "");
+    if (missing) return new Map();
+    console.error("court_actor_row_review select error:", error.message);
+    return new Map();
+  }
+  const map = new Map<string, CourtActorRowReviewDecision>();
+  for (const r of (data ?? []) as Array<{ row_id: string; decision: CourtActorRowReviewDecision }>) {
+    map.set(r.row_id, r.decision);
+  }
+  return map;
+}
+
+function familyKey(row: Row, reviewMap: Map<string, CourtActorRowReviewDecision>): string | null {
   const state = actorState(row) ?? "";
-  const email = joinedSubmission(row)?.email?.trim().toLowerCase();
-  return email ? `${email}|${state}` : `submission:${row.submission_id}`;
+  return resolveFamilyKey({
+    row_id: row.id,
+    reporter_email: joinedSubmission(row)?.email ?? null,
+    submission_id: row.submission_id,
+    location_key: state,
+    review_decision: reviewMap.get(row.id) ?? null,
+  });
 }
 
 // Internal admin/source prefixes that get prepended when notes were
@@ -103,7 +148,7 @@ export async function GET(request: Request) {
       const { data, error } = await sb
         .from("court_actors")
         .select(
-          "role, name, court_or_county, state_code, notes, submission_id, created_at, survey_submissions(email, state_of_occurrence)"
+          "id, role, name, court_or_county, state_code, notes, submission_id, created_at, survey_submissions(email, state_of_occurrence)"
         )
         .eq("source", "form_direct")
         .range(from, from + pageSize - 1);
@@ -117,17 +162,33 @@ export async function GET(request: Request) {
       from += pageSize;
     }
 
-    // Find rows that match the requested actor bucket + state.
+    // Apply the same alias / row-review overlays as /api/survey/court-actors
+    // so an actor whose public count came from an admin 'same_actor' decision
+    // (e.g. Catherine Conklin rolling up Cathrin/Cathrine) actually returns
+    // its rows here. Without this, the gate below sees zero matching families
+    // for alias-merged actors and silently returns an empty notes list.
+    const aliasResolver = await loadAliasResolver(sb);
+    const rowReviewMap = await loadRowReviewMap(sb);
+
+    // Find rows that match the requested actor bucket + state. A row matches
+    // if either its own bucket key OR its alias-canonical bucket key equals
+    // the target.
     const matchingRows: Row[] = [];
     const families = new Set<string>();
     for (const row of all) {
       if (!row.role || !row.name) continue;
       const state = actorState(row);
       if (!state || state !== stateParam) continue;
-      const key = actorBucketKey(row.name, row.role, state);
+      const aliasHit = aliasResolver?.resolve(row.name, state) ?? null;
+      const effectiveName = aliasHit?.canonical_name ?? row.name;
+      const key = actorBucketKey(effectiveName, row.role, state);
       if (key !== targetBucketKey) continue;
+      const fk = familyKey(row, rowReviewMap);
+      // Skip rows the admin marked as 'duplicate' — testimony is preserved
+      // in court_actors but contributes nothing to public counts or notes.
+      if (fk === null) continue;
       matchingRows.push(row);
-      families.add(familyKey(row));
+      families.add(fk);
     }
 
     // Hard gate: only expose notes for actors who have already crossed the
@@ -148,7 +209,8 @@ export async function GET(request: Request) {
       if (!original) continue;
       const note = cleanPublicNote(original);
       if (!note) continue;
-      const fk = familyKey(row);
+      const fk = familyKey(row, rowReviewMap);
+      if (fk === null) continue;
       const month = isoMonth(row.created_at);
       const existing = notesByFamily.get(fk);
       if (!existing || note.length > existing.note.length) {
