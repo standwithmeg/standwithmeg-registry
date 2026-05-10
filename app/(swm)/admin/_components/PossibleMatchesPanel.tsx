@@ -865,7 +865,14 @@ export function PossibleMatchesPanel() {
                                 <button
                                   type="button"
                                   disabled={rowBusy || isDup || isMerged}
-                                  onClick={() => setMergeOpen(prev => prev === s.row_id ? null : s.row_id)}
+                                  onClick={() => {
+                                    if (mergeOpen === s.row_id) { setMergeOpen(null); return; }
+                                    // Persist the default form (pre-checked same-reporter rows + auto comment)
+                                    // so saveMerge and the textarea onChange see them, not just the render.
+                                    const seed = ensureMergeForm(s, allClusterSamples);
+                                    setMergeForms(prev => prev[s.row_id] ? prev : { ...prev, [s.row_id]: seed });
+                                    setMergeOpen(s.row_id);
+                                  }}
                                   title="Count once but combine multiple comments from this reporter into one merged display note (preserves both testimonies)."
                                   className="text-[10px] px-2 py-0.5 rounded font-bold transition-opacity disabled:opacity-50"
                                   style={{ backgroundColor: "rgba(56,189,248,0.15)", color: "rgb(125,211,252)", border: "1px solid rgba(56,189,248,0.35)" }}>
