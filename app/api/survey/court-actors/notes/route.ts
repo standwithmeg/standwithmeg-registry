@@ -87,6 +87,32 @@ async function loadRowReviewMap(sb: AdminClient): Promise<Map<string, CourtActor
   return map;
 }
 
+/**
+ * Load court_actor_comment_merges → map of primary_row_id → merged_comment.
+ * Returns empty map (not null) when the table is missing so pre-migration
+ * behavior is unaffected.
+ */
+async function loadCommentMergeMap(sb: AdminClient): Promise<Map<string, string>> {
+  const { data, error } = await sb
+    .from("court_actor_comment_merges")
+    .select("primary_row_id, merged_comment");
+  if (error) {
+    const missing = error.code === "42P01"
+      || error.code === "PGRST205"
+      || /Could not find the table/i.test(error.message ?? "");
+    if (missing) return new Map();
+    console.error("court_actor_comment_merges select error:", error.message);
+    return new Map();
+  }
+  const map = new Map<string, string>();
+  for (const r of (data ?? []) as Array<{ primary_row_id: string; merged_comment: string }>) {
+    if (r.merged_comment && r.merged_comment.trim()) {
+      map.set(r.primary_row_id, r.merged_comment);
+    }
+  }
+  return map;
+}
+
 function familyKey(row: Row, reviewMap: Map<string, CourtActorRowReviewDecision>): string | null {
   const state = actorState(row) ?? "";
   return resolveFamilyKey({
@@ -170,6 +196,13 @@ export async function GET(request: Request) {
     const aliasResolver = await loadAliasResolver(sb);
     const rowReviewMap = await loadRowReviewMap(sb);
 
+    // Comment merges: when the same reporter submitted multiple rows about
+    // the same actor and the admin merged the comments, the primary row's
+    // displayed note is replaced by the admin-edited merged_comment, and
+    // the merged rows are excluded from family counts (their decision in
+    // row_review is 'merge_comments' so resolveFamilyKey returns null).
+    const commentMergeMap = await loadCommentMergeMap(sb);
+
     // Find rows that match the requested actor bucket + state. A row matches
     // if either its own bucket key OR its alias-canonical bucket key equals
     // the target.
@@ -203,17 +236,31 @@ export async function GET(request: Request) {
     //
     // If an admin promotes an AI/regex-discovered row to counted, strip the
     // internal source tag before showing the underlying family-written text.
+    //
+    // If this row is the primary of a comment-merge, replace its original
+    // notes with the admin-edited merged_comment so all of the same
+    // reporter's testimony shows publicly under one display entry.
     const notesByFamily = new Map<string, { note: string; month: string | null }>();
     for (const row of matchingRows) {
-      const original = (row.notes ?? "").trim();
-      if (!original) continue;
-      const note = cleanPublicNote(original);
+      const merged = commentMergeMap.get(row.id);
+      const sourceText = merged ?? (row.notes ?? "").trim();
+      if (!sourceText) continue;
+      // cleanPublicNote strips the internal [extracted_*] tags; merged
+      // comments are already admin-edited so the strip is a no-op there.
+      const note = cleanPublicNote(sourceText);
       if (!note) continue;
       const fk = familyKey(row, rowReviewMap);
       if (fk === null) continue;
       const month = isoMonth(row.created_at);
       const existing = notesByFamily.get(fk);
-      if (!existing || note.length > existing.note.length) {
+      // Prefer merged_comment over any plain note for the same family,
+      // even if a plain note happens to be longer character-wise.
+      const isMerged = Boolean(merged);
+      const existingIsMerged = Boolean(existing && existing.note === merged);
+      const shouldReplace = !existing
+        || (isMerged && !existingIsMerged)
+        || (!existingIsMerged && note.length > existing.note.length);
+      if (shouldReplace) {
         notesByFamily.set(fk, { note, month });
       }
     }

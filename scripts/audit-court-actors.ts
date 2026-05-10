@@ -119,6 +119,25 @@ async function fetchRowReviewMap(): Promise<Map<string, CourtActorRowReviewDecis
   return map;
 }
 
+type CommentMergeRow = {
+  primary_row_id: string;
+  merged_row_ids: string[];
+  decided_by: string | null;
+  decided_at: string;
+};
+
+async function fetchCommentMerges(): Promise<{ rows: CommentMergeRow[]; available: boolean }> {
+  const { data, error } = await sb
+    .from("court_actor_comment_merges")
+    .select("primary_row_id, merged_row_ids, decided_by, decided_at")
+    .order("decided_at", { ascending: false });
+  if (error) {
+    if (tableMissing(error)) return { rows: [], available: false };
+    throw new Error(`comment_merges select failed: ${error.message}`);
+  }
+  return { rows: (data ?? []) as CommentMergeRow[], available: true };
+}
+
 async function fetchExistingDecisions(): Promise<{
   decided: Set<string>;
   same_actor: number;
@@ -178,6 +197,7 @@ async function main() {
   );
 
   const reviewMap = await fetchRowReviewMap();
+  const commentMerges = await fetchCommentMerges();
 
   const forClustering: ActorRowForClustering[] = rows.map(r => ({
     id: r.id,
@@ -207,7 +227,31 @@ async function main() {
   console.log(`- Already decided: ${resolved.length}` + (decisions.available ? "" : "  (alias_decisions table not yet migrated)"));
   console.log(`- High confidence clusters: ${pending.filter(c => c.highest_confidence === "high").length}`);
   console.log(`- Medium confidence clusters: ${pending.filter(c => c.highest_confidence === "medium").length}`);
-  console.log(`- Row-level review decisions saved (court_actor_row_review): ${reviewMap.size}`);
+  // Break the row-review count down by decision so the operator can see how
+  // many rows are duplicates vs count-separately vs merged-comments.
+  const reviewByDecision = new Map<string, number>();
+  for (const decision of reviewMap.values()) {
+    if (!decision) continue;
+    reviewByDecision.set(decision, (reviewByDecision.get(decision) ?? 0) + 1);
+  }
+  const reviewBreakdown = Array.from(reviewByDecision.entries())
+    .sort((a, b) => b[1] - a[1])
+    .map(([d, n]) => `${n} ${d}`)
+    .join(", ");
+  console.log(
+    `- Row-level review decisions saved (court_actor_row_review): ${reviewMap.size}` +
+      (reviewBreakdown ? `  (${reviewBreakdown})` : ""),
+  );
+  const mergeRowsCount = commentMerges.rows.reduce(
+    (n, m) => n + (m.merged_row_ids?.length ?? 0),
+    0,
+  );
+  console.log(
+    `- Comment merges saved (court_actor_comment_merges): ${commentMerges.rows.length}` +
+      (commentMerges.available
+        ? `  (${commentMerges.rows.length} primary rows · ${mergeRowsCount} merged rows)`
+        : "  (comment_merges table not yet migrated)"),
+  );
   console.log("");
 
   // ---------------------------------------------------------------

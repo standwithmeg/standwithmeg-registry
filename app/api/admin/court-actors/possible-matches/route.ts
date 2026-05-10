@@ -169,6 +169,49 @@ export async function GET() {
       onlyFormDirect: true,
     });
 
+    // Load comment merges (migration 023) and enrich each cluster sample so
+    // the UI can show "merged into" / "primary of merge" badges and pre-fill
+    // the merge-comments modal. Pre-migration this loop is a no-op.
+    {
+      const mergesResult = await sb
+        .from("court_actor_comment_merges")
+        .select("primary_row_id, merged_row_ids, merged_comment");
+      if (mergesResult.error) {
+        const e = mergesResult.error;
+        const missing = e.code === "42P01"
+          || e.code === "PGRST205"
+          || /Could not find the table/i.test(e.message ?? "");
+        if (!missing) {
+          console.error("possible-matches comment_merges error:", e);
+        }
+      } else {
+        const byPrimary = new Map<string, { merged_row_ids: string[]; merged_comment: string }>();
+        const byMerged = new Map<string, string>();
+        for (const r of (mergesResult.data ?? []) as Array<{
+          primary_row_id: string;
+          merged_row_ids: string[];
+          merged_comment: string;
+        }>) {
+          byPrimary.set(r.primary_row_id, {
+            merged_row_ids: r.merged_row_ids ?? [],
+            merged_comment: r.merged_comment,
+          });
+          for (const m of r.merged_row_ids ?? []) byMerged.set(m, r.primary_row_id);
+        }
+        for (const cluster of allClusters) {
+          for (const variant of cluster.variants) {
+            for (const sample of variant.samples) {
+              const primary = byPrimary.get(sample.row_id);
+              const mergedInto = byMerged.get(sample.row_id) ?? null;
+              sample.merged_into = mergedInto;
+              sample.merge_primary_for = primary?.merged_row_ids ?? null;
+              sample.merged_comment = primary?.merged_comment ?? null;
+            }
+          }
+        }
+      }
+    }
+
     // Load existing decisions so the UI can show resolved clusters
     // separately and so we can suppress already-decided suggestions.
     let decisions: AliasDecisionRecord[] = [];

@@ -65,10 +65,20 @@ type VariantSample = {
   notes: string | null;
   source: string | null;
   created_at: string | null;
-  review_decision: "duplicate" | "count_separately" | null;
+  // 'merge_comments' is set by the comment-merge endpoint, not by the
+  // row-review buttons in this panel. Treated like 'duplicate' for
+  // family-counting; treated as "merged into a primary" for display.
+  review_decision: "duplicate" | "count_separately" | "merge_comments" | null;
   counts_publicly: boolean;
   cluster_email_count: number;
   cluster_submission_count: number;
+  // Comment-merge state, populated by the route handler:
+  //   merged_into:        primary row id this row's testimony was folded into
+  //   merge_primary_for:  row ids that were merged into THIS row (this row IS primary)
+  //   merged_comment:     the public-facing combined text (only when this row is primary)
+  merged_into?: string | null;
+  merge_primary_for?: string[] | null;
+  merged_comment?: string | null;
 };
 
 type Variant = {
@@ -171,6 +181,140 @@ export function PossibleMatchesPanel() {
 
   // Per-cluster expanded testimony toggle (notes/testimony are long).
   const [expandedTestimony, setExpandedTestimony] = useState<Record<string, boolean>>({});
+
+  // Inline merge editor — keyed by the chosen primary row's id. When set,
+  // an inline form opens beneath that row letting the admin pick which
+  // OTHER rows in the same cluster fold into the primary plus edit the
+  // public-facing merged_comment text. Closing/saving clears the key.
+  type MergeForm = { mergedRowIds: string[]; mergedComment: string };
+  const [mergeOpen, setMergeOpen] = useState<string | null>(null);
+  const [mergeForms, setMergeForms] = useState<Record<string, MergeForm>>({});
+
+  function buildAutoMergeComment(primary: VariantSample, others: VariantSample[]): string {
+    // Privacy-safe public default: testimony only, separated by paragraph
+    // breaks. The admin can edit before saving — and SHOULD strip any names
+    // or emails that slipped into a free-text note.
+    const parts: string[] = [];
+    const allRows = [primary, ...others];
+    for (const r of allRows) {
+      const text = (r.notes ?? "").trim();
+      if (text) parts.push(text);
+    }
+    return parts.join("\n\n");
+  }
+
+  function ensureMergeForm(primary: VariantSample, candidates: VariantSample[]): MergeForm {
+    const existing = mergeForms[primary.row_id];
+    if (existing) return existing;
+    // If this row already IS a primary, pre-fill from saved state.
+    if (primary.merge_primary_for && primary.merge_primary_for.length > 0 && primary.merged_comment) {
+      return {
+        mergedRowIds: [...primary.merge_primary_for],
+        mergedComment: primary.merged_comment,
+      };
+    }
+    // Otherwise, default to merging in everything from the same reporter email.
+    const sameReporter = candidates.filter(
+      c => c.row_id !== primary.row_id
+        && primary.reporter_email
+        && c.reporter_email
+        && c.reporter_email.toLowerCase() === primary.reporter_email.toLowerCase(),
+    );
+    const defaults = sameReporter.length > 0 ? sameReporter : [];
+    return {
+      mergedRowIds: defaults.map(r => r.row_id),
+      mergedComment: buildAutoMergeComment(primary, defaults),
+    };
+  }
+
+  function setMergeForm(rowId: string, patch: Partial<MergeForm>) {
+    setMergeForms(prev => {
+      const base = prev[rowId] ?? { mergedRowIds: [], mergedComment: "" };
+      return { ...prev, [rowId]: { ...base, ...patch } };
+    });
+  }
+
+  function toggleMergeRow(primary: VariantSample, candidates: VariantSample[], rowId: string) {
+    const form = ensureMergeForm(primary, candidates);
+    const isIncluded = form.mergedRowIds.includes(rowId);
+    const nextIds = isIncluded
+      ? form.mergedRowIds.filter(id => id !== rowId)
+      : [...form.mergedRowIds, rowId];
+    const others = candidates.filter(c => nextIds.includes(c.row_id));
+    setMergeForm(primary.row_id, {
+      mergedRowIds: nextIds,
+      // Only auto-rebuild the comment if the admin has not started editing
+      // away from the auto value. Detection: current value equals what we'd
+      // build for the previous selection — meaning admin hasn't edited.
+      mergedComment: form.mergedComment === buildAutoMergeComment(primary, candidates.filter(c => form.mergedRowIds.includes(c.row_id)))
+        ? buildAutoMergeComment(primary, others)
+        : form.mergedComment,
+    });
+  }
+
+  async function saveMerge(primary: VariantSample) {
+    const form = mergeForms[primary.row_id];
+    if (!form || form.mergedRowIds.length === 0) {
+      window.alert("Pick at least one other row to merge into this primary.");
+      return;
+    }
+    if (!form.mergedComment.trim()) {
+      window.alert("Merged comment cannot be empty.");
+      return;
+    }
+    setBusyKey(`merge:${primary.row_id}`);
+    try {
+      const res = await fetch("/api/admin/court-actors/comment-merge", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          primary_row_id: primary.row_id,
+          merged_row_ids: form.mergedRowIds,
+          merged_comment: form.mergedComment.trim(),
+        }),
+      });
+      const json = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        window.alert(json.error || "Merge save failed.");
+        return;
+      }
+      if (json.warning) window.alert(json.warning);
+      setMergeOpen(null);
+      setMergeForms(prev => {
+        const next = { ...prev };
+        delete next[primary.row_id];
+        return next;
+      });
+      await load();
+    } catch (err) {
+      window.alert(err instanceof Error ? err.message : "Network error.");
+    } finally {
+      setBusyKey(null);
+    }
+  }
+
+  async function undoMerge(primaryRowId: string) {
+    if (!window.confirm("Remove this comment-merge? The merged rows will re-enter family counts and the merged_comment override goes away. Original testimony is never touched.")) return;
+    setBusyKey(`merge:${primaryRowId}`);
+    try {
+      const res = await fetch("/api/admin/court-actors/comment-merge", {
+        method: "DELETE",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ primary_row_id: primaryRowId }),
+      });
+      const json = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        window.alert(json.error || "Undo failed.");
+        return;
+      }
+      if (json.warning) window.alert(json.warning);
+      await load();
+    } catch (err) {
+      window.alert(err instanceof Error ? err.message : "Network error.");
+    } finally {
+      setBusyKey(null);
+    }
+  }
 
   const load = useCallback(async () => {
     setLoading(true);
@@ -590,17 +734,32 @@ export function PossibleMatchesPanel() {
                     {samplesToShow.length > 0 && (
                       <div className="mt-2 space-y-1.5">
                         {samplesToShow.map(s => {
-                          const rowBusy = busyKey === `row-review:${s.row_id}`;
+                          const rowBusy = busyKey === `row-review:${s.row_id}` || busyKey === `merge:${s.row_id}`;
                           const isDup = s.review_decision === "duplicate";
                           const isSep = s.review_decision === "count_separately";
+                          const isMerged = s.review_decision === "merge_comments" || Boolean(s.merged_into);
+                          const isPrimary = Array.isArray(s.merge_primary_for) && s.merge_primary_for.length > 0;
                           const sameEmailWarn = s.cluster_email_count > 1;
                           const sameSubWarn = s.cluster_submission_count > 1;
+                          // The full sample list across all variants — used by the inline merge editor
+                          // to pick rows to fold into this primary, regardless of which variant they live under.
+                          const allClusterSamples: VariantSample[] = c.variants.flatMap(vv => vv.samples ?? []);
+                          const mergeIsOpen = mergeOpen === s.row_id;
+                          const mergeForm = mergeIsOpen
+                            ? ensureMergeForm(s, allClusterSamples)
+                            : { mergedRowIds: [], mergedComment: "" };
                           return (
                             <div key={s.row_id} className="px-2.5 py-1.5 rounded"
                               style={{
-                                backgroundColor: isDup ? "rgba(120,120,120,0.10)" : "rgba(0,0,0,0.18)",
-                                border: isDup ? "1px dashed rgba(255,255,255,0.2)" : "1px solid rgba(255,255,255,0.05)",
-                                opacity: isDup ? 0.7 : 1,
+                                backgroundColor: isDup || isMerged ? "rgba(120,120,120,0.10)" : "rgba(0,0,0,0.18)",
+                                border: isDup
+                                  ? "1px dashed rgba(255,255,255,0.2)"
+                                  : isMerged
+                                    ? "1px dashed rgba(56,189,248,0.35)"
+                                    : isPrimary
+                                      ? "1px solid rgba(56,189,248,0.5)"
+                                      : "1px solid rgba(255,255,255,0.05)",
+                                opacity: isDup || isMerged ? 0.7 : 1,
                               }}>
                               <div className="text-[10px] mb-0.5 flex items-center gap-2 flex-wrap" style={{ color: "rgba(245,245,245,0.55)" }}>
                                 <span><strong>{s.reporter_name || "(no name on file)"}</strong> &lt;{s.reporter_email || "no email"}&gt;</span>
@@ -639,6 +798,20 @@ export function PossibleMatchesPanel() {
                                     count separately
                                   </span>
                                 )}
+                                {isMerged && !isPrimary && (
+                                  <span className="text-[9px] px-1 py-0.5 rounded font-bold uppercase"
+                                    style={{ backgroundColor: "rgba(56,189,248,0.16)", color: "rgb(125,211,252)" }}
+                                    title={`Testimony merged into row ${s.merged_into}`}>
+                                    merged → {s.merged_into?.slice(0, 8)}…
+                                  </span>
+                                )}
+                                {isPrimary && (
+                                  <span className="text-[9px] px-1 py-0.5 rounded font-bold uppercase"
+                                    style={{ backgroundColor: "rgba(56,189,248,0.22)", color: "rgb(186,230,253)" }}
+                                    title={`Primary of a comment merge — combines testimony from ${s.merge_primary_for!.length} other row(s)`}>
+                                    primary +{s.merge_primary_for!.length}
+                                  </span>
+                                )}
                               </div>
                               <div className="text-[9px] mb-1 flex items-center gap-2 flex-wrap" style={{ color: "rgba(245,245,245,0.35)" }}>
                                 <span>row id: {s.row_id}</span>
@@ -661,24 +834,42 @@ export function PossibleMatchesPanel() {
                               ) : (
                                 <div className="text-[10px]" style={{ color: "rgba(245,245,245,0.35)" }}>(no testimony note)</div>
                               )}
+                              {isPrimary && s.merged_comment && (
+                                <div className="mt-1.5 px-2 py-1.5 rounded text-[11px]"
+                                  style={{ backgroundColor: "rgba(56,189,248,0.08)", border: "1px solid rgba(56,189,248,0.25)", color: "rgba(245,245,245,0.85)" }}>
+                                  <div className="text-[9px] mb-1 font-bold uppercase" style={{ color: "rgb(125,211,252)" }}>
+                                    Public merged comment (replaces this row&apos;s note in PDFs/dashboards)
+                                  </div>
+                                  <div className="whitespace-pre-wrap">{s.merged_comment}</div>
+                                </div>
+                              )}
                               <div className="mt-1.5 flex items-center gap-1.5 flex-wrap">
                                 <button
                                   type="button"
-                                  disabled={rowBusy || isDup}
+                                  disabled={rowBusy || isDup || isMerged}
                                   onClick={() => void markRowReview(s.row_id, "duplicate")}
-                                  title="Mark this row as a duplicate of another row in this cluster. Excludes from family counts. Testimony preserved."
+                                  title="Do not count the extra row. Testimony stays in court_actors but is hidden from public output."
                                   className="text-[10px] px-2 py-0.5 rounded font-bold transition-opacity disabled:opacity-50"
                                   style={{ backgroundColor: "rgba(120,120,120,0.18)", color: "rgba(245,245,245,0.7)", border: "1px solid rgba(255,255,255,0.18)" }}>
                                   {rowBusy ? "…" : "Mark duplicate"}
                                 </button>
                                 <button
                                   type="button"
-                                  disabled={rowBusy || isSep}
+                                  disabled={rowBusy || isSep || isMerged}
                                   onClick={() => void markRowReview(s.row_id, "count_separately")}
-                                  title="Force this row to count as its own family-key (rare)."
+                                  title="Same email but different court matter — count as its own family."
                                   className="text-[10px] px-2 py-0.5 rounded font-bold transition-opacity disabled:opacity-50"
                                   style={{ backgroundColor: "rgba(201,162,39,0.15)", color: GOLD, border: "1px solid rgba(201,162,39,0.35)" }}>
                                   {rowBusy ? "…" : "Count separately"}
+                                </button>
+                                <button
+                                  type="button"
+                                  disabled={rowBusy || isDup || isMerged}
+                                  onClick={() => setMergeOpen(prev => prev === s.row_id ? null : s.row_id)}
+                                  title="Count once but combine multiple comments from this reporter into one merged display note (preserves both testimonies)."
+                                  className="text-[10px] px-2 py-0.5 rounded font-bold transition-opacity disabled:opacity-50"
+                                  style={{ backgroundColor: "rgba(56,189,248,0.15)", color: "rgb(125,211,252)", border: "1px solid rgba(56,189,248,0.35)" }}>
+                                  {isPrimary ? "Edit merged comment" : "Merge comments"}
                                 </button>
                                 {(isDup || isSep) && (
                                   <button
@@ -691,7 +882,94 @@ export function PossibleMatchesPanel() {
                                     {rowBusy ? "…" : "Reset to normal"}
                                   </button>
                                 )}
+                                {isPrimary && (
+                                  <button
+                                    type="button"
+                                    disabled={rowBusy}
+                                    onClick={() => void undoMerge(s.row_id)}
+                                    title="Remove this comment-merge. Merged rows re-enter family counts. Original testimony was never touched."
+                                    className="text-[10px] px-2 py-0.5 rounded font-bold transition-opacity disabled:opacity-50"
+                                    style={{ backgroundColor: "rgba(255,255,255,0.06)", color: "rgba(245,245,245,0.6)", border: "1px solid rgba(255,255,255,0.15)" }}>
+                                    {rowBusy ? "…" : "Undo merge"}
+                                  </button>
+                                )}
                               </div>
+                              {mergeIsOpen && (
+                                <div className="mt-2 px-2.5 py-2 rounded"
+                                  style={{ backgroundColor: "rgba(56,189,248,0.06)", border: "1px solid rgba(56,189,248,0.3)" }}>
+                                  <div className="text-[10px] mb-1.5 font-bold uppercase" style={{ color: "rgb(125,211,252)" }}>
+                                    Merge other rows into THIS primary
+                                  </div>
+                                  <div className="text-[10px] mb-2" style={{ color: "rgba(245,245,245,0.6)" }}>
+                                    Pick the rows whose testimony should fold into this one. Rows from the same reporter email are pre-selected. The merged comment below replaces this row&apos;s display note in PDFs and dashboards. Original notes stay preserved in <code>court_actors</code>.
+                                  </div>
+                                  <div className="space-y-1 mb-2">
+                                    {allClusterSamples.filter(o => o.row_id !== s.row_id).map(o => {
+                                      const checked = mergeForm.mergedRowIds.includes(o.row_id);
+                                      const isOtherMerged = Boolean(o.merged_into) && o.merged_into !== s.row_id;
+                                      return (
+                                        <label key={o.row_id}
+                                          className="flex items-start gap-2 px-2 py-1 rounded cursor-pointer"
+                                          style={{ backgroundColor: checked ? "rgba(56,189,248,0.1)" : "transparent" }}
+                                          title={isOtherMerged ? `Already merged into row ${o.merged_into}` : ""}>
+                                          <input
+                                            type="checkbox"
+                                            checked={checked}
+                                            disabled={isOtherMerged}
+                                            onChange={() => toggleMergeRow(s, allClusterSamples, o.row_id)}
+                                            className="mt-0.5"
+                                          />
+                                          <div className="flex-1 min-w-0">
+                                            <div className="text-[10px]" style={{ color: "rgba(245,245,245,0.7)" }}>
+                                              <strong>{o.reporter_name || "(no name)"}</strong> &lt;{o.reporter_email || "no email"}&gt;
+                                              {o.created_at && <span> · {new Date(o.created_at).toLocaleDateString()}</span>}
+                                              <span> · row {o.row_id.slice(0, 8)}…</span>
+                                              {isOtherMerged && (
+                                                <span className="ml-1 text-[9px] px-1 py-0.5 rounded font-bold uppercase"
+                                                  style={{ backgroundColor: "rgba(120,120,120,0.18)", color: "rgba(245,245,245,0.55)" }}>
+                                                  already merged elsewhere
+                                                </span>
+                                              )}
+                                            </div>
+                                            <div className="text-[10px] italic truncate" style={{ color: "rgba(245,245,245,0.55)" }}>
+                                              {o.notes ? `"${o.notes.slice(0, 140)}${o.notes.length > 140 ? "…" : ""}"` : "(no testimony note)"}
+                                            </div>
+                                          </div>
+                                        </label>
+                                      );
+                                    })}
+                                  </div>
+                                  <label className="text-[10px] font-bold uppercase block mb-1" style={{ color: "rgb(125,211,252)" }}>
+                                    Merged comment (public — edit before saving)
+                                  </label>
+                                  <textarea
+                                    value={mergeForm.mergedComment}
+                                    onChange={e => setMergeForm(s.row_id, { mergedComment: e.target.value })}
+                                    rows={6}
+                                    placeholder="Auto-built from selected rows. Strip any names/emails before saving."
+                                    className="w-full text-[11px] rounded p-2 font-mono"
+                                    style={{ backgroundColor: "rgba(0,0,0,0.3)", border: "1px solid rgba(255,255,255,0.18)", color: "rgba(245,245,245,0.9)" }}
+                                  />
+                                  <div className="mt-2 flex items-center gap-2">
+                                    <button
+                                      type="button"
+                                      disabled={rowBusy || mergeForm.mergedRowIds.length === 0 || !mergeForm.mergedComment.trim()}
+                                      onClick={() => void saveMerge(s)}
+                                      className="text-[10px] px-3 py-1 rounded font-bold transition-opacity disabled:opacity-50"
+                                      style={{ backgroundColor: "rgba(56,189,248,0.25)", color: "rgb(186,230,253)", border: "1px solid rgba(56,189,248,0.5)" }}>
+                                      {rowBusy ? "Saving…" : "Save merge"}
+                                    </button>
+                                    <button
+                                      type="button"
+                                      disabled={rowBusy}
+                                      onClick={() => { setMergeOpen(null); setMergeForms(prev => { const n = { ...prev }; delete n[s.row_id]; return n; }); }}
+                                      className="text-[10px] px-3 py-1 rounded font-bold transition-opacity"
+                                      style={{ backgroundColor: "rgba(255,255,255,0.06)", color: "rgba(245,245,245,0.6)", border: "1px solid rgba(255,255,255,0.15)" }}>
+                                      Cancel
+                                    </button>
+                                  </div>
+                                </div>
+                              )}
                             </div>
                           );
                         })}

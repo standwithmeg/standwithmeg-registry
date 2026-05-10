@@ -77,13 +77,19 @@ type PublicCourtActor = {
  * Row-level review decision (court_actor_row_review.decision).
  *   duplicate        — exclude row from family counts; still visible.
  *   count_separately — force this row to count as its own family-key.
+ *   merge_comments   — exclude row from family counts because its
+ *                      testimony has been merged into a primary row's
+ *                      court_actor_comment_merges.merged_comment.
+ *                      Read paths skip the merged row's own note and
+ *                      use the primary's merged_comment instead.
  *   null/undefined   — normal: row counts using email|location dedupe.
  */
-export type CourtActorRowReviewDecision = "duplicate" | "count_separately" | null | undefined;
+export type CourtActorRowReviewDecision = "duplicate" | "count_separately" | "merge_comments" | null | undefined;
 
 /**
  * Compute the family-dedupe key for a court_actors row.
- *   - returns null when the row is marked duplicate (caller should skip).
+ *   - returns null when the row is marked duplicate OR merge_comments
+ *     (caller should skip — testimony preserved elsewhere).
  *   - returns `row:<id>` when count_separately so it survives email dedupe.
  *   - otherwise falls back to `lower(email)|location_key`, then to
  *     `submission:<submission_id>` if no email is on file.
@@ -98,6 +104,7 @@ export function resolveFamilyKey(args: {
   review_decision?: CourtActorRowReviewDecision;
 }): string | null {
   if (args.review_decision === "duplicate") return null;
+  if (args.review_decision === "merge_comments") return null;
   if (args.review_decision === "count_separately") return `row:${args.row_id}`;
   const email = args.reporter_email?.trim()?.toLowerCase();
   if (email) return `${email}|${args.location_key ?? ""}`;

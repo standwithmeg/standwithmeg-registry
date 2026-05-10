@@ -75,6 +75,7 @@ type ActorRow = {
   court_or_county: string | null;
   state_code: string | null;
   location_key: string | null;
+  created_at: string;
   submission_id: string;
   survey_submissions:
     | { email: string | null; state_of_occurrence: string | null; outside_us_country: string | null }
@@ -153,7 +154,7 @@ export async function GET(request: Request) {
 
       // Try with location_key first
       const qWithLocation = sb.from("court_actors")
-        .select("id, role, name, court_or_county, state_code, location_key, submission_id, survey_submissions(email, state_of_occurrence, outside_us_country)")
+        .select("id, role, name, court_or_county, state_code, location_key, created_at, submission_id, survey_submissions(email, state_of_occurrence, outside_us_country)")
         .eq("source", "form_direct");
 
       const { data, error } = await qWithLocation.range(from, from + pageSize - 1);
@@ -161,7 +162,7 @@ export async function GET(request: Request) {
         // If location_key doesn't exist yet, fallback to old query
         if (error.code === "42703") { // column doesn't exist
           const q = sb.from("court_actors")
-            .select("id, role, name, court_or_county, state_code, submission_id, survey_submissions(email, state_of_occurrence, outside_us_country)")
+            .select("id, role, name, court_or_county, state_code, created_at, submission_id, survey_submissions(email, state_of_occurrence, outside_us_country)")
             .eq("source", "form_direct");
           const { data: fallbackData, error: fallbackError } = await q.range(from, from + pageSize - 1);
           if (fallbackError) {
@@ -213,6 +214,7 @@ export async function GET(request: Request) {
       roleCounts: Map<string, number>;
       casingCounts: Map<string, number>;
       courtCounts: Map<string, number>;
+      latest_reported_at: string | null;
     };
 
     const buckets = new Map<string, Bucket>();
@@ -246,9 +248,13 @@ export async function GET(request: Request) {
           roleCounts: new Map(),
           casingCounts: new Map(),
           courtCounts: new Map(),
+          latest_reported_at: a.created_at ?? null,
         });
       }
       const b = buckets.get(key)!;
+      if (a.created_at && (!b.latest_reported_at || a.created_at > b.latest_reported_at)) {
+        b.latest_reported_at = a.created_at;
+      }
       b.families.add(fk);
       b.roleCounts.set(a.role, (b.roleCounts.get(a.role) ?? 0) + 1);
       const casingName = aliasHit?.canonical_name ?? a.name;
@@ -267,8 +273,15 @@ export async function GET(request: Request) {
         state_code: b.state_code,
         location_key: b.location_key,
         count: b.families.size,
+        latest_reported_at: b.latest_reported_at,
       }))
-      .sort((a, b) => b.count - a.count);
+      .sort((a, b) => {
+        // Newest public patterns first, then most families, then name A-Z.
+        // Frontend (CourtActorPanel) can re-sort via the dropdown — this is
+        // only the default ordering for the API response.
+        const newest = (b.latest_reported_at ?? "").localeCompare(a.latest_reported_at ?? "");
+        return newest || b.count - a.count || a.name.localeCompare(b.name);
+      });
 
     return Response.json({ actors: publicActors, threshold: COURT_ACTOR_PUBLIC_THRESHOLD });
   } catch (err) {
