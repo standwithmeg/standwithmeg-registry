@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
-import { COURT_ACTOR_PUBLIC_THRESHOLD } from "../../../lib/court-actors";
+import { useState, useEffect, useCallback, useMemo } from "react";
+import { COURT_ACTOR_PUBLIC_THRESHOLD, actorLooseNameKey } from "../../../lib/court-actors";
 import { PossibleMatchesPanel } from "./_components/PossibleMatchesPanel";
 
 const GOLD  = "#C9A227";
@@ -662,6 +662,17 @@ export default function AdminPage() {
   const [adminActors, setAdminActors] = useState<AdminActor[]>([]);
   const [adminActorAggs, setAdminActorAggs] = useState<AdminActorAgg[]>([]);
 
+  // Court-actor search/filter (applies to Patterns + All Reports views).
+  // Source defaults to "form_direct" so the admin sees counted rows first;
+  // toggle to "all" to include AI/regex extractions awaiting promotion.
+  const [actorSearch, setActorSearch] = useState("");
+  const [actorLocationFilter, setActorLocationFilter] = useState("");
+  const [actorRoleFilter, setActorRoleFilter] = useState("");
+  type ActorSourceFilter = "all" | "form_direct" | "extracted_ai" | "extracted_regex";
+  const [actorSourceFilter, setActorSourceFilter] = useState<ActorSourceFilter>("all");
+  type ActorSortMode = "default" | "group_near_dupes";
+  const [actorSortMode, setActorSortMode] = useState<ActorSortMode>("default");
+
   // ── Photo-request workflow tile ──────────────────────────────────
   type PhotoRequestRecent = {
     id: string;
@@ -845,6 +856,83 @@ export default function AdminPage() {
   }, [applyActorData, applyAuditData]);
 
   useEffect(() => { load(); }, [load]);
+
+  // ── Filter + sort applied to Patterns + All Reports views ──────────
+  // Cached so the predicate body stays in one place. Search is case-
+  // insensitive, matches across name, role, location, county, source,
+  // notes, and (admin-only) reporter info.
+  const actorSearchQuery = actorSearch.trim().toLowerCase();
+
+  function actorMatchesQuery(blob: string): boolean {
+    if (!actorSearchQuery) return true;
+    return blob.toLowerCase().includes(actorSearchQuery);
+  }
+
+  const allActorLocations = useMemo(() => {
+    const set = new Set<string>();
+    for (const a of adminActors) {
+      const loc = a.location_key ?? a.state_code;
+      if (loc) set.add(loc);
+    }
+    for (const agg of adminActorAggs) {
+      const loc = agg.location_key ?? agg.state_code;
+      if (loc) set.add(loc);
+    }
+    return Array.from(set).sort();
+  }, [adminActors, adminActorAggs]);
+
+  const allActorRoles = useMemo(() => {
+    const set = new Set<string>();
+    for (const a of adminActors) if (a.role) set.add(a.role);
+    return Array.from(set).sort();
+  }, [adminActors]);
+
+  const filteredAdminActorAggs = useMemo(() => {
+    const filtered = adminActorAggs.filter(agg => {
+      if (actorLocationFilter && (agg.location_key ?? agg.state_code) !== actorLocationFilter) return false;
+      if (actorRoleFilter && agg.role !== actorRoleFilter && !agg.role.includes(actorRoleFilter)) return false;
+      const blob = `${agg.name} ${agg.role} ${agg.location_key ?? ""} ${agg.state_code ?? ""} ${agg.court_or_county ?? ""}`;
+      return actorMatchesQuery(blob);
+    });
+    if (actorSortMode === "group_near_dupes") {
+      return filtered.slice().sort((a, b) => {
+        const locA = a.location_key ?? a.state_code ?? "";
+        const locB = b.location_key ?? b.state_code ?? "";
+        if (locA !== locB) return locA.localeCompare(locB);
+        const keyA = actorLooseNameKey(a.name);
+        const keyB = actorLooseNameKey(b.name);
+        if (keyA !== keyB) return keyA.localeCompare(keyB);
+        if (b.count !== a.count) return b.count - a.count;
+        return a.name.localeCompare(b.name);
+      });
+    }
+    return filtered;
+  // actorMatchesQuery closes over actorSearchQuery, so depend on the query string.
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [adminActorAggs, actorSearchQuery, actorLocationFilter, actorRoleFilter, actorSortMode]);
+
+  const filteredAdminActors = useMemo(() => {
+    const filtered = adminActors.filter(a => {
+      if (actorSourceFilter !== "all" && a.source !== actorSourceFilter) return false;
+      if (actorLocationFilter && (a.location_key ?? a.state_code) !== actorLocationFilter) return false;
+      if (actorRoleFilter && a.role !== actorRoleFilter && !a.role.includes(actorRoleFilter)) return false;
+      const blob = `${a.name} ${a.role} ${a.location_key ?? ""} ${a.state_code ?? ""} ${a.court_or_county ?? ""} ${a.source} ${a.notes ?? ""} ${a.reporter_email ?? ""} ${a.reporter_name ?? ""}`;
+      return actorMatchesQuery(blob);
+    });
+    if (actorSortMode === "group_near_dupes") {
+      return filtered.slice().sort((a, b) => {
+        const locA = a.location_key ?? a.state_code ?? "";
+        const locB = b.location_key ?? b.state_code ?? "";
+        if (locA !== locB) return locA.localeCompare(locB);
+        const keyA = actorLooseNameKey(a.name);
+        const keyB = actorLooseNameKey(b.name);
+        if (keyA !== keyB) return keyA.localeCompare(keyB);
+        return a.name.localeCompare(b.name);
+      });
+    }
+    return filtered;
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [adminActors, actorSearchQuery, actorLocationFilter, actorRoleFilter, actorSourceFilter, actorSortMode]);
 
   async function toggleApprove(id: string, current: boolean) {
     setApproving(id);
@@ -1743,6 +1831,111 @@ export default function AdminPage() {
             </div>
           </div>
 
+          {/* Filter bar — applies to Patterns and All Reports views.
+              Search is case-insensitive across name, role, location, county,
+              source, notes, and reporter (admin-only). */}
+          {(actorView === "patterns" || actorView === "all") && (
+            <div className="px-6 py-3 grid grid-cols-1 md:grid-cols-12 gap-3 border-b"
+              style={{ borderColor: "rgba(255,255,255,0.06)", backgroundColor: "rgba(0,0,0,0.18)" }}>
+              <div className="md:col-span-4">
+                <label className="block text-[10px] font-bold uppercase tracking-wide mb-1"
+                  style={{ color: "rgba(245,245,245,0.45)" }}>Search</label>
+                <input
+                  type="text"
+                  value={actorSearch}
+                  onChange={e => setActorSearch(e.target.value)}
+                  placeholder="Name, spelling variant, court, role, reporter…"
+                  className="w-full px-3 py-1.5 rounded-md text-xs"
+                  style={{
+                    backgroundColor: "rgba(255,255,255,0.05)",
+                    border: "1px solid rgba(255,255,255,0.15)",
+                    color: "white",
+                  }} />
+              </div>
+              <div className="md:col-span-2">
+                <label className="block text-[10px] font-bold uppercase tracking-wide mb-1"
+                  style={{ color: "rgba(245,245,245,0.45)" }}>Location</label>
+                <select
+                  value={actorLocationFilter}
+                  onChange={e => setActorLocationFilter(e.target.value)}
+                  className="w-full px-2 py-1.5 rounded-md text-xs"
+                  style={{
+                    backgroundColor: "rgba(255,255,255,0.05)",
+                    border: "1px solid rgba(255,255,255,0.15)",
+                    color: "rgba(245,245,245,0.85)",
+                  }}>
+                  <option value="">All</option>
+                  {allActorLocations.map(loc => <option key={loc} value={loc}>{loc}</option>)}
+                </select>
+              </div>
+              <div className="md:col-span-3">
+                <label className="block text-[10px] font-bold uppercase tracking-wide mb-1"
+                  style={{ color: "rgba(245,245,245,0.45)" }}>Role</label>
+                <select
+                  value={actorRoleFilter}
+                  onChange={e => setActorRoleFilter(e.target.value)}
+                  className="w-full px-2 py-1.5 rounded-md text-xs"
+                  style={{
+                    backgroundColor: "rgba(255,255,255,0.05)",
+                    border: "1px solid rgba(255,255,255,0.15)",
+                    color: "rgba(245,245,245,0.85)",
+                  }}>
+                  <option value="">All</option>
+                  {allActorRoles.map(r => <option key={r} value={r}>{r}</option>)}
+                </select>
+              </div>
+              {actorView === "all" && (
+                <div className="md:col-span-3">
+                  <label className="block text-[10px] font-bold uppercase tracking-wide mb-1"
+                    style={{ color: "rgba(245,245,245,0.45)" }}>Source</label>
+                  <select
+                    value={actorSourceFilter}
+                    onChange={e => setActorSourceFilter(e.target.value as ActorSourceFilter)}
+                    className="w-full px-2 py-1.5 rounded-md text-xs"
+                    style={{
+                      backgroundColor: "rgba(255,255,255,0.05)",
+                      border: "1px solid rgba(255,255,255,0.15)",
+                      color: "rgba(245,245,245,0.85)",
+                    }}>
+                    <option value="all">All sources</option>
+                    <option value="form_direct">form_direct (counted)</option>
+                    <option value="extracted_ai">extracted_ai</option>
+                    <option value="extracted_regex">extracted_regex</option>
+                  </select>
+                </div>
+              )}
+              <div className={`flex items-end gap-2 ${actorView === "all" ? "md:col-span-12" : "md:col-span-3"}`}>
+                <button
+                  type="button"
+                  onClick={() => setActorSortMode(actorSortMode === "default" ? "group_near_dupes" : "default")}
+                  className="text-xs px-3 py-1.5 rounded-md font-bold whitespace-nowrap transition-colors"
+                  title="Sort by location, then by normalized name. Same/near-same names appear adjacent so duplicates are easy to spot."
+                  style={{
+                    backgroundColor: actorSortMode === "group_near_dupes" ? "rgba(201,162,39,0.18)" : "rgba(255,255,255,0.05)",
+                    color: actorSortMode === "group_near_dupes" ? GOLD : "rgba(245,245,245,0.7)",
+                    border: "1px solid rgba(255,255,255,0.15)",
+                  }}>
+                  {actorSortMode === "group_near_dupes" ? "✓ Group near-duplicates" : "Group near-duplicates"}
+                </button>
+                {(actorSearch || actorLocationFilter || actorRoleFilter || actorSourceFilter !== "all" || actorSortMode !== "default") && (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setActorSearch("");
+                      setActorLocationFilter("");
+                      setActorRoleFilter("");
+                      setActorSourceFilter("all");
+                      setActorSortMode("default");
+                    }}
+                    className="text-xs px-2 py-1.5 rounded-md transition-colors"
+                    style={{ color: "rgba(245,245,245,0.6)", border: "1px solid rgba(255,255,255,0.1)" }}>
+                    Clear
+                  </button>
+                )}
+              </div>
+            </div>
+          )}
+
           {/* ── By Location ── */}
           {actorView === "by_state" && (() => {
             // Build { locationKey: { total: number, actors: AdminActor[] } } from flat list
@@ -1940,12 +2133,14 @@ export default function AdminPage() {
                   Download PDF
                 </a>
               </div>
-              {adminActorAggs.length === 0 && (
+              {filteredAdminActorAggs.length === 0 && (
                 <div className="px-6 py-10 text-center text-sm" style={{ color: "rgba(245,245,245,0.3)" }}>
-                  No court actors have been reported yet.
+                  {adminActorAggs.length === 0
+                    ? "No court actors have been reported yet."
+                    : "No actor patterns match these filters."}
                 </div>
               )}
-              {adminActorAggs.slice(0, 50).map((agg, i) => {
+              {filteredAdminActorAggs.slice(0, 200).map((agg, i) => {
                 const isPublic = agg.count >= COURT_ACTOR_PUBLIC_THRESHOLD;
                 return (
                   <div key={i} className="px-6 py-3 flex items-center justify-between gap-4"
@@ -1990,12 +2185,14 @@ export default function AdminPage() {
 
           {actorView === "all" && (
             <div>
-              {adminActors.length === 0 && (
+              {filteredAdminActors.length === 0 && (
                 <div className="px-6 py-10 text-center text-sm" style={{ color: "rgba(245,245,245,0.3)" }}>
-                  No court actor reports yet.
+                  {adminActors.length === 0
+                    ? "No court actor reports yet."
+                    : "No reports match these filters."}
                 </div>
               )}
-              {adminActors.slice(0, 200).map((a, i) => (
+              {filteredAdminActors.slice(0, 500).map((a, i) => (
                 <div key={a.id} className="px-6 py-3"
                   style={{ borderTop: i > 0 ? "1px solid rgba(255,255,255,0.05)" : "none" }}>
                   <div className="flex items-center justify-between gap-3 mb-1 flex-wrap">

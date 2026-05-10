@@ -166,6 +166,7 @@ export function PossibleMatchesPanel() {
   const [error, setError] = useState<string | null>(null);
   const [filter, setFilter] = useState<"high" | "medium" | "all">("all");
   const [locationFilter, setLocationFilter] = useState<string>("");
+  const [searchQuery, setSearchQuery] = useState("");
   const [busyKey, setBusyKey] = useState<string | null>(null);
   const [showDecided, setShowDecided] = useState(false);
 
@@ -539,12 +540,31 @@ export function PossibleMatchesPanel() {
 
   const filtered = useMemo(() => {
     if (!data) return [] as Cluster[];
+    const q = searchQuery.trim().toLowerCase();
     return data.clusters.filter(c => {
       if (filter !== "all" && c.highest_confidence !== filter) return false;
       if (locationFilter && c.location_key !== locationFilter) return false;
+      if (q) {
+        // Search across every variant's display + name_key + sample data
+        // (raw names, roles, counties, reporter case_county). Reporter
+        // emails/names live behind the admin gate already; including them
+        // here lets the admin pivot from a known reporter to their cluster.
+        const blobParts: string[] = [];
+        for (const v of c.variants) {
+          blobParts.push(v.display_name, v.name_key);
+          for (const r of v.roles) blobParts.push(r.role);
+          for (const co of v.counties) blobParts.push(co.county);
+          for (const s of v.samples) {
+            blobParts.push(s.name, s.role, s.court_or_county ?? "", s.reporter_case_county ?? "", s.reporter_email ?? "", s.reporter_name ?? "");
+          }
+        }
+        if (c.location_key) blobParts.push(c.location_key);
+        const blob = blobParts.join(" ").toLowerCase();
+        if (!blob.includes(q)) return false;
+      }
       return true;
     });
-  }, [data, filter, locationFilter]);
+  }, [data, filter, locationFilter, searchQuery]);
 
   return (
     <div>
@@ -564,6 +584,14 @@ export function PossibleMatchesPanel() {
           )}
         </div>
         <div className="flex items-center gap-2 flex-wrap">
+          <input
+            type="text"
+            value={searchQuery}
+            onChange={e => setSearchQuery(e.target.value)}
+            placeholder="Search name, role, county, reporter…"
+            className="text-xs px-2 py-1 rounded-md min-w-[220px]"
+            style={{ backgroundColor: "rgba(255,255,255,0.05)", color: "white", border: "1px solid rgba(255,255,255,0.15)" }}
+          />
           <select
             value={locationFilter}
             onChange={e => setLocationFilter(e.target.value)}
