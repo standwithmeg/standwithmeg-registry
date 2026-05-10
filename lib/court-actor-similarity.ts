@@ -198,6 +198,16 @@ export function nameSimilarity(rawA: string, rawB: string): SimilarityHit | null
     confidence = "medium";
   }
 
+  // One side has only a last name after title-stripping. After actorNameKey
+  // strips role prefixes, "Magistrate Blevins" collapses to ["blevins"] while
+  // "Angela Blevins" stays ["angela", "blevins"]. Same last name + a
+  // single-token variant is a real "needs admin review" signal — usually
+  // one reporter only knew the actor's title + surname.
+  if (!confidence && lastA === lastB && ta.length !== tb.length && (ta.length === 1 || tb.length === 1)) {
+    reasons.push("one variant has no first name, same last name");
+    confidence = "medium";
+  }
+
   // Same number of tokens, all but one identical, differing token edit
   // distance ≤ 2 (e.g. middle initial vs middle name, hyphenated drop,
   // misspelled middle).
