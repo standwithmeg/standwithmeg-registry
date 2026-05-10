@@ -22,7 +22,9 @@ import { isAdminEmail } from "../../../../../lib/require-auth";
 type ReviewRow = {
   id: string;
   row_id: string;
-  decision: "duplicate" | "count_separately";
+  // merge_comments is set by the comment-merge endpoint, not directly via
+  // POST here. The POST handler still only accepts duplicate / count_separately.
+  decision: "duplicate" | "count_separately" | "merge_comments";
   note: string | null;
   decided_by: string | null;
   decided_at: string;

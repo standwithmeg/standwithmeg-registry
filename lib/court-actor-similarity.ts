@@ -270,6 +270,14 @@ export type ClusterVariantSample = {
   // submission_id. >1 means "this reporter / submission is repeated."
   cluster_email_count: number;
   cluster_submission_count: number;
+  // Comment-merge state, populated by the route handler from
+  // court_actor_comment_merges. Default null when no merge involves this row.
+  //   merged_into:        primary row id this row's testimony was folded into.
+  //   merge_primary_for:  row ids merged into this row (this row IS the primary).
+  //   merged_comment:     when this row IS the primary, the public-facing combined text.
+  merged_into?: string | null;
+  merge_primary_for?: string[] | null;
+  merged_comment?: string | null;
 };
 
 export type ClusterVariant = {

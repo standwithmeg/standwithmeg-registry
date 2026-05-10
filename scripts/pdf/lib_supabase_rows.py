@@ -167,6 +167,36 @@ def _load_court_actor_row_review_map(sb: Client) -> dict[str, str]:
     }
 
 
+def _load_court_actor_comment_merge_map(sb: Client) -> dict[str, str]:
+    """Load primary_row_id -> merged_comment map. Empty map if table missing.
+
+    Mirrors loadCommentMergeMap in app/api/survey/court-actors/notes/route.ts.
+    Merged rows themselves are excluded from family counts via the
+    'merge_comments' decision in court_actor_row_review (migration 023 widens
+    the check). The primary row's display note is replaced with merged_comment
+    by the caller, so all of the same reporter's testimony shows under one
+    family entry in the PDF.
+    """
+    try:
+        resp = (
+            sb.table("court_actor_comment_merges")
+            .select("primary_row_id,merged_comment")
+            .execute()
+        )
+    except Exception as exc:
+        text = str(exc)
+        if "court_actor_comment_merges" in text or "42P01" in text or "PGRST205" in text:
+            return {}
+        raise
+    out: dict[str, str] = {}
+    for r in (resp.data or []):
+        primary = r.get("primary_row_id")
+        comment = (r.get("merged_comment") or "").strip()
+        if primary and comment:
+            out[primary] = comment
+    return out
+
+
 def load_public_court_actors_from_supabase(state_filter: str | None = None) -> dict[str, list[dict]]:
     """Return public-safe court actors grouped by location (US state or country)
     using the public threshold. Each actor includes an anonymized list of
@@ -199,10 +229,11 @@ def load_public_court_actors_from_supabase(state_filter: str | None = None) -> d
             break
         offset += page_size
 
-    # Admin-decision overlays. Both functions return {} (not None) when the
-    # underlying table is missing, so this stays safe pre-migration.
+    # Admin-decision overlays. All three functions return {} (not None) when
+    # the underlying table is missing, so this stays safe pre-migration.
     alias_resolver = _load_court_actor_alias_resolver(sb)
     review_map = _load_court_actor_row_review_map(sb)
+    comment_merge_map = _load_court_actor_comment_merge_map(sb)
 
     buckets: dict[tuple[str, str], dict] = {}
     for row in rows:
@@ -248,14 +279,27 @@ def load_public_court_actors_from_supabase(state_filter: str | None = None) -> d
             bucket["court_counts"][court] += 1
         if row.get("submission_id"):
             bucket["families"].add(family_key)
-        # Track best note per family (longest non-empty wins, drops [extracted_*] markers)
-        note = str(row.get("notes") or "").strip()
+        # Track best note per family. Merged-comment primaries win over plain
+        # notes for the same family, regardless of plain-note length, because
+        # the merged_comment IS the admin-curated combined testimony for that
+        # reporter. Otherwise, longest non-empty wins; [extracted_*] markers
+        # are dropped (those are admin-only source tags).
+        merged = comment_merge_map.get(row.get("id"))
+        note = (merged or str(row.get("notes") or "")).strip()
         if note and not note.startswith("[extracted_"):
             existing = bucket["family_notes"].get(family_key)
-            if existing is None or len(note) > len(existing.get("note", "")):
+            existing_is_merged = bool(existing and existing.get("is_merged"))
+            is_merged = bool(merged)
+            should_replace = (
+                existing is None
+                or (is_merged and not existing_is_merged)
+                or (not existing_is_merged and len(note) > len(existing.get("note", "")))
+            )
+            if should_replace:
                 bucket["family_notes"][family_key] = {
                     "note": note,
                     "court_or_county": court,
+                    "is_merged": is_merged,
                 }
 
     by_state: dict[str, list[dict]] = defaultdict(list)

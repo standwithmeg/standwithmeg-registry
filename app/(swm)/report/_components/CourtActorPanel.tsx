@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 const GOLD = "#C9A227";
 const BG = "#0F1E30";
@@ -12,6 +12,7 @@ export type PublicActor = {
   state_code: string | null;
   location_key: string | null;
   count: number;
+  latest_reported_at?: string | null;
 };
 
 type Props = {
@@ -24,8 +25,68 @@ type AnonymousNote = {
   month: string;
 };
 
+type SortMode = "newest" | "families" | "state" | "name";
+
+const STATE_LABEL: Record<string, string> = {
+  AL: "Alabama", AK: "Alaska", AZ: "Arizona", AR: "Arkansas", CA: "California",
+  CO: "Colorado", CT: "Connecticut", DE: "Delaware", FL: "Florida", GA: "Georgia",
+  HI: "Hawaii", ID: "Idaho", IL: "Illinois", IN: "Indiana", IA: "Iowa", KS: "Kansas",
+  KY: "Kentucky", LA: "Louisiana", ME: "Maine", MD: "Maryland", MA: "Massachusetts",
+  MI: "Michigan", MN: "Minnesota", MS: "Mississippi", MO: "Missouri", MT: "Montana",
+  NE: "Nebraska", NV: "Nevada", NH: "New Hampshire", NJ: "New Jersey", NM: "New Mexico",
+  NY: "New York", NC: "North Carolina", ND: "North Dakota", OH: "Ohio", OK: "Oklahoma",
+  OR: "Oregon", PA: "Pennsylvania", RI: "Rhode Island", SC: "South Carolina",
+  SD: "South Dakota", TN: "Tennessee", TX: "Texas", UT: "Utah", VT: "Vermont",
+  VA: "Virginia", WA: "Washington", WV: "West Virginia", WI: "Wisconsin", WY: "Wyoming",
+  DC: "District of Columbia",
+};
+
+function actorLocationLabel(actor: PublicActor): string {
+  const location = actor.location_key || actor.state_code;
+  if (!location) return "";
+  return STATE_LABEL[location] ?? location;
+}
+
+function actorSearchBlob(actor: PublicActor): string {
+  return [
+    actor.name,
+    actor.role,
+    actor.state_code,
+    actor.location_key,
+    actorLocationLabel(actor),
+    actor.court_or_county,
+  ].filter(Boolean).join(" ").toLowerCase();
+}
+
+function sortActors(actors: PublicActor[], sortMode: SortMode): PublicActor[] {
+  return [...actors].sort((a, b) => {
+    if (sortMode === "newest") {
+      const newest = (b.latest_reported_at ?? "").localeCompare(a.latest_reported_at ?? "");
+      return newest || b.count - a.count || a.name.localeCompare(b.name);
+    }
+    if (sortMode === "families") {
+      return b.count - a.count || a.name.localeCompare(b.name);
+    }
+    if (sortMode === "state") {
+      return actorLocationLabel(a).localeCompare(actorLocationLabel(b))
+        || a.name.localeCompare(b.name);
+    }
+    return a.name.localeCompare(b.name);
+  });
+}
+
 export function CourtActorPanel({ actors, threshold }: Props) {
   const [openActor, setOpenActor] = useState<PublicActor | null>(null);
+  const [sortMode, setSortMode] = useState<SortMode>("newest");
+  const [search, setSearch] = useState("");
+
+  const sortedActors = useMemo(() => {
+    const q = search.trim().toLowerCase();
+    const filtered = q
+      ? actors.filter(actor => actorSearchBlob(actor).includes(q))
+      : actors;
+    return sortActors(filtered, sortMode);
+  }, [actors, search, sortMode]);
 
   if (actors.length === 0) return null;
 
@@ -48,10 +109,54 @@ export function CourtActorPanel({ actors, threshold }: Props) {
               {actors.length} public {actors.length === 1 ? "pattern" : "patterns"}
             </div>
           </div>
+          <div className="mt-4 grid gap-3 md:grid-cols-[1fr_auto] md:items-end">
+            <div>
+              <label className="block text-[11px] font-bold uppercase tracking-wide mb-1"
+                style={{ color: "rgba(245,245,245,0.45)" }}>
+                Find a court actor
+              </label>
+              <input
+                type="search"
+                value={search}
+                onChange={e => setSearch(e.target.value)}
+                placeholder="Search name, role, state, or county"
+                className="w-full rounded-lg px-3 py-2 text-sm outline-none focus:ring-1 focus:ring-amber-300/40"
+                style={{
+                  backgroundColor: "rgba(255,255,255,0.06)",
+                  border: "1px solid rgba(255,255,255,0.14)",
+                  color: "white",
+                }}
+              />
+            </div>
+            <div>
+              <label className="block text-[11px] font-bold uppercase tracking-wide mb-1"
+                style={{ color: "rgba(245,245,245,0.45)" }}>
+                Sort
+              </label>
+              <select
+                value={sortMode}
+                onChange={e => setSortMode(e.target.value as SortMode)}
+                className="w-full rounded-lg px-3 py-2 text-sm outline-none focus:ring-1 focus:ring-amber-300/40"
+                style={{
+                  backgroundColor: "rgba(255,255,255,0.06)",
+                  border: "1px solid rgba(255,255,255,0.14)",
+                  color: "white",
+                }}
+              >
+                <option value="newest">Newest public patterns first</option>
+                <option value="families">Most families first</option>
+                <option value="state">State A-Z</option>
+                <option value="name">Name A-Z</option>
+              </select>
+            </div>
+          </div>
+          <div className="mt-2 text-[11px]" style={{ color: "rgba(245,245,245,0.38)" }}>
+            Showing {sortedActors.length} of {actors.length} public {actors.length === 1 ? "pattern" : "patterns"}.
+          </div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-px" style={{ backgroundColor: "rgba(255,255,255,0.06)" }}>
-          {actors.slice(0, 24).map((actor, i) => (
+          {sortedActors.map((actor, i) => (
             <button
               type="button"
               key={`${actor.state_code ?? "NA"}-${actor.name}-${i}`}
@@ -61,7 +166,15 @@ export function CourtActorPanel({ actors, threshold }: Props) {
               aria-label={`View what families said about ${actor.name}`}>
               <div className="flex items-start justify-between gap-3">
                 <div className="min-w-0">
-                  <div className="font-black text-white text-sm truncate">{actor.name}</div>
+                  <div className="flex items-center gap-2">
+                    {sortMode === "newest" && i < 6 && (
+                      <span className="text-[10px] font-black px-1.5 py-0.5 rounded"
+                        style={{ backgroundColor: "rgba(185,28,28,0.25)", color: "rgb(252,165,165)", border: "1px solid rgba(252,165,165,0.22)" }}>
+                        NEW
+                      </span>
+                    )}
+                    <div className="font-black text-white text-sm truncate">{actor.name}</div>
+                  </div>
                   <div className="text-xs mt-1 flex flex-wrap items-center gap-1.5"
                     style={{ color: "rgba(245,245,245,0.5)" }}>
                     <span>{actor.role}</span>

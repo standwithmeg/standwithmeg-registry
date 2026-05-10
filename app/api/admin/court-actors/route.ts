@@ -42,6 +42,37 @@ async function loadRowReviewMap(sb: AdminClient): Promise<Map<string, CourtActor
   return map;
 }
 
+type CommentMergeRecord = {
+  primary_row_id: string;
+  merged_row_ids: string[];
+  merged_comment: string;
+};
+
+async function loadCommentMerges(sb: AdminClient): Promise<{
+  byPrimary: Map<string, CommentMergeRecord>;
+  byMerged: Map<string, string>; // merged row_id → primary row_id
+}> {
+  const empty = { byPrimary: new Map(), byMerged: new Map() };
+  const { data, error } = await sb
+    .from("court_actor_comment_merges")
+    .select("primary_row_id, merged_row_ids, merged_comment");
+  if (error) {
+    const missing = error.code === "42P01"
+      || error.code === "PGRST205"
+      || /Could not find the table/i.test(error.message ?? "");
+    if (missing) return empty;
+    console.error("court_actor_comment_merges select error:", error.message);
+    return empty;
+  }
+  const byPrimary = new Map<string, CommentMergeRecord>();
+  const byMerged = new Map<string, string>();
+  for (const r of (data ?? []) as CommentMergeRecord[]) {
+    byPrimary.set(r.primary_row_id, r);
+    for (const m of r.merged_row_ids ?? []) byMerged.set(m, r.primary_row_id);
+  }
+  return { byPrimary, byMerged };
+}
+
 /**
  * Admin-only: returns EVERY named court actor (no threshold), plus aggregate
  * counts per unique (name, location) bucket. Includes reporter info
@@ -192,6 +223,7 @@ export async function GET() {
     // additionally roll close-spelling variants into the canonical name.
     const aliasResolver = await loadAliasResolver(adminSb);
     const rowReviewMap = await loadRowReviewMap(adminSb);
+    const commentMerges = await loadCommentMerges(adminSb);
 
     type AggBucket = {
       name: string;
@@ -249,6 +281,8 @@ export async function GET() {
       const submission = joinedSubmission(r);
       const review = rowReviewMap.get(r.id) ?? null;
       const fk = familyKey(r, rowReviewMap);
+      const mergePrimary = commentMerges.byPrimary.get(r.id) ?? null;
+      const mergeParentId = commentMerges.byMerged.get(r.id) ?? null;
       return {
         id: r.id,
         role: r.role,
@@ -270,6 +304,13 @@ export async function GET() {
           : null,
         review_decision: review,
         counts_publicly: fk !== null && (r.source ?? "form_direct") === "form_direct",
+        // Comment-merge state for the admin UI:
+        //   merge_primary_for: row IDs this row is the merged-display primary for
+        //   merged_into:        primary row id this row's testimony was merged into
+        //   merged_comment:     when this row IS the primary, the public-facing combined text
+        merge_primary_for: mergePrimary?.merged_row_ids ?? null,
+        merged_into: mergeParentId,
+        merged_comment: mergePrimary?.merged_comment ?? null,
       };
     });
 
