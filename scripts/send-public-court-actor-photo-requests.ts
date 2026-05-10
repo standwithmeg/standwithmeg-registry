@@ -32,12 +32,12 @@
 
 import { existsSync, readFileSync } from "fs";
 import path from "path";
-import { createClient } from "@supabase/supabase-js";
 
 loadDotEnvLocal();
 
 import {
   buildPhotoRequestEmail,
+  dispatchPendingPhotoRequests,
   getPublicActorsWithReporters,
   loadExistingNotifications,
   notificationDedupeKey,
@@ -206,121 +206,20 @@ function logPreview(args: {
 }
 
 async function performSend(args: {
-  plan: PlannedSend[];
   smtpUser: string;
   smtpPass: string;
   fromAddress: string;
   replyToAddress: string;
 }) {
-  const { plan, smtpUser, smtpPass, fromAddress, replyToAddress } = args;
-  const sb = createClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.SUPABASE_SERVICE_ROLE_KEY!,
-    { auth: { autoRefreshToken: false, persistSession: false } },
-  );
-
-  // Confirm the dedupe table exists. If not, refuse to send — sending
-  // without writing the audit row would defeat the one-email-per-reporter rule.
-  const probe = await sb
-    .from("court_actor_public_notifications")
-    .select("id", { count: "exact", head: true });
-  if (probe.error) {
-    throw new Error(
-      `Refusing to --send: court_actor_public_notifications is unreachable (${probe.error.message}). ` +
-        "Apply migration 023_court_actor_public_notifications.sql first.",
-    );
-  }
-
-  const nodemailer = await import("nodemailer");
-  const transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 587,
-    secure: false,
-    auth: { user: smtpUser, pass: smtpPass },
+  const summary = await dispatchPendingPhotoRequests({
+    smtpUser: args.smtpUser,
+    smtpPass: args.smtpPass,
+    fromAddress: args.fromAddress,
+    replyToAddress: args.replyToAddress,
   });
-
-  let sentCount = 0;
-  let skippedCount = 0;
-  let failedCount = 0;
-
-  for (const p of plan) {
-    // Race-safety: re-check just before sending in case another run beat us.
-    const { data: existing, error: existingErr } = await sb
-      .from("court_actor_public_notifications")
-      .select("id")
-      .eq("status", "sent")
-      .eq("actor_bucket_key", p.bucket.actor_bucket_key)
-      .ilike("reporter_email", p.reporter.reporter_email)
-      .limit(1);
-    if (existingErr) {
-      console.error(
-        `[skip] could not verify dedupe for ${p.reporter.reporter_email}: ${existingErr.message}`,
-      );
-      skippedCount += 1;
-      continue;
-    }
-    if (existing && existing.length > 0) {
-      console.log(
-        `[skip] ${p.reporter.reporter_email} re: ${p.bucket.canonical_name} — already sent in another run`,
-      );
-      skippedCount += 1;
-      continue;
-    }
-
-    try {
-      const info = await transporter.sendMail({
-        from: `"Stand With Meg" <${fromAddress}>`,
-        replyTo: replyToAddress,
-        to: p.reporter.reporter_email,
-        subject: p.subject,
-        text: p.body,
-      });
-      const { error: insertErr } = await sb
-        .from("court_actor_public_notifications")
-        .insert({
-          actor_bucket_key: p.bucket.actor_bucket_key,
-          canonical_name: p.bucket.canonical_name,
-          location_key: p.bucket.location_key,
-          reporter_email: p.reporter.reporter_email,
-          submission_id: p.reporter.submission_id,
-          court_actor_row_id: p.reporter.court_actor_row_id,
-          status: "sent",
-          email_subject: p.subject,
-          email_body: p.body,
-          sent_at: new Date().toISOString(),
-        });
-      if (insertErr) {
-        console.error(
-          `[warn] sent email but failed to record notification for ${p.reporter.reporter_email}: ${insertErr.message}`,
-        );
-      } else {
-        console.log(
-          `[sent] ${p.reporter.reporter_email} re: ${p.bucket.canonical_name} — messageId=${info.messageId}`,
-        );
-      }
-      sentCount += 1;
-    } catch (err: unknown) {
-      const message = err instanceof Error ? err.message : String(err);
-      console.error(
-        `[fail] ${p.reporter.reporter_email} re: ${p.bucket.canonical_name}: ${message}`,
-      );
-      await sb.from("court_actor_public_notifications").insert({
-        actor_bucket_key: p.bucket.actor_bucket_key,
-        canonical_name: p.bucket.canonical_name,
-        location_key: p.bucket.location_key,
-        reporter_email: p.reporter.reporter_email,
-        submission_id: p.reporter.submission_id,
-        court_actor_row_id: p.reporter.court_actor_row_id,
-        status: "failed",
-        email_subject: p.subject,
-        email_body: p.body,
-        error_message: message.slice(0, 2000),
-      });
-      failedCount += 1;
-    }
-  }
-
-  console.log(`\nDone. sent=${sentCount} skipped=${skippedCount} failed=${failedCount}`);
+  console.log(
+    `\nDone. sent=${summary.sent} skipped=${summary.skipped} failed=${summary.failed}`,
+  );
 }
 
 function describeMissingMigration(text: string): boolean {
@@ -395,7 +294,7 @@ async function main() {
     return;
   }
 
-  await performSend({ plan, smtpUser, smtpPass, fromAddress, replyToAddress });
+  await performSend({ smtpUser, smtpPass, fromAddress, replyToAddress });
 }
 
 main().catch(err => {

@@ -5,7 +5,8 @@ import {
   normalizeOutsideCountryForReporting,
 } from "../../../lib/survey-location";
 import { VALID_US_JURISDICTION_CODES } from "../../../lib/us-jurisdictions";
-import { courtActorLocationKey } from "../../../lib/court-actors";
+import { actorLooseNameKey, courtActorLocationKey } from "../../../lib/court-actors";
+import { dispatchPendingPhotoRequests } from "../../../lib/court-actor-public-notifications";
 import { createHash } from "crypto";
 
 // Public submissions come in anonymously from untrusted visitors, but the
@@ -263,6 +264,34 @@ export async function POST(request: Request) {
         if (actorsErr) {
           // Log but don't fail the whole submission
           console.error("court_actors insert error (non-blocking):", actorsErr.message);
+        } else if (location_key) {
+          // Fire-and-forget: if any of the actors this family just named has
+          // *now* crossed the public threshold, the dispatcher will email
+          // every contributing reporter who hasn't already been emailed for
+          // that actor. Scoped to the just-submitted bucket keys so we never
+          // do unbounded SMTP work in the request path. Errors are logged
+          // and never thrown — the submission response is unaffected.
+          const onlyActorBucketKeys = new Set<string>();
+          for (const a of actorRows) {
+            const looseKey = actorLooseNameKey(a.name);
+            if (looseKey) onlyActorBucketKeys.add(`${looseKey}|${location_key}`);
+          }
+          const smtpUser = process.env.GOOGLE_SMTP_USER;
+          const smtpPass = process.env.GOOGLE_SMTP_PASSWORD;
+          if (smtpUser && smtpPass && onlyActorBucketKeys.size > 0) {
+            const fromAddress = process.env.GOOGLE_SMTP_FROM || smtpUser;
+            const replyToAddress = process.env.GOOGLE_SMTP_REPLY_TO || fromAddress;
+            void dispatchPendingPhotoRequests({
+              smtpUser,
+              smtpPass,
+              fromAddress,
+              replyToAddress,
+              onlyActorBucketKeys,
+            }).catch((err: unknown) => {
+              const msg = err instanceof Error ? err.message : String(err);
+              console.error("instant photo-request dispatch failed (non-blocking):", msg);
+            });
+          }
         }
       }
     }

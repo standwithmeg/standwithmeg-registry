@@ -661,6 +661,32 @@ export default function AdminPage() {
   };
   const [adminActors, setAdminActors] = useState<AdminActor[]>([]);
   const [adminActorAggs, setAdminActorAggs] = useState<AdminActorAgg[]>([]);
+
+  // ── Photo-request workflow tile ──────────────────────────────────
+  type PhotoRequestRecent = {
+    id: string;
+    canonical_name: string;
+    location_key: string;
+    reporter_email: string;
+    status: "sent" | "skipped" | "failed" | "pending";
+    email_subject: string | null;
+    sent_at: string | null;
+    error_message: string | null;
+    created_at: string;
+  };
+  type PhotoRequestSummary = {
+    totals: {
+      would_send: number;
+      already_sent: number;
+      previously_failed: number;
+      sent_last_7d: number;
+      failed_last_7d: number;
+      last_sent_at: string | null;
+    };
+    recent: PhotoRequestRecent[];
+  };
+  const [photoRequests, setPhotoRequests] = useState<PhotoRequestSummary | null>(null);
+  const [photoRequestsExpanded, setPhotoRequestsExpanded] = useState(false);
   type ActorView = "by_state" | "patterns" | "possible_matches" | "all";
   const [actorView, setActorView] = useState<ActorView>("by_state");
   const [expandedState, setExpandedState] = useState<string | null>(null);
@@ -780,10 +806,11 @@ export default function AdminPage() {
     setLoading(true);
     setError(null);
     try {
-      const [statsRes, actorsRes, auditRes] = await Promise.all([
+      const [statsRes, actorsRes, auditRes, photoReqRes] = await Promise.all([
         fetch("/api/admin/survey-stats"),
         fetch("/api/admin/court-actors"),
         fetch("/api/admin/reporting-audit"),
+        fetch("/api/admin/court-actor-photo-requests"),
       ]);
       const statsData = await statsRes.json();
       if (!statsRes.ok) { setError(statsData.error || "Failed to load stats."); return; }
@@ -799,6 +826,16 @@ export default function AdminPage() {
         setAuditRows([]);
         setAuditSummary(null);
         setAuditError(auditData.error || "Failed to load reporting audit.");
+      }
+
+      if (photoReqRes.ok) {
+        const photoReqData = await photoReqRes.json().catch(() => null);
+        if (photoReqData?.totals) {
+          setPhotoRequests({
+            totals: photoReqData.totals,
+            recent: Array.isArray(photoReqData.recent) ? photoReqData.recent : [],
+          });
+        }
       }
     } catch {
       setError("Network error.");
@@ -1565,6 +1602,111 @@ export default function AdminPage() {
             </div>
           )}
         </div>
+
+        {/* ── Photo Requests (Auto-email workflow) ── */}
+        {photoRequests && (
+          <div className="rounded-2xl overflow-hidden"
+            style={{ backgroundColor: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.1)" }}>
+            <div className="px-6 py-4 flex items-start justify-between gap-4 flex-wrap border-b"
+              style={{ borderColor: "rgba(255,255,255,0.08)", backgroundColor: "rgba(30,58,95,0.4)" }}>
+              <div>
+                <h2 className="font-black text-white text-base tracking-wide">Photo Requests</h2>
+                <p className="text-xs mt-0.5" style={{ color: "rgba(245,245,245,0.4)" }}>
+                  Automatic photo / source request emails to reporters when their named court actor crosses the public threshold. One email per reporter per actor, ever.
+                </p>
+              </div>
+              <button
+                onClick={() => setPhotoRequestsExpanded(v => !v)}
+                className="text-xs px-3 py-1.5 font-bold rounded-lg whitespace-nowrap transition-colors"
+                style={{
+                  border: `1px solid rgba(201,162,39,0.3)`,
+                  backgroundColor: photoRequestsExpanded ? "rgba(201,162,39,0.18)" : "transparent",
+                  color: photoRequestsExpanded ? GOLD : "rgba(245,245,245,0.55)",
+                }}>
+                {photoRequestsExpanded ? "Hide recent" : "Show recent"}
+              </button>
+            </div>
+            <div className="px-6 py-4 grid grid-cols-2 sm:grid-cols-4 gap-4">
+              <div>
+                <div className="text-2xl font-black text-white">{photoRequests.totals.sent_last_7d}</div>
+                <div className="text-xs" style={{ color: "rgba(245,245,245,0.5)" }}>Sent · last 7 days</div>
+              </div>
+              <div>
+                <div className="text-2xl font-black"
+                  style={{ color: photoRequests.totals.failed_last_7d > 0 ? "rgb(252,165,165)" : "rgb(245,245,245)" }}>
+                  {photoRequests.totals.failed_last_7d}
+                </div>
+                <div className="text-xs" style={{ color: "rgba(245,245,245,0.5)" }}>Failed · last 7 days</div>
+              </div>
+              <div>
+                <div className="text-2xl font-black text-white">{photoRequests.totals.would_send}</div>
+                <div className="text-xs" style={{ color: "rgba(245,245,245,0.5)" }}>Pending next run</div>
+              </div>
+              <div>
+                <div className="text-2xl font-black text-white">{photoRequests.totals.already_sent}</div>
+                <div className="text-xs" style={{ color: "rgba(245,245,245,0.5)" }}>Total ever sent</div>
+              </div>
+            </div>
+            {photoRequests.totals.last_sent_at && (
+              <div className="px-6 pb-3 text-xs" style={{ color: "rgba(245,245,245,0.45)" }}>
+                Last send: <span title={exactTimestamp(photoRequests.totals.last_sent_at)}>
+                  {timeAgo(photoRequests.totals.last_sent_at)}
+                </span>
+                {" · "}
+                <a
+                  href="https://github.com/standwithmeg/standwithmeg-registry/actions/workflows/send-public-court-actor-photo-requests.yml"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: GOLD, textDecoration: "underline" }}>
+                  Workflow runs ↗
+                </a>
+              </div>
+            )}
+            {photoRequestsExpanded && photoRequests.recent.length > 0 && (
+              <div className="border-t" style={{ borderColor: "rgba(255,255,255,0.06)" }}>
+                <table className="w-full text-xs">
+                  <thead>
+                    <tr style={{ backgroundColor: "rgba(255,255,255,0.03)" }}>
+                      <th className="px-6 py-2 text-left font-bold" style={{ color: "rgba(245,245,245,0.4)" }}>When</th>
+                      <th className="px-2 py-2 text-left font-bold" style={{ color: "rgba(245,245,245,0.4)" }}>Status</th>
+                      <th className="px-2 py-2 text-left font-bold" style={{ color: "rgba(245,245,245,0.4)" }}>Court actor</th>
+                      <th className="px-2 py-2 text-left font-bold" style={{ color: "rgba(245,245,245,0.4)" }}>Reporter</th>
+                      <th className="px-6 py-2 text-left font-bold" style={{ color: "rgba(245,245,245,0.4)" }}>Detail</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {photoRequests.recent.map(r => {
+                      const statusColor =
+                        r.status === "sent" ? "rgb(134,239,172)" :
+                        r.status === "failed" ? "rgb(252,165,165)" :
+                        "rgba(245,245,245,0.55)";
+                      return (
+                        <tr key={r.id} style={{ borderTop: "1px solid rgba(255,255,255,0.04)" }}>
+                          <td className="px-6 py-2 whitespace-nowrap" style={{ color: "rgba(245,245,245,0.5)" }}
+                            title={exactTimestamp(r.created_at)}>
+                            {timeAgo(r.created_at)}
+                          </td>
+                          <td className="px-2 py-2 font-bold" style={{ color: statusColor }}>
+                            {r.status}
+                          </td>
+                          <td className="px-2 py-2" style={{ color: "rgba(245,245,245,0.85)" }}>
+                            {r.canonical_name} <span style={{ color: "rgba(245,245,245,0.4)" }}>· {r.location_key}</span>
+                          </td>
+                          <td className="px-2 py-2 font-mono" style={{ color: "rgba(245,245,245,0.65)" }}>
+                            {r.reporter_email}
+                          </td>
+                          <td className="px-6 py-2" style={{ color: r.status === "failed" ? "rgb(252,165,165)" : "rgba(245,245,245,0.5)" }}>
+                            {r.status === "failed" ? r.error_message : (r.email_subject ?? "")}
+                          </td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </div>
+            )}
+          </div>
+        )}
 
         {/* ── Court Actors (Admin) ── */}
         <div className="rounded-2xl overflow-hidden"

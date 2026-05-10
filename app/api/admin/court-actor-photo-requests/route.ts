@@ -3,6 +3,7 @@ import { isAdminEmail } from "../../../../lib/require-auth";
 import {
   getPublicActorsWithReporters,
   loadExistingNotifications,
+  loadRecentNotifications,
   notificationDedupeKey,
 } from "../../../../lib/court-actor-public-notifications";
 
@@ -112,6 +113,14 @@ export async function GET() {
       }),
     }));
 
+    const recent = await loadRecentNotifications(50);
+
+    const sevenDaysAgoMs = Date.now() - 7 * 24 * 60 * 60 * 1000;
+    const recent7d = recent.filter(r => Date.parse(r.created_at) >= sevenDaysAgoMs);
+    const sent7d = recent7d.filter(r => r.status === "sent").length;
+    const failed7d = recent7d.filter(r => r.status === "failed").length;
+    const lastSentAt = recent.find(r => r.status === "sent")?.sent_at ?? null;
+
     return Response.json({
       threshold: 3,
       buckets: decorated,
@@ -119,7 +128,11 @@ export async function GET() {
         would_send: wouldSend,
         already_sent: alreadySent,
         previously_failed: previouslyFailed,
+        sent_last_7d: sent7d,
+        failed_last_7d: failed7d,
+        last_sent_at: lastSentAt,
       },
+      recent,
     });
   } catch (err) {
     const msg = err instanceof Error ? err.message : "Failed.";
