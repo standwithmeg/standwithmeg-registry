@@ -447,3 +447,250 @@ export function buildPhotoRequestEmail(args: {
   ].join("\n");
   return { subject, body };
 }
+
+// ─────────────────────────────────────────────────────────────────────
+// Send-and-record dispatcher.
+//
+// Does the actual work: for every public bucket that has emailable
+// reporters not already in the dedupe table, send the locked email via
+// SMTP and record a court_actor_public_notifications row. Used by the
+// daily script and by the survey-submission hot path (fire-and-forget).
+//
+// The same partial unique index that protects the script also protects
+// concurrent calls from this function — a duplicate send race becomes a
+// 23505 on insert, which we count as 'skipped' instead of 'sent'.
+// ─────────────────────────────────────────────────────────────────────
+export type DispatchSummary = {
+  sent: number;
+  skipped: number;
+  failed: number;
+  details: Array<
+    | { kind: "sent"; reporter_email: string; canonical_name: string; location_key: string; message_id?: string }
+    | { kind: "skipped"; reporter_email: string; canonical_name: string; location_key: string; reason: string }
+    | { kind: "failed"; reporter_email: string; canonical_name: string; location_key: string; error: string }
+  >;
+};
+
+export type DispatchOptions = {
+  smtpUser: string;
+  smtpPass: string;
+  fromAddress: string;
+  replyToAddress: string;
+  /**
+   * Optional filter: only consider buckets whose actor_bucket_key is in
+   * this set. Used by the survey hot path so we only do the SMTP work
+   * for actors related to the just-submitted form, not the entire DB.
+   */
+  onlyActorBucketKeys?: Set<string>;
+  logger?: {
+    log: (msg: string) => void;
+    warn: (msg: string) => void;
+    error: (msg: string) => void;
+  };
+};
+
+const DEFAULT_LOGGER = {
+  log: (msg: string) => console.log(msg),
+  warn: (msg: string) => console.warn(msg),
+  error: (msg: string) => console.error(msg),
+};
+
+export async function dispatchPendingPhotoRequests(
+  options: DispatchOptions,
+): Promise<DispatchSummary> {
+  const logger = options.logger ?? DEFAULT_LOGGER;
+  const summary: DispatchSummary = { sent: 0, skipped: 0, failed: 0, details: [] };
+
+  const sb = createAdminSupabaseClient();
+
+  const probe = await sb
+    .from("court_actor_public_notifications")
+    .select("id", { count: "exact", head: true });
+  if (probe.error) {
+    throw new Error(
+      `court_actor_public_notifications is unreachable (${probe.error.message}). ` +
+        "Apply migration 023_court_actor_public_notifications.sql first.",
+    );
+  }
+
+  const buckets = await getPublicActorsWithReporters();
+  const existingRows = await loadExistingNotifications();
+  const alreadySent = new Set<string>();
+  for (const r of existingRows) {
+    if (r.status === "sent") {
+      alreadySent.add(notificationDedupeKey(r.reporter_email, r.actor_bucket_key));
+    }
+  }
+
+  type Plan = {
+    bucket: PublicActorBucket;
+    reporter: PublicActorReporter;
+    subject: string;
+    body: string;
+  };
+  const plan: Plan[] = [];
+  for (const bucket of buckets) {
+    if (options.onlyActorBucketKeys && !options.onlyActorBucketKeys.has(bucket.actor_bucket_key)) {
+      continue;
+    }
+    for (const reporter of bucket.reporters) {
+      const key = notificationDedupeKey(reporter.reporter_email, bucket.actor_bucket_key);
+      if (alreadySent.has(key)) continue;
+      const { subject, body } = buildPhotoRequestEmail({
+        firstName: reporter.reporter_first_name,
+        canonicalName: bucket.canonical_name,
+        locationKey: bucket.location_key,
+      });
+      plan.push({ bucket, reporter, subject, body });
+    }
+  }
+
+  if (plan.length === 0) return summary;
+
+  const nodemailer = await import("nodemailer");
+  const transporter = nodemailer.createTransport({
+    host: "smtp.gmail.com",
+    port: 587,
+    secure: false,
+    auth: { user: options.smtpUser, pass: options.smtpPass },
+  });
+
+  for (const p of plan) {
+    // Race-safety: another caller may have written a 'sent' row since we
+    // loaded existingRows. Re-check immediately before SMTP work.
+    const { data: justChecked, error: dedupeErr } = await sb
+      .from("court_actor_public_notifications")
+      .select("id")
+      .eq("status", "sent")
+      .eq("actor_bucket_key", p.bucket.actor_bucket_key)
+      .ilike("reporter_email", p.reporter.reporter_email)
+      .limit(1);
+    if (dedupeErr) {
+      summary.skipped += 1;
+      summary.details.push({
+        kind: "skipped",
+        reporter_email: p.reporter.reporter_email,
+        canonical_name: p.bucket.canonical_name,
+        location_key: p.bucket.location_key,
+        reason: `dedupe-check-failed: ${dedupeErr.message}`,
+      });
+      logger.error(`[skip] dedupe check failed for ${p.reporter.reporter_email}: ${dedupeErr.message}`);
+      continue;
+    }
+    if (justChecked && justChecked.length > 0) {
+      summary.skipped += 1;
+      summary.details.push({
+        kind: "skipped",
+        reporter_email: p.reporter.reporter_email,
+        canonical_name: p.bucket.canonical_name,
+        location_key: p.bucket.location_key,
+        reason: "already-sent-in-other-run",
+      });
+      continue;
+    }
+
+    try {
+      const info = await transporter.sendMail({
+        from: `"Stand With Meg" <${options.fromAddress}>`,
+        replyTo: options.replyToAddress,
+        to: p.reporter.reporter_email,
+        subject: p.subject,
+        text: p.body,
+      });
+      const { error: insertErr } = await sb
+        .from("court_actor_public_notifications")
+        .insert({
+          actor_bucket_key: p.bucket.actor_bucket_key,
+          canonical_name: p.bucket.canonical_name,
+          location_key: p.bucket.location_key,
+          reporter_email: p.reporter.reporter_email,
+          submission_id: p.reporter.submission_id,
+          court_actor_row_id: p.reporter.court_actor_row_id,
+          status: "sent",
+          email_subject: p.subject,
+          email_body: p.body,
+          sent_at: new Date().toISOString(),
+        });
+      summary.sent += 1;
+      summary.details.push({
+        kind: "sent",
+        reporter_email: p.reporter.reporter_email,
+        canonical_name: p.bucket.canonical_name,
+        location_key: p.bucket.location_key,
+        message_id: info.messageId,
+      });
+      if (insertErr) {
+        logger.warn(
+          `[warn] sent email but failed to record notification for ${p.reporter.reporter_email}: ${insertErr.message}`,
+        );
+      } else {
+        logger.log(
+          `[sent] ${p.reporter.reporter_email} re: ${p.bucket.canonical_name} — messageId=${info.messageId}`,
+        );
+      }
+    } catch (err: unknown) {
+      const message = err instanceof Error ? err.message : String(err);
+      logger.error(`[fail] ${p.reporter.reporter_email} re: ${p.bucket.canonical_name}: ${message}`);
+      await sb.from("court_actor_public_notifications").insert({
+        actor_bucket_key: p.bucket.actor_bucket_key,
+        canonical_name: p.bucket.canonical_name,
+        location_key: p.bucket.location_key,
+        reporter_email: p.reporter.reporter_email,
+        submission_id: p.reporter.submission_id,
+        court_actor_row_id: p.reporter.court_actor_row_id,
+        status: "failed",
+        email_subject: p.subject,
+        email_body: p.body,
+        error_message: message.slice(0, 2000),
+      });
+      summary.failed += 1;
+      summary.details.push({
+        kind: "failed",
+        reporter_email: p.reporter.reporter_email,
+        canonical_name: p.bucket.canonical_name,
+        location_key: p.bucket.location_key,
+        error: message,
+      });
+    }
+  }
+
+  return summary;
+}
+
+// ─────────────────────────────────────────────────────────────────────
+// Recent-activity reader for the admin tile.
+// ─────────────────────────────────────────────────────────────────────
+export type RecentNotification = {
+  id: string;
+  actor_bucket_key: string;
+  canonical_name: string;
+  location_key: string;
+  reporter_email: string;
+  status: "sent" | "skipped" | "failed" | "pending";
+  email_subject: string | null;
+  error_message: string | null;
+  sent_at: string | null;
+  created_at: string;
+};
+
+/**
+ * Most-recent N notification rows. Used by the admin tile to surface
+ * "what fired since last time I looked" plus any failures.
+ */
+export async function loadRecentNotifications(limit = 50): Promise<RecentNotification[]> {
+  const sb = createAdminSupabaseClient();
+  const { data, error } = await sb
+    .from("court_actor_public_notifications")
+    .select("id, actor_bucket_key, canonical_name, location_key, reporter_email, status, email_subject, error_message, sent_at, created_at")
+    .order("created_at", { ascending: false })
+    .limit(limit);
+  if (error) {
+    const missing =
+      error.code === "42P01" ||
+      error.code === "PGRST205" ||
+      /Could not find the table/i.test(error.message ?? "");
+    if (missing) return [];
+    throw new Error(`court_actor_public_notifications recent select failed: ${error.message}`);
+  }
+  return (data ?? []) as RecentNotification[];
+}

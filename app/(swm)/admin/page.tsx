@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
-import { COURT_ACTOR_PUBLIC_THRESHOLD } from "../../../lib/court-actors";
+import { useState, useEffect, useCallback, useMemo } from "react";
+import { COURT_ACTOR_PUBLIC_THRESHOLD, actorLooseNameKey } from "../../../lib/court-actors";
 import { PossibleMatchesPanel } from "./_components/PossibleMatchesPanel";
 
 const GOLD  = "#C9A227";
@@ -661,6 +661,43 @@ export default function AdminPage() {
   };
   const [adminActors, setAdminActors] = useState<AdminActor[]>([]);
   const [adminActorAggs, setAdminActorAggs] = useState<AdminActorAgg[]>([]);
+
+  // Court-actor search/filter (applies to Patterns + All Reports views).
+  // Source defaults to "form_direct" so the admin sees counted rows first;
+  // toggle to "all" to include AI/regex extractions awaiting promotion.
+  const [actorSearch, setActorSearch] = useState("");
+  const [actorLocationFilter, setActorLocationFilter] = useState("");
+  const [actorRoleFilter, setActorRoleFilter] = useState("");
+  type ActorSourceFilter = "all" | "form_direct" | "extracted_ai" | "extracted_regex";
+  const [actorSourceFilter, setActorSourceFilter] = useState<ActorSourceFilter>("all");
+  type ActorSortMode = "default" | "group_near_dupes";
+  const [actorSortMode, setActorSortMode] = useState<ActorSortMode>("default");
+
+  // ── Photo-request workflow tile ──────────────────────────────────
+  type PhotoRequestRecent = {
+    id: string;
+    canonical_name: string;
+    location_key: string;
+    reporter_email: string;
+    status: "sent" | "skipped" | "failed" | "pending";
+    email_subject: string | null;
+    sent_at: string | null;
+    error_message: string | null;
+    created_at: string;
+  };
+  type PhotoRequestSummary = {
+    totals: {
+      would_send: number;
+      already_sent: number;
+      previously_failed: number;
+      sent_last_7d: number;
+      failed_last_7d: number;
+      last_sent_at: string | null;
+    };
+    recent: PhotoRequestRecent[];
+  };
+  const [photoRequests, setPhotoRequests] = useState<PhotoRequestSummary | null>(null);
+  const [photoRequestsExpanded, setPhotoRequestsExpanded] = useState(false);
   type ActorView = "by_state" | "patterns" | "possible_matches" | "all";
   const [actorView, setActorView] = useState<ActorView>("by_state");
   const [expandedState, setExpandedState] = useState<string | null>(null);
@@ -780,10 +817,11 @@ export default function AdminPage() {
     setLoading(true);
     setError(null);
     try {
-      const [statsRes, actorsRes, auditRes] = await Promise.all([
+      const [statsRes, actorsRes, auditRes, photoReqRes] = await Promise.all([
         fetch("/api/admin/survey-stats"),
         fetch("/api/admin/court-actors"),
         fetch("/api/admin/reporting-audit"),
+        fetch("/api/admin/court-actor-photo-requests"),
       ]);
       const statsData = await statsRes.json();
       if (!statsRes.ok) { setError(statsData.error || "Failed to load stats."); return; }
@@ -800,6 +838,16 @@ export default function AdminPage() {
         setAuditSummary(null);
         setAuditError(auditData.error || "Failed to load reporting audit.");
       }
+
+      if (photoReqRes.ok) {
+        const photoReqData = await photoReqRes.json().catch(() => null);
+        if (photoReqData?.totals) {
+          setPhotoRequests({
+            totals: photoReqData.totals,
+            recent: Array.isArray(photoReqData.recent) ? photoReqData.recent : [],
+          });
+        }
+      }
     } catch {
       setError("Network error.");
     } finally {
@@ -808,6 +856,83 @@ export default function AdminPage() {
   }, [applyActorData, applyAuditData]);
 
   useEffect(() => { load(); }, [load]);
+
+  // ── Filter + sort applied to Patterns + All Reports views ──────────
+  // Cached so the predicate body stays in one place. Search is case-
+  // insensitive, matches across name, role, location, county, source,
+  // notes, and (admin-only) reporter info.
+  const actorSearchQuery = actorSearch.trim().toLowerCase();
+
+  function actorMatchesQuery(blob: string): boolean {
+    if (!actorSearchQuery) return true;
+    return blob.toLowerCase().includes(actorSearchQuery);
+  }
+
+  const allActorLocations = useMemo(() => {
+    const set = new Set<string>();
+    for (const a of adminActors) {
+      const loc = a.location_key ?? a.state_code;
+      if (loc) set.add(loc);
+    }
+    for (const agg of adminActorAggs) {
+      const loc = agg.location_key ?? agg.state_code;
+      if (loc) set.add(loc);
+    }
+    return Array.from(set).sort();
+  }, [adminActors, adminActorAggs]);
+
+  const allActorRoles = useMemo(() => {
+    const set = new Set<string>();
+    for (const a of adminActors) if (a.role) set.add(a.role);
+    return Array.from(set).sort();
+  }, [adminActors]);
+
+  const filteredAdminActorAggs = useMemo(() => {
+    const filtered = adminActorAggs.filter(agg => {
+      if (actorLocationFilter && (agg.location_key ?? agg.state_code) !== actorLocationFilter) return false;
+      if (actorRoleFilter && agg.role !== actorRoleFilter && !agg.role.includes(actorRoleFilter)) return false;
+      const blob = `${agg.name} ${agg.role} ${agg.location_key ?? ""} ${agg.state_code ?? ""} ${agg.court_or_county ?? ""}`;
+      return actorMatchesQuery(blob);
+    });
+    if (actorSortMode === "group_near_dupes") {
+      return filtered.slice().sort((a, b) => {
+        const locA = a.location_key ?? a.state_code ?? "";
+        const locB = b.location_key ?? b.state_code ?? "";
+        if (locA !== locB) return locA.localeCompare(locB);
+        const keyA = actorLooseNameKey(a.name);
+        const keyB = actorLooseNameKey(b.name);
+        if (keyA !== keyB) return keyA.localeCompare(keyB);
+        if (b.count !== a.count) return b.count - a.count;
+        return a.name.localeCompare(b.name);
+      });
+    }
+    return filtered;
+  // actorMatchesQuery closes over actorSearchQuery, so depend on the query string.
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [adminActorAggs, actorSearchQuery, actorLocationFilter, actorRoleFilter, actorSortMode]);
+
+  const filteredAdminActors = useMemo(() => {
+    const filtered = adminActors.filter(a => {
+      if (actorSourceFilter !== "all" && a.source !== actorSourceFilter) return false;
+      if (actorLocationFilter && (a.location_key ?? a.state_code) !== actorLocationFilter) return false;
+      if (actorRoleFilter && a.role !== actorRoleFilter && !a.role.includes(actorRoleFilter)) return false;
+      const blob = `${a.name} ${a.role} ${a.location_key ?? ""} ${a.state_code ?? ""} ${a.court_or_county ?? ""} ${a.source} ${a.notes ?? ""} ${a.reporter_email ?? ""} ${a.reporter_name ?? ""}`;
+      return actorMatchesQuery(blob);
+    });
+    if (actorSortMode === "group_near_dupes") {
+      return filtered.slice().sort((a, b) => {
+        const locA = a.location_key ?? a.state_code ?? "";
+        const locB = b.location_key ?? b.state_code ?? "";
+        if (locA !== locB) return locA.localeCompare(locB);
+        const keyA = actorLooseNameKey(a.name);
+        const keyB = actorLooseNameKey(b.name);
+        if (keyA !== keyB) return keyA.localeCompare(keyB);
+        return a.name.localeCompare(b.name);
+      });
+    }
+    return filtered;
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [adminActors, actorSearchQuery, actorLocationFilter, actorRoleFilter, actorSourceFilter, actorSortMode]);
 
   async function toggleApprove(id: string, current: boolean) {
     setApproving(id);
@@ -1566,6 +1691,111 @@ export default function AdminPage() {
           )}
         </div>
 
+        {/* ── Photo Requests (Auto-email workflow) ── */}
+        {photoRequests && (
+          <div className="rounded-2xl overflow-hidden"
+            style={{ backgroundColor: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.1)" }}>
+            <div className="px-6 py-4 flex items-start justify-between gap-4 flex-wrap border-b"
+              style={{ borderColor: "rgba(255,255,255,0.08)", backgroundColor: "rgba(30,58,95,0.4)" }}>
+              <div>
+                <h2 className="font-black text-white text-base tracking-wide">Photo Requests</h2>
+                <p className="text-xs mt-0.5" style={{ color: "rgba(245,245,245,0.4)" }}>
+                  Automatic photo / source request emails to reporters when their named court actor crosses the public threshold. One email per reporter per actor, ever.
+                </p>
+              </div>
+              <button
+                onClick={() => setPhotoRequestsExpanded(v => !v)}
+                className="text-xs px-3 py-1.5 font-bold rounded-lg whitespace-nowrap transition-colors"
+                style={{
+                  border: `1px solid rgba(201,162,39,0.3)`,
+                  backgroundColor: photoRequestsExpanded ? "rgba(201,162,39,0.18)" : "transparent",
+                  color: photoRequestsExpanded ? GOLD : "rgba(245,245,245,0.55)",
+                }}>
+                {photoRequestsExpanded ? "Hide recent" : "Show recent"}
+              </button>
+            </div>
+            <div className="px-6 py-4 grid grid-cols-2 sm:grid-cols-4 gap-4">
+              <div>
+                <div className="text-2xl font-black text-white">{photoRequests.totals.sent_last_7d}</div>
+                <div className="text-xs" style={{ color: "rgba(245,245,245,0.5)" }}>Sent · last 7 days</div>
+              </div>
+              <div>
+                <div className="text-2xl font-black"
+                  style={{ color: photoRequests.totals.failed_last_7d > 0 ? "rgb(252,165,165)" : "rgb(245,245,245)" }}>
+                  {photoRequests.totals.failed_last_7d}
+                </div>
+                <div className="text-xs" style={{ color: "rgba(245,245,245,0.5)" }}>Failed · last 7 days</div>
+              </div>
+              <div>
+                <div className="text-2xl font-black text-white">{photoRequests.totals.would_send}</div>
+                <div className="text-xs" style={{ color: "rgba(245,245,245,0.5)" }}>Pending next run</div>
+              </div>
+              <div>
+                <div className="text-2xl font-black text-white">{photoRequests.totals.already_sent}</div>
+                <div className="text-xs" style={{ color: "rgba(245,245,245,0.5)" }}>Total ever sent</div>
+              </div>
+            </div>
+            {photoRequests.totals.last_sent_at && (
+              <div className="px-6 pb-3 text-xs" style={{ color: "rgba(245,245,245,0.45)" }}>
+                Last send: <span title={exactTimestamp(photoRequests.totals.last_sent_at)}>
+                  {timeAgo(photoRequests.totals.last_sent_at)}
+                </span>
+                {" · "}
+                <a
+                  href="https://github.com/standwithmeg/standwithmeg-registry/actions/workflows/send-public-court-actor-photo-requests.yml"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: GOLD, textDecoration: "underline" }}>
+                  Workflow runs ↗
+                </a>
+              </div>
+            )}
+            {photoRequestsExpanded && photoRequests.recent.length > 0 && (
+              <div className="border-t" style={{ borderColor: "rgba(255,255,255,0.06)" }}>
+                <table className="w-full text-xs">
+                  <thead>
+                    <tr style={{ backgroundColor: "rgba(255,255,255,0.03)" }}>
+                      <th className="px-6 py-2 text-left font-bold" style={{ color: "rgba(245,245,245,0.4)" }}>When</th>
+                      <th className="px-2 py-2 text-left font-bold" style={{ color: "rgba(245,245,245,0.4)" }}>Status</th>
+                      <th className="px-2 py-2 text-left font-bold" style={{ color: "rgba(245,245,245,0.4)" }}>Court actor</th>
+                      <th className="px-2 py-2 text-left font-bold" style={{ color: "rgba(245,245,245,0.4)" }}>Reporter</th>
+                      <th className="px-6 py-2 text-left font-bold" style={{ color: "rgba(245,245,245,0.4)" }}>Detail</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {photoRequests.recent.map(r => {
+                      const statusColor =
+                        r.status === "sent" ? "rgb(134,239,172)" :
+                        r.status === "failed" ? "rgb(252,165,165)" :
+                        "rgba(245,245,245,0.55)";
+                      return (
+                        <tr key={r.id} style={{ borderTop: "1px solid rgba(255,255,255,0.04)" }}>
+                          <td className="px-6 py-2 whitespace-nowrap" style={{ color: "rgba(245,245,245,0.5)" }}
+                            title={exactTimestamp(r.created_at)}>
+                            {timeAgo(r.created_at)}
+                          </td>
+                          <td className="px-2 py-2 font-bold" style={{ color: statusColor }}>
+                            {r.status}
+                          </td>
+                          <td className="px-2 py-2" style={{ color: "rgba(245,245,245,0.85)" }}>
+                            {r.canonical_name} <span style={{ color: "rgba(245,245,245,0.4)" }}>· {r.location_key}</span>
+                          </td>
+                          <td className="px-2 py-2 font-mono" style={{ color: "rgba(245,245,245,0.65)" }}>
+                            {r.reporter_email}
+                          </td>
+                          <td className="px-6 py-2" style={{ color: r.status === "failed" ? "rgb(252,165,165)" : "rgba(245,245,245,0.5)" }}>
+                            {r.status === "failed" ? r.error_message : (r.email_subject ?? "")}
+                          </td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </div>
+            )}
+          </div>
+        )}
+
         {/* ── Court Actors (Admin) ── */}
         <div className="rounded-2xl overflow-hidden"
           style={{ backgroundColor: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.1)" }}>
@@ -1600,6 +1830,111 @@ export default function AdminPage() {
               ))}
             </div>
           </div>
+
+          {/* Filter bar — applies to Patterns and All Reports views.
+              Search is case-insensitive across name, role, location, county,
+              source, notes, and reporter (admin-only). */}
+          {(actorView === "patterns" || actorView === "all") && (
+            <div className="px-6 py-3 grid grid-cols-1 md:grid-cols-12 gap-3 border-b"
+              style={{ borderColor: "rgba(255,255,255,0.06)", backgroundColor: "rgba(0,0,0,0.18)" }}>
+              <div className="md:col-span-4">
+                <label className="block text-[10px] font-bold uppercase tracking-wide mb-1"
+                  style={{ color: "rgba(245,245,245,0.45)" }}>Search</label>
+                <input
+                  type="text"
+                  value={actorSearch}
+                  onChange={e => setActorSearch(e.target.value)}
+                  placeholder="Name, spelling variant, court, role, reporter…"
+                  className="w-full px-3 py-1.5 rounded-md text-xs"
+                  style={{
+                    backgroundColor: "rgba(255,255,255,0.05)",
+                    border: "1px solid rgba(255,255,255,0.15)",
+                    color: "white",
+                  }} />
+              </div>
+              <div className="md:col-span-2">
+                <label className="block text-[10px] font-bold uppercase tracking-wide mb-1"
+                  style={{ color: "rgba(245,245,245,0.45)" }}>Location</label>
+                <select
+                  value={actorLocationFilter}
+                  onChange={e => setActorLocationFilter(e.target.value)}
+                  className="w-full px-2 py-1.5 rounded-md text-xs"
+                  style={{
+                    backgroundColor: "rgba(255,255,255,0.05)",
+                    border: "1px solid rgba(255,255,255,0.15)",
+                    color: "rgba(245,245,245,0.85)",
+                  }}>
+                  <option value="">All</option>
+                  {allActorLocations.map(loc => <option key={loc} value={loc}>{loc}</option>)}
+                </select>
+              </div>
+              <div className="md:col-span-3">
+                <label className="block text-[10px] font-bold uppercase tracking-wide mb-1"
+                  style={{ color: "rgba(245,245,245,0.45)" }}>Role</label>
+                <select
+                  value={actorRoleFilter}
+                  onChange={e => setActorRoleFilter(e.target.value)}
+                  className="w-full px-2 py-1.5 rounded-md text-xs"
+                  style={{
+                    backgroundColor: "rgba(255,255,255,0.05)",
+                    border: "1px solid rgba(255,255,255,0.15)",
+                    color: "rgba(245,245,245,0.85)",
+                  }}>
+                  <option value="">All</option>
+                  {allActorRoles.map(r => <option key={r} value={r}>{r}</option>)}
+                </select>
+              </div>
+              {actorView === "all" && (
+                <div className="md:col-span-3">
+                  <label className="block text-[10px] font-bold uppercase tracking-wide mb-1"
+                    style={{ color: "rgba(245,245,245,0.45)" }}>Source</label>
+                  <select
+                    value={actorSourceFilter}
+                    onChange={e => setActorSourceFilter(e.target.value as ActorSourceFilter)}
+                    className="w-full px-2 py-1.5 rounded-md text-xs"
+                    style={{
+                      backgroundColor: "rgba(255,255,255,0.05)",
+                      border: "1px solid rgba(255,255,255,0.15)",
+                      color: "rgba(245,245,245,0.85)",
+                    }}>
+                    <option value="all">All sources</option>
+                    <option value="form_direct">form_direct (counted)</option>
+                    <option value="extracted_ai">extracted_ai</option>
+                    <option value="extracted_regex">extracted_regex</option>
+                  </select>
+                </div>
+              )}
+              <div className={`flex items-end gap-2 ${actorView === "all" ? "md:col-span-12" : "md:col-span-3"}`}>
+                <button
+                  type="button"
+                  onClick={() => setActorSortMode(actorSortMode === "default" ? "group_near_dupes" : "default")}
+                  className="text-xs px-3 py-1.5 rounded-md font-bold whitespace-nowrap transition-colors"
+                  title="Sort by location, then by normalized name. Same/near-same names appear adjacent so duplicates are easy to spot."
+                  style={{
+                    backgroundColor: actorSortMode === "group_near_dupes" ? "rgba(201,162,39,0.18)" : "rgba(255,255,255,0.05)",
+                    color: actorSortMode === "group_near_dupes" ? GOLD : "rgba(245,245,245,0.7)",
+                    border: "1px solid rgba(255,255,255,0.15)",
+                  }}>
+                  {actorSortMode === "group_near_dupes" ? "✓ Group near-duplicates" : "Group near-duplicates"}
+                </button>
+                {(actorSearch || actorLocationFilter || actorRoleFilter || actorSourceFilter !== "all" || actorSortMode !== "default") && (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setActorSearch("");
+                      setActorLocationFilter("");
+                      setActorRoleFilter("");
+                      setActorSourceFilter("all");
+                      setActorSortMode("default");
+                    }}
+                    className="text-xs px-2 py-1.5 rounded-md transition-colors"
+                    style={{ color: "rgba(245,245,245,0.6)", border: "1px solid rgba(255,255,255,0.1)" }}>
+                    Clear
+                  </button>
+                )}
+              </div>
+            </div>
+          )}
 
           {/* ── By Location ── */}
           {actorView === "by_state" && (() => {
@@ -1798,12 +2133,14 @@ export default function AdminPage() {
                   Download PDF
                 </a>
               </div>
-              {adminActorAggs.length === 0 && (
+              {filteredAdminActorAggs.length === 0 && (
                 <div className="px-6 py-10 text-center text-sm" style={{ color: "rgba(245,245,245,0.3)" }}>
-                  No court actors have been reported yet.
+                  {adminActorAggs.length === 0
+                    ? "No court actors have been reported yet."
+                    : "No actor patterns match these filters."}
                 </div>
               )}
-              {adminActorAggs.slice(0, 50).map((agg, i) => {
+              {filteredAdminActorAggs.slice(0, 200).map((agg, i) => {
                 const isPublic = agg.count >= COURT_ACTOR_PUBLIC_THRESHOLD;
                 return (
                   <div key={i} className="px-6 py-3 flex items-center justify-between gap-4"
@@ -1848,12 +2185,14 @@ export default function AdminPage() {
 
           {actorView === "all" && (
             <div>
-              {adminActors.length === 0 && (
+              {filteredAdminActors.length === 0 && (
                 <div className="px-6 py-10 text-center text-sm" style={{ color: "rgba(245,245,245,0.3)" }}>
-                  No court actor reports yet.
+                  {adminActors.length === 0
+                    ? "No court actor reports yet."
+                    : "No reports match these filters."}
                 </div>
               )}
-              {adminActors.slice(0, 200).map((a, i) => (
+              {filteredAdminActors.slice(0, 500).map((a, i) => (
                 <div key={a.id} className="px-6 py-3"
                   style={{ borderTop: i > 0 ? "1px solid rgba(255,255,255,0.05)" : "none" }}>
                   <div className="flex items-center justify-between gap-3 mb-1 flex-wrap">

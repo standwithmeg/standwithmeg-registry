@@ -200,12 +200,30 @@ export function nameSimilarity(rawA: string, rawB: string): SimilarityHit | null
 
   // One side has only a last name after title-stripping. After actorNameKey
   // strips role prefixes, "Magistrate Blevins" collapses to ["blevins"] while
-  // "Angela Blevins" stays ["angela", "blevins"]. Same last name + a
-  // single-token variant is a real "needs admin review" signal — usually
-  // one reporter only knew the actor's title + surname.
-  if (!confidence && lastA === lastB && ta.length !== tb.length && (ta.length === 1 || tb.length === 1)) {
-    reasons.push("one variant has no first name, same last name");
-    confidence = "medium";
+  // "Angela Blevins" stays ["angela", "blevins"]. Same (or close-spelling)
+  // last name + a single-token variant is a real "needs admin review"
+  // signal — usually one reporter only knew the actor's title + surname,
+  // possibly with a small typo. Examples we want to catch:
+  //   "Mary Mattivi" vs "Mativi"        (Kansas: surname typo + missing first)
+  //   "Magistrate Blevins" vs "Angela Blevins"  (already caught by lastA===lastB)
+  if (!confidence && ta.length !== tb.length && (ta.length === 1 || tb.length === 1)) {
+    const single = ta.length === 1 ? ta[0] : tb[0];
+    const multiLast = ta.length === 1 ? lastB : lastA;
+    if (single && multiLast && single.length >= 4 && multiLast.length >= 4) {
+      if (single === multiLast) {
+        reasons.push("one variant has no first name, same last name");
+        confidence = "medium";
+      } else {
+        const ed = damerauLevenshtein(single, multiLast);
+        if (ed === 1) {
+          reasons.push("one variant has no first name, last-name one-letter typo");
+          confidence = "medium";
+        } else if (ed === 2 && single.length >= 6 && multiLast.length >= 6) {
+          reasons.push("one variant has no first name, last-name close spelling");
+          confidence = "low";
+        }
+      }
+    }
   }
 
   // Same number of tokens, all but one identical, differing token edit
