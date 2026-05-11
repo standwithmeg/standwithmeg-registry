@@ -1,81 +1,81 @@
 [
   {
     "state": "CA",
-    "submissions": 296,
+    "submissions": 299,
     "file": "/state-reports/CA.pdf",
-    "size_kb": 1495
+    "size_kb": 1492
   },
   {
     "state": "TX",
-    "submissions": 205,
+    "submissions": 206,
     "file": "/state-reports/TX.pdf",
     "size_kb": 1448
   },
   {
     "state": "FL",
-    "submissions": 192,
+    "submissions": 195,
     "file": "/state-reports/FL.pdf",
-    "size_kb": 1458
+    "size_kb": 1459
   },
   {
     "state": "OH",
-    "submissions": 165,
+    "submissions": 172,
     "file": "/state-reports/OH.pdf",
-    "size_kb": 1422
+    "size_kb": 1464
   },
   {
     "state": "KS",
-    "submissions": 160,
+    "submissions": 163,
     "file": "/state-reports/KS.pdf",
-    "size_kb": 1437
+    "size_kb": 1454
   },
   {
     "state": "MO",
-    "submissions": 133,
+    "submissions": 137,
     "file": "/state-reports/MO.pdf",
-    "size_kb": 1362
+    "size_kb": 1366
   },
   {
     "state": "NC",
-    "submissions": 107,
+    "submissions": 108,
     "file": "/state-reports/NC.pdf",
-    "size_kb": 1373
+    "size_kb": 1374
+  },
+  {
+    "state": "MI",
+    "submissions": 106,
+    "file": "/state-reports/MI.pdf",
+    "size_kb": 1353
   },
   {
     "state": "PA",
     "submissions": 106,
     "file": "/state-reports/PA.pdf",
-    "size_kb": 1330
-  },
-  {
-    "state": "MI",
-    "submissions": 104,
-    "file": "/state-reports/MI.pdf",
-    "size_kb": 1344
-  },
-  {
-    "state": "OK",
-    "submissions": 97,
-    "file": "/state-reports/OK.pdf",
-    "size_kb": 1398
+    "size_kb": 1331
   },
   {
     "state": "NY",
-    "submissions": 96,
+    "submissions": 99,
     "file": "/state-reports/NY.pdf",
-    "size_kb": 1380
+    "size_kb": 1374
+  },
+  {
+    "state": "OK",
+    "submissions": 99,
+    "file": "/state-reports/OK.pdf",
+    "size_kb": 1403
   },
   {
     "state": "IL",
-    "submissions": 95,
+    "submissions": 96,
     "file": "/state-reports/IL.pdf",
-    "size_kb": 1319
+    "size_kb": 1322
   },
   {
     "state": "VA",
-    "submissions": 87,
+    "submissions": 88,
     "file": "/state-reports/VA.pdf",
-    "size_kb": 1341
+    "size_kb": 1339
   },
   {
     "state": "TN",
@@ -84,28 +84,28 @@
     "size_kb": 1364
   },
   {
+    "state": "IN",
+    "submissions": 77,
+    "file": "/state-reports/IN.pdf",
+    "size_kb": 1310
+  },
+  {
     "state": "GA",
     "submissions": 76,
     "file": "/state-reports/GA.pdf",
     "size_kb": 1319
   },
   {
-    "state": "IN",
-    "submissions": 76,
-    "file": "/state-reports/IN.pdf",
-    "size_kb": 1308
-  },
-  {
     "state": "WA",
-    "submissions": 70,
+    "submissions": 71,
     "file": "/state-reports/WA.pdf",
-    "size_kb": 1348
+    "size_kb": 1346
   },
   {
     "state": "CO",
-    "submissions": 69,
+    "submissions": 70,
     "file": "/state-reports/CO.pdf",
-    "size_kb": 1302
+    "size_kb": 1303
   },
   {
     "state": "IA",
@@ -115,15 +115,15 @@
   },
   {
     "state": "KY",
-    "submissions": 66,
+    "submissions": 67,
     "file": "/state-reports/KY.pdf",
-    "size_kb": 1315
+    "size_kb": 1309
   },
   {
     "state": "MA",
-    "submissions": 63,
+    "submissions": 64,
     "file": "/state-reports/MA.pdf",
-    "size_kb": 1325
+    "size_kb": 1324
   },
   {
     "state": "SC",
@@ -151,21 +151,21 @@
   },
   {
     "state": "MN",
-    "submissions": 53,
+    "submissions": 54,
     "file": "/state-reports/MN.pdf",
-    "size_kb": 1338
+    "size_kb": 1336
   },
   {
     "state": "WI",
-    "submissions": 47,
+    "submissions": 48,
     "file": "/state-reports/WI.pdf",
-    "size_kb": 1310
+    "size_kb": 1312
   },
   {
     "state": "NJ",
-    "submissions": 44,
+    "submissions": 45,
     "file": "/state-reports/NJ.pdf",
-    "size_kb": 1286
+    "size_kb": 1296
   },
   {
     "state": "WV",
@@ -181,9 +181,9 @@
   },
   {
     "state": "LA",
-    "submissions": 41,
+    "submissions": 42,
     "file": "/state-reports/LA.pdf",
-    "size_kb": 1266
+    "size_kb": 1285
   },
   {
     "state": "MD",
@@ -199,14 +199,20 @@
   },
   {
     "state": "UT",
-    "submissions": 39,
+    "submissions": 40,
     "file": "/state-reports/UT.pdf",
-    "size_kb": 1310
+    "size_kb": 1306
   },
   {
     "state": "MS",
     "submissions": 38,
     "file": "/state-reports/MS.pdf",
     "size_kb": 1251
+  },
+  {
+    "state": "CT",
+    "submissions": 30,
+    "file": "/state-reports/CT.pdf",
+    "size_kb": 1242
   }
 ]
