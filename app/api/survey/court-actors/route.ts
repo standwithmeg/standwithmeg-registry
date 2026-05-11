@@ -1,31 +1,8 @@
 import { createAdminSupabaseClient } from "../../../../lib/supabase-admin";
 import { COURT_ACTOR_PUBLIC_THRESHOLD, actorBucketKeyWithLocation, courtActorLocationKey, resolveFamilyKey, type CourtActorRowReviewDecision } from "../../../../lib/court-actors";
-import { AliasResolver, type AliasDecisionRow } from "../../../../lib/court-actor-similarity";
+import { isPublicShareableSubmission } from "../../../../lib/submission-public-visibility";
 
 type AdminClient = ReturnType<typeof createAdminSupabaseClient>;
-
-/**
- * Loads court_actor_alias_decisions and returns an AliasResolver. Returns
- * null if the migration has not been applied yet — counts will then run
- * with no admin overrides, exactly as before this feature shipped.
- */
-async function loadAliasResolver(sb: AdminClient): Promise<AliasResolver | null> {
-  const { data, error } = await sb
-    .from("court_actor_alias_decisions")
-    .select("cluster_key, location_key, decision, canonical_name, canonical_role, name_keys")
-    .eq("decision", "same_actor");
-  if (error) {
-    // Table or column missing — pre-migration. Run unaffected.
-    const missing = error.code === "42P01"
-      || error.code === "42703"
-      || error.code === "PGRST205"
-      || /Could not find the table/i.test(error.message ?? "");
-    if (missing) return null;
-    console.error("court_actor_alias_decisions select error:", error.message);
-    return null;
-  }
-  return new AliasResolver((data ?? []) as AliasDecisionRow[]);
-}
 
 /**
  * Loads court_actor_row_review and returns row_id -> decision map.
@@ -78,8 +55,8 @@ type ActorRow = {
   created_at: string;
   submission_id: string;
   survey_submissions:
-    | { email: string | null; state_of_occurrence: string | null; outside_us_country: string | null }
-    | { email: string | null; state_of_occurrence: string | null; outside_us_country: string | null }[]
+    | { email: string | null; state_of_occurrence: string | null; outside_us_country: string | null; permission_to_share: string | null; approved: boolean | null }
+    | { email: string | null; state_of_occurrence: string | null; outside_us_country: string | null; permission_to_share: string | null; approved: boolean | null }[]
     | null;
 };
 
@@ -154,7 +131,7 @@ export async function GET(request: Request) {
 
       // Try with location_key first
       const qWithLocation = sb.from("court_actors")
-        .select("id, role, name, court_or_county, state_code, location_key, created_at, submission_id, survey_submissions(email, state_of_occurrence, outside_us_country)")
+        .select("id, role, name, court_or_county, state_code, location_key, created_at, submission_id, survey_submissions(email, state_of_occurrence, outside_us_country, permission_to_share, approved)")
         .eq("source", "form_direct");
 
       const { data, error } = await qWithLocation.range(from, from + pageSize - 1);
@@ -162,7 +139,7 @@ export async function GET(request: Request) {
         // If location_key doesn't exist yet, fallback to old query
         if (error.code === "42703") { // column doesn't exist
           const q = sb.from("court_actors")
-            .select("id, role, name, court_or_county, state_code, created_at, submission_id, survey_submissions(email, state_of_occurrence, outside_us_country)")
+            .select("id, role, name, court_or_county, state_code, created_at, submission_id, survey_submissions(email, state_of_occurrence, outside_us_country, permission_to_share, approved)")
             .eq("source", "form_direct");
           const { data: fallbackData, error: fallbackError } = await q.range(from, from + pageSize - 1);
           if (fallbackError) {
@@ -192,11 +169,6 @@ export async function GET(request: Request) {
       from += pageSize;
     }
 
-    // Load admin alias decisions so approved 'same_actor' clusters roll up
-    // into one public bucket. 'keep_separate' decisions don't affect counts;
-    // they only suppress the suggestion in the admin Possible Matches tab.
-    const aliasResolver = await loadAliasResolver(sb);
-
     // Load per-row review decisions so duplicate-marked rows are excluded
     // from family counts and count_separately rows count as their own family.
     const rowReviewMap = await loadRowReviewMap(sb);
@@ -220,6 +192,8 @@ export async function GET(request: Request) {
     const buckets = new Map<string, Bucket>();
     for (const a of all) {
       if (!a.role || !a.name) continue;
+      const submission = joinedSubmission(a);
+      if (!isPublicShareableSubmission(submission)) continue;
       const location = actorLocation(a);
       if (!location) continue;
 
@@ -232,14 +206,13 @@ export async function GET(request: Request) {
       // in court_actors but contributes nothing to public counts.
       if (fk === null) continue;
 
-      const aliasHit = aliasResolver?.resolve(a.name, location) ?? null;
-      const effectiveName = aliasHit?.canonical_name ?? a.name;
+      const effectiveName = a.name;
       const normalizedName = actorBucketKeyWithLocation(effectiveName, a.role, location);
       if (!normalizedName.split("|")[0]) continue;
       const key = normalizedName;
       if (!buckets.has(key)) {
         buckets.set(key, {
-          role: aliasHit?.canonical_role ?? a.role,
+          role: a.role,
           name: effectiveName,
           court_or_county: a.court_or_county,
           state_code: a.state_code,
@@ -257,7 +230,7 @@ export async function GET(request: Request) {
       }
       b.families.add(fk);
       b.roleCounts.set(a.role, (b.roleCounts.get(a.role) ?? 0) + 1);
-      const casingName = aliasHit?.canonical_name ?? a.name;
+      const casingName = a.name;
       b.casingCounts.set(casingName, (b.casingCounts.get(casingName) ?? 0) + 1);
       if (a.court_or_county) {
         b.courtCounts.set(a.court_or_county, (b.courtCounts.get(a.court_or_county) ?? 0) + 1);

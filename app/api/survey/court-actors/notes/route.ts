@@ -1,6 +1,6 @@
 import { createAdminSupabaseClient } from "../../../../../lib/supabase-admin";
 import { COURT_ACTOR_PUBLIC_THRESHOLD, actorBucketKey, resolveFamilyKey, type CourtActorRowReviewDecision } from "../../../../../lib/court-actors";
-import { AliasResolver, type AliasDecisionRow } from "../../../../../lib/court-actor-similarity";
+import { isPublicShareableSubmission } from "../../../../../lib/submission-public-visibility";
 
 type AdminClient = ReturnType<typeof createAdminSupabaseClient>;
 
@@ -33,8 +33,8 @@ type Row = {
   submission_id: string;
   created_at: string;
   survey_submissions:
-    | { email: string | null; state_of_occurrence: string | null }
-    | { email: string | null; state_of_occurrence: string | null }[]
+    | { email: string | null; state_of_occurrence: string | null; permission_to_share: string | null; approved: boolean | null }
+    | { email: string | null; state_of_occurrence: string | null; permission_to_share: string | null; approved: boolean | null }[]
     | null;
 };
 
@@ -49,23 +49,6 @@ function actorState(row: Row): string | null {
   if (direct) return direct;
   const joined = joinedSubmission(row)?.state_of_occurrence?.trim().toUpperCase();
   return joined || null;
-}
-
-async function loadAliasResolver(sb: AdminClient): Promise<AliasResolver | null> {
-  const { data, error } = await sb
-    .from("court_actor_alias_decisions")
-    .select("cluster_key, location_key, decision, canonical_name, canonical_role, name_keys")
-    .eq("decision", "same_actor");
-  if (error) {
-    const missing = error.code === "42P01"
-      || error.code === "42703"
-      || error.code === "PGRST205"
-      || /Could not find the table/i.test(error.message ?? "");
-    if (missing) return null;
-    console.error("court_actor_alias_decisions select error:", error.message);
-    return null;
-  }
-  return new AliasResolver((data ?? []) as AliasDecisionRow[]);
 }
 
 async function loadRowReviewMap(sb: AdminClient): Promise<Map<string, CourtActorRowReviewDecision>> {
@@ -174,7 +157,7 @@ export async function GET(request: Request) {
       const { data, error } = await sb
         .from("court_actors")
         .select(
-          "id, role, name, court_or_county, state_code, notes, submission_id, created_at, survey_submissions(email, state_of_occurrence)"
+          "id, role, name, court_or_county, state_code, notes, submission_id, created_at, survey_submissions(email, state_of_occurrence, permission_to_share, approved)"
         )
         .eq("source", "form_direct")
         .range(from, from + pageSize - 1);
@@ -193,7 +176,6 @@ export async function GET(request: Request) {
     // (e.g. Catherine Conklin rolling up Cathrin/Cathrine) actually returns
     // its rows here. Without this, the gate below sees zero matching families
     // for alias-merged actors and silently returns an empty notes list.
-    const aliasResolver = await loadAliasResolver(sb);
     const rowReviewMap = await loadRowReviewMap(sb);
 
     // Comment merges: when the same reporter submitted multiple rows about
@@ -210,10 +192,11 @@ export async function GET(request: Request) {
     const families = new Set<string>();
     for (const row of all) {
       if (!row.role || !row.name) continue;
+      const submission = joinedSubmission(row);
+      if (!isPublicShareableSubmission(submission)) continue;
       const state = actorState(row);
       if (!state || state !== stateParam) continue;
-      const aliasHit = aliasResolver?.resolve(row.name, state) ?? null;
-      const effectiveName = aliasHit?.canonical_name ?? row.name;
+      const effectiveName = row.name;
       const key = actorBucketKey(effectiveName, row.role, state);
       if (key !== targetBucketKey) continue;
       const fk = familyKey(row, rowReviewMap);

@@ -3,6 +3,7 @@ import { createAdminSupabaseClient } from "../../../../lib/supabase-admin";
 import { isAdminEmail } from "../../../../lib/require-auth";
 import { COURT_ACTOR_PUBLIC_THRESHOLD, actorBucketKeyWithLocation, courtActorLocationKey, resolveFamilyKey, type CourtActorRowReviewDecision } from "../../../../lib/court-actors";
 import { AliasResolver, type AliasDecisionRow } from "../../../../lib/court-actor-similarity";
+import { isPublicShareableSubmission } from "../../../../lib/submission-public-visibility";
 
 type AdminClient = ReturnType<typeof createAdminSupabaseClient>;
 
@@ -95,8 +96,8 @@ type Row = {
   nudge_sent_to: string | null;
   nudge_last_subject: string | null;
   survey_submissions:
-    | { email: string | null; first_name: string | null; last_name: string | null; state_of_occurrence: string | null; outside_us_country: string | null }
-    | { email: string | null; first_name: string | null; last_name: string | null; state_of_occurrence: string | null; outside_us_country: string | null }[]
+    | { email: string | null; first_name: string | null; last_name: string | null; state_of_occurrence: string | null; outside_us_country: string | null; permission_to_share: string | null; approved: boolean | null }
+    | { email: string | null; first_name: string | null; last_name: string | null; state_of_occurrence: string | null; outside_us_country: string | null; permission_to_share: string | null; approved: boolean | null }[]
     | null;
 };
 
@@ -165,9 +166,9 @@ export async function GET() {
     let from = 0;
     const pageSize = 1000;
     const rows: Row[] = [];
-    const baseSelect = "id, role, name, court_or_county, state_code, notes, source, created_at, submission_id, survey_submissions(email, first_name, last_name, state_of_occurrence, outside_us_country)";
-    const nudgeSelect = "id, role, name, court_or_county, state_code, notes, source, created_at, submission_id, nudge_sent_at, nudge_sent_by, nudge_sent_to, nudge_last_subject, survey_submissions(email, first_name, last_name, state_of_occurrence, outside_us_country)";
-    const locationSelect = "id, role, name, court_or_county, state_code, location_key, notes, source, created_at, submission_id, nudge_sent_at, nudge_sent_by, nudge_sent_to, nudge_last_subject, survey_submissions(email, first_name, last_name, state_of_occurrence, outside_us_country)";
+    const baseSelect = "id, role, name, court_or_county, state_code, notes, source, created_at, submission_id, survey_submissions(email, first_name, last_name, state_of_occurrence, outside_us_country, permission_to_share, approved)";
+    const nudgeSelect = "id, role, name, court_or_county, state_code, notes, source, created_at, submission_id, nudge_sent_at, nudge_sent_by, nudge_sent_to, nudge_last_subject, survey_submissions(email, first_name, last_name, state_of_occurrence, outside_us_country, permission_to_share, approved)";
+    const locationSelect = "id, role, name, court_or_county, state_code, location_key, notes, source, created_at, submission_id, nudge_sent_at, nudge_sent_by, nudge_sent_to, nudge_last_subject, survey_submissions(email, first_name, last_name, state_of_occurrence, outside_us_country, permission_to_share, approved)";
 
     let includeNudgeColumns = true;
     let includeLocationKey = true;
@@ -239,6 +240,7 @@ export async function GET() {
     for (const r of rows) {
       if ((r.source ?? "form_direct") !== "form_direct") continue;
       if (!r.role || !r.name) continue;
+      if (!isPublicShareableSubmission(joinedSubmission(r))) continue;
       const fk = familyKey(r, rowReviewMap);
       if (fk === null) continue;
       const location = actorLocation(r);
@@ -283,6 +285,7 @@ export async function GET() {
       const fk = familyKey(r, rowReviewMap);
       const mergePrimary = commentMerges.byPrimary.get(r.id) ?? null;
       const mergeParentId = commentMerges.byMerged.get(r.id) ?? null;
+      const isPublicEligible = isPublicShareableSubmission(submission);
       return {
         id: r.id,
         role: r.role,
@@ -303,7 +306,7 @@ export async function GET() {
           ? [submission.first_name, submission.last_name].filter(Boolean).join(" ") || null
           : null,
         review_decision: review,
-        counts_publicly: fk !== null && (r.source ?? "form_direct") === "form_direct",
+        counts_publicly: isPublicEligible && fk !== null && (r.source ?? "form_direct") === "form_direct",
         // Comment-merge state for the admin UI:
         //   merge_primary_for: row IDs this row is the merged-display primary for
         //   merged_into:        primary row id this row's testimony was merged into

@@ -447,41 +447,18 @@ export function PossibleMatchesPanel() {
       window.alert("Choose a canonical name before marking as same actor.");
       return;
     }
+    if (decision === "same_actor") {
+      const rowCount = c.variants.reduce((sum, variant) => sum + variant.row_ids.length, 0);
+      if (!window.confirm(`Mark this visible cluster as the same actor?\n\nThis saves an admin review note for ${c.variants.length} spelling variants / ${rowCount} row(s). Public actor counts are currently fail-closed and will not use broad same-actor aliases.`)) {
+        return;
+      }
+    }
     setBusyKey(c.cluster_key);
     try {
       const json = await postDecision(c, decision, form);
       applyLocalDecision(c, decision, form, json.cluster_key ?? c.cluster_key);
     } catch (err) {
       window.alert(err instanceof Error ? err.message : "Network error.");
-    } finally {
-      setBusyKey(null);
-    }
-  }
-
-  async function autoMatchEasySameCounty() {
-    const candidates = data?.clusters.filter(c => c.auto_decision?.kind === "easy_same_county_same_actor") ?? [];
-    if (candidates.length === 0) return;
-    if (!window.confirm(`Mark ${candidates.length} high-confidence same-county match${candidates.length === 1 ? "" : "es"} as the same actor? This only applies to clusters where every variant shares the same state/location, county/court, and role.`)) return;
-
-    setBusyKey("bulk:easy_same_county");
-    const failures: string[] = [];
-    try {
-      for (const c of candidates) {
-        const base = ensureForm(c);
-        const form: FormState = {
-          ...base,
-          note: base.note.trim() || c.auto_decision?.reason || "",
-        };
-        try {
-          const json = await postDecision(c, "same_actor", form);
-          applyLocalDecision(c, "same_actor", form, json.cluster_key ?? c.cluster_key);
-        } catch (err) {
-          failures.push(`${c.variants.map(v => v.display_name).join(" / ")}: ${err instanceof Error ? err.message : "save failed"}`);
-        }
-      }
-      if (failures.length > 0) {
-        window.alert(`Some easy matches did not save:\n\n${failures.slice(0, 6).join("\n")}${failures.length > 6 ? `\n+${failures.length - 6} more` : ""}`);
-      }
     } finally {
       setBusyKey(null);
     }
@@ -647,11 +624,6 @@ export function PossibleMatchesPanel() {
     });
   }, [data, filter, locationFilter, searchQuery]);
 
-  const easySameCountyCount = useMemo(() => {
-    if (!data) return 0;
-    return data.clusters.filter(c => c.auto_decision?.kind === "easy_same_county_same_actor").length;
-  }, [data]);
-
   return (
     <div>
       <div className="px-6 py-4 flex items-start justify-between gap-4 flex-wrap border-b"
@@ -714,18 +686,6 @@ export function PossibleMatchesPanel() {
           </button>
           <button
             type="button"
-            disabled={easySameCountyCount === 0 || busyKey === "bulk:easy_same_county"}
-            onClick={() => void autoMatchEasySameCounty()}
-            className="text-xs px-3 py-1.5 rounded-md font-bold transition-opacity disabled:opacity-50"
-            style={{
-              backgroundColor: "rgba(74,222,128,0.14)",
-              color: "rgb(134,239,172)",
-              border: "1px solid rgba(74,222,128,0.35)",
-            }}>
-            {busyKey === "bulk:easy_same_county" ? "Matching…" : `Auto-match easy (${easySameCountyCount})`}
-          </button>
-          <button
-            type="button"
             onClick={() => void load()}
             className="text-xs px-3 py-1.5 rounded-md font-bold transition-colors"
             style={{
@@ -759,7 +719,7 @@ export function PossibleMatchesPanel() {
         const reasons = uniqueReasons(c.edges);
         const form = ensureForm(c);
         const draft = ensureResearchDraft(c);
-        const busy = busyKey === c.cluster_key || busyKey === "bulk:easy_same_county";
+        const busy = busyKey === c.cluster_key;
         const researchBusy = busyKey === `research:${c.cluster_key}`;
         const expanded = expandedTestimony[c.cluster_key] ?? false;
         const crossVariant = c.cross_variant_reporters ?? [];
@@ -778,13 +738,6 @@ export function PossibleMatchesPanel() {
               <span className="text-[11px]" style={{ color: "rgba(245,245,245,0.55)" }}>
                 {c.variants.length} variants · would total {c.total_family_count} {c.total_family_count === 1 ? "family" : "families"} if merged
               </span>
-              {c.auto_decision && (
-                <span className="text-[10px] font-bold uppercase tracking-wide px-2 py-0.5 rounded"
-                  title={c.auto_decision.reason}
-                  style={{ backgroundColor: "rgba(74,222,128,0.14)", color: "rgb(134,239,172)", border: "1px solid rgba(74,222,128,0.35)" }}>
-                  Easy same-county
-                </span>
-              )}
               <button
                 type="button"
                 onClick={() => setExpandedTestimony(prev => ({ ...prev, [c.cluster_key]: !expanded }))}

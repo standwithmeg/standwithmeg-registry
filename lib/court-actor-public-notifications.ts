@@ -7,10 +7,7 @@ import {
   resolveFamilyKey,
   type CourtActorRowReviewDecision,
 } from "./court-actors";
-import {
-  AliasResolver,
-  type AliasDecisionRow,
-} from "./court-actor-similarity";
+import { isPublicShareableSubmission } from "./submission-public-visibility";
 import { US_JURISDICTIONS } from "./us-jurisdictions";
 
 type AdminClient = ReturnType<typeof createAdminSupabaseClient>;
@@ -83,12 +80,16 @@ type ActorJoinedRow = {
         first_name: string | null;
         state_of_occurrence: string | null;
         outside_us_country: string | null;
+        permission_to_share: string | null;
+        approved: boolean | null;
       }
     | {
         email: string | null;
         first_name: string | null;
         state_of_occurrence: string | null;
         outside_us_country: string | null;
+        permission_to_share: string | null;
+        approved: boolean | null;
       }[]
     | null;
 };
@@ -106,23 +107,6 @@ function rowLocation(row: ActorJoinedRow): string | null {
     submission?.state_of_occurrence ?? null,
     submission?.outside_us_country ?? null,
   );
-}
-
-async function loadAliasResolver(sb: AdminClient): Promise<AliasResolver | null> {
-  const { data, error } = await sb
-    .from("court_actor_alias_decisions")
-    .select("cluster_key, location_key, decision, canonical_name, canonical_role, name_keys")
-    .eq("decision", "same_actor");
-  if (error) {
-    const missing =
-      error.code === "42P01" ||
-      error.code === "42703" ||
-      error.code === "PGRST205" ||
-      /Could not find the table/i.test(error.message ?? "");
-    if (missing) return null;
-    throw new Error(`court_actor_alias_decisions select failed: ${error.message}`);
-  }
-  return new AliasResolver((data ?? []) as AliasDecisionRow[]);
 }
 
 async function loadRowReviewMap(sb: AdminClient): Promise<Map<string, CourtActorRowReviewDecision>> {
@@ -187,7 +171,7 @@ export async function getPublicActorsWithReporters(): Promise<PublicActorBucket[
     const { data, error } = await sb
       .from("court_actors")
       .select(
-        "id, role, name, court_or_county, state_code, location_key, created_at, submission_id, source, survey_submissions(email, first_name, state_of_occurrence, outside_us_country)",
+        "id, role, name, court_or_county, state_code, location_key, created_at, submission_id, source, survey_submissions(email, first_name, state_of_occurrence, outside_us_country, permission_to_share, approved)",
       )
       .eq("source", "form_direct")
       .range(from, from + pageSize - 1);
@@ -200,7 +184,6 @@ export async function getPublicActorsWithReporters(): Promise<PublicActorBucket[
     from += pageSize;
   }
 
-  const aliasResolver = await loadAliasResolver(sb);
   const rowReviewMap = await loadRowReviewMap(sb);
 
   type FamilyEntry = {
@@ -230,6 +213,7 @@ export async function getPublicActorsWithReporters(): Promise<PublicActorBucket[
     if (!location) continue;
 
     const submission = joinedSubmission(a);
+    if (!isPublicShareableSubmission(submission)) continue;
 
     const fk = resolveFamilyKey({
       row_id: a.id,
@@ -240,8 +224,7 @@ export async function getPublicActorsWithReporters(): Promise<PublicActorBucket[
     });
     if (fk === null) continue;
 
-    const aliasHit = aliasResolver?.resolve(a.name, location) ?? null;
-    const effectiveName = aliasHit?.canonical_name ?? a.name;
+    const effectiveName = a.name;
     const bucketKey = actorBucketKeyWithLocation(effectiveName, a.role, location);
     if (!bucketKey.split("|")[0]) continue;
 
@@ -260,7 +243,7 @@ export async function getPublicActorsWithReporters(): Promise<PublicActorBucket[
     }
 
     bucket.roleCounts.set(a.role, (bucket.roleCounts.get(a.role) ?? 0) + 1);
-    const casingName = aliasHit?.canonical_name ?? a.name;
+    const casingName = a.name;
     bucket.casingCounts.set(casingName, (bucket.casingCounts.get(casingName) ?? 0) + 1);
 
     const reporterEmail = submission?.email?.trim().toLowerCase();
@@ -295,6 +278,7 @@ export async function getPublicActorsWithReporters(): Promise<PublicActorBucket[
     const location = rowLocation(a);
     if (!location) continue;
     const submission = joinedSubmission(a);
+    if (!isPublicShareableSubmission(submission)) continue;
     const fk = resolveFamilyKey({
       row_id: a.id,
       reporter_email: submission?.email ?? null,
@@ -303,8 +287,7 @@ export async function getPublicActorsWithReporters(): Promise<PublicActorBucket[
       review_decision: rowReviewMap.get(a.id) ?? null,
     });
     if (fk === null) continue;
-    const aliasHit = aliasResolver?.resolve(a.name, location) ?? null;
-    const effectiveName = aliasHit?.canonical_name ?? a.name;
+    const effectiveName = a.name;
     const bucketKey = actorBucketKeyWithLocation(effectiveName, a.role, location);
     if (!bucketKey.split("|")[0]) continue;
     let set = allFamilyCounts.get(bucketKey);

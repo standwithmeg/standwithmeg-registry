@@ -26,6 +26,22 @@ PERMISSION_REVERSE = {
 }
 
 PUBLIC_ACTOR_THRESHOLD = 3
+
+# Mirrors lib/submission-public-visibility.ts. A survey submission only
+# contributes to public court-actor aggregates when the reporter explicitly
+# consented to public display AND an admin has approved the row. data_only
+# submissions never feed public counts, names, or notes — even if other
+# admin signals would otherwise let the cluster through.
+_PUBLIC_SHARE_PERMISSIONS = {"public", "anonymous", "first_name"}
+
+
+def _is_public_shareable_submission(submission: dict | None) -> bool:
+    if not submission:
+        return False
+    if submission.get("approved") is not True:
+        return False
+    perm = str(submission.get("permission_to_share") or "").strip()
+    return perm in _PUBLIC_SHARE_PERMISSIONS
 _ROLE_PREFIX_RE = re.compile(r"^(hon\.?|honorable|judge|justice|magistrate|commissioner|referee|attorney|atty\.?|gal|guardian ad litem|minor'?s counsel|minor counsel|dr\.?|doctor)\s+", re.I)
 _SUFFIX_RE = re.compile(r"\s+(jr\.?|sr\.?|ii|iii|iv|esq\.?|esquire)$", re.I)
 _GIVEN_NAME_ALIASES = {
@@ -217,7 +233,7 @@ def load_public_court_actors_from_supabase(state_filter: str | None = None) -> d
     while True:
         q = (
             sb.table("court_actors")
-            .select("id,role,name,court_or_county,state_code,location_key,notes,submission_id,survey_submissions(email,state_of_occurrence,outside_us_country)")
+            .select("id,role,name,court_or_county,state_code,location_key,notes,submission_id,survey_submissions(email,state_of_occurrence,outside_us_country,permission_to_share,approved)")
             .eq("source", "form_direct")
         )
         resp = q.range(offset, offset + page_size - 1).execute()
@@ -244,6 +260,13 @@ def load_public_court_actors_from_supabase(state_filter: str | None = None) -> d
         name = str(row.get("name") or "").strip()
         name_key = _actor_name_key(name)
         if not location or not role or not name_key:
+            continue
+
+        # Fail-closed on submitter consent. Rows tied to data_only or
+        # unapproved survey submissions never contribute to public counts,
+        # names, or quoted notes. Mirrors isPublicShareableSubmission() in
+        # the TypeScript public actor endpoints.
+        if not _is_public_shareable_submission(_joined_submission(row)):
             continue
 
         # Skip rows the admin marked as 'duplicate' — testimony is preserved

@@ -8,6 +8,7 @@ import {
   type ActorRowForClustering,
   type SuggestedCluster,
 } from "../../../../../lib/court-actor-similarity";
+import { isPublicShareableSubmission } from "../../../../../lib/submission-public-visibility";
 
 /**
  * Admin-only: returns clusters of close-spelling court-actor variants
@@ -32,6 +33,8 @@ type SubmissionShape = {
   state_of_occurrence: string | null;
   outside_us_country: string | null;
   case_county: string | null;
+  permission_to_share: string | null;
+  approved: boolean | null;
 };
 
 type Row = {
@@ -117,8 +120,8 @@ export async function GET() {
     let includeLocationKey = true;
     while (true) {
       const select = includeLocationKey
-        ? "id, role, name, court_or_county, state_code, location_key, notes, source, submission_id, created_at, survey_submissions(email, first_name, last_name, state_of_occurrence, outside_us_country, case_county)"
-        : "id, role, name, court_or_county, state_code, notes, source, submission_id, created_at, survey_submissions(email, first_name, last_name, state_of_occurrence, outside_us_country, case_county)";
+        ? "id, role, name, court_or_county, state_code, location_key, notes, source, submission_id, created_at, survey_submissions(email, first_name, last_name, state_of_occurrence, outside_us_country, case_county, permission_to_share, approved)"
+        : "id, role, name, court_or_county, state_code, notes, source, submission_id, created_at, survey_submissions(email, first_name, last_name, state_of_occurrence, outside_us_country, case_county, permission_to_share, approved)";
       const { data, error } = await sb
         .from("court_actors")
         .select(select)
@@ -143,12 +146,13 @@ export async function GET() {
       from += pageSize;
     }
 
-    const forClustering: ActorRowForClustering[] = rows.map(r => {
+    const forClustering: ActorRowForClustering[] = rows.flatMap(r => {
       const submission = joinedSubmission(r);
+      if (!isPublicShareableSubmission(submission)) return [];
       const reporterName = submission
         ? [submission.first_name, submission.last_name].filter(Boolean).join(" ") || null
         : null;
-      return {
+      return [{
         id: r.id,
         name: r.name,
         role: r.role,
@@ -162,7 +166,7 @@ export async function GET() {
         notes: r.notes,
         created_at: r.created_at,
         review_decision: rowReviewMap.get(r.id) ?? null,
-      };
+      }];
     });
 
     const allClusters: SuggestedCluster[] = buildSuggestedClusters(forClustering, {
