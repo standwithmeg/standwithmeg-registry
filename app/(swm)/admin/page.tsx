@@ -496,6 +496,10 @@ function auditGroupCountedFamilies(group: AuditReviewGroup) {
   return separateRows + (hasNormalDedupeRow ? 1 : 0);
 }
 
+function auditGroupReviewed(group: AuditReviewGroup) {
+  return group.rows.some(row => row.review_decision !== null);
+}
+
 function auditReviewBoolean(value: string | boolean | null) {
   if (value === true) return "Yes";
   if (value === false) return "No";
@@ -712,6 +716,7 @@ export default function AdminPage() {
   const [deletingAuditRow, setDeletingAuditRow] = useState<string | null>(null);
   const [keepingAuditRow, setKeepingAuditRow] = useState<string | null>(null);
   const [countingSeparatelyAuditRow, setCountingSeparatelyAuditRow] = useState<string | null>(null);
+  const [showReviewedAuditGroups, setShowReviewedAuditGroups] = useState(false);
 
   // Quote modal
   const [quoteModal, setQuoteModal] = useState<{ state: string; is_us: boolean; total: number } | null>(null);
@@ -791,6 +796,7 @@ export default function AdminPage() {
   function openAuditReview(row: ReportingAuditRow) {
     setAuditReview(null);
     setAuditReviewContext(row);
+    setShowReviewedAuditGroups(false);
     void loadAuditReview(row.state);
   }
 
@@ -964,7 +970,7 @@ export default function AdminPage() {
       });
       const data = await res.json().catch(() => ({}));
       if (!res.ok) throw new Error(data.error || "Delete failed.");
-      await Promise.all([loadAuditReview(row.state), refreshStatsAndAudit()]);
+      removeAuditReviewRow(row);
     } catch (err) {
       window.alert(err instanceof Error ? err.message : "Delete failed.");
     } finally {
@@ -972,9 +978,68 @@ export default function AdminPage() {
     }
   }
 
+  function updateAuditReviewRowDecision(
+    row: AuditReviewRow,
+    decision: NonNullable<AuditReviewRow["review_decision"]>,
+    reviewedAt: string,
+  ) {
+    const key = auditRowKey(row);
+    const patchRow = (candidate: AuditReviewRow): AuditReviewRow => (
+      auditRowKey(candidate) === key
+        ? { ...candidate, review_decision: decision, reviewed_at: reviewedAt, dedupe_winner: decision === "count_separately" ? true : candidate.dedupe_winner }
+        : candidate
+    );
+    setAuditReview(prev => {
+      if (!prev) return prev;
+      return {
+        ...prev,
+        rows: prev.rows.map(patchRow),
+        duplicate_groups: prev.duplicate_groups.map(group => ({
+          ...group,
+          rows: group.rows.map(patchRow),
+        })),
+        financial_fingerprint_groups: prev.financial_fingerprint_groups?.map(group => ({
+          ...group,
+          rows: group.rows.map(patchRow),
+        })),
+        placeholder_email_groups: prev.placeholder_email_groups?.map(group => ({
+          ...group,
+          rows: group.rows.map(patchRow),
+        })),
+      };
+    });
+  }
+
+  function removeAuditReviewRow(row: AuditReviewRow) {
+    const key = auditRowKey(row);
+    const keepRow = (candidate: AuditReviewRow) => auditRowKey(candidate) !== key;
+    const pruneGroups = (groups: AuditReviewGroup[] | undefined) => groups
+      ?.map(group => ({ ...group, rows: group.rows.filter(keepRow) }))
+      .filter(group => group.rows.length > 1);
+
+    setAuditReview(prev => {
+      if (!prev) return prev;
+      return {
+        ...prev,
+        rows: prev.rows.filter(keepRow),
+        duplicate_groups: pruneGroups(prev.duplicate_groups) ?? [],
+        financial_fingerprint_groups: pruneGroups(prev.financial_fingerprint_groups),
+        placeholder_email_groups: pruneGroups(prev.placeholder_email_groups),
+        summary: {
+          ...prev.summary,
+          raw_rows: Math.max(0, prev.summary.raw_rows - 1),
+          duplicate_groups: pruneGroups(prev.duplicate_groups)?.length ?? 0,
+          financial_fingerprint_groups: pruneGroups(prev.financial_fingerprint_groups)?.length ?? 0,
+          placeholder_email_groups: pruneGroups(prev.placeholder_email_groups)?.length ?? 0,
+        },
+      };
+    });
+  }
+
   async function keepAuditReviewRow(row: AuditReviewRow) {
     const key = auditRowKey(row);
     setKeepingAuditRow(key);
+    const reviewedAt = new Date().toISOString();
     try {
       const res = await fetch("/api/admin/reporting-audit/review", {
         method: "PATCH",
@@ -983,7 +1048,7 @@ export default function AdminPage() {
       });
       const data = await res.json().catch(() => ({}));
       if (!res.ok) throw new Error(data.error || "Keep failed.");
-      await Promise.all([loadAuditReview(row.state), refreshStatsAndAudit()]);
+      updateAuditReviewRowDecision(row, "keep", reviewedAt);
     } catch (err) {
       window.alert(err instanceof Error ? err.message : "Keep failed.");
     } finally {
@@ -999,6 +1064,7 @@ export default function AdminPage() {
 
     const key = auditRowKey(row);
     setCountingSeparatelyAuditRow(key);
+    const reviewedAt = new Date().toISOString();
     try {
       const res = await fetch("/api/admin/reporting-audit/review", {
         method: "PATCH",
@@ -1007,7 +1073,7 @@ export default function AdminPage() {
       });
       const data = await res.json().catch(() => ({}));
       if (!res.ok) throw new Error(data.error || "Different case decision failed to save.");
-      await Promise.all([loadAuditReview(row.state), refreshStatsAndAudit()]);
+      updateAuditReviewRowDecision(row, "count_separately", reviewedAt);
     } catch (err) {
       window.alert(err instanceof Error ? err.message : "Different case decision failed to save.");
     } finally {
@@ -2352,13 +2418,26 @@ export default function AdminPage() {
                   For each duplicate group, decide: <strong>Same family</strong> (duplicate import — same family, same case, only one counts), <strong>Different case</strong> (real separate court matter — counts on its own; can be the same family with another case OR unrelated families), or <strong>Delete</strong> (obvious junk import / test row / wrong-state record).
                 </div>
               </div>
-              <button onClick={() => { setAuditReview(null); setAuditReviewError(null); setAuditReviewContext(null); }}
-                className="w-8 h-8 rounded-lg flex items-center justify-center transition-colors hover:bg-white/10"
-                style={{ color: "rgba(245,245,245,0.5)" }} aria-label="Close">
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
+              <div className="flex items-center gap-2">
+                <button
+                  type="button"
+                  onClick={() => setShowReviewedAuditGroups(v => !v)}
+                  className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide transition-opacity hover:opacity-80"
+                  style={{
+                    backgroundColor: showReviewedAuditGroups ? "rgba(201,162,39,0.18)" : "rgba(255,255,255,0.05)",
+                    color: showReviewedAuditGroups ? GOLD : "rgba(245,245,245,0.6)",
+                    border: "1px solid rgba(255,255,255,0.15)",
+                  }}>
+                  {showReviewedAuditGroups ? "Hide reviewed" : "Show reviewed"}
+                </button>
+                <button onClick={() => { setAuditReview(null); setAuditReviewError(null); setAuditReviewContext(null); }}
+                  className="w-8 h-8 rounded-lg flex items-center justify-center transition-colors hover:bg-white/10"
+                  style={{ color: "rgba(245,245,245,0.5)" }} aria-label="Close">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
             </div>
 
             <div className="overflow-y-auto flex-1 px-6 py-5 space-y-5">
@@ -2482,10 +2561,12 @@ export default function AdminPage() {
                     ))}
                   </div>
 
-                  {auditReview.duplicate_groups.length === 0 ? (
+                  {auditReview.duplicate_groups.filter(group => showReviewedAuditGroups || !auditGroupReviewed(group)).length === 0 ? (
                     <div className="rounded-xl px-4 py-4 text-sm"
                       style={{ backgroundColor: "rgba(74,222,128,0.08)", color: "rgba(245,245,245,0.75)", border: "1px solid rgba(74,222,128,0.2)" }}>
-                      No same-email duplicate groups were found for {auditReview.state}. If the audit table still says mismatch, the most likely cause is a stale PDF/index. Regenerate that state PDF or regenerate all 30+ PDFs.
+                      {auditReview.duplicate_groups.length === 0
+                        ? `No same-email duplicate groups were found for ${auditReview.state}. If the audit table still says mismatch, the most likely cause is a stale PDF/index. Regenerate that state PDF or regenerate all 30+ PDFs.`
+                        : `All same-email duplicate groups for ${auditReview.state} are reviewed. Use Show reviewed if you need to reopen what you just labeled.`}
                     </div>
                   ) : (
                     <div className="space-y-4">
@@ -2499,8 +2580,10 @@ export default function AdminPage() {
                         </p>
                       </div>
 
-                      {auditReview.duplicate_groups.map(group => {
-                        const groupReviewed = group.rows.some(row => row.review_decision !== null);
+                      {auditReview.duplicate_groups
+                        .filter(group => showReviewedAuditGroups || !auditGroupReviewed(group))
+                        .map(group => {
+                        const groupReviewed = auditGroupReviewed(group);
                         const surveyRows = group.rows.filter(row => row.source_table === "survey_submissions");
                         const canMerge = group.rows.length === 2 && surveyRows.length === 2 && !!group.email;
                         const winnerRow = group.rows.find(row => row.dedupe_winner) ?? group.rows[0];
@@ -2650,7 +2733,7 @@ export default function AdminPage() {
                     </div>
                   )}
 
-                  {auditReview.financial_fingerprint_groups && auditReview.financial_fingerprint_groups.length > 0 && (
+                  {auditReview.financial_fingerprint_groups && auditReview.financial_fingerprint_groups.filter(group => showReviewedAuditGroups || !auditGroupReviewed(group)).length > 0 && (
                     <div className="space-y-3">
                       <div className="rounded-xl px-4 py-3"
                         style={{ backgroundColor: "rgba(234,179,8,0.10)", border: "1px solid rgba(234,179,8,0.35)" }}>
@@ -2669,7 +2752,9 @@ export default function AdminPage() {
                         </p>
                       </div>
 
-                      {auditReview.financial_fingerprint_groups.map(group => (
+                      {auditReview.financial_fingerprint_groups
+                        .filter(group => showReviewedAuditGroups || !auditGroupReviewed(group))
+                        .map(group => (
                         <div key={`fp-${group.family_key}`} className="rounded-xl overflow-hidden"
                           style={{ backgroundColor: "rgba(255,255,255,0.025)", border: "1px solid rgba(234,179,8,0.22)" }}>
                           <div className="px-4 py-3 flex items-center justify-between gap-3 flex-wrap"
