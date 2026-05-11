@@ -822,43 +822,64 @@ export default function AdminPage() {
   const load = useCallback(async () => {
     setLoading(true);
     setError(null);
-    try {
-      const [statsRes, actorsRes, auditRes, photoReqRes] = await Promise.all([
-        fetch("/api/admin/survey-stats"),
-        fetch("/api/admin/court-actors"),
-        fetch("/api/admin/reporting-audit"),
-        fetch("/api/admin/court-actor-photo-requests"),
-      ]);
-      const statsData = await statsRes.json();
-      if (!statsRes.ok) { setError(statsData.error || "Failed to load stats."); return; }
-      setStats(statsData);
 
-      const actorsData = await actorsRes.json().catch(() => ({ actors: [], aggregates: [] }));
-      applyActorData(actorsData);
+    // Kick off all four endpoints in parallel. Each section updates
+    // its own slice of state as soon as its endpoint returns, so the
+    // dashboard renders the moment the fastest one is back — not
+    // 10 s later when /court-actors finishes its alias/aggregate work.
+    const statsPromise = fetch("/api/admin/survey-stats")
+      .then(async res => {
+        const data = await res.json().catch(() => ({}));
+        if (!res.ok) {
+          setError(data.error || "Failed to load stats.");
+          return;
+        }
+        setStats(data);
+      })
+      .catch(() => setError("Network error."));
 
-      const auditData = await auditRes.json().catch(() => ({ rows: [], summary: null }));
-      if (auditRes.ok) {
-        applyAuditData(auditData);
-      } else {
-        setAuditRows([]);
-        setAuditSummary(null);
-        setAuditError(auditData.error || "Failed to load reporting audit.");
-      }
+    const actorsPromise = fetch("/api/admin/court-actors")
+      .then(async res => {
+        const data = await res.json().catch(() => ({ actors: [], aggregates: [] }));
+        if (res.ok) applyActorData(data);
+      })
+      .catch(() => { /* swallow — actor list stays empty, no global blocker */ });
 
-      if (photoReqRes.ok) {
-        const photoReqData = await photoReqRes.json().catch(() => null);
-        if (photoReqData?.totals) {
+    const auditPromise = fetch("/api/admin/reporting-audit")
+      .then(async res => {
+        const data = await res.json().catch(() => ({ rows: [], summary: null }));
+        if (res.ok) {
+          applyAuditData(data);
+        } else {
+          setAuditRows([]);
+          setAuditSummary(null);
+          setAuditError(data.error || "Failed to load reporting audit.");
+        }
+      })
+      .catch(() => { /* swallow — audit row failure shouldn't block dashboard */ });
+
+    const photoReqPromise = fetch("/api/admin/court-actor-photo-requests")
+      .then(async res => {
+        if (!res.ok) return;
+        const data = await res.json().catch(() => null);
+        if (data?.totals) {
           setPhotoRequests({
-            totals: photoReqData.totals,
-            recent: Array.isArray(photoReqData.recent) ? photoReqData.recent : [],
+            totals: data.totals,
+            recent: Array.isArray(data.recent) ? data.recent : [],
           });
         }
-      }
-    } catch {
-      setError("Network error.");
-    } finally {
-      setLoading(false);
-    }
+      })
+      .catch(() => { /* swallow */ });
+
+    // Dismiss the global Loading dashboard… spinner as soon as stats
+    // is back (drives the top tiles). Actors/audit/photos keep
+    // hydrating in the background; their own sections show whatever
+    // data has arrived.
+    await statsPromise;
+    setLoading(false);
+
+    // Track the rest so an unhandled rejection doesn't surface later.
+    void Promise.allSettled([actorsPromise, auditPromise, photoReqPromise]);
   }, [applyActorData, applyAuditData]);
 
   useEffect(() => { load(); }, [load]);
@@ -1168,6 +1189,22 @@ export default function AdminPage() {
   async function patchActor(id: string, action: "promote" | "demote" | "delete") {
     if (action === "delete" && !confirm("Remove this actor row permanently? This can't be undone.")) return;
     setActorActing(id);
+
+    // Snapshot for rollback if the request fails — keeps the optimistic
+    // update safe even when the server rejects (auth expired, network
+    // hiccup, etc.).
+    const previousActors = adminActors;
+
+    // Apply the change locally first so the row visibly updates the
+    // moment the admin clicks. No /api/admin/court-actors refetch, so
+    // no 10 s wait and no scroll jump back to the top.
+    if (action === "delete") {
+      setAdminActors(prev => prev.filter(a => a.id !== id));
+    } else {
+      const newSource = action === "promote" ? "form_direct" : "extracted_regex";
+      setAdminActors(prev => prev.map(a => a.id === id ? { ...a, source: newSource } : a));
+    }
+
     try {
       const res = await fetch("/api/admin/court-actors", {
         method: "PATCH",
@@ -1176,11 +1213,17 @@ export default function AdminPage() {
       });
       if (!res.ok) {
         const data = await res.json().catch(() => ({}));
+        setAdminActors(previousActors);
         alert("Action failed: " + (data.error ?? res.statusText));
         return;
       }
-      await refreshActors();
+      // Aggregates (Patterns view counts) are derived server-side with
+      // alias resolution we can't faithfully reproduce client-side, so
+      // they may lag this row's source change by one row until the next
+      // page load. The actor list itself — what the admin is looking
+      // at — is correct immediately.
     } catch (err) {
+      setAdminActors(previousActors);
       alert("Action failed: " + (err instanceof Error ? err.message : "Network error."));
     } finally {
       setActorActing(null);
