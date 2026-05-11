@@ -395,6 +395,35 @@ function normalizeRole(value: string | null | undefined): string | null {
   return role || null;
 }
 
+// Role families collapse the survey's role enum into the few buckets where
+// the same human could plausibly appear under more than one label. Two
+// variants whose role-family sets are entirely disjoint (e.g. Judge vs
+// Therapist) are almost certainly different people, regardless of how
+// close the last names look. "other" is treated as an unknown wildcard —
+// it never blocks clustering.
+function roleFamily(value: string | null | undefined): string | null {
+  const role = normalizeRole(value);
+  if (!role) return null;
+  if (role === "judge") return "judge";
+  if (role.startsWith("attorney")) return "attorney";
+  if (role.includes("gal") || role.includes("child representative") || role.includes("guardian ad litem")) return "gal";
+  if (role.includes("evaluator")) return "evaluator";
+  if (role === "cps worker" || role === "cps") return "cps";
+  if (role.includes("therapist") || role.includes("counselor")) return "therapist";
+  if (role === "mediator") return "mediator";
+  if (role === "other") return null;
+  return null;
+}
+
+function roleFamiliesForVariant(roleCounts: Map<string, number>): Set<string> {
+  const families = new Set<string>();
+  for (const role of Array.from(roleCounts.keys())) {
+    const family = roleFamily(role);
+    if (family) families.add(family);
+  }
+  return families;
+}
+
 function intersectSets(sets: Array<Set<string>>): Set<string> {
   if (sets.length === 0) return new Set();
   const [first, ...rest] = sets;
@@ -583,11 +612,35 @@ export function buildSuggestedClusters(
       rawByKey.set(v.name_key, bestName || v.name_key);
     }
 
+    // Precompute role-family sets per variant so the edge loop can drop
+    // pairs that are obviously different professions (Judge vs Therapist
+    // etc.) before they ever become a cluster the admin has to review.
+    const familiesByKey = new Map<string, Set<string>>();
+    for (const v of variantList) {
+      familiesByKey.set(v.name_key, roleFamiliesForVariant(v.role_counts));
+    }
+
     const edges: Edge[] = [];
     for (let i = 0; i < variantList.length; i += 1) {
       for (let j = i + 1; j < variantList.length; j += 1) {
         const a = variantList[i].name_key;
         const b = variantList[j].name_key;
+
+        // Suppress edges when both variants have known role families
+        // and those sets don't intersect. Either side having no
+        // identified family (e.g. "Other" or missing role) falls
+        // through to the current name-similarity behavior so we don't
+        // silently hide ambiguous data.
+        const famA = familiesByKey.get(a)!;
+        const famB = familiesByKey.get(b)!;
+        if (famA.size > 0 && famB.size > 0) {
+          let overlaps = false;
+          for (const f of Array.from(famA)) {
+            if (famB.has(f)) { overlaps = true; break; }
+          }
+          if (!overlaps) continue;
+        }
+
         const hit = nameSimilarity(rawByKey.get(a)!, rawByKey.get(b)!);
         if (!hit) continue;
         edges.push({ a, b, confidence: hit.confidence, reasons: hit.reasons });
