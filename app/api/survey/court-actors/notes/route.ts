@@ -1,6 +1,6 @@
 import { createAdminSupabaseClient } from "../../../../../lib/supabase-admin";
 import { COURT_ACTOR_PUBLIC_THRESHOLD, actorBucketKey, resolveFamilyKey, type CourtActorRowReviewDecision } from "../../../../../lib/court-actors";
-import { isPublicShareableSubmission } from "../../../../../lib/submission-public-visibility";
+import { isCountableSubmission, isPublicShareableSubmission } from "../../../../../lib/submission-public-visibility";
 
 type AdminClient = ReturnType<typeof createAdminSupabaseClient>;
 
@@ -70,15 +70,12 @@ async function loadRowReviewMap(sb: AdminClient): Promise<Map<string, CourtActor
   return map;
 }
 
-/**
- * Load court_actor_comment_merges → map of primary_row_id → merged_comment.
- * Returns empty map (not null) when the table is missing so pre-migration
- * behavior is unaffected.
- */
-async function loadCommentMergeMap(sb: AdminClient): Promise<Map<string, string>> {
+type CommentMergeEntry = { merged_comment: string; merged_row_ids: string[] };
+
+async function loadCommentMergeMap(sb: AdminClient): Promise<Map<string, CommentMergeEntry>> {
   const { data, error } = await sb
     .from("court_actor_comment_merges")
-    .select("primary_row_id, merged_comment");
+    .select("primary_row_id, merged_comment, merged_row_ids");
   if (error) {
     const missing = error.code === "42P01"
       || error.code === "PGRST205"
@@ -87,10 +84,13 @@ async function loadCommentMergeMap(sb: AdminClient): Promise<Map<string, string>
     console.error("court_actor_comment_merges select error:", error.message);
     return new Map();
   }
-  const map = new Map<string, string>();
-  for (const r of (data ?? []) as Array<{ primary_row_id: string; merged_comment: string }>) {
+  const map = new Map<string, CommentMergeEntry>();
+  for (const r of (data ?? []) as Array<{ primary_row_id: string; merged_comment: string; merged_row_ids: string[] }>) {
     if (r.merged_comment && r.merged_comment.trim()) {
-      map.set(r.primary_row_id, r.merged_comment);
+      map.set(r.primary_row_id, {
+        merged_comment: r.merged_comment,
+        merged_row_ids: r.merged_row_ids ?? [],
+      });
     }
   }
   return map;
@@ -188,56 +188,65 @@ export async function GET(request: Request) {
     // Find rows that match the requested actor bucket + state. A row matches
     // if either its own bucket key OR its alias-canonical bucket key equals
     // the target.
+    // Identify non-public rows across ALL loaded data so we can check
+    // merge taint even for rows outside the matched bucket.
+    const nonPublicRowIds = new Set<string>();
+    for (const row of all) {
+      const submission = joinedSubmission(row);
+      if (!isPublicShareableSubmission(submission)) {
+        nonPublicRowIds.add(row.id);
+      }
+    }
+
     const matchingRows: Row[] = [];
     const families = new Set<string>();
     for (const row of all) {
       if (!row.role || !row.name) continue;
       const submission = joinedSubmission(row);
-      if (!isPublicShareableSubmission(submission)) continue;
+      if (!isCountableSubmission(submission)) continue;
       const state = actorState(row);
       if (!state || state !== stateParam) continue;
       const effectiveName = row.name;
       const key = actorBucketKey(effectiveName, row.role, state);
       if (key !== targetBucketKey) continue;
       const fk = familyKey(row, rowReviewMap);
-      // Skip rows the admin marked as 'duplicate' — testimony is preserved
-      // in court_actors but contributes nothing to public counts or notes.
       if (fk === null) continue;
       matchingRows.push(row);
       families.add(fk);
     }
 
-    // Hard gate: only expose notes for actors who have already crossed the
-    // public-display threshold. This makes probing /notes useless for
-    // looking up a single family's submission.
     if (families.size < COURT_ACTOR_PUBLIC_THRESHOLD) {
       return Response.json({ notes: [], count: 0 });
     }
 
-    // Dedup notes per family — one family writing the same note twice
-    // appears once. Pick the longest non-empty note for each family.
-    //
-    // If an admin promotes an AI/regex-discovered row to counted, strip the
-    // internal source tag before showing the underlying family-written text.
-    //
-    // If this row is the primary of a comment-merge, replace its original
-    // notes with the admin-edited merged_comment so all of the same
-    // reporter's testimony shows publicly under one display entry.
     const notesByFamily = new Map<string, { note: string; month: string | null }>();
     for (const row of matchingRows) {
-      const merged = commentMergeMap.get(row.id);
+      // Only display notes from publicly-shareable submissions.
+      // data_only rows counted above but their text stays hidden.
+      if (nonPublicRowIds.has(row.id)) continue;
+
+      const mergeEntry = commentMergeMap.get(row.id);
+      let merged: string | undefined;
+      if (mergeEntry) {
+        // If any merged source row came from a non-public submission,
+        // the merged_comment could contain their text — fall back to
+        // this row's own notes only.
+        const mergeTainted = mergeEntry.merged_row_ids.some(
+          id => nonPublicRowIds.has(id)
+        );
+        if (!mergeTainted) {
+          merged = mergeEntry.merged_comment;
+        }
+      }
+
       const sourceText = merged ?? (row.notes ?? "").trim();
       if (!sourceText) continue;
-      // cleanPublicNote strips the internal [extracted_*] tags; merged
-      // comments are already admin-edited so the strip is a no-op there.
       const note = cleanPublicNote(sourceText);
       if (!note) continue;
       const fk = familyKey(row, rowReviewMap);
       if (fk === null) continue;
       const month = isoMonth(row.created_at);
       const existing = notesByFamily.get(fk);
-      // Prefer merged_comment over any plain note for the same family,
-      // even if a plain note happens to be longer character-wise.
       const isMerged = Boolean(merged);
       const existingIsMerged = Boolean(existing && existing.note === merged);
       const shouldReplace = !existing

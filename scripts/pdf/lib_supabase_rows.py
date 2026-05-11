@@ -42,6 +42,17 @@ def _is_public_shareable_submission(submission: dict | None) -> bool:
         return False
     perm = str(submission.get("permission_to_share") or "").strip()
     return perm in _PUBLIC_SHARE_PERMISSIONS
+
+
+def _is_countable_submission(submission: dict | None) -> bool:
+    if not submission:
+        return False
+    perm = str(submission.get("permission_to_share") or "").strip()
+    if perm == "data_only":
+        return True
+    if submission.get("approved") is not True:
+        return False
+    return perm in _PUBLIC_SHARE_PERMISSIONS
 _ROLE_PREFIX_RE = re.compile(r"^(hon\.?|honorable|judge|justice|magistrate|commissioner|referee|attorney|atty\.?|gal|guardian ad litem|minor'?s counsel|minor counsel|dr\.?|doctor)\s+", re.I)
 _SUFFIX_RE = re.compile(r"\s+(jr\.?|sr\.?|ii|iii|iv|esq\.?|esquire)$", re.I)
 _GIVEN_NAME_ALIASES = {
@@ -183,34 +194,35 @@ def _load_court_actor_row_review_map(sb: Client) -> dict[str, str]:
     }
 
 
-def _load_court_actor_comment_merge_map(sb: Client) -> dict[str, str]:
-    """Load primary_row_id -> merged_comment map. Empty map if table missing.
+def _load_court_actor_comment_merge_map(
+    sb: Client,
+) -> tuple[dict[str, str], dict[str, list[str]]]:
+    """Load primary_row_id -> merged_comment AND primary_row_id -> merged_row_ids.
 
-    Mirrors loadCommentMergeMap in app/api/survey/court-actors/notes/route.ts.
-    Merged rows themselves are excluded from family counts via the
-    'merge_comments' decision in court_actor_row_review (migration 023 widens
-    the check). The primary row's display note is replaced with merged_comment
-    by the caller, so all of the same reporter's testimony shows under one
-    family entry in the PDF.
+    Returns (comment_map, source_map). Both empty dicts if table missing.
     """
     try:
         resp = (
             sb.table("court_actor_comment_merges")
-            .select("primary_row_id,merged_comment")
+            .select("primary_row_id,merged_comment,merged_row_ids")
             .execute()
         )
     except Exception as exc:
         text = str(exc)
         if "court_actor_comment_merges" in text or "42P01" in text or "PGRST205" in text:
-            return {}
+            return {}, {}
         raise
-    out: dict[str, str] = {}
+    comment_map: dict[str, str] = {}
+    source_map: dict[str, list[str]] = {}
     for r in (resp.data or []):
         primary = r.get("primary_row_id")
+        if not primary:
+            continue
         comment = (r.get("merged_comment") or "").strip()
-        if primary and comment:
-            out[primary] = comment
-    return out
+        if comment:
+            comment_map[primary] = comment
+        source_map[primary] = r.get("merged_row_ids") or []
+    return comment_map, source_map
 
 
 def load_public_court_actors_from_supabase(state_filter: str | None = None) -> dict[str, list[dict]]:
@@ -249,7 +261,16 @@ def load_public_court_actors_from_supabase(state_filter: str | None = None) -> d
     # the underlying table is missing, so this stays safe pre-migration.
     alias_resolver = _load_court_actor_alias_resolver(sb)
     review_map = _load_court_actor_row_review_map(sb)
-    comment_merge_map = _load_court_actor_comment_merge_map(sb)
+    comment_merge_map, comment_merge_source_map = _load_court_actor_comment_merge_map(sb)
+
+    # Pre-compute which row IDs came from non-public submissions so we can
+    # suppress their notes and detect merge taint.
+    non_public_row_ids: set[str] = set()
+    for row in rows:
+        if not _is_public_shareable_submission(_joined_submission(row)):
+            rid = row.get("id")
+            if rid:
+                non_public_row_ids.add(rid)
 
     buckets: dict[tuple[str, str], dict] = {}
     for row in rows:
@@ -262,21 +283,15 @@ def load_public_court_actors_from_supabase(state_filter: str | None = None) -> d
         if not location or not role or not name_key:
             continue
 
-        # Fail-closed on submitter consent. Rows tied to data_only or
-        # unapproved survey submissions never contribute to public counts,
-        # names, or quoted notes. Mirrors isPublicShareableSubmission() in
-        # the TypeScript public actor endpoints.
-        if not _is_public_shareable_submission(_joined_submission(row)):
+        # Count data_only submissions toward family totals (they consented
+        # to be counted) but never expose their notes text.
+        if not _is_countable_submission(_joined_submission(row)):
             continue
 
-        # Skip rows the admin marked as 'duplicate' — testimony is preserved
-        # in court_actors but contributes nothing to public counts.
         family_key = _actor_family_key(row, review_map)
         if family_key is None:
             continue
 
-        # Apply approved 'same_actor' alias decisions: roll close-name variants
-        # in this location into the canonical bucket and display.
         alias_hit = alias_resolver.get(f"{name_key}|{location}")
         effective_name = alias_hit["canonical_name"] if alias_hit else name
         effective_name_key = _actor_name_key(effective_name)
@@ -289,25 +304,30 @@ def load_public_court_actors_from_supabase(state_filter: str | None = None) -> d
                 "name_counts": Counter(),
                 "court_counts": Counter(),
                 "families": set(),
-                # family_key -> {note, court_or_county} — keep best note per family
                 "family_notes": {},
             },
         )
         bucket["role_counts"][role] += 1
-        # When alias decision applies, the canonical spelling is what gets
-        # tracked for casing — mirrors lib/court-actors.ts buildPublicCourtActors.
         bucket["name_counts"][effective_name] += 1
         court = str(row.get("court_or_county") or "").strip()
         if court:
             bucket["court_counts"][court] += 1
         if row.get("submission_id"):
             bucket["families"].add(family_key)
-        # Track best note per family. Merged-comment primaries win over plain
-        # notes for the same family, regardless of plain-note length, because
-        # the merged_comment IS the admin-curated combined testimony for that
-        # reporter. Otherwise, longest non-empty wins; [extracted_*] markers
-        # are dropped (those are admin-only source tags).
+
+        # Notes: only from publicly-shareable submissions. data_only rows
+        # counted above but their text stays hidden from the PDF.
+        if row.get("id") in non_public_row_ids:
+            continue
+
         merged = comment_merge_map.get(row.get("id"))
+        if merged and row.get("id") in comment_merge_source_map:
+            merge_tainted = any(
+                rid in non_public_row_ids
+                for rid in comment_merge_source_map[row["id"]]
+            )
+            if merge_tainted:
+                merged = None
         note = (merged or str(row.get("notes") or "")).strip()
         if note and not note.startswith("[extracted_"):
             existing = bucket["family_notes"].get(family_key)

@@ -1,6 +1,6 @@
 import { createAdminSupabaseClient } from "../../../../lib/supabase-admin";
 import { COURT_ACTOR_PUBLIC_THRESHOLD, actorBucketKeyWithLocation, courtActorLocationKey, resolveFamilyKey, type CourtActorRowReviewDecision } from "../../../../lib/court-actors";
-import { isPublicShareableSubmission } from "../../../../lib/submission-public-visibility";
+import { isCountableSubmission } from "../../../../lib/submission-public-visibility";
 
 type AdminClient = ReturnType<typeof createAdminSupabaseClient>;
 
@@ -170,7 +170,7 @@ export async function GET() {
     for (const a of all) {
       if (!a.role || !a.name) continue;
       const submission = joinedSubmission(a);
-      if (!isPublicShareableSubmission(submission)) continue;
+      if (!isCountableSubmission(submission)) continue;
       const location = actorLocation(a);
       if (!location) continue;
       const fk = familyKey(a, rowReviewMap);

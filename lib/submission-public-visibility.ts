@@ -9,3 +9,10 @@ export function isPublicShareableSubmission(submission: SubmissionVisibilityFiel
   return submission?.approved === true
     && PUBLIC_SHARE_PERMISSIONS.has((submission.permission_to_share ?? "").trim());
 }
+
+export function isCountableSubmission(submission: SubmissionVisibilityFields): boolean {
+  if (!submission) return false;
+  const perm = (submission.permission_to_share ?? "").trim();
+  if (perm === "data_only") return true;
+  return submission.approved === true && PUBLIC_SHARE_PERMISSIONS.has(perm);
+}

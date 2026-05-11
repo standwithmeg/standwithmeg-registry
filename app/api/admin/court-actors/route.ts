@@ -3,7 +3,7 @@ import { createAdminSupabaseClient } from "../../../../lib/supabase-admin";
 import { isAdminEmail } from "../../../../lib/require-auth";
 import { COURT_ACTOR_PUBLIC_THRESHOLD, actorBucketKeyWithLocation, courtActorLocationKey, resolveFamilyKey, type CourtActorRowReviewDecision } from "../../../../lib/court-actors";
 import { AliasResolver, type AliasDecisionRow } from "../../../../lib/court-actor-similarity";
-import { isPublicShareableSubmission } from "../../../../lib/submission-public-visibility";
+import { isCountableSubmission, isPublicShareableSubmission } from "../../../../lib/submission-public-visibility";
 
 type AdminClient = ReturnType<typeof createAdminSupabaseClient>;
 
@@ -240,7 +240,7 @@ export async function GET() {
     for (const r of rows) {
       if ((r.source ?? "form_direct") !== "form_direct") continue;
       if (!r.role || !r.name) continue;
-      if (!isPublicShareableSubmission(joinedSubmission(r))) continue;
+      if (!isCountableSubmission(joinedSubmission(r))) continue;
       const fk = familyKey(r, rowReviewMap);
       if (fk === null) continue;
       const location = actorLocation(r);
@@ -285,7 +285,7 @@ export async function GET() {
       const fk = familyKey(r, rowReviewMap);
       const mergePrimary = commentMerges.byPrimary.get(r.id) ?? null;
       const mergeParentId = commentMerges.byMerged.get(r.id) ?? null;
-      const isPublicEligible = isPublicShareableSubmission(submission);
+      const isPublicEligible = isCountableSubmission(submission);
       return {
         id: r.id,
         role: r.role,

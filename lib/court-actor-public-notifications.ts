@@ -7,7 +7,7 @@ import {
   resolveFamilyKey,
   type CourtActorRowReviewDecision,
 } from "./court-actors";
-import { isPublicShareableSubmission } from "./submission-public-visibility";
+import { isCountableSubmission, isPublicShareableSubmission } from "./submission-public-visibility";
 import { US_JURISDICTIONS } from "./us-jurisdictions";
 
 type AdminClient = ReturnType<typeof createAdminSupabaseClient>;
@@ -278,7 +278,7 @@ export async function getPublicActorsWithReporters(): Promise<PublicActorBucket[
     const location = rowLocation(a);
     if (!location) continue;
     const submission = joinedSubmission(a);
-    if (!isPublicShareableSubmission(submission)) continue;
+    if (!isCountableSubmission(submission)) continue;
     const fk = resolveFamilyKey({
       row_id: a.id,
       reporter_email: submission?.email ?? null,
