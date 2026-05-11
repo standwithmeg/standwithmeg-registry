@@ -340,7 +340,113 @@ export type SuggestedCluster = {
   // cluster. Strong "same person, same family typed two spellings" signal —
   // and a reminder that those rows already dedupe to one family before merge.
   cross_variant_reporters: Array<{ reporter_email: string; variants: string[] }>;
+  auto_decision: EasySameCountyDecision | null;
 };
+
+export type EasySameCountyDecision = {
+  kind: "easy_same_county_same_actor";
+  county_key: string;
+  role_key: string;
+  reason: string;
+};
+
+const STATE_WORDS = new Set([
+  "alabama", "alaska", "arizona", "arkansas", "california", "colorado", "connecticut",
+  "delaware", "florida", "georgia", "hawaii", "idaho", "illinois", "indiana", "iowa",
+  "kansas", "kentucky", "louisiana", "maine", "maryland", "massachusetts", "michigan",
+  "minnesota", "mississippi", "missouri", "montana", "nebraska", "nevada",
+  "hampshire", "jersey", "mexico", "york", "carolina", "dakota", "ohio", "oklahoma",
+  "oregon", "pennsylvania", "rhode", "island", "tennessee", "texas", "utah", "vermont",
+  "virginia", "washington", "wisconsin", "wyoming",
+  "al", "ak", "az", "ar", "ca", "co", "ct", "de", "fl", "ga", "hi", "id", "il", "in",
+  "ia", "ks", "ky", "la", "me", "md", "ma", "mi", "mn", "ms", "mo", "mt", "ne", "nv",
+  "nh", "nj", "nm", "ny", "nc", "nd", "oh", "ok", "or", "pa", "ri", "sc", "sd", "tn",
+  "tx", "ut", "vt", "va", "wa", "wi", "wy", "dc",
+]);
+
+const COURT_LOCATION_WORDS = new Set([
+  "county", "court", "courts", "courthouse", "family", "district", "circuit", "judicial",
+  "division", "dept", "department", "domestic", "relations", "superior", "supreme",
+  "common", "pleas", "juvenile", "probate", "magistrate", "municipal", "civil", "criminal",
+  "state", "the", "of", "and",
+]);
+
+function normalizeCountyCourt(value: string | null | undefined): string | null {
+  if (!value) return null;
+  const parts = value
+    .toLowerCase()
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9\s]/g, " ")
+    .split(/\s+/)
+    .map(part => part.replace(/^\d+(st|nd|rd|th)?$/, ""))
+    .map(part => part.trim())
+    .filter(Boolean)
+    .filter(part => !STATE_WORDS.has(part))
+    .filter(part => !COURT_LOCATION_WORDS.has(part));
+  if (parts.length === 0) return null;
+  const key = parts.join(" ").trim();
+  return key.length >= 3 ? key : null;
+}
+
+function normalizeRole(value: string | null | undefined): string | null {
+  if (!value) return null;
+  const role = value.toLowerCase().replace(/\s+/g, " ").trim();
+  return role || null;
+}
+
+function intersectSets(sets: Array<Set<string>>): Set<string> {
+  if (sets.length === 0) return new Set();
+  const [first, ...rest] = sets;
+  const out = new Set<string>();
+  for (const value of first) {
+    if (rest.every(set => set.has(value))) out.add(value);
+  }
+  return out;
+}
+
+function easySameCountyDecisionForCluster(
+  highest: SimilarityHit["confidence"],
+  variants: ClusterVariant[],
+): EasySameCountyDecision | null {
+  if (highest !== "high") return null;
+  if (variants.length < 2) return null;
+
+  const countySets = variants.map(variant => {
+    const keys = new Set<string>();
+    for (const sample of variant.samples) {
+      if (!sample.counts_publicly) continue;
+      const actorCounty = normalizeCountyCourt(sample.court_or_county);
+      const caseCounty = normalizeCountyCourt(sample.reporter_case_county);
+      if (actorCounty) keys.add(actorCounty);
+      if (caseCounty) keys.add(caseCounty);
+    }
+    return keys;
+  });
+  if (countySets.some(set => set.size === 0)) return null;
+  const sharedCounty = Array.from(intersectSets(countySets)).sort((a, b) => a.localeCompare(b))[0];
+  if (!sharedCounty) return null;
+
+  const roleSets = variants.map(variant => {
+    const roles = new Set<string>();
+    for (const sample of variant.samples) {
+      if (!sample.counts_publicly) continue;
+      const role = normalizeRole(sample.role);
+      if (role && role !== "other") roles.add(role);
+    }
+    return roles;
+  });
+  if (roleSets.some(set => set.size === 0)) return null;
+  const sharedRole = Array.from(intersectSets(roleSets)).sort((a, b) => a.localeCompare(b))[0];
+  if (!sharedRole) return null;
+
+  return {
+    kind: "easy_same_county_same_actor",
+    county_key: sharedCounty,
+    role_key: sharedRole,
+    reason: `High-confidence spelling match in the same state/location, shared county/court "${sharedCounty}", and shared role "${sharedRole}".`,
+  };
+}
 
 function familyKeyFromRow(row: ActorRowForClustering): string | null {
   return resolveFamilyKey({
@@ -626,6 +732,7 @@ export function buildSuggestedClusters(
         highest_confidence: highest,
         total_family_count: allFamilies.size,
         cross_variant_reporters,
+        auto_decision: easySameCountyDecisionForCluster(highest, variants),
       });
     }
   }
