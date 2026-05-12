@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "darik_anderson",
+    "display_name": "Darik Anderson",
+    "title": "",
+    "first_name": "Darik",
+    "last_name": "Anderson",
+    "role": "GAL / Child Representative",
+    "court": "Winona County MN",
+    "county": null,
+    "court_or_county": "Winona County MN",
+    "state": "Minnesota",
+    "state_abbr": "MN",
+    "mention_count": 3,
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "3530d98e-bba4-4670-9222-aee137be4994",
+      "cedaaf31-adab-424b-b256-d0d2dacd15ed",
+      "22d80eb0-d856-4931-9ec0-87f387627e2a"
+    ],
+    "actor_row_id": "3530d98e-bba4-4670-9222-aee137be4994",
+    "actor_bucket_key": "darik anderson|MN"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 46,
+    "total_submissions": 56,
+    "avg_financial_loss": 198309.92,
+    "avg_months_lost": 33.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "MN",
+    "state_family_count": 56,
+    "median_months_lost": 19.5,
+    "median_financial_loss": 150175,
+    "median_burden_sample_size": 26,
+    "pro_se_count": 36,
+    "pro_se_pct": 60.0,
+    "children_impacted": 102,
+    "clean_sample_size": 60,
+    "raw_submission_count": 60
+  },
+  "movement_total": 3525,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Not conducting an independent study, filling false documentation into court, Lying on the stand.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "She failed to do her job. She never evaluated, visited or spoke with anyone",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Refused documents",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/darik_anderson",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/minnesota/darik_anderson/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

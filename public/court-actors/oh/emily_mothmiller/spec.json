@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "emily_mothmiller",
+    "display_name": "Emily Mothmiller",
+    "title": "",
+    "first_name": "Emily",
+    "last_name": "Mothmiller",
+    "role": "Attorney (Opposing)",
+    "court": "Shelby",
+    "county": null,
+    "court_or_county": "Shelby",
+    "state": "Ohio",
+    "state_abbr": "OH",
+    "mention_count": 3,
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "747771a9-fad6-401b-bd58-fe98576ed673",
+      "5cf96024-5abd-431d-a520-551ec5ed218c",
+      "87c1a624-d0a5-490e-8017-64f276902865"
+    ],
+    "actor_row_id": "747771a9-fad6-401b-bd58-fe98576ed673",
+    "actor_bucket_key": "emily mothmiler|OH"
+  },
+  "photo": {
+    "path": "ohio/emily_mothmiller/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 144,
+    "total_submissions": 186,
+    "avg_financial_loss": 123936.34,
+    "avg_months_lost": 31.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OH",
+    "state_family_count": 186,
+    "median_months_lost": 20.0,
+    "median_financial_loss": 82500,
+    "median_burden_sample_size": 93,
+    "pro_se_count": 106,
+    "pro_se_pct": 58.2,
+    "children_impacted": 274,
+    "clean_sample_size": 182,
+    "raw_submission_count": 182
+  },
+  "movement_total": 3525,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Uses \"evidence\" gotten under false pretenses and exaggerates in court to try and manipulate you into emotional responses and answers",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Files retaliatory motions to keep parties wrapped up in legal fees",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Aquired restricted court documents from a 3rd party of a juvenile case in a different state with kids not involved in this case in any way to discredit a witness…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/emily_mothmiller",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/ohio/emily_mothmiller/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

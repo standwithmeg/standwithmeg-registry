@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "nicole_warren",
+    "display_name": "Nicole Warren",
+    "title": "",
+    "first_name": "Nicole",
+    "last_name": "warren",
+    "role": "CPS Worker",
+    "court": "Canadian",
+    "county": null,
+    "court_or_county": "Canadian",
+    "state": "Oklahoma",
+    "state_abbr": "OK",
+    "mention_count": 5,
+    "actor_report_count": 5,
+    "supabase_row_ids": [
+      "f726f53f-67c6-4853-a00c-0503236ede53",
+      "ccdcc8b0-aeba-4d6d-b5ee-de255705a9b3",
+      "1aec2c67-ae75-4254-a746-83553820409f",
+      "28d762c3-c760-4224-9883-0c8cd563cc33",
+      "71732e54-a7a6-472a-a60f-b1124adb2ede"
+    ],
+    "actor_row_id": "f726f53f-67c6-4853-a00c-0503236ede53",
+    "actor_bucket_key": "nicole waren|OK"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 85,
+    "total_submissions": 105,
+    "avg_financial_loss": 116341.98,
+    "avg_months_lost": 27.7,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OK",
+    "state_family_count": 105,
+    "median_months_lost": 11.5,
+    "median_financial_loss": 82000,
+    "median_burden_sample_size": 55,
+    "pro_se_count": 48,
+    "pro_se_pct": 46.2,
+    "children_impacted": 181,
+    "clean_sample_size": 104,
+    "raw_submission_count": 104
+  },
+  "movement_total": 3525,
+  "supabase": {
+    "report_count": 5,
+    "actor_report_count": 5,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Light on the stand in tampered with evidence and witness well also failing to vet witnesses",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "she lied under oath during my initial hearing",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "She committed perjury, omitted information from an affidavit used to remove my child",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/nicole_warren",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/oklahoma/nicole_warren/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "joan_anthony",
+    "display_name": "Joan Anthony",
+    "title": "",
+    "first_name": "Joan",
+    "last_name": "Anthony",
+    "role": "Judge",
+    "court": "Seventh Circuit Court",
+    "county": null,
+    "court_or_county": "Seventh Circuit Court",
+    "state": "Florida",
+    "state_abbr": "FL",
+    "mention_count": 4,
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "6e2bd141-759a-4694-a30b-c8e36ed76619",
+      "2c0950c8-d6b0-4b36-82bb-7d5c87e82861",
+      "a5b013d5-72b1-4719-ae07-2fc202b90728",
+      "eecc0c12-9516-405d-9b0e-5801dbca854b"
+    ],
+    "actor_row_id": "6e2bd141-759a-4694-a30b-c8e36ed76619",
+    "actor_bucket_key": "joan anthony|FL"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 150,
+    "total_submissions": 202,
+    "avg_financial_loss": 204114.65,
+    "avg_months_lost": 30.8,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "FL",
+    "state_family_count": 202,
+    "median_months_lost": 20.0,
+    "median_financial_loss": 215500,
+    "median_burden_sample_size": 88,
+    "pro_se_count": 117,
+    "pro_se_pct": 59.1,
+    "children_impacted": 320,
+    "clean_sample_size": 198,
+    "raw_submission_count": 198
+  },
+  "movement_total": 3525,
+  "supabase": {
+    "report_count": 4,
+    "actor_report_count": 4,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Florida DCF and its state contractors (Community Partnership for Children, Seventh Circuit Court, Volusia County) ignored altered and fraudulent coerced consent documents used to remove parental rights from a disabled…",
+        "author": "Anonymous parent",
+        "source": "court_actor_comment_merges",
+        "row_id": "a5b013d5-72b1-4719-ae07-2fc202b90728"
+      },
+      {
+        "comment_text": "Florida DCF and its state contractors (Community Partnership for Children, Seventh Circuit Court, Volusia County) ignored altered and fraudulent coerced consent documents used to remove parental rights from a disabled…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Judge Anthony did not have the court clerk docket my pro se filings. They were substantive filings, including a motion to vacate and written opposition to TPR. She silenced me…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/joan_anthony",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/florida/joan_anthony/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

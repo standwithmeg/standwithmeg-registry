@@ -1,0 +1,82 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "michelle_bell",
+    "display_name": "Michelle Bell",
+    "title": "",
+    "first_name": "Michelle",
+    "last_name": "Bell",
+    "role": "Judge",
+    "court": "Orange",
+    "county": null,
+    "court_or_county": "Orange",
+    "state": "California",
+    "state_abbr": "CA",
+    "mention_count": 2,
+    "actor_report_count": 2,
+    "supabase_row_ids": [
+      "543e9ddf-f2f7-4952-a4aa-7df5e7e34736",
+      "396fe1e0-08b8-4b88-b936-e029f87348d2"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "california/michelle_bell/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 240,
+    "total_submissions": 307,
+    "avg_financial_loss": 283576.48,
+    "avg_months_lost": 37.6,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "CA",
+    "state_family_count": 307,
+    "median_months_lost": 23.0,
+    "median_financial_loss": 277100,
+    "median_burden_sample_size": 138,
+    "pro_se_count": 170,
+    "pro_se_pct": 56.7,
+    "children_impacted": 486,
+    "clean_sample_size": 300,
+    "raw_submission_count": 300
+  },
+  "movement_total": 3525,
+  "supabase": {
+    "report_count": 2,
+    "actor_report_count": 2,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Issued prejudiced orders, ignored/forgot standard cost procedures, ignored evidence,",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Issued unlawful orders. Prejudiced. Ignored or forgot standard court procedures.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/michelle_bell",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/california/michelle_bell/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

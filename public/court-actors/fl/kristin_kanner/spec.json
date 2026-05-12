@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "kristin_kanner",
+    "display_name": "Kristin Kanner",
+    "title": "",
+    "first_name": "Kristin",
+    "last_name": "Kanner",
+    "role": "Judge",
+    "court": "Broward",
+    "county": null,
+    "court_or_county": "Broward",
+    "state": "Florida",
+    "state_abbr": "FL",
+    "mention_count": 5,
+    "actor_report_count": 5,
+    "supabase_row_ids": [
+      "ae76a23b-c86f-41d6-a9c8-3a2379b9cfdb",
+      "f1257d8e-9d8e-4733-9be2-e49266ac929d",
+      "8b760b90-8485-4d98-a64b-321f4d3174cf",
+      "2668078d-7146-40d8-9877-2b1699f1d143",
+      "64f2e4a4-a3d4-4f32-b77d-6070a84e2a36"
+    ],
+    "actor_row_id": "ae76a23b-c86f-41d6-a9c8-3a2379b9cfdb",
+    "actor_bucket_key": "kristin kaner|FL"
+  },
+  "photo": {
+    "path": "florida/13_kristin_kanner/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 150,
+    "total_submissions": 202,
+    "avg_financial_loss": 204114.65,
+    "avg_months_lost": 30.8,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "FL",
+    "state_family_count": 202,
+    "median_months_lost": 20.0,
+    "median_financial_loss": 215500,
+    "median_burden_sample_size": 88,
+    "pro_se_count": 117,
+    "pro_se_pct": 59.1,
+    "children_impacted": 320,
+    "clean_sample_size": 198,
+    "raw_submission_count": 198
+  },
+  "movement_total": 3525,
+  "supabase": {
+    "report_count": 5,
+    "actor_report_count": 5,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Issued a cross-state child pickup order leading to the forced removal of my granddaughter from my daughter, Kathryn Dressler, by armed police while ignoring documented domestic violence and safety risks.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "My case has been delayed due to Nicole Vette’s endless litigation abuse and Ryanne Seyba GAL allowing it. Judge Kanner is allowing it to persist, too. 3.5 years and counting!",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "My concerns have mainly been around due process—things like important issues being decided without enough time to present evidence, delays in hearing my motions, and procedural decisions that I don’t…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/kristin_kanner",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/florida/kristin_kanner/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

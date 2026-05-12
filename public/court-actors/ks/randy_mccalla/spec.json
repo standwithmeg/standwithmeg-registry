@@ -1,0 +1,89 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "randy_mccalla",
+    "display_name": "Randy McCalla",
+    "title": "",
+    "first_name": "Randy",
+    "last_name": "McCalla",
+    "role": "GAL / Child Representative",
+    "court": "Johnson",
+    "county": null,
+    "court_or_county": "Johnson",
+    "state": "Kansas",
+    "state_abbr": "KS",
+    "mention_count": 4,
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "ec69c9c9-fd55-49dd-b625-f2507aa011da",
+      "f42cd393-05ff-4bcb-bd8f-e3f5f7f7bfba",
+      "54e9569c-6281-4021-9b7f-2725de6b2c27",
+      "5f91accd-45f3-4436-886a-868339149fa9"
+    ],
+    "actor_row_id": "ec69c9c9-fd55-49dd-b625-f2507aa011da",
+    "actor_bucket_key": "randy mcala|KS"
+  },
+  "photo": {
+    "path": "kansas/randy_mccalla/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 116,
+    "total_submissions": 167,
+    "avg_financial_loss": 128403.78,
+    "avg_months_lost": 32.1,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "KS",
+    "state_family_count": 167,
+    "median_months_lost": 20.5,
+    "median_financial_loss": 84225,
+    "median_burden_sample_size": 76,
+    "pro_se_count": 85,
+    "pro_se_pct": 54.1,
+    "children_impacted": 278,
+    "clean_sample_size": 157,
+    "raw_submission_count": 157
+  },
+  "movement_total": 3525,
+  "supabase": {
+    "report_count": 4,
+    "actor_report_count": 4,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Filed the emergency motion that led to my children being taken, never spoke to me, and instead worked with my ex, his attorney, therapists, and DCF while leaving me completely…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "He did not interview my witnesses, coerced my son to go live in a warm climate to play sports. Wouldn’t tell me the reasons why my son should be removed…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Caused permanent and irreparable harm to my children's mental and physical health as well as to my entire family. Blackmailed by Randy McCalla. Ex parte communication between attorneys and court…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/randy_mccalla",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/kansas/randy_mccalla/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

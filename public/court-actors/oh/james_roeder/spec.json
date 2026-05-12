@@ -1,0 +1,89 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "james_roeder",
+    "display_name": "James Roeder",
+    "title": "",
+    "first_name": "James",
+    "last_name": "Roeder",
+    "role": "Attorney (Opposing)",
+    "court": "Highland",
+    "county": null,
+    "court_or_county": "Highland",
+    "state": "Ohio",
+    "state_abbr": "OH",
+    "mention_count": 4,
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "0633d20a-1dcb-44f3-ab80-b290b5673063",
+      "372601f2-88d9-4fd0-a436-ad60e54ac1f4",
+      "550c0ce6-fac9-4603-8b34-731982271966",
+      "b7c0bae7-4d0d-4742-869d-aab1c2206f03"
+    ],
+    "actor_row_id": "0633d20a-1dcb-44f3-ab80-b290b5673063",
+    "actor_bucket_key": "james roeder|OH"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 144,
+    "total_submissions": 186,
+    "avg_financial_loss": 123936.34,
+    "avg_months_lost": 31.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OH",
+    "state_family_count": 186,
+    "median_months_lost": 20.0,
+    "median_financial_loss": 82500,
+    "median_burden_sample_size": 93,
+    "pro_se_count": 106,
+    "pro_se_pct": 58.2,
+    "children_impacted": 274,
+    "clean_sample_size": 182,
+    "raw_submission_count": 182
+  },
+  "movement_total": 3525,
+  "supabase": {
+    "report_count": 4,
+    "actor_report_count": 4,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Denied motion and ignored evidence!! None of them did their job they made up everything. The judge didn’t want to listen to us whatsoever that we gave him evidence and…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Denied motion without hearing",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Delayed any attempt at reunification and ignored exculpatory evidence.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/james_roeder",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/ohio/james_roeder/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

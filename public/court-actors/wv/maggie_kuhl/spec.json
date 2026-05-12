@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "maggie_kuhl",
+    "display_name": "Maggie Kuhl",
+    "title": "",
+    "first_name": "Maggie",
+    "last_name": "Kuhl",
+    "role": "Attorney / GAL / Child Representative",
+    "court": "Putnam County",
+    "county": null,
+    "court_or_county": "Putnam County",
+    "state": "West Virginia",
+    "state_abbr": "WV",
+    "mention_count": 3,
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "e26acfce-3759-4795-809c-35de424dd36b",
+      "c2b4314b-ee9c-4f45-abfc-0e2f9285906e",
+      "ba2e472c-efa3-4c81-b689-17bd66d267f5"
+    ],
+    "actor_row_id": "e26acfce-3759-4795-809c-35de424dd36b",
+    "actor_bucket_key": "magie kuhl|WV"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 41,
+    "total_submissions": 45,
+    "avg_financial_loss": 70805.93,
+    "avg_months_lost": 37.8,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "WV",
+    "state_family_count": 45,
+    "median_months_lost": 25.0,
+    "median_financial_loss": 71000,
+    "median_burden_sample_size": 12,
+    "pro_se_count": 23,
+    "pro_se_pct": 46.0,
+    "children_impacted": 91,
+    "clean_sample_size": 50,
+    "raw_submission_count": 50
+  },
+  "movement_total": 3525,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Maggie Kuhl works at Putnam County Courthouse multiple times during the week. She is also represented Cara Branham my ex for the majority of the court proceedings over the 11…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "I have a special needs child. I was always 100% primary parent and that father never went to doc appts or therapy appts. that he never paid for food or…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "At one point, she went over a year without speaking to the kids, yet continued to write reports and make recommendations.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/maggie_kuhl",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/west-virginia/maggie_kuhl/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

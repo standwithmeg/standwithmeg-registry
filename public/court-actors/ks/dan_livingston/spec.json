@@ -1,0 +1,83 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "dan_livingston",
+    "display_name": "Dan Livingston",
+    "title": "",
+    "first_name": "Dan",
+    "last_name": "Livingston",
+    "role": "Reunification Therapist",
+    "court": "Johnson",
+    "county": null,
+    "court_or_county": "Johnson",
+    "state": "Kansas",
+    "state_abbr": "KS",
+    "mention_count": 3,
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "a17e7647-a519-438e-88a7-32e3bb9ef71b",
+      "27ae93b4-bd2f-499a-ba0a-35e3bc2296ac",
+      "5254ca1d-b70a-4d03-8b71-ddc833692c40"
+    ],
+    "actor_row_id": "a17e7647-a519-438e-88a7-32e3bb9ef71b",
+    "actor_bucket_key": "dan livingston|KS"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 116,
+    "total_submissions": 167,
+    "avg_financial_loss": 128403.78,
+    "avg_months_lost": 32.1,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "KS",
+    "state_family_count": 167,
+    "median_months_lost": 20.5,
+    "median_financial_loss": 84225,
+    "median_burden_sample_size": 76,
+    "pro_se_count": 85,
+    "pro_se_pct": 54.1,
+    "children_impacted": 278,
+    "clean_sample_size": 157,
+    "raw_submission_count": 157
+  },
+  "movement_total": 3525,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Was assigned to help restore contact with my kids but allowed my ex to keep them from sessions, canceled visits over payment, made me spend over $5,000 before I could…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Livingston counseling center aided ex spouse in allegations of child abuse. Required mom son counseling led to loss of legal and physical custody of all children based on my oldest…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/dan_livingston",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/kansas/dan_livingston/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

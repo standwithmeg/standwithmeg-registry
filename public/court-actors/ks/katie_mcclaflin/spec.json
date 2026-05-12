@@ -1,0 +1,89 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "katie_mcclaflin",
+    "display_name": "Katie McClaflin",
+    "title": "",
+    "first_name": "Katie",
+    "last_name": "mcclaflin",
+    "role": "Attorney (Opposing)",
+    "court": "Johnson",
+    "county": null,
+    "court_or_county": "Johnson",
+    "state": "Kansas",
+    "state_abbr": "KS",
+    "mention_count": 4,
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "6e696c5a-1bdf-4d33-89ac-ef19bdcf1569",
+      "664bda65-3621-4e38-ac6c-15023bd681d6",
+      "a8d6533f-bf08-4424-9285-0b9d2733d313",
+      "a7f9e738-e1cf-45e5-9199-022fc631bb0c"
+    ],
+    "actor_row_id": "6e696c5a-1bdf-4d33-89ac-ef19bdcf1569",
+    "actor_bucket_key": "katie mclaflin|KS"
+  },
+  "photo": {
+    "path": "kansas/katie_mcclaflin/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 116,
+    "total_submissions": 167,
+    "avg_financial_loss": 128403.78,
+    "avg_months_lost": 32.1,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "KS",
+    "state_family_count": 167,
+    "median_months_lost": 20.5,
+    "median_financial_loss": 84225,
+    "median_burden_sample_size": 76,
+    "pro_se_count": 85,
+    "pro_se_pct": 54.1,
+    "children_impacted": 278,
+    "clean_sample_size": 157,
+    "raw_submission_count": 157
+  },
+  "movement_total": 3525,
+  "supabase": {
+    "report_count": 4,
+    "actor_report_count": 4,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Lying sack of shit",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "She clearly advised her client to lie and avoid accountability for misleading the court.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Represented opposing party and advanced positions supporting continued restriction of my parenting time and separation from my children.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/katie_mcclaflin",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/kansas/katie_mcclaflin/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

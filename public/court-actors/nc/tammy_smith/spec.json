@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "tammy_smith",
+    "display_name": "Tammy Smith",
+    "title": "",
+    "first_name": "Tammy",
+    "last_name": "Smith",
+    "role": "Attorney (Opposing)",
+    "court": "Harnett",
+    "county": null,
+    "court_or_county": "Harnett",
+    "state": "North Carolina",
+    "state_abbr": "NC",
+    "mention_count": 3,
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "c450afc9-5432-40b9-ab97-dddc0d8df62e",
+      "6eae0841-80c9-4d2b-b7e6-4dd376d528bc",
+      "d443b57e-9cb1-4685-8c0b-57f7005abde1"
+    ],
+    "actor_row_id": "c450afc9-5432-40b9-ab97-dddc0d8df62e",
+    "actor_bucket_key": "tamy smith|NC"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 76,
+    "total_submissions": 110,
+    "avg_financial_loss": 144235.38,
+    "avg_months_lost": 42.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "NC",
+    "state_family_count": 110,
+    "median_months_lost": 18.0,
+    "median_financial_loss": 129400,
+    "median_burden_sample_size": 32,
+    "pro_se_count": 55,
+    "pro_se_pct": 50.9,
+    "children_impacted": 166,
+    "clean_sample_size": 108,
+    "raw_submission_count": 108
+  },
+  "movement_total": 3525,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "She was texting the judge from a personal number during the hearing about the hearing itself. He would check his phone after every single text she sent in the court…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Delay after delay. Inappropriate with the judge",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Refused to make copies (in the chambers) of evidence that the trial judge Rose asked, continued to question myself about My spouse but would not subpoena My spouse to ask…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/tammy_smith",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/north-carolina/tammy_smith/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

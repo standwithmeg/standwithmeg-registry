@@ -1,0 +1,89 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "lindsey_wynne",
+    "display_name": "Lindsey Wynne",
+    "title": "",
+    "first_name": "Lindsey",
+    "last_name": "Wynne",
+    "role": "Judge",
+    "court": "Collin County",
+    "county": null,
+    "court_or_county": "Collin County",
+    "state": "Texas",
+    "state_abbr": "TX",
+    "mention_count": 4,
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "665796ba-f313-499a-85fe-0cc22261dd30",
+      "67c778ee-eb4b-4b84-8807-d21652632a02",
+      "ad5aedff-f460-4bcc-a932-77614f24d1b9",
+      "68edc5e9-7f59-4572-842f-3d817f70e9a0"
+    ],
+    "actor_row_id": "665796ba-f313-499a-85fe-0cc22261dd30",
+    "actor_bucket_key": "lindsey wyne|TX"
+  },
+  "photo": {
+    "path": "texas/lindsey_wynne/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 159,
+    "total_submissions": 212,
+    "avg_financial_loss": 229516.22,
+    "avg_months_lost": 32.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "TX",
+    "state_family_count": 212,
+    "median_months_lost": 21.0,
+    "median_financial_loss": 135000,
+    "median_burden_sample_size": 101,
+    "pro_se_count": 101,
+    "pro_se_pct": 49.0,
+    "children_impacted": 338,
+    "clean_sample_size": 206,
+    "raw_submission_count": 206
+  },
+  "movement_total": 3525,
+  "supabase": {
+    "report_count": 4,
+    "actor_report_count": 4,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Made decision to reduce possession time on child abuse/neglect claims without evidence presented or anyone taking the stand. Did not ask follow up questions of attorney who made false claims.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "She focuses on one narrative and does not sway she does not care about the best interestnof the child jusy the side that looks like they have the highest probability…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Ignored evidence",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/lindsey_wynne",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/texas/lindsey_wynne/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

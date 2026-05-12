@@ -1,0 +1,84 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "bethany_roberts",
+    "display_name": "Bethany Roberts",
+    "title": "",
+    "first_name": "Bethany",
+    "last_name": "Roberts",
+    "role": "Mediator",
+    "court": "Franklin",
+    "county": null,
+    "court_or_county": "Franklin",
+    "state": "Kansas",
+    "state_abbr": "KS",
+    "mention_count": 4,
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "b953390b-5647-4054-a73b-5bf7093d0818",
+      "6616515e-7b65-4ac6-90b8-8bbe714ac652",
+      "2d3ef218-332e-4b30-a0b4-34266f27c044",
+      "645f4cb1-55e0-40fc-96b1-91d29890fb4a"
+    ],
+    "actor_row_id": "b953390b-5647-4054-a73b-5bf7093d0818",
+    "actor_bucket_key": "bethany roberts|KS"
+  },
+  "photo": {
+    "path": "kansas/06_bethany_roberts/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 116,
+    "total_submissions": 167,
+    "avg_financial_loss": 128403.78,
+    "avg_months_lost": 32.1,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "KS",
+    "state_family_count": 167,
+    "median_months_lost": 20.5,
+    "median_financial_loss": 84225,
+    "median_burden_sample_size": 76,
+    "pro_se_count": 85,
+    "pro_se_pct": 54.1,
+    "children_impacted": 278,
+    "clean_sample_size": 157,
+    "raw_submission_count": 157
+  },
+  "movement_total": 3525,
+  "supabase": {
+    "report_count": 4,
+    "actor_report_count": 4,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Wrongful reporting, dismissal of evidence",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Never met with the primary custodial parent of 12 years nor was that parent given the opportunity to submit evidence. She knew no one in the hallway when we finally…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/bethany_roberts",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/kansas/bethany_roberts/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

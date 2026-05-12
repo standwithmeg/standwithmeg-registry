@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "dev_haegele",
+    "display_name": "Dev Haegele",
+    "title": "",
+    "first_name": "Dev",
+    "last_name": "Haegele",
+    "role": "CPS Worker",
+    "court": "Flathead County",
+    "county": null,
+    "court_or_county": "Flathead County",
+    "state": "Montana",
+    "state_abbr": "MT",
+    "mention_count": 3,
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "22a48302-347a-4a6b-a6ee-5891c60e3fbe",
+      "6e21515d-b695-40ab-9d82-83f53bdbd572",
+      "3c9d7068-6f5d-4795-83a2-248dc6ecac55"
+    ],
+    "actor_row_id": "22a48302-347a-4a6b-a6ee-5891c60e3fbe",
+    "actor_bucket_key": "dev haegele|MT"
+  },
+  "photo": {
+    "path": "montana/Dev Haegele CPS worker MT.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 29,
+    "total_submissions": 42,
+    "avg_financial_loss": 180572.42,
+    "avg_months_lost": 59.7,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "MT",
+    "state_family_count": 42,
+    "median_months_lost": 36.0,
+    "median_financial_loss": 157500,
+    "median_burden_sample_size": 22,
+    "pro_se_count": 28,
+    "pro_se_pct": 57.1,
+    "children_impacted": 83,
+    "clean_sample_size": 49,
+    "raw_submission_count": 49
+  },
+  "movement_total": 3525,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "CPS worker. She is allowing the kids to stay in an abusive environment. Treats the kinship foster parents extremely bad",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "She came on the case and the 1st visit she was terrible to us. Then said she was returning the kids to the abusive parents. We are the aunt and…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "She lies and put children in harms way all the time",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/dev_haegele",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/montana/dev_haegele/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

@@ -1,0 +1,83 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "christina_joliat",
+    "display_name": "Christina Joliat",
+    "title": "",
+    "first_name": "Christina",
+    "last_name": "Joliat",
+    "role": "GAL / Child Representative",
+    "court": null,
+    "county": null,
+    "court_or_county": null,
+    "state": "Ohio",
+    "state_abbr": "OH",
+    "mention_count": 3,
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "4c4d23ba-39bb-4816-a1ec-0e26b77cf3fb",
+      "4c32caec-6794-45f9-8737-1929454562e0",
+      "d6060cc8-571d-43f9-98b5-4fcfec285beb"
+    ],
+    "actor_row_id": "4c4d23ba-39bb-4816-a1ec-0e26b77cf3fb",
+    "actor_bucket_key": "christina joliat|OH"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 144,
+    "total_submissions": 186,
+    "avg_financial_loss": 123936.34,
+    "avg_months_lost": 31.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OH",
+    "state_family_count": 186,
+    "median_months_lost": 20.0,
+    "median_financial_loss": 82500,
+    "median_burden_sample_size": 93,
+    "pro_se_count": 106,
+    "pro_se_pct": 58.2,
+    "children_impacted": 274,
+    "clean_sample_size": 182,
+    "raw_submission_count": 182
+  },
+  "movement_total": 3525,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Denied motion and ignored evidence!! None of them did their job they made up everything. The judge didn’t want to listen to us whatsoever that we gave him evidence and…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Sided with father gave him full custody after being burned multiple times and multiple CPS reports. Made false statements in report that could cause harm/ defamation of character.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/christina_joliat",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/ohio/christina_joliat/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

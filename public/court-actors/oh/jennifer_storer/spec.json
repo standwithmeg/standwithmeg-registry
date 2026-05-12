@@ -1,0 +1,91 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "jennifer_storer",
+    "display_name": "Jennifer storer",
+    "title": "",
+    "first_name": "Jennifer",
+    "last_name": "Storer",
+    "role": "CPS Worker",
+    "court": "Highland",
+    "county": null,
+    "court_or_county": "Highland",
+    "state": "Ohio",
+    "state_abbr": "OH",
+    "mention_count": 6,
+    "actor_report_count": 6,
+    "supabase_row_ids": [
+      "2f9858c1-56aa-4d4d-b17e-f87cc2a004c3",
+      "6cdd400a-9f94-414e-a2c7-5beef1d36bfc",
+      "83639e4e-04c3-4a28-bbc5-79c1086555ca",
+      "39e32e75-3001-494e-9aa6-67de732bc4aa",
+      "4b73b82e-df54-4627-8cde-66043e48a8a9",
+      "2810a0fc-2ac2-41a3-8f2d-85012ee81c5f"
+    ],
+    "actor_row_id": "2f9858c1-56aa-4d4d-b17e-f87cc2a004c3",
+    "actor_bucket_key": "jenifer storer|OH"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 144,
+    "total_submissions": 186,
+    "avg_financial_loss": 123936.34,
+    "avg_months_lost": 31.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OH",
+    "state_family_count": 186,
+    "median_months_lost": 20.0,
+    "median_financial_loss": 82500,
+    "median_burden_sample_size": 93,
+    "pro_se_count": 106,
+    "pro_se_pct": 58.2,
+    "children_impacted": 274,
+    "clean_sample_size": 182,
+    "raw_submission_count": 182
+  },
+  "movement_total": 3525,
+  "supabase": {
+    "report_count": 6,
+    "actor_report_count": 6,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Fabrication evidence",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Denied motion and ignored evidence!! None of them did their job they made up everything. The judge didn’t want to listen to us whatsoever that we gave him evidence and…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Obtained a rule 6 based on false information and filed a false complaint. Was in a relationship and living with the assistant prosecutor that was on the case.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/jennifer_storer",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/ohio/jennifer_storer/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

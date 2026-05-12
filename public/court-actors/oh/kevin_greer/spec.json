@@ -1,0 +1,89 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "kevin_greer",
+    "display_name": "Kevin Greer",
+    "title": "Judge",
+    "first_name": "Kevin L.",
+    "last_name": "Greer",
+    "role": "Judge",
+    "court": "Highland",
+    "county": null,
+    "court_or_county": "Highland",
+    "state": "Ohio",
+    "state_abbr": "OH",
+    "mention_count": 4,
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "f91d83ec-f75a-42b4-bf45-e7ef4f31e52a",
+      "311a49cd-8965-452f-b71b-f83c03ec0205",
+      "d0bc8b2c-33f7-44a9-a1ab-a0d37502f8d0",
+      "a156ed04-c2ca-443f-9bea-7bfb498323ba"
+    ],
+    "actor_row_id": "f91d83ec-f75a-42b4-bf45-e7ef4f31e52a",
+    "actor_bucket_key": "kevin grer|OH"
+  },
+  "photo": {
+    "path": "ohio/kevin_greer/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 144,
+    "total_submissions": 186,
+    "avg_financial_loss": 123936.34,
+    "avg_months_lost": 31.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OH",
+    "state_family_count": 186,
+    "median_months_lost": 20.0,
+    "median_financial_loss": 82500,
+    "median_burden_sample_size": 93,
+    "pro_se_count": 106,
+    "pro_se_pct": 58.2,
+    "children_impacted": 274,
+    "clean_sample_size": 182,
+    "raw_submission_count": 182
+  },
+  "movement_total": 3525,
+  "supabase": {
+    "report_count": 4,
+    "actor_report_count": 4,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Denied motion, ignored evidence",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Denied motion and ignored evidence!! None of them did their job they made up everything. The judge didn’t want to listen to us whatsoever that we gave him evidence and…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Ignored my evidence and motions filed throughout case, terminating my rights.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/kevin_greer",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/ohio/kevin_greer/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

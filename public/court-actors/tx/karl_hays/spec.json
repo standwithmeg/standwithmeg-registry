@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "karl_hays",
+    "display_name": "Karl Hays",
+    "title": "",
+    "first_name": "Karl",
+    "last_name": "Hays",
+    "role": "Judge",
+    "court": "Hays",
+    "county": null,
+    "court_or_county": "Hays",
+    "state": "Texas",
+    "state_abbr": "TX",
+    "mention_count": 5,
+    "actor_report_count": 5,
+    "supabase_row_ids": [
+      "516aac31-93e6-4212-b229-8edc32f26314",
+      "9643b5fe-9bd5-4c7f-9fab-476cd5b3418a",
+      "a37d9061-30cf-494e-93ad-09502a5aa266",
+      "2be18465-744d-4be2-b607-72da17bd8008",
+      "21d18253-111e-4ac4-8f86-543ee52583e9"
+    ],
+    "actor_row_id": "516aac31-93e6-4212-b229-8edc32f26314",
+    "actor_bucket_key": "karl hays|TX"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 159,
+    "total_submissions": 212,
+    "avg_financial_loss": 229516.22,
+    "avg_months_lost": 32.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "TX",
+    "state_family_count": 212,
+    "median_months_lost": 21.0,
+    "median_financial_loss": 135000,
+    "median_burden_sample_size": 101,
+    "pro_se_count": 101,
+    "pro_se_pct": 49.0,
+    "children_impacted": 338,
+    "clean_sample_size": 206,
+    "raw_submission_count": 206
+  },
+  "movement_total": 3525,
+  "supabase": {
+    "report_count": 5,
+    "actor_report_count": 5,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Abuse and adultry are not considered.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Facts were ignored. Guardian ad litem testimony was not heard after months of investigation.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Acting out not on behalf of best interest of the child.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/karl_hays",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/texas/karl_hays/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

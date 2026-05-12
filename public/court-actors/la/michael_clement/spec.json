@@ -1,0 +1,89 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "michael_clement",
+    "display_name": "Michael Clement",
+    "title": "",
+    "first_name": "Michael",
+    "last_name": "Clement",
+    "role": "Judge",
+    "court": "Plaquemines",
+    "county": null,
+    "court_or_county": "Plaquemines",
+    "state": "Louisiana",
+    "state_abbr": "LA",
+    "mention_count": 4,
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "7cb9d065-8d62-481d-8627-95e38a61c7aa",
+      "efd70294-0eed-4e26-87a3-39576d23c5c4",
+      "2d8cb8fb-4d78-4513-977e-32fab2775232",
+      "90274968-e53c-474c-a3f7-6ea091add6db"
+    ],
+    "actor_row_id": "7cb9d065-8d62-481d-8627-95e38a61c7aa",
+    "actor_bucket_key": "michael clement|LA"
+  },
+  "photo": {
+    "path": "louisiana/michael_clement/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 34,
+    "total_submissions": 45,
+    "avg_financial_loss": 199523.89,
+    "avg_months_lost": 35.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "LA",
+    "state_family_count": 45,
+    "median_months_lost": 24.0,
+    "median_financial_loss": 221600,
+    "median_burden_sample_size": 24,
+    "pro_se_count": 22,
+    "pro_se_pct": 46.8,
+    "children_impacted": 76,
+    "clean_sample_size": 47,
+    "raw_submission_count": 47
+  },
+  "movement_total": 3525,
+  "supabase": {
+    "report_count": 4,
+    "actor_report_count": 4,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Ignored evidence, allowed opposing counsel to call witnesses you never spoke with child or mother, no best interest factors in ruling.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "The judge made a ruling that I had to live with my dad who molested me. I know there is evidence, I had to talk to the police and I…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Denied my evidence that perjured ex’s witnesses, refused to allow my professionals to testify",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/michael_clement",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/louisiana/michael_clement/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

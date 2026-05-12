@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "magistrate_blevins",
+    "display_name": "Magistrate Blevins",
+    "title": "Magistrate",
+    "first_name": "Magistrate",
+    "last_name": "Blevins",
+    "role": "Judge",
+    "court": "Knox",
+    "county": null,
+    "court_or_county": "Knox",
+    "state": "Tennessee",
+    "state_abbr": "TN",
+    "mention_count": 3,
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "8f70d0f2-9b87-4917-87bb-f2d378ef51ad",
+      "2e54b868-d845-472a-94b4-c4f162e80bd9",
+      "40c00084-1caf-485b-add0-b8da57212a86"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "tennessee/28_angela_blevins/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 64,
+    "total_submissions": 88,
+    "avg_financial_loss": 130694.37,
+    "avg_months_lost": 41.4,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "TN",
+    "state_family_count": 88,
+    "median_months_lost": 18.0,
+    "median_financial_loss": 65000,
+    "median_burden_sample_size": 36,
+    "pro_se_count": 37,
+    "pro_se_pct": 42.0,
+    "children_impacted": 136,
+    "clean_sample_size": 88,
+    "raw_submission_count": 88
+  },
+  "movement_total": 3523,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Blevins signed an order to remove our children while under federal review, essentially completely kidnapping out boys. Never allowed is to show evidence. All the while keeping our precious babies…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "She ignored evidence contradicting dcs's alleged drug test she did not listen to my a&d assessor she labeled me as incredible for no reason",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Magistrate Blevens combined Two separate cases to the detriment of my son, but for her own convenience. Magistrate Blevens removed my son from the home against protocol. There is definitely…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/magistrate_blevins",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/tennessee/magistrate_blevins/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

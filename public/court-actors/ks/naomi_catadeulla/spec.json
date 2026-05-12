@@ -1,0 +1,92 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "naomi_catadeulla",
+    "display_name": "Naomi Catadeulla",
+    "title": "",
+    "first_name": "Naomi",
+    "last_name": "Catadeulla",
+    "role": "Reunification Therapist",
+    "court": "Johnson County, KS (Leawood)",
+    "county": null,
+    "court_or_county": "Johnson County, KS (Leawood)",
+    "state": "Kansas",
+    "state_abbr": "KS",
+    "mention_count": 7,
+    "actor_report_count": 7,
+    "supabase_row_ids": [
+      "84e401d5-8d8e-4cb6-a245-765bced77b14",
+      "83f8e625-f4d1-4d74-a65b-87aab62f5d99",
+      "380d12c9-22bd-40df-9859-e5aa65f08e21",
+      "4bff0d2a-b069-4f2e-8f01-eebff3fe268d",
+      "02dcabd7-63ff-44f3-b70a-91f939a2fa0b",
+      "88c9fffc-636b-4a19-9cdf-6d16bc7f92a7",
+      "5580a201-fcf4-476c-bab1-f50ac7e86414"
+    ],
+    "actor_row_id": "84e401d5-8d8e-4cb6-a245-765bced77b14",
+    "actor_bucket_key": "naomi catadeula|KS"
+  },
+  "photo": {
+    "path": "kansas/naomi_catadeulla/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 116,
+    "total_submissions": 167,
+    "avg_financial_loss": 128403.78,
+    "avg_months_lost": 32.1,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "KS",
+    "state_family_count": 167,
+    "median_months_lost": 20.5,
+    "median_financial_loss": 84225,
+    "median_burden_sample_size": 76,
+    "pro_se_count": 85,
+    "pro_se_pct": 54.1,
+    "children_impacted": 278,
+    "clean_sample_size": 157,
+    "raw_submission_count": 157
+  },
+  "movement_total": 3525,
+  "supabase": {
+    "report_count": 7,
+    "actor_report_count": 7,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Naomi was also biased due to her husband dying in the line of duty. She highly favored the petitioner. She told me that she would not talk about anything that…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Told me I psychologically abused my son, told me basically I am the problem and I need to just give into his demands for the betterment of the child",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Met with me 1 time for 1 hour. Then drafted a report to my detriment. Never saw me with our kids. In my opinion is part of a corrupt system…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/naomi_catadeulla",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/kansas/naomi_catadeulla/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

@@ -1,0 +1,83 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "ann_keele",
+    "display_name": "Ann Keele",
+    "title": "",
+    "first_name": "Ann",
+    "last_name": "Keele",
+    "role": "Attorney (Opposing)",
+    "court": "Wagoner",
+    "county": null,
+    "court_or_county": "Wagoner",
+    "state": "Oklahoma",
+    "state_abbr": "OK",
+    "mention_count": 3,
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "904b1937-2568-42a3-88cf-9bff6e58c486",
+      "2d61278d-b34e-4680-85bb-ceca551e04b9",
+      "08be759f-d234-4bbc-a482-81729fb8d74b"
+    ],
+    "actor_row_id": "904b1937-2568-42a3-88cf-9bff6e58c486",
+    "actor_bucket_key": "ann kele|OK"
+  },
+  "photo": {
+    "path": "oklahoma/ann_keele/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 85,
+    "total_submissions": 105,
+    "avg_financial_loss": 116341.98,
+    "avg_months_lost": 27.7,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OK",
+    "state_family_count": 105,
+    "median_months_lost": 11.5,
+    "median_financial_loss": 82000,
+    "median_burden_sample_size": 55,
+    "pro_se_count": 48,
+    "pro_se_pct": 46.2,
+    "children_impacted": 181,
+    "clean_sample_size": 104,
+    "raw_submission_count": 104
+  },
+  "movement_total": 3525,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "To be disclosed if my testimony is required. I have paper, digital, and video evidence of all of my above statements. The judge dismissed all as evidence.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Has stalled the whole case. Worked closely with GAL went to lunch with gal during trial. Anne and GAL worked together to take my little girl. Anne helped a multi…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/ann_keele",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/oklahoma/ann_keele/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "terri_campesta",
+    "display_name": "Terri Campesta",
+    "title": "",
+    "first_name": "Terry",
+    "last_name": "Campesta",
+    "role": "Custody Evaluator",
+    "court": null,
+    "county": null,
+    "court_or_county": null,
+    "state": "Louisiana",
+    "state_abbr": "LA",
+    "mention_count": 5,
+    "actor_report_count": 5,
+    "supabase_row_ids": [
+      "2050a180-89b9-4ce2-8293-1df074d18c6c",
+      "ba5d98a9-37e6-4b5c-a6da-1e6cdebc7222",
+      "43d6d305-a0ff-425c-8126-779e6c250425",
+      "d867810a-a647-499f-a112-a536aac93947",
+      "fa7046d6-4659-40c3-af7c-6e1f43114eb9"
+    ],
+    "actor_row_id": "2050a180-89b9-4ce2-8293-1df074d18c6c",
+    "actor_bucket_key": "teri campesta|LA"
+  },
+  "photo": {
+    "path": "louisiana/terri_campesta/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 34,
+    "total_submissions": 45,
+    "avg_financial_loss": 199523.89,
+    "avg_months_lost": 35.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "LA",
+    "state_family_count": 45,
+    "median_months_lost": 24.0,
+    "median_financial_loss": 221600,
+    "median_burden_sample_size": 24,
+    "pro_se_count": 22,
+    "pro_se_pct": 46.8,
+    "children_impacted": 76,
+    "clean_sample_size": 47,
+    "raw_submission_count": 47
+  },
+  "movement_total": 3525,
+  "supabase": {
+    "report_count": 5,
+    "actor_report_count": 5,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Ignored child’s disclosures of sexual abuse, refused to speak to child’s therapist.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "She lied about my mom and it's because my dad told her iles and she believed him. My dad molested me and she wrote a report that said I have…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Became romantically involved with my ex during court case. Lied about me to give him sole custody",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/terri_campesta",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/louisiana/terri_campesta/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

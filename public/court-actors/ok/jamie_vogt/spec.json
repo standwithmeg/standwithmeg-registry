@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "jamie_vogt",
+    "display_name": "Jamie Vogt",
+    "title": "",
+    "first_name": "Jamie",
+    "last_name": "Vogt",
+    "role": "Therapist / Counselor",
+    "court": "Tulsa County",
+    "county": null,
+    "court_or_county": "Tulsa County",
+    "state": "Oklahoma",
+    "state_abbr": "OK",
+    "mention_count": 5,
+    "actor_report_count": 5,
+    "supabase_row_ids": [
+      "f6137388-78cb-4525-8d2c-50bc99c17a45",
+      "11a74e9b-21a7-47c7-9016-ae22f76a56ce",
+      "5cc82853-1edf-459b-82fb-08205839de8d",
+      "e4abf836-635e-4759-a500-f510c57b7e90",
+      "04cb40a0-1a2e-4e80-93df-f279bcf1507a"
+    ],
+    "actor_row_id": "f6137388-78cb-4525-8d2c-50bc99c17a45",
+    "actor_bucket_key": "jamie vogt|OK"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 85,
+    "total_submissions": 105,
+    "avg_financial_loss": 116341.98,
+    "avg_months_lost": 27.7,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OK",
+    "state_family_count": 105,
+    "median_months_lost": 11.5,
+    "median_financial_loss": 82000,
+    "median_burden_sample_size": 55,
+    "pro_se_count": 48,
+    "pro_se_pct": 46.2,
+    "children_impacted": 181,
+    "clean_sample_size": 104,
+    "raw_submission_count": 104
+  },
+  "movement_total": 3525,
+  "supabase": {
+    "report_count": 5,
+    "actor_report_count": 5,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Coerced me to give details about a situation with my kids in counseling with my ex while the divorce was still taking place. I expressed that my ex was using…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "To be disclosed if my testimony is required. I have paper, digital, and video evidence of all of my above statements. The judge dismissed all as evidence.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "She ruled that my daughter's disclosure of SA was coached because she had a flat affect and became emotionally distant when discussing the abuse. My daughter has PTSD. That is…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/jamie_vogt",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/oklahoma/jamie_vogt/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

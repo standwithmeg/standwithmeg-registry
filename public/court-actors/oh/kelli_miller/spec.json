@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "kelli_miller",
+    "display_name": "Kelli Miller",
+    "title": "",
+    "first_name": "Kelli",
+    "last_name": "Miller",
+    "role": "CPS Worker",
+    "court": "Hancock",
+    "county": null,
+    "court_or_county": "Hancock",
+    "state": "Ohio",
+    "state_abbr": "OH",
+    "mention_count": 5,
+    "actor_report_count": 5,
+    "supabase_row_ids": [
+      "7f8e88a8-e81f-4501-9e42-6390fad16c1d",
+      "c3ba57b3-d1d8-44d8-9911-d7326bd28e97",
+      "b59bf58c-ed99-41d1-ab12-06d4c5db4895",
+      "b44a360c-6d64-4a84-bfbe-a2c820e4836c",
+      "d7c0b30c-cb1c-494b-a540-58c94f7ff728"
+    ],
+    "actor_row_id": "7f8e88a8-e81f-4501-9e42-6390fad16c1d",
+    "actor_bucket_key": "keli miler|OH"
+  },
+  "photo": {
+    "path": "ohio/kelli_miller/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 144,
+    "total_submissions": 186,
+    "avg_financial_loss": 123936.34,
+    "avg_months_lost": 31.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OH",
+    "state_family_count": 186,
+    "median_months_lost": 20.0,
+    "median_financial_loss": 82500,
+    "median_burden_sample_size": 93,
+    "pro_se_count": 106,
+    "pro_se_pct": 58.2,
+    "children_impacted": 274,
+    "clean_sample_size": 182,
+    "raw_submission_count": 182
+  },
+  "movement_total": 3525,
+  "supabase": {
+    "report_count": 5,
+    "actor_report_count": 5,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Perjury, met children one time, attended my sons criminal hearing with foster parents. Trial by ambush.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Falsified reports, changed drug test to a positive. Changed documents after signed. Lied on the stand. Claimed to attempt a home visit when no contact was ever made. Also claimed…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Lied on stand. Did NOT contact any family. Never returned phone calls for outreach and placement. Did dual roles at agency. Abuse of power and relatiation.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/kelli_miller",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/ohio/kelli_miller/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

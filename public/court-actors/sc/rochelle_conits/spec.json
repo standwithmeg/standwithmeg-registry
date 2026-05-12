@@ -1,0 +1,83 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "rochelle_conits",
+    "display_name": "Rochelle conits",
+    "title": "",
+    "first_name": "Rochelle",
+    "last_name": "conits",
+    "role": "Judge",
+    "court": "County not listed",
+    "county": null,
+    "court_or_county": "County not listed",
+    "state": "South Carolina",
+    "state_abbr": "SC",
+    "mention_count": 3,
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "28d37c6e-b3f5-4040-ab3d-07759e06998d",
+      "1660956e-6242-41d2-94b6-b081628981da",
+      "c41e87f8-3a1d-4cfe-9437-086a65b9f822"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 52,
+    "total_submissions": 63,
+    "avg_financial_loss": 360964.78,
+    "avg_months_lost": 27.1,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "SC",
+    "state_family_count": 63,
+    "median_months_lost": 18.5,
+    "median_financial_loss": 153500,
+    "median_burden_sample_size": 46,
+    "pro_se_count": 37,
+    "pro_se_pct": 56.9,
+    "children_impacted": 111,
+    "clean_sample_size": 65,
+    "raw_submission_count": 65
+  },
+  "movement_total": 3523,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Explosive and could not control emotions, biased, lack of ethics",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Violated our due process rights",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/rochelle_conits",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/south-carolina/rochelle_conits/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

@@ -1,0 +1,83 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "randall_galbraith",
+    "display_name": "Randall Galbraith",
+    "title": "",
+    "first_name": "Randall",
+    "last_name": "Galbraith",
+    "role": "CPS Worker",
+    "court": "Hancock CPS Director",
+    "county": null,
+    "court_or_county": "Hancock CPS Director",
+    "state": "Ohio",
+    "state_abbr": "OH",
+    "mention_count": 3,
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "bae0e6a0-8307-46b7-a5c5-1d0557556624",
+      "18122619-414a-4b7e-9cdd-3a2ae033e54a",
+      "d18dbeef-9795-4c16-8faa-3f6c71a34f86"
+    ],
+    "actor_row_id": "bae0e6a0-8307-46b7-a5c5-1d0557556624",
+    "actor_bucket_key": "randal galbraith|OH"
+  },
+  "photo": {
+    "path": "ohio/randall_galbraith/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 144,
+    "total_submissions": 186,
+    "avg_financial_loss": 123936.34,
+    "avg_months_lost": 31.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OH",
+    "state_family_count": 186,
+    "median_months_lost": 20.0,
+    "median_financial_loss": 82500,
+    "median_burden_sample_size": 93,
+    "pro_se_count": 106,
+    "pro_se_pct": 58.2,
+    "children_impacted": 274,
+    "clean_sample_size": 182,
+    "raw_submission_count": 182
+  },
+  "movement_total": 3525,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Would NOT file my grievance said he’d see me in court.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Refuse kinship reunification an never returns calls very disrespectful on the phone an in person",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/randall_galbraith",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/ohio/randall_galbraith/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

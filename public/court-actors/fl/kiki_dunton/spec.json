@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "kiki_dunton",
+    "display_name": "Kiki Dunton",
+    "title": "",
+    "first_name": "Kiki",
+    "last_name": "Dunton",
+    "role": "GAL / Child Representative",
+    "court": "Leon",
+    "county": null,
+    "court_or_county": "Leon",
+    "state": "Florida",
+    "state_abbr": "FL",
+    "mention_count": 3,
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "35117f68-f92d-4040-b42d-670a88387fe1",
+      "6ee3e4c4-81c0-495a-bd2c-75599b924cfe",
+      "45e198a9-e2e7-4097-92c8-836122f25288"
+    ],
+    "actor_row_id": "35117f68-f92d-4040-b42d-670a88387fe1",
+    "actor_bucket_key": "kiki dunton|FL"
+  },
+  "photo": {
+    "path": "florida/kiki_dunton/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 150,
+    "total_submissions": 202,
+    "avg_financial_loss": 204114.65,
+    "avg_months_lost": 30.8,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "FL",
+    "state_family_count": 202,
+    "median_months_lost": 20.0,
+    "median_financial_loss": 215500,
+    "median_burden_sample_size": 88,
+    "pro_se_count": 117,
+    "pro_se_pct": 59.1,
+    "children_impacted": 320,
+    "clean_sample_size": 198,
+    "raw_submission_count": 198
+  },
+  "movement_total": 3525,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "The Guardian ad Litem appeared to place significant emphasis on relatively minor school attendance concerns, including a small number of tardies, while giving comparatively limited attention to more serious allegations…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "There are concerns regarding this Guardian ad Litem’s pattern of involvement in cases connected to the same attorney representing fathers in family law matters. In multiple cases, serious allegations involving…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "She allowed a complete violation of time-sharing and decision making and didn't budge when a therapist called DCF on the Father after speaking to the child once.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/kiki_dunton",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/florida/kiki_dunton/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

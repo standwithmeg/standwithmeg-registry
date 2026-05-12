@@ -1,0 +1,89 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "dianna_russell",
+    "display_name": "Dianna Russell",
+    "title": "",
+    "first_name": "Dianna",
+    "last_name": "Russell",
+    "role": "GAL / Child Representative",
+    "court": "Sevier",
+    "county": null,
+    "court_or_county": "Sevier",
+    "state": "Tennessee",
+    "state_abbr": "TN",
+    "mention_count": 4,
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "e2038615-69c5-4692-b635-d0eca5923536",
+      "91b787a3-e2e9-45c9-9f0b-a0d2153c58d5",
+      "ad4130aa-f098-402f-b939-f86d463ec374",
+      "643ba64e-38ec-4ba3-9955-1a7ab6c482e2"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "diana rusel|TN"
+  },
+  "photo": {
+    "path": "tennessee/dianna_russell/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 64,
+    "total_submissions": 88,
+    "avg_financial_loss": 130694.37,
+    "avg_months_lost": 41.4,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "TN",
+    "state_family_count": 88,
+    "median_months_lost": 18.0,
+    "median_financial_loss": 65000,
+    "median_burden_sample_size": 36,
+    "pro_se_count": 37,
+    "pro_se_pct": 42.0,
+    "children_impacted": 136,
+    "clean_sample_size": 88,
+    "raw_submission_count": 88
+  },
+  "movement_total": 3525,
+  "supabase": {
+    "report_count": 4,
+    "actor_report_count": 4,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Committed perjury on motions and in hearings, Judge Rader threw her off the case only AFTER my attorney brought her misconduct to light, but the damage was done",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Won't look at evidence and has a conflict of interest in the case as an ex guardian of litem",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "I spelled her name wrong and listed her as Diane Russell instead of Dianna Russell. She took my kid without due process , would let me give her evidence and…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/dianna_russell",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/tennessee/dianna_russell/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

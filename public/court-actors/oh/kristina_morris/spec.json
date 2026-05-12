@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "kristina_morris",
+    "display_name": "Kristina Morris",
+    "title": "",
+    "first_name": "Kristina",
+    "last_name": "Morris",
+    "role": "Judge",
+    "court": "Shelby",
+    "county": null,
+    "court_or_county": "Shelby",
+    "state": "Ohio",
+    "state_abbr": "OH",
+    "mention_count": 3,
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "fe630310-93e0-46ad-a8e6-f22282e86a6e",
+      "c3150547-e5c0-4606-9c31-e38adbebbfd9",
+      "934a68f2-3773-43e5-8bae-f6418e70f821"
+    ],
+    "actor_row_id": "fe630310-93e0-46ad-a8e6-f22282e86a6e",
+    "actor_bucket_key": "kristina moris|OH"
+  },
+  "photo": {
+    "path": "ohio/kristina_morris/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 144,
+    "total_submissions": 186,
+    "avg_financial_loss": 123936.34,
+    "avg_months_lost": 31.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OH",
+    "state_family_count": 186,
+    "median_months_lost": 20.0,
+    "median_financial_loss": 82500,
+    "median_burden_sample_size": 93,
+    "pro_se_count": 106,
+    "pro_se_pct": 58.2,
+    "children_impacted": 274,
+    "clean_sample_size": 182,
+    "raw_submission_count": 182
+  },
+  "movement_total": 3525,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Refused to look at evidence and allowed lies and slander to stand up as evidence when it was proven untrue",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Ignored evidence for protection order, put children in danger, consistently taken away custody and visitation time",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Denied protection order 3 times, denied witnesses on my behalf twice.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/kristina_morris",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/ohio/kristina_morris/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

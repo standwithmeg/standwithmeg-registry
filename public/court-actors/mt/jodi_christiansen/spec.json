@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "jodi_christiansen",
+    "display_name": "Jodi Christiansen",
+    "title": "",
+    "first_name": "Jodi",
+    "last_name": "Christiansen",
+    "role": "CPS Worker",
+    "court": "Flathead County",
+    "county": null,
+    "court_or_county": "Flathead County",
+    "state": "Montana",
+    "state_abbr": "MT",
+    "mention_count": 3,
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "3bcea224-4705-4495-82bc-0a3bb84a90dc",
+      "0cda1d77-86cd-48de-8087-2a3d5d87ec45",
+      "ea693500-63fc-4001-90db-7ed5130e0d55"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "montana/jodi_christiansen/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 29,
+    "total_submissions": 42,
+    "avg_financial_loss": 180572.42,
+    "avg_months_lost": 59.7,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "MT",
+    "state_family_count": 42,
+    "median_months_lost": 36.0,
+    "median_financial_loss": 157500,
+    "median_burden_sample_size": 22,
+    "pro_se_count": 28,
+    "pro_se_pct": 57.1,
+    "children_impacted": 83,
+    "clean_sample_size": 49,
+    "raw_submission_count": 49
+  },
+  "movement_total": 3523,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "She is the CPS supervisor she allows the people under her to go rogue and do whatever they want.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Cps supervisor. Lets all the workers under her go rogue and do what they want. Will not return calls.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Ahe is the cps supervisor. She neglects to supervise. She lets all the workers under her play God and just goes along with it.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/jodi_christiansen",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/montana/jodi_christiansen/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

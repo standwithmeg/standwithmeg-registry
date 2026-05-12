@@ -1,0 +1,89 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "raymond_de_jesus",
+    "display_name": "Raymond De Jesus",
+    "title": "",
+    "first_name": "Raymond",
+    "last_name": "De Jesus",
+    "role": "Judge",
+    "court": "Placer",
+    "county": null,
+    "court_or_county": "Placer",
+    "state": "California",
+    "state_abbr": "CA",
+    "mention_count": 4,
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "2fcccd40-ac73-48af-ab9c-5fab6021363d",
+      "6bae9e4e-084b-48e4-94f4-77ef3ef9e378",
+      "a4d72528-62f9-4bb5-8d3b-355206361fff",
+      "66b72eeb-d0a5-454e-8702-864efd95fed9"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "california/raymond_de_jesus/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 240,
+    "total_submissions": 307,
+    "avg_financial_loss": 283576.48,
+    "avg_months_lost": 37.6,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "CA",
+    "state_family_count": 307,
+    "median_months_lost": 23.0,
+    "median_financial_loss": 277100,
+    "median_burden_sample_size": 138,
+    "pro_se_count": 170,
+    "pro_se_pct": 56.7,
+    "children_impacted": 486,
+    "clean_sample_size": 300,
+    "raw_submission_count": 300
+  },
+  "movement_total": 3523,
+  "supabase": {
+    "report_count": 4,
+    "actor_report_count": 4,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Reason cited for denying my request for protection went against case law, my abuser found out and retaliated",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Wouldn’t let me speak, didn’t review the case, didn’t know pertinent info (ie: dad convicted of felony child abuse against the children in the case).",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Denied my request for protection based on time since last act of abuse, despite the law clearly stating the last act of abuse / timing shouldn’t be considered as a…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/raymond_de_jesus",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/california/raymond_de_jesus/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

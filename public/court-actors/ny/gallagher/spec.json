@@ -1,0 +1,83 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "gallagher",
+    "display_name": "Gallagher",
+    "title": "",
+    "first_name": "",
+    "last_name": "Gallagher",
+    "role": "Judge",
+    "court": "Monroe",
+    "county": null,
+    "court_or_county": "Monroe",
+    "state": "New York",
+    "state_abbr": "NY",
+    "mention_count": 3,
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "e10a4d02-85ed-49ab-b63c-32d213c5c53e",
+      "766ef04b-06e9-41b2-b747-b902ff67a7be",
+      "88a8e51f-65c2-4f97-af32-49a25299f75f"
+    ],
+    "actor_row_id": "e10a4d02-85ed-49ab-b63c-32d213c5c53e",
+    "actor_bucket_key": "galagher|NY"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 69,
+    "total_submissions": 102,
+    "avg_financial_loss": 146993.47,
+    "avg_months_lost": 30.1,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "NY",
+    "state_family_count": 102,
+    "median_months_lost": 18.0,
+    "median_financial_loss": 189175,
+    "median_burden_sample_size": 36,
+    "pro_se_count": 44,
+    "pro_se_pct": 41.9,
+    "children_impacted": 165,
+    "clean_sample_size": 105,
+    "raw_submission_count": 105
+  },
+  "movement_total": 3525,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Judge who appears to be related to the domestic violence leader Patrick Gallagher who was involved in a false narrative on me for domestic violence. The judge also appears to…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Pat gallagher. Has been maliciously prosecuting me with false charges",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/gallagher",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/new-york/gallagher/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

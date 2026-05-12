@@ -1,0 +1,92 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "dennis_kirk",
+    "display_name": "Dennis Kirk",
+    "title": "",
+    "first_name": "Dennis",
+    "last_name": "Kirk",
+    "role": "GAL / Child Representative",
+    "court": "Highland",
+    "county": null,
+    "court_or_county": "Highland",
+    "state": "Ohio",
+    "state_abbr": "OH",
+    "mention_count": 7,
+    "actor_report_count": 7,
+    "supabase_row_ids": [
+      "84523aae-6f04-4471-b0c2-f5dcb914fbd7",
+      "4f37f144-9a31-42d3-ba17-6662e8dc7da8",
+      "0e71522c-f016-4a31-8863-6867a8a64444",
+      "6b03fe85-3c4d-4691-9ce7-c77ebd69f496",
+      "55909197-8e41-4972-996c-2527ed759eb4",
+      "c191a17c-80c4-4107-8a8a-0d0ffea90e88",
+      "0a77a37f-d53f-4458-a348-078aa1ded4f1"
+    ],
+    "actor_row_id": "84523aae-6f04-4471-b0c2-f5dcb914fbd7",
+    "actor_bucket_key": "denis kirk|OH"
+  },
+  "photo": {
+    "path": "ohio/dennis_kirk/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 144,
+    "total_submissions": 186,
+    "avg_financial_loss": 123936.34,
+    "avg_months_lost": 31.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OH",
+    "state_family_count": 186,
+    "median_months_lost": 20.0,
+    "median_financial_loss": 82500,
+    "median_burden_sample_size": 93,
+    "pro_se_count": 106,
+    "pro_se_pct": 58.2,
+    "children_impacted": 274,
+    "clean_sample_size": 182,
+    "raw_submission_count": 182
+  },
+  "movement_total": 3525,
+  "supabase": {
+    "report_count": 7,
+    "actor_report_count": 7,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Fabricated evidence",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Denied motion and ignored evidence!! None of them did their job they made up everything. The judge didn’t want to listen to us whatsoever that we gave him evidence and…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "My children’s therapists and myself reached out to Mr Kirk from Oct 2024 to March 2025 with no return communication. He then made claims as facts, brought to him via…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/dennis_kirk",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/ohio/dennis_kirk/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

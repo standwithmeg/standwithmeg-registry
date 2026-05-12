@@ -1,0 +1,95 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "cynthia_hucks",
+    "display_name": "Cynthia Hucks",
+    "title": "",
+    "first_name": "Cynthia",
+    "last_name": "Hucks",
+    "role": "Attorney (Opposing)",
+    "court": "Unknown",
+    "county": null,
+    "court_or_county": "Unknown",
+    "state": "Iowa",
+    "state_abbr": "IA",
+    "mention_count": 10,
+    "actor_report_count": 10,
+    "supabase_row_ids": [
+      "964260ec-f170-4010-8c58-77d09bf2ca79",
+      "aba9d2ca-e996-47a4-b9b5-399f319f9a3e",
+      "7c0dc075-098f-4f3c-a987-b7df38043911",
+      "66894518-3d3d-429a-8d55-0f345f8cae0d",
+      "b3b027b0-ce9c-47aa-ab0a-b25709823d02",
+      "8901e212-5aaa-40f7-a881-a47e2bf39c33",
+      "bf65852a-06dd-468f-b8fd-67e2e58759d4",
+      "02e8b574-a5b2-4f1b-9098-cd92608c4f85",
+      "39fd2d1d-ca8c-4796-bb2f-9218702bc6d4",
+      "55a728f0-bc82-48a1-bd22-9220ed466271"
+    ],
+    "actor_row_id": "964260ec-f170-4010-8c58-77d09bf2ca79",
+    "actor_bucket_key": "cynthia hucks|IA"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 52,
+    "total_submissions": 68,
+    "avg_financial_loss": 172477.03,
+    "avg_months_lost": 48.3,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "IA",
+    "state_family_count": 68,
+    "median_months_lost": 23.0,
+    "median_financial_loss": 248750,
+    "median_burden_sample_size": 22,
+    "pro_se_count": 38,
+    "pro_se_pct": 55.1,
+    "children_impacted": 104,
+    "clean_sample_size": 69,
+    "raw_submission_count": 69
+  },
+  "movement_total": 3525,
+  "supabase": {
+    "report_count": 10,
+    "actor_report_count": 10,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "They moved up my court date. They tried to make me quick claim my house",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "She lied to me in her office and said it would be a conflict of interest if she were my attorney but proceeded to be the opposing parties attorney. I…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "She helped me leave my abuser and fight for what was fair for my children. She is a busy attorney just like any good one, but her job is implacable!",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/cynthia_hucks",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/iowa/cynthia_hucks/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

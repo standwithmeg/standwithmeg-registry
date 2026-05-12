@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "camisha_sawtelle",
+    "display_name": "Camisha Sawtelle",
+    "title": "",
+    "first_name": "Camisha",
+    "last_name": "Sawtelle",
+    "role": "GAL / Child Representative",
+    "court": "Flathead County",
+    "county": null,
+    "court_or_county": "Flathead County",
+    "state": "Montana",
+    "state_abbr": "MT",
+    "mention_count": 3,
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "4f4fb5c5-566e-46d1-aab9-b8103f4bec46",
+      "7a2e89e9-3996-4873-92c4-d8743d35cad0",
+      "2dd25e6c-33e9-4b9a-95ce-e98539707f6a"
+    ],
+    "actor_row_id": "4f4fb5c5-566e-46d1-aab9-b8103f4bec46",
+    "actor_bucket_key": "camisha sawtele|MT"
+  },
+  "photo": {
+    "path": "montana/camisha_sawtelle/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 29,
+    "total_submissions": 42,
+    "avg_financial_loss": 180572.42,
+    "avg_months_lost": 59.7,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "MT",
+    "state_family_count": 42,
+    "median_months_lost": 36.0,
+    "median_financial_loss": 157500,
+    "median_burden_sample_size": 22,
+    "pro_se_count": 28,
+    "pro_se_pct": 57.1,
+    "children_impacted": 83,
+    "clean_sample_size": 49,
+    "raw_submission_count": 49
+  },
+  "movement_total": 3525,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "She represents a lot of kids in this county. She is not a family lawyer, she is an environmental lawyer. She never stands up for the children. Unless family comes…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "She does not stand up for or advocate for the children. The first week the kids were back with their parents, they were choked. She didn't see anything wrong with…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "She defamesmy character all the time. She fought tooth and nail for my children to not go with our aunt, who is already a licensed foster home",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/camisha_sawtelle",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/montana/camisha_sawtelle/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

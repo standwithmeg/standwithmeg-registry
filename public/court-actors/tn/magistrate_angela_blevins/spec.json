@@ -1,0 +1,91 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "magistrate_angela_blevins",
+    "display_name": "Magistrate Angela Blevins",
+    "title": "",
+    "first_name": "Angela",
+    "last_name": "Blevins",
+    "role": "Judge",
+    "court": "Knox",
+    "county": null,
+    "court_or_county": "Knox",
+    "state": "Tennessee",
+    "state_abbr": "TN",
+    "mention_count": 6,
+    "actor_report_count": 6,
+    "supabase_row_ids": [
+      "40c00084-1caf-485b-add0-b8da57212a86",
+      "6a97aff7-fd8d-4445-96a5-a2bc217dc92f",
+      "c0188de5-04d3-4888-81bd-01a9df9886a7",
+      "f2a53602-eded-42fd-a18e-69af5f7ccd36",
+      "8f70d0f2-9b87-4917-87bb-f2d378ef51ad",
+      "2e54b868-d845-472a-94b4-c4f162e80bd9"
+    ],
+    "actor_row_id": "40c00084-1caf-485b-add0-b8da57212a86",
+    "actor_bucket_key": "angela blevins|TN"
+  },
+  "photo": {
+    "path": "tennessee/28_angela_blevins/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 64,
+    "total_submissions": 88,
+    "avg_financial_loss": 130694.37,
+    "avg_months_lost": 41.4,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "TN",
+    "state_family_count": 88,
+    "median_months_lost": 18.0,
+    "median_financial_loss": 65000,
+    "median_burden_sample_size": 36,
+    "pro_se_count": 37,
+    "pro_se_pct": 42.0,
+    "children_impacted": 136,
+    "clean_sample_size": 88,
+    "raw_submission_count": 88
+  },
+  "movement_total": 3525,
+  "supabase": {
+    "report_count": 6,
+    "actor_report_count": 6,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Magistrate Blevens combined Two separate cases to the detriment of my son, but for her own convenience. Magistrate Blevens removed my son from the home against protocol. There is definitely…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "She would not let us testify in our own defense. And was making joking remarks about how there was no way we were getting our kids back. She is corrupt,…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "She ignored a negative drug screen that was submitted by my attorney she deemed me uncredible because I didn't fill out custody papers correctly and kept my kids in custody…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/magistrate_angela_blevins",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/tennessee/magistrate_angela_blevins/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

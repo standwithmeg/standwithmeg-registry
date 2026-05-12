@@ -1,0 +1,89 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "amy_eddy",
+    "display_name": "Amy Eddy",
+    "title": "",
+    "first_name": "Amy",
+    "last_name": "Eddy",
+    "role": "Judge",
+    "court": "Flathead county",
+    "county": null,
+    "court_or_county": "Flathead county",
+    "state": "Montana",
+    "state_abbr": "MT",
+    "mention_count": 4,
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "321e9795-f40e-42c2-8015-9e71fe704800",
+      "183662e0-6cff-4495-a451-d4fab9d4ed59",
+      "99646a9a-df29-4935-86e8-bb30fb9ea8ae",
+      "333ad64e-a532-4322-8325-e9091210e2f0"
+    ],
+    "actor_row_id": "321e9795-f40e-42c2-8015-9e71fe704800",
+    "actor_bucket_key": "amy eddy|MT"
+  },
+  "photo": {
+    "path": "montana/amy_eddy/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 29,
+    "total_submissions": 42,
+    "avg_financial_loss": 180572.42,
+    "avg_months_lost": 59.7,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "MT",
+    "state_family_count": 42,
+    "median_months_lost": 36.0,
+    "median_financial_loss": 157500,
+    "median_burden_sample_size": 22,
+    "pro_se_count": 28,
+    "pro_se_pct": 57.1,
+    "children_impacted": 83,
+    "clean_sample_size": 49,
+    "raw_submission_count": 49
+  },
+  "movement_total": 3525,
+  "supabase": {
+    "report_count": 4,
+    "actor_report_count": 4,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Everything. I have some reason downloaded that I have that I need to turn to judicial standards commission so if you want more details of my case and how it…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Confidential information handed to other side, discovery allowed in a third party guardianship (that is NOT SUPPOSED TO HAPPEN!) awarded attorney fees, FOR WHAT?! Said “taken as truth” because why?!?!…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Granted emergency ex parte with no proper notice, no substantiated documentation, just a false statement from father. Was told a child was harmed when she didn't grant one previously and…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/amy_eddy",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/montana/amy_eddy/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

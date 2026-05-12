@@ -1,0 +1,70 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "julia_kolber",
+    "display_name": "Julia C. Kolber",
+    "title": "",
+    "first_name": "Julia C.",
+    "last_name": "Kolber",
+    "role": null,
+    "court": null,
+    "county": null,
+    "court_or_county": null,
+    "state": "Ohio",
+    "state_abbr": "OH",
+    "mention_count": null,
+    "actor_report_count": null,
+    "supabase_row_ids": null,
+    "actor_row_id": null,
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "ohio/julia_kolber/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 143,
+    "total_submissions": 185,
+    "avg_financial_loss": 124725.75,
+    "avg_months_lost": 31.1,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OH",
+    "state_family_count": 185,
+    "median_months_lost": 20.0,
+    "median_financial_loss": 82500,
+    "median_burden_sample_size": 93,
+    "pro_se_count": 105,
+    "pro_se_pct": 58.0,
+    "children_impacted": 273,
+    "clean_sample_size": 181,
+    "raw_submission_count": 181
+  },
+  "movement_total": 3524,
+  "supabase": {
+    "report_count": null,
+    "actor_report_count": null,
+    "family_reports": [],
+    "public_comments": []
+  },
+  "export_dir": "New Final Post and Capcut template/export/julia_kolber",
+  "unresolved": [
+    "court_actors: no rows match name~'Julia C. Kolber' state='OH'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/ohio/julia_kolber/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

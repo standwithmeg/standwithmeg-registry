@@ -1,0 +1,92 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "cathrin_conklin",
+    "display_name": "Cathrin Conklin",
+    "title": "",
+    "first_name": "Cathrine",
+    "last_name": "Conklin",
+    "role": "Judge",
+    "court": "Weber county",
+    "county": null,
+    "court_or_county": "Weber county",
+    "state": "Utah",
+    "state_abbr": "UT",
+    "mention_count": 6,
+    "actor_report_count": 6,
+    "supabase_row_ids": [
+      "60fbada1-2ab2-4453-936c-314db5dd558e",
+      "b31a4cea-6902-4ce5-ab81-f27bedd3918f",
+      "48eedfe3-e658-489e-b189-ddd9e79e697a",
+      "4252a8f2-18ed-4f29-a5f7-e270f214f8d0",
+      "b1bfd28e-1514-48dd-b57a-c0c6095fc59d",
+      "65e15864-7843-4787-bb81-3961195b1eca"
+    ],
+    "actor_row_id": "60fbada1-2ab2-4453-936c-314db5dd558e",
+    "actor_bucket_key": "cathrin conklin|UT"
+  },
+  "photo": {
+    "path": "utah/cathrin_conklin/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 29,
+    "total_submissions": 40,
+    "avg_financial_loss": 242439.0,
+    "avg_months_lost": 17.9,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "UT",
+    "state_family_count": 40,
+    "median_months_lost": 7.0,
+    "median_financial_loss": 161600,
+    "median_burden_sample_size": 28,
+    "pro_se_count": 25,
+    "pro_se_pct": 56.8,
+    "children_impacted": 75,
+    "clean_sample_size": 44,
+    "raw_submission_count": 44
+  },
+  "movement_total": 3525,
+  "supabase": {
+    "report_count": 6,
+    "actor_report_count": 6,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "I already added this Said she couldn’t use the evaluators report due to the other side’s attorneys bringing up the recommendations before trial that’s all she used in her findings,…",
+        "author": "Anonymous parent",
+        "source": "court_actor_comment_merges",
+        "row_id": "48eedfe3-e658-489e-b189-ddd9e79e697a"
+      },
+      {
+        "comment_text": "Kept delaying hearings to give abuser more chance for custody of kids.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Two be determined my case is active.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/cathrin_conklin",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/utah/cathrin_conklin/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

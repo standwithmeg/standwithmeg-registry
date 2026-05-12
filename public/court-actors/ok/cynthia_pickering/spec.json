@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "cynthia_pickering",
+    "display_name": "Cynthia Pickering",
+    "title": "",
+    "first_name": "Cynthia",
+    "last_name": "Pickering",
+    "role": "Judge",
+    "court": "Okmulgee county",
+    "county": null,
+    "court_or_county": "Okmulgee county",
+    "state": "Oklahoma",
+    "state_abbr": "OK",
+    "mention_count": 3,
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "93afafa5-c00b-46c3-a78a-f8aa69cf3bb2",
+      "4deee429-973b-46da-bb2e-1d23f3559f18",
+      "695be153-e464-4857-ae83-b2d6f9488aa0"
+    ],
+    "actor_row_id": "93afafa5-c00b-46c3-a78a-f8aa69cf3bb2",
+    "actor_bucket_key": "cynthia pickering|OK"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 85,
+    "total_submissions": 105,
+    "avg_financial_loss": 116341.98,
+    "avg_months_lost": 27.7,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OK",
+    "state_family_count": 105,
+    "median_months_lost": 11.5,
+    "median_financial_loss": 82000,
+    "median_burden_sample_size": 55,
+    "pro_se_count": 48,
+    "pro_se_pct": 46.2,
+    "children_impacted": 181,
+    "clean_sample_size": 104,
+    "raw_submission_count": 104
+  },
+  "movement_total": 3525,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Took my kids in an ex parte guardianship with no evidence other than a sworn statement from my abusers parents and him terminating his legal rights to them. I'm currently…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "She has left it up to the attorneys to figure out details regarding visitations and we have not been to court since. Even though the schedules are not being followed…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Ignored evidence on my part. Had a private meeting with the defendants attorney without my attorney present with lead the defendant to know exactly how our case was going to…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/cynthia_pickering",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/oklahoma/cynthia_pickering/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

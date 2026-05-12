@@ -13,6 +13,13 @@ export type PublicActor = {
   location_key: string | null;
   count: number;
   latest_reported_at?: string | null;
+  /**
+   * URLs from court-actor-posts/_scripts/deploy_actor_to_site.py manifest.
+   * When present, the actor has a deployed spotlight page + portrait.
+   * When null, frontend falls back to a placeholder/initials.
+   */
+  photo_url?: string | null;
+  share_url?: string | null;
 };
 
 type Props = {
@@ -164,31 +171,56 @@ export function CourtActorPanel({ actors, threshold }: Props) {
               className="text-left px-6 py-5 transition-colors hover:bg-white/5 focus:outline-none focus:ring-1 focus:ring-amber-300/40"
               style={{ backgroundColor: BG }}
               aria-label={`View what families said about ${actor.name}`}>
-              <div className="flex items-start justify-between gap-3">
-                <div className="min-w-0">
-                  <div className="flex items-center gap-2">
-                    {sortMode === "newest" && i < 6 && (
-                      <span className="text-[10px] font-black px-1.5 py-0.5 rounded"
-                        style={{ backgroundColor: "rgba(185,28,28,0.25)", color: "rgb(252,165,165)", border: "1px solid rgba(252,165,165,0.22)" }}>
-                        NEW
-                      </span>
-                    )}
-                    <div className="font-black text-white text-sm truncate">{actor.name}</div>
+              <div className="flex items-start gap-3">
+                {actor.photo_url ? (
+                  <img
+                    src={actor.photo_url}
+                    alt=""
+                    className="w-12 h-12 rounded-full object-cover flex-shrink-0"
+                    style={{ border: "1.5px solid rgba(201,162,39,0.55)", objectPosition: "center 25%" }}
+                    onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
+                  />
+                ) : (
+                  <div
+                    className="w-12 h-12 rounded-full flex-shrink-0 flex items-center justify-center text-xs font-black"
+                    style={{
+                      backgroundColor: "rgba(201,162,39,0.10)",
+                      border: "1.5px dashed rgba(201,162,39,0.35)",
+                      color: "rgba(201,162,39,0.55)",
+                    }}
+                    aria-hidden="true"
+                  >
+                    {actor.name.split(/\s+/).filter(Boolean).map(w => w[0]).slice(0, 2).join("").toUpperCase()}
                   </div>
-                  <div className="text-xs mt-1 flex flex-wrap items-center gap-1.5"
-                    style={{ color: "rgba(245,245,245,0.5)" }}>
-                    <span>{actor.role}</span>
-                    {actor.state_code && <span>· {actor.state_code}</span>}
-                    {actor.court_or_county && <span>· {actor.court_or_county}</span>}
+                )}
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-start justify-between gap-3">
+                    <div className="min-w-0">
+                      <div className="flex items-center gap-2">
+                        {sortMode === "newest" && i < 6 && (
+                          <span className="text-[10px] font-black px-1.5 py-0.5 rounded"
+                            style={{ backgroundColor: "rgba(185,28,28,0.25)", color: "rgb(252,165,165)", border: "1px solid rgba(252,165,165,0.22)" }}>
+                            NEW
+                          </span>
+                        )}
+                        <div className="font-black text-white text-sm truncate">{actor.name}</div>
+                      </div>
+                      <div className="text-xs mt-1 flex flex-wrap items-center gap-1.5"
+                        style={{ color: "rgba(245,245,245,0.5)" }}>
+                        <span>{actor.role}</span>
+                        {actor.state_code && <span>· {actor.state_code}</span>}
+                        {actor.court_or_county && <span>· {actor.court_or_county}</span>}
+                      </div>
+                    </div>
+                    <div className="text-xs font-bold whitespace-nowrap px-2.5 py-1 rounded-md"
+                      style={{ backgroundColor: "rgba(201,162,39,0.12)", color: GOLD, border: "1px solid rgba(201,162,39,0.25)" }}>
+                      {actor.count} {actor.count === 1 ? "family" : "families"}
+                    </div>
+                  </div>
+                  <div className="mt-3 text-[11px] font-semibold" style={{ color: GOLD }}>
+                    Read what families said →
                   </div>
                 </div>
-                <div className="text-xs font-bold whitespace-nowrap px-2.5 py-1 rounded-md"
-                  style={{ backgroundColor: "rgba(201,162,39,0.12)", color: GOLD, border: "1px solid rgba(201,162,39,0.25)" }}>
-                  {actor.count} {actor.count === 1 ? "family" : "families"}
-                </div>
-              </div>
-              <div className="mt-3 text-[11px] font-semibold" style={{ color: GOLD }}>
-                Read what families said →
               </div>
             </button>
           ))}
@@ -340,13 +372,24 @@ export function CourtActorNotesModal({ actor, onClose }: ModalProps) {
 
         <div className="px-6 py-4 flex items-start justify-between gap-4"
           style={{ borderBottom: "1px solid rgba(201,162,39,0.2)", backgroundColor: "rgba(30,58,95,0.6)" }}>
-          <div className="min-w-0">
-            <div className="font-black text-white text-base leading-tight">{actor.name}</div>
-            <div className="text-xs mt-1 flex flex-wrap gap-1.5" style={{ color: "rgba(245,245,245,0.55)" }}>
-              <span>{actor.role}</span>
-              {actor.state_code && <span>· {actor.state_code}</span>}
-              {actor.court_or_county && <span>· {actor.court_or_county}</span>}
-              <span>· {actor.count} {actor.count === 1 ? "family" : "families"}</span>
+          <div className="flex items-start gap-3 min-w-0">
+            {actor.photo_url && (
+              <img
+                src={actor.photo_url}
+                alt=""
+                className="w-12 h-12 rounded-full object-cover flex-shrink-0"
+                style={{ border: `2px solid ${GOLD}`, objectPosition: "center 25%" }}
+                onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
+              />
+            )}
+            <div className="min-w-0">
+              <div className="font-black text-white text-base leading-tight">{actor.name}</div>
+              <div className="text-xs mt-1 flex flex-wrap gap-1.5" style={{ color: "rgba(245,245,245,0.55)" }}>
+                <span>{actor.role}</span>
+                {actor.state_code && <span>· {actor.state_code}</span>}
+                {actor.court_or_county && <span>· {actor.court_or_county}</span>}
+                <span>· {actor.count} {actor.count === 1 ? "family" : "families"}</span>
+              </div>
             </div>
           </div>
           <button onClick={onClose}
@@ -357,6 +400,22 @@ export function CourtActorNotesModal({ actor, onClose }: ModalProps) {
             </svg>
           </button>
         </div>
+
+        {actor.share_url && (
+          <a
+            href={actor.share_url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block px-6 py-3 text-sm font-semibold transition-colors hover:opacity-90"
+            style={{
+              backgroundColor: GOLD,
+              color: "#0F1E30",
+              borderBottom: "1px solid rgba(201,162,39,0.35)",
+            }}
+          >
+            View the full spotlight →
+          </a>
+        )}
 
         <div className="px-6 py-4 text-[11px] leading-snug"
           style={{ borderBottom: "1px solid rgba(255,255,255,0.06)", color: "rgba(245,245,245,0.5)" }}>

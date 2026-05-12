@@ -1,0 +1,92 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "casey_cook",
+    "display_name": "Casey cook",
+    "title": "",
+    "first_name": "Casey",
+    "last_name": "Cook",
+    "role": "CPS Worker",
+    "court": "Highland",
+    "county": null,
+    "court_or_county": "Highland",
+    "state": "Ohio",
+    "state_abbr": "OH",
+    "mention_count": 7,
+    "actor_report_count": 7,
+    "supabase_row_ids": [
+      "c049fe92-77e3-40ee-8a67-c21fe2607700",
+      "1f6955d2-86af-44f1-9dae-c9636fe60c6d",
+      "447056ef-649f-4f67-943c-6e3d398798c7",
+      "851677fb-4d8a-4153-8a09-45715526723b",
+      "f869b081-4233-4a71-8a75-4425b7ef1d49",
+      "4ed619c0-5f7f-4077-aaa7-5ec13ae27ae6",
+      "9696db4a-6a17-4128-a606-caac50da896c"
+    ],
+    "actor_row_id": "c049fe92-77e3-40ee-8a67-c21fe2607700",
+    "actor_bucket_key": "casey cook|OH"
+  },
+  "photo": {
+    "path": "ohio/casey_cook/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 144,
+    "total_submissions": 186,
+    "avg_financial_loss": 123936.34,
+    "avg_months_lost": 31.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OH",
+    "state_family_count": 186,
+    "median_months_lost": 20.0,
+    "median_financial_loss": 82500,
+    "median_burden_sample_size": 93,
+    "pro_se_count": 106,
+    "pro_se_pct": 58.2,
+    "children_impacted": 274,
+    "clean_sample_size": 182,
+    "raw_submission_count": 182
+  },
+  "movement_total": 3525,
+  "supabase": {
+    "report_count": 7,
+    "actor_report_count": 7,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Fabricated evidence",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Denied motion and ignored evidence!! None of them did their job they made up everything. The judge didn’t want to listen to us whatsoever that we gave him evidence and…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Violated my rights on April 1, 2024, coming on my property and recording within the curtilage of my home without permission. Also ignored exculpatory evidence identified presented.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/casey_cook",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/ohio/casey_cook/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

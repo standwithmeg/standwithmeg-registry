@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "bud_dale",
+    "display_name": "Bud Dale",
+    "title": "",
+    "first_name": "Bud",
+    "last_name": "Dale",
+    "role": "Custody Evaluator",
+    "court": null,
+    "county": null,
+    "court_or_county": null,
+    "state": "Kansas",
+    "state_abbr": "KS",
+    "mention_count": 5,
+    "actor_report_count": 5,
+    "supabase_row_ids": [
+      "a14d48fb-950d-42f0-9205-9f04510cb52c",
+      "1510a0cd-f735-49b3-8e55-53b5364cf2a5",
+      "0614d30e-0208-4161-832d-d8722c75eb13",
+      "c01b375f-6bb6-461b-94e5-51bcc2aa65c4",
+      "dc2af4c1-aeff-4b23-ac16-4c378d220f88"
+    ],
+    "actor_row_id": "a14d48fb-950d-42f0-9205-9f04510cb52c",
+    "actor_bucket_key": "bud dale|KS"
+  },
+  "photo": {
+    "path": "kansas/bud_dale/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 116,
+    "total_submissions": 167,
+    "avg_financial_loss": 128403.78,
+    "avg_months_lost": 32.1,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "KS",
+    "state_family_count": 167,
+    "median_months_lost": 20.5,
+    "median_financial_loss": 84225,
+    "median_burden_sample_size": 76,
+    "pro_se_count": 85,
+    "pro_se_pct": 54.1,
+    "children_impacted": 278,
+    "clean_sample_size": 157,
+    "raw_submission_count": 157
+  },
+  "movement_total": 3525,
+  "supabase": {
+    "report_count": 5,
+    "actor_report_count": 5,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Makes personal opinion to form decision making. Does not hold parties to the court order/allows unilateral decision making. Creates hostile environment; cussing. Challenges the party as if on trial. Mocked…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "I hired him initially to be my attorney for divorce and child custody. I want to try to get my money back from Bud Dale. He collected the retainer and…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Refused to allow myself or my attorney to submit evidence to him. He refused it, after learning he met with me as counsel 9 months prior. He then retaliated after…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/bud_dale",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/kansas/bud_dale/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

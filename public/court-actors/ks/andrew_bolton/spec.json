@@ -1,0 +1,92 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "andrew_bolton",
+    "display_name": "Andrew Bolton",
+    "title": "",
+    "first_name": "Andrew",
+    "last_name": "Bolton",
+    "role": "GAL/Childre Representative",
+    "court": "Miami",
+    "county": null,
+    "court_or_county": "Miami",
+    "state": "Kansas",
+    "state_abbr": "KS",
+    "mention_count": 7,
+    "actor_report_count": 7,
+    "supabase_row_ids": [
+      "ddfd7d7b-8684-4a68-bd8a-9aa8bbc46147",
+      "7e19b9be-3c22-414b-a435-6e0ad2215ad5",
+      "8932eaa1-bf75-4243-bde0-48bc4d6a429a",
+      "262336c7-0a95-482a-83d6-2e2c5ac9bc44",
+      "8b8484d0-b091-4da7-9fa8-b1a588666a12",
+      "222e95af-f209-402b-8d38-15c3e724dd8e",
+      "ffa86815-dbc4-47c6-beca-24388811b40f"
+    ],
+    "actor_row_id": "ddfd7d7b-8684-4a68-bd8a-9aa8bbc46147",
+    "actor_bucket_key": "andrew bolton|KS"
+  },
+  "photo": {
+    "path": "kansas/andrew_bolton/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 116,
+    "total_submissions": 167,
+    "avg_financial_loss": 128403.78,
+    "avg_months_lost": 32.1,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "KS",
+    "state_family_count": 167,
+    "median_months_lost": 20.5,
+    "median_financial_loss": 84225,
+    "median_burden_sample_size": 76,
+    "pro_se_count": 85,
+    "pro_se_pct": 54.1,
+    "children_impacted": 278,
+    "clean_sample_size": 157,
+    "raw_submission_count": 157
+  },
+  "movement_total": 3525,
+  "supabase": {
+    "report_count": 7,
+    "actor_report_count": 7,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "The system allowed my abuser to escape all consequences to the point of his criminal charges being dismissed and helped Dad turning me into the abuser. The system has stripped…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Ignored evidence. Did not investigate. Sided with bias due to ex communicating and me going through my lawyer. Literally yelled at me in court, misconduct and the judge even called…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Lied under oath about child’s wants.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/andrew_bolton",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/kansas/andrew_bolton/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

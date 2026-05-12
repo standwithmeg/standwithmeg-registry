@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "hon_amy_poehling_eddy",
+    "display_name": "Hon. Amy Poehling Eddy",
+    "title": "",
+    "first_name": "Amy",
+    "last_name": "Eddie",
+    "role": "Judge",
+    "court": "Unknown",
+    "county": null,
+    "court_or_county": "Unknown",
+    "state": "Montana",
+    "state_abbr": "MT",
+    "mention_count": 3,
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "ff08ce71-8808-402a-b14d-595d1d5ae578",
+      "99646a9a-df29-4935-86e8-bb30fb9ea8ae",
+      "183662e0-6cff-4495-a451-d4fab9d4ed59"
+    ],
+    "actor_row_id": "ff08ce71-8808-402a-b14d-595d1d5ae578",
+    "actor_bucket_key": "amy poehling eddy|MT"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 29,
+    "total_submissions": 42,
+    "avg_financial_loss": 180572.42,
+    "avg_months_lost": 59.7,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "MT",
+    "state_family_count": 42,
+    "median_months_lost": 36.0,
+    "median_financial_loss": 157500,
+    "median_burden_sample_size": 22,
+    "pro_se_count": 28,
+    "pro_se_pct": 57.1,
+    "children_impacted": 83,
+    "clean_sample_size": 49,
+    "raw_submission_count": 49
+  },
+  "movement_total": 3525,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "[extracted_regex] hen judge Olympus retired and judge Amy Eddie came into office and she judg",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Granted emergency ex parte with no proper notice, no substantiated documentation, just a false statement from father. Was told a child was harmed when she didn't grant one previously and…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Confidential information handed to other side, discovery allowed in a third party guardianship (that is NOT SUPPOSED TO HAPPEN!) awarded attorney fees, FOR WHAT?! Said “taken as truth” because why?!?!…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/hon_amy_poehling_eddy",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/montana/hon_amy_poehling_eddy/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

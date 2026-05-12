@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "jesse_i_santana",
+    "display_name": "Jesse I. Santana",
+    "title": "",
+    "first_name": "Jesse I.",
+    "last_name": "Santana",
+    "role": "Judge",
+    "court": "Sutter County",
+    "county": null,
+    "court_or_county": "Sutter County",
+    "state": "California",
+    "state_abbr": "CA",
+    "mention_count": 5,
+    "actor_report_count": 5,
+    "supabase_row_ids": [
+      "d75c3213-cd6d-4736-842f-da2da234e063",
+      "1f41031a-1919-4989-ae55-ed17ccd0c8c8",
+      "c1e4c256-8a42-49dc-ac3c-563872c20232",
+      "6eeba191-0155-4a25-8525-fe3c402f6375",
+      "4dd4db03-c1ee-4470-889b-8ce8fa2186a2"
+    ],
+    "actor_row_id": "d75c3213-cd6d-4736-842f-da2da234e063",
+    "actor_bucket_key": "jese santana|CA"
+  },
+  "photo": {
+    "path": "california/jesse_i_santana/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 240,
+    "total_submissions": 307,
+    "avg_financial_loss": 283576.48,
+    "avg_months_lost": 37.6,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "CA",
+    "state_family_count": 307,
+    "median_months_lost": 23.0,
+    "median_financial_loss": 277100,
+    "median_burden_sample_size": 138,
+    "pro_se_count": 170,
+    "pro_se_pct": 56.7,
+    "children_impacted": 486,
+    "clean_sample_size": 300,
+    "raw_submission_count": 300
+  },
+  "movement_total": 3525,
+  "supabase": {
+    "report_count": 5,
+    "actor_report_count": 5,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Constant extreme bias. Ignoring facts and pleadings. Removed my child from my life as punishment for false claims from ex.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Favors women and attorneys.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Ignored evidence, allowed physical and legal custody to be given to my and child’s abuser",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/jesse_i_santana",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/california/jesse_i_santana/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

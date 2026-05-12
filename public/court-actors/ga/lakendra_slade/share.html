@@ -1,0 +1,939 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lakendra slade · Stand With Meg · Story Spotlight</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,900&family=Inter:wght@400;600;700;800;900&family=JetBrains+Mono:wght@500;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+<style>
+:root {
+  --navy:#0B1A2D; --navy-deep:#050A14; --gold:#C9A227; --gold-soft:#E0B93C;
+  --crimson:#B91C1C; --crimson-hot:#EF4444; --cream:#F2EAD6; --white:#F5F5F5;
+}
+* { box-sizing:border-box; margin:0; padding:0; }
+html,body { background:#06070A; color:var(--white); font-family:Inter,system-ui,sans-serif; min-height:100vh; }
+.topbar { position:sticky; top:0; z-index:50; padding:14px 16px; background:rgba(6,7,10,.9); border-bottom:1px solid rgba(201,162,39,.25); backdrop-filter:blur(14px); }
+.topbar b { display:block; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.24em; color:var(--gold); text-transform:uppercase; }
+.topbar span { display:block; margin-top:4px; color:rgba(245,245,245,.66); font-size:13px; line-height:1.4; }
+.share-scroll { width:min(100%,540px); margin:0 auto; padding:18px 12px 48px; }
+.phone-frame { margin:0 0 32px; }
+
+/* Story card — 9:16, rounded, deep navy gradient */
+.frame {
+  position:relative; width:100%; aspect-ratio:9/16; overflow:hidden;
+  border-radius:22px;
+  background:linear-gradient(180deg,#0B1A2D 0%, #050A14 100%);
+  box-shadow:0 28px 70px rgba(0,0,0,.62),0 0 0 1px rgba(255,255,255,.06);
+  color:var(--white);
+  font-family:Inter,sans-serif;
+  isolation:isolate;
+}
+
+/* Photo (Frame 1) */
+.photo-bg {
+  position:absolute; inset:0; z-index:0;
+  background-size:cover; background-position:center 25%;
+}
+/* Real photo lifts above the flag (z:1) so stripes/stars don't print across the face,
+   but stays below grain (z:5), scanlines (z:6), and vignette (z:7) so the photo still
+   gets the dossier-style overlay treatment. */
+.photo-bg.photo-real { z-index:2; }
+.photo-overlay {
+  position:absolute; inset:0;
+  background:linear-gradient(180deg,rgba(11,26,45,.18) 0%, rgba(5,10,20,.78) 100%);
+}
+/* When the face is a real photo, dial back the overlays so the actor is clear.
+   Keep enough darkness at the bottom for the headline + label area to stay readable. */
+.frame.has-real-photo .photo-overlay {
+  background:linear-gradient(180deg,
+    rgba(11,26,45,0) 0%,
+    rgba(11,26,45,0) 35%,
+    rgba(5,10,20,.55) 70%,
+    rgba(5,10,20,.92) 100%);
+}
+.frame.has-real-photo .grain { opacity:.28; mix-blend-mode:soft-light; }
+.frame.has-real-photo .scanlines {
+  background:repeating-linear-gradient(to bottom, rgba(0,0,0,.07) 0 1px, transparent 1px 6px);
+}
+.frame.has-real-photo .vignette {
+  background:radial-gradient(ellipse at center 38%, transparent 55%, rgba(0,0,0,.55) 100%);
+}
+.frame.has-real-photo .flag-bg--cover { opacity:0; }
+.photo-placeholder {
+  background:radial-gradient(ellipse at 50% 35%, #4B5867 0%, #2A3B52 40%, #14253A 75%, #050A14 100%);
+}
+.ph-silhouette {
+  position:absolute; left:50%; top:24%; transform:translateX(-50%);
+  width:62%; height:36%;
+  background:
+    radial-gradient(ellipse 36% 26% at 50% 22%, rgba(245,235,210,.45) 0%, transparent 60%),
+    radial-gradient(ellipse 44% 52% at 50% 70%, rgba(30,40,55,.8) 0%, transparent 75%);
+  filter:blur(2px);
+}
+.ph-overlay {
+  position:absolute; inset:0;
+  background:linear-gradient(180deg, rgba(11,26,45,.32) 0%, rgba(11,26,45,.85) 100%);
+}
+.ph-tag {
+  position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+  font-family:'JetBrains Mono',monospace; font-size:clamp(8px,1.7cqw,11px);
+  letter-spacing:.3em; color:rgba(201,162,39,.6); text-transform:uppercase;
+  border:1.5px dashed rgba(201,162,39,.5); padding:8px 12px;
+  text-align:center; max-width:80%;
+}
+
+/* Flag wave layer */
+.flag-bg { position:absolute; inset:0; z-index:1; opacity:.22; filter:blur(2px); }
+.flag-bg svg { width:100%; height:100%; }
+.flag-bg--cover { opacity:.32; filter:blur(2px); mix-blend-mode:screen; }
+.flag-bg--faded { opacity:.14; filter:blur(6px); }
+
+/* Grain + scanlines + vignette */
+.grain {
+  position:absolute; inset:0; z-index:5; pointer-events:none;
+  opacity:.7; mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.7  0 0 0 0 0.7  0 0 0 0 0.7  0 0 0 0.22 0'/></filter><rect width='200' height='200' filter='url(%23n)' opacity='0.6'/></svg>");
+}
+.scanlines {
+  position:absolute; inset:0; z-index:6; pointer-events:none;
+  background:repeating-linear-gradient(to bottom, rgba(0,0,0,.18) 0 1px, transparent 1px 5px);
+  mix-blend-mode:multiply;
+}
+.vignette {
+  position:absolute; inset:0; z-index:7; pointer-events:none;
+  background:radial-gradient(ellipse at center, transparent 38%, rgba(0,0,0,.78) 100%);
+}
+
+/* State badge top-right (the yellow OHIO stamp) */
+.state-badge {
+  position:absolute; top:5%; right:5%; z-index:25;
+  display:flex; flex-direction:column; align-items:flex-end; gap:6px;
+}
+.sb-eyebrow {
+  font-family:'JetBrains Mono',monospace; letter-spacing:.3em;
+  color:rgba(242,234,214,.6); text-transform:uppercase;
+  font-size:clamp(8px,1.6cqw,11px);
+}
+.sb-stamp {
+  display:inline-block; background:var(--gold); color:#0A0A0A;
+  font-family:'Anton',sans-serif; letter-spacing:.02em; line-height:1;
+  padding:6px 14px 4px; text-transform:uppercase;
+  box-shadow:0 8px 24px rgba(0,0,0,.5);
+  font-size:clamp(28px,6cqw,42px);
+}
+.sb-caption {
+  font-family:'Oswald',sans-serif; font-weight:700; letter-spacing:.22em;
+  color:#F5F5F5; text-transform:uppercase;
+  font-size:clamp(9px,2cqw,13px);
+}
+
+/* Top-left frame tag */
+.frame-tag {
+  position:absolute; top:5%; left:5%; z-index:25;
+  font-family:'JetBrains Mono',monospace; letter-spacing:.3em;
+  color:var(--gold); text-transform:uppercase;
+  font-size:clamp(8px,1.8cqw,13px);
+}
+
+/* Display headlines */
+.display {
+  font-family:'Anton',sans-serif; text-transform:uppercase; letter-spacing:-.02em;
+  line-height:1.05; text-shadow:0 8px 0 rgba(0,0,0,.4);
+}
+.display.xl { font-size:clamp(48px,15cqw,98px); }
+.display .gold { color:var(--gold); }
+.gold { color:var(--gold); }
+
+/* Frame 1 — cover */
+.f1-headline {
+  position:absolute; left:5%; right:5%; bottom:18%; z-index:25;
+}
+.f1-role {
+  margin-top:14px; font-family:'Fraunces',serif; font-style:italic;
+  color:rgba(245,245,245,.92); line-height:1.25;
+  font-size:clamp(14px,3.4cqw,22px);
+}
+.f1-report-count {
+  margin-top:16px; display:flex; align-items:flex-end; gap:14px;
+  border-top:2px solid rgba(201,162,39,.8); padding-top:12px;
+}
+.f1-report-count b {
+  font-family:'Anton',sans-serif; color:var(--gold); line-height:.85;
+  font-size:clamp(40px,11cqw,72px);
+}
+.f1-report-count span {
+  font-family:'Oswald',sans-serif; letter-spacing:.16em;
+  text-transform:uppercase; color:rgba(245,245,245,.82);
+  font-size:clamp(10px,2.4cqw,15px); padding-bottom:6px;
+}
+
+/* Frame 2 — they thought */
+.f2-headline { position:absolute; left:5%; right:5%; top:22%; z-index:25; }
+.red-bar {
+  position:relative; display:inline-block; color:#F5F5F5;
+  padding:0 .12em;
+}
+.red-bar::before {
+  content:""; position:absolute; left:-6px; right:-6px; top:18%; bottom:18%;
+  background:var(--crimson); transform:skewX(-6deg); z-index:-1;
+}
+.not-any-more-stamp {
+  display:inline-block; margin-top:24px;
+  background:var(--gold); color:#0A0A0A;
+  font-family:'Anton',sans-serif; letter-spacing:.01em; text-transform:uppercase;
+  padding:6px 22px 10px; line-height:1;
+  box-shadow:8px 8px 0 rgba(0,0,0,.6);
+  font-size:clamp(36px,10cqw,72px);
+  transform:rotate(-3deg); transform-origin:left center;
+}
+
+/* Frame 3 — stacked pull quotes (up to 3) */
+.f3-body {
+  position:absolute; left:6%; right:6%; top:14%; bottom:28%; z-index:25;
+  display:flex; flex-direction:column; justify-content:center;
+  gap:clamp(14px,3cqw,26px);
+}
+.f3-quote {
+  position:relative; padding-left:clamp(14px,2.8cqw,22px);
+  border-left:3px solid var(--gold);
+}
+.f3-dot {
+  position:absolute; left:-8px; top:0;
+  width:14px; height:14px; border-radius:50%;
+  background:var(--crimson);
+  box-shadow:0 0 0 4px var(--navy-deep);
+}
+.f3-text {
+  font-family:'Fraunces',serif; font-weight:500; font-style:italic;
+  line-height:1.22; color:var(--white);
+  font-size:clamp(15px,4.2cqw,26px);
+}
+.f3-attr {
+  margin-top:clamp(6px,1.6cqw,12px);
+  font-family:'Oswald',sans-serif; font-weight:600; letter-spacing:.18em;
+  color:rgba(245,245,245,.7);
+  font-size:clamp(9px,2.2cqw,13px);
+  text-transform:uppercase;
+}
+/* When only one quote exists, bump it up to the original hero size */
+.f3-body.f3-single .f3-text {
+  font-size:clamp(22px,6cqw,42px); line-height:1.18;
+}
+.f3-body.f3-single .f3-attr {
+  font-size:clamp(11px,2.6cqw,15px); margin-top:clamp(18px,3cqw,28px);
+}
+
+/* Frame 4 — counted. Flex column inside an absolute wrapper so each line
+   claims its own vertical slot. No more pattern colliding with the italic. */
+.f4-stack {
+  position:absolute; left:5%; right:5%; top:14%; bottom:28%; z-index:25;
+  display:flex; flex-direction:column; justify-content:center;
+  gap:clamp(8px,2cqw,18px); text-align:center;
+}
+.f4-mega-number {
+  font-family:'Anton',sans-serif; line-height:.82; letter-spacing:-.04em;
+  color:var(--gold);
+  font-size:clamp(110px,34cqw,240px);
+  text-shadow:0 10px 0 rgba(0,0,0,.4), 0 24px 80px rgba(201,162,39,.35);
+}
+.f4-mega-label {
+  font-family:'Anton',sans-serif; text-transform:uppercase;
+  letter-spacing:-.01em; line-height:1.05; color:#F5F5F5;
+  font-size:clamp(38px,10cqw,72px);
+}
+.f4-italic {
+  font-family:'Fraunces',serif; font-style:italic;
+  color:rgba(245,245,245,.8);
+  font-size:clamp(14px,3.4cqw,22px);
+  margin-bottom:clamp(8px,2cqw,16px);
+}
+.f4-pattern {
+  font-family:'Anton',sans-serif; text-transform:uppercase;
+  color:#F5F5F5; line-height:1.18;
+  font-size:clamp(22px,6.2cqw,44px);
+}
+.f4-pattern .strike {
+  text-decoration:line-through; text-decoration-color:var(--crimson);
+  text-decoration-thickness:5px; color:rgba(245,245,245,.45);
+}
+.f4-pattern .pattern-pill {
+  display:inline-block; background:var(--gold); color:#0A0A0A;
+  padding:2px 14px; margin-top:6px;
+}
+
+/* Frame 5 — exposing the pattern */
+.f5-headline {
+  position:absolute; left:5%; right:5%; top:14%; z-index:25;
+  font-family:'Anton',sans-serif; color:#F5F5F5; text-transform:uppercase;
+  letter-spacing:-.02em; line-height:1.04;
+  font-size:clamp(40px,11cqw,86px);
+}
+.f5-stats {
+  position:absolute; left:5%; right:5%; bottom:24%; z-index:25;
+  border-top:3px solid var(--gold); padding-top:14px;
+  display:flex; flex-direction:column; gap:8px;
+}
+.f5-stats-label {
+  font-family:'JetBrains Mono',monospace; letter-spacing:.26em;
+  color:rgba(245,245,245,.55); text-transform:uppercase;
+  margin-bottom:8px; font-size:clamp(8px,2cqw,12px);
+}
+.stat-row {
+  display:flex; justify-content:space-between; align-items:baseline;
+  border-bottom:1px solid rgba(245,245,245,.18); padding-bottom:8px;
+}
+.stat-row .stat-n {
+  font-family:'Anton',sans-serif; color:var(--gold); line-height:1;
+  font-size:clamp(28px,8cqw,52px);
+}
+.stat-row .stat-l {
+  font-family:'Oswald',sans-serif; font-weight:600; letter-spacing:.14em;
+  color:#F5F5F5; text-align:right; text-transform:uppercase;
+  font-size:clamp(9px,2.2cqw,14px);
+}
+
+/* Frame 6 — STAND WITH MEG */
+.f6-headline {
+  position:absolute; left:5%; right:5%; top:14%; z-index:25;
+  font-family:'Anton',sans-serif; text-transform:uppercase;
+  letter-spacing:-.02em; line-height:1.05;
+  color:#F5F5F5; text-align:center;
+  font-size:clamp(70px,22cqw,160px);
+}
+.f6-with { display:inline-block; }
+.f6-cta-text {
+  position:absolute; left:5%; right:5%; top:58%; z-index:25;
+  font-family:'Fraunces',serif; font-style:italic;
+  color:rgba(245,245,245,.9); text-align:center; line-height:1.25;
+  font-size:clamp(15px,4cqw,30px);
+}
+.f6-cta-text .f6-count {
+  color:var(--gold); font-weight:900; font-style:normal; font-family:'Anton',sans-serif;
+}
+.f6-pill-stack {
+  position:absolute; left:0; right:0; bottom:14%; z-index:25;
+  display:flex; flex-direction:column; align-items:center; gap:14px;
+}
+.f6-visit {
+  font-family:'Oswald',sans-serif; font-weight:700; letter-spacing:.2em;
+  color:rgba(245,245,245,.7); text-transform:uppercase;
+  font-size:clamp(14px,3.4cqw,22px);
+}
+.url-pill {
+  display:inline-flex; align-items:center; gap:12px;
+  padding:14px 22px; border-radius:999px; background:#F5F5F5; color:#0B1A2D;
+  font-family:'Oswald',sans-serif; font-weight:700; letter-spacing:.14em;
+  text-transform:uppercase; box-shadow:0 12px 36px rgba(0,0,0,.55);
+  font-size:clamp(18px,5.2cqw,32px);
+}
+.url-pill .dot {
+  width:14px; height:14px; border-radius:50%; background:var(--crimson);
+  animation:pulse 1.5s infinite;
+}
+@keyframes pulse { 0%,100% { opacity:1; transform:scale(1);} 50% { opacity:.4; transform:scale(.7);} }
+.f6-legal {
+  position:absolute; left:5%; right:5%; bottom:5%; z-index:25;
+  font-family:'JetBrains Mono',monospace; letter-spacing:.22em;
+  color:rgba(245,245,245,.45); text-align:center; text-transform:uppercase;
+  font-size:clamp(8px,1.7cqw,11px);
+}
+
+/* Bottom strips (frames 2–5) */
+.actor-id-strip {
+  position:absolute; left:5%; right:5%; bottom:14%; z-index:25;
+  border-top:3px solid var(--gold); padding-top:12px;
+}
+.aid-name {
+  font-family:'Oswald',sans-serif; font-weight:700; letter-spacing:.1em;
+  color:#F5F5F5; text-transform:uppercase; line-height:1.1;
+  font-size:clamp(16px,4.4cqw,28px);
+}
+.aid-role {
+  margin-top:4px; font-family:'Fraunces',serif; font-style:italic;
+  color:rgba(245,245,245,.8);
+  font-size:clamp(12px,2.8cqw,18px);
+}
+
+.movement-foot {
+  position:absolute; left:5%; right:5%; bottom:5%; z-index:25;
+  display:flex; justify-content:space-between; align-items:center;
+  border-top:1px solid rgba(245,245,245,.18); padding-top:12px;
+}
+.mf-handle {
+  font-family:'Oswald',sans-serif; font-weight:600; letter-spacing:.18em;
+  color:rgba(245,245,245,.7); text-transform:uppercase;
+  font-size:clamp(10px,2.4cqw,16px);
+}
+.mf-url {
+  font-family:'JetBrains Mono',monospace; letter-spacing:.24em;
+  color:rgba(245,245,245,.55); text-transform:uppercase;
+  font-size:clamp(10px,2.4cqw,16px);
+}
+
+.legal {
+  position:absolute; left:5%; right:5%; bottom:1.5%; z-index:25;
+  font-family:'JetBrains Mono',monospace; letter-spacing:.14em;
+  color:rgba(245,245,245,.4); text-align:center; text-transform:uppercase;
+  font-size:clamp(7px,1.5cqw,10px);
+}
+
+/* Frame containers use container queries so cqw scales fonts to frame width */
+.frame { container-type:inline-size; }
+
+/* Action buttons under each frame */
+.frame-actions { display:flex; gap:10px; padding:10px 4px 0; }
+.frame-actions button {
+  flex:1; border:1px solid rgba(201,162,39,.35); border-radius:10px;
+  padding:11px 10px; background:rgba(201,162,39,.12); color:var(--white);
+  font-weight:800; font-size:13px; cursor:pointer;
+}
+
+/* Audit notes drawer */
+.review { width:min(100%,540px); margin:0 auto 48px; padding:0 12px; }
+.review details {
+  border:1px solid rgba(201,162,39,.25); border-radius:12px;
+  padding:12px 14px; background:rgba(255,255,255,.035); color:rgba(245,245,245,.78);
+}
+.review summary {
+  cursor:pointer; color:var(--gold);
+  font-family:'JetBrains Mono',monospace; font-size:12px;
+  letter-spacing:.16em; text-transform:uppercase;
+}
+.review li { margin:8px 0; }
+
+@media (min-width:760px) { .share-scroll { padding-top:28px; } }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <b>Story-ready share draft · Stand With Meg v2</b>
+  <span>Lakendra slade · Georgia · review before posting. Suggested public route: /actors/georgia/lakendra_slade/share</span>
+</header>
+<main class="share-scroll">
+<section class="phone-frame">
+<article class="frame f1" id="frame-01">
+  <div class="photo-bg photo-placeholder"><div class="ph-silhouette"></div><div class="ph-overlay"></div><div class="ph-tag">{{ACTOR.IMAGE_URL}} · 1080×1920 · pad-don't-crop</div></div>
+  <div class="flag-bg flag-bg--cover">
+<svg viewBox="0 0 1080 1920" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+  <defs>
+    <filter id="wave">
+      <feTurbulence type="fractalNoise" baseFrequency="0.008 0.02" numOctaves="2" seed="3">
+        <animate attributeName="baseFrequency" dur="14s" repeatCount="indefinite"
+          values="0.008 0.02;0.012 0.024;0.008 0.02" />
+      </feTurbulence>
+      <feDisplacementMap in="SourceGraphic" scale="46" />
+    </filter>
+  </defs>
+  <g filter="url(#wave)">
+    <rect x="0" y="0.0" width="1080" height="147.7" fill="#9F1F2C" />
+<rect x="0" y="147.7" width="1080" height="147.7" fill="#F2EAD6" />
+<rect x="0" y="295.4" width="1080" height="147.7" fill="#9F1F2C" />
+<rect x="0" y="443.1" width="1080" height="147.7" fill="#F2EAD6" />
+<rect x="0" y="590.8" width="1080" height="147.7" fill="#9F1F2C" />
+<rect x="0" y="738.5" width="1080" height="147.7" fill="#F2EAD6" />
+<rect x="0" y="886.2" width="1080" height="147.7" fill="#9F1F2C" />
+<rect x="0" y="1033.9" width="1080" height="147.7" fill="#F2EAD6" />
+<rect x="0" y="1181.6" width="1080" height="147.7" fill="#9F1F2C" />
+<rect x="0" y="1329.3" width="1080" height="147.7" fill="#F2EAD6" />
+<rect x="0" y="1477.0" width="1080" height="147.7" fill="#9F1F2C" />
+<rect x="0" y="1624.7" width="1080" height="147.7" fill="#F2EAD6" />
+<rect x="0" y="1772.4" width="1080" height="147.7" fill="#9F1F2C" />
+    <rect x="0" y="0" width="480" height="1033.9" fill="#10243F" />
+    <polygon points="40.0,39.4 45.3,50.2 57.1,51.9 48.6,60.2 50.6,72.0 40.0,66.4 29.4,72.0 31.4,60.2 22.9,51.9 34.7,50.2" fill="#ECE7DC" /><polygon points="120.0,39.4 125.3,50.2 137.1,51.9 128.6,60.2 130.6,72.0 120.0,66.4 109.4,72.0 111.4,60.2 102.9,51.9 114.7,50.2" fill="#ECE7DC" /><polygon points="200.0,39.4 205.3,50.2 217.1,51.9 208.6,60.2 210.6,72.0 200.0,66.4 189.4,72.0 191.4,60.2 182.9,51.9 194.7,50.2" fill="#ECE7DC" /><polygon points="280.0,39.4 285.3,50.2 297.1,51.9 288.6,60.2 290.6,72.0 280.0,66.4 269.4,72.0 271.4,60.2 262.9,51.9 274.7,50.2" fill="#ECE7DC" /><polygon points="360.0,39.4 365.3,50.2 377.1,51.9 368.6,60.2 370.6,72.0 360.0,66.4 349.4,72.0 351.4,60.2 342.9,51.9 354.7,50.2" fill="#ECE7DC" /><polygon points="440.0,39.4 445.3,50.2 457.1,51.9 448.6,60.2 450.6,72.0 440.0,66.4 429.4,72.0 431.4,60.2 422.9,51.9 434.7,50.2" fill="#ECE7DC" /><polygon points="80.0,154.3 85.3,165.0 97.1,166.8 88.6,175.1 90.6,186.9 80.0,181.3 69.4,186.9 71.4,175.1 62.9,166.8 74.7,165.0" fill="#ECE7DC" /><polygon points="160.0,154.3 165.3,165.0 177.1,166.8 168.6,175.1 170.6,186.9 160.0,181.3 149.4,186.9 151.4,175.1 142.9,166.8 154.7,165.0" fill="#ECE7DC" /><polygon points="240.0,154.3 245.3,165.0 257.1,166.8 248.6,175.1 250.6,186.9 240.0,181.3 229.4,186.9 231.4,175.1 222.9,166.8 234.7,165.0" fill="#ECE7DC" /><polygon points="320.0,154.3 325.3,165.0 337.1,166.8 328.6,175.1 330.6,186.9 320.0,181.3 309.4,186.9 311.4,175.1 302.9,166.8 314.7,165.0" fill="#ECE7DC" /><polygon points="400.0,154.3 405.3,165.0 417.1,166.8 408.6,175.1 410.6,186.9 400.0,181.3 389.4,186.9 391.4,175.1 382.9,166.8 394.7,165.0" fill="#ECE7DC" /><polygon points="40.0,269.2 45.3,279.9 57.1,281.6 48.6,290.0 50.6,301.8 40.0,296.2 29.4,301.8 31.4,290.0 22.9,281.6 34.7,279.9" fill="#ECE7DC" /><polygon points="120.0,269.2 125.3,279.9 137.1,281.6 128.6,290.0 130.6,301.8 120.0,296.2 109.4,301.8 111.4,290.0 102.9,281.6 114.7,279.9" fill="#ECE7DC" /><polygon points="200.0,269.2 205.3,279.9 217.1,281.6 208.6,290.0 210.6,301.8 200.0,296.2 189.4,301.8 191.4,290.0 182.9,281.6 194.7,279.9" fill="#ECE7DC" /><polygon points="280.0,269.2 285.3,279.9 297.1,281.6 288.6,290.0 290.6,301.8 280.0,296.2 269.4,301.8 271.4,290.0 262.9,281.6 274.7,279.9" fill="#ECE7DC" /><polygon points="360.0,269.2 365.3,279.9 377.1,281.6 368.6,290.0 370.6,301.8 360.0,296.2 349.4,301.8 351.4,290.0 342.9,281.6 354.7,279.9" fill="#ECE7DC" /><polygon points="440.0,269.2 445.3,279.9 457.1,281.6 448.6,290.0 450.6,301.8 440.0,296.2 429.4,301.8 431.4,290.0 422.9,281.6 434.7,279.9" fill="#ECE7DC" /><polygon points="80.0,384.1 85.3,394.8 97.1,396.5 88.6,404.9 90.6,416.6 80.0,411.1 69.4,416.6 71.4,404.9 62.9,396.5 74.7,394.8" fill="#ECE7DC" /><polygon points="160.0,384.1 165.3,394.8 177.1,396.5 168.6,404.9 170.6,416.6 160.0,411.1 149.4,416.6 151.4,404.9 142.9,396.5 154.7,394.8" fill="#ECE7DC" /><polygon points="240.0,384.1 245.3,394.8 257.1,396.5 248.6,404.9 250.6,416.6 240.0,411.1 229.4,416.6 231.4,404.9 222.9,396.5 234.7,394.8" fill="#ECE7DC" /><polygon points="320.0,384.1 325.3,394.8 337.1,396.5 328.6,404.9 330.6,416.6 320.0,411.1 309.4,416.6 311.4,404.9 302.9,396.5 314.7,394.8" fill="#ECE7DC" /><polygon points="400.0,384.1 405.3,394.8 417.1,396.5 408.6,404.9 410.6,416.6 400.0,411.1 389.4,416.6 391.4,404.9 382.9,396.5 394.7,394.8" fill="#ECE7DC" /><polygon points="40.0,498.9 45.3,509.7 57.1,511.4 48.6,519.7 50.6,531.5 40.0,525.9 29.4,531.5 31.4,519.7 22.9,511.4 34.7,509.7" fill="#ECE7DC" /><polygon points="120.0,498.9 125.3,509.7 137.1,511.4 128.6,519.7 130.6,531.5 120.0,525.9 109.4,531.5 111.4,519.7 102.9,511.4 114.7,509.7" fill="#ECE7DC" /><polygon points="200.0,498.9 205.3,509.7 217.1,511.4 208.6,519.7 210.6,531.5 200.0,525.9 189.4,531.5 191.4,519.7 182.9,511.4 194.7,509.7" fill="#ECE7DC" /><polygon points="280.0,498.9 285.3,509.7 297.1,511.4 288.6,519.7 290.6,531.5 280.0,525.9 269.4,531.5 271.4,519.7 262.9,511.4 274.7,509.7" fill="#ECE7DC" /><polygon points="360.0,498.9 365.3,509.7 377.1,511.4 368.6,519.7 370.6,531.5 360.0,525.9 349.4,531.5 351.4,519.7 342.9,511.4 354.7,509.7" fill="#ECE7DC" /><polygon points="440.0,498.9 445.3,509.7 457.1,511.4 448.6,519.7 450.6,531.5 440.0,525.9 429.4,531.5 431.4,519.7 422.9,511.4 434.7,509.7" fill="#ECE7DC" /><polygon points="80.0,613.8 85.3,624.5 97.1,626.3 88.6,634.6 90.6,646.4 80.0,640.8 69.4,646.4 71.4,634.6 62.9,626.3 74.7,624.5" fill="#ECE7DC" /><polygon points="160.0,613.8 165.3,624.5 177.1,626.3 168.6,634.6 170.6,646.4 160.0,640.8 149.4,646.4 151.4,634.6 142.9,626.3 154.7,624.5" fill="#ECE7DC" /><polygon points="240.0,613.8 245.3,624.5 257.1,626.3 248.6,634.6 250.6,646.4 240.0,640.8 229.4,646.4 231.4,634.6 222.9,626.3 234.7,624.5" fill="#ECE7DC" /><polygon points="320.0,613.8 325.3,624.5 337.1,626.3 328.6,634.6 330.6,646.4 320.0,640.8 309.4,646.4 311.4,634.6 302.9,626.3 314.7,624.5" fill="#ECE7DC" /><polygon points="400.0,613.8 405.3,624.5 417.1,626.3 408.6,634.6 410.6,646.4 400.0,640.8 389.4,646.4 391.4,634.6 382.9,626.3 394.7,624.5" fill="#ECE7DC" /><polygon points="40.0,728.7 45.3,739.4 57.1,741.1 48.6,749.5 50.6,761.3 40.0,755.7 29.4,761.3 31.4,749.5 22.9,741.1 34.7,739.4" fill="#ECE7DC" /><polygon points="120.0,728.7 125.3,739.4 137.1,741.1 128.6,749.5 130.6,761.3 120.0,755.7 109.4,761.3 111.4,749.5 102.9,741.1 114.7,739.4" fill="#ECE7DC" /><polygon points="200.0,728.7 205.3,739.4 217.1,741.1 208.6,749.5 210.6,761.3 200.0,755.7 189.4,761.3 191.4,749.5 182.9,741.1 194.7,739.4" fill="#ECE7DC" /><polygon points="280.0,728.7 285.3,739.4 297.1,741.1 288.6,749.5 290.6,761.3 280.0,755.7 269.4,761.3 271.4,749.5 262.9,741.1 274.7,739.4" fill="#ECE7DC" /><polygon points="360.0,728.7 365.3,739.4 377.1,741.1 368.6,749.5 370.6,761.3 360.0,755.7 349.4,761.3 351.4,749.5 342.9,741.1 354.7,739.4" fill="#ECE7DC" /><polygon points="440.0,728.7 445.3,739.4 457.1,741.1 448.6,749.5 450.6,761.3 440.0,755.7 429.4,761.3 431.4,749.5 422.9,741.1 434.7,739.4" fill="#ECE7DC" /><polygon points="80.0,843.6 85.3,854.3 97.1,856.0 88.6,864.4 90.6,876.1 80.0,870.6 69.4,876.1 71.4,864.4 62.9,856.0 74.7,854.3" fill="#ECE7DC" /><polygon points="160.0,843.6 165.3,854.3 177.1,856.0 168.6,864.4 170.6,876.1 160.0,870.6 149.4,876.1 151.4,864.4 142.9,856.0 154.7,854.3" fill="#ECE7DC" /><polygon points="240.0,843.6 245.3,854.3 257.1,856.0 248.6,864.4 250.6,876.1 240.0,870.6 229.4,876.1 231.4,864.4 222.9,856.0 234.7,854.3" fill="#ECE7DC" /><polygon points="320.0,843.6 325.3,854.3 337.1,856.0 328.6,864.4 330.6,876.1 320.0,870.6 309.4,876.1 311.4,864.4 302.9,856.0 314.7,854.3" fill="#ECE7DC" /><polygon points="400.0,843.6 405.3,854.3 417.1,856.0 408.6,864.4 410.6,876.1 400.0,870.6 389.4,876.1 391.4,864.4 382.9,856.0 394.7,854.3" fill="#ECE7DC" /><polygon points="40.0,958.5 45.3,969.2 57.1,970.9 48.6,979.2 50.6,991.0 40.0,985.5 29.4,991.0 31.4,979.2 22.9,970.9 34.7,969.2" fill="#ECE7DC" /><polygon points="120.0,958.5 125.3,969.2 137.1,970.9 128.6,979.2 130.6,991.0 120.0,985.5 109.4,991.0 111.4,979.2 102.9,970.9 114.7,969.2" fill="#ECE7DC" /><polygon points="200.0,958.5 205.3,969.2 217.1,970.9 208.6,979.2 210.6,991.0 200.0,985.5 189.4,991.0 191.4,979.2 182.9,970.9 194.7,969.2" fill="#ECE7DC" /><polygon points="280.0,958.5 285.3,969.2 297.1,970.9 288.6,979.2 290.6,991.0 280.0,985.5 269.4,991.0 271.4,979.2 262.9,970.9 274.7,969.2" fill="#ECE7DC" /><polygon points="360.0,958.5 365.3,969.2 377.1,970.9 368.6,979.2 370.6,991.0 360.0,985.5 349.4,991.0 351.4,979.2 342.9,970.9 354.7,969.2" fill="#ECE7DC" /><polygon points="440.0,958.5 445.3,969.2 457.1,970.9 448.6,979.2 450.6,991.0 440.0,985.5 429.4,991.0 431.4,979.2 422.9,970.9 434.7,969.2" fill="#ECE7DC" />
+  </g>
+</svg>
+</div>
+  <div class="grain"></div>
+  <div class="scanlines"></div>
+  <div class="vignette"></div>
+  
+<div class="state-badge">
+  <div class="sb-eyebrow">STATE OF</div>
+  <div class="sb-stamp">GEORGIA</div>
+  <div class="sb-caption">GA · BEN HILL DFCS CO.</div>
+</div>
+
+  <div class="frame-tag">COURT ACTOR · EXPOSED</div>
+  <div class="f1-headline">
+    <div class="display xl">LAKENDRA<br><span class="gold">SLADE</span></div>
+    <div class="f1-role">Child Protective Services (CPS) Worker</div>
+    <div class="f1-report-count">
+      <b>78</b>
+      <span>GA families on the public record</span>
+    </div>
+  </div>
+  
+<div class="movement-foot">
+  <div class="mf-handle">@STANDWITHMEG</div>
+  <div class="mf-url">STANDWITHMEG.COM</div>
+</div>
+
+  <div class="legal">Family-reported submissions · not court findings.</div>
+</article>
+
+<div class="frame-actions" aria-label="Frame 1 actions">
+  <button type="button" data-save="frame-01">Save image</button>
+  <button type="button" data-share="frame-01">Share</button>
+</div>
+</section>
+<section class="phone-frame">
+<article class="frame f2" id="frame-02">
+  <div class="flag-bg">
+<svg viewBox="0 0 1080 1920" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+  <defs>
+    <filter id="wave">
+      <feTurbulence type="fractalNoise" baseFrequency="0.008 0.02" numOctaves="2" seed="3">
+        <animate attributeName="baseFrequency" dur="14s" repeatCount="indefinite"
+          values="0.008 0.02;0.012 0.024;0.008 0.02" />
+      </feTurbulence>
+      <feDisplacementMap in="SourceGraphic" scale="46" />
+    </filter>
+  </defs>
+  <g filter="url(#wave)">
+    <rect x="0" y="0.0" width="1080" height="147.7" fill="#9F1F2C" />
+<rect x="0" y="147.7" width="1080" height="147.7" fill="#F2EAD6" />
+<rect x="0" y="295.4" width="1080" height="147.7" fill="#9F1F2C" />
+<rect x="0" y="443.1" width="1080" height="147.7" fill="#F2EAD6" />
+<rect x="0" y="590.8" width="1080" height="147.7" fill="#9F1F2C" />
+<rect x="0" y="738.5" width="1080" height="147.7" fill="#F2EAD6" />
+<rect x="0" y="886.2" width="1080" height="147.7" fill="#9F1F2C" />
+<rect x="0" y="1033.9" width="1080" height="147.7" fill="#F2EAD6" />
+<rect x="0" y="1181.6" width="1080" height="147.7" fill="#9F1F2C" />
+<rect x="0" y="1329.3" width="1080" height="147.7" fill="#F2EAD6" />
+<rect x="0" y="1477.0" width="1080" height="147.7" fill="#9F1F2C" />
+<rect x="0" y="1624.7" width="1080" height="147.7" fill="#F2EAD6" />
+<rect x="0" y="1772.4" width="1080" height="147.7" fill="#9F1F2C" />
+    <rect x="0" y="0" width="480" height="1033.9" fill="#10243F" />
+    <polygon points="40.0,39.4 45.3,50.2 57.1,51.9 48.6,60.2 50.6,72.0 40.0,66.4 29.4,72.0 31.4,60.2 22.9,51.9 34.7,50.2" fill="#ECE7DC" /><polygon points="120.0,39.4 125.3,50.2 137.1,51.9 128.6,60.2 130.6,72.0 120.0,66.4 109.4,72.0 111.4,60.2 102.9,51.9 114.7,50.2" fill="#ECE7DC" /><polygon points="200.0,39.4 205.3,50.2 217.1,51.9 208.6,60.2 210.6,72.0 200.0,66.4 189.4,72.0 191.4,60.2 182.9,51.9 194.7,50.2" fill="#ECE7DC" /><polygon points="280.0,39.4 285.3,50.2 297.1,51.9 288.6,60.2 290.6,72.0 280.0,66.4 269.4,72.0 271.4,60.2 262.9,51.9 274.7,50.2" fill="#ECE7DC" /><polygon points="360.0,39.4 365.3,50.2 377.1,51.9 368.6,60.2 370.6,72.0 360.0,66.4 349.4,72.0 351.4,60.2 342.9,51.9 354.7,50.2" fill="#ECE7DC" /><polygon points="440.0,39.4 445.3,50.2 457.1,51.9 448.6,60.2 450.6,72.0 440.0,66.4 429.4,72.0 431.4,60.2 422.9,51.9 434.7,50.2" fill="#ECE7DC" /><polygon points="80.0,154.3 85.3,165.0 97.1,166.8 88.6,175.1 90.6,186.9 80.0,181.3 69.4,186.9 71.4,175.1 62.9,166.8 74.7,165.0" fill="#ECE7DC" /><polygon points="160.0,154.3 165.3,165.0 177.1,166.8 168.6,175.1 170.6,186.9 160.0,181.3 149.4,186.9 151.4,175.1 142.9,166.8 154.7,165.0" fill="#ECE7DC" /><polygon points="240.0,154.3 245.3,165.0 257.1,166.8 248.6,175.1 250.6,186.9 240.0,181.3 229.4,186.9 231.4,175.1 222.9,166.8 234.7,165.0" fill="#ECE7DC" /><polygon points="320.0,154.3 325.3,165.0 337.1,166.8 328.6,175.1 330.6,186.9 320.0,181.3 309.4,186.9 311.4,175.1 302.9,166.8 314.7,165.0" fill="#ECE7DC" /><polygon points="400.0,154.3 405.3,165.0 417.1,166.8 408.6,175.1 410.6,186.9 400.0,181.3 389.4,186.9 391.4,175.1 382.9,166.8 394.7,165.0" fill="#ECE7DC" /><polygon points="40.0,269.2 45.3,279.9 57.1,281.6 48.6,290.0 50.6,301.8 40.0,296.2 29.4,301.8 31.4,290.0 22.9,281.6 34.7,279.9" fill="#ECE7DC" /><polygon points="120.0,269.2 125.3,279.9 137.1,281.6 128.6,290.0 130.6,301.8 120.0,296.2 109.4,301.8 111.4,290.0 102.9,281.6 114.7,279.9" fill="#ECE7DC" /><polygon points="200.0,269.2 205.3,279.9 217.1,281.6 208.6,290.0 210.6,301.8 200.0,296.2 189.4,301.8 191.4,290.0 182.9,281.6 194.7,279.9" fill="#ECE7DC" /><polygon points="280.0,269.2 285.3,279.9 297.1,281.6 288.6,290.0 290.6,301.8 280.0,296.2 269.4,301.8 271.4,290.0 262.9,281.6 274.7,279.9" fill="#ECE7DC" /><polygon points="360.0,269.2 365.3,279.9 377.1,281.6 368.6,290.0 370.6,301.8 360.0,296.2 349.4,301.8 351.4,290.0 342.9,281.6 354.7,279.9" fill="#ECE7DC" /><polygon points="440.0,269.2 445.3,279.9 457.1,281.6 448.6,290.0 450.6,301.8 440.0,296.2 429.4,301.8 431.4,290.0 422.9,281.6 434.7,279.9" fill="#ECE7DC" /><polygon points="80.0,384.1 85.3,394.8 97.1,396.5 88.6,404.9 90.6,416.6 80.0,411.1 69.4,416.6 71.4,404.9 62.9,396.5 74.7,394.8" fill="#ECE7DC" /><polygon points="160.0,384.1 165.3,394.8 177.1,396.5 168.6,404.9 170.6,416.6 160.0,411.1 149.4,416.6 151.4,404.9 142.9,396.5 154.7,394.8" fill="#ECE7DC" /><polygon points="240.0,384.1 245.3,394.8 257.1,396.5 248.6,404.9 250.6,416.6 240.0,411.1 229.4,416.6 231.4,404.9 222.9,396.5 234.7,394.8" fill="#ECE7DC" /><polygon points="320.0,384.1 325.3,394.8 337.1,396.5 328.6,404.9 330.6,416.6 320.0,411.1 309.4,416.6 311.4,404.9 302.9,396.5 314.7,394.8" fill="#ECE7DC" /><polygon points="400.0,384.1 405.3,394.8 417.1,396.5 408.6,404.9 410.6,416.6 400.0,411.1 389.4,416.6 391.4,404.9 382.9,396.5 394.7,394.8" fill="#ECE7DC" /><polygon points="40.0,498.9 45.3,509.7 57.1,511.4 48.6,519.7 50.6,531.5 40.0,525.9 29.4,531.5 31.4,519.7 22.9,511.4 34.7,509.7" fill="#ECE7DC" /><polygon points="120.0,498.9 125.3,509.7 137.1,511.4 128.6,519.7 130.6,531.5 120.0,525.9 109.4,531.5 111.4,519.7 102.9,511.4 114.7,509.7" fill="#ECE7DC" /><polygon points="200.0,498.9 205.3,509.7 217.1,511.4 208.6,519.7 210.6,531.5 200.0,525.9 189.4,531.5 191.4,519.7 182.9,511.4 194.7,509.7" fill="#ECE7DC" /><polygon points="280.0,498.9 285.3,509.7 297.1,511.4 288.6,519.7 290.6,531.5 280.0,525.9 269.4,531.5 271.4,519.7 262.9,511.4 274.7,509.7" fill="#ECE7DC" /><polygon points="360.0,498.9 365.3,509.7 377.1,511.4 368.6,519.7 370.6,531.5 360.0,525.9 349.4,531.5 351.4,519.7 342.9,511.4 354.7,509.7" fill="#ECE7DC" /><polygon points="440.0,498.9 445.3,509.7 457.1,511.4 448.6,519.7 450.6,531.5 440.0,525.9 429.4,531.5 431.4,519.7 422.9,511.4 434.7,509.7" fill="#ECE7DC" /><polygon points="80.0,613.8 85.3,624.5 97.1,626.3 88.6,634.6 90.6,646.4 80.0,640.8 69.4,646.4 71.4,634.6 62.9,626.3 74.7,624.5" fill="#ECE7DC" /><polygon points="160.0,613.8 165.3,624.5 177.1,626.3 168.6,634.6 170.6,646.4 160.0,640.8 149.4,646.4 151.4,634.6 142.9,626.3 154.7,624.5" fill="#ECE7DC" /><polygon points="240.0,613.8 245.3,624.5 257.1,626.3 248.6,634.6 250.6,646.4 240.0,640.8 229.4,646.4 231.4,634.6 222.9,626.3 234.7,624.5" fill="#ECE7DC" /><polygon points="320.0,613.8 325.3,624.5 337.1,626.3 328.6,634.6 330.6,646.4 320.0,640.8 309.4,646.4 311.4,634.6 302.9,626.3 314.7,624.5" fill="#ECE7DC" /><polygon points="400.0,613.8 405.3,624.5 417.1,626.3 408.6,634.6 410.6,646.4 400.0,640.8 389.4,646.4 391.4,634.6 382.9,626.3 394.7,624.5" fill="#ECE7DC" /><polygon points="40.0,728.7 45.3,739.4 57.1,741.1 48.6,749.5 50.6,761.3 40.0,755.7 29.4,761.3 31.4,749.5 22.9,741.1 34.7,739.4" fill="#ECE7DC" /><polygon points="120.0,728.7 125.3,739.4 137.1,741.1 128.6,749.5 130.6,761.3 120.0,755.7 109.4,761.3 111.4,749.5 102.9,741.1 114.7,739.4" fill="#ECE7DC" /><polygon points="200.0,728.7 205.3,739.4 217.1,741.1 208.6,749.5 210.6,761.3 200.0,755.7 189.4,761.3 191.4,749.5 182.9,741.1 194.7,739.4" fill="#ECE7DC" /><polygon points="280.0,728.7 285.3,739.4 297.1,741.1 288.6,749.5 290.6,761.3 280.0,755.7 269.4,761.3 271.4,749.5 262.9,741.1 274.7,739.4" fill="#ECE7DC" /><polygon points="360.0,728.7 365.3,739.4 377.1,741.1 368.6,749.5 370.6,761.3 360.0,755.7 349.4,761.3 351.4,749.5 342.9,741.1 354.7,739.4" fill="#ECE7DC" /><polygon points="440.0,728.7 445.3,739.4 457.1,741.1 448.6,749.5 450.6,761.3 440.0,755.7 429.4,761.3 431.4,749.5 422.9,741.1 434.7,739.4" fill="#ECE7DC" /><polygon points="80.0,843.6 85.3,854.3 97.1,856.0 88.6,864.4 90.6,876.1 80.0,870.6 69.4,876.1 71.4,864.4 62.9,856.0 74.7,854.3" fill="#ECE7DC" /><polygon points="160.0,843.6 165.3,854.3 177.1,856.0 168.6,864.4 170.6,876.1 160.0,870.6 149.4,876.1 151.4,864.4 142.9,856.0 154.7,854.3" fill="#ECE7DC" /><polygon points="240.0,843.6 245.3,854.3 257.1,856.0 248.6,864.4 250.6,876.1 240.0,870.6 229.4,876.1 231.4,864.4 222.9,856.0 234.7,854.3" fill="#ECE7DC" /><polygon points="320.0,843.6 325.3,854.3 337.1,856.0 328.6,864.4 330.6,876.1 320.0,870.6 309.4,876.1 311.4,864.4 302.9,856.0 314.7,854.3" fill="#ECE7DC" /><polygon points="400.0,843.6 405.3,854.3 417.1,856.0 408.6,864.4 410.6,876.1 400.0,870.6 389.4,876.1 391.4,864.4 382.9,856.0 394.7,854.3" fill="#ECE7DC" /><polygon points="40.0,958.5 45.3,969.2 57.1,970.9 48.6,979.2 50.6,991.0 40.0,985.5 29.4,991.0 31.4,979.2 22.9,970.9 34.7,969.2" fill="#ECE7DC" /><polygon points="120.0,958.5 125.3,969.2 137.1,970.9 128.6,979.2 130.6,991.0 120.0,985.5 109.4,991.0 111.4,979.2 102.9,970.9 114.7,969.2" fill="#ECE7DC" /><polygon points="200.0,958.5 205.3,969.2 217.1,970.9 208.6,979.2 210.6,991.0 200.0,985.5 189.4,991.0 191.4,979.2 182.9,970.9 194.7,969.2" fill="#ECE7DC" /><polygon points="280.0,958.5 285.3,969.2 297.1,970.9 288.6,979.2 290.6,991.0 280.0,985.5 269.4,991.0 271.4,979.2 262.9,970.9 274.7,969.2" fill="#ECE7DC" /><polygon points="360.0,958.5 365.3,969.2 377.1,970.9 368.6,979.2 370.6,991.0 360.0,985.5 349.4,991.0 351.4,979.2 342.9,970.9 354.7,969.2" fill="#ECE7DC" /><polygon points="440.0,958.5 445.3,969.2 457.1,970.9 448.6,979.2 450.6,991.0 440.0,985.5 429.4,991.0 431.4,979.2 422.9,970.9 434.7,969.2" fill="#ECE7DC" />
+  </g>
+</svg>
+</div>
+  <div class="grain"></div>
+  <div class="scanlines"></div>
+  <div class="vignette"></div>
+  
+<div class="state-badge">
+  <div class="sb-eyebrow">STATE OF</div>
+  <div class="sb-stamp">GEORGIA</div>
+  <div class="sb-caption">GA · BEN HILL DFCS CO.</div>
+</div>
+
+  <div class="frame-tag">NOT ANY MORE</div>
+  <div class="f2-headline">
+    <div class="display xl">
+      THEY THOUGHT<br>
+      THEY COULD<br>
+      <span class="red-bar">KEEP US</span><br>
+      <span class="gold">QUIET.</span>
+    </div>
+    <div class="not-any-more-stamp">Not any more!</div>
+  </div>
+  
+<div class="actor-id-strip">
+  <div class="aid-name">LAKENDRA SLADE</div>
+  <div class="aid-role">Child Protective Services (CPS) Worker · Georgia</div>
+</div>
+
+  
+<div class="movement-foot">
+  <div class="mf-handle">@STANDWITHMEG</div>
+  <div class="mf-url">STANDWITHMEG.COM</div>
+</div>
+
+  <div class="legal">Family-reported submissions · not court findings.</div>
+</article>
+
+<div class="frame-actions" aria-label="Frame 2 actions">
+  <button type="button" data-save="frame-02">Save image</button>
+  <button type="button" data-share="frame-02">Share</button>
+</div>
+</section>
+<section class="phone-frame">
+<article class="frame f3" id="frame-03">
+  <div class="flag-bg flag-bg--faded">
+<svg viewBox="0 0 1080 1920" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+  <defs>
+    <filter id="wave">
+      <feTurbulence type="fractalNoise" baseFrequency="0.008 0.02" numOctaves="2" seed="3">
+        <animate attributeName="baseFrequency" dur="14s" repeatCount="indefinite"
+          values="0.008 0.02;0.012 0.024;0.008 0.02" />
+      </feTurbulence>
+      <feDisplacementMap in="SourceGraphic" scale="46" />
+    </filter>
+  </defs>
+  <g filter="url(#wave)">
+    <rect x="0" y="0.0" width="1080" height="147.7" fill="#9F1F2C" />
+<rect x="0" y="147.7" width="1080" height="147.7" fill="#F2EAD6" />
+<rect x="0" y="295.4" width="1080" height="147.7" fill="#9F1F2C" />
+<rect x="0" y="443.1" width="1080" height="147.7" fill="#F2EAD6" />
+<rect x="0" y="590.8" width="1080" height="147.7" fill="#9F1F2C" />
+<rect x="0" y="738.5" width="1080" height="147.7" fill="#F2EAD6" />
+<rect x="0" y="886.2" width="1080" height="147.7" fill="#9F1F2C" />
+<rect x="0" y="1033.9" width="1080" height="147.7" fill="#F2EAD6" />
+<rect x="0" y="1181.6" width="1080" height="147.7" fill="#9F1F2C" />
+<rect x="0" y="1329.3" width="1080" height="147.7" fill="#F2EAD6" />
+<rect x="0" y="1477.0" width="1080" height="147.7" fill="#9F1F2C" />
+<rect x="0" y="1624.7" width="1080" height="147.7" fill="#F2EAD6" />
+<rect x="0" y="1772.4" width="1080" height="147.7" fill="#9F1F2C" />
+    <rect x="0" y="0" width="480" height="1033.9" fill="#10243F" />
+    <polygon points="40.0,39.4 45.3,50.2 57.1,51.9 48.6,60.2 50.6,72.0 40.0,66.4 29.4,72.0 31.4,60.2 22.9,51.9 34.7,50.2" fill="#ECE7DC" /><polygon points="120.0,39.4 125.3,50.2 137.1,51.9 128.6,60.2 130.6,72.0 120.0,66.4 109.4,72.0 111.4,60.2 102.9,51.9 114.7,50.2" fill="#ECE7DC" /><polygon points="200.0,39.4 205.3,50.2 217.1,51.9 208.6,60.2 210.6,72.0 200.0,66.4 189.4,72.0 191.4,60.2 182.9,51.9 194.7,50.2" fill="#ECE7DC" /><polygon points="280.0,39.4 285.3,50.2 297.1,51.9 288.6,60.2 290.6,72.0 280.0,66.4 269.4,72.0 271.4,60.2 262.9,51.9 274.7,50.2" fill="#ECE7DC" /><polygon points="360.0,39.4 365.3,50.2 377.1,51.9 368.6,60.2 370.6,72.0 360.0,66.4 349.4,72.0 351.4,60.2 342.9,51.9 354.7,50.2" fill="#ECE7DC" /><polygon points="440.0,39.4 445.3,50.2 457.1,51.9 448.6,60.2 450.6,72.0 440.0,66.4 429.4,72.0 431.4,60.2 422.9,51.9 434.7,50.2" fill="#ECE7DC" /><polygon points="80.0,154.3 85.3,165.0 97.1,166.8 88.6,175.1 90.6,186.9 80.0,181.3 69.4,186.9 71.4,175.1 62.9,166.8 74.7,165.0" fill="#ECE7DC" /><polygon points="160.0,154.3 165.3,165.0 177.1,166.8 168.6,175.1 170.6,186.9 160.0,181.3 149.4,186.9 151.4,175.1 142.9,166.8 154.7,165.0" fill="#ECE7DC" /><polygon points="240.0,154.3 245.3,165.0 257.1,166.8 248.6,175.1 250.6,186.9 240.0,181.3 229.4,186.9 231.4,175.1 222.9,166.8 234.7,165.0" fill="#ECE7DC" /><polygon points="320.0,154.3 325.3,165.0 337.1,166.8 328.6,175.1 330.6,186.9 320.0,181.3 309.4,186.9 311.4,175.1 302.9,166.8 314.7,165.0" fill="#ECE7DC" /><polygon points="400.0,154.3 405.3,165.0 417.1,166.8 408.6,175.1 410.6,186.9 400.0,181.3 389.4,186.9 391.4,175.1 382.9,166.8 394.7,165.0" fill="#ECE7DC" /><polygon points="40.0,269.2 45.3,279.9 57.1,281.6 48.6,290.0 50.6,301.8 40.0,296.2 29.4,301.8 31.4,290.0 22.9,281.6 34.7,279.9" fill="#ECE7DC" /><polygon points="120.0,269.2 125.3,279.9 137.1,281.6 128.6,290.0 130.6,301.8 120.0,296.2 109.4,301.8 111.4,290.0 102.9,281.6 114.7,279.9" fill="#ECE7DC" /><polygon points="200.0,269.2 205.3,279.9 217.1,281.6 208.6,290.0 210.6,301.8 200.0,296.2 189.4,301.8 191.4,290.0 182.9,281.6 194.7,279.9" fill="#ECE7DC" /><polygon points="280.0,269.2 285.3,279.9 297.1,281.6 288.6,290.0 290.6,301.8 280.0,296.2 269.4,301.8 271.4,290.0 262.9,281.6 274.7,279.9" fill="#ECE7DC" /><polygon points="360.0,269.2 365.3,279.9 377.1,281.6 368.6,290.0 370.6,301.8 360.0,296.2 349.4,301.8 351.4,290.0 342.9,281.6 354.7,279.9" fill="#ECE7DC" /><polygon points="440.0,269.2 445.3,279.9 457.1,281.6 448.6,290.0 450.6,301.8 440.0,296.2 429.4,301.8 431.4,290.0 422.9,281.6 434.7,279.9" fill="#ECE7DC" /><polygon points="80.0,384.1 85.3,394.8 97.1,396.5 88.6,404.9 90.6,416.6 80.0,411.1 69.4,416.6 71.4,404.9 62.9,396.5 74.7,394.8" fill="#ECE7DC" /><polygon points="160.0,384.1 165.3,394.8 177.1,396.5 168.6,404.9 170.6,416.6 160.0,411.1 149.4,416.6 151.4,404.9 142.9,396.5 154.7,394.8" fill="#ECE7DC" /><polygon points="240.0,384.1 245.3,394.8 257.1,396.5 248.6,404.9 250.6,416.6 240.0,411.1 229.4,416.6 231.4,404.9 222.9,396.5 234.7,394.8" fill="#ECE7DC" /><polygon points="320.0,384.1 325.3,394.8 337.1,396.5 328.6,404.9 330.6,416.6 320.0,411.1 309.4,416.6 311.4,404.9 302.9,396.5 314.7,394.8" fill="#ECE7DC" /><polygon points="400.0,384.1 405.3,394.8 417.1,396.5 408.6,404.9 410.6,416.6 400.0,411.1 389.4,416.6 391.4,404.9 382.9,396.5 394.7,394.8" fill="#ECE7DC" /><polygon points="40.0,498.9 45.3,509.7 57.1,511.4 48.6,519.7 50.6,531.5 40.0,525.9 29.4,531.5 31.4,519.7 22.9,511.4 34.7,509.7" fill="#ECE7DC" /><polygon points="120.0,498.9 125.3,509.7 137.1,511.4 128.6,519.7 130.6,531.5 120.0,525.9 109.4,531.5 111.4,519.7 102.9,511.4 114.7,509.7" fill="#ECE7DC" /><polygon points="200.0,498.9 205.3,509.7 217.1,511.4 208.6,519.7 210.6,531.5 200.0,525.9 189.4,531.5 191.4,519.7 182.9,511.4 194.7,509.7" fill="#ECE7DC" /><polygon points="280.0,498.9 285.3,509.7 297.1,511.4 288.6,519.7 290.6,531.5 280.0,525.9 269.4,531.5 271.4,519.7 262.9,511.4 274.7,509.7" fill="#ECE7DC" /><polygon points="360.0,498.9 365.3,509.7 377.1,511.4 368.6,519.7 370.6,531.5 360.0,525.9 349.4,531.5 351.4,519.7 342.9,511.4 354.7,509.7" fill="#ECE7DC" /><polygon points="440.0,498.9 445.3,509.7 457.1,511.4 448.6,519.7 450.6,531.5 440.0,525.9 429.4,531.5 431.4,519.7 422.9,511.4 434.7,509.7" fill="#ECE7DC" /><polygon points="80.0,613.8 85.3,624.5 97.1,626.3 88.6,634.6 90.6,646.4 80.0,640.8 69.4,646.4 71.4,634.6 62.9,626.3 74.7,624.5" fill="#ECE7DC" /><polygon points="160.0,613.8 165.3,624.5 177.1,626.3 168.6,634.6 170.6,646.4 160.0,640.8 149.4,646.4 151.4,634.6 142.9,626.3 154.7,624.5" fill="#ECE7DC" /><polygon points="240.0,613.8 245.3,624.5 257.1,626.3 248.6,634.6 250.6,646.4 240.0,640.8 229.4,646.4 231.4,634.6 222.9,626.3 234.7,624.5" fill="#ECE7DC" /><polygon points="320.0,613.8 325.3,624.5 337.1,626.3 328.6,634.6 330.6,646.4 320.0,640.8 309.4,646.4 311.4,634.6 302.9,626.3 314.7,624.5" fill="#ECE7DC" /><polygon points="400.0,613.8 405.3,624.5 417.1,626.3 408.6,634.6 410.6,646.4 400.0,640.8 389.4,646.4 391.4,634.6 382.9,626.3 394.7,624.5" fill="#ECE7DC" /><polygon points="40.0,728.7 45.3,739.4 57.1,741.1 48.6,749.5 50.6,761.3 40.0,755.7 29.4,761.3 31.4,749.5 22.9,741.1 34.7,739.4" fill="#ECE7DC" /><polygon points="120.0,728.7 125.3,739.4 137.1,741.1 128.6,749.5 130.6,761.3 120.0,755.7 109.4,761.3 111.4,749.5 102.9,741.1 114.7,739.4" fill="#ECE7DC" /><polygon points="200.0,728.7 205.3,739.4 217.1,741.1 208.6,749.5 210.6,761.3 200.0,755.7 189.4,761.3 191.4,749.5 182.9,741.1 194.7,739.4" fill="#ECE7DC" /><polygon points="280.0,728.7 285.3,739.4 297.1,741.1 288.6,749.5 290.6,761.3 280.0,755.7 269.4,761.3 271.4,749.5 262.9,741.1 274.7,739.4" fill="#ECE7DC" /><polygon points="360.0,728.7 365.3,739.4 377.1,741.1 368.6,749.5 370.6,761.3 360.0,755.7 349.4,761.3 351.4,749.5 342.9,741.1 354.7,739.4" fill="#ECE7DC" /><polygon points="440.0,728.7 445.3,739.4 457.1,741.1 448.6,749.5 450.6,761.3 440.0,755.7 429.4,761.3 431.4,749.5 422.9,741.1 434.7,739.4" fill="#ECE7DC" /><polygon points="80.0,843.6 85.3,854.3 97.1,856.0 88.6,864.4 90.6,876.1 80.0,870.6 69.4,876.1 71.4,864.4 62.9,856.0 74.7,854.3" fill="#ECE7DC" /><polygon points="160.0,843.6 165.3,854.3 177.1,856.0 168.6,864.4 170.6,876.1 160.0,870.6 149.4,876.1 151.4,864.4 142.9,856.0 154.7,854.3" fill="#ECE7DC" /><polygon points="240.0,843.6 245.3,854.3 257.1,856.0 248.6,864.4 250.6,876.1 240.0,870.6 229.4,876.1 231.4,864.4 222.9,856.0 234.7,854.3" fill="#ECE7DC" /><polygon points="320.0,843.6 325.3,854.3 337.1,856.0 328.6,864.4 330.6,876.1 320.0,870.6 309.4,876.1 311.4,864.4 302.9,856.0 314.7,854.3" fill="#ECE7DC" /><polygon points="400.0,843.6 405.3,854.3 417.1,856.0 408.6,864.4 410.6,876.1 400.0,870.6 389.4,876.1 391.4,864.4 382.9,856.0 394.7,854.3" fill="#ECE7DC" /><polygon points="40.0,958.5 45.3,969.2 57.1,970.9 48.6,979.2 50.6,991.0 40.0,985.5 29.4,991.0 31.4,979.2 22.9,970.9 34.7,969.2" fill="#ECE7DC" /><polygon points="120.0,958.5 125.3,969.2 137.1,970.9 128.6,979.2 130.6,991.0 120.0,985.5 109.4,991.0 111.4,979.2 102.9,970.9 114.7,969.2" fill="#ECE7DC" /><polygon points="200.0,958.5 205.3,969.2 217.1,970.9 208.6,979.2 210.6,991.0 200.0,985.5 189.4,991.0 191.4,979.2 182.9,970.9 194.7,969.2" fill="#ECE7DC" /><polygon points="280.0,958.5 285.3,969.2 297.1,970.9 288.6,979.2 290.6,991.0 280.0,985.5 269.4,991.0 271.4,979.2 262.9,970.9 274.7,969.2" fill="#ECE7DC" /><polygon points="360.0,958.5 365.3,969.2 377.1,970.9 368.6,979.2 370.6,991.0 360.0,985.5 349.4,991.0 351.4,979.2 342.9,970.9 354.7,969.2" fill="#ECE7DC" /><polygon points="440.0,958.5 445.3,969.2 457.1,970.9 448.6,979.2 450.6,991.0 440.0,985.5 429.4,991.0 431.4,979.2 422.9,970.9 434.7,969.2" fill="#ECE7DC" />
+  </g>
+</svg>
+</div>
+  <div class="grain"></div>
+  <div class="scanlines"></div>
+  <div class="vignette"></div>
+  
+<div class="state-badge">
+  <div class="sb-eyebrow">STATE OF</div>
+  <div class="sb-stamp">GEORGIA</div>
+  <div class="sb-caption">GA · BEN HILL DFCS CO.</div>
+</div>
+
+  <div class="frame-tag">WHAT FAMILIES SAY</div>
+  <div class="f3-body">
+    <div class="f3-quote"><span class="f3-dot"></span><p class="f3-text">Will not even speak to any family trying to get placement</p><p class="f3-attr">— Anonymous parent · GA</p></div><div class="f3-quote"><span class="f3-dot"></span><p class="f3-text">Refuses to help. Will not even contact family to discuss placement for least restrictive options and falsifying documents</p><p class="f3-attr">— Anonymous parent · GA</p></div><div class="f3-quote"><span class="f3-dot"></span><p class="f3-text">Refuses to help reunification in any way whatsoever, falsifies documentations, never sets clear goals for reunification and always claims any documents provided…</p><p class="f3-attr">— Anonymous parent · GA</p></div>
+  </div>
+  
+<div class="actor-id-strip">
+  <div class="aid-name">LAKENDRA SLADE</div>
+  <div class="aid-role">Child Protective Services (CPS) Worker · Georgia</div>
+</div>
+
+  
+<div class="movement-foot">
+  <div class="mf-handle">@STANDWITHMEG</div>
+  <div class="mf-url">STANDWITHMEG.COM</div>
+</div>
+
+  <div class="legal">Family-reported submissions · not court findings.</div>
+</article>
+
+<div class="frame-actions" aria-label="Frame 3 actions">
+  <button type="button" data-save="frame-03">Save image</button>
+  <button type="button" data-share="frame-03">Share</button>
+</div>
+</section>
+<section class="phone-frame">
+<article class="frame f4" id="frame-04">
+  <div class="flag-bg">
+<svg viewBox="0 0 1080 1920" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+  <defs>
+    <filter id="wave">
+      <feTurbulence type="fractalNoise" baseFrequency="0.008 0.02" numOctaves="2" seed="3">
+        <animate attributeName="baseFrequency" dur="14s" repeatCount="indefinite"
+          values="0.008 0.02;0.012 0.024;0.008 0.02" />
+      </feTurbulence>
+      <feDisplacementMap in="SourceGraphic" scale="46" />
+    </filter>
+  </defs>
+  <g filter="url(#wave)">
+    <rect x="0" y="0.0" width="1080" height="147.7" fill="#9F1F2C" />
+<rect x="0" y="147.7" width="1080" height="147.7" fill="#F2EAD6" />
+<rect x="0" y="295.4" width="1080" height="147.7" fill="#9F1F2C" />
+<rect x="0" y="443.1" width="1080" height="147.7" fill="#F2EAD6" />
+<rect x="0" y="590.8" width="1080" height="147.7" fill="#9F1F2C" />
+<rect x="0" y="738.5" width="1080" height="147.7" fill="#F2EAD6" />
+<rect x="0" y="886.2" width="1080" height="147.7" fill="#9F1F2C" />
+<rect x="0" y="1033.9" width="1080" height="147.7" fill="#F2EAD6" />
+<rect x="0" y="1181.6" width="1080" height="147.7" fill="#9F1F2C" />
+<rect x="0" y="1329.3" width="1080" height="147.7" fill="#F2EAD6" />
+<rect x="0" y="1477.0" width="1080" height="147.7" fill="#9F1F2C" />
+<rect x="0" y="1624.7" width="1080" height="147.7" fill="#F2EAD6" />
+<rect x="0" y="1772.4" width="1080" height="147.7" fill="#9F1F2C" />
+    <rect x="0" y="0" width="480" height="1033.9" fill="#10243F" />
+    <polygon points="40.0,39.4 45.3,50.2 57.1,51.9 48.6,60.2 50.6,72.0 40.0,66.4 29.4,72.0 31.4,60.2 22.9,51.9 34.7,50.2" fill="#ECE7DC" /><polygon points="120.0,39.4 125.3,50.2 137.1,51.9 128.6,60.2 130.6,72.0 120.0,66.4 109.4,72.0 111.4,60.2 102.9,51.9 114.7,50.2" fill="#ECE7DC" /><polygon points="200.0,39.4 205.3,50.2 217.1,51.9 208.6,60.2 210.6,72.0 200.0,66.4 189.4,72.0 191.4,60.2 182.9,51.9 194.7,50.2" fill="#ECE7DC" /><polygon points="280.0,39.4 285.3,50.2 297.1,51.9 288.6,60.2 290.6,72.0 280.0,66.4 269.4,72.0 271.4,60.2 262.9,51.9 274.7,50.2" fill="#ECE7DC" /><polygon points="360.0,39.4 365.3,50.2 377.1,51.9 368.6,60.2 370.6,72.0 360.0,66.4 349.4,72.0 351.4,60.2 342.9,51.9 354.7,50.2" fill="#ECE7DC" /><polygon points="440.0,39.4 445.3,50.2 457.1,51.9 448.6,60.2 450.6,72.0 440.0,66.4 429.4,72.0 431.4,60.2 422.9,51.9 434.7,50.2" fill="#ECE7DC" /><polygon points="80.0,154.3 85.3,165.0 97.1,166.8 88.6,175.1 90.6,186.9 80.0,181.3 69.4,186.9 71.4,175.1 62.9,166.8 74.7,165.0" fill="#ECE7DC" /><polygon points="160.0,154.3 165.3,165.0 177.1,166.8 168.6,175.1 170.6,186.9 160.0,181.3 149.4,186.9 151.4,175.1 142.9,166.8 154.7,165.0" fill="#ECE7DC" /><polygon points="240.0,154.3 245.3,165.0 257.1,166.8 248.6,175.1 250.6,186.9 240.0,181.3 229.4,186.9 231.4,175.1 222.9,166.8 234.7,165.0" fill="#ECE7DC" /><polygon points="320.0,154.3 325.3,165.0 337.1,166.8 328.6,175.1 330.6,186.9 320.0,181.3 309.4,186.9 311.4,175.1 302.9,166.8 314.7,165.0" fill="#ECE7DC" /><polygon points="400.0,154.3 405.3,165.0 417.1,166.8 408.6,175.1 410.6,186.9 400.0,181.3 389.4,186.9 391.4,175.1 382.9,166.8 394.7,165.0" fill="#ECE7DC" /><polygon points="40.0,269.2 45.3,279.9 57.1,281.6 48.6,290.0 50.6,301.8 40.0,296.2 29.4,301.8 31.4,290.0 22.9,281.6 34.7,279.9" fill="#ECE7DC" /><polygon points="120.0,269.2 125.3,279.9 137.1,281.6 128.6,290.0 130.6,301.8 120.0,296.2 109.4,301.8 111.4,290.0 102.9,281.6 114.7,279.9" fill="#ECE7DC" /><polygon points="200.0,269.2 205.3,279.9 217.1,281.6 208.6,290.0 210.6,301.8 200.0,296.2 189.4,301.8 191.4,290.0 182.9,281.6 194.7,279.9" fill="#ECE7DC" /><polygon points="280.0,269.2 285.3,279.9 297.1,281.6 288.6,290.0 290.6,301.8 280.0,296.2 269.4,301.8 271.4,290.0 262.9,281.6 274.7,279.9" fill="#ECE7DC" /><polygon points="360.0,269.2 365.3,279.9 377.1,281.6 368.6,290.0 370.6,301.8 360.0,296.2 349.4,301.8 351.4,290.0 342.9,281.6 354.7,279.9" fill="#ECE7DC" /><polygon points="440.0,269.2 445.3,279.9 457.1,281.6 448.6,290.0 450.6,301.8 440.0,296.2 429.4,301.8 431.4,290.0 422.9,281.6 434.7,279.9" fill="#ECE7DC" /><polygon points="80.0,384.1 85.3,394.8 97.1,396.5 88.6,404.9 90.6,416.6 80.0,411.1 69.4,416.6 71.4,404.9 62.9,396.5 74.7,394.8" fill="#ECE7DC" /><polygon points="160.0,384.1 165.3,394.8 177.1,396.5 168.6,404.9 170.6,416.6 160.0,411.1 149.4,416.6 151.4,404.9 142.9,396.5 154.7,394.8" fill="#ECE7DC" /><polygon points="240.0,384.1 245.3,394.8 257.1,396.5 248.6,404.9 250.6,416.6 240.0,411.1 229.4,416.6 231.4,404.9 222.9,396.5 234.7,394.8" fill="#ECE7DC" /><polygon points="320.0,384.1 325.3,394.8 337.1,396.5 328.6,404.9 330.6,416.6 320.0,411.1 309.4,416.6 311.4,404.9 302.9,396.5 314.7,394.8" fill="#ECE7DC" /><polygon points="400.0,384.1 405.3,394.8 417.1,396.5 408.6,404.9 410.6,416.6 400.0,411.1 389.4,416.6 391.4,404.9 382.9,396.5 394.7,394.8" fill="#ECE7DC" /><polygon points="40.0,498.9 45.3,509.7 57.1,511.4 48.6,519.7 50.6,531.5 40.0,525.9 29.4,531.5 31.4,519.7 22.9,511.4 34.7,509.7" fill="#ECE7DC" /><polygon points="120.0,498.9 125.3,509.7 137.1,511.4 128.6,519.7 130.6,531.5 120.0,525.9 109.4,531.5 111.4,519.7 102.9,511.4 114.7,509.7" fill="#ECE7DC" /><polygon points="200.0,498.9 205.3,509.7 217.1,511.4 208.6,519.7 210.6,531.5 200.0,525.9 189.4,531.5 191.4,519.7 182.9,511.4 194.7,509.7" fill="#ECE7DC" /><polygon points="280.0,498.9 285.3,509.7 297.1,511.4 288.6,519.7 290.6,531.5 280.0,525.9 269.4,531.5 271.4,519.7 262.9,511.4 274.7,509.7" fill="#ECE7DC" /><polygon points="360.0,498.9 365.3,509.7 377.1,511.4 368.6,519.7 370.6,531.5 360.0,525.9 349.4,531.5 351.4,519.7 342.9,511.4 354.7,509.7" fill="#ECE7DC" /><polygon points="440.0,498.9 445.3,509.7 457.1,511.4 448.6,519.7 450.6,531.5 440.0,525.9 429.4,531.5 431.4,519.7 422.9,511.4 434.7,509.7" fill="#ECE7DC" /><polygon points="80.0,613.8 85.3,624.5 97.1,626.3 88.6,634.6 90.6,646.4 80.0,640.8 69.4,646.4 71.4,634.6 62.9,626.3 74.7,624.5" fill="#ECE7DC" /><polygon points="160.0,613.8 165.3,624.5 177.1,626.3 168.6,634.6 170.6,646.4 160.0,640.8 149.4,646.4 151.4,634.6 142.9,626.3 154.7,624.5" fill="#ECE7DC" /><polygon points="240.0,613.8 245.3,624.5 257.1,626.3 248.6,634.6 250.6,646.4 240.0,640.8 229.4,646.4 231.4,634.6 222.9,626.3 234.7,624.5" fill="#ECE7DC" /><polygon points="320.0,613.8 325.3,624.5 337.1,626.3 328.6,634.6 330.6,646.4 320.0,640.8 309.4,646.4 311.4,634.6 302.9,626.3 314.7,624.5" fill="#ECE7DC" /><polygon points="400.0,613.8 405.3,624.5 417.1,626.3 408.6,634.6 410.6,646.4 400.0,640.8 389.4,646.4 391.4,634.6 382.9,626.3 394.7,624.5" fill="#ECE7DC" /><polygon points="40.0,728.7 45.3,739.4 57.1,741.1 48.6,749.5 50.6,761.3 40.0,755.7 29.4,761.3 31.4,749.5 22.9,741.1 34.7,739.4" fill="#ECE7DC" /><polygon points="120.0,728.7 125.3,739.4 137.1,741.1 128.6,749.5 130.6,761.3 120.0,755.7 109.4,761.3 111.4,749.5 102.9,741.1 114.7,739.4" fill="#ECE7DC" /><polygon points="200.0,728.7 205.3,739.4 217.1,741.1 208.6,749.5 210.6,761.3 200.0,755.7 189.4,761.3 191.4,749.5 182.9,741.1 194.7,739.4" fill="#ECE7DC" /><polygon points="280.0,728.7 285.3,739.4 297.1,741.1 288.6,749.5 290.6,761.3 280.0,755.7 269.4,761.3 271.4,749.5 262.9,741.1 274.7,739.4" fill="#ECE7DC" /><polygon points="360.0,728.7 365.3,739.4 377.1,741.1 368.6,749.5 370.6,761.3 360.0,755.7 349.4,761.3 351.4,749.5 342.9,741.1 354.7,739.4" fill="#ECE7DC" /><polygon points="440.0,728.7 445.3,739.4 457.1,741.1 448.6,749.5 450.6,761.3 440.0,755.7 429.4,761.3 431.4,749.5 422.9,741.1 434.7,739.4" fill="#ECE7DC" /><polygon points="80.0,843.6 85.3,854.3 97.1,856.0 88.6,864.4 90.6,876.1 80.0,870.6 69.4,876.1 71.4,864.4 62.9,856.0 74.7,854.3" fill="#ECE7DC" /><polygon points="160.0,843.6 165.3,854.3 177.1,856.0 168.6,864.4 170.6,876.1 160.0,870.6 149.4,876.1 151.4,864.4 142.9,856.0 154.7,854.3" fill="#ECE7DC" /><polygon points="240.0,843.6 245.3,854.3 257.1,856.0 248.6,864.4 250.6,876.1 240.0,870.6 229.4,876.1 231.4,864.4 222.9,856.0 234.7,854.3" fill="#ECE7DC" /><polygon points="320.0,843.6 325.3,854.3 337.1,856.0 328.6,864.4 330.6,876.1 320.0,870.6 309.4,876.1 311.4,864.4 302.9,856.0 314.7,854.3" fill="#ECE7DC" /><polygon points="400.0,843.6 405.3,854.3 417.1,856.0 408.6,864.4 410.6,876.1 400.0,870.6 389.4,876.1 391.4,864.4 382.9,856.0 394.7,854.3" fill="#ECE7DC" /><polygon points="40.0,958.5 45.3,969.2 57.1,970.9 48.6,979.2 50.6,991.0 40.0,985.5 29.4,991.0 31.4,979.2 22.9,970.9 34.7,969.2" fill="#ECE7DC" /><polygon points="120.0,958.5 125.3,969.2 137.1,970.9 128.6,979.2 130.6,991.0 120.0,985.5 109.4,991.0 111.4,979.2 102.9,970.9 114.7,969.2" fill="#ECE7DC" /><polygon points="200.0,958.5 205.3,969.2 217.1,970.9 208.6,979.2 210.6,991.0 200.0,985.5 189.4,991.0 191.4,979.2 182.9,970.9 194.7,969.2" fill="#ECE7DC" /><polygon points="280.0,958.5 285.3,969.2 297.1,970.9 288.6,979.2 290.6,991.0 280.0,985.5 269.4,991.0 271.4,979.2 262.9,970.9 274.7,969.2" fill="#ECE7DC" /><polygon points="360.0,958.5 365.3,969.2 377.1,970.9 368.6,979.2 370.6,991.0 360.0,985.5 349.4,991.0 351.4,979.2 342.9,970.9 354.7,969.2" fill="#ECE7DC" /><polygon points="440.0,958.5 445.3,969.2 457.1,970.9 448.6,979.2 450.6,991.0 440.0,985.5 429.4,991.0 431.4,979.2 422.9,970.9 434.7,969.2" fill="#ECE7DC" />
+  </g>
+</svg>
+</div>
+  <div class="grain"></div>
+  <div class="scanlines"></div>
+  <div class="vignette"></div>
+  
+<div class="state-badge">
+  <div class="sb-eyebrow">STATE OF</div>
+  <div class="sb-stamp">GEORGIA</div>
+  <div class="sb-caption">GA · BEN HILL DFCS CO.</div>
+</div>
+
+  <div class="frame-tag">COUNTED · PUBLIC RECORD</div>
+  <div class="f4-stack">
+    <div class="f4-mega-number">3,525</div>
+    <div class="f4-mega-label">FAMILIES<br>NATIONWIDE</div>
+    <div class="f4-italic">— and now global.</div>
+    <div class="f4-pattern">
+      Not an <span class="strike">ISOLATED</span> incident.<br>
+      <span class="pattern-pill">A PATTERN.</span>
+    </div>
+  </div>
+  
+<div class="actor-id-strip">
+  <div class="aid-name">LAKENDRA SLADE</div>
+  <div class="aid-role">Child Protective Services (CPS) Worker · Georgia</div>
+</div>
+
+  
+<div class="movement-foot">
+  <div class="mf-handle">@STANDWITHMEG</div>
+  <div class="mf-url">STANDWITHMEG.COM</div>
+</div>
+
+  <div class="legal">Family-reported submissions · not court findings.</div>
+</article>
+
+<div class="frame-actions" aria-label="Frame 4 actions">
+  <button type="button" data-save="frame-04">Save image</button>
+  <button type="button" data-share="frame-04">Share</button>
+</div>
+</section>
+<section class="phone-frame">
+<article class="frame f5" id="frame-05">
+  <div class="flag-bg">
+<svg viewBox="0 0 1080 1920" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+  <defs>
+    <filter id="wave">
+      <feTurbulence type="fractalNoise" baseFrequency="0.008 0.02" numOctaves="2" seed="3">
+        <animate attributeName="baseFrequency" dur="14s" repeatCount="indefinite"
+          values="0.008 0.02;0.012 0.024;0.008 0.02" />
+      </feTurbulence>
+      <feDisplacementMap in="SourceGraphic" scale="46" />
+    </filter>
+  </defs>
+  <g filter="url(#wave)">
+    <rect x="0" y="0.0" width="1080" height="147.7" fill="#9F1F2C" />
+<rect x="0" y="147.7" width="1080" height="147.7" fill="#F2EAD6" />
+<rect x="0" y="295.4" width="1080" height="147.7" fill="#9F1F2C" />
+<rect x="0" y="443.1" width="1080" height="147.7" fill="#F2EAD6" />
+<rect x="0" y="590.8" width="1080" height="147.7" fill="#9F1F2C" />
+<rect x="0" y="738.5" width="1080" height="147.7" fill="#F2EAD6" />
+<rect x="0" y="886.2" width="1080" height="147.7" fill="#9F1F2C" />
+<rect x="0" y="1033.9" width="1080" height="147.7" fill="#F2EAD6" />
+<rect x="0" y="1181.6" width="1080" height="147.7" fill="#9F1F2C" />
+<rect x="0" y="1329.3" width="1080" height="147.7" fill="#F2EAD6" />
+<rect x="0" y="1477.0" width="1080" height="147.7" fill="#9F1F2C" />
+<rect x="0" y="1624.7" width="1080" height="147.7" fill="#F2EAD6" />
+<rect x="0" y="1772.4" width="1080" height="147.7" fill="#9F1F2C" />
+    <rect x="0" y="0" width="480" height="1033.9" fill="#10243F" />
+    <polygon points="40.0,39.4 45.3,50.2 57.1,51.9 48.6,60.2 50.6,72.0 40.0,66.4 29.4,72.0 31.4,60.2 22.9,51.9 34.7,50.2" fill="#ECE7DC" /><polygon points="120.0,39.4 125.3,50.2 137.1,51.9 128.6,60.2 130.6,72.0 120.0,66.4 109.4,72.0 111.4,60.2 102.9,51.9 114.7,50.2" fill="#ECE7DC" /><polygon points="200.0,39.4 205.3,50.2 217.1,51.9 208.6,60.2 210.6,72.0 200.0,66.4 189.4,72.0 191.4,60.2 182.9,51.9 194.7,50.2" fill="#ECE7DC" /><polygon points="280.0,39.4 285.3,50.2 297.1,51.9 288.6,60.2 290.6,72.0 280.0,66.4 269.4,72.0 271.4,60.2 262.9,51.9 274.7,50.2" fill="#ECE7DC" /><polygon points="360.0,39.4 365.3,50.2 377.1,51.9 368.6,60.2 370.6,72.0 360.0,66.4 349.4,72.0 351.4,60.2 342.9,51.9 354.7,50.2" fill="#ECE7DC" /><polygon points="440.0,39.4 445.3,50.2 457.1,51.9 448.6,60.2 450.6,72.0 440.0,66.4 429.4,72.0 431.4,60.2 422.9,51.9 434.7,50.2" fill="#ECE7DC" /><polygon points="80.0,154.3 85.3,165.0 97.1,166.8 88.6,175.1 90.6,186.9 80.0,181.3 69.4,186.9 71.4,175.1 62.9,166.8 74.7,165.0" fill="#ECE7DC" /><polygon points="160.0,154.3 165.3,165.0 177.1,166.8 168.6,175.1 170.6,186.9 160.0,181.3 149.4,186.9 151.4,175.1 142.9,166.8 154.7,165.0" fill="#ECE7DC" /><polygon points="240.0,154.3 245.3,165.0 257.1,166.8 248.6,175.1 250.6,186.9 240.0,181.3 229.4,186.9 231.4,175.1 222.9,166.8 234.7,165.0" fill="#ECE7DC" /><polygon points="320.0,154.3 325.3,165.0 337.1,166.8 328.6,175.1 330.6,186.9 320.0,181.3 309.4,186.9 311.4,175.1 302.9,166.8 314.7,165.0" fill="#ECE7DC" /><polygon points="400.0,154.3 405.3,165.0 417.1,166.8 408.6,175.1 410.6,186.9 400.0,181.3 389.4,186.9 391.4,175.1 382.9,166.8 394.7,165.0" fill="#ECE7DC" /><polygon points="40.0,269.2 45.3,279.9 57.1,281.6 48.6,290.0 50.6,301.8 40.0,296.2 29.4,301.8 31.4,290.0 22.9,281.6 34.7,279.9" fill="#ECE7DC" /><polygon points="120.0,269.2 125.3,279.9 137.1,281.6 128.6,290.0 130.6,301.8 120.0,296.2 109.4,301.8 111.4,290.0 102.9,281.6 114.7,279.9" fill="#ECE7DC" /><polygon points="200.0,269.2 205.3,279.9 217.1,281.6 208.6,290.0 210.6,301.8 200.0,296.2 189.4,301.8 191.4,290.0 182.9,281.6 194.7,279.9" fill="#ECE7DC" /><polygon points="280.0,269.2 285.3,279.9 297.1,281.6 288.6,290.0 290.6,301.8 280.0,296.2 269.4,301.8 271.4,290.0 262.9,281.6 274.7,279.9" fill="#ECE7DC" /><polygon points="360.0,269.2 365.3,279.9 377.1,281.6 368.6,290.0 370.6,301.8 360.0,296.2 349.4,301.8 351.4,290.0 342.9,281.6 354.7,279.9" fill="#ECE7DC" /><polygon points="440.0,269.2 445.3,279.9 457.1,281.6 448.6,290.0 450.6,301.8 440.0,296.2 429.4,301.8 431.4,290.0 422.9,281.6 434.7,279.9" fill="#ECE7DC" /><polygon points="80.0,384.1 85.3,394.8 97.1,396.5 88.6,404.9 90.6,416.6 80.0,411.1 69.4,416.6 71.4,404.9 62.9,396.5 74.7,394.8" fill="#ECE7DC" /><polygon points="160.0,384.1 165.3,394.8 177.1,396.5 168.6,404.9 170.6,416.6 160.0,411.1 149.4,416.6 151.4,404.9 142.9,396.5 154.7,394.8" fill="#ECE7DC" /><polygon points="240.0,384.1 245.3,394.8 257.1,396.5 248.6,404.9 250.6,416.6 240.0,411.1 229.4,416.6 231.4,404.9 222.9,396.5 234.7,394.8" fill="#ECE7DC" /><polygon points="320.0,384.1 325.3,394.8 337.1,396.5 328.6,404.9 330.6,416.6 320.0,411.1 309.4,416.6 311.4,404.9 302.9,396.5 314.7,394.8" fill="#ECE7DC" /><polygon points="400.0,384.1 405.3,394.8 417.1,396.5 408.6,404.9 410.6,416.6 400.0,411.1 389.4,416.6 391.4,404.9 382.9,396.5 394.7,394.8" fill="#ECE7DC" /><polygon points="40.0,498.9 45.3,509.7 57.1,511.4 48.6,519.7 50.6,531.5 40.0,525.9 29.4,531.5 31.4,519.7 22.9,511.4 34.7,509.7" fill="#ECE7DC" /><polygon points="120.0,498.9 125.3,509.7 137.1,511.4 128.6,519.7 130.6,531.5 120.0,525.9 109.4,531.5 111.4,519.7 102.9,511.4 114.7,509.7" fill="#ECE7DC" /><polygon points="200.0,498.9 205.3,509.7 217.1,511.4 208.6,519.7 210.6,531.5 200.0,525.9 189.4,531.5 191.4,519.7 182.9,511.4 194.7,509.7" fill="#ECE7DC" /><polygon points="280.0,498.9 285.3,509.7 297.1,511.4 288.6,519.7 290.6,531.5 280.0,525.9 269.4,531.5 271.4,519.7 262.9,511.4 274.7,509.7" fill="#ECE7DC" /><polygon points="360.0,498.9 365.3,509.7 377.1,511.4 368.6,519.7 370.6,531.5 360.0,525.9 349.4,531.5 351.4,519.7 342.9,511.4 354.7,509.7" fill="#ECE7DC" /><polygon points="440.0,498.9 445.3,509.7 457.1,511.4 448.6,519.7 450.6,531.5 440.0,525.9 429.4,531.5 431.4,519.7 422.9,511.4 434.7,509.7" fill="#ECE7DC" /><polygon points="80.0,613.8 85.3,624.5 97.1,626.3 88.6,634.6 90.6,646.4 80.0,640.8 69.4,646.4 71.4,634.6 62.9,626.3 74.7,624.5" fill="#ECE7DC" /><polygon points="160.0,613.8 165.3,624.5 177.1,626.3 168.6,634.6 170.6,646.4 160.0,640.8 149.4,646.4 151.4,634.6 142.9,626.3 154.7,624.5" fill="#ECE7DC" /><polygon points="240.0,613.8 245.3,624.5 257.1,626.3 248.6,634.6 250.6,646.4 240.0,640.8 229.4,646.4 231.4,634.6 222.9,626.3 234.7,624.5" fill="#ECE7DC" /><polygon points="320.0,613.8 325.3,624.5 337.1,626.3 328.6,634.6 330.6,646.4 320.0,640.8 309.4,646.4 311.4,634.6 302.9,626.3 314.7,624.5" fill="#ECE7DC" /><polygon points="400.0,613.8 405.3,624.5 417.1,626.3 408.6,634.6 410.6,646.4 400.0,640.8 389.4,646.4 391.4,634.6 382.9,626.3 394.7,624.5" fill="#ECE7DC" /><polygon points="40.0,728.7 45.3,739.4 57.1,741.1 48.6,749.5 50.6,761.3 40.0,755.7 29.4,761.3 31.4,749.5 22.9,741.1 34.7,739.4" fill="#ECE7DC" /><polygon points="120.0,728.7 125.3,739.4 137.1,741.1 128.6,749.5 130.6,761.3 120.0,755.7 109.4,761.3 111.4,749.5 102.9,741.1 114.7,739.4" fill="#ECE7DC" /><polygon points="200.0,728.7 205.3,739.4 217.1,741.1 208.6,749.5 210.6,761.3 200.0,755.7 189.4,761.3 191.4,749.5 182.9,741.1 194.7,739.4" fill="#ECE7DC" /><polygon points="280.0,728.7 285.3,739.4 297.1,741.1 288.6,749.5 290.6,761.3 280.0,755.7 269.4,761.3 271.4,749.5 262.9,741.1 274.7,739.4" fill="#ECE7DC" /><polygon points="360.0,728.7 365.3,739.4 377.1,741.1 368.6,749.5 370.6,761.3 360.0,755.7 349.4,761.3 351.4,749.5 342.9,741.1 354.7,739.4" fill="#ECE7DC" /><polygon points="440.0,728.7 445.3,739.4 457.1,741.1 448.6,749.5 450.6,761.3 440.0,755.7 429.4,761.3 431.4,749.5 422.9,741.1 434.7,739.4" fill="#ECE7DC" /><polygon points="80.0,843.6 85.3,854.3 97.1,856.0 88.6,864.4 90.6,876.1 80.0,870.6 69.4,876.1 71.4,864.4 62.9,856.0 74.7,854.3" fill="#ECE7DC" /><polygon points="160.0,843.6 165.3,854.3 177.1,856.0 168.6,864.4 170.6,876.1 160.0,870.6 149.4,876.1 151.4,864.4 142.9,856.0 154.7,854.3" fill="#ECE7DC" /><polygon points="240.0,843.6 245.3,854.3 257.1,856.0 248.6,864.4 250.6,876.1 240.0,870.6 229.4,876.1 231.4,864.4 222.9,856.0 234.7,854.3" fill="#ECE7DC" /><polygon points="320.0,843.6 325.3,854.3 337.1,856.0 328.6,864.4 330.6,876.1 320.0,870.6 309.4,876.1 311.4,864.4 302.9,856.0 314.7,854.3" fill="#ECE7DC" /><polygon points="400.0,843.6 405.3,854.3 417.1,856.0 408.6,864.4 410.6,876.1 400.0,870.6 389.4,876.1 391.4,864.4 382.9,856.0 394.7,854.3" fill="#ECE7DC" /><polygon points="40.0,958.5 45.3,969.2 57.1,970.9 48.6,979.2 50.6,991.0 40.0,985.5 29.4,991.0 31.4,979.2 22.9,970.9 34.7,969.2" fill="#ECE7DC" /><polygon points="120.0,958.5 125.3,969.2 137.1,970.9 128.6,979.2 130.6,991.0 120.0,985.5 109.4,991.0 111.4,979.2 102.9,970.9 114.7,969.2" fill="#ECE7DC" /><polygon points="200.0,958.5 205.3,969.2 217.1,970.9 208.6,979.2 210.6,991.0 200.0,985.5 189.4,991.0 191.4,979.2 182.9,970.9 194.7,969.2" fill="#ECE7DC" /><polygon points="280.0,958.5 285.3,969.2 297.1,970.9 288.6,979.2 290.6,991.0 280.0,985.5 269.4,991.0 271.4,979.2 262.9,970.9 274.7,969.2" fill="#ECE7DC" /><polygon points="360.0,958.5 365.3,969.2 377.1,970.9 368.6,979.2 370.6,991.0 360.0,985.5 349.4,991.0 351.4,979.2 342.9,970.9 354.7,969.2" fill="#ECE7DC" /><polygon points="440.0,958.5 445.3,969.2 457.1,970.9 448.6,979.2 450.6,991.0 440.0,985.5 429.4,991.0 431.4,979.2 422.9,970.9 434.7,969.2" fill="#ECE7DC" />
+  </g>
+</svg>
+</div>
+  <div class="grain"></div>
+  <div class="scanlines"></div>
+  <div class="vignette"></div>
+  
+<div class="state-badge">
+  <div class="sb-eyebrow">STATE OF</div>
+  <div class="sb-stamp">GEORGIA</div>
+  <div class="sb-caption">GA · BEN HILL DFCS CO.</div>
+</div>
+
+  <div class="frame-tag">EXPOSING THE PATTERN</div>
+  <div class="f5-headline">
+    What the<br>
+    <span class="gold">government</span><br>
+    is doing to<br>
+    our families.
+  </div>
+  <div class="f5-stats">
+    <div class="f5-stats-label">STATE OF GEORGIA · LIVE STATS</div>
+    <div class="stat-row">
+      <span class="stat-n">$123,000</span>
+      <span class="stat-l">MEDIAN FAMILY BURDEN</span>
+    </div>
+    <div class="stat-row">
+      <span class="stat-n">42.3%</span>
+      <span class="stat-l">PARENTS FORCED PRO SE</span>
+    </div>
+    <div class="stat-row">
+      <span class="stat-n">17 mo</span>
+      <span class="stat-l">MEDIAN TIME LOST</span>
+    </div>
+  </div>
+  
+<div class="movement-foot">
+  <div class="mf-handle">@STANDWITHMEG</div>
+  <div class="mf-url">STANDWITHMEG.COM</div>
+</div>
+
+  <div class="legal">Family-reported submissions · not court findings.</div>
+</article>
+
+<div class="frame-actions" aria-label="Frame 5 actions">
+  <button type="button" data-save="frame-05">Save image</button>
+  <button type="button" data-share="frame-05">Share</button>
+</div>
+</section>
+<section class="phone-frame">
+<article class="frame f6" id="frame-06">
+  <div class="flag-bg flag-bg--cover">
+<svg viewBox="0 0 1080 1920" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+  <defs>
+    <filter id="wave">
+      <feTurbulence type="fractalNoise" baseFrequency="0.008 0.02" numOctaves="2" seed="3">
+        <animate attributeName="baseFrequency" dur="14s" repeatCount="indefinite"
+          values="0.008 0.02;0.012 0.024;0.008 0.02" />
+      </feTurbulence>
+      <feDisplacementMap in="SourceGraphic" scale="46" />
+    </filter>
+  </defs>
+  <g filter="url(#wave)">
+    <rect x="0" y="0.0" width="1080" height="147.7" fill="#9F1F2C" />
+<rect x="0" y="147.7" width="1080" height="147.7" fill="#F2EAD6" />
+<rect x="0" y="295.4" width="1080" height="147.7" fill="#9F1F2C" />
+<rect x="0" y="443.1" width="1080" height="147.7" fill="#F2EAD6" />
+<rect x="0" y="590.8" width="1080" height="147.7" fill="#9F1F2C" />
+<rect x="0" y="738.5" width="1080" height="147.7" fill="#F2EAD6" />
+<rect x="0" y="886.2" width="1080" height="147.7" fill="#9F1F2C" />
+<rect x="0" y="1033.9" width="1080" height="147.7" fill="#F2EAD6" />
+<rect x="0" y="1181.6" width="1080" height="147.7" fill="#9F1F2C" />
+<rect x="0" y="1329.3" width="1080" height="147.7" fill="#F2EAD6" />
+<rect x="0" y="1477.0" width="1080" height="147.7" fill="#9F1F2C" />
+<rect x="0" y="1624.7" width="1080" height="147.7" fill="#F2EAD6" />
+<rect x="0" y="1772.4" width="1080" height="147.7" fill="#9F1F2C" />
+    <rect x="0" y="0" width="480" height="1033.9" fill="#10243F" />
+    <polygon points="40.0,39.4 45.3,50.2 57.1,51.9 48.6,60.2 50.6,72.0 40.0,66.4 29.4,72.0 31.4,60.2 22.9,51.9 34.7,50.2" fill="#ECE7DC" /><polygon points="120.0,39.4 125.3,50.2 137.1,51.9 128.6,60.2 130.6,72.0 120.0,66.4 109.4,72.0 111.4,60.2 102.9,51.9 114.7,50.2" fill="#ECE7DC" /><polygon points="200.0,39.4 205.3,50.2 217.1,51.9 208.6,60.2 210.6,72.0 200.0,66.4 189.4,72.0 191.4,60.2 182.9,51.9 194.7,50.2" fill="#ECE7DC" /><polygon points="280.0,39.4 285.3,50.2 297.1,51.9 288.6,60.2 290.6,72.0 280.0,66.4 269.4,72.0 271.4,60.2 262.9,51.9 274.7,50.2" fill="#ECE7DC" /><polygon points="360.0,39.4 365.3,50.2 377.1,51.9 368.6,60.2 370.6,72.0 360.0,66.4 349.4,72.0 351.4,60.2 342.9,51.9 354.7,50.2" fill="#ECE7DC" /><polygon points="440.0,39.4 445.3,50.2 457.1,51.9 448.6,60.2 450.6,72.0 440.0,66.4 429.4,72.0 431.4,60.2 422.9,51.9 434.7,50.2" fill="#ECE7DC" /><polygon points="80.0,154.3 85.3,165.0 97.1,166.8 88.6,175.1 90.6,186.9 80.0,181.3 69.4,186.9 71.4,175.1 62.9,166.8 74.7,165.0" fill="#ECE7DC" /><polygon points="160.0,154.3 165.3,165.0 177.1,166.8 168.6,175.1 170.6,186.9 160.0,181.3 149.4,186.9 151.4,175.1 142.9,166.8 154.7,165.0" fill="#ECE7DC" /><polygon points="240.0,154.3 245.3,165.0 257.1,166.8 248.6,175.1 250.6,186.9 240.0,181.3 229.4,186.9 231.4,175.1 222.9,166.8 234.7,165.0" fill="#ECE7DC" /><polygon points="320.0,154.3 325.3,165.0 337.1,166.8 328.6,175.1 330.6,186.9 320.0,181.3 309.4,186.9 311.4,175.1 302.9,166.8 314.7,165.0" fill="#ECE7DC" /><polygon points="400.0,154.3 405.3,165.0 417.1,166.8 408.6,175.1 410.6,186.9 400.0,181.3 389.4,186.9 391.4,175.1 382.9,166.8 394.7,165.0" fill="#ECE7DC" /><polygon points="40.0,269.2 45.3,279.9 57.1,281.6 48.6,290.0 50.6,301.8 40.0,296.2 29.4,301.8 31.4,290.0 22.9,281.6 34.7,279.9" fill="#ECE7DC" /><polygon points="120.0,269.2 125.3,279.9 137.1,281.6 128.6,290.0 130.6,301.8 120.0,296.2 109.4,301.8 111.4,290.0 102.9,281.6 114.7,279.9" fill="#ECE7DC" /><polygon points="200.0,269.2 205.3,279.9 217.1,281.6 208.6,290.0 210.6,301.8 200.0,296.2 189.4,301.8 191.4,290.0 182.9,281.6 194.7,279.9" fill="#ECE7DC" /><polygon points="280.0,269.2 285.3,279.9 297.1,281.6 288.6,290.0 290.6,301.8 280.0,296.2 269.4,301.8 271.4,290.0 262.9,281.6 274.7,279.9" fill="#ECE7DC" /><polygon points="360.0,269.2 365.3,279.9 377.1,281.6 368.6,290.0 370.6,301.8 360.0,296.2 349.4,301.8 351.4,290.0 342.9,281.6 354.7,279.9" fill="#ECE7DC" /><polygon points="440.0,269.2 445.3,279.9 457.1,281.6 448.6,290.0 450.6,301.8 440.0,296.2 429.4,301.8 431.4,290.0 422.9,281.6 434.7,279.9" fill="#ECE7DC" /><polygon points="80.0,384.1 85.3,394.8 97.1,396.5 88.6,404.9 90.6,416.6 80.0,411.1 69.4,416.6 71.4,404.9 62.9,396.5 74.7,394.8" fill="#ECE7DC" /><polygon points="160.0,384.1 165.3,394.8 177.1,396.5 168.6,404.9 170.6,416.6 160.0,411.1 149.4,416.6 151.4,404.9 142.9,396.5 154.7,394.8" fill="#ECE7DC" /><polygon points="240.0,384.1 245.3,394.8 257.1,396.5 248.6,404.9 250.6,416.6 240.0,411.1 229.4,416.6 231.4,404.9 222.9,396.5 234.7,394.8" fill="#ECE7DC" /><polygon points="320.0,384.1 325.3,394.8 337.1,396.5 328.6,404.9 330.6,416.6 320.0,411.1 309.4,416.6 311.4,404.9 302.9,396.5 314.7,394.8" fill="#ECE7DC" /><polygon points="400.0,384.1 405.3,394.8 417.1,396.5 408.6,404.9 410.6,416.6 400.0,411.1 389.4,416.6 391.4,404.9 382.9,396.5 394.7,394.8" fill="#ECE7DC" /><polygon points="40.0,498.9 45.3,509.7 57.1,511.4 48.6,519.7 50.6,531.5 40.0,525.9 29.4,531.5 31.4,519.7 22.9,511.4 34.7,509.7" fill="#ECE7DC" /><polygon points="120.0,498.9 125.3,509.7 137.1,511.4 128.6,519.7 130.6,531.5 120.0,525.9 109.4,531.5 111.4,519.7 102.9,511.4 114.7,509.7" fill="#ECE7DC" /><polygon points="200.0,498.9 205.3,509.7 217.1,511.4 208.6,519.7 210.6,531.5 200.0,525.9 189.4,531.5 191.4,519.7 182.9,511.4 194.7,509.7" fill="#ECE7DC" /><polygon points="280.0,498.9 285.3,509.7 297.1,511.4 288.6,519.7 290.6,531.5 280.0,525.9 269.4,531.5 271.4,519.7 262.9,511.4 274.7,509.7" fill="#ECE7DC" /><polygon points="360.0,498.9 365.3,509.7 377.1,511.4 368.6,519.7 370.6,531.5 360.0,525.9 349.4,531.5 351.4,519.7 342.9,511.4 354.7,509.7" fill="#ECE7DC" /><polygon points="440.0,498.9 445.3,509.7 457.1,511.4 448.6,519.7 450.6,531.5 440.0,525.9 429.4,531.5 431.4,519.7 422.9,511.4 434.7,509.7" fill="#ECE7DC" /><polygon points="80.0,613.8 85.3,624.5 97.1,626.3 88.6,634.6 90.6,646.4 80.0,640.8 69.4,646.4 71.4,634.6 62.9,626.3 74.7,624.5" fill="#ECE7DC" /><polygon points="160.0,613.8 165.3,624.5 177.1,626.3 168.6,634.6 170.6,646.4 160.0,640.8 149.4,646.4 151.4,634.6 142.9,626.3 154.7,624.5" fill="#ECE7DC" /><polygon points="240.0,613.8 245.3,624.5 257.1,626.3 248.6,634.6 250.6,646.4 240.0,640.8 229.4,646.4 231.4,634.6 222.9,626.3 234.7,624.5" fill="#ECE7DC" /><polygon points="320.0,613.8 325.3,624.5 337.1,626.3 328.6,634.6 330.6,646.4 320.0,640.8 309.4,646.4 311.4,634.6 302.9,626.3 314.7,624.5" fill="#ECE7DC" /><polygon points="400.0,613.8 405.3,624.5 417.1,626.3 408.6,634.6 410.6,646.4 400.0,640.8 389.4,646.4 391.4,634.6 382.9,626.3 394.7,624.5" fill="#ECE7DC" /><polygon points="40.0,728.7 45.3,739.4 57.1,741.1 48.6,749.5 50.6,761.3 40.0,755.7 29.4,761.3 31.4,749.5 22.9,741.1 34.7,739.4" fill="#ECE7DC" /><polygon points="120.0,728.7 125.3,739.4 137.1,741.1 128.6,749.5 130.6,761.3 120.0,755.7 109.4,761.3 111.4,749.5 102.9,741.1 114.7,739.4" fill="#ECE7DC" /><polygon points="200.0,728.7 205.3,739.4 217.1,741.1 208.6,749.5 210.6,761.3 200.0,755.7 189.4,761.3 191.4,749.5 182.9,741.1 194.7,739.4" fill="#ECE7DC" /><polygon points="280.0,728.7 285.3,739.4 297.1,741.1 288.6,749.5 290.6,761.3 280.0,755.7 269.4,761.3 271.4,749.5 262.9,741.1 274.7,739.4" fill="#ECE7DC" /><polygon points="360.0,728.7 365.3,739.4 377.1,741.1 368.6,749.5 370.6,761.3 360.0,755.7 349.4,761.3 351.4,749.5 342.9,741.1 354.7,739.4" fill="#ECE7DC" /><polygon points="440.0,728.7 445.3,739.4 457.1,741.1 448.6,749.5 450.6,761.3 440.0,755.7 429.4,761.3 431.4,749.5 422.9,741.1 434.7,739.4" fill="#ECE7DC" /><polygon points="80.0,843.6 85.3,854.3 97.1,856.0 88.6,864.4 90.6,876.1 80.0,870.6 69.4,876.1 71.4,864.4 62.9,856.0 74.7,854.3" fill="#ECE7DC" /><polygon points="160.0,843.6 165.3,854.3 177.1,856.0 168.6,864.4 170.6,876.1 160.0,870.6 149.4,876.1 151.4,864.4 142.9,856.0 154.7,854.3" fill="#ECE7DC" /><polygon points="240.0,843.6 245.3,854.3 257.1,856.0 248.6,864.4 250.6,876.1 240.0,870.6 229.4,876.1 231.4,864.4 222.9,856.0 234.7,854.3" fill="#ECE7DC" /><polygon points="320.0,843.6 325.3,854.3 337.1,856.0 328.6,864.4 330.6,876.1 320.0,870.6 309.4,876.1 311.4,864.4 302.9,856.0 314.7,854.3" fill="#ECE7DC" /><polygon points="400.0,843.6 405.3,854.3 417.1,856.0 408.6,864.4 410.6,876.1 400.0,870.6 389.4,876.1 391.4,864.4 382.9,856.0 394.7,854.3" fill="#ECE7DC" /><polygon points="40.0,958.5 45.3,969.2 57.1,970.9 48.6,979.2 50.6,991.0 40.0,985.5 29.4,991.0 31.4,979.2 22.9,970.9 34.7,969.2" fill="#ECE7DC" /><polygon points="120.0,958.5 125.3,969.2 137.1,970.9 128.6,979.2 130.6,991.0 120.0,985.5 109.4,991.0 111.4,979.2 102.9,970.9 114.7,969.2" fill="#ECE7DC" /><polygon points="200.0,958.5 205.3,969.2 217.1,970.9 208.6,979.2 210.6,991.0 200.0,985.5 189.4,991.0 191.4,979.2 182.9,970.9 194.7,969.2" fill="#ECE7DC" /><polygon points="280.0,958.5 285.3,969.2 297.1,970.9 288.6,979.2 290.6,991.0 280.0,985.5 269.4,991.0 271.4,979.2 262.9,970.9 274.7,969.2" fill="#ECE7DC" /><polygon points="360.0,958.5 365.3,969.2 377.1,970.9 368.6,979.2 370.6,991.0 360.0,985.5 349.4,991.0 351.4,979.2 342.9,970.9 354.7,969.2" fill="#ECE7DC" /><polygon points="440.0,958.5 445.3,969.2 457.1,970.9 448.6,979.2 450.6,991.0 440.0,985.5 429.4,991.0 431.4,979.2 422.9,970.9 434.7,969.2" fill="#ECE7DC" />
+  </g>
+</svg>
+</div>
+  <div class="grain"></div>
+  <div class="scanlines"></div>
+  <div class="vignette"></div>
+  
+<div class="state-badge">
+  <div class="sb-eyebrow">STATE OF</div>
+  <div class="sb-stamp">GEORGIA</div>
+  <div class="sb-caption">GA · BEN HILL DFCS CO.</div>
+</div>
+
+  <div class="frame-tag">JOIN THE MOVEMENT</div>
+  <div class="f6-headline">
+    STAND<br>
+    <span class="red-bar f6-with">WITH</span><br>
+    <span class="gold">MEG.</span>
+  </div>
+  <div class="f6-cta-text">
+    Join over <b class="f6-count">3,525</b><br>
+    families nationwide &amp; global<br>
+    exposing the truth.
+  </div>
+  <div class="f6-pill-stack">
+    <div class="f6-visit">VISIT</div>
+    <div class="url-pill"><span class="dot"></span>STANDWITHMEG.COM</div>
+  </div>
+  <div class="legal f6-legal">FAMILY-REPORTED · NOT COURT FINDINGS</div>
+</article>
+
+<div class="frame-actions" aria-label="Frame 6 actions">
+  <button type="button" data-save="frame-06">Save image</button>
+  <button type="button" data-share="frame-06">Share</button>
+</div>
+</section>
+</main>
+<aside class="review">
+  <details>
+    <summary>Audit notes</summary>
+    <p>Spec source: <code>New Final Post and Capcut template/export/lakendra_slade</code></p>
+    <ul><li>No unresolved fields recorded.</li></ul>
+  </details>
+</aside>
+<script>
+async function frameToBlob(id) {
+  const node = document.getElementById(id);
+  if (!node) throw new Error('frame not found: ' + id);
+  if (!window.html2canvas) throw new Error('html2canvas failed to load');
+  if (document.fonts && document.fonts.ready) {
+    try { await document.fonts.ready; } catch (e) { /* ignore */ }
+  }
+  const canvas = await html2canvas(node, {
+    backgroundColor: '#0B1A2D',
+    scale: 2,                       // crisp on retina; 2x → ~1080w output from a 540w preview
+    useCORS: true,
+    allowTaint: true,
+    logging: false,
+    imageTimeout: 8000,
+  });
+  return new Promise((resolve, reject) => {
+    canvas.toBlob((blob) => blob ? resolve(blob) : reject(new Error('canvas-to-blob returned null')), 'image/png');
+  });
+}
+
+async function saveFrame(id) {
+  const btn = document.querySelector(`[data-save="${id}"]`);
+  const orig = btn ? btn.textContent : null;
+  if (btn) btn.textContent = 'Saving…';
+  try {
+    const blob = await frameToBlob(id);
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.download = id + '.png';
+    link.href = url;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    setTimeout(() => URL.revokeObjectURL(url), 2000);
+    if (btn) btn.textContent = '✓ Saved';
+  } catch (e) {
+    console.error(e);
+    alert('Save failed: ' + (e.message || e) +
+          '\nFallback: take a screenshot — Cmd+Shift+4 on Mac, Power+Vol-Up on phone.');
+    if (btn && orig) btn.textContent = orig;
+    return;
+  }
+  setTimeout(() => { if (btn && orig) btn.textContent = orig; }, 1800);
+}
+
+async function shareFrame(id) {
+  const btn = document.querySelector(`[data-share="${id}"]`);
+  const orig = btn ? btn.textContent : null;
+  if (btn) btn.textContent = 'Preparing…';
+  try {
+    const blob = await frameToBlob(id);
+    const file = new File([blob], id + '.png', { type: 'image/png' });
+
+    // Best path: share the IMAGE (Web Share API Level 2 — iOS Safari, Android Chrome).
+    if (navigator.canShare && navigator.canShare({ files: [file] })) {
+      await navigator.share({
+        files: [file],
+        title: document.title,
+        text: 'Court actor on the public record. StandWithMeg.com',
+      });
+      if (btn) btn.textContent = '✓ Shared';
+    } else if (navigator.share) {
+      // Fallback: share the page link
+      await navigator.share({
+        title: document.title,
+        text: 'StandWithMeg.com',
+        url: location.href + '#' + id,
+      });
+      if (btn) btn.textContent = '✓ Shared';
+    } else {
+      // Final fallback: copy URL to clipboard
+      await navigator.clipboard.writeText(location.href + '#' + id);
+      alert('Image sharing not supported here. Frame link copied to clipboard instead.');
+      if (btn) btn.textContent = '✓ Link copied';
+    }
+  } catch (e) {
+    // User cancellation is normal — don't show an error for that
+    if (e.name !== 'AbortError') {
+      console.error(e);
+      alert('Share failed: ' + (e.message || e));
+    }
+    if (btn && orig) btn.textContent = orig;
+    return;
+  }
+  setTimeout(() => { if (btn && orig) btn.textContent = orig; }, 1800);
+}
+
+document.addEventListener('click', (event) => {
+  const save = event.target.closest('[data-save]');
+  const share = event.target.closest('[data-share]');
+  if (save) { event.preventDefault(); saveFrame(save.dataset.save); }
+  if (share) { event.preventDefault(); shareFrame(share.dataset.share); }
+});
+</script>
+</body>
+</html>

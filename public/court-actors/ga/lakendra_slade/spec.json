@@ -1,0 +1,89 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "lakendra_slade",
+    "display_name": "Lakendra slade",
+    "title": "",
+    "first_name": "Lakendra",
+    "last_name": "Slade",
+    "role": "CPS Worker",
+    "court": "Ben hill dfcs",
+    "county": null,
+    "court_or_county": "Ben hill dfcs",
+    "state": "Georgia",
+    "state_abbr": "GA",
+    "mention_count": 4,
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "6d6fd186-edc0-4bd8-abb8-f4748f36c70d",
+      "40bb306a-0f5b-40ef-9d6f-fe9f8c8ce7c9",
+      "6588fc42-a1f2-406b-a8ec-90440b790700",
+      "e2503552-0a61-4f6c-aba6-5284f68c7747"
+    ],
+    "actor_row_id": "6d6fd186-edc0-4bd8-abb8-f4748f36c70d",
+    "actor_bucket_key": "lakendra slade|GA"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 58,
+    "total_submissions": 78,
+    "avg_financial_loss": 173508.28,
+    "avg_months_lost": 34.6,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "GA",
+    "state_family_count": 78,
+    "median_months_lost": 17.0,
+    "median_financial_loss": 123000,
+    "median_burden_sample_size": 41,
+    "pro_se_count": 33,
+    "pro_se_pct": 42.3,
+    "children_impacted": 142,
+    "clean_sample_size": 78,
+    "raw_submission_count": 78
+  },
+  "movement_total": 3525,
+  "supabase": {
+    "report_count": 4,
+    "actor_report_count": 4,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Will not even speak to any family trying to get placement",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Refuses to help. Will not even contact family to discuss placement for least restrictive options and falsifying documents",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Refuses to help reunification in any way whatsoever, falsifies documentations, never sets clear goals for reunification and always claims any documents provided to show progress or stability etc are not…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/lakendra_slade",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/georgia/lakendra_slade/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "marlo_ross",
+    "display_name": "Marlo Ross",
+    "title": "",
+    "first_name": "Marlo",
+    "last_name": "Ross",
+    "role": "Judge",
+    "court": "Pierce",
+    "county": null,
+    "court_or_county": "Pierce",
+    "state": "Georgia",
+    "state_abbr": "GA",
+    "mention_count": 3,
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "7366ffdc-dd29-4e5c-92e5-34add9b09011",
+      "d73792cb-d1c0-47ea-b650-ddd8de4971d2",
+      "3078a054-6af8-464e-a078-c5e196a81a9d"
+    ],
+    "actor_row_id": "7366ffdc-dd29-4e5c-92e5-34add9b09011",
+    "actor_bucket_key": "marlo ross|GA"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 58,
+    "total_submissions": 78,
+    "avg_financial_loss": 173508.28,
+    "avg_months_lost": 34.6,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "GA",
+    "state_family_count": 78,
+    "median_months_lost": 17.0,
+    "median_financial_loss": 123000,
+    "median_burden_sample_size": 41,
+    "pro_se_count": 33,
+    "pro_se_pct": 42.3,
+    "children_impacted": 142,
+    "clean_sample_size": 78,
+    "raw_submission_count": 78
+  },
+  "movement_total": 3525,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Ignores least restrictive placement options will not provide any reasonable explanation for why they cant be considered allowing dfcs to lie on the stand",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Denied ex parte motions and denied them without proper hearing. Allowed dfcs to lie on the stand. Refuses to even consider a least restrictive option for placement thats in the…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Ignored evidence denied motions before properly addressing it or allowing anyone to speak on it. Delayed reunification, suspended visits based on a false report. Allowed CPS workers to lie on…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/marlo_ross",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/georgia/marlo_ross/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}
