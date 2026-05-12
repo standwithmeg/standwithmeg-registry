@@ -7,10 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,900&family=Inter:wght@400;600;700;800;900&family=JetBrains+Mono:wght@500;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
-<!-- Primary: modern-screenshot handles iOS Safari + cross-origin fonts cleanly.
-     Fallback: html2canvas in case modern-screenshot fails to load. -->
-<script src="https://cdn.jsdelivr.net/npm/modern-screenshot@4.6.7/dist/index.umd.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+<!-- Frames are pre-rendered server-side; we just need JSZip to bundle the Save All download. -->
 <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
 <style>
 :root {
@@ -885,40 +882,15 @@ html,body { background:#06070A; color:var(--white); font-family:Inter,system-ui,
   </details>
 </aside>
 <script>
+// Frames are pre-rendered server-side by _scripts/prerender_frames.py (Playwright).
+// We fetch the JPEGs directly — no client-side canvas, so iOS Safari can't taint anything.
 async function frameToBlob(id) {
-  const node = document.getElementById(id);
-  if (!node) throw new Error('frame not found: ' + id);
-
-  // Wait for webfonts to fully load before snapshot
-  if (document.fonts && document.fonts.ready) {
-    try { await document.fonts.ready; } catch (e) { /* ignore */ }
-  }
-
-  // Try modern-screenshot first — it inlines all cross-origin resources
-  // (fonts, images, SVG filters) automatically, so the resulting canvas
-  // is never tainted. Falls back to html2canvas if mod-ss didn't load.
-  if (window.modernScreenshot && window.modernScreenshot.domToBlob) {
-    return await window.modernScreenshot.domToBlob(node, {
-      backgroundColor: '#0B1A2D',
-      scale: 2,                       // ~1080w output from a 540w preview
-      fetch: { requestInit: { mode: 'cors' } },
-    });
-  }
-
-  // Fallback path — useful for environments where modern-screenshot
-  // couldn't load (cdn blocked, etc.)
-  if (!window.html2canvas) throw new Error('No screenshot library available');
-  const canvas = await html2canvas(node, {
-    backgroundColor: '#0B1A2D',
-    scale: 2,
-    useCORS: true,
-    logging: false,
-    imageTimeout: 15000,
-    foreignObjectRendering: false,
-  });
-  return new Promise((resolve, reject) => {
-    canvas.toBlob((blob) => blob ? resolve(blob) : reject(new Error('canvas-to-blob returned null')), 'image/png');
-  });
+  // frame-01.jpg ... frame-06.jpg live in the same folder as share.html
+  const num = id.replace('frame-', '');
+  const url = `frame-${num}.jpg`;
+  const res = await fetch(url, { cache: 'reload' });
+  if (!res.ok) throw new Error(`Couldn't fetch ${url}: HTTP ${res.status}`);
+  return await res.blob();
 }
 
 async function saveFrame(id) {
@@ -929,7 +901,7 @@ async function saveFrame(id) {
     const blob = await frameToBlob(id);
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
-    link.download = id + '.png';
+    link.download = id + '.jpg';
     link.href = url;
     document.body.appendChild(link);
     link.click();
@@ -952,7 +924,7 @@ async function shareFrame(id) {
   if (btn) btn.textContent = 'Preparing…';
   try {
     const blob = await frameToBlob(id);
-    const file = new File([blob], id + '.png', { type: 'image/png' });
+    const file = new File([blob], id + '.jpg', { type: 'image/jpeg' });
 
     // Best path: share the IMAGE (Web Share API Level 2 — iOS Safari, Android Chrome).
     if (navigator.canShare && navigator.canShare({ files: [file] })) {
@@ -1021,7 +993,7 @@ async function bundleAsZip(blobs, packName) {
   if (!window.JSZip) throw new Error('JSZip failed to load');
   const zip = new JSZip();
   for (const { id, blob } of blobs) {
-    zip.file(id + '.png', blob);
+    zip.file(id + '.jpg', blob);
   }
   return await zip.generateAsync({ type: 'blob', compression: 'STORE' });
 }
@@ -1068,7 +1040,7 @@ async function shareAllFrames() {
       setProgress(`Capturing ${id}  (${i + 1} of ${total})`);
       if (btn) btn.querySelector('.bulk-label').textContent = `Capturing ${i + 1}/${total}…`;
     });
-    const files = blobs.map(({ id, blob }) => new File([blob], id + '.png', { type: 'image/png' }));
+    const files = blobs.map(({ id, blob }) => new File([blob], id + '.jpg', { type: 'image/jpeg' }));
 
     // Best path: native multi-file share (iOS Safari, Android Chrome)
     if (navigator.canShare && navigator.canShare({ files })) {
