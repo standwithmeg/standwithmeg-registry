@@ -446,10 +446,10 @@ html,body { background:#06070A; color:var(--white); font-family:Inter,system-ui,
 </header>
 <div class="bulk-bar">
   <button type="button" id="save-all-btn" class="bulk-btn bulk-save">
-    <span class="bulk-icon">⇩</span><span class="bulk-label">Save 6 frames to phone</span>
+    <span class="bulk-icon">⇩</span><span class="bulk-label">Save 6 images</span>
   </button>
   <button type="button" id="share-all-btn" class="bulk-btn bulk-share">
-    <span class="bulk-icon">↗</span><span class="bulk-label">Share 6 frames</span>
+    <span class="bulk-icon">↗</span><span class="bulk-label">Share 6 images</span>
   </button>
 </div>
 <div class="bulk-progress" id="bulk-progress"></div>
@@ -1002,54 +1002,64 @@ async function saveAllFrames() {
   const btn = document.getElementById('save-all-btn');
   const orig = btn ? btn.querySelector('.bulk-label').textContent : null;
   if (btn) { btn.disabled = true; btn.querySelector('.bulk-label').textContent = 'Loading…'; }
+
+  // Build a tidy filename prefix so all 6 files clearly belong together
+  // when they land in Downloads or Photos. e.g. "Magistrate_Blevins_frame-01.jpg".
+  const baseName = (document.title || 'spotlight').split(' ·')[0].trim().replace(/[^A-Za-z0-9]+/g, '_');
+
   try {
     const blobs = await captureAllFrames((i, total, id) => {
       setProgress(`Loading ${id}  (${i + 1} of ${total})`);
       if (btn) btn.querySelector('.bulk-label').textContent = `Loading ${i + 1}/${total}…`;
     });
+    const files = blobs.map(({ id, blob }) => new File([blob], `${baseName}_${id}.jpg`, { type: 'image/jpeg' }));
 
-    // ON PHONES (iOS Safari + Android Chrome): use Web Share API so the user
-    // can pick "Save to Photos" / "Save 6 Images" from the iOS share sheet.
-    // This is the ONLY way to get images into the phone's Photo Library —
-    // a direct download just puts them in Files, not Photos.
-    const files = blobs.map(({ id, blob }) => new File([blob], id + '.jpg', { type: 'image/jpeg' }));
+    // PHONES (iOS Safari, Android Chrome): Web Share API → share sheet →
+    // user picks "Save 6 Images" to drop them into the Photo Library.
     if (navigator.canShare && navigator.canShare({ files })) {
       setProgress('Opening share sheet — pick "Save 6 Images"');
-      if (btn) btn.querySelector('.bulk-label').textContent = 'Opening share…';
+      if (btn) btn.querySelector('.bulk-label').textContent = 'Opening…';
       try {
         await navigator.share({
           files,
           title: document.title,
           text: 'Stand With Meg · Court actor spotlight',
         });
-        setProgress('✓ Done — check Photos app');
-        if (btn) btn.querySelector('.bulk-label').textContent = '✓ Sent to share sheet';
+        setProgress('✓ Done');
+        if (btn) btn.querySelector('.bulk-label').textContent = '✓ Saved';
         return;
       } catch (e) {
         if (e.name === 'AbortError') {
-          // User cancelled the share sheet — that's fine, just clear state
           setProgress('');
           if (btn && orig) btn.querySelector('.bulk-label').textContent = orig;
           return;
         }
-        // Real error → fall through to zip download
-        console.warn('share sheet failed, falling back to zip:', e);
+        console.warn('share sheet failed, falling back:', e);
       }
     }
 
-    // DESKTOP FALLBACK: download as a zip
-    setProgress('Bundling as zip…');
-    if (btn) btn.querySelector('.bulk-label').textContent = 'Bundling zip…';
-    const zipBlob = await bundleAsZip(blobs, 'spotlight');
-    const url = URL.createObjectURL(zipBlob);
-    const link = document.createElement('a');
-    const baseName = (document.title || 'spotlight').split(' ·')[0].replace(/[^A-Za-z0-9]+/g,'_');
-    link.download = `${baseName}_spotlight.zip`;
-    link.href = url;
-    document.body.appendChild(link); link.click(); document.body.removeChild(link);
-    setTimeout(() => URL.revokeObjectURL(url), 3000);
-    setProgress('✓ Saved as zip');
-    if (btn) btn.querySelector('.bulk-label').textContent = '✓ Saved zip';
+    // DESKTOP (no canShare for files): trigger 6 direct downloads in sequence.
+    // The browser may prompt "Allow this site to download multiple files?" the
+    // first time — after Allow, future runs are silent.
+    setProgress('Downloading 6 images…');
+    if (btn) btn.querySelector('.bulk-label').textContent = 'Downloading…';
+    for (let i = 0; i < files.length; i++) {
+      const file = files[i];
+      const url = URL.createObjectURL(file);
+      const link = document.createElement('a');
+      link.download = file.name;
+      link.href = url;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      setTimeout(() => URL.revokeObjectURL(url), 5000);
+      // Small pause between clicks so Chrome doesn't drop later downloads
+      if (i < files.length - 1) {
+        await new Promise(r => setTimeout(r, 200));
+      }
+    }
+    setProgress('✓ Saved 6 images to Downloads');
+    if (btn) btn.querySelector('.bulk-label').textContent = '✓ Saved';
   } catch (e) {
     console.error(e);
     setProgress('✗ ' + (e.message || e));
