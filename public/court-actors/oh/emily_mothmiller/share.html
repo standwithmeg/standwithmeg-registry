@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,900&family=Inter:wght@400;600;700;800;900&family=JetBrains+Mono:wght@500;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
 <style>
 :root {
   --navy:#0B1A2D; --navy-deep:#050A14; --gold:#C9A227; --gold-soft:#E0B93C;
@@ -19,6 +20,37 @@ html,body { background:#06070A; color:var(--white); font-family:Inter,system-ui,
 .topbar b { display:block; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.24em; color:var(--gold); text-transform:uppercase; }
 .topbar span { display:block; margin-top:4px; color:rgba(245,245,245,.66); font-size:13px; line-height:1.4; }
 .share-scroll { width:min(100%,540px); margin:0 auto; padding:18px 12px 48px; }
+
+/* Bulk action bar — Save All / Share All buttons under the topbar */
+.bulk-bar {
+  width:min(100%,540px); margin:18px auto 0; padding:0 12px;
+  display:grid; grid-template-columns:1fr 1fr; gap:10px;
+}
+.bulk-btn {
+  display:flex; align-items:center; justify-content:center; gap:10px;
+  padding:14px 16px; border-radius:12px; cursor:pointer;
+  font-family:'Oswald',sans-serif; font-weight:700; font-size:14px;
+  letter-spacing:.14em; text-transform:uppercase;
+  transition:transform .12s, opacity .12s;
+}
+.bulk-btn:hover { transform:translateY(-1px); }
+.bulk-btn:active { transform:translateY(1px); }
+.bulk-btn:disabled { opacity:.65; cursor:wait; transform:none; }
+.bulk-save {
+  background:var(--gold); color:#0F1E30; border:none;
+  box-shadow:0 8px 22px rgba(201,162,39,.35);
+}
+.bulk-share {
+  background:var(--crimson); color:#fff; border:none;
+  box-shadow:0 8px 22px rgba(185,28,28,.35);
+}
+.bulk-icon { font-size:16px; }
+.bulk-progress {
+  width:min(100%,540px); margin:8px auto 0; padding:0 12px;
+  font-family:'JetBrains Mono',monospace; font-size:11px;
+  letter-spacing:.18em; color:var(--gold); text-transform:uppercase;
+  text-align:center; min-height:14px;
+}
 .phone-frame { margin:0 0 32px; }
 
 /* Story card — 9:16, rounded, deep navy gradient */
@@ -412,6 +444,15 @@ html,body { background:#06070A; color:var(--white); font-family:Inter,system-ui,
   <b>Story-ready share draft · Stand With Meg v2</b>
   <span>Emily Mothmiller · Ohio · review before posting. Suggested public route: /actors/ohio/emily_mothmiller/share</span>
 </header>
+<div class="bulk-bar">
+  <button type="button" id="save-all-btn" class="bulk-btn bulk-save">
+    <span class="bulk-icon">⇩</span><span class="bulk-label">Save all 6 frames</span>
+  </button>
+  <button type="button" id="share-all-btn" class="bulk-btn bulk-share">
+    <span class="bulk-icon">↗</span><span class="bulk-label">Share all 6 frames</span>
+  </button>
+</div>
+<div class="bulk-progress" id="bulk-progress"></div>
 <main class="share-scroll">
 <section class="phone-frame">
 <article class="frame f1 has-real-photo" id="frame-01">
@@ -934,6 +975,131 @@ document.addEventListener('click', (event) => {
   if (save) { event.preventDefault(); saveFrame(save.dataset.save); }
   if (share) { event.preventDefault(); shareFrame(share.dataset.share); }
 });
+
+// ============================================================
+// Save All / Share All — capture every frame, bundle as zip,
+// download or pass to Web Share API.
+// ============================================================
+const FRAME_IDS = ['frame-01','frame-02','frame-03','frame-04','frame-05','frame-06'];
+
+function setProgress(text) {
+  const el = document.getElementById('bulk-progress');
+  if (el) el.textContent = text || '';
+}
+
+async function captureAllFrames(onProgress) {
+  const blobs = [];
+  for (let i = 0; i < FRAME_IDS.length; i++) {
+    const id = FRAME_IDS[i];
+    if (onProgress) onProgress(i, FRAME_IDS.length, id);
+    const blob = await frameToBlob(id);
+    blobs.push({ id, blob });
+  }
+  return blobs;
+}
+
+async function bundleAsZip(blobs, packName) {
+  if (!window.JSZip) throw new Error('JSZip failed to load');
+  const zip = new JSZip();
+  for (const { id, blob } of blobs) {
+    zip.file(id + '.png', blob);
+  }
+  return await zip.generateAsync({ type: 'blob', compression: 'STORE' });
+}
+
+async function saveAllFrames() {
+  const btn = document.getElementById('save-all-btn');
+  const orig = btn ? btn.querySelector('.bulk-label').textContent : null;
+  if (btn) { btn.disabled = true; btn.querySelector('.bulk-label').textContent = 'Capturing…'; }
+  try {
+    const blobs = await captureAllFrames((i, total, id) => {
+      setProgress(`Capturing ${id}  (${i + 1} of ${total})`);
+      if (btn) btn.querySelector('.bulk-label').textContent = `Capturing ${i + 1}/${total}…`;
+    });
+    setProgress('Bundling as zip…');
+    const zipBlob = await bundleAsZip(blobs, 'spotlight');
+    const url = URL.createObjectURL(zipBlob);
+    const link = document.createElement('a');
+    const baseName = (document.title || 'spotlight').split(' ·')[0].replace(/[^A-Za-z0-9]+/g,'_');
+    link.download = `${baseName}_spotlight.zip`;
+    link.href = url;
+    document.body.appendChild(link); link.click(); document.body.removeChild(link);
+    setTimeout(() => URL.revokeObjectURL(url), 3000);
+    setProgress('✓ Saved all 6 frames as a zip');
+    if (btn) btn.querySelector('.bulk-label').textContent = '✓ Saved zip';
+  } catch (e) {
+    console.error(e);
+    setProgress('✗ ' + (e.message || e));
+    alert('Save all failed: ' + (e.message || e) + '\nFallback: save frames one at a time.');
+    if (btn && orig) btn.querySelector('.bulk-label').textContent = orig;
+  } finally {
+    if (btn) {
+      btn.disabled = false;
+      setTimeout(() => { if (orig) btn.querySelector('.bulk-label').textContent = orig; setProgress(''); }, 2500);
+    }
+  }
+}
+
+async function shareAllFrames() {
+  const btn = document.getElementById('share-all-btn');
+  const orig = btn ? btn.querySelector('.bulk-label').textContent : null;
+  if (btn) { btn.disabled = true; btn.querySelector('.bulk-label').textContent = 'Preparing…'; }
+  try {
+    const blobs = await captureAllFrames((i, total, id) => {
+      setProgress(`Capturing ${id}  (${i + 1} of ${total})`);
+      if (btn) btn.querySelector('.bulk-label').textContent = `Capturing ${i + 1}/${total}…`;
+    });
+    const files = blobs.map(({ id, blob }) => new File([blob], id + '.png', { type: 'image/png' }));
+
+    // Best path: native multi-file share (iOS Safari, Android Chrome)
+    if (navigator.canShare && navigator.canShare({ files })) {
+      setProgress('Opening share sheet…');
+      await navigator.share({
+        files,
+        title: document.title,
+        text: 'Court actor on the public record. StandWithMeg.com',
+      });
+      setProgress('✓ Shared');
+      if (btn) btn.querySelector('.bulk-label').textContent = '✓ Shared';
+    } else {
+      // Fallback: bundle as zip + offer the zip via share or download
+      setProgress('Bundling for share…');
+      const zipBlob = await bundleAsZip(blobs, 'spotlight');
+      const zipFile = new File([zipBlob], 'spotlight.zip', { type: 'application/zip' });
+      if (navigator.canShare && navigator.canShare({ files: [zipFile] })) {
+        await navigator.share({ files: [zipFile], title: document.title, text: 'StandWithMeg.com' });
+        setProgress('✓ Shared as zip');
+        if (btn) btn.querySelector('.bulk-label').textContent = '✓ Shared';
+      } else {
+        // Final fallback: download the zip locally
+        const url = URL.createObjectURL(zipBlob);
+        const link = document.createElement('a');
+        link.download = 'spotlight.zip'; link.href = url;
+        document.body.appendChild(link); link.click(); document.body.removeChild(link);
+        setTimeout(() => URL.revokeObjectURL(url), 3000);
+        setProgress('Share not supported here — zip downloaded instead');
+        if (btn) btn.querySelector('.bulk-label').textContent = '✓ Zip downloaded';
+      }
+    }
+  } catch (e) {
+    if (e.name !== 'AbortError') {
+      console.error(e);
+      setProgress('✗ ' + (e.message || e));
+      alert('Share all failed: ' + (e.message || e));
+    } else {
+      setProgress('');
+    }
+    if (btn && orig) btn.querySelector('.bulk-label').textContent = orig;
+  } finally {
+    if (btn) {
+      btn.disabled = false;
+      setTimeout(() => { if (orig) btn.querySelector('.bulk-label').textContent = orig; setProgress(''); }, 2500);
+    }
+  }
+}
+
+document.getElementById('save-all-btn')?.addEventListener('click', saveAllFrames);
+document.getElementById('share-all-btn')?.addEventListener('click', shareAllFrames);
 </script>
 </body>
 </html>
