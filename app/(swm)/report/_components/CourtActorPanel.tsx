@@ -163,14 +163,14 @@ export function CourtActorPanel({ actors, threshold }: Props) {
         </div>
 
         <div className="grid md:grid-cols-2 gap-px" style={{ backgroundColor: "rgba(255,255,255,0.06)" }}>
-          {sortedActors.map((actor, i) => (
-            <button
-              type="button"
-              key={`${actor.state_code ?? "NA"}-${actor.name}-${i}`}
-              onClick={() => setOpenActor(actor)}
-              className="text-left px-6 py-5 transition-colors hover:bg-white/5 focus:outline-none focus:ring-1 focus:ring-amber-300/40"
-              style={{ backgroundColor: BG }}
-              aria-label={`View what families said about ${actor.name}`}>
+          {sortedActors.map((actor, i) => {
+            // When this actor has a deployed spotlight page, the card links
+            // directly to it. No modal middle-step. The family-reported notes
+            // already live in the downloadable state PDF and on the spotlight page.
+            const key = `${actor.state_code ?? "NA"}-${actor.name}-${i}`;
+            const className = "text-left px-6 py-5 transition-colors hover:bg-white/5 focus:outline-none focus:ring-1 focus:ring-amber-300/40";
+            const ariaLabel = `Get the social media share template for ${actor.name}`;
+            const cardInner = (
               <div className="flex items-start gap-3">
                 {actor.photo_url ? (
                   <img
@@ -218,12 +218,34 @@ export function CourtActorPanel({ actors, threshold }: Props) {
                     </div>
                   </div>
                   <div className="mt-3 text-[11px] font-semibold" style={{ color: GOLD }}>
-                    Read what families said →
+                    Click here for the social media share template →
                   </div>
                 </div>
               </div>
-            </button>
-          ))}
+            );
+            return actor.share_url ? (
+              <a
+                key={key}
+                href={actor.share_url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={className}
+                style={{ backgroundColor: BG }}
+                aria-label={ariaLabel}>
+                {cardInner}
+              </a>
+            ) : (
+              <button
+                key={key}
+                type="button"
+                onClick={() => setOpenActor(actor)}
+                className={className}
+                style={{ backgroundColor: BG }}
+                aria-label={ariaLabel}>
+                {cardInner}
+              </button>
+            );
+          })}
         </div>
 
         <div className="px-6 py-3 text-[11px] leading-snug"
