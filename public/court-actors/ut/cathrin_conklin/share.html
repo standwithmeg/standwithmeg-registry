@@ -1014,9 +1014,16 @@ async function saveAllFrames() {
     });
     const files = blobs.map(({ id, blob }) => new File([blob], `${baseName}_${id}.jpg`, { type: 'image/jpeg' }));
 
+    // Only use the share sheet on PHONES — macOS desktop also supports
+    // Web Share API but its share sheet doesn't have "Save to Photos",
+    // just AirDrop/Messages. Users on desktop want a direct download.
+    const isMobile =
+      window.matchMedia('(pointer: coarse)').matches &&
+      /iPhone|iPad|iPod|Android/i.test(navigator.userAgent || '');
+
     // PHONES (iOS Safari, Android Chrome): Web Share API → share sheet →
     // user picks "Save 6 Images" to drop them into the Photo Library.
-    if (navigator.canShare && navigator.canShare({ files })) {
+    if (isMobile && navigator.canShare && navigator.canShare({ files })) {
       setProgress('Opening share sheet — pick "Save 6 Images"');
       if (btn) btn.querySelector('.bulk-label').textContent = 'Opening…';
       try {
