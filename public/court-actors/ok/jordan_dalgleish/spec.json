@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "jordan_dalgleish",
+    "display_name": "Jordan Dalgleish",
+    "title": "",
+    "first_name": "Jordan",
+    "last_name": "Dalgleish",
+    "role": "GAL / Child Representative",
+    "court": "Wagoner",
+    "county": null,
+    "court_or_county": "Wagoner",
+    "state": "Oklahoma",
+    "state_abbr": "OK",
+    "mention_count": 3,
+    "family_count": 3,
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "08bd38b3-fe28-41fa-8d99-ea6152a6e0c7",
+      "b4927d24-2ded-4e53-9174-d7b09d55e533",
+      "b0002bf0-4dd3-483d-aad7-3e1aa84d4aaa"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "oklahoma/jordan_dalgleish/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 88,
+    "total_submissions": 108,
+    "avg_financial_loss": 114484.55,
+    "avg_months_lost": 28.2,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OK",
+    "state_family_count": 108,
+    "median_months_lost": 12.0,
+    "median_financial_loss": 78500,
+    "median_burden_sample_size": 59,
+    "pro_se_count": 48,
+    "pro_se_pct": 44.4,
+    "children_impacted": 188,
+    "clean_sample_size": 108,
+    "raw_submission_count": 108
+  },
+  "movement_total": 3588,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Failed to follow through with meetings with the children and investigations.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Failed to follow through with investigations and meetings with the children, she knew of lies being told by the opposing party but allowed the case to move forward and her…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Spent countless hours with my ex and the kids during our divorce. Spent less than an hour with me and the kids. Never objectively considered both parent’s roles and value…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/jordan_dalgleish",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/oklahoma/jordan_dalgleish/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}
