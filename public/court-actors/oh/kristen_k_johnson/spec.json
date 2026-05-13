@@ -13,6 +13,7 @@
     "state": "Ohio",
     "state_abbr": "OH",
     "mention_count": 8,
+    "family_count": 9,
     "actor_report_count": 8,
     "supabase_row_ids": [
       "02012677-e69a-4ba3-b2bf-635b3acfa3f5",
@@ -30,34 +31,34 @@
   "photo": {
     "path": "ohio/kristen_k_johnson/image_1080.png",
     "exists": true,
-    "policy": "covers_only",
-    "assigned_from": "_inbox/photos/_unmatched/20260512_154526__kristin_johnson (manual override \u2014 filename had vowel typo)"
+    "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 144,
-    "total_submissions": 186,
-    "avg_financial_loss": 123936.34,
-    "avg_months_lost": 31.0,
+    "families_approved": 148,
+    "total_submissions": 191,
+    "avg_financial_loss": 123191.67,
+    "avg_months_lost": 30.3,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OH",
-    "state_family_count": 186,
-    "median_months_lost": 20.0,
-    "median_financial_loss": 82500,
-    "median_burden_sample_size": 93,
-    "pro_se_count": 106,
-    "pro_se_pct": 58.2,
-    "children_impacted": 274,
-    "clean_sample_size": 182,
-    "raw_submission_count": 182
+    "state_family_count": 191,
+    "median_months_lost": 19.0,
+    "median_financial_loss": 81250,
+    "median_burden_sample_size": 96,
+    "pro_se_count": 110,
+    "pro_se_pct": 58.5,
+    "children_impacted": 282,
+    "clean_sample_size": 188,
+    "raw_submission_count": 188
   },
-  "movement_total": 3525,
+  "movement_total": 3580,
   "supabase": {
     "report_count": 8,
     "actor_report_count": 8,
+    "family_count": 9,
     "family_reports": [],
     "public_comments": [
       {
-        "comment_text": "She didn\u2019t look at my case at all and just decided the mother was the best choice without looking at evidence and blatantly ignored eveidence in court",
+        "comment_text": "She didn’t look at my case at all and just decided the mother was the best choice without looking at evidence and blatantly ignored eveidence in court",
         "author": "Anonymous parent",
         "source": "court_actors.notes"
       },
@@ -76,8 +77,8 @@
   "export_dir": "New Final Post and Capcut template/export/kristen_k_johnson",
   "unresolved": [],
   "guardrails": {
-    "voice": "families reported / submitted / alleged \u2014 never 'this person did X'",
-    "footer": "Family-reported submissions \u00b7 not court findings.",
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
     "strike_through_reserved_for": [
       "isolated",
       "dismissed",
@@ -90,5 +91,5 @@
     "recommended_route": "/actors/ohio/kristen_k_johnson/share",
     "draft_only": true
   },
-  "cta": "STANDWITHMEG.COM \u2197"
+  "cta": "STANDWITHMEG.COM ↗"
 }
