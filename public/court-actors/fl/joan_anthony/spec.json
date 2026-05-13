@@ -25,8 +25,8 @@
     "actor_bucket_key": "joan anthony|FL"
   },
   "photo": {
-    "path": null,
-    "exists": false,
+    "path": "florida/joan_anthony/image_1080.png",
+    "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
@@ -46,12 +46,31 @@
     "clean_sample_size": 202,
     "raw_submission_count": 202
   },
-  "movement_total": 3580,
+  "movement_total": 3589,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Florida DCF medically kidnapped my specials needs child who was weaning. The agency put…",
+        "state": "FL",
+        "county": "Volusia",
+        "row_id": "4c63f799-5d2f-4526-8ce1-9061d62c8425"
+      },
+      {
+        "body": "Fl DCF is endangering my infant granddaughters life. She has complex special needs and…",
+        "state": "FL",
+        "county": "Daytona Beach",
+        "row_id": "32c1079d-4f48-408f-955e-7e0173f25c19"
+      },
+      {
+        "body": "Our entire family is shattered beyond repair, physically, emotionally and psychologically.",
+        "state": "FL",
+        "county": "Volusia",
+        "row_id": "d575c70d-4163-490a-8c75-a33d394eee4b"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Florida DCF and its state contractors (Community Partnership for Children, Seventh Circuit Court, Volusia County) ignored altered and fraudulent coerced consent documents used to remove parental rights from a disabled…",
