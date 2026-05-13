@@ -24,8 +24,8 @@
     "actor_bucket_key": "cynthia pickering|OK"
   },
   "photo": {
-    "path": null,
-    "exists": false,
+    "path": "oklahoma/cynthia_pickering/image_1080.png",
+    "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
@@ -45,7 +45,7 @@
     "clean_sample_size": 108,
     "raw_submission_count": 108
   },
-  "movement_total": 3580,
+  "movement_total": 3587,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
