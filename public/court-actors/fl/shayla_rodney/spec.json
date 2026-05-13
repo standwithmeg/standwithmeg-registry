@@ -1,0 +1,83 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "shayla_rodney",
+    "display_name": "Shayla Rodney",
+    "title": "",
+    "first_name": "Shayla",
+    "last_name": "Rodney",
+    "role": "CPS Worker",
+    "court": "Volusia",
+    "county": null,
+    "court_or_county": "Volusia",
+    "state": "Florida",
+    "state_abbr": "FL",
+    "mention_count": 3,
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "e907bd65-d1a0-4fd8-b421-55e06827af42",
+      "92df62e3-c374-4f90-99ba-c191419a9144",
+      "71accc58-9433-440a-a5d2-1112b8976d92"
+    ],
+    "actor_row_id": "e907bd65-d1a0-4fd8-b421-55e06827af42",
+    "actor_bucket_key": "shayla rodney|FL"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 151,
+    "total_submissions": 205,
+    "avg_financial_loss": 201273.29,
+    "avg_months_lost": 30.6,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "FL",
+    "state_family_count": 205,
+    "median_months_lost": 20.0,
+    "median_financial_loss": 215500,
+    "median_burden_sample_size": 88,
+    "pro_se_count": 120,
+    "pro_se_pct": 59.4,
+    "children_impacted": 326,
+    "clean_sample_size": 202,
+    "raw_submission_count": 202
+  },
+  "movement_total": 3571,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Removed relative Kim Florida Homestudy from the FSFN database to foreclose guardian candidacy and did not start a court ordered VT ICPC homestudy for 5 months until candidate filed a…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Rodney pulled my mother’s FL home-study out of the FSFN system. She had the hospital eject my mother and I from the NICU. She committed mental injury on my two…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/shayla_rodney",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/florida/shayla_rodney/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

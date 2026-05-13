@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-13T11:41:27.644558",
+  "generated_at": "2026-05-13T11:45:18.993538",
   "actors": [
     {
       "slug": "jesse_i_santana",
@@ -63,6 +63,15 @@
       "actor_bucket_key": "leah case|FL",
       "photo_url": "/court-actors/fl/leah_case/image_1080.png",
       "share_url": "/court-actors/fl/leah_case/share.html"
+    },
+    {
+      "slug": "shayla_rodney",
+      "state_abbr": "FL",
+      "display_name": "Shayla Rodney",
+      "canonical_name": "Shayla Rodney",
+      "actor_bucket_key": "shayla rodney|FL",
+      "photo_url": null,
+      "share_url": "/court-actors/fl/shayla_rodney/share.html"
     },
     {
       "slug": "lakendra_slade",
@@ -252,6 +261,15 @@
       "actor_bucket_key": null,
       "photo_url": "/court-actors/mt/jodi_christiansen/image_1080.png",
       "share_url": "/court-actors/mt/jodi_christiansen/share.html"
+    },
+    {
+      "slug": "judge_kimble",
+      "state_abbr": "NC",
+      "display_name": "Judge Kimble",
+      "canonical_name": "Judge Kimble",
+      "actor_bucket_key": "kimble|NC",
+      "photo_url": "/court-actors/nc/judge_kimble/image_1080.png",
+      "share_url": "/court-actors/nc/judge_kimble/share.html"
     },
     {
       "slug": "tammy_smith",

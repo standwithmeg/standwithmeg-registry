@@ -1,0 +1,89 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "judge_kimble",
+    "display_name": "Judge Kimble",
+    "title": "Judge",
+    "first_name": "Judge",
+    "last_name": "Kimble",
+    "role": "Judge",
+    "court": "Harnett county",
+    "county": null,
+    "court_or_county": "Harnett county",
+    "state": "North Carolina",
+    "state_abbr": "NC",
+    "mention_count": 4,
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "29fbf7cc-c00f-4a06-ade8-735d24c15f4f",
+      "0e098b53-c73f-4ae7-b1c4-55e366115ca0",
+      "3c8f75cc-178f-497f-adbe-648cc3b81980",
+      "194c1fd0-f298-401d-a79c-984821d99193"
+    ],
+    "actor_row_id": "29fbf7cc-c00f-4a06-ade8-735d24c15f4f",
+    "actor_bucket_key": "kimble|NC"
+  },
+  "photo": {
+    "path": "north_carolina/judge_kimble/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 77,
+    "total_submissions": 111,
+    "avg_financial_loss": 142632.77,
+    "avg_months_lost": 41.5,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "NC",
+    "state_family_count": 111,
+    "median_months_lost": 18.0,
+    "median_financial_loss": 129400,
+    "median_burden_sample_size": 32,
+    "pro_se_count": 55,
+    "pro_se_pct": 50.5,
+    "children_impacted": 167,
+    "clean_sample_size": 109,
+    "raw_submission_count": 109
+  },
+  "movement_total": 3570,
+  "supabase": {
+    "report_count": 4,
+    "actor_report_count": 4,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Made a ruling with no evidence. Left child with abuser. Took months and months to make a ruling on emergency ex parte order",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Took entirely too long to rule on an emergency case.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Very inappropriate comments during the trial. He joked about himself not knowing when to stop drinking alcohol - knowing that he was arrested for a DUI from picking up his…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/judge_kimble",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/north-carolina/judge_kimble/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}
