@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "donald_griffith",
+    "display_name": "Donald griffith",
+    "title": "",
+    "first_name": "Donald",
+    "last_name": "Griffith",
+    "role": "Judge",
+    "court": "Kern",
+    "county": null,
+    "court_or_county": "Kern",
+    "state": "California",
+    "state_abbr": "CA",
+    "mention_count": 3,
+    "family_count": 3,
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "6b0faaac-5290-4f43-9697-2266e8ac11e5",
+      "78d339ce-48d0-498c-b1f6-7904461b0e68",
+      "f0acaab3-1bfd-4f7f-a59b-077c76181172"
+    ],
+    "actor_row_id": "6b0faaac-5290-4f43-9697-2266e8ac11e5",
+    "actor_bucket_key": "donald grifith|CA"
+  },
+  "photo": {
+    "path": "california/donald_griffith/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 252,
+    "total_submissions": 320,
+    "avg_financial_loss": 287937.38,
+    "avg_months_lost": 37.5,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "CA",
+    "state_family_count": 320,
+    "median_months_lost": 23.5,
+    "median_financial_loss": 277100,
+    "median_burden_sample_size": 150,
+    "pro_se_count": 179,
+    "pro_se_pct": 57.0,
+    "children_impacted": 516,
+    "clean_sample_size": 314,
+    "raw_submission_count": 314
+  },
+  "movement_total": 3586,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "This was my ex’s attorney’s last attempt to make my case go away. This judge only purposely was to act like he was having a hearing and then ignore any…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "As court commissioner removed all of Fathers visitation rights on a contested false ex parte order. As a judge, refused to self recuse on the ground with bias at the…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Refused to follow CCP 5.250 and when asked to provide “investigator” for questioning stated “I’m not going to do that to her” “you can appeal, you’ve done it before” also…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/donald_griffith",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/california/donald_griffith/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}
