@@ -46,12 +46,31 @@
     "clean_sample_size": 111,
     "raw_submission_count": 111
   },
-  "movement_total": 3580,
+  "movement_total": 3592,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
     "family_count": 4,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "I’ve witnessed a very unfair and concerning amount of corruption in this court room…",
+        "state": "NC",
+        "county": "Harnett",
+        "row_id": "03a099b6-3763-4dc1-aaca-25abaf6d4ac7"
+      },
+      {
+        "body": "My boys that I raised alone were instantly ripped from their mother and have…",
+        "state": "NC",
+        "county": "Harnett",
+        "row_id": "b84405c6-56b1-4cde-84e8-e6dbaa50d323"
+      },
+      {
+        "body": "The system has stolen time and been completely unjust to my child, my family…",
+        "state": "NC",
+        "county": "Harnett County",
+        "row_id": "268d09b2-234c-4395-bdc1-ab41544fdea1"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "She was texting the judge from a personal number during the hearing about the hearing itself. He would check his phone after every single text she sent in the court…",
@@ -65,6 +84,11 @@
       },
       {
         "comment_text": "Delay after delay. Inappropriate with the judge",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Refused to make copies (in the chambers) of evidence that the trial judge Rose asked, continued to question myself about My spouse but would not subpoena My spouse to ask…",
         "author": "Anonymous parent",
         "source": "court_actors.notes"
       }

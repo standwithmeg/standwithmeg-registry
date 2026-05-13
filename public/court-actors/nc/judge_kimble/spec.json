@@ -46,12 +46,25 @@
     "clean_sample_size": 111,
     "raw_submission_count": 111
   },
-  "movement_total": 3580,
+  "movement_total": 3592,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "I’ve witnessed a very unfair and concerning amount of corruption in this court room…",
+        "state": "NC",
+        "county": "Harnett",
+        "row_id": "03a099b6-3763-4dc1-aaca-25abaf6d4ac7"
+      },
+      {
+        "body": "My boys that I raised alone were instantly ripped from their mother and have…",
+        "state": "NC",
+        "county": "Harnett",
+        "row_id": "b84405c6-56b1-4cde-84e8-e6dbaa50d323"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Made a ruling with no evidence. Left child with abuser. Took months and months to make a ruling on emergency ex parte order",
@@ -65,6 +78,11 @@
       },
       {
         "comment_text": "Very inappropriate comments during the trial. He joked about himself not knowing when to stop drinking alcohol - knowing that he was arrested for a DUI from picking up his…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Ruled on emergency ex parte, never had an emergency hearing. Took my son from me with no evidence",
         "author": "Anonymous parent",
         "source": "court_actors.notes"
       }

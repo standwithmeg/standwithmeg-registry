@@ -43,12 +43,19 @@
     "clean_sample_size": 80,
     "raw_submission_count": 80
   },
-  "movement_total": 3580,
+  "movement_total": 3592,
   "supabase": {
     "report_count": 1,
     "actor_report_count": 1,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "This system has stolen years of our lives, and I can’t honestly teach my…",
+        "state": "GA",
+        "county": "Cherokee County",
+        "row_id": "4261fe2d-1017-4108-8e5e-66d4d84e0408"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Lied in testimony, made up evidence (including totally fake drug charges she submitted on an excel spreadsheet), ignored actual convicted criminal activity of the other side, currently being sued by…",

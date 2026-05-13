@@ -52,7 +52,7 @@
     "clean_sample_size": 69,
     "raw_submission_count": 69
   },
-  "movement_total": 3589,
+  "movement_total": 3592,
   "supabase": {
     "report_count": 10,
     "actor_report_count": 10,
@@ -75,6 +75,24 @@
         "state": "IA",
         "county": "Wapello county",
         "row_id": "85455bb8-d73d-4bee-a037-5a69bd0f0e0c"
+      },
+      {
+        "body": "Cynthia Hucks ruined my life. The only thing I got to keep in my…",
+        "state": "IA",
+        "county": "Wapello",
+        "row_id": "8bcae321-a45b-4247-ae13-cba22dba1398"
+      },
+      {
+        "body": "It has torn my life apart with no end in sight. Now they want…",
+        "state": "IA",
+        "county": "Wapello",
+        "row_id": "3375ea30-dced-462b-80dd-41a94ed13815"
+      },
+      {
+        "body": "Family court is not about justice. It’s about how much justice you can afford.",
+        "state": "IA",
+        "county": "Jefferson",
+        "row_id": "c4876b98-0f52-47c2-b295-f91587acbaa5"
       }
     ],
     "public_comments": [
@@ -90,6 +108,21 @@
       },
       {
         "comment_text": "She helped me leave my abuser and fight for what was fair for my children. She is a busy attorney just like any good one, but her job is implacable!",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Amazing lawyer, did everything I asked. She has helped me and so many other families",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "She failed to provide me with court dates and tell me that i needed character affidavits in my daughter's custody case in 2010",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "There is a lot to list but the two major take aways. 1. I paid her to file and argue a contempt of court for non visitation. She filed however…",
         "author": "Anonymous parent",
         "source": "court_actors.notes"
       }

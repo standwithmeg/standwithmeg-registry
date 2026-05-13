@@ -47,12 +47,37 @@
     "clean_sample_size": 47,
     "raw_submission_count": 47
   },
-  "movement_total": 3580,
+  "movement_total": 3592,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
     "family_count": 4,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "the court made me live with my dad who sexually molested me and the…",
+        "state": "LA",
+        "county": "Plaquemines",
+        "row_id": "626bc7d9-56d4-4976-b132-663795575ec4"
+      },
+      {
+        "body": "The system worked with the father to take my children away from their loving…",
+        "state": "LA",
+        "county": "Plaquemines",
+        "row_id": "a0496d45-bf2f-43b2-8078-77a0f4ad19a7"
+      },
+      {
+        "body": "The family court specifically judge Michael Clement ruled against a child’s safety and forced…",
+        "state": "LA",
+        "county": "Plaquemines",
+        "row_id": "a7bbeaf9-40a1-4fdd-832c-bb52606bd720"
+      },
+      {
+        "body": "Walking through family court felt less like seeking protection and more like trying to…",
+        "state": "LA",
+        "county": "Plaquemines",
+        "row_id": "8ad8a041-adf1-41fe-984d-a908036b4bb0"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Ignored child’s disclosures of sexual abuse, refused to speak to child’s therapist.",
@@ -66,6 +91,16 @@
       },
       {
         "comment_text": "Became romantically involved with my ex during court case. Lied about me to give him sole custody",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Custody evaluation was biased, she met with the father 12 times and with the mother three, she ignored Mother’s report regarding the father‘s child pornography addiction, she recommended sole custody…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Did not believe the child’s disclosures of sexual abuse even though substantiated by CPS, refused to speak to child’s therapist",
         "author": "Anonymous parent",
         "source": "court_actors.notes"
       }

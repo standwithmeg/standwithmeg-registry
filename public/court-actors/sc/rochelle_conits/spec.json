@@ -45,12 +45,25 @@
     "clean_sample_size": 65,
     "raw_submission_count": 65
   },
-  "movement_total": 3580,
+  "movement_total": 3592,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Multiple people in the DSS system repeatedly apologized and said this should never happen.…",
+        "state": "SC",
+        "county": "greenville",
+        "row_id": "a08fa2eb-bc21-4966-85c2-565b73df0065"
+      },
+      {
+        "body": "They destroyed us.",
+        "state": "SC",
+        "county": "Greenville",
+        "row_id": "92d80a92-eeb8-4854-9b54-5ebb5b564dac"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Explosive and could not control emotions, biased, lack of ethics",

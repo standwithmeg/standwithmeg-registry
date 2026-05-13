@@ -43,12 +43,19 @@
     "clean_sample_size": 62,
     "raw_submission_count": 62
   },
-  "movement_total": 3586,
+  "movement_total": 3592,
   "supabase": {
     "report_count": 1,
     "actor_report_count": 1,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "\"To give you an idea of what the last two years have looked like…",
+        "state": "MA",
+        "county": "Essex",
+        "row_id": "f123c8f9-62a3-4ab4-9b2e-e7acf216a97e"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Denied motions rushed to judgment told me that she doesn’t care what’s happened in the criminal court",

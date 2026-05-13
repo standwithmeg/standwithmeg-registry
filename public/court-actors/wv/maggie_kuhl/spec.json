@@ -45,12 +45,31 @@
     "clean_sample_size": 50,
     "raw_submission_count": 50
   },
-  "movement_total": 3588,
+  "movement_total": 3592,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Neither attorney acknowledged that my son is specials needs bc father doesnt want him…",
+        "state": "WV",
+        "county": "Putnam",
+        "row_id": "1212d22f-a220-4e1f-85e6-f667997f3e62"
+      },
+      {
+        "body": "Family court proved that abuse can be rewarded and those who never abuse their…",
+        "state": "WV",
+        "county": "Putnam",
+        "row_id": "bd204428-c254-4e8a-b295-e6b3e3dbd7a3"
+      },
+      {
+        "body": "The system has destroyed relationships, legacies, holidays, milestones, but it has cost me a…",
+        "state": "WV",
+        "county": "Putnam County",
+        "row_id": "03d6fd34-053e-4a8b-a161-1bbd557947d1"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Maggie Kuhl works at Putnam County Courthouse multiple times during the week. She is also represented Cara Branham my ex for the majority of the court proceedings over the 11…",

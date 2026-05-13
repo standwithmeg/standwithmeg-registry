@@ -45,12 +45,31 @@
     "clean_sample_size": 107,
     "raw_submission_count": 107
   },
-  "movement_total": 3580,
+  "movement_total": 3592,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "It has ruined my life. My relationship with my little girl, my business went…",
+        "state": "NY",
+        "county": "Monroe",
+        "row_id": "333eb6c0-7dbb-4f65-9b5c-2b428277ab11"
+      },
+      {
+        "body": "Obliterated it. They did illegal things, then coerced the mother into becoming a criminal…",
+        "state": "NY",
+        "county": "Monroe",
+        "row_id": "29136b64-3413-4508-8bb3-e6a9ec1ac0d0"
+      },
+      {
+        "body": "Family court leveraged my child to financially drain me until I was forced into…",
+        "state": "NY",
+        "county": "Monroe",
+        "row_id": "af23dd43-a631-489f-91c2-797f16d4dfaa"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Judge who appears to be related to the domestic violence leader Patrick Gallagher who was involved in a false narrative on me for domestic violence. The judge also appears to…",

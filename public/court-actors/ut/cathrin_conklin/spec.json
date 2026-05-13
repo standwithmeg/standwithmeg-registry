@@ -48,12 +48,25 @@
     "clean_sample_size": 45,
     "raw_submission_count": 45
   },
-  "movement_total": 3580,
+  "movement_total": 3592,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
     "family_count": 2,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "My kids are still at risk and I have to come up with more…",
+        "state": "UT",
+        "county": "Weber",
+        "row_id": "7336c0bd-7388-404c-a5c9-19f9ea3e9486"
+      },
+      {
+        "body": "My ex husband has taken everything he threatened to with the exception of the…",
+        "state": "UT",
+        "county": "Davis county",
+        "row_id": "959b5036-368e-4d88-ac66-ce7857a8066f"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "I already added this Said she couldn’t use the evaluators report due to the other side’s attorneys bringing up the recommendations before trial that’s all she used in her findings,…",
@@ -68,6 +81,21 @@
       },
       {
         "comment_text": "Two be determined my case is active.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "I already added this",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Ignored domestic violence protections in favor of abusive parent.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Same person... so the same reason.",
         "author": "Anonymous parent",
         "source": "court_actors.notes"
       }
