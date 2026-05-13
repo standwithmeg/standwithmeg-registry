@@ -13,6 +13,7 @@
     "state": "Kansas",
     "state_abbr": "KS",
     "mention_count": 7,
+    "family_count": 7,
     "actor_report_count": 7,
     "supabase_row_ids": [
       "ddfd7d7b-8684-4a68-bd8a-9aa8bbc46147",
@@ -32,26 +33,27 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 116,
-    "total_submissions": 167,
-    "avg_financial_loss": 128403.78,
-    "avg_months_lost": 32.1,
+    "families_approved": 119,
+    "total_submissions": 170,
+    "avg_financial_loss": 127154.04,
+    "avg_months_lost": 31.6,
     "_source_table": "movement_stats_by_state",
     "_match_value": "KS",
-    "state_family_count": 167,
-    "median_months_lost": 20.5,
+    "state_family_count": 170,
+    "median_months_lost": 20.0,
     "median_financial_loss": 84225,
-    "median_burden_sample_size": 76,
-    "pro_se_count": 85,
-    "pro_se_pct": 54.1,
-    "children_impacted": 278,
-    "clean_sample_size": 157,
-    "raw_submission_count": 157
+    "median_burden_sample_size": 78,
+    "pro_se_count": 86,
+    "pro_se_pct": 53.8,
+    "children_impacted": 285,
+    "clean_sample_size": 160,
+    "raw_submission_count": 160
   },
-  "movement_total": 3525,
+  "movement_total": 3580,
   "supabase": {
     "report_count": 7,
     "actor_report_count": 7,
+    "family_count": 7,
     "family_reports": [],
     "public_comments": [
       {
