@@ -13,6 +13,7 @@
     "state": "Iowa",
     "state_abbr": "IA",
     "mention_count": 10,
+    "family_count": 10,
     "actor_report_count": 10,
     "supabase_row_ids": [
       "964260ec-f170-4010-8c58-77d09bf2ca79",
@@ -51,10 +52,11 @@
     "clean_sample_size": 69,
     "raw_submission_count": 69
   },
-  "movement_total": 3525,
+  "movement_total": 3580,
   "supabase": {
     "report_count": 10,
     "actor_report_count": 10,
+    "family_count": 10,
     "family_reports": [],
     "public_comments": [
       {

@@ -356,6 +356,7 @@ export function CourtActorNotesModal({ actor, onClose }: ModalProps) {
   const [notes, setNotes] = useState<AnonymousNote[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [shareStatus, setShareStatus] = useState<"idle" | "copied" | "error">("idle");
 
   useEffect(() => {
     let cancelled = false;
@@ -384,6 +385,40 @@ export function CourtActorNotesModal({ actor, onClose }: ModalProps) {
     void load();
     return () => { cancelled = true; };
   }, [actor.name, actor.state_code]);
+
+  const handleSharePage = async () => {
+    const shareUrl = typeof window !== "undefined" ? window.location.href : "https://standwithmeg.com/report";
+    const locationLabel = actor.state_code ? ` in ${actor.state_code}` : "";
+    const shareData: ShareData = {
+      title: `${actor.name} — named by ${actor.count} families`,
+      text: `${actor.count} families independently named ${actor.name} (${actor.role}${locationLabel}) on Stand With Meg's public record. Help amplify the pattern.`,
+      url: shareUrl,
+    };
+    setShareStatus("idle");
+    try {
+      if (typeof navigator !== "undefined" && typeof navigator.share === "function") {
+        await navigator.share(shareData);
+        return;
+      }
+    } catch (err) {
+      const name = (err as { name?: string } | null)?.name;
+      if (name === "AbortError") return;
+    }
+    try {
+      if (typeof navigator !== "undefined" && navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(shareUrl);
+        setShareStatus("copied");
+        setTimeout(() => setShareStatus("idle"), 2500);
+        return;
+      }
+    } catch {
+      // fall through
+    }
+    setShareStatus("error");
+    setTimeout(() => setShareStatus("idle"), 2500);
+  };
+
+  const showAmplifyState = !loading && !error && !actor.share_url && notes.length === 0;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4"
@@ -458,7 +493,38 @@ export function CourtActorNotesModal({ actor, onClose }: ModalProps) {
             </div>
           )}
 
-          {!loading && !error && notes.length === 0 && (
+          {showAmplifyState && (
+            <div className="rounded-lg px-5 py-6 text-center space-y-4"
+              style={{ backgroundColor: "rgba(201,162,39,0.06)", border: "1px solid rgba(201,162,39,0.22)" }}>
+              <div className="text-sm leading-relaxed" style={{ color: "rgba(245,245,245,0.85)" }}>
+                Counted by <span className="font-black" style={{ color: GOLD }}>{actor.count}</span>{" "}
+                {actor.count === 1 ? "family" : "families"} who named this person but did not write a note.
+                Help amplify the pattern by sharing this page.
+              </div>
+              <button
+                type="button"
+                onClick={() => { void handleSharePage(); }}
+                className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-bold rounded-lg transition-colors hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-amber-300/50"
+                style={{ backgroundColor: GOLD, color: "#0F1E30" }}
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                    d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+                </svg>
+                Share this page
+              </button>
+              {shareStatus === "copied" && (
+                <div className="text-xs" style={{ color: GOLD }}>Link copied to clipboard.</div>
+              )}
+              {shareStatus === "error" && (
+                <div className="text-xs" style={{ color: "rgb(252,165,165)" }}>
+                  Could not share automatically. Copy the page URL from your browser.
+                </div>
+              )}
+            </div>
+          )}
+
+          {!loading && !error && !showAmplifyState && notes.length === 0 && (
             <div className="text-sm text-center py-8" style={{ color: "rgba(245,245,245,0.4)" }}>
               No written reports yet. {actor.count} {actor.count === 1 ? "family" : "families"} named this person but did not include a note.
             </div>

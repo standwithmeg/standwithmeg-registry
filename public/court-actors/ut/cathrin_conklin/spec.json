@@ -13,6 +13,7 @@
     "state": "Utah",
     "state_abbr": "UT",
     "mention_count": 6,
+    "family_count": 2,
     "actor_report_count": 6,
     "supabase_row_ids": [
       "60fbada1-2ab2-4453-936c-314db5dd558e",
@@ -31,26 +32,27 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 29,
-    "total_submissions": 40,
-    "avg_financial_loss": 242439.0,
-    "avg_months_lost": 17.9,
+    "families_approved": 30,
+    "total_submissions": 41,
+    "avg_financial_loss": 289480.08,
+    "avg_months_lost": 18.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "UT",
-    "state_family_count": 40,
-    "median_months_lost": 7.0,
-    "median_financial_loss": 161600,
-    "median_burden_sample_size": 28,
+    "state_family_count": 41,
+    "median_months_lost": 8.0,
+    "median_financial_loss": 166000,
+    "median_burden_sample_size": 29,
     "pro_se_count": 25,
-    "pro_se_pct": 56.8,
-    "children_impacted": 75,
-    "clean_sample_size": 44,
-    "raw_submission_count": 44
+    "pro_se_pct": 55.6,
+    "children_impacted": 77,
+    "clean_sample_size": 45,
+    "raw_submission_count": 45
   },
-  "movement_total": 3525,
+  "movement_total": 3580,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
+    "family_count": 2,
     "family_reports": [],
     "public_comments": [
       {

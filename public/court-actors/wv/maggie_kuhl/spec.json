@@ -13,6 +13,7 @@
     "state": "West Virginia",
     "state_abbr": "WV",
     "mention_count": 3,
+    "family_count": 3,
     "actor_report_count": 3,
     "supabase_row_ids": [
       "e26acfce-3759-4795-809c-35de424dd36b",
@@ -44,10 +45,11 @@
     "clean_sample_size": 50,
     "raw_submission_count": 50
   },
-  "movement_total": 3525,
+  "movement_total": 3580,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
+    "family_count": 3,
     "family_reports": [],
     "public_comments": [
       {

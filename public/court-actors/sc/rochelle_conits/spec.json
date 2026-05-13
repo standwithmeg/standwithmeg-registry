@@ -13,6 +13,7 @@
     "state": "South Carolina",
     "state_abbr": "SC",
     "mention_count": 3,
+    "family_count": 3,
     "actor_report_count": 3,
     "supabase_row_ids": [
       "28d37c6e-b3f5-4040-ab3d-07759e06998d",
@@ -44,10 +45,11 @@
     "clean_sample_size": 65,
     "raw_submission_count": 65
   },
-  "movement_total": 3556,
+  "movement_total": 3580,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
+    "family_count": 3,
     "family_reports": [],
     "public_comments": [
       {
