@@ -534,28 +534,72 @@ def _paginate_court_actors(actors):
 
     The Court Actors page now shows full anonymized comments per family, so
     a single state can run several pages. Without pagination, long comments
-    overflow the fixed page height and bleed into the next section.
+    or the per-actor complaint-packet block can overflow the fixed page
+    height and bleed into the next section.
 
     Heuristic: estimate content "weight" by total character count of comments
-    plus a fixed per-actor overhead. The first page has less budget because
-    it carries the section heading and lede; continuation pages have more.
+    plus per-actor / per-comment / complaint-block overhead, with a wrap
+    penalty for single comments that span multiple visual lines. The first
+    page has less budget because it carries the section heading and lede.
 
     Returns: list[list[dict]] where each inner list is one page's actors.
     """
     if not actors:
         return []
-    PAGE_BUDGET_FIRST = 3800
-    PAGE_BUDGET_REST = 5200
-    PER_ACTOR_OVERHEAD = 80
-    PER_COMMENT_OVERHEAD = 35
+    weights = [_court_actor_card_weight(a) for a in actors]
+    return _pack_actor_pages(actors, weights)
+
+
+def _court_actor_card_weight(actor):
+    """Estimate visual weight of one rendered actor card in the state PDF.
+
+    Units are arbitrary but tuned to the budgets in _pack_actor_pages so
+    the running sum approximates the fraction of the actor-card page
+    consumed. Counts every part of the card the renderer emits:
+
+      - actor header (name + role/county/families meta row, hairline border)
+      - each comment (bullet, italic body, optional county tag)
+      - the complaint-packet block, when complaint_packet_url is set
+      - a per-extra-wrapped-line penalty for long single comments
+
+    Increasing PER_ACTOR_OVERHEAD or COMPLAINT_BLOCK_WEIGHT makes the
+    paginator break sooner (more pages, less overflow risk).
+    """
+    PER_ACTOR_OVERHEAD = 180   # 2-line header + borders + top/bottom padding
+    PER_COMMENT_OVERHEAD = 45  # bullet indent + leading + margin between items
+    COMPLAINT_BLOCK_WEIGHT = 360  # fixed text + URL line + disclaimer line
+    LONG_COMMENT_WRAP = 260    # chars that fit on one .actor-comments li line
+    LONG_COMMENT_PENALTY = 40  # added weight per extra wrapped line
+
+    weight = PER_ACTOR_OVERHEAD
+    for c in actor.get('comments', []) or []:
+        text_len = len(c.get('note', '') or '')
+        weight += text_len + PER_COMMENT_OVERHEAD
+        if text_len > LONG_COMMENT_WRAP:
+            extra_lines = (text_len - 1) // LONG_COMMENT_WRAP
+            weight += extra_lines * LONG_COMMENT_PENALTY
+    if actor.get('complaint_packet_url'):
+        weight += COMPLAINT_BLOCK_WEIGHT
+    return weight
+
+
+def _pack_actor_pages(actors, weights):
+    """Bin-pack precomputed actor weights into pages.
+
+    Conservative: a card that would put the running sum past `budget`
+    starts a new page even if it would individually fit. Cards larger
+    than the per-page budget are placed alone (the safer-print CSS keeps
+    them from spilling onto the next page, and a single very-long card
+    is preferable to two overlapping ones).
+    """
+    PAGE_BUDGET_FIRST = 3400  # leaves room for section heading + lede
+    PAGE_BUDGET_REST = 4600   # continuation pages — slightly tighter to
+                              # absorb the complaint-block overhead
 
     pages: list[list[dict]] = []
     current: list[dict] = []
     current_weight = 0
-    for actor in actors:
-        weight = PER_ACTOR_OVERHEAD
-        for c in actor.get('comments', []):
-            weight += len(c.get('note', '')) + PER_COMMENT_OVERHEAD
+    for actor, weight in zip(actors, weights):
         budget = PAGE_BUDGET_FIRST if not pages else PAGE_BUDGET_REST
         if current and (current_weight + weight > budget):
             pages.append(current)

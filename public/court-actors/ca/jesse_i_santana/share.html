@@ -201,6 +201,21 @@ html,body { background:#06070A; color:var(--white); font-family:Inter,system-ui,
   text-transform:uppercase; color:rgba(245,245,245,.82);
   font-size:clamp(10px,2.4cqw,15px); padding-bottom:6px;
 }
+/* Statewide Registry total — small caption under the actor count.
+   Sits inside f1-headline (bottom:18%) above movement-foot (bottom:5%),
+   so it never collides with the state badge, quotes, or footer. */
+.f1-state-count {
+  margin-top:10px;
+  font-family:'Oswald',sans-serif; font-weight:600;
+  letter-spacing:.18em; text-transform:uppercase;
+  color:rgba(245,245,245,.7);
+  font-size:clamp(10px,2.2cqw,13px);
+}
+.f1-state-count b {
+  color:var(--gold); font-weight:700;
+  font-family:'JetBrains Mono',monospace;
+  letter-spacing:.04em;
+}
 
 /* Frame 2 — they thought */
 .f2-headline { position:absolute; left:5%; right:5%; top:22%; z-index:25; }
@@ -531,6 +546,7 @@ html,body { background:#06070A; color:var(--white); font-family:Inter,system-ui,
       <b>5</b>
       <span>families named this person on the public record</span>
     </div>
+    <div class="f1-state-count"><b>321</b> CA families in the Registry</div>
   </div>
   
 <div class="movement-foot">
@@ -728,7 +744,7 @@ html,body { background:#06070A; color:var(--white); font-family:Inter,system-ui,
 
   <div class="frame-tag">COUNTED · PUBLIC RECORD</div>
   <div class="f4-stack">
-    <div class="f4-mega-number">3,595</div>
+    <div class="f4-mega-number">3,598</div>
     <div class="f4-mega-label">FAMILIES<br>NATIONWIDE</div>
     <div class="f4-italic">— and now global.</div>
     <div class="f4-pattern">
@@ -883,7 +899,7 @@ html,body { background:#06070A; color:var(--white); font-family:Inter,system-ui,
     <span class="gold">MEG.</span>
   </div>
   <div class="f6-cta-text">
-    Join over <b class="f6-count">3,595</b><br>
+    Join over <b class="f6-count">3,598</b><br>
     families nationwide &amp; global<br>
     exposing the truth.
   </div>
