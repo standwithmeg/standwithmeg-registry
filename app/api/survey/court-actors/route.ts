@@ -1,7 +1,7 @@
 import { promises as fs } from "fs";
 import path from "path";
 import { createAdminSupabaseClient } from "../../../../lib/supabase-admin";
-import { COURT_ACTOR_PUBLIC_THRESHOLD, actorBucketKeyWithLocation, courtActorLocationKey, resolveFamilyKey, type CourtActorRowReviewDecision } from "../../../../lib/court-actors";
+import { COURT_ACTOR_PUBLIC_THRESHOLD, actorBucketKeyWithLocation, actorLooseNameKey, courtActorLocationKey, resolveFamilyKey, type CourtActorRowReviewDecision } from "../../../../lib/court-actors";
 import { isCountableSubmission } from "../../../../lib/submission-public-visibility";
 import { AliasResolver, type AliasDecisionRow } from "../../../../lib/court-actor-similarity";
 
@@ -20,34 +20,87 @@ type ManifestEntry = {
   share_url: string | null;
 };
 
-let _manifestCache: { mtime: number; entries: Map<string, ManifestEntry> } | null = null;
+/**
+ * Manifest lookups by primary `state/slug` key AND a fallback name-key map.
+ *
+ * The fallback exists because the manifest's slug is frozen at deploy time
+ * (e.g. `naomi_catadeulla`) while the public API derives its slug from the
+ * current canonical_name returned by the active alias decision (e.g.
+ * `naomi_cataudella` after a rename). Without the fallback, photos for any
+ * actor whose canonical name has been respelled after deploy would silently
+ * stop loading. The fallback matches by location + actorLooseNameKey, which
+ * is invariant under casing, punctuation, titles, and the most common
+ * spelling slips.
+ */
+type ManifestLookups = {
+  byStateSlug: Map<string, ManifestEntry>;
+  byStateLooseNameKey: Map<string, ManifestEntry>;
+};
 
-async function loadSpotlightManifest(): Promise<Map<string, ManifestEntry>> {
+let _manifestCache: { mtime: number; lookups: ManifestLookups } | null = null;
+
+async function loadSpotlightManifest(): Promise<ManifestLookups> {
   try {
     const manifestPath = path.join(process.cwd(), "public", "court-actors", "manifest.json");
     const stat = await fs.stat(manifestPath);
     const mtime = stat.mtimeMs;
     if (_manifestCache && _manifestCache.mtime === mtime) {
-      return _manifestCache.entries;
+      return _manifestCache.lookups;
     }
     const text = await fs.readFile(manifestPath, "utf-8");
     const data = JSON.parse(text) as { actors?: ManifestEntry[] };
-    const map = new Map<string, ManifestEntry>();
+    const byStateSlug = new Map<string, ManifestEntry>();
+    const byStateLooseNameKey = new Map<string, ManifestEntry>();
     for (const entry of data.actors || []) {
-      if (entry.slug && entry.state_abbr) {
-        map.set(`${entry.state_abbr.toLowerCase()}/${entry.slug}`, entry);
+      if (!entry.slug || !entry.state_abbr) continue;
+      const state = entry.state_abbr.toLowerCase();
+      byStateSlug.set(`${state}/${entry.slug}`, entry);
+      for (const candidate of [entry.canonical_name, entry.display_name]) {
+        if (!candidate) continue;
+        const nk = actorLooseNameKey(candidate);
+        if (!nk) continue;
+        const key = `${state}|${nk}`;
+        if (!byStateLooseNameKey.has(key)) {
+          byStateLooseNameKey.set(key, entry);
+        }
       }
     }
-    _manifestCache = { mtime, entries: map };
-    return map;
+    const lookups = { byStateSlug, byStateLooseNameKey };
+    _manifestCache = { mtime, lookups };
+    return lookups;
   } catch {
-    return new Map();
+    return { byStateSlug: new Map(), byStateLooseNameKey: new Map() };
   }
 }
 
 function spotlightSlug(name: string): string {
   // Mirrors slugify() in court-actor-posts/_scripts/watch_new_actors.py.
   return name.toLowerCase().replace(/[^a-z0-9]+/g, "_").replace(/^_+|_+$/g, "");
+}
+
+/**
+ * Find the manifest entry for an actor card. Tries the strict
+ * `state/slug` lookup first, then falls back to a state + loose-name-key
+ * match so respellings after deploy don't drop the photo.
+ */
+function findManifestEntry(
+  lookups: ManifestLookups,
+  state: string,
+  displayName: string,
+): ManifestEntry | null {
+  const stateLower = state.toLowerCase();
+  if (!stateLower) return null;
+  const slug = spotlightSlug(displayName);
+  if (slug) {
+    const hit = lookups.byStateSlug.get(`${stateLower}/${slug}`);
+    if (hit) return hit;
+  }
+  const nk = actorLooseNameKey(displayName);
+  if (nk) {
+    const hit = lookups.byStateLooseNameKey.get(`${stateLower}|${nk}`);
+    if (hit) return hit;
+  }
+  return null;
 }
 
 type AdminClient = ReturnType<typeof createAdminSupabaseClient>;
@@ -323,9 +376,8 @@ export async function GET(request: Request) {
       .filter(b => b.families.size >= COURT_ACTOR_PUBLIC_THRESHOLD)
       .map(b => {
         const displayName = mostFrequent(b.casingCounts) ?? b.name;
-        const slug = spotlightSlug(displayName);
         const state = (b.location_key || b.state_code || "").toLowerCase();
-        const manifestEntry = state && slug ? manifest.get(`${state}/${slug}`) ?? null : null;
+        const manifestEntry = findManifestEntry(manifest, state, displayName);
         return {
           role: roleSummary(b.roleCounts),
           name: displayName,
