@@ -29,28 +29,47 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 148,
-    "total_submissions": 191,
-    "avg_financial_loss": 123191.67,
-    "avg_months_lost": 30.3,
+    "families_approved": 151,
+    "total_submissions": 194,
+    "avg_financial_loss": 121090.61,
+    "avg_months_lost": 29.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OH",
-    "state_family_count": 191,
-    "median_months_lost": 19.0,
+    "state_family_count": 194,
+    "median_months_lost": 18.0,
     "median_financial_loss": 81250,
     "median_burden_sample_size": 96,
     "pro_se_count": 110,
-    "pro_se_pct": 58.5,
-    "children_impacted": 282,
-    "clean_sample_size": 188,
-    "raw_submission_count": 188
+    "pro_se_pct": 57.6,
+    "children_impacted": 290,
+    "clean_sample_size": 191,
+    "raw_submission_count": 191
   },
-  "movement_total": 3580,
+  "movement_total": 3592,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Lost time and crucial relationship with my kids and has destroyed my reputation with…",
+        "state": "OH",
+        "county": "Shelby",
+        "row_id": "5321231e-69de-4e1c-98ce-43ec25e6c261"
+      },
+      {
+        "body": "Removed valuable time with my children and broken their mental health and mine, caused…",
+        "state": "OH",
+        "county": "Shelby",
+        "row_id": "a52dab93-1163-49d4-abcd-8433c5a4c696"
+      },
+      {
+        "body": "This system is a joke. They gave custody of my son to a man…",
+        "state": "OH",
+        "county": "Shelby",
+        "row_id": "ceee542e-f3aa-440a-a450-ec1975f5f07e"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Refused to look at evidence and allowed lies and slander to stand up as evidence when it was proven untrue",

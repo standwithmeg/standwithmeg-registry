@@ -31,28 +31,59 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 148,
-    "total_submissions": 191,
-    "avg_financial_loss": 123191.67,
-    "avg_months_lost": 30.3,
+    "families_approved": 151,
+    "total_submissions": 194,
+    "avg_financial_loss": 121090.61,
+    "avg_months_lost": 29.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OH",
-    "state_family_count": 191,
-    "median_months_lost": 19.0,
+    "state_family_count": 194,
+    "median_months_lost": 18.0,
     "median_financial_loss": 81250,
     "median_burden_sample_size": 96,
     "pro_se_count": 110,
-    "pro_se_pct": 58.5,
-    "children_impacted": 282,
-    "clean_sample_size": 188,
-    "raw_submission_count": 188
+    "pro_se_pct": 57.6,
+    "children_impacted": 290,
+    "clean_sample_size": 191,
+    "raw_submission_count": 191
   },
-  "movement_total": 3580,
+  "movement_total": 3592,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
     "family_count": 4,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Torn apart a mom from her kids and alienated a mom for 4+ years…",
+        "state": "OH",
+        "county": "Hancock",
+        "row_id": "396e8c1d-7277-4614-9d0e-46fdb3aff297"
+      },
+      {
+        "body": "The system has DESTROYED my whole family we had a living family full of…",
+        "state": "OH",
+        "county": "Hancock county",
+        "row_id": "661a9d9b-df22-4aa9-bfe5-57c439c836ac"
+      },
+      {
+        "body": "Complete destroyed us my daughters are in my life we are trying to get…",
+        "state": "OH",
+        "county": "Hancock",
+        "row_id": "495a058c-3c9c-464d-8755-e3d5abb136d3"
+      },
+      {
+        "body": "I am the grandmother trying to get kinship, visitation, custody intervention and was denied.…",
+        "state": "OH",
+        "county": "Hancock",
+        "row_id": "8600b24c-832a-4022-98e8-f7aca792a7b4"
+      },
+      {
+        "body": "This systemic issue in Hancock county unjustly kept the children from all relatives to…",
+        "state": "OH",
+        "county": "Hancock",
+        "row_id": "774221b7-593e-46c4-9c39-6284aac12e18"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Perjury, met children one time, attended my sons criminal hearing with foster parents. Trial by ambush.",
@@ -66,6 +97,16 @@
       },
       {
         "comment_text": "Lied on stand. Did NOT contact any family. Never returned phone calls for outreach and placement. Did dual roles at agency. Abuse of power and relatiation.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "She altered drugs tests lied twisted everything said my son was adopted he has not been pay childsupport currently no visits or contact or response from cps or family court",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Said I was unsafe, never did background check or home study. Said I didn’t protect my grandchildren when in fact I had and always have. Had him since he was…",
         "author": "Anonymous parent",
         "source": "court_actors.notes"
       }

@@ -34,28 +34,65 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 148,
-    "total_submissions": 191,
-    "avg_financial_loss": 123191.67,
-    "avg_months_lost": 30.3,
+    "families_approved": 151,
+    "total_submissions": 194,
+    "avg_financial_loss": 121090.61,
+    "avg_months_lost": 29.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OH",
-    "state_family_count": 191,
-    "median_months_lost": 19.0,
+    "state_family_count": 194,
+    "median_months_lost": 18.0,
     "median_financial_loss": 81250,
     "median_burden_sample_size": 96,
     "pro_se_count": 110,
-    "pro_se_pct": 58.5,
-    "children_impacted": 282,
-    "clean_sample_size": 188,
-    "raw_submission_count": 188
+    "pro_se_pct": 57.6,
+    "children_impacted": 290,
+    "clean_sample_size": 191,
+    "raw_submission_count": 191
   },
-  "movement_total": 3580,
+  "movement_total": 3592,
   "supabase": {
     "report_count": 8,
     "actor_report_count": 8,
     "family_count": 9,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "“This system tore our family apart, stripped away our stability, and left us living…",
+        "state": "OH",
+        "county": "hancock",
+        "row_id": "79e6da58-7685-475a-a7fe-6bd1b2c654ce"
+      },
+      {
+        "body": "Torn apart a mom from her kids and alienated a mom for 4+ years…",
+        "state": "OH",
+        "county": "Hancock",
+        "row_id": "396e8c1d-7277-4614-9d0e-46fdb3aff297"
+      },
+      {
+        "body": "by ignoring evidence, they allowed my child to be molested again.",
+        "state": "OH",
+        "county": "Hancock",
+        "row_id": "7cbd092f-9ba9-4026-8a55-9f328d4f8c02"
+      },
+      {
+        "body": "This system allows legal kidnapping, because there are no checks and balances for Juvenile…",
+        "state": "OH",
+        "county": "Hancock County",
+        "row_id": "a7404c1e-efa9-4ace-a0d8-23b34f1b3239"
+      },
+      {
+        "body": "I am the grandmother trying to get kinship, visitation, custody intervention and was denied.…",
+        "state": "OH",
+        "county": "Hancock",
+        "row_id": "8600b24c-832a-4022-98e8-f7aca792a7b4"
+      },
+      {
+        "body": "Completely destroyed our bonded an took my son from me an refused his sister's…",
+        "state": "OH",
+        "county": "Hancock",
+        "row_id": "95e1583a-bf37-41f5-acf5-84af62b2004f"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "She didn’t look at my case at all and just decided the mother was the best choice without looking at evidence and blatantly ignored eveidence in court",
@@ -69,6 +106,21 @@
       },
       {
         "comment_text": "She added and listened to false information. She took my children away from a mother based off false information and continues to keep them away for absolutely no reason!",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Used blanket statements on all family not there to represent themselves. Allows Kelli Millet to lie on the stand. Overruled many objections. Cherry picked the lines she wanted to deny…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "stepped in hours before mediation to rule dad (Indicated forensic interview) would get next day over night weekends.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "She refused to admit my emails with CPS as evidence in my trial for custody. However during appeal the Ohio Thrid District court of Appeals did accept jurisdiction of my…",
         "author": "Anonymous parent",
         "source": "court_actors.notes"
       }
