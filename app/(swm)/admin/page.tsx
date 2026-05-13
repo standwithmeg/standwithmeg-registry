@@ -2426,8 +2426,18 @@ export default function AdminPage() {
               )}
               {filteredAdminActorAggs.slice(0, 200).map((agg, i) => {
                 const isPublic = agg.count >= COURT_ACTOR_PUBLIC_THRESHOLD;
+                const drillDown = () => {
+                  setActorSearch(agg.name);
+                  setActorLocationFilter(agg.location_key ?? agg.state_code ?? "");
+                  setActorView("all");
+                };
                 return (
-                  <div key={i} className="px-6 py-3 flex items-center justify-between gap-4"
+                  <button
+                    key={i}
+                    type="button"
+                    onClick={drillDown}
+                    title={`Show every report for ${agg.name} (with View / Permission / Delete actions)`}
+                    className="w-full text-left px-6 py-3 flex items-center justify-between gap-4 hover:bg-white/5 transition-colors"
                     style={{ borderTop: i > 0 ? "1px solid rgba(255,255,255,0.05)" : "none" }}>
                     <div className="min-w-0 flex-1">
                       <div className="flex items-center gap-2 flex-wrap">
@@ -2456,8 +2466,11 @@ export default function AdminPage() {
                         <span className="text-[10px] font-bold uppercase tracking-wide"
                           style={{ color: GOLD }}>Public</span>
                       )}
+                      <span className="text-[10px] font-bold uppercase tracking-wide" style={{ color: "rgba(245,245,245,0.4)" }}>
+                        View reports →
+                      </span>
                     </div>
-                  </div>
+                  </button>
                 );
               })}
             </div>
