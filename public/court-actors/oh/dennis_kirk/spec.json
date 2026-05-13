@@ -33,28 +33,59 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 148,
-    "total_submissions": 191,
-    "avg_financial_loss": 123191.67,
-    "avg_months_lost": 30.3,
+    "families_approved": 151,
+    "total_submissions": 194,
+    "avg_financial_loss": 121090.61,
+    "avg_months_lost": 29.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OH",
-    "state_family_count": 191,
-    "median_months_lost": 19.0,
+    "state_family_count": 194,
+    "median_months_lost": 18.0,
     "median_financial_loss": 81250,
     "median_burden_sample_size": 96,
     "pro_se_count": 110,
-    "pro_se_pct": 58.5,
-    "children_impacted": 282,
-    "clean_sample_size": 188,
-    "raw_submission_count": 188
+    "pro_se_pct": 57.6,
+    "children_impacted": 290,
+    "clean_sample_size": 191,
+    "raw_submission_count": 191
   },
-  "movement_total": 3580,
+  "movement_total": 3592,
   "supabase": {
     "report_count": 7,
     "actor_report_count": 7,
     "family_count": 5,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Denied motion and ignored evidence!! None of them did their job they made up…",
+        "state": "OH",
+        "county": "Highland county",
+        "row_id": "93b9ae0f-56b2-4e79-ab9c-427da47455a6"
+      },
+      {
+        "body": "This system has lied and tore my family apart causing emotional damage",
+        "state": "OH",
+        "county": "Highland county",
+        "row_id": "6caec907-d638-46ce-ac09-9cde3975ad8e"
+      },
+      {
+        "body": "My lived experience that is still ongoing has cast me into homelessness, taken all…",
+        "state": "OH",
+        "county": "Clinton",
+        "row_id": "b07bca07-832d-414e-8716-f62f66e6b311"
+      },
+      {
+        "body": "They took the happiest and joy out of us",
+        "state": "OH",
+        "county": "Highland county",
+        "row_id": "8b35071a-b597-4615-93d0-41c8dca323bd"
+      },
+      {
+        "body": "Killed me and my family",
+        "state": "OH",
+        "county": "Highland county",
+        "row_id": "df430208-7750-49eb-9718-6825553635b6"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Fabricated evidence",
@@ -68,6 +99,21 @@
       },
       {
         "comment_text": "My children’s therapists and myself reached out to Mr Kirk from Oct 2024 to March 2025 with no return communication. He then made claims as facts, brought to him via…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Mr kirk made no reasonable efforts to put my daughter back in my care, despite having long term housing and employment. He filed no motions with the court on my…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "He didn’t meet with us or do his job he lied on stand saying we never called him but I showed a recording we did talk to his assistant and…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Didn’t do his job",
         "author": "Anonymous parent",
         "source": "court_actors.notes"
       }

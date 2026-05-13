@@ -32,28 +32,53 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 148,
-    "total_submissions": 191,
-    "avg_financial_loss": 123191.67,
-    "avg_months_lost": 30.3,
+    "families_approved": 151,
+    "total_submissions": 194,
+    "avg_financial_loss": 121090.61,
+    "avg_months_lost": 29.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OH",
-    "state_family_count": 191,
-    "median_months_lost": 19.0,
+    "state_family_count": 194,
+    "median_months_lost": 18.0,
     "median_financial_loss": 81250,
     "median_burden_sample_size": 96,
     "pro_se_count": 110,
-    "pro_se_pct": 58.5,
-    "children_impacted": 282,
-    "clean_sample_size": 188,
-    "raw_submission_count": 188
+    "pro_se_pct": 57.6,
+    "children_impacted": 290,
+    "clean_sample_size": 191,
+    "raw_submission_count": 191
   },
-  "movement_total": 3580,
+  "movement_total": 3592,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
     "family_count": 0,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Denied motion and ignored evidence!! None of them did their job they made up…",
+        "state": "OH",
+        "county": "Highland county",
+        "row_id": "93b9ae0f-56b2-4e79-ab9c-427da47455a6"
+      },
+      {
+        "body": "This system has lied and tore my family apart causing emotional damage",
+        "state": "OH",
+        "county": "Highland county",
+        "row_id": "6caec907-d638-46ce-ac09-9cde3975ad8e"
+      },
+      {
+        "body": "They took the happiest and joy out of us",
+        "state": "OH",
+        "county": "Highland county",
+        "row_id": "8b35071a-b597-4615-93d0-41c8dca323bd"
+      },
+      {
+        "body": "Killed me and my family",
+        "state": "OH",
+        "county": "Highland county",
+        "row_id": "df430208-7750-49eb-9718-6825553635b6"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Fabrication evidence",
@@ -67,6 +92,16 @@
       },
       {
         "comment_text": "Obtained a rule 6 based on false information and filed a false complaint. Was in a relationship and living with the assistant prosecutor that was on the case.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Living with the prosecutor and she’s the one who got the rule 6 from him to take my daughter",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Get the hospital to discharge me because I won’t speak to her without a Lawyer present she lies in comes back rooms and just then she gets double six but…",
         "author": "Anonymous parent",
         "source": "court_actors.notes"
       }
