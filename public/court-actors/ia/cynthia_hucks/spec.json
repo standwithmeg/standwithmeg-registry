@@ -31,8 +31,8 @@
     "actor_bucket_key": "cynthia hucks|IA"
   },
   "photo": {
-    "path": null,
-    "exists": false,
+    "path": "iowa/cynthia_hucks/image_1080.png",
+    "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
@@ -52,12 +52,31 @@
     "clean_sample_size": 69,
     "raw_submission_count": 69
   },
-  "movement_total": 3580,
+  "movement_total": 3589,
   "supabase": {
     "report_count": 10,
     "actor_report_count": 10,
     "family_count": 10,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Riped a daughter away from her mother to place her with someone who is…",
+        "state": "IA",
+        "county": "Davis county",
+        "row_id": "90e8c2a2-305a-484e-9ed7-416640c0ba04"
+      },
+      {
+        "body": "She helped my children and I even tho we had barely any money and…",
+        "state": "IA",
+        "county": "Wapello",
+        "row_id": "70fed271-3fa5-4236-abbd-766e63b93a97"
+      },
+      {
+        "body": "Did everything I asked and even more, an amazing lawyer",
+        "state": "IA",
+        "county": "Wapello county",
+        "row_id": "85455bb8-d73d-4bee-a037-5a69bd0f0e0c"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "They moved up my court date. They tried to make me quick claim my house",
