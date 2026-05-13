@@ -159,6 +159,17 @@ type Resp = {
 
 type Props = {
   onOpenSubmission?: (submissionId: string) => void | Promise<void>;
+  onNudgeFamily?: (actor: {
+    id: string;
+    name: string;
+    role: string;
+    submission_id: string;
+    reporter_email: string | null;
+    reporter_name: string | null;
+    notes: string | null;
+    state_code?: string | null;
+    location_key?: string | null;
+  }) => void | Promise<void>;
 };
 
 const CONFIDENCE_STYLE: Record<Cluster["highest_confidence"], { label: string; bg: string; color: string; border: string }> = {
@@ -179,7 +190,7 @@ function matchesQuery(parts: Array<string | null | undefined>, query: string): b
   return haystack.includes(query);
 }
 
-export function PossibleMatchesPanel({ onOpenSubmission }: Props = {}) {
+export function PossibleMatchesPanel({ onOpenSubmission, onNudgeFamily }: Props = {}) {
   const [data, setData] = useState<Resp | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -1037,6 +1048,27 @@ export function PossibleMatchesPanel({ onOpenSubmission }: Props = {}) {
                                   style={{ backgroundColor: "rgba(248,113,113,0.16)", color: "rgb(252,165,165)", border: "1px solid rgba(248,113,113,0.35)" }}>
                                   {sampleBusy ? "…" : "Delete survey"}
                                 </button>
+                                {onNudgeFamily && (
+                                  <button
+                                    type="button"
+                                    disabled={rowBusy || sampleBusy || viewBusy || !s.reporter_email}
+                                    onClick={() => void onNudgeFamily({
+                                      id: s.row_id,
+                                      name: s.name,
+                                      role: s.role,
+                                      submission_id: s.submission_id,
+                                      reporter_email: s.reporter_email,
+                                      reporter_name: s.reporter_name,
+                                      notes: s.notes,
+                                      state_code: c.location_key ?? null,
+                                      location_key: c.location_key ?? null,
+                                    })}
+                                    title={s.reporter_email ? "Send a follow-up email to this family" : "No reporter email on file for this family."}
+                                    className="text-[10px] px-2 py-0.5 rounded font-bold transition-opacity disabled:opacity-50"
+                                    style={{ backgroundColor: "rgba(201,162,39,0.15)", color: GOLD, border: "1px solid rgba(201,162,39,0.3)" }}>
+                                    ✉ Nudge family
+                                  </button>
+                                )}
                                 <button
                                   type="button"
                                   disabled={!onOpenSubmission || rowBusy || sampleBusy || viewBusy}

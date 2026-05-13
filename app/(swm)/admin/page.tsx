@@ -415,6 +415,23 @@ type QuoteRow = {
   case_county: string | null;
 };
 
+type SurveySubmissionDetailCourtActor = {
+  id: string;
+  role: string;
+  name: string;
+  court_or_county: string | null;
+  state_code: string | null;
+  location_key: string | null;
+  notes: string | null;
+  source: string | null;
+  created_at: string;
+};
+
+type SurveySubmissionDetailData = {
+  submission: RecentRow;
+  court_actors: SurveySubmissionDetailCourtActor[];
+};
+
 function fmt$(n: number | null) {
   if (n == null || n === 0) return "—";
   return "$" + n.toLocaleString();
@@ -471,6 +488,33 @@ function displayName(row: RecentRow) {
   if (row.permission_to_share === "anonymous" || !row.first_name) return "Anonymous";
   if (row.permission_to_share === "first_name") return row.first_name[0] + ".";
   return row.first_name;
+}
+
+function publicSubmissionDisplayName(submission: Pick<RecentRow, "permission_to_share" | "first_name">) {
+  const permission = (submission.permission_to_share ?? "").trim();
+  if (permission === "anonymous" || !submission.first_name) return "Anonymous";
+  if (permission === "first_name") return `${submission.first_name[0]}.`;
+  return submission.first_name;
+}
+
+function permissionToShareBadge(permission: string | null) {
+  const perm = (permission ?? "").trim();
+  switch (perm) {
+    case "public":
+      return { label: "public", color: "rgb(134,239,172)", bg: "rgba(74,222,128,0.12)", border: "rgba(74,222,128,0.28)" };
+    case "first_name":
+      return { label: "first name", color: "rgb(147,197,253)", bg: "rgba(59,130,246,0.14)", border: "rgba(59,130,246,0.28)" };
+    case "anonymous":
+      return { label: "anonymous", color: GOLD, bg: "rgba(201,162,39,0.14)", border: "rgba(201,162,39,0.28)" };
+    case "data_only":
+      return { label: "data only", color: "rgb(248,113,113)", bg: "rgba(185,28,28,0.15)", border: "rgba(185,28,28,0.3)" };
+    default:
+      return { label: perm || "unknown", color: "rgba(245,245,245,0.55)", bg: "rgba(255,255,255,0.06)", border: "rgba(255,255,255,0.12)" };
+  }
+}
+
+function normalizeActorRole(role: string) {
+  return role.trim().replace(/\s+/g, " ").toLowerCase();
 }
 
 function shortDate(iso: string | null) {
@@ -593,6 +637,18 @@ type NudgeTarget = {
   html: string;
 };
 
+type NudgeFamilySource = {
+  id: string;
+  name: string;
+  role: string;
+  submission_id: string;
+  reporter_email: string | null;
+  reporter_name: string | null;
+  notes: string | null;
+  state_code?: string | null;
+  location_key?: string | null;
+};
+
 function escapeHtml(text: string) {
   return text
     .replace(/&/g, "&amp;")
@@ -635,6 +691,17 @@ export default function AdminPage() {
 
   // Detail modal — view all fields for a single submission
   const [detailRow, setDetailRow] = useState<RecentRow | null>(null);
+  const [surveyDetail, setSurveyDetail] = useState<{
+    open: boolean;
+    loading: boolean;
+    data: SurveySubmissionDetailData | null;
+    error: string | null;
+  }>({
+    open: false,
+    loading: false,
+    data: null,
+    error: null,
+  });
 
   // Court actors panel — all actors + aggregates
   type AdminActor = {
@@ -722,6 +789,34 @@ export default function AdminPage() {
   const [quoteModal, setQuoteModal] = useState<{ state: string; is_us: boolean; total: number } | null>(null);
   const [modalQuotes, setModalQuotes]   = useState<QuoteRow[]>([]);
   const [modalLoading, setModalLoading] = useState(false);
+
+  async function openSubmissionDetail(submissionId: string) {
+    setSurveyDetail({ open: true, loading: true, data: null, error: null });
+    try {
+      const res = await fetch(`/api/admin/survey-submission/${submissionId}`);
+      const json = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        throw new Error(typeof json.error === "string" ? json.error : "Failed to load survey submission.");
+      }
+      setSurveyDetail({
+        open: true,
+        loading: false,
+        data: json as SurveySubmissionDetailData,
+        error: null,
+      });
+    } catch (err) {
+      setSurveyDetail({
+        open: true,
+        loading: false,
+        data: null,
+        error: err instanceof Error ? err.message : "Network error.",
+      });
+    }
+  }
+
+  function closeSurveyDetail() {
+    setSurveyDetail({ open: false, loading: false, data: null, error: null });
+  }
 
   async function openQuoteModal(row: StateRow) {
     if (row.approved_count === 0) return;
@@ -909,15 +1004,25 @@ export default function AdminPage() {
   }, [adminActors, adminActorAggs]);
 
   const allActorRoles = useMemo(() => {
-    const set = new Set<string>();
-    for (const a of adminActors) if (a.role) set.add(a.role);
-    return Array.from(set).sort();
+    const map = new Map<string, string>();
+    for (const a of adminActors) {
+      if (!a.role) continue;
+      const display = a.role.trim().replace(/\s+/g, " ");
+      const key = normalizeActorRole(display);
+      if (!map.has(key)) {
+        map.set(key, display);
+      }
+    }
+    return Array.from(map.values()).sort((a, b) => a.localeCompare(b));
   }, [adminActors]);
 
   const filteredAdminActorAggs = useMemo(() => {
     const filtered = adminActorAggs.filter(agg => {
       if (actorLocationFilter && (agg.location_key ?? agg.state_code) !== actorLocationFilter) return false;
-      if (actorRoleFilter && agg.role !== actorRoleFilter && !agg.role.includes(actorRoleFilter)) return false;
+      if (actorRoleFilter) {
+        const filterKey = normalizeActorRole(actorRoleFilter);
+        if (!normalizeActorRole(agg.role).includes(filterKey)) return false;
+      }
       const blob = `${agg.name} ${agg.role} ${agg.location_key ?? ""} ${agg.state_code ?? ""} ${agg.court_or_county ?? ""}`;
       return actorMatchesQuery(blob);
     });
@@ -942,7 +1047,10 @@ export default function AdminPage() {
     const filtered = adminActors.filter(a => {
       if (actorSourceFilter !== "all" && a.source !== actorSourceFilter) return false;
       if (actorLocationFilter && (a.location_key ?? a.state_code) !== actorLocationFilter) return false;
-      if (actorRoleFilter && a.role !== actorRoleFilter && !a.role.includes(actorRoleFilter)) return false;
+      if (actorRoleFilter) {
+        const filterKey = normalizeActorRole(actorRoleFilter);
+        if (!normalizeActorRole(a.role).includes(filterKey)) return false;
+      }
       const blob = `${a.name} ${a.role} ${a.location_key ?? ""} ${a.state_code ?? ""} ${a.court_or_county ?? ""} ${a.source} ${a.notes ?? ""} ${a.reporter_email ?? ""} ${a.reporter_name ?? ""}`;
       return actorMatchesQuery(blob);
     });
@@ -1269,7 +1377,7 @@ export default function AdminPage() {
     }
   }
 
-  function nudgeFamily(a: AdminActor) {
+  function nudgeFamily(a: NudgeFamilySource) {
     if (!a.reporter_email) { alert("No email on file for this reporter."); return; }
     const greeting = a.reporter_name ? `Hi ${a.reporter_name.split(" ")[0]},` : "Hi,";
     const subject = "Stand With Meg — quick court actor follow-up";
@@ -1279,7 +1387,7 @@ export default function AdminPage() {
     const role = a.role.trim();
     const roleIsOther = !role || role.toLowerCase() === "other";
     const hasNotes = Boolean(a.notes?.trim()) && a.notes!.trim().length >= 12;
-    const location = a.state_code ? ` in ${a.state_code}` : "";
+    const location = a.state_code ? ` in ${a.state_code}` : a.location_key ? ` in ${a.location_key}` : "";
     const actorLine = hasNamedActor
       ? roleIsOther
         ? `${actorName}${location}, but the role was marked "Other"`
@@ -2289,7 +2397,7 @@ export default function AdminPage() {
           )}
 
           {actorView === "possible_matches" && (
-            <PossibleMatchesPanel />
+            <PossibleMatchesPanel onOpenSubmission={openSubmissionDetail} onNudgeFamily={nudgeFamily} />
           )}
 
           {actorView === "all" && (
@@ -3452,6 +3560,178 @@ export default function AdminPage() {
                   </blockquote>
                 </div>
               )}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ── Survey Detail Modal — full submission view for possible matches ── */}
+      {surveyDetail.open && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4"
+          style={{ backgroundColor: "rgba(0,0,0,0.72)", backdropFilter: "blur(4px)" }}
+          onClick={e => { if (e.target === e.currentTarget) closeSurveyDetail(); }}
+        >
+          <div className="relative w-full max-w-4xl max-h-[90vh] flex flex-col rounded-2xl overflow-hidden"
+            style={{ backgroundColor: "#0F1E30", border: `1px solid rgba(201,162,39,0.35)` }}>
+            <div className="px-6 py-4 flex items-center justify-between flex-shrink-0"
+              style={{ borderBottom: `1px solid rgba(201,162,39,0.2)`, backgroundColor: "rgba(30,58,95,0.6)" }}>
+              <div className="min-w-0">
+                <div className="font-black text-white text-base leading-none">
+                  {surveyDetail.loading
+                    ? "Loading survey…"
+                    : surveyDetail.data
+                      ? `${publicSubmissionDisplayName(surveyDetail.data.submission)} · Survey detail`
+                      : "Survey detail"}
+                </div>
+                <div className="text-xs mt-1" style={{ color: "rgba(245,245,245,0.4)" }}>
+                  {surveyDetail.loading
+                    ? "Fetching the linked survey submission and actor rows."
+                    : surveyDetail.data
+                      ? [
+                          surveyDetail.data.submission.state_of_occurrence ?? surveyDetail.data.submission.outside_us_country ?? "No location",
+                          surveyDetail.data.submission.case_county ? surveyDetail.data.submission.case_county : null,
+                        ].filter(Boolean).join(" · ")
+                      : surveyDetail.error || ""}
+                </div>
+              </div>
+              <button
+                onClick={closeSurveyDetail}
+                className="w-8 h-8 rounded-lg flex items-center justify-center transition-colors hover:bg-white/10"
+                style={{ color: "rgba(245,245,245,0.5)" }}
+                aria-label="Close survey detail"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+
+            <div className="overflow-y-auto flex-1 px-6 py-5 space-y-5">
+              {surveyDetail.loading && (
+                <div className="flex items-center justify-center py-12">
+                  <div className="w-6 h-6 rounded-full border-2 border-t-transparent animate-spin"
+                    style={{ borderColor: `${GOLD} transparent ${GOLD} ${GOLD}` }} />
+                </div>
+              )}
+
+              {!surveyDetail.loading && surveyDetail.error && (
+                <div className="rounded-xl px-4 py-3 text-sm"
+                  style={{ backgroundColor: "rgba(185,28,28,0.14)", border: "1px solid rgba(185,28,28,0.35)", color: "rgb(252,165,165)" }}>
+                  {surveyDetail.error}
+                </div>
+              )}
+
+              {!surveyDetail.loading && surveyDetail.data && (() => {
+                const submission = surveyDetail.data!.submission;
+                const badge = permissionToShareBadge(submission.permission_to_share);
+                const name = publicSubmissionDisplayName(submission);
+                const location = submission.state_of_occurrence ?? submission.outside_us_country ?? "—";
+                const county = submission.case_county || "—";
+                const courtActors = surveyDetail.data!.court_actors;
+
+                return (
+                  <>
+                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3">
+                      {[
+                        ["Name", name],
+                        ["Email", submission.email || "—"],
+                        ["State", location],
+                        ["County", county],
+                        ["Case status", submission.case_status || "—"],
+                        ["Custody status", submission.custody_status || "—"],
+                        ["Months lost parenting time", submission.months_lost_parenting_time?.toString() || "—"],
+                        ["Total financial loss", fmt$(submission.total_financial_loss)],
+                      ].map(([label, value]) => (
+                        <div key={label} className="rounded-lg p-3"
+                          style={{ backgroundColor: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.07)" }}>
+                          <div className="text-xs font-bold uppercase tracking-wide mb-1" style={{ color: "rgba(245,245,245,0.35)" }}>
+                            {label}
+                          </div>
+                          <div className="text-sm text-white break-words">{value}</div>
+                        </div>
+                      ))}
+                      <div className="rounded-lg p-3 md:col-span-2 xl:col-span-4"
+                        style={{ backgroundColor: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.07)" }}>
+                        <div className="flex items-center justify-between gap-3 flex-wrap">
+                          <div>
+                            <div className="text-xs font-bold uppercase tracking-wide mb-1" style={{ color: "rgba(245,245,245,0.35)" }}>
+                              Permission to share
+                            </div>
+                            <div
+                              className="inline-flex items-center px-2.5 py-1 rounded-full text-[11px] font-bold uppercase tracking-wide"
+                              style={{
+                                color: badge.color,
+                                backgroundColor: badge.bg,
+                                border: `1px solid ${badge.border}`,
+                              }}
+                            >
+                              {badge.label}
+                            </div>
+                          </div>
+                          <div className="text-xs" style={{ color: "rgba(245,245,245,0.45)" }}>
+                            Submitted {exactTimestamp(submission.created_at)}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <div className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: GOLD }}>
+                        Impact Quote
+                      </div>
+                      <div className="rounded-xl p-4"
+                        style={{ backgroundColor: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.07)" }}>
+                        {submission.impact_quote ? (
+                          <blockquote className="text-sm italic pl-4 py-1"
+                            style={{ borderLeft: `3px solid rgba(201,162,39,0.5)`, color: "rgba(245,245,245,0.8)" }}>
+                            &ldquo;{submission.impact_quote}&rdquo;
+                          </blockquote>
+                        ) : (
+                          <div className="text-sm" style={{ color: "rgba(245,245,245,0.45)" }}>
+                            No impact quote on file.
+                          </div>
+                        )}
+                      </div>
+                    </div>
+
+                    <div>
+                      <div className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: GOLD }}>
+                        Linked Court Actors
+                      </div>
+                      <div className="space-y-2">
+                        {courtActors.length > 0 ? courtActors.map(actor => (
+                          <div key={actor.id} className="rounded-lg px-4 py-3"
+                            style={{ backgroundColor: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.07)" }}>
+                            <div className="flex items-center justify-between gap-3 flex-wrap">
+                              <div className="flex items-center gap-2 flex-wrap min-w-0">
+                                <span className="text-xs px-2 py-0.5 rounded-full font-bold"
+                                  style={{ backgroundColor: "rgba(255,255,255,0.08)", color: "rgba(245,245,245,0.75)" }}>
+                                  {actor.role}
+                                </span>
+                                <span className="font-semibold text-sm text-white">{actor.name}</span>
+                              </div>
+                              <div className="text-xs" style={{ color: "rgba(245,245,245,0.45)" }}>
+                                {actor.court_or_county || "—"}
+                              </div>
+                            </div>
+                            {actor.notes && (
+                              <div className="mt-1.5 text-xs italic" style={{ color: "rgba(245,245,245,0.55)" }}>
+                                {actor.notes}
+                              </div>
+                            )}
+                          </div>
+                        )) : (
+                          <div className="rounded-lg px-4 py-3 text-sm"
+                            style={{ backgroundColor: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.07)", color: "rgba(245,245,245,0.45)" }}>
+                            No court actors are linked to this submission.
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  </>
+                );
+              })()}
             </div>
           </div>
         </div>
