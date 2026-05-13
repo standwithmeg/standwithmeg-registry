@@ -13,6 +13,7 @@
     "state": "Montana",
     "state_abbr": "MT",
     "mention_count": 3,
+    "family_count": 3,
     "actor_report_count": 3,
     "supabase_row_ids": [
       "3bcea224-4705-4495-82bc-0a3bb84a90dc",
@@ -44,10 +45,11 @@
     "clean_sample_size": 49,
     "raw_submission_count": 49
   },
-  "movement_total": 3523,
+  "movement_total": 3580,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
+    "family_count": 3,
     "family_reports": [],
     "public_comments": [
       {
