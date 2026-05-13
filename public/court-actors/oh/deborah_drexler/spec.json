@@ -1,0 +1,89 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "deborah_drexler",
+    "display_name": "Deborah Drexler",
+    "title": "Magistrate",
+    "first_name": "Deborah",
+    "last_name": "Drexler",
+    "role": "Judge",
+    "court": "Allen",
+    "county": null,
+    "court_or_county": "Allen",
+    "state": "Ohio",
+    "state_abbr": "OH",
+    "mention_count": 4,
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "9371326b-8304-4800-ae0e-eca8785fdb80",
+      "5c6b33a3-873c-4c4f-ade6-0039f6773184",
+      "336d23c6-3a2e-4a8a-a74f-71104ee78a2f",
+      "8b7a2f6d-d1e0-4af9-b0cf-2afb3f2ed737"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "ohio/deborah_drexler/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 147,
+    "total_submissions": 189,
+    "avg_financial_loss": 122625.73,
+    "avg_months_lost": 30.5,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OH",
+    "state_family_count": 189,
+    "median_months_lost": 19.5,
+    "median_financial_loss": 82500,
+    "median_burden_sample_size": 95,
+    "pro_se_count": 109,
+    "pro_se_pct": 58.6,
+    "children_impacted": 279,
+    "clean_sample_size": 186,
+    "raw_submission_count": 186
+  },
+  "movement_total": 3556,
+  "supabase": {
+    "report_count": 4,
+    "actor_report_count": 4,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "She continues to downplay everything, not take the child’s best interest in mind, even after proving abuse, and possible pedophilia she let the dad continue having joint custody. I proved…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Denied all rights, placed my daughter with her pedophile father, denied all evidence of abuse to my daughter. Gave me a gag order and tampered with court records.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Denied all rights. Threatened me and gave me a gag order for as she said, \"telling the truth.\" Denied my rights to a hearing for almost 5 years now.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/deborah_drexler",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/ohio/deborah_drexler/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

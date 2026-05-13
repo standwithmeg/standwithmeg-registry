@@ -23,8 +23,8 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": null,
-    "exists": false,
+    "path": "south_carolina/rochelle_conits/image_1080.png",
+    "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
@@ -44,7 +44,7 @@
     "clean_sample_size": 65,
     "raw_submission_count": 65
   },
-  "movement_total": 3523,
+  "movement_total": 3556,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
