@@ -30,23 +30,23 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 78,
-    "total_submissions": 112,
+    "families_approved": 79,
+    "total_submissions": 113,
     "avg_financial_loss": 141065.37,
-    "avg_months_lost": 41.1,
+    "avg_months_lost": 41.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "NC",
-    "state_family_count": 112,
+    "state_family_count": 113,
     "median_months_lost": 18.0,
     "median_financial_loss": 129400,
     "median_burden_sample_size": 32,
-    "pro_se_count": 55,
-    "pro_se_pct": 49.5,
-    "children_impacted": 171,
-    "clean_sample_size": 111,
-    "raw_submission_count": 111
+    "pro_se_count": 56,
+    "pro_se_pct": 50.0,
+    "children_impacted": 175,
+    "clean_sample_size": 112,
+    "raw_submission_count": 112
   },
-  "movement_total": 3594,
+  "movement_total": 3597,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
