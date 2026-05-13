@@ -15,6 +15,24 @@ from typing import Any
 from supabase import create_client, Client
 
 
+def _court_actor_slug(name: str) -> str:
+    # Mirrors courtActorSlug() in lib/complaint-routing/courtActorPacketId.ts
+    # so the PDF complaint-packet URL resolves to the same Next.js dynamic
+    # route the registry uses.
+    if not name:
+        return ""
+    s = unicodedata.normalize("NFKD", str(name))
+    s = s.encode("ascii", "ignore").decode("ascii").lower()
+    s = re.sub(r"[^a-z0-9]+", "-", s)
+    return re.sub(r"^-+|-+$", "", s)
+
+
+def _complaint_packet_url(name: str, location_key: str | None, state_code: str | None = None) -> str:
+    loc_raw = (location_key or state_code or "unknown").lower()
+    loc = re.sub(r"[^a-z0-9]+", "-", loc_raw)
+    return f"/reports/actors/{loc}-{_court_actor_slug(name)}/complaint-packet"
+
+
 # Reverse-map the short-enum permission values stored in Postgres back to the
 # long descriptive strings that score_quote() in generate_state_pdf.py pattern-
 # matches against ('share away', 'first name', 'anonymous', 'do not share').
@@ -360,12 +378,21 @@ def load_public_court_actors_from_supabase(state_filter: str | None = None) -> d
             ],
             key=lambda c: -len(c["note"]),
         )
+        actor_name = _most_common(bucket["name_counts"]) or "Named actor"
         by_state[location].append({
             "role": _most_common(bucket["role_counts"]) or "Court Actor",
-            "name": _most_common(bucket["name_counts"]) or "Named actor",
+            "name": actor_name,
             "court_or_county": _most_common(bucket["court_counts"]),
             "count": count,
             "comments": comments,
+            # Deep link to the complaint-packet page rendered by Next.js for
+            # this actor. The slug is computed on both sides identically so
+            # the URL resolves to the right /reports/actors/<id>/complaint-packet
+            # route. complaint_agency_name is left blank — the routing config
+            # lives in TypeScript (lib/complaint-routing/stateComplaintConfig.ts)
+            # and the template falls back gracefully when this is empty.
+            "complaint_packet_url": f"https://my.standwithmeg.com{_complaint_packet_url(actor_name, location)}",
+            "complaint_agency_name": None,
         })
 
     for state, actors in by_state.items():

@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import Link from "next/link";
+import { courtActorComplaintPacketUrl } from "../../../../lib/complaint-routing/courtActorPacketId";
 
 const GOLD = "#C9A227";
 const BG = "#0F1E30";
@@ -223,27 +225,42 @@ export function CourtActorPanel({ actors, threshold }: Props) {
                 </div>
               </div>
             );
-            return actor.share_url ? (
-              <a
-                key={key}
-                href={actor.share_url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={className}
-                style={{ backgroundColor: BG }}
-                aria-label={ariaLabel}>
-                {cardInner}
-              </a>
-            ) : (
-              <button
-                key={key}
-                type="button"
-                onClick={() => setOpenActor(actor)}
-                className={className}
-                style={{ backgroundColor: BG }}
-                aria-label={ariaLabel}>
-                {cardInner}
-              </button>
+            const packetUrl = courtActorComplaintPacketUrl(actor);
+            const packetLink = (
+              <Link
+                href={packetUrl}
+                className="block px-6 py-2 text-[11px] font-semibold transition-colors hover:bg-white/5"
+                style={{
+                  color: GOLD,
+                  borderTop: "1px solid rgba(255,255,255,0.06)",
+                  backgroundColor: "rgba(15,30,48,0.6)",
+                }}
+                aria-label={`Open the complaint packet for ${actor.name}`}>
+                Create Complaint Packet →
+              </Link>
+            );
+            return (
+              <div key={key} className="flex flex-col" style={{ backgroundColor: BG }}>
+                {actor.share_url ? (
+                  <a
+                    href={actor.share_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={className}
+                    aria-label={ariaLabel}>
+                    {cardInner}
+                  </a>
+                ) : (
+                  <button
+                    type="button"
+                    onClick={() => setOpenActor(actor)}
+                    className={className}
+                    aria-label={ariaLabel}>
+                    {cardInner}
+                  </button>
+                )}
+                {packetLink}
+              </div>
             );
           })}
         </div>
@@ -306,30 +323,40 @@ export function CourtActorListModal({ state, actors, threshold, onClose }: ListM
               </div>
             )}
             {actors.map((actor, i) => (
-              <button
-                type="button"
+              <div
                 key={`${actor.state_code ?? "NA"}-${actor.name}-${i}`}
-                onClick={() => setOpenActor(actor)}
-                className="w-full text-left rounded-lg px-4 py-3 transition-colors hover:bg-white/5 focus:outline-none focus:ring-1 focus:ring-amber-300/40"
+                className="rounded-lg overflow-hidden"
                 style={{ backgroundColor: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)" }}>
-                <div className="flex items-start justify-between gap-3">
-                  <div className="min-w-0">
-                    <div className="font-black text-white text-sm truncate">{actor.name}</div>
-                    <div className="text-xs mt-1 flex flex-wrap items-center gap-1.5"
-                      style={{ color: "rgba(245,245,245,0.55)" }}>
-                      <span>{actor.role}</span>
-                      {actor.court_or_county && <span>· {actor.court_or_county}</span>}
+                <button
+                  type="button"
+                  onClick={() => setOpenActor(actor)}
+                  className="w-full text-left px-4 py-3 transition-colors hover:bg-white/5 focus:outline-none focus:ring-1 focus:ring-amber-300/40">
+                  <div className="flex items-start justify-between gap-3">
+                    <div className="min-w-0">
+                      <div className="font-black text-white text-sm truncate">{actor.name}</div>
+                      <div className="text-xs mt-1 flex flex-wrap items-center gap-1.5"
+                        style={{ color: "rgba(245,245,245,0.55)" }}>
+                        <span>{actor.role}</span>
+                        {actor.court_or_county && <span>· {actor.court_or_county}</span>}
+                      </div>
+                    </div>
+                    <div className="text-xs font-bold whitespace-nowrap px-2.5 py-1 rounded-md"
+                      style={{ backgroundColor: "rgba(201,162,39,0.12)", color: GOLD, border: "1px solid rgba(201,162,39,0.25)" }}>
+                      {actor.count} {actor.count === 1 ? "family" : "families"}
                     </div>
                   </div>
-                  <div className="text-xs font-bold whitespace-nowrap px-2.5 py-1 rounded-md"
-                    style={{ backgroundColor: "rgba(201,162,39,0.12)", color: GOLD, border: "1px solid rgba(201,162,39,0.25)" }}>
-                    {actor.count} {actor.count === 1 ? "family" : "families"}
+                  <div className="mt-2 text-[11px] font-semibold" style={{ color: GOLD }}>
+                    Read what families said →
                   </div>
-                </div>
-                <div className="mt-2 text-[11px] font-semibold" style={{ color: GOLD }}>
-                  Read what families said →
-                </div>
-              </button>
+                </button>
+                <Link
+                  href={courtActorComplaintPacketUrl(actor)}
+                  className="block px-4 py-2 text-[11px] font-semibold transition-colors hover:bg-white/5"
+                  style={{ color: GOLD, borderTop: "1px solid rgba(255,255,255,0.06)" }}
+                  aria-label={`Open the complaint packet for ${actor.name}`}>
+                  Create Complaint Packet →
+                </Link>
+              </div>
             ))}
           </div>
 

@@ -678,6 +678,23 @@
     letter-spacing: 0.06em;
     font-weight: 600;
   }
+  .actor-complaint {
+    margin-top: 9px;
+    padding: 9px 10px;
+    background: rgba(201,162,39,0.10);
+    border: 1px solid rgba(201,162,39,0.35);
+    font-size: 9.5px;
+    line-height: 1.45;
+    color: var(--ink-muted);
+  }
+  .actor-complaint strong {
+    color: var(--navy);
+  }
+  .actor-complaint a {
+    color: var(--crimson);
+    font-weight: 700;
+    text-decoration: none;
+  }
 
   /* PULL QUOTE / VOICES */
   .pullquote {
@@ -1001,6 +1018,15 @@
         </li>
         {% endfor %}
       </ul>
+      {% endif %}
+      {% if actor.complaint_packet_url %}
+      <div class="actor-complaint">
+        <strong>Create Complaint Packet:</strong>
+        {% if actor.complaint_agency_name %}{{ actor.complaint_agency_name }} · {% endif %}
+        <a href="{{ actor.complaint_packet_url }}">{{ actor.complaint_packet_url }}</a>
+        <br>
+        Family-reported pattern context only. Each person must file only their own truthful, first-hand complaint using their own facts, dates, evidence, orders, transcripts, and documents.
+      </div>
       {% endif %}
     </div>
     {% endfor %}

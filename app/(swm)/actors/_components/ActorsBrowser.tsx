@@ -1,8 +1,10 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import Link from "next/link";
 import { COURT_ACTOR_PUBLIC_THRESHOLD } from "../../../../lib/court-actors";
 import { DONATION_URL } from "../../../../lib/site-links";
+import { courtActorComplaintPacketUrl } from "../../../../lib/complaint-routing/courtActorPacketId";
 
 const GOLD = "#C9A227";
 const NAVY = "#0F1E30";
@@ -375,13 +377,25 @@ export function ActorsBrowser({ visitorEmail, visitorSubmissionId, visitorFirstN
                         </td>
                         <td className="px-4 py-3 text-white/70 text-xs">{a.county_breakdown}</td>
                         <td className="px-4 py-3 text-right">
-                          <button
-                            onClick={() => setClaimActor(a)}
-                            className="text-xs font-semibold px-3 py-1.5 rounded-md hover:opacity-90 transition-opacity"
-                            style={{ backgroundColor: GOLD, color: NAVY_DEEP }}
-                          >
-                            On my case
-                          </button>
+                          <div className="flex flex-col items-end gap-1.5">
+                            <button
+                              onClick={() => setClaimActor(a)}
+                              className="text-xs font-semibold px-3 py-1.5 rounded-md hover:opacity-90 transition-opacity"
+                              style={{ backgroundColor: GOLD, color: NAVY_DEEP }}
+                            >
+                              On my case
+                            </button>
+                            {a.at_threshold && (
+                              <Link
+                                href={courtActorComplaintPacketUrl(a)}
+                                className="text-[11px] font-semibold transition-opacity hover:opacity-80"
+                                style={{ color: GOLD }}
+                                aria-label={`Open the complaint packet for ${a.name}`}
+                              >
+                                Complaint packet →
+                              </Link>
+                            )}
+                          </div>
                         </td>
                       </tr>
                     ))}
@@ -407,13 +421,25 @@ export function ActorsBrowser({ visitorEmail, visitorSubmissionId, visitorFirstN
                     <div className="text-white/60 text-xs mb-3">{a.county_breakdown}</div>
                     <div className="flex items-center justify-between gap-3">
                       <ThresholdBadge actor={a} />
-                      <button
-                        onClick={() => setClaimActor(a)}
-                        className="text-xs font-semibold px-3 py-1.5 rounded-md"
-                        style={{ backgroundColor: GOLD, color: NAVY_DEEP }}
-                      >
-                        On my case
-                      </button>
+                      <div className="flex flex-col items-end gap-1.5">
+                        <button
+                          onClick={() => setClaimActor(a)}
+                          className="text-xs font-semibold px-3 py-1.5 rounded-md"
+                          style={{ backgroundColor: GOLD, color: NAVY_DEEP }}
+                        >
+                          On my case
+                        </button>
+                        {a.at_threshold && (
+                          <Link
+                            href={courtActorComplaintPacketUrl(a)}
+                            className="text-[11px] font-semibold transition-opacity hover:opacity-80"
+                            style={{ color: GOLD }}
+                            aria-label={`Open the complaint packet for ${a.name}`}
+                          >
+                            Complaint packet →
+                          </Link>
+                        )}
+                      </div>
                     </div>
                   </div>
                 ))}
