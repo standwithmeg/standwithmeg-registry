@@ -1,0 +1,78 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "frances_m_giordano",
+    "display_name": "Frances M. Giordano",
+    "title": "",
+    "first_name": "Frances M.",
+    "last_name": "Giordano",
+    "role": "Judge",
+    "court": "Essex",
+    "county": null,
+    "court_or_county": "Essex",
+    "state": "Massachusetts",
+    "state_abbr": "MA",
+    "mention_count": 1,
+    "family_count": 3,
+    "actor_report_count": 1,
+    "supabase_row_ids": [
+      "cc950e98-0f09-477b-bbaa-4c5e30f0274e"
+    ],
+    "actor_row_id": "cc950e98-0f09-477b-bbaa-4c5e30f0274e",
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "massachusetts/frances_m_giordano/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 44,
+    "total_submissions": 65,
+    "avg_financial_loss": 160770.88,
+    "avg_months_lost": 31.5,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "MA",
+    "state_family_count": 65,
+    "median_months_lost": 20.0,
+    "median_financial_loss": 124000,
+    "median_burden_sample_size": 31,
+    "pro_se_count": 37,
+    "pro_se_pct": 59.7,
+    "children_impacted": 92,
+    "clean_sample_size": 62,
+    "raw_submission_count": 62
+  },
+  "movement_total": 3586,
+  "supabase": {
+    "report_count": 1,
+    "actor_report_count": 1,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Denied motions rushed to judgment told me that she doesn’t care what’s happened in the criminal court",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/frances_m_giordano",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/massachusetts/frances_m_giordano/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}
