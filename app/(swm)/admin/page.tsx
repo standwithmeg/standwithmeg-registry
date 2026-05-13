@@ -721,6 +721,7 @@ export default function AdminPage() {
     nudge_last_subject: string | null;
     reporter_email: string | null;
     reporter_name: string | null;
+    reporter_permission: string | null;
   };
   type AdminActorAgg = {
     role: string;
@@ -1335,6 +1336,45 @@ export default function AdminPage() {
       alert("Action failed: " + (err instanceof Error ? err.message : "Network error."));
     } finally {
       setActorActing(null);
+    }
+  }
+
+  async function updateSubmissionPermission(submissionId: string, value: string) {
+    const previousActors = adminActors;
+    // Optimistic update: every actor row sharing this submission_id gets the new permission immediately.
+    setAdminActors(prev => prev.map(a => a.submission_id === submissionId ? { ...a, reporter_permission: value } : a));
+    try {
+      const res = await fetch(`/api/admin/survey-submission/${submissionId}`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ permission_to_share: value }),
+      });
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        setAdminActors(previousActors);
+        alert("Permission change failed: " + (data.error ?? res.statusText));
+      }
+    } catch (err) {
+      setAdminActors(previousActors);
+      alert("Permission change failed: " + (err instanceof Error ? err.message : "Network error."));
+    }
+  }
+
+  async function deleteSurveySubmission(submissionId: string) {
+    if (!confirm("This deletes the ENTIRE survey submission and all its actor rows. Cannot be undone.")) return;
+    const previousActors = adminActors;
+    // Optimistic update: drop every row tied to this submission.
+    setAdminActors(prev => prev.filter(a => a.submission_id !== submissionId));
+    try {
+      const res = await fetch(`/api/admin/survey-submission/${submissionId}`, { method: "DELETE" });
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        setAdminActors(previousActors);
+        alert("Delete failed: " + (data.error ?? res.statusText));
+      }
+    } catch (err) {
+      setAdminActors(previousActors);
+      alert("Delete failed: " + (err instanceof Error ? err.message : "Network error."));
     }
   }
 
@@ -2313,6 +2353,33 @@ export default function AdminPage() {
                                         style={{ backgroundColor: "rgba(185,28,28,0.12)", color: "rgb(252,165,165)", border: "1px solid rgba(185,28,28,0.3)" }}>
                                         {isActing ? "…" : "× Del"}
                                       </button>
+                                      <button
+                                        type="button"
+                                        onClick={() => void openSubmissionDetail(a.submission_id)}
+                                        title="Open this family's full survey response"
+                                        className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide transition-colors"
+                                        style={{ backgroundColor: "rgba(59,130,246,0.15)", color: "rgb(147,197,253)", border: "1px solid rgba(59,130,246,0.3)" }}>
+                                        👁 View
+                                      </button>
+                                      <select
+                                        value={a.reporter_permission ?? "public"}
+                                        onChange={e => void updateSubmissionPermission(a.submission_id, e.target.value)}
+                                        title="Change this submission's permission_to_share (affects every actor row from this submission)"
+                                        className="text-[10px] px-1.5 py-1 rounded font-bold uppercase tracking-wide transition-colors"
+                                        style={{ backgroundColor: "rgba(255,255,255,0.06)", color: "rgba(245,245,245,0.85)", border: "1px solid rgba(255,255,255,0.18)" }}>
+                                        <option value="public">public</option>
+                                        <option value="anonymous">anonymous</option>
+                                        <option value="first_name">first_name</option>
+                                        <option value="data_only">data_only</option>
+                                      </select>
+                                      <button
+                                        type="button"
+                                        onClick={() => void deleteSurveySubmission(a.submission_id)}
+                                        title="Delete the ENTIRE survey submission and every actor row from it"
+                                        className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide transition-colors"
+                                        style={{ backgroundColor: "rgba(248,113,113,0.16)", color: "rgb(252,165,165)", border: "1px solid rgba(248,113,113,0.35)" }}>
+                                        Del Survey
+                                      </button>
                                     </div>
                                   </div>
                                 );
@@ -2449,6 +2516,35 @@ export default function AdminPage() {
                       {a.notes}
                     </div>
                   )}
+                  <div className="mt-2 flex items-center gap-1.5 flex-wrap">
+                    <button
+                      type="button"
+                      onClick={() => void openSubmissionDetail(a.submission_id)}
+                      title="Open this family's full survey response"
+                      className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide transition-colors"
+                      style={{ backgroundColor: "rgba(59,130,246,0.15)", color: "rgb(147,197,253)", border: "1px solid rgba(59,130,246,0.3)" }}>
+                      👁 View Survey
+                    </button>
+                    <select
+                      value={a.reporter_permission ?? "public"}
+                      onChange={e => void updateSubmissionPermission(a.submission_id, e.target.value)}
+                      title="Change this submission's permission_to_share (affects every actor row from this submission)"
+                      className="text-[10px] px-1.5 py-1 rounded font-bold uppercase tracking-wide transition-colors"
+                      style={{ backgroundColor: "rgba(255,255,255,0.06)", color: "rgba(245,245,245,0.85)", border: "1px solid rgba(255,255,255,0.18)" }}>
+                      <option value="public">public</option>
+                      <option value="anonymous">anonymous</option>
+                      <option value="first_name">first_name</option>
+                      <option value="data_only">data_only</option>
+                    </select>
+                    <button
+                      type="button"
+                      onClick={() => void deleteSurveySubmission(a.submission_id)}
+                      title="Delete the ENTIRE survey submission and every actor row from it"
+                      className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide transition-colors"
+                      style={{ backgroundColor: "rgba(248,113,113,0.16)", color: "rgb(252,165,165)", border: "1px solid rgba(248,113,113,0.35)" }}>
+                      Delete Survey
+                    </button>
+                  </div>
                 </div>
               ))}
             </div>
