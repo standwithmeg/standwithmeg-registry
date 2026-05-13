@@ -26,8 +26,8 @@
     "actor_bucket_key": "karl hays|TX"
   },
   "photo": {
-    "path": null,
-    "exists": false,
+    "path": "texas/karl_hays/image_1080.png",
+    "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
@@ -47,7 +47,7 @@
     "clean_sample_size": 208,
     "raw_submission_count": 208
   },
-  "movement_total": 3580,
+  "movement_total": 3588,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
