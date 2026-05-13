@@ -3,14 +3,18 @@
  * into one. Used by both the admin merge preview UI and the server-side
  * merge endpoint so the preview always matches what the server would do.
  *
- * Smart defaults per field type:
- *   - Free-text strings: longer non-empty wins, tie-break to winner
- *   - Numeric fees / int counts: max of the two
- *   - Bool: OR (true wins)
- *   - Permission-to-share enum: most permissive
- *   - Created_at: earliest preserved
- *   - String enums: winner unless empty, then loser
- *   - String[] (due_process_checklist): union, deduped
+ * Smart defaults (updated 2026-05-13 — see Bug #5):
+ *   - Every field defaults to the NEWEST submission's value (by created_at),
+ *     unless that value is empty — in which case the older non-empty value
+ *     is kept so we don't lose data.
+ *   - SAFETY EXCEPTIONS (these IGNORE the "newest wins" rule):
+ *       - permission_to_share: most-PRIVATE wins (data_only > anonymous >
+ *         first_name > public). Prevents a "newer = public" reply from
+ *         exposing someone who originally chose anonymous.
+ *       - due_process_checklist: UNION of both rows' flags (we never lose
+ *         a reported due-process violation).
+ *       - created_at: earliest preserved (audit history).
+ *   - The admin can override any per-field pick in the UI before commit.
  */
 
 const PERMISSION_RANK: Record<string, number> = {
@@ -86,7 +90,6 @@ export type MergeFieldDiff = {
 type FieldRule = {
   field: keyof SurveySubmissionRow;
   label: string;
-  pick: (a: unknown, b: unknown) => MergeChoice;
 };
 
 function isEmpty(v: unknown): boolean {
@@ -105,33 +108,6 @@ function asNumber(v: unknown): number {
   return 0;
 }
 
-function pickLongerString(a: unknown, b: unknown): MergeChoice {
-  const aStr = typeof a === "string" ? a : "";
-  const bStr = typeof b === "string" ? b : "";
-  if (isEmpty(aStr) && !isEmpty(bStr)) return "loser";
-  if (!isEmpty(aStr) && isEmpty(bStr)) return "winner";
-  return bStr.length > aStr.length ? "loser" : "winner";
-}
-
-function pickMaxNumber(a: unknown, b: unknown): MergeChoice {
-  return asNumber(b) > asNumber(a) ? "loser" : "winner";
-}
-
-function pickWinnerUnlessEmpty(a: unknown, b: unknown): MergeChoice {
-  if (isEmpty(a) && !isEmpty(b)) return "loser";
-  return "winner";
-}
-
-function pickPermission(a: unknown, b: unknown): MergeChoice {
-  const aRank = typeof a === "string" ? PERMISSION_RANK[a] ?? -1 : -1;
-  const bRank = typeof b === "string" ? PERMISSION_RANK[b] ?? -1 : -1;
-  return bRank > aRank ? "loser" : "winner";
-}
-
-function pickBoolOr(a: unknown, b: unknown): MergeChoice {
-  return b === true && a !== true ? "loser" : "winner";
-}
-
 function pickEarliest(a: unknown, b: unknown): MergeChoice {
   const aMs = typeof a === "string" ? Date.parse(a) : NaN;
   const bMs = typeof b === "string" ? Date.parse(b) : NaN;
@@ -140,38 +116,73 @@ function pickEarliest(a: unknown, b: unknown): MergeChoice {
   return bMs < aMs ? "loser" : "winner";
 }
 
+function pickMorePrivate(a: unknown, b: unknown): MergeChoice {
+  // Lowest PERMISSION_RANK wins (data_only=0 most private, public=3 least).
+  // Unknown values rank as "very exposed" (99) so we never default to them.
+  const aRank = typeof a === "string" && a in PERMISSION_RANK ? PERMISSION_RANK[a] : 99;
+  const bRank = typeof b === "string" && b in PERMISSION_RANK ? PERMISSION_RANK[b] : 99;
+  return bRank < aRank ? "loser" : "winner";
+}
+
+/**
+ * "Newest wins" default: prefer the value from whichever row was submitted
+ * most recently (by created_at). If the newer row's value is empty, fall
+ * back to the older row's value so we don't silently lose data.
+ */
+function pickNewerNonEmpty(
+  winnerValue: unknown,
+  loserValue: unknown,
+  winnerNewer: boolean
+): MergeChoice {
+  const newerValue = winnerNewer ? winnerValue : loserValue;
+  const olderValue = winnerNewer ? loserValue : winnerValue;
+  if (isEmpty(newerValue) && !isEmpty(olderValue)) {
+    return winnerNewer ? "loser" : "winner";
+  }
+  return winnerNewer ? "winner" : "loser";
+}
+
+// FIELD_RULES is now {field, label} only — every field uses the unified
+// "newest wins, safety overrides" logic in buildMergeDiff below.
 const FIELD_RULES: FieldRule[] = [
-  { field: "created_at",                     label: "Submitted at",         pick: pickEarliest },
-  { field: "case_county",                    label: "County",               pick: pickWinnerUnlessEmpty },
-  { field: "case_status",                    label: "Case status",          pick: pickWinnerUnlessEmpty },
-  { field: "number_of_kids",                 label: "Children",             pick: pickMaxNumber },
-  { field: "system_affected",                label: "System",               pick: pickWinnerUnlessEmpty },
-  { field: "time_in_system",                 label: "Time in system",       pick: pickWinnerUnlessEmpty },
-  { field: "custody_status",                 label: "Custody",              pick: pickWinnerUnlessEmpty },
-  { field: "is_pro_se",                      label: "Pro se",               pick: pickBoolOr },
-  { field: "legal_rep_history",              label: "Legal history",        pick: pickWinnerUnlessEmpty },
-  { field: "allegation_type",                label: "Allegation type",      pick: pickWinnerUnlessEmpty },
-  { field: "allegation_other_detail",        label: "Allegation detail",    pick: pickLongerString },
-  { field: "allegation_root_cause",          label: "Root cause",           pick: pickLongerString },
-  { field: "other_allegation_details",       label: "Other allegations",    pick: pickLongerString },
-  { field: "conflict_of_interest_awareness", label: "Conflict awareness",   pick: pickWinnerUnlessEmpty },
-  { field: "conflict_description",           label: "Conflict description", pick: pickLongerString },
-  { field: "federal_funding_influence",      label: "Federal funding",      pick: pickWinnerUnlessEmpty },
-  { field: "months_lost_parenting_time",     label: "Months lost",          pick: pickMaxNumber },
-  { field: "lost_milestones_description",    label: "Lost milestones",      pick: pickLongerString },
-  { field: "attorney_fees",                  label: "Attorney fees",        pick: pickMaxNumber },
-  { field: "gal_fees",                       label: "GAL fees",             pick: pickMaxNumber },
-  { field: "therapy_eval_fees",              label: "Therapy/eval fees",    pick: pickMaxNumber },
-  { field: "reunification_fees",             label: "Reunification fees",   pick: pickMaxNumber },
-  { field: "other_court_actors_fees",        label: "Other actor fees",     pick: pickMaxNumber },
-  { field: "lost_wages",                     label: "Lost wages",           pick: pickMaxNumber },
-  { field: "asset_liquidation_loss",         label: "Asset/property loss",  pick: pickMaxNumber },
-  { field: "impact_quote",                   label: "Quote",                pick: pickLongerString },
-  { field: "permission_to_share",            label: "Permission",           pick: pickPermission },
-  { field: "first_name",                     label: "First name",           pick: pickWinnerUnlessEmpty },
-  { field: "last_name",                      label: "Last name",            pick: pickWinnerUnlessEmpty },
-  { field: "approved",                       label: "Approved",             pick: pickBoolOr },
+  { field: "created_at",                     label: "Submitted at" },
+  { field: "case_county",                    label: "County" },
+  { field: "case_status",                    label: "Case status" },
+  { field: "number_of_kids",                 label: "Children" },
+  { field: "system_affected",                label: "System" },
+  { field: "time_in_system",                 label: "Time in system" },
+  { field: "custody_status",                 label: "Custody" },
+  { field: "is_pro_se",                      label: "Pro se" },
+  { field: "legal_rep_history",              label: "Legal history" },
+  { field: "allegation_type",                label: "Allegation type" },
+  { field: "allegation_other_detail",        label: "Allegation detail" },
+  { field: "allegation_root_cause",          label: "Root cause" },
+  { field: "other_allegation_details",       label: "Other allegations" },
+  { field: "conflict_of_interest_awareness", label: "Conflict awareness" },
+  { field: "conflict_description",           label: "Conflict description" },
+  { field: "federal_funding_influence",      label: "Federal funding" },
+  { field: "months_lost_parenting_time",     label: "Months lost" },
+  { field: "lost_milestones_description",    label: "Lost milestones" },
+  { field: "attorney_fees",                  label: "Attorney fees" },
+  { field: "gal_fees",                       label: "GAL fees" },
+  { field: "therapy_eval_fees",              label: "Therapy/eval fees" },
+  { field: "reunification_fees",             label: "Reunification fees" },
+  { field: "other_court_actors_fees",        label: "Other actor fees" },
+  { field: "lost_wages",                     label: "Lost wages" },
+  { field: "asset_liquidation_loss",         label: "Asset/property loss" },
+  { field: "impact_quote",                   label: "Quote" },
+  { field: "permission_to_share",            label: "Permission" },
+  { field: "first_name",                     label: "First name" },
+  { field: "last_name",                      label: "Last name" },
+  { field: "approved",                       label: "Approved" },
 ];
+
+function isWinnerNewer(winner: SurveySubmissionRow, loser: SurveySubmissionRow): boolean {
+  const w = winner.created_at ? Date.parse(winner.created_at) : 0;
+  const l = loser.created_at ? Date.parse(loser.created_at) : 0;
+  // Tie → keep the existing winner (stable, predictable).
+  return w >= l;
+}
 
 function valuesEqual(a: unknown, b: unknown): boolean {
   if (a === b) return true;
@@ -194,12 +205,25 @@ export function buildMergeDiff(
   loser: SurveySubmissionRow
 ): MergeFieldDiff[] {
   const diffs: MergeFieldDiff[] = [];
+  const winnerNewer = isWinnerNewer(winner, loser);
 
   for (const rule of FIELD_RULES) {
     const winnerValue = winner[rule.field];
     const loserValue = loser[rule.field];
     if (valuesEqual(winnerValue, loserValue)) continue;
-    const defaultChoice = rule.pick(winnerValue, loserValue);
+
+    let defaultChoice: MergeChoice;
+    if (rule.field === "permission_to_share") {
+      // SAFETY: more private wins regardless of submission date.
+      defaultChoice = pickMorePrivate(winnerValue, loserValue);
+    } else if (rule.field === "created_at") {
+      // Preserve earliest submission timestamp for audit history.
+      defaultChoice = pickEarliest(winnerValue, loserValue);
+    } else {
+      // Everyone else: newest submission's value wins (unless empty).
+      defaultChoice = pickNewerNonEmpty(winnerValue, loserValue, winnerNewer);
+    }
+
     const mergedValue = defaultChoice === "winner" ? winnerValue : loserValue;
     diffs.push({
       field: rule.field,

@@ -541,7 +541,10 @@ function auditGroupCountedFamilies(group: AuditReviewGroup) {
 }
 
 function auditGroupReviewed(group: AuditReviewGroup) {
-  return group.rows.some(row => row.review_decision !== null);
+  // Bug #6 fix: a group is only "reviewed" when EVERY row has a decision.
+  // Previous `some()` logic hid the entire group after the first decision,
+  // making it impossible to review the rest of the rows in the same group.
+  return group.rows.every(row => row.review_decision !== null);
 }
 
 function auditReviewBoolean(value: string | boolean | null) {
@@ -3973,7 +3976,7 @@ export default function AdminPage() {
                   {mergePreview?.winner.email as string ?? ""}{mergePreview?.state ? ` · ${mergePreview.state}` : ""}
                   {mergePreview && (
                     <span className="ml-2" style={{ color: "rgba(245,245,245,0.4)" }}>
-                      Pick a value per field. Defaults follow smart rules (longer text, max fee, more permissive permission).
+                      Pick a value per field. Defaults to the NEWEST submission&apos;s value. Permission defaults to MORE PRIVATE for safety. Due-process flags are unioned.
                     </span>
                   )}
                 </div>
