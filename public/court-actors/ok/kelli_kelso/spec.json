@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "kelli_kelso",
+    "display_name": "Kelli Kelso",
+    "title": "",
+    "first_name": "Kelli",
+    "last_name": "Kelso",
+    "role": "Attorney (Mine)",
+    "court": "Cleveland County",
+    "county": null,
+    "court_or_county": "Cleveland County",
+    "state": "Oklahoma",
+    "state_abbr": "OK",
+    "mention_count": 3,
+    "family_count": 3,
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "1aa8c3b5-bd17-4f78-98bf-9fba3586c3aa",
+      "0297be22-9672-4438-884a-d0ef22487ec7",
+      "10f0e82c-c841-4810-ab6d-0f94386a3cf5"
+    ],
+    "actor_row_id": "1aa8c3b5-bd17-4f78-98bf-9fba3586c3aa",
+    "actor_bucket_key": "keli kelso|OK"
+  },
+  "photo": {
+    "path": "oklahoma/kelli_kelso/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 88,
+    "total_submissions": 108,
+    "avg_financial_loss": 114484.55,
+    "avg_months_lost": 28.2,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OK",
+    "state_family_count": 108,
+    "median_months_lost": 12.0,
+    "median_financial_loss": 78500,
+    "median_burden_sample_size": 59,
+    "pro_se_count": 48,
+    "pro_se_pct": 44.4,
+    "children_impacted": 188,
+    "clean_sample_size": 108,
+    "raw_submission_count": 108
+  },
+  "movement_total": 3581,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Horrible attorney made deal with the other Attorney behind the table in my divorce. Did not fight for my child does not care about anything about the money. She is…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Had off record meetings with the therapist, improper investigations, excluded me from everything, and lied to my own attorney about me due to improper investigating.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Gave 2 extra nights a month to bio dad after finding out that his 2 sons were also sexually molested by him as children. Filed motion to remove my attorney,…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/kelli_kelso",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/oklahoma/kelli_kelso/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}
