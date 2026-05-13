@@ -13,6 +13,7 @@
     "state": "Florida",
     "state_abbr": "FL",
     "mention_count": 3,
+    "family_count": 3,
     "actor_report_count": 3,
     "supabase_row_ids": [
       "e907bd65-d1a0-4fd8-b421-55e06827af42",
@@ -44,10 +45,11 @@
     "clean_sample_size": 202,
     "raw_submission_count": 202
   },
-  "movement_total": 3571,
+  "movement_total": 3580,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
+    "family_count": 3,
     "family_reports": [],
     "public_comments": [
       {

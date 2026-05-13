@@ -13,6 +13,7 @@
     "state": "Oklahoma",
     "state_abbr": "OK",
     "mention_count": 5,
+    "family_count": 4,
     "actor_report_count": 5,
     "supabase_row_ids": [
       "f726f53f-67c6-4853-a00c-0503236ede53",
@@ -30,26 +31,27 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 85,
-    "total_submissions": 105,
-    "avg_financial_loss": 116341.98,
-    "avg_months_lost": 27.7,
+    "families_approved": 88,
+    "total_submissions": 108,
+    "avg_financial_loss": 114484.55,
+    "avg_months_lost": 28.2,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OK",
-    "state_family_count": 105,
-    "median_months_lost": 11.5,
-    "median_financial_loss": 82000,
-    "median_burden_sample_size": 55,
+    "state_family_count": 108,
+    "median_months_lost": 12.0,
+    "median_financial_loss": 78500,
+    "median_burden_sample_size": 59,
     "pro_se_count": 48,
-    "pro_se_pct": 46.2,
-    "children_impacted": 181,
-    "clean_sample_size": 104,
-    "raw_submission_count": 104
+    "pro_se_pct": 44.4,
+    "children_impacted": 188,
+    "clean_sample_size": 108,
+    "raw_submission_count": 108
   },
-  "movement_total": 3525,
+  "movement_total": 3580,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
+    "family_count": 4,
     "family_reports": [],
     "public_comments": [
       {

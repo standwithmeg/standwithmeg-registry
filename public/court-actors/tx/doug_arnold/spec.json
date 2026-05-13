@@ -13,6 +13,7 @@
     "state": "Texas",
     "state_abbr": "TX",
     "mention_count": 1,
+    "family_count": 3,
     "actor_report_count": 1,
     "supabase_row_ids": [
       "103aa724-5c55-4965-b0de-4aff3ca1978d"
@@ -42,10 +43,11 @@
     "clean_sample_size": 208,
     "raw_submission_count": 208
   },
-  "movement_total": 3577,
+  "movement_total": 3580,
   "supabase": {
     "report_count": 1,
     "actor_report_count": 1,
+    "family_count": 3,
     "family_reports": [],
     "public_comments": []
   },

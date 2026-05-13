@@ -13,6 +13,7 @@
     "state": "Florida",
     "state_abbr": "FL",
     "mention_count": 3,
+    "family_count": 3,
     "actor_report_count": 3,
     "supabase_row_ids": [
       "35117f68-f92d-4040-b42d-670a88387fe1",
@@ -28,26 +29,27 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 150,
-    "total_submissions": 202,
-    "avg_financial_loss": 204114.65,
-    "avg_months_lost": 30.8,
+    "families_approved": 151,
+    "total_submissions": 205,
+    "avg_financial_loss": 201273.29,
+    "avg_months_lost": 30.6,
     "_source_table": "movement_stats_by_state",
     "_match_value": "FL",
-    "state_family_count": 202,
+    "state_family_count": 205,
     "median_months_lost": 20.0,
     "median_financial_loss": 215500,
     "median_burden_sample_size": 88,
-    "pro_se_count": 117,
-    "pro_se_pct": 59.1,
-    "children_impacted": 320,
-    "clean_sample_size": 198,
-    "raw_submission_count": 198
+    "pro_se_count": 120,
+    "pro_se_pct": 59.4,
+    "children_impacted": 326,
+    "clean_sample_size": 202,
+    "raw_submission_count": 202
   },
-  "movement_total": 3525,
+  "movement_total": 3580,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
+    "family_count": 3,
     "family_reports": [],
     "public_comments": [
       {

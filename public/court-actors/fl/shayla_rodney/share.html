@@ -228,6 +228,14 @@ html,body { background:#06070A; color:var(--white); font-family:Inter,system-ui,
   display:flex; flex-direction:column; justify-content:center;
   gap:clamp(14px,3cqw,26px);
 }
+.f3-body.f3-count-4,
+.f3-body.f3-count-5,
+.f3-body.f3-count-6 {
+  top:12%;
+  bottom:24%;
+  justify-content:flex-start;
+  gap:clamp(8px,1.8cqw,14px);
+}
 .f3-quote {
   position:relative; padding-left:clamp(14px,2.8cqw,22px);
   border-left:3px solid var(--gold);
@@ -251,11 +259,29 @@ html,body { background:#06070A; color:var(--white); font-family:Inter,system-ui,
   text-transform:uppercase;
 }
 /* When only one quote exists, bump it up to the original hero size */
-.f3-body.f3-single .f3-text {
+.f3-body.f3-count-1 .f3-text {
   font-size:clamp(22px,6cqw,42px); line-height:1.18;
 }
-.f3-body.f3-single .f3-attr {
+.f3-body.f3-count-1 .f3-attr {
   font-size:clamp(11px,2.6cqw,15px); margin-top:clamp(18px,3cqw,28px);
+}
+.f3-body.f3-count-4 .f3-text {
+  font-size:clamp(14px,3.4cqw,22px);
+  line-height:1.16;
+}
+.f3-body.f3-count-5 .f3-text {
+  font-size:clamp(13px,3.1cqw,20px);
+  line-height:1.14;
+}
+.f3-body.f3-count-6 .f3-text {
+  font-size:clamp(12px,2.8cqw,18px);
+  line-height:1.12;
+}
+.f3-body.f3-count-4 .f3-attr,
+.f3-body.f3-count-5 .f3-attr,
+.f3-body.f3-count-6 .f3-attr {
+  margin-top:clamp(4px,1.2cqw,8px);
+  font-size:clamp(8px,1.8cqw,11px);
 }
 
 /* Frame 4 — counted. Flex column inside an absolute wrapper so each line
@@ -502,8 +528,8 @@ html,body { background:#06070A; color:var(--white); font-family:Inter,system-ui,
     <div class="display xl">SHAYLA<br><span class="gold">RODNEY</span></div>
     <div class="f1-role">Child Protective Services (CPS) Worker</div>
     <div class="f1-report-count">
-      <b>205</b>
-      <span>FL families on the public record</span>
+      <b>3</b>
+      <span>families named this person on the public record</span>
     </div>
   </div>
   
@@ -635,8 +661,8 @@ html,body { background:#06070A; color:var(--white); font-family:Inter,system-ui,
 </div>
 
   <div class="frame-tag">WHAT FAMILIES SAY</div>
-  <div class="f3-body">
-    <div class="f3-quote"><span class="f3-dot"></span><p class="f3-text">Removed relative Kim Florida Homestudy from the FSFN database to foreclose guardian candidacy and did not start a court ordered VT ICPC…</p><p class="f3-attr">— Anonymous parent · FL</p></div><div class="f3-quote"><span class="f3-dot"></span><p class="f3-text">Rodney pulled my mother’s FL home-study out of the FSFN system.</p><p class="f3-attr">— Anonymous parent · FL</p></div>
+  <div class="f3-body f3-count-2">
+    <div class="f3-quote"><span class="f3-dot"></span><p class="f3-text">Removed relative Kim Florida Homestudy from the FSFN database to foreclose guardian candidacy and did not start a court ordered VT ICPC hom…</p><p class="f3-attr">— Anonymous parent · FL</p></div><div class="f3-quote"><span class="f3-dot"></span><p class="f3-text">Rodney pulled my mother’s FL home-study out of the FSFN system.</p><p class="f3-attr">— Anonymous parent · FL</p></div>
   </div>
   
 <div class="actor-id-strip">
@@ -702,7 +728,7 @@ html,body { background:#06070A; color:var(--white); font-family:Inter,system-ui,
 
   <div class="frame-tag">COUNTED · PUBLIC RECORD</div>
   <div class="f4-stack">
-    <div class="f4-mega-number">3,571</div>
+    <div class="f4-mega-number">3,580</div>
     <div class="f4-mega-label">FAMILIES<br>NATIONWIDE</div>
     <div class="f4-italic">— and now global.</div>
     <div class="f4-pattern">
@@ -857,7 +883,7 @@ html,body { background:#06070A; color:var(--white); font-family:Inter,system-ui,
     <span class="gold">MEG.</span>
   </div>
   <div class="f6-cta-text">
-    Join over <b class="f6-count">3,571</b><br>
+    Join over <b class="f6-count">3,580</b><br>
     families nationwide &amp; global<br>
     exposing the truth.
   </div>

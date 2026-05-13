@@ -13,6 +13,7 @@
     "state": "Texas",
     "state_abbr": "TX",
     "mention_count": 4,
+    "family_count": 3,
     "actor_report_count": 4,
     "supabase_row_ids": [
       "665796ba-f313-499a-85fe-0cc22261dd30",
@@ -29,26 +30,27 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 159,
-    "total_submissions": 212,
-    "avg_financial_loss": 229516.22,
-    "avg_months_lost": 32.0,
+    "families_approved": 160,
+    "total_submissions": 214,
+    "avg_financial_loss": 228212.49,
+    "avg_months_lost": 31.6,
     "_source_table": "movement_stats_by_state",
     "_match_value": "TX",
-    "state_family_count": 212,
-    "median_months_lost": 21.0,
-    "median_financial_loss": 135000,
-    "median_burden_sample_size": 101,
+    "state_family_count": 214,
+    "median_months_lost": 20.0,
+    "median_financial_loss": 134677,
+    "median_burden_sample_size": 102,
     "pro_se_count": 101,
-    "pro_se_pct": 49.0,
-    "children_impacted": 338,
-    "clean_sample_size": 206,
-    "raw_submission_count": 206
+    "pro_se_pct": 48.6,
+    "children_impacted": 341,
+    "clean_sample_size": 208,
+    "raw_submission_count": 208
   },
-  "movement_total": 3525,
+  "movement_total": 3580,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
+    "family_count": 3,
     "family_reports": [],
     "public_comments": [
       {
