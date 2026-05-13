@@ -47,12 +47,43 @@
     "clean_sample_size": 108,
     "raw_submission_count": 108
   },
-  "movement_total": 3580,
+  "movement_total": 3592,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
     "family_count": 5,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Destroyed my faith in child court and what is supposed to be the absolute…",
+        "state": "OK",
+        "county": "Wagoner",
+        "row_id": "d8843cb7-6aff-48f7-8687-d3f895db0be8"
+      },
+      {
+        "body": "Family court is a circus and for all of the lip service to “children’s…",
+        "state": "OK",
+        "county": "Tulsa",
+        "row_id": "93551a22-a4cb-4e62-b51e-b5d93de214e1"
+      },
+      {
+        "body": "Destroyed my family for over 6 years now! Took every penny we have down…",
+        "state": "OK",
+        "county": "Wagoner",
+        "row_id": "8b70ebcd-62ae-4250-8e33-a8a4f74e16d9"
+      },
+      {
+        "body": "My biggest regret in life is telling the truth and following the law. I…",
+        "state": "OK",
+        "county": "Creek County",
+        "row_id": "d96a7040-db92-4c65-bacf-32372cd3e6f0"
+      },
+      {
+        "body": "Family court has shown me that children and families come last. They have facilitated…",
+        "state": "OK",
+        "county": "Tulsa",
+        "row_id": "a1abd884-3ba6-422d-af70-96645c152a8c"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Coerced me to give details about a situation with my kids in counseling with my ex while the divorce was still taking place. I expressed that my ex was using…",
@@ -66,6 +97,11 @@
       },
       {
         "comment_text": "She ruled that my daughter's disclosure of SA was coached because she had a flat affect and became emotionally distant when discussing the abuse. My daughter has PTSD. That is…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Jamie Vogt did EFE on both my children. My daughter layed in my lap in her office after not seeing me for 1 year my first time seeing her was…",
         "author": "Anonymous parent",
         "source": "court_actors.notes"
       }

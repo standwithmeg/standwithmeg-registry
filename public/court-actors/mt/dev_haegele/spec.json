@@ -45,12 +45,25 @@
     "clean_sample_size": 49,
     "raw_submission_count": 49
   },
-  "movement_total": 3580,
+  "movement_total": 3592,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Our nephews and niece have been removed from our care, and placed back into…",
+        "state": "MT",
+        "county": "Flathead",
+        "row_id": "a24a81cb-b146-49a8-99ec-f9fa0003ba28"
+      },
+      {
+        "body": "We are in constant worry mode for the safety of the children.",
+        "state": "MT",
+        "county": "Flathead",
+        "row_id": "d2151ba0-6fd5-497e-ba18-f07168f156cf"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "CPS worker. She is allowing the kids to stay in an abusive environment. Treats the kinship foster parents extremely bad",

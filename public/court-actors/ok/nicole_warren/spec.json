@@ -47,12 +47,37 @@
     "clean_sample_size": 108,
     "raw_submission_count": 108
   },
-  "movement_total": 3580,
+  "movement_total": 3592,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
     "family_count": 4,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Has caused me and my daughter ongoing trauma for the last six years. I’ve…",
+        "state": "OK",
+        "county": "Canadian County",
+        "row_id": "6a3e9b82-ab18-4dee-ac68-8ef8c220dc43"
+      },
+      {
+        "body": "Took my grandkids from their family and placed them into a foster home traumatizing…",
+        "state": "OK",
+        "county": "Canadian",
+        "row_id": "b578de7c-b917-4c4b-9d5c-1ddbb9eb35ec"
+      },
+      {
+        "body": "they locked my fiancé up on false accusations then used TDC to get my…",
+        "state": "OK",
+        "county": "canadian county",
+        "row_id": "ed0d80c7-f9d5-4c37-a430-80f9fa4f730b"
+      },
+      {
+        "body": "It’s an ‘our way or no way’ system that tries to force compliance, tears…",
+        "state": "OK",
+        "county": "Canadian",
+        "row_id": "c7955da2-1eb5-4731-872c-390f3fcaae5c"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Light on the stand in tampered with evidence and witness well also failing to vet witnesses",
@@ -66,6 +91,11 @@
       },
       {
         "comment_text": "She committed perjury, omitted information from an affidavit used to remove my child",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "took kids without warrants or consent and lied to judge under oath",
         "author": "Anonymous parent",
         "source": "court_actors.notes"
       }

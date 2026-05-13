@@ -29,28 +29,41 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 65,
-    "total_submissions": 89,
-    "avg_financial_loss": 128974.71,
+    "families_approved": 66,
+    "total_submissions": 90,
+    "avg_financial_loss": 127299.71,
     "avg_months_lost": 41.7,
     "_source_table": "movement_stats_by_state",
     "_match_value": "TN",
-    "state_family_count": 89,
+    "state_family_count": 90,
     "median_months_lost": 18.0,
     "median_financial_loss": 65000,
     "median_burden_sample_size": 36,
-    "pro_se_count": 37,
-    "pro_se_pct": 41.6,
-    "children_impacted": 142,
-    "clean_sample_size": 89,
-    "raw_submission_count": 89
+    "pro_se_count": 38,
+    "pro_se_pct": 42.2,
+    "children_impacted": 144,
+    "clean_sample_size": 90,
+    "raw_submission_count": 90
   },
-  "movement_total": 3580,
+  "movement_total": 3592,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
     "family_count": 0,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "It has destroyed us my kids cry me and my husband no longer sleep…",
+        "state": "TN",
+        "county": "Knox",
+        "row_id": "6b2c625a-6db9-4f9a-8480-13eff215d4e2"
+      },
+      {
+        "body": "I feel that my son was taken because DCS assumed we were drug addicts,…",
+        "state": "TN",
+        "county": "knox",
+        "row_id": "6c137af8-1af8-4c54-abd9-e4e262e7065f"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Blevins signed an order to remove our children while under federal review, essentially completely kidnapping out boys. Never allowed is to show evidence. All the while keeping our precious babies…",

@@ -30,28 +30,35 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 65,
-    "total_submissions": 89,
-    "avg_financial_loss": 128974.71,
+    "families_approved": 66,
+    "total_submissions": 90,
+    "avg_financial_loss": 127299.71,
     "avg_months_lost": 41.7,
     "_source_table": "movement_stats_by_state",
     "_match_value": "TN",
-    "state_family_count": 89,
+    "state_family_count": 90,
     "median_months_lost": 18.0,
     "median_financial_loss": 65000,
     "median_burden_sample_size": 36,
-    "pro_se_count": 37,
-    "pro_se_pct": 41.6,
-    "children_impacted": 142,
-    "clean_sample_size": 89,
-    "raw_submission_count": 89
+    "pro_se_count": 38,
+    "pro_se_pct": 42.2,
+    "children_impacted": 144,
+    "clean_sample_size": 90,
+    "raw_submission_count": 90
   },
-  "movement_total": 3588,
+  "movement_total": 3592,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "I've lost everything. And I'm still fighting for my child and I will never…",
+        "state": "TN",
+        "county": "Sevier",
+        "row_id": "8a247f9e-293d-463a-a7ad-063aa2dd7814"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Committed perjury on motions and in hearings, Judge Rader threw her off the case only AFTER my attorney brought her misconduct to light, but the damage was done",
@@ -65,6 +72,11 @@
       },
       {
         "comment_text": "I spelled her name wrong and listed her as Diane Russell instead of Dianna Russell. She took my kid without due process , would let me give her evidence and…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "She is now magistrate and took my daughter away without due process. Won't let me show her proof and had her ripped out of her bed a 11:30 at night…",
         "author": "Anonymous parent",
         "source": "court_actors.notes"
       }

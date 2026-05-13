@@ -45,12 +45,25 @@
     "clean_sample_size": 108,
     "raw_submission_count": 108
   },
-  "movement_total": 3588,
+  "movement_total": 3592,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "The court system has allowed lies told by one side without evidence to be…",
+        "state": "OK",
+        "county": "Wagoner",
+        "row_id": "a43487c5-82c6-46de-a68c-0b2f50a3f4a6"
+      },
+      {
+        "body": "Family court is a circus and for all of the lip service to “children’s…",
+        "state": "OK",
+        "county": "Tulsa",
+        "row_id": "93551a22-a4cb-4e62-b51e-b5d93de214e1"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Failed to follow through with meetings with the children and investigations.",

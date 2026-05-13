@@ -45,12 +45,25 @@
     "clean_sample_size": 108,
     "raw_submission_count": 108
   },
-  "movement_total": 3581,
+  "movement_total": 3592,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "This has cost me my mental and physical health(chronic illness), has nearly bankerupted me…",
+        "state": "OK",
+        "county": "Cleveland county",
+        "row_id": "f88d69d3-091e-4b08-a9ee-239792ef9a1d"
+      },
+      {
+        "body": "Has caused me and my daughter ongoing trauma for the last six years. I’ve…",
+        "state": "OK",
+        "county": "Canadian County",
+        "row_id": "6a3e9b82-ab18-4dee-ac68-8ef8c220dc43"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Horrible attorney made deal with the other Attorney behind the table in my divorce. Did not fight for my child does not care about anything about the money. She is…",

@@ -45,12 +45,31 @@
     "clean_sample_size": 108,
     "raw_submission_count": 108
   },
-  "movement_total": 3580,
+  "movement_total": 3592,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Destroyed my faith in child court and what is supposed to be the absolute…",
+        "state": "OK",
+        "county": "Wagoner",
+        "row_id": "d8843cb7-6aff-48f7-8687-d3f895db0be8"
+      },
+      {
+        "body": "Destroyed my family for over 6 years now! Took every penny we have down…",
+        "state": "OK",
+        "county": "Wagoner",
+        "row_id": "8b70ebcd-62ae-4250-8e33-a8a4f74e16d9"
+      },
+      {
+        "body": "Family court has shown me that children and families come last. They have facilitated…",
+        "state": "OK",
+        "county": "Tulsa",
+        "row_id": "a1abd884-3ba6-422d-af70-96645c152a8c"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "To be disclosed if my testimony is required. I have paper, digital, and video evidence of all of my above statements. The judge dismissed all as evidence.",

@@ -45,12 +45,25 @@
     "clean_sample_size": 108,
     "raw_submission_count": 108
   },
-  "movement_total": 3587,
+  "movement_total": 3592,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
     "family_count": 4,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "This system has torn our family apart, stripping me of my child through false…",
+        "state": "OK",
+        "county": "Okmulgee",
+        "row_id": "d364e44d-fc35-4324-95da-9d4026c2d6f5"
+      },
+      {
+        "body": "I’ve learned that if you are a man who filed for a divorce, you…",
+        "state": "OK",
+        "county": "Okmulgee county",
+        "row_id": "ad52ad44-ea1a-4dbb-9571-a65c22aac210"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Took my kids in an ex parte guardianship with no evidence other than a sworn statement from my abusers parents and him terminating his legal rights to them. I'm currently…",

@@ -45,12 +45,25 @@
     "clean_sample_size": 49,
     "raw_submission_count": 49
   },
-  "movement_total": 3580,
+  "movement_total": 3592,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "They have bypassed every guideline put into place to prevent third party take over.…",
+        "state": "MT",
+        "county": "Flathead",
+        "row_id": "a1ac5892-636b-4251-8d14-04605c580c37"
+      },
+      {
+        "body": "Stolen time of parent-child relationship. Deprived the ability to give or show love I…",
+        "state": "MT",
+        "county": "Unknown",
+        "row_id": "8b25eb7a-ca32-42e3-9e1a-65058dac36f6"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "[extracted_regex] hen judge Olympus retired and judge Amy Eddie came into office and she judg",

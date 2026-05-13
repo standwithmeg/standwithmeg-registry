@@ -46,12 +46,25 @@
     "clean_sample_size": 49,
     "raw_submission_count": 49
   },
-  "movement_total": 3580,
+  "movement_total": 3592,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
     "family_count": 0,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "The system stole time that can't be given back deprived of making memories that…",
+        "state": "MT",
+        "county": "Flathead County",
+        "row_id": "a3e3e58c-81e3-4c5e-aae6-399a03a97b43"
+      },
+      {
+        "body": "They have bypassed every guideline put into place to prevent third party take over.…",
+        "state": "MT",
+        "county": "Flathead",
+        "row_id": "a1ac5892-636b-4251-8d14-04605c580c37"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Everything. I have some reason downloaded that I have that I need to turn to judicial standards commission so if you want more details of my case and how it…",
@@ -65,6 +78,11 @@
       },
       {
         "comment_text": "Granted emergency ex parte with no proper notice, no substantiated documentation, just a false statement from father. Was told a child was harmed when she didn't grant one previously and…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Conflict of interest falsifying information unlawfully ripping kids out of my life ignoring domestic violence ignoring my kids witnessing the abuse abusing her color of law allowing my kids to…",
         "author": "Anonymous parent",
         "source": "court_actors.notes"
       }
