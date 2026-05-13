@@ -45,12 +45,31 @@
     "clean_sample_size": 202,
     "raw_submission_count": 202
   },
-  "movement_total": 3580,
+  "movement_total": 3592,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Nightmare!!!",
+        "state": "FL",
+        "county": "Leon",
+        "row_id": "6dbdd908-02bb-4319-b020-3e1b448be9c2"
+      },
+      {
+        "body": "The system is corrupt and it destroys families and children.",
+        "state": "FL",
+        "county": "Leon",
+        "row_id": "2f0d8aea-9f6e-4994-9876-6216d4468cb4"
+      },
+      {
+        "body": "Family court has destroyed my children.",
+        "state": "FL",
+        "county": "Leon",
+        "row_id": "a01ca4a6-5047-4e42-a626-709059f29e2d"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "The Guardian ad Litem appeared to place significant emphasis on relatively minor school attendance concerns, including a small number of tardies, while giving comparatively limited attention to more serious allegations…",

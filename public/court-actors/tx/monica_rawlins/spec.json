@@ -46,12 +46,31 @@
     "clean_sample_size": 208,
     "raw_submission_count": 208
   },
-  "movement_total": 3580,
+  "movement_total": 3592,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "This system has definitely destroyed my children mentally know they have to say with…",
+        "state": "TX",
+        "county": "Fort bend",
+        "row_id": "bf838093-a621-4e5d-8a61-681a5e0ebdfe"
+      },
+      {
+        "body": "Judge Rawlins has granted my ex husband full custody and given me SPO without…",
+        "state": "TX",
+        "county": "Fort Bend",
+        "row_id": "0b65cb4b-bbe8-4007-884c-0961af6f8b85"
+      },
+      {
+        "body": "The 328th family court in fort bend county TX has been a complete disaster…",
+        "state": "TX",
+        "county": "Fort Bend",
+        "row_id": "4d07e32d-3424-468f-8660-f3ea6c19470b"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "She ignored evidence of my ex husband violating the temporary orders and standard orders and did not require any evidence from his attorney or the Amicus when they committed perjury…",
@@ -65,6 +84,11 @@
       },
       {
         "comment_text": "She is up for reelection and my amicus Danny hoke contributes to her election campaign and there is a conflict of interest and they are very unfair. Have separated family…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Monica Rawlins appeared unfamiliar with important evidence and details in my case, and I felt my filings and concerns as a pro se parent were not given meaningful consideration. The…",
         "author": "Anonymous parent",
         "source": "court_actors.notes"
       }

@@ -28,28 +28,35 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 250,
-    "total_submissions": 319,
-    "avg_financial_loss": 281279.21,
-    "avg_months_lost": 37.5,
+    "families_approved": 253,
+    "total_submissions": 321,
+    "avg_financial_loss": 287139.08,
+    "avg_months_lost": 37.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CA",
-    "state_family_count": 319,
-    "median_months_lost": 23.5,
-    "median_financial_loss": 263600,
-    "median_burden_sample_size": 148,
-    "pro_se_count": 178,
+    "state_family_count": 321,
+    "median_months_lost": 23.0,
+    "median_financial_loss": 277100,
+    "median_burden_sample_size": 150,
+    "pro_se_count": 180,
     "pro_se_pct": 57.1,
-    "children_impacted": 512,
-    "clean_sample_size": 312,
-    "raw_submission_count": 312
+    "children_impacted": 518,
+    "clean_sample_size": 315,
+    "raw_submission_count": 315
   },
-  "movement_total": 3580,
+  "movement_total": 3591,
   "supabase": {
     "report_count": 2,
     "actor_report_count": 2,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Destroyed me emotionally and financially. Revoked my parental role.",
+        "state": "CA",
+        "county": "Orange county",
+        "row_id": "f99ee049-4966-4fd8-81f0-084aadfb9dac"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Issued prejudiced orders, ignored/forgot standard cost procedures, ignored evidence,",

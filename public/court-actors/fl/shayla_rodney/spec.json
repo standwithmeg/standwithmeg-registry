@@ -45,12 +45,25 @@
     "clean_sample_size": 202,
     "raw_submission_count": 202
   },
-  "movement_total": 3580,
+  "movement_total": 3592,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Florida DCF medically kidnapped my specials needs child who was weaning. The agency put…",
+        "state": "FL",
+        "county": "Volusia",
+        "row_id": "4c63f799-5d2f-4526-8ce1-9061d62c8425"
+      },
+      {
+        "body": "Fl DCF is endangering my infant granddaughters life. She has complex special needs and…",
+        "state": "FL",
+        "county": "Daytona Beach",
+        "row_id": "32c1079d-4f48-408f-955e-7e0173f25c19"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Removed relative Kim Florida Homestudy from the FSFN database to foreclose guardian candidacy and did not start a court ordered VT ICPC homestudy for 5 months until candidate filed a…",

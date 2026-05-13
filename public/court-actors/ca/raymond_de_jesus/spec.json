@@ -30,28 +30,41 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 250,
-    "total_submissions": 319,
-    "avg_financial_loss": 281279.21,
-    "avg_months_lost": 37.5,
+    "families_approved": 253,
+    "total_submissions": 321,
+    "avg_financial_loss": 287139.08,
+    "avg_months_lost": 37.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CA",
-    "state_family_count": 319,
-    "median_months_lost": 23.5,
-    "median_financial_loss": 263600,
-    "median_burden_sample_size": 148,
-    "pro_se_count": 178,
+    "state_family_count": 321,
+    "median_months_lost": 23.0,
+    "median_financial_loss": 277100,
+    "median_burden_sample_size": 150,
+    "pro_se_count": 180,
     "pro_se_pct": 57.1,
-    "children_impacted": 512,
-    "clean_sample_size": 312,
-    "raw_submission_count": 312
+    "children_impacted": 518,
+    "clean_sample_size": 315,
+    "raw_submission_count": 315
   },
-  "movement_total": 3580,
+  "movement_total": 3591,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "-Facilitated and empowered my ex to abuse us physically/emotionally. -Sucked the life out of…",
+        "state": "CA",
+        "county": "Placer",
+        "row_id": "6268b70d-0a58-439c-b8f7-2fa158311545"
+      },
+      {
+        "body": "Denied justice and ignored an active DRVO in Sutter county, because child custody was…",
+        "state": "CA",
+        "county": "Placer",
+        "row_id": "27fe0f52-9992-4fc8-b8b1-57b51f22fcf7"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Reason cited for denying my request for protection went against case law, my abuser found out and retaliated",
@@ -65,6 +78,11 @@
       },
       {
         "comment_text": "Denied my request for protection based on time since last act of abuse, despite the law clearly stating the last act of abuse / timing shouldn’t be considered as a…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Asian Judge Raymond De Jesus smerked at me as he gave my ex half custody. My DRVO was accepted in Sutter County and granted after a trial — only to…",
         "author": "Anonymous parent",
         "source": "court_actors.notes"
       }

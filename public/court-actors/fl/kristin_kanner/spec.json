@@ -47,12 +47,31 @@
     "clean_sample_size": 202,
     "raw_submission_count": 202
   },
-  "movement_total": 3580,
+  "movement_total": 3592,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
     "family_count": 4,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "This Broward County Family Court system caused devastating harm to our family long before…",
+        "state": "FL",
+        "county": "Broward",
+        "row_id": "896e496a-5c19-4bdb-9121-fbd8beb758b0"
+      },
+      {
+        "body": "My child was taken through backroom orders with no hearing, no proof, and no…",
+        "state": "FL",
+        "county": "Broward",
+        "row_id": "a6fe87f9-00be-429e-a6c1-dc51b3a08d7c"
+      },
+      {
+        "body": "The court system has taken a survivor of domestic violence and has punished her…",
+        "state": "FL",
+        "county": "Unknown",
+        "row_id": "4cb1a622-d5b1-484d-9a83-387dfa34bb96"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Issued a cross-state child pickup order leading to the forced removal of my granddaughter from my daughter, Kathryn Dressler, by armed police while ignoring documented domestic violence and safety risks.",
@@ -66,6 +85,16 @@
       },
       {
         "comment_text": "My concerns have mainly been around due process—things like important issues being decided without enough time to present evidence, delays in hearing my motions, and procedural decisions that I don’t…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Issued and enforced a child pick-up order without an evidentiary hearing or record, ignored a pending motion to disqualify, and proceeded without due process or factual basis; within days of…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Ordered the cross-state removal of my granddaughter from my partner’s daughter, Kathryn Dressler, by armed police in another state despite documented domestic violence and safety concerns, after our family had…",
         "author": "Anonymous parent",
         "source": "court_actors.notes"
       }

@@ -45,12 +45,19 @@
     "clean_sample_size": 202,
     "raw_submission_count": 202
   },
-  "movement_total": 3580,
+  "movement_total": 3592,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "EVERY judicial actor in the 7th judicial Circuit has violated their oath and stripped…",
+        "state": "FL",
+        "county": "Volusia County",
+        "row_id": "d57d50b6-bace-4282-a78b-df1f51c87174"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Chief Judge Leah Case (Seventh Circuit, Florida) As a family member, I reported to Chief Judge Leah Case that the presiding judge was retaliating against the parent for requesting ADA…",

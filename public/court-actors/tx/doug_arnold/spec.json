@@ -43,12 +43,19 @@
     "clean_sample_size": 208,
     "raw_submission_count": 208
   },
-  "movement_total": 3580,
+  "movement_total": 3592,
   "supabase": {
     "report_count": 1,
     "actor_report_count": 1,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "I would say the family court system is a joke, but it is not…",
+        "state": "TX",
+        "county": "Willamson",
+        "row_id": "dfe3677e-fb28-4ae9-ab60-21b29c45aa2d"
+      }
+    ],
     "public_comments": []
   },
   "export_dir": "New Final Post and Capcut template/export/doug_arnold",

@@ -47,12 +47,43 @@
     "clean_sample_size": 208,
     "raw_submission_count": 208
   },
-  "movement_total": 3588,
+  "movement_total": 3592,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
     "family_count": 5,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "My experience within the family court system was nothing short of a living nightmare.…",
+        "state": "TX",
+        "county": "Hays",
+        "row_id": "5451bf33-1a1d-44be-8140-f698aa7128ac"
+      },
+      {
+        "body": "A 6 year old has been diagnosed with PTSD and severe trauma, due to…",
+        "state": "TX",
+        "county": "Hays county",
+        "row_id": "3f6aecad-dbe8-4bc8-9054-b4c7fd730379"
+      },
+      {
+        "body": "Completely took the side of the mother without giving me a chance to give…",
+        "state": "TX",
+        "county": "Bexar country",
+        "row_id": "83962e75-7534-4654-9f91-bb3c333cb7bb"
+      },
+      {
+        "body": "This has cost me money, my health, my children.",
+        "state": "TX",
+        "county": "Hays",
+        "row_id": "1f336a63-1d4b-4e54-8f10-e330078bd3a9"
+      },
+      {
+        "body": "Is so far the court is attempting to force services and other requirements on…",
+        "state": "TX",
+        "county": "Hays",
+        "row_id": "7ef46254-b6ad-4934-ad1a-ad450101503e"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Abuse and adultry are not considered.",
@@ -66,6 +97,16 @@
       },
       {
         "comment_text": "Acting out not on behalf of best interest of the child.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "The rights to my children were taken away while I was in rehab during a court session in which I was not present. I have been fighting for my day…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Violation of due process, lack of jurisdiction, combingling of cases, ex parte communications.",
         "author": "Anonymous parent",
         "source": "court_actors.notes"
       }

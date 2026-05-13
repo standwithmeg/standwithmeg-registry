@@ -29,28 +29,47 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 252,
-    "total_submissions": 320,
-    "avg_financial_loss": 287937.38,
-    "avg_months_lost": 37.5,
+    "families_approved": 253,
+    "total_submissions": 321,
+    "avg_financial_loss": 287139.08,
+    "avg_months_lost": 37.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CA",
-    "state_family_count": 320,
-    "median_months_lost": 23.5,
+    "state_family_count": 321,
+    "median_months_lost": 23.0,
     "median_financial_loss": 277100,
     "median_burden_sample_size": 150,
-    "pro_se_count": 179,
-    "pro_se_pct": 57.0,
-    "children_impacted": 516,
-    "clean_sample_size": 314,
-    "raw_submission_count": 314
+    "pro_se_count": 180,
+    "pro_se_pct": 57.1,
+    "children_impacted": 518,
+    "clean_sample_size": 315,
+    "raw_submission_count": 315
   },
-  "movement_total": 3586,
+  "movement_total": 3591,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "The family court has stolen time with my kids memories I can never get…",
+        "state": "CA",
+        "county": "Kern",
+        "row_id": "2844c883-a0a9-4fda-9149-25249ff964f1"
+      },
+      {
+        "body": "On false allegations with no evidence, I was reduced from full physical and legal…",
+        "state": "CA",
+        "county": "Kern",
+        "row_id": "ee51eb76-08db-4afc-84a1-5568d199cb26"
+      },
+      {
+        "body": "I now have two emotionally damaged children and have been barred from helping them.…",
+        "state": "CA",
+        "county": "Kern",
+        "row_id": "ab1e3d84-ca27-4d7f-a09d-77705cf44616"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "This was my ex’s attorney’s last attempt to make my case go away. This judge only purposely was to act like he was having a hearing and then ignore any…",

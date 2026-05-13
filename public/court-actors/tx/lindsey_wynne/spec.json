@@ -46,12 +46,31 @@
     "clean_sample_size": 208,
     "raw_submission_count": 208
   },
-  "movement_total": 3580,
+  "movement_total": 3592,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Family of veterans forever changed by the effects of a broken corrupt system that…",
+        "state": "TX",
+        "county": "Collin",
+        "row_id": "c9a97839-ead3-4ed7-a165-08a1b33e59d4"
+      },
+      {
+        "body": "Destroyed",
+        "state": "TX",
+        "county": "Collin",
+        "row_id": "3eacd9a1-c8d5-45b8-aa37-497c50f28d65"
+      },
+      {
+        "body": "The system has not protected my children from an abusive parent who also disclosed…",
+        "state": "TX",
+        "county": "Collin County",
+        "row_id": "a2c49c83-12f7-47da-ab96-44d574db3cbf"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Made decision to reduce possession time on child abuse/neglect claims without evidence presented or anyone taking the stand. Did not ask follow up questions of attorney who made false claims.",
@@ -65,6 +84,11 @@
       },
       {
         "comment_text": "Ignored evidence",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Denied due process. Denied meaningful participation. Denied early childhood milestones. Bias. Judgemental. Ignores procedural defects. All about appearance. Ex parte communications",
         "author": "Anonymous parent",
         "source": "court_actors.notes"
       }

@@ -31,28 +31,59 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 250,
-    "total_submissions": 319,
-    "avg_financial_loss": 281279.21,
-    "avg_months_lost": 37.5,
+    "families_approved": 253,
+    "total_submissions": 321,
+    "avg_financial_loss": 287139.08,
+    "avg_months_lost": 37.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CA",
-    "state_family_count": 319,
-    "median_months_lost": 23.5,
-    "median_financial_loss": 263600,
-    "median_burden_sample_size": 148,
-    "pro_se_count": 178,
+    "state_family_count": 321,
+    "median_months_lost": 23.0,
+    "median_financial_loss": 277100,
+    "median_burden_sample_size": 150,
+    "pro_se_count": 180,
     "pro_se_pct": 57.1,
-    "children_impacted": 512,
-    "clean_sample_size": 312,
-    "raw_submission_count": 312
+    "children_impacted": 518,
+    "clean_sample_size": 315,
+    "raw_submission_count": 315
   },
-  "movement_total": 3580,
+  "movement_total": 3591,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
     "family_count": 5,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Forgery and felony fraud didn’t stop the courts to giving children to mother, even…",
+        "state": "CA",
+        "county": "Sutter",
+        "row_id": "c194a5d6-923d-4309-9d41-953635d048b3"
+      },
+      {
+        "body": "Sutter county family court is corrupt. It is not protecting victims of domestic violence.…",
+        "state": "CA",
+        "county": "Sutter County",
+        "row_id": "3eb36330-1723-4760-b9f1-9200f9a82ba2"
+      },
+      {
+        "body": "The system is abusing victims and denying our rights to safety. Abused women and…",
+        "state": "CA",
+        "county": "Sutter County",
+        "row_id": "174423e9-c2ff-484c-940a-5350dc07e3b3"
+      },
+      {
+        "body": "Constantly driving controversy. Individuals are encouraged to nit pick every negative aspect of their…",
+        "state": "CA",
+        "county": "Sutter",
+        "row_id": "b3ff0f9d-6298-4135-8322-44883b4e1166"
+      },
+      {
+        "body": "This system ripped my child out of my arms despite his fear, silenced the…",
+        "state": "CA",
+        "county": "Sutter County",
+        "row_id": "a555fdf2-af2a-4106-a27f-591d027ddefd"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Constant extreme bias. Ignoring facts and pleadings. Removed my child from my life as punishment for false claims from ex.",
@@ -66,6 +97,16 @@
       },
       {
         "comment_text": "Ignored evidence, allowed physical and legal custody to be given to my and child’s abuser",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Lack of due process, embroiled, abuse of authority. Forced victims into contact with their abuser. Yelled in court.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Lack of due process, abuse of authority, embroilment. Access granted to our abuser during an active DVRO order with no contact (issued by the now retired judge). No 3044 findings,…",
         "author": "Anonymous parent",
         "source": "court_actors.notes"
       }
