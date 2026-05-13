@@ -13,6 +13,7 @@
     "state": "Louisiana",
     "state_abbr": "LA",
     "mention_count": 5,
+    "family_count": 4,
     "actor_report_count": 5,
     "supabase_row_ids": [
       "2050a180-89b9-4ce2-8293-1df074d18c6c",
@@ -46,10 +47,11 @@
     "clean_sample_size": 47,
     "raw_submission_count": 47
   },
-  "movement_total": 3525,
+  "movement_total": 3580,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
+    "family_count": 4,
     "family_reports": [],
     "public_comments": [
       {

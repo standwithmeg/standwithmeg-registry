@@ -13,6 +13,7 @@
     "state": "North Carolina",
     "state_abbr": "NC",
     "mention_count": 4,
+    "family_count": 4,
     "actor_report_count": 4,
     "supabase_row_ids": [
       "c450afc9-5432-40b9-ab97-dddc0d8df62e",
@@ -29,26 +30,27 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 77,
-    "total_submissions": 111,
-    "avg_financial_loss": 142632.77,
-    "avg_months_lost": 41.5,
+    "families_approved": 78,
+    "total_submissions": 112,
+    "avg_financial_loss": 141065.37,
+    "avg_months_lost": 41.1,
     "_source_table": "movement_stats_by_state",
     "_match_value": "NC",
-    "state_family_count": 111,
+    "state_family_count": 112,
     "median_months_lost": 18.0,
     "median_financial_loss": 129400,
     "median_burden_sample_size": 32,
     "pro_se_count": 55,
-    "pro_se_pct": 50.5,
-    "children_impacted": 167,
-    "clean_sample_size": 109,
-    "raw_submission_count": 109
+    "pro_se_pct": 49.5,
+    "children_impacted": 171,
+    "clean_sample_size": 111,
+    "raw_submission_count": 111
   },
-  "movement_total": 3571,
+  "movement_total": 3580,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
+    "family_count": 4,
     "family_reports": [],
     "public_comments": [
       {

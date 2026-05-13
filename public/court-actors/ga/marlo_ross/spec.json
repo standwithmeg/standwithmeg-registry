@@ -13,6 +13,7 @@
     "state": "Georgia",
     "state_abbr": "GA",
     "mention_count": 3,
+    "family_count": 3,
     "actor_report_count": 3,
     "supabase_row_ids": [
       "7366ffdc-dd29-4e5c-92e5-34add9b09011",
@@ -28,26 +29,27 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 58,
-    "total_submissions": 78,
-    "avg_financial_loss": 173508.28,
-    "avg_months_lost": 34.6,
+    "families_approved": 60,
+    "total_submissions": 80,
+    "avg_financial_loss": 184860.15,
+    "avg_months_lost": 34.7,
     "_source_table": "movement_stats_by_state",
     "_match_value": "GA",
-    "state_family_count": 78,
+    "state_family_count": 80,
     "median_months_lost": 17.0,
-    "median_financial_loss": 123000,
-    "median_burden_sample_size": 41,
-    "pro_se_count": 33,
-    "pro_se_pct": 42.3,
-    "children_impacted": 142,
-    "clean_sample_size": 78,
-    "raw_submission_count": 78
+    "median_financial_loss": 139000,
+    "median_burden_sample_size": 43,
+    "pro_se_count": 34,
+    "pro_se_pct": 42.5,
+    "children_impacted": 144,
+    "clean_sample_size": 80,
+    "raw_submission_count": 80
   },
-  "movement_total": 3525,
+  "movement_total": 3580,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
+    "family_count": 3,
     "family_reports": [],
     "public_comments": [
       {

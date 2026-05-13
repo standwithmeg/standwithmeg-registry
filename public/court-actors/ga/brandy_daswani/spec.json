@@ -13,6 +13,7 @@
     "state": "Georgia",
     "state_abbr": "GA",
     "mention_count": 1,
+    "family_count": 3,
     "actor_report_count": 1,
     "supabase_row_ids": [
       "7f0ee247-6d04-455a-93a0-e1fa93a2dcfc"
@@ -42,10 +43,11 @@
     "clean_sample_size": 80,
     "raw_submission_count": 80
   },
-  "movement_total": 3576,
+  "movement_total": 3580,
   "supabase": {
     "report_count": 1,
     "actor_report_count": 1,
+    "family_count": 3,
     "family_reports": [],
     "public_comments": [
       {
