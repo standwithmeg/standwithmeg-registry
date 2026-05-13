@@ -7,6 +7,7 @@ const GOLD = "#C9A227";
 const ROLE_OPTIONS: string[] = [
   "Judge",
   "Commissioner",
+  "Attorney",
   "Attorney (Mine)",
   "Attorney (Opposing)",
   "GAL / Child Representative",
