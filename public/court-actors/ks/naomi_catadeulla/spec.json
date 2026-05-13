@@ -49,12 +49,31 @@
     "clean_sample_size": 160,
     "raw_submission_count": 160
   },
-  "movement_total": 3580,
+  "movement_total": 3592,
   "supabase": {
     "report_count": 7,
     "actor_report_count": 7,
     "family_count": 0,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Court assigned officials in JoCo are not all fit. There MUST be a way…",
+        "state": "KS",
+        "county": "Johnson County",
+        "row_id": "13c6a06f-4cb4-485d-b4dd-00a60b2c0dfa"
+      },
+      {
+        "body": "I havent seen my kids in 3+ years. The court enabled alienation and swept…",
+        "state": "KS",
+        "county": "Johnson County",
+        "row_id": "e8753d6f-4cec-4da3-8c26-dd3d0e2ccf9b"
+      },
+      {
+        "body": "It didn’t just take my 5 kids—it took birthdays, holidays, and the everyday moments…",
+        "state": "KS",
+        "county": "Johnson",
+        "row_id": "b07c29cd-51df-4866-bc45-3006426b91c8"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Naomi was also biased due to her husband dying in the line of duty. She highly favored the petitioner. She told me that she would not talk about anything that…",
@@ -68,6 +87,21 @@
       },
       {
         "comment_text": "Met with me 1 time for 1 hour. Then drafted a report to my detriment. Never saw me with our kids. In my opinion is part of a corrupt system…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "It is deeply upsetting to revisit and update my survey to include Naomi Catadeulla as one of the court actors in my case. She was the first supervisor assigned to…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Reintegration therapist forced on me by Andy Bolton — described as Bolton's buddy. Located 2.5 hours away from my home. I was required to use her, not allowed to choose…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "I listed Naomi in my report. Her name is listed twice in the kansas report. The correct way to spell her name is Cataudella. She is listed 4 times in…",
         "author": "Anonymous parent",
         "source": "court_actors.notes"
       }

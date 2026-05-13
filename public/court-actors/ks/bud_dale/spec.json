@@ -47,12 +47,19 @@
     "clean_sample_size": 160,
     "raw_submission_count": 160
   },
-  "movement_total": 3580,
+  "movement_total": 3592,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "My children’s childhood was stolen from them. They were taken on false allegations over…",
+        "state": "KS",
+        "county": "Shawnee",
+        "row_id": "c9ca7851-1cad-40da-b1d2-5c9dd4622db9"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Makes personal opinion to form decision making. Does not hold parties to the court order/allows unilateral decision making. Creates hostile environment; cussing. Challenges the party as if on trial. Mocked…",
@@ -66,6 +73,16 @@
       },
       {
         "comment_text": "Refused to allow myself or my attorney to submit evidence to him. He refused it, after learning he met with me as counsel 9 months prior. He then retaliated after…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Was replaced after refusing to allow one party to submit evidence, refused to allow my attorney to submit a significant amount of evidence. Was quicky replaced from being on our…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Did not allow my attorney or me submit any evidence. He was replaced after he was exposed on the record for blocking one party from participating and submitting critical evidence.",
         "author": "Anonymous parent",
         "source": "court_actors.notes"
       }

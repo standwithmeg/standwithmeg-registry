@@ -47,12 +47,31 @@
     "clean_sample_size": 160,
     "raw_submission_count": 160
   },
-  "movement_total": 3580,
+  "movement_total": 3592,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
     "family_count": 4,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "My life revolves around soul crushing court ordered abuse. My child has been legally…",
+        "state": "KS",
+        "county": "Franklin",
+        "row_id": "0797cb5c-c120-4f8d-80af-b40f9e60232e"
+      },
+      {
+        "body": "My children’s childhood was stolen from them. They were taken on false allegations over…",
+        "state": "KS",
+        "county": "Shawnee",
+        "row_id": "c9ca7851-1cad-40da-b1d2-5c9dd4622db9"
+      },
+      {
+        "body": "When systems meant to protect children fail to conduct a full and fair investigation…",
+        "state": "KS",
+        "county": "Unsure",
+        "row_id": "06cb59ec-222f-4abf-aeee-4fe63518aa14"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Wrongful reporting, dismissal of evidence",

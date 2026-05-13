@@ -43,12 +43,19 @@
     "clean_sample_size": 160,
     "raw_submission_count": 160
   },
-  "movement_total": 3580,
+  "movement_total": 3592,
   "supabase": {
     "report_count": 1,
     "actor_report_count": 1,
     "family_count": 4,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "This system removed my children without due process, ignored evidence that cleared me, and…",
+        "state": "KS",
+        "county": "Johnson County",
+        "row_id": "79a2d570-52fe-40f1-a0c8-1f41ca10d5b6"
+      }
+    ],
     "public_comments": []
   },
   "export_dir": "New Final Post and Capcut template/export/keven_o_grady",

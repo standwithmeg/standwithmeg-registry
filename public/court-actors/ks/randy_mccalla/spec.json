@@ -46,12 +46,31 @@
     "clean_sample_size": 160,
     "raw_submission_count": 160
   },
-  "movement_total": 3580,
+  "movement_total": 3592,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
     "family_count": 4,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "This system removed my children without due process, ignored evidence that cleared me, and…",
+        "state": "KS",
+        "county": "Johnson County",
+        "row_id": "79a2d570-52fe-40f1-a0c8-1f41ca10d5b6"
+      },
+      {
+        "body": "This the single biggest trauma of my life. Guardian Ad Litems are the biggest…",
+        "state": "KS",
+        "county": "Johnson",
+        "row_id": "3338c6ba-25d3-4621-a5d1-217a0347dc6f"
+      },
+      {
+        "body": "Corrupt judges, attorneys and other court appointed professionals abused their position to extort money…",
+        "state": "KS",
+        "county": "Yes",
+        "row_id": "2b205887-e06c-40e1-a52a-854808fb983c"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Filed the emergency motion that led to my children being taken, never spoke to me, and instead worked with my ex, his attorney, therapists, and DCF while leaving me completely…",
@@ -65,6 +84,11 @@
       },
       {
         "comment_text": "Caused permanent and irreparable harm to my children's mental and physical health as well as to my entire family. Blackmailed by Randy McCalla. Ex parte communication between attorneys and court…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "This is the single biggest trauma of my life. Guardian Ad Litems are the biggest threat to the family court system and their power must be checked. Randy McCalla ambushed…",
         "author": "Anonymous parent",
         "source": "court_actors.notes"
       }

@@ -49,12 +49,37 @@
     "clean_sample_size": 160,
     "raw_submission_count": 160
   },
-  "movement_total": 3580,
+  "movement_total": 3592,
   "supabase": {
     "report_count": 7,
     "actor_report_count": 7,
     "family_count": 7,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "My life revolves around soul crushing court ordered abuse. My child has been legally…",
+        "state": "KS",
+        "county": "Franklin",
+        "row_id": "0797cb5c-c120-4f8d-80af-b40f9e60232e"
+      },
+      {
+        "body": "The system and those in it s have systematically and meticulously destroyed the relationship…",
+        "state": "KS",
+        "county": "Miami county",
+        "row_id": "c62b3dbe-3d83-47e5-85cd-aa1ddeb33f5e"
+      },
+      {
+        "body": "Fucked us all up",
+        "state": "KS",
+        "county": "Johnson county",
+        "row_id": "29d87f00-3f28-436e-b17b-2904016a38c1"
+      },
+      {
+        "body": "The system allowed my abuser to escape all consequences to the point of his…",
+        "state": "KS",
+        "county": "Miami",
+        "row_id": "6d3f54cc-663f-4be4-8b7e-1cd728283e38"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "The system allowed my abuser to escape all consequences to the point of his criminal charges being dismissed and helped Dad turning me into the abuser. The system has stripped…",
@@ -68,6 +93,21 @@
       },
       {
         "comment_text": "Lied under oath about child’s wants.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Not ensuring Court Ordered Reintegration Therapy proceeds — only 2 sessions for me, 1 for my daughter since order on Nov 17, 2025.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Hand-picked by Judge Richard Fisher. Refuses to review my evidence. Believes all allegations against me. Won't allow me to choose my own reintegration therapist — required to use his buddy…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Real life con artist",
         "author": "Anonymous parent",
         "source": "court_actors.notes"
       }

@@ -45,12 +45,25 @@
     "clean_sample_size": 160,
     "raw_submission_count": 160
   },
-  "movement_total": 3580,
+  "movement_total": 3592,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Court assigned officials in JoCo are not all fit. There MUST be a way…",
+        "state": "KS",
+        "county": "Johnson County",
+        "row_id": "13c6a06f-4cb4-485d-b4dd-00a60b2c0dfa"
+      },
+      {
+        "body": "This system removed my children without due process, ignored evidence that cleared me, and…",
+        "state": "KS",
+        "county": "Johnson County",
+        "row_id": "79a2d570-52fe-40f1-a0c8-1f41ca10d5b6"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Was assigned to help restore contact with my kids but allowed my ex to keep them from sessions, canceled visits over payment, made me spend over $5,000 before I could…",

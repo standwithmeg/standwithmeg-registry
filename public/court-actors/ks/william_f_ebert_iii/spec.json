@@ -45,12 +45,31 @@
     "clean_sample_size": 160,
     "raw_submission_count": 160
   },
-  "movement_total": 3580,
+  "movement_total": 3592,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "I now have no trust in the family court system. I fear every time…",
+        "state": "KS",
+        "county": "Shawnee",
+        "row_id": "400cfc0c-bb88-4354-ab64-0cf79eef4471"
+      },
+      {
+        "body": "Instead of protecting my children, this system has enabled disruption, ignored critical concerns, and…",
+        "state": "KS",
+        "county": "Shawnee County",
+        "row_id": "aa3e2566-39cb-42f1-845b-b87eec806598"
+      },
+      {
+        "body": "My children’s childhood was stolen from them. They were taken on false allegations over…",
+        "state": "KS",
+        "county": "Shawnee",
+        "row_id": "c9ca7851-1cad-40da-b1d2-5c9dd4622db9"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Ignored evidence and facts, delayed unification",

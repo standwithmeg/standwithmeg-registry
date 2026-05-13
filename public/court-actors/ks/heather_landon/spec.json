@@ -47,12 +47,31 @@
     "clean_sample_size": 160,
     "raw_submission_count": 160
   },
-  "movement_total": 3580,
+  "movement_total": 3592,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
     "family_count": 4,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Ripped two children from the only home they had ever known and from their…",
+        "state": "KS",
+        "county": "Johnson",
+        "row_id": "35ad29b0-090c-4d64-95b0-8ba4a9979b97"
+      },
+      {
+        "body": "The system is failing my daughter by dismissing abuse claims because the opposing attorney…",
+        "state": "KS",
+        "county": "No",
+        "row_id": "8f54eaeb-3c65-4f97-917c-8ce25d11d657"
+      },
+      {
+        "body": "I havent seen my kids in 3+ years. The court enabled alienation and swept…",
+        "state": "KS",
+        "county": "Johnson County",
+        "row_id": "e8753d6f-4cec-4da3-8c26-dd3d0e2ccf9b"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Shows extreme bias based on if she knows the parties representatives. Does not put the child first. Ignores abuse claims due to the personal relationship she has with council.",
