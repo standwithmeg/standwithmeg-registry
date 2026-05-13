@@ -24,8 +24,8 @@
     "actor_bucket_key": "magie kuhl|WV"
   },
   "photo": {
-    "path": null,
-    "exists": false,
+    "path": "west_virginia/maggie_kuhl/image_1080.png",
+    "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
@@ -45,7 +45,7 @@
     "clean_sample_size": 50,
     "raw_submission_count": 50
   },
-  "movement_total": 3580,
+  "movement_total": 3588,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
