@@ -13,6 +13,7 @@
     "state": "Ohio",
     "state_abbr": "OH",
     "mention_count": null,
+    "family_count": 0,
     "actor_report_count": null,
     "supabase_row_ids": null,
     "actor_row_id": null,
@@ -31,32 +32,33 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 147,
-    "total_submissions": 189,
-    "avg_financial_loss": 122625.73,
-    "avg_months_lost": 30.5,
+    "families_approved": 148,
+    "total_submissions": 191,
+    "avg_financial_loss": 123191.67,
+    "avg_months_lost": 30.3,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OH",
-    "state_family_count": 189,
-    "median_months_lost": 19.5,
-    "median_financial_loss": 82500,
-    "median_burden_sample_size": 95,
-    "pro_se_count": 109,
-    "pro_se_pct": 58.6,
-    "children_impacted": 279,
-    "clean_sample_size": 186,
-    "raw_submission_count": 186
+    "state_family_count": 191,
+    "median_months_lost": 19.0,
+    "median_financial_loss": 81250,
+    "median_burden_sample_size": 96,
+    "pro_se_count": 110,
+    "pro_se_pct": 58.5,
+    "children_impacted": 282,
+    "clean_sample_size": 188,
+    "raw_submission_count": 188
   },
-  "movement_total": 3556,
+  "movement_total": 3580,
   "supabase": {
     "report_count": null,
     "actor_report_count": null,
+    "family_count": 0,
     "family_reports": [],
     "public_comments": []
   },
   "export_dir": "New Final Post and Capcut template/export/anika_collins",
   "unresolved": [
-    "court_actors: no rows match name~'Anneka P. Collins' state='OH'"
+    "court_actors: no rows match name~'Hon. Anneka P. Collins' state='OH'"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",

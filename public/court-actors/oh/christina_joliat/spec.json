@@ -13,6 +13,7 @@
     "state": "Ohio",
     "state_abbr": "OH",
     "mention_count": 3,
+    "family_count": 0,
     "actor_report_count": 3,
     "supabase_row_ids": [
       "4c4d23ba-39bb-4816-a1ec-0e26b77cf3fb",
@@ -28,26 +29,27 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 144,
-    "total_submissions": 186,
-    "avg_financial_loss": 123936.34,
-    "avg_months_lost": 31.0,
+    "families_approved": 148,
+    "total_submissions": 191,
+    "avg_financial_loss": 123191.67,
+    "avg_months_lost": 30.3,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OH",
-    "state_family_count": 186,
-    "median_months_lost": 20.0,
-    "median_financial_loss": 82500,
-    "median_burden_sample_size": 93,
-    "pro_se_count": 106,
-    "pro_se_pct": 58.2,
-    "children_impacted": 274,
-    "clean_sample_size": 182,
-    "raw_submission_count": 182
+    "state_family_count": 191,
+    "median_months_lost": 19.0,
+    "median_financial_loss": 81250,
+    "median_burden_sample_size": 96,
+    "pro_se_count": 110,
+    "pro_se_pct": 58.5,
+    "children_impacted": 282,
+    "clean_sample_size": 188,
+    "raw_submission_count": 188
   },
-  "movement_total": 3525,
+  "movement_total": 3580,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
+    "family_count": 0,
     "family_reports": [],
     "public_comments": [
       {
