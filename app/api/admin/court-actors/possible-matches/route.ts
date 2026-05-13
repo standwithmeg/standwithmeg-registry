@@ -173,6 +173,12 @@ export async function GET() {
       onlyFormDirect: true,
     });
 
+    const permissionBySubmissionId = new Map<string, string | null>();
+    for (const row of rows) {
+      const submission = joinedSubmission(row);
+      permissionBySubmissionId.set(row.submission_id, submission?.permission_to_share ?? null);
+    }
+
     // Load comment merges (migration 023) and enrich each cluster sample so
     // the UI can show "merged into" / "primary of merge" badges and pre-fill
     // the merge-comments modal. Pre-migration this loop is a no-op.
@@ -284,8 +290,19 @@ export async function GET() {
       research_notes: researchByCluster.get(c.cluster_key) ?? [],
     }));
 
+    const pendingWithResearchAndPermissions = pendingWithResearch.map(c => ({
+      ...c,
+      variants: c.variants.map(v => ({
+        ...v,
+        samples: v.samples.map(s => ({
+          ...s,
+          permission_to_share: permissionBySubmissionId.get(s.submission_id) ?? null,
+        })),
+      })),
+    }));
+
     return Response.json({
-      clusters: pendingWithResearch,
+      clusters: pendingWithResearchAndPermissions,
       decisions,
       cluster_count: allClusters.length,
       pending_count: pending.length,

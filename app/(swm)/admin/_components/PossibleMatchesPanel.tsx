@@ -53,6 +53,8 @@ function googleSearchUrlFor(name: string, role: string | null, location: string 
   return `https://www.google.com/search?q=${encodeURIComponent(parts.join(" "))}`;
 }
 
+const PERMISSION_OPTIONS = ["public", "anonymous", "first_name", "data_only"] as const;
+
 type VariantSample = {
   row_id: string;
   name: string;
@@ -61,6 +63,7 @@ type VariantSample = {
   reporter_case_county: string | null;
   reporter_email: string | null;
   reporter_name: string | null;
+  permission_to_share: string | null;
   submission_id: string;
   notes: string | null;
   source: string | null;
@@ -154,6 +157,10 @@ type Resp = {
   error?: string;
 };
 
+type Props = {
+  onOpenSubmission?: (submissionId: string) => void | Promise<void>;
+};
+
 const CONFIDENCE_STYLE: Record<Cluster["highest_confidence"], { label: string; bg: string; color: string; border: string }> = {
   high:   { label: "High",   bg: "rgba(185,28,28,0.18)", color: "rgb(252,165,165)", border: "rgba(185,28,28,0.4)" },
   medium: { label: "Medium", bg: "rgba(234,179,8,0.16)", color: "rgb(253,224,71)",  border: "rgba(234,179,8,0.4)" },
@@ -166,7 +173,13 @@ function uniqueReasons(edges: Edge[]): string[] {
   return Array.from(set);
 }
 
-export function PossibleMatchesPanel() {
+function matchesQuery(parts: Array<string | null | undefined>, query: string): boolean {
+  if (!query) return true;
+  const haystack = parts.filter(Boolean).join(" ").toLowerCase();
+  return haystack.includes(query);
+}
+
+export function PossibleMatchesPanel({ onOpenSubmission }: Props = {}) {
   const [data, setData] = useState<Resp | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -175,6 +188,7 @@ export function PossibleMatchesPanel() {
   const [searchQuery, setSearchQuery] = useState("");
   const [busyKey, setBusyKey] = useState<string | null>(null);
   const [showDecided, setShowDecided] = useState(false);
+  const [loadingViewId, setLoadingViewId] = useState<string | null>(null);
 
   // Per-cluster local form state (canonical name + note + decision)
   type FormState = { canonicalName: string; canonicalRole: string; note: string };
@@ -544,6 +558,79 @@ export function PossibleMatchesPanel() {
     }
   }
 
+  async function promoteRow(rowId: string) {
+    setBusyKey(`sample-submission:${rowId}`);
+    try {
+      const res = await fetch("/api/admin/court-actors", {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id: rowId, action: "promote" }),
+      });
+      const json = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        window.alert(json.error || "Save failed.");
+        return;
+      }
+      await load();
+    } catch (err) {
+      window.alert(err instanceof Error ? err.message : "Network error.");
+    } finally {
+      setBusyKey(null);
+    }
+  }
+
+  async function updateSubmissionPermission(submissionId: string, permissionToShare: string) {
+    setBusyKey(`sample-submission:${submissionId}`);
+    try {
+      const res = await fetch(`/api/admin/survey-submission/${submissionId}`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ permission_to_share: permissionToShare }),
+      });
+      const json = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        window.alert(json.error || "Save failed.");
+        return;
+      }
+      await load();
+    } catch (err) {
+      window.alert(err instanceof Error ? err.message : "Network error.");
+    } finally {
+      setBusyKey(null);
+    }
+  }
+
+  async function deleteSurveySubmission(submissionId: string) {
+    if (!window.confirm("This deletes the ENTIRE survey submission and all its actor rows. Cannot be undone.")) return;
+    setBusyKey(`sample-submission:${submissionId}`);
+    try {
+      const res = await fetch(`/api/admin/survey-submission/${submissionId}`, {
+        method: "DELETE",
+        headers: { "Content-Type": "application/json" },
+      });
+      const json = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        window.alert(json.error || "Delete failed.");
+        return;
+      }
+      await load();
+    } catch (err) {
+      window.alert(err instanceof Error ? err.message : "Network error.");
+    } finally {
+      setBusyKey(null);
+    }
+  }
+
+  async function viewSurvey(submissionId: string) {
+    if (!onOpenSubmission) return;
+    setLoadingViewId(submissionId);
+    try {
+      await onOpenSubmission(submissionId);
+    } finally {
+      setLoadingViewId(null);
+    }
+  }
+
   async function deleteResearchNote(noteId: string, clusterKey: string) {
     if (!window.confirm("Delete this research note? The audit trail entry is permanent.")) return;
     setBusyKey(`research:${clusterKey}:${noteId}`);
@@ -623,6 +710,18 @@ export function PossibleMatchesPanel() {
       return true;
     });
   }, [data, filter, locationFilter, searchQuery]);
+
+  const filteredDecisions = useMemo(() => {
+    if (!data) return [] as Decision[];
+    const q = searchQuery.trim().toLowerCase();
+    return data.decisions.filter(d => {
+      if (locationFilter && d.location_key !== locationFilter) return false;
+      if (!matchesQuery([d.location_key, d.canonical_name, d.canonical_role, d.note, ...d.name_keys], q)) {
+        return false;
+      }
+      return true;
+    });
+  }, [data, locationFilter, searchQuery]);
 
   return (
     <div>
@@ -821,6 +920,9 @@ export function PossibleMatchesPanel() {
                       <div className="mt-2 space-y-1.5">
                         {samplesToShow.map(s => {
                           const rowBusy = busyKey === `row-review:${s.row_id}` || busyKey === `merge:${s.row_id}`;
+                          const sampleBusy = busyKey === `sample-submission:${s.submission_id}`;
+                          const viewBusy = loadingViewId === s.submission_id;
+                          const currentPermission = (s.permission_to_share ?? "public") as typeof PERMISSION_OPTIONS[number];
                           const isDup = s.review_decision === "duplicate";
                           const isSep = s.review_decision === "count_separately";
                           const isMerged = s.review_decision === "merge_comments" || Boolean(s.merged_into);
@@ -898,6 +1000,52 @@ export function PossibleMatchesPanel() {
                                     primary +{s.merge_primary_for!.length}
                                   </span>
                                 )}
+                              </div>
+                              <div className="mt-1.5 flex items-center gap-1.5 flex-wrap">
+                                <label className="text-[10px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-md"
+                                  style={{ backgroundColor: "rgba(255,255,255,0.05)", color: "rgba(245,245,245,0.7)", border: "1px solid rgba(255,255,255,0.12)" }}>
+                                  Permission
+                                  <select
+                                    value={currentPermission}
+                                    disabled={rowBusy || sampleBusy || viewBusy}
+                                    onChange={e => void updateSubmissionPermission(s.submission_id, e.target.value)}
+                                    className="ml-2 text-[10px] font-bold bg-transparent outline-none"
+                                    style={{ color: GOLD }}
+                                  >
+                                    {PERMISSION_OPTIONS.map(option => (
+                                      <option key={option} value={option}>{option}</option>
+                                    ))}
+                                  </select>
+                                </label>
+                                {s.source !== "form_direct" && (
+                                  <button
+                                    type="button"
+                                    disabled={rowBusy || sampleBusy || viewBusy}
+                                    onClick={() => void promoteRow(s.row_id)}
+                                    title="Mark this row as counted publicly."
+                                    className="text-[10px] px-2 py-0.5 rounded font-bold transition-opacity disabled:opacity-50"
+                                    style={{ backgroundColor: "rgba(74,222,128,0.18)", color: "rgb(134,239,172)", border: "1px solid rgba(74,222,128,0.35)" }}>
+                                    {sampleBusy ? "…" : "Mark Counted"}
+                                  </button>
+                                )}
+                                <button
+                                  type="button"
+                                  disabled={rowBusy || sampleBusy || viewBusy}
+                                  onClick={() => void deleteSurveySubmission(s.submission_id)}
+                                  title="Delete the full survey submission and every actor row from it."
+                                  className="text-[10px] px-2 py-0.5 rounded font-bold transition-opacity disabled:opacity-50"
+                                  style={{ backgroundColor: "rgba(248,113,113,0.16)", color: "rgb(252,165,165)", border: "1px solid rgba(248,113,113,0.35)" }}>
+                                  {sampleBusy ? "…" : "Delete survey"}
+                                </button>
+                                <button
+                                  type="button"
+                                  disabled={!onOpenSubmission || rowBusy || sampleBusy || viewBusy}
+                                  onClick={() => void viewSurvey(s.submission_id)}
+                                  title={onOpenSubmission ? "Open this family's full survey response" : "No survey opener connected in this view."}
+                                  className="text-[10px] px-2 py-0.5 rounded font-bold transition-opacity disabled:opacity-50"
+                                  style={{ backgroundColor: "rgba(59,130,246,0.15)", color: "rgb(147,197,253)", border: "1px solid rgba(59,130,246,0.3)" }}>
+                                  {viewBusy ? "Loading…" : "👁 View survey"}
+                                </button>
                               </div>
                               <div className="text-[9px] mb-1 flex items-center gap-2 flex-wrap" style={{ color: "rgba(245,245,245,0.35)" }}>
                                 <span>row id: {s.row_id}</span>
@@ -1254,12 +1402,18 @@ export function PossibleMatchesPanel() {
         );
       })}
 
-      {showDecided && data && data.decisions.length > 0 && (
+      {showDecided && data && filteredDecisions.length === 0 && (
+        <div className="px-6 py-10 text-center text-sm" style={{ color: "rgba(245,245,245,0.4)" }}>
+          No decided clusters match the current search.
+        </div>
+      )}
+
+      {showDecided && data && filteredDecisions.length > 0 && (
         <div className="border-t" style={{ borderColor: "rgba(255,255,255,0.08)" }}>
           <div className="px-6 py-3 text-xs font-bold uppercase tracking-wide" style={{ color: "rgba(245,245,245,0.5)" }}>
-            Decided ({data.decisions.length})
+            Decided ({filteredDecisions.length}{filteredDecisions.length === data.decisions.length ? "" : ` of ${data.decisions.length}`})
           </div>
-          {data.decisions.map((d, i) => (
+          {filteredDecisions.map((d, i) => (
             <div key={d.cluster_key} className="px-6 py-3 flex items-center justify-between gap-3 flex-wrap"
               style={{ borderTop: i > 0 ? "1px solid rgba(255,255,255,0.05)" : "none" }}>
               <div className="min-w-0">
