@@ -12,10 +12,11 @@
     "court_or_county": "Harnett",
     "state": "North Carolina",
     "state_abbr": "NC",
-    "mention_count": 3,
-    "actor_report_count": 3,
+    "mention_count": 4,
+    "actor_report_count": 4,
     "supabase_row_ids": [
       "c450afc9-5432-40b9-ab97-dddc0d8df62e",
+      "9b410481-09f0-4efb-ad85-2cba609b0684",
       "6eae0841-80c9-4d2b-b7e6-4dd376d528bc",
       "d443b57e-9cb1-4685-8c0b-57f7005abde1"
     ],
@@ -23,31 +24,31 @@
     "actor_bucket_key": "tamy smith|NC"
   },
   "photo": {
-    "path": null,
-    "exists": false,
+    "path": "north_carolina/tammy_smith/image_1080.png",
+    "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 76,
-    "total_submissions": 110,
-    "avg_financial_loss": 144235.38,
-    "avg_months_lost": 42.0,
+    "families_approved": 77,
+    "total_submissions": 111,
+    "avg_financial_loss": 142632.77,
+    "avg_months_lost": 41.5,
     "_source_table": "movement_stats_by_state",
     "_match_value": "NC",
-    "state_family_count": 110,
+    "state_family_count": 111,
     "median_months_lost": 18.0,
     "median_financial_loss": 129400,
     "median_burden_sample_size": 32,
     "pro_se_count": 55,
-    "pro_se_pct": 50.9,
-    "children_impacted": 166,
-    "clean_sample_size": 108,
-    "raw_submission_count": 108
+    "pro_se_pct": 50.5,
+    "children_impacted": 167,
+    "clean_sample_size": 109,
+    "raw_submission_count": 109
   },
-  "movement_total": 3525,
+  "movement_total": 3571,
   "supabase": {
-    "report_count": 3,
-    "actor_report_count": 3,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_reports": [],
     "public_comments": [
       {
@@ -56,12 +57,12 @@
         "source": "court_actors.notes"
       },
       {
-        "comment_text": "Delay after delay. Inappropriate with the judge",
+        "comment_text": "Inappropriate relationship with the judge.",
         "author": "Anonymous parent",
         "source": "court_actors.notes"
       },
       {
-        "comment_text": "Refused to make copies (in the chambers) of evidence that the trial judge Rose asked, continued to question myself about My spouse but would not subpoena My spouse to ask…",
+        "comment_text": "Delay after delay. Inappropriate with the judge",
         "author": "Anonymous parent",
         "source": "court_actors.notes"
       }

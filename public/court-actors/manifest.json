@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-13T07:39:55.269413",
+  "generated_at": "2026-05-13T11:41:27.644558",
   "actors": [
     {
       "slug": "jesse_i_santana",
@@ -259,7 +259,7 @@
       "display_name": "Tammy Smith",
       "canonical_name": "Tammy Smith",
       "actor_bucket_key": "tamy smith|NC",
-      "photo_url": null,
+      "photo_url": "/court-actors/nc/tammy_smith/image_1080.png",
       "share_url": "/court-actors/nc/tammy_smith/share.html"
     },
     {
@@ -274,8 +274,8 @@
     {
       "slug": "anika_collins",
       "state_abbr": "OH",
-      "display_name": "Anneka P. Collins",
-      "canonical_name": "Anneka P. Collins",
+      "display_name": "Hon. Anneka P. Collins",
+      "canonical_name": "Hon. Anneka P. Collins",
       "actor_bucket_key": null,
       "photo_url": "/court-actors/oh/anika_collins/image_1080.png",
       "share_url": "/court-actors/oh/anika_collins/share.html"
@@ -297,15 +297,6 @@
       "actor_bucket_key": "christina joliat|OH",
       "photo_url": null,
       "share_url": "/court-actors/oh/christina_joliat/share.html"
-    },
-    {
-      "slug": "deborah_drexler",
-      "state_abbr": "OH",
-      "display_name": "Deborah Drexler",
-      "canonical_name": "Deborah Drexler",
-      "actor_bucket_key": null,
-      "photo_url": "/court-actors/oh/deborah_drexler/image_1080.png",
-      "share_url": "/court-actors/oh/deborah_drexler/share.html"
     },
     {
       "slug": "dennis_kirk",
@@ -405,6 +396,15 @@
       "actor_bucket_key": "kristina moris|OH",
       "photo_url": "/court-actors/oh/kristina_morris/image_1080.png",
       "share_url": "/court-actors/oh/kristina_morris/share.html"
+    },
+    {
+      "slug": "magistrate_deborah_drexler",
+      "state_abbr": "OH",
+      "display_name": "Magistrate Deborah Drexler",
+      "canonical_name": "Magistrate Deborah Drexler",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/oh/magistrate_deborah_drexler/image_1080.png",
+      "share_url": "/court-actors/oh/magistrate_deborah_drexler/share.html"
     },
     {
       "slug": "randall_galbraith",
