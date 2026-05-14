@@ -374,7 +374,11 @@ def clean_public_text(text: str, max_words: int) -> str:
     s = " ".join(str(text).split())
     risky_patterns = [
         r"\b[\w.+-]+@[\w.-]+\.\w+\b",
-        r"\b(?:case|docket|cause)\s*(?:no\.?|number|#)?\s*[:#]?\s*[A-Z0-9-]{5,}\b",
+        # Case/docket/cause identifier — require at least one digit in the
+        # trailing identifier so plain English ("case after", "case manager",
+        # "case worker") doesn't trip the safety filter. Real identifiers
+        # like "20-FC-12345" or "2024CV001234" always contain digits.
+        r"\b(?:case|docket|cause)\s*(?:no\.?|number|#)?\s*[:#]?\s*(?=[A-Z0-9-]{5,}\b)[A-Z0-9-]*\d[A-Z0-9-]*\b",
         r"\b\d{1,6}\s+[A-Z][A-Za-z0-9.'-]+\s+(?:Street|St\.|Road|Rd\.|Avenue|Ave\.|Lane|Ln\.|Drive|Dr\.|Court|Ct\.)\b",
         r"\b(?:kill|murder|shoot|hang|execute|bomb)\b",
     ]
