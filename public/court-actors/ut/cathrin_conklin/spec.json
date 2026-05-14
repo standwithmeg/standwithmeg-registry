@@ -41,15 +41,15 @@
     "_source_table": "movement_stats_by_state",
     "_match_value": "UT",
     "state_family_count": 41,
-    "median_financial_loss": 145600,
-    "median_burden_sample_size": 26,
+    "median_financial_loss": 157200,
+    "median_burden_sample_size": 25,
     "median_months_lost": 6,
     "pro_se_pct": 53.7,
     "pro_se_count": 22,
     "_pdf_state_family_count": 41,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3649,
+  "movement_total": 3660,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,

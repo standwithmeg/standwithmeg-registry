@@ -26,7 +26,7 @@
     "actor_bucket_key": "lawrence army|MA"
   },
   "photo": {
-    "path": "massachusetts/lawrence_army_jr/image_1080.png",
+    "path": "public/court-actors/ma/lawrence_army_jr/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -38,19 +38,15 @@
     "_source_table": "movement_stats_by_state",
     "_match_value": "MA",
     "state_family_count": 66,
-    "median_months_lost": 20.0,
-    "median_financial_loss": 124000,
-    "median_burden_sample_size": 31,
-    "pro_se_count": 38,
-    "pro_se_pct": 60.3,
-    "children_impacted": 95,
-    "clean_sample_size": 63,
-    "raw_submission_count": 63,
-    "_unresolved": [
-      "pdf_stats: cache unreadable at .: [Errno 21] Is a directory: '.'"
-    ]
+    "median_financial_loss": 119250,
+    "median_burden_sample_size": 28,
+    "median_months_lost": 18,
+    "pro_se_pct": 63.6,
+    "pro_se_count": 42,
+    "_pdf_state_family_count": 66,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3654,
+  "movement_total": 3660,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -71,26 +67,27 @@
     ],
     "public_comments": [
       {
-        "comment_text": "Came in from no were kangaroo judge just fir my hearing . Later found he signed off before trial custody from mother to father. He's very corrupt . He was…",
+        "comment_text": "Judge Army switched custody overnight to my abusive ex husband who my children had been refusing to go with out of fear. When I brought forth a conflict of interest with the GAL and myself (we worked together, I contracted her husband for work for years and her daughter was a student in my school and worked directly with my children) he then removed all contact between me and my children without findings. Within weeks he aburuptly \"retired\" effectively leaving…",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Hampden Country Family Probate Court"
       },
       {
-        "comment_text": "Judge Army switched custody overnight to my abusive ex husband who my children had been refusing to go with out of fear. When I brought forth a conflict of interest…",
+        "comment_text": "Came in from no were kangaroo judge just fir my hearing . Later found he signed off before trial custody from mother to father. He's very corrupt . He was involved lots of playoffs his own contempt of court in his divorce alimony and his own custody stealing his kids ..women hater .",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Worcester Probate"
       },
       {
         "comment_text": "Will not hear past nor see any evidence",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Worcester Probate"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/lawrence_army_jr",
-  "unresolved": [
-    "pdf_stats: cache unreadable at .: [Errno 21] Is a directory: '.'"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions · not court findings.",

@@ -26,31 +26,27 @@
     "actor_bucket_key": "kim openheimer|GA"
   },
   "photo": {
-    "path": "georgia/kim_oppenheimer/image_1080.png",
+    "path": "public/court-actors/ga/kim_oppenheimer/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 63,
-    "total_submissions": 83,
-    "avg_financial_loss": 197367.16,
-    "avg_months_lost": 34.1,
+    "families_approved": 65,
+    "total_submissions": 86,
+    "avg_financial_loss": 192089.66,
+    "avg_months_lost": 33.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "GA",
-    "state_family_count": 83,
-    "median_months_lost": 17.0,
-    "median_financial_loss": 140500,
+    "state_family_count": 86,
+    "median_financial_loss": 122500,
     "median_burden_sample_size": 44,
-    "pro_se_count": 35,
-    "pro_se_pct": 42.2,
-    "children_impacted": 150,
-    "clean_sample_size": 83,
-    "raw_submission_count": 83,
-    "_unresolved": [
-      "pdf_stats: cache unreadable at .: [Errno 21] Is a directory: '.'"
-    ]
+    "median_months_lost": 17,
+    "pro_se_pct": 44.2,
+    "pro_se_count": 38,
+    "_pdf_state_family_count": 86,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3655,
+  "movement_total": 3660,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -77,26 +73,27 @@
     ],
     "public_comments": [
       {
-        "comment_text": "Allegedly made the very statements that Kathryn Franklin would use against me in court to take custody of my kids away from me. Kim Oppenheimer never evaluated me nor produced…",
+        "comment_text": "Allegedly made the very statements that Kathryn Franklin would use against me in court to take custody of my kids away from me. Kim Oppenheimer never evaluated me nor produced a written report she gave me my full $3500 retainer back. Never cooperated with Dr. Eddie Beal who cleared me of all mental illnesses.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Gwinnett County"
       },
       {
         "comment_text": "Conducted an incomplete and one-sided evaluation process that harmed my parental relationship without providing a meaningful written report or fair opportunity to challenge her conclusions.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Cobb County Superior Court"
       },
       {
         "comment_text": "Falsied records, misrepresented evidence, falsely accused me, ignored witnesses, ignored medical records, ignored therapist",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Fulton"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/kim_oppenheimer",
-  "unresolved": [
-    "pdf_stats: cache unreadable at .: [Errno 21] Is a directory: '.'"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions · not court findings.",

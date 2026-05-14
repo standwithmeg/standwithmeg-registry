@@ -12,13 +12,14 @@
     "court_or_county": "Knox",
     "state": "Tennessee",
     "state_abbr": "TN",
-    "mention_count": 6,
+    "mention_count": 7,
     "family_count": 5,
     "public_family_count": 5,
     "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
-    "actor_report_count": 6,
+    "actor_report_count": 7,
     "supabase_row_ids": [
       "40c00084-1caf-485b-add0-b8da57212a86",
+      "36b1cc60-cb03-4b14-91a3-b11dd4fc38ca",
       "6a97aff7-fd8d-4445-96a5-a2bc217dc92f",
       "c0188de5-04d3-4888-81bd-01a9df9886a7",
       "f2a53602-eded-42fd-a18e-69af5f7ccd36",
@@ -36,8 +37,8 @@
   "state_stats": {
     "families_approved": 67,
     "total_submissions": 94,
-    "avg_financial_loss": 121916.4,
-    "avg_months_lost": 42.0,
+    "avg_financial_loss": 115550.96,
+    "avg_months_lost": 42.2,
     "_source_table": "movement_stats_by_state",
     "_match_value": "TN",
     "state_family_count": 94,
@@ -49,12 +50,18 @@
     "_pdf_state_family_count": 94,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3649,
+  "movement_total": 3660,
   "supabase": {
-    "report_count": 6,
-    "actor_report_count": 6,
+    "report_count": 7,
+    "actor_report_count": 7,
     "family_count": 5,
     "family_reports": [
+      {
+        "body": "My infant died and then DCS decided to take my other son on grounds…",
+        "state": "TN",
+        "county": "Knox County",
+        "row_id": "20a909b6-43ee-4f81-a454-4d259d807d9d"
+      },
       {
         "body": "Stole a year of my children's childhood and happiness - permanently damaged their confidence;…",
         "state": "TN",

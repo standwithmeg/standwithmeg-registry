@@ -35,8 +35,8 @@
   "state_stats": {
     "families_approved": 67,
     "total_submissions": 94,
-    "avg_financial_loss": 121916.4,
-    "avg_months_lost": 42.0,
+    "avg_financial_loss": 115550.96,
+    "avg_months_lost": 42.2,
     "_source_table": "movement_stats_by_state",
     "_match_value": "TN",
     "state_family_count": 94,
@@ -48,7 +48,7 @@
     "_pdf_state_family_count": 94,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3649,
+  "movement_total": 3660,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
