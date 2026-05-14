@@ -584,6 +584,18 @@ def frame_5_exposing(state: str, state_abbr: str, county: str, stats: dict) -> s
     burden = fmt_money(first_nonempty(stats.get("median_financial_loss"), stats.get("avg_financial_loss")))
     pro_se = fmt_pct(stats.get("pro_se_pct"))
     months = fmt_months(first_nonempty(stats.get("median_months_lost"), stats.get("avg_months_lost")))
+    family_count_raw = stats.get("state_family_count")
+    try:
+        n_families = int(family_count_raw) if family_count_raw is not None else 0
+    except (TypeError, ValueError):
+        n_families = 0
+    hero_html = ""
+    if n_families > 0:
+        hero_html = f"""    <div class="f5-hero-stat">
+      <div class="f5-hero-n">{n_families:,}</div>
+      <div class="f5-hero-l">FAMILIES IN<br>THE REGISTRY</div>
+    </div>
+"""
     return f"""
 <article class="frame f5" id="frame-05">
   <div class="flag-bg">{flag_svg()}</div>
@@ -600,7 +612,7 @@ def frame_5_exposing(state: str, state_abbr: str, county: str, stats: dict) -> s
   </div>
   <div class="f5-stats">
     <div class="f5-stats-label">STATE OF {esc(state.upper())} · LIVE STATS</div>
-    <div class="stat-row">
+{hero_html}    <div class="stat-row">
       <span class="stat-n">{burden}</span>
       <span class="stat-l">MEDIAN FAMILY BURDEN</span>
     </div>
@@ -1093,6 +1105,20 @@ html,body {{ background:#06070A; color:var(--white); font-family:Inter,system-ui
   font-family:'Oswald',sans-serif; font-weight:600; letter-spacing:.14em;
   color:#F5F5F5; text-align:right; text-transform:uppercase;
   font-size:clamp(9px,2.2cqw,14px);
+}}
+.f5-hero-stat {{
+  display:flex; align-items:baseline; justify-content:space-between; gap:16px;
+  padding-bottom:14px; border-bottom:2px solid rgba(245,245,245,.30);
+  margin-bottom:4px;
+}}
+.f5-hero-n {{
+  font-family:'Anton',sans-serif; color:#F5F5F5; line-height:.95;
+  letter-spacing:-.02em; font-size:clamp(56px,16cqw,108px);
+}}
+.f5-hero-l {{
+  font-family:'Oswald',sans-serif; font-weight:700; letter-spacing:.14em;
+  color:var(--gold); text-align:right; text-transform:uppercase;
+  font-size:clamp(11px,2.6cqw,18px); line-height:1.1;
 }}
 
 /* Frame 6 — STAND WITH MEG */
