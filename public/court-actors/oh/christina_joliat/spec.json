@@ -14,8 +14,8 @@
     "state_abbr": "OH",
     "mention_count": 3,
     "family_count": 3,
-    "public_family_count": null,
-    "public_family_count_source": null,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
     "actor_report_count": 3,
     "supabase_row_ids": [
       "4c4d23ba-39bb-4816-a1ec-0e26b77cf3fb",
@@ -46,7 +46,7 @@
     "_pdf_state_family_count": 194,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3642,
+  "movement_total": 3643,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -79,9 +79,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/christina_joliat",
-  "unresolved": [
-    "public_family_count_api: no match for display_name='Christina Joliat' bucket='christina joliat|OH' in OH (14 actors)"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions · not court findings.",

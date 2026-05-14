@@ -12,16 +12,17 @@
     "court_or_county": null,
     "state": "Kansas",
     "state_abbr": "KS",
-    "mention_count": 4,
+    "mention_count": 5,
     "family_count": 4,
     "public_family_count": 4,
     "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
-    "actor_report_count": 4,
+    "actor_report_count": 5,
     "supabase_row_ids": [
       "49ea85e3-6277-415b-b461-348dd60c122a",
       "fbbfcbf3-716e-446b-936c-de7c1bd29081",
       "a14fce63-4d44-4c6e-928e-4cc31fc7e756",
-      "85c9fade-2c38-4d67-91e0-e350400266eb"
+      "85c9fade-2c38-4d67-91e0-e350400266eb",
+      "37b122b4-5f85-45e4-935e-f6a658abb2ab"
     ],
     "actor_row_id": null,
     "actor_bucket_key": null
@@ -47,10 +48,10 @@
     "_pdf_state_family_count": 170,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3642,
+  "movement_total": 3643,
   "supabase": {
-    "report_count": 4,
-    "actor_report_count": 4,
+    "report_count": 5,
+    "actor_report_count": 5,
     "family_count": 4,
     "family_reports": [
       {
@@ -91,6 +92,11 @@
       },
       {
         "comment_text": "He had been actively representing opposing counsel since 2 months prior to being appointed as my domestic conciliator, at the recommendation of opposing counsel and has since switched primary residential…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Delayed reunification, false allegations were known and proven and still tried to convince judge otherwise.",
         "author": "Anonymous parent",
         "source": "court_actors.notes"
       }

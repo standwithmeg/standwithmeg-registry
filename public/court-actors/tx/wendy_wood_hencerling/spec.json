@@ -12,13 +12,15 @@
     "court_or_county": "Brazos County",
     "state": "Texas",
     "state_abbr": "TX",
-    "mention_count": 1,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
     "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
-    "actor_report_count": 1,
+    "actor_report_count": 3,
     "supabase_row_ids": [
-      "a402dc7a-b6a5-4425-8596-d6f565567178"
+      "a402dc7a-b6a5-4425-8596-d6f565567178",
+      "5b769424-f9b6-4e53-a123-ca5a92465a09",
+      "b2ef4dab-fd49-4504-9962-8f1d69e7cab2"
     ],
     "actor_row_id": null,
     "actor_bucket_key": null
@@ -44,10 +46,10 @@
     "_pdf_state_family_count": 217,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3642,
+  "movement_total": 3643,
   "supabase": {
-    "report_count": 1,
-    "actor_report_count": 1,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
     "family_reports": [
       {
@@ -55,6 +57,12 @@
         "state": "TX",
         "county": "Brazos",
         "row_id": "1a43f4f9-ba94-4866-a487-ecb2efa13962"
+      },
+      {
+        "body": "The Brazos County court system has left my family deeply fractured after I was…",
+        "state": "TX",
+        "county": "Brazos",
+        "row_id": "6c6e99b2-fe66-4ea6-a619-ddf6ac68a551"
       }
     ],
     "public_comments": [
@@ -66,6 +74,16 @@
       },
       {
         "comment_text": "Denied my due process as she allowed my ex-wife 40 minutes to testify and allowed me 8 minutes to testify.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Same actor as Wendy Wood Hencerling and Wendy Wood-Hencerling",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "- day of court appeal judge got changed to her court room (with her stepping in as Judge) even though it was her previous court case that was being appealed",
         "author": "Anonymous parent",
         "source": "court_actors.notes"
       }

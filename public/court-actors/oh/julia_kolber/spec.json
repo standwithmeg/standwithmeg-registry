@@ -4,20 +4,22 @@
     "slug": "julia_kolber",
     "display_name": "Julia C. Kolber",
     "title": "",
-    "first_name": "Julia C.",
+    "first_name": "Julia",
     "last_name": "Kolber",
-    "role": null,
-    "court": null,
+    "role": "Attorney (Opposing)",
+    "court": "Montgomery County",
     "county": null,
-    "court_or_county": null,
+    "court_or_county": "Montgomery County",
     "state": "Ohio",
     "state_abbr": "OH",
-    "mention_count": null,
+    "mention_count": 1,
     "family_count": 1,
     "public_family_count": null,
     "public_family_count_source": null,
-    "actor_report_count": null,
-    "supabase_row_ids": null,
+    "actor_report_count": 1,
+    "supabase_row_ids": [
+      "9e8e9467-bf07-408e-8edf-82e411ca5f84"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
@@ -42,18 +44,30 @@
     "_pdf_state_family_count": 194,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3642,
+  "movement_total": 3643,
   "supabase": {
-    "report_count": null,
-    "actor_report_count": null,
+    "report_count": 1,
+    "actor_report_count": 1,
     "family_count": 1,
-    "family_reports": [],
-    "public_comments": []
+    "family_reports": [
+      {
+        "body": "Took our health, finances and entrapped us into never ending horrific cycles of abuse.…",
+        "state": "OH",
+        "county": "Montgomery County",
+        "row_id": "272c3703-8c2a-490e-93b4-e33843b22f6d"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Engaged judge in ex parte communications, violated rules of professional conduct, failed to report abuse",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
   },
   "export_dir": "New Final Post and Capcut template/export/julia_kolber",
   "unresolved": [
-    "court_actors: no rows match name~'Julia C. Kolber' state='OH'",
-    "public_family_count_api: no match for display_name='Julia C. Kolber' bucket=None in OH (14 actors)"
+    "public_family_count_api: no match for display_name='Julia C. Kolber' bucket=None slug='julia_kolber' in OH (14 actors)"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",

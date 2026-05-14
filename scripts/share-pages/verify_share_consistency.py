@@ -27,6 +27,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import html
 import json
 import os
 import re
@@ -38,7 +39,15 @@ import urllib.request
 from dataclasses import dataclass
 from pathlib import Path
 
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
+SCRIPT_DIR = Path(__file__).resolve().parent
+PROJECT_ROOT = SCRIPT_DIR.parent.parent
+GENERATOR_REPO = Path(
+    os.environ.get(
+        "SWM_GENERATOR_REPO",
+        str(PROJECT_ROOT if (PROJECT_ROOT / "New Final Post and Capcut template").exists()
+            else Path("/Users/meghannmiller/Code/court-actor-posts")),
+    )
+)
 NEXT_REPO = Path(
     os.environ.get(
         "SWM_NEXT_REPO",
@@ -46,7 +55,7 @@ NEXT_REPO = Path(
     )
 )
 MANIFEST_PATH = NEXT_REPO / "public" / "court-actors" / "manifest.json"
-EXPORT_ROOT = PROJECT_ROOT / "New Final Post and Capcut template" / "export"
+EXPORT_ROOT = GENERATOR_REPO / "New Final Post and Capcut template" / "export"
 PDF_STATS_HELPER = Path(
     os.environ.get(
         "SWM_PDF_STATS_HELPER",
@@ -61,6 +70,16 @@ PUBLIC_API_BASE = os.environ.get("SWM_PUBLIC_API_BASE", "https://my.standwithmeg
 FIXTURE_ACTORS = [
     {"slug": "dianna_russell", "state_abbr": "TN", "display_name": "Dianna Russell", "expected_count": 4},
     {"slug": "anthony_miller", "state_abbr": "FL", "display_name": "Anthony Miller"},
+    {"slug": "danny_phillips", "state_abbr": "FL", "display_name": "Danny Phillips", "expected_photo": True, "expected_share": True},
+    {
+        "slug": "frances_m_giordano",
+        "state_abbr": "MA",
+        "display_name": "Frances M. Giordano",
+        "expected_comment_substrings": [
+            "Denied motions rushed to judgment",
+            "Evidence and testimony was ignored",
+        ],
+    },
 ]
 
 
@@ -78,8 +97,10 @@ def _load_env(path: Path) -> None:
         os.environ.setdefault(key.strip(), val.strip().strip('"').strip("'"))
 
 
-_load_env(PROJECT_ROOT / ".env")
-_load_env(PROJECT_ROOT / ".env.local")
+_load_env(GENERATOR_REPO / ".env")
+_load_env(GENERATOR_REPO / ".env.local")
+_load_env(NEXT_REPO / ".env")
+_load_env(NEXT_REPO / ".env.local")
 
 
 # ---------------------------------------------------------------------------
@@ -132,17 +153,41 @@ def fetch_state_actors(state_abbr: str) -> list[dict]:
     return actors
 
 
-def api_count_for_actor(state_abbr: str, display_name: str, bucket_key: str | None) -> int | None:
+def api_count_for_actor(
+    state_abbr: str,
+    display_name: str,
+    bucket_key: str | None,
+    slug: str | None = None,
+) -> tuple[int | None, str]:
+    """Return (count, reason). Reason is either 'matched_by_<path>' on a hit
+    or a human-readable explanation when no canonical count is reachable —
+    important for distinguishing 'API rejected our lookup' from 'actor is
+    below the public 3-family threshold and therefore absent from the API
+    response by design'."""
     actors = fetch_state_actors(state_abbr)
+    if not actors:
+        return None, "api_response_empty"
+
+    # The API joins the manifest into each response — photo_url contains the
+    # actor's slug. Match on that first so alias renames (catadeulla →
+    # cataudella) don't break the comparison.
+    if slug:
+        slug_token = f"/{slug}/"
+        for a in actors:
+            for url_field in ("photo_url", "share_url"):
+                if slug_token in (a.get(url_field) or ""):
+                    return int(a.get("count") or 0), f"matched_by_{url_field}"
+
     name_key = loose_name_key(display_name or "")
     target_bucket = (bucket_key or "").split("|", 1)[0].strip().lower() if bucket_key else ""
     for a in actors:
         api_key = loose_name_key(a.get("name") or a.get("display_name") or "")
         if name_key and api_key == name_key:
-            return int(a.get("count") or 0)
+            return int(a.get("count") or 0), "matched_by_name"
         if target_bucket and api_key == target_bucket:
-            return int(a.get("count") or 0)
-    return None
+            return int(a.get("count") or 0), "matched_by_bucket"
+
+    return None, "below_threshold_or_unmatched"
 
 
 def pdf_stats_for_state(state_abbr: str) -> dict | None:
@@ -195,6 +240,7 @@ _FRAME5_MONTHS_RE = re.compile(
     r'class="stat-n">\s*([^<]+?)\s*</span>\s*<span class="stat-l">MEDIAN TIME LOST',
     re.DOTALL,
 )
+_FRAME3_TEXT_RE = re.compile(r'<p class="f3-text">(.+?)</p>', re.DOTALL)
 
 
 def parse_share_html(html_path: Path) -> dict:
@@ -214,7 +260,76 @@ def parse_share_html(html_path: Path) -> dict:
     m = _FRAME5_MONTHS_RE.search(text)
     if m:
         out["frame5_months"] = m.group(1).strip()
+    out["frame3_quotes"] = [
+        re.sub(r"\s+", " ", html.unescape(q)).strip()
+        for q in _FRAME3_TEXT_RE.findall(text)
+    ]
     return out
+
+
+def _sanitize_quote_text(text: str) -> str:
+    if not text:
+        return ""
+    text = re.sub(r"\s+", " ", text).strip()
+    if not text:
+        return ""
+    text = re.sub(r"\b\d{2}-?\d{4,}\b", "[case #]", text)
+    text = re.sub(r"\b\S+@\S+\.\S+\b", "[email]", text)
+    text = re.sub(r"\b\d{3}-\d{3}-\d{4}\b", "[phone]", text)
+    return text
+
+
+def _quote_char_budget(target_count: int) -> int:
+    if target_count >= 6:
+        return 110
+    if target_count == 5:
+        return 125
+    if target_count == 4:
+        return 140
+    return 168
+
+
+def select_best_quote(text: str, char_budget: int = 140) -> str:
+    text = _sanitize_quote_text(text)
+    if not text:
+        return ""
+    if len(text) <= char_budget:
+        return text
+    sentences = [s.strip() for s in re.split(r"(?<=[.!?])\s+", text) if s.strip()]
+    first = sentences[0] if sentences else text
+    if len(first) <= char_budget:
+        return first
+    trimmed = first[: max(1, char_budget - 1)].rstrip(" ,;:-")
+    return f"{trimmed}…"
+
+
+def expected_frame3_quotes(spec: dict, n: int = 6) -> tuple[list[str], str]:
+    """Mirror render_spotlight.story_quotes: actor-specific public_comments
+    are exclusive. family_reports are only allowed when public_comments is
+    empty."""
+    sb = spec.get("supabase") or {}
+    comments = sb.get("public_comments") or []
+    reports = sb.get("family_reports") or []
+    source = "public_comments" if comments else "family_reports"
+    raw = [
+        str(item.get("comment_text") if comments else item.get("body") or "").strip()
+        for item in (comments if comments else reports)
+    ][:n]
+    target_count = max(4, min(n, len(raw))) if raw else 0
+    char_budget = _quote_char_budget(target_count or n)
+    out: list[str] = []
+    seen: set[str] = set()
+    for item in raw:
+        body = select_best_quote(item, char_budget=char_budget)
+        key = re.sub(r"\s+", " ", body).strip().lower()
+        if body and key not in seen:
+            out.append(body)
+            seen.add(key)
+    return out, source
+
+
+def _norm_quote(text: str) -> str:
+    return re.sub(r"\s+", " ", html.unescape(text or "")).strip().lower()
 
 
 def fmt_money(v) -> str:
@@ -276,7 +391,13 @@ def find_actor_export(slug: str) -> Path | None:
     return None
 
 
-def check_actor(entry: dict, expected_count: int | None = None) -> list[Mismatch]:
+def check_actor(
+    entry: dict,
+    expected_count: int | None = None,
+    expected_photo: bool = False,
+    expected_share: bool = False,
+    expected_comment_substrings: list[str] | None = None,
+) -> list[Mismatch]:
     slug = entry.get("slug") or ""
     state_abbr = (entry.get("state_abbr") or "").upper()
     display_name = entry.get("display_name") or entry.get("canonical_name") or slug
@@ -289,16 +410,31 @@ def check_actor(entry: dict, expected_count: int | None = None) -> list[Mismatch
     spec = json.loads((export_dir / "spec.json").read_text())
     rendered = parse_share_html(export_dir / "share.html")
     actor = spec.get("actor") or {}
+    supabase = spec.get("supabase") or {}
 
     spec_public = actor.get("public_family_count")
     spec_family = actor.get("family_count")
     rendered_count = rendered.get("frame1_count")
-    api_count = api_count_for_actor(state_abbr, display_name, bucket_key)
+    api_count, api_reason = api_count_for_actor(state_abbr, display_name, bucket_key, slug=slug)
 
     mismatches: list[Mismatch] = []
+    manifest_photo = entry.get("photo_url")
+    manifest_share = entry.get("share_url")
+    if expected_photo and not manifest_photo:
+        mismatches.append(Mismatch(slug, "manifest.photo_url", "present", str(manifest_photo), "n/a"))
+    if expected_share and not manifest_share:
+        mismatches.append(Mismatch(slug, "manifest.share_url", "present", str(manifest_share), "n/a"))
+
     if api_count is None:
-        mismatches.append(Mismatch(slug, "public_family_count_lookup",
-                                   "unavailable", str(spec_public), str(rendered_count)))
+        # The API legitimately omits actors below the 3-family public
+        # threshold and entire states that have no public actors yet.
+        # Either path is consistent with "share page shows the local
+        # spec value because the API has nothing public to show" — flag
+        # only when we couldn't reach the API at all.
+        benign = {"below_threshold_or_unmatched", "api_response_empty"}
+        if api_reason not in benign:
+            mismatches.append(Mismatch(slug, "public_family_count_lookup",
+                                       api_reason, str(spec_public), str(rendered_count)))
     else:
         if spec_public is not None and int(spec_public) != int(api_count):
             mismatches.append(Mismatch(slug, "spec.public_family_count",
@@ -318,6 +454,35 @@ def check_actor(entry: dict, expected_count: int | None = None) -> list[Mismatch
                                        str(expected_count),
                                        str(spec_public if spec_public is not None else spec_family),
                                        str(rendered_count)))
+
+    expected_quotes, quote_source = expected_frame3_quotes(spec, n=6)
+    rendered_quotes = rendered.get("frame3_quotes") or []
+    rendered_norm = [_norm_quote(q) for q in rendered_quotes]
+    for q in expected_quotes:
+        q_norm = _norm_quote(q)
+        if q_norm and q_norm not in rendered_norm:
+            mismatches.append(Mismatch(slug, "frame3 actor-specific quote",
+                                       quote_source, q, "missing from share.html"))
+
+    # If public_comments exist, Frame 3 must not top up with broad
+    # family_reports. This catches the "one actor note plus generic filler"
+    # regression without relying on private reporter data.
+    if supabase.get("public_comments"):
+        expected_norm = {_norm_quote(q) for q in expected_quotes}
+        report_norm = {
+            _norm_quote(select_best_quote(str(r.get("body") or ""), _quote_char_budget(len(expected_quotes) or 6)))
+            for r in (supabase.get("family_reports") or [])
+        }
+        leaked = [q for q in rendered_norm if q in report_norm and q not in expected_norm]
+        if leaked:
+            mismatches.append(Mismatch(slug, "frame3 fallback mixing",
+                                       "public_comments only", str(expected_quotes),
+                                       str(rendered_quotes)))
+
+    for needle in expected_comment_substrings or []:
+        if _norm_quote(needle) not in _norm_quote(" ".join(rendered_quotes)):
+            mismatches.append(Mismatch(slug, "fixture expected comment",
+                                       needle, "public_comments", str(rendered_quotes)))
 
     return mismatches
 
@@ -382,8 +547,14 @@ def main(argv: list[str]) -> int:
     checked_actors = 0
     for entry in entries:
         slug = entry.get("slug")
-        expected = next((f.get("expected_count") for f in FIXTURE_ACTORS if f["slug"] == slug), None)
-        result = check_actor(entry, expected_count=expected)
+        fixture = next((f for f in FIXTURE_ACTORS if f["slug"] == slug), {})
+        result = check_actor(
+            entry,
+            expected_count=fixture.get("expected_count"),
+            expected_photo=bool(fixture.get("expected_photo")),
+            expected_share=bool(fixture.get("expected_share")),
+            expected_comment_substrings=fixture.get("expected_comment_substrings"),
+        )
         failures.extend(result)
         checked_actors += 1
 

@@ -1,15 +1,15 @@
 {
   "schema_version": 2,
   "actor": {
-    "slug": "kirsten_lee_dunton",
-    "display_name": "Kirsten Lee Dunton",
+    "slug": "danny_phillips",
+    "display_name": "Danny Phillips",
     "title": "",
-    "first_name": "Kirsten \"Kiki\"",
-    "last_name": "Dunton",
-    "role": "GAL / Child Representative",
-    "court": "Leon County",
+    "first_name": "Danny",
+    "last_name": "Phillips",
+    "role": "Other",
+    "court": "Leon",
     "county": null,
-    "court_or_county": "Leon County",
+    "court_or_county": "Leon",
     "state": "Florida",
     "state_abbr": "FL",
     "mention_count": 4,
@@ -18,16 +18,16 @@
     "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
     "actor_report_count": 4,
     "supabase_row_ids": [
-      "68837b36-6cc8-4916-807a-47269b4cc6e4",
-      "51eaba09-4b39-45bd-93f6-55a86f199491",
-      "32e131f6-2da0-4842-8660-6931e76eb25e",
-      "047a126d-4f2d-48da-b78e-084b3d615d12"
+      "3ce69a55-7139-454f-be01-b6e9f7d63b78",
+      "461d976c-22ed-418b-8808-c9a9580cfb5f",
+      "730d9d5c-8e03-430d-8d48-9a3412ee9c02",
+      "a1e59325-8ae5-4da6-9267-66a9550ba224"
     ],
-    "actor_row_id": null,
+    "actor_row_id": "3ce69a55-7139-454f-be01-b6e9f7d63b78",
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "florida/kirsten_lee_dunton/image_1080.png",
+    "path": "florida/danny_phillips/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -54,48 +54,43 @@
     "family_count": 3,
     "family_reports": [
       {
-        "body": "Family court destroyed my family.",
-        "state": "FL",
-        "county": "Leon",
-        "row_id": "5551df4a-f030-4c80-9e8a-ebb35b83a81b"
-      },
-      {
         "body": "Years of conflict within the family court system caused financial devastation, stress-related health complications,…",
         "state": "FL",
         "county": "Leon County",
         "row_id": "7f28cc13-c697-4136-8169-a678c83a88be"
       },
       {
-        "body": "The system is corrupt and it destroys families and children.",
+        "body": "I expected the system to save me and my 6 children from 17 years…",
         "state": "FL",
         "county": "Leon",
-        "row_id": "2f0d8aea-9f6e-4994-9876-6216d4468cb4"
+        "row_id": "e1db8870-7b51-4ef3-b79d-2599f5713349"
+      },
+      {
+        "body": "Family court has destroyed my children.",
+        "state": "FL",
+        "county": "Leon",
+        "row_id": "a01ca4a6-5047-4e42-a626-709059f29e2d"
       }
     ],
     "public_comments": [
       {
-        "comment_text": "This guardian ad litem is incredibly biased and ignores child abuse reports by mandatory reports if the report does not favor her preferred parent. Her preferred parents are consistently represented…",
+        "comment_text": "Concerns have been raised regarding this attorney’s candor and professional conduct in court proceedings, including allegations that statements made in litigation have at times been inconsistent with the likely facts…",
         "author": "Anonymous parent",
         "source": "court_actors.notes"
       },
       {
-        "comment_text": "This guardian ad litem is incredibly biased and ignores child abuse reports by mandatory reports if the report does not favor her preferred parent. Her preferred parents are consistently represented…",
+        "comment_text": "Spoke with me about the case for a period of time before disclosing he shared an office and paralegal with the opposing counsel. Filed a NOA as opposing counsel afterwards.",
         "author": "Anonymous parent",
         "source": "court_actors.notes"
       },
       {
-        "comment_text": "Reported false narratives",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "There are concerns regarding this Guardian ad Litem’s pattern of involvement in cases connected to the same attorney representing fathers in family law matters. In multiple cases, serious allegations involving…",
+        "comment_text": "Works with other court actors to be profitable and he uses people in a position of power to threaten victims",
         "author": "Anonymous parent",
         "source": "court_actors.notes"
       }
     ]
   },
-  "export_dir": "New Final Post and Capcut template/export/kirsten_lee_dunton",
+  "export_dir": "New Final Post and Capcut template/export/danny_phillips",
   "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
@@ -109,7 +104,7 @@
     "no_case_numbers": true
   },
   "public_share": {
-    "recommended_route": "/actors/florida/kirsten_lee_dunton/share",
+    "recommended_route": "/actors/florida/danny_phillips/share",
     "draft_only": true
   },
   "cta": "STANDWITHMEG.COM ↗"

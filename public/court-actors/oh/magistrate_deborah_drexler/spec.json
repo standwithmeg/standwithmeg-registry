@@ -12,14 +12,16 @@
     "court_or_county": "Allen",
     "state": "Ohio",
     "state_abbr": "OH",
-    "mention_count": 2,
+    "mention_count": 4,
     "family_count": 3,
     "public_family_count": 3,
     "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
-    "actor_report_count": 2,
+    "actor_report_count": 4,
     "supabase_row_ids": [
       "5c6b33a3-873c-4c4f-ade6-0039f6773184",
-      "8b7a2f6d-d1e0-4af9-b0cf-2afb3f2ed737"
+      "8b7a2f6d-d1e0-4af9-b0cf-2afb3f2ed737",
+      "9371326b-8304-4800-ae0e-eca8785fdb80",
+      "336d23c6-3a2e-4a8a-a74f-71104ee78a2f"
     ],
     "actor_row_id": null,
     "actor_bucket_key": null
@@ -45,12 +47,18 @@
     "_pdf_state_family_count": 194,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3642,
+  "movement_total": 3643,
   "supabase": {
-    "report_count": 2,
-    "actor_report_count": 2,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 3,
     "family_reports": [
+      {
+        "body": "The court is destroying my child. He’s being abused and neglected by his dad…",
+        "state": "OH",
+        "county": "Allen",
+        "row_id": "81f87716-197d-4827-bed2-e3eb38414afb"
+      },
       {
         "body": "The court stole my daughter and trafficked her to a pedophile, all for financial…",
         "state": "OH",
@@ -72,6 +80,16 @@
       },
       {
         "comment_text": "Magistrate not Judge",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "She continues to downplay everything, not take the child’s best interest in mind, even after proving abuse, and possible pedophilia she let the dad continue having joint custody. I proved…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Denied all rights. Threatened me and gave me a gag order for as she said, \"telling the truth.\" Denied my rights to a hearing for almost 5 years now.",
         "author": "Anonymous parent",
         "source": "court_actors.notes"
       }

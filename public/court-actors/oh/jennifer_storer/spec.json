@@ -14,8 +14,8 @@
     "state_abbr": "OH",
     "mention_count": 6,
     "family_count": 4,
-    "public_family_count": null,
-    "public_family_count_source": null,
+    "public_family_count": 4,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
     "actor_report_count": 6,
     "supabase_row_ids": [
       "2f9858c1-56aa-4d4d-b17e-f87cc2a004c3",
@@ -49,7 +49,7 @@
     "_pdf_state_family_count": 194,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3642,
+  "movement_total": 3643,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
@@ -109,9 +109,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/jennifer_storer",
-  "unresolved": [
-    "public_family_count_api: no match for display_name='Jennifer storer' bucket='jenifer storer|OH' in OH (14 actors)"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions · not court findings.",

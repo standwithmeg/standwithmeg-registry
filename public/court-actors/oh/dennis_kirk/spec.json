@@ -12,11 +12,11 @@
     "court_or_county": "Highland",
     "state": "Ohio",
     "state_abbr": "OH",
-    "mention_count": 7,
+    "mention_count": 8,
     "family_count": 5,
     "public_family_count": 5,
     "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
-    "actor_report_count": 7,
+    "actor_report_count": 8,
     "supabase_row_ids": [
       "84523aae-6f04-4471-b0c2-f5dcb914fbd7",
       "4f37f144-9a31-42d3-ba17-6662e8dc7da8",
@@ -24,7 +24,8 @@
       "6b03fe85-3c4d-4691-9ce7-c77ebd69f496",
       "55909197-8e41-4972-996c-2527ed759eb4",
       "c191a17c-80c4-4107-8a8a-0d0ffea90e88",
-      "0a77a37f-d53f-4458-a348-078aa1ded4f1"
+      "0a77a37f-d53f-4458-a348-078aa1ded4f1",
+      "344b67f2-c588-4c57-b953-58ce802aa6c7"
     ],
     "actor_row_id": "84523aae-6f04-4471-b0c2-f5dcb914fbd7",
     "actor_bucket_key": "denis kirk|OH"
@@ -50,10 +51,10 @@
     "_pdf_state_family_count": 194,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3642,
+  "movement_total": 3643,
   "supabase": {
-    "report_count": 7,
-    "actor_report_count": 7,
+    "report_count": 8,
+    "actor_report_count": 8,
     "family_count": 5,
     "family_reports": [
       {

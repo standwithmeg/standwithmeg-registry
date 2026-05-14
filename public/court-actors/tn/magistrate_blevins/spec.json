@@ -46,7 +46,7 @@
     "_pdf_state_family_count": 94,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3642,
+  "movement_total": 3643,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -85,7 +85,7 @@
   },
   "export_dir": "New Final Post and Capcut template/export/magistrate_blevins",
   "unresolved": [
-    "public_family_count_api: no match for display_name='Magistrate Blevins' bucket=None in TN (4 actors)"
+    "public_family_count_api: no match for display_name='Magistrate Blevins' bucket=None slug='magistrate_blevins' in TN (4 actors)"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",

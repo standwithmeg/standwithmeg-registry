@@ -4,7 +4,7 @@
     "slug": "brandy_daswani",
     "display_name": "Brandy Daswani",
     "title": "",
-    "first_name": "Brandy",
+    "first_name": "Brandy J.",
     "last_name": "Daswani",
     "role": "GAL / Child Representative",
     "court": "Cobb",
@@ -12,15 +12,16 @@
     "court_or_county": "Cobb",
     "state": "Georgia",
     "state_abbr": "GA",
-    "mention_count": 3,
+    "mention_count": 4,
     "family_count": 5,
     "public_family_count": 5,
     "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
-    "actor_report_count": 3,
+    "actor_report_count": 4,
     "supabase_row_ids": [
       "d24d3164-f6f1-4336-ab13-9f1d4e14118f",
       "951dc4e1-ef8a-49df-be42-777cf33df0e5",
-      "7f0ee247-6d04-455a-93a0-e1fa93a2dcfc"
+      "7f0ee247-6d04-455a-93a0-e1fa93a2dcfc",
+      "1f59a920-ee53-4e00-9ff8-210628987167"
     ],
     "actor_row_id": null,
     "actor_bucket_key": null
@@ -46,10 +47,10 @@
     "_pdf_state_family_count": 83,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3642,
+  "movement_total": 3643,
   "supabase": {
-    "report_count": 3,
-    "actor_report_count": 3,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 5,
     "family_reports": [
       {
@@ -63,6 +64,12 @@
         "state": "GA",
         "county": "Fulton",
         "row_id": "05d2dd9b-f4d4-4306-b6d2-132c948981f9"
+      },
+      {
+        "body": "This system took a fit and loving father and used state machinery, financial pressure,…",
+        "state": "GA",
+        "county": "Cobb County",
+        "row_id": "672701a7-9d68-48e4-bb86-119f6bf35865"
       },
       {
         "body": "This system has stolen years of our lives, and I can’t honestly teach my…",
@@ -84,6 +91,11 @@
       },
       {
         "comment_text": "Lied in testimony, made up evidence (including totally fake drug charges she submitted on an excel spreadsheet), ignored actual convicted criminal activity of the other side, currently being sued by…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Failed to act neutrally, ignored or minimized evidence I provided, and supported knowingly false narratives and recommendations that effectively severed my relationship with my child.",
         "author": "Anonymous parent",
         "source": "court_actors.notes"
       }

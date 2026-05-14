@@ -4,7 +4,7 @@
     "slug": "james_roeder",
     "display_name": "James Roeder",
     "title": "",
-    "first_name": "James",
+    "first_name": "James (Jim)",
     "last_name": "Roeder",
     "role": "Attorney (Opposing)",
     "court": "Highland",
@@ -12,16 +12,18 @@
     "court_or_county": "Highland",
     "state": "Ohio",
     "state_abbr": "OH",
-    "mention_count": 4,
+    "mention_count": 6,
     "family_count": 4,
     "public_family_count": null,
     "public_family_count_source": null,
-    "actor_report_count": 4,
+    "actor_report_count": 6,
     "supabase_row_ids": [
       "0633d20a-1dcb-44f3-ab80-b290b5673063",
       "372601f2-88d9-4fd0-a436-ad60e54ac1f4",
       "550c0ce6-fac9-4603-8b34-731982271966",
-      "b7c0bae7-4d0d-4742-869d-aab1c2206f03"
+      "b7c0bae7-4d0d-4742-869d-aab1c2206f03",
+      "dc6642db-35a3-42a1-8d5d-e6f255559765",
+      "cf9385a2-e65d-4df0-904e-7631a96f52f1"
     ],
     "actor_row_id": "0633d20a-1dcb-44f3-ab80-b290b5673063",
     "actor_bucket_key": "james roeder|OH"
@@ -47,10 +49,10 @@
     "_pdf_state_family_count": 194,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3642,
+  "movement_total": 3643,
   "supabase": {
-    "report_count": 4,
-    "actor_report_count": 4,
+    "report_count": 6,
+    "actor_report_count": 6,
     "family_count": 4,
     "family_reports": [
       {
@@ -64,6 +66,12 @@
         "state": "OH",
         "county": "Highland county",
         "row_id": "6caec907-d638-46ce-ac09-9cde3975ad8e"
+      },
+      {
+        "body": "They took the happiest and joy out of us",
+        "state": "OH",
+        "county": "Highland county",
+        "row_id": "8b35071a-b597-4615-93d0-41c8dca323bd"
       },
       {
         "body": "Killed me and my family",
@@ -92,12 +100,17 @@
         "comment_text": "Assistant prosecutor did a rule 6 and it was not signed by the judge",
         "author": "Anonymous parent",
         "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Assistant prosecutor verbally emails a rule six when it was normal hours, it was at 10:58 AM on a weekday and the judge should’ve been there to sign off but…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/james_roeder",
   "unresolved": [
-    "public_family_count_api: no match for display_name='James Roeder' bucket='james roeder|OH' in OH (14 actors)"
+    "public_family_count_api: no match for display_name='James Roeder' bucket='james roeder|OH' slug='james_roeder' in OH (14 actors)"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",

@@ -485,6 +485,52 @@ def pick_most_complete_name(rows: list[dict], name_col: str) -> str:
     return best
 
 
+def _name_tokens_for_actor_match(name: Any) -> list[str]:
+    return [t for t in _actor_name_key(name).split() if t]
+
+
+def _edit_distance_lte(a: str, b: str, limit: int = 2) -> bool:
+    """Small bounded Levenshtein check for spelling variants like
+    Frances/Francis. Avoids pulling unrelated same-surname actors into a
+    public share page."""
+    if a == b:
+        return True
+    if not a or not b or abs(len(a) - len(b)) > limit:
+        return False
+    prev = list(range(len(b) + 1))
+    for i, ca in enumerate(a, 1):
+        cur = [i]
+        row_min = cur[0]
+        for j, cb in enumerate(b, 1):
+            cost = 0 if ca == cb else 1
+            cur.append(min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + cost))
+            row_min = min(row_min, cur[-1])
+        if row_min > limit:
+            return False
+        prev = cur
+    return prev[-1] <= limit
+
+
+def _likely_same_actor_name(candidate: Any, canonical: Any) -> bool:
+    candidate_tokens = _name_tokens_for_actor_match(candidate)
+    canonical_tokens = _name_tokens_for_actor_match(canonical)
+    if not candidate_tokens or not canonical_tokens:
+        return False
+    if " ".join(candidate_tokens) == " ".join(canonical_tokens):
+        return True
+    candidate_last = candidate_tokens[-1]
+    canonical_last = canonical_tokens[-1]
+    if candidate_last != canonical_last:
+        return False
+    candidate_first = candidate_tokens[0]
+    canonical_first = canonical_tokens[0]
+    if candidate_first == canonical_first:
+        return True
+    if candidate_first[:1] != canonical_first[:1]:
+        return False
+    return _edit_distance_lte(candidate_first, canonical_first, limit=2)
+
+
 def resolve_actor(
     name_search: str,
     state_abbr: str,
@@ -555,6 +601,36 @@ def resolve_actor(
     if name_rows:
         seen_ids = {r.get(block["id_column"]) for r in rows}
         rows.extend(r for r in name_rows if r.get(block["id_column"]) not in seen_ids)
+
+    # Exact ILIKE misses safe spelling variants that the public API groups
+    # together, e.g. Frances M. Giordano / Francis M. Giordano / Francis
+    # Giordano. Pull same-state surname rows and keep only rows whose first
+    # name is an obvious spelling variant. This is deliberately narrower
+    # than a broad surname merge so unrelated same-surname actors do not
+    # inherit each other's public notes.
+    canonical_for_match = (head or {}).get(block["name_column"]) or name_search
+    canonical_tokens = _name_tokens_for_actor_match(canonical_for_match)
+    if canonical_tokens:
+        surname = canonical_tokens[-1]
+        surname_filters = [f"{block['name_column']}=ilike.*{surname}*"]
+        if state_abbr:
+            surname_filters.append(f"{block['state_code_column']}=eq.{state_abbr}")
+        try:
+            surname_rows = select(table, ["*"], filters=surname_filters, order=f"{block['created_column']}.desc")
+        except SupabaseError as e:
+            surname_rows = []
+            if DEBUG:
+                print(f"[supabase] surname expansion failed: {e.status}", file=sys.stderr)
+        if surname_rows:
+            seen_ids = {r.get(block["id_column"]) for r in rows}
+            for r in surname_rows:
+                rid = r.get(block["id_column"])
+                if rid in seen_ids:
+                    continue
+                candidate_name = r.get(block["name_column"]) or ""
+                if _likely_same_actor_name(candidate_name, canonical_for_match):
+                    rows.append(r)
+                    seen_ids.add(rid)
 
     if not rows and head:
         rows = [head]
@@ -909,7 +985,8 @@ PDF_STATS_HELPER = Path(
 # states) it sets this env var so each per-actor build can read its stats
 # instantly. The cache file is a dict[state_abbr]->stats_dict written by
 # state_stats_for_share.py --all.
-PDF_STATS_CACHE_FILE = Path(os.environ.get("SWM_PDF_STATS_CACHE", ""))
+_PDF_STATS_CACHE_RAW = os.environ.get("SWM_PDF_STATS_CACHE", "").strip()
+PDF_STATS_CACHE_FILE = Path(_PDF_STATS_CACHE_RAW) if _PDF_STATS_CACHE_RAW else None
 
 
 def _pdf_headline_stats(state_abbr: str) -> tuple[dict | None, str | None]:
@@ -924,7 +1001,7 @@ def _pdf_headline_stats(state_abbr: str) -> tuple[dict | None, str | None]:
     if not state_abbr:
         return None, "pdf_stats: no state_abbr provided"
 
-    if PDF_STATS_CACHE_FILE and PDF_STATS_CACHE_FILE.exists():
+    if PDF_STATS_CACHE_FILE is not None and PDF_STATS_CACHE_FILE.exists():
         try:
             cache = json.loads(PDF_STATS_CACHE_FILE.read_text())
         except (OSError, json.JSONDecodeError) as e:
