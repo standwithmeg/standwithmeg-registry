@@ -20,11 +20,18 @@ async function main() {
     process.exit(1);
   }
 
+  type SurveySubmissionRef = {
+    email?: string | null;
+    first_name?: string | null;
+    last_name?: string | null;
+    permission_to_share?: boolean | string | null;
+  };
+
   console.log(`OR attorneys: ${data?.length ?? 0}\n`);
   for (const a of data ?? []) {
-    const sub: any = Array.isArray(a.survey_submissions)
-      ? a.survey_submissions[0]
-      : a.survey_submissions;
+    const sub: SurveySubmissionRef | undefined = Array.isArray(a.survey_submissions)
+      ? (a.survey_submissions[0] as SurveySubmissionRef | undefined)
+      : (a.survey_submissions as SurveySubmissionRef | undefined);
     console.log(`• ${a.name} [${a.role}] — ${a.court_or_county ?? "(no county)"}`);
     console.log(
       `    submitted by: ${sub?.first_name ?? ""} ${sub?.last_name ?? ""} <${sub?.email ?? ""}>  perm=${sub?.permission_to_share ?? ""}`

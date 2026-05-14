@@ -39,8 +39,21 @@ async function main() {
     return;
   }
 
+  type SubmissionRow = {
+    id: string;
+    first_name: string | null;
+    last_name: string | null;
+    email: string | null;
+    state_of_occurrence: string | null;
+    case_county: string | null;
+    permission_to_share: boolean | string | null;
+    approved: boolean | string | null;
+    impact_quote: string | null;
+    created_at: string;
+  };
+
   console.log(`Found ${subs.length} submission(s) for ${email}:\n`);
-  for (const r of subs as any[]) {
+  for (const r of subs as SubmissionRow[]) {
     console.log(`── ${r.first_name ?? ""} ${r.last_name ?? ""} ──`);
     console.log(`  id:                  ${r.id}`);
     console.log(`  created_at:          ${r.created_at}`);
