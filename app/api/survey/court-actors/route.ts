@@ -21,20 +21,28 @@ type ManifestEntry = {
 };
 
 /**
- * Manifest lookups by primary `state/slug` key AND a fallback name-key map.
+ * Manifest lookups by primary `state/slug` key, a fallback name-key map, AND
+ * a per-state list used by the alias-cluster fallback.
  *
- * The fallback exists because the manifest's slug is frozen at deploy time
- * (e.g. `naomi_catadeulla`) while the public API derives its slug from the
- * current canonical_name returned by the active alias decision (e.g.
- * `naomi_cataudella` after a rename). Without the fallback, photos for any
- * actor whose canonical name has been respelled after deploy would silently
- * stop loading. The fallback matches by location + actorLooseNameKey, which
- * is invariant under casing, punctuation, titles, and the most common
- * spelling slips.
+ * The two fallbacks exist because the manifest's slug + canonical_name are
+ * frozen at deploy time (e.g. `naomi_catadeulla` / "Naomi Catadeulla") while
+ * the public API derives both from the current canonical_name returned by the
+ * active alias decision (e.g. "Naomi Cataudella" after a rename). Without a
+ * fallback, photos for any actor whose canonical name has been respelled
+ * after deploy would silently stop loading.
+ *
+ *   1) byStateLooseNameKey covers respellings that survive
+ *      actorLooseNameKey() — casing, punctuation, titles, middle initials,
+ *      repeated-letter slips.
+ *   2) byState (used with the AliasResolver) covers transposed-letter or
+ *      otherwise non-loose-equivalent renames, e.g. Catadeulla → Cataudella
+ *      (loose keys `naomi catadeula` vs `naomi cataudela` differ but both
+ *      live in the same alias cluster after the admin's same_actor decision).
  */
 type ManifestLookups = {
   byStateSlug: Map<string, ManifestEntry>;
   byStateLooseNameKey: Map<string, ManifestEntry>;
+  byState: Map<string, ManifestEntry[]>;
 };
 
 let _manifestCache: { mtime: number; lookups: ManifestLookups } | null = null;
@@ -51,6 +59,7 @@ async function loadSpotlightManifest(): Promise<ManifestLookups> {
     const data = JSON.parse(text) as { actors?: ManifestEntry[] };
     const byStateSlug = new Map<string, ManifestEntry>();
     const byStateLooseNameKey = new Map<string, ManifestEntry>();
+    const byState = new Map<string, ManifestEntry[]>();
     for (const entry of data.actors || []) {
       if (!entry.slug || !entry.state_abbr) continue;
       const state = entry.state_abbr.toLowerCase();
@@ -64,12 +73,29 @@ async function loadSpotlightManifest(): Promise<ManifestLookups> {
           byStateLooseNameKey.set(key, entry);
         }
       }
+      // Also index by actor_bucket_key's loose-name half, since the manifest
+      // writer (deploy_actor_to_site.write_manifest) stamps the deploy-time
+      // bucket key onto every entry. Catches cases where display_name and
+      // canonical_name diverge from the bucket-key spelling.
+      if (entry.actor_bucket_key) {
+        const [bucketName] = entry.actor_bucket_key.split("|");
+        const bucketNk = bucketName?.trim();
+        if (bucketNk) {
+          const key = `${state}|${bucketNk}`;
+          if (!byStateLooseNameKey.has(key)) {
+            byStateLooseNameKey.set(key, entry);
+          }
+        }
+      }
+      const list = byState.get(state) ?? [];
+      list.push(entry);
+      byState.set(state, list);
     }
-    const lookups = { byStateSlug, byStateLooseNameKey };
+    const lookups = { byStateSlug, byStateLooseNameKey, byState };
     _manifestCache = { mtime, lookups };
     return lookups;
   } catch {
-    return { byStateSlug: new Map(), byStateLooseNameKey: new Map() };
+    return { byStateSlug: new Map(), byStateLooseNameKey: new Map(), byState: new Map() };
   }
 }
 
@@ -79,16 +105,25 @@ function spotlightSlug(name: string): string {
 }
 
 /**
- * Find the manifest entry for an actor card. Tries the strict
- * `state/slug` lookup first, then falls back to a state + loose-name-key
- * match so respellings after deploy don't drop the photo.
+ * Find the manifest entry for an actor card. Match precedence:
+ *   1. strict `state/slug` (covers the common case — no rename since deploy)
+ *   2. state + loose-name-key (covers casing, punctuation, title prefix,
+ *      middle initial, and repeated-letter respellings)
+ *   3. alias cluster match (covers transposed-letter or otherwise
+ *      non-loose-equivalent renames where the admin used the Possible
+ *      Matches UI to merge two spellings into one canonical actor)
+ *
+ * locationKey is passed through in its original case (typically uppercase
+ * like "KS") so the AliasResolver lookup uses the same key the alias
+ * decisions table was written with.
  */
 function findManifestEntry(
   lookups: ManifestLookups,
-  state: string,
+  locationKey: string,
   displayName: string,
+  aliasResolver: AliasResolver | null,
 ): ManifestEntry | null {
-  const stateLower = state.toLowerCase();
+  const stateLower = locationKey.toLowerCase();
   if (!stateLower) return null;
   const slug = spotlightSlug(displayName);
   if (slug) {
@@ -99,6 +134,31 @@ function findManifestEntry(
   if (nk) {
     const hit = lookups.byStateLooseNameKey.get(`${stateLower}|${nk}`);
     if (hit) return hit;
+  }
+  if (!aliasResolver) return null;
+
+  // Alias-cluster fallback. The API's displayName is the alias-resolved
+  // canonical (post-rename); the manifest entry was deployed under the
+  // pre-rename spelling. If both spellings belong to the same same_actor
+  // cluster, the resolver's cluster_key on either side will match.
+  const apiResolution = aliasResolver.resolve(displayName, locationKey);
+  if (!apiResolution) return null;
+  const stateEntries = lookups.byState.get(stateLower) ?? [];
+  for (const entry of stateEntries) {
+    // Match when the entry's bucket-key loose name IS the canonical key —
+    // i.e. the entry was deployed under the now-canonical spelling.
+    if (entry.actor_bucket_key) {
+      const [bucketName] = entry.actor_bucket_key.split("|");
+      if (bucketName?.trim() === apiResolution.canonical_name_key) return entry;
+    }
+    // Otherwise resolve the entry's own deploy-time name and compare
+    // clusters. Same cluster_key → same actor under a different spelling.
+    const candidateName = entry.canonical_name || entry.display_name;
+    if (!candidateName) continue;
+    const entryResolution = aliasResolver.resolve(candidateName, locationKey);
+    if (entryResolution && entryResolution.cluster_key === apiResolution.cluster_key) {
+      return entry;
+    }
   }
   return null;
 }
@@ -376,8 +436,11 @@ export async function GET(request: Request) {
       .filter(b => b.families.size >= COURT_ACTOR_PUBLIC_THRESHOLD)
       .map(b => {
         const displayName = mostFrequent(b.casingCounts) ?? b.name;
-        const state = (b.location_key || b.state_code || "").toLowerCase();
-        const manifestEntry = findManifestEntry(manifest, state, displayName);
+        // Preserve the original (uppercase) location_key so the
+        // AliasResolver lookup in findManifestEntry uses the same key the
+        // alias decisions table was written with.
+        const locationKey = b.location_key || b.state_code || "";
+        const manifestEntry = findManifestEntry(manifest, locationKey, displayName, aliasResolver);
         return {
           role: roleSummary(b.roleCounts),
           name: displayName,
