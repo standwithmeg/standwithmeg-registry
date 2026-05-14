@@ -654,7 +654,16 @@ def render(spec: dict, web_mode: bool = False) -> str:
     county = first_nonempty(actor.get("county"), actor.get("court_or_county")) or ""
     state = actor.get("state") or ""
     state_abbr = (actor.get("state_abbr") or "").upper()
+    # actor.public_family_count is the value /api/survey/court-actors returns
+    # for this actor — the same count the public card shows. Prefer it above
+    # every locally-computed fallback so the share slide and the card cannot
+    # disagree (Dianna Russell regression: spec had family_count=3 while the
+    # API card showed 4 because of an alias-resolution gap in the local
+    # mirror). The legacy fields stay as fallbacks for older specs that
+    # predate the public_family_count writer.
     actor_family_count = first_nonempty(
+        actor.get("public_family_count"),
+        supabase.get("public_family_count"),
         actor.get("family_count"),
         supabase.get("family_count"),
         actor.get("actor_report_count"),

@@ -14,6 +14,8 @@
     "state_abbr": "OH",
     "mention_count": 4,
     "family_count": 4,
+    "public_family_count": 4,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
     "actor_report_count": 4,
     "supabase_row_ids": [
       "f91d83ec-f75a-42b4-bf45-e7ef4f31e52a",
@@ -37,16 +39,15 @@
     "_source_table": "movement_stats_by_state",
     "_match_value": "OH",
     "state_family_count": 194,
-    "median_months_lost": 18.0,
-    "median_financial_loss": 81250,
-    "median_burden_sample_size": 96,
-    "pro_se_count": 110,
-    "pro_se_pct": 57.6,
-    "children_impacted": 290,
-    "clean_sample_size": 191,
-    "raw_submission_count": 191
+    "median_financial_loss": 82500,
+    "median_burden_sample_size": 95,
+    "median_months_lost": 18,
+    "pro_se_pct": 56.2,
+    "pro_se_count": 109,
+    "_pdf_state_family_count": 194,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3599,
+  "movement_total": 3642,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,

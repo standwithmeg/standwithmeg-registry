@@ -11,21 +11,31 @@ sources are mirrored here whenever they change.
 
 ## What's in this folder
 
-- `render_spotlight.py` — backup copy of the per-actor share/spotlight
-  HTML generator. Authoritative source lives at:
-  `/Users/meghannmiller/Code/court-actor-posts/_scripts/render_spotlight.py`.
-  Diff and re-sync if the working copy drifts.
+- `render_spotlight.py` — backup of the per-actor share/spotlight HTML
+  generator. Source: `_scripts/render_spotlight.py`.
+- `spotlight_build.py` — backup of the spec builder that pulls live counts
+  from `/api/survey/court-actors` and headline state stats from
+  `scripts/pdf/state_stats_for_share.py` so the share slide and the
+  public PDF can never drift. Source: `_scripts/spotlight_build.py`.
+- `verify_share_consistency.py` — pre-push regression gate. Walks the
+  deployed manifest and asserts API ↔ spec.json ↔ share.html agreement
+  for counts and Frame 5 state stats. Includes Dianna Russell + Anthony
+  Miller as explicit fixtures. Source: `_scripts/verify_share_consistency.py`.
 
 ## Sync from working copy → versioned backup
 
-    cp /Users/meghannmiller/Code/court-actor-posts/_scripts/render_spotlight.py \
-       scripts/share-pages/render_spotlight.py
+    for f in render_spotlight.py spotlight_build.py verify_share_consistency.py; do
+      cp "/Users/meghannmiller/Code/court-actor-posts/_scripts/$f" \
+         "scripts/share-pages/$f"
+    done
 
 ## Restore versioned backup → working copy (after machine wipe / new clone)
 
     mkdir -p /Users/meghannmiller/Code/court-actor-posts/_scripts
-    cp scripts/share-pages/render_spotlight.py \
-       /Users/meghannmiller/Code/court-actor-posts/_scripts/render_spotlight.py
+    for f in render_spotlight.py spotlight_build.py verify_share_consistency.py; do
+      cp "scripts/share-pages/$f" \
+         "/Users/meghannmiller/Code/court-actor-posts/_scripts/$f"
+    done
 
 ## Regen pipeline (chained)
 

@@ -12,11 +12,14 @@
     "court_or_county": "Sevier",
     "state": "Tennessee",
     "state_abbr": "TN",
-    "mention_count": 4,
-    "family_count": 3,
-    "actor_report_count": 4,
+    "mention_count": 5,
+    "family_count": 4,
+    "public_family_count": 4,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 5,
     "supabase_row_ids": [
       "e2038615-69c5-4692-b635-d0eca5923536",
+      "79510224-15ee-4025-ae23-f6af85b82f8a",
       "91b787a3-e2e9-45c9-9f0b-a0d2153c58d5",
       "ad4130aa-f098-402f-b939-f86d463ec374",
       "643ba64e-38ec-4ba3-9955-1a7ab6c482e2"
@@ -30,27 +33,26 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 66,
-    "total_submissions": 90,
-    "avg_financial_loss": 127299.71,
-    "avg_months_lost": 41.7,
+    "families_approved": 67,
+    "total_submissions": 94,
+    "avg_financial_loss": 121916.4,
+    "avg_months_lost": 42.0,
     "_source_table": "movement_stats_by_state",
     "_match_value": "TN",
-    "state_family_count": 90,
-    "median_months_lost": 18.0,
-    "median_financial_loss": 65000,
-    "median_burden_sample_size": 36,
-    "pro_se_count": 38,
-    "pro_se_pct": 42.2,
-    "children_impacted": 144,
-    "clean_sample_size": 90,
-    "raw_submission_count": 90
+    "state_family_count": 94,
+    "median_financial_loss": 72000,
+    "median_burden_sample_size": 37,
+    "median_months_lost": 18,
+    "pro_se_pct": 42.6,
+    "pro_se_count": 40,
+    "_pdf_state_family_count": 94,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3600,
+  "movement_total": 3642,
   "supabase": {
-    "report_count": 4,
-    "actor_report_count": 4,
-    "family_count": 3,
+    "report_count": 5,
+    "actor_report_count": 5,
+    "family_count": 4,
     "family_reports": [
       {
         "body": "I've lost everything. And I'm still fighting for my child and I will never…",
@@ -62,6 +64,11 @@
     "public_comments": [
       {
         "comment_text": "Committed perjury on motions and in hearings, Judge Rader threw her off the case only AFTER my attorney brought her misconduct to light, but the damage was done",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "No due process, gag orders",
         "author": "Anonymous parent",
         "source": "court_actors.notes"
       },

@@ -14,6 +14,8 @@
     "state_abbr": "SC",
     "mention_count": 3,
     "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
     "actor_report_count": 3,
     "supabase_row_ids": [
       "28d37c6e-b3f5-4040-ab3d-07759e06998d",
@@ -36,16 +38,15 @@
     "_source_table": "movement_stats_by_state",
     "_match_value": "SC",
     "state_family_count": 63,
-    "median_months_lost": 18.5,
-    "median_financial_loss": 153500,
-    "median_burden_sample_size": 46,
-    "pro_se_count": 37,
-    "pro_se_pct": 56.9,
-    "children_impacted": 111,
-    "clean_sample_size": 65,
-    "raw_submission_count": 65
+    "median_financial_loss": 168500,
+    "median_burden_sample_size": 44,
+    "median_months_lost": 18,
+    "pro_se_pct": 55.6,
+    "pro_se_count": 35,
+    "_pdf_state_family_count": 63,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3600,
+  "movement_total": 3642,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,

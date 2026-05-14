@@ -14,6 +14,8 @@
     "state_abbr": "UT",
     "mention_count": 6,
     "family_count": 2,
+    "public_family_count": null,
+    "public_family_count_source": null,
     "actor_report_count": 6,
     "supabase_row_ids": [
       "60fbada1-2ab2-4453-936c-314db5dd558e",
@@ -39,16 +41,15 @@
     "_source_table": "movement_stats_by_state",
     "_match_value": "UT",
     "state_family_count": 41,
-    "median_months_lost": 8.0,
-    "median_financial_loss": 166000,
-    "median_burden_sample_size": 29,
-    "pro_se_count": 25,
-    "pro_se_pct": 55.6,
-    "children_impacted": 77,
-    "clean_sample_size": 45,
-    "raw_submission_count": 45
+    "median_financial_loss": 145600,
+    "median_burden_sample_size": 26,
+    "median_months_lost": 6,
+    "pro_se_pct": 53.7,
+    "pro_se_count": 22,
+    "_pdf_state_family_count": 41,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3600,
+  "movement_total": 3642,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
@@ -102,7 +103,9 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/cathrin_conklin",
-  "unresolved": [],
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='UT'"
+  ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions · not court findings.",

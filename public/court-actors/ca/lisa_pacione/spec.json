@@ -14,6 +14,8 @@
     "state_abbr": "CA",
     "mention_count": 3,
     "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
     "actor_report_count": 3,
     "supabase_row_ids": [
       "da862864-4133-459f-86ce-42830b0af515",
@@ -36,16 +38,15 @@
     "_source_table": "movement_stats_by_state",
     "_match_value": "CA",
     "state_family_count": 326,
-    "median_months_lost": 22.0,
-    "median_financial_loss": 263600,
-    "median_burden_sample_size": 154,
-    "pro_se_count": 183,
-    "pro_se_pct": 56.8,
-    "children_impacted": 532,
-    "clean_sample_size": 322,
-    "raw_submission_count": 322
+    "median_financial_loss": 285000,
+    "median_burden_sample_size": 153,
+    "median_months_lost": 20,
+    "pro_se_pct": 56.4,
+    "pro_se_count": 184,
+    "_pdf_state_family_count": 326,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3641,
+  "movement_total": 3642,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,

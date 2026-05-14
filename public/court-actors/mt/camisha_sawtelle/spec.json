@@ -14,6 +14,8 @@
     "state_abbr": "MT",
     "mention_count": 3,
     "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
     "actor_report_count": 3,
     "supabase_row_ids": [
       "4f4fb5c5-566e-46d1-aab9-b8103f4bec46",
@@ -36,16 +38,15 @@
     "_source_table": "movement_stats_by_state",
     "_match_value": "MT",
     "state_family_count": 42,
-    "median_months_lost": 36.0,
-    "median_financial_loss": 157500,
-    "median_burden_sample_size": 22,
-    "pro_se_count": 28,
-    "pro_se_pct": 57.1,
-    "children_impacted": 83,
-    "clean_sample_size": 49,
-    "raw_submission_count": 49
+    "median_financial_loss": 156000,
+    "median_burden_sample_size": 21,
+    "median_months_lost": 36,
+    "pro_se_pct": 59.5,
+    "pro_se_count": 25,
+    "_pdf_state_family_count": 42,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3599,
+  "movement_total": 3642,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,

@@ -14,6 +14,8 @@
     "state_abbr": "KS",
     "mention_count": 5,
     "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
     "actor_report_count": 5,
     "supabase_row_ids": [
       "a14d48fb-950d-42f0-9205-9f04510cb52c",
@@ -38,16 +40,15 @@
     "_source_table": "movement_stats_by_state",
     "_match_value": "KS",
     "state_family_count": 170,
-    "median_months_lost": 20.0,
-    "median_financial_loss": 84225,
-    "median_burden_sample_size": 78,
-    "pro_se_count": 86,
-    "pro_se_pct": 53.8,
-    "children_impacted": 285,
-    "clean_sample_size": 160,
-    "raw_submission_count": 160
+    "median_financial_loss": 75425,
+    "median_burden_sample_size": 84,
+    "median_months_lost": 16,
+    "pro_se_pct": 53.5,
+    "pro_se_count": 91,
+    "_pdf_state_family_count": 170,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3598,
+  "movement_total": 3642,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,

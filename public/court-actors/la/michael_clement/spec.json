@@ -14,6 +14,8 @@
     "state_abbr": "LA",
     "mention_count": 4,
     "family_count": 4,
+    "public_family_count": 4,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
     "actor_report_count": 4,
     "supabase_row_ids": [
       "7cb9d065-8d62-481d-8627-95e38a61c7aa",
@@ -37,16 +39,15 @@
     "_source_table": "movement_stats_by_state",
     "_match_value": "LA",
     "state_family_count": 45,
-    "median_months_lost": 24.0,
     "median_financial_loss": 221600,
-    "median_burden_sample_size": 24,
-    "pro_se_count": 22,
-    "pro_se_pct": 46.8,
-    "children_impacted": 76,
-    "clean_sample_size": 47,
-    "raw_submission_count": 47
+    "median_burden_sample_size": 22,
+    "median_months_lost": 24,
+    "pro_se_pct": 46.7,
+    "pro_se_count": 21,
+    "_pdf_state_family_count": 45,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3599,
+  "movement_total": 3642,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,

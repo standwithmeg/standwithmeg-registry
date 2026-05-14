@@ -14,6 +14,8 @@
     "state_abbr": "MN",
     "mention_count": 3,
     "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
     "actor_report_count": 3,
     "supabase_row_ids": [
       "3530d98e-bba4-4670-9222-aee137be4994",
@@ -36,16 +38,15 @@
     "_source_table": "movement_stats_by_state",
     "_match_value": "MN",
     "state_family_count": 58,
-    "median_months_lost": 24.0,
-    "median_financial_loss": 150175,
-    "median_burden_sample_size": 26,
-    "pro_se_count": 37,
-    "pro_se_pct": 59.7,
-    "children_impacted": 108,
-    "clean_sample_size": 62,
-    "raw_submission_count": 62
+    "median_financial_loss": 145175,
+    "median_burden_sample_size": 24,
+    "median_months_lost": 13,
+    "pro_se_pct": 55.2,
+    "pro_se_count": 32,
+    "_pdf_state_family_count": 58,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3599,
+  "movement_total": 3642,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,

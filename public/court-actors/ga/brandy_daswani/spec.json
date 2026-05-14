@@ -7,15 +7,19 @@
     "first_name": "Brandy",
     "last_name": "Daswani",
     "role": "GAL / Child Representative",
-    "court": null,
+    "court": "Cobb",
     "county": null,
-    "court_or_county": null,
+    "court_or_county": "Cobb",
     "state": "Georgia",
     "state_abbr": "GA",
-    "mention_count": 1,
-    "family_count": 3,
-    "actor_report_count": 1,
+    "mention_count": 3,
+    "family_count": 5,
+    "public_family_count": 5,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 3,
     "supabase_row_ids": [
+      "d24d3164-f6f1-4336-ab13-9f1d4e14118f",
+      "951dc4e1-ef8a-49df-be42-777cf33df0e5",
       "7f0ee247-6d04-455a-93a0-e1fa93a2dcfc"
     ],
     "actor_row_id": null,
@@ -27,28 +31,39 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 60,
-    "total_submissions": 80,
-    "avg_financial_loss": 184860.15,
-    "avg_months_lost": 34.7,
+    "families_approved": 63,
+    "total_submissions": 83,
+    "avg_financial_loss": 197367.16,
+    "avg_months_lost": 34.1,
     "_source_table": "movement_stats_by_state",
     "_match_value": "GA",
-    "state_family_count": 80,
-    "median_months_lost": 17.0,
-    "median_financial_loss": 139000,
-    "median_burden_sample_size": 43,
-    "pro_se_count": 34,
-    "pro_se_pct": 42.5,
-    "children_impacted": 144,
-    "clean_sample_size": 80,
-    "raw_submission_count": 80
+    "state_family_count": 83,
+    "median_financial_loss": 131000,
+    "median_burden_sample_size": 42,
+    "median_months_lost": 17,
+    "pro_se_pct": 44.6,
+    "pro_se_count": 37,
+    "_pdf_state_family_count": 83,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3598,
+  "movement_total": 3642,
   "supabase": {
-    "report_count": 1,
-    "actor_report_count": 1,
-    "family_count": 3,
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 5,
     "family_reports": [
+      {
+        "body": "Brandy Daswani gave my children to an abuser. 4 years later my oldest son…",
+        "state": "GA",
+        "county": "Cobb",
+        "row_id": "22d5230c-ba9d-4507-b19c-0d425202fa51"
+      },
+      {
+        "body": "She was hired to protect my son and give a non partisan opinion and…",
+        "state": "GA",
+        "county": "Fulton",
+        "row_id": "05d2dd9b-f4d4-4306-b6d2-132c948981f9"
+      },
       {
         "body": "This system has stolen years of our lives, and I can’t honestly teach my…",
         "state": "GA",
@@ -57,6 +72,16 @@
       }
     ],
     "public_comments": [
+      {
+        "comment_text": "Perjury- false testimony Recommend evaluations and experts and ignored their recommendations because they were against what my ex husband wanted Made up evidence against me Tried to have my special…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Lied on recommendations to be one sided",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
       {
         "comment_text": "Lied in testimony, made up evidence (including totally fake drug charges she submitted on an excel spreadsheet), ignored actual convicted criminal activity of the other side, currently being sued by…",
         "author": "Anonymous parent",

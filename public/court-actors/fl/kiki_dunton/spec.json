@@ -14,6 +14,8 @@
     "state_abbr": "FL",
     "mention_count": 3,
     "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
     "actor_report_count": 3,
     "supabase_row_ids": [
       "35117f68-f92d-4040-b42d-670a88387fe1",
@@ -36,16 +38,15 @@
     "_source_table": "movement_stats_by_state",
     "_match_value": "FL",
     "state_family_count": 210,
-    "median_months_lost": 19.5,
-    "median_financial_loss": 215500,
-    "median_burden_sample_size": 90,
-    "pro_se_count": 122,
-    "pro_se_pct": 58.9,
-    "children_impacted": 345,
-    "clean_sample_size": 207,
-    "raw_submission_count": 207
+    "median_financial_loss": 226000,
+    "median_burden_sample_size": 89,
+    "median_months_lost": 18,
+    "pro_se_pct": 58.6,
+    "pro_se_count": 123,
+    "_pdf_state_family_count": 210,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3641,
+  "movement_total": 3642,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,

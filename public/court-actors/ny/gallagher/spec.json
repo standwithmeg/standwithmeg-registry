@@ -14,6 +14,8 @@
     "state_abbr": "NY",
     "mention_count": 3,
     "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
     "actor_report_count": 3,
     "supabase_row_ids": [
       "e10a4d02-85ed-49ab-b63c-32d213c5c53e",
@@ -36,16 +38,15 @@
     "_source_table": "movement_stats_by_state",
     "_match_value": "NY",
     "state_family_count": 104,
-    "median_months_lost": 18.0,
-    "median_financial_loss": 190300,
-    "median_burden_sample_size": 37,
-    "pro_se_count": 45,
-    "pro_se_pct": 42.1,
-    "children_impacted": 168,
-    "clean_sample_size": 107,
-    "raw_submission_count": 107
+    "median_financial_loss": 189175,
+    "median_burden_sample_size": 36,
+    "median_months_lost": 14,
+    "pro_se_pct": 42.3,
+    "pro_se_count": 44,
+    "_pdf_state_family_count": 104,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3599,
+  "movement_total": 3642,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,

@@ -14,6 +14,8 @@
     "state_abbr": "TX",
     "mention_count": 1,
     "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
     "actor_report_count": 1,
     "supabase_row_ids": [
       "a402dc7a-b6a5-4425-8596-d6f565567178"
@@ -34,16 +36,15 @@
     "_source_table": "movement_stats_by_state",
     "_match_value": "TX",
     "state_family_count": 217,
-    "median_months_lost": 18.5,
     "median_financial_loss": 134677,
-    "median_burden_sample_size": 104,
-    "pro_se_count": 101,
-    "pro_se_pct": 47.9,
-    "children_impacted": 349,
-    "clean_sample_size": 211,
-    "raw_submission_count": 211
+    "median_burden_sample_size": 102,
+    "median_months_lost": 18,
+    "pro_se_pct": 47.5,
+    "pro_se_count": 103,
+    "_pdf_state_family_count": 217,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3641,
+  "movement_total": 3642,
   "supabase": {
     "report_count": 1,
     "actor_report_count": 1,
