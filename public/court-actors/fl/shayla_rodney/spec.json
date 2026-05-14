@@ -46,7 +46,7 @@
     "_pdf_state_family_count": 210,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3642,
+  "movement_total": 3649,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -67,14 +67,16 @@
     ],
     "public_comments": [
       {
-        "comment_text": "Removed relative Kim Florida Homestudy from the FSFN database to foreclose guardian candidacy and did not start a court ordered VT ICPC homestudy for 5 months until candidate filed a…",
+        "comment_text": "Rodney pulled my mother’s FL home-study out of the FSFN system. She had the hospital eject my mother and I from the NICU. She committed mental injury on my two older children while committing relative alienation to destroy familial bonds. She denied g-tube weaning for my medically fragile infant, misrepresenting medicsl reports and using foster caregiver here-say and Devereux behavioral assessment reports instead of an Easter Seals oral-motar evaluation. She removed the Easter Seals report from the file. As a…",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Volusia"
       },
       {
-        "comment_text": "Rodney pulled my mother’s FL home-study out of the FSFN system. She had the hospital eject my mother and I from the NICU. She committed mental injury on my two…",
+        "comment_text": "Removed relative Kim Florida Homestudy from the FSFN database to foreclose guardian candidacy and did not start a court ordered VT ICPC homestudy for 5 months until candidate filed a petition. Altered consent paperwork and attached a falsified notary. Denied g-tube weaning evaluation using Deveruex Behavioral Assessment reports done by Licensed Mental Health Counselors and foster care giver observations. Misrepresented a gastroenterologist visit for formula feed and constipation As a g-tube weaning assessment. Denying proper medical care endangering infants life.…",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Volusia"
       }
     ]
   },

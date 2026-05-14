@@ -30,7 +30,7 @@
     "actor_bucket_key": "andrew bolton|KS"
   },
   "photo": {
-    "path": "kansas/andrew_bolton/image_1080.png",
+    "path": "public/court-actors/ks/andrew_bolton/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -50,7 +50,7 @@
     "_pdf_state_family_count": 170,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3642,
+  "movement_total": 3649,
   "supabase": {
     "report_count": 7,
     "actor_report_count": 7,
@@ -83,34 +83,34 @@
     ],
     "public_comments": [
       {
-        "comment_text": "The system allowed my abuser to escape all consequences to the point of his criminal charges being dismissed and helped Dad turning me into the abuser. The system has stripped…",
+        "comment_text": "Hand-picked by Judge Richard Fisher. Refuses to review my evidence. Believes all allegations against me. Won't allow me to choose my own reintegration therapist — required to use his buddy Naomi Catadella. I lost my kids to the REAL abuser and Andy Bolton and Richard Fisher painted me as crazy, took my voice.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Miami"
       },
       {
-        "comment_text": "Ignored evidence. Did not investigate. Sided with bias due to ex communicating and me going through my lawyer. Literally yelled at me in court, misconduct and the judge even called…",
+        "comment_text": "The system allowed my abuser to escape all consequences to the point of his criminal charges being dismissed and helped Dad turning me into the abuser. The system has stripped me of any belief that leaving my abuser was the right choice. I wish I would have stayed — at least I would still have my children.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Miami"
+      },
+      {
+        "comment_text": "Ignored evidence. Did not investigate. Sided with bias due to ex communicating and me going through my lawyer. Literally yelled at me in court, misconduct and the judge even called him out.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Franklin"
       },
       {
         "comment_text": "Lied under oath about child’s wants.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "Not ensuring Court Ordered Reintegration Therapy proceeds — only 2 sessions for me, 1 for my daughter since order on Nov 17, 2025.",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "Hand-picked by Judge Richard Fisher. Refuses to review my evidence. Believes all allegations against me. Won't allow me to choose my own reintegration therapist — required to use his buddy…",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Miami county"
       },
       {
         "comment_text": "Real life con artist",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Johnson"
       }
     ]
   },

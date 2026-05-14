@@ -26,27 +26,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "oklahoma/jordan_dalgleish/image_1080.png",
+    "path": "public/court-actors/ok/jordan_dalgleish/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 89,
-    "total_submissions": 109,
-    "avg_financial_loss": 113339.7,
-    "avg_months_lost": 28.1,
+    "families_approved": 90,
+    "total_submissions": 110,
+    "avg_financial_loss": 112217.52,
+    "avg_months_lost": 28.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OK",
-    "state_family_count": 109,
+    "state_family_count": 110,
     "median_financial_loss": 82000,
     "median_burden_sample_size": 57,
     "median_months_lost": 12,
-    "pro_se_pct": 45.9,
+    "pro_se_pct": 45.5,
     "pro_se_count": 50,
-    "_pdf_state_family_count": 109,
+    "_pdf_state_family_count": 110,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3642,
+  "movement_total": 3649,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -67,19 +67,22 @@
     ],
     "public_comments": [
       {
-        "comment_text": "Failed to follow through with meetings with the children and investigations.",
+        "comment_text": "Spent countless hours with my ex and the kids during our divorce. Spent less than an hour with me and the kids. Never objectively considered both parent’s roles and value in the kids lives. Effectively helped my ex’s side throughout the divorce process.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Tulsa County"
       },
       {
-        "comment_text": "Failed to follow through with investigations and meetings with the children, she knew of lies being told by the opposing party but allowed the case to move forward and her…",
+        "comment_text": "Failed to follow through with investigations and meetings with the children, she knew of lies being told by the opposing party but allowed the case to move forward and her to be removed from my care and be given to him.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
       },
       {
-        "comment_text": "Spent countless hours with my ex and the kids during our divorce. Spent less than an hour with me and the kids. Never objectively considered both parent’s roles and value…",
+        "comment_text": "Lied to judge and GAL, said if I didn't drop vpo I should lose my kids",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Okmulgee county"
       }
     ]
   },

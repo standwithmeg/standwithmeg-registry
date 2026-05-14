@@ -28,7 +28,7 @@
     "actor_bucket_key": "bethany roberts|KS"
   },
   "photo": {
-    "path": "kansas/bethany_roberts/image_1080.png",
+    "path": "public/court-actors/ks/bethany_roberts/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -48,7 +48,7 @@
     "_pdf_state_family_count": 170,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3642,
+  "movement_total": 3649,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -75,19 +75,22 @@
     ],
     "public_comments": [
       {
-        "comment_text": "Wrongful reporting, dismissal of evidence",
+        "comment_text": "Never met with the primary custodial parent of 12 years nor was that parent given the opportunity to submit evidence. She knew no one in the hallway when we finally got a hearing after the children were removed. She didn’t know the children’s teachers, coaches or counselors. She even attempted to intimidate a witness in the hallway, the school counselor. She then recommended the children and family to see a therapist that was not properly licensed.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Shawnee"
       },
       {
         "comment_text": "Bethany Roberts failed to properly investigate my concerns, dismissed allegations of abuse without meaningful inquiry, and accepted my abuser’s denials at face value, which further harmed and divided my family.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Osage"
       },
       {
-        "comment_text": "Never met with the primary custodial parent of 12 years nor was that parent given the opportunity to submit evidence. She knew no one in the hallway when we finally…",
+        "comment_text": "Wrongful reporting, dismissal of evidence",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Franklin"
       }
     ]
   },

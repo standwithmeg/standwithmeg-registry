@@ -26,7 +26,7 @@
     "actor_bucket_key": "leah case|FL"
   },
   "photo": {
-    "path": "florida/leah_case/image_1080.png",
+    "path": "public/court-actors/fl/leah_case/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -46,7 +46,7 @@
     "_pdf_state_family_count": 210,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3642,
+  "movement_total": 3649,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -61,9 +61,10 @@
     ],
     "public_comments": [
       {
-        "comment_text": "Chief Judge Leah Case (Seventh Circuit, Florida) As a family member, I reported to Chief Judge Leah Case that the presiding judge was retaliating against the parent for requesting ADA…",
+        "comment_text": "Chief Judge Leah Case (Seventh Circuit, Florida) As a family member, I reported to Chief Judge Leah Case that the presiding judge was retaliating against the parent for requesting ADA accommodations and that the docket had been scrubbed after Judge Anthony appointed conflicted counsel during the shelter hearing. Despite raising these concerns, including the grandparent’s report of retaliation and record‑integrity issues, Chief Judge Case took no action.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Volusia"
       }
     ]
   },

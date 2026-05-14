@@ -28,7 +28,7 @@
     "actor_bucket_key": "diana rusel|TN"
   },
   "photo": {
-    "path": "tennessee/dianna_russell/image_1080.png",
+    "path": "public/court-actors/tn/dianna_russell/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -48,7 +48,7 @@
     "_pdf_state_family_count": 94,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3642,
+  "movement_total": 3649,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -65,27 +65,8 @@
       {
         "comment_text": "Committed perjury on motions and in hearings, Judge Rader threw her off the case only AFTER my attorney brought her misconduct to light, but the damage was done",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "No due process, gag orders",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "Won't look at evidence and has a conflict of interest in the case as an ex guardian of litem",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "I spelled her name wrong and listed her as Diane Russell instead of Dianna Russell. She took my kid without due process , would let me give her evidence and…",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "She is now magistrate and took my daughter away without due process. Won't let me show her proof and had her ripped out of her bed a 11:30 at night…",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Sevier"
       }
     ]
   },

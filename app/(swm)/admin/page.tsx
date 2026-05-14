@@ -8,9 +8,10 @@ const GOLD  = "#C9A227";
 const BG    = "#0F1E30";  // deep dark navy for page background
 
 // Fires a workflow_dispatch on GitHub. The workflow regenerates one state
-// PDF (or all 30+ states when state is blank), commits to main, and Vercel
-// redeploys. UI polls GitHub after dispatch so admins can see whether it
-// queued, started, completed, or failed.
+// PDF plus that state's public court actor share pages (or all 30+ states
+// when state is blank), commits to main, and Vercel redeploys. UI polls
+// GitHub after dispatch so admins can see whether it queued, started,
+// completed, or failed.
 type RegenerateStatus = "idle" | "pending" | "queued" | "running" | "done" | "error";
 type RegenerateResult = {
   message?: string;
@@ -73,7 +74,9 @@ function statusFromRun(result: RegenerateResult): RegenerateStatus {
 }
 
 function regenerateMessage(result: RegenerateResult, state: string) {
-  const target = state ? `${state}.pdf` : "all 30+ state PDFs";
+  const target = state
+    ? `${state}.pdf + ${state} actor share pages`
+    : "all 30+ state PDFs + actor share pages";
   if (result.run_status === "completed") {
     return result.run_conclusion === "success"
       ? `GitHub Actions finished regenerating ${target}. Vercel should redeploy after the commit.`
@@ -149,7 +152,7 @@ function RegenerateStateButton({ state }: { state: string }) {
     ? "Done ✓"
     : status === "error"
     ? "failed"
-    : "Regen PDF";
+    : "Regen PDF + slides";
   const color = status === "done" ? "#22c55e" : status === "error" ? "#ef4444" : GOLD;
   return (
     <span className="inline-flex items-center gap-1">
@@ -157,7 +160,7 @@ function RegenerateStateButton({ state }: { state: string }) {
         type="button"
         onClick={click}
         disabled={status === "pending" || status === "queued" || status === "running"}
-        title={msg || (workflowUrl ? `Check ${workflowUrl}` : `Regenerate ${state}.pdf from live Supabase data`)}
+        title={msg || (workflowUrl ? `Check ${workflowUrl}` : `Regenerate ${state}.pdf and actor share pages from live Supabase data`)}
         className="text-xs px-2 py-1 rounded-md font-bold transition-opacity hover:opacity-80 disabled:opacity-50"
         style={{ backgroundColor: "rgba(201,162,39,0.15)", color, border: `1px solid ${color}40` }}
       >
@@ -185,7 +188,7 @@ function RegenerateAllButton() {
   const [workflowUrl, setWorkflowUrl] = useState<string | null>(null);
   async function click() {
     if (status === "pending") return;
-    if (!window.confirm("Regenerate PDFs for every state with 30+ submissions? Takes ~5-10 min.")) return;
+    if (!window.confirm("Regenerate PDFs and actor share pages for every state with 30+ submissions? Takes ~5-10 min.")) return;
     setStatus("pending");
     try {
       const result = await dispatchRegenerate("");
@@ -225,14 +228,14 @@ function RegenerateAllButton() {
     ? "Done ✓"
     : status === "error"
     ? "Failed"
-    : "Regenerate all 30+ PDFs";
+    : "Regenerate PDFs + actor slides";
   return (
     <span className="inline-flex items-center gap-2">
       <button
         type="button"
         onClick={click}
         disabled={status === "pending" || status === "queued" || status === "running"}
-        title={msg || (workflowUrl ? `Check ${workflowUrl}` : "Queue a workflow run that regenerates every 30+ state PDF")}
+        title={msg || (workflowUrl ? `Check ${workflowUrl}` : "Queue a workflow run that regenerates every 30+ state PDF and court actor share page")}
         className="text-xs px-3 py-2 rounded-lg font-bold transition-opacity hover:opacity-80 disabled:opacity-50"
         style={{ backgroundColor: "rgba(201,162,39,0.15)", color: GOLD, border: `1px solid rgba(201,162,39,0.4)` }}
       >

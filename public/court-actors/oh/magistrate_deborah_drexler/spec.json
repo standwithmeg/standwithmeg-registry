@@ -12,45 +12,53 @@
     "court_or_county": "Allen",
     "state": "Ohio",
     "state_abbr": "OH",
-    "mention_count": 2,
+    "mention_count": 4,
     "family_count": 3,
     "public_family_count": 3,
     "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
-    "actor_report_count": 2,
+    "actor_report_count": 4,
     "supabase_row_ids": [
       "5c6b33a3-873c-4c4f-ade6-0039f6773184",
-      "8b7a2f6d-d1e0-4af9-b0cf-2afb3f2ed737"
+      "8b7a2f6d-d1e0-4af9-b0cf-2afb3f2ed737",
+      "9371326b-8304-4800-ae0e-eca8785fdb80",
+      "336d23c6-3a2e-4a8a-a74f-71104ee78a2f"
     ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "ohio/magistrate_deborah_drexler/image_1080.png",
+    "path": "public/court-actors/oh/magistrate_deborah_drexler/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 151,
-    "total_submissions": 194,
-    "avg_financial_loss": 121090.61,
+    "families_approved": 152,
+    "total_submissions": 195,
+    "avg_financial_loss": 120428.4,
     "avg_months_lost": 29.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OH",
-    "state_family_count": 194,
-    "median_financial_loss": 82500,
-    "median_burden_sample_size": 95,
+    "state_family_count": 195,
+    "median_financial_loss": 81250,
+    "median_burden_sample_size": 96,
     "median_months_lost": 18,
-    "pro_se_pct": 56.2,
+    "pro_se_pct": 55.9,
     "pro_se_count": 109,
-    "_pdf_state_family_count": 194,
+    "_pdf_state_family_count": 195,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3642,
+  "movement_total": 3649,
   "supabase": {
-    "report_count": 2,
-    "actor_report_count": 2,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 3,
     "family_reports": [
+      {
+        "body": "The court is destroying my child. He’s being abused and neglected by his dad…",
+        "state": "OH",
+        "county": "Allen",
+        "row_id": "81f87716-197d-4827-bed2-e3eb38414afb"
+      },
       {
         "body": "The court stole my daughter and trafficked her to a pedophile, all for financial…",
         "state": "OH",
@@ -66,14 +74,22 @@
     ],
     "public_comments": [
       {
+        "comment_text": "She continues to downplay everything, not take the child’s best interest in mind, even after proving abuse, and possible pedophilia she let the dad continue having joint custody. I proved he’s been attacking me, and a lot of other post separation abuse, and she does nothing. The county Prosecutor said that if I could get something from family court, proving that what he’s doing to me has nothing to do with the child, then he can prosecute. Family court won’t…",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Allen"
+      },
+      {
         "comment_text": "Denied all rights, placed my daughter with her pedophile father, denied all evidence of abuse to my daughter. Gave me a gag order and tampered with court records.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Allen"
       },
       {
         "comment_text": "Magistrate not Judge",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Allen County"
       }
     ]
   },

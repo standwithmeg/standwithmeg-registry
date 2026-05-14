@@ -46,7 +46,7 @@
     "_pdf_state_family_count": 58,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3642,
+  "movement_total": 3649,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -75,17 +75,20 @@
       {
         "comment_text": "Not conducting an independent study, filling false documentation into court, Lying on the stand.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Winona County MN"
       },
       {
         "comment_text": "She failed to do her job. She never evaluated, visited or spoke with anyone",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Winona"
       },
       {
         "comment_text": "Refused documents",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Winona"
       }
     ]
   },

@@ -12,45 +12,59 @@
     "court_or_county": "Orange",
     "state": "California",
     "state_abbr": "CA",
-    "mention_count": 2,
+    "mention_count": 4,
     "family_count": 3,
     "public_family_count": 3,
     "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
-    "actor_report_count": 2,
+    "actor_report_count": 4,
     "supabase_row_ids": [
       "543e9ddf-f2f7-4952-a4aa-7df5e7e34736",
-      "396fe1e0-08b8-4b88-b936-e029f87348d2"
+      "396fe1e0-08b8-4b88-b936-e029f87348d2",
+      "46216f37-b7c0-438f-8c8e-973af43d25f8",
+      "4330c777-e82c-4425-8715-3adc883e0019"
     ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "california/michelle_bell/image_1080.png",
+    "path": "public/court-actors/ca/michelle_bell/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 259,
-    "total_submissions": 326,
-    "avg_financial_loss": 285779.63,
-    "avg_months_lost": 37.0,
+    "total_submissions": 327,
+    "avg_financial_loss": 284758.99,
+    "avg_months_lost": 36.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CA",
-    "state_family_count": 326,
+    "state_family_count": 327,
     "median_financial_loss": 285000,
     "median_burden_sample_size": 153,
     "median_months_lost": 20,
-    "pro_se_pct": 56.4,
-    "pro_se_count": 184,
-    "_pdf_state_family_count": 326,
+    "pro_se_pct": 56.6,
+    "pro_se_count": 185,
+    "_pdf_state_family_count": 327,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3642,
+  "movement_total": 3649,
   "supabase": {
-    "report_count": 2,
-    "actor_report_count": 2,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 3,
     "family_reports": [
+      {
+        "body": "They used the courts to turn a present, involved father into a visitor in…",
+        "state": "CA",
+        "county": "Orange County",
+        "row_id": "e47cf812-3969-42a2-b1d1-eab7ec1e203b"
+      },
+      {
+        "body": "Permanent fracturing of child-mother bond. Orange County, CA = Complete Corruption!",
+        "state": "CA",
+        "county": "Orange",
+        "row_id": "55418383-edee-4dc2-bacb-5ad337af2ed6"
+      },
       {
         "body": "Destroyed me emotionally and financially. Revoked my parental role.",
         "state": "CA",
@@ -60,14 +74,22 @@
     ],
     "public_comments": [
       {
-        "comment_text": "Issued prejudiced orders, ignored/forgot standard cost procedures, ignored evidence,",
+        "comment_text": "• Denied ex parte request • Awarded ex-wife sole legal custody based on allegations later acknowledged during the ruling to be false or unsupported • Failure to review and/or properly weigh all evidence presented • Failure to award sanctions against opposing counsel despite documented concerns • Ordered reimbursement of 20% of ex-wife’s legal fees based on allegedly false Income and Expense Declaration • Refused to consider evidence contradicting Income and Expense Declaration claims • Applied incorrect legal standard in custody…",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lamoreaux Justice Center"
       },
       {
-        "comment_text": "Issued unlawful orders. Prejudiced. Ignored or forgot standard court procedures.",
+        "comment_text": "Does not look into the history of cases, illegal/out of jurisdiction orders, misconduct.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Orange"
+      },
+      {
+        "comment_text": "Issued prejudiced orders, ignored/forgot standard cost procedures, ignored evidence,",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Orange"
       }
     ]
   },

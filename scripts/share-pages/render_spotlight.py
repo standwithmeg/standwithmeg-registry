@@ -25,13 +25,22 @@ import argparse
 import html
 import json
 import math
+import os
 import re
 import shutil
 import sys
 from pathlib import Path
 from typing import Any
 
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
+SCRIPT_DIR = Path(__file__).resolve().parent
+if SCRIPT_DIR.name == "share-pages":
+    WEBSITE_ROOT = SCRIPT_DIR.parent.parent
+    PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent / ".share-pages-work"
+    PROJECT_ROOT = Path(os.environ.get("SWM_SHARE_WORKDIR", PROJECT_ROOT)).resolve()
+    PHOTO_ROOT = Path(os.environ.get("SWM_PHOTO_ROOT", WEBSITE_ROOT)).resolve()
+else:
+    WEBSITE_ROOT = PROJECT_ROOT = SCRIPT_DIR.parent
+    PHOTO_ROOT = PROJECT_ROOT
 NEW_TEMPLATE_ROOT = PROJECT_ROOT / "New Final Post and Capcut template"
 EXPORT_ROOT = NEW_TEMPLATE_ROOT / "export"
 
@@ -272,7 +281,8 @@ def photo_block(spec: dict, web_mode: bool = False) -> str:
     photo = spec.get("photo") or {}
     rel = photo.get("path")
     if photo.get("exists") and rel:
-        full = (PROJECT_ROOT / rel).resolve()
+        rel_path = Path(rel)
+        full = (rel_path if rel_path.is_absolute() else (PHOTO_ROOT / rel_path)).resolve()
         try:
             cache_bust = f"?v={int(full.stat().st_mtime)}" if full.exists() else ""
         except OSError:

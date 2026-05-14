@@ -1,0 +1,108 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "danny_phillips",
+    "display_name": "Danny Phillips",
+    "title": "",
+    "first_name": "Danny",
+    "last_name": "Phillips",
+    "role": "Other",
+    "court": "Leon",
+    "county": null,
+    "court_or_county": "Leon",
+    "state": "Florida",
+    "state_abbr": "FL",
+    "mention_count": 4,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "3ce69a55-7139-454f-be01-b6e9f7d63b78",
+      "461d976c-22ed-418b-8808-c9a9580cfb5f",
+      "730d9d5c-8e03-430d-8d48-9a3412ee9c02",
+      "a1e59325-8ae5-4da6-9267-66a9550ba224"
+    ],
+    "actor_row_id": "3ce69a55-7139-454f-be01-b6e9f7d63b78",
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/fl/danny_phillips/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 155,
+    "total_submissions": 210,
+    "avg_financial_loss": 200683.92,
+    "avg_months_lost": 30.7,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "FL",
+    "state_family_count": 210,
+    "median_financial_loss": 226000,
+    "median_burden_sample_size": 89,
+    "median_months_lost": 18,
+    "pro_se_pct": 58.6,
+    "pro_se_count": 123,
+    "_pdf_state_family_count": 210,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 3649,
+  "supabase": {
+    "report_count": 4,
+    "actor_report_count": 4,
+    "family_count": 3,
+    "family_reports": [
+      {
+        "body": "Years of conflict within the family court system caused financial devastation, stress-related health complications,…",
+        "state": "FL",
+        "county": "Leon County",
+        "row_id": "7f28cc13-c697-4136-8169-a678c83a88be"
+      },
+      {
+        "body": "I expected the system to save me and my 6 children from 17 years…",
+        "state": "FL",
+        "county": "Leon",
+        "row_id": "e1db8870-7b51-4ef3-b79d-2599f5713349"
+      },
+      {
+        "body": "Family court has destroyed my children.",
+        "state": "FL",
+        "county": "Leon",
+        "row_id": "a01ca4a6-5047-4e42-a626-709059f29e2d"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Concerns have been raised regarding this attorney’s candor and professional conduct in court proceedings, including allegations that statements made in litigation have at times been inconsistent with the likely facts of the situation. Additional concerns relate to the attorney’s personal relationship with a former client whom he previously represented before later marrying. Critics argue that this history raises questions regarding professional boundaries, judgment, and potential ethical considerations surrounding attorney-client relationships. Taken together, these issues have contributed to broader concerns regarding…",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Leon"
+      },
+      {
+        "comment_text": "Spoke with me about the case for a period of time before disclosing he shared an office and paralegal with the opposing counsel. Filed a NOA as opposing counsel afterwards.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Leon County"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/danny_phillips",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/florida/danny_phillips/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

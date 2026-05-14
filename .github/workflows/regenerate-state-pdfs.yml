@@ -1,4 +1,4 @@
-name: Regenerate State PDFs
+name: Regenerate State PDFs and Actor Shares
 
 # Triggers:
 #   - Every day at 07:00 UTC (03:00 ET) — covers overnight submissions
@@ -78,6 +78,18 @@ jobs:
             python scripts/pdf/sync_public_state_reports.py --prune --require-all
           fi
 
+      - name: Regenerate court actor share pages
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          SWM_PUBLIC_API_BASE: https://my.standwithmeg.com
+        run: |
+          if [ -n "${{ github.event.inputs.state }}" ]; then
+            python scripts/share-pages/regenerate_deployed_actors.py --state "${{ github.event.inputs.state }}"
+          else
+            python scripts/share-pages/regenerate_deployed_actors.py
+          fi
+
       - name: Commit and push if changed
         # Use Meg's own GitHub identity so Vercel's Hobby-tier deploy gate
         # (only authorized team members can trigger deploys) accepts the
@@ -86,13 +98,13 @@ jobs:
           set -euo pipefail
           git config user.name  "Meghann Miller"
           git config user.email "founder@standwithmeg.com"
-          git add public/state-reports
+          git add public/state-reports public/court-actors
           if git diff --staged --quiet; then
-            echo "No PDF changes — nothing to commit."
+            echo "No PDF/share-page changes — nothing to commit."
             exit 0
           fi
           changed=$(git diff --staged --name-only | wc -l | tr -d ' ')
-          git commit -m "chore: auto-regenerate ${changed} state PDF(s) from live Supabase data"
+          git commit -m "chore: auto-regenerate ${changed} state PDF/share file(s) from live Supabase data"
 
           # Retry on push races. If main moved while we were regenerating
           # (Vercel deploy commit, another PR merge, a parallel run), rebase

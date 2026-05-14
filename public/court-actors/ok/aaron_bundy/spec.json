@@ -26,27 +26,27 @@
     "actor_bucket_key": "aron bundy|OK"
   },
   "photo": {
-    "path": "oklahoma/aaron_bundy/image_1080.png",
+    "path": "public/court-actors/ok/aaron_bundy/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 89,
-    "total_submissions": 109,
-    "avg_financial_loss": 113339.7,
-    "avg_months_lost": 28.1,
+    "families_approved": 90,
+    "total_submissions": 110,
+    "avg_financial_loss": 112217.52,
+    "avg_months_lost": 28.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OK",
-    "state_family_count": 109,
+    "state_family_count": 110,
     "median_financial_loss": 82000,
     "median_burden_sample_size": 57,
     "median_months_lost": 12,
-    "pro_se_pct": 45.9,
+    "pro_se_pct": 45.5,
     "pro_se_count": 50,
-    "_pdf_state_family_count": 109,
+    "_pdf_state_family_count": 110,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3642,
+  "movement_total": 3649,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -75,17 +75,20 @@
       {
         "comment_text": "To be disclosed if my testimony is required. I have paper, digital, and video evidence of all of my above statements. The judge dismissed all as evidence.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Wagoner"
       },
       {
         "comment_text": "Doesn’t respond to other atty emails in a timely manner. Plays delay tactic games",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Wagoner county"
       },
       {
         "comment_text": "Delayed hearings, stalled case for years. Ignored evidence",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Wagoner county"
       }
     ]
   },

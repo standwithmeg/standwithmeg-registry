@@ -12,46 +12,53 @@
     "court_or_county": "Okmulgee county",
     "state": "Oklahoma",
     "state_abbr": "OK",
-    "mention_count": 3,
+    "mention_count": 4,
     "family_count": 4,
     "public_family_count": 4,
     "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
-    "actor_report_count": 3,
+    "actor_report_count": 4,
     "supabase_row_ids": [
       "93afafa5-c00b-46c3-a78a-f8aa69cf3bb2",
       "4deee429-973b-46da-bb2e-1d23f3559f18",
-      "695be153-e464-4857-ae83-b2d6f9488aa0"
+      "695be153-e464-4857-ae83-b2d6f9488aa0",
+      "43f27e93-0cb9-431d-aabd-52afd76fbd09"
     ],
     "actor_row_id": "93afafa5-c00b-46c3-a78a-f8aa69cf3bb2",
     "actor_bucket_key": "cynthia pickering|OK"
   },
   "photo": {
-    "path": "oklahoma/cynthia_pickering/image_1080.png",
+    "path": "public/court-actors/ok/cynthia_pickering/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 89,
-    "total_submissions": 109,
-    "avg_financial_loss": 113339.7,
-    "avg_months_lost": 28.1,
+    "families_approved": 90,
+    "total_submissions": 110,
+    "avg_financial_loss": 112217.52,
+    "avg_months_lost": 28.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OK",
-    "state_family_count": 109,
+    "state_family_count": 110,
     "median_financial_loss": 82000,
     "median_burden_sample_size": 57,
     "median_months_lost": 12,
-    "pro_se_pct": 45.9,
+    "pro_se_pct": 45.5,
     "pro_se_count": 50,
-    "_pdf_state_family_count": 109,
+    "_pdf_state_family_count": 110,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3642,
+  "movement_total": 3649,
   "supabase": {
-    "report_count": 3,
-    "actor_report_count": 3,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 4,
     "family_reports": [
+      {
+        "body": "My DHS worker stated that you will be a great roll model for your…",
+        "state": "OK",
+        "county": "Okmulgee",
+        "row_id": "1560faf3-b02d-4429-9d98-442b401845b9"
+      },
       {
         "body": "This system has torn our family apart, stripping me of my child through false…",
         "state": "OK",
@@ -67,19 +74,28 @@
     ],
     "public_comments": [
       {
-        "comment_text": "Took my kids in an ex parte guardianship with no evidence other than a sworn statement from my abusers parents and him terminating his legal rights to them. I'm currently…",
+        "comment_text": "Took my kids in an ex parte guardianship with no evidence other than a sworn statement from my abusers parents and him terminating his legal rights to them. I'm currently facing arraignment for indirect contempt for speaking about my case and answering my kids messages when they ran away from abuse suffered at the home of the guardians/ paternal grandparents",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Okmulgee county"
       },
       {
-        "comment_text": "She has left it up to the attorneys to figure out details regarding visitations and we have not been to court since. Even though the schedules are not being followed…",
+        "comment_text": "My son and his wife were telling doctors and other people that I had been doing drugs while I was pregnant with my daughter. The judge told them that they had to correct that statement and tell everyone that it was untrue. She did not do anything about the inappropriate letter that was not true. I still lost my being able to contact my daughter.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Okmulgee"
       },
       {
-        "comment_text": "Ignored evidence on my part. Had a private meeting with the defendants attorney without my attorney present with lead the defendant to know exactly how our case was going to…",
+        "comment_text": "Ignored evidence on my part. Had a private meeting with the defendants attorney without my attorney present with lead the defendant to know exactly how our case was going to turn out.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Okmulgee county family court"
+      },
+      {
+        "comment_text": "She has left it up to the attorneys to figure out details regarding visitations and we have not been to court since. Even though the schedules are not being followed correctly.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Okmulgee"
       }
     ]
   },

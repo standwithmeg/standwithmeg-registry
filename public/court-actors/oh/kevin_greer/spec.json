@@ -27,27 +27,27 @@
     "actor_bucket_key": "kevin grer|OH"
   },
   "photo": {
-    "path": "ohio/kevin_greer/image_1080.png",
+    "path": "public/court-actors/oh/kevin_greer/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 151,
-    "total_submissions": 194,
-    "avg_financial_loss": 121090.61,
+    "families_approved": 152,
+    "total_submissions": 195,
+    "avg_financial_loss": 120428.4,
     "avg_months_lost": 29.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OH",
-    "state_family_count": 194,
-    "median_financial_loss": 82500,
-    "median_burden_sample_size": 95,
+    "state_family_count": 195,
+    "median_financial_loss": 81250,
+    "median_burden_sample_size": 96,
     "median_months_lost": 18,
-    "pro_se_pct": 56.2,
+    "pro_se_pct": 55.9,
     "pro_se_count": 109,
-    "_pdf_state_family_count": 194,
+    "_pdf_state_family_count": 195,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3642,
+  "movement_total": 3649,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -74,24 +74,28 @@
     ],
     "public_comments": [
       {
-        "comment_text": "Denied motion, ignored evidence",
+        "comment_text": "Denied motion and ignored evidence!! None of them did their job they made up everything. The judge didn’t want to listen to us whatsoever that we gave him evidence and they didn’t show him any evidence and that he ruled with them over us. He delayed hearings gave them more time biased, he didn’t sign half of his records he had to click record sign it things like that you can put well. She really really wasn’t on our case…",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Highland"
       },
       {
-        "comment_text": "Denied motion and ignored evidence!! None of them did their job they made up everything. The judge didn’t want to listen to us whatsoever that we gave him evidence and…",
+        "comment_text": "The night motions with clearing convicted evidence that we were telling the truth we had proof of everything house pay rent all the time it took receipts look presentable all that, and he still decided to go with them",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Highland county"
       },
       {
         "comment_text": "Ignored my evidence and motions filed throughout case, terminating my rights.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Highland County Court of Common Pleas"
       },
       {
-        "comment_text": "He ignored my evidence and motions with my evidence attached to them, and believed the prosecutor and the hospital",
+        "comment_text": "Denied motion, ignored evidence",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Highland"
       }
     ]
   },

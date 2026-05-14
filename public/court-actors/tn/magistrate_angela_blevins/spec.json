@@ -29,7 +29,7 @@
     "actor_bucket_key": "angela blevins|TN"
   },
   "photo": {
-    "path": "tennessee/28_angela_blevins/image_1080.png",
+    "path": "public/court-actors/tn/magistrate_angela_blevins/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -49,7 +49,7 @@
     "_pdf_state_family_count": 94,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3642,
+  "movement_total": 3649,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
@@ -76,34 +76,28 @@
     ],
     "public_comments": [
       {
-        "comment_text": "Magistrate Blevens combined Two separate cases to the detriment of my son, but for her own convenience. Magistrate Blevens removed my son from the home against protocol. There is definitely…",
+        "comment_text": "She ignored a negative drug screen that was submitted by my attorney she deemed me uncredible because I didn't fill out custody papers correctly and kept my kids in custody and threatened me saying that my rights could be terminated and I needed to watch myself",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Knoxville"
       },
       {
-        "comment_text": "She would not let us testify in our own defense. And was making joking remarks about how there was no way we were getting our kids back. She is corrupt,…",
+        "comment_text": "She would not let us testify in our own defense. And was making joking remarks about how there was no way we were getting our kids back. She is corrupt, an absolute deviant, and should be in prison - has no business medling with families' lives.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Knox County Juvenile Court"
       },
       {
-        "comment_text": "She ignored a negative drug screen that was submitted by my attorney she deemed me uncredible because I didn't fill out custody papers correctly and kept my kids in custody…",
+        "comment_text": "Magistrate Blevens combined Two separate cases to the detriment of my son, but for her own convenience. Magistrate Blevens removed my son from the home against protocol. There is definitely judicial Bias, in my opinion.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Knox"
       },
       {
-        "comment_text": "Told is “ spoiler alert, your kids are staying in foster care” without hearing any evidence. Refused to hear us.",
+        "comment_text": "Talked with GAL privately before our court hearing, and granted temporary custody order IPA? to family friend’s without explaining why.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "Blevins signed an order to remove our children while under federal review, essentially completely kidnapping out boys. Never allowed is to show evidence. All the while keeping our precious babies…",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "She ignored evidence contradicting dcs's alleged drug test she did not listen to my a&d assessor she labeled me as incredible for no reason",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Knoxville"
       }
     ]
   },

@@ -29,14 +29,14 @@
     "actor_bucket_key": "cathrin conklin|UT"
   },
   "photo": {
-    "path": "utah/cathrin_conklin/image_1080.png",
+    "path": "public/court-actors/ut/cathrin_conklin/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 30,
     "total_submissions": 41,
-    "avg_financial_loss": 277652.51,
+    "avg_financial_loss": 289480.08,
     "avg_months_lost": 18.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "UT",
@@ -49,7 +49,7 @@
     "_pdf_state_family_count": 41,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3642,
+  "movement_total": 3649,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
@@ -104,7 +104,8 @@
   },
   "export_dir": "New Final Post and Capcut template/export/cathrin_conklin",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='UT'"
+    "public_family_count_api: no actors returned for state='UT'",
+    "pdf_public_actor: no 'Cathrin Conklin' in cache for UT"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",

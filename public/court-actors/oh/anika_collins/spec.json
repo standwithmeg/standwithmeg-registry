@@ -3,8 +3,8 @@
   "actor": {
     "slug": "anika_collins",
     "display_name": "Hon. Anneka P. Collins",
-    "title": "",
-    "first_name": "Hon. Anneka P.",
+    "title": "Hon.",
+    "first_name": "Anneka P.",
     "last_name": "Collins",
     "role": "Judge",
     "court": null,
@@ -19,37 +19,30 @@
     "actor_report_count": null,
     "supabase_row_ids": null,
     "actor_row_id": null,
-    "actor_bucket_key": null,
-    "_overrides_applied": [
-      "display_name",
-      "first_name",
-      "last_name",
-      "role",
-      "title"
-    ]
+    "actor_bucket_key": null
   },
   "photo": {
-    "path": null,
-    "exists": false,
+    "path": "public/court-actors/oh/anika_collins/image_1080.png",
+    "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 151,
-    "total_submissions": 194,
-    "avg_financial_loss": 121090.61,
+    "families_approved": 152,
+    "total_submissions": 195,
+    "avg_financial_loss": 120428.4,
     "avg_months_lost": 29.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OH",
-    "state_family_count": 194,
-    "median_financial_loss": 82500,
-    "median_burden_sample_size": 95,
+    "state_family_count": 195,
+    "median_financial_loss": 81250,
+    "median_burden_sample_size": 96,
     "median_months_lost": 18,
-    "pro_se_pct": 56.2,
+    "pro_se_pct": 55.9,
     "pro_se_count": 109,
-    "_pdf_state_family_count": 194,
+    "_pdf_state_family_count": 195,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3643,
+  "movement_total": 3649,
   "supabase": {
     "report_count": null,
     "actor_report_count": null,
@@ -59,7 +52,8 @@
   },
   "export_dir": "New Final Post and Capcut template/export/anika_collins",
   "unresolved": [
-    "court_actors: no rows match name~'Hon. Anneka P. Collins' state='OH'"
+    "court_actors: no rows match name~'Hon. Anneka P. Collins' state='OH'",
+    "pdf_public_actor: no 'Hon. Anneka P. Collins' in cache for OH"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",

@@ -26,7 +26,7 @@
     "actor_bucket_key": "dev haegele|MT"
   },
   "photo": {
-    "path": "montana/Dev Haegele CPS worker MT.png",
+    "path": "public/court-actors/mt/dev_haegele/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -46,7 +46,7 @@
     "_pdf_state_family_count": 42,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3642,
+  "movement_total": 3649,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -67,19 +67,22 @@
     ],
     "public_comments": [
       {
-        "comment_text": "CPS worker. She is allowing the kids to stay in an abusive environment. Treats the kinship foster parents extremely bad",
+        "comment_text": "She came on the case and the 1st visit she was terrible to us. Then said she was returning the kids to the abusive parents. We are the aunt and uncle to the birth mother.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
       },
       {
-        "comment_text": "She came on the case and the 1st visit she was terrible to us. Then said she was returning the kids to the abusive parents. We are the aunt and…",
+        "comment_text": "CPS worker. She is allowing the kids to stay in an abusive environment. Treats the kinship foster parents extremely bad",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Flathead County"
       },
       {
         "comment_text": "She lies and put children in harms way all the time",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Flathead"
       }
     ]
   },

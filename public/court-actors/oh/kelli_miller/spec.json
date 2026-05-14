@@ -28,27 +28,27 @@
     "actor_bucket_key": "keli miler|OH"
   },
   "photo": {
-    "path": "ohio/kelli_miller/image_1080.png",
+    "path": "public/court-actors/oh/kelli_miller/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 151,
-    "total_submissions": 194,
-    "avg_financial_loss": 121090.61,
+    "families_approved": 152,
+    "total_submissions": 195,
+    "avg_financial_loss": 120428.4,
     "avg_months_lost": 29.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OH",
-    "state_family_count": 194,
-    "median_financial_loss": 82500,
-    "median_burden_sample_size": 95,
+    "state_family_count": 195,
+    "median_financial_loss": 81250,
+    "median_burden_sample_size": 96,
     "median_months_lost": 18,
-    "pro_se_pct": 56.2,
+    "pro_se_pct": 55.9,
     "pro_se_count": 109,
-    "_pdf_state_family_count": 194,
+    "_pdf_state_family_count": 195,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3642,
+  "movement_total": 3649,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -87,29 +87,28 @@
     ],
     "public_comments": [
       {
-        "comment_text": "Perjury, met children one time, attended my sons criminal hearing with foster parents. Trial by ambush.",
+        "comment_text": "Said I was unsafe, never did background check or home study. Said I didn’t protect my grandchildren when in fact I had and always have. Had him since he was 2 months old every single weekend. She filed a false report stating FRESH RIBS PLURAL and that he was SEEN in person by their doctor- a lie. He had a single old hairline fix rib nobody knew about.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Hancock county cps"
       },
       {
-        "comment_text": "Falsified reports, changed drug test to a positive. Changed documents after signed. Lied on the stand. Claimed to attempt a home visit when no contact was ever made. Also claimed…",
+        "comment_text": "Falsified reports, changed drug test to a positive. Changed documents after signed. Lied on the stand. Claimed to attempt a home visit when no contact was ever made. Also claimed that home visits were denied but were done every month and recording of them prove it.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "Lied on stand. Did NOT contact any family. Never returned phone calls for outreach and placement. Did dual roles at agency. Abuse of power and relatiation.",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Hancock"
       },
       {
         "comment_text": "She altered drugs tests lied twisted everything said my son was adopted he has not been pay childsupport currently no visits or contact or response from cps or family court",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Hancock county cps"
       },
       {
-        "comment_text": "Said I was unsafe, never did background check or home study. Said I didn’t protect my grandchildren when in fact I had and always have. Had him since he was…",
+        "comment_text": "Lied on stand. Did NOT contact any family. Never returned phone calls for outreach and placement. Did dual roles at agency. Abuse of power and relatiation.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Hancock"
       }
     ]
   },

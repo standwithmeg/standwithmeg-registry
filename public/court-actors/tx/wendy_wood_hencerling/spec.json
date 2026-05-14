@@ -12,42 +12,44 @@
     "court_or_county": "Brazos County",
     "state": "Texas",
     "state_abbr": "TX",
-    "mention_count": 1,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
     "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
-    "actor_report_count": 1,
+    "actor_report_count": 3,
     "supabase_row_ids": [
-      "a402dc7a-b6a5-4425-8596-d6f565567178"
+      "a402dc7a-b6a5-4425-8596-d6f565567178",
+      "5b769424-f9b6-4e53-a123-ca5a92465a09",
+      "b2ef4dab-fd49-4504-9962-8f1d69e7cab2"
     ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "texas/wendy_wood_hencerling/image_1080.png",
+    "path": "public/court-actors/tx/wendy_wood_hencerling/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 163,
-    "total_submissions": 217,
-    "avg_financial_loss": 225972.5,
+    "total_submissions": 218,
+    "avg_financial_loss": 224764.09,
     "avg_months_lost": 31.1,
     "_source_table": "movement_stats_by_state",
     "_match_value": "TX",
-    "state_family_count": 217,
+    "state_family_count": 218,
     "median_financial_loss": 134677,
     "median_burden_sample_size": 102,
     "median_months_lost": 18,
-    "pro_se_pct": 47.5,
+    "pro_se_pct": 47.2,
     "pro_se_count": 103,
-    "_pdf_state_family_count": 217,
+    "_pdf_state_family_count": 218,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3642,
+  "movement_total": 3649,
   "supabase": {
-    "report_count": 1,
-    "actor_report_count": 1,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
     "family_reports": [
       {
@@ -55,19 +57,32 @@
         "state": "TX",
         "county": "Brazos",
         "row_id": "1a43f4f9-ba94-4866-a487-ecb2efa13962"
+      },
+      {
+        "body": "The Brazos County court system has left my family deeply fractured after I was…",
+        "state": "TX",
+        "county": "Brazos",
+        "row_id": "6c6e99b2-fe66-4ea6-a619-ddf6ac68a551"
       }
     ],
     "public_comments": [
       {
-        "comment_text": "Denied my due process as she allowed my ex-wife 40 minutes to testify and allowed me 8 minutes to testify. Same actor as Wendy Wood Hencerling and Wendy Wood-Hencerling Same…",
+        "comment_text": "Ignored evidence, repeatedly mimicked me or spoke down to me, constantly made side bar comments, ignored all facts and evidence that I presented and only acknowledged the word of mouth that the opposing attorney put forth, delayed all hearings ,denied my indigency without even looking at one paper, one paycheck, one anything from me, gave false legal definitions, retaliated when I filed for appeal by taking even more time from me.",
         "author": "Anonymous parent",
-        "source": "court_actor_comment_merges",
-        "row_id": "a402dc7a-b6a5-4425-8596-d6f565567178"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Brazos"
       },
       {
-        "comment_text": "Denied my due process as she allowed my ex-wife 40 minutes to testify and allowed me 8 minutes to testify.",
+        "comment_text": "Denied my due process as she allowed my ex-wife 40 minutes to testify and allowed me 8 minutes to testify. Same actor as Wendy Wood Hencerling and Wendy Wood-Hencerling Same actor as Wendy Wood Hencerling",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Brazos County"
+      },
+      {
+        "comment_text": "- day of court appeal judge got changed to her court room (with her stepping in as Judge) even though it was her previous court case that was being appealed",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Brazos County"
       }
     ]
   },

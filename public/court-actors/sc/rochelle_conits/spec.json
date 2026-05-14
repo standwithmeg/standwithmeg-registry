@@ -12,21 +12,22 @@
     "court_or_county": "County not listed",
     "state": "South Carolina",
     "state_abbr": "SC",
-    "mention_count": 3,
+    "mention_count": 4,
     "family_count": 3,
     "public_family_count": 3,
     "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
-    "actor_report_count": 3,
+    "actor_report_count": 4,
     "supabase_row_ids": [
       "28d37c6e-b3f5-4040-ab3d-07759e06998d",
       "1660956e-6242-41d2-94b6-b081628981da",
-      "c41e87f8-3a1d-4cfe-9437-086a65b9f822"
+      "c41e87f8-3a1d-4cfe-9437-086a65b9f822",
+      "7802e04d-353b-442a-958e-58ae5b2cb564"
     ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "south_carolina/rochelle_conits/image_1080.png",
+    "path": "public/court-actors/sc/rochelle_conits/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -46,10 +47,10 @@
     "_pdf_state_family_count": 63,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3642,
+  "movement_total": 3649,
   "supabase": {
-    "report_count": 3,
-    "actor_report_count": 3,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 3,
     "family_reports": [
       {
@@ -67,14 +68,10 @@
     ],
     "public_comments": [
       {
-        "comment_text": "Explosive and could not control emotions, biased, lack of ethics",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
         "comment_text": "Violated our due process rights",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
       }
     ]
   },

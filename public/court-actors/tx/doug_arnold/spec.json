@@ -12,44 +12,51 @@
     "court_or_county": "Williamson County # 3",
     "state": "Texas",
     "state_abbr": "TX",
-    "mention_count": 1,
+    "mention_count": 2,
     "family_count": 3,
     "public_family_count": 3,
     "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
-    "actor_report_count": 1,
+    "actor_report_count": 2,
     "supabase_row_ids": [
-      "103aa724-5c55-4965-b0de-4aff3ca1978d"
+      "103aa724-5c55-4965-b0de-4aff3ca1978d",
+      "b3ca4eb2-4565-442b-a1e4-e2fb7af4de4a"
     ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "texas/doug_arnold/image_1080.png",
+    "path": "public/court-actors/tx/doug_arnold/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 163,
-    "total_submissions": 217,
-    "avg_financial_loss": 225972.5,
+    "total_submissions": 218,
+    "avg_financial_loss": 224764.09,
     "avg_months_lost": 31.1,
     "_source_table": "movement_stats_by_state",
     "_match_value": "TX",
-    "state_family_count": 217,
+    "state_family_count": 218,
     "median_financial_loss": 134677,
     "median_burden_sample_size": 102,
     "median_months_lost": 18,
-    "pro_se_pct": 47.5,
+    "pro_se_pct": 47.2,
     "pro_se_count": 103,
-    "_pdf_state_family_count": 217,
+    "_pdf_state_family_count": 218,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3642,
+  "movement_total": 3649,
   "supabase": {
-    "report_count": 1,
-    "actor_report_count": 1,
+    "report_count": 2,
+    "actor_report_count": 2,
     "family_count": 3,
     "family_reports": [
+      {
+        "body": "Its driven a wedge in my life and made my child question everything they…",
+        "state": "TX",
+        "county": "Harris",
+        "row_id": "079b382e-9d9c-4b2c-a219-73c0bd9ae22c"
+      },
       {
         "body": "I would say the family court system is a joke, but it is not…",
         "state": "TX",
@@ -57,12 +64,23 @@
         "row_id": "dfe3677e-fb28-4ae9-ab60-21b29c45aa2d"
       }
     ],
-    "public_comments": []
+    "public_comments": [
+      {
+        "comment_text": "Not being herd or not feeling like im taken serious",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
+      },
+      {
+        "comment_text": "Ignored evidence; or the lack there of.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Harris"
+      }
+    ]
   },
   "export_dir": "New Final Post and Capcut template/export/doug_arnold",
-  "unresolved": [
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions · not court findings.",

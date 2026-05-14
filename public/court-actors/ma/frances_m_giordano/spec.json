@@ -12,20 +12,23 @@
     "court_or_county": "Essex",
     "state": "Massachusetts",
     "state_abbr": "MA",
-    "mention_count": 1,
+    "mention_count": 4,
     "family_count": 3,
     "public_family_count": 3,
     "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
-    "actor_report_count": 1,
+    "actor_report_count": 4,
     "supabase_row_ids": [
-      "cc950e98-0f09-477b-bbaa-4c5e30f0274e"
+      "cc950e98-0f09-477b-bbaa-4c5e30f0274e",
+      "69902b58-ed90-4c0a-9f93-2bb953ab8c08",
+      "fbff5334-ec8d-4fb0-8afd-b2b18d0bc262",
+      "c5f8336d-c5f4-4630-9ba4-1ec3d822eb1d"
     ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
   "photo": {
-    "path": null,
-    "exists": false,
+    "path": "public/court-actors/ma/frances_m_giordano/image_1080.png",
+    "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
@@ -44,12 +47,18 @@
     "_pdf_state_family_count": 66,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3643,
+  "movement_total": 3649,
   "supabase": {
-    "report_count": 1,
-    "actor_report_count": 1,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 3,
     "family_reports": [
+      {
+        "body": "Stripped us of everything in order to keep us stuck in the legal system…",
+        "state": "MA",
+        "county": "Essex County",
+        "row_id": "18c15191-3bd4-45f5-ab7f-3325e005d07a"
+      },
       {
         "body": "\"To give you an idea of what the last two years have looked like…",
         "state": "MA",
@@ -61,7 +70,14 @@
       {
         "comment_text": "Denied motions rushed to judgment told me that she doesn’t care what’s happened in the criminal court",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Essex"
+      },
+      {
+        "comment_text": "Evidence and testimony was ignored by the judge",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Essex County"
       }
     ]
   },

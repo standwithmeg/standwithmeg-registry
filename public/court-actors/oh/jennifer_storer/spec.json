@@ -14,8 +14,8 @@
     "state_abbr": "OH",
     "mention_count": 6,
     "family_count": 4,
-    "public_family_count": null,
-    "public_family_count_source": null,
+    "public_family_count": 4,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
     "actor_report_count": 6,
     "supabase_row_ids": [
       "2f9858c1-56aa-4d4d-b17e-f87cc2a004c3",
@@ -34,22 +34,22 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 151,
-    "total_submissions": 194,
-    "avg_financial_loss": 121090.61,
+    "families_approved": 152,
+    "total_submissions": 195,
+    "avg_financial_loss": 120428.4,
     "avg_months_lost": 29.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OH",
-    "state_family_count": 194,
-    "median_financial_loss": 82500,
-    "median_burden_sample_size": 95,
+    "state_family_count": 195,
+    "median_financial_loss": 81250,
+    "median_burden_sample_size": 96,
     "median_months_lost": 18,
-    "pro_se_pct": 56.2,
+    "pro_se_pct": 55.9,
     "pro_se_count": 109,
-    "_pdf_state_family_count": 194,
+    "_pdf_state_family_count": 195,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3642,
+  "movement_total": 3649,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
@@ -110,7 +110,7 @@
   },
   "export_dir": "New Final Post and Capcut template/export/jennifer_storer",
   "unresolved": [
-    "public_family_count_api: no match for display_name='Jennifer storer' bucket='jenifer storer|OH' in OH (14 actors)"
+    "pdf_public_actor: no 'Jennifer storer' in cache for OH"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
