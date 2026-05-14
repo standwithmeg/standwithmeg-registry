@@ -1,0 +1,91 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "wendy_wood_hencerling",
+    "display_name": "Wendy Wood Hencerling",
+    "title": "",
+    "first_name": "Wendy Wood",
+    "last_name": "Hencerling",
+    "role": "Judge",
+    "court": "Brazos County",
+    "county": null,
+    "court_or_county": "Brazos County",
+    "state": "Texas",
+    "state_abbr": "TX",
+    "mention_count": 1,
+    "family_count": 3,
+    "actor_report_count": 1,
+    "supabase_row_ids": [
+      "a402dc7a-b6a5-4425-8596-d6f565567178"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "texas/wendy_wood_hencerling/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 163,
+    "total_submissions": 217,
+    "avg_financial_loss": 225972.5,
+    "avg_months_lost": 31.1,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "TX",
+    "state_family_count": 217,
+    "median_months_lost": 18.5,
+    "median_financial_loss": 134677,
+    "median_burden_sample_size": 104,
+    "pro_se_count": 101,
+    "pro_se_pct": 47.9,
+    "children_impacted": 349,
+    "clean_sample_size": 211,
+    "raw_submission_count": 211
+  },
+  "movement_total": 3641,
+  "supabase": {
+    "report_count": 1,
+    "actor_report_count": 1,
+    "family_count": 3,
+    "family_reports": [
+      {
+        "body": "I lost precious years with my children, my successful business, and my reputation while…",
+        "state": "TX",
+        "county": "Brazos",
+        "row_id": "1a43f4f9-ba94-4866-a487-ecb2efa13962"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Denied my due process as she allowed my ex-wife 40 minutes to testify and allowed me 8 minutes to testify. Same actor as Wendy Wood Hencerling and Wendy Wood-Hencerling Same…",
+        "author": "Anonymous parent",
+        "source": "court_actor_comment_merges",
+        "row_id": "a402dc7a-b6a5-4425-8596-d6f565567178"
+      },
+      {
+        "comment_text": "Denied my due process as she allowed my ex-wife 40 minutes to testify and allowed me 8 minutes to testify.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/wendy_wood_hencerling",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/texas/wendy_wood_hencerling/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}
