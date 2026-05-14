@@ -1,0 +1,72 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "david_c_bonfiglio",
+    "display_name": "David C. Bonfiglio",
+    "title": "",
+    "first_name": "David C.",
+    "last_name": "Bonfiglio",
+    "role": null,
+    "court": null,
+    "county": null,
+    "court_or_county": null,
+    "state": "Indiana",
+    "state_abbr": "IN",
+    "mention_count": null,
+    "family_count": 3,
+    "actor_report_count": null,
+    "supabase_row_ids": null,
+    "actor_row_id": null,
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "indiana/david_c_bonfiglio/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 67,
+    "total_submissions": 84,
+    "avg_financial_loss": 125855.28,
+    "avg_months_lost": 33.1,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "IN",
+    "state_family_count": 84,
+    "median_months_lost": 24.0,
+    "median_financial_loss": 59625,
+    "median_burden_sample_size": 36,
+    "pro_se_count": 37,
+    "pro_se_pct": 44.0,
+    "children_impacted": 134,
+    "clean_sample_size": 84,
+    "raw_submission_count": 84
+  },
+  "movement_total": 3641,
+  "supabase": {
+    "report_count": null,
+    "actor_report_count": null,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": []
+  },
+  "export_dir": "New Final Post and Capcut template/export/david_c_bonfiglio",
+  "unresolved": [
+    "court_actors: no rows match name~'David C. Bonfiglio' state='IN'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/indiana/david_c_bonfiglio/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}
