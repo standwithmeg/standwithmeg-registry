@@ -24,6 +24,7 @@ from typing import Any
 SCRIPT_DIR = Path(__file__).resolve().parent
 WEBSITE_ROOT = SCRIPT_DIR.parent.parent
 PUBLIC_ACTORS_DIR = WEBSITE_ROOT / "public" / "court-actors"
+MEG_INTRO_DIR = PUBLIC_ACTORS_DIR / "_assets" / "meg-intros"
 MANIFEST_PATH = PUBLIC_ACTORS_DIR / "manifest.json"
 WORK_DIR = Path(os.environ.get("SWM_SHARE_WORKDIR", tempfile.mkdtemp(prefix="swm-share-pages-"))).resolve()
 EXPORT_ROOT = WORK_DIR / "New Final Post and Capcut template" / "export"
@@ -105,8 +106,12 @@ def actor_outputs_exist(slug: str, state_abbr: str, render_frames: bool) -> bool
     actor_dir = PUBLIC_ACTORS_DIR / state_abbr.lower() / slug
     required = ["spec.json", "share.html"]
     if render_frames:
-        required.extend(f"frame-{i:02d}.jpg" for i in range(1, 7))
+        required.extend(f"frame-{i:02d}.jpg" for i in range(1, 8))
     return all((actor_dir / filename).exists() for filename in required)
+
+
+def meg_intro_path(state_abbr: str) -> Path:
+    return MEG_INTRO_DIR / f"meg_intro_{state_abbr.lower()}.jpg"
 
 
 def actor_name_key(name: Any) -> str:
@@ -175,6 +180,7 @@ def actor_input_hash(
     payload = {
         "actor": actor_hints,
         "photo_sha256": sha256_file(photo_path),
+        "meg_intro_sha256": sha256_file(meg_intro_path(state_abbr)),
         "public_actor_payload": public_payload,
         "state_stats": state_stats_by_state.get(state_abbr),
         "template_version": version_hash,
@@ -253,10 +259,32 @@ def copy_generated_assets(slug: str, state_abbr: str) -> None:
     generated_dir = EXPORT_ROOT / slug
     dest_dir = PUBLIC_ACTORS_DIR / state_abbr.lower() / slug
     dest_dir.mkdir(parents=True, exist_ok=True)
-    for filename in ("spec.json", "share.html", "frame-01.jpg", "frame-02.jpg", "frame-03.jpg", "frame-04.jpg", "frame-05.jpg", "frame-06.jpg"):
+    for filename in ("spec.json", "share.html", "frame-01.jpg"):
         src = generated_dir / filename
         if src.exists():
             shutil.copy2(src, dest_dir / filename)
+    meg_src = meg_intro_path(state_abbr)
+    if meg_src.exists():
+        shutil.copy2(meg_src, dest_dir / "frame-02.jpg")
+    else:
+        print(f"[meg-intro] missing meg_intro_{state_abbr.lower()}.jpg - falling back to generated frame-02 for slug={slug}", file=sys.stderr)
+        src = generated_dir / "frame-02.jpg"
+        if src.exists():
+            shutil.copy2(src, dest_dir / "frame-02.jpg")
+    for filename in ("frame-03.jpg", "frame-04.jpg", "frame-05.jpg", "frame-06.jpg", "frame-07.jpg"):
+        src = generated_dir / filename
+        if src.exists():
+            shutil.copy2(src, dest_dir / filename)
+
+
+def prepare_generated_meg_intro(slug: str, state_abbr: str) -> None:
+    meg_src = meg_intro_path(state_abbr)
+    if not meg_src.exists():
+        print(f"[meg-intro] missing meg_intro_{state_abbr.lower()}.jpg - frame-02 image may be blank for slug={slug}", file=sys.stderr)
+        return
+    generated_dir = EXPORT_ROOT / slug
+    generated_dir.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(meg_src, generated_dir / "frame-02.jpg")
 
 
 def rewrite_manifest() -> None:
@@ -374,6 +402,8 @@ def main(argv: list[str]) -> int:
             results.append(ActorResult(label, slug, state_abbr, old_count, "-", "render failed"))
             print(err or out, file=sys.stderr)
             continue
+
+        prepare_generated_meg_intro(slug, state_abbr)
 
         if not args.skip_frames:
             code, out, err = run([sys.executable, "scripts/share-pages/prerender_frames.py", slug], env)

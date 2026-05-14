@@ -31,7 +31,7 @@ def prerender_one(slug: str, page) -> tuple[bool, str]:
     page.wait_for_timeout(300)
 
     saved = 0
-    for i in range(1, 7):
+    for i in range(1, 8):
         frame_id = f"frame-{i:02d}"
         try:
             locator = page.locator(f"#{frame_id}")

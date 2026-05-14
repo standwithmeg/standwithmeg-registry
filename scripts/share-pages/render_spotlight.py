@@ -8,8 +8,9 @@ Implements the Spotlight Stories v2 design vocabulary
  - STATE OF [state] yellow stamp top-right on every frame
  - JetBrains Mono top-left frame tags
  - Anton huge headlines, Fraunces italic serif accents
- - Frame 2 "KEEP US" red highlight bar + rotated "NOT ANY MORE!" stamp
- - Frame 3 ghost quote mark behind italic pull-quote
+ - Frame 2 Meg journalist intro image
+ - Frame 3 "KEEP US" red highlight bar + rotated "NOT ANY MORE!" stamp
+ - Frame 4 stacked family quotes
  - ActorIDStrip + MovementFoot at the bottom of every frame
 
 Reads:
@@ -139,7 +140,7 @@ def story_quote(spec: dict) -> tuple[str, str]:
 
 
 # ---------------------------------------------------------------------------
-# Multi-quote selection — prefers 4-6 short snippets for Frame 3
+# Multi-quote selection — prefers 4-6 short snippets for the quote frame
 # ---------------------------------------------------------------------------
 def _sanitize_quote_text(text: str) -> str:
     if not text:
@@ -195,7 +196,7 @@ def select_best_quote(text: str, char_budget: int = 140) -> str:
 
 
 def story_quotes(spec: dict, n: int = 3) -> list[dict]:
-    """Returns up to N {body, kind} dicts for Frame 3.
+    """Returns up to N {body, kind} dicts for the quote frame.
 
     Precedence — strict, EXCLUSIVE sources:
       1. spec.supabase.public_comments  (admin-curated court_actors.notes —
@@ -432,7 +433,7 @@ def frame_actions(num: int) -> str:
 
 
 # ---------------------------------------------------------------------------
-# Six frame compositions — matches Spotlight Stories v2.html
+# Seven frame compositions — matches Spotlight Stories v2.html
 # ---------------------------------------------------------------------------
 def frame_1_who(actor: dict, role: str, court: str, state: str, state_abbr: str, county: str,
                 actor_family_count: Any, state_family_count: Any, spec: dict, big_name_html: str,
@@ -485,16 +486,24 @@ def frame_1_who(actor: dict, role: str, court: str, state: str, state_abbr: str,
 """
 
 
-def frame_2_they_thought(state: str, state_abbr: str, county: str, first: str, last: str, role: str) -> str:
+def frame_2_meg_intro() -> str:
     return f"""
 <article class="frame f2" id="frame-02">
+  <img class="f2-meg-img" src="frame-02.jpg" alt="">
+</article>
+"""
+
+
+def frame_3_they_thought(state: str, state_abbr: str, county: str, first: str, last: str, role: str) -> str:
+    return f"""
+<article class="frame f3" id="frame-03">
   <div class="flag-bg">{flag_svg()}</div>
   <div class="grain"></div>
   <div class="scanlines"></div>
   <div class="vignette"></div>
   {state_badge(state, state_abbr, county)}
   {frame_tag("NOT ANY MORE")}
-  <div class="f2-headline">
+  <div class="f3-headline">
     <div class="display xl">
       THEY THOUGHT<br>
       THEY COULD<br>
@@ -510,9 +519,9 @@ def frame_2_they_thought(state: str, state_abbr: str, county: str, first: str, l
 """
 
 
-def frame_3_pull_quote(quotes: list[dict], state: str, state_abbr: str, county: str,
+def frame_4_pull_quote(quotes: list[dict], state: str, state_abbr: str, county: str,
                       first: str, last: str, role: str) -> str:
-    """Stacks up to 6 family quotes on Frame 3, each in italic Fraunces with a small
+    """Stacks up to 6 family quotes on Frame 4, each in italic Fraunces with a small
     crimson bullet and 'Anonymous parent · STATE' attribution."""
     if not quotes:
         # Fallback: single empathic placeholder so the frame still composes
@@ -524,25 +533,25 @@ def frame_3_pull_quote(quotes: list[dict], state: str, state_abbr: str, county: 
         if not body:
             continue
         quote_blocks.append(
-            f'<div class="f3-quote">'
-            f'<span class="f3-dot"></span>'
-            f'<p class="f3-text">{esc(body)}</p>'
-            f'<p class="f3-attr">— Anonymous parent · {esc(state_abbr.upper())}</p>'
+            f'<div class="f4-quote">'
+            f'<span class="f4-dot"></span>'
+            f'<p class="f4-text">{esc(body)}</p>'
+            f'<p class="f4-attr">— Anonymous parent · {esc(state_abbr.upper())}</p>'
             f'</div>'
         )
 
     quotes_html = "".join(quote_blocks)
-    quote_count_class = f" f3-count-{len(quote_blocks)}" if quote_blocks else ""
+    quote_count_class = f" f4-count-{len(quote_blocks)}" if quote_blocks else ""
 
     return f"""
-<article class="frame f3" id="frame-03">
+<article class="frame f4" id="frame-04">
   <div class="flag-bg flag-bg--faded">{flag_svg()}</div>
   <div class="grain"></div>
   <div class="scanlines"></div>
   <div class="vignette"></div>
   {state_badge(state, state_abbr, county)}
   {frame_tag("WHAT FAMILIES SAY")}
-  <div class="f3-body{quote_count_class}">
+  <div class="f4-body{quote_count_class}">
     {quotes_html}
   </div>
   {actor_id_strip(first, last, role, state)}
@@ -552,23 +561,23 @@ def frame_3_pull_quote(quotes: list[dict], state: str, state_abbr: str, county: 
 """
 
 
-def frame_4_counted(state: str, state_abbr: str, county: str, first: str, last: str, role: str,
+def frame_5_counted(state: str, state_abbr: str, county: str, first: str, last: str, role: str,
                    movement_total: Any) -> str:
     """Center content stacks as a flex column so each line gets its own
     vertical slot — no more overlap between the italic and the pattern."""
     return f"""
-<article class="frame f4" id="frame-04">
+<article class="frame f5" id="frame-05">
   <div class="flag-bg">{flag_svg()}</div>
   <div class="grain"></div>
   <div class="scanlines"></div>
   <div class="vignette"></div>
   {state_badge(state, state_abbr, county)}
   {frame_tag("COUNTED · PUBLIC RECORD")}
-  <div class="f4-stack">
-    <div class="f4-mega-number">{fmt_int(movement_total)}</div>
-    <div class="f4-mega-label">FAMILIES<br>NATIONWIDE</div>
-    <div class="f4-italic">— and now global.</div>
-    <div class="f4-pattern">
+  <div class="f5-stack">
+    <div class="f5-mega-number">{fmt_int(movement_total)}</div>
+    <div class="f5-mega-label">FAMILIES<br>NATIONWIDE</div>
+    <div class="f5-italic">— and now global.</div>
+    <div class="f5-pattern">
       Not an <span class="strike">ISOLATED</span> incident.<br>
       <span class="pattern-pill">A PATTERN.</span>
     </div>
@@ -580,7 +589,7 @@ def frame_4_counted(state: str, state_abbr: str, county: str, first: str, last: 
 """
 
 
-def frame_5_exposing(state: str, state_abbr: str, county: str, stats: dict) -> str:
+def frame_6_exposing(state: str, state_abbr: str, county: str, stats: dict) -> str:
     burden = fmt_money(first_nonempty(stats.get("median_financial_loss"), stats.get("avg_financial_loss")))
     pro_se = fmt_pct(stats.get("pro_se_pct"))
     months = fmt_months(first_nonempty(stats.get("median_months_lost"), stats.get("avg_months_lost")))
@@ -591,27 +600,27 @@ def frame_5_exposing(state: str, state_abbr: str, county: str, stats: dict) -> s
         n_families = 0
     hero_html = ""
     if n_families > 0:
-        hero_html = f"""    <div class="f5-hero-stat">
-      <div class="f5-hero-n">{n_families:,}</div>
-      <div class="f5-hero-l">FAMILIES IN<br>THE REGISTRY</div>
+        hero_html = f"""    <div class="f6-hero-stat">
+      <div class="f6-hero-n">{n_families:,}</div>
+      <div class="f6-hero-l">FAMILIES IN<br>THE REGISTRY</div>
     </div>
 """
     return f"""
-<article class="frame f5" id="frame-05">
+<article class="frame f6" id="frame-06">
   <div class="flag-bg">{flag_svg()}</div>
   <div class="grain"></div>
   <div class="scanlines"></div>
   <div class="vignette"></div>
   {state_badge(state, state_abbr, county)}
   {frame_tag("EXPOSING THE PATTERN")}
-  <div class="f5-headline">
+  <div class="f6-headline">
     What the<br>
     <span class="gold">government</span><br>
     is doing to<br>
     our families.
   </div>
-  <div class="f5-stats">
-    <div class="f5-stats-label">STATE OF {esc(state.upper())} · LIVE STATS</div>
+  <div class="f6-stats">
+    <div class="f6-stats-label">STATE OF {esc(state.upper())} · LIVE STATS</div>
 {hero_html}    <div class="stat-row">
       <span class="stat-n">{burden}</span>
       <span class="stat-l">MEDIAN FAMILY BURDEN</span>
@@ -631,30 +640,30 @@ def frame_5_exposing(state: str, state_abbr: str, county: str, stats: dict) -> s
 """
 
 
-def frame_6_stand_with_meg(state: str, state_abbr: str, county: str, movement_total: Any, cta: str) -> str:
+def frame_7_stand_with_meg(state: str, state_abbr: str, county: str, movement_total: Any, cta: str) -> str:
     return f"""
-<article class="frame f6" id="frame-06">
+<article class="frame f7" id="frame-07">
   <div class="flag-bg flag-bg--cover">{flag_svg()}</div>
   <div class="grain"></div>
   <div class="scanlines"></div>
   <div class="vignette"></div>
   {state_badge(state, state_abbr, county)}
   {frame_tag("JOIN THE MOVEMENT")}
-  <div class="f6-headline">
+  <div class="f7-headline">
     STAND<br>
-    <span class="red-bar f6-with">WITH</span><br>
+    <span class="red-bar f7-with">WITH</span><br>
     <span class="gold">MEG.</span>
   </div>
-  <div class="f6-cta-text">
-    Join over <b class="f6-count">{fmt_int(movement_total)}</b><br>
+  <div class="f7-cta-text">
+    Join over <b class="f7-count">{fmt_int(movement_total)}</b><br>
     families nationwide &amp; global<br>
     exposing the truth.
   </div>
-  <div class="f6-pill-stack">
-    <div class="f6-visit">VISIT</div>
+  <div class="f7-pill-stack">
+    <div class="f7-visit">VISIT</div>
     <div class="url-pill"><span class="dot"></span>{esc(cta).replace(' ↗', '').replace('↗', '')}</div>
   </div>
-  <div class="legal f6-legal">FAMILY-REPORTED · NOT COURT FINDINGS</div>
+  <div class="legal f7-legal">FAMILY-REPORTED · NOT COURT FINDINGS</div>
 </article>
 """
 
@@ -720,16 +729,17 @@ def render(spec: dict, web_mode: bool = False) -> str:
 
     cards = [
         frame_1_who(actor, role, court, state, state_abbr, county, actor_family_count, state_family_count, spec, big_name_html, web_mode=web_mode),
-        frame_2_they_thought(state, state_abbr, county, first, last, role),
-        frame_3_pull_quote(quotes_for_frame_3, state, state_abbr, county, first, last, role),
-        frame_4_counted(state, state_abbr, county, first, last, role, movement_total),
-        frame_5_exposing(state, state_abbr, county, stats),
-        frame_6_stand_with_meg(state, state_abbr, county, movement_total, cta),
+        frame_2_meg_intro(),
+        frame_3_they_thought(state, state_abbr, county, first, last, role),
+        frame_4_pull_quote(quotes_for_frame_3, state, state_abbr, county, first, last, role),
+        frame_5_counted(state, state_abbr, county, first, last, role, movement_total),
+        frame_6_exposing(state, state_abbr, county, stats),
+        frame_7_stand_with_meg(state, state_abbr, county, movement_total, cta),
     ]
 
     sections = "\n".join(
         f'<section class="phone-frame">{cards[i]}{frame_actions(i + 1)}</section>'
-        for i in range(6)
+        for i in range(7)
     )
 
     unresolved = spec.get("unresolved") or []
@@ -956,8 +966,14 @@ html,body {{ background:#06070A; color:var(--white); font-family:Inter,system-ui
   letter-spacing:.04em;
 }}
 
-/* Frame 2 — they thought */
-.f2-headline {{ position:absolute; left:5%; right:5%; top:22%; z-index:25; }}
+/* Frame 2 — Meg journalist intro */
+.f2-meg-img {{
+  position:absolute; inset:0; z-index:1;
+  width:100%; height:100%; object-fit:cover; display:block;
+}}
+
+/* Frame 3 — they thought */
+.f3-headline {{ position:absolute; left:5%; right:5%; top:22%; z-index:25; }}
 .red-bar {{
   position:relative; display:inline-block; color:#F5F5F5;
   padding:0 .12em;
@@ -976,36 +992,36 @@ html,body {{ background:#06070A; color:var(--white); font-family:Inter,system-ui
   transform:rotate(-3deg); transform-origin:left center;
 }}
 
-/* Frame 3 — stacked pull quotes (up to 3) */
-.f3-body {{
+/* Frame 4 — stacked pull quotes (up to 6) */
+.f4-body {{
   position:absolute; left:6%; right:6%; top:14%; bottom:28%; z-index:25;
   display:flex; flex-direction:column; justify-content:center;
   gap:clamp(14px,3cqw,26px);
 }}
-.f3-body.f3-count-4,
-.f3-body.f3-count-5,
-.f3-body.f3-count-6 {{
+.f4-body.f4-count-4,
+.f4-body.f4-count-5,
+.f4-body.f4-count-6 {{
   top:12%;
   bottom:24%;
   justify-content:flex-start;
   gap:clamp(8px,1.8cqw,14px);
 }}
-.f3-quote {{
+.f4-quote {{
   position:relative; padding-left:clamp(14px,2.8cqw,22px);
   border-left:3px solid var(--gold);
 }}
-.f3-dot {{
+.f4-dot {{
   position:absolute; left:-8px; top:0;
   width:14px; height:14px; border-radius:50%;
   background:var(--crimson);
   box-shadow:0 0 0 4px var(--navy-deep);
 }}
-.f3-text {{
+.f4-text {{
   font-family:'Fraunces',serif; font-weight:500; font-style:italic;
   line-height:1.22; color:var(--white);
   font-size:clamp(15px,4.2cqw,26px);
 }}
-.f3-attr {{
+.f4-attr {{
   margin-top:clamp(6px,1.6cqw,12px);
   font-family:'Oswald',sans-serif; font-weight:600; letter-spacing:.18em;
   color:rgba(245,245,245,.7);
@@ -1013,82 +1029,82 @@ html,body {{ background:#06070A; color:var(--white); font-family:Inter,system-ui
   text-transform:uppercase;
 }}
 /* When only one quote exists, bump it up to the original hero size */
-.f3-body.f3-count-1 .f3-text {{
+.f4-body.f4-count-1 .f4-text {{
   font-size:clamp(22px,6cqw,42px); line-height:1.18;
 }}
-.f3-body.f3-count-1 .f3-attr {{
+.f4-body.f4-count-1 .f4-attr {{
   font-size:clamp(11px,2.6cqw,15px); margin-top:clamp(18px,3cqw,28px);
 }}
-.f3-body.f3-count-4 .f3-text {{
+.f4-body.f4-count-4 .f4-text {{
   font-size:clamp(14px,3.4cqw,22px);
   line-height:1.16;
 }}
-.f3-body.f3-count-5 .f3-text {{
+.f4-body.f4-count-5 .f4-text {{
   font-size:clamp(13px,3.1cqw,20px);
   line-height:1.14;
 }}
-.f3-body.f3-count-6 .f3-text {{
+.f4-body.f4-count-6 .f4-text {{
   font-size:clamp(12px,2.8cqw,18px);
   line-height:1.12;
 }}
-.f3-body.f3-count-4 .f3-attr,
-.f3-body.f3-count-5 .f3-attr,
-.f3-body.f3-count-6 .f3-attr {{
+.f4-body.f4-count-4 .f4-attr,
+.f4-body.f4-count-5 .f4-attr,
+.f4-body.f4-count-6 .f4-attr {{
   margin-top:clamp(4px,1.2cqw,8px);
   font-size:clamp(8px,1.8cqw,11px);
 }}
 
-/* Frame 4 — counted. Flex column inside an absolute wrapper so each line
+/* Frame 5 — counted. Flex column inside an absolute wrapper so each line
    claims its own vertical slot. No more pattern colliding with the italic. */
-.f4-stack {{
+.f5-stack {{
   position:absolute; left:5%; right:5%; top:14%; bottom:28%; z-index:25;
   display:flex; flex-direction:column; justify-content:center;
   gap:clamp(8px,2cqw,18px); text-align:center;
 }}
-.f4-mega-number {{
+.f5-mega-number {{
   font-family:'Anton',sans-serif; line-height:.82; letter-spacing:-.04em;
   color:var(--gold);
   font-size:clamp(110px,34cqw,240px);
   text-shadow:0 10px 0 rgba(0,0,0,.4), 0 24px 80px rgba(201,162,39,.35);
 }}
-.f4-mega-label {{
+.f5-mega-label {{
   font-family:'Anton',sans-serif; text-transform:uppercase;
   letter-spacing:-.01em; line-height:1.05; color:#F5F5F5;
   font-size:clamp(38px,10cqw,72px);
 }}
-.f4-italic {{
+.f5-italic {{
   font-family:'Fraunces',serif; font-style:italic;
   color:rgba(245,245,245,.8);
   font-size:clamp(14px,3.4cqw,22px);
   margin-bottom:clamp(8px,2cqw,16px);
 }}
-.f4-pattern {{
+.f5-pattern {{
   font-family:'Anton',sans-serif; text-transform:uppercase;
   color:#F5F5F5; line-height:1.18;
   font-size:clamp(22px,6.2cqw,44px);
 }}
-.f4-pattern .strike {{
+.f5-pattern .strike {{
   text-decoration:line-through; text-decoration-color:var(--crimson);
   text-decoration-thickness:5px; color:rgba(245,245,245,.45);
 }}
-.f4-pattern .pattern-pill {{
+.f5-pattern .pattern-pill {{
   display:inline-block; background:var(--gold); color:#0A0A0A;
   padding:2px 14px; margin-top:6px;
 }}
 
-/* Frame 5 — exposing the pattern */
-.f5-headline {{
+/* Frame 6 — exposing the pattern */
+.f6-headline {{
   position:absolute; left:5%; right:5%; top:14%; z-index:25;
   font-family:'Anton',sans-serif; color:#F5F5F5; text-transform:uppercase;
   letter-spacing:-.02em; line-height:1.04;
   font-size:clamp(40px,11cqw,86px);
 }}
-.f5-stats {{
+.f6-stats {{
   position:absolute; left:5%; right:5%; bottom:24%; z-index:25;
   border-top:3px solid var(--gold); padding-top:14px;
   display:flex; flex-direction:column; gap:8px;
 }}
-.f5-stats-label {{
+.f6-stats-label {{
   font-family:'JetBrains Mono',monospace; letter-spacing:.26em;
   color:rgba(245,245,245,.55); text-transform:uppercase;
   margin-bottom:8px; font-size:clamp(8px,2cqw,12px);
@@ -1106,44 +1122,44 @@ html,body {{ background:#06070A; color:var(--white); font-family:Inter,system-ui
   color:#F5F5F5; text-align:right; text-transform:uppercase;
   font-size:clamp(9px,2.2cqw,14px);
 }}
-.f5-hero-stat {{
+.f6-hero-stat {{
   display:flex; align-items:baseline; justify-content:space-between; gap:16px;
   padding-bottom:14px; border-bottom:2px solid rgba(245,245,245,.30);
   margin-bottom:4px;
 }}
-.f5-hero-n {{
+.f6-hero-n {{
   font-family:'Anton',sans-serif; color:#F5F5F5; line-height:.95;
   letter-spacing:-.02em; font-size:clamp(56px,16cqw,108px);
 }}
-.f5-hero-l {{
+.f6-hero-l {{
   font-family:'Oswald',sans-serif; font-weight:700; letter-spacing:.14em;
   color:var(--gold); text-align:right; text-transform:uppercase;
   font-size:clamp(11px,2.6cqw,18px); line-height:1.1;
 }}
 
-/* Frame 6 — STAND WITH MEG */
-.f6-headline {{
+/* Frame 7 — STAND WITH MEG */
+.f7-headline {{
   position:absolute; left:5%; right:5%; top:14%; z-index:25;
   font-family:'Anton',sans-serif; text-transform:uppercase;
   letter-spacing:-.02em; line-height:1.05;
   color:#F5F5F5; text-align:center;
   font-size:clamp(70px,22cqw,160px);
 }}
-.f6-with {{ display:inline-block; }}
-.f6-cta-text {{
+.f7-with {{ display:inline-block; }}
+.f7-cta-text {{
   position:absolute; left:5%; right:5%; top:58%; z-index:25;
   font-family:'Fraunces',serif; font-style:italic;
   color:rgba(245,245,245,.9); text-align:center; line-height:1.25;
   font-size:clamp(15px,4cqw,30px);
 }}
-.f6-cta-text .f6-count {{
+.f7-cta-text .f7-count {{
   color:var(--gold); font-weight:900; font-style:normal; font-family:'Anton',sans-serif;
 }}
-.f6-pill-stack {{
+.f7-pill-stack {{
   position:absolute; left:0; right:0; bottom:14%; z-index:25;
   display:flex; flex-direction:column; align-items:center; gap:14px;
 }}
-.f6-visit {{
+.f7-visit {{
   font-family:'Oswald',sans-serif; font-weight:700; letter-spacing:.2em;
   color:rgba(245,245,245,.7); text-transform:uppercase;
   font-size:clamp(14px,3.4cqw,22px);
@@ -1160,14 +1176,14 @@ html,body {{ background:#06070A; color:var(--white); font-family:Inter,system-ui
   animation:pulse 1.5s infinite;
 }}
 @keyframes pulse {{ 0%,100% {{ opacity:1; transform:scale(1);}} 50% {{ opacity:.4; transform:scale(.7);}} }}
-.f6-legal {{
+.f7-legal {{
   position:absolute; left:5%; right:5%; bottom:5%; z-index:25;
   font-family:'JetBrains Mono',monospace; letter-spacing:.22em;
   color:rgba(245,245,245,.45); text-align:center; text-transform:uppercase;
   font-size:clamp(8px,1.7cqw,11px);
 }}
 
-/* Bottom strips (frames 2–5) */
+/* Bottom strips (frames 3–6) */
 .actor-id-strip {{
   position:absolute; left:5%; right:5%; bottom:14%; z-index:25;
   border-top:3px solid var(--gold); padding-top:12px;
@@ -1240,10 +1256,10 @@ html,body {{ background:#06070A; color:var(--white); font-family:Inter,system-ui
 </header>
 <div class="bulk-bar">
   <button type="button" id="save-all-btn" class="bulk-btn bulk-save">
-    <span class="bulk-icon">⇩</span><span class="bulk-label">Save 6 images</span>
+    <span class="bulk-icon">⇩</span><span class="bulk-label">Save 7 images</span>
   </button>
   <button type="button" id="share-all-btn" class="bulk-btn bulk-share">
-    <span class="bulk-icon">↗</span><span class="bulk-label">Share 6 images</span>
+    <span class="bulk-icon">↗</span><span class="bulk-label">Share 7 images</span>
   </button>
 </div>
 <div class="bulk-progress" id="bulk-progress"></div>
@@ -1261,7 +1277,7 @@ html,body {{ background:#06070A; color:var(--white); font-family:Inter,system-ui
 // Frames are pre-rendered server-side by _scripts/prerender_frames.py (Playwright).
 // We fetch the JPEGs directly — no client-side canvas, so iOS Safari can't taint anything.
 async function frameToBlob(id) {{
-  // frame-01.jpg ... frame-06.jpg live in the same folder as share.html
+  // frame-01.jpg ... frame-07.jpg live in the same folder as share.html
   const num = id.replace('frame-', '');
   const url = `frame-${{num}}.jpg`;
   const res = await fetch(url, {{ cache: 'reload' }});
@@ -1347,7 +1363,7 @@ document.addEventListener('click', (event) => {{
 // Save All / Share All — capture every frame, bundle as zip,
 // download or pass to Web Share API.
 // ============================================================
-const FRAME_IDS = ['frame-01','frame-02','frame-03','frame-04','frame-05','frame-06'];
+const FRAME_IDS = ['frame-01','frame-02','frame-03','frame-04','frame-05','frame-06','frame-07'];
 
 function setProgress(text) {{
   const el = document.getElementById('bulk-progress');
@@ -1379,7 +1395,7 @@ async function saveAllFrames() {{
   const orig = btn ? btn.querySelector('.bulk-label').textContent : null;
   if (btn) {{ btn.disabled = true; btn.querySelector('.bulk-label').textContent = 'Loading…'; }}
 
-  // Build a tidy filename prefix so all 6 files clearly belong together
+  // Build a tidy filename prefix so all 7 files clearly belong together
   // when they land in Downloads or Photos. e.g. "Magistrate_Blevins_frame-01.jpg".
   const baseName = (document.title || 'spotlight').split(' ·')[0].trim().replace(/[^A-Za-z0-9]+/g, '_');
 
@@ -1398,9 +1414,9 @@ async function saveAllFrames() {{
       /iPhone|iPad|iPod|Android/i.test(navigator.userAgent || '');
 
     // PHONES (iOS Safari, Android Chrome): Web Share API → share sheet →
-    // user picks "Save 6 Images" to drop them into the Photo Library.
+    // user picks "Save 7 Images" to drop them into the Photo Library.
     if (isMobile && navigator.canShare && navigator.canShare({{ files }})) {{
-      setProgress('Opening share sheet — pick "Save 6 Images"');
+      setProgress('Opening share sheet — pick "Save 7 Images"');
       if (btn) btn.querySelector('.bulk-label').textContent = 'Opening…';
       try {{
         await navigator.share({{
@@ -1424,12 +1440,12 @@ async function saveAllFrames() {{
     // DESKTOP: zip download. Chrome/Safari block multiple sequential downloads
     // after the first, so direct multi-download is unreliable. ONE zip is more
     // dependable, and macOS auto-extracts when you double-click it.
-    setProgress('Bundling 6 images…');
+    setProgress('Bundling 7 images…');
     if (btn) btn.querySelector('.bulk-label').textContent = 'Bundling…';
     const zipBlob = await bundleAsZip(blobs, 'spotlight');
     const url = URL.createObjectURL(zipBlob);
     const link = document.createElement('a');
-    link.download = `${{baseName}}_6_frames.zip`;
+    link.download = `${{baseName}}_7_frames.zip`;
     link.href = url;
     document.body.appendChild(link);
     link.click();
