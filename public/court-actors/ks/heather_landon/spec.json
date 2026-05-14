@@ -40,15 +40,15 @@
     "_source_table": "movement_stats_by_state",
     "_match_value": "KS",
     "state_family_count": 172,
-    "median_financial_loss": 75400,
-    "median_burden_sample_size": 85,
+    "median_financial_loss": 75425,
+    "median_burden_sample_size": 86,
     "median_months_lost": 16,
-    "pro_se_pct": 53.8,
+    "pro_se_pct": 53.5,
     "pro_se_count": 92,
-    "_pdf_state_family_count": 171,
+    "_pdf_state_family_count": 172,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3660,
+  "movement_total": 3666,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -65,6 +65,12 @@
         "state": "KS",
         "county": "No",
         "row_id": "8f54eaeb-3c65-4f97-917c-8ce25d11d657"
+      },
+      {
+        "body": "My exhusband had criminal charges for taking the life of our unborn child through…",
+        "state": "KS",
+        "county": "Miami",
+        "row_id": "6e86678b-939a-4835-92a8-777f488aa5ce"
       },
       {
         "body": "I havent seen my kids in 3+ years. The court enabled alienation and swept…",
@@ -85,6 +91,12 @@
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Johnson"
+      },
+      {
+        "comment_text": "Earlier GAL on the case. Continued to force the children into reintegration therapy even though the DA said it would taint the criminal case against the father.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Miami"
       },
       {
         "comment_text": "Withdrew from case. Violated rights, handled issues for ex during hearings, failed to meet with children and me",

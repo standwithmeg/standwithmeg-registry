@@ -40,15 +40,15 @@
     "_source_table": "movement_stats_by_state",
     "_match_value": "KS",
     "state_family_count": 172,
-    "median_financial_loss": 75400,
-    "median_burden_sample_size": 85,
+    "median_financial_loss": 75425,
+    "median_burden_sample_size": 86,
     "median_months_lost": 16,
-    "pro_se_pct": 53.8,
+    "pro_se_pct": 53.5,
     "pro_se_count": 92,
-    "_pdf_state_family_count": 171,
+    "_pdf_state_family_count": 172,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3660,
+  "movement_total": 3666,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -80,6 +80,12 @@
       }
     ],
     "public_comments": [
+      {
+        "comment_text": "Audited 200 cases by his bar number. Discovered a significant pattern of cases the children were being harmed. In the audits I also discovered he is sending his cases he has as a GAL/Case Manager/Concilliator to a specific therapist that lost their license in NE for sexual misconduct with patients. However in KS Mr. Ebert is subjecting people to use this therapist. Discovered overwhelming evidence he has been misleading the judges for years providing false information. Exploiting children to chaos…",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Shawnee County"
+      },
       {
         "comment_text": "Withheld evidence from court, manipulated school reporters, doctors, took away my rights each time kids reported abuse by other parent. Financially and emotionally exploitative, damaged my children and I and we still suffer due to his falsified evidence and unsafe recommendations.",
         "author": "Anonymous parent",

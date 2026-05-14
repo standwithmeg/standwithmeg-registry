@@ -46,12 +46,18 @@
     "_pdf_state_family_count": 211,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3660,
+  "movement_total": 3666,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
     "family_count": 3,
     "family_reports": [
+      {
+        "body": "Lea Case ignored dependency court retaliation against my family",
+        "state": "FL",
+        "county": "Volusia",
+        "row_id": "4a08abb2-b0d1-45cf-b134-5236e8d5ab02"
+      },
       {
         "body": "Florida DCF medically kidnapped my specials needs child who was weaning. The agency put…",
         "state": "FL",
@@ -66,6 +72,12 @@
       }
     ],
     "public_comments": [
+      {
+        "comment_text": "Florida DCF and its contracted Case Managers relied on Licensed Mental Health Counselors (LMHCs) to interpret my infant grandchild’s medical records, summarize medical findings, and make recommendations about medical conditions outside their scope of practice. These LMHC reports were used in place of qualified medical evaluations and specialists, and their interpretations were treated as authoritative despite the LMHCs lacking medical licensure. This practice denied my daughter meaningful participation in her baby’s medical care, obstructed access to accurate medical information and…",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Volusia"
+      },
       {
         "comment_text": "Rodney pulled my mother’s FL home-study out of the FSFN system. She had the hospital eject my mother and I from the NICU. She committed mental injury on my two older children while committing relative alienation to destroy familial bonds. She denied g-tube weaning for my medically fragile infant, misrepresenting medicsl reports and using foster caregiver here-say and Devereux behavioral assessment reports instead of an Easter Seals oral-motar evaluation. She removed the Easter Seals report from the file. As a…",
         "author": "Anonymous parent",

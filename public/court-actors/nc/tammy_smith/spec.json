@@ -48,12 +48,18 @@
     "_pdf_state_family_count": 120,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3660,
+  "movement_total": 3666,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
     "family_count": 4,
     "family_reports": [
+      {
+        "body": "Due to the emergency case being drug out for entirely too long, there has…",
+        "state": "NC",
+        "county": "Harnett",
+        "row_id": "3dfb7e80-74a2-4ebf-8afc-b3f06937add7"
+      },
       {
         "body": "I’ve witnessed a very unfair and concerning amount of corruption in this court room…",
         "state": "NC",

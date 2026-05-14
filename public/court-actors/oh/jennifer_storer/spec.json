@@ -29,7 +29,7 @@
     "actor_bucket_key": "jenifer storer|OH"
   },
   "photo": {
-    "path": "ohio/jennifer_storer/image_1080.png",
+    "path": "public/court-actors/oh/jennifer_storer/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -41,19 +41,15 @@
     "_source_table": "movement_stats_by_state",
     "_match_value": "OH",
     "state_family_count": 196,
-    "median_months_lost": 19.0,
-    "median_financial_loss": 80000,
-    "median_burden_sample_size": 97,
-    "pro_se_count": 111,
-    "pro_se_pct": 57.5,
-    "children_impacted": 292,
-    "clean_sample_size": 193,
-    "raw_submission_count": 193,
-    "_unresolved": [
-      "pdf_stats: cache unreadable at .: [Errno 21] Is a directory: '.'"
-    ]
+    "median_financial_loss": 81250,
+    "median_burden_sample_size": 96,
+    "median_months_lost": 18,
+    "pro_se_pct": 56.1,
+    "pro_se_count": 110,
+    "_pdf_state_family_count": 196,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3664,
+  "movement_total": 3666,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
@@ -72,6 +68,12 @@
         "row_id": "6caec907-d638-46ce-ac09-9cde3975ad8e"
       },
       {
+        "body": "I want people to understand that this was never just a custody case to…",
+        "state": "OH",
+        "county": "Highland",
+        "row_id": "899c1aec-eb22-48b6-91a7-613a0f0bb684"
+      },
+      {
         "body": "They took the happiest and joy out of us",
         "state": "OH",
         "county": "Highland county",
@@ -86,36 +88,45 @@
     ],
     "public_comments": [
       {
-        "comment_text": "Fabrication evidence",
+        "comment_text": "Denied motion and ignored evidence!! None of them did their job they made up everything. The judge didn’t want to listen to us whatsoever that we gave him evidence and they didn’t show him any evidence and that he ruled with them over us. He delayed hearings gave them more time biased, he didn’t sign half of his records he had to click record sign it things like that you can put well. She really really wasn’t on our case…",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Highland"
       },
       {
-        "comment_text": "Denied motion and ignored evidence!! None of them did their job they made up everything. The judge didn’t want to listen to us whatsoever that we gave him evidence and…",
+        "comment_text": "Living with the prosecutor and she’s the one who got the rule 6 from him to take my daughter Get the hospital to discharge me because I won’t speak to her without a Lawyer present she lies in comes back rooms and just then she gets double six but I got the hospital record saying a totally completely different story where she called and had the rule six when she got there before speaking to us The first caseworker",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Highland county Ohio"
+      },
+      {
+        "comment_text": "Get the hospital to discharge me because I won’t speak to her without a Lawyer present she lies in comes back rooms and just then she gets double six but I got the hospital record saying a totally completely different story where she called and had the rule six when she got there before speaking to us",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Highland county"
       },
       {
         "comment_text": "Obtained a rule 6 based on false information and filed a false complaint. Was in a relationship and living with the assistant prosecutor that was on the case.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Highland County"
       },
       {
-        "comment_text": "Living with the prosecutor and she’s the one who got the rule 6 from him to take my daughter",
+        "comment_text": "Delayed reunification, lied to me about giving my daughter back to me, refused to listen to my side.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lorain county"
       },
       {
-        "comment_text": "Get the hospital to discharge me because I won’t speak to her without a Lawyer present she lies in comes back rooms and just then she gets double six but…",
+        "comment_text": "Fabrication evidence",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Highland"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/jennifer_storer",
-  "unresolved": [
-    "pdf_stats: cache unreadable at .: [Errno 21] Is a directory: '.'"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions · not court findings.",

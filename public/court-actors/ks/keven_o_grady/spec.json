@@ -39,15 +39,15 @@
     "_source_table": "movement_stats_by_state",
     "_match_value": "KS",
     "state_family_count": 172,
-    "median_financial_loss": 75400,
-    "median_burden_sample_size": 85,
+    "median_financial_loss": 75425,
+    "median_burden_sample_size": 86,
     "median_months_lost": 16,
-    "pro_se_pct": 53.8,
+    "pro_se_pct": 53.5,
     "pro_se_count": 92,
-    "_pdf_state_family_count": 171,
+    "_pdf_state_family_count": 172,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3660,
+  "movement_total": 3666,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -73,6 +73,12 @@
       }
     ],
     "public_comments": [
+      {
+        "comment_text": "Ordered removal of my five children without a full hearing, without any witnesses or ever asking me if the allegations were true, and still has not given me a real hearing while I have been separated from my kids for over two years, and requires me to find and pay for supervisors with unrealistic requirements like providing their full case history before he will even set a hearing, which has made it nearly impossible to see my children.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Johnson"
+      },
       {
         "comment_text": "The court system has taken away my son's mother, my other kids' brother. Kevin O'Grady needs to be exposed — he claims he does things for the kids' safety. No, he breaks families.",
         "author": "Anonymous parent",

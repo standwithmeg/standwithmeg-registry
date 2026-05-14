@@ -42,15 +42,15 @@
     "_source_table": "movement_stats_by_state",
     "_match_value": "KS",
     "state_family_count": 172,
-    "median_financial_loss": 75400,
-    "median_burden_sample_size": 85,
+    "median_financial_loss": 75425,
+    "median_burden_sample_size": 86,
     "median_months_lost": 16,
-    "pro_se_pct": 53.8,
+    "pro_se_pct": 53.5,
     "pro_se_count": 92,
-    "_pdf_state_family_count": 171,
+    "_pdf_state_family_count": 172,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3660,
+  "movement_total": 3666,
   "supabase": {
     "report_count": 7,
     "actor_report_count": 7,
@@ -79,6 +79,12 @@
         "state": "KS",
         "county": "Miami",
         "row_id": "6d3f54cc-663f-4be4-8b7e-1cd728283e38"
+      },
+      {
+        "body": "My exhusband had criminal charges for taking the life of our unborn child through…",
+        "state": "KS",
+        "county": "Miami",
+        "row_id": "6e86678b-939a-4835-92a8-777f488aa5ce"
       }
     ],
     "public_comments": [

@@ -42,15 +42,15 @@
     "_source_table": "movement_stats_by_state",
     "_match_value": "KS",
     "state_family_count": 172,
-    "median_financial_loss": 75400,
-    "median_burden_sample_size": 85,
+    "median_financial_loss": 75425,
+    "median_burden_sample_size": 86,
     "median_months_lost": 16,
-    "pro_se_pct": 53.8,
+    "pro_se_pct": 53.5,
     "pro_se_count": 92,
-    "_pdf_state_family_count": 171,
+    "_pdf_state_family_count": 172,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3660,
+  "movement_total": 3666,
   "supabase": {
     "report_count": 7,
     "actor_report_count": 7,
@@ -61,6 +61,12 @@
         "state": "KS",
         "county": "Johnson County",
         "row_id": "13c6a06f-4cb4-485d-b4dd-00a60b2c0dfa"
+      },
+      {
+        "body": "My exhusband had criminal charges for taking the life of our unborn child through…",
+        "state": "KS",
+        "county": "Miami",
+        "row_id": "6e86678b-939a-4835-92a8-777f488aa5ce"
       },
       {
         "body": "I havent seen my kids in 3+ years. The court enabled alienation and swept…",
@@ -82,6 +88,11 @@
         "source": "court_actors.notes"
       },
       {
+        "comment_text": "She hates women. Apparently had a bad mother. She would say she hates working with us. She would give horrible stares downs. She was rude and unprofessional near every session.…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
         "comment_text": "Told me I psychologically abused my son, told me basically I am the problem and I need to just give into his demands for the betterment of the child",
         "author": "Anonymous parent",
         "source": "court_actors.notes"
@@ -98,11 +109,6 @@
       },
       {
         "comment_text": "Reintegration therapist forced on me by Andy Bolton — described as Bolton's buddy. Located 2.5 hours away from my home. I was required to use her, not allowed to choose…",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "I listed Naomi in my report. Her name is listed twice in the kansas report. The correct way to spell her name is Cataudella. She is listed 4 times in…",
         "author": "Anonymous parent",
         "source": "court_actors.notes"
       }

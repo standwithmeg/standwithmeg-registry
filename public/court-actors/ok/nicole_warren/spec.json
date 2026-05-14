@@ -48,7 +48,7 @@
     "_pdf_state_family_count": 110,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3660,
+  "movement_total": 3666,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -80,6 +80,12 @@
       }
     ],
     "public_comments": [
+      {
+        "comment_text": "CPS this was the supervisor of the DHS worker Canton that investigated my claims. Nicole advised Canton to close my case before it was even investigated after I provided proof of abuse, numerous documents, proof, video, audio. Absolutely horrible.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Oklahoma County"
+      },
       {
         "comment_text": "Light on the stand in tampered with evidence and witness well also failing to vet witnesses",
         "author": "Anonymous parent",

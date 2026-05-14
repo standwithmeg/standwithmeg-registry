@@ -38,15 +38,15 @@
     "_source_table": "movement_stats_by_state",
     "_match_value": "KS",
     "state_family_count": 172,
-    "median_financial_loss": 75400,
-    "median_burden_sample_size": 85,
+    "median_financial_loss": 75425,
+    "median_burden_sample_size": 86,
     "median_months_lost": 16,
-    "pro_se_pct": 53.8,
+    "pro_se_pct": 53.5,
     "pro_se_count": 92,
-    "_pdf_state_family_count": 171,
+    "_pdf_state_family_count": 172,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3660,
+  "movement_total": 3666,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -66,6 +66,12 @@
       }
     ],
     "public_comments": [
+      {
+        "comment_text": "Has had counseling with my daughters for eight months and will not listen to them that they do not want to return to 50% custody with their father and says that they have to go back and otherwise they have to keep coming to him. My girls have told Dan that they know that Dan lies, and Dan minimize their problems that they are addressing… And that he only sides with the father. He has made a point that only…",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "JoCo"
+      },
       {
         "comment_text": "Was assigned to help restore contact with my kids but allowed my ex to keep them from sessions, canceled visits over payment, made me spend over $5,000 before I could even see them, I spent over $10,000 total, and then he suddenly dropped me based on what my ex said, which stopped reunification completely.",
         "author": "Anonymous parent",

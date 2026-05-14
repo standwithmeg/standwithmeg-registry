@@ -49,7 +49,7 @@
     "_pdf_state_family_count": 196,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3660,
+  "movement_total": 3666,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
@@ -66,6 +66,12 @@
         "state": "OH",
         "county": "Highland county",
         "row_id": "6caec907-d638-46ce-ac09-9cde3975ad8e"
+      },
+      {
+        "body": "I want people to understand that this was never just a custody case to…",
+        "state": "OH",
+        "county": "Highland",
+        "row_id": "899c1aec-eb22-48b6-91a7-613a0f0bb684"
       },
       {
         "body": "They took the happiest and joy out of us",
@@ -98,6 +104,11 @@
       },
       {
         "comment_text": "Assistant prosecutor did a rule 6 and it was not signed by the judge",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "He’s the (assistant) prosecutor and did a juvenile rule 6 without a judge or magistrate and waiting a whole day after cps receiving the phone call of the hospital saying…",
         "author": "Anonymous parent",
         "source": "court_actors.notes"
       },

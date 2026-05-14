@@ -40,25 +40,37 @@
     "_source_table": "movement_stats_by_state",
     "_match_value": "KS",
     "state_family_count": 172,
-    "median_financial_loss": 75400,
-    "median_burden_sample_size": 85,
+    "median_financial_loss": 75425,
+    "median_burden_sample_size": 86,
     "median_months_lost": 16,
-    "pro_se_pct": 53.8,
+    "pro_se_pct": 53.5,
     "pro_se_count": 92,
-    "_pdf_state_family_count": 171,
+    "_pdf_state_family_count": 172,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3660,
+  "movement_total": 3666,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
     "family_count": 3,
     "family_reports": [
       {
+        "body": "My daughter being in the KVC foster care system cause further trauma for her…",
+        "state": "KS",
+        "county": "Shawnee",
+        "row_id": "0af61314-fa53-45e7-bef8-103454b1b831"
+      },
+      {
         "body": "My children’s childhood was stolen from them. They were taken on false allegations over…",
         "state": "KS",
         "county": "Shawnee",
         "row_id": "c9ca7851-1cad-40da-b1d2-5c9dd4622db9"
+      },
+      {
+        "body": "Protect the parent that emotionally harms and attempts to alienate our children because their…",
+        "state": "KS",
+        "county": "Jefferson County",
+        "row_id": "d3e45d06-acf9-442e-b6db-fca9cfd93d66"
       }
     ],
     "public_comments": [

@@ -46,12 +46,24 @@
     "_pdf_state_family_count": 211,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3660,
+  "movement_total": 3666,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
     "family_count": 3,
     "family_reports": [
+      {
+        "body": "Lea Case ignored dependency court retaliation against my family",
+        "state": "FL",
+        "county": "Volusia",
+        "row_id": "4a08abb2-b0d1-45cf-b134-5236e8d5ab02"
+      },
+      {
+        "body": "Chief Judge Leah Case was notified that Judge Anthony, a judicial defendant in the…",
+        "state": "FL",
+        "county": "Volusia County",
+        "row_id": "cca49cbe-9d66-40c1-aa02-00b72f42c902"
+      },
       {
         "body": "EVERY judicial actor in the 7th judicial Circuit has violated their oath and stripped…",
         "state": "FL",
@@ -61,7 +73,19 @@
     ],
     "public_comments": [
       {
+        "comment_text": "Chief Judge Leah Case (Seventh Circuit, Florida) Reported for failure to act on a Canon 3E judicial‑review request involving structural defects in an active dependency/TPR case. The report detailed: • The presiding judge (Anthony) was a judicial defendant in a related federal action yet continued to preside over the TPR trial without recusal. • Altered consent documents and a fraudulent notary certificate attached to the case file. • Docket scrubbing that concealed the appointment of conflicted counsel. • A request…",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Seventh Circuit, Volusia County"
+      },
+      {
         "comment_text": "Chief Judge Leah Case (Seventh Circuit, Florida) As a family member, I reported to Chief Judge Leah Case that the presiding judge was retaliating against the parent for requesting ADA accommodations and that the docket had been scrubbed after Judge Anthony appointed conflicted counsel during the shelter hearing. Despite raising these concerns, including the grandparent’s report of retaliation and record‑integrity issues, Chief Judge Case took no action.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Volusia"
+      },
+      {
+        "comment_text": "Chief judge Leah Case barred me from FULL access to the Courts and placed an entire communication ban to the ENTIRE 7th judicial circuit, clerks, court administration, IT department and Law Enforcement (bailiffs from the Volusia Sheriffs office with NO DUE PROCESS HEARING) She partook in ex parte with Court Administration Mark Weinberg stating my emails were misuse of the judicial system when it was protected activity.",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Volusia"

@@ -47,7 +47,7 @@
     "_pdf_state_family_count": 211,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3660,
+  "movement_total": 3666,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -74,7 +74,19 @@
     ],
     "public_comments": [
       {
+        "comment_text": "She was a defendant in my federal case while she presided over my tpr hearing and refused to recuse. She had me thrown in jail when i filed a motion to have her recuse for suppressing domestic violence evidence I disclosed and a motion for ADA accommodations for online court record viewing. The court window would not give me copies of filings or orders. She appointed counsel in abstentia on February 5, 2024 and had the attorney representing my husband…",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Seventh Circuit Court"
+      },
+      {
         "comment_text": "Florida DCF and its state contractors (Community Partnership for Children, Seventh Circuit Court, Volusia County) ignored altered and fraudulent coerced consent documents used to remove parental rights from a disabled woman under duress. The fraudulent consent forms, fraudulent notary certificate, an unnegotiated and unsigned case plan — and the judicial forms Judge Anthony altered — are all filed in our federal Appeal case (Fla. 11th Cir. Appeal No. [redacted] G) as irrefutable evidence of improper documents used to procure federal…",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Volusia"
+      },
+      {
+        "comment_text": "Presided over my daughter’s TPR trial while named as a defendant in her civil rights case. Appointed counsel in abstention, and has the father’s lawyer represent both parents conflict. Father has a criminal case where my daughter was victim. The substitute lawyer stopped my daughter from disclosing she was a victim of dv during the shelter hearing. Judge Anthony allowed FL DCF to use Devereux Behavioral Assessment reports and foster heresay to keep my granddaughter on a g-tube. FL DCF…",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Volusia"

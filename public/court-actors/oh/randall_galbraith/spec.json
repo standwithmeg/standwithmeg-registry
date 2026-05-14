@@ -46,7 +46,7 @@
     "_pdf_state_family_count": 196,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3660,
+  "movement_total": 3666,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -72,6 +72,12 @@
       }
     ],
     "public_comments": [
+      {
+        "comment_text": "He ignored my filed letter complaint as soon as the case opened. He ignored my attorney and her communication. He ignored my moms complaint he recieved certified. He did not return phone calls either. His only response was the letter was received. He has backed Kelli Miller and her abuse of power.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Hancock county director of DJFS"
+      },
       {
         "comment_text": "Refuse kinship reunification an never returns calls very disrespectful on the phone an in person",
         "author": "Anonymous parent",

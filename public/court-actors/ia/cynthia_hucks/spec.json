@@ -53,7 +53,7 @@
     "_pdf_state_family_count": 68,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3660,
+  "movement_total": 3666,
   "supabase": {
     "report_count": 10,
     "actor_report_count": 10,
@@ -117,6 +117,12 @@
       },
       {
         "comment_text": "She failed to provide me with court dates and tell me that i needed character affidavits in my daughter's custody case in 2010",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Wapello"
+      },
+      {
+        "comment_text": "She used manipulation tactics to get her way, lied to court, pressured me to resolve our case outside of court, and very rude!",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Wapello"
