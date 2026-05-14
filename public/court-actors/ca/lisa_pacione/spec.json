@@ -1,0 +1,109 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "lisa_pacione",
+    "display_name": "Lisa Pacione",
+    "title": "",
+    "first_name": "Lisa",
+    "last_name": "paciones",
+    "role": "Judge",
+    "court": "Kern",
+    "county": null,
+    "court_or_county": "Kern",
+    "state": "California",
+    "state_abbr": "CA",
+    "mention_count": 3,
+    "family_count": 3,
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "da862864-4133-459f-86ce-42830b0af515",
+      "8c7b38d0-6222-4890-b716-e98ea3b508ec",
+      "0e8152cc-45cd-4f90-825d-d41f58d94ea6"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "california/lisa_pacione/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 259,
+    "total_submissions": 326,
+    "avg_financial_loss": 285779.63,
+    "avg_months_lost": 37.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "CA",
+    "state_family_count": 326,
+    "median_months_lost": 22.0,
+    "median_financial_loss": 263600,
+    "median_burden_sample_size": 154,
+    "pro_se_count": 183,
+    "pro_se_pct": 56.8,
+    "children_impacted": 532,
+    "clean_sample_size": 322,
+    "raw_submission_count": 322
+  },
+  "movement_total": 3641,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 3,
+    "family_reports": [
+      {
+        "body": "The family court has stolen time with my kids memories I can never get…",
+        "state": "CA",
+        "county": "Kern",
+        "row_id": "2844c883-a0a9-4fda-9149-25249ff964f1"
+      },
+      {
+        "body": "On false allegations with no evidence, I was reduced from full physical and legal…",
+        "state": "CA",
+        "county": "Kern",
+        "row_id": "ee51eb76-08db-4afc-84a1-5568d199cb26"
+      },
+      {
+        "body": "I now have two emotionally damaged children and have been barred from helping them.…",
+        "state": "CA",
+        "county": "Kern",
+        "row_id": "ab1e3d84-ca27-4d7f-a09d-77705cf44616"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "This administration judge ignored evidence and made misleading statements about case law and procedures.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Issued a three-year restraining order with no history of abuse based on a three week old Facebook post that opposing party was blocked from seeing. Made a rush judgment to…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Issued 3 year restraining order based on a weeks old social media post. Entered rulings without viewing evidence, removed fathers right indefinitely to petition the court for relief without due…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/lisa_pacione",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/california/lisa_pacione/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}
