@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "lori_walker",
+    "display_name": "Lori Walker",
+    "title": "",
+    "first_name": "Lori",
+    "last_name": "Walker",
+    "role": "Attorney (Opposing)",
+    "court": "Sevier county Court",
+    "county": null,
+    "court_or_county": "Sevier county Court",
+    "state": "Tennessee",
+    "state_abbr": "TN",
+    "mention_count": 3,
+    "family_count": 3,
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "87c99b30-e023-4de4-aabf-b371c6f4b2d8",
+      "cf3422ad-a4f0-4433-ba81-7ddea7e8a946",
+      "748b7ed7-95bb-42b6-af26-3d98626d2bd3"
+    ],
+    "actor_row_id": "87c99b30-e023-4de4-aabf-b371c6f4b2d8",
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "tennessee/lori_walker/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 67,
+    "total_submissions": 94,
+    "avg_financial_loss": 121916.4,
+    "avg_months_lost": 42.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "TN",
+    "state_family_count": 94,
+    "median_months_lost": 18.0,
+    "median_financial_loss": 72000,
+    "median_burden_sample_size": 37,
+    "pro_se_count": 40,
+    "pro_se_pct": 42.1,
+    "children_impacted": 153,
+    "clean_sample_size": 95,
+    "raw_submission_count": 95
+  },
+  "movement_total": 3641,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Has screamed at me during a hearing in front of my child. Threatened my sister before court and did not follow a court order which was to do a home…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Very aggressive, lies, drag out cases and threatens before court occurs",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Makes threats to custodians, screams in front of children during hearing and doesn't have best interest of the children at heart",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/lori_walker",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/tennessee/lori_walker/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}
