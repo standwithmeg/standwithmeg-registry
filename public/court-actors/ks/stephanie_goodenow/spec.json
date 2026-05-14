@@ -1,0 +1,104 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "stephanie_goodenow",
+    "display_name": "STEPHANIE GOODENOW",
+    "title": "",
+    "first_name": "STEPHANIE",
+    "last_name": "GOODENOW",
+    "role": "Judge",
+    "court": "Johnson",
+    "county": null,
+    "court_or_county": "Johnson",
+    "state": "Kansas",
+    "state_abbr": "KS",
+    "mention_count": 3,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "2991db4e-8f2e-4292-8ae4-f55dc3a5b0e1",
+      "5af261d5-a6df-445e-9aea-8d0d7de433de",
+      "728ad597-5a4c-4b11-b55d-ebff0f2f52c7"
+    ],
+    "actor_row_id": "2991db4e-8f2e-4292-8ae4-f55dc3a5b0e1",
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "kansas/stephanie_goodenow/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 121,
+    "total_submissions": 172,
+    "avg_financial_loss": 127789.56,
+    "avg_months_lost": 31.6,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "KS",
+    "state_family_count": 172,
+    "median_months_lost": 20.0,
+    "median_financial_loss": 84225,
+    "median_burden_sample_size": 80,
+    "pro_se_count": 87,
+    "pro_se_pct": 53.7,
+    "children_impacted": 292,
+    "clean_sample_size": 162,
+    "raw_submission_count": 162,
+    "_unresolved": [
+      "pdf_stats: cache unreadable at .: [Errno 21] Is a directory: '.'"
+    ]
+  },
+  "movement_total": 3666,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 3,
+    "family_reports": [
+      {
+        "body": "It had destroyed my children's mental health and mine. My youngest has became suicidal,…",
+        "state": "KS",
+        "county": "Johnson County",
+        "row_id": "5743fc9c-b65d-4033-ab3f-1e711e67009d"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Ignored the domestic violence, Ignored the abuse that happened to my daughter that was done by her father, whom had charges in the same county. Ignored evidence. Allowed the derailing.…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Inserted punitive orders against me without any evidence",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Gave custody back to a man who didn't follow court orders to go to therapy, treated coparenting therapy and reunification therapy like it was optional, threw tantrums in the courtroom,…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/stephanie_goodenow",
+  "unresolved": [
+    "pdf_stats: cache unreadable at .: [Errno 21] Is a directory: '.'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/kansas/stephanie_goodenow/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}
