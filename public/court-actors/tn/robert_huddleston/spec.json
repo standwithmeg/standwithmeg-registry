@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "robert_huddleston",
+    "display_name": "Robert Huddleston",
+    "title": "",
+    "first_name": "Robert",
+    "last_name": "Huddleston'",
+    "role": "GAL / Child Representative",
+    "court": "Sevier County court",
+    "county": null,
+    "court_or_county": "Sevier County court",
+    "state": "Tennessee",
+    "state_abbr": "TN",
+    "mention_count": 3,
+    "family_count": 3,
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "bcb20cf9-e095-433c-bc36-2fbe55dd298d",
+      "4ac647c4-8453-4bef-8bd0-0520d2e383dd",
+      "457bc86d-5081-4cec-bd82-e3a3426528c6"
+    ],
+    "actor_row_id": "bcb20cf9-e095-433c-bc36-2fbe55dd298d",
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "tennessee/robert_huddleston/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 67,
+    "total_submissions": 94,
+    "avg_financial_loss": 121916.4,
+    "avg_months_lost": 42.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "TN",
+    "state_family_count": 94,
+    "median_months_lost": 18.0,
+    "median_financial_loss": 72000,
+    "median_burden_sample_size": 37,
+    "pro_se_count": 40,
+    "pro_se_pct": 42.1,
+    "children_impacted": 153,
+    "clean_sample_size": 95,
+    "raw_submission_count": 95
+  },
+  "movement_total": 3641,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Failed to protect or look in upon my child and place her in two neglectful homes and is still keeping me from seeing my child. He hadn't met her in…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Never executed judges order, lies and hasn't represented my daughter or met her ever",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Lies and never checks on his clients/ children. Doesn't listen to there want and needs and doesn't have their best interest in mind",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/robert_huddleston",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/tennessee/robert_huddleston/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}
