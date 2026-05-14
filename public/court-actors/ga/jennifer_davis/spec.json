@@ -1,0 +1,110 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "jennifer_davis",
+    "display_name": "Jennifer Davis",
+    "title": "",
+    "first_name": "Jennifer",
+    "last_name": "Davis",
+    "role": "Judge",
+    "court": "Cherokee",
+    "county": null,
+    "court_or_county": "Cherokee",
+    "state": "Georgia",
+    "state_abbr": "GA",
+    "mention_count": 3,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "5e8de302-a37f-4f76-b517-a4a91132762d",
+      "de5a0728-0238-4976-99f4-90d835b96c04",
+      "94f96eee-db80-488c-a4b8-5a1d791ef23a"
+    ],
+    "actor_row_id": "5e8de302-a37f-4f76-b517-a4a91132762d",
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "georgia/jennifer_davis/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 69,
+    "total_submissions": 90,
+    "avg_financial_loss": 187218.69,
+    "avg_months_lost": 33.8,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "GA",
+    "state_family_count": 90,
+    "median_months_lost": 19.0,
+    "median_financial_loss": 131000,
+    "median_burden_sample_size": 50,
+    "pro_se_count": 37,
+    "pro_se_pct": 40.7,
+    "children_impacted": 165,
+    "clean_sample_size": 91,
+    "raw_submission_count": 91,
+    "_unresolved": [
+      "pdf_stats: cache unreadable at .: [Errno 21] Is a directory: '.'"
+    ]
+  },
+  "movement_total": 3666,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 3,
+    "family_reports": [
+      {
+        "body": "They destroyed our happy family and kids as we knew it. Life will never…",
+        "state": "GA",
+        "county": "Cobb",
+        "row_id": "53222120-db80-43fa-b1bd-a179adbfcefb"
+      },
+      {
+        "body": "This system has stolen years of our lives, and I can’t honestly teach my…",
+        "state": "GA",
+        "county": "Cherokee County",
+        "row_id": "4261fe2d-1017-4108-8e5e-66d4d84e0408"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Took the attorneys in chambers and threatened our counsel not to attack a GAL in her courtroom, in violation of due process. Abdicated her judgment to the GAL without any…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Falsified documents that led to the removal of my son. Had the court stamp documents via “ her memory” from years ago.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "She refused to consider my tax returns for my income, and scolded me for not calling the opposing attorney “Mr.” as if I should have known that was required for…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/jennifer_davis",
+  "unresolved": [
+    "pdf_stats: cache unreadable at .: [Errno 21] Is a directory: '.'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/georgia/jennifer_davis/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}
