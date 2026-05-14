@@ -1,0 +1,72 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "kirsten_lee_dunton",
+    "display_name": "Kirsten Lee Dunton",
+    "title": "",
+    "first_name": "Kirsten Lee",
+    "last_name": "Dunton",
+    "role": null,
+    "court": null,
+    "county": null,
+    "court_or_county": null,
+    "state": "Florida",
+    "state_abbr": "FL",
+    "mention_count": null,
+    "family_count": 3,
+    "actor_report_count": null,
+    "supabase_row_ids": null,
+    "actor_row_id": null,
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "florida/kirsten_lee_dunton/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 155,
+    "total_submissions": 210,
+    "avg_financial_loss": 200683.92,
+    "avg_months_lost": 30.7,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "FL",
+    "state_family_count": 210,
+    "median_months_lost": 19.5,
+    "median_financial_loss": 215500,
+    "median_burden_sample_size": 90,
+    "pro_se_count": 122,
+    "pro_se_pct": 58.9,
+    "children_impacted": 345,
+    "clean_sample_size": 207,
+    "raw_submission_count": 207
+  },
+  "movement_total": 3641,
+  "supabase": {
+    "report_count": null,
+    "actor_report_count": null,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": []
+  },
+  "export_dir": "New Final Post and Capcut template/export/kirsten_lee_dunton",
+  "unresolved": [
+    "court_actors: no rows match name~'Kirsten Lee Dunton' state='FL'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/florida/kirsten_lee_dunton/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}
