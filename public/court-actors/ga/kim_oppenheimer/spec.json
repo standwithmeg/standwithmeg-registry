@@ -1,0 +1,116 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "kim_oppenheimer",
+    "display_name": "Kim Oppenheimer",
+    "title": "",
+    "first_name": "Kim C.",
+    "last_name": "Oppenheimer",
+    "role": "Custody Evaluator",
+    "court": "Gwinnett County",
+    "county": null,
+    "court_or_county": "Gwinnett County",
+    "state": "Georgia",
+    "state_abbr": "GA",
+    "mention_count": 3,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "1c2178a8-8062-4959-8bdc-1ee00b97a300",
+      "c1d7c6c8-0edc-4d41-ba8f-b59c3bde641d",
+      "00cbdf5f-14c0-49d4-80c0-821cc721e9a2"
+    ],
+    "actor_row_id": "1c2178a8-8062-4959-8bdc-1ee00b97a300",
+    "actor_bucket_key": "kim openheimer|GA"
+  },
+  "photo": {
+    "path": "georgia/kim_oppenheimer/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 63,
+    "total_submissions": 83,
+    "avg_financial_loss": 197367.16,
+    "avg_months_lost": 34.1,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "GA",
+    "state_family_count": 83,
+    "median_months_lost": 17.0,
+    "median_financial_loss": 140500,
+    "median_burden_sample_size": 44,
+    "pro_se_count": 35,
+    "pro_se_pct": 42.2,
+    "children_impacted": 150,
+    "clean_sample_size": 83,
+    "raw_submission_count": 83,
+    "_unresolved": [
+      "pdf_stats: cache unreadable at .: [Errno 21] Is a directory: '.'"
+    ]
+  },
+  "movement_total": 3655,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 3,
+    "family_reports": [
+      {
+        "body": "The family court system in Gwinnett County has caused my children and I irreparable…",
+        "state": "GA",
+        "county": "Gwinnett",
+        "row_id": "e3d0c4fc-5b8a-49b6-80c5-e5107c3e1475"
+      },
+      {
+        "body": "This system took a fit and loving father and used state machinery, financial pressure,…",
+        "state": "GA",
+        "county": "Cobb County",
+        "row_id": "672701a7-9d68-48e4-bb86-119f6bf35865"
+      },
+      {
+        "body": "The system that I naively trusted stole my daughter's life and my family's.",
+        "state": "GA",
+        "county": "Chatham",
+        "row_id": "75db6be5-f373-49ec-8d63-06ccceb50e09"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Allegedly made the very statements that Kathryn Franklin would use against me in court to take custody of my kids away from me. Kim Oppenheimer never evaluated me nor produced…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Conducted an incomplete and one-sided evaluation process that harmed my parental relationship without providing a meaningful written report or fair opportunity to challenge her conclusions.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Falsied records, misrepresented evidence, falsely accused me, ignored witnesses, ignored medical records, ignored therapist",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/kim_oppenheimer",
+  "unresolved": [
+    "pdf_stats: cache unreadable at .: [Errno 21] Is a directory: '.'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/georgia/kim_oppenheimer/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

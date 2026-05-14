@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-14T11:21:10.311012",
+  "generated_at": "2026-05-14T11:41:31.675210",
   "actors": [
     {
       "slug": "donald_griffith",
@@ -126,6 +126,15 @@
       "actor_bucket_key": null,
       "photo_url": "/court-actors/ga/brandy_daswani/image_1080.png",
       "share_url": "/court-actors/ga/brandy_daswani/share.html"
+    },
+    {
+      "slug": "kim_oppenheimer",
+      "state_abbr": "GA",
+      "display_name": "Kim Oppenheimer",
+      "canonical_name": "Kim Oppenheimer",
+      "actor_bucket_key": "kim openheimer|GA",
+      "photo_url": "/court-actors/ga/kim_oppenheimer/image_1080.png",
+      "share_url": "/court-actors/ga/kim_oppenheimer/share.html"
     },
     {
       "slug": "lakendra_slade",
