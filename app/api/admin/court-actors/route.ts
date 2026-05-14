@@ -3,7 +3,8 @@ import { createAdminSupabaseClient } from "../../../../lib/supabase-admin";
 import { isAdminEmail } from "../../../../lib/require-auth";
 import { COURT_ACTOR_PUBLIC_THRESHOLD, actorBucketKeyWithLocation, courtActorLocationKey, resolveFamilyKey, type CourtActorRowReviewDecision } from "../../../../lib/court-actors";
 import { AliasResolver, type AliasDecisionRow } from "../../../../lib/court-actor-similarity";
-import { isCountableSubmission, isPublicShareableSubmission } from "../../../../lib/submission-public-visibility";
+import { isCountableSubmission } from "../../../../lib/submission-public-visibility";
+import { normalizeCourtActorEditFields } from "../../../../lib/court-actor-admin-edit";
 
 type AdminClient = ReturnType<typeof createAdminSupabaseClient>;
 
@@ -331,6 +332,7 @@ export async function GET() {
  *   { id: uuid, action: "promote" }   // change source → form_direct
  *   { id: uuid, action: "demote"  }   // revert to extracted_regex (in case of misclick)
  *   { id: uuid, action: "delete"  }   // remove entirely (e.g. confirmed bogus)
+ *   { id: uuid, action: "edit", fields: { name?, role?, court_or_county? } }
  *
  * "promote" is the big one: once form_direct, the row counts toward the
  * public threshold. Meant to be used after the admin has
@@ -344,15 +346,30 @@ export async function PATCH(request: Request) {
       return Response.json({ error: "Not authorized." }, { status: 403 });
     }
 
-    const { id, action } = await request.json();
+    const { id, action, fields } = await request.json();
     if (!id || typeof id !== "string") {
       return Response.json({ error: "id is required." }, { status: 400 });
     }
-    if (!["promote", "demote", "delete"].includes(action)) {
-      return Response.json({ error: "action must be promote, demote, or delete." }, { status: 400 });
+    if (!["promote", "demote", "delete", "edit"].includes(action)) {
+      return Response.json({ error: "action must be promote, demote, delete, or edit." }, { status: 400 });
     }
 
     const adminSb = createAdminSupabaseClient();
+
+    if (action === "edit") {
+      const normalized = normalizeCourtActorEditFields(fields);
+      if ("error" in normalized) {
+        return Response.json({ error: normalized.error }, { status: 400 });
+      }
+      const { data, error } = await adminSb
+        .from("court_actors")
+        .update(normalized.update)
+        .eq("id", id)
+        .select("id, name, role, court_or_county")
+        .single();
+      if (error) return Response.json({ error: error.message }, { status: 500 });
+      return Response.json({ success: true, actor: data });
+    }
 
     if (action === "delete") {
       const { error } = await adminSb.from("court_actors").delete().eq("id", id);

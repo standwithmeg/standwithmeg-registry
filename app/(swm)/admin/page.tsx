@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback, useMemo } from "react";
-import { COURT_ACTOR_PUBLIC_THRESHOLD, actorLooseNameKey } from "../../../lib/court-actors";
+import { COURT_ACTOR_PUBLIC_THRESHOLD, actorBucketKeyWithLocation, actorLooseNameKey, resolveFamilyKey } from "../../../lib/court-actors";
 import { PossibleMatchesPanel } from "./_components/PossibleMatchesPanel";
 
 const GOLD  = "#C9A227";
@@ -520,6 +520,27 @@ function normalizeActorRole(role: string) {
   return role.trim().replace(/\s+/g, " ").toLowerCase();
 }
 
+function mostFrequentValue<T>(m: Map<T, number>): T | null {
+  let best: T | null = null;
+  let max = 0;
+  for (const [value, count] of Array.from(m.entries())) {
+    if (count > max) {
+      best = value;
+      max = count;
+    }
+  }
+  return best;
+}
+
+function actorRoleSummary(roles: Map<string, number>) {
+  const sorted = Array.from(roles.entries()).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+  if (sorted.length === 0) return "Court Actor";
+  if (sorted.length <= 3) return sorted.map(s => s[0]).join(" / ");
+  const head = sorted.slice(0, 2).map(s => s[0]).join(" / ");
+  const remaining = sorted.length - 2;
+  return `${head} + ${remaining} more role${remaining === 1 ? "" : "s"}`;
+}
+
 function shortDate(iso: string | null) {
   if (!iso) return "No date";
   return new Date(iso).toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" });
@@ -750,6 +771,14 @@ export default function AdminPage() {
   const [actorSourceFilter, setActorSourceFilter] = useState<ActorSourceFilter>("all");
   type ActorSortMode = "default" | "group_near_dupes";
   const [actorSortMode, setActorSortMode] = useState<ActorSortMode>("default");
+  type ActorEditDraft = { name: string; role: string; court_or_county: string };
+  const emptyActorEditDraft: ActorEditDraft = { name: "", role: "", court_or_county: "" };
+  const [editingActorId, setEditingActorId] = useState<string | null>(null);
+  const [actorEditDraft, setActorEditDraft] = useState<ActorEditDraft>(emptyActorEditDraft);
+  const [savingActorEdit, setSavingActorEdit] = useState<string | null>(null);
+  const [editingPatternKey, setEditingPatternKey] = useState<string | null>(null);
+  const [patternEditDraft, setPatternEditDraft] = useState<ActorEditDraft>(emptyActorEditDraft);
+  const [savingPatternEdit, setSavingPatternEdit] = useState<string | null>(null);
 
   // ── Photo-request workflow tile ──────────────────────────────────
   type PhotoRequestRecent = {
@@ -856,6 +885,170 @@ export default function AdminPage() {
     }
     applyActorData(actorsData);
   }, [applyActorData]);
+
+  function buildAdminActorAggsFromRows(rows: AdminActor[]): AdminActorAgg[] {
+    type Bucket = {
+      state_code: string | null;
+      location_key: string | null;
+      families: Set<string>;
+      roles: Map<string, number>;
+      names: Map<string, number>;
+      courts: Map<string, number>;
+    };
+
+    const buckets = new Map<string, Bucket>();
+    for (const row of rows) {
+      if ((row.source ?? "form_direct") !== "form_direct") continue;
+      if (!row.name || !row.role) continue;
+      const location = row.location_key ?? row.state_code;
+      const key = actorBucketKeyWithLocation(row.name, row.role, location);
+      if (!key.split("|")[0]) continue;
+      const familyKey = resolveFamilyKey({
+        row_id: row.id,
+        reporter_email: row.reporter_email,
+        submission_id: row.submission_id,
+        location_key: location ?? null,
+      });
+      if (familyKey === null) continue;
+      if (!buckets.has(key)) {
+        buckets.set(key, {
+          state_code: row.state_code,
+          location_key: location ?? null,
+          families: new Set(),
+          roles: new Map(),
+          names: new Map(),
+          courts: new Map(),
+        });
+      }
+      const bucket = buckets.get(key)!;
+      bucket.families.add(familyKey);
+      bucket.roles.set(row.role, (bucket.roles.get(row.role) ?? 0) + 1);
+      bucket.names.set(row.name, (bucket.names.get(row.name) ?? 0) + 1);
+      if (row.court_or_county) bucket.courts.set(row.court_or_county, (bucket.courts.get(row.court_or_county) ?? 0) + 1);
+    }
+
+    return Array.from(buckets.values()).map(bucket => ({
+      role: actorRoleSummary(bucket.roles),
+      name: mostFrequentValue(bucket.names) ?? "Unnamed Actor",
+      state_code: bucket.state_code,
+      location_key: bucket.location_key,
+      court_or_county: mostFrequentValue(bucket.courts),
+      count: bucket.families.size,
+    })).sort((a, b) => b.count - a.count);
+  }
+
+  function patternKey(agg: AdminActorAgg) {
+    return actorBucketKeyWithLocation(agg.name, agg.role, agg.location_key ?? agg.state_code);
+  }
+
+  function rowsForPattern(agg: AdminActorAgg, rows: AdminActor[] = adminActors) {
+    const key = patternKey(agg);
+    return rows.filter(row =>
+      (row.source ?? "form_direct") === "form_direct"
+      && actorBucketKeyWithLocation(row.name, row.role, row.location_key ?? row.state_code) === key
+    );
+  }
+
+  function actorEditFieldsFromDraft(draft: ActorEditDraft) {
+    const name = draft.name.trim().replace(/\s+/g, " ");
+    const role = draft.role.trim().replace(/\s+/g, " ");
+    const court = draft.court_or_county.trim().replace(/\s+/g, " ");
+    if (!name || !role) {
+      return { error: "Name and role are required." } as const;
+    }
+    return { fields: { name, role, court_or_county: court || null } } as const;
+  }
+
+  function applyActorEdits(ids: string[], fields: { name?: string; role?: string; court_or_county?: string | null }) {
+    const idSet = new Set(ids);
+    setAdminActors(prev => {
+      const next = prev.map(actor => idSet.has(actor.id) ? { ...actor, ...fields } : actor);
+      setAdminActorAggs(buildAdminActorAggsFromRows(next));
+      return next;
+    });
+  }
+
+  function startActorEdit(actor: AdminActor) {
+    setEditingActorId(actor.id);
+    setActorEditDraft({
+      name: actor.name,
+      role: actor.role,
+      court_or_county: actor.court_or_county ?? "",
+    });
+  }
+
+  function startPatternEdit(agg: AdminActorAgg) {
+    setEditingPatternKey(patternKey(agg));
+    setPatternEditDraft({
+      name: agg.name,
+      role: agg.role,
+      court_or_county: agg.court_or_county ?? "",
+    });
+  }
+
+  async function saveActorEdit(id: string) {
+    const payload = actorEditFieldsFromDraft(actorEditDraft);
+    if ("error" in payload) {
+      alert(payload.error);
+      return;
+    }
+    setSavingActorEdit(id);
+    try {
+      const res = await fetch("/api/admin/court-actors", {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id, action: "edit", fields: payload.fields }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        alert("Edit failed: " + (data.error ?? res.statusText));
+        return;
+      }
+      applyActorEdits([id], data.actor ?? payload.fields);
+      setEditingActorId(null);
+    } catch (err) {
+      alert("Edit failed: " + (err instanceof Error ? err.message : "Network error."));
+    } finally {
+      setSavingActorEdit(null);
+    }
+  }
+
+  async function savePatternEdit(agg: AdminActorAgg) {
+    const payload = actorEditFieldsFromDraft(patternEditDraft);
+    if ("error" in payload) {
+      alert(payload.error);
+      return;
+    }
+    const rows = rowsForPattern(agg);
+    const ids = rows.map(row => row.id);
+    if (ids.length === 0) {
+      alert("No rows found for this pattern.");
+      return;
+    }
+    if (ids.length > 200) {
+      alert("This pattern has more than 200 rows. Narrow the filter before editing.");
+      return;
+    }
+    setSavingPatternEdit(patternKey(agg));
+    try {
+      const res = await fetch("/api/admin/court-actors/bucket-edit", {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ids, fields: payload.fields }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        alert("Pattern edit failed: " + (data.error ?? res.statusText));
+        return;
+      }
+      applyActorEdits(ids, payload.fields);
+      setEditingPatternKey(null);
+    } catch (err) {
+      alert("Pattern edit failed: " + (err instanceof Error ? err.message : "Network error."));
+    } finally {
+      setSavingPatternEdit(null);
+    }
+  }
 
   const applyAuditData = useCallback((data: { rows?: ReportingAuditRow[]; summary?: ReportingAuditSummary | null }) => {
     setAuditRows(data.rows ?? []);
@@ -2432,51 +2625,117 @@ export default function AdminPage() {
               )}
               {filteredAdminActorAggs.slice(0, 200).map((agg, i) => {
                 const isPublic = agg.count >= COURT_ACTOR_PUBLIC_THRESHOLD;
+                const editKey = patternKey(agg);
+                const isEditing = editingPatternKey === editKey;
+                const matchingRows = rowsForPattern(agg);
                 const drillDown = () => {
                   setActorSearch(agg.name);
                   setActorLocationFilter(agg.location_key ?? agg.state_code ?? "");
                   setActorView("all");
                 };
                 return (
-                  <button
-                    key={i}
-                    type="button"
-                    onClick={drillDown}
-                    title={`Show every report for ${agg.name} (with View / Permission / Delete actions)`}
-                    className="w-full text-left px-6 py-3 flex items-center justify-between gap-4 hover:bg-white/5 transition-colors"
+                  <div
+                    key={editKey}
+                    className="px-6 py-3"
                     style={{ borderTop: i > 0 ? "1px solid rgba(255,255,255,0.05)" : "none" }}>
-                    <div className="min-w-0 flex-1">
+                    <div className="flex items-center justify-between gap-4 flex-wrap">
+                      <div className="min-w-0 flex-1">
+                        <div className="flex items-center gap-2 flex-wrap">
+                          <span className="font-semibold text-sm text-white">{agg.name}</span>
+                          <span className="text-xs px-2 py-0.5 rounded-full"
+                            style={{ backgroundColor: "rgba(255,255,255,0.08)", color: "rgba(245,245,245,0.7)" }}>
+                            {agg.role}
+                          </span>
+                          {agg.location_key && (
+                            <span className="text-xs" style={{ color: GOLD }}>{agg.location_key}</span>
+                          )}
+                          {agg.court_or_county && (
+                            <span className="text-xs" style={{ color: "rgba(245,245,245,0.4)" }}>· {agg.court_or_county}</span>
+                          )}
+                        </div>
+                      </div>
                       <div className="flex items-center gap-2 flex-wrap">
-                        <span className="font-semibold text-sm text-white">{agg.name}</span>
-                        <span className="text-xs px-2 py-0.5 rounded-full"
-                          style={{ backgroundColor: "rgba(255,255,255,0.08)", color: "rgba(245,245,245,0.7)" }}>
-                          {agg.role}
+                        <span className={`text-xs font-bold px-2.5 py-1 rounded-md ${isPublic ? "text-red-300" : ""}`}
+                          style={{
+                            backgroundColor: isPublic ? "rgba(185,28,28,0.22)" : "rgba(255,255,255,0.08)",
+                            color: isPublic ? undefined : "rgba(245,245,245,0.6)"
+                          }}>
+                          {agg.count} {agg.count === 1 ? "report" : "reports"}
                         </span>
-                        {agg.location_key && (
-                          <span className="text-xs" style={{ color: GOLD }}>{agg.location_key}</span>
+                        {isPublic && (
+                          <span className="text-[10px] font-bold uppercase tracking-wide"
+                            style={{ color: GOLD }}>Public</span>
                         )}
-                        {agg.court_or_county && (
-                          <span className="text-xs" style={{ color: "rgba(245,245,245,0.4)" }}>· {agg.court_or_county}</span>
-                        )}
+                        <button
+                          type="button"
+                          onClick={() => startPatternEdit(agg)}
+                          className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide transition-colors"
+                          style={{ backgroundColor: "rgba(201,162,39,0.12)", color: GOLD, border: "1px solid rgba(201,162,39,0.28)" }}>
+                          Edit pattern
+                        </button>
+                        <button
+                          type="button"
+                          onClick={drillDown}
+                          title={`Show every report for ${agg.name} (with View / Permission / Delete actions)`}
+                          className="text-[10px] font-bold uppercase tracking-wide"
+                          style={{ color: "rgba(245,245,245,0.4)" }}>
+                          View reports →
+                        </button>
                       </div>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <span className={`text-xs font-bold px-2.5 py-1 rounded-md ${isPublic ? "text-red-300" : ""}`}
-                        style={{
-                          backgroundColor: isPublic ? "rgba(185,28,28,0.22)" : "rgba(255,255,255,0.08)",
-                          color: isPublic ? undefined : "rgba(245,245,245,0.6)"
-                        }}>
-                        {agg.count} {agg.count === 1 ? "report" : "reports"}
-                      </span>
-                      {isPublic && (
-                        <span className="text-[10px] font-bold uppercase tracking-wide"
-                          style={{ color: GOLD }}>Public</span>
+                    {isEditing && (
+                      <div className="mt-3 grid grid-cols-1 md:grid-cols-[1fr_1fr_1fr_auto] gap-2 items-end rounded-lg p-3"
+                        style={{ backgroundColor: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.09)" }}>
+                        <label className="text-[10px] uppercase tracking-wide font-bold" style={{ color: "rgba(245,245,245,0.45)" }}>
+                          Name
+                          <input
+                            value={patternEditDraft.name}
+                            onChange={e => setPatternEditDraft(prev => ({ ...prev, name: e.target.value }))}
+                            className="mt-1 w-full rounded px-2 py-1.5 text-xs"
+                            style={{ backgroundColor: "rgba(0,0,0,0.35)", color: "white", border: "1px solid rgba(255,255,255,0.14)" }}
+                          />
+                        </label>
+                        <label className="text-[10px] uppercase tracking-wide font-bold" style={{ color: "rgba(245,245,245,0.45)" }}>
+                          Role
+                          <input
+                            value={patternEditDraft.role}
+                            onChange={e => setPatternEditDraft(prev => ({ ...prev, role: e.target.value }))}
+                            className="mt-1 w-full rounded px-2 py-1.5 text-xs"
+                            style={{ backgroundColor: "rgba(0,0,0,0.35)", color: "white", border: "1px solid rgba(255,255,255,0.14)" }}
+                          />
+                        </label>
+                        <label className="text-[10px] uppercase tracking-wide font-bold" style={{ color: "rgba(245,245,245,0.45)" }}>
+                          Court
+                          <input
+                            value={patternEditDraft.court_or_county}
+                            onChange={e => setPatternEditDraft(prev => ({ ...prev, court_or_county: e.target.value }))}
+                            className="mt-1 w-full rounded px-2 py-1.5 text-xs"
+                            style={{ backgroundColor: "rgba(0,0,0,0.35)", color: "white", border: "1px solid rgba(255,255,255,0.14)" }}
+                          />
+                        </label>
+                        <div className="flex items-center gap-2 flex-wrap">
+                          <span className="text-[10px]" style={{ color: "rgba(245,245,245,0.4)" }}>
+                            Applies to {matchingRows.length} row{matchingRows.length === 1 ? "" : "s"}
+                          </span>
+                          <button
+                            type="button"
+                            disabled={savingPatternEdit === editKey}
+                            onClick={() => void savePatternEdit(agg)}
+                            className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide disabled:opacity-50"
+                            style={{ backgroundColor: "rgba(34,197,94,0.16)", color: "rgb(134,239,172)", border: "1px solid rgba(34,197,94,0.3)" }}>
+                            {savingPatternEdit === editKey ? "Saving…" : "Save"}
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => setEditingPatternKey(null)}
+                            className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide"
+                            style={{ backgroundColor: "rgba(255,255,255,0.06)", color: "rgba(245,245,245,0.7)", border: "1px solid rgba(255,255,255,0.12)" }}>
+                            Cancel
+                          </button>
+                        </div>
+                      </div>
                       )}
-                      <span className="text-[10px] font-bold uppercase tracking-wide" style={{ color: "rgba(245,245,245,0.4)" }}>
-                        View reports →
-                      </span>
-                    </div>
-                  </button>
+                  </div>
                 );
               })}
             </div>
@@ -2535,7 +2794,64 @@ export default function AdminPage() {
                       {a.notes}
                     </div>
                   )}
+                  {editingActorId === a.id && (
+                    <div className="mt-3 grid grid-cols-1 md:grid-cols-[1fr_1fr_1fr_auto] gap-2 items-end rounded-lg p-3"
+                      style={{ backgroundColor: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.09)" }}>
+                      <label className="text-[10px] uppercase tracking-wide font-bold" style={{ color: "rgba(245,245,245,0.45)" }}>
+                        Name
+                        <input
+                          value={actorEditDraft.name}
+                          onChange={e => setActorEditDraft(prev => ({ ...prev, name: e.target.value }))}
+                          className="mt-1 w-full rounded px-2 py-1.5 text-xs"
+                          style={{ backgroundColor: "rgba(0,0,0,0.35)", color: "white", border: "1px solid rgba(255,255,255,0.14)" }}
+                        />
+                      </label>
+                      <label className="text-[10px] uppercase tracking-wide font-bold" style={{ color: "rgba(245,245,245,0.45)" }}>
+                        Role
+                        <input
+                          value={actorEditDraft.role}
+                          onChange={e => setActorEditDraft(prev => ({ ...prev, role: e.target.value }))}
+                          className="mt-1 w-full rounded px-2 py-1.5 text-xs"
+                          style={{ backgroundColor: "rgba(0,0,0,0.35)", color: "white", border: "1px solid rgba(255,255,255,0.14)" }}
+                        />
+                      </label>
+                      <label className="text-[10px] uppercase tracking-wide font-bold" style={{ color: "rgba(245,245,245,0.45)" }}>
+                        Court
+                        <input
+                          value={actorEditDraft.court_or_county}
+                          onChange={e => setActorEditDraft(prev => ({ ...prev, court_or_county: e.target.value }))}
+                          className="mt-1 w-full rounded px-2 py-1.5 text-xs"
+                          style={{ backgroundColor: "rgba(0,0,0,0.35)", color: "white", border: "1px solid rgba(255,255,255,0.14)" }}
+                        />
+                      </label>
+                      <div className="flex items-center gap-2 flex-wrap">
+                        <button
+                          type="button"
+                          disabled={savingActorEdit === a.id}
+                          onClick={() => void saveActorEdit(a.id)}
+                          className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide disabled:opacity-50"
+                          style={{ backgroundColor: "rgba(34,197,94,0.16)", color: "rgb(134,239,172)", border: "1px solid rgba(34,197,94,0.3)" }}>
+                          {savingActorEdit === a.id ? "Saving…" : "Save"}
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => setEditingActorId(null)}
+                          className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide"
+                          style={{ backgroundColor: "rgba(255,255,255,0.06)", color: "rgba(245,245,245,0.7)", border: "1px solid rgba(255,255,255,0.12)" }}>
+                          Cancel
+                        </button>
+                      </div>
+                    </div>
+                  )}
                   <div className="mt-2 flex items-center gap-1.5 flex-wrap">
+                    <button
+                      type="button"
+                      onClick={() => startActorEdit(a)}
+                      title="Edit this actor row's name, role, or court"
+                      className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide transition-colors"
+                      style={{ backgroundColor: "rgba(201,162,39,0.12)", color: GOLD, border: "1px solid rgba(201,162,39,0.28)" }}>
+                      Edit
+                    </button>
                     <button
                       type="button"
                       onClick={() => void openSubmissionDetail(a.submission_id)}
