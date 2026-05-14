@@ -114,10 +114,26 @@ jobs:
               echo "Push succeeded on attempt ${attempt}."
               exit 0
             fi
-            echo "Push rejected on attempt ${attempt}; rebasing on origin/main and retrying."
+            echo "Push rejected on attempt ${attempt}; rebasing on origin/main."
             git fetch origin main
-            git rebase origin/main
+            if ! git rebase origin/main; then
+              conflicts=$(git diff --name-only --diff-filter=U)
+              if [ "$conflicts" = "public/court-actors/manifest.json" ]; then
+                echo "Resolving manifest.json conflict by regenerating from filesystem."
+                python -c "
+import sys; sys.path.insert(0, 'scripts/share-pages')
+from regenerate_deployed_actors import rewrite_manifest
+rewrite_manifest()
+"
+                git add public/court-actors/manifest.json
+                GIT_EDITOR=true git rebase --continue
+              else
+                echo "Unexpected conflicts: $conflicts - aborting rebase."
+                git rebase --abort
+                exit 1
+              fi
+            fi
             sleep $((attempt * 3))
           done
-          echo "Push still failing after 5 rebase attempts — giving up so the run is visible."
+          echo "Push still failing after 5 attempts — giving up so the run is visible."
           exit 1

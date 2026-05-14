@@ -9,6 +9,7 @@ specific manifest-filtered state is passed.
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import os
 import shutil
@@ -16,7 +17,7 @@ import subprocess
 import sys
 import tempfile
 from dataclasses import dataclass
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -26,6 +27,17 @@ PUBLIC_ACTORS_DIR = WEBSITE_ROOT / "public" / "court-actors"
 MANIFEST_PATH = PUBLIC_ACTORS_DIR / "manifest.json"
 WORK_DIR = Path(os.environ.get("SWM_SHARE_WORKDIR", tempfile.mkdtemp(prefix="swm-share-pages-"))).resolve()
 EXPORT_ROOT = WORK_DIR / "New Final Post and Capcut template" / "export"
+CACHE_FILENAME = ".regen-cache.json"
+TEMPLATE_INPUT_FILES = (
+    "scripts/share-pages/spotlight_build.py",
+    "scripts/share-pages/render_spotlight.py",
+    "scripts/share-pages/prerender_frames.py",
+    "scripts/share-pages/spotlight_columns.json",
+    "scripts/pdf/public_actor_for_share.py",
+    "scripts/pdf/state_stats_for_share.py",
+    "scripts/pdf/generate_state_pdf.py",
+    "scripts/pdf/lib_supabase_rows.py",
+)
 
 
 @dataclass
@@ -43,6 +55,132 @@ def read_json(path: Path) -> dict[str, Any] | None:
         return json.loads(path.read_text())
     except (OSError, json.JSONDecodeError):
         return None
+
+
+def stable_json(data: Any) -> str:
+    return json.dumps(data, sort_keys=True, separators=(",", ":"), ensure_ascii=False, default=str)
+
+
+def sha256_text(text: str) -> str:
+    return "sha256:" + hashlib.sha256(text.encode("utf-8")).hexdigest()
+
+
+def sha256_file(path: Path) -> str | None:
+    if not path.exists() or not path.is_file():
+        return None
+    h = hashlib.sha256()
+    with path.open("rb") as fh:
+        for chunk in iter(lambda: fh.read(1024 * 1024), b""):
+            h.update(chunk)
+    return "sha256:" + h.hexdigest()
+
+
+def template_version() -> str:
+    payload = []
+    for rel in TEMPLATE_INPUT_FILES:
+        path = WEBSITE_ROOT / rel
+        payload.append({"path": rel, "sha256": sha256_file(path)})
+    return sha256_text(stable_json(payload))
+
+
+def cache_path(slug: str, state_abbr: str) -> Path:
+    return PUBLIC_ACTORS_DIR / state_abbr.lower() / slug / CACHE_FILENAME
+
+
+def read_cache(slug: str, state_abbr: str) -> dict[str, Any] | None:
+    return read_json(cache_path(slug, state_abbr))
+
+
+def write_cache(slug: str, state_abbr: str, input_hash: str, version_hash: str) -> None:
+    path = cache_path(slug, state_abbr)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(stable_json({
+        "input_hash": input_hash,
+        "last_regen": datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z"),
+        "template_version": version_hash,
+    }) + "\n")
+
+
+def actor_outputs_exist(slug: str, state_abbr: str, render_frames: bool) -> bool:
+    actor_dir = PUBLIC_ACTORS_DIR / state_abbr.lower() / slug
+    required = ["spec.json", "share.html"]
+    if render_frames:
+        required.extend(f"frame-{i:02d}.jpg" for i in range(1, 7))
+    return all((actor_dir / filename).exists() for filename in required)
+
+
+def actor_name_key(name: Any) -> str:
+    return " ".join(
+        "".join(ch.lower() if ch.isalnum() else " " for ch in str(name or "")).split()
+    )
+
+
+def public_actor_for_entry(public_actors_by_state: dict[str, Any], state_abbr: str, display_name: str) -> dict[str, Any] | None:
+    actors = public_actors_by_state.get(state_abbr.upper()) or []
+    target = actor_name_key(display_name)
+    for actor in actors:
+        if actor_name_key(actor.get("name") or actor.get("display_name")) == target:
+            return actor
+    target_parts = target.split()
+    if target_parts:
+        surname = target_parts[-1]
+        matches = [
+            actor for actor in actors
+            if surname and surname in actor_name_key(actor.get("name") or actor.get("display_name")).split()
+        ]
+        if len(matches) == 1:
+            return matches[0]
+    return None
+
+
+def load_cache_file(env: dict[str, str], key: str) -> dict[str, Any]:
+    path = env.get(key)
+    if not path:
+        return {}
+    data = read_json(Path(path))
+    return data if isinstance(data, dict) else {}
+
+
+def actor_input_hash(
+    entry: dict[str, Any],
+    deployed_spec: dict[str, Any] | None,
+    state_stats_by_state: dict[str, Any],
+    public_actors_by_state: dict[str, Any],
+    version_hash: str,
+    render_frames: bool,
+) -> str:
+    slug = str(entry["slug"])
+    state_abbr = str(entry["state_abbr"]).upper()
+    actor = (deployed_spec or {}).get("actor") or {}
+    label = str(entry.get("display_name") or actor.get("display_name") or entry.get("canonical_name") or slug)
+    photo_path = PUBLIC_ACTORS_DIR / state_abbr.lower() / slug / "image_1080.png"
+    public_actor = public_actor_for_entry(public_actors_by_state, state_abbr, label)
+    public_payload = public_actor if public_actor is not None else {
+        "unmatched_state_public_actors": public_actors_by_state.get(state_abbr) or [],
+    }
+    actor_hints = {
+        "slug": slug,
+        "state_abbr": state_abbr,
+        "display_name": label,
+        "entry_actor_bucket_key": entry.get("actor_bucket_key"),
+    }
+    if public_actor is None:
+        actor_hints.update({
+            "role": actor.get("role"),
+            "court": actor.get("court"),
+            "county": actor.get("county"),
+            "actor_row_id": actor.get("actor_row_id"),
+            "actor_bucket_key": actor.get("actor_bucket_key"),
+        })
+    payload = {
+        "actor": actor_hints,
+        "photo_sha256": sha256_file(photo_path),
+        "public_actor_payload": public_payload,
+        "state_stats": state_stats_by_state.get(state_abbr),
+        "template_version": version_hash,
+        "render_frames": render_frames,
+    }
+    return sha256_text(stable_json(payload))
 
 
 def family_count_from_spec(spec: dict[str, Any] | None) -> str:
@@ -154,6 +292,8 @@ def main(argv: list[str]) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--state", help="Optional 2-letter state filter. Omit for every manifest actor.")
     parser.add_argument("--skip-frames", action="store_true", help="Regenerate share.html/spec.json only.")
+    parser.add_argument("--force", action="store_true", help="Bypass .regen-cache.json and regenerate every selected actor.")
+    parser.add_argument("--changed-only", action="store_true", default=True, help="Regenerate only changed actors. Default unless --force is set.")
     args = parser.parse_args(argv)
 
     state_filter = args.state.strip().upper() if args.state else None
@@ -166,8 +306,13 @@ def main(argv: list[str]) -> int:
         return 0
 
     env = build_env()
+    state_stats_by_state = load_cache_file(env, "SWM_PDF_STATS_CACHE")
+    public_actors_by_state = load_cache_file(env, "SWM_PUBLIC_ACTORS_CACHE")
+    version_hash = template_version()
+    render_frames = not args.skip_frames
     results: list[ActorResult] = []
     failed = False
+    changed_any = False
     for entry in entries:
         slug = str(entry["slug"])
         state_abbr = str(entry["state_abbr"]).upper()
@@ -177,6 +322,22 @@ def main(argv: list[str]) -> int:
         photo_path = PUBLIC_ACTORS_DIR / state_abbr.lower() / slug / "image_1080.png"
         label = str(entry.get("display_name") or actor.get("display_name") or entry.get("canonical_name") or slug)
         old_count = family_count_from_spec(deployed_spec)
+        input_hash = actor_input_hash(
+            entry,
+            deployed_spec,
+            state_stats_by_state,
+            public_actors_by_state,
+            version_hash,
+            render_frames,
+        )
+        cached = read_cache(slug, state_abbr)
+        if (not args.force
+                and cached
+                and cached.get("input_hash") == input_hash
+                and actor_outputs_exist(slug, state_abbr, render_frames)):
+            results.append(ActorResult(label, slug, state_abbr, old_count, old_count, "skipped (unchanged)"))
+            print(f"· skipped {slug} (unchanged)")
+            continue
 
         cmd = [
             sys.executable,
@@ -223,6 +384,8 @@ def main(argv: list[str]) -> int:
                 continue
 
         copy_generated_assets(slug, state_abbr)
+        write_cache(slug, state_abbr, input_hash, version_hash)
+        changed_any = True
         fresh_spec = read_json(EXPORT_ROOT / slug / "spec.json")
         new_count = family_count_from_spec(fresh_spec)
         results.append(ActorResult(
@@ -230,7 +393,8 @@ def main(argv: list[str]) -> int:
             "unchanged" if old_count == new_count else "updated",
         ))
 
-    rewrite_manifest()
+    if changed_any:
+        rewrite_manifest()
     print("actor | state | old_family_count | new_family_count | status")
     print("------|-------|------------------|------------------|-------")
     for r in results:
