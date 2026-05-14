@@ -26,7 +26,7 @@
     "actor_bucket_key": "emily mothmiler|OH"
   },
   "photo": {
-    "path": "public/court-actors/oh/emily_mothmiller/image_1080.png",
+    "path": "ohio/emily_mothmiller/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -38,15 +38,19 @@
     "_source_table": "movement_stats_by_state",
     "_match_value": "OH",
     "state_family_count": 196,
-    "median_financial_loss": 81250,
-    "median_burden_sample_size": 96,
-    "median_months_lost": 18,
-    "pro_se_pct": 56.1,
-    "pro_se_count": 110,
-    "_pdf_state_family_count": 196,
-    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+    "median_months_lost": 19.0,
+    "median_financial_loss": 80000,
+    "median_burden_sample_size": 97,
+    "pro_se_count": 111,
+    "pro_se_pct": 57.5,
+    "children_impacted": 292,
+    "clean_sample_size": 193,
+    "raw_submission_count": 193,
+    "_unresolved": [
+      "pdf_stats: cache unreadable at .: [Errno 21] Is a directory: '.'"
+    ]
   },
-  "movement_total": 3666,
+  "movement_total": 3680,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -73,27 +77,26 @@
     ],
     "public_comments": [
       {
-        "comment_text": "Aquired restricted court documents from a 3rd party of a juvenile case in a different state with kids not involved in this case in any way to discredit a witness and those documents were fully unredacted and compromised those childrens identities. Lied about having them and lied about redacting them",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Shelby County"
-      },
-      {
         "comment_text": "Uses \"evidence\" gotten under false pretenses and exaggerates in court to try and manipulate you into emotional responses and answers",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Shelby"
+        "source": "court_actors.notes"
       },
       {
         "comment_text": "Files retaliatory motions to keep parties wrapped up in legal fees",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Shelby"
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Aquired restricted court documents from a 3rd party of a juvenile case in a different state with kids not involved in this case in any way to discredit a witness…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/emily_mothmiller",
-  "unresolved": [],
+  "unresolved": [
+    "pdf_stats: cache unreadable at .: [Errno 21] Is a directory: '.'"
+  ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions · not court findings.",
