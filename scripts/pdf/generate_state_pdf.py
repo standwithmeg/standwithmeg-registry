@@ -10,7 +10,7 @@ Usage:
     python generate_state_pdf.py --source=xlsx MT
 """
 from __future__ import annotations
-import os, sys, statistics
+import hashlib, json, os, sys, statistics
 from pathlib import Path
 from collections import Counter, defaultdict
 from datetime import datetime, timezone, timedelta
@@ -20,9 +20,12 @@ from jinja2 import Environment, FileSystemLoader
 from playwright.sync_api import sync_playwright
 
 BASE_DIR = Path(__file__).resolve().parent
+WEBSITE_ROOT = BASE_DIR.parent.parent
 MASTER_PATH = BASE_DIR / "outputs" / "SWM_MASTER_LATEST.xlsx"
 TEMPLATE_DIR = BASE_DIR / "templates"
 OUTPUT_DIR = BASE_DIR / "outputs" / "state_packets_pdf"
+PUBLIC_STATE_REPORTS_DIR = WEBSITE_ROOT / "public" / "state-reports"
+PDF_CACHE_PATH = PUBLIC_STATE_REPORTS_DIR / ".regen-cache.json"
 SHEET_NAME = "Sheet1"
 
 COLS = {'state':1,'atty_fees':2,'gal_fees':3,'therapy_fees':4,'reunif_fees':5,
@@ -56,6 +59,67 @@ STATE_COUNTIES = {
 }
 
 CUSTODY_NORM = {"Yes": "50/50 Joint", "No": "No Contact / Total Loss of Access"}
+
+
+def stable_json(data) -> str:
+    return json.dumps(data, sort_keys=True, separators=(",", ":"), ensure_ascii=False, default=str)
+
+
+def sha256_text(text: str) -> str:
+    return "sha256:" + hashlib.sha256(text.encode("utf-8")).hexdigest()
+
+
+def sha256_file(path: Path) -> str | None:
+    if not path.exists() or not path.is_file():
+        return None
+    h = hashlib.sha256()
+    with path.open("rb") as fh:
+        for chunk in iter(lambda: fh.read(1024 * 1024), b""):
+            h.update(chunk)
+    return "sha256:" + h.hexdigest()
+
+
+def pdf_template_version() -> str:
+    files = [
+        BASE_DIR / "generate_state_pdf.py",
+        BASE_DIR / "lib_supabase_rows.py",
+        TEMPLATE_DIR / "state_report.html.j2",
+    ]
+    assets_dir = BASE_DIR / "assets"
+    if assets_dir.exists():
+        files.extend(sorted(path for path in assets_dir.rglob("*") if path.is_file()))
+    payload = [
+        {
+            "path": str(path.relative_to(WEBSITE_ROOT)),
+            "sha256": sha256_file(path),
+        }
+        for path in files
+    ]
+    return sha256_text(stable_json(payload))
+
+
+def read_pdf_cache() -> dict:
+    try:
+        data = json.loads(PDF_CACHE_PATH.read_text())
+    except (OSError, json.JSONDecodeError):
+        return {}
+    return data if isinstance(data, dict) else {}
+
+
+def write_pdf_cache(cache: dict) -> None:
+    PUBLIC_STATE_REPORTS_DIR.mkdir(parents=True, exist_ok=True)
+    PDF_CACHE_PATH.write_text(stable_json(cache) + "\n")
+
+
+def state_input_hash(state_abbr: str, rows: list, court_actors: list, version_hash: str, source: str) -> str:
+    payload = {
+        "state_abbr": state_abbr,
+        "rows": rows,
+        "court_actors": court_actors,
+        "template_version": version_hash,
+        "source": source,
+    }
+    return sha256_text(stable_json(payload))
 
 # Values that were entered into the County free-text field but are not
 # counties — usually they are answers to an adjacent yes/no question, the
@@ -952,6 +1016,7 @@ def main():
     args = [a for a in sys.argv[1:]]
     use_supabase = True
     only_30plus = False
+    force = False
     cleaned: list[str] = []
     for a in args:
         if a == "--source=supabase":
@@ -960,6 +1025,10 @@ def main():
             use_supabase = False
         elif a == "--all-30plus":
             only_30plus = True
+        elif a == "--force":
+            force = True
+        elif a == "--changed-only":
+            pass
         else:
             cleaned.append(a)
     args = cleaned
@@ -989,7 +1058,11 @@ def main():
     else:
         states = [s.strip().upper() for s in args]
 
+    cache = read_pdf_cache()
+    version_hash = pdf_template_version()
+    source_name = "supabase" if use_supabase else "xlsx"
     generated = 0
+    skipped = 0
     for state in states:
         if state not in by_state:
             print(f"  {state}: not found in data, skipping")
@@ -998,11 +1071,24 @@ def main():
         if len(sr) < 30:
             print(f"  {state}: {len(sr)} submissions, below 30-family threshold; skipping")
             continue
+        court_actors = public_actors_by_state.get(state, [])
+        input_hash = state_input_hash(state, sr, court_actors, version_hash, source_name)
+        cached = cache.get(state) if isinstance(cache.get(state), dict) else None
+        if not force and cached and cached.get("input_hash") == input_hash and (PUBLIC_STATE_REPORTS_DIR / f"{state}.pdf").exists():
+            print(f"  {state}: skipped (unchanged)")
+            skipped += 1
+            continue
         print(f"\n  Generating {STATE_NAMES.get(state, state)} ({state}) — {len(sr)} submissions")
-        generate_pdf(state, sr, court_actors=public_actors_by_state.get(state, []))
+        generate_pdf(state, sr, court_actors=court_actors)
+        cache[state] = {
+            "input_hash": input_hash,
+            "last_regen": datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z"),
+            "template_version": version_hash,
+        }
+        write_pdf_cache(cache)
         generated += 1
 
-    print(f"\nDone. Generated {generated} PDF(s).")
+    print(f"\nDone. Generated {generated} PDF(s), skipped {skipped} unchanged.")
 
 
 if __name__ == "__main__":
