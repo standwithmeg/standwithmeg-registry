@@ -1,0 +1,115 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "anthony_miller",
+    "display_name": "Anthony Miller",
+    "title": "",
+    "first_name": "Anthony",
+    "last_name": "Miller",
+    "role": "Judge",
+    "court": "Leon",
+    "county": null,
+    "court_or_county": "Leon",
+    "state": "Florida",
+    "state_abbr": "FL",
+    "mention_count": 4,
+    "family_count": 3,
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "49f43fa2-eb12-43ca-86cf-c9a7e98c68a4",
+      "b8c94c4b-7352-49b2-b016-031451ece4c9",
+      "497f36d8-bf70-4971-84fc-370e91629e26",
+      "12e2cf03-8192-48a7-84ef-a84a812b2f7c"
+    ],
+    "actor_row_id": "49f43fa2-eb12-43ca-86cf-c9a7e98c68a4",
+    "actor_bucket_key": "anthony miler|FL"
+  },
+  "photo": {
+    "path": "florida/anthony_miller/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 155,
+    "total_submissions": 210,
+    "avg_financial_loss": 200683.92,
+    "avg_months_lost": 30.7,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "FL",
+    "state_family_count": 210,
+    "median_months_lost": 19.5,
+    "median_financial_loss": 215500,
+    "median_burden_sample_size": 90,
+    "pro_se_count": 122,
+    "pro_se_pct": 58.9,
+    "children_impacted": 345,
+    "clean_sample_size": 207,
+    "raw_submission_count": 207
+  },
+  "movement_total": 3641,
+  "supabase": {
+    "report_count": 4,
+    "actor_report_count": 4,
+    "family_count": 3,
+    "family_reports": [
+      {
+        "body": "Family court destroyed my family.",
+        "state": "FL",
+        "county": "Leon",
+        "row_id": "5551df4a-f030-4c80-9e8a-ebb35b83a81b"
+      },
+      {
+        "body": "I expected the system to save me and my 6 children from 17 years…",
+        "state": "FL",
+        "county": "Leon",
+        "row_id": "e1db8870-7b51-4ef3-b79d-2599f5713349"
+      },
+      {
+        "body": "Family court has destroyed my children.",
+        "state": "FL",
+        "county": "Leon",
+        "row_id": "a01ca4a6-5047-4e42-a626-709059f29e2d"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Would not allow children to testify. When one child did testify it was off the record for 45 minutes. When a motion was filed by the Gaurdian Ad Litem to…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "This judge ruled based on hearsay testimony of a guardian ad litem who was ill informed of the facts of the situation. Florida law does not allow guardian ad litems…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Concerns have been raised regarding the handling of allegations of child abuse Specifically, despite a report made by a mental health provider concerning suspected abuse, no emergency hearing was scheduled…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Continued to have a hearing without me present while I attended a funeral of a close family member, forced reunification of 6 minor children exposed to domestic violence and abuse…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/anthony_miller",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/florida/anthony_miller/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

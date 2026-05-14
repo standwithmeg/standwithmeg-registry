@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-14T07:29:35.572505",
+  "generated_at": "2026-05-14T07:29:49.588217",
   "actors": [
     {
       "slug": "donald_griffith",
@@ -36,6 +36,15 @@
       "actor_bucket_key": null,
       "photo_url": "/court-actors/ca/raymond_de_jesus/image_1080.png",
       "share_url": "/court-actors/ca/raymond_de_jesus/share.html"
+    },
+    {
+      "slug": "anthony_miller",
+      "state_abbr": "FL",
+      "display_name": "Anthony Miller",
+      "canonical_name": "Anthony Miller",
+      "actor_bucket_key": "anthony miler|FL",
+      "photo_url": "/court-actors/fl/anthony_miller/image_1080.png",
+      "share_url": "/court-actors/fl/anthony_miller/share.html"
     },
     {
       "slug": "joan_anthony",
