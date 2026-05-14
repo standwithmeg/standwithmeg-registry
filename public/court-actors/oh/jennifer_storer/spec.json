@@ -13,8 +13,8 @@
     "state": "Ohio",
     "state_abbr": "OH",
     "mention_count": 6,
-    "family_count": 4,
-    "public_family_count": 4,
+    "family_count": 5,
+    "public_family_count": 5,
     "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
     "actor_report_count": 6,
     "supabase_row_ids": [
@@ -29,8 +29,8 @@
     "actor_bucket_key": "jenifer storer|OH"
   },
   "photo": {
-    "path": null,
-    "exists": false,
+    "path": "ohio/jennifer_storer/image_1080.png",
+    "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
@@ -41,19 +41,23 @@
     "_source_table": "movement_stats_by_state",
     "_match_value": "OH",
     "state_family_count": 196,
-    "median_financial_loss": 81250,
-    "median_burden_sample_size": 96,
-    "median_months_lost": 18,
-    "pro_se_pct": 56.1,
-    "pro_se_count": 110,
-    "_pdf_state_family_count": 196,
-    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+    "median_months_lost": 19.0,
+    "median_financial_loss": 80000,
+    "median_burden_sample_size": 97,
+    "pro_se_count": 111,
+    "pro_se_pct": 57.5,
+    "children_impacted": 292,
+    "clean_sample_size": 193,
+    "raw_submission_count": 193,
+    "_unresolved": [
+      "pdf_stats: cache unreadable at .: [Errno 21] Is a directory: '.'"
+    ]
   },
-  "movement_total": 3660,
+  "movement_total": 3664,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
-    "family_count": 4,
+    "family_count": 5,
     "family_reports": [
       {
         "body": "Denied motion and ignored evidence!! None of them did their job they made up…",
@@ -110,7 +114,7 @@
   },
   "export_dir": "New Final Post and Capcut template/export/jennifer_storer",
   "unresolved": [
-    "pdf_public_actor: no 'Jennifer storer' in cache for OH"
+    "pdf_stats: cache unreadable at .: [Errno 21] Is a directory: '.'"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
