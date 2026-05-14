@@ -120,11 +120,7 @@ jobs:
               conflicts=$(git diff --name-only --diff-filter=U)
               if [ "$conflicts" = "public/court-actors/manifest.json" ]; then
                 echo "Resolving manifest.json conflict by regenerating from filesystem."
-                python -c "
-import sys; sys.path.insert(0, 'scripts/share-pages')
-from regenerate_deployed_actors import rewrite_manifest
-rewrite_manifest()
-"
+                python -c "import sys; sys.path.insert(0, 'scripts/share-pages'); from regenerate_deployed_actors import rewrite_manifest; rewrite_manifest()"
                 git add public/court-actors/manifest.json
                 GIT_EDITOR=true git rebase --continue
               else
