@@ -12,11 +12,11 @@
     "court_or_county": "Hancock",
     "state": "Ohio",
     "state_abbr": "OH",
-    "mention_count": 9,
+    "mention_count": 8,
     "family_count": 9,
     "public_family_count": 9,
     "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
-    "actor_report_count": 9,
+    "actor_report_count": 8,
     "supabase_row_ids": [
       "02012677-e69a-4ba3-b2bf-635b3acfa3f5",
       "fa918d31-ec10-4615-9ac2-586c88dffcf7",
@@ -25,14 +25,13 @@
       "91b68742-c036-4746-9861-dd4f51ed0810",
       "fa461b05-ecae-42c7-9a15-705b23675895",
       "044630e8-a388-42bc-b25c-3ae1ff2b1260",
-      "d5117ab7-c9c3-4383-bf34-229bfb923ea7",
-      "c3ca2584-80ba-4d89-958e-7c5f94a099e1"
+      "d5117ab7-c9c3-4383-bf34-229bfb923ea7"
     ],
     "actor_row_id": "02012677-e69a-4ba3-b2bf-635b3acfa3f5",
     "actor_bucket_key": "kristen johnson|OH"
   },
   "photo": {
-    "path": "public/court-actors/oh/kristen_k_johnson/image_1080.png",
+    "path": "ohio/kristen_k_johnson/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -44,18 +43,22 @@
     "_source_table": "movement_stats_by_state",
     "_match_value": "OH",
     "state_family_count": 196,
-    "median_financial_loss": 81250,
-    "median_burden_sample_size": 96,
-    "median_months_lost": 18,
-    "pro_se_pct": 56.1,
-    "pro_se_count": 110,
-    "_pdf_state_family_count": 196,
-    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+    "median_months_lost": 19.0,
+    "median_financial_loss": 80000,
+    "median_burden_sample_size": 97,
+    "pro_se_count": 111,
+    "pro_se_pct": 57.5,
+    "children_impacted": 292,
+    "clean_sample_size": 193,
+    "raw_submission_count": 193,
+    "_unresolved": [
+      "pdf_stats: cache unreadable at .: [Errno 21] Is a directory: '.'"
+    ]
   },
-  "movement_total": 3666,
+  "movement_total": 3680,
   "supabase": {
-    "report_count": 9,
-    "actor_report_count": 9,
+    "report_count": 8,
+    "actor_report_count": 8,
     "family_count": 9,
     "family_reports": [
       {
@@ -71,12 +74,6 @@
         "row_id": "396e8c1d-7277-4614-9d0e-46fdb3aff297"
       },
       {
-        "body": "It cost me my entire life. Caused my kids to have ptsd and trust…",
-        "state": "OH",
-        "county": "Hancock county",
-        "row_id": "90f7d1d1-9e3d-4717-a374-2a2b13a39c67"
-      },
-      {
         "body": "by ignoring evidence, they allowed my child to be molested again.",
         "state": "OH",
         "county": "Hancock",
@@ -89,71 +86,55 @@
         "row_id": "a7404c1e-efa9-4ace-a0d8-23b34f1b3239"
       },
       {
-        "body": "I lost everything fighting for my son, I had my rights taken from me…",
+        "body": "I am the grandmother trying to get kinship, visitation, custody intervention and was denied.…",
         "state": "OH",
         "county": "Hancock",
-        "row_id": "7fd63851-60f4-4fcb-9906-1f5c9aafc439"
+        "row_id": "8600b24c-832a-4022-98e8-f7aca792a7b4"
+      },
+      {
+        "body": "Completely destroyed our bonded an took my son from me an refused his sister's…",
+        "state": "OH",
+        "county": "Hancock",
+        "row_id": "95e1583a-bf37-41f5-acf5-84af62b2004f"
       }
     ],
     "public_comments": [
       {
-        "comment_text": "She never once spoke to me. I was never given due process nor aware of my first court date the day they where removed. Wasn't till after the court date susan from cps told me I had a chance to speak and wasn't there. They fumbled bad with my case. And still to this date the man that rapped my daughter walks free. Never once questioned or brought in. Because she was 16 just turned 16 they said it was…",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Hancock"
-      },
-      {
-        "comment_text": "Used blanket statements on all family not there to represent themselves. Allows Kelli Millet to lie on the stand. Overruled many objections. Cherry picked the lines she wanted to deny and progress with family.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Hancock"
-      },
-      {
-        "comment_text": "She refused to admit my emails with CPS as evidence in my trial for custody. However during appeal the Ohio Thrid District court of Appeals did accept jurisdiction of my emails but still upheld her judgment.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Hancock County"
-      },
-      {
-        "comment_text": "Prior cps prosecuting attorney, no due process, denied intervention, kinship, supervised visits, and custody. Cherry picked evidence and twisted it to fit the narrative .",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Hancock"
-      },
-      {
-        "comment_text": "She added and listened to false information. She took my children away from a mother based off false information and continues to keep them away for absolutely no reason!",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Hancock"
-      },
-      {
-        "comment_text": "She refuses kinship makes up false allegations makes doin anything requested by the court impossible or looses an doesnt submitt paper work or evidence",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Hancock county"
-      },
-      {
         "comment_text": "She didn’t look at my case at all and just decided the mother was the best choice without looking at evidence and blatantly ignored eveidence in court",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Hancock"
-      },
-      {
-        "comment_text": "stepped in hours before mediation to rule dad (Indicated forensic interview) would get next day over night weekends.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Hancock"
+        "source": "court_actors.notes"
       },
       {
         "comment_text": "didnt show up for court",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "hancock"
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "She added and listened to false information. She took my children away from a mother based off false information and continues to keep them away for absolutely no reason!",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Used blanket statements on all family not there to represent themselves. Allows Kelli Millet to lie on the stand. Overruled many objections. Cherry picked the lines she wanted to deny…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "stepped in hours before mediation to rule dad (Indicated forensic interview) would get next day over night weekends.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "She refused to admit my emails with CPS as evidence in my trial for custody. However during appeal the Ohio Thrid District court of Appeals did accept jurisdiction of my…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/kristen_k_johnson",
-  "unresolved": [],
+  "unresolved": [
+    "pdf_stats: cache unreadable at .: [Errno 21] Is a directory: '.'"
+  ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions · not court findings.",
