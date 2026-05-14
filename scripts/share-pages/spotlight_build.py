@@ -42,12 +42,22 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
 
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
-COLUMNS_CONFIG = PROJECT_ROOT / "_scripts" / "spotlight_columns.json"
-OBSERVED_OUT = PROJECT_ROOT / "_scripts" / "spotlight_columns_observed.json"
+SCRIPT_DIR = Path(__file__).resolve().parent
+if SCRIPT_DIR.name == "share-pages":
+    WEBSITE_ROOT = SCRIPT_DIR.parent.parent
+    PROJECT_ROOT = Path(os.environ.get("SWM_SHARE_WORKDIR", WEBSITE_ROOT / ".share-pages-work")).resolve()
+    COLUMNS_CONFIG = SCRIPT_DIR / "spotlight_columns.json"
+    OBSERVED_OUT = PROJECT_ROOT / "spotlight_columns_observed.json"
+    README_PATH = WEBSITE_ROOT / "README.md"
+    PHOTO_ROOT = Path(os.environ.get("SWM_PHOTO_ROOT", WEBSITE_ROOT)).resolve()
+else:
+    WEBSITE_ROOT = PROJECT_ROOT = SCRIPT_DIR.parent
+    COLUMNS_CONFIG = PROJECT_ROOT / "_scripts" / "spotlight_columns.json"
+    OBSERVED_OUT = PROJECT_ROOT / "_scripts" / "spotlight_columns_observed.json"
+    README_PATH = PROJECT_ROOT / "README.md"
+    PHOTO_ROOT = PROJECT_ROOT
 NEW_TEMPLATE_ROOT = PROJECT_ROOT / "New Final Post and Capcut template"
 EXPORT_ROOT = NEW_TEMPLATE_ROOT / "export"
-README_PATH = PROJECT_ROOT / "README.md"
 
 PHOTO_POLICY = "covers_only"  # locked: Option A
 MAX_QUOTE_WORDS = 14
@@ -83,8 +93,10 @@ def load_env(env_path: Path) -> None:
         os.environ.setdefault(key.strip(), val.strip().strip('"').strip("'"))
 
 
+load_env(WEBSITE_ROOT / ".env")
+load_env(WEBSITE_ROOT / ".env.local")  # Next.js convention — share keys with the web app
 load_env(PROJECT_ROOT / ".env")
-load_env(PROJECT_ROOT / ".env.local")  # Next.js convention — share keys with the web app
+load_env(PROJECT_ROOT / ".env.local")
 
 # Accept NEXT_PUBLIC_SUPABASE_URL as a fallback (that's where the Next.js app stores it).
 SUPABASE_URL = (os.environ.get("SUPABASE_URL") or os.environ.get("NEXT_PUBLIC_SUPABASE_URL") or "").rstrip("/")
@@ -522,6 +534,8 @@ def _likely_same_actor_name(candidate: Any, canonical: Any) -> bool:
     canonical_last = canonical_tokens[-1]
     if candidate_last != canonical_last:
         return False
+    if len(candidate_tokens) == 1:
+        return True
     candidate_first = candidate_tokens[0]
     canonical_first = canonical_tokens[0]
     if candidate_first == canonical_first:
@@ -979,6 +993,12 @@ PDF_STATS_HELPER = Path(
         "/Users/meghannmiller/Code/standwithmeg-court-actor-fresh/scripts/pdf/state_stats_for_share.py",
     )
 )
+PDF_PUBLIC_ACTOR_HELPER = Path(
+    os.environ.get(
+        "SWM_PDF_PUBLIC_ACTOR_HELPER",
+        str(WEBSITE_ROOT / "scripts" / "pdf" / "public_actor_for_share.py"),
+    )
+)
 
 
 # When regen_all_deployed_actors prebuilds a cache (one helper run for all
@@ -987,6 +1007,8 @@ PDF_STATS_HELPER = Path(
 # state_stats_for_share.py --all.
 _PDF_STATS_CACHE_RAW = os.environ.get("SWM_PDF_STATS_CACHE", "").strip()
 PDF_STATS_CACHE_FILE = Path(_PDF_STATS_CACHE_RAW) if _PDF_STATS_CACHE_RAW else None
+_PUBLIC_ACTORS_CACHE_RAW = os.environ.get("SWM_PUBLIC_ACTORS_CACHE", "").strip()
+PUBLIC_ACTORS_CACHE_FILE = Path(_PUBLIC_ACTORS_CACHE_RAW) if _PUBLIC_ACTORS_CACHE_RAW else None
 
 
 def _pdf_headline_stats(state_abbr: str) -> tuple[dict | None, str | None]:
@@ -1030,6 +1052,46 @@ def _pdf_headline_stats(state_abbr: str) -> tuple[dict | None, str | None]:
         return json.loads(proc.stdout), None
     except json.JSONDecodeError as e:
         return None, f"pdf_stats: helper output not JSON: {e}"
+
+
+def _pdf_public_actor(display_name: str, state_abbr: str) -> tuple[dict | None, str | None]:
+    """Return the public court-actor card/comments from the same helper path
+    the PDF uses (`scripts/pdf/lib_supabase_rows.py`). This keeps Frame 3
+    comments aligned with the state report instead of drifting through a
+    separate court_actors query."""
+    state_abbr = (state_abbr or "").upper()
+    if not state_abbr or not display_name:
+        return None, None
+
+    if PUBLIC_ACTORS_CACHE_FILE is not None and PUBLIC_ACTORS_CACHE_FILE.exists():
+        try:
+            cache = json.loads(PUBLIC_ACTORS_CACHE_FILE.read_text())
+        except (OSError, json.JSONDecodeError) as e:
+            return None, f"pdf_public_actor: cache unreadable at {PUBLIC_ACTORS_CACHE_FILE}: {e}"
+        actors = cache.get(state_abbr) or []
+        target = _actor_loose_name_key(display_name)
+        for actor in actors:
+            if _actor_loose_name_key(actor.get("name") or "") == target:
+                return actor, None
+        return None, f"pdf_public_actor: no {display_name!r} in cache for {state_abbr}"
+
+    if not PDF_PUBLIC_ACTOR_HELPER.exists():
+        return None, f"pdf_public_actor: helper missing at {PDF_PUBLIC_ACTOR_HELPER}"
+    try:
+        proc = subprocess.run(
+            [sys.executable, str(PDF_PUBLIC_ACTOR_HELPER), state_abbr, display_name],
+            capture_output=True, text=True, timeout=300,
+        )
+    except (subprocess.SubprocessError, OSError) as e:
+        return None, f"pdf_public_actor: helper invocation failed: {e}"
+    if proc.returncode != 0:
+        snippet = (proc.stderr or proc.stdout).strip().splitlines()[-1:] or [""]
+        return None, f"pdf_public_actor: helper exit {proc.returncode}: {snippet[0][:160]}"
+    try:
+        actor = json.loads(proc.stdout)
+    except json.JSONDecodeError as e:
+        return None, f"pdf_public_actor: helper output not JSON: {e}"
+    return actor or None, None
 
 
 def resolve_state_stats(state: str, state_abbr: str, config: dict) -> tuple[dict, str | None]:
@@ -1372,7 +1434,10 @@ def _previous_family_count(slug: str) -> int | None:
 
 def write_spec(base: Path, resolved: Resolved, args: argparse.Namespace) -> Path:
     photo_rel = args.photo
-    photo_abs = (PROJECT_ROOT / photo_rel) if photo_rel else None
+    photo_abs = None
+    if photo_rel:
+        photo_path = Path(photo_rel)
+        photo_abs = photo_path if photo_path.is_absolute() else (PHOTO_ROOT / photo_path)
     photo_ok = photo_abs.exists() if photo_abs else False
     if photo_rel and not photo_ok:
         resolved.unresolved.append(f"photo: file not found at {photo_rel}")
@@ -1380,9 +1445,19 @@ def write_spec(base: Path, resolved: Resolved, args: argparse.Namespace) -> Path
     # Best-effort title/first/last from whichever source has the most-complete name.
     resolved_name = resolved.actor.get("name") or args.display_name or ""
     fallback_title, fallback_first, fallback_last = split_name(resolved_name)
+    if args.display_name and not fallback_first:
+        display_title, display_first, display_last = split_name(args.display_name)
+        if display_first and display_last == fallback_last:
+            fallback_title, fallback_first, fallback_last = display_title, display_first, display_last
     title = resolved.actor.get("title") or fallback_title
     first_name = resolved.actor.get("first_name") or fallback_first
     last_name = resolved.actor.get("last_name") or fallback_last
+    if args.display_name and not first_name:
+        display_title, display_first, display_last = split_name(args.display_name)
+        if display_first and display_last == last_name:
+            title = title or display_title
+            first_name = display_first
+            last_name = display_last
     # If the canonical name was just a title + last name (e.g. 'Magistrate Blevins'),
     # first_name will be empty. That's correct — the renderer falls back gracefully.
 
@@ -1564,6 +1639,37 @@ def main(argv: list[str]) -> int:
             if err:
                 resolved.unresolved.append(err)
             resolved.public_comments = comments
+
+        pdf_actor, err = _pdf_public_actor(
+            args.display_name or actor.get("name") or args.actor,
+            args.state_abbr or actor.get("state_abbr") or "",
+        )
+        if err:
+            resolved.unresolved.append(err)
+        if pdf_actor:
+            resolved.actor.setdefault("name", args.display_name or pdf_actor.get("name"))
+            if not resolved.actor.get("role"):
+                resolved.actor["role"] = pdf_actor.get("role")
+            if not resolved.actor.get("court_or_county"):
+                resolved.actor["court_or_county"] = pdf_actor.get("court_or_county")
+            if not resolved.actor.get("state_abbr"):
+                resolved.actor["state_abbr"] = args.state_abbr
+            pdf_count = pdf_actor.get("count")
+            if pdf_count is not None and resolved.report_count is None:
+                resolved.report_count = int(pdf_count)
+            pdf_comments = []
+            for item in pdf_actor.get("comments") or []:
+                note = clean_public_text(item.get("note") or "", 80)
+                if not note:
+                    continue
+                pdf_comments.append({
+                    "comment_text": note,
+                    "author": "Anonymous parent",
+                    "source": "scripts/pdf/lib_supabase_rows.py",
+                    "court_or_county": item.get("court_or_county"),
+                })
+            if pdf_comments:
+                resolved.public_comments = pdf_comments
 
         # Sanity gate (hardened): never write 0 over a positive previous
         # spec value OR a positive report_count. Precedence when the live

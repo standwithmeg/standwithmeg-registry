@@ -82,9 +82,10 @@ async function getWorkflowRun(repo: string, token: string, runId: string) {
  * POST /api/admin/regenerate-state-pdf
  * Body: { state: "MD" }   // "" or omitted => regenerate every 30+ state
  *
- * Admin-only. Triggers the "Regenerate State PDFs" GitHub Actions workflow
+ * Admin-only. Triggers the "Regenerate State PDFs and Actor Shares" GitHub Actions workflow
  * via workflow_dispatch. The workflow itself pulls data from Supabase,
- * regenerates the PDF(s), and commits them back to main — Vercel auto-deploys.
+ * regenerates the PDF(s) plus public court actor share pages, and commits them
+ * back to main — Vercel auto-deploys.
  *
  * Requires env vars:
  *   GITHUB_REPO           e.g. "standwithmeg/standwithmeg-registry"
@@ -147,8 +148,8 @@ export async function POST(request: Request) {
     success: true,
     state:   state || "all-30plus",
     message: state
-      ? `Regeneration of ${state}.pdf queued. Allow ~2–3 min for the workflow to finish.`
-      : "Regeneration of every 30+ state queued. Allow ~5–10 min.",
+      ? `Regeneration of ${state}.pdf and ${state} court actor share pages queued. Allow ~2–3 min for the workflow to finish.`
+      : "Regeneration of every 30+ state PDF and court actor share page queued. Allow ~5–10 min.",
     workflow_url: workflowUrl(repo),
     ...(run ? runPayload(run) : {}),
   });

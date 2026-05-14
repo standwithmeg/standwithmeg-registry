@@ -33,22 +33,22 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 89,
-    "total_submissions": 109,
-    "avg_financial_loss": 113339.7,
-    "avg_months_lost": 28.1,
+    "families_approved": 90,
+    "total_submissions": 110,
+    "avg_financial_loss": 112217.52,
+    "avg_months_lost": 28.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OK",
-    "state_family_count": 109,
+    "state_family_count": 110,
     "median_financial_loss": 82000,
     "median_burden_sample_size": 57,
     "median_months_lost": 12,
-    "pro_se_pct": 45.9,
+    "pro_se_pct": 45.5,
     "pro_se_count": 50,
-    "_pdf_state_family_count": 109,
+    "_pdf_state_family_count": 110,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3643,
+  "movement_total": 3649,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -83,22 +83,20 @@
       {
         "comment_text": "Light on the stand in tampered with evidence and witness well also failing to vet witnesses",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "she lied under oath during my initial hearing",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Canadian"
       },
       {
         "comment_text": "She committed perjury, omitted information from an affidavit used to remove my child",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Canadian"
       },
       {
         "comment_text": "took kids without warrants or consent and lied to judge under oath",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Canadian"
       }
     ]
   },

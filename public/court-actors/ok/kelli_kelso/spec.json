@@ -26,27 +26,27 @@
     "actor_bucket_key": "keli kelso|OK"
   },
   "photo": {
-    "path": "oklahoma/kelli_kelso/image_1080.png",
+    "path": "public/court-actors/ok/kelli_kelso/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 89,
-    "total_submissions": 109,
-    "avg_financial_loss": 113339.7,
-    "avg_months_lost": 28.1,
+    "families_approved": 90,
+    "total_submissions": 110,
+    "avg_financial_loss": 112217.52,
+    "avg_months_lost": 28.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OK",
-    "state_family_count": 109,
+    "state_family_count": 110,
     "median_financial_loss": 82000,
     "median_burden_sample_size": 57,
     "median_months_lost": 12,
-    "pro_se_pct": 45.9,
+    "pro_se_pct": 45.5,
     "pro_se_count": 50,
-    "_pdf_state_family_count": 109,
+    "_pdf_state_family_count": 110,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3643,
+  "movement_total": 3649,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -67,19 +67,16 @@
     ],
     "public_comments": [
       {
-        "comment_text": "Horrible attorney made deal with the other Attorney behind the table in my divorce. Did not fight for my child does not care about anything about the money. She is…",
+        "comment_text": "Horrible attorney made deal with the other Attorney behind the table in my divorce. Did not fight for my child does not care about anything about the money. She is the reason we are still stuck in this horrible position six years later. Lied and told me that the judge would not honor the GAL’s recommendation never even got to speak to the judge. My attorney made a deal with his attorney for [redacted] against the GAL‘s recommendations and led…",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Cleveland County"
       },
       {
         "comment_text": "Had off record meetings with the therapist, improper investigations, excluded me from everything, and lied to my own attorney about me due to improper investigating.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "Gave 2 extra nights a month to bio dad after finding out that his 2 sons were also sexually molested by him as children. Filed motion to remove my attorney,…",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Cleveland county"
       }
     ]
   },

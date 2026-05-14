@@ -33,7 +33,7 @@
     "actor_bucket_key": "cynthia hucks|IA"
   },
   "photo": {
-    "path": "iowa/cynthia_hucks/image_1080.png",
+    "path": "public/court-actors/ia/cynthia_hucks/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -53,7 +53,7 @@
     "_pdf_state_family_count": 68,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3643,
+  "movement_total": 3649,
   "supabase": {
     "report_count": 10,
     "actor_report_count": 10,
@@ -98,34 +98,58 @@
     ],
     "public_comments": [
       {
-        "comment_text": "They moved up my court date. They tried to make me quick claim my house",
+        "comment_text": "There is a lot to list but the two major take aways. 1. I paid her to file and argue a contempt of court for non visitation. She filed however she never scheduled a court date. 2. I have paid her nearly 15k and I honestly believe I would be far better off if I represented myself.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Jefferson"
       },
       {
-        "comment_text": "She lied to me in her office and said it would be a conflict of interest if she were my attorney but proceeded to be the opposing parties attorney. I…",
+        "comment_text": "She lied to me in her office and said it would be a conflict of interest if she were my attorney but proceeded to be the opposing parties attorney. I can give more detail if needed just email me.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
       },
       {
         "comment_text": "She helped me leave my abuser and fight for what was fair for my children. She is a busy attorney just like any good one, but her job is implacable!",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "Amazing lawyer, did everything I asked. She has helped me and so many other families",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Wapello"
       },
       {
         "comment_text": "She failed to provide me with court dates and tell me that i needed character affidavits in my daughter's custody case in 2010",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Wapello"
       },
       {
-        "comment_text": "There is a lot to list but the two major take aways. 1. I paid her to file and argue a contempt of court for non visitation. She filed however…",
+        "comment_text": "Amazing lawyer, did everything I asked. She has helped me and so many other families",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Wapello"
+      },
+      {
+        "comment_text": "Produced illegal documents. Placed me in a room alone with her and my abuse.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Wapello"
+      },
+      {
+        "comment_text": "They moved up my court date. They tried to make me quick claim my house",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Unknown"
+      },
+      {
+        "comment_text": "Litigation harassment and abuse",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Wapello"
+      },
+      {
+        "comment_text": "She’s one sided",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Wapello"
       }
     ]
   },

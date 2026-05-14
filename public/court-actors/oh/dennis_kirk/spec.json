@@ -31,27 +31,27 @@
     "actor_bucket_key": "denis kirk|OH"
   },
   "photo": {
-    "path": "ohio/dennis_kirk/image_1080.png",
+    "path": "public/court-actors/oh/dennis_kirk/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 151,
-    "total_submissions": 194,
-    "avg_financial_loss": 121090.61,
+    "families_approved": 152,
+    "total_submissions": 195,
+    "avg_financial_loss": 120428.4,
     "avg_months_lost": 29.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OH",
-    "state_family_count": 194,
-    "median_financial_loss": 82500,
-    "median_burden_sample_size": 95,
+    "state_family_count": 195,
+    "median_financial_loss": 81250,
+    "median_burden_sample_size": 96,
     "median_months_lost": 18,
-    "pro_se_pct": 56.2,
+    "pro_se_pct": 55.9,
     "pro_se_count": 109,
-    "_pdf_state_family_count": 194,
+    "_pdf_state_family_count": 195,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3643,
+  "movement_total": 3649,
   "supabase": {
     "report_count": 8,
     "actor_report_count": 8,
@@ -90,34 +90,34 @@
     ],
     "public_comments": [
       {
+        "comment_text": "Denied motion and ignored evidence!! None of them did their job they made up everything. The judge didn’t want to listen to us whatsoever that we gave him evidence and they didn’t show him any evidence and that he ruled with them over us. He delayed hearings gave them more time biased, he didn’t sign half of his records he had to click record sign it things like that you can put well. She really really wasn’t on our case…",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Highland"
+      },
+      {
+        "comment_text": "My children’s therapists and myself reached out to Mr Kirk from Oct 2024 to March 2025 with no return communication. He then made claims as facts, brought to him via an email from a concerned citizen, yet never spoke to myself or others to verify this concern. While communication was not provided to myself or the therapists, Mr Kirk kept communications with the defendant and his counsel. As of May 5 2026, he has been voted in to Higjland County’s…",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Highland county"
+      },
+      {
+        "comment_text": "Mr kirk made no reasonable efforts to put my daughter back in my care, despite having long term housing and employment. He filed no motions with the court on my daughter's behalf. Never came to my house for a visit and I called his office early in the case to setup a home visit and he said that he doesn't complete home visits till after the adjudication and deposition. He is now taking Judge Greers position as the juvenile judge.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Highland County"
+      },
+      {
+        "comment_text": "Didn’t do his job didn’t supervise any visits didn’t watch me with my daughter at all. I called and his secretary told me that they don’t do that right now at the beginning, but I did call and then he said on that I never called and then he just went with everything piggyback off the prosecutor and everything, and he even used the word piggyback",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Highland county"
+      },
+      {
         "comment_text": "Fabricated evidence",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "Denied motion and ignored evidence!! None of them did their job they made up everything. The judge didn’t want to listen to us whatsoever that we gave him evidence and…",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "My children’s therapists and myself reached out to Mr Kirk from Oct 2024 to March 2025 with no return communication. He then made claims as facts, brought to him via…",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "Mr kirk made no reasonable efforts to put my daughter back in my care, despite having long term housing and employment. He filed no motions with the court on my…",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "He didn’t meet with us or do his job he lied on stand saying we never called him but I showed a recording we did talk to his assistant and…",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "Didn’t do his job",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Highland"
       }
     ]
   },

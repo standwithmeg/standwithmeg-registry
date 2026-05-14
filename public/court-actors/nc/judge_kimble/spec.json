@@ -27,27 +27,27 @@
     "actor_bucket_key": "kimble|NC"
   },
   "photo": {
-    "path": "north_carolina/judge_kimble/image_1080.png",
+    "path": "public/court-actors/nc/judge_kimble/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 84,
-    "total_submissions": 119,
-    "avg_financial_loss": 162743.44,
+    "total_submissions": 120,
+    "avg_financial_loss": 161490.96,
     "avg_months_lost": 41.7,
     "_source_table": "movement_stats_by_state",
     "_match_value": "NC",
-    "state_family_count": 119,
+    "state_family_count": 120,
     "median_financial_loss": 137332,
     "median_burden_sample_size": 38,
     "median_months_lost": 18,
-    "pro_se_pct": 52.1,
+    "pro_se_pct": 51.7,
     "pro_se_count": 62,
-    "_pdf_state_family_count": 119,
+    "_pdf_state_family_count": 120,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3643,
+  "movement_total": 3649,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -68,24 +68,22 @@
     ],
     "public_comments": [
       {
+        "comment_text": "Very inappropriate comments during the trial. He joked about himself not knowing when to stop drinking alcohol - knowing that he was arrested for a DUI from picking up his kids from school. He also was talking inappropriately with the attorney - he allowed heresay numerous times for her client. Didn’t ask for proof. Discarded all evidence of her client being abusive and neglected to make a ruling several times until it was far enough out to claim comfort.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Harnett county"
+      },
+      {
         "comment_text": "Made a ruling with no evidence. Left child with abuser. Took months and months to make a ruling on emergency ex parte order",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Harnett county"
       },
       {
         "comment_text": "Took entirely too long to rule on an emergency case.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "Very inappropriate comments during the trial. He joked about himself not knowing when to stop drinking alcohol - knowing that he was arrested for a DUI from picking up his…",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "Ruled on emergency ex parte, never had an emergency hearing. Took my son from me with no evidence",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Harnett"
       }
     ]
   },

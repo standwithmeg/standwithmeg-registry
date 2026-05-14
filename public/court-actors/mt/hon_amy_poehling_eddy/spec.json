@@ -26,8 +26,8 @@
     "actor_bucket_key": "amy poehling eddy|MT"
   },
   "photo": {
-    "path": null,
-    "exists": false,
+    "path": "public/court-actors/mt/hon_amy_poehling_eddy/image_1080.png",
+    "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
@@ -46,7 +46,7 @@
     "_pdf_state_family_count": 42,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3643,
+  "movement_total": 3649,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -67,19 +67,16 @@
     ],
     "public_comments": [
       {
-        "comment_text": "[extracted_regex] hen judge Olympus retired and judge Amy Eddie came into office and she judg",
+        "comment_text": "Conflict of interest falsifying information unlawfully ripping kids out of my life ignoring domestic violence ignoring my kids witnessing the abuse abusing her color of law allowing my kids to get beaten and molested because I wasn't able to be there and protect them. As well as her being involved in criminal charges in past trying to shut me up before",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Flathead county"
       },
       {
-        "comment_text": "Granted emergency ex parte with no proper notice, no substantiated documentation, just a false statement from father. Was told a child was harmed when she didn't grant one previously and…",
+        "comment_text": "Confidential information handed to other side, discovery allowed in a third party guardianship (that is NOT SUPPOSED TO HAPPEN!) awarded attorney fees, FOR WHAT?! Said “taken as truth” because why?!?! Struck my record of evidence?! What!!!!!! Went past six month mark?! Perjury obviously committed by other side!!!!! Allowed to happen?!?!?!?",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "Confidential information handed to other side, discovery allowed in a third party guardianship (that is NOT SUPPOSED TO HAPPEN!) awarded attorney fees, FOR WHAT?! Said “taken as truth” because why?!?!…",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Flathead County"
       }
     ]
   },

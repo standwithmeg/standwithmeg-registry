@@ -27,7 +27,7 @@
     "actor_bucket_key": "randy mcala|KS"
   },
   "photo": {
-    "path": "kansas/randy_mccalla/image_1080.png",
+    "path": "public/court-actors/ks/randy_mccalla/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -47,7 +47,7 @@
     "_pdf_state_family_count": 170,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3643,
+  "movement_total": 3649,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -74,24 +74,22 @@
     ],
     "public_comments": [
       {
-        "comment_text": "Filed the emergency motion that led to my children being taken, never spoke to me, and instead worked with my ex, his attorney, therapists, and DCF while leaving me completely…",
+        "comment_text": "This is the single biggest trauma of my life. Guardian Ad Litems are the biggest threat to the family court system and their power must be checked. Randy McCalla ambushed me in court in 2013 — a standard custody hearing — claiming my rights needed to be terminated due to parental alienation. He presented no evidence, and I left court shocked and without my kids. Randy didn't allow me to talk to my kids for 5 weeks. He told me…",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Johnson"
       },
       {
-        "comment_text": "He did not interview my witnesses, coerced my son to go live in a warm climate to play sports. Wouldn’t tell me the reasons why my son should be removed…",
+        "comment_text": "Caused permanent and irreparable harm to my children's mental and physical health as well as to my entire family. Blackmailed by Randy McCalla. Ex parte communication between attorneys and court appointed medical professionals. Falsified court hearings with custody-modifying orders when no hearing ever occurred.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Johnson"
       },
       {
-        "comment_text": "Caused permanent and irreparable harm to my children's mental and physical health as well as to my entire family. Blackmailed by Randy McCalla. Ex parte communication between attorneys and court…",
+        "comment_text": "Filed the emergency motion that led to my children being taken, never spoke to me, and instead worked with my ex, his attorney, therapists, and DCF while leaving me completely out and continuing to push for me to stay separated from my kids.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "This is the single biggest trauma of my life. Guardian Ad Litems are the biggest threat to the family court system and their power must be checked. Randy McCalla ambushed…",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Johnson"
       }
     ]
   },

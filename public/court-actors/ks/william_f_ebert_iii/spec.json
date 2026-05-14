@@ -9,7 +9,7 @@
     "role": "GAL / Child Representative",
     "court": "Shawnee County",
     "county": null,
-    "court_or_county": null,
+    "court_or_county": "Shawnee County",
     "state": "Kansas",
     "state_abbr": "KS",
     "mention_count": 5,
@@ -28,7 +28,7 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "kansas/william_f_ebert_iii/image_1080.png",
+    "path": "public/court-actors/ks/william_f_ebert_iii/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -48,7 +48,7 @@
     "_pdf_state_family_count": 170,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3643,
+  "movement_total": 3649,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -81,24 +81,22 @@
     ],
     "public_comments": [
       {
-        "comment_text": "Withheld evidence from court, manipulated school reporters, doctors, took away my rights each time kids reported abuse by other parent. Financially and emotionally exploitative, damaged my children and I and…",
+        "comment_text": "Withheld evidence from court, manipulated school reporters, doctors, took away my rights each time kids reported abuse by other parent. Financially and emotionally exploitative, damaged my children and I and we still suffer due to his falsified evidence and unsafe recommendations.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
       },
       {
-        "comment_text": "Ignored evidence and facts, delayed unification",
+        "comment_text": "He had been actively representing opposing counsel since 2 months prior to being appointed as my domestic conciliator, at the recommendation of opposing counsel and has since switched primary residential custody and then terminated my parenting time without due process.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "He had been actively representing opposing counsel since 2 months prior to being appointed as my domestic conciliator, at the recommendation of opposing counsel and has since switched primary residential…",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Shawnee County"
       },
       {
         "comment_text": "Delayed reunification, false allegations were known and proven and still tried to convince judge otherwise.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Shawnee County"
       }
     ]
   },

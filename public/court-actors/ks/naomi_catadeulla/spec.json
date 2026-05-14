@@ -30,7 +30,7 @@
     "actor_bucket_key": "naomi catadeula|KS"
   },
   "photo": {
-    "path": "kansas/naomi_catadeulla/image_1080.png",
+    "path": "public/court-actors/ks/naomi_catadeulla/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -50,7 +50,7 @@
     "_pdf_state_family_count": 170,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3643,
+  "movement_total": 3649,
   "supabase": {
     "report_count": 7,
     "actor_report_count": 7,
@@ -109,7 +109,9 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/naomi_catadeulla",
-  "unresolved": [],
+  "unresolved": [
+    "pdf_public_actor: no 'Naomi Catadeulla' in cache for KS"
+  ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions · not court findings.",

@@ -27,7 +27,7 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "florida/danny_phillips/image_1080.png",
+    "path": "public/court-actors/fl/danny_phillips/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -47,7 +47,7 @@
     "_pdf_state_family_count": 210,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3643,
+  "movement_total": 3649,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -74,19 +74,16 @@
     ],
     "public_comments": [
       {
-        "comment_text": "Concerns have been raised regarding this attorney’s candor and professional conduct in court proceedings, including allegations that statements made in litigation have at times been inconsistent with the likely facts…",
+        "comment_text": "Concerns have been raised regarding this attorney’s candor and professional conduct in court proceedings, including allegations that statements made in litigation have at times been inconsistent with the likely facts of the situation. Additional concerns relate to the attorney’s personal relationship with a former client whom he previously represented before later marrying. Critics argue that this history raises questions regarding professional boundaries, judgment, and potential ethical considerations surrounding attorney-client relationships. Taken together, these issues have contributed to broader concerns regarding…",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Leon"
       },
       {
         "comment_text": "Spoke with me about the case for a period of time before disclosing he shared an office and paralegal with the opposing counsel. Filed a NOA as opposing counsel afterwards.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "Works with other court actors to be profitable and he uses people in a position of power to threaten victims",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Leon County"
       }
     ]
   },

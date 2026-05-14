@@ -26,7 +26,7 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "montana/jodi_christiansen/image_1080.png",
+    "path": "public/court-actors/mt/jodi_christiansen/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -46,7 +46,7 @@
     "_pdf_state_family_count": 42,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3643,
+  "movement_total": 3649,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -73,19 +73,22 @@
     ],
     "public_comments": [
       {
-        "comment_text": "She is the CPS supervisor she allows the people under her to go rogue and do whatever they want.",
+        "comment_text": "Ahe is the cps supervisor. She neglects to supervise. She lets all the workers under her play God and just goes along with it.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Flathead"
       },
       {
         "comment_text": "Cps supervisor. Lets all the workers under her go rogue and do what they want. Will not return calls.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
       },
       {
-        "comment_text": "Ahe is the cps supervisor. She neglects to supervise. She lets all the workers under her play God and just goes along with it.",
+        "comment_text": "She is the CPS supervisor she allows the people under her to go rogue and do whatever they want.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Flathead County"
       }
     ]
   },

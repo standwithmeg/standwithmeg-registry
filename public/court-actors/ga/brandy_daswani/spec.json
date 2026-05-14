@@ -27,7 +27,7 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "georgia/brandy_daswani/image_1080.png",
+    "path": "public/court-actors/ga/brandy_daswani/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -47,7 +47,7 @@
     "_pdf_state_family_count": 83,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3643,
+  "movement_total": 3649,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -80,24 +80,28 @@
     ],
     "public_comments": [
       {
-        "comment_text": "Perjury- false testimony Recommend evaluations and experts and ignored their recommendations because they were against what my ex husband wanted Made up evidence against me Tried to have my special…",
+        "comment_text": "Made up evidence (including a false criminal record on an excel spreadsheet), told me she is sick of our family’s religion (we are Christians), ignored convicted criminal activity on the other side and said it wasn’t a crime - victim shamed and threatened a bad outcome if we cooperated with law enforcement. That’s exactly what happened. Lied in testimony, made up evidence (including totally fake drug charges she submitted on an excel spreadsheet), ignored actual convicted criminal activity of the…",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Cobb"
+      },
+      {
+        "comment_text": "Acted with bias rather than neutrality by disregarding evidence I provided, relying on one-sided narratives, participating in communications outside my presence, and supporting restrictions that delayed and damaged my relationship with my child without adequate findings of harm or unfitness.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Cobb"
+      },
+      {
+        "comment_text": "Perjury- false testimony Recommend evaluations and experts and ignored their recommendations because they were against what my ex husband wanted Made up evidence against me Tried to have my special needs son removed from his school and therapy because my ex didn’t want to pay for it.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Cobb"
       },
       {
         "comment_text": "Lied on recommendations to be one sided",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "Lied in testimony, made up evidence (including totally fake drug charges she submitted on an excel spreadsheet), ignored actual convicted criminal activity of the other side, currently being sued by…",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "Failed to act neutrally, ignored or minimized evidence I provided, and supported knowingly false narratives and recommendations that effectively severed my relationship with my child.",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Fulton"
       }
     ]
   },

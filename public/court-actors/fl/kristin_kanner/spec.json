@@ -28,7 +28,7 @@
     "actor_bucket_key": "kristin kaner|FL"
   },
   "photo": {
-    "path": "florida/kristin_kanner/image_1080.png",
+    "path": "public/court-actors/fl/kristin_kanner/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -48,7 +48,7 @@
     "_pdf_state_family_count": 210,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3643,
+  "movement_total": 3649,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -75,29 +75,22 @@
     ],
     "public_comments": [
       {
+        "comment_text": "Issued and enforced a child pick-up order without an evidentiary hearing or record, ignored a pending motion to disqualify, and proceeded without due process or factual basis; within days of my pro se filings reporting judicial, attorney, and third-party misconduct, and despite being under criminal investigation related to my case, she refused to recuse, resulting in foreseeable harm including my child’s hospitalization.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Broward"
+      },
+      {
         "comment_text": "Issued a cross-state child pickup order leading to the forced removal of my granddaughter from my daughter, Kathryn Dressler, by armed police while ignoring documented domestic violence and safety risks.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Broward"
       },
       {
         "comment_text": "My case has been delayed due to Nicole Vette’s endless litigation abuse and Ryanne Seyba GAL allowing it. Judge Kanner is allowing it to persist, too. 3.5 years and counting!",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "My concerns have mainly been around due process—things like important issues being decided without enough time to present evidence, delays in hearing my motions, and procedural decisions that I don’t…",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "Issued and enforced a child pick-up order without an evidentiary hearing or record, ignored a pending motion to disqualify, and proceeded without due process or factual basis; within days of…",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "Ordered the cross-state removal of my granddaughter from my partner’s daughter, Kathryn Dressler, by armed police in another state despite documented domestic violence and safety concerns, after our family had…",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Broward"
       }
     ]
   },

@@ -27,7 +27,7 @@
     "actor_bucket_key": "joan anthony|FL"
   },
   "photo": {
-    "path": "florida/joan_anthony/image_1080.png",
+    "path": "public/court-actors/fl/joan_anthony/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -47,7 +47,7 @@
     "_pdf_state_family_count": 210,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3643,
+  "movement_total": 3649,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -74,20 +74,10 @@
     ],
     "public_comments": [
       {
-        "comment_text": "Florida DCF and its state contractors (Community Partnership for Children, Seventh Circuit Court, Volusia County) ignored altered and fraudulent coerced consent documents used to remove parental rights from a disabled…",
+        "comment_text": "Florida DCF and its state contractors (Community Partnership for Children, Seventh Circuit Court, Volusia County) ignored altered and fraudulent coerced consent documents used to remove parental rights from a disabled woman under duress. The fraudulent consent forms, fraudulent notary certificate, an unnegotiated and unsigned case plan — and the judicial forms Judge Anthony altered — are all filed in our federal Appeal case (Fla. 11th Cir. Appeal No. [redacted] G) as irrefutable evidence of improper documents used to procure federal…",
         "author": "Anonymous parent",
-        "source": "court_actor_comment_merges",
-        "row_id": "a5b013d5-72b1-4719-ae07-2fc202b90728"
-      },
-      {
-        "comment_text": "Florida DCF and its state contractors (Community Partnership for Children, Seventh Circuit Court, Volusia County) ignored altered and fraudulent coerced consent documents used to remove parental rights from a disabled…",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "Judge Anthony did not have the court clerk docket my pro se filings. They were substantive filings, including a motion to vacate and written opposition to TPR. She silenced me…",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Volusia"
       }
     ]
   },

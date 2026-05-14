@@ -54,6 +54,7 @@ NEXT_REPO = Path(
         "/Users/meghannmiller/Code/standwithmeg-court-actor-fresh",
     )
 )
+PUBLIC_ACTORS_DIR = NEXT_REPO / "public" / "court-actors"
 MANIFEST_PATH = NEXT_REPO / "public" / "court-actors" / "manifest.json"
 EXPORT_ROOT = GENERATOR_REPO / "New Final Post and Capcut template" / "export"
 PDF_STATS_HELPER = Path(
@@ -78,6 +79,16 @@ FIXTURE_ACTORS = [
         "expected_comment_substrings": [
             "Denied motions rushed to judgment",
             "Evidence and testimony was ignored",
+        ],
+    },
+    {
+        "slug": "david_c_bonfiglio",
+        "state_abbr": "IN",
+        "display_name": "David C. Bonfiglio",
+        "expected_comment_substrings": [
+            "A lawyer took me to the wrong courtroom",
+            "Found me in contempt",
+            "Sided with gal report",
         ],
     },
 ]
@@ -385,6 +396,9 @@ def load_manifest() -> list[dict]:
 
 
 def find_actor_export(slug: str) -> Path | None:
+    for p in PUBLIC_ACTORS_DIR.glob(f"*/{slug}"):
+        if (p / "spec.json").exists():
+            return p
     p = EXPORT_ROOT / slug
     if (p / "spec.json").exists():
         return p
@@ -526,7 +540,9 @@ def main(argv: list[str]) -> int:
     p.add_argument("--skip-states", action="store_true", help="Skip state-stats checks (actors only).")
     args = p.parse_args(argv)
 
-    entries = load_manifest()
+    manifest_entries = load_manifest()
+    manifest_by_slug = {e.get("slug"): e for e in manifest_entries if e.get("slug")}
+    entries = list(manifest_entries)
     if args.actor:
         wanted = set(args.actor)
         entries = [e for e in entries if e.get("slug") in wanted]
@@ -536,11 +552,13 @@ def main(argv: list[str]) -> int:
     seen_slugs = {e.get("slug") for e in entries}
     for fixture in FIXTURE_ACTORS:
         if fixture["slug"] not in seen_slugs:
+            manifest_entry = manifest_by_slug.get(fixture["slug"]) or {}
             entries.append({
+                **manifest_entry,
                 "slug": fixture["slug"],
-                "state_abbr": fixture["state_abbr"],
-                "display_name": fixture["display_name"],
-                "actor_bucket_key": fixture.get("actor_bucket_key"),
+                "state_abbr": manifest_entry.get("state_abbr") or fixture["state_abbr"],
+                "display_name": manifest_entry.get("display_name") or fixture["display_name"],
+                "actor_bucket_key": manifest_entry.get("actor_bucket_key") or fixture.get("actor_bucket_key"),
             })
 
     failures: list[Mismatch] = []
@@ -586,7 +604,7 @@ def main(argv: list[str]) -> int:
         print(f"\nFAIL: {len(failures)} mismatch(es) across {checked_actors} actor(s) and {state_count} state(s):")
         for f in failures:
             print(str(f))
-        print(f"\nFixtures Dianna Russell + Anthony Miller: {'in failures' if any(f.scope in fixture_slugs for f in failures) else 'PASS'}")
+        print(f"\nNamed regression fixtures: {'in failures' if any(f.scope in fixture_slugs for f in failures) else 'PASS'}")
         return 1
 
     print(f"OK: {checked_actors} actor(s) and {state_count} state(s) consistent "

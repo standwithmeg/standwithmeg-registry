@@ -26,27 +26,27 @@
     "actor_bucket_key": "kiefer king|OH"
   },
   "photo": {
-    "path": "ohio/kiefer_king/image_1080.png",
+    "path": "public/court-actors/oh/kiefer_king/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 151,
-    "total_submissions": 194,
-    "avg_financial_loss": 121090.61,
+    "families_approved": 152,
+    "total_submissions": 195,
+    "avg_financial_loss": 120428.4,
     "avg_months_lost": 29.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OH",
-    "state_family_count": 194,
-    "median_financial_loss": 82500,
-    "median_burden_sample_size": 95,
+    "state_family_count": 195,
+    "median_financial_loss": 81250,
+    "median_burden_sample_size": 96,
     "median_months_lost": 18,
-    "pro_se_pct": 56.2,
+    "pro_se_pct": 55.9,
     "pro_se_count": 109,
-    "_pdf_state_family_count": 194,
+    "_pdf_state_family_count": 195,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3643,
+  "movement_total": 3649,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -73,19 +73,22 @@
     ],
     "public_comments": [
       {
+        "comment_text": "Admitted in open court to not accurately reporting his time spent with the Plaintiff so things would appear more even. Admitted to taking the expert advice from a witness and claiming her to be an expert witness even though evidence was shown the person was not who they said they were (posing as a therapist but unlicensed and practicing without a license)",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
+      },
+      {
         "comment_text": "Failed to file things in time, spent more time with the other party, refused to do research and accepted false statements about medical diagnoses to make me look bad",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Miami"
       },
       {
         "comment_text": "Biased time spent with opposing party and misquoted me in report",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "Admitted in open court to not accurately reporting his time spent with the Plaintiff so things would appear more even. Admitted to taking the expert advice from a witness and…",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Miami"
       }
     ]
   },

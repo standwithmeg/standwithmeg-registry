@@ -26,27 +26,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "california/lisa_pacione/image_1080.png",
+    "path": "public/court-actors/ca/lisa_pacione/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 259,
-    "total_submissions": 326,
-    "avg_financial_loss": 285779.63,
-    "avg_months_lost": 37.0,
+    "total_submissions": 327,
+    "avg_financial_loss": 284758.99,
+    "avg_months_lost": 36.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CA",
-    "state_family_count": 326,
+    "state_family_count": 327,
     "median_financial_loss": 285000,
     "median_burden_sample_size": 153,
     "median_months_lost": 20,
-    "pro_se_pct": 56.4,
-    "pro_se_count": 184,
-    "_pdf_state_family_count": 326,
+    "pro_se_pct": 56.6,
+    "pro_se_count": 185,
+    "_pdf_state_family_count": 327,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3643,
+  "movement_total": 3649,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -73,19 +73,22 @@
     ],
     "public_comments": [
       {
+        "comment_text": "Issued a three-year restraining order with no history of abuse based on a three week old Facebook post that opposing party was blocked from seeing. Made a rush judgment to label father a vexatious litigant without allowing the father to be heard. Continue to fail to view evidence that would exonerate father 100%. More violations of due process.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Kern"
+      },
+      {
+        "comment_text": "Issued 3 year restraining order based on a weeks old social media post. Entered rulings without viewing evidence, removed fathers right indefinitely to petition the court for relief without due process. Allowed custody interference without action",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Kern"
+      },
+      {
         "comment_text": "This administration judge ignored evidence and made misleading statements about case law and procedures.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "Issued a three-year restraining order with no history of abuse based on a three week old Facebook post that opposing party was blocked from seeing. Made a rush judgment to…",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "Issued 3 year restraining order based on a weeks old social media post. Entered rulings without viewing evidence, removed fathers right indefinitely to petition the court for relief without due…",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Kern"
       }
     ]
   },

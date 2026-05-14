@@ -33,22 +33,22 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 89,
-    "total_submissions": 109,
-    "avg_financial_loss": 113339.7,
-    "avg_months_lost": 28.1,
+    "families_approved": 90,
+    "total_submissions": 110,
+    "avg_financial_loss": 112217.52,
+    "avg_months_lost": 28.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OK",
-    "state_family_count": 109,
+    "state_family_count": 110,
     "median_financial_loss": 82000,
     "median_burden_sample_size": 57,
     "median_months_lost": 12,
-    "pro_se_pct": 45.9,
+    "pro_se_pct": 45.5,
     "pro_se_count": 50,
-    "_pdf_state_family_count": 109,
+    "_pdf_state_family_count": 110,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3643,
+  "movement_total": 3649,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -87,24 +87,28 @@
     ],
     "public_comments": [
       {
-        "comment_text": "Coerced me to give details about a situation with my kids in counseling with my ex while the divorce was still taking place. I expressed that my ex was using…",
+        "comment_text": "Jamie Vogt did EFE on both my children. My daughter layed in my lap in her office after not seeing me for 1 year my first time seeing her was in Jamie Vogt office for one hour. My daughter layed in my lap crying begging me not to leave saying I was the only one who can keep her safe. Jamie did noting to help my baby! Took 10 thousand dollars to see both my kids and helped paternal grandmother…",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Wagoner county"
+      },
+      {
+        "comment_text": "Coerced me to give details about a situation with my kids in counseling with my ex while the divorce was still taking place. I expressed that my ex was using the session to fish for information to use against me and she allowed her to do it, even telling me that if I didn’t she would report back to the GAL how difficult I was being.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Tulsa County"
+      },
+      {
+        "comment_text": "She ruled that my daughter's disclosure of SA was coached because she had a flat affect and became emotionally distant when discussing the abuse. My daughter has PTSD. That is the typical presentation. My daughter was denied advocacy and protection as a result.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Tulsa County"
       },
       {
         "comment_text": "To be disclosed if my testimony is required. I have paper, digital, and video evidence of all of my above statements. The judge dismissed all as evidence.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "She ruled that my daughter's disclosure of SA was coached because she had a flat affect and became emotionally distant when discussing the abuse. My daughter has PTSD. That is…",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "Jamie Vogt did EFE on both my children. My daughter layed in my lap in her office after not seeing me for 1 year my first time seeing her was…",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Wagoner"
       }
     ]
   },

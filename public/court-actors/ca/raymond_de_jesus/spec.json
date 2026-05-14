@@ -27,27 +27,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "california/raymond_de_jesus/image_1080.png",
+    "path": "public/court-actors/ca/raymond_de_jesus/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 259,
-    "total_submissions": 326,
-    "avg_financial_loss": 285779.63,
-    "avg_months_lost": 37.0,
+    "total_submissions": 327,
+    "avg_financial_loss": 284758.99,
+    "avg_months_lost": 36.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CA",
-    "state_family_count": 326,
+    "state_family_count": 327,
     "median_financial_loss": 285000,
     "median_burden_sample_size": 153,
     "median_months_lost": 20,
-    "pro_se_pct": 56.4,
-    "pro_se_count": 184,
-    "_pdf_state_family_count": 326,
+    "pro_se_pct": 56.6,
+    "pro_se_count": 185,
+    "_pdf_state_family_count": 327,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3643,
+  "movement_total": 3649,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -68,24 +68,16 @@
     ],
     "public_comments": [
       {
-        "comment_text": "Reason cited for denying my request for protection went against case law, my abuser found out and retaliated",
+        "comment_text": "Asian Judge Raymond De Jesus smerked at me as he gave my ex half custody. My DRVO was accepted in Sutter County and granted after a trial — only to be rebutted in Placer County by Judge Raymond De Jesus. The lawyer lied and I couldn't get a word in edgewise. Denied justice and ignored an active DRVO from Sutter County. Got silenced and couldn't speak the truth. Took my abuser's money and allowed him to continuously lie and manipulate…",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Placer"
       },
       {
         "comment_text": "Wouldn’t let me speak, didn’t review the case, didn’t know pertinent info (ie: dad convicted of felony child abuse against the children in the case).",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "Denied my request for protection based on time since last act of abuse, despite the law clearly stating the last act of abuse / timing shouldn’t be considered as a…",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "Asian Judge Raymond De Jesus smerked at me as he gave my ex half custody. My DRVO was accepted in Sutter County and granted after a trial — only to…",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Placer"
       }
     ]
   },

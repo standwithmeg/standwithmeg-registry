@@ -28,27 +28,27 @@
     "actor_bucket_key": "jese santana|CA"
   },
   "photo": {
-    "path": "california/jesse_i_santana/image_1080.png",
+    "path": "public/court-actors/ca/jesse_i_santana/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 259,
-    "total_submissions": 326,
-    "avg_financial_loss": 285779.63,
-    "avg_months_lost": 37.0,
+    "total_submissions": 327,
+    "avg_financial_loss": 284758.99,
+    "avg_months_lost": 36.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CA",
-    "state_family_count": 326,
+    "state_family_count": 327,
     "median_financial_loss": 285000,
     "median_burden_sample_size": 153,
     "median_months_lost": 20,
-    "pro_se_pct": 56.4,
-    "pro_se_count": 184,
-    "_pdf_state_family_count": 326,
+    "pro_se_pct": 56.6,
+    "pro_se_count": 185,
+    "_pdf_state_family_count": 327,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3643,
+  "movement_total": 3649,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -87,29 +87,34 @@
     ],
     "public_comments": [
       {
+        "comment_text": "Lack of due process, abuse of authority, embroilment. Access granted to our abuser during an active DVRO order with no contact (issued by the now retired judge). No 3044 findings, no change in circumstances warranting hearings, no due process. Ex recieved a felony and has documented abuse on file but my daughter and I were ordered to go to reunification therapy.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Sutter County"
+      },
+      {
         "comment_text": "Constant extreme bias. Ignoring facts and pleadings. Removed my child from my life as punishment for false claims from ex.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "Favors women and attorneys.",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "Ignored evidence, allowed physical and legal custody to be given to my and child’s abuser",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Sutter County"
       },
       {
         "comment_text": "Lack of due process, embroiled, abuse of authority. Forced victims into contact with their abuser. Yelled in court.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Sutter County"
       },
       {
-        "comment_text": "Lack of due process, abuse of authority, embroilment. Access granted to our abuser during an active DVRO order with no contact (issued by the now retired judge). No 3044 findings,…",
+        "comment_text": "Ignored evidence, allowed physical and legal custody to be given to my and child’s abuser",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Sutter County"
+      },
+      {
+        "comment_text": "Favors women and attorneys.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Sutter County"
       }
     ]
   },

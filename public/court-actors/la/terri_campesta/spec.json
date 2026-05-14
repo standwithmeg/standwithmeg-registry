@@ -7,9 +7,9 @@
     "first_name": "Terry",
     "last_name": "Campesta",
     "role": "Custody Evaluator",
-    "court": null,
+    "court": "Plaquemines",
     "county": null,
-    "court_or_county": null,
+    "court_or_county": "Plaquemines",
     "state": "Louisiana",
     "state_abbr": "LA",
     "mention_count": 5,
@@ -28,7 +28,7 @@
     "actor_bucket_key": "teri campesta|LA"
   },
   "photo": {
-    "path": "louisiana/terri_campesta/image_1080.png",
+    "path": "public/court-actors/la/terri_campesta/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -48,7 +48,7 @@
     "_pdf_state_family_count": 45,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3643,
+  "movement_total": 3649,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -81,29 +81,28 @@
     ],
     "public_comments": [
       {
-        "comment_text": "Ignored child’s disclosures of sexual abuse, refused to speak to child’s therapist.",
+        "comment_text": "Custody evaluation was biased, she met with the father 12 times and with the mother three, she ignored Mother’s report regarding the father‘s child pornography addiction, she recommended sole custody to the father",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Plaquemines"
       },
       {
-        "comment_text": "She lied about my mom and it's because my dad told her iles and she believed him. My dad molested me and she wrote a report that said I have…",
+        "comment_text": "She lied about my mom and it's because my dad told her iles and she believed him. My dad molested me and she wrote a report that said I have to live with him and I don't get to see my mom now.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "Became romantically involved with my ex during court case. Lied about me to give him sole custody",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "Custody evaluation was biased, she met with the father 12 times and with the mother three, she ignored Mother’s report regarding the father‘s child pornography addiction, she recommended sole custody…",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Plaquemines"
       },
       {
         "comment_text": "Did not believe the child’s disclosures of sexual abuse even though substantiated by CPS, refused to speak to child’s therapist",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Plaquemines"
+      },
+      {
+        "comment_text": "Became romantically involved with my ex during court case. Lied about me to give him sole custody",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Plaquemines"
       }
     ]
   },

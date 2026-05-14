@@ -34,22 +34,22 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 151,
-    "total_submissions": 194,
-    "avg_financial_loss": 121090.61,
+    "families_approved": 152,
+    "total_submissions": 195,
+    "avg_financial_loss": 120428.4,
     "avg_months_lost": 29.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OH",
-    "state_family_count": 194,
-    "median_financial_loss": 82500,
-    "median_burden_sample_size": 95,
+    "state_family_count": 195,
+    "median_financial_loss": 81250,
+    "median_burden_sample_size": 96,
     "median_months_lost": 18,
-    "pro_se_pct": 56.2,
+    "pro_se_pct": 55.9,
     "pro_se_count": 109,
-    "_pdf_state_family_count": 194,
+    "_pdf_state_family_count": 195,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3643,
+  "movement_total": 3649,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
@@ -82,29 +82,22 @@
     ],
     "public_comments": [
       {
-        "comment_text": "Denied motion without hearing",
+        "comment_text": "Denied motion and ignored evidence!! None of them did their job they made up everything. The judge didn’t want to listen to us whatsoever that we gave him evidence and they didn’t show him any evidence and that he ruled with them over us. He delayed hearings gave them more time biased, he didn’t sign half of his records he had to click record sign it things like that you can put well. She really really wasn’t on our case…",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Highland"
       },
       {
         "comment_text": "Delayed any attempt at reunification and ignored exculpatory evidence.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Highland"
       },
       {
-        "comment_text": "Denied motion and ignored evidence!! None of them did their job they made up everything. The judge didn’t want to listen to us whatsoever that we gave him evidence and…",
+        "comment_text": "Denied motion without hearing",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "Assistant prosecutor did a rule 6 and it was not signed by the judge",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "Assistant prosecutor verbally emails a rule six when it was normal hours, it was at 10:58 AM on a weekday and the judge should’ve been there to sign off but…",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Highland"
       }
     ]
   },

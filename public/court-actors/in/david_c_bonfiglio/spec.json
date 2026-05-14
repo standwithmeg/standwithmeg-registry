@@ -6,23 +6,28 @@
     "title": "",
     "first_name": "David C.",
     "last_name": "Bonfiglio",
-    "role": null,
-    "court": null,
+    "role": "Judge",
+    "court": "Elkhart County",
     "county": null,
-    "court_or_county": null,
+    "court_or_county": "Elkhart County",
     "state": "Indiana",
     "state_abbr": "IN",
-    "mention_count": null,
+    "mention_count": 4,
     "family_count": 3,
     "public_family_count": 3,
     "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
-    "actor_report_count": null,
-    "supabase_row_ids": null,
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "440dc061-d6eb-4cc3-b998-957375a7dab0",
+      "c1d230f0-15f1-4de3-ae36-48bb10e6bd12",
+      "e3e5fe8e-4da3-42f8-83a5-6c5b2e8fd81a",
+      "76d5fc96-393b-421b-b5bb-ffaf8e6078b4"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "indiana/david_c_bonfiglio/image_1080.png",
+    "path": "public/court-actors/in/david_c_bonfiglio/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -42,18 +47,48 @@
     "_pdf_state_family_count": 84,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3643,
+  "movement_total": 3649,
   "supabase": {
-    "report_count": null,
-    "actor_report_count": null,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 3,
-    "family_reports": [],
-    "public_comments": []
+    "family_reports": [
+      {
+        "body": "It has alienated my sons from me. My rapist has custody of my children…",
+        "state": "IN",
+        "county": "Elkhart County",
+        "row_id": "3fb54d53-1750-4edf-9b13-0a1de9bc52df"
+      },
+      {
+        "body": "I’ve been harmed by a system where subjective interpretation carried more power than verified…",
+        "state": "IN",
+        "county": "Elkhart",
+        "row_id": "240b4615-5661-4bcc-8517-c951ab1b5ca9"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "A lawyer took me to the wrong courtroom, and when we realized and went to the right courtroom, the judge told me that their mind was made up and there was nothing that they could do. I would have to re-file to have that court redone and I said what do I do if my son‘s being abused and the lady said report it to CPS so I did and then a month later she turned around and gave him…",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Elkhart"
+      },
+      {
+        "comment_text": "Found me in contempt for placing my son in therapy at the recommendation of the detective overseeing the sexual abuse case for my son. Found me in contempt for staying home with my son rather than sending him to preschool despite my husband providing for our family. Ignored sexual abuse concerns.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Elkhart County"
+      },
+      {
+        "comment_text": "Sided with gal report and wouldn't hear my side. Sided with corrupt gal and refused to hear child abuse police report Sided with corrupt gal",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Elkhart superior 6"
+      }
+    ]
   },
   "export_dir": "New Final Post and Capcut template/export/david_c_bonfiglio",
-  "unresolved": [
-    "court_actors: no rows match name~'David C. Bonfiglio' state='IN'"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions · not court findings.",

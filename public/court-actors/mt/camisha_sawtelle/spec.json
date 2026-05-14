@@ -26,7 +26,7 @@
     "actor_bucket_key": "camisha sawtele|MT"
   },
   "photo": {
-    "path": "montana/camisha_sawtelle/image_1080.png",
+    "path": "public/court-actors/mt/camisha_sawtelle/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -46,7 +46,7 @@
     "_pdf_state_family_count": 42,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3643,
+  "movement_total": 3649,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -67,19 +67,22 @@
     ],
     "public_comments": [
       {
-        "comment_text": "She represents a lot of kids in this county. She is not a family lawyer, she is an environmental lawyer. She never stands up for the children. Unless family comes…",
+        "comment_text": "She represents a lot of kids in this county. She is not a family lawyer, she is an environmental lawyer. She never stands up for the children. Unless family comes forward and wants the kids, she seems to rally for certain foster parents to keep kids, over family. We have reached out to her over all the abuse allegations, she won't even respond.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Flathead County"
       },
       {
-        "comment_text": "She does not stand up for or advocate for the children. The first week the kids were back with their parents, they were choked. She didn't see anything wrong with…",
+        "comment_text": "She does not stand up for or advocate for the children. The first week the kids were back with their parents, they were choked. She didn't see anything wrong with it",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
       },
       {
         "comment_text": "She defamesmy character all the time. She fought tooth and nail for my children to not go with our aunt, who is already a licensed foster home",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Child attorney"
       }
     ]
   },

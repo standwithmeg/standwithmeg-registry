@@ -26,27 +26,27 @@
     "actor_bucket_key": "donald grifith|CA"
   },
   "photo": {
-    "path": "california/donald_griffith/image_1080.png",
+    "path": "public/court-actors/ca/donald_griffith/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 259,
-    "total_submissions": 326,
-    "avg_financial_loss": 285779.63,
-    "avg_months_lost": 37.0,
+    "total_submissions": 327,
+    "avg_financial_loss": 284758.99,
+    "avg_months_lost": 36.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CA",
-    "state_family_count": 326,
+    "state_family_count": 327,
     "median_financial_loss": 285000,
     "median_burden_sample_size": 153,
     "median_months_lost": 20,
-    "pro_se_pct": 56.4,
-    "pro_se_count": 184,
-    "_pdf_state_family_count": 326,
+    "pro_se_pct": 56.6,
+    "pro_se_count": 185,
+    "_pdf_state_family_count": 327,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3643,
+  "movement_total": 3649,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -73,19 +73,22 @@
     ],
     "public_comments": [
       {
-        "comment_text": "This was my ex’s attorney’s last attempt to make my case go away. This judge only purposely was to act like he was having a hearing and then ignore any…",
+        "comment_text": "As court commissioner removed all of Fathers visitation rights on a contested false ex parte order. As a judge, refused to self recuse on the ground with bias at the very first hearing in the case as a judge. The next hearing he almost completely removed all visitation rights of the father based on a nickname that the father had used with the minor all her life. This was contested an open court, and the hearing that was supposedly scheduled…",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Kern"
       },
       {
-        "comment_text": "As court commissioner removed all of Fathers visitation rights on a contested false ex parte order. As a judge, refused to self recuse on the ground with bias at the…",
+        "comment_text": "Refused to follow CCP 5.250 and when asked to provide “investigator” for questioning stated “I’m not going to do that to her” “you can appeal, you’ve done it before” also at first appearance was noted and called out for extreme bias and asked to recuse, refused without pause. Illegally used report to that was openly contested to further remove fathers contact. Allowed custody interference without action",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Kern"
       },
       {
-        "comment_text": "Refused to follow CCP 5.250 and when asked to provide “investigator” for questioning stated “I’m not going to do that to her” “you can appeal, you’ve done it before” also…",
+        "comment_text": "This was my ex’s attorney’s last attempt to make my case go away. This judge only purposely was to act like he was having a hearing and then ignore any facts or evidence in the case and quickly gavel down and run away.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Kern"
       }
     ]
   },

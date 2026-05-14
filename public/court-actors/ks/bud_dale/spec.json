@@ -7,9 +7,9 @@
     "first_name": "Bud",
     "last_name": "Dale",
     "role": "Custody Evaluator",
-    "court": null,
+    "court": "Shawnee",
     "county": null,
-    "court_or_county": null,
+    "court_or_county": "Shawnee",
     "state": "Kansas",
     "state_abbr": "KS",
     "mention_count": 5,
@@ -28,7 +28,7 @@
     "actor_bucket_key": "bud dale|KS"
   },
   "photo": {
-    "path": "kansas/bud_dale/image_1080.png",
+    "path": "public/court-actors/ks/bud_dale/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -48,7 +48,7 @@
     "_pdf_state_family_count": 170,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3643,
+  "movement_total": 3649,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -63,29 +63,22 @@
     ],
     "public_comments": [
       {
-        "comment_text": "Makes personal opinion to form decision making. Does not hold parties to the court order/allows unilateral decision making. Creates hostile environment; cussing. Challenges the party as if on trial. Mocked…",
+        "comment_text": "I hired him initially to be my attorney for divorce and child custody. I want to try to get my money back from Bud Dale. He collected the retainer and never did anything. I even had to submit ALL paperwork twice because he lost it! Had to hire other counsel because he disappeared and kept my $. He never filed the paperwork he was hired to and missed crucial deadlines which harmed my child. After creating a much bigger mess.…",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Shawnee"
       },
       {
-        "comment_text": "I hired him initially to be my attorney for divorce and child custody. I want to try to get my money back from Bud Dale. He collected the retainer and…",
+        "comment_text": "Makes personal opinion to form decision making. Does not hold parties to the court order/allows unilateral decision making. Creates hostile environment; cussing. Challenges the party as if on trial. Mocked the capabilities of my child’s spelling ability. Attempted to discourage a legitimate report being made on a crime as that would make coparenting “more difficult”.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
       },
       {
-        "comment_text": "Refused to allow myself or my attorney to submit evidence to him. He refused it, after learning he met with me as counsel 9 months prior. He then retaliated after…",
+        "comment_text": "Refused to allow myself or my attorney to submit evidence to him. He refused it, after learning he met with me as counsel 9 months prior. He then retaliated after my attorney exposed his behavior on the record. He was then replaced the next day.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "Was replaced after refusing to allow one party to submit evidence, refused to allow my attorney to submit a significant amount of evidence. Was quicky replaced from being on our…",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "Did not allow my attorney or me submit any evidence. He was replaced after he was exposed on the record for blocking one party from participating and submitting critical evidence.",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Shawnee"
       }
     ]
   },

@@ -27,7 +27,7 @@
     "actor_bucket_key": "anthony miler|FL"
   },
   "photo": {
-    "path": "florida/anthony_miller/image_1080.png",
+    "path": "public/court-actors/fl/anthony_miller/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -47,7 +47,7 @@
     "_pdf_state_family_count": 210,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3643,
+  "movement_total": 3649,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -74,24 +74,22 @@
     ],
     "public_comments": [
       {
-        "comment_text": "Would not allow children to testify. When one child did testify it was off the record for 45 minutes. When a motion was filed by the Gaurdian Ad Litem to…",
+        "comment_text": "Continued to have a hearing without me present while I attended a funeral of a close family member, forced reunification of 6 minor children exposed to domestic violence and abuse with an active injunction in place, would not allow testimony from witnesses including counselors, social workers, family members. Would not allow the children to testify even though they requested to. Denied motions before they were heard regarding incompetence of the therapist “Rosie Harkness” who I later discovered is a convicted…",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Leon"
       },
       {
-        "comment_text": "This judge ruled based on hearsay testimony of a guardian ad litem who was ill informed of the facts of the situation. Florida law does not allow guardian ad litems…",
+        "comment_text": "Concerns have been raised regarding the handling of allegations of child abuse Specifically, despite a report made by a mental health provider concerning suspected abuse, no emergency hearing was scheduled following the report. Additional concerns relate to this judge's apparent reliance on hearsay testimony during proceedings. It is alleged that significant decisions affecting custody and related matters were made based on statements that were not subject to direct testimony or cross-examination. The handling of these matters including the combination of…",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Leon"
       },
       {
-        "comment_text": "Concerns have been raised regarding the handling of allegations of child abuse Specifically, despite a report made by a mental health provider concerning suspected abuse, no emergency hearing was scheduled…",
+        "comment_text": "This judge ruled based on hearsay testimony of a guardian ad litem who was ill informed of the facts of the situation. Florida law does not allow guardian ad litems to give hearsay testimony.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "Continued to have a hearing without me present while I attended a funeral of a close family member, forced reunification of 6 minor children exposed to domestic violence and abuse…",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Leon"
       }
     ]
   },

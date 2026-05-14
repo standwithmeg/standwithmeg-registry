@@ -27,7 +27,7 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "kansas/keven_o_grady/image_1080.png",
+    "path": "public/court-actors/ks/keven_o_grady/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -47,7 +47,7 @@
     "_pdf_state_family_count": 170,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3643,
+  "movement_total": 3649,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -74,19 +74,16 @@
     ],
     "public_comments": [
       {
+        "comment_text": "The court system has taken away my son's mother, my other kids' brother. Kevin O'Grady needs to be exposed — he claims he does things for the kids' safety. No, he breaks families.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Johnson"
+      },
+      {
         "comment_text": "Doesn't do shit. Named alongside attorney Katie McClaflin and GAL Andrew Bolton in the conflict that \"fucked us all up.\"",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "It has taken my life. Father alleging parental alienation versus actual emotional abuse and neglect of children by him.",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "The court system has taken away my son's mother, my other kids' brother. Kevin O'Grady needs to be exposed — he claims he does things for the kids' safety. No,…",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Johnson"
       }
     ]
   },

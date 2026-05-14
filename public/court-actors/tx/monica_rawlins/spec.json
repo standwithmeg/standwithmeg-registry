@@ -27,27 +27,27 @@
     "actor_bucket_key": "monica rawlins|TX"
   },
   "photo": {
-    "path": "texas/monica_rawlins/image_1080.png",
+    "path": "public/court-actors/tx/monica_rawlins/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 163,
-    "total_submissions": 217,
-    "avg_financial_loss": 225972.5,
+    "total_submissions": 218,
+    "avg_financial_loss": 224764.09,
     "avg_months_lost": 31.1,
     "_source_table": "movement_stats_by_state",
     "_match_value": "TX",
-    "state_family_count": 217,
+    "state_family_count": 218,
     "median_financial_loss": 134677,
     "median_burden_sample_size": 102,
     "median_months_lost": 18,
-    "pro_se_pct": 47.5,
+    "pro_se_pct": 47.2,
     "pro_se_count": 103,
-    "_pdf_state_family_count": 217,
+    "_pdf_state_family_count": 218,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3643,
+  "movement_total": 3649,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -74,24 +74,22 @@
     ],
     "public_comments": [
       {
-        "comment_text": "She ignored evidence of my ex husband violating the temporary orders and standard orders and did not require any evidence from his attorney or the Amicus when they committed perjury…",
+        "comment_text": "Monica Rawlins appeared unfamiliar with important evidence and details in my case, and I felt my filings and concerns as a pro se parent were not given meaningful consideration. The resulting orders left major issues unresolved and unenforceable, leading to continued litigation, additional hearings, and ongoing conflict rather than a clear and workable path toward reunification and co-parenting.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "328th fort bend county Texas court"
+      },
+      {
+        "comment_text": "She ignored evidence of my ex husband violating the temporary orders and standard orders and did not require any evidence from his attorney or the Amicus when they committed perjury against me.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Fort Bend"
       },
       {
         "comment_text": "Didn’t acknowledge ex wife assault",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "She is up for reelection and my amicus Danny hoke contributes to her election campaign and there is a conflict of interest and they are very unfair. Have separated family…",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "Monica Rawlins appeared unfamiliar with important evidence and details in my case, and I felt my filings and concerns as a pro se parent were not given meaningful consideration. The…",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Fort bend"
       }
     ]
   },

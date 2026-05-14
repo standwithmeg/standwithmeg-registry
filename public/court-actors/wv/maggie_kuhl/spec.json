@@ -26,7 +26,7 @@
     "actor_bucket_key": "magie kuhl|WV"
   },
   "photo": {
-    "path": "west_virginia/maggie_kuhl/image_1080.png",
+    "path": "public/court-actors/wv/maggie_kuhl/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -46,7 +46,7 @@
     "_pdf_state_family_count": 46,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3643,
+  "movement_total": 3649,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -73,19 +73,22 @@
     ],
     "public_comments": [
       {
-        "comment_text": "Maggie Kuhl works at Putnam County Courthouse multiple times during the week. She is also represented Cara Branham my ex for the majority of the court proceedings over the 11…",
+        "comment_text": "Maggie Kuhl works at Putnam County Courthouse multiple times during the week. She is also represented Cara Branham my ex for the majority of the court proceedings over the 11 years and the 22 times that she has sued me for contempt and there’s only one twice both financial both because the other Party owes me $4000 and refuses to pay any of accrued cost on my side of the fence. Maggie Kuhl works at Putnam County Courthouse multiple times…",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Putnam County"
       },
       {
-        "comment_text": "I have a special needs child. I was always 100% primary parent and that father never went to doc appts or therapy appts. that he never paid for food or…",
+        "comment_text": "I have a special needs child. I was always 100% primary parent and that father never went to doc appts or therapy appts. that he never paid for food or diapers or anything. The father never spent anytime with the child. Then later I was told that she has \"relations\" with the petitioner's counsel. Maggie never opened her mouth in defense. she also said that she had never lost a case to the petitioner's attorney and made a lot of…",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Putnam"
       },
       {
         "comment_text": "At one point, she went over a year without speaking to the kids, yet continued to write reports and make recommendations.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
       }
     ]
   },

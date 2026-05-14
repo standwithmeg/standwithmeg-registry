@@ -28,7 +28,7 @@
     "actor_bucket_key": "heather landon|KS"
   },
   "photo": {
-    "path": "kansas/heather_landon/image_1080.png",
+    "path": "public/court-actors/ks/heather_landon/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -48,7 +48,7 @@
     "_pdf_state_family_count": 170,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3643,
+  "movement_total": 3649,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -75,19 +75,22 @@
     ],
     "public_comments": [
       {
-        "comment_text": "Shows extreme bias based on if she knows the parties representatives. Does not put the child first. Ignores abuse claims due to the personal relationship she has with council.",
+        "comment_text": "Misled court regarding information gained about children's relationship to mother and maternal family. Failed to perform proper investigation or talk to material witnesses listed as required state procedure for GALs. Failed to disclose conflict of interest with judge. Previous history in other county courts under other names.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
       },
       {
-        "comment_text": "Misled court regarding information gained about children's relationship to mother and maternal family. Failed to perform proper investigation or talk to material witnesses listed as required state procedure for GALs.…",
+        "comment_text": "Shows extreme bias based on if she knows the parties representatives. Does not put the child first. Ignores abuse claims due to the personal relationship she has with council.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Johnson"
       },
       {
         "comment_text": "Withdrew from case. Violated rights, handled issues for ex during hearings, failed to meet with children and me",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Johnson"
       }
     ]
   },

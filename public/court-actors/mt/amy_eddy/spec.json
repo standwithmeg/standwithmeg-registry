@@ -27,7 +27,7 @@
     "actor_bucket_key": "amy eddy|MT"
   },
   "photo": {
-    "path": "montana/amy_eddy/image_1080.png",
+    "path": "public/court-actors/mt/amy_eddy/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -47,7 +47,7 @@
     "_pdf_state_family_count": 42,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3643,
+  "movement_total": 3649,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -91,7 +91,8 @@
   },
   "export_dir": "New Final Post and Capcut template/export/amy_eddy",
   "unresolved": [
-    "public_family_count_api: no match for display_name='Amy Eddy' bucket='amy eddy|MT' slug='amy_eddy' in MT (4 actors)"
+    "public_family_count_api: no match for display_name='Amy Eddy' bucket='amy eddy|MT' slug='amy_eddy' in MT (4 actors)",
+    "pdf_public_actor: no 'Amy Eddy' in cache for MT"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",

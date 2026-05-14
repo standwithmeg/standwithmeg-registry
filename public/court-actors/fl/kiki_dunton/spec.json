@@ -26,7 +26,7 @@
     "actor_bucket_key": "kiki dunton|FL"
   },
   "photo": {
-    "path": "florida/kiki_dunton/image_1080.png",
+    "path": "public/court-actors/fl/kiki_dunton/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -46,7 +46,7 @@
     "_pdf_state_family_count": 210,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3643,
+  "movement_total": 3649,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -73,19 +73,22 @@
     ],
     "public_comments": [
       {
-        "comment_text": "The Guardian ad Litem appeared to place significant emphasis on relatively minor school attendance concerns, including a small number of tardies, while giving comparatively limited attention to more serious allegations…",
+        "comment_text": "The Guardian ad Litem appeared to place significant emphasis on relatively minor school attendance concerns, including a small number of tardies, while giving comparatively limited attention to more serious allegations involving the father’s history and conduct. According to the information available, the father had previously experienced a removal/loss of custody involving other children. There were also allegations involving the father’s association with an individual described as a pedophile who was reportedly attempting to gain access to the child, as well…",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Leon"
       },
       {
-        "comment_text": "There are concerns regarding this Guardian ad Litem’s pattern of involvement in cases connected to the same attorney representing fathers in family law matters. In multiple cases, serious allegations involving…",
+        "comment_text": "There are concerns regarding this Guardian ad Litem’s pattern of involvement in cases connected to the same attorney representing fathers in family law matters. In multiple cases, serious allegations involving the fathers appear to receive limited scrutiny, while allegations against mothers are amplified and emphasized. A recurring issue raised by several mothers involves accusations related to eating disorders and nutritional concerns, despite questions regarding the Guardian ad Litem’s qualifications to make clinical or nutritional assessments. There are also concerns that…",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Leon"
       },
       {
         "comment_text": "She allowed a complete violation of time-sharing and decision making and didn't budge when a therapist called DCF on the Father after speaking to the child once.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Leon"
       }
     ]
   },

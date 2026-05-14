@@ -28,27 +28,27 @@
     "actor_bucket_key": "tamy smith|NC"
   },
   "photo": {
-    "path": "north_carolina/tammy_smith/image_1080.png",
+    "path": "public/court-actors/nc/tammy_smith/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 84,
-    "total_submissions": 119,
-    "avg_financial_loss": 162743.44,
+    "total_submissions": 120,
+    "avg_financial_loss": 161490.96,
     "avg_months_lost": 41.7,
     "_source_table": "movement_stats_by_state",
     "_match_value": "NC",
-    "state_family_count": 119,
+    "state_family_count": 120,
     "median_financial_loss": 137332,
     "median_burden_sample_size": 38,
     "median_months_lost": 18,
-    "pro_se_pct": 52.1,
+    "pro_se_pct": 51.7,
     "pro_se_count": 62,
-    "_pdf_state_family_count": 119,
+    "_pdf_state_family_count": 120,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3643,
+  "movement_total": 3649,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -81,29 +81,28 @@
     ],
     "public_comments": [
       {
-        "comment_text": "She was texting the judge from a personal number during the hearing about the hearing itself. He would check his phone after every single text she sent in the court…",
+        "comment_text": "She was texting the judge from a personal number during the hearing about the hearing itself. He would check his phone after every single text she sent in the court room. And they would lock eyes and nod.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Harnett"
       },
       {
-        "comment_text": "Inappropriate relationship with the judge.",
+        "comment_text": "Refused to make copies (in the chambers) of evidence that the trial judge Rose asked, continued to question myself about My spouse but would not subpoena My spouse to ask the questions.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Harnett County"
       },
       {
         "comment_text": "Delay after delay. Inappropriate with the judge",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Harnett County"
       },
       {
-        "comment_text": "Refused to make copies (in the chambers) of evidence that the trial judge Rose asked, continued to question myself about My spouse but would not subpoena My spouse to ask…",
+        "comment_text": "Inappropriate relationship with the judge.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "He denied me being able to take up for myself when they were lying",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Harnett"
       }
     ]
   },

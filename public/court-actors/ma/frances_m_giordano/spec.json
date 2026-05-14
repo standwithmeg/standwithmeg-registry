@@ -27,8 +27,8 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": null,
-    "exists": false,
+    "path": "public/court-actors/ma/frances_m_giordano/image_1080.png",
+    "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
@@ -47,7 +47,7 @@
     "_pdf_state_family_count": 66,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3643,
+  "movement_total": 3649,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -70,22 +70,14 @@
       {
         "comment_text": "Denied motions rushed to judgment told me that she doesn’t care what’s happened in the criminal court",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "She’s taken my child completely out of my life based off lies and completely ignoring the fact this is all happening by her doing and silencing myself from talking about…",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "Ignored evidence and testimony",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Essex"
       },
       {
         "comment_text": "Evidence and testimony was ignored by the judge",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Essex County"
       }
     ]
   },
