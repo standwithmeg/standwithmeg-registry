@@ -7,9 +7,9 @@
     "first_name": "Patricia",
     "last_name": "Brady",
     "role": "GAL / Child Representative",
-    "court": null,
+    "court": "Medford MA",
     "county": null,
-    "court_or_county": null,
+    "court_or_county": "Medford MA",
     "state": "Massachusetts",
     "state_abbr": "MA",
     "mention_count": 4,
@@ -27,31 +27,27 @@
     "actor_bucket_key": "patricia brady|MA"
   },
   "photo": {
-    "path": "massachusetts/patricia_brady/image_1080.png",
+    "path": "public/court-actors/ma/patricia_brady/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 46,
-    "total_submissions": 67,
-    "avg_financial_loss": 167270.17,
-    "avg_months_lost": 30.9,
+    "families_approved": 47,
+    "total_submissions": 68,
+    "avg_financial_loss": 166790.67,
+    "avg_months_lost": 30.7,
     "_source_table": "movement_stats_by_state",
     "_match_value": "MA",
-    "state_family_count": 67,
-    "median_months_lost": 20.0,
+    "state_family_count": 68,
     "median_financial_loss": 129050,
-    "median_burden_sample_size": 32,
-    "pro_se_count": 38,
-    "pro_se_pct": 59.4,
-    "children_impacted": 97,
-    "clean_sample_size": 64,
-    "raw_submission_count": 64,
-    "_unresolved": [
-      "pdf_stats: cache unreadable at .: [Errno 21] Is a directory: '.'"
-    ]
+    "median_burden_sample_size": 30,
+    "median_months_lost": 20,
+    "pro_se_pct": 61.8,
+    "pro_se_count": 42,
+    "_pdf_state_family_count": 68,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3737,
+  "movement_total": 3739,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -78,31 +74,27 @@
     ],
     "public_comments": [
       {
-        "comment_text": "This is a very well known offender in Massachusetts she runs a business profiteering on children acting as both a guardian ad litem as well as expert witness and supervisor.…",
+        "comment_text": "This is a very well known offender in Massachusetts she runs a business profiteering on children acting as both a guardian ad litem as well as expert witness and supervisor. I have a lot of information on her as well as records where she had ex parte Communications with the father asked the father if he was happy with the report while collecting money as well as concealing evidence including felony illegal wiretapping",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
       },
       {
-        "comment_text": "Took over a year and a half to complete a GAL investigation recommended that there be no contact between father and daughter because of the seriousness of allegations recommended that…",
+        "comment_text": "Took over a year and a half to complete a GAL investigation recommended that there be no contact between father and daughter because of the seriousness of allegations recommended that the boys have transition plan with Dad and parenting time as well as family therapy.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "Delayed finishing and completing GAL report for over a year",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Middlesex/Medford"
       },
       {
         "comment_text": "Locked my kid in room. Supports who ever pays her bill. Does not look out for best interest of children",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Medford MA"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/patricia_brady",
-  "unresolved": [
-    "pdf_stats: cache unreadable at .: [Errno 21] Is a directory: '.'"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions · not court findings.",
