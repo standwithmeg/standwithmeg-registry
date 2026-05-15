@@ -14,8 +14,8 @@
     "state_abbr": "OH",
     "mention_count": 6,
     "family_count": 4,
-    "public_family_count": 4,
-    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "public_family_count": null,
+    "public_family_count_source": null,
     "actor_report_count": 6,
     "supabase_row_ids": [
       "372601f2-88d9-4fd0-a436-ad60e54ac1f4",
@@ -49,7 +49,7 @@
     "_pdf_state_family_count": 196,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3666,
+  "movement_total": 3699,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
@@ -88,33 +88,42 @@
     ],
     "public_comments": [
       {
-        "comment_text": "Denied motion and ignored evidence!! None of them did their job they made up everything. The judge didn’t want to listen to us whatsoever that we gave him evidence and they didn’t show him any evidence and that he ruled with them over us. He delayed hearings gave them more time biased, he didn’t sign half of his records he had to click record sign it things like that you can put well. She really really wasn’t on our case…",
+        "comment_text": "Denied motion without hearing",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Highland"
-      },
-      {
-        "comment_text": "He’s the (assistant) prosecutor and did a juvenile rule 6 without a judge or magistrate and waiting a whole day after cps receiving the phone call of the hospital saying “mother is fine and I don’t see her leaving with baby tonight” and caseworker saying “okay we will be up tomorrow morning and let things settle down”",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Highland county"
+        "source": "court_actors.notes"
       },
       {
         "comment_text": "Delayed any attempt at reunification and ignored exculpatory evidence.",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Highland"
+        "source": "court_actors.notes"
       },
       {
-        "comment_text": "Denied motion without hearing",
+        "comment_text": "He’s the (assistant) prosecutor and did a juvenile rule 6 without a judge or magistrate and waiting a whole day after cps receiving the phone call of the hospital saying…",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Highland"
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Denied motion and ignored evidence!! None of them did their job they made up everything. The judge didn’t want to listen to us whatsoever that we gave him evidence and…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Assistant prosecutor did a rule 6 and it was not signed by the judge",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Assistant prosecutor verbally emails a rule six when it was normal hours, it was at 10:58 AM on a weekday and the judge should’ve been there to sign off but…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/james_jim_roeder",
-  "unresolved": [],
+  "unresolved": [
+    "public_family_count_api: no match for display_name='James (Jim) Roeder' bucket='james (jim) roeder|OH' slug='james_jim_roeder' in OH (14 actors)",
+    "pdf_public_actor: no 'James (Jim) Roeder' in cache for OH"
+  ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions · not court findings.",

@@ -26,36 +26,38 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "kansas/stephanie_goodenow/image_1080.png",
+    "path": "public/court-actors/ks/stephanie_goodenow/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 121,
-    "total_submissions": 172,
-    "avg_financial_loss": 127789.56,
+    "families_approved": 122,
+    "total_submissions": 173,
+    "avg_financial_loss": 128911.79,
     "avg_months_lost": 31.6,
     "_source_table": "movement_stats_by_state",
     "_match_value": "KS",
-    "state_family_count": 172,
-    "median_months_lost": 20.0,
-    "median_financial_loss": 84225,
-    "median_burden_sample_size": 80,
-    "pro_se_count": 87,
-    "pro_se_pct": 53.7,
-    "children_impacted": 292,
-    "clean_sample_size": 162,
-    "raw_submission_count": 162,
-    "_unresolved": [
-      "pdf_stats: cache unreadable at .: [Errno 21] Is a directory: '.'"
-    ]
+    "state_family_count": 173,
+    "median_financial_loss": 75450,
+    "median_burden_sample_size": 87,
+    "median_months_lost": 16,
+    "pro_se_pct": 53.2,
+    "pro_se_count": 92,
+    "_pdf_state_family_count": 173,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3666,
+  "movement_total": 3699,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
     "family_count": 3,
     "family_reports": [
+      {
+        "body": "System was complicit in alienating my children from me. Attorneys, GAL's, a Case Manager,…",
+        "state": "KS",
+        "county": "Johnson County",
+        "row_id": "87cd907e-3928-4f1c-8191-aacf997ed156"
+      },
       {
         "body": "It had destroyed my children's mental health and mine. My youngest has became suicidal,…",
         "state": "KS",
@@ -65,26 +67,21 @@
     ],
     "public_comments": [
       {
-        "comment_text": "Ignored the domestic violence, Ignored the abuse that happened to my daughter that was done by her father, whom had charges in the same county. Ignored evidence. Allowed the derailing.…",
+        "comment_text": "Ignored the domestic violence, Ignored the abuse that happened to my daughter that was done by her father, whom had charges in the same county. Ignored evidence. Allowed the derailing. Ignored that I had been a victim of domestic violence and all abuse done by the father many years and much more.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Johnson"
       },
       {
         "comment_text": "Inserted punitive orders against me without any evidence",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "Gave custody back to a man who didn't follow court orders to go to therapy, treated coparenting therapy and reunification therapy like it was optional, threw tantrums in the courtroom,…",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Johnson County"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/stephanie_goodenow",
-  "unresolved": [
-    "pdf_stats: cache unreadable at .: [Errno 21] Is a directory: '.'"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions · not court findings.",

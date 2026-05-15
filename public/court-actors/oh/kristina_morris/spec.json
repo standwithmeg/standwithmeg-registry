@@ -26,7 +26,7 @@
     "actor_bucket_key": "kristina moris|OH"
   },
   "photo": {
-    "path": "ohio/kristina_morris/image_1080.png",
+    "path": "public/court-actors/oh/kristina_morris/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -38,19 +38,15 @@
     "_source_table": "movement_stats_by_state",
     "_match_value": "OH",
     "state_family_count": 196,
-    "median_months_lost": 19.0,
-    "median_financial_loss": 80000,
-    "median_burden_sample_size": 97,
-    "pro_se_count": 111,
-    "pro_se_pct": 57.5,
-    "children_impacted": 292,
-    "clean_sample_size": 193,
-    "raw_submission_count": 193,
-    "_unresolved": [
-      "pdf_stats: cache unreadable at .: [Errno 21] Is a directory: '.'"
-    ]
+    "median_financial_loss": 81250,
+    "median_burden_sample_size": 96,
+    "median_months_lost": 18,
+    "pro_se_pct": 56.1,
+    "pro_se_count": 110,
+    "_pdf_state_family_count": 196,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3666,
+  "movement_total": 3699,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -77,26 +73,27 @@
     ],
     "public_comments": [
       {
-        "comment_text": "Refused to look at evidence and allowed lies and slander to stand up as evidence when it was proven untrue",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
         "comment_text": "Ignored evidence for protection order, put children in danger, consistently taken away custody and visitation time",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Shelby"
+      },
+      {
+        "comment_text": "Refused to look at evidence and allowed lies and slander to stand up as evidence when it was proven untrue",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Shelby"
       },
       {
         "comment_text": "Denied protection order 3 times, denied witnesses on my behalf twice.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/kristina_morris",
-  "unresolved": [
-    "pdf_stats: cache unreadable at .: [Errno 21] Is a directory: '.'"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions · not court findings.",

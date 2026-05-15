@@ -26,31 +26,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "georgia/jennifer_davis/image_1080.png",
+    "path": "public/court-actors/ga/jennifer_davis/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 69,
-    "total_submissions": 90,
-    "avg_financial_loss": 187218.69,
-    "avg_months_lost": 33.8,
+    "families_approved": 73,
+    "total_submissions": 94,
+    "avg_financial_loss": 199531.93,
+    "avg_months_lost": 33.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "GA",
-    "state_family_count": 90,
-    "median_months_lost": 19.0,
-    "median_financial_loss": 131000,
+    "state_family_count": 94,
+    "median_financial_loss": 122500,
     "median_burden_sample_size": 50,
-    "pro_se_count": 37,
-    "pro_se_pct": 40.7,
-    "children_impacted": 165,
-    "clean_sample_size": 91,
-    "raw_submission_count": 91,
-    "_unresolved": [
-      "pdf_stats: cache unreadable at .: [Errno 21] Is a directory: '.'"
-    ]
+    "median_months_lost": 18,
+    "pro_se_pct": 43.6,
+    "pro_se_count": 41,
+    "_pdf_state_family_count": 94,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3666,
+  "movement_total": 3699,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -71,26 +67,27 @@
     ],
     "public_comments": [
       {
-        "comment_text": "Took the attorneys in chambers and threatened our counsel not to attack a GAL in her courtroom, in violation of due process. Abdicated her judgment to the GAL without any…",
+        "comment_text": "She refused to consider my tax returns for my income, and scolded me for not calling the opposing attorney “Mr.” as if I should have known that was required for due process. I was nothing but kind and respectful. I was threatened with criminal contempt if I didn’t settle, once my admissible evidence was treated as non-admissible.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Cherokee"
+      },
+      {
+        "comment_text": "Took the attorneys in chambers and threatened our counsel not to attack a GAL in her courtroom, in violation of due process. Abdicated her judgment to the GAL without any finding of fact.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Cherokee"
       },
       {
         "comment_text": "Falsified documents that led to the removal of my son. Had the court stamp documents via “ her memory” from years ago.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "She refused to consider my tax returns for my income, and scolded me for not calling the opposing attorney “Mr.” as if I should have known that was required for…",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Cherokee"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/jennifer_davis",
-  "unresolved": [
-    "pdf_stats: cache unreadable at .: [Errno 21] Is a directory: '.'"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions · not court findings.",

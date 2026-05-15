@@ -4,7 +4,7 @@
     "slug": "james_roeder",
     "display_name": "James Roeder",
     "title": "",
-    "first_name": "James",
+    "first_name": "James (Jim)",
     "last_name": "Roeder",
     "role": "Attorney (Opposing)",
     "court": "Highland",
@@ -12,22 +12,24 @@
     "court_or_county": "Highland",
     "state": "Ohio",
     "state_abbr": "OH",
-    "mention_count": 4,
+    "mention_count": 6,
     "family_count": 4,
     "public_family_count": 4,
     "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
-    "actor_report_count": 4,
+    "actor_report_count": 6,
     "supabase_row_ids": [
       "0633d20a-1dcb-44f3-ab80-b290b5673063",
       "372601f2-88d9-4fd0-a436-ad60e54ac1f4",
       "550c0ce6-fac9-4603-8b34-731982271966",
-      "b7c0bae7-4d0d-4742-869d-aab1c2206f03"
+      "b7c0bae7-4d0d-4742-869d-aab1c2206f03",
+      "dc6642db-35a3-42a1-8d5d-e6f255559765",
+      "cf9385a2-e65d-4df0-904e-7631a96f52f1"
     ],
     "actor_row_id": "0633d20a-1dcb-44f3-ab80-b290b5673063",
     "actor_bucket_key": "james roeder|OH"
   },
   "photo": {
-    "path": "ohio/james_roeder/image_1080.png",
+    "path": "public/court-actors/oh/james_roeder/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -39,22 +41,18 @@
     "_source_table": "movement_stats_by_state",
     "_match_value": "OH",
     "state_family_count": 196,
-    "median_months_lost": 19.0,
-    "median_financial_loss": 80000,
-    "median_burden_sample_size": 97,
-    "pro_se_count": 111,
-    "pro_se_pct": 57.5,
-    "children_impacted": 292,
-    "clean_sample_size": 193,
-    "raw_submission_count": 193,
-    "_unresolved": [
-      "pdf_stats: cache unreadable at .: [Errno 21] Is a directory: '.'"
-    ]
+    "median_financial_loss": 81250,
+    "median_burden_sample_size": 96,
+    "median_months_lost": 18,
+    "pro_se_pct": 56.1,
+    "pro_se_count": 110,
+    "_pdf_state_family_count": 196,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3687,
+  "movement_total": 3699,
   "supabase": {
-    "report_count": 4,
-    "actor_report_count": 4,
+    "report_count": 6,
+    "actor_report_count": 6,
     "family_count": 4,
     "family_reports": [
       {
@@ -70,6 +68,18 @@
         "row_id": "6caec907-d638-46ce-ac09-9cde3975ad8e"
       },
       {
+        "body": "I want people to understand that this was never just a custody case to…",
+        "state": "OH",
+        "county": "Highland",
+        "row_id": "899c1aec-eb22-48b6-91a7-613a0f0bb684"
+      },
+      {
+        "body": "They took the happiest and joy out of us",
+        "state": "OH",
+        "county": "Highland county",
+        "row_id": "8b35071a-b597-4615-93d0-41c8dca323bd"
+      },
+      {
         "body": "Killed me and my family",
         "state": "OH",
         "county": "Highland county",
@@ -78,31 +88,33 @@
     ],
     "public_comments": [
       {
-        "comment_text": "Denied motion and ignored evidence!! None of them did their job they made up everything. The judge didn’t want to listen to us whatsoever that we gave him evidence and…",
+        "comment_text": "Denied motion and ignored evidence!! None of them did their job they made up everything. The judge didn’t want to listen to us whatsoever that we gave him evidence and they didn’t show him any evidence and that he ruled with them over us. He delayed hearings gave them more time biased, he didn’t sign half of his records he had to click record sign it things like that you can put well. She really really wasn’t on our case…",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Highland"
       },
       {
-        "comment_text": "Denied motion without hearing",
+        "comment_text": "He’s the (assistant) prosecutor and did a juvenile rule 6 without a judge or magistrate and waiting a whole day after cps receiving the phone call of the hospital saying “mother is fine and I don’t see her leaving with baby tonight” and caseworker saying “okay we will be up tomorrow morning and let things settle down”",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Highland county"
       },
       {
         "comment_text": "Delayed any attempt at reunification and ignored exculpatory evidence.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Highland"
       },
       {
-        "comment_text": "Assistant prosecutor did a rule 6 and it was not signed by the judge",
+        "comment_text": "Denied motion without hearing",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Highland"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/james_roeder",
-  "unresolved": [
-    "pdf_stats: cache unreadable at .: [Errno 21] Is a directory: '.'"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions · not court findings.",
