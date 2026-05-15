@@ -1,0 +1,113 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "kimberly_b_schutt",
+    "display_name": "Kimberly B. Schutt",
+    "title": "",
+    "first_name": "Kimberly B.",
+    "last_name": "Schutt",
+    "role": "Judge",
+    "court": "Weld county",
+    "county": null,
+    "court_or_county": "Weld county",
+    "state": "CO",
+    "state_abbr": "CO",
+    "mention_count": 3,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "0accef5f-48f5-44ae-b0be-b5d28df5604a",
+      "04d35390-bcc0-418b-9757-6f7397042315",
+      "fa44ae86-a221-4d89-8dfd-53a259b92eef"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/co/kimberly_b_schutt/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 56,
+    "total_submissions": 78,
+    "avg_financial_loss": 287363.22,
+    "avg_months_lost": 39.8,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "CO",
+    "state_family_count": 78,
+    "median_financial_loss": 191245,
+    "median_burden_sample_size": 36,
+    "median_months_lost": 18,
+    "pro_se_pct": 67.9,
+    "pro_se_count": 53,
+    "_pdf_state_family_count": 78,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 3718,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 3,
+    "family_reports": [
+      {
+        "body": "This situation has affected our daughter and her siblings relationship which should never happen…",
+        "state": "CO",
+        "county": "Weld",
+        "row_id": "dbdbb8b3-c2fa-4d47-b7df-100f5eb5dc95"
+      },
+      {
+        "body": "Weld County CPS is full of bad actors and corruption. A literal threat made…",
+        "state": "CO",
+        "county": "Weld",
+        "row_id": "c3b21ff9-4911-4d72-b7e4-380b806ad442"
+      },
+      {
+        "body": "This family court rewarded parental alienation, restricted my relationship with my children, and gave…",
+        "state": "CO",
+        "county": "Weld",
+        "row_id": "f4a2d4c0-382b-4116-8938-b6c2c1aa09a5"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "The court’s permanent orders rewarded obstruction and parental alienation rather than protecting and restoring the father-child relationship. Despite repeated evidence of denied phone calls, withheld parenting time, gatekeeping, scheduling conflicts placed over parenting time, and lack of cooperation from the mother, the Court still awarded her sole decision-making authority over medical, education, therapy, extracurricular activities, and major parenting decisions. The Court relied heavily on historical domestic violence allegations even after the permanent protection order was denied and replaced with only…",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Weld county"
+      },
+      {
+        "comment_text": "Was extremely new to family court and not well versed in high conflict parenting. Opened a CPS case falsely using educational neglect as a way to start a CPS investigation that lasted 4 years and thousands of dollars.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Weld county"
+      },
+      {
+        "comment_text": "She ignored Family First and listened to DHS.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Weld county"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/kimberly_b_schutt",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/co/kimberly_b_schutt/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}
