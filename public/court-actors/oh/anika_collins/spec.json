@@ -34,15 +34,15 @@
     "_source_table": "movement_stats_by_state",
     "_match_value": "OH",
     "state_family_count": 198,
-    "median_financial_loss": 81250,
-    "median_burden_sample_size": 96,
+    "median_financial_loss": 80000,
+    "median_burden_sample_size": 95,
     "median_months_lost": 18,
     "pro_se_pct": 55.6,
     "pro_se_count": 110,
     "_pdf_state_family_count": 198,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3747,
+  "movement_total": 3748,
   "supabase": {
     "report_count": null,
     "actor_report_count": null,
