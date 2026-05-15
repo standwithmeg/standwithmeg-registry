@@ -12,16 +12,17 @@
     "court_or_county": "Hancock",
     "state": "Ohio",
     "state_abbr": "OH",
-    "mention_count": 5,
-    "family_count": 4,
-    "public_family_count": 4,
+    "mention_count": 6,
+    "family_count": 5,
+    "public_family_count": 5,
     "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
-    "actor_report_count": 5,
+    "actor_report_count": 6,
     "supabase_row_ids": [
       "7f8e88a8-e81f-4501-9e42-6390fad16c1d",
       "c3ba57b3-d1d8-44d8-9911-d7326bd28e97",
       "b59bf58c-ed99-41d1-ab12-06d4c5db4895",
       "b44a360c-6d64-4a84-bfbe-a2c820e4836c",
+      "000b885c-39b1-4863-a194-b02431ba066d",
       "d7c0b30c-cb1c-494b-a540-58c94f7ff728"
     ],
     "actor_row_id": "7f8e88a8-e81f-4501-9e42-6390fad16c1d",
@@ -34,25 +35,25 @@
   },
   "state_stats": {
     "families_approved": 154,
-    "total_submissions": 197,
-    "avg_financial_loss": 119124.51,
-    "avg_months_lost": 29.6,
+    "total_submissions": 198,
+    "avg_financial_loss": 117731.24,
+    "avg_months_lost": 29.7,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OH",
-    "state_family_count": 197,
-    "median_financial_loss": 81250,
-    "median_burden_sample_size": 96,
+    "state_family_count": 198,
+    "median_financial_loss": 80000,
+    "median_burden_sample_size": 95,
     "median_months_lost": 18,
-    "pro_se_pct": 55.8,
+    "pro_se_pct": 55.6,
     "pro_se_count": 110,
-    "_pdf_state_family_count": 197,
+    "_pdf_state_family_count": 198,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3715,
+  "movement_total": 3746,
   "supabase": {
-    "report_count": 5,
-    "actor_report_count": 5,
-    "family_count": 4,
+    "report_count": 6,
+    "actor_report_count": 6,
+    "family_count": 5,
     "family_reports": [
       {
         "body": "Torn apart a mom from her kids and alienated a mom for 4+ years…",
@@ -71,6 +72,12 @@
         "state": "OH",
         "county": "Hancock",
         "row_id": "495a058c-3c9c-464d-8755-e3d5abb136d3"
+      },
+      {
+        "body": "This system allows legal kidnapping, because there are no checks and balances for Juvenile…",
+        "state": "OH",
+        "county": "Hancock County",
+        "row_id": "a7404c1e-efa9-4ace-a0d8-23b34f1b3239"
       },
       {
         "body": "I am the grandmother trying to get kinship, visitation, custody intervention and was denied.…",
@@ -94,6 +101,12 @@
       },
       {
         "comment_text": "Falsified reports, changed drug test to a positive. Changed documents after signed. Lied on the stand. Claimed to attempt a home visit when no contact was ever made. Also claimed that home visits were denied but were done every month and recording of them prove it.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Hancock"
+      },
+      {
+        "comment_text": "Lied about the results of a drug test, that was eventually overturned at court by Judge Kristen Johnson. Delayed granting my visitation request for months, my lawyer had to contact her and demand à response",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Hancock"
