@@ -5,7 +5,7 @@
     "display_name": "Rochelle conits",
     "title": "",
     "first_name": "Rochelle",
-    "last_name": "conits",
+    "last_name": "Conits",
     "role": "Judge",
     "court": "County not listed",
     "county": null,
@@ -19,9 +19,9 @@
     "actor_report_count": 4,
     "supabase_row_ids": [
       "28d37c6e-b3f5-4040-ab3d-07759e06998d",
+      "7802e04d-353b-442a-958e-58ae5b2cb564",
       "1660956e-6242-41d2-94b6-b081628981da",
-      "c41e87f8-3a1d-4cfe-9437-086a65b9f822",
-      "7802e04d-353b-442a-958e-58ae5b2cb564"
+      "c41e87f8-3a1d-4cfe-9437-086a65b9f822"
     ],
     "actor_row_id": null,
     "actor_bucket_key": null
@@ -47,7 +47,7 @@
     "_pdf_state_family_count": 63,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3699,
+  "movement_total": 3718,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,

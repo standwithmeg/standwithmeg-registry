@@ -13,8 +13,8 @@
     "state": "Kansas",
     "state_abbr": "KS",
     "mention_count": 5,
-    "family_count": 4,
-    "public_family_count": 4,
+    "family_count": 5,
+    "public_family_count": 5,
     "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
     "actor_report_count": 5,
     "supabase_row_ids": [
@@ -48,11 +48,11 @@
     "_pdf_state_family_count": 173,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3699,
+  "movement_total": 3718,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
-    "family_count": 4,
+    "family_count": 5,
     "family_reports": [
       {
         "body": "My life revolves around soul crushing court ordered abuse. My child has been legally…",
@@ -82,6 +82,12 @@
       },
       {
         "comment_text": "Bethany Roberts failed to properly investigate my concerns, dismissed allegations of abuse without meaningful inquiry, and accepted my abuser’s denials at face value, which further harmed and divided my family.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Osage"
+      },
+      {
+        "comment_text": "Ignored and still ignores drug/alcohol abuse and neglect. Refuses to communicate with children’s therapist regarding children’s welfare",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Osage"
