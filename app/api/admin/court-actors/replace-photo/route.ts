@@ -147,7 +147,7 @@ function readImageDimensions(input: Buffer, contentType: string): ImageDimension
   throw new PhotoValidationError("Photo must be a PNG or JPEG image.");
 }
 
-async function normalizeUploadedPhoto(photo: File): Promise<Buffer> {
+async function validateUploadedPhoto(photo: File): Promise<Buffer> {
   const contentType = photo.type.toLowerCase();
   if (contentType !== "image/png" && contentType !== "image/jpeg") {
     throw new PhotoValidationError("Photo must be a PNG or JPEG image.");
@@ -168,6 +168,8 @@ async function normalizeUploadedPhoto(photo: File): Promise<Buffer> {
     throw new PhotoValidationError("Uploaded image is not a portrait. Use a portrait photo instead of a webpage screenshot.");
   }
 
+  // Keep the uploaded portrait bytes unchanged. The share-page renderer handles
+  // crop/fill through its existing photo layout.
   return input;
 }
 
@@ -177,7 +179,7 @@ async function commitPhoto(args: {
   message: string;
   stateAbbr: string;
   slug: string;
-  photoBuffer: Buffer;
+  uploadedPhotoBuffer: Buffer;
   manifest: CourtActorManifest | null;
 }) {
   const api = `https://api.github.com/repos/${args.repo}`;
@@ -186,7 +188,7 @@ async function commitPhoto(args: {
   const photoBlob = await fetchGithubJson<{ sha: string }>(`${api}/git/blobs`, args.token, {
     method: "POST",
     body: JSON.stringify({
-      content: args.photoBuffer.toString("base64"),
+      content: args.uploadedPhotoBuffer.toString("base64"),
       encoding: "base64",
     }),
   });
@@ -274,9 +276,9 @@ export async function POST(request: Request) {
       return Response.json({ error: "Server not configured: missing GITHUB_REPO or GITHUB_DISPATCH_TOKEN." }, { status: 500 });
     }
 
-    const [{ manifest }, photoBuffer] = await Promise.all([
+    const [{ manifest }, uploadedPhotoBuffer] = await Promise.all([
       getManifestFromGithub(repo, token),
-      normalizeUploadedPhoto(photo),
+      validateUploadedPhoto(photo),
     ]);
     const entry = findManifestEntry(manifest, stateAbbr, slug);
     if (!entry) {
@@ -292,7 +294,7 @@ export async function POST(request: Request) {
       message,
       stateAbbr,
       slug,
-      photoBuffer,
+      uploadedPhotoBuffer,
       manifest: nextManifest,
     });
 
@@ -312,8 +314,8 @@ export async function POST(request: Request) {
       commit_sha: commit.sha,
       commit_url: commit.html_url,
       message: dispatchWarning
-        ? `Photo replaced for ${displayName}, but regen dispatch needs manual retry: ${dispatchWarning}`
-        : `Photo replaced for ${displayName}. Regeneration queued for ${stateAbbr}.`,
+        ? `Portrait uploaded for ${displayName}, but regen dispatch needs manual retry: ${dispatchWarning}`
+        : `Portrait uploaded for ${displayName}. Regeneration queued for ${stateAbbr}.`,
       warning: dispatchWarning,
     });
   } catch (err) {
