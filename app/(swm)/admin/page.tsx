@@ -1226,7 +1226,7 @@ export default function AdminPage() {
     const state = agg.deploy_state_abbr ?? agg.location_key ?? agg.state_code ?? "";
     const slug = agg.deploy_slug ?? "";
     if (!state || !slug) {
-      alert("This actor does not have a deployable US state/slug.");
+      alert("This actor does not have a share-page-ready US state/slug.");
       return;
     }
     setDeployActorModal({
@@ -1271,7 +1271,7 @@ export default function AdminPage() {
       setDeployActorModal(prev => prev ? {
         ...prev,
         status: "success",
-        message: data.message || "Deployed — regenerate to render.",
+        message: data.message || "Share page created — regenerate to render slides.",
       } : prev);
       await refreshActors().catch(() => undefined);
     } catch (err) {
@@ -3012,7 +3012,7 @@ export default function AdminPage() {
                         onClick={() => openDeployActorModal(selectedActorAgg)}
                         className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide"
                         style={{ backgroundColor: "rgba(234,179,8,0.18)", color: "rgb(253,224,71)", border: "1px solid rgba(234,179,8,0.35)" }}>
-                        Deploy this actor →
+                        Create share page →
                       </button>
                     )}
                   </div>
@@ -3052,7 +3052,7 @@ export default function AdminPage() {
                       style={{ backgroundColor: isDeployed ? "rgba(74,222,128,0.10)" : "rgba(234,179,8,0.10)", border: `1px solid ${isDeployed ? "rgba(74,222,128,0.26)" : "rgba(234,179,8,0.28)"}` }}>
                       <div className="text-[10px] font-black uppercase tracking-wide"
                         style={{ color: isDeployed ? "rgb(134,239,172)" : "rgb(253,224,71)" }}>
-                        {isDeployed ? "DEPLOYED" : "UNDEPLOYED"}
+                        {isDeployed ? "SHARE PAGE READY" : "NO SHARE PAGE YET"}
                       </div>
                       {isDeployed && shareUrl ? (
                         <a href={shareUrl} target="_blank" rel="noopener noreferrer"
@@ -3062,7 +3062,7 @@ export default function AdminPage() {
                         </a>
                       ) : (
                         <div className="mt-1 text-xs" style={{ color: "rgba(245,245,245,0.55)" }}>
-                          {canDeploy ? "Ready for one-click deployment." : "Not deployable yet."}
+                          {canDeploy ? "Visible on /report; share page still needs to be created." : "No share page action available yet."}
                         </div>
                       )}
                     </div>
@@ -3363,10 +3363,10 @@ export default function AdminPage() {
                 <div>
                   <div className="text-xs font-black uppercase tracking-wide"
                     style={{ color: undeployedPublicPatterns.length > 0 ? "rgb(253,224,71)" : "rgba(245,245,245,0.42)" }}>
-                    {undeployedPublicPatterns.length} actors at public threshold are not yet deployed.
+                    {undeployedPublicPatterns.length} public report actors need share pages.
                   </div>
                   <div className="text-[11px] mt-0.5" style={{ color: "rgba(245,245,245,0.42)" }}>
-                    These names have enough family reports, but no committed share-page manifest entry yet.
+                    They already qualify for /report. This only means their social share page and slide files are not committed yet.
                   </div>
                 </div>
                 <button
@@ -3492,7 +3492,7 @@ export default function AdminPage() {
                               color: "rgb(253,224,71)",
                               border: "1px solid rgba(234,179,8,0.35)",
                             }}>
-                            Deploy this actor →
+                            Create share page →
                           </button>
                         )}
                         {justDeployed && (
@@ -3502,7 +3502,7 @@ export default function AdminPage() {
                               color: "rgb(134,239,172)",
                               border: "1px solid rgba(74,222,128,0.28)",
                             }}>
-                            ✓ Deployed — regenerate to render
+                            ✓ Share page created — regenerate to render
                           </span>
                         )}
                         <button
@@ -3844,9 +3844,9 @@ export default function AdminPage() {
             <div className="px-6 py-4 flex items-start justify-between gap-4"
               style={{ borderBottom: `1px solid rgba(201,162,39,0.2)`, backgroundColor: "rgba(30,58,95,0.6)" }}>
               <div>
-                <div className="font-black text-white text-base leading-none">Deploy court actor</div>
+                <div className="font-black text-white text-base leading-none">Create actor share page</div>
                 <div className="text-xs mt-1" style={{ color: "rgba(245,245,245,0.45)" }}>
-                  This commits the manifest entry and queues that state&apos;s regen workflow.
+                  The actor already appears on /report. This commits the social share-page files and queues that state&apos;s regen workflow.
                 </div>
               </div>
               <button
@@ -3890,7 +3890,7 @@ export default function AdminPage() {
                 />
                 <span className="block mt-1 text-[11px] normal-case font-normal tracking-normal"
                   style={{ color: "rgba(245,245,245,0.38)" }}>
-                  Leave blank to deploy with the flag-only fallback.
+                  Leave blank to create the share page with the flag-only fallback.
                 </span>
               </label>
               {deployActorModal.message && (
@@ -3918,7 +3918,7 @@ export default function AdminPage() {
                   onClick={() => void deployActorFromModal()}
                   className="text-xs px-4 py-2 rounded-lg font-bold disabled:opacity-50"
                   style={{ backgroundColor: "rgba(201,162,39,0.18)", color: GOLD, border: "1px solid rgba(201,162,39,0.38)" }}>
-                  {deployActorModal.status === "deploying" ? "Deploying..." : "Deploy"}
+                  {deployActorModal.status === "deploying" ? "Creating..." : "Create share page"}
                 </button>
               </div>
             </div>
