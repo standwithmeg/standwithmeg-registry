@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-15T17:54:27.402768",
+  "generated_at": "2026-05-15T13:49:33.579716",
   "actors": [
     {
       "slug": "donald_griffith",
@@ -326,6 +326,15 @@
       "share_url": "/court-actors/ma/lawrence_army_jr/share.html"
     },
     {
+      "slug": "patricia_brady",
+      "state_abbr": "MA",
+      "display_name": "Patricia brady",
+      "canonical_name": "Patricia brady",
+      "actor_bucket_key": "patricia brady|MA",
+      "photo_url": "/court-actors/ma/patricia_brady/image_1080.png",
+      "share_url": "/court-actors/ma/patricia_brady/share.html"
+    },
+    {
       "slug": "darik_anderson",
       "state_abbr": "MN",
       "display_name": "Darik Anderson",
@@ -457,7 +466,7 @@
       "display_name": "James (Jim) Roeder",
       "canonical_name": "James (Jim) Roeder",
       "actor_bucket_key": "james (jim) roeder|OH",
-      "photo_url": null,
+      "photo_url": "/court-actors/oh/james_jim_roeder/image_1080.png",
       "share_url": "/court-actors/oh/james_jim_roeder/share.html"
     },
     {
