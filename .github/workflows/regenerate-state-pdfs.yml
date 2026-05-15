@@ -126,16 +126,27 @@ jobs:
             git fetch origin main
             if ! git rebase origin/main; then
               conflicts=$(git diff --name-only --diff-filter=U)
-              if [ "$conflicts" = "public/court-actors/manifest.json" ]; then
-                echo "Resolving manifest.json conflict by regenerating from filesystem."
-                python -c "import sys; sys.path.insert(0, 'scripts/share-pages'); from regenerate_deployed_actors import rewrite_manifest; rewrite_manifest()"
-                git add public/court-actors/manifest.json
-                GIT_EDITOR=true git rebase --continue
-              else
-                echo "Unexpected conflicts: $conflicts - aborting rebase."
+              unexpected_conflicts=$(printf '%s\n' "$conflicts" | grep -vE '^(public/state-reports/|public/court-actors/)' || true)
+              if [ -n "$unexpected_conflicts" ]; then
+                echo "Unexpected conflicts: $unexpected_conflicts - aborting rebase."
                 git rebase --abort
                 exit 1
               fi
+
+              echo "Resolving generated-file conflicts:"
+              printf '%s\n' "$conflicts"
+              while IFS= read -r file; do
+                if [ -n "$file" ]; then
+                  git checkout --theirs -- "$file"
+                fi
+              done <<< "$conflicts"
+
+              if printf '%s\n' "$conflicts" | grep -q '^public/court-actors/manifest.json$'; then
+                echo "Regenerating manifest.json from filesystem."
+                python -c "import sys; sys.path.insert(0, 'scripts/share-pages'); from regenerate_deployed_actors import rewrite_manifest; rewrite_manifest()"
+              fi
+              git add $conflicts
+              GIT_EDITOR=true git rebase --continue
             fi
             sleep $((attempt * 3))
           done
