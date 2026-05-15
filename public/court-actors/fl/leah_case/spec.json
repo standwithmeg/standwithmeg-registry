@@ -26,44 +26,36 @@
     "actor_bucket_key": "leah case|FL"
   },
   "photo": {
-    "path": "public/court-actors/fl/leah_case/image_1080.png",
+    "path": "florida/leah_case/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 158,
-    "total_submissions": 216,
-    "avg_financial_loss": 199200.2,
-    "avg_months_lost": 30.4,
+    "families_approved": 160,
+    "total_submissions": 217,
+    "avg_financial_loss": 197931.2,
+    "avg_months_lost": 30.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "FL",
-    "state_family_count": 216,
-    "median_financial_loss": 238000,
-    "median_burden_sample_size": 90,
-    "median_months_lost": 18,
-    "pro_se_pct": 58.8,
+    "state_family_count": 217,
+    "median_months_lost": 20.0,
+    "median_financial_loss": 205000,
+    "median_burden_sample_size": 93,
     "pro_se_count": 127,
-    "_pdf_state_family_count": 216,
-    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+    "pro_se_pct": 58.8,
+    "children_impacted": 356,
+    "clean_sample_size": 216,
+    "raw_submission_count": 216,
+    "_unresolved": [
+      "pdf_stats: cache unreadable at .: [Errno 21] Is a directory: '.'"
+    ]
   },
-  "movement_total": 3709,
+  "movement_total": 3731,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
     "family_count": 3,
     "family_reports": [
-      {
-        "body": "Lea Case ignored dependency court retaliation against my family",
-        "state": "FL",
-        "county": "Volusia",
-        "row_id": "4a08abb2-b0d1-45cf-b134-5236e8d5ab02"
-      },
-      {
-        "body": "Chief Judge Leah Case was notified that Judge Anthony, a judicial defendant in the…",
-        "state": "FL",
-        "county": "Volusia County",
-        "row_id": "cca49cbe-9d66-40c1-aa02-00b72f42c902"
-      },
       {
         "body": "EVERY judicial actor in the 7th judicial Circuit has violated their oath and stripped…",
         "state": "FL",
@@ -73,27 +65,16 @@
     ],
     "public_comments": [
       {
-        "comment_text": "Chief Judge Leah Case (Seventh Circuit, Florida) Reported for failure to act on a Canon 3E judicial‑review request involving structural defects in an active dependency/TPR case. The report detailed: • The presiding judge (Anthony) was a judicial defendant in a related federal action yet continued to preside over the TPR trial without recusal. • Altered consent documents and a fraudulent notary certificate attached to the case file. • Docket scrubbing that concealed the appointment of conflicted counsel. • A request…",
+        "comment_text": "Chief Judge Leah Case (Seventh Circuit, Florida) As a family member, I reported to Chief Judge Leah Case that the presiding judge was retaliating against the parent for requesting ADA…",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Seventh Circuit, Volusia County"
-      },
-      {
-        "comment_text": "Chief Judge Leah Case (Seventh Circuit, Florida) As a family member, I reported to Chief Judge Leah Case that the presiding judge was retaliating against the parent for requesting ADA accommodations and that the docket had been scrubbed after Judge Anthony appointed conflicted counsel during the shelter hearing. Despite raising these concerns, including the grandparent’s report of retaliation and record‑integrity issues, Chief Judge Case took no action.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Volusia"
-      },
-      {
-        "comment_text": "Chief judge Leah Case barred me from FULL access to the Courts and placed an entire communication ban to the ENTIRE 7th judicial circuit, clerks, court administration, IT department and Law Enforcement (bailiffs from the Volusia Sheriffs office with NO DUE PROCESS HEARING) She partook in ex parte with Court Administration Mark Weinberg stating my emails were misuse of the judicial system when it was protected activity.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Volusia"
+        "source": "court_actors.notes"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/leah_case",
-  "unresolved": [],
+  "unresolved": [
+    "pdf_stats: cache unreadable at .: [Errno 21] Is a directory: '.'"
+  ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions · not court findings.",
