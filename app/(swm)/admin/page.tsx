@@ -757,6 +757,11 @@ export default function AdminPage() {
     location_key: string | null;
     court_or_county: string | null;
     count: number;
+    actor_bucket_key?: string | null;
+    deploy_slug?: string | null;
+    deploy_state_abbr?: string | null;
+    deployable?: boolean;
+    deployed?: boolean;
   };
   const [adminActors, setAdminActors] = useState<AdminActor[]>([]);
   const [adminActorAggs, setAdminActorAggs] = useState<AdminActorAgg[]>([]);
@@ -779,6 +784,17 @@ export default function AdminPage() {
   const [editingPatternKey, setEditingPatternKey] = useState<string | null>(null);
   const [patternEditDraft, setPatternEditDraft] = useState<ActorEditDraft>(emptyActorEditDraft);
   const [savingPatternEdit, setSavingPatternEdit] = useState<string | null>(null);
+  const [showOnlyUndeployedPublic, setShowOnlyUndeployedPublic] = useState(false);
+  type DeployActorModalState = {
+    slug: string;
+    state_abbr: string;
+    display_name: string;
+    photo_source: string;
+    status: "idle" | "deploying" | "success" | "error";
+    message: string | null;
+  };
+  const [deployActorModal, setDeployActorModal] = useState<DeployActorModalState | null>(null);
+  const [recentlyDeployedActorKeys, setRecentlyDeployedActorKeys] = useState<Set<string>>(() => new Set());
 
   // ── Photo-request workflow tile ──────────────────────────────────
   type PhotoRequestRecent = {
@@ -1050,6 +1066,67 @@ export default function AdminPage() {
     }
   }
 
+  function openDeployActorModal(agg: AdminActorAgg) {
+    const state = agg.deploy_state_abbr ?? agg.location_key ?? agg.state_code ?? "";
+    const slug = agg.deploy_slug ?? "";
+    if (!state || !slug) {
+      alert("This actor does not have a deployable US state/slug.");
+      return;
+    }
+    setDeployActorModal({
+      slug,
+      state_abbr: state,
+      display_name: agg.name,
+      photo_source: "",
+      status: "idle",
+      message: null,
+    });
+  }
+
+  async function deployActorFromModal() {
+    if (!deployActorModal || deployActorModal.status === "deploying") return;
+    setDeployActorModal(prev => prev ? { ...prev, status: "deploying", message: null } : prev);
+    try {
+      const res = await fetch("/api/admin/court-actors/deploy", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          slug: deployActorModal.slug,
+          state_abbr: deployActorModal.state_abbr,
+          display_name: deployActorModal.display_name,
+          photo_source: deployActorModal.photo_source.trim() || undefined,
+        }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        throw new Error(data.error || `HTTP ${res.status}`);
+      }
+      setAdminActorAggs(prev => prev.map(agg => (
+        agg.deploy_slug === deployActorModal.slug && agg.deploy_state_abbr === deployActorModal.state_abbr
+          ? { ...agg, deployed: true }
+          : agg
+      )));
+      const deployedKey = `${deployActorModal.state_abbr.toLowerCase()}/${deployActorModal.slug}`;
+      setRecentlyDeployedActorKeys(prev => {
+        const next = new Set(prev);
+        next.add(deployedKey);
+        return next;
+      });
+      setDeployActorModal(prev => prev ? {
+        ...prev,
+        status: "success",
+        message: data.message || "Deployed — regenerate to render.",
+      } : prev);
+      await refreshActors().catch(() => undefined);
+    } catch (err) {
+      setDeployActorModal(prev => prev ? {
+        ...prev,
+        status: "error",
+        message: err instanceof Error ? err.message : "Deploy failed.",
+      } : prev);
+    }
+  }
+
   const applyAuditData = useCallback((data: { rows?: ReportingAuditRow[]; summary?: ReportingAuditSummary | null }) => {
     setAuditRows(data.rows ?? []);
     setAuditSummary(data.summary ?? null);
@@ -1218,6 +1295,12 @@ export default function AdminPage() {
 
   const filteredAdminActorAggs = useMemo(() => {
     const filtered = adminActorAggs.filter(agg => {
+      if (
+        showOnlyUndeployedPublic
+        && !(agg.count >= COURT_ACTOR_PUBLIC_THRESHOLD && agg.deployable && !agg.deployed)
+      ) {
+        return false;
+      }
       if (actorLocationFilter && (agg.location_key ?? agg.state_code) !== actorLocationFilter) return false;
       if (actorRoleFilter) {
         const filterKey = normalizeActorRole(actorRoleFilter);
@@ -1241,7 +1324,11 @@ export default function AdminPage() {
     return filtered;
   // actorMatchesQuery closes over actorSearchQuery, so depend on the query string.
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [adminActorAggs, actorSearchQuery, actorLocationFilter, actorRoleFilter, actorSortMode]);
+  }, [adminActorAggs, actorSearchQuery, actorLocationFilter, actorRoleFilter, actorSortMode, showOnlyUndeployedPublic]);
+
+  const undeployedPublicPatterns = useMemo(() => (
+    adminActorAggs.filter(agg => agg.count >= COURT_ACTOR_PUBLIC_THRESHOLD && agg.deployable && !agg.deployed)
+  ), [adminActorAggs]);
 
   const filteredAdminActors = useMemo(() => {
     const filtered = adminActors.filter(a => {
@@ -2597,6 +2684,32 @@ export default function AdminPage() {
           {actorView === "patterns" && (
             <div>
               <div className="px-6 py-3 flex items-center justify-between gap-3 flex-wrap"
+                style={{
+                  borderBottom: "1px solid rgba(234,179,8,0.22)",
+                  backgroundColor: undeployedPublicPatterns.length > 0 ? "rgba(234,179,8,0.10)" : "rgba(255,255,255,0.025)",
+                }}>
+                <div>
+                  <div className="text-xs font-black uppercase tracking-wide"
+                    style={{ color: undeployedPublicPatterns.length > 0 ? "rgb(253,224,71)" : "rgba(245,245,245,0.42)" }}>
+                    {undeployedPublicPatterns.length} actors at public threshold are not yet deployed.
+                  </div>
+                  <div className="text-[11px] mt-0.5" style={{ color: "rgba(245,245,245,0.42)" }}>
+                    These names have enough family reports, but no committed share-page manifest entry yet.
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => setShowOnlyUndeployedPublic(v => !v)}
+                  className="text-xs px-3 py-1.5 rounded-md font-bold transition-colors"
+                  style={{
+                    backgroundColor: showOnlyUndeployedPublic ? "rgba(234,179,8,0.20)" : "rgba(255,255,255,0.05)",
+                    color: showOnlyUndeployedPublic ? "rgb(253,224,71)" : "rgba(245,245,245,0.65)",
+                    border: "1px solid rgba(234,179,8,0.28)",
+                  }}>
+                  {showOnlyUndeployedPublic ? "Showing only these" : "Show only these"}
+                </button>
+              </div>
+              <div className="px-6 py-3 flex items-center justify-between gap-3 flex-wrap"
                 style={{ borderBottom: "1px solid rgba(255,255,255,0.06)", backgroundColor: "rgba(0,0,0,0.12)" }}>
                 <div>
                   <div className="text-xs font-bold uppercase tracking-wide" style={{ color: "rgba(245,245,245,0.55)" }}>
@@ -2628,6 +2741,11 @@ export default function AdminPage() {
                 const editKey = patternKey(agg);
                 const isEditing = editingPatternKey === editKey;
                 const matchingRows = rowsForPattern(agg);
+                const deployKey = agg.deploy_state_abbr && agg.deploy_slug
+                  ? `${agg.deploy_state_abbr.toLowerCase()}/${agg.deploy_slug}`
+                  : "";
+                const needsDeploy = isPublic && Boolean(agg.deployable) && !agg.deployed;
+                const justDeployed = Boolean(deployKey && recentlyDeployedActorKeys.has(deployKey));
                 const drillDown = () => {
                   setActorSearch(agg.name);
                   setActorLocationFilter(agg.location_key ?? agg.state_code ?? "");
@@ -2665,6 +2783,29 @@ export default function AdminPage() {
                         {isPublic && (
                           <span className="text-[10px] font-bold uppercase tracking-wide"
                             style={{ color: GOLD }}>Public</span>
+                        )}
+                        {needsDeploy && (
+                          <button
+                            type="button"
+                            onClick={() => openDeployActorModal(agg)}
+                            className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide transition-colors"
+                            style={{
+                              backgroundColor: "rgba(234,179,8,0.18)",
+                              color: "rgb(253,224,71)",
+                              border: "1px solid rgba(234,179,8,0.35)",
+                            }}>
+                            Deploy this actor →
+                          </button>
+                        )}
+                        {justDeployed && (
+                          <span className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide"
+                            style={{
+                              backgroundColor: "rgba(74,222,128,0.13)",
+                              color: "rgb(134,239,172)",
+                              border: "1px solid rgba(74,222,128,0.28)",
+                            }}>
+                            ✓ Deployed — regenerate to render
+                          </span>
                         )}
                         <button
                           type="button"
@@ -2979,6 +3120,101 @@ export default function AdminPage() {
         style={{ color: "rgba(245,245,245,0.2)", borderColor: "rgba(255,255,255,0.06)" }}>
         Stand With Meg &nbsp;·&nbsp; Courage to Stand, Power to Change &nbsp;·&nbsp; standwithmeg.com
       </footer>
+
+      {deployActorModal && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4"
+          style={{ backgroundColor: "rgba(0,0,0,0.72)", backdropFilter: "blur(4px)" }}
+          onClick={e => {
+            if (e.target === e.currentTarget && deployActorModal.status !== "deploying") setDeployActorModal(null);
+          }}
+        >
+          <div className="w-full max-w-lg rounded-2xl overflow-hidden"
+            style={{ backgroundColor: "#0F1E30", border: `1px solid rgba(201,162,39,0.35)` }}>
+            <div className="px-6 py-4 flex items-start justify-between gap-4"
+              style={{ borderBottom: `1px solid rgba(201,162,39,0.2)`, backgroundColor: "rgba(30,58,95,0.6)" }}>
+              <div>
+                <div className="font-black text-white text-base leading-none">Deploy court actor</div>
+                <div className="text-xs mt-1" style={{ color: "rgba(245,245,245,0.45)" }}>
+                  This commits the manifest entry and queues that state&apos;s regen workflow.
+                </div>
+              </div>
+              <button
+                type="button"
+                disabled={deployActorModal.status === "deploying"}
+                onClick={() => setDeployActorModal(null)}
+                className="w-8 h-8 rounded-lg flex items-center justify-center transition-colors hover:bg-white/10 disabled:opacity-40"
+                style={{ color: "rgba(245,245,245,0.5)" }}
+                aria-label="Close"
+              >
+                ×
+              </button>
+            </div>
+            <div className="px-6 py-5 space-y-4">
+              <label className="block text-[10px] uppercase tracking-wide font-bold" style={{ color: "rgba(245,245,245,0.48)" }}>
+                Display name
+                <input
+                  value={deployActorModal.display_name}
+                  onChange={e => setDeployActorModal(prev => prev ? { ...prev, display_name: e.target.value, status: "idle", message: null } : prev)}
+                  className="mt-1 w-full rounded-lg px-3 py-2 text-sm"
+                  style={{ backgroundColor: "rgba(0,0,0,0.34)", color: "white", border: "1px solid rgba(255,255,255,0.14)" }}
+                />
+              </label>
+              <label className="block text-[10px] uppercase tracking-wide font-bold" style={{ color: "rgba(245,245,245,0.48)" }}>
+                State
+                <input
+                  value={deployActorModal.state_abbr}
+                  readOnly
+                  className="mt-1 w-full rounded-lg px-3 py-2 text-sm"
+                  style={{ backgroundColor: "rgba(255,255,255,0.04)", color: "rgba(245,245,245,0.7)", border: "1px solid rgba(255,255,255,0.10)" }}
+                />
+              </label>
+              <label className="block text-[10px] uppercase tracking-wide font-bold" style={{ color: "rgba(245,245,245,0.48)" }}>
+                Photo source
+                <input
+                  value={deployActorModal.photo_source}
+                  onChange={e => setDeployActorModal(prev => prev ? { ...prev, photo_source: e.target.value, status: "idle", message: null } : prev)}
+                  placeholder="Optional: image URL or server-readable file path"
+                  className="mt-1 w-full rounded-lg px-3 py-2 text-sm"
+                  style={{ backgroundColor: "rgba(0,0,0,0.34)", color: "white", border: "1px solid rgba(255,255,255,0.14)" }}
+                />
+                <span className="block mt-1 text-[11px] normal-case font-normal tracking-normal"
+                  style={{ color: "rgba(245,245,245,0.38)" }}>
+                  Leave blank to deploy with the flag-only fallback.
+                </span>
+              </label>
+              {deployActorModal.message && (
+                <div className="rounded-lg px-3 py-2 text-xs"
+                  style={{
+                    backgroundColor: deployActorModal.status === "error" ? "rgba(185,28,28,0.14)" : "rgba(74,222,128,0.10)",
+                    color: deployActorModal.status === "error" ? "rgb(252,165,165)" : "rgb(134,239,172)",
+                    border: `1px solid ${deployActorModal.status === "error" ? "rgba(185,28,28,0.35)" : "rgba(74,222,128,0.24)"}`,
+                  }}>
+                  {deployActorModal.message}
+                </div>
+              )}
+              <div className="flex items-center justify-end gap-2 pt-1">
+                <button
+                  type="button"
+                  disabled={deployActorModal.status === "deploying"}
+                  onClick={() => setDeployActorModal(null)}
+                  className="text-xs px-3 py-2 rounded-lg font-bold disabled:opacity-40"
+                  style={{ backgroundColor: "rgba(255,255,255,0.06)", color: "rgba(245,245,245,0.68)", border: "1px solid rgba(255,255,255,0.12)" }}>
+                  Cancel
+                </button>
+                <button
+                  type="button"
+                  disabled={deployActorModal.status === "deploying"}
+                  onClick={() => void deployActorFromModal()}
+                  className="text-xs px-4 py-2 rounded-lg font-bold disabled:opacity-50"
+                  style={{ backgroundColor: "rgba(201,162,39,0.18)", color: GOLD, border: "1px solid rgba(201,162,39,0.38)" }}>
+                  {deployActorModal.status === "deploying" ? "Deploying..." : "Deploy"}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* ── Reporting Review Modal — inspect mismatches before deleting anything ── */}
       {(auditReview || auditReviewLoading || auditReviewError) && (

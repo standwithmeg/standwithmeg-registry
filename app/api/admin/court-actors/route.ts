@@ -5,6 +5,7 @@ import { COURT_ACTOR_PUBLIC_THRESHOLD, actorBucketKeyWithLocation, courtActorLoc
 import { AliasResolver, type AliasDecisionRow } from "../../../../lib/court-actor-similarity";
 import { isCountableSubmission } from "../../../../lib/submission-public-visibility";
 import { normalizeCourtActorEditFields } from "../../../../lib/court-actor-admin-edit";
+import { loadCourtActorManifestFromDisk, manifestStateSlugKey, manifestStateSlugSet, spotlightSlug } from "../../../../lib/court-actor-deploy";
 
 type AdminClient = ReturnType<typeof createAdminSupabaseClient>;
 
@@ -226,6 +227,7 @@ export async function GET() {
     const aliasResolver = await loadAliasResolver(adminSb);
     const rowReviewMap = await loadRowReviewMap(adminSb);
     const commentMerges = await loadCommentMerges(adminSb);
+    const deployedSlugs = manifestStateSlugSet(await loadCourtActorManifestFromDisk().catch(() => ({ actors: [] })));
 
     type AggBucket = {
       name: string;
@@ -268,15 +270,26 @@ export async function GET() {
       if (r.court_or_county) b.courts.set(r.court_or_county, (b.courts.get(r.court_or_county) ?? 0) + 1);
     }
 
-    const aggregates = Array.from(agg.values())
-      .map(b => ({
-        role: roleSummary(b.roles),
-        name: mostFrequent(b.names) ?? b.name,
-        state_code: b.state_code,
-        location_key: b.location_key,
-        court_or_county: Array.from(b.courts.entries()).sort((a, b) => b[1] - a[1])[0]?.[0] ?? null,
-        count: b.families.size,
-      }))
+    const aggregates = Array.from(agg.entries())
+      .map(([actor_bucket_key, b]) => {
+        const name = mostFrequent(b.names) ?? b.name;
+        const stateAbbr = /^[A-Z]{2}$/.test(b.location_key ?? "") ? b.location_key : b.state_code;
+        const slug = spotlightSlug(name);
+        const deployKey = stateAbbr && slug ? manifestStateSlugKey(stateAbbr, slug) : "";
+        return {
+          role: roleSummary(b.roles),
+          name,
+          state_code: b.state_code,
+          location_key: b.location_key,
+          court_or_county: Array.from(b.courts.entries()).sort((a, b) => b[1] - a[1])[0]?.[0] ?? null,
+          count: b.families.size,
+          actor_bucket_key,
+          deploy_slug: slug || null,
+          deploy_state_abbr: stateAbbr ?? null,
+          deployable: Boolean(stateAbbr && /^[A-Z]{2}$/.test(stateAbbr) && slug),
+          deployed: Boolean(deployKey && deployedSlugs.has(deployKey)),
+        };
+      })
       .sort((a, b) => b.count - a.count);
 
     // Flat list with reporter info
