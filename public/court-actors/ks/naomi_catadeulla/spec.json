@@ -50,7 +50,7 @@
     "_pdf_state_family_count": 173,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3718,
+  "movement_total": 3746,
   "supabase": {
     "report_count": 7,
     "actor_report_count": 7,
@@ -83,41 +83,33 @@
     ],
     "public_comments": [
       {
-        "comment_text": "Naomi was also biased due to her husband dying in the line of duty. She highly favored the petitioner. She told me that she would not talk about anything that…",
+        "comment_text": "It is deeply upsetting to revisit and update my survey to include Naomi Catadeulla as one of the court actors in my case. She was the first supervisor assigned to me after my children were taken on January 29, 2024, and my experience with her was confusing, distressing, and ultimately devastating. During our meetings, she gave me constantly shifting and conflicting rules about how I was allowed to behave. I was told I could not cry in front of my…",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Johnson"
       },
       {
-        "comment_text": "She hates women. Apparently had a bad mother. She would say she hates working with us. She would give horrible stares downs. She was rude and unprofessional near every session.…",
+        "comment_text": "She hates women. Apparently had a bad mother. She would say she hates working with us. She would give horrible stares downs. She was rude and unprofessional near every session. She believed every single lie from the father in my case because he was charming in sessions. She never solved our issues. She gave a thousand delays and dinners and excuses to the father and was brutally harsh on me.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "JoCo"
       },
       {
-        "comment_text": "Told me I psychologically abused my son, told me basically I am the problem and I need to just give into his demands for the betterment of the child",
+        "comment_text": "Reintegration therapist forced on me by Andy Bolton — described as Bolton's buddy. Located 2.5 hours away from my home. I was required to use her, not allowed to choose my own.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Miami"
       },
       {
-        "comment_text": "Met with me 1 time for 1 hour. Then drafted a report to my detriment. Never saw me with our kids. In my opinion is part of a corrupt system…",
+        "comment_text": "Met with me 1 time for 1 hour. Then drafted a report to my detriment. Never saw me with our kids. In my opinion is part of a corrupt system used in Johnson County KS.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "It is deeply upsetting to revisit and update my survey to include Naomi Catadeulla as one of the court actors in my case. She was the first supervisor assigned to…",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "Reintegration therapist forced on me by Andy Bolton — described as Bolton's buddy. Located 2.5 hours away from my home. I was required to use her, not allowed to choose…",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Johnson"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/naomi_catadeulla",
-  "unresolved": [
-    "pdf_public_actor: no 'Naomi Catadeulla' in cache for KS"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions · not court findings.",

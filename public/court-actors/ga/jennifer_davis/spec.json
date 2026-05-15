@@ -12,13 +12,14 @@
     "court_or_county": "Cherokee",
     "state": "Georgia",
     "state_abbr": "GA",
-    "mention_count": 3,
-    "family_count": 3,
-    "public_family_count": 3,
+    "mention_count": 4,
+    "family_count": 4,
+    "public_family_count": 4,
     "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
-    "actor_report_count": 3,
+    "actor_report_count": 4,
     "supabase_row_ids": [
       "5e8de302-a37f-4f76-b517-a4a91132762d",
+      "2f5a9c8a-3540-4a85-b74d-25c6762b5fe7",
       "de5a0728-0238-4976-99f4-90d835b96c04",
       "94f96eee-db80-488c-a4b8-5a1d791ef23a"
     ],
@@ -31,27 +32,33 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 74,
-    "total_submissions": 95,
-    "avg_financial_loss": 204944.35,
-    "avg_months_lost": 33.8,
+    "families_approved": 75,
+    "total_submissions": 97,
+    "avg_financial_loss": 200456.98,
+    "avg_months_lost": 33.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "GA",
-    "state_family_count": 95,
+    "state_family_count": 97,
     "median_financial_loss": 123000,
     "median_burden_sample_size": 51,
     "median_months_lost": 19,
-    "pro_se_pct": 44.2,
-    "pro_se_count": 42,
-    "_pdf_state_family_count": 95,
+    "pro_se_pct": 44.3,
+    "pro_se_count": 43,
+    "_pdf_state_family_count": 97,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3715,
+  "movement_total": 3746,
   "supabase": {
-    "report_count": 3,
-    "actor_report_count": 3,
-    "family_count": 3,
+    "report_count": 4,
+    "actor_report_count": 4,
+    "family_count": 4,
     "family_reports": [
+      {
+        "body": "This has devastated our family in ways words can barely describe. After losing my…",
+        "state": "GA",
+        "county": "Cherokee",
+        "row_id": "4b2fc65e-1417-463c-93ac-75fb17699aa0"
+      },
       {
         "body": "They destroyed our happy family and kids as we knew it. Life will never…",
         "state": "GA",
@@ -83,6 +90,12 @@
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Cherokee"
+      },
+      {
+        "comment_text": "Jennifer Davis approved an adoption while awaiting a pending retrial hearing in Cherokee County Juvenile Court.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Cherokee County"
       }
     ]
   },

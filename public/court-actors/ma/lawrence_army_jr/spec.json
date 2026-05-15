@@ -13,8 +13,8 @@
     "state": "Massachusetts",
     "state_abbr": "MA",
     "mention_count": 4,
-    "family_count": 3,
-    "public_family_count": 3,
+    "family_count": 4,
+    "public_family_count": 4,
     "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
     "actor_report_count": 4,
     "supabase_row_ids": [
@@ -32,26 +32,26 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 47,
-    "total_submissions": 68,
-    "avg_financial_loss": 166790.67,
+    "families_approved": 48,
+    "total_submissions": 69,
+    "avg_financial_loss": 164056.39,
     "avg_months_lost": 30.7,
     "_source_table": "movement_stats_by_state",
     "_match_value": "MA",
-    "state_family_count": 68,
+    "state_family_count": 69,
     "median_financial_loss": 129050,
     "median_burden_sample_size": 30,
     "median_months_lost": 20,
-    "pro_se_pct": 61.8,
-    "pro_se_count": 42,
-    "_pdf_state_family_count": 68,
+    "pro_se_pct": 62.3,
+    "pro_se_count": 43,
+    "_pdf_state_family_count": 69,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3739,
+  "movement_total": 3746,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
-    "family_count": 3,
+    "family_count": 4,
     "family_reports": [
       {
         "body": "I have been alienated from a special needs child, I've lost precious time that…",
@@ -90,6 +90,12 @@
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Worcester Probate"
+      },
+      {
+        "comment_text": "He took away my custodial rights after a false allegations",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Hampden"
       },
       {
         "comment_text": "Will not hear past nor see any evidence",
