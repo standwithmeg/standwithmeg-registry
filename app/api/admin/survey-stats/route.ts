@@ -1,6 +1,7 @@
 import { createServerSupabaseClient } from "../../../../lib/supabase";
 import { createAdminSupabaseClient } from "../../../../lib/supabase-admin";
 import { isAdminEmail } from "../../../../lib/require-auth";
+import { queueStateRegeneration } from "../../../../lib/state-regeneration";
 import {
   normalizeOutsideCountryForReporting,
   reportingLocationFromParts,
@@ -207,14 +208,18 @@ export async function PATCH(request: Request) {
       return Response.json({ error: "id and approved (boolean) are required." }, { status: 400 });
     }
 
-    const { error } = await adminSupabase
+    const { data: updated, error } = await adminSupabase
       .from("survey_submissions")
       .update({ approved })
-      .eq("id", id);
+      .eq("id", id)
+      .select("state_of_occurrence")
+      .single();
 
     if (error) {
       return Response.json({ error: "Update failed." }, { status: 500 });
     }
+
+    queueStateRegeneration(updated?.state_of_occurrence ?? null, "admin approval changed");
 
     return Response.json({ success: true });
   } catch (err) {

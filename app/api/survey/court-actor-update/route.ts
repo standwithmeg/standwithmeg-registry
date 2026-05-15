@@ -1,5 +1,6 @@
 import { createAdminSupabaseClient } from "../../../../lib/supabase-admin";
 import { courtActorLocationKey } from "../../../../lib/court-actors";
+import { queueStateRegeneration } from "../../../../lib/state-regeneration";
 
 const ACTOR_NOTE_MIN_CHARS = 12;
 const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
@@ -167,6 +168,10 @@ export async function POST(request: Request) {
         console.error("court actor update insert error:", insertError.message);
         return Response.json({ error: "Could not save the court actor details." }, { status: 500 });
       }
+    }
+
+    if (updated > 0 || actorsToInsert.length > 0) {
+      queueStateRegeneration(rowState, "court actor update form");
     }
 
     return Response.json({

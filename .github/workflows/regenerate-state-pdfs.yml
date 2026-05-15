@@ -1,11 +1,11 @@
 name: Regenerate State PDFs and Actor Shares
 
 # Triggers:
-#   - Every day at 07:00 UTC (03:00 ET) — covers overnight submissions
+#   - Hourly — safety net for any submission-triggered regen that gets skipped
 #   - Manual dispatch from Actions tab or from the /admin button
 on:
   schedule:
-    - cron: "0 7 * * *"
+    - cron: "0 * * * *"
   workflow_dispatch:
     inputs:
       state:

@@ -7,6 +7,7 @@ import {
 import { VALID_US_JURISDICTION_CODES } from "../../../lib/us-jurisdictions";
 import { actorLooseNameKey, courtActorLocationKey } from "../../../lib/court-actors";
 import { dispatchPendingPhotoRequests } from "../../../lib/court-actor-public-notifications";
+import { queueStateRegeneration } from "../../../lib/state-regeneration";
 import { createHash } from "crypto";
 
 // Public submissions come in anonymously from untrusted visitors, but the
@@ -265,6 +266,7 @@ export async function POST(request: Request) {
           // Log but don't fail the whole submission
           console.error("court_actors insert error (non-blocking):", actorsErr.message);
         } else if (location_key) {
+          queueStateRegeneration(state_of_occurrence, "new court actor submission");
           // Fire-and-forget: if any of the actors this family just named has
           // *now* crossed the public threshold, the dispatcher will email
           // every contributing reporter who hasn't already been emailed for
