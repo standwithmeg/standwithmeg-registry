@@ -768,6 +768,10 @@ export default function AdminPage() {
     deploy_state_abbr?: string | null;
     deployable?: boolean;
     deployed?: boolean;
+    photo_url?: string | null;
+    photo_size_kb?: number | null;
+    photo_suspect?: boolean;
+    photo_suspect_reason?: string | null;
   };
   const [adminActors, setAdminActors] = useState<AdminActor[]>([]);
   const [adminActorAggs, setAdminActorAggs] = useState<AdminActorAgg[]>([]);
@@ -791,6 +795,7 @@ export default function AdminPage() {
   const [patternEditDraft, setPatternEditDraft] = useState<ActorEditDraft>(emptyActorEditDraft);
   const [savingPatternEdit, setSavingPatternEdit] = useState<string | null>(null);
   const [showOnlyUndeployedPublic, setShowOnlyUndeployedPublic] = useState(false);
+  const [showOnlySuspectPhotos, setShowOnlySuspectPhotos] = useState(false);
   const [actorFinderQuery, setActorFinderQuery] = useState("");
   const [actorFinderOpen, setActorFinderOpen] = useState(false);
   const [selectedActorKey, setSelectedActorKey] = useState<string | null>(null);
@@ -828,6 +833,15 @@ export default function AdminPage() {
     message: string | null;
   };
   const [deployActorModal, setDeployActorModal] = useState<DeployActorModalState | null>(null);
+  type ReplacePhotoModalState = {
+    slug: string;
+    state_abbr: string;
+    display_name: string;
+    photo_file: File | null;
+    status: "idle" | "uploading" | "success" | "error";
+    message: string | null;
+  };
+  const [replacePhotoModal, setReplacePhotoModal] = useState<ReplacePhotoModalState | null>(null);
   const [recentlyDeployedActorKeys, setRecentlyDeployedActorKeys] = useState<Set<string>>(() => new Set());
 
   // ── Photo-request workflow tile ──────────────────────────────────
@@ -1025,6 +1039,7 @@ export default function AdminPage() {
     setActorSourceFilter("all");
     setActorSortMode("default");
     setShowOnlyUndeployedPublic(false);
+    setShowOnlySuspectPhotos(false);
   }
 
   function selectActorDetail(agg: AdminActorAgg) {
@@ -1038,6 +1053,58 @@ export default function AdminPage() {
   function actorShareUrl(agg: AdminActorAgg) {
     if (!agg.deploy_state_abbr || !agg.deploy_slug) return null;
     return `/court-actors/${agg.deploy_state_abbr.toLowerCase()}/${agg.deploy_slug}/share.html`;
+  }
+
+  function openReplacePhotoModal(agg: AdminActorAgg) {
+    const state = agg.deploy_state_abbr ?? agg.location_key ?? agg.state_code ?? "";
+    const slug = agg.deploy_slug ?? "";
+    if (!state || !slug) {
+      alert("This actor does not have a deployed US state/slug.");
+      return;
+    }
+    setReplacePhotoModal({
+      slug,
+      state_abbr: state,
+      display_name: agg.name,
+      photo_file: null,
+      status: "idle",
+      message: null,
+    });
+  }
+
+  async function replacePhotoFromModal() {
+    if (!replacePhotoModal || replacePhotoModal.status === "uploading") return;
+    if (!replacePhotoModal.photo_file) {
+      setReplacePhotoModal(prev => prev ? { ...prev, status: "error", message: "Choose a PNG or JPEG photo first." } : prev);
+      return;
+    }
+    setReplacePhotoModal(prev => prev ? { ...prev, status: "uploading", message: null } : prev);
+    try {
+      const form = new FormData();
+      form.append("slug", replacePhotoModal.slug);
+      form.append("state_abbr", replacePhotoModal.state_abbr);
+      form.append("photo", replacePhotoModal.photo_file);
+      const res = await fetch("/api/admin/court-actors/replace-photo", {
+        method: "POST",
+        body: form,
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        throw new Error(data.error || `HTTP ${res.status}`);
+      }
+      setReplacePhotoModal(prev => prev ? {
+        ...prev,
+        status: "success",
+        message: data.message || "Photo replaced. Regeneration queued.",
+      } : prev);
+      await refreshActors().catch(() => undefined);
+    } catch (err) {
+      setReplacePhotoModal(prev => prev ? {
+        ...prev,
+        status: "error",
+        message: err instanceof Error ? err.message : "Photo replacement failed.",
+      } : prev);
+    }
   }
 
   function slideHiddenReason(actor: AdminActor): string | null {
@@ -1390,6 +1457,7 @@ export default function AdminPage() {
       ) {
         return false;
       }
+      if (showOnlySuspectPhotos && !(agg.deployed && agg.photo_suspect)) return false;
       if (actorLocationFilter && (agg.location_key ?? agg.state_code) !== actorLocationFilter) return false;
       if (actorRoleFilter) {
         const filterKey = normalizeActorRole(actorRoleFilter);
@@ -1413,10 +1481,14 @@ export default function AdminPage() {
     return filtered;
   // actorMatchesQuery closes over actorSearchQuery, so depend on the query string.
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [adminActorAggs, actorSearchQuery, actorLocationFilter, actorRoleFilter, actorSortMode, showOnlyUndeployedPublic]);
+  }, [adminActorAggs, actorSearchQuery, actorLocationFilter, actorRoleFilter, actorSortMode, showOnlyUndeployedPublic, showOnlySuspectPhotos]);
 
   const undeployedPublicPatterns = useMemo(() => (
     adminActorAggs.filter(agg => agg.count >= COURT_ACTOR_PUBLIC_THRESHOLD && agg.deployable && !agg.deployed)
+  ), [adminActorAggs]);
+
+  const suspectPhotoPatterns = useMemo(() => (
+    adminActorAggs.filter(agg => agg.deployed && agg.photo_suspect)
   ), [adminActorAggs]);
 
   const actorFinderSuggestions = useMemo(() => {
@@ -2673,7 +2745,7 @@ export default function AdminPage() {
                   }}>
                   {actorSortMode === "group_near_dupes" ? "✓ Group near-duplicates" : "Group near-duplicates"}
                 </button>
-                {(actorSearch || actorLocationFilter || actorRoleFilter || actorSourceFilter !== "all" || actorSortMode !== "default" || showOnlyUndeployedPublic) && (
+                {(actorSearch || actorLocationFilter || actorRoleFilter || actorSourceFilter !== "all" || actorSortMode !== "default" || showOnlyUndeployedPublic || showOnlySuspectPhotos) && (
                   <button
                     type="button"
                     onClick={resetActorFilters}
@@ -3037,6 +3109,62 @@ export default function AdminPage() {
                   )}
                 </div>
 
+                <div className="rounded-xl p-4 mb-4"
+                  style={{ backgroundColor: "rgba(255,255,255,0.025)", border: "1px solid rgba(255,255,255,0.08)" }}>
+                  <div className="flex items-start justify-between gap-4 flex-wrap">
+                    <div>
+                      <div className="text-xs font-black uppercase tracking-wide" style={{ color: "rgba(245,245,245,0.62)" }}>
+                        Photo
+                      </div>
+                      <div className="text-[11px] mt-0.5" style={{ color: "rgba(245,245,245,0.38)" }}>
+                        Current committed image_1080.png used by this actor&apos;s share page.
+                      </div>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => openReplacePhotoModal(selectedActorAgg)}
+                      disabled={!selectedActorAgg.deploy_state_abbr || !selectedActorAgg.deploy_slug}
+                      className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide disabled:opacity-40"
+                      style={{ backgroundColor: "rgba(201,162,39,0.12)", color: GOLD, border: "1px solid rgba(201,162,39,0.28)" }}>
+                      Replace photo
+                    </button>
+                  </div>
+                  <div className="mt-3 flex items-start gap-4 flex-wrap">
+                    {selectedActorAgg.photo_url ? (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img
+                        src={`${selectedActorAgg.photo_url}?v=${selectedActorAgg.photo_size_kb ?? "photo"}`}
+                        alt={`${selectedActorAgg.name} current actor photo`}
+                        className="rounded-lg object-cover"
+                        style={{ height: 200, width: 113, border: "1px solid rgba(255,255,255,0.12)", backgroundColor: "rgba(0,0,0,0.25)" }}
+                      />
+                    ) : (
+                      <div className="rounded-lg flex items-center justify-center text-xs"
+                        style={{ height: 200, width: 113, border: "1px solid rgba(255,255,255,0.12)", backgroundColor: "rgba(0,0,0,0.25)", color: "rgba(245,245,245,0.35)" }}>
+                        No photo
+                      </div>
+                    )}
+                    <div className="min-w-[220px] flex-1">
+                      <div className="text-xs" style={{ color: "rgba(245,245,245,0.7)" }}>
+                        File size: {selectedActorAgg.photo_size_kb ? `${selectedActorAgg.photo_size_kb.toLocaleString()} KB` : "unknown"}
+                      </div>
+                      {selectedActorAgg.photo_url && (
+                        <a href={selectedActorAgg.photo_url} target="_blank" rel="noopener noreferrer"
+                          className="mt-1 inline-block text-[11px] underline"
+                          style={{ color: "rgba(245,245,245,0.45)" }}>
+                          Open original image
+                        </a>
+                      )}
+                      {selectedActorAgg.photo_suspect && (
+                        <div className="mt-3 rounded-lg px-3 py-2 text-xs font-semibold"
+                          style={{ backgroundColor: "rgba(234,179,8,0.13)", color: "rgb(253,224,71)", border: "1px solid rgba(234,179,8,0.28)" }}>
+                          {selectedActorAgg.photo_suspect_reason || "May not be a portrait — file size suggests a webpage screenshot"}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+
                 <div className="grid grid-cols-1 lg:grid-cols-4 gap-3 mb-4">
                   <div className="rounded-lg p-3" style={{ backgroundColor: "rgba(255,255,255,0.035)", border: "1px solid rgba(255,255,255,0.08)" }}>
                     <div className="text-[10px] font-bold uppercase tracking-wide" style={{ color: "rgba(245,245,245,0.42)" }}>Family count</div>
@@ -3201,6 +3329,35 @@ export default function AdminPage() {
               <div className="px-6 py-3 flex items-center justify-between gap-3 flex-wrap"
                 style={{
                   borderBottom: "1px solid rgba(234,179,8,0.22)",
+                  backgroundColor: suspectPhotoPatterns.length > 0 ? "rgba(234,179,8,0.08)" : "rgba(255,255,255,0.02)",
+                }}>
+                <div>
+                  <div className="text-xs font-black uppercase tracking-wide"
+                    style={{ color: suspectPhotoPatterns.length > 0 ? "rgb(253,224,71)" : "rgba(245,245,245,0.38)" }}>
+                    {suspectPhotoPatterns.length} deployed actors have photos that may be webpage screenshots.
+                  </div>
+                  <div className="text-[11px] mt-0.5" style={{ color: "rgba(245,245,245,0.42)" }}>
+                    Review each actor detail before replacing anything. No photos are changed automatically.
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setShowOnlySuspectPhotos(v => !v);
+                    setShowOnlyUndeployedPublic(false);
+                  }}
+                  className="text-xs px-3 py-1.5 rounded-md font-bold transition-colors"
+                  style={{
+                    backgroundColor: showOnlySuspectPhotos ? "rgba(234,179,8,0.20)" : "rgba(255,255,255,0.05)",
+                    color: showOnlySuspectPhotos ? "rgb(253,224,71)" : "rgba(245,245,245,0.65)",
+                    border: "1px solid rgba(234,179,8,0.28)",
+                  }}>
+                  {showOnlySuspectPhotos ? "Showing suspect photos" : "Review"}
+                </button>
+              </div>
+              <div className="px-6 py-3 flex items-center justify-between gap-3 flex-wrap"
+                style={{
+                  borderBottom: "1px solid rgba(234,179,8,0.22)",
                   backgroundColor: undeployedPublicPatterns.length > 0 ? "rgba(234,179,8,0.10)" : "rgba(255,255,255,0.025)",
                 }}>
                 <div>
@@ -3214,7 +3371,10 @@ export default function AdminPage() {
                 </div>
                 <button
                   type="button"
-                  onClick={() => setShowOnlyUndeployedPublic(v => !v)}
+                  onClick={() => {
+                    setShowOnlyUndeployedPublic(v => !v);
+                    setShowOnlySuspectPhotos(false);
+                  }}
                   className="text-xs px-3 py-1.5 rounded-md font-bold transition-colors"
                   style={{
                     backgroundColor: showOnlyUndeployedPublic ? "rgba(234,179,8,0.20)" : "rgba(255,255,255,0.05)",
@@ -3312,6 +3472,16 @@ export default function AdminPage() {
                           <span className="text-[10px] font-bold uppercase tracking-wide"
                             style={{ color: GOLD }}>Public</span>
                         )}
+                        {agg.photo_suspect && (
+                          <span className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide"
+                            style={{
+                              backgroundColor: "rgba(234,179,8,0.13)",
+                              color: "rgb(253,224,71)",
+                              border: "1px solid rgba(234,179,8,0.28)",
+                            }}>
+                            Photo audit
+                          </span>
+                        )}
                         {needsDeploy && (
                           <button
                             type="button"
@@ -3341,6 +3511,13 @@ export default function AdminPage() {
                           className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide transition-colors"
                           style={{ backgroundColor: "rgba(201,162,39,0.12)", color: GOLD, border: "1px solid rgba(201,162,39,0.28)" }}>
                           Edit pattern
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => selectActorDetail(agg)}
+                          className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide transition-colors"
+                          style={{ backgroundColor: "rgba(59,130,246,0.12)", color: "rgb(147,197,253)", border: "1px solid rgba(59,130,246,0.25)" }}>
+                          Actor detail
                         </button>
                         <button
                           type="button"
@@ -3742,6 +3919,91 @@ export default function AdminPage() {
                   className="text-xs px-4 py-2 rounded-lg font-bold disabled:opacity-50"
                   style={{ backgroundColor: "rgba(201,162,39,0.18)", color: GOLD, border: "1px solid rgba(201,162,39,0.38)" }}>
                   {deployActorModal.status === "deploying" ? "Deploying..." : "Deploy"}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {replacePhotoModal && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4"
+          style={{ backgroundColor: "rgba(0,0,0,0.72)", backdropFilter: "blur(4px)" }}
+          onClick={e => {
+            if (e.target === e.currentTarget && replacePhotoModal.status !== "uploading") setReplacePhotoModal(null);
+          }}
+        >
+          <div className="w-full max-w-lg rounded-2xl overflow-hidden"
+            style={{ backgroundColor: "#0F1E30", border: `1px solid rgba(201,162,39,0.35)` }}>
+            <div className="px-6 py-4 flex items-start justify-between gap-4"
+              style={{ borderBottom: `1px solid rgba(201,162,39,0.2)`, backgroundColor: "rgba(30,58,95,0.6)" }}>
+              <div>
+                <div className="font-black text-white text-base leading-none">Replace actor photo</div>
+                <div className="text-xs mt-1" style={{ color: "rgba(245,245,245,0.45)" }}>
+                  This commits a new 1080×1920 PNG and queues that state&apos;s regen workflow.
+                </div>
+              </div>
+              <button
+                type="button"
+                disabled={replacePhotoModal.status === "uploading"}
+                onClick={() => setReplacePhotoModal(null)}
+                className="w-8 h-8 rounded-lg flex items-center justify-center transition-colors hover:bg-white/10 disabled:opacity-40"
+                style={{ color: "rgba(245,245,245,0.5)" }}
+                aria-label="Close"
+              >
+                ×
+              </button>
+            </div>
+            <div className="px-6 py-5 space-y-4">
+              <div className="rounded-lg px-3 py-2 text-xs"
+                style={{ backgroundColor: "rgba(255,255,255,0.04)", color: "rgba(245,245,245,0.65)", border: "1px solid rgba(255,255,255,0.10)" }}>
+                {replacePhotoModal.display_name} · {replacePhotoModal.state_abbr} · {replacePhotoModal.slug}
+              </div>
+              <label className="block text-[10px] uppercase tracking-wide font-bold" style={{ color: "rgba(245,245,245,0.48)" }}>
+                Replacement photo
+                <input
+                  type="file"
+                  accept="image/png,image/jpeg"
+                  disabled={replacePhotoModal.status === "uploading"}
+                  onChange={e => {
+                    const file = e.target.files?.[0] ?? null;
+                    setReplacePhotoModal(prev => prev ? { ...prev, photo_file: file, status: "idle", message: null } : prev);
+                  }}
+                  className="mt-1 w-full rounded-lg px-3 py-2 text-sm"
+                  style={{ backgroundColor: "rgba(0,0,0,0.34)", color: "white", border: "1px solid rgba(255,255,255,0.14)" }}
+                />
+                <span className="block mt-1 text-[11px] normal-case font-normal tracking-normal"
+                  style={{ color: "rgba(245,245,245,0.38)" }}>
+                  PNG or JPEG portrait only. The server crops it to 1080×1920.
+                </span>
+              </label>
+              {replacePhotoModal.message && (
+                <div className="rounded-lg px-3 py-2 text-xs"
+                  style={{
+                    backgroundColor: replacePhotoModal.status === "error" ? "rgba(185,28,28,0.14)" : "rgba(74,222,128,0.10)",
+                    color: replacePhotoModal.status === "error" ? "rgb(252,165,165)" : "rgb(134,239,172)",
+                    border: `1px solid ${replacePhotoModal.status === "error" ? "rgba(185,28,28,0.35)" : "rgba(74,222,128,0.24)"}`,
+                  }}>
+                  {replacePhotoModal.message}
+                </div>
+              )}
+              <div className="flex items-center justify-end gap-2 pt-1">
+                <button
+                  type="button"
+                  disabled={replacePhotoModal.status === "uploading"}
+                  onClick={() => setReplacePhotoModal(null)}
+                  className="text-xs px-3 py-2 rounded-lg font-bold disabled:opacity-40"
+                  style={{ backgroundColor: "rgba(255,255,255,0.06)", color: "rgba(245,245,245,0.68)", border: "1px solid rgba(255,255,255,0.12)" }}>
+                  Cancel
+                </button>
+                <button
+                  type="button"
+                  disabled={replacePhotoModal.status === "uploading" || !replacePhotoModal.photo_file}
+                  onClick={() => void replacePhotoFromModal()}
+                  className="text-xs px-4 py-2 rounded-lg font-bold disabled:opacity-50"
+                  style={{ backgroundColor: "rgba(201,162,39,0.18)", color: GOLD, border: "1px solid rgba(201,162,39,0.38)" }}>
+                  {replacePhotoModal.status === "uploading" ? "Uploading..." : "Replace photo"}
                 </button>
               </div>
             </div>

@@ -18,7 +18,8 @@
     "pdf-parse": "^1.1.1",
     "pg": "^8.20.0",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "sharp": "^0.34.5"
   },
   "devDependencies": {
     "@opennextjs/cloudflare": "^1.19.3",
