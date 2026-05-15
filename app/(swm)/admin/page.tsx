@@ -749,6 +749,12 @@ export default function AdminPage() {
     reporter_email: string | null;
     reporter_name: string | null;
     reporter_permission: string | null;
+    reporter_approved: boolean | null;
+    counts_publicly?: boolean | null;
+    review_decision?: string | null;
+    merge_primary_for?: string[] | null;
+    merged_into?: string | null;
+    merged_comment?: string | null;
   };
   type AdminActorAgg = {
     role: string;
@@ -785,6 +791,34 @@ export default function AdminPage() {
   const [patternEditDraft, setPatternEditDraft] = useState<ActorEditDraft>(emptyActorEditDraft);
   const [savingPatternEdit, setSavingPatternEdit] = useState<string | null>(null);
   const [showOnlyUndeployedPublic, setShowOnlyUndeployedPublic] = useState(false);
+  const [actorFinderQuery, setActorFinderQuery] = useState("");
+  const [actorFinderOpen, setActorFinderOpen] = useState(false);
+  const [selectedActorKey, setSelectedActorKey] = useState<string | null>(null);
+  type ActorPossibleClusterSample = {
+    row_id: string;
+    name?: string | null;
+    role?: string | null;
+    reporter_email?: string | null;
+    submission_id?: string | null;
+  };
+  type ActorPossibleClusterVariant = {
+    display_name: string;
+    name_key: string;
+    roles?: string[];
+    counties?: string[];
+    samples?: ActorPossibleClusterSample[];
+  };
+  type ActorPossibleCluster = {
+    cluster_key: string;
+    location_key: string | null;
+    variants: ActorPossibleClusterVariant[];
+    highest_confidence?: number;
+    total_family_count?: number;
+  };
+  const [possibleMatchClusters, setPossibleMatchClusters] = useState<ActorPossibleCluster[]>([]);
+  const [possibleMatchLoading, setPossibleMatchLoading] = useState(false);
+  const [possibleMatchError, setPossibleMatchError] = useState<string | null>(null);
+  const [possibleMatchSearchSeed, setPossibleMatchSearchSeed] = useState({ query: "", location: "" });
   type DeployActorModalState = {
     slug: string;
     state_abbr: string;
@@ -821,7 +855,7 @@ export default function AdminPage() {
   };
   const [photoRequests, setPhotoRequests] = useState<PhotoRequestSummary | null>(null);
   const [photoRequestsExpanded, setPhotoRequestsExpanded] = useState(false);
-  type ActorView = "by_state" | "patterns" | "possible_matches" | "all";
+  type ActorView = "by_state" | "patterns" | "possible_matches" | "all" | "actor_detail";
   const [actorView, setActorView] = useState<ActorView>("by_state");
   const [expandedState, setExpandedState] = useState<string | null>(null);
   const [auditRows, setAuditRows] = useState<ReportingAuditRow[]>([]);
@@ -963,6 +997,61 @@ export default function AdminPage() {
       (row.source ?? "form_direct") === "form_direct"
       && actorBucketKeyWithLocation(row.name, row.role, row.location_key ?? row.state_code) === key
     );
+  }
+
+  function rowsForActorDetail(agg: AdminActorAgg, rows: AdminActor[] = adminActors) {
+    const selectedNameKey = actorLooseNameKey(agg.name);
+    const selectedLocation = agg.location_key ?? agg.state_code ?? null;
+    const exactKey = patternKey(agg);
+    const seen = new Set<string>();
+    const matched: AdminActor[] = [];
+    for (const row of rows) {
+      if ((row.source ?? "form_direct") !== "form_direct") continue;
+      const rowLocation = row.location_key ?? row.state_code ?? null;
+      const exactMatch = actorBucketKeyWithLocation(row.name, row.role, rowLocation) === exactKey;
+      const looseNameMatch = actorLooseNameKey(row.name) === selectedNameKey && rowLocation === selectedLocation;
+      if ((exactMatch || looseNameMatch) && !seen.has(row.id)) {
+        seen.add(row.id);
+        matched.push(row);
+      }
+    }
+    return matched;
+  }
+
+  function resetActorFilters() {
+    setActorSearch("");
+    setActorLocationFilter("");
+    setActorRoleFilter("");
+    setActorSourceFilter("all");
+    setActorSortMode("default");
+    setShowOnlyUndeployedPublic(false);
+  }
+
+  function selectActorDetail(agg: AdminActorAgg) {
+    setSelectedActorKey(patternKey(agg));
+    setActorFinderQuery(agg.name);
+    setActorFinderOpen(false);
+    setActorView("actor_detail");
+    setExpandedState(null);
+  }
+
+  function actorShareUrl(agg: AdminActorAgg) {
+    if (!agg.deploy_state_abbr || !agg.deploy_slug) return null;
+    return `/court-actors/${agg.deploy_state_abbr.toLowerCase()}/${agg.deploy_slug}/share.html`;
+  }
+
+  function slideHiddenReason(actor: AdminActor): string | null {
+    if ((actor.reporter_permission ?? "").toLowerCase() === "data_only") {
+      return "Hidden from public slide (data_only permission)";
+    }
+    if (actor.reporter_approved !== true) {
+      return "Hidden from public slide (submission not approved)";
+    }
+    const quoteText = (actor.merged_comment || actor.notes || "").trim();
+    if (!quoteText) {
+      return "Hidden from public slide (no quote text)";
+    }
+    return null;
   }
 
   function actorEditFieldsFromDraft(draft: ActorEditDraft) {
@@ -1329,6 +1418,69 @@ export default function AdminPage() {
   const undeployedPublicPatterns = useMemo(() => (
     adminActorAggs.filter(agg => agg.count >= COURT_ACTOR_PUBLIC_THRESHOLD && agg.deployable && !agg.deployed)
   ), [adminActorAggs]);
+
+  const actorFinderSuggestions = useMemo(() => {
+    const q = actorFinderQuery.trim().toLowerCase();
+    if (q.length < 2) return [];
+    return adminActorAggs
+      .filter(agg => {
+        const blob = `${agg.name} ${agg.role} ${agg.location_key ?? ""} ${agg.state_code ?? ""} ${agg.court_or_county ?? ""}`.toLowerCase();
+        return blob.includes(q);
+      })
+      .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name))
+      .slice(0, 12);
+  }, [adminActorAggs, actorFinderQuery]);
+
+  const selectedActorAgg = useMemo(() => {
+    if (!selectedActorKey) return null;
+    return adminActorAggs.find(agg => patternKey(agg) === selectedActorKey) ?? null;
+  // patternKey is deterministic and only uses aggregate fields.
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [adminActorAggs, selectedActorKey]);
+
+  const selectedActorRows = useMemo(() => (
+    selectedActorAgg ? rowsForActorDetail(selectedActorAgg) : []
+  // rowsForActorDetail closes over adminActors.
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  ), [selectedActorAgg, adminActors]);
+
+  useEffect(() => {
+    if (actorView !== "actor_detail" || !selectedActorAgg) return;
+    let cancelled = false;
+    setPossibleMatchLoading(true);
+    setPossibleMatchError(null);
+    fetch("/api/admin/court-actors/possible-matches")
+      .then(async res => {
+        const data = await res.json().catch(() => ({}));
+        if (!res.ok) throw new Error(data.error || "Failed to load possible matches.");
+        if (!cancelled) setPossibleMatchClusters(Array.isArray(data.clusters) ? data.clusters : []);
+      })
+      .catch(err => {
+        if (!cancelled) {
+          setPossibleMatchClusters([]);
+          setPossibleMatchError(err instanceof Error ? err.message : "Failed to load possible matches.");
+        }
+      })
+      .finally(() => {
+        if (!cancelled) setPossibleMatchLoading(false);
+      });
+    return () => { cancelled = true; };
+  }, [actorView, selectedActorAgg]);
+
+  const selectedActorPossibleClusters = useMemo(() => {
+    if (!selectedActorAgg) return [];
+    const rowIds = new Set(selectedActorRows.map(row => row.id));
+    const selectedLocation = selectedActorAgg.location_key ?? selectedActorAgg.state_code ?? null;
+    const selectedNameKey = actorLooseNameKey(selectedActorAgg.name);
+    return possibleMatchClusters.filter(cluster => {
+      if ((cluster.location_key ?? null) !== selectedLocation) return false;
+      return cluster.variants.some(variant =>
+        variant.name_key === selectedNameKey
+        || actorLooseNameKey(variant.display_name) === selectedNameKey
+        || (variant.samples ?? []).some(sample => sample.row_id && rowIds.has(sample.row_id))
+      );
+    });
+  }, [possibleMatchClusters, selectedActorAgg, selectedActorRows]);
 
   const filteredAdminActors = useMemo(() => {
     const filtered = adminActors.filter(a => {
@@ -2353,24 +2505,85 @@ export default function AdminPage() {
                 Promote means you verified an auto-extracted name and marked it counted. Once a counted name reaches the public threshold, it appears on the public dashboard automatically. Names are grouped conservatively by normalized spelling; close misspellings still need manual review before launch.
               </p>
             </div>
-            {/* Segmented view selector */}
-            <div className="flex items-center rounded-lg overflow-hidden"
-              style={{ border: `1px solid rgba(201,162,39,0.3)`, backgroundColor: "rgba(255,255,255,0.04)" }}>
-              {([
-                ["by_state", "By Location"],
-                ["patterns", "Patterns"],
-                ["possible_matches", "Possible Matches"],
-                ["all", "All Reports"],
-              ] as [ActorView, string][]).map(([val, label]) => (
-                <button key={val} onClick={() => { setActorView(val); setExpandedState(null); }}
-                  className="text-xs px-3 py-1.5 font-bold whitespace-nowrap transition-colors"
+            <div className="flex-1 min-w-[280px] max-w-2xl">
+              <div className="relative mb-3">
+                <input
+                  type="text"
+                  value={actorFinderQuery}
+                  onChange={e => {
+                    setActorFinderQuery(e.target.value);
+                    setActorFinderOpen(true);
+                  }}
+                  onFocus={() => setActorFinderOpen(true)}
+                  placeholder="Find any court actor by name..."
+                  className="w-full px-4 py-2.5 rounded-lg text-sm font-semibold"
                   style={{
-                    backgroundColor: actorView === val ? "rgba(201,162,39,0.18)" : "transparent",
-                    color: actorView === val ? GOLD : "rgba(245,245,245,0.55)",
-                  }}>
-                  {label}
+                    backgroundColor: "rgba(0,0,0,0.28)",
+                    border: `1px solid rgba(201,162,39,0.32)`,
+                    color: "white",
+                    outline: "none",
+                  }}
+                />
+                {actorFinderOpen && actorFinderQuery.trim().length >= 2 && (
+                  <div className="absolute right-0 left-0 mt-1 rounded-lg overflow-hidden z-20 shadow-xl"
+                    style={{ backgroundColor: "rgb(15,23,42)", border: "1px solid rgba(201,162,39,0.28)" }}>
+                    {actorFinderSuggestions.length === 0 ? (
+                      <div className="px-4 py-3 text-xs" style={{ color: "rgba(245,245,245,0.45)" }}>
+                        No actor buckets match that name.
+                      </div>
+                    ) : (
+                      actorFinderSuggestions.map((agg, i) => (
+                        <button
+                          key={patternKey(agg)}
+                          type="button"
+                          onClick={() => selectActorDetail(agg)}
+                          className="w-full px-4 py-2.5 text-left transition-colors hover:bg-white/5"
+                          style={{ borderTop: i > 0 ? "1px solid rgba(255,255,255,0.06)" : "none" }}>
+                          <div className="flex items-center justify-between gap-3">
+                            <span className="text-sm font-bold text-white">{agg.name}</span>
+                            <span className="text-xs font-bold" style={{ color: GOLD }}>{agg.location_key ?? agg.state_code ?? "No state"}</span>
+                          </div>
+                          <div className="text-[11px] mt-0.5" style={{ color: "rgba(245,245,245,0.45)" }}>
+                            {agg.role}{agg.court_or_county ? ` · ${agg.court_or_county}` : ""} · {agg.count} {agg.count === 1 ? "family" : "families"}
+                          </div>
+                        </button>
+                      ))
+                    )}
+                  </div>
+                )}
+              </div>
+              <div className="flex items-center justify-end gap-2 flex-wrap">
+                <button
+                  type="button"
+                  onClick={resetActorFilters}
+                  className="text-xs px-3 py-1.5 rounded-lg font-bold whitespace-nowrap transition-colors"
+                  style={{ backgroundColor: "rgba(255,255,255,0.05)", color: "rgba(245,245,245,0.65)", border: "1px solid rgba(255,255,255,0.13)" }}>
+                  Reset all filters
                 </button>
-              ))}
+                {/* Segmented view selector */}
+                <div className="flex items-center rounded-lg overflow-hidden"
+                  style={{ border: `1px solid rgba(201,162,39,0.3)`, backgroundColor: "rgba(255,255,255,0.04)" }}>
+                  {([
+                    ["by_state", "By Location"],
+                    ["patterns", "Patterns"],
+                    ["possible_matches", "Possible Matches"],
+                    ["all", "All Reports"],
+                  ] as [Exclude<ActorView, "actor_detail">, string][]).map(([val, label]) => (
+                    <button key={val} onClick={() => {
+                      if (val === "possible_matches") setPossibleMatchSearchSeed({ query: "", location: "" });
+                      setActorView(val);
+                      setExpandedState(null);
+                    }}
+                      className="text-xs px-3 py-1.5 font-bold whitespace-nowrap transition-colors"
+                      style={{
+                        backgroundColor: actorView === val ? "rgba(201,162,39,0.18)" : "transparent",
+                        color: actorView === val ? GOLD : "rgba(245,245,245,0.55)",
+                      }}>
+                      {label}
+                    </button>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
 
@@ -2460,16 +2673,10 @@ export default function AdminPage() {
                   }}>
                   {actorSortMode === "group_near_dupes" ? "✓ Group near-duplicates" : "Group near-duplicates"}
                 </button>
-                {(actorSearch || actorLocationFilter || actorRoleFilter || actorSourceFilter !== "all" || actorSortMode !== "default") && (
+                {(actorSearch || actorLocationFilter || actorRoleFilter || actorSourceFilter !== "all" || actorSortMode !== "default" || showOnlyUndeployedPublic) && (
                   <button
                     type="button"
-                    onClick={() => {
-                      setActorSearch("");
-                      setActorLocationFilter("");
-                      setActorRoleFilter("");
-                      setActorSourceFilter("all");
-                      setActorSortMode("default");
-                    }}
+                    onClick={resetActorFilters}
                     className="text-xs px-2 py-1.5 rounded-md transition-colors"
                     style={{ color: "rgba(245,245,245,0.6)", border: "1px solid rgba(255,255,255,0.1)" }}>
                     Clear
@@ -2681,6 +2888,314 @@ export default function AdminPage() {
             );
           })()}
 
+          {actorView === "actor_detail" && (() => {
+            if (!selectedActorAgg) {
+              return (
+                <div className="px-6 py-10 text-center text-sm" style={{ color: "rgba(245,245,245,0.35)" }}>
+                  Search for an actor above, then select a bucket to open the unified detail view.
+                </div>
+              );
+            }
+
+            const rows = selectedActorRows;
+            const location = selectedActorAgg.location_key ?? selectedActorAgg.state_code ?? null;
+            const deployKey = selectedActorAgg.deploy_state_abbr && selectedActorAgg.deploy_slug
+              ? `${selectedActorAgg.deploy_state_abbr.toLowerCase()}/${selectedActorAgg.deploy_slug}`
+              : "";
+            const isDeployed = Boolean(selectedActorAgg.deployed || (deployKey && recentlyDeployedActorKeys.has(deployKey)));
+            const canDeploy = selectedActorAgg.count >= COURT_ACTOR_PUBLIC_THRESHOLD && Boolean(selectedActorAgg.deployable) && !isDeployed;
+            const shareUrl = actorShareUrl(selectedActorAgg);
+            const roleVariants = Array.from(new Set(rows.map(row => row.role).filter(Boolean))).sort((a, b) => a.localeCompare(b));
+            const nameVariants = Array.from(new Set(rows.map(row => row.name).filter(Boolean))).sort((a, b) => a.localeCompare(b));
+            const countyVariants = Array.from(new Set(rows.map(row => row.court_or_county).filter(Boolean) as string[])).sort((a, b) => a.localeCompare(b));
+            const permissionCounts = rows.reduce((map, row) => {
+              const key = row.reporter_permission || "unknown";
+              map.set(key, (map.get(key) ?? 0) + 1);
+              return map;
+            }, new Map<string, number>());
+            const recentActorRow = rows.slice().sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime())[0] ?? null;
+            const isEditing = editingPatternKey === patternKey(selectedActorAgg);
+
+            return (
+              <div className="px-6 py-5">
+                <div className="mb-4 flex items-center justify-between gap-3 flex-wrap">
+                  <button
+                    type="button"
+                    onClick={() => setActorView("patterns")}
+                    className="text-xs font-bold uppercase tracking-wide"
+                    style={{ color: "rgba(245,245,245,0.5)" }}>
+                    ← Back to Patterns
+                  </button>
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <button
+                      type="button"
+                      onClick={() => startPatternEdit(selectedActorAgg)}
+                      className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide"
+                      style={{ backgroundColor: "rgba(201,162,39,0.12)", color: GOLD, border: "1px solid rgba(201,162,39,0.28)" }}>
+                      Edit Pattern
+                    </button>
+                    {canDeploy && (
+                      <button
+                        type="button"
+                        onClick={() => openDeployActorModal(selectedActorAgg)}
+                        className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide"
+                        style={{ backgroundColor: "rgba(234,179,8,0.18)", color: "rgb(253,224,71)", border: "1px solid rgba(234,179,8,0.35)" }}>
+                        Deploy this actor →
+                      </button>
+                    )}
+                  </div>
+                </div>
+
+                <div className="rounded-xl p-4 mb-4"
+                  style={{ backgroundColor: "rgba(255,255,255,0.035)", border: "1px solid rgba(255,255,255,0.09)" }}>
+                  <div className="flex items-start justify-between gap-4 flex-wrap">
+                    <div>
+                      <h3 className="text-xl font-black text-white">{selectedActorAgg.name}</h3>
+                      <div className="mt-1 flex items-center gap-2 flex-wrap">
+                        <span className="text-xs px-2 py-0.5 rounded-full"
+                          style={{ backgroundColor: "rgba(255,255,255,0.08)", color: "rgba(245,245,245,0.72)" }}>
+                          {selectedActorAgg.role}
+                        </span>
+                        {location && <span className="text-xs font-bold" style={{ color: GOLD }}>{location}</span>}
+                        {selectedActorAgg.court_or_county && (
+                          <span className="text-xs" style={{ color: "rgba(245,245,245,0.45)" }}>· {selectedActorAgg.court_or_county}</span>
+                        )}
+                      </div>
+                      <div className="mt-3 grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
+                        <div>
+                          <div className="font-bold uppercase tracking-wide" style={{ color: "rgba(245,245,245,0.42)" }}>Roles seen</div>
+                          <div className="mt-1" style={{ color: "rgba(245,245,245,0.76)" }}>{roleVariants.join(" / ") || selectedActorAgg.role}</div>
+                        </div>
+                        <div>
+                          <div className="font-bold uppercase tracking-wide" style={{ color: "rgba(245,245,245,0.42)" }}>Name variants</div>
+                          <div className="mt-1" style={{ color: "rgba(245,245,245,0.76)" }}>{nameVariants.join(" / ") || selectedActorAgg.name}</div>
+                        </div>
+                        <div>
+                          <div className="font-bold uppercase tracking-wide" style={{ color: "rgba(245,245,245,0.42)" }}>County</div>
+                          <div className="mt-1" style={{ color: "rgba(245,245,245,0.76)" }}>{countyVariants.join(" / ") || selectedActorAgg.court_or_county || "—"}</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="min-w-[220px] rounded-lg p-3"
+                      style={{ backgroundColor: isDeployed ? "rgba(74,222,128,0.10)" : "rgba(234,179,8,0.10)", border: `1px solid ${isDeployed ? "rgba(74,222,128,0.26)" : "rgba(234,179,8,0.28)"}` }}>
+                      <div className="text-[10px] font-black uppercase tracking-wide"
+                        style={{ color: isDeployed ? "rgb(134,239,172)" : "rgb(253,224,71)" }}>
+                        {isDeployed ? "DEPLOYED" : "UNDEPLOYED"}
+                      </div>
+                      {isDeployed && shareUrl ? (
+                        <a href={shareUrl} target="_blank" rel="noopener noreferrer"
+                          className="mt-1 block text-xs font-bold underline"
+                          style={{ color: "rgb(134,239,172)" }}>
+                          Open share page
+                        </a>
+                      ) : (
+                        <div className="mt-1 text-xs" style={{ color: "rgba(245,245,245,0.55)" }}>
+                          {canDeploy ? "Ready for one-click deployment." : "Not deployable yet."}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+
+                  {isEditing && (
+                    <div className="mt-4 grid grid-cols-1 md:grid-cols-[1fr_1fr_1fr_auto] gap-2 items-end rounded-lg p-3"
+                      style={{ backgroundColor: "rgba(0,0,0,0.20)", border: "1px solid rgba(255,255,255,0.09)" }}>
+                      <label className="text-[10px] uppercase tracking-wide font-bold" style={{ color: "rgba(245,245,245,0.45)" }}>
+                        Display name
+                        <input value={patternEditDraft.name}
+                          onChange={e => setPatternEditDraft(prev => ({ ...prev, name: e.target.value }))}
+                          className="mt-1 w-full rounded px-2 py-1.5 text-xs"
+                          style={{ backgroundColor: "rgba(0,0,0,0.35)", color: "white", border: "1px solid rgba(255,255,255,0.14)" }} />
+                      </label>
+                      <label className="text-[10px] uppercase tracking-wide font-bold" style={{ color: "rgba(245,245,245,0.45)" }}>
+                        Role
+                        <input value={patternEditDraft.role}
+                          onChange={e => setPatternEditDraft(prev => ({ ...prev, role: e.target.value }))}
+                          className="mt-1 w-full rounded px-2 py-1.5 text-xs"
+                          style={{ backgroundColor: "rgba(0,0,0,0.35)", color: "white", border: "1px solid rgba(255,255,255,0.14)" }} />
+                      </label>
+                      <label className="text-[10px] uppercase tracking-wide font-bold" style={{ color: "rgba(245,245,245,0.45)" }}>
+                        County
+                        <input value={patternEditDraft.court_or_county}
+                          onChange={e => setPatternEditDraft(prev => ({ ...prev, court_or_county: e.target.value }))}
+                          className="mt-1 w-full rounded px-2 py-1.5 text-xs"
+                          style={{ backgroundColor: "rgba(0,0,0,0.35)", color: "white", border: "1px solid rgba(255,255,255,0.14)" }} />
+                      </label>
+                      <div className="flex items-center gap-2">
+                        <button type="button" disabled={savingPatternEdit === patternKey(selectedActorAgg)}
+                          onClick={() => void savePatternEdit(selectedActorAgg)}
+                          className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide disabled:opacity-50"
+                          style={{ backgroundColor: "rgba(34,197,94,0.16)", color: "rgb(134,239,172)", border: "1px solid rgba(34,197,94,0.3)" }}>
+                          {savingPatternEdit === patternKey(selectedActorAgg) ? "Saving…" : "Save"}
+                        </button>
+                        <button type="button" onClick={() => setEditingPatternKey(null)}
+                          className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide"
+                          style={{ backgroundColor: "rgba(255,255,255,0.06)", color: "rgba(245,245,245,0.7)", border: "1px solid rgba(255,255,255,0.12)" }}>
+                          Cancel
+                        </button>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                <div className="grid grid-cols-1 lg:grid-cols-4 gap-3 mb-4">
+                  <div className="rounded-lg p-3" style={{ backgroundColor: "rgba(255,255,255,0.035)", border: "1px solid rgba(255,255,255,0.08)" }}>
+                    <div className="text-[10px] font-bold uppercase tracking-wide" style={{ color: "rgba(245,245,245,0.42)" }}>Family count</div>
+                    <div className="text-2xl font-black text-white">{selectedActorAgg.count}</div>
+                  </div>
+                  <div className="rounded-lg p-3" style={{ backgroundColor: "rgba(255,255,255,0.035)", border: "1px solid rgba(255,255,255,0.08)" }}>
+                    <div className="text-[10px] font-bold uppercase tracking-wide" style={{ color: "rgba(245,245,245,0.42)" }}>Court actor rows</div>
+                    <div className="text-2xl font-black text-white">{rows.length}</div>
+                  </div>
+                  <div className="rounded-lg p-3 lg:col-span-2" style={{ backgroundColor: "rgba(255,255,255,0.035)", border: "1px solid rgba(255,255,255,0.08)" }}>
+                    <div className="text-[10px] font-bold uppercase tracking-wide mb-2" style={{ color: "rgba(245,245,245,0.42)" }}>Permission breakdown</div>
+                    <div className="flex items-center gap-2 flex-wrap">
+                      {Array.from(permissionCounts.entries()).map(([permission, count]) => {
+                        const badge = permissionToShareBadge(permission);
+                        return (
+                          <span key={permission} className="text-[10px] px-2 py-1 rounded font-mono uppercase"
+                            style={{ color: badge.color, backgroundColor: badge.bg, border: `1px solid ${badge.border}` }}>
+                            {badge.label}: {count}
+                          </span>
+                        );
+                      })}
+                    </div>
+                  </div>
+                </div>
+
+                {recentActorRow && (
+                  <div className="rounded-lg p-3 mb-4 flex items-center justify-between gap-3 flex-wrap"
+                    style={{ backgroundColor: "rgba(59,130,246,0.08)", border: "1px solid rgba(59,130,246,0.20)" }}>
+                    <div>
+                      <div className="text-[10px] font-bold uppercase tracking-wide" style={{ color: "rgb(147,197,253)" }}>Recent activity</div>
+                      <div className="text-xs mt-0.5" style={{ color: "rgba(245,245,245,0.7)" }}>
+                        Most recent submission naming this actor: {timeAgo(recentActorRow.created_at)} by {recentActorRow.reporter_name || recentActorRow.reporter_email || "unknown reporter"}.
+                      </div>
+                    </div>
+                    <button type="button" onClick={() => void openSubmissionDetail(recentActorRow.submission_id)}
+                      className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide"
+                      style={{ backgroundColor: "rgba(59,130,246,0.15)", color: "rgb(147,197,253)", border: "1px solid rgba(59,130,246,0.3)" }}>
+                      View Survey
+                    </button>
+                  </div>
+                )}
+
+                <div className="rounded-xl overflow-hidden mb-4"
+                  style={{ backgroundColor: "rgba(255,255,255,0.025)", border: "1px solid rgba(255,255,255,0.08)" }}>
+                  <div className="px-4 py-3 border-b" style={{ borderColor: "rgba(255,255,255,0.06)" }}>
+                    <div className="text-xs font-black uppercase tracking-wide" style={{ color: "rgba(245,245,245,0.62)" }}>
+                      Every court_actor row for this actor
+                    </div>
+                  </div>
+                  {rows.length === 0 ? (
+                    <div className="px-4 py-8 text-center text-sm" style={{ color: "rgba(245,245,245,0.35)" }}>
+                      No individual rows matched this actor bucket.
+                    </div>
+                  ) : (
+                    rows.map((row, i) => {
+                      const badge = permissionToShareBadge(row.reporter_permission);
+                      const hiddenReason = slideHiddenReason(row);
+                      const quoteText = (row.merged_comment || row.notes || "").trim();
+                      return (
+                        <div key={row.id} className="px-4 py-3" style={{ borderTop: i > 0 ? "1px solid rgba(255,255,255,0.05)" : "none" }}>
+                          <div className="flex items-start justify-between gap-3 flex-wrap">
+                            <div className="min-w-0 flex-1">
+                              <div className="flex items-center gap-2 flex-wrap">
+                                <span className="text-sm font-semibold text-white">{row.name}</span>
+                                <span className="text-xs px-1.5 py-0.5 rounded"
+                                  style={{ backgroundColor: "rgba(255,255,255,0.07)", color: "rgba(245,245,245,0.65)" }}>
+                                  {row.role}
+                                </span>
+                                <span className="text-[10px] px-2 py-0.5 rounded font-mono uppercase"
+                                  style={{ color: badge.color, backgroundColor: badge.bg, border: `1px solid ${badge.border}` }}>
+                                  {badge.label}
+                                </span>
+                                <span className="text-[10px] px-2 py-0.5 rounded font-bold uppercase"
+                                  style={{
+                                    backgroundColor: row.reporter_approved ? "rgba(74,222,128,0.12)" : "rgba(185,28,28,0.12)",
+                                    color: row.reporter_approved ? "rgb(134,239,172)" : "rgb(252,165,165)",
+                                    border: `1px solid ${row.reporter_approved ? "rgba(74,222,128,0.28)" : "rgba(185,28,28,0.28)"}`,
+                                  }}>
+                                  {row.reporter_approved ? "Approved" : "Not approved"}
+                                </span>
+                              </div>
+                              <div className="text-[11px] mt-1" style={{ color: "rgba(245,245,245,0.42)" }}>
+                                Reporter: {row.reporter_name || "—"} ({row.reporter_email || "no email"}) · {timeAgo(row.created_at)}
+                              </div>
+                              {quoteText ? (
+                                <div className="mt-2 text-xs italic px-3 py-2 rounded-md"
+                                  style={{ backgroundColor: "rgba(255,255,255,0.03)", color: "rgba(245,245,245,0.65)", borderLeft: `2px solid rgba(201,162,39,0.4)` }}>
+                                  {quoteText}
+                                </div>
+                              ) : (
+                                <div className="mt-2 text-xs italic" style={{ color: "rgba(245,245,245,0.35)" }}>
+                                  No quote text.
+                                </div>
+                              )}
+                              {hiddenReason && (
+                                <div className="mt-1.5 text-[11px] italic" style={{ color: "rgba(245,245,245,0.35)" }}>
+                                  {hiddenReason}
+                                </div>
+                              )}
+                            </div>
+                            <button type="button" onClick={() => void openSubmissionDetail(row.submission_id)}
+                              className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide"
+                              style={{ backgroundColor: "rgba(59,130,246,0.15)", color: "rgb(147,197,253)", border: "1px solid rgba(59,130,246,0.3)" }}>
+                              View Survey
+                            </button>
+                          </div>
+                        </div>
+                      );
+                    })
+                  )}
+                </div>
+
+                <div className="rounded-xl p-4"
+                  style={{ backgroundColor: "rgba(255,255,255,0.025)", border: "1px solid rgba(255,255,255,0.08)" }}>
+                  <div className="flex items-center justify-between gap-3 flex-wrap mb-3">
+                    <div>
+                      <div className="text-xs font-black uppercase tracking-wide" style={{ color: "rgba(245,245,245,0.62)" }}>
+                        Possible-match clusters
+                      </div>
+                      <div className="text-[11px] mt-0.5" style={{ color: "rgba(245,245,245,0.38)" }}>
+                        Use this when close spellings may need to merge into one canonical actor.
+                      </div>
+                    </div>
+                    <button type="button"
+                      onClick={() => {
+                        setPossibleMatchSearchSeed({ query: selectedActorAgg.name, location: location ?? "" });
+                        setActorView("possible_matches");
+                      }}
+                      className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide"
+                      style={{ backgroundColor: "rgba(201,162,39,0.12)", color: GOLD, border: "1px solid rgba(201,162,39,0.28)" }}>
+                      Open merge action
+                    </button>
+                  </div>
+                  {possibleMatchLoading ? (
+                    <div className="text-xs" style={{ color: "rgba(245,245,245,0.45)" }}>Loading possible matches…</div>
+                  ) : possibleMatchError ? (
+                    <div className="text-xs" style={{ color: "rgb(252,165,165)" }}>{possibleMatchError}</div>
+                  ) : selectedActorPossibleClusters.length === 0 ? (
+                    <div className="text-xs" style={{ color: "rgba(245,245,245,0.38)" }}>No pending possible-match clusters include this actor.</div>
+                  ) : (
+                    <div className="space-y-2">
+                      {selectedActorPossibleClusters.map(cluster => (
+                        <div key={cluster.cluster_key} className="rounded-lg p-3"
+                          style={{ backgroundColor: "rgba(0,0,0,0.18)", border: "1px solid rgba(255,255,255,0.07)" }}>
+                          <div className="text-xs font-bold text-white">
+                            {cluster.variants.map(v => v.display_name).join(" ↔ ")}
+                          </div>
+                          <div className="text-[11px] mt-1" style={{ color: "rgba(245,245,245,0.42)" }}>
+                            {cluster.location_key ?? "No location"} · {cluster.total_family_count ?? 0} families in suggested cluster
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </div>
+            );
+          })()}
+
           {actorView === "patterns" && (
             <div>
               <div className="px-6 py-3 flex items-center justify-between gap-3 flex-wrap"
@@ -2731,9 +3246,22 @@ export default function AdminPage() {
               </div>
               {filteredAdminActorAggs.length === 0 && (
                 <div className="px-6 py-10 text-center text-sm" style={{ color: "rgba(245,245,245,0.3)" }}>
-                  {adminActorAggs.length === 0
-                    ? "No court actors have been reported yet."
-                    : "No actor patterns match these filters."}
+                  <div>
+                    {adminActorAggs.length === 0
+                      ? "No court actors have been reported yet."
+                      : showOnlyUndeployedPublic && actorLocationFilter
+                        ? "No actors match both filters. Try clearing the Location filter."
+                        : "No actor patterns match the current filters."}
+                  </div>
+                  {adminActorAggs.length > 0 && (
+                    <button
+                      type="button"
+                      onClick={resetActorFilters}
+                      className="mt-3 text-xs px-3 py-1.5 rounded-md font-bold transition-colors"
+                      style={{ backgroundColor: "rgba(201,162,39,0.12)", color: GOLD, border: "1px solid rgba(201,162,39,0.28)" }}>
+                      Clear filters
+                    </button>
+                  )}
                 </div>
               )}
               {filteredAdminActorAggs.slice(0, 200).map((agg, i) => {
@@ -2883,7 +3411,12 @@ export default function AdminPage() {
           )}
 
           {actorView === "possible_matches" && (
-            <PossibleMatchesPanel onOpenSubmission={openSubmissionDetail} onNudgeFamily={nudgeFamily} />
+            <PossibleMatchesPanel
+              onOpenSubmission={openSubmissionDetail}
+              onNudgeFamily={nudgeFamily}
+              initialSearchQuery={possibleMatchSearchSeed.query}
+              initialLocationFilter={possibleMatchSearchSeed.location}
+            />
           )}
 
           {actorView === "all" && (

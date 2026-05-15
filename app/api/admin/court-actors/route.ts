@@ -319,6 +319,8 @@ export async function GET() {
         reporter_name: submission
           ? [submission.first_name, submission.last_name].filter(Boolean).join(" ") || null
           : null,
+        reporter_permission: submission?.permission_to_share ?? null,
+        reporter_approved: submission?.approved ?? null,
         review_decision: review,
         counts_publicly: isPublicEligible && fk !== null && (r.source ?? "form_direct") === "form_direct",
         // Comment-merge state for the admin UI:

@@ -160,6 +160,8 @@ type Resp = {
 
 type Props = {
   onOpenSubmission?: (submissionId: string) => void | Promise<void>;
+  initialSearchQuery?: string;
+  initialLocationFilter?: string;
   onNudgeFamily?: (actor: {
     id: string;
     name: string;
@@ -191,7 +193,7 @@ function matchesQuery(parts: Array<string | null | undefined>, query: string): b
   return haystack.includes(query);
 }
 
-export function PossibleMatchesPanel({ onOpenSubmission, onNudgeFamily }: Props = {}) {
+export function PossibleMatchesPanel({ onOpenSubmission, onNudgeFamily, initialSearchQuery = "", initialLocationFilter = "" }: Props = {}) {
   const [data, setData] = useState<Resp | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -201,6 +203,11 @@ export function PossibleMatchesPanel({ onOpenSubmission, onNudgeFamily }: Props 
   const [busyKey, setBusyKey] = useState<string | null>(null);
   const [showDecided, setShowDecided] = useState(false);
   const [loadingViewId, setLoadingViewId] = useState<string | null>(null);
+
+  useEffect(() => {
+    setSearchQuery(initialSearchQuery);
+    setLocationFilter(initialLocationFilter);
+  }, [initialSearchQuery, initialLocationFilter]);
 
   // Per-cluster local form state (canonical name + note + decision)
   type FormState = { canonicalName: string; canonicalRole: string; note: string };
