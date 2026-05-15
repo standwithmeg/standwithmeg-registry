@@ -1,5 +1,3 @@
-import { promises as fs } from "fs";
-import path from "path";
 import { createServerSupabaseClient } from "../../../../lib/supabase";
 import { createAdminSupabaseClient } from "../../../../lib/supabase-admin";
 import { isAdminEmail } from "../../../../lib/require-auth";
@@ -25,21 +23,37 @@ type PhotoAuditInfo = {
   photo_suspect_reason: string | null;
 };
 
+function publicAssetOrigin() {
+  const configured =
+    process.env.NEXT_PUBLIC_APP_URL ||
+    process.env.NEXT_PUBLIC_SITE_URL ||
+    process.env.SWM_PUBLIC_API_BASE;
+  const vercelUrl = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : null;
+  return (configured || vercelUrl || "https://my.standwithmeg.com").replace(/\/+$/, "");
+}
+
+async function fetchPhotoSizeKb(photoUrl: string): Promise<number | null> {
+  try {
+    const res = await fetch(new URL(photoUrl, publicAssetOrigin()), {
+      method: "HEAD",
+      cache: "no-store",
+    });
+    if (!res.ok) return null;
+    const contentLength = res.headers.get("content-length");
+    if (!contentLength) return null;
+    const bytes = Number(contentLength);
+    return Number.isFinite(bytes) && bytes > 0 ? Math.ceil(bytes / 1024) : null;
+  } catch {
+    return null;
+  }
+}
+
 async function loadPhotoAuditInfoByActor(manifest: { actors?: Array<{ slug?: string | null; state_abbr?: string | null; photo_url?: string | null }> }): Promise<Map<string, PhotoAuditInfo>> {
   const info = new Map<string, PhotoAuditInfo>();
   await Promise.all((manifest.actors ?? []).map(async actor => {
     if (!actor.slug || !actor.state_abbr) return;
     const key = manifestStateSlugKey(actor.state_abbr, actor.slug);
-    let photoSizeKb: number | null = null;
-    if (actor.photo_url) {
-      try {
-        const photoPath = path.join(process.cwd(), "public", actor.photo_url.replace(/^\//, ""));
-        const stat = await fs.stat(photoPath);
-        photoSizeKb = Math.ceil(stat.size / 1024);
-      } catch {
-        photoSizeKb = null;
-      }
-    }
+    const photoSizeKb = actor.photo_url ? await fetchPhotoSizeKb(actor.photo_url) : null;
     const sizeSuspect = photoSizeKb !== null && photoSizeKb > SUSPECT_PHOTO_SIZE_KB;
     const confirmedSuspect = CONFIRMED_SUSPECT_PHOTO_KEYS.has(key);
     info.set(key, {
