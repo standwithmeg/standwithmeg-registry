@@ -12,13 +12,14 @@
     "court_or_county": "Harnett",
     "state": "North Carolina",
     "state_abbr": "NC",
-    "mention_count": 5,
-    "family_count": 4,
-    "public_family_count": 4,
+    "mention_count": 6,
+    "family_count": 5,
+    "public_family_count": 5,
     "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
-    "actor_report_count": 5,
+    "actor_report_count": 6,
     "supabase_row_ids": [
       "c450afc9-5432-40b9-ab97-dddc0d8df62e",
+      "343193c8-6cba-453d-8b87-173fd5ce66ac",
       "9b410481-09f0-4efb-ad85-2cba609b0684",
       "6eae0841-80c9-4d2b-b7e6-4dd376d528bc",
       "d443b57e-9cb1-4685-8c0b-57f7005abde1",
@@ -33,27 +34,33 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 89,
-    "total_submissions": 131,
-    "avg_financial_loss": 159225.82,
-    "avg_months_lost": 41.5,
+    "families_approved": 90,
+    "total_submissions": 132,
+    "avg_financial_loss": 158323.76,
+    "avg_months_lost": 41.2,
     "_source_table": "movement_stats_by_state",
     "_match_value": "NC",
-    "state_family_count": 131,
+    "state_family_count": 132,
     "median_financial_loss": 141500,
     "median_burden_sample_size": 43,
-    "median_months_lost": 22,
-    "pro_se_pct": 50.4,
+    "median_months_lost": 19,
+    "pro_se_pct": 50.0,
     "pro_se_count": 66,
-    "_pdf_state_family_count": 131,
+    "_pdf_state_family_count": 132,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3715,
+  "movement_total": 3720,
   "supabase": {
-    "report_count": 5,
-    "actor_report_count": 5,
-    "family_count": 4,
+    "report_count": 6,
+    "actor_report_count": 6,
+    "family_count": 5,
     "family_reports": [
+      {
+        "body": "This has cost my parents their retirement savings. They will now have to work…",
+        "state": "NC",
+        "county": "Harnett County",
+        "row_id": "a26881a1-9303-4de8-9a72-6e1ea7032341"
+      },
       {
         "body": "Due to the emergency case being drug out for entirely too long, there has…",
         "state": "NC",
@@ -97,6 +104,12 @@
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Harnett County"
+      },
+      {
+        "comment_text": "Weird stuff going on in this county with this lawyer and judge Kimble. The case showed obvious partiality towards Tammy and her client.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Harnett"
       },
       {
         "comment_text": "Delay after delay. Inappropriate with the judge",

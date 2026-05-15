@@ -12,13 +12,14 @@
     "court_or_county": "Harnett county",
     "state": "North Carolina",
     "state_abbr": "NC",
-    "mention_count": 4,
-    "family_count": 3,
-    "public_family_count": 3,
+    "mention_count": 5,
+    "family_count": 4,
+    "public_family_count": 4,
     "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
-    "actor_report_count": 4,
+    "actor_report_count": 5,
     "supabase_row_ids": [
       "29fbf7cc-c00f-4a06-ade8-735d24c15f4f",
+      "2cce2617-a6ae-4475-ae6f-5adf455e530f",
       "0e098b53-c73f-4ae7-b1c4-55e366115ca0",
       "3c8f75cc-178f-497f-adbe-648cc3b81980",
       "194c1fd0-f298-401d-a79c-984821d99193"
@@ -32,27 +33,33 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 89,
-    "total_submissions": 131,
-    "avg_financial_loss": 159225.82,
-    "avg_months_lost": 41.5,
+    "families_approved": 90,
+    "total_submissions": 132,
+    "avg_financial_loss": 158323.76,
+    "avg_months_lost": 41.2,
     "_source_table": "movement_stats_by_state",
     "_match_value": "NC",
-    "state_family_count": 131,
+    "state_family_count": 132,
     "median_financial_loss": 141500,
     "median_burden_sample_size": 43,
-    "median_months_lost": 22,
-    "pro_se_pct": 50.4,
+    "median_months_lost": 19,
+    "pro_se_pct": 50.0,
     "pro_se_count": 66,
-    "_pdf_state_family_count": 131,
+    "_pdf_state_family_count": 132,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3715,
+  "movement_total": 3720,
   "supabase": {
-    "report_count": 4,
-    "actor_report_count": 4,
-    "family_count": 3,
+    "report_count": 5,
+    "actor_report_count": 5,
+    "family_count": 4,
     "family_reports": [
+      {
+        "body": "This has cost my parents their retirement savings. They will now have to work…",
+        "state": "NC",
+        "county": "Harnett County",
+        "row_id": "a26881a1-9303-4de8-9a72-6e1ea7032341"
+      },
       {
         "body": "Due to the emergency case being drug out for entirely too long, there has…",
         "state": "NC",
@@ -73,6 +80,12 @@
       }
     ],
     "public_comments": [
+      {
+        "comment_text": "He dragged the case out over months and months because he kept claiming he didn’t have time to listen to the testimonies. It cost our family tens of thousands of dollars. He claimed he lost his notes and extended the case yet another day for the father to say his piece all over again. Pushed and pushed his decision as far as he possible could. The father had zero case against the mother. All his accusations were proved false. The…",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Harnett"
+      },
       {
         "comment_text": "Very inappropriate comments during the trial. He joked about himself not knowing when to stop drinking alcohol - knowing that he was arrested for a DUI from picking up his kids from school. He also was talking inappropriately with the attorney - he allowed heresay numerous times for her client. Didn’t ask for proof. Discarded all evidence of her client being abusive and neglected to make a ruling several times until it was far enough out to claim comfort.",
         "author": "Anonymous parent",
