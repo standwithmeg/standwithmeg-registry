@@ -12,6 +12,10 @@ on:
         description: "Optional: single state code (e.g. MD). Leave blank for all 30+ states."
         required: false
         default: ""
+      force:
+        description: "Bypass actor share-page cache and rebuild selected actor pages with the current renderer."
+        required: false
+        default: "false"
 
 permissions:
   contents: write
@@ -84,10 +88,14 @@ jobs:
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
           SWM_PUBLIC_API_BASE: https://my.standwithmeg.com
         run: |
+          force_args=""
+          if [ "${{ github.event.inputs.force }}" = "true" ]; then
+            force_args="--force"
+          fi
           if [ -n "${{ github.event.inputs.state }}" ]; then
-            python scripts/share-pages/regenerate_deployed_actors.py --state "${{ github.event.inputs.state }}"
+            python scripts/share-pages/regenerate_deployed_actors.py --state "${{ github.event.inputs.state }}" $force_args
           else
-            python scripts/share-pages/regenerate_deployed_actors.py
+            python scripts/share-pages/regenerate_deployed_actors.py $force_args
           fi
 
       - name: Commit and push if changed

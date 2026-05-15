@@ -159,11 +159,19 @@ async function commitPhoto(args: {
   return commit;
 }
 
-async function dispatchStateRegen(repo: string, token: string, stateAbbr: string) {
+async function dispatchCanonicalStateRegen(repo: string, token: string, stateAbbr: string) {
   const res = await fetch(`https://api.github.com/repos/${repo}/actions/workflows/${WORKFLOW_FILE}/dispatches`, {
     method: "POST",
     headers: githubHeaders(token),
-    body: JSON.stringify({ ref: "main", inputs: { state: stateAbbr } }),
+    body: JSON.stringify({
+      ref: "main",
+      inputs: {
+        state: stateAbbr,
+        // Photo replacement must always rebuild from the versioned canonical
+        // scripts/share-pages/regenerate_deployed_actors.py pipeline on main.
+        force: "true",
+      },
+    }),
   });
   if (!res.ok) {
     const text = await res.text();
@@ -222,7 +230,7 @@ export async function POST(request: Request) {
 
     let dispatchWarning: string | null = null;
     try {
-      await dispatchStateRegen(repo, token, stateAbbr);
+      await dispatchCanonicalStateRegen(repo, token, stateAbbr);
     } catch (err) {
       dispatchWarning = err instanceof Error ? err.message : "Workflow dispatch failed.";
       console.error("court actor replace-photo regen dispatch failed:", dispatchWarning);
