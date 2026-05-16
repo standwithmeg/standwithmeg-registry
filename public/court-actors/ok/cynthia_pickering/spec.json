@@ -19,9 +19,9 @@
     "actor_report_count": 5,
     "supabase_row_ids": [
       "93afafa5-c00b-46c3-a78a-f8aa69cf3bb2",
+      "0cf7ea48-51dd-4697-ab19-879b5792b9c2",
       "4deee429-973b-46da-bb2e-1d23f3559f18",
       "695be153-e464-4857-ae83-b2d6f9488aa0",
-      "0cf7ea48-51dd-4697-ab19-879b5792b9c2",
       "43f27e93-0cb9-431d-aabd-52afd76fbd09"
     ],
     "actor_row_id": "93afafa5-c00b-46c3-a78a-f8aa69cf3bb2",
@@ -48,7 +48,7 @@
     "_pdf_state_family_count": 114,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3783,
+  "movement_total": 3801,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,

@@ -28,8 +28,8 @@
     "actor_bucket_key": "jamie vogt|OK"
   },
   "photo": {
-    "path": null,
-    "exists": false,
+    "path": "public/court-actors/ok/jamie_vogt/image_1080.png",
+    "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
@@ -48,7 +48,7 @@
     "_pdf_state_family_count": 114,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3783,
+  "movement_total": 3801,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
