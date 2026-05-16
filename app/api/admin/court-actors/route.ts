@@ -5,7 +5,7 @@ import { COURT_ACTOR_PUBLIC_THRESHOLD, actorBucketKeyWithLocation, courtActorLoc
 import { AliasResolver, type AliasDecisionRow } from "../../../../lib/court-actor-similarity";
 import { isCountableSubmission } from "../../../../lib/submission-public-visibility";
 import { normalizeCourtActorEditFields } from "../../../../lib/court-actor-admin-edit";
-import { loadCourtActorManifestFromDisk, manifestStateSlugKey, manifestStateSlugSet, spotlightSlug } from "../../../../lib/court-actor-deploy";
+import { loadCourtActorManifestFromDisk, manifestReadyShareStateSlugSet, manifestStateSlugKey, manifestStateSlugSet, spotlightSlug } from "../../../../lib/court-actor-deploy";
 
 type AdminClient = ReturnType<typeof createAdminSupabaseClient>;
 
@@ -16,8 +16,9 @@ const CONFIRMED_SUSPECT_PHOTO_KEYS = new Set([
   "ks/naomi_catadeulla",
 ]);
 
-type PhotoAuditInfo = {
+type ManifestAssetInfo = {
   photo_url: string | null;
+  share_url: string | null;
   photo_size_kb: number | null;
   photo_suspect: boolean;
   photo_suspect_reason: string | null;
@@ -48,8 +49,8 @@ async function fetchPhotoSizeKb(photoUrl: string): Promise<number | null> {
   }
 }
 
-async function loadPhotoAuditInfoByActor(manifest: { actors?: Array<{ slug?: string | null; state_abbr?: string | null; photo_url?: string | null }> }): Promise<Map<string, PhotoAuditInfo>> {
-  const info = new Map<string, PhotoAuditInfo>();
+async function loadManifestAssetInfoByActor(manifest: { actors?: Array<{ slug?: string | null; state_abbr?: string | null; photo_url?: string | null; share_url?: string | null }> }): Promise<Map<string, ManifestAssetInfo>> {
+  const info = new Map<string, ManifestAssetInfo>();
   await Promise.all((manifest.actors ?? []).map(async actor => {
     if (!actor.slug || !actor.state_abbr) return;
     const key = manifestStateSlugKey(actor.state_abbr, actor.slug);
@@ -58,6 +59,7 @@ async function loadPhotoAuditInfoByActor(manifest: { actors?: Array<{ slug?: str
     const confirmedSuspect = CONFIRMED_SUSPECT_PHOTO_KEYS.has(key);
     info.set(key, {
       photo_url: actor.photo_url ?? null,
+      share_url: actor.share_url ?? null,
       photo_size_kb: photoSizeKb,
       photo_suspect: Boolean(actor.photo_url && (sizeSuspect || confirmedSuspect)),
       photo_suspect_reason: sizeSuspect
@@ -289,8 +291,9 @@ export async function GET() {
     const rowReviewMap = await loadRowReviewMap(adminSb);
     const commentMerges = await loadCommentMerges(adminSb);
     const manifest = await loadCourtActorManifestFromDisk().catch(() => ({ actors: [] }));
-    const deployedSlugs = manifestStateSlugSet(manifest);
-    const photoAuditByActor = await loadPhotoAuditInfoByActor(manifest);
+    const manifestSlugs = manifestStateSlugSet(manifest);
+    const readyShareSlugs = manifestReadyShareStateSlugSet(manifest);
+    const manifestAssetsByActor = await loadManifestAssetInfoByActor(manifest);
 
     type AggBucket = {
       name: string;
@@ -339,7 +342,9 @@ export async function GET() {
         const stateAbbr = /^[A-Z]{2}$/.test(b.location_key ?? "") ? b.location_key : b.state_code;
         const slug = spotlightSlug(name);
         const deployKey = stateAbbr && slug ? manifestStateSlugKey(stateAbbr, slug) : "";
-        const photoAudit = deployKey ? photoAuditByActor.get(deployKey) : null;
+        const manifestAssets = deployKey ? manifestAssetsByActor.get(deployKey) : null;
+        const hasManifestEntry = Boolean(deployKey && manifestSlugs.has(deployKey));
+        const hasReadySharePage = Boolean(deployKey && readyShareSlugs.has(deployKey));
         return {
           role: roleSummary(b.roles),
           name,
@@ -351,11 +356,13 @@ export async function GET() {
           deploy_slug: slug || null,
           deploy_state_abbr: stateAbbr ?? null,
           deployable: Boolean(stateAbbr && /^[A-Z]{2}$/.test(stateAbbr) && slug),
-          deployed: Boolean(deployKey && deployedSlugs.has(deployKey)),
-          photo_url: photoAudit?.photo_url ?? null,
-          photo_size_kb: photoAudit?.photo_size_kb ?? null,
-          photo_suspect: photoAudit?.photo_suspect ?? false,
-          photo_suspect_reason: photoAudit?.photo_suspect_reason ?? null,
+          deployed: hasReadySharePage,
+          deployment_pending: hasManifestEntry && !hasReadySharePage,
+          share_url: manifestAssets?.share_url ?? null,
+          photo_url: manifestAssets?.photo_url ?? null,
+          photo_size_kb: manifestAssets?.photo_size_kb ?? null,
+          photo_suspect: manifestAssets?.photo_suspect ?? false,
+          photo_suspect_reason: manifestAssets?.photo_suspect_reason ?? null,
         };
       })
       .sort((a, b) => b.count - a.count);

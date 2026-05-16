@@ -768,6 +768,8 @@ export default function AdminPage() {
     deploy_state_abbr?: string | null;
     deployable?: boolean;
     deployed?: boolean;
+    deployment_pending?: boolean;
+    share_url?: string | null;
     photo_url?: string | null;
     photo_size_kb?: number | null;
     photo_suspect?: boolean;
@@ -1051,8 +1053,7 @@ export default function AdminPage() {
   }
 
   function actorShareUrl(agg: AdminActorAgg) {
-    if (!agg.deploy_state_abbr || !agg.deploy_slug) return null;
-    return `/court-actors/${agg.deploy_state_abbr.toLowerCase()}/${agg.deploy_slug}/share.html`;
+    return agg.share_url ?? null;
   }
 
   function openReplacePhotoModal(agg: AdminActorAgg) {
@@ -1259,7 +1260,7 @@ export default function AdminPage() {
       }
       setAdminActorAggs(prev => prev.map(agg => (
         agg.deploy_slug === deployActorModal.slug && agg.deploy_state_abbr === deployActorModal.state_abbr
-          ? { ...agg, deployed: true }
+          ? { ...agg, deployed: false, deployment_pending: true, share_url: null }
           : agg
       )));
       const deployedKey = `${deployActorModal.state_abbr.toLowerCase()}/${deployActorModal.slug}`;
@@ -2974,8 +2975,9 @@ export default function AdminPage() {
             const deployKey = selectedActorAgg.deploy_state_abbr && selectedActorAgg.deploy_slug
               ? `${selectedActorAgg.deploy_state_abbr.toLowerCase()}/${selectedActorAgg.deploy_slug}`
               : "";
-            const isDeployed = Boolean(selectedActorAgg.deployed || (deployKey && recentlyDeployedActorKeys.has(deployKey)));
-            const canDeploy = selectedActorAgg.count >= COURT_ACTOR_PUBLIC_THRESHOLD && Boolean(selectedActorAgg.deployable) && !isDeployed;
+            const isPending = Boolean(selectedActorAgg.deployment_pending || (deployKey && recentlyDeployedActorKeys.has(deployKey)));
+            const isDeployed = Boolean(selectedActorAgg.deployed);
+            const canDeploy = selectedActorAgg.count >= COURT_ACTOR_PUBLIC_THRESHOLD && Boolean(selectedActorAgg.deployable) && !isDeployed && !isPending;
             const shareUrl = actorShareUrl(selectedActorAgg);
             const roleVariants = Array.from(new Set(rows.map(row => row.role).filter(Boolean))).sort((a, b) => a.localeCompare(b));
             const nameVariants = Array.from(new Set(rows.map(row => row.name).filter(Boolean))).sort((a, b) => a.localeCompare(b));
@@ -3052,7 +3054,7 @@ export default function AdminPage() {
                       style={{ backgroundColor: isDeployed ? "rgba(74,222,128,0.10)" : "rgba(234,179,8,0.10)", border: `1px solid ${isDeployed ? "rgba(74,222,128,0.26)" : "rgba(234,179,8,0.28)"}` }}>
                       <div className="text-[10px] font-black uppercase tracking-wide"
                         style={{ color: isDeployed ? "rgb(134,239,172)" : "rgb(253,224,71)" }}>
-                        {isDeployed ? "SHARE PAGE READY" : "NO SHARE PAGE YET"}
+                        {isDeployed ? "SHARE PAGE READY" : isPending ? "REGEN QUEUED" : "NO SHARE PAGE YET"}
                       </div>
                       {isDeployed && shareUrl ? (
                         <a href={shareUrl} target="_blank" rel="noopener noreferrer"
@@ -3062,7 +3064,7 @@ export default function AdminPage() {
                         </a>
                       ) : (
                         <div className="mt-1 text-xs" style={{ color: "rgba(245,245,245,0.55)" }}>
-                          {canDeploy ? "Visible on /report; share page still needs to be created." : "No share page action available yet."}
+                          {isPending ? "Photo is committed. The public link appears after the regen workflow and Vercel deployment finish." : canDeploy ? "Visible on /report; share page still needs to be created." : "No share page action available yet."}
                         </div>
                       )}
                     </div>
@@ -3846,7 +3848,7 @@ export default function AdminPage() {
               <div>
                 <div className="font-black text-white text-base leading-none">Create actor share page</div>
                 <div className="text-xs mt-1" style={{ color: "rgba(245,245,245,0.45)" }}>
-                  The actor already appears on /report. This commits the social share-page files and queues that state&apos;s regen workflow.
+                  The actor already appears on /report. This commits the photo/manifest entry, then queues that state&apos;s regen workflow to create the public share page.
                 </div>
               </div>
               <button

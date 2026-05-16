@@ -380,6 +380,7 @@ export async function POST(request: Request) {
       displayName,
       actorBucketKey: bucket.actor_bucket_key,
       hasPhoto: Boolean(photoBuffer),
+      shareReady: false,
     });
     const nextManifest = addActorToManifest(manifest, entry);
     const message = `deploy(actors): wire photo for ${displayName} (${stateAbbr})`;
@@ -412,7 +413,7 @@ export async function POST(request: Request) {
       commit_url: commit.html_url,
       message: dispatchWarning
         ? `Committed ${displayName}, but regen dispatch needs manual retry: ${dispatchWarning}`
-        : `Deployed ${displayName}. Regeneration queued for ${stateAbbr}.`,
+        : `Queued ${displayName}. The public share link will appear after ${stateAbbr} regeneration finishes and Vercel deploys it.`,
       warning: dispatchWarning,
     });
   } catch (err) {

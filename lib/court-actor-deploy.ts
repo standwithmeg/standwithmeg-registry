@@ -30,6 +30,7 @@ export function actorManifestEntry(args: {
   displayName: string;
   actorBucketKey?: string | null;
   hasPhoto: boolean;
+  shareReady?: boolean;
 }): CourtActorManifestEntry {
   const state = args.stateAbbr.trim().toUpperCase();
   const stateLower = state.toLowerCase();
@@ -40,7 +41,7 @@ export function actorManifestEntry(args: {
     canonical_name: args.displayName,
     actor_bucket_key: args.actorBucketKey ?? null,
     photo_url: args.hasPhoto ? `/court-actors/${stateLower}/${args.slug}/image_1080.png` : null,
-    share_url: `/court-actors/${stateLower}/${args.slug}/share.html`,
+    share_url: args.shareReady === false ? null : `/court-actors/${stateLower}/${args.slug}/share.html`,
   };
 }
 
@@ -83,4 +84,13 @@ export function manifestStateSlugSet(manifest: CourtActorManifest): Set<string> 
     deployed.add(manifestStateSlugKey(entry.state_abbr, entry.slug));
   }
   return deployed;
+}
+
+export function manifestReadyShareStateSlugSet(manifest: CourtActorManifest): Set<string> {
+  const ready = new Set<string>();
+  for (const entry of manifest.actors ?? []) {
+    if (!entry.slug || !entry.state_abbr || !entry.share_url) continue;
+    ready.add(manifestStateSlugKey(entry.state_abbr, entry.slug));
+  }
+  return ready;
 }
