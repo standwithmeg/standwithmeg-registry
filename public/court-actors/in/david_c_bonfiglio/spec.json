@@ -4,7 +4,7 @@
     "slug": "david_c_bonfiglio",
     "display_name": "David C. Bonfiglio",
     "title": "",
-    "first_name": "David C.",
+    "first_name": "David",
     "last_name": "Bonfiglio",
     "role": "Judge",
     "court": "Elkhart County",
@@ -12,12 +12,13 @@
     "court_or_county": "Elkhart",
     "state": "Indiana",
     "state_abbr": "IN",
-    "mention_count": 6,
-    "family_count": 5,
-    "public_family_count": 5,
+    "mention_count": 7,
+    "family_count": 6,
+    "public_family_count": 6,
     "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
-    "actor_report_count": 6,
+    "actor_report_count": 7,
     "supabase_row_ids": [
+      "1e185a91-c96e-473b-855c-5b0aeca62a94",
       "db3401e1-900d-468c-bcb2-40beab66760c",
       "77654954-d71f-424f-8012-e8b0808b38c5",
       "440dc061-d6eb-4cc3-b998-957375a7dab0",
@@ -34,27 +35,33 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 74,
-    "total_submissions": 94,
-    "avg_financial_loss": 115068.85,
-    "avg_months_lost": 31.3,
+    "families_approved": 75,
+    "total_submissions": 95,
+    "avg_financial_loss": 113918.86,
+    "avg_months_lost": 31.2,
     "_source_table": "movement_stats_by_state",
     "_match_value": "IN",
-    "state_family_count": 94,
-    "median_financial_loss": 54000,
-    "median_burden_sample_size": 43,
-    "median_months_lost": 22,
-    "pro_se_pct": 44.7,
-    "pro_se_count": 42,
-    "_pdf_state_family_count": 94,
+    "state_family_count": 95,
+    "median_financial_loss": 52250,
+    "median_burden_sample_size": 44,
+    "median_months_lost": 24,
+    "pro_se_pct": 45.3,
+    "pro_se_count": 43,
+    "_pdf_state_family_count": 95,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3750,
+  "movement_total": 3759,
   "supabase": {
-    "report_count": 6,
-    "actor_report_count": 6,
-    "family_count": 5,
+    "report_count": 7,
+    "actor_report_count": 7,
+    "family_count": 6,
     "family_reports": [
+      {
+        "body": "It has caused me to miss out on every milestone my children have had.…",
+        "state": "IN",
+        "county": "Elkhart",
+        "row_id": "c6e0cbcc-9605-4c62-9c9e-a493e0ecfbc6"
+      },
       {
         "body": "For more than three years, the actions taken through the Elkhart County family court…",
         "state": "IN",
@@ -92,6 +99,12 @@
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Elkhart superior 6"
+      },
+      {
+        "comment_text": "Decided with the gal report when the gal did not like me",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Elkhart"
       }
     ]
   },
