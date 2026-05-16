@@ -13,8 +13,8 @@
     "state": "Indiana",
     "state_abbr": "IN",
     "mention_count": 7,
-    "family_count": 6,
-    "public_family_count": 6,
+    "family_count": 7,
+    "public_family_count": 7,
     "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
     "actor_report_count": 7,
     "supabase_row_ids": [
@@ -50,11 +50,11 @@
     "_pdf_state_family_count": 95,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3759,
+  "movement_total": 3792,
   "supabase": {
     "report_count": 7,
     "actor_report_count": 7,
-    "family_count": 6,
+    "family_count": 7,
     "family_reports": [
       {
         "body": "It has caused me to miss out on every milestone my children have had.…",
@@ -93,6 +93,12 @@
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Elkhart County"
+      },
+      {
+        "comment_text": "Removed child at status hearing based solely on father and gal testimony. Did not have a trial based on allegations no evidence. Due process violated at status hearing.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Elkhart county"
       },
       {
         "comment_text": "Sided with gal report and wouldn't hear my side. Sided with corrupt gal and refused to hear child abuse police report Sided with corrupt gal",
