@@ -12,15 +12,16 @@
     "court_or_county": "King",
     "state": "WA",
     "state_abbr": "WA",
-    "mention_count": 4,
-    "family_count": 3,
-    "public_family_count": 3,
+    "mention_count": 5,
+    "family_count": 4,
+    "public_family_count": 4,
     "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
-    "actor_report_count": 4,
+    "actor_report_count": 5,
     "supabase_row_ids": [
       "003667e2-273f-4f15-87e9-9076be0adfef",
       "edcf07c9-df81-4f13-948c-11f9e17ddd79",
       "f8bea642-c15f-44dd-a6ec-92327cf8d385",
+      "97cc8f4b-dd3e-462d-8d65-cacf89a9ce31",
       "9cbf9c70-802f-424f-a277-26910d1f14d0"
     ],
     "actor_row_id": null,
@@ -32,27 +33,33 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 60,
-    "total_submissions": 85,
-    "avg_financial_loss": 245619.83,
-    "avg_months_lost": 31.3,
+    "families_approved": 61,
+    "total_submissions": 86,
+    "avg_financial_loss": 246337.37,
+    "avg_months_lost": 30.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "WA",
-    "state_family_count": 85,
-    "median_financial_loss": 158975,
-    "median_burden_sample_size": 42,
-    "median_months_lost": 14,
-    "pro_se_pct": 64.7,
+    "state_family_count": 86,
+    "median_financial_loss": 201950,
+    "median_burden_sample_size": 43,
+    "median_months_lost": 13,
+    "pro_se_pct": 64.0,
     "pro_se_count": 55,
-    "_pdf_state_family_count": 85,
+    "_pdf_state_family_count": 86,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3796,
+  "movement_total": 3797,
   "supabase": {
-    "report_count": 4,
-    "actor_report_count": 4,
-    "family_count": 3,
+    "report_count": 5,
+    "actor_report_count": 5,
+    "family_count": 4,
     "family_reports": [
+      {
+        "body": "I have had 2 ethical judges but the 3 people I mentioned harmed me…",
+        "state": "WA",
+        "county": "King",
+        "row_id": "291d05ef-00d0-43f3-b3a8-53259a226060"
+      },
       {
         "body": "The system is completely corrupt. If opposing is connected as was mine, you have…",
         "state": "WA",
@@ -90,6 +97,12 @@
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "King"
+      },
+      {
+        "comment_text": "He did not report my ex not paying child support and paused DV program",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
       }
     ]
   },
