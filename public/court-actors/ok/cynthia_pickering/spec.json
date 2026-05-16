@@ -12,15 +12,16 @@
     "court_or_county": "Okmulgee county",
     "state": "Oklahoma",
     "state_abbr": "OK",
-    "mention_count": 4,
-    "family_count": 4,
-    "public_family_count": 4,
+    "mention_count": 5,
+    "family_count": 5,
+    "public_family_count": 5,
     "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
-    "actor_report_count": 4,
+    "actor_report_count": 5,
     "supabase_row_ids": [
       "93afafa5-c00b-46c3-a78a-f8aa69cf3bb2",
       "4deee429-973b-46da-bb2e-1d23f3559f18",
       "695be153-e464-4857-ae83-b2d6f9488aa0",
+      "0cf7ea48-51dd-4697-ab19-879b5792b9c2",
       "43f27e93-0cb9-431d-aabd-52afd76fbd09"
     ],
     "actor_row_id": "93afafa5-c00b-46c3-a78a-f8aa69cf3bb2",
@@ -32,27 +33,33 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 90,
-    "total_submissions": 113,
-    "avg_financial_loss": 113010.29,
+    "families_approved": 91,
+    "total_submissions": 114,
+    "avg_financial_loss": 112029.24,
     "avg_months_lost": 28.3,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OK",
-    "state_family_count": 113,
+    "state_family_count": 114,
     "median_financial_loss": 80250,
     "median_burden_sample_size": 60,
     "median_months_lost": 13,
-    "pro_se_pct": 46.0,
-    "pro_se_count": 52,
-    "_pdf_state_family_count": 113,
+    "pro_se_pct": 46.5,
+    "pro_se_count": 53,
+    "_pdf_state_family_count": 114,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3747,
+  "movement_total": 3783,
   "supabase": {
-    "report_count": 4,
-    "actor_report_count": 4,
-    "family_count": 4,
+    "report_count": 5,
+    "actor_report_count": 5,
+    "family_count": 5,
     "family_reports": [
+      {
+        "body": "My daughter was to have an overnight visit with her half sister, my 26…",
+        "state": "OK",
+        "county": "Okmulgee",
+        "row_id": "5cc6dac4-71dc-4db8-84b4-774a73893e87"
+      },
       {
         "body": "My DHS worker stated that you will be a great roll model for your…",
         "state": "OK",
@@ -93,6 +100,12 @@
       },
       {
         "comment_text": "She has left it up to the attorneys to figure out details regarding visitations and we have not been to court since. Even though the schedules are not being followed correctly.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Okmulgee"
+      },
+      {
+        "comment_text": "I will send you what I sent to the news stations",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Okmulgee"
