@@ -1,0 +1,103 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "heidi_cintron",
+    "display_name": "Heidi Cintron",
+    "title": "",
+    "first_name": "Heidi",
+    "last_name": "Cintron",
+    "role": "Judge",
+    "court": "Elkhart county",
+    "county": null,
+    "court_or_county": "Elkhart county",
+    "state": "Indiana",
+    "state_abbr": "IN",
+    "mention_count": 3,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "a1fd9388-fc78-48ce-8fd1-26e738a6fa93",
+      "98d8be69-738d-450c-b233-6da7b3fbe88c",
+      "9c40d832-8f5c-4beb-b2ec-4e5600cb2384"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "indiana/heidi_cintron/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 77,
+    "total_submissions": 97,
+    "avg_financial_loss": 112038.66,
+    "avg_months_lost": 31.2,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "IN",
+    "state_family_count": 97,
+    "median_months_lost": 24.0,
+    "median_financial_loss": 50500,
+    "median_burden_sample_size": 45,
+    "pro_se_count": 43,
+    "pro_se_pct": 44.3,
+    "children_impacted": 156,
+    "clean_sample_size": 97,
+    "raw_submission_count": 97,
+    "_unresolved": [
+      "pdf_stats: cache unreadable at .: [Errno 21] Is a directory: '.'"
+    ]
+  },
+  "movement_total": 3801,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "This magistrate compelled parties to agree on unsupervised visitation which resulted in the children being exposed to substance abuse, domestic violence, constant police presence, and physical and psychological abuse to…",
+        "author": "Anonymous parent",
+        "source": "court_actor_comment_merges",
+        "row_id": "a1fd9388-fc78-48ce-8fd1-26e738a6fa93"
+      },
+      {
+        "comment_text": "This magistrate compelled parties to agree on unsupervised visitation which resulted in the children being exposed to substance abuse, domestic violence, constant police presence, and physical and psychological abuse to…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Ordered parties to settle on Unsupervised Visitation resulting in the children being exposed to drug and alcohol usage, domestic violence, constant police presence, and physical abuse to themselves. Magistrate denied…",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "She makes life altering decisions based on hearsay. Refuses evidentiary hearings",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/heidi_cintron",
+  "unresolved": [
+    "pdf_stats: cache unreadable at .: [Errno 21] Is a directory: '.'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/indiana/heidi_cintron/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

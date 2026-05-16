@@ -5,7 +5,7 @@ import { COURT_ACTOR_PUBLIC_THRESHOLD, actorBucketKeyWithLocation, courtActorLoc
 import { AliasResolver, type AliasDecisionRow } from "../../../../lib/court-actor-similarity";
 import { isCountableSubmission } from "../../../../lib/submission-public-visibility";
 import { normalizeCourtActorEditFields } from "../../../../lib/court-actor-admin-edit";
-import { loadCourtActorManifestFromDisk, manifestReadyShareStateSlugSet, manifestStateSlugKey, manifestStateSlugSet, spotlightSlug } from "../../../../lib/court-actor-deploy";
+import { loadCourtActorManifestFromDisk, manifestStateSlugKey, manifestStateSlugSet, publicManifestAssetExists, spotlightSlug } from "../../../../lib/court-actor-deploy";
 
 type AdminClient = ReturnType<typeof createAdminSupabaseClient>;
 
@@ -54,14 +54,20 @@ async function loadManifestAssetInfoByActor(manifest: { actors?: Array<{ slug?: 
   await Promise.all((manifest.actors ?? []).map(async actor => {
     if (!actor.slug || !actor.state_abbr) return;
     const key = manifestStateSlugKey(actor.state_abbr, actor.slug);
-    const photoSizeKb = actor.photo_url ? await fetchPhotoSizeKb(actor.photo_url) : null;
+    const [photoExists, shareExists] = await Promise.all([
+      publicManifestAssetExists(actor.photo_url),
+      publicManifestAssetExists(actor.share_url),
+    ]);
+    const photoUrl = photoExists ? actor.photo_url ?? null : null;
+    const shareUrl = shareExists ? actor.share_url ?? null : null;
+    const photoSizeKb = photoUrl ? await fetchPhotoSizeKb(photoUrl) : null;
     const sizeSuspect = photoSizeKb !== null && photoSizeKb > SUSPECT_PHOTO_SIZE_KB;
     const confirmedSuspect = CONFIRMED_SUSPECT_PHOTO_KEYS.has(key);
     info.set(key, {
-      photo_url: actor.photo_url ?? null,
-      share_url: actor.share_url ?? null,
+      photo_url: photoUrl,
+      share_url: shareUrl,
       photo_size_kb: photoSizeKb,
-      photo_suspect: Boolean(actor.photo_url && (sizeSuspect || confirmedSuspect)),
+      photo_suspect: Boolean(photoUrl && (sizeSuspect || confirmedSuspect)),
       photo_suspect_reason: sizeSuspect
         ? "May not be a portrait — file size suggests a webpage screenshot"
         : confirmedSuspect
@@ -292,7 +298,6 @@ export async function GET() {
     const commentMerges = await loadCommentMerges(adminSb);
     const manifest = await loadCourtActorManifestFromDisk().catch(() => ({ actors: [] }));
     const manifestSlugs = manifestStateSlugSet(manifest);
-    const readyShareSlugs = manifestReadyShareStateSlugSet(manifest);
     const manifestAssetsByActor = await loadManifestAssetInfoByActor(manifest);
 
     type AggBucket = {
@@ -344,7 +349,7 @@ export async function GET() {
         const deployKey = stateAbbr && slug ? manifestStateSlugKey(stateAbbr, slug) : "";
         const manifestAssets = deployKey ? manifestAssetsByActor.get(deployKey) : null;
         const hasManifestEntry = Boolean(deployKey && manifestSlugs.has(deployKey));
-        const hasReadySharePage = Boolean(deployKey && readyShareSlugs.has(deployKey));
+        const hasReadySharePage = Boolean(manifestAssets?.share_url);
         return {
           role: roleSummary(b.roles),
           name,

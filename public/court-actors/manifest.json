@@ -1,6 +1,15 @@
 {
-  "generated_at": "2026-05-16T20:11:15.341930",
+  "generated_at": "2026-05-16T20:46:34.119949+00:00",
   "actors": [
+    {
+      "slug": "brian_baron",
+      "state_abbr": "CA",
+      "display_name": "Brian Baron",
+      "canonical_name": "Brian Baron",
+      "actor_bucket_key": "brian baron|CA",
+      "photo_url": "/court-actors/ca/brian_baron/image_1080.png",
+      "share_url": "/court-actors/ca/brian_baron/share.html"
+    },
     {
       "slug": "donald_griffith",
       "state_abbr": "CA",
@@ -9,6 +18,15 @@
       "actor_bucket_key": "donald grifith|CA",
       "photo_url": "/court-actors/ca/donald_griffith/image_1080.png",
       "share_url": "/court-actors/ca/donald_griffith/share.html"
+    },
+    {
+      "slug": "dr_keith_peterson",
+      "state_abbr": "CA",
+      "display_name": "Dr. Keith Peterson",
+      "canonical_name": "Dr. Keith Peterson",
+      "actor_bucket_key": "keith peterson|CA",
+      "photo_url": "/court-actors/ca/dr_keith_peterson/image_1080.png",
+      "share_url": "/court-actors/ca/dr_keith_peterson/share.html"
     },
     {
       "slug": "jesse_i_santana",
@@ -189,6 +207,15 @@
       "actor_bucket_key": null,
       "photo_url": "/court-actors/in/david_c_bonfiglio/image_1080.png",
       "share_url": "/court-actors/in/david_c_bonfiglio/share.html"
+    },
+    {
+      "slug": "heidi_cintron",
+      "state_abbr": "IN",
+      "display_name": "Heidi Cintron",
+      "canonical_name": "Heidi Cintron",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/in/heidi_cintron/image_1080.png",
+      "share_url": "/court-actors/in/heidi_cintron/share.html"
     },
     {
       "slug": "andrew_bolton",

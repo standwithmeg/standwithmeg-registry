@@ -51,6 +51,30 @@ export async function loadCourtActorManifestFromDisk(): Promise<CourtActorManife
   return JSON.parse(text) as CourtActorManifest;
 }
 
+export function publicManifestAssetPath(assetUrl: string | null | undefined): string | null {
+  const url = assetUrl?.trim();
+  if (!url || !url.startsWith("/") || url.startsWith("//")) return null;
+  const pathname = url.split(/[?#]/, 1)[0].replace(/^\/+/, "");
+  const normalized = path.posix.normalize(pathname);
+  if (!normalized || normalized === "." || normalized === ".." || normalized.startsWith("../")) {
+    return null;
+  }
+  const courtActorPrefix = "court-actors/";
+  if (!normalized.startsWith(courtActorPrefix)) return null;
+  return path.join(process.cwd(), "public", "court-actors", normalized.slice(courtActorPrefix.length));
+}
+
+export async function publicManifestAssetExists(assetUrl: string | null | undefined): Promise<boolean> {
+  const assetPath = publicManifestAssetPath(assetUrl);
+  if (!assetPath) return false;
+  try {
+    const stat = await fs.stat(assetPath);
+    return stat.isFile();
+  } catch {
+    return false;
+  }
+}
+
 export function manifestHasActor(manifest: CourtActorManifest, stateAbbr: string, slug: string): boolean {
   const key = manifestStateSlugKey(stateAbbr, slug);
   return (manifest.actors ?? []).some(entry =>
