@@ -12,17 +12,18 @@
     "court_or_county": "Highland",
     "state": "Ohio",
     "state_abbr": "OH",
-    "mention_count": 8,
-    "family_count": 5,
-    "public_family_count": 5,
+    "mention_count": 9,
+    "family_count": 6,
+    "public_family_count": 6,
     "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
-    "actor_report_count": 8,
+    "actor_report_count": 9,
     "supabase_row_ids": [
       "84523aae-6f04-4471-b0c2-f5dcb914fbd7",
       "4f37f144-9a31-42d3-ba17-6662e8dc7da8",
       "0e71522c-f016-4a31-8863-6867a8a64444",
       "6b03fe85-3c4d-4691-9ce7-c77ebd69f496",
       "55909197-8e41-4972-996c-2527ed759eb4",
+      "0a87ddb8-c789-4db7-821b-979269b5fac1",
       "c191a17c-80c4-4107-8a8a-0d0ffea90e88",
       "0a77a37f-d53f-4458-a348-078aa1ded4f1",
       "344b67f2-c588-4c57-b953-58ce802aa6c7"
@@ -36,27 +37,33 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 157,
-    "total_submissions": 204,
-    "avg_financial_loss": 114237.38,
-    "avg_months_lost": 30.9,
+    "families_approved": 158,
+    "total_submissions": 205,
+    "avg_financial_loss": 113772.57,
+    "avg_months_lost": 31.0,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OH",
-    "state_family_count": 204,
-    "median_financial_loss": 78000,
-    "median_burden_sample_size": 99,
+    "state_family_count": 205,
+    "median_financial_loss": 77750,
+    "median_burden_sample_size": 100,
     "median_months_lost": 18,
-    "pro_se_pct": 54.9,
-    "pro_se_count": 112,
-    "_pdf_state_family_count": 204,
+    "pro_se_pct": 55.1,
+    "pro_se_count": 113,
+    "_pdf_state_family_count": 205,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 3781,
+  "movement_total": 3792,
   "supabase": {
-    "report_count": 8,
-    "actor_report_count": 8,
-    "family_count": 5,
+    "report_count": 9,
+    "actor_report_count": 9,
+    "family_count": 6,
     "family_reports": [
+      {
+        "body": "The system ripped my family apart. Broke our unity, our circle, caused major anxiety…",
+        "state": "OH",
+        "county": "Highland",
+        "row_id": "92533d98-ca96-4eac-8521-9e7fc2b1df11"
+      },
       {
         "body": "Denied motion and ignored evidence!! None of them did their job they made up…",
         "state": "OH",
@@ -86,12 +93,6 @@
         "state": "OH",
         "county": "Highland county",
         "row_id": "8b35071a-b597-4615-93d0-41c8dca323bd"
-      },
-      {
-        "body": "Killed me and my family",
-        "state": "OH",
-        "county": "Highland county",
-        "row_id": "df430208-7750-49eb-9718-6825553635b6"
       }
     ],
     "public_comments": [
@@ -118,6 +119,12 @@
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Highland county"
+      },
+      {
+        "comment_text": "He would seem like your friend and on the children's side then go into court and deny any change or say was not in best interest for children to be returned home",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Highland county/juvenile guardian"
       },
       {
         "comment_text": "Fabricated evidence",
