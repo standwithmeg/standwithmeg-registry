@@ -1,0 +1,113 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "landon_poppleton",
+    "display_name": "Landon Poppleton",
+    "title": "",
+    "first_name": "Landon",
+    "last_name": "Poppleton",
+    "role": "Psychological Evaluator",
+    "court": "Oregon",
+    "county": null,
+    "court_or_county": "Oregon",
+    "state": "OR",
+    "state_abbr": "OR",
+    "mention_count": 3,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "f28b264c-87f9-417a-a1e3-70f884297431",
+      "243b7f14-4d7d-4cea-aaf2-1337c9a0d4d8",
+      "619a9131-8bda-4652-a51e-2f674efba353"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "landon popleton|OR"
+  },
+  "photo": {
+    "path": "public/court-actors/or/landon_poppleton/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 47,
+    "total_submissions": 61,
+    "avg_financial_loss": 203294.81,
+    "avg_months_lost": 35.8,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OR",
+    "state_family_count": 61,
+    "median_financial_loss": 221500,
+    "median_burden_sample_size": 24,
+    "median_months_lost": 21,
+    "pro_se_pct": 54.1,
+    "pro_se_count": 33,
+    "_pdf_state_family_count": 61,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 3796,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 3,
+    "family_reports": [
+      {
+        "body": "The court took my daughter from me based on an emergency order that was…",
+        "state": "OR",
+        "county": "Multnomah",
+        "row_id": "1fc72ac9-ea2a-4477-9766-67a2d2af1fbb"
+      },
+      {
+        "body": "Biggest waste of time and money to get nowhere.",
+        "state": "OR",
+        "county": "Clackamas",
+        "row_id": "23df782d-f01d-498d-b473-ac78c556848b"
+      },
+      {
+        "body": "My son is currently a competent and clear 13 year old young man who…",
+        "state": "OR",
+        "county": "Unknown",
+        "row_id": "58f51c2a-e059-4276-b459-64b8cf0e1334"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Supervising psychologist at NW Family Psychology and Jessica McBride's supervisor. Admitted to Mother over the phone that psychological evaluation reports are used as a mechanism to get evidence into court that could not otherwise be admitted through normal evidentiary procedures. Stated in writing that \"the court is the client,\" not the person being evaluated, confirming the evaluation was conducted to serve the court's interests rather than as an independent clinical assessment. Looped Rachel Finn into email communications and referred to…",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Oregon"
+      },
+      {
+        "comment_text": "Dr Poppleton was hired to be an expert on my case, unfortunately my attorney guided me to meet with him prior to the hearing. That made him not able to be my expert. And his findings were that it was in fact an abusive relationship and he tried to convey that to the other court actors including the child’s attorney Sandy Faber. And it was all used against me during our hearing.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Oregon"
+      },
+      {
+        "comment_text": "Basically paid off by mother to grant full custody",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Oregon"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/landon_poppleton",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/or/landon_poppleton/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

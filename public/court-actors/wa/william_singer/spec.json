@@ -1,0 +1,114 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "william_singer",
+    "display_name": "William Singer",
+    "title": "",
+    "first_name": "William",
+    "last_name": "Singer",
+    "role": "Therapist / Counselor",
+    "court": "King",
+    "county": null,
+    "court_or_county": "King",
+    "state": "WA",
+    "state_abbr": "WA",
+    "mention_count": 4,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "003667e2-273f-4f15-87e9-9076be0adfef",
+      "edcf07c9-df81-4f13-948c-11f9e17ddd79",
+      "f8bea642-c15f-44dd-a6ec-92327cf8d385",
+      "9cbf9c70-802f-424f-a277-26910d1f14d0"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "wiliam singer|WA"
+  },
+  "photo": {
+    "path": "public/court-actors/wa/william_singer/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 60,
+    "total_submissions": 85,
+    "avg_financial_loss": 245619.83,
+    "avg_months_lost": 31.3,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "WA",
+    "state_family_count": 85,
+    "median_financial_loss": 158975,
+    "median_burden_sample_size": 42,
+    "median_months_lost": 14,
+    "pro_se_pct": 64.7,
+    "pro_se_count": 55,
+    "_pdf_state_family_count": 85,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 3796,
+  "supabase": {
+    "report_count": 4,
+    "actor_report_count": 4,
+    "family_count": 3,
+    "family_reports": [
+      {
+        "body": "The system is completely corrupt. If opposing is connected as was mine, you have…",
+        "state": "WA",
+        "county": "Pierce",
+        "row_id": "a793c8e8-9846-4d0f-be65-b3efcf848e90"
+      },
+      {
+        "body": "The system is allowing an abuser to continue abuse and face no consequences for…",
+        "state": "WA",
+        "county": "King",
+        "row_id": "8dfe17a9-6351-4512-9cc5-0fa5370c10f5"
+      },
+      {
+        "body": "I had an obvious abuse her in my case court found him to have…",
+        "state": "WA",
+        "county": "king",
+        "row_id": "8e65a417-6393-4f71-996e-217065106d41"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "omitted crucial evidence that was given to him failed to investigate Domestic Violence judges finding actually Leyde when A investigation was done failed to correct billing errors that were obvious and when I refuse to pay them or ask him, he sued me a year later. Had expert communication with my ex during life trial and his attorney admitted it on record failed to investigate. DV did not make choices. Best interest to the kids and did the opposite of…",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "king, snohomish, kitsap, pierce"
+      },
+      {
+        "comment_text": "He gave an evaluation for DV for my ex without talking to me. He brought my ex from a 3 to a 0 despite police reports, prior evaluation and documentation from me. He is under investigation in other cases now as well for the same actions.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "King"
+      },
+      {
+        "comment_text": "Hired gun. Whitewashes DV by father, blames child for making up abuse and me for alienating the child.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "King"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/william_singer",
+  "unresolved": [],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/actors/wa/william_singer/share",
+    "draft_only": true
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}
