@@ -1,0 +1,104 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "edie_jansson",
+    "display_name": "Edie Jansson",
+    "title": "",
+    "first_name": "Edie",
+    "last_name": "Jansson",
+    "role": "GAL / Child Representative",
+    "court": "County not listed",
+    "county": null,
+    "court_or_county": "County not listed",
+    "state": "Missouri",
+    "state_abbr": "MO",
+    "mention_count": 4,
+    "family_count": 2,
+    "public_family_count": null,
+    "public_family_count_source": null,
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "e24dddc9-714b-46aa-8673-9bd6544dae48",
+      "7432fed0-5e57-4774-b7c9-2e7e98b9d659",
+      "71629736-0d95-49bb-9b5c-c90d66d94558",
+      "636df818-9380-4a0e-a8dc-c7f71afccfdb"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "missouri/edie_jansson/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 149,
+    "total_submissions": 194,
+    "avg_financial_loss": 111944.2,
+    "avg_months_lost": 41.5,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "MO",
+    "state_family_count": 194,
+    "median_financial_loss": 101000,
+    "median_burden_sample_size": 91,
+    "median_months_lost": 24,
+    "pro_se_pct": 53.6,
+    "pro_se_count": 104,
+    "_pdf_state_family_count": 194,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5322,
+  "supabase": {
+    "report_count": 4,
+    "actor_report_count": 4,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "This system took years of my children’s childhood and forced our family to live in a constant state of fear, instability, and financial hardship while we waited for protection and resolution that never came. The emotional, financial, and developmental costs to our family have been immeasurable.",
+        "state": "MO",
+        "county": "St. Charles",
+        "row_id": "31fecbb3-8231-4655-b31d-69a943afa7bb"
+      },
+      {
+        "body": "Torn. Us. Apart",
+        "state": "MO",
+        "county": "St. Charles",
+        "row_id": "e9a50f95-0502-4c44-a2ac-14b01473ec42"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Ignored evidence of safety concerns, prolonged process under temporary orders that were unworkable for over three years, ultimately recommended relocation under threat of loss of primary custody",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Fathers rights GAL Friends with OP Andrew Pynn",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/edie_jansson",
+  "unresolved": [
+    "public_family_count_api: no match for display_name='Edie Jansson' bucket=None slug='edie_jansson' in MO (5 actors)",
+    "pdf_public_actor: helper missing at /Users/meghannmiller/Code/court-actor-posts/scripts/pdf/public_actor_for_share.py"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/mo/edie_jansson/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}
