@@ -1,0 +1,100 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "kirk_m_fellhoelter",
+    "display_name": "Kirk M. Fellhoelter",
+    "title": "",
+    "first_name": "Kirk M.",
+    "last_name": "Fellhoelter",
+    "role": "Attorney",
+    "court": "Count my attorney",
+    "county": "Count my attorney",
+    "court_or_county": "Count my attorney",
+    "state": "NE",
+    "state_abbr": "NE",
+    "mention_count": 0,
+    "family_count": 4,
+    "public_family_count": 4,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": "kirk felhoelter|NE"
+  },
+  "photo": {
+    "path": "public/court-actors/ne/kirk_m_fellhoelter/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 35,
+    "total_submissions": 42,
+    "avg_financial_loss": 179170.13,
+    "avg_months_lost": 36.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "NE",
+    "state_family_count": 42,
+    "median_financial_loss": 176750,
+    "median_burden_sample_size": 16,
+    "median_months_lost": 22,
+    "pro_se_pct": 50.0,
+    "pro_se_count": 21,
+    "_pdf_state_family_count": 42,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5207,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 4,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "He laughed at all of my concerns, and when I would talk about my children’s special needs, tell me that I didn’t know what I was talking about. He laughed at me quite a bit in court, and I asked the judge if this was allowed and I was ignored.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Count my attorney"
+      },
+      {
+        "comment_text": "This man doesn't seem educated at all and always talks negative about everyone and doesn't care to find evidence to prove someone actually is a bad mom or dad",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Count my attorney"
+      },
+      {
+        "comment_text": "He was so condescending when he looked at me and just didn’t care what evidence there was",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Count my attorney"
+      },
+      {
+        "comment_text": "He doesn’t care what’s right or wrong he labels you once he’s seen you one time",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Count my attorney"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/kirk_m_fellhoelter",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ne/kirk_m_fellhoelter/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

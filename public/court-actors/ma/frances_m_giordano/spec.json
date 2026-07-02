@@ -1,0 +1,100 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "frances_m_giordano",
+    "display_name": "Frances M. Giordano",
+    "title": "",
+    "first_name": "Frances M.",
+    "last_name": "Giordano",
+    "role": "Judge",
+    "court": "Essex",
+    "county": "Essex County",
+    "court_or_county": "Essex County",
+    "state": "Massachusetts",
+    "state_abbr": "MA",
+    "mention_count": 0,
+    "family_count": 5,
+    "public_family_count": 5,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/ma/frances_m_giordano/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 75,
+    "total_submissions": 104,
+    "avg_financial_loss": 235880.44,
+    "avg_months_lost": 26.3,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "MA",
+    "state_family_count": 104,
+    "median_financial_loss": 136300,
+    "median_burden_sample_size": 44,
+    "median_months_lost": 18,
+    "pro_se_pct": 57.7,
+    "pro_se_count": 60,
+    "_pdf_state_family_count": 104,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5207,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 5,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "On 01/2024 when I first filed the contempt , She found my son’s father in contempt and said he had to return him for parenting time. She ordered me to start therapy becauee they were saying that I wanted to kill my children etc. then she said I’ll see you back in court in a month. So we went back and we were supposed to see her that day. I was handed a complaint for contempt and modification in custody by my son’s father’s attorney. I told the clerk I wanted to continue the contempt hearing that day because I now felt uncomfortable about all these lies and false accusations against me that I was just given by the other party. They refused to allow me to reschedule and on top of that they waited until almost 4pm when the court was about to close to have us called. When we got to the courtroom. Judge Giordano supposedly had to leave right at 4 for a family emergency. So we had judge Manisha Bhatt who has never presided over a hearing as a judge until this day when the court was about to close(keeping in mind I asked for a continuance so I could obtain counsel around 9am that morning and sat there the entire day after being told NO! Judge Bhatt was just nominated in December 2023 and she was now making this huge life changing decision for my case which ruined my world. She again wouldn’t let me continue the case and I asked her and told her I needed an attorney because they’re now accusing me of things that are not true. She didn’t care and proceeded with the contempt hearing. She overruled judge Giordanos findings that dad was in contempt and she said now he’s not in contempt and here we are 28 months later and I’ve never had parenting time with my son. He was just erased from our lives in a blink of an eye. I’m not even sure she was legally allowed to to rule on my care. She was in the court room that entire day sitting with judge Giordano and she was training. I don’t know how things like this are allowed to happen.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Essex County"
+      },
+      {
+        "comment_text": "Denied motions rushed to judgment told me that she doesn’t care what’s happened in the criminal court",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Essex"
+      },
+      {
+        "comment_text": "Ignored evidence and decided to rule on false allegations. Lost time with children.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Essex County"
+      },
+      {
+        "comment_text": "Evidence and testimony was ignored by the judge",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Essex County"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/frances_m_giordano",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ma/frances_m_giordano/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "jimmy_l_love_jr",
+    "display_name": "Jimmy Love Jr.",
+    "title": "",
+    "first_name": "Jimmy",
+    "last_name": "Love Jr.",
+    "role": "Judge",
+    "court": "Family Court",
+    "county": "Family Court",
+    "court_or_county": "Family Court",
+    "state": "North Carolina",
+    "state_abbr": "NC",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": "jimy love|NC"
+  },
+  "photo": {
+    "path": "public/court-actors/nc/jimmy_l_love_jr/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 161,
+    "total_submissions": 213,
+    "avg_financial_loss": 186966.14,
+    "avg_months_lost": 36.1,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "NC",
+    "state_family_count": 213,
+    "median_financial_loss": 140000,
+    "median_burden_sample_size": 71,
+    "median_months_lost": 16,
+    "pro_se_pct": 50.7,
+    "pro_se_count": 108,
+    "_pdf_state_family_count": 213,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5317,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Forced me into an equitable distribution trial without an attorney, denied my request to submit evidence of separate property and cost me tens of thousands of dollars. He also refused to hear a return hearing on an ex parte order because he wasn’t the “assigned” judge in our case.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Family Court"
+      },
+      {
+        "comment_text": "He heard her case and his son as a parental coordinator when I had evidence showing medical neglect, and this was not the first time that we had medical neglect. He was also the judge that saw a Debenham.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Johnston"
+      },
+      {
+        "comment_text": "Issued rulings that maintained supervised visitation and prolonged my separation from my children. Spoke with other party before I was allowed into the court room. Gave my children to our abuser.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Family Court"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/jimmy_l_love_jr",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/nc/jimmy_l_love_jr/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

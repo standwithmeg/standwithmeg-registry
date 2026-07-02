@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "julian_schreibman",
+    "display_name": "Julian Schreibman",
+    "title": "",
+    "first_name": "Julian",
+    "last_name": "Schreibman",
+    "role": "Judge",
+    "court": "Ulster county",
+    "county": "Ulster county",
+    "court_or_county": "Ulster county",
+    "state": "New York",
+    "state_abbr": "NY",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "27c2b602-5eab-4a6e-9ef9-ccc066455550",
+    "actor_bucket_key": "julian schreibman|NY"
+  },
+  "photo": {
+    "path": "public/court-actors/ny/julian_schreibman/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 136,
+    "total_submissions": 171,
+    "avg_financial_loss": 213193.71,
+    "avg_months_lost": 26.4,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "NY",
+    "state_family_count": 171,
+    "median_financial_loss": 165000,
+    "median_burden_sample_size": 69,
+    "median_months_lost": 14,
+    "pro_se_pct": 39.2,
+    "pro_se_count": 67,
+    "_pdf_state_family_count": 171,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5314,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "He did not issue a ruling in the divorce trial until nine months after the conclusion of the trial and submission of the case. He also disclosed that he knew the defendant's mother. Although he stated that he would impose penalty fees against my ex for financial abuse and failure to pay daycare expenses, he never did so. Additionally, he did not award either parent final legal decision-making authority, despite the Attorney for the Children stating in her closing argument that the mother should have final decision-making authority because the father was unlikely to follow the recommendations of medical professionals. Throughout the proceedings, he observed my ex hire and fire four attorneys before ultimately representing himself at trial.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Ulster Supreme Court"
+      },
+      {
+        "comment_text": "Vacated my Temporary Order of Protection without a hearing, brought me into contempt proceedings days later, and issued rulings that I believe transferred custody and control to my abuser.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Ulster County Supreme and Family Court"
+      },
+      {
+        "comment_text": "Refused to address the inconsistent fraudulent financial information in the divorce record DOMESTIC VIOLENCE AND STALKING NEVER ADDRESSED!",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Ulster county"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/julian_schreibman",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ny/julian_schreibman/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

@@ -1,0 +1,106 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "randall_galbraith",
+    "display_name": "Randall Galbraith",
+    "title": "",
+    "first_name": "Randall",
+    "last_name": "Galbraith",
+    "role": "CPS Worker",
+    "court": "Hancock CPS Director",
+    "county": "Hancock county cps head of cps",
+    "court_or_county": "Hancock CPS Director",
+    "state": "Ohio",
+    "state_abbr": "OH",
+    "mention_count": 0,
+    "family_count": 5,
+    "public_family_count": 5,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "bae0e6a0-8307-46b7-a5c5-1d0557556624",
+    "actor_bucket_key": "randal galbraith|OH"
+  },
+  "photo": {
+    "path": "public/court-actors/oh/randall_galbraith/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 205,
+    "total_submissions": 260,
+    "avg_financial_loss": 113532.41,
+    "avg_months_lost": 31.4,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OH",
+    "state_family_count": 260,
+    "median_financial_loss": 81125,
+    "median_burden_sample_size": 126,
+    "median_months_lost": 18,
+    "pro_se_pct": 52.7,
+    "pro_se_count": 137,
+    "_pdf_state_family_count": 260,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5303,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 5,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "False allegations were sent to Hancock County from Williams County under the guise of \"third-party, neutral investigation\". It was far from neutral, based on evidence discovered. Hancock County JFS then released confidential information through the US Postal service in a clear view window envelope. No accountability to this day.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Hancock county cps head of cps"
+      },
+      {
+        "comment_text": "He ignored my filed letter complaint as soon as the case opened. He ignored my attorney and her communication. He ignored my moms complaint he recieved certified. He did not return phone calls either. His only response was the letter was received. He has backed Kelli Miller and her abuse of power.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Hancock county director of DJFS"
+      },
+      {
+        "comment_text": "Refused to investigate the handling of my case when i asked several times. Violated my due process rights",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Hancock county cps head of cps"
+      },
+      {
+        "comment_text": "Refuse kinship reunification an never returns calls very disrespectful on the phone an in person",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Hancock county cps head of cps"
+      },
+      {
+        "comment_text": "Would NOT file my grievance said he’d see me in court.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Hancock CPS Director"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/randall_galbraith",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/oh/randall_galbraith/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

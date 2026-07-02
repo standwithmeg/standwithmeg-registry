@@ -1,0 +1,2633 @@
+{
+  "generated_at": "2026-07-02T17:10:48.540569+00:00",
+  "actors": [
+    {
+      "slug": "ali_upchurch_patterson",
+      "state_abbr": "AL",
+      "display_name": "Ali Upchurch Patterson",
+      "canonical_name": "Ali Upchurch Patterson",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/al/ali_upchurch_patterson/image_1080.png",
+      "share_url": "/court-actors/al/ali_upchurch_patterson/share.html"
+    },
+    {
+      "slug": "andrew_hairston",
+      "state_abbr": "AL",
+      "display_name": "Andrew Hairston",
+      "canonical_name": "Andrew Hairston",
+      "actor_bucket_key": "andrew hairston|AL",
+      "photo_url": "/court-actors/al/andrew_hairston/image_1080.png",
+      "share_url": "/court-actors/al/andrew_hairston/share.html"
+    },
+    {
+      "slug": "carol_cook_carter",
+      "state_abbr": "AL",
+      "display_name": "Carol Cook Carter",
+      "canonical_name": "Carol Cook Carter",
+      "actor_bucket_key": "carol cook carter|AL",
+      "photo_url": "/court-actors/al/carol_cook_carter/image_1080.png",
+      "share_url": "/court-actors/al/carol_cook_carter/share.html"
+    },
+    {
+      "slug": "deanne_dee_dee_calhoon",
+      "state_abbr": "AL",
+      "display_name": "DeAnne \"Dee Dee\" Calhoon",
+      "canonical_name": "DeAnne \"Dee Dee\" Calhoon",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/al/deanne_dee_dee_calhoon/image_1080.png",
+      "share_url": "/court-actors/al/deanne_dee_dee_calhoon/share.html"
+    },
+    {
+      "slug": "joy_booth",
+      "state_abbr": "AL",
+      "display_name": "Joy Pace Booth",
+      "canonical_name": "Joy Pace Booth",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/al/joy_booth/image_1080.png",
+      "share_url": "/court-actors/al/joy_booth/share.html"
+    },
+    {
+      "slug": "kyle_shirley",
+      "state_abbr": "AL",
+      "display_name": "Kyle Shirley",
+      "canonical_name": "Kyle Shirley",
+      "actor_bucket_key": "kyle shirley|AL",
+      "photo_url": "/court-actors/al/kyle_shirley/image_1080.png",
+      "share_url": "/court-actors/al/kyle_shirley/share.html"
+    },
+    {
+      "slug": "natalie_jones",
+      "state_abbr": "AL",
+      "display_name": "Natalie Jones",
+      "canonical_name": "Natalie Jones",
+      "actor_bucket_key": "natalie jones|AL",
+      "photo_url": "/court-actors/al/natalie_jones/image_1080.png",
+      "share_url": "/court-actors/al/natalie_jones/share.html"
+    },
+    {
+      "slug": "sibley_reynolds",
+      "state_abbr": "AL",
+      "display_name": "Sibley Reynolds",
+      "canonical_name": "Sibley Reynolds",
+      "actor_bucket_key": "sibley reynolds|AL",
+      "photo_url": "/court-actors/al/sibley_reynolds/image_1080.png",
+      "share_url": "/court-actors/al/sibley_reynolds/share.html"
+    },
+    {
+      "slug": "thea_langley",
+      "state_abbr": "AL",
+      "display_name": "Thea Barnes Langley",
+      "canonical_name": "Thea Barnes Langley",
+      "actor_bucket_key": "thea langley|AL",
+      "photo_url": "/court-actors/al/thea_langley/image_1080.png",
+      "share_url": "/court-actors/al/thea_langley/share.html"
+    },
+    {
+      "slug": "william_e_scully_jr",
+      "state_abbr": "AL",
+      "display_name": "William E. Scully, Jr.",
+      "canonical_name": "William E. Scully, Jr.",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/al/william_e_scully_jr/image_1080.png",
+      "share_url": "/court-actors/al/william_e_scully_jr/share.html"
+    },
+    {
+      "slug": "dianna_hewitt_ladd",
+      "state_abbr": "AR",
+      "display_name": "Dianna Hewitt Ladd",
+      "canonical_name": "Dianna Hewitt Ladd",
+      "actor_bucket_key": "diana hewit ladd|AR",
+      "photo_url": "/court-actors/ar/dianna_hewitt_ladd/image_1080.png",
+      "share_url": "/court-actors/ar/dianna_hewitt_ladd/share.html"
+    },
+    {
+      "slug": "alexander_m_calero",
+      "state_abbr": "CA",
+      "display_name": "Alexander M. Calero",
+      "canonical_name": "Alexander M. Calero",
+      "actor_bucket_key": "alexander calero|CA",
+      "photo_url": "/court-actors/ca/alexander_m_calero/image_1080.png",
+      "share_url": "/court-actors/ca/alexander_m_calero/share.html"
+    },
+    {
+      "slug": "alexandra_fong",
+      "state_abbr": "CA",
+      "display_name": "Alexandra Fong",
+      "canonical_name": "Alexandra Fong",
+      "actor_bucket_key": "alexandra fong|CA",
+      "photo_url": "/court-actors/ca/alexandra_fong/image_1080.png",
+      "share_url": "/court-actors/ca/alexandra_fong/share.html"
+    },
+    {
+      "slug": "brian_baron",
+      "state_abbr": "CA",
+      "display_name": "Brian Baron",
+      "canonical_name": "Brian Baron",
+      "actor_bucket_key": "brian baron|CA",
+      "photo_url": "/court-actors/ca/brian_baron/image_1080.png",
+      "share_url": "/court-actors/ca/brian_baron/share.html"
+    },
+    {
+      "slug": "cara_d_hutson",
+      "state_abbr": "CA",
+      "display_name": "Cara D. Hutson",
+      "canonical_name": "Cara D. Hutson",
+      "actor_bucket_key": "cara hutson|CA",
+      "photo_url": "/court-actors/ca/cara_d_hutson/image_1080.png",
+      "share_url": "/court-actors/ca/cara_d_hutson/share.html"
+    },
+    {
+      "slug": "devin_davis",
+      "state_abbr": "CA",
+      "display_name": "Devin Davis",
+      "canonical_name": "Devin Davis",
+      "actor_bucket_key": "devin davis|CA",
+      "photo_url": null,
+      "share_url": "/court-actors/ca/devin_davis/share.html"
+    },
+    {
+      "slug": "dina_richman",
+      "state_abbr": "CA",
+      "display_name": "Dina Richman",
+      "canonical_name": "Dina Richman",
+      "actor_bucket_key": "dina richman|CA",
+      "photo_url": "/court-actors/ca/dina_richman/image_1080.png",
+      "share_url": "/court-actors/ca/dina_richman/share.html"
+    },
+    {
+      "slug": "donald_griffith",
+      "state_abbr": "CA",
+      "display_name": "Donald Griffith",
+      "canonical_name": "Donald Griffith",
+      "actor_bucket_key": "donald grifith|CA",
+      "photo_url": "/court-actors/ca/donald_griffith/image_1080.png",
+      "share_url": "/court-actors/ca/donald_griffith/share.html"
+    },
+    {
+      "slug": "dr_keith_peterson",
+      "state_abbr": "CA",
+      "display_name": "Dr. Keith Peterson",
+      "canonical_name": "Dr. Keith Peterson",
+      "actor_bucket_key": "keith peterson|CA",
+      "photo_url": "/court-actors/ca/dr_keith_peterson/image_1080.png",
+      "share_url": "/court-actors/ca/dr_keith_peterson/share.html"
+    },
+    {
+      "slug": "gloria_cannon",
+      "state_abbr": "CA",
+      "display_name": "Gloria Cannon",
+      "canonical_name": "Gloria Cannon",
+      "actor_bucket_key": "gloria cannon|CA",
+      "photo_url": "/court-actors/ca/gloria_cannon/image_1080.png",
+      "share_url": "/court-actors/ca/gloria_cannon/share.html"
+    },
+    {
+      "slug": "jacquelyn_duffy",
+      "state_abbr": "CA",
+      "display_name": "Jacquelyn Duffy",
+      "canonical_name": "Jacquelyn Duffy",
+      "actor_bucket_key": "jacquelyn dufy|CA",
+      "photo_url": null,
+      "share_url": "/court-actors/ca/jacquelyn_duffy/share.html"
+    },
+    {
+      "slug": "jared_paul_hastey",
+      "state_abbr": "CA",
+      "display_name": "Jared Paul Hastey",
+      "canonical_name": "Jared Paul Hastey",
+      "actor_bucket_key": "jared paul hastey|CA",
+      "photo_url": "/court-actors/ca/jared_paul_hastey/image_1080.png",
+      "share_url": "/court-actors/ca/jared_paul_hastey/share.html"
+    },
+    {
+      "slug": "jesse_i_santana",
+      "state_abbr": "CA",
+      "display_name": "Jesse I. Santana",
+      "canonical_name": "Jesse I. Santana",
+      "actor_bucket_key": "jese santana|CA",
+      "photo_url": "/court-actors/ca/jesse_i_santana/image_1080.png",
+      "share_url": "/court-actors/ca/jesse_i_santana/share.html"
+    },
+    {
+      "slug": "lisa_metcalf",
+      "state_abbr": "CA",
+      "display_name": "Lisa Metcalf",
+      "canonical_name": "Lisa Metcalf",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/ca/lisa_metcalf/image_1080.png",
+      "share_url": "/court-actors/ca/lisa_metcalf/share.html"
+    },
+    {
+      "slug": "lisa_pacione",
+      "state_abbr": "CA",
+      "display_name": "Lisa paciones",
+      "canonical_name": "Lisa paciones",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/ca/lisa_pacione/image_1080.png",
+      "share_url": "/court-actors/ca/lisa_pacione/share.html"
+    },
+    {
+      "slug": "michael_anthony_jacques",
+      "state_abbr": "CA",
+      "display_name": "Michael Anthony Jacques",
+      "canonical_name": "Michael Anthony Jacques",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/ca/michael_anthony_jacques/image_1080.png",
+      "share_url": "/court-actors/ca/michael_anthony_jacques/share.html"
+    },
+    {
+      "slug": "michelle_bell",
+      "state_abbr": "CA",
+      "display_name": "Michelle Bell",
+      "canonical_name": "Michelle Bell",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/ca/michelle_bell/image_1080.png",
+      "share_url": "/court-actors/ca/michelle_bell/share.html"
+    },
+    {
+      "slug": "raymond_de_jesus",
+      "state_abbr": "CA",
+      "display_name": "Raymond De Jesus",
+      "canonical_name": "Raymond De Jesus",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/ca/raymond_de_jesus/image_1080.png",
+      "share_url": "/court-actors/ca/raymond_de_jesus/share.html"
+    },
+    {
+      "slug": "steven_a_mapes",
+      "state_abbr": "CA",
+      "display_name": "Steven Alan Mapes",
+      "canonical_name": "Steven Alan Mapes",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/ca/steven_a_mapes/image_1080.png",
+      "share_url": "/court-actors/ca/steven_a_mapes/share.html"
+    },
+    {
+      "slug": "yvette_allivato",
+      "state_abbr": "CA",
+      "display_name": "Yvette Allivato",
+      "canonical_name": "Yvette Allivato",
+      "actor_bucket_key": "yvete alivato|CA",
+      "photo_url": "/court-actors/ca/yvette_allivato/image_1080.png",
+      "share_url": "/court-actors/ca/yvette_allivato/share.html"
+    },
+    {
+      "slug": "kimberly_b_schutt",
+      "state_abbr": "CO",
+      "display_name": "KIMBERLY B. SCHUTT",
+      "canonical_name": "KIMBERLY B. SCHUTT",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/co/kimberly_b_schutt/image_1080.png",
+      "share_url": "/court-actors/co/kimberly_b_schutt/share.html"
+    },
+    {
+      "slug": "donna_heller",
+      "state_abbr": "CT",
+      "display_name": "Judge Donna Heller",
+      "canonical_name": "Judge Donna Heller",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/ct/donna_heller/image_1080.png",
+      "share_url": "/court-actors/ct/donna_heller/share.html"
+    },
+    {
+      "slug": "heidi_opinsky",
+      "state_abbr": "CT",
+      "display_name": "Heidi Opinsky",
+      "canonical_name": "Heidi Opinsky",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/ct/heidi_opinsky/image_1080.png",
+      "share_url": "/court-actors/ct/heidi_opinsky/share.html"
+    },
+    {
+      "slug": "heidi_winslow",
+      "state_abbr": "CT",
+      "display_name": "Heidi Winslow",
+      "canonical_name": "Heidi Winslow",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/ct/heidi_winslow/image_1080.png",
+      "share_url": "/court-actors/ct/heidi_winslow/share.html"
+    },
+    {
+      "slug": "ingemar_heredia",
+      "state_abbr": "CT",
+      "display_name": "Ingemar Heredia",
+      "canonical_name": "Ingemar Heredia",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/ct/ingemar_heredia/image_1080.png",
+      "share_url": "/court-actors/ct/ingemar_heredia/share.html"
+    },
+    {
+      "slug": "jennifer_j_decastro_tunnard",
+      "state_abbr": "CT",
+      "display_name": "Jennifer de Castro Tunnard",
+      "canonical_name": "Jennifer de Castro Tunnard",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/ct/jennifer_j_decastro_tunnard/image_1080.png",
+      "share_url": "/court-actors/ct/jennifer_j_decastro_tunnard/share.html"
+    },
+    {
+      "slug": "marissa_bigelli",
+      "state_abbr": "CT",
+      "display_name": "Marissa Bigelli",
+      "canonical_name": "Marissa Bigelli",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/ct/marissa_bigelli/image_1080.png",
+      "share_url": "/court-actors/ct/marissa_bigelli/share.html"
+    },
+    {
+      "slug": "robert_nastri",
+      "state_abbr": "CT",
+      "display_name": "Robert Nastri, Jr.",
+      "canonical_name": "Robert Nastri, Jr.",
+      "actor_bucket_key": "robert nastri|CT",
+      "photo_url": "/court-actors/ct/robert_nastri/image_1080.png",
+      "share_url": "/court-actors/ct/robert_nastri/share.html"
+    },
+    {
+      "slug": "ronald_e_kowalski",
+      "state_abbr": "CT",
+      "display_name": "Ronald E. Kowalski",
+      "canonical_name": "Ronald E. Kowalski",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/ct/ronald_e_kowalski/image_1080.png",
+      "share_url": "/court-actors/ct/ronald_e_kowalski/share.html"
+    },
+    {
+      "slug": "ronald_kowalski",
+      "state_abbr": "CT",
+      "display_name": "Ronald Kowalski",
+      "canonical_name": "Ronald Kowalski",
+      "actor_bucket_key": "ronald kowalski|CT",
+      "photo_url": "/court-actors/ct/ronald_kowalski/image_1080.png",
+      "share_url": "/court-actors/ct/ronald_kowalski/share.html"
+    },
+    {
+      "slug": "thomas_o_neill",
+      "state_abbr": "CT",
+      "display_name": "Thomas O'Neill",
+      "canonical_name": "Thomas O'Neill",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/ct/thomas_o_neill/image_1080.png",
+      "share_url": "/court-actors/ct/thomas_o_neill/share.html"
+    },
+    {
+      "slug": "all_judges_ive_had_4_judges_in_4_years",
+      "state_abbr": "FL",
+      "display_name": "All Judges - I\u2019ve had 4 judges in 4 years",
+      "canonical_name": "All Judges - I\u2019ve had 4 judges in 4 years",
+      "actor_bucket_key": "all judges - ve had 4 judges in 4 years|FL",
+      "photo_url": null,
+      "share_url": "/court-actors/fl/all_judges_ive_had_4_judges_in_4_years/share.html"
+    },
+    {
+      "slug": "anthony_miller",
+      "state_abbr": "FL",
+      "display_name": "Anthony Miller",
+      "canonical_name": "Anthony Miller",
+      "actor_bucket_key": "anthony miler|FL",
+      "photo_url": "/court-actors/fl/anthony_miller/image_1080.png",
+      "share_url": "/court-actors/fl/anthony_miller/share.html"
+    },
+    {
+      "slug": "danny_phillips",
+      "state_abbr": "FL",
+      "display_name": "Danny Phillips",
+      "canonical_name": "Danny Phillips",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/fl/danny_phillips/image_1080.png",
+      "share_url": "/court-actors/fl/danny_phillips/share.html"
+    },
+    {
+      "slug": "deborah_o_day",
+      "state_abbr": "FL",
+      "display_name": "Deborah O. Day",
+      "canonical_name": "Deborah O. Day",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/fl/deborah_o_day/image_1080.png",
+      "share_url": "/court-actors/fl/deborah_o_day/share.html"
+    },
+    {
+      "slug": "elaine_carbuccia",
+      "state_abbr": "FL",
+      "display_name": "Elaine A. Carbuccia",
+      "canonical_name": "Elaine A. Carbuccia",
+      "actor_bucket_key": "elaine carbucia|FL",
+      "photo_url": "/court-actors/fl/elaine_carbuccia/image_1080.png",
+      "share_url": "/court-actors/fl/elaine_carbuccia/share.html"
+    },
+    {
+      "slug": "general_magistrate_annette_j_szorosy",
+      "state_abbr": "FL",
+      "display_name": "General Magistrate Annette J. Szorosy",
+      "canonical_name": "General Magistrate Annette J. Szorosy",
+      "actor_bucket_key": "general magistrate annette szorosy|FL",
+      "photo_url": "/court-actors/fl/general_magistrate_annette_j_szorosy/image_1080.png",
+      "share_url": "/court-actors/fl/general_magistrate_annette_j_szorosy/share.html"
+    },
+    {
+      "slug": "joan_anthony",
+      "state_abbr": "FL",
+      "display_name": "Joan Anthony",
+      "canonical_name": "Joan Anthony",
+      "actor_bucket_key": "joan anthony|FL",
+      "photo_url": "/court-actors/fl/joan_anthony/image_1080.png",
+      "share_url": "/court-actors/fl/joan_anthony/share.html"
+    },
+    {
+      "slug": "jon_gann",
+      "state_abbr": "FL",
+      "display_name": "Jon Gann",
+      "canonical_name": "Jon Gann",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/fl/jon_gann/image_1080.png",
+      "share_url": "/court-actors/fl/jon_gann/share.html"
+    },
+    {
+      "slug": "kiki_dunton",
+      "state_abbr": "FL",
+      "display_name": "Kiki Dunton",
+      "canonical_name": "Kiki Dunton",
+      "actor_bucket_key": "kiki dunton|FL",
+      "photo_url": "/court-actors/fl/kiki_dunton/image_1080.png",
+      "share_url": "/court-actors/fl/kiki_dunton/share.html"
+    },
+    {
+      "slug": "kirsten_lee_dunton",
+      "state_abbr": "FL",
+      "display_name": "Kirsten \"Kiki\" Dunton",
+      "canonical_name": "Kirsten \"Kiki\" Dunton",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/fl/kirsten_lee_dunton/image_1080.png",
+      "share_url": "/court-actors/fl/kirsten_lee_dunton/share.html"
+    },
+    {
+      "slug": "kristin_kanner",
+      "state_abbr": "FL",
+      "display_name": "Kristin Kanner",
+      "canonical_name": "Kristin Kanner",
+      "actor_bucket_key": "kristin kaner|FL",
+      "photo_url": "/court-actors/fl/kristin_kanner/image_1080.png",
+      "share_url": "/court-actors/fl/kristin_kanner/share.html"
+    },
+    {
+      "slug": "lauralee_ganson_westine",
+      "state_abbr": "FL",
+      "display_name": "Lauralee Ganson Westine",
+      "canonical_name": "Lauralee Ganson Westine",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/fl/lauralee_ganson_westine/image_1080.png",
+      "share_url": "/court-actors/fl/lauralee_ganson_westine/share.html"
+    },
+    {
+      "slug": "leah_case",
+      "state_abbr": "FL",
+      "display_name": "Leah Case",
+      "canonical_name": "Leah Case",
+      "actor_bucket_key": "leah case|FL",
+      "photo_url": "/court-actors/fl/leah_case/image_1080.png",
+      "share_url": "/court-actors/fl/leah_case/share.html"
+    },
+    {
+      "slug": "marlon_weiss",
+      "state_abbr": "FL",
+      "display_name": "Marlon Weiss",
+      "canonical_name": "Marlon Weiss",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/fl/marlon_weiss/image_1080.png",
+      "share_url": "/court-actors/fl/marlon_weiss/share.html"
+    },
+    {
+      "slug": "rochelle_curley",
+      "state_abbr": "FL",
+      "display_name": "Rochelle T. Curley",
+      "canonical_name": "Rochelle T. Curley",
+      "actor_bucket_key": "rochele curley|FL",
+      "photo_url": "/court-actors/fl/rochelle_curley/image_1080.png",
+      "share_url": "/court-actors/fl/rochelle_curley/share.html"
+    },
+    {
+      "slug": "ryanne_seyba",
+      "state_abbr": "FL",
+      "display_name": "Ryanne Seyba",
+      "canonical_name": "Ryanne Seyba",
+      "actor_bucket_key": "ryane seyba|FL",
+      "photo_url": "/court-actors/fl/ryanne_seyba/image_1080.png",
+      "share_url": "/court-actors/fl/ryanne_seyba/share.html"
+    },
+    {
+      "slug": "shayla_rodney",
+      "state_abbr": "FL",
+      "display_name": "Shayla Rodney",
+      "canonical_name": "Shayla Rodney",
+      "actor_bucket_key": "shayla rodney|FL",
+      "photo_url": "/court-actors/fl/shayla_rodney/image_1080.png",
+      "share_url": "/court-actors/fl/shayla_rodney/share.html"
+    },
+    {
+      "slug": "ashley_wine",
+      "state_abbr": "GA",
+      "display_name": "Ashley White",
+      "canonical_name": "Ashley White",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/ga/ashley_wine/image_1080.png",
+      "share_url": "/court-actors/ga/ashley_wine/share.html"
+    },
+    {
+      "slug": "brandy_daswani",
+      "state_abbr": "GA",
+      "display_name": "Brandy J. Daswani",
+      "canonical_name": "Brandy J. Daswani",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/ga/brandy_daswani/image_1080.png",
+      "share_url": "/court-actors/ga/brandy_daswani/share.html"
+    },
+    {
+      "slug": "candice_broce",
+      "state_abbr": "GA",
+      "display_name": "Commissioner Candice Broce",
+      "canonical_name": "Commissioner Candice Broce",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/ga/candice_broce/image_1080.png",
+      "share_url": "/court-actors/ga/candice_broce/share.html"
+    },
+    {
+      "slug": "drug_testing_facility",
+      "state_abbr": "GA",
+      "display_name": "Drug testing facility",
+      "canonical_name": "Drug testing facility",
+      "actor_bucket_key": "drug testing facility|GA",
+      "photo_url": null,
+      "share_url": "/court-actors/ga/drug_testing_facility/share.html"
+    },
+    {
+      "slug": "jeffrey_bagley",
+      "state_abbr": "GA",
+      "display_name": "Jeffrey Bagley",
+      "canonical_name": "Jeffrey Bagley",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/ga/jeffrey_bagley/image_1080.png",
+      "share_url": "/court-actors/ga/jeffrey_bagley/share.html"
+    },
+    {
+      "slug": "jennifer_davis",
+      "state_abbr": "GA",
+      "display_name": "Jennifer Davis",
+      "canonical_name": "Jennifer Davis",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/ga/jennifer_davis/image_1080.png",
+      "share_url": "/court-actors/ga/jennifer_davis/share.html"
+    },
+    {
+      "slug": "joshua_ray_welch",
+      "state_abbr": "GA",
+      "display_name": "Joshua Ray Welch",
+      "canonical_name": "Joshua Ray Welch",
+      "actor_bucket_key": "joshua ray welch|GA",
+      "photo_url": "/court-actors/ga/joshua_ray_welch/image_1080.png",
+      "share_url": "/court-actors/ga/joshua_ray_welch/share.html"
+    },
+    {
+      "slug": "kim_oppenheimer",
+      "state_abbr": "GA",
+      "display_name": "Kim C. Oppenheimer",
+      "canonical_name": "Kim C. Oppenheimer",
+      "actor_bucket_key": "kim openheimer|GA",
+      "photo_url": "/court-actors/ga/kim_oppenheimer/image_1080.png",
+      "share_url": "/court-actors/ga/kim_oppenheimer/share.html"
+    },
+    {
+      "slug": "lakendra_slade",
+      "state_abbr": "GA",
+      "display_name": "Lakendra Slade",
+      "canonical_name": "Lakendra Slade",
+      "actor_bucket_key": "lakendra slade|GA",
+      "photo_url": null,
+      "share_url": "/court-actors/ga/lakendra_slade/share.html"
+    },
+    {
+      "slug": "marlo_ross",
+      "state_abbr": "GA",
+      "display_name": "Marlo Ross",
+      "canonical_name": "Marlo Ross",
+      "actor_bucket_key": "marlo ross|GA",
+      "photo_url": null,
+      "share_url": "/court-actors/ga/marlo_ross/share.html"
+    },
+    {
+      "slug": "cynthia_hucks",
+      "state_abbr": "IA",
+      "display_name": "Cynthia Hucks",
+      "canonical_name": "Cynthia Hucks",
+      "actor_bucket_key": "cynthia hucks|IA",
+      "photo_url": "/court-actors/ia/cynthia_hucks/image_1080.png",
+      "share_url": "/court-actors/ia/cynthia_hucks/share.html"
+    },
+    {
+      "slug": "joel_d_yates",
+      "state_abbr": "IA",
+      "display_name": "Joel D. Yates",
+      "canonical_name": "Joel D. Yates",
+      "actor_bucket_key": "joel yates|IA",
+      "photo_url": "/court-actors/ia/joel_d_yates/image_1080.png",
+      "share_url": "/court-actors/ia/joel_d_yates/share.html"
+    },
+    {
+      "slug": "reyna_wilkens",
+      "state_abbr": "IA",
+      "display_name": "Reyna Wilkens",
+      "canonical_name": "Reyna Wilkens",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/ia/reyna_wilkens/image_1080.png",
+      "share_url": "/court-actors/ia/reyna_wilkens/share.html"
+    },
+    {
+      "slug": "ransom_bailey",
+      "state_abbr": "ID",
+      "display_name": "Ransom Bailey",
+      "canonical_name": "Ransom Bailey",
+      "actor_bucket_key": "ransom bailey|ID",
+      "photo_url": null,
+      "share_url": "/court-actors/id/ransom_bailey/share.html"
+    },
+    {
+      "slug": "antoinette_l_granholm",
+      "state_abbr": "IL",
+      "display_name": "Antoinette L. Granholm",
+      "canonical_name": "Antoinette L. Granholm",
+      "actor_bucket_key": "antoinete granholm|IL",
+      "photo_url": null,
+      "share_url": "/court-actors/il/antoinette_l_granholm/share.html"
+    },
+    {
+      "slug": "kelly_stephen",
+      "state_abbr": "IL",
+      "display_name": "Kelly Stephen",
+      "canonical_name": "Kelly Stephen",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/il/kelly_stephen/image_1080.png",
+      "share_url": "/court-actors/il/kelly_stephen/share.html"
+    },
+    {
+      "slug": "neal_cerne",
+      "state_abbr": "IL",
+      "display_name": "Neal W. Cerne",
+      "canonical_name": "Neal W. Cerne",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/il/neal_cerne/image_1080.png",
+      "share_url": "/court-actors/il/neal_cerne/share.html"
+    },
+    {
+      "slug": "prairie_state_legal_services",
+      "state_abbr": "IL",
+      "display_name": "Prairie State Legal Services",
+      "canonical_name": "Prairie State Legal Services",
+      "actor_bucket_key": "prairie state legal services|IL",
+      "photo_url": "/court-actors/il/prairie_state_legal_services/image_1080.png",
+      "share_url": "/court-actors/il/prairie_state_legal_services/share.html"
+    },
+    {
+      "slug": "brittany_obando",
+      "state_abbr": "IN",
+      "display_name": "Brittany Obando",
+      "canonical_name": "Brittany Obando",
+      "actor_bucket_key": "britany obando|IN",
+      "photo_url": null,
+      "share_url": "/court-actors/in/brittany_obando/share.html"
+    },
+    {
+      "slug": "david_c_bonfiglio",
+      "state_abbr": "IN",
+      "display_name": "Judge David C Bonfiglio",
+      "canonical_name": "Judge David C Bonfiglio",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/in/david_c_bonfiglio/image_1080.png",
+      "share_url": "/court-actors/in/david_c_bonfiglio/share.html"
+    },
+    {
+      "slug": "heidi_cintron",
+      "state_abbr": "IN",
+      "display_name": "Magistrate Heidi Citron",
+      "canonical_name": "Magistrate Heidi Citron",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/in/heidi_cintron/image_1080.png",
+      "share_url": "/court-actors/in/heidi_cintron/share.html"
+    },
+    {
+      "slug": "indiana_department_of_child_services",
+      "state_abbr": "IN",
+      "display_name": "Indiana Department of Child services",
+      "canonical_name": "Indiana Department of Child services",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/in/indiana_department_of_child_services/image_1080.png",
+      "share_url": "/court-actors/in/indiana_department_of_child_services/share.html"
+    },
+    {
+      "slug": "jeryl_leach",
+      "state_abbr": "IN",
+      "display_name": "Jeryl Leach",
+      "canonical_name": "Jeryl Leach",
+      "actor_bucket_key": "jeryl leach|IN",
+      "photo_url": "/court-actors/in/jeryl_leach/image_1080.png",
+      "share_url": "/court-actors/in/jeryl_leach/share.html"
+    },
+    {
+      "slug": "linda_harris",
+      "state_abbr": "IN",
+      "display_name": "Linda Harris",
+      "canonical_name": "Linda Harris",
+      "actor_bucket_key": "linda haris|IN",
+      "photo_url": "/court-actors/in/linda_harris/image_1080.png",
+      "share_url": "/court-actors/in/linda_harris/share.html"
+    },
+    {
+      "slug": "mary_raatz",
+      "state_abbr": "IN",
+      "display_name": "Mary Raatz",
+      "canonical_name": "Mary Raatz",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/in/mary_raatz/image_1080.png",
+      "share_url": "/court-actors/in/mary_raatz/share.html"
+    },
+    {
+      "slug": "robert_shive",
+      "state_abbr": "IN",
+      "display_name": "Robert Shive",
+      "canonical_name": "Robert Shive",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/in/robert_shive/image_1080.png",
+      "share_url": "/court-actors/in/robert_shive/share.html"
+    },
+    {
+      "slug": "sean_persin",
+      "state_abbr": "IN",
+      "display_name": "Sean Persin",
+      "canonical_name": "Sean Persin",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/in/sean_persin/image_1080.png",
+      "share_url": "/court-actors/in/sean_persin/share.html"
+    },
+    {
+      "slug": "sybil_sharvelle",
+      "state_abbr": "IN",
+      "display_name": "Sybil Sharvelle",
+      "canonical_name": "Sybil Sharvelle",
+      "actor_bucket_key": "sybil sharvele|IN",
+      "photo_url": "/court-actors/in/sybil_sharvelle/image_1080.png",
+      "share_url": "/court-actors/in/sybil_sharvelle/share.html"
+    },
+    {
+      "slug": "andrew_bolton",
+      "state_abbr": "KS",
+      "display_name": "Andrew Bolton",
+      "canonical_name": "Andrew Bolton",
+      "actor_bucket_key": "andrew bolton|KS",
+      "photo_url": "/court-actors/ks/andrew_bolton/image_1080.png",
+      "share_url": "/court-actors/ks/andrew_bolton/share.html"
+    },
+    {
+      "slug": "ashlyn_l_yarnell",
+      "state_abbr": "KS",
+      "display_name": "Ashlyn L. Yarnell",
+      "canonical_name": "Ashlyn L. Yarnell",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/ks/ashlyn_l_yarnell/image_1080.png",
+      "share_url": "/court-actors/ks/ashlyn_l_yarnell/share.html"
+    },
+    {
+      "slug": "bethany_roberts",
+      "state_abbr": "KS",
+      "display_name": "Bethany Roberts",
+      "canonical_name": "Bethany Roberts",
+      "actor_bucket_key": "bethany roberts|KS",
+      "photo_url": "/court-actors/ks/bethany_roberts/image_1080.png",
+      "share_url": "/court-actors/ks/bethany_roberts/share.html"
+    },
+    {
+      "slug": "bud_dale",
+      "state_abbr": "KS",
+      "display_name": "Bud Dale",
+      "canonical_name": "Bud Dale",
+      "actor_bucket_key": "bud dale|KS",
+      "photo_url": "/court-actors/ks/bud_dale/image_1080.png",
+      "share_url": "/court-actors/ks/bud_dale/share.html"
+    },
+    {
+      "slug": "catherine_decena_triplett",
+      "state_abbr": "KS",
+      "display_name": "Catherine Decena Triplett",
+      "canonical_name": "Catherine Decena Triplett",
+      "actor_bucket_key": "catherine decena triplet|KS",
+      "photo_url": "/court-actors/ks/catherine_decena_triplett/image_1080.png",
+      "share_url": "/court-actors/ks/catherine_decena_triplett/share.html"
+    },
+    {
+      "slug": "dan_livingston",
+      "state_abbr": "KS",
+      "display_name": "Dan Livingston",
+      "canonical_name": "Dan Livingston",
+      "actor_bucket_key": "dan livingston|KS",
+      "photo_url": "/court-actors/ks/dan_livingston/image_1080.png",
+      "share_url": "/court-actors/ks/dan_livingston/share.html"
+    },
+    {
+      "slug": "elizabeth_sweeney_reeder",
+      "state_abbr": "KS",
+      "display_name": "Elizabeth Sweeney-Reeder",
+      "canonical_name": "Elizabeth Sweeney-Reeder",
+      "actor_bucket_key": "elizabeth sweney-reder|KS",
+      "photo_url": "/court-actors/ks/elizabeth_sweeney_reeder/image_1080.png",
+      "share_url": "/court-actors/ks/elizabeth_sweeney_reeder/share.html"
+    },
+    {
+      "slug": "heather_landon",
+      "state_abbr": "KS",
+      "display_name": "Heather Landon",
+      "canonical_name": "Heather Landon",
+      "actor_bucket_key": "heather landon|KS",
+      "photo_url": "/court-actors/ks/heather_landon/image_1080.png",
+      "share_url": "/court-actors/ks/heather_landon/share.html"
+    },
+    {
+      "slug": "jacquelyn_ellen_rokusek",
+      "state_abbr": "KS",
+      "display_name": "Jacquelyn Ellen Rokusek",
+      "canonical_name": "Jacquelyn Ellen Rokusek",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/ks/jacquelyn_ellen_rokusek/image_1080.png",
+      "share_url": "/court-actors/ks/jacquelyn_ellen_rokusek/share.html"
+    },
+    {
+      "slug": "jenifer_berger",
+      "state_abbr": "KS",
+      "display_name": "Jennifer Berger",
+      "canonical_name": "Jennifer Berger",
+      "actor_bucket_key": "jenifer berger|KS",
+      "photo_url": "/court-actors/ks/jenifer_berger/image_1080.png",
+      "share_url": "/court-actors/ks/jenifer_berger/share.html"
+    },
+    {
+      "slug": "jennifer_hagg",
+      "state_abbr": "KS",
+      "display_name": "Jennifer Hagg",
+      "canonical_name": "Jennifer Hagg",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/ks/jennifer_hagg/image_1080.png",
+      "share_url": "/court-actors/ks/jennifer_hagg/share.html"
+    },
+    {
+      "slug": "jennifer_passiglia",
+      "state_abbr": "KS",
+      "display_name": "Jennifer Passiglia",
+      "canonical_name": "Jennifer Passiglia",
+      "actor_bucket_key": "jenifer pasiglia|KS",
+      "photo_url": null,
+      "share_url": "/court-actors/ks/jennifer_passiglia/share.html"
+    },
+    {
+      "slug": "kathleen_sloan",
+      "state_abbr": "KS",
+      "display_name": "Kathleen Sloan",
+      "canonical_name": "Kathleen Sloan",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/ks/kathleen_sloan/image_1080.png",
+      "share_url": "/court-actors/ks/kathleen_sloan/share.html"
+    },
+    {
+      "slug": "katie_mcclaflin",
+      "state_abbr": "KS",
+      "display_name": "Katie mcclaflin",
+      "canonical_name": "Katie mcclaflin",
+      "actor_bucket_key": "katie mclaflin|KS",
+      "photo_url": "/court-actors/ks/katie_mcclaflin/image_1080.png",
+      "share_url": "/court-actors/ks/katie_mcclaflin/share.html"
+    },
+    {
+      "slug": "keven_o_grady",
+      "state_abbr": "KS",
+      "display_name": "Keven O'Grady",
+      "canonical_name": "Keven O'Grady",
+      "actor_bucket_key": "kevin grady|KS",
+      "photo_url": "/court-actors/ks/keven_o_grady/image_1080.png",
+      "share_url": "/court-actors/ks/keven_o_grady/share.html"
+    },
+    {
+      "slug": "lewanna_bell_lloyd",
+      "state_abbr": "KS",
+      "display_name": "Lewanna Bell-Lloyd",
+      "canonical_name": "Lewanna Bell-Lloyd",
+      "actor_bucket_key": "lewana bel-loyd|KS",
+      "photo_url": null,
+      "share_url": "/court-actors/ks/lewanna_bell_lloyd/share.html"
+    },
+    {
+      "slug": "meredith_frederick",
+      "state_abbr": "KS",
+      "display_name": "Meredith Frederick",
+      "canonical_name": "Meredith Frederick",
+      "actor_bucket_key": "meredith frederick|KS",
+      "photo_url": "/court-actors/ks/meredith_frederick/image_1080.png",
+      "share_url": "/court-actors/ks/meredith_frederick/share.html"
+    },
+    {
+      "slug": "naomi_cataudella",
+      "state_abbr": "KS",
+      "display_name": "Naomi Cataudella",
+      "canonical_name": "Naomi Cataudella",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/ks/naomi_cataudella/image_1080.png",
+      "share_url": "/court-actors/ks/naomi_cataudella/share.html"
+    },
+    {
+      "slug": "nicholas_st_peter",
+      "state_abbr": "KS",
+      "display_name": "Judge Nicholas St. Peter.",
+      "canonical_name": "Judge Nicholas St. Peter.",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/ks/nicholas_st_peter/image_1080.png",
+      "share_url": "/court-actors/ks/nicholas_st_peter/share.html"
+    },
+    {
+      "slug": "paul_burmaster",
+      "state_abbr": "KS",
+      "display_name": "Paul Burmaster",
+      "canonical_name": "Paul Burmaster",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/ks/paul_burmaster/image_1080.png",
+      "share_url": "/court-actors/ks/paul_burmaster/share.html"
+    },
+    {
+      "slug": "penny_moylan",
+      "state_abbr": "KS",
+      "display_name": "Penny R. Moylan",
+      "canonical_name": "Penny R. Moylan",
+      "actor_bucket_key": "peny moylan|KS",
+      "photo_url": "/court-actors/ks/penny_moylan/image_1080.png",
+      "share_url": "/court-actors/ks/penny_moylan/share.html"
+    },
+    {
+      "slug": "phillip_journey",
+      "state_abbr": "KS",
+      "display_name": "Phillip Journey",
+      "canonical_name": "Phillip Journey",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/ks/phillip_journey/image_1080.png",
+      "share_url": "/court-actors/ks/phillip_journey/share.html"
+    },
+    {
+      "slug": "randy_mccalla",
+      "state_abbr": "KS",
+      "display_name": "Randy McCalla",
+      "canonical_name": "Randy McCalla",
+      "actor_bucket_key": "randy mcala|KS",
+      "photo_url": "/court-actors/ks/randy_mccalla/image_1080.png",
+      "share_url": "/court-actors/ks/randy_mccalla/share.html"
+    },
+    {
+      "slug": "sheri_wampler",
+      "state_abbr": "KS",
+      "display_name": "Sheri Wampler",
+      "canonical_name": "Sheri Wampler",
+      "actor_bucket_key": "sheri wampler|KS",
+      "photo_url": "/court-actors/ks/sheri_wampler/image_1080.png",
+      "share_url": "/court-actors/ks/sheri_wampler/share.html"
+    },
+    {
+      "slug": "stephanie_goodenow",
+      "state_abbr": "KS",
+      "display_name": "Stephanie Goodenow",
+      "canonical_name": "Stephanie Goodenow",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/ks/stephanie_goodenow/image_1080.png",
+      "share_url": "/court-actors/ks/stephanie_goodenow/share.html"
+    },
+    {
+      "slug": "steve_ellis",
+      "state_abbr": "KS",
+      "display_name": "Steve Ellis",
+      "canonical_name": "Steve Ellis",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/ks/steve_ellis/image_1080.png",
+      "share_url": "/court-actors/ks/steve_ellis/share.html"
+    },
+    {
+      "slug": "steven_d_henry",
+      "state_abbr": "KS",
+      "display_name": "Steven D. Henry",
+      "canonical_name": "Steven D. Henry",
+      "actor_bucket_key": "steven henry|KS",
+      "photo_url": "/court-actors/ks/steven_d_henry/image_1080.png",
+      "share_url": "/court-actors/ks/steven_d_henry/share.html"
+    },
+    {
+      "slug": "steven_montgomery",
+      "state_abbr": "KS",
+      "display_name": "Steven Montgomery",
+      "canonical_name": "Steven Montgomery",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/ks/steven_montgomery/image_1080.png",
+      "share_url": "/court-actors/ks/steven_montgomery/share.html"
+    },
+    {
+      "slug": "william_f_ebert_iii",
+      "state_abbr": "KS",
+      "display_name": "William F. Ebert III",
+      "canonical_name": "William F. Ebert III",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/ks/william_f_ebert_iii/image_1080.png",
+      "share_url": "/court-actors/ks/william_f_ebert_iii/share.html"
+    },
+    {
+      "slug": "dewana_mclean",
+      "state_abbr": "KY",
+      "display_name": "Dewana McLean",
+      "canonical_name": "Dewana McLean",
+      "actor_bucket_key": "dewana mclean|KY",
+      "photo_url": null,
+      "share_url": "/court-actors/ky/dewana_mclean/share.html"
+    },
+    {
+      "slug": "kimberly_walson",
+      "state_abbr": "KY",
+      "display_name": "Kimberly Blair Walson",
+      "canonical_name": "Kimberly Blair Walson",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/ky/kimberly_walson/image_1080.png",
+      "share_url": "/court-actors/ky/kimberly_walson/share.html"
+    },
+    {
+      "slug": "guy_e_bradberry",
+      "state_abbr": "LA",
+      "display_name": "Guy E. Bradberry",
+      "canonical_name": "Guy E. Bradberry",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/la/guy_e_bradberry/image_1080.png",
+      "share_url": "/court-actors/la/guy_e_bradberry/share.html"
+    },
+    {
+      "slug": "michael_clement",
+      "state_abbr": "LA",
+      "display_name": "Michael Clement",
+      "canonical_name": "Michael Clement",
+      "actor_bucket_key": "michael clement|LA",
+      "photo_url": "/court-actors/la/michael_clement/image_1080.png",
+      "share_url": "/court-actors/la/michael_clement/share.html"
+    },
+    {
+      "slug": "terri_campesta",
+      "state_abbr": "LA",
+      "display_name": "Terry Campesta",
+      "canonical_name": "Terry Campesta",
+      "actor_bucket_key": "teri campesta|LA",
+      "photo_url": "/court-actors/la/terri_campesta/image_1080.png",
+      "share_url": "/court-actors/la/terri_campesta/share.html"
+    },
+    {
+      "slug": "carla_a_salvucci",
+      "state_abbr": "MA",
+      "display_name": "Carla A. Salvucci",
+      "canonical_name": "Carla A. Salvucci",
+      "actor_bucket_key": "carla salvuci|MA",
+      "photo_url": "/court-actors/ma/carla_a_salvucci/image_1080.png",
+      "share_url": "/court-actors/ma/carla_a_salvucci/share.html"
+    },
+    {
+      "slug": "frances_m_giordano",
+      "state_abbr": "MA",
+      "display_name": "Frances M. Giordano",
+      "canonical_name": "Frances M. Giordano",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/ma/frances_m_giordano/image_1080.png",
+      "share_url": "/court-actors/ma/frances_m_giordano/share.html"
+    },
+    {
+      "slug": "judge_manish_bahatt",
+      "state_abbr": "MA",
+      "display_name": "Judge Manish Bahatt",
+      "canonical_name": "Judge Manish Bahatt",
+      "actor_bucket_key": "manish bahat|MA",
+      "photo_url": null,
+      "share_url": "/court-actors/ma/judge_manish_bahatt/share.html"
+    },
+    {
+      "slug": "lawrence_army_jr",
+      "state_abbr": "MA",
+      "display_name": "Lawrence Army Jr.",
+      "canonical_name": "Lawrence Army Jr.",
+      "actor_bucket_key": "lawrence army|MA",
+      "photo_url": "/court-actors/ma/lawrence_army_jr/image_1080.png",
+      "share_url": "/court-actors/ma/lawrence_army_jr/share.html"
+    },
+    {
+      "slug": "manisha_bhatt",
+      "state_abbr": "MA",
+      "display_name": "Manisha Bhatt",
+      "canonical_name": "Manisha Bhatt",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/ma/manisha_bhatt/image_1080.png",
+      "share_url": "/court-actors/ma/manisha_bhatt/share.html"
+    },
+    {
+      "slug": "maureen_monks",
+      "state_abbr": "MA",
+      "display_name": "Maureen Monks",
+      "canonical_name": "Maureen Monks",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/ma/maureen_monks/image_1080.png",
+      "share_url": "/court-actors/ma/maureen_monks/share.html"
+    },
+    {
+      "slug": "patricia_brady",
+      "state_abbr": "MA",
+      "display_name": "Patricia Brady",
+      "canonical_name": "Patricia Brady",
+      "actor_bucket_key": "patricia brady|MA",
+      "photo_url": "/court-actors/ma/patricia_brady/image_1080.png",
+      "share_url": "/court-actors/ma/patricia_brady/share.html"
+    },
+    {
+      "slug": "terri_klug_cafazzo",
+      "state_abbr": "MA",
+      "display_name": "Terri Klug Cafazzo",
+      "canonical_name": "Terri Klug Cafazzo",
+      "actor_bucket_key": null,
+      "photo_url": null,
+      "share_url": "/court-actors/ma/terri_klug_cafazzo/share.html"
+    },
+    {
+      "slug": "brian_kirkham",
+      "state_abbr": "MI",
+      "display_name": "Brian Kirkham",
+      "canonical_name": "Brian Kirkham",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/mi/brian_kirkham/image_1080.png",
+      "share_url": "/court-actors/mi/brian_kirkham/share.html"
+    },
+    {
+      "slug": "charles_simon_iii",
+      "state_abbr": "MI",
+      "display_name": "Charles Simon III",
+      "canonical_name": "Charles Simon III",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/mi/charles_simon_iii/image_1080.png",
+      "share_url": "/court-actors/mi/charles_simon_iii/share.html"
+    },
+    {
+      "slug": "emily_davidson",
+      "state_abbr": "MI",
+      "display_name": "Emily Davidson",
+      "canonical_name": "Emily Davidson",
+      "actor_bucket_key": "emily davidson|MI",
+      "photo_url": null,
+      "share_url": "/court-actors/mi/emily_davidson/share.html"
+    },
+    {
+      "slug": "eric_w_cholack",
+      "state_abbr": "MI",
+      "display_name": "Eric W. Cholack",
+      "canonical_name": "Eric W. Cholack",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/mi/eric_w_cholack/image_1080.png",
+      "share_url": "/court-actors/mi/eric_w_cholack/share.html"
+    },
+    {
+      "slug": "jennifer_lewandowski",
+      "state_abbr": "MI",
+      "display_name": "Jennifer Lewandowski",
+      "canonical_name": "Jennifer Lewandowski",
+      "actor_bucket_key": "jenifer lewandowski|MI",
+      "photo_url": null,
+      "share_url": "/court-actors/mi/jennifer_lewandowski/share.html"
+    },
+    {
+      "slug": "karen_mcfadden",
+      "state_abbr": "MI",
+      "display_name": "Karen McFadden",
+      "canonical_name": "Karen McFadden",
+      "actor_bucket_key": "karen mcfaden|MI",
+      "photo_url": "/court-actors/mi/karen_mcfadden/image_1080.png",
+      "share_url": "/court-actors/mi/karen_mcfadden/share.html"
+    },
+    {
+      "slug": "lisa_gorcyca",
+      "state_abbr": "MI",
+      "display_name": "Lisa Gorcyca",
+      "canonical_name": "Lisa Gorcyca",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/mi/lisa_gorcyca/image_1080.png",
+      "share_url": "/court-actors/mi/lisa_gorcyca/share.html"
+    },
+    {
+      "slug": "lisa_langton",
+      "state_abbr": "MI",
+      "display_name": "Lisa Langton",
+      "canonical_name": "Lisa Langton",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/mi/lisa_langton/image_1080.png",
+      "share_url": "/court-actors/mi/lisa_langton/share.html"
+    },
+    {
+      "slug": "lori_shearer",
+      "state_abbr": "MI",
+      "display_name": "Lori Shearer",
+      "canonical_name": "Lori Shearer",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/mi/lori_shearer/image_1080.png",
+      "share_url": "/court-actors/mi/lori_shearer/share.html"
+    },
+    {
+      "slug": "marc_crotteau",
+      "state_abbr": "MI",
+      "display_name": "Marc crotteau",
+      "canonical_name": "Marc crotteau",
+      "actor_bucket_key": "marc croteau|MI",
+      "photo_url": null,
+      "share_url": "/court-actors/mi/marc_crotteau/share.html"
+    },
+    {
+      "slug": "michelle_lyons",
+      "state_abbr": "MI",
+      "display_name": "Michelle Lyons",
+      "canonical_name": "Michelle Lyons",
+      "actor_bucket_key": "michele lyons|MI",
+      "photo_url": "/court-actors/mi/michelle_lyons/image_1080.png",
+      "share_url": "/court-actors/mi/michelle_lyons/share.html"
+    },
+    {
+      "slug": "tasha_welch",
+      "state_abbr": "MI",
+      "display_name": "Tasha Welch",
+      "canonical_name": "Tasha Welch",
+      "actor_bucket_key": "tasha welch|MI",
+      "photo_url": "/court-actors/mi/tasha_welch/image_1080.png",
+      "share_url": "/court-actors/mi/tasha_welch/share.html"
+    },
+    {
+      "slug": "travis_carr",
+      "state_abbr": "MI",
+      "display_name": "Travis Carr",
+      "canonical_name": "Travis Carr",
+      "actor_bucket_key": "travis carr|MI",
+      "photo_url": "/court-actors/mi/travis_carr/image_1080.png",
+      "share_url": "/court-actors/mi/travis_carr/share.html"
+    },
+    {
+      "slug": "darik_anderson",
+      "state_abbr": "MN",
+      "display_name": "Darik Anderson",
+      "canonical_name": "Darik Anderson",
+      "actor_bucket_key": "darik anderson|MN",
+      "photo_url": null,
+      "share_url": "/court-actors/mn/darik_anderson/share.html"
+    },
+    {
+      "slug": "daren_adkins",
+      "state_abbr": "MO",
+      "display_name": "Daren L Adkins",
+      "canonical_name": "Daren L Adkins",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/mo/daren_adkins/image_1080.png",
+      "share_url": "/court-actors/mo/daren_adkins/share.html"
+    },
+    {
+      "slug": "edward_page",
+      "state_abbr": "MO",
+      "display_name": "Edward Page",
+      "canonical_name": "Edward Page",
+      "actor_bucket_key": "edward page|MO",
+      "photo_url": "/court-actors/mo/edward_page/image_1080.png",
+      "share_url": "/court-actors/mo/edward_page/share.html"
+    },
+    {
+      "slug": "jack_p_banas",
+      "state_abbr": "MO",
+      "display_name": "Jack P. Banas",
+      "canonical_name": "Jack P. Banas",
+      "actor_bucket_key": "jack banas|MO",
+      "photo_url": "/court-actors/mo/jack_p_banas/image_1080.png",
+      "share_url": "/court-actors/mo/jack_p_banas/share.html"
+    },
+    {
+      "slug": "madelyn_zych",
+      "state_abbr": "MO",
+      "display_name": "Madelyn Zych",
+      "canonical_name": "Madelyn Zych",
+      "actor_bucket_key": "madelyn zych|MO",
+      "photo_url": null,
+      "share_url": "/court-actors/mo/madelyn_zych/share.html"
+    },
+    {
+      "slug": "michelle_puckett",
+      "state_abbr": "MO",
+      "display_name": "Michele C. Puckett",
+      "canonical_name": "Michele C. Puckett",
+      "actor_bucket_key": "michele pucket|MO",
+      "photo_url": "/court-actors/mo/michelle_puckett/image_1080.png",
+      "share_url": "/court-actors/mo/michelle_puckett/share.html"
+    },
+    {
+      "slug": "amanda_heitmueller",
+      "state_abbr": "MS",
+      "display_name": "Amanda Heitmueller",
+      "canonical_name": "Amanda Heitmueller",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/ms/amanda_heitmueller/image_1080.png",
+      "share_url": "/court-actors/ms/amanda_heitmueller/share.html"
+    },
+    {
+      "slug": "cherieka_witherspoon_white",
+      "state_abbr": "MS",
+      "display_name": "Cherieka Witherspoon white",
+      "canonical_name": "Cherieka Witherspoon white",
+      "actor_bucket_key": "cherieka witherspoon white|MS",
+      "photo_url": "/court-actors/ms/cherieka_witherspoon_white/image_1080.png",
+      "share_url": "/court-actors/ms/cherieka_witherspoon_white/share.html"
+    },
+    {
+      "slug": "camisha_sawtelle",
+      "state_abbr": "MT",
+      "display_name": "Camisha Sawtelle",
+      "canonical_name": "Camisha Sawtelle",
+      "actor_bucket_key": "camisha sawtele|MT",
+      "photo_url": "/court-actors/mt/camisha_sawtelle/image_1080.png",
+      "share_url": "/court-actors/mt/camisha_sawtelle/share.html"
+    },
+    {
+      "slug": "dev_haegele",
+      "state_abbr": "MT",
+      "display_name": "Dev Haegele",
+      "canonical_name": "Dev Haegele",
+      "actor_bucket_key": "dev haegele|MT",
+      "photo_url": "/court-actors/mt/dev_haegele/image_1080.png",
+      "share_url": "/court-actors/mt/dev_haegele/share.html"
+    },
+    {
+      "slug": "hon_amy_poehling_eddy",
+      "state_abbr": "MT",
+      "display_name": "Hon. Amy Poehling Eddy",
+      "canonical_name": "Hon. Amy Poehling Eddy",
+      "actor_bucket_key": "amy poehling eddy|MT",
+      "photo_url": "/court-actors/mt/hon_amy_poehling_eddy/image_1080.png",
+      "share_url": "/court-actors/mt/hon_amy_poehling_eddy/share.html"
+    },
+    {
+      "slug": "jodi_christiansen",
+      "state_abbr": "MT",
+      "display_name": "Jodi Christiansen",
+      "canonical_name": "Jodi Christiansen",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/mt/jodi_christiansen/image_1080.png",
+      "share_url": "/court-actors/mt/jodi_christiansen/share.html"
+    },
+    {
+      "slug": "abigail_williams",
+      "state_abbr": "NC",
+      "display_name": "Abigail Williams",
+      "canonical_name": "Abigail Williams",
+      "actor_bucket_key": "abigail wiliams|NC",
+      "photo_url": "/court-actors/nc/abigail_williams/image_1080.png",
+      "share_url": "/court-actors/nc/abigail_williams/share.html"
+    },
+    {
+      "slug": "andrea_starkey",
+      "state_abbr": "NC",
+      "display_name": "Andrea Starkey",
+      "canonical_name": "Andrea Starkey",
+      "actor_bucket_key": "andrea starkey|NC",
+      "photo_url": "/court-actors/nc/andrea_starkey/image_1080.png",
+      "share_url": "/court-actors/nc/andrea_starkey/share.html"
+    },
+    {
+      "slug": "april_harris_britt",
+      "state_abbr": "NC",
+      "display_name": "April Harris Britt",
+      "canonical_name": "April Harris Britt",
+      "actor_bucket_key": "april haris brit|NC",
+      "photo_url": "/court-actors/nc/april_harris_britt/image_1080.png",
+      "share_url": "/court-actors/nc/april_harris_britt/share.html"
+    },
+    {
+      "slug": "cindy_cronkhite",
+      "state_abbr": "NC",
+      "display_name": "Cindy Cronkhite",
+      "canonical_name": "Cindy Cronkhite",
+      "actor_bucket_key": "cindy cronkhite|NC",
+      "photo_url": null,
+      "share_url": "/court-actors/nc/cindy_cronkhite/share.html"
+    },
+    {
+      "slug": "daphne_bacon",
+      "state_abbr": "NC",
+      "display_name": "Daphne Bacon",
+      "canonical_name": "Daphne Bacon",
+      "actor_bucket_key": "daphne bacon|NC",
+      "photo_url": "/court-actors/nc/daphne_bacon/image_1080.png",
+      "share_url": "/court-actors/nc/daphne_bacon/share.html"
+    },
+    {
+      "slug": "duchess_chance",
+      "state_abbr": "NC",
+      "display_name": "Duchess Chance",
+      "canonical_name": "Duchess Chance",
+      "actor_bucket_key": "duches chance|NC",
+      "photo_url": "/court-actors/nc/duchess_chance/image_1080.png",
+      "share_url": "/court-actors/nc/duchess_chance/share.html"
+    },
+    {
+      "slug": "elizabeth_heath",
+      "state_abbr": "NC",
+      "display_name": "Elizabeth Heath",
+      "canonical_name": "Elizabeth Heath",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/nc/elizabeth_heath/image_1080.png",
+      "share_url": "/court-actors/nc/elizabeth_heath/share.html"
+    },
+    {
+      "slug": "george_l_jenkins",
+      "state_abbr": "NC",
+      "display_name": "George L. Jenkins",
+      "canonical_name": "George L. Jenkins",
+      "actor_bucket_key": "george jenkins|NC",
+      "photo_url": "/court-actors/nc/george_l_jenkins/image_1080.png",
+      "share_url": "/court-actors/nc/george_l_jenkins/share.html"
+    },
+    {
+      "slug": "h_jay_white_sr",
+      "state_abbr": "NC",
+      "display_name": "H. Jay White Sr",
+      "canonical_name": "H. Jay White Sr",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/nc/h_jay_white_sr/image_1080.png",
+      "share_url": "/court-actors/nc/h_jay_white_sr/share.html"
+    },
+    {
+      "slug": "jason_williams",
+      "state_abbr": "NC",
+      "display_name": "Jason Williams",
+      "canonical_name": "Jason Williams",
+      "actor_bucket_key": "jason wiliams|NC",
+      "photo_url": "/court-actors/nc/jason_williams/image_1080.png",
+      "share_url": "/court-actors/nc/jason_williams/share.html"
+    },
+    {
+      "slug": "jennifer_eichorn",
+      "state_abbr": "NC",
+      "display_name": "Jennifer Eichorn",
+      "canonical_name": "Jennifer Eichorn",
+      "actor_bucket_key": "jenifer eichorn|NC",
+      "photo_url": "/court-actors/nc/jennifer_eichorn/image_1080.png",
+      "share_url": "/court-actors/nc/jennifer_eichorn/share.html"
+    },
+    {
+      "slug": "jennifer_hyler",
+      "state_abbr": "NC",
+      "display_name": "Jennifer Hyler",
+      "canonical_name": "Jennifer Hyler",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/nc/jennifer_hyler/image_1080.png",
+      "share_url": "/court-actors/nc/jennifer_hyler/share.html"
+    },
+    {
+      "slug": "jimmy_l_love_jr",
+      "state_abbr": "NC",
+      "display_name": "Jimmy Love Jr.",
+      "canonical_name": "Jimmy Love Jr.",
+      "actor_bucket_key": "jimy love|NC",
+      "photo_url": "/court-actors/nc/jimmy_l_love_jr/image_1080.png",
+      "share_url": "/court-actors/nc/jimmy_l_love_jr/share.html"
+    },
+    {
+      "slug": "jonathan_jones",
+      "state_abbr": "NC",
+      "display_name": "Johnathan jones",
+      "canonical_name": "Johnathan jones",
+      "actor_bucket_key": "jonathan jones|NC",
+      "photo_url": null,
+      "share_url": "/court-actors/nc/jonathan_jones/share.html"
+    },
+    {
+      "slug": "jonathon_sargeant",
+      "state_abbr": "NC",
+      "display_name": "Jonathon Sargeant",
+      "canonical_name": "Jonathon Sargeant",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/nc/jonathon_sargeant/image_1080.png",
+      "share_url": "/court-actors/nc/jonathon_sargeant/share.html"
+    },
+    {
+      "slug": "judge_kimble",
+      "state_abbr": "NC",
+      "display_name": "Judge Judge Kimble",
+      "canonical_name": "Judge Judge Kimble",
+      "actor_bucket_key": "kimble|NC",
+      "photo_url": "/court-actors/nc/judge_kimble/image_1080.png",
+      "share_url": "/court-actors/nc/judge_kimble/share.html"
+    },
+    {
+      "slug": "kaaneetha_morning",
+      "state_abbr": "NC",
+      "display_name": "Kaaneetha Morning",
+      "canonical_name": "Kaaneetha Morning",
+      "actor_bucket_key": "kanetha morning|NC",
+      "photo_url": null,
+      "share_url": "/court-actors/nc/kaaneetha_morning/share.html"
+    },
+    {
+      "slug": "keith_mason",
+      "state_abbr": "NC",
+      "display_name": "Keith B. Mason",
+      "canonical_name": "Keith B. Mason",
+      "actor_bucket_key": "keith mason|NC",
+      "photo_url": "/court-actors/nc/keith_mason/image_1080.png",
+      "share_url": "/court-actors/nc/keith_mason/share.html"
+    },
+    {
+      "slug": "latesha_boseman",
+      "state_abbr": "NC",
+      "display_name": "Latesha Boseman",
+      "canonical_name": "Latesha Boseman",
+      "actor_bucket_key": "latesha boseman|NC",
+      "photo_url": "/court-actors/nc/latesha_boseman/image_1080.png",
+      "share_url": "/court-actors/nc/latesha_boseman/share.html"
+    },
+    {
+      "slug": "lori_leggett",
+      "state_abbr": "NC",
+      "display_name": "Lori leggett",
+      "canonical_name": "Lori leggett",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/nc/lori_leggett/image_1080.png",
+      "share_url": "/court-actors/nc/lori_leggett/share.html"
+    },
+    {
+      "slug": "mario_white",
+      "state_abbr": "NC",
+      "display_name": "Mario M. White",
+      "canonical_name": "Mario M. White",
+      "actor_bucket_key": "mario white|NC",
+      "photo_url": "/court-actors/nc/mario_white/image_1080.png",
+      "share_url": "/court-actors/nc/mario_white/share.html"
+    },
+    {
+      "slug": "matthew_jackson",
+      "state_abbr": "NC",
+      "display_name": "Matthew Jackson",
+      "canonical_name": "Matthew Jackson",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/nc/matthew_jackson/image_1080.png",
+      "share_url": "/court-actors/nc/matthew_jackson/share.html"
+    },
+    {
+      "slug": "monica_moore",
+      "state_abbr": "NC",
+      "display_name": "Monica Moore",
+      "canonical_name": "Monica Moore",
+      "actor_bucket_key": "monica more|NC",
+      "photo_url": null,
+      "share_url": "/court-actors/nc/monica_moore/share.html"
+    },
+    {
+      "slug": "regina_parker",
+      "state_abbr": "NC",
+      "display_name": "Regina Parker",
+      "canonical_name": "Regina Parker",
+      "actor_bucket_key": "regina parker|NC",
+      "photo_url": "/court-actors/nc/regina_parker/image_1080.png",
+      "share_url": "/court-actors/nc/regina_parker/share.html"
+    },
+    {
+      "slug": "robert_s_pleasant",
+      "state_abbr": "NC",
+      "display_name": "Robert S. Pleasant",
+      "canonical_name": "Robert S. Pleasant",
+      "actor_bucket_key": "robert pleasant|NC",
+      "photo_url": "/court-actors/nc/robert_s_pleasant/image_1080.png",
+      "share_url": "/court-actors/nc/robert_s_pleasant/share.html"
+    },
+    {
+      "slug": "samantha_keech",
+      "state_abbr": "NC",
+      "display_name": "Samantha Keech",
+      "canonical_name": "Samantha Keech",
+      "actor_bucket_key": "samantha kech|NC",
+      "photo_url": "/court-actors/nc/samantha_keech/image_1080.png",
+      "share_url": "/court-actors/nc/samantha_keech/share.html"
+    },
+    {
+      "slug": "shy_kendra_lawson",
+      "state_abbr": "NC",
+      "display_name": "Shy-kendra Lawson",
+      "canonical_name": "Shy-kendra Lawson",
+      "actor_bucket_key": "shy-kendra lawson|NC",
+      "photo_url": "/court-actors/nc/shy_kendra_lawson/image_1080.png",
+      "share_url": "/court-actors/nc/shy_kendra_lawson/share.html"
+    },
+    {
+      "slug": "tammy_smith",
+      "state_abbr": "NC",
+      "display_name": "Tammy Smith",
+      "canonical_name": "Tammy Smith",
+      "actor_bucket_key": "tamy smith|NC",
+      "photo_url": "/court-actors/nc/tammy_smith/image_1080.png",
+      "share_url": "/court-actors/nc/tammy_smith/share.html"
+    },
+    {
+      "slug": "tom_brandon_iii",
+      "state_abbr": "NC",
+      "display_name": "Tom Brandon III",
+      "canonical_name": "Tom Brandon III",
+      "actor_bucket_key": "tom brandon|NC",
+      "photo_url": null,
+      "share_url": "/court-actors/nc/tom_brandon_iii/share.html"
+    },
+    {
+      "slug": "ward_scott",
+      "state_abbr": "NC",
+      "display_name": "Ward Douglas Scott",
+      "canonical_name": "Ward Douglas Scott",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/nc/ward_scott/image_1080.png",
+      "share_url": "/court-actors/nc/ward_scott/share.html"
+    },
+    {
+      "slug": "amanda_mathis",
+      "state_abbr": "NE",
+      "display_name": "Amanda Mathis",
+      "canonical_name": "Amanda Mathis",
+      "actor_bucket_key": "amanda mathis|NE",
+      "photo_url": null,
+      "share_url": "/court-actors/ne/amanda_mathis/share.html"
+    },
+    {
+      "slug": "audrey_long",
+      "state_abbr": "NE",
+      "display_name": "Audrey Long",
+      "canonical_name": "Audrey Long",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/ne/audrey_long/image_1080.png",
+      "share_url": "/court-actors/ne/audrey_long/share.html"
+    },
+    {
+      "slug": "dr_gage_stermenski",
+      "state_abbr": "NE",
+      "display_name": "Dr. Gage Stermenski",
+      "canonical_name": "Dr. Gage Stermenski",
+      "actor_bucket_key": "gage stermenski|NE",
+      "photo_url": "/court-actors/ne/dr_gage_stermenski/image_1080.png",
+      "share_url": "/court-actors/ne/dr_gage_stermenski/share.html"
+    },
+    {
+      "slug": "james_worden",
+      "state_abbr": "NE",
+      "display_name": "James Worden",
+      "canonical_name": "James Worden",
+      "actor_bucket_key": "james worden|NE",
+      "photo_url": "/court-actors/ne/james_worden/image_1080.png",
+      "share_url": "/court-actors/ne/james_worden/share.html"
+    },
+    {
+      "slug": "katy_reichert",
+      "state_abbr": "NE",
+      "display_name": "Katy Reichert",
+      "canonical_name": "Katy Reichert",
+      "actor_bucket_key": "katy reichert|NE",
+      "photo_url": "/court-actors/ne/katy_reichert/image_1080.png",
+      "share_url": "/court-actors/ne/katy_reichert/share.html"
+    },
+    {
+      "slug": "kirk_m_fellhoelter",
+      "state_abbr": "NE",
+      "display_name": "Kirk M. Fellhoelter",
+      "canonical_name": "Kirk M. Fellhoelter",
+      "actor_bucket_key": "kirk felhoelter|NE",
+      "photo_url": "/court-actors/ne/kirk_m_fellhoelter/image_1080.png",
+      "share_url": "/court-actors/ne/kirk_m_fellhoelter/share.html"
+    },
+    {
+      "slug": "edward_b_tenney_ii",
+      "state_abbr": "NH",
+      "display_name": "TENNEY",
+      "canonical_name": "TENNEY",
+      "actor_bucket_key": "edward teney|NH",
+      "photo_url": null,
+      "share_url": "/court-actors/nh/edward_b_tenney_ii/share.html"
+    },
+    {
+      "slug": "teresa_mahoney_mullen",
+      "state_abbr": "NH",
+      "display_name": "Theresa Mahoney Mullen",
+      "canonical_name": "Theresa Mahoney Mullen",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/nh/teresa_mahoney_mullen/image_1080.png",
+      "share_url": "/court-actors/nh/teresa_mahoney_mullen/share.html"
+    },
+    {
+      "slug": "jane_c_levy",
+      "state_abbr": "NM",
+      "display_name": "Jane C. Levy",
+      "canonical_name": "Jane C. Levy",
+      "actor_bucket_key": "jane c levy|NM",
+      "photo_url": "/court-actors/nm/jane_c_levy/image_1080.png",
+      "share_url": "/court-actors/nm/jane_c_levy/share.html"
+    },
+    {
+      "slug": "adriana_rincon_white",
+      "state_abbr": "NV",
+      "display_name": "Adriana Rincon White",
+      "canonical_name": "Adriana Rincon White",
+      "actor_bucket_key": "adriana rincon white|NV",
+      "photo_url": "/court-actors/nv/adriana_rincon_white/image_1080.png",
+      "share_url": "/court-actors/nv/adriana_rincon_white/share.html"
+    },
+    {
+      "slug": "paige_bollinger",
+      "state_abbr": "NV",
+      "display_name": "Paige Bollinger",
+      "canonical_name": "Paige Bollinger",
+      "actor_bucket_key": "paige bolinger|NV",
+      "photo_url": null,
+      "share_url": "/court-actors/nv/paige_bollinger/share.html"
+    },
+    {
+      "slug": "paige_dollinger",
+      "state_abbr": "NV",
+      "display_name": "Paige Dollinger",
+      "canonical_name": "Paige Dollinger",
+      "actor_bucket_key": "paige dollinger|NV",
+      "photo_url": "/court-actors/nv/paige_dollinger/image_1080.png",
+      "share_url": "/court-actors/nv/paige_dollinger/share.html"
+    },
+    {
+      "slug": "adam_bello",
+      "state_abbr": "NY",
+      "display_name": "Adam J. Bello",
+      "canonical_name": "Adam J. Bello",
+      "actor_bucket_key": "adam belo|NY",
+      "photo_url": "/court-actors/ny/adam_bello/image_1080.png",
+      "share_url": "/court-actors/ny/adam_bello/share.html"
+    },
+    {
+      "slug": "anthony_mcginty",
+      "state_abbr": "NY",
+      "display_name": "Anthony McGinty",
+      "canonical_name": "Anthony McGinty",
+      "actor_bucket_key": "anthony mcginty|NY",
+      "photo_url": "/court-actors/ny/anthony_mcginty/image_1080.png",
+      "share_url": "/court-actors/ny/anthony_mcginty/share.html"
+    },
+    {
+      "slug": "elizabeth_faulkner",
+      "state_abbr": "NY",
+      "display_name": "Elizabeth Faulkner",
+      "canonical_name": "Elizabeth Faulkner",
+      "actor_bucket_key": "elizabeth faulkner|NY",
+      "photo_url": "/court-actors/ny/elizabeth_faulkner/image_1080.png",
+      "share_url": "/court-actors/ny/elizabeth_faulkner/share.html"
+    },
+    {
+      "slug": "jessica_rachwal",
+      "state_abbr": "NY",
+      "display_name": "Jessica Rachwal",
+      "canonical_name": "Jessica Rachwal",
+      "actor_bucket_key": "jesica rachwal|NY",
+      "photo_url": null,
+      "share_url": "/court-actors/ny/jessica_rachwal/share.html"
+    },
+    {
+      "slug": "john_j_leo",
+      "state_abbr": "NY",
+      "display_name": "John J. Leo",
+      "canonical_name": "John J. Leo",
+      "actor_bucket_key": "john leo|NY",
+      "photo_url": "/court-actors/ny/john_j_leo/image_1080.png",
+      "share_url": "/court-actors/ny/john_j_leo/share.html"
+    },
+    {
+      "slug": "julian_schreibman",
+      "state_abbr": "NY",
+      "display_name": "Julian Schreibman",
+      "canonical_name": "Julian Schreibman",
+      "actor_bucket_key": "julian schreibman|NY",
+      "photo_url": "/court-actors/ny/julian_schreibman/image_1080.png",
+      "share_url": "/court-actors/ny/julian_schreibman/share.html"
+    },
+    {
+      "slug": "kelly_brinkworth",
+      "state_abbr": "NY",
+      "display_name": "Kelly A brinkworth",
+      "canonical_name": "Kelly A brinkworth",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/ny/kelly_brinkworth/image_1080.png",
+      "share_url": "/court-actors/ny/kelly_brinkworth/share.html"
+    },
+    {
+      "slug": "kristina_kitty_karle",
+      "state_abbr": "NY",
+      "display_name": "Kristina \"Kitty\" Karle",
+      "canonical_name": "Kristina \"Kitty\" Karle",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/ny/kristina_kitty_karle/image_1080.png",
+      "share_url": "/court-actors/ny/kristina_kitty_karle/share.html"
+    },
+    {
+      "slug": "pat_gallagher",
+      "state_abbr": "NY",
+      "display_name": "Pat Gallagher",
+      "canonical_name": "Pat Gallagher",
+      "actor_bucket_key": "pat galagher|NY",
+      "photo_url": "/court-actors/ny/pat_gallagher/image_1080.png",
+      "share_url": "/court-actors/ny/pat_gallagher/share.html"
+    },
+    {
+      "slug": "rachel_k_saeli_marrero",
+      "state_abbr": "NY",
+      "display_name": "RACHEL K. SAELI (Marrero)",
+      "canonical_name": "RACHEL K. SAELI (Marrero)",
+      "actor_bucket_key": "rachel saeli (marero)|NY",
+      "photo_url": null,
+      "share_url": "/court-actors/ny/rachel_k_saeli_marrero/share.html"
+    },
+    {
+      "slug": "sarah_rakov",
+      "state_abbr": "NY",
+      "display_name": "Sarah Rakov",
+      "canonical_name": "Sarah Rakov",
+      "actor_bucket_key": "sarah rakov|NY",
+      "photo_url": "/court-actors/ny/sarah_rakov/image_1080.png",
+      "share_url": "/court-actors/ny/sarah_rakov/share.html"
+    },
+    {
+      "slug": "adam_wilgus",
+      "state_abbr": "OH",
+      "display_name": "Adam W. Wilgus",
+      "canonical_name": "Adam W. Wilgus",
+      "actor_bucket_key": "adam wilgus|OH",
+      "photo_url": "/court-actors/oh/adam_wilgus/image_1080.png",
+      "share_url": "/court-actors/oh/adam_wilgus/share.html"
+    },
+    {
+      "slug": "aimee_drescher",
+      "state_abbr": "OH",
+      "display_name": "Aimee Drescher",
+      "canonical_name": "Aimee Drescher",
+      "actor_bucket_key": "aime drescher|OH",
+      "photo_url": "/court-actors/oh/aimee_drescher/image_1080.png",
+      "share_url": "/court-actors/oh/aimee_drescher/share.html"
+    },
+    {
+      "slug": "aimee_thomas",
+      "state_abbr": "OH",
+      "display_name": "Dr. Aimee Thomas",
+      "canonical_name": "Dr. Aimee Thomas",
+      "actor_bucket_key": "aime thomas|OH",
+      "photo_url": "/court-actors/oh/aimee_thomas/image_1080.png",
+      "share_url": "/court-actors/oh/aimee_thomas/share.html"
+    },
+    {
+      "slug": "casey_cook",
+      "state_abbr": "OH",
+      "display_name": "Casey Cook",
+      "canonical_name": "Casey Cook",
+      "actor_bucket_key": "casey cook|OH",
+      "photo_url": "/court-actors/oh/casey_cook/image_1080.png",
+      "share_url": "/court-actors/oh/casey_cook/share.html"
+    },
+    {
+      "slug": "christina_marie_joliat",
+      "state_abbr": "OH",
+      "display_name": "Christina Marie Joliat",
+      "canonical_name": "Christina Marie Joliat",
+      "actor_bucket_key": "christina marie joliat|OH",
+      "photo_url": null,
+      "share_url": "/court-actors/oh/christina_marie_joliat/share.html"
+    },
+    {
+      "slug": "christine_sayre",
+      "state_abbr": "OH",
+      "display_name": "Christine Sayre",
+      "canonical_name": "Christine Sayre",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/oh/christine_sayre/image_1080.png",
+      "share_url": "/court-actors/oh/christine_sayre/share.html"
+    },
+    {
+      "slug": "dennis_kirk",
+      "state_abbr": "OH",
+      "display_name": "Dennis Kirk",
+      "canonical_name": "Dennis Kirk",
+      "actor_bucket_key": "denis kirk|OH",
+      "photo_url": "/court-actors/oh/dennis_kirk/image_1080.png",
+      "share_url": "/court-actors/oh/dennis_kirk/share.html"
+    },
+    {
+      "slug": "emily_mothmiller",
+      "state_abbr": "OH",
+      "display_name": "Emily Mothmiller",
+      "canonical_name": "Emily Mothmiller",
+      "actor_bucket_key": "emily mothmiler|OH",
+      "photo_url": "/court-actors/oh/emily_mothmiller/image_1080.png",
+      "share_url": "/court-actors/oh/emily_mothmiller/share.html"
+    },
+    {
+      "slug": "hon_anneka_p_collins",
+      "state_abbr": "OH",
+      "display_name": "Hon. Anneka P. Collins",
+      "canonical_name": "Hon. Anneka P. Collins",
+      "actor_bucket_key": "anika colins|OH",
+      "photo_url": "/court-actors/oh/hon_anneka_p_collins/image_1080.png",
+      "share_url": "/court-actors/oh/hon_anneka_p_collins/share.html"
+    },
+    {
+      "slug": "james_roeder",
+      "state_abbr": "OH",
+      "display_name": "James (Jim) Roeder",
+      "canonical_name": "James (Jim) Roeder",
+      "actor_bucket_key": "james roeder|OH",
+      "photo_url": "/court-actors/oh/james_roeder/image_1080.png",
+      "share_url": "/court-actors/oh/james_roeder/share.html"
+    },
+    {
+      "slug": "jennifer_storer",
+      "state_abbr": "OH",
+      "display_name": "Jennifer Stopper",
+      "canonical_name": "Jennifer Stopper",
+      "actor_bucket_key": "jenifer storer|OH",
+      "photo_url": "/court-actors/oh/jennifer_storer/image_1080.png",
+      "share_url": "/court-actors/oh/jennifer_storer/share.html"
+    },
+    {
+      "slug": "julia_kolber",
+      "state_abbr": "OH",
+      "display_name": "Julia C. Kolber",
+      "canonical_name": "Julia C. Kolber",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/oh/julia_kolber/image_1080.png",
+      "share_url": "/court-actors/oh/julia_kolber/share.html"
+    },
+    {
+      "slug": "katarina_cook",
+      "state_abbr": "OH",
+      "display_name": "Katarina V. Cook",
+      "canonical_name": "Katarina V. Cook",
+      "actor_bucket_key": "katarina cook|OH",
+      "photo_url": "/court-actors/oh/katarina_cook/image_1080.png",
+      "share_url": "/court-actors/oh/katarina_cook/share.html"
+    },
+    {
+      "slug": "kelli_miller",
+      "state_abbr": "OH",
+      "display_name": "Kelli Miller",
+      "canonical_name": "Kelli Miller",
+      "actor_bucket_key": "keli miler|OH",
+      "photo_url": "/court-actors/oh/kelli_miller/image_1080.png",
+      "share_url": "/court-actors/oh/kelli_miller/share.html"
+    },
+    {
+      "slug": "kevin_greer",
+      "state_abbr": "OH",
+      "display_name": "Judge Kevin L. Greer",
+      "canonical_name": "Judge Kevin L. Greer",
+      "actor_bucket_key": "kevin grer|OH",
+      "photo_url": "/court-actors/oh/kevin_greer/image_1080.png",
+      "share_url": "/court-actors/oh/kevin_greer/share.html"
+    },
+    {
+      "slug": "kiefer_king",
+      "state_abbr": "OH",
+      "display_name": "Kiefer King",
+      "canonical_name": "Kiefer King",
+      "actor_bucket_key": "kiefer king|OH",
+      "photo_url": "/court-actors/oh/kiefer_king/image_1080.png",
+      "share_url": "/court-actors/oh/kiefer_king/share.html"
+    },
+    {
+      "slug": "kristen_k_johnson",
+      "state_abbr": "OH",
+      "display_name": "Judge Kristen K. Johnson",
+      "canonical_name": "Judge Kristen K. Johnson",
+      "actor_bucket_key": "kristen johnson|OH",
+      "photo_url": "/court-actors/oh/kristen_k_johnson/image_1080.png",
+      "share_url": "/court-actors/oh/kristen_k_johnson/share.html"
+    },
+    {
+      "slug": "kristina_morris",
+      "state_abbr": "OH",
+      "display_name": "Kristina Morris",
+      "canonical_name": "Kristina Morris",
+      "actor_bucket_key": "kristina moris|OH",
+      "photo_url": "/court-actors/oh/kristina_morris/image_1080.png",
+      "share_url": "/court-actors/oh/kristina_morris/share.html"
+    },
+    {
+      "slug": "magistrate_deborah_drexler",
+      "state_abbr": "OH",
+      "display_name": "Magistrate Deborah Drexler",
+      "canonical_name": "Magistrate Deborah Drexler",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/oh/magistrate_deborah_drexler/image_1080.png",
+      "share_url": "/court-actors/oh/magistrate_deborah_drexler/share.html"
+    },
+    {
+      "slug": "randall_galbraith",
+      "state_abbr": "OH",
+      "display_name": "Randall Galbraith",
+      "canonical_name": "Randall Galbraith",
+      "actor_bucket_key": "randal galbraith|OH",
+      "photo_url": "/court-actors/oh/randall_galbraith/image_1080.png",
+      "share_url": "/court-actors/oh/randall_galbraith/share.html"
+    },
+    {
+      "slug": "rhonda_burgraff",
+      "state_abbr": "OH",
+      "display_name": "Rhonda G. Burggraf",
+      "canonical_name": "Rhonda G. Burggraf",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/oh/rhonda_burgraff/image_1080.png",
+      "share_url": "/court-actors/oh/rhonda_burgraff/share.html"
+    },
+    {
+      "slug": "susan_steinhauer",
+      "state_abbr": "OH",
+      "display_name": "Susan K. Steinhauer",
+      "canonical_name": "Susan K. Steinhauer",
+      "actor_bucket_key": "susan steinhauer|OH",
+      "photo_url": "/court-actors/oh/susan_steinhauer/image_1080.png",
+      "share_url": "/court-actors/oh/susan_steinhauer/share.html"
+    },
+    {
+      "slug": "aaron_bundy",
+      "state_abbr": "OK",
+      "display_name": "Aaron Bundy",
+      "canonical_name": "Aaron Bundy",
+      "actor_bucket_key": "aron bundy|OK",
+      "photo_url": "/court-actors/ok/aaron_bundy/image_1080.png",
+      "share_url": "/court-actors/ok/aaron_bundy/share.html"
+    },
+    {
+      "slug": "amy_newberry",
+      "state_abbr": "OK",
+      "display_name": "Amy Newberry",
+      "canonical_name": "Amy Newberry",
+      "actor_bucket_key": "amy newbery|OK",
+      "photo_url": "/court-actors/ok/amy_newberry/image_1080.png",
+      "share_url": "/court-actors/ok/amy_newberry/share.html"
+    },
+    {
+      "slug": "ann_keele",
+      "state_abbr": "OK",
+      "display_name": "Ann Keele",
+      "canonical_name": "Ann Keele",
+      "actor_bucket_key": "ann kele|OK",
+      "photo_url": "/court-actors/ok/ann_keele/image_1080.png",
+      "share_url": "/court-actors/ok/ann_keele/share.html"
+    },
+    {
+      "slug": "cynthia_pickering",
+      "state_abbr": "OK",
+      "display_name": "Cynthia Pickering",
+      "canonical_name": "Cynthia Pickering",
+      "actor_bucket_key": "cynthia pickering|OK",
+      "photo_url": "/court-actors/ok/cynthia_pickering/image_1080.png",
+      "share_url": "/court-actors/ok/cynthia_pickering/share.html"
+    },
+    {
+      "slug": "dr_william_b_berman",
+      "state_abbr": "OK",
+      "display_name": "Dr. William B. Berman",
+      "canonical_name": "Dr. William B. Berman",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/ok/dr_william_b_berman/image_1080.png",
+      "share_url": "/court-actors/ok/dr_william_b_berman/share.html"
+    },
+    {
+      "slug": "emily_mueller",
+      "state_abbr": "OK",
+      "display_name": "Emily Mueller",
+      "canonical_name": "Emily Mueller",
+      "actor_bucket_key": "emily mueler|OK",
+      "photo_url": "/court-actors/ok/emily_mueller/image_1080.png",
+      "share_url": "/court-actors/ok/emily_mueller/share.html"
+    },
+    {
+      "slug": "jamie_vogt",
+      "state_abbr": "OK",
+      "display_name": "Jamie Vogt",
+      "canonical_name": "Jamie Vogt",
+      "actor_bucket_key": "jamie vogt|OK",
+      "photo_url": "/court-actors/ok/jamie_vogt/image_1080.png",
+      "share_url": "/court-actors/ok/jamie_vogt/share.html"
+    },
+    {
+      "slug": "jordan_dalgleish",
+      "state_abbr": "OK",
+      "display_name": "Jordan Dalgleish",
+      "canonical_name": "Jordan Dalgleish",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/ok/jordan_dalgleish/image_1080.png",
+      "share_url": "/court-actors/ok/jordan_dalgleish/share.html"
+    },
+    {
+      "slug": "kelli_kelso",
+      "state_abbr": "OK",
+      "display_name": "Kelli Kelso",
+      "canonical_name": "Kelli Kelso",
+      "actor_bucket_key": "keli kelso|OK",
+      "photo_url": "/court-actors/ok/kelli_kelso/image_1080.png",
+      "share_url": "/court-actors/ok/kelli_kelso/share.html"
+    },
+    {
+      "slug": "kim_conyers",
+      "state_abbr": "OK",
+      "display_name": "Kim Conyers",
+      "canonical_name": "Kim Conyers",
+      "actor_bucket_key": "kim conyers|OK",
+      "photo_url": "/court-actors/ok/kim_conyers/image_1080.png",
+      "share_url": "/court-actors/ok/kim_conyers/share.html"
+    },
+    {
+      "slug": "kristin_tipps",
+      "state_abbr": "OK",
+      "display_name": "Kristin Tipps",
+      "canonical_name": "Kristin Tipps",
+      "actor_bucket_key": "kristin tips|OK",
+      "photo_url": "/court-actors/ok/kristin_tipps/image_1080.png",
+      "share_url": "/court-actors/ok/kristin_tipps/share.html"
+    },
+    {
+      "slug": "linda_van_valkenburg",
+      "state_abbr": "OK",
+      "display_name": "Linda Van Valkenburg",
+      "canonical_name": "Linda Van Valkenburg",
+      "actor_bucket_key": "linda van valkenburg|OK",
+      "photo_url": "/court-actors/ok/linda_van_valkenburg/image_1080.png",
+      "share_url": "/court-actors/ok/linda_van_valkenburg/share.html"
+    },
+    {
+      "slug": "louis_alvin_luke_duel_jr",
+      "state_abbr": "OK",
+      "display_name": "Louis Duel",
+      "canonical_name": "Louis Duel",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/ok/louis_alvin_luke_duel_jr/image_1080.png",
+      "share_url": "/court-actors/ok/louis_alvin_luke_duel_jr/share.html"
+    },
+    {
+      "slug": "nicole_warren",
+      "state_abbr": "OK",
+      "display_name": "Nicole warren",
+      "canonical_name": "Nicole warren",
+      "actor_bucket_key": "nicole waren|OK",
+      "photo_url": null,
+      "share_url": "/court-actors/ok/nicole_warren/share.html"
+    },
+    {
+      "slug": "rob_hopkins",
+      "state_abbr": "OK",
+      "display_name": "Rob Hopkins",
+      "canonical_name": "Rob Hopkins",
+      "actor_bucket_key": "rob hopkins|OK",
+      "photo_url": "/court-actors/ok/rob_hopkins/image_1080.png",
+      "share_url": "/court-actors/ok/rob_hopkins/share.html"
+    },
+    {
+      "slug": "robert_danaher",
+      "state_abbr": "OK",
+      "display_name": "Robert Danaher",
+      "canonical_name": "Robert Danaher",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/ok/robert_danaher/image_1080.png",
+      "share_url": "/court-actors/ok/robert_danaher/share.html"
+    },
+    {
+      "slug": "landon_poppleton",
+      "state_abbr": "OR",
+      "display_name": "Landon Poppleton",
+      "canonical_name": "Landon Poppleton",
+      "actor_bucket_key": "landon popleton|OR",
+      "photo_url": "/court-actors/or/landon_poppleton/image_1080.png",
+      "share_url": "/court-actors/or/landon_poppleton/share.html"
+    },
+    {
+      "slug": "dr_eric_bernstein",
+      "state_abbr": "PA",
+      "display_name": "Dr. Eric Bernstein",
+      "canonical_name": "Dr. Eric Bernstein",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/pa/dr_eric_bernstein/image_1080.png",
+      "share_url": "/court-actors/pa/dr_eric_bernstein/share.html"
+    },
+    {
+      "slug": "ri_dcyf",
+      "state_abbr": "RI",
+      "display_name": "RI DCYF",
+      "canonical_name": "RI DCYF",
+      "actor_bucket_key": "ri dcyf|RI",
+      "photo_url": "/court-actors/ri/ri_dcyf/image_1080.png",
+      "share_url": "/court-actors/ri/ri_dcyf/share.html"
+    },
+    {
+      "slug": "amanda_mueller",
+      "state_abbr": "SC",
+      "display_name": "Amanda Mueller",
+      "canonical_name": "Amanda Mueller",
+      "actor_bucket_key": "amanda mueler|SC",
+      "photo_url": "/court-actors/sc/amanda_mueller/image_1080.png",
+      "share_url": "/court-actors/sc/amanda_mueller/share.html"
+    },
+    {
+      "slug": "ashby_jones",
+      "state_abbr": "SC",
+      "display_name": "Ashby Jones",
+      "canonical_name": "Ashby Jones",
+      "actor_bucket_key": "ashby jones|SC",
+      "photo_url": "/court-actors/sc/ashby_jones/image_1080.png",
+      "share_url": "/court-actors/sc/ashby_jones/share.html"
+    },
+    {
+      "slug": "christi_zerega",
+      "state_abbr": "SC",
+      "display_name": "Christi Zerega",
+      "canonical_name": "Christi Zerega",
+      "actor_bucket_key": "christi zerega|SC",
+      "photo_url": "/court-actors/sc/christi_zerega/image_1080.png",
+      "share_url": "/court-actors/sc/christi_zerega/share.html"
+    },
+    {
+      "slug": "coreen_b_khoury",
+      "state_abbr": "SC",
+      "display_name": "Coreen khoury",
+      "canonical_name": "Coreen khoury",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/sc/coreen_b_khoury/image_1080.png",
+      "share_url": "/court-actors/sc/coreen_b_khoury/share.html"
+    },
+    {
+      "slug": "elizabeth_stringer",
+      "state_abbr": "SC",
+      "display_name": "Elizabeth Stringer",
+      "canonical_name": "Elizabeth Stringer",
+      "actor_bucket_key": "elizabeth stringer|SC",
+      "photo_url": null,
+      "share_url": "/court-actors/sc/elizabeth_stringer/share.html"
+    },
+    {
+      "slug": "greg_seigler",
+      "state_abbr": "SC",
+      "display_name": "Greg Seigler",
+      "canonical_name": "Greg Seigler",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/sc/greg_seigler/image_1080.png",
+      "share_url": "/court-actors/sc/greg_seigler/share.html"
+    },
+    {
+      "slug": "meredith_thompson_loftis",
+      "state_abbr": "SC",
+      "display_name": "Meredith Thompson Loftis",
+      "canonical_name": "Meredith Thompson Loftis",
+      "actor_bucket_key": null,
+      "photo_url": null,
+      "share_url": "/court-actors/sc/meredith_thompson_loftis/share.html"
+    },
+    {
+      "slug": "michelle_hurley",
+      "state_abbr": "SC",
+      "display_name": "Michelle Hurley",
+      "canonical_name": "Michelle Hurley",
+      "actor_bucket_key": "michele hurley|SC",
+      "photo_url": "/court-actors/sc/michelle_hurley/image_1080.png",
+      "share_url": "/court-actors/sc/michelle_hurley/share.html"
+    },
+    {
+      "slug": "michelle_s_gorski",
+      "state_abbr": "SC",
+      "display_name": "Michelle Smith Gorski",
+      "canonical_name": "Michelle Smith Gorski",
+      "actor_bucket_key": "michele gorski|SC",
+      "photo_url": "/court-actors/sc/michelle_s_gorski/image_1080.png",
+      "share_url": "/court-actors/sc/michelle_s_gorski/share.html"
+    },
+    {
+      "slug": "mindy_zimmerman",
+      "state_abbr": "SC",
+      "display_name": "Mindy W. Zimmerman",
+      "canonical_name": "Mindy W. Zimmerman",
+      "actor_bucket_key": "mindy zimerman|SC",
+      "photo_url": "/court-actors/sc/mindy_zimmerman/image_1080.png",
+      "share_url": "/court-actors/sc/mindy_zimmerman/share.html"
+    },
+    {
+      "slug": "monet_pincus",
+      "state_abbr": "SC",
+      "display_name": "Mon\u00e9t S. Pincus",
+      "canonical_name": "Mon\u00e9t S. Pincus",
+      "actor_bucket_key": "monet pincus|SC",
+      "photo_url": null,
+      "share_url": "/court-actors/sc/monet_pincus/share.html"
+    },
+    {
+      "slug": "nancy_jordan",
+      "state_abbr": "SC",
+      "display_name": "Nancy T. Jordan",
+      "canonical_name": "Nancy T. Jordan",
+      "actor_bucket_key": "nancy jordan|SC",
+      "photo_url": "/court-actors/sc/nancy_jordan/image_1080.png",
+      "share_url": "/court-actors/sc/nancy_jordan/share.html"
+    },
+    {
+      "slug": "robert_newton",
+      "state_abbr": "SC",
+      "display_name": "Robert E. Newton",
+      "canonical_name": "Robert E. Newton",
+      "actor_bucket_key": "robert newton|SC",
+      "photo_url": "/court-actors/sc/robert_newton/image_1080.png",
+      "share_url": "/court-actors/sc/robert_newton/share.html"
+    },
+    {
+      "slug": "rochelle_conits",
+      "state_abbr": "SC",
+      "display_name": "Rochelle Conits",
+      "canonical_name": "Rochelle Conits",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/sc/rochelle_conits/image_1080.png",
+      "share_url": "/court-actors/sc/rochelle_conits/share.html"
+    },
+    {
+      "slug": "sadia_upright",
+      "state_abbr": "SC",
+      "display_name": "Sadia Upright",
+      "canonical_name": "Sadia Upright",
+      "actor_bucket_key": "sadia upright|SC",
+      "photo_url": "/court-actors/sc/sadia_upright/image_1080.png",
+      "share_url": "/court-actors/sc/sadia_upright/share.html"
+    },
+    {
+      "slug": "samer_touma",
+      "state_abbr": "SC",
+      "display_name": "Samer Touma",
+      "canonical_name": "Samer Touma",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/sc/samer_touma/image_1080.png",
+      "share_url": "/court-actors/sc/samer_touma/share.html"
+    },
+    {
+      "slug": "stephanie_fajardo",
+      "state_abbr": "SC",
+      "display_name": "Stephanie Fajardo",
+      "canonical_name": "Stephanie Fajardo",
+      "actor_bucket_key": "stephanie fajardo|SC",
+      "photo_url": "/court-actors/sc/stephanie_fajardo/image_1080.png",
+      "share_url": "/court-actors/sc/stephanie_fajardo/share.html"
+    },
+    {
+      "slug": "wendy_bowen",
+      "state_abbr": "SC",
+      "display_name": "Wendy Bowen",
+      "canonical_name": "Wendy Bowen",
+      "actor_bucket_key": "wendy bowen|SC",
+      "photo_url": null,
+      "share_url": "/court-actors/sc/wendy_bowen/share.html"
+    },
+    {
+      "slug": "darrell_l_scarlett",
+      "state_abbr": "TN",
+      "display_name": "Darrell L. Scarlett",
+      "canonical_name": "Darrell L. Scarlett",
+      "actor_bucket_key": "darel scarlet|TN",
+      "photo_url": "/court-actors/tn/darrell_l_scarlett/image_1080.png",
+      "share_url": "/court-actors/tn/darrell_l_scarlett/share.html"
+    },
+    {
+      "slug": "dianna_russell",
+      "state_abbr": "TN",
+      "display_name": "Dianna Russell",
+      "canonical_name": "Dianna Russell",
+      "actor_bucket_key": "diana rusel|TN",
+      "photo_url": "/court-actors/tn/dianna_russell/image_1080.png",
+      "share_url": "/court-actors/tn/dianna_russell/share.html"
+    },
+    {
+      "slug": "joseph_woody_woodruff",
+      "state_abbr": "TN",
+      "display_name": "Joseph \"Woody\" Woodruff",
+      "canonical_name": "Joseph \"Woody\" Woodruff",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/tn/joseph_woody_woodruff/image_1080.png",
+      "share_url": "/court-actors/tn/joseph_woody_woodruff/share.html"
+    },
+    {
+      "slug": "lori_walker",
+      "state_abbr": "TN",
+      "display_name": "Lori Walker",
+      "canonical_name": "Lori Walker",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/tn/lori_walker/image_1080.png",
+      "share_url": "/court-actors/tn/lori_walker/share.html"
+    },
+    {
+      "slug": "magistrate_angela_blevins",
+      "state_abbr": "TN",
+      "display_name": "Angela Blevins",
+      "canonical_name": "Angela Blevins",
+      "actor_bucket_key": "angela blevins|TN",
+      "photo_url": "/court-actors/tn/magistrate_angela_blevins/image_1080.png",
+      "share_url": "/court-actors/tn/magistrate_angela_blevins/share.html"
+    },
+    {
+      "slug": "magistrate_blevins",
+      "state_abbr": "TN",
+      "display_name": "Angela Blevins - magistrate",
+      "canonical_name": "Angela Blevins - magistrate",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/tn/magistrate_blevins/image_1080.png",
+      "share_url": "/court-actors/tn/magistrate_blevins/share.html"
+    },
+    {
+      "slug": "robert_huddleston",
+      "state_abbr": "TN",
+      "display_name": "Robert Huddleston'",
+      "canonical_name": "Robert Huddleston'",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/tn/robert_huddleston/image_1080.png",
+      "share_url": "/court-actors/tn/robert_huddleston/share.html"
+    },
+    {
+      "slug": "scott_kimberly",
+      "state_abbr": "TN",
+      "display_name": "Scott Kimberley",
+      "canonical_name": "Scott Kimberley",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/tn/scott_kimberly/image_1080.png",
+      "share_url": "/court-actors/tn/scott_kimberly/share.html"
+    },
+    {
+      "slug": "w_scott_kimberly",
+      "state_abbr": "TN",
+      "display_name": "Kimberly Turner",
+      "canonical_name": "Kimberly Turner",
+      "actor_bucket_key": "w scot kimberly|TN",
+      "photo_url": null,
+      "share_url": "/court-actors/tn/w_scott_kimberly/share.html"
+    },
+    {
+      "slug": "gabriela_garcia",
+      "state_abbr": "TX",
+      "display_name": "Gabriela Garcia",
+      "canonical_name": "Gabriela Garcia",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/tx/gabriela_garcia/image_1080.png",
+      "share_url": "/court-actors/tx/gabriela_garcia/share.html"
+    },
+    {
+      "slug": "greggory_lundberg",
+      "state_abbr": "TX",
+      "display_name": "Greggory Lundberg",
+      "canonical_name": "Greggory Lundberg",
+      "actor_bucket_key": "greggory lundberg|TX",
+      "photo_url": "/court-actors/tx/greggory_lundberg/image_1080.png",
+      "share_url": "/court-actors/tx/greggory_lundberg/share.html"
+    },
+    {
+      "slug": "jean_lee",
+      "state_abbr": "TX",
+      "display_name": "Jean Lee",
+      "canonical_name": "Jean Lee",
+      "actor_bucket_key": "jean lee|TX",
+      "photo_url": "/court-actors/tx/jean_lee/image_1080.png",
+      "share_url": "/court-actors/tx/jean_lee/share.html"
+    },
+    {
+      "slug": "judge_william_doug_wallace",
+      "state_abbr": "TX",
+      "display_name": "Judge William \"Doug\" Wallace",
+      "canonical_name": "Judge William \"Doug\" Wallace",
+      "actor_bucket_key": "wiliam doug walace|TX",
+      "photo_url": "/court-actors/tx/judge_william_doug_wallace/image_1080.png",
+      "share_url": "/court-actors/tx/judge_william_doug_wallace/share.html"
+    },
+    {
+      "slug": "karen_alexander",
+      "state_abbr": "TX",
+      "display_name": "Karen Alexander",
+      "canonical_name": "Karen Alexander",
+      "actor_bucket_key": "karen alexander|TX",
+      "photo_url": "/court-actors/tx/karen_alexander/image_1080.png",
+      "share_url": "/court-actors/tx/karen_alexander/share.html"
+    },
+    {
+      "slug": "karl_hays",
+      "state_abbr": "TX",
+      "display_name": "Karl Hays",
+      "canonical_name": "Karl Hays",
+      "actor_bucket_key": "karl hays|TX",
+      "photo_url": "/court-actors/tx/karl_hays/image_1080.png",
+      "share_url": "/court-actors/tx/karl_hays/share.html"
+    },
+    {
+      "slug": "kelly_bernstein",
+      "state_abbr": "TX",
+      "display_name": "Kelly Bernstein",
+      "canonical_name": "Kelly Bernstein",
+      "actor_bucket_key": "kely bernstein|TX",
+      "photo_url": "/court-actors/tx/kelly_bernstein/image_1080.png",
+      "share_url": "/court-actors/tx/kelly_bernstein/share.html"
+    },
+    {
+      "slug": "lindsey_wynne",
+      "state_abbr": "TX",
+      "display_name": "Lindsey Wynne",
+      "canonical_name": "Lindsey Wynne",
+      "actor_bucket_key": "lindsey wyne|TX",
+      "photo_url": "/court-actors/tx/lindsey_wynne/image_1080.png",
+      "share_url": "/court-actors/tx/lindsey_wynne/share.html"
+    },
+    {
+      "slug": "lisa_duke",
+      "state_abbr": "TX",
+      "display_name": "Lisa duke",
+      "canonical_name": "Lisa duke",
+      "actor_bucket_key": "lisa duke|TX",
+      "photo_url": "/court-actors/tx/lisa_duke/image_1080.png",
+      "share_url": "/court-actors/tx/lisa_duke/share.html"
+    },
+    {
+      "slug": "monica_rawlins",
+      "state_abbr": "TX",
+      "display_name": "Monica Rawlins",
+      "canonical_name": "Monica Rawlins",
+      "actor_bucket_key": "monica rawlins|TX",
+      "photo_url": "/court-actors/tx/monica_rawlins/image_1080.png",
+      "share_url": "/court-actors/tx/monica_rawlins/share.html"
+    },
+    {
+      "slug": "monica_schocken",
+      "state_abbr": "TX",
+      "display_name": "Dr. Monica Schocken",
+      "canonical_name": "Dr. Monica Schocken",
+      "actor_bucket_key": "monica schocken|TX",
+      "photo_url": "/court-actors/tx/monica_schocken/image_1080.png",
+      "share_url": "/court-actors/tx/monica_schocken/share.html"
+    },
+    {
+      "slug": "tiffany_haertling",
+      "state_abbr": "TX",
+      "display_name": "Tiffany Haertling",
+      "canonical_name": "Tiffany Haertling",
+      "actor_bucket_key": "tifany haertling|TX",
+      "photo_url": "/court-actors/tx/tiffany_haertling/image_1080.png",
+      "share_url": "/court-actors/tx/tiffany_haertling/share.html"
+    },
+    {
+      "slug": "victoria_harvey",
+      "state_abbr": "TX",
+      "display_name": "Victoria Harvey",
+      "canonical_name": "Victoria Harvey",
+      "actor_bucket_key": "victoria harvey|TX",
+      "photo_url": "/court-actors/tx/victoria_harvey/image_1080.png",
+      "share_url": "/court-actors/tx/victoria_harvey/share.html"
+    },
+    {
+      "slug": "wendy_wood_hencerling",
+      "state_abbr": "TX",
+      "display_name": "Wendy Wood Hencerling",
+      "canonical_name": "Wendy Wood Hencerling",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/tx/wendy_wood_hencerling/image_1080.png",
+      "share_url": "/court-actors/tx/wendy_wood_hencerling/share.html"
+    },
+    {
+      "slug": "catherine_conklin",
+      "state_abbr": "UT",
+      "display_name": "Catherine Conklin",
+      "canonical_name": "Catherine Conklin",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/ut/catherine_conklin/image_1080.png",
+      "share_url": "/court-actors/ut/catherine_conklin/share.html"
+    },
+    {
+      "slug": "kyle_hancock",
+      "state_abbr": "UT",
+      "display_name": "Dr Kyle Hancock",
+      "canonical_name": "Dr Kyle Hancock",
+      "actor_bucket_key": null,
+      "photo_url": "/court-actors/ut/kyle_hancock/image_1080.png",
+      "share_url": "/court-actors/ut/kyle_hancock/share.html"
+    },
+    {
+      "slug": "william_singer",
+      "state_abbr": "WA",
+      "display_name": "William Singer",
+      "canonical_name": "William Singer",
+      "actor_bucket_key": "wiliam singer|WA",
+      "photo_url": "/court-actors/wa/william_singer/image_1080.png",
+      "share_url": "/court-actors/wa/william_singer/share.html"
+    },
+    {
+      "slug": "maggie_kuhl",
+      "state_abbr": "WV",
+      "display_name": "Maggie Kuhl",
+      "canonical_name": "Maggie Kuhl",
+      "actor_bucket_key": "magie kuhl|WV",
+      "photo_url": "/court-actors/wv/maggie_kuhl/image_1080.png",
+      "share_url": "/court-actors/wv/maggie_kuhl/share.html"
+    }
+  ]
+}

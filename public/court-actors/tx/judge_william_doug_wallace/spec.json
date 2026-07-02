@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "judge_william_doug_wallace",
+    "display_name": "Judge William \"Doug\" Wallace",
+    "title": "Judge",
+    "first_name": "William \"Doug\"",
+    "last_name": "Wallace",
+    "role": "Judge",
+    "court": "378th judicial district court Ellis county",
+    "county": "Ellis County",
+    "court_or_county": "378th judicial district court Ellis county",
+    "state": "TX",
+    "state_abbr": "TX",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": "wiliam doug walace|TX"
+  },
+  "photo": {
+    "path": "public/court-actors/tx/judge_william_doug_wallace/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 243,
+    "total_submissions": 307,
+    "avg_financial_loss": 232914.17,
+    "avg_months_lost": 32.4,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "TX",
+    "state_family_count": 307,
+    "median_financial_loss": 125500,
+    "median_burden_sample_size": 146,
+    "median_months_lost": 20,
+    "pro_se_pct": 49.2,
+    "pro_se_count": 151,
+    "_pdf_state_family_count": 307,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5314,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Denied due process ignored child abuse medical records refused to allow testimony accepted edited drug tests results edited photos showing father forgot to edit the black eye on four year out on one of them it was pointed out in court by father of judge refused to allow Det Bunster Crimes Against Children to testify interrupts witnesses testifying for mother, interrupts mother tells mother, which is in the transcripts you know you’re not gonna win you know you’re not gonna win this you will go do this psychological evaluation your rapist ex-husband if the psychologist wants to have him participate in it, he will participate in ir it’s up to them I trust them I use them I have a list these aren’t just strangers something like that I believe we have every transcript there might be one that they’ve refused to turn over to her",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Ellis County Texas 378th Judicial District Court"
+      },
+      {
+        "comment_text": "Signed a lifetime order a protection then gave full custody to my ex husband. Refused to hear violations of my order or protection. Ordered me a vexatious litigant without meeting the standards for it ordering me to pay my exes attorneys fees of almost $18,000 plus $25,000 in bond for his future attorneys fees if I wanted to be pro se. Ordered me to do a psych eval with Ben albritton who ended up refusing to take on the case and now made me go to Victoria Harvey. Stated I had to modify my order of protection to see or speak to my children and protect my ex so I cannot report violations of the order of protection. And refused to look at medical records of child abuse, where the hospital made a priority 1 CPS report. CPS never requested the medical records or the police records but went on stand and stated they did.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "378th judicial district court Ellis county"
+      },
+      {
+        "comment_text": "Too many evils to name. I have complaints prepared on both of them",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Ellis County"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/judge_william_doug_wallace",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/tx/judge_william_doug_wallace/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

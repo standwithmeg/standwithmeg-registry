@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "amanda_mathis",
+    "display_name": "Amanda Mathis",
+    "title": "",
+    "first_name": "Amanda",
+    "last_name": "Mathis",
+    "role": "CPS Worker",
+    "court": "Caseworker",
+    "county": "Caseworker",
+    "court_or_county": "Caseworker",
+    "state": "NE",
+    "state_abbr": "NE",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": "amanda mathis|NE"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 35,
+    "total_submissions": 42,
+    "avg_financial_loss": 179170.13,
+    "avg_months_lost": 36.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "NE",
+    "state_family_count": 42,
+    "median_financial_loss": 176750,
+    "median_burden_sample_size": 16,
+    "median_months_lost": 22,
+    "pro_se_pct": 50.0,
+    "pro_se_count": 21,
+    "_pdf_state_family_count": 42,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5207,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "She’s a brand new Caseworker that started in October 2024 and was transferred to my case in March 2025 and was already at the process of removing my children without knowing who I was or who my children are and continued to say that I wouldn’t work with family support workers. When I told her it was a conflict of interest because I had worked for those family support workers. She had lied many times in court.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Caseworker"
+      },
+      {
+        "comment_text": "She was friendly with my ex and listened and believed everything she said without any evidence.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
+      },
+      {
+        "comment_text": "Her supervisor Smith is also bad",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Caseworker"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/amanda_mathis",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ne/amanda_mathis/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

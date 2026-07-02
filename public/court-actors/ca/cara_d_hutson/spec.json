@@ -1,0 +1,102 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "cara_d_hutson",
+    "display_name": "Cara D. Hutson",
+    "title": "",
+    "first_name": "Cara D.",
+    "last_name": "Hutson",
+    "role": "Judge",
+    "court": "San Bernardino",
+    "county": "San Bernardino",
+    "court_or_county": "San Bernardino",
+    "state": "CA",
+    "state_abbr": "CA",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": "cara hutson|CA",
+    "_overrides_applied": [
+      "county",
+      "court_or_county",
+      "display_name",
+      "first_name",
+      "last_name",
+      "role"
+    ]
+  },
+  "photo": {
+    "path": "public/court-actors/ca/cara_d_hutson/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 353,
+    "total_submissions": 439,
+    "avg_financial_loss": 288012.6,
+    "avg_months_lost": 36.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "CA",
+    "state_family_count": 439,
+    "median_financial_loss": 265100,
+    "median_burden_sample_size": 196,
+    "median_months_lost": 20,
+    "pro_se_pct": 58.8,
+    "pro_se_count": 258,
+    "_pdf_state_family_count": 439,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5303,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Failed to report one of my children as a run away had her as present in court but she had already ran away 24hours prior I was aware cause my daughter called me and told me she was off with her boyfriend who knows I can't stand him got my baby to turn herself in a week later but they treated her bad said she won't see her sister again , she ran away the same night I got the police report #s from the placement called San Bernardino police to verify she was already reported. Neither report number was good and nothing as missing or run away by my daughter's name pd put me to sheriff's,nothing then to records nothing! The f kinda bs , failure to protect ?...not by me!shortly after another 2 weeks I went to court list my shit and these dicks act like it's no big deal no one reported a runaway , my daughter then became a victim of domestic violence , cops arrested the bf and left my @5 yo on the street... wtf.i ain't lying you guys WTF,!idk if their looking out for kids at all , more like looking out for traffickers. I went picked my kid up brought her home , they show up remove her and she aeols again , mind you she was not remover from my home .I have no allegations , paternal grandma Biasly takes everything worker says with out question ar evidence, doesn't allow me to spee",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "San Bernardino"
+      },
+      {
+        "comment_text": "“Denied my request without holding a hearing. Ignored evidence showing compliance with court orders. Allowed delays that affected reunification progress. Relied on statements not supported by the record. Did not correct inaccurate information presented in court.” Hon. Cara D. Hutson — Juvenile Court Judge She terminated reunification services based solely on three disputed drug tests despite documented chain‑of‑custody anomalies and withheld clean tests. (Supported by Drug Test Evidence document and Pattern‑of‑Misconduct Declaration.) She terminated reunification services based solely on three disputed drug tests despite documented chain‑of‑custody anomalies and withheld clean tests, ignored my children's cries and letters about the other parent's abuse Presiding Judge — Made decisions based on incomplete and inaccurate information and did not address conflicts of interest raised in the case.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "San Bernardino"
+      },
+      {
+        "comment_text": "Bias, sides with county always.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "San Bernardino"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/cara_d_hutson",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ca/cara_d_hutson/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

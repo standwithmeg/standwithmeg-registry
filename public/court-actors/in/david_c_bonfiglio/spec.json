@@ -1,0 +1,178 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "david_c_bonfiglio",
+    "display_name": "Judge David C Bonfiglio",
+    "title": "Judge",
+    "first_name": "David C",
+    "last_name": "Bonfiglio",
+    "role": "Judge",
+    "court": "Elkhart County",
+    "county": "Elkhart",
+    "court_or_county": "Ellhart Superior Court 6",
+    "state": "Indiana",
+    "state_abbr": "IN",
+    "mention_count": 0,
+    "family_count": 18,
+    "public_family_count": 18,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/in/david_c_bonfiglio/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 128,
+    "total_submissions": 153,
+    "avg_financial_loss": 121922.6,
+    "avg_months_lost": 30.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "IN",
+    "state_family_count": 153,
+    "median_financial_loss": 63875,
+    "median_burden_sample_size": 76,
+    "median_months_lost": 18,
+    "pro_se_pct": 45.8,
+    "pro_se_count": 70,
+    "_pdf_state_family_count": 153,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5298,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 18,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Judge Bonfiglio uses aggressive, hostile and abusive language towards pro se litigants. He’s an embarrassment to the entire county of Elkhart. He gave custody to an abuser without due process. He ignores constitutional rights of parents and families. He would rather destroy families than actually obey the oath he took. I’ve never witnessed a more unhinged judge in my life. He is a disgrace to judges everywhere. He should have removed from the bench years ago, he’s almost 80 years old. He DOES NOT care about children or families at all. He threatens, yells and refuses due process. Judge Bonfiglio is ruining Elkhart County. His family should be embarrassed by his pure lack of empathy for families in his county.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Elkhart"
+      },
+      {
+        "comment_text": "He makes rulings without any due process. He orders GALS and approves their recommendations without any evidence. He orders parents to be evaluated by psychologists that cost thousands who work exclusively for the court. He will issue warrants, contempt threats and fees without due process. He recently gave a father who had 2 lifetime sex offender convictions against 2 young boys, full custody of his young son. That father ended up torturing and killing his young son after receiving full custody. The father has been convicted of murder. The need wont share that it was a family court judge that gave this monster full custody:",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Elkhart"
+      },
+      {
+        "comment_text": "A lawyer took me to the wrong courtroom, and when we realized and went to the right courtroom, the judge told me that their mind was made up and there was nothing that they could do. I would have to re-file to have that court redone and I said what do I do if my son‘s being abused and the lady said report it to CPS so I did and then a month later she turned around and gave him full custody They didn’t wanna listen to me. I told him my son was being abused. No one listened a month later Franklin Elmore was given custody. A year later, Franklin Elmore and his wife killed my son.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Elkhart"
+      },
+      {
+        "comment_text": "He literally leaves all the work to GAL. He the only person that could access the whole trial from the DCS chins case to verify all my claims that I already won. Disregarded what that judge said to keep my daughter w her other siblings and me at 50 50. Like we had been for the prior years up to this.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Superior court 6"
+      },
+      {
+        "comment_text": "Found me in contempt for placing my son in therapy at the recommendation of the detective overseeing the sexual abuse case for my son. Found me in contempt for staying home with my son rather than sending him to preschool despite my husband providing for our family. Ignored sexual abuse concerns.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Elkhart County"
+      },
+      {
+        "comment_text": "Denied my motion without a hearing and ignored evidence in my custody modification case. Allowed the father to have temporary custody of the child based on hearsay without requiring a court order and without being accountable for returning the child to my custody.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Elkhart"
+      },
+      {
+        "comment_text": "He lied on my dad countless times for things he didn’t do and took us out of our home for false allegations. Repeatedly lied on my dad for things he never did. Got us put on foster care for false allegations.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Elkhart"
+      },
+      {
+        "comment_text": "Violated yet another fit mothers due rights process. There was no evidence sworn and no testimonies given. Judgment was made on a 15 minute contested hearing with a flawed biased gal report.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Elkhart 6"
+      },
+      {
+        "comment_text": "Approved a false protection order that's keeping myself away from my daughter with no facts from the athe mother. Not hearing Truth that's supported by facts filed. Giving mother everything",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Elkhart"
+      },
+      {
+        "comment_text": "Removed child at status hearing based solely on father and gal testimony. Did not have a trial based on allegations no evidence. Due process violated at status hearing.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Elkhart county"
+      },
+      {
+        "comment_text": "He allowed my ex-husband to fail to comply with providing proof of income for a child support hearing and just took my ex-husband's claim for his income as fact.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Elkhart"
+      },
+      {
+        "comment_text": "Sided with gal report and wouldn't hear my side. Sided with corrupt gal and refused to hear child abuse police report Sided with corrupt gal",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Elkhart superior 6"
+      },
+      {
+        "comment_text": "He refused to hear m. Gave mom custody after the girls told DCS they were being abused, took a bribe from my kids' mom and her family",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Ellhart Superior Court 6"
+      },
+      {
+        "comment_text": "Denied my attorney to represent me and considered me pro se",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Elkhart"
+      },
+      {
+        "comment_text": "Decided with the gal report when the gal did not like me",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Elkhart"
+      },
+      {
+        "comment_text": "He completely ignores due process of any kind.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Elkhart"
+      },
+      {
+        "comment_text": "Denied motions",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Elkhart"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/david_c_bonfiglio",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/in/david_c_bonfiglio/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

@@ -1,0 +1,75 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "marlo_ross",
+    "display_name": "Marlo Ross",
+    "title": "",
+    "first_name": "Marlo",
+    "last_name": "Ross",
+    "role": "Judge",
+    "court": "Pierce",
+    "county": "Pierce",
+    "court_or_county": "Pierce",
+    "state": "Georgia",
+    "state_abbr": "GA",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "7366ffdc-dd29-4e5c-92e5-34add9b09011",
+    "actor_bucket_key": "marlo ross|GA"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 122,
+    "total_submissions": 149,
+    "avg_financial_loss": 222633.06,
+    "avg_months_lost": 32.5,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "GA",
+    "state_family_count": 149,
+    "median_financial_loss": 148000,
+    "median_burden_sample_size": 84,
+    "median_months_lost": 18,
+    "pro_se_pct": 45.6,
+    "pro_se_count": 68,
+    "_pdf_state_family_count": 149,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5275,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": []
+  },
+  "export_dir": "New Final Post and Capcut template/export/marlo_ross",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ga/marlo_ross/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

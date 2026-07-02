@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "susan_steinhauer",
+    "display_name": "Susan K. Steinhauer",
+    "title": "",
+    "first_name": "Susan K.",
+    "last_name": "Steinhauer",
+    "role": "Judge",
+    "court": "Summit",
+    "county": "Summit",
+    "court_or_county": "Summit",
+    "state": "Ohio",
+    "state_abbr": "OH",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": "susan steinhauer|OH"
+  },
+  "photo": {
+    "path": "public/court-actors/oh/susan_steinhauer/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 205,
+    "total_submissions": 260,
+    "avg_financial_loss": 113532.41,
+    "avg_months_lost": 31.4,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OH",
+    "state_family_count": 260,
+    "median_financial_loss": 81125,
+    "median_burden_sample_size": 126,
+    "median_months_lost": 18,
+    "pro_se_pct": 52.7,
+    "pro_se_count": 137,
+    "_pdf_state_family_count": 260,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5303,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "collusion between opposing counsel and judge to secure the judge a partner position at opposing counsels firm. Stripped me of custody without due process, breaking countless laws and procedures. retaliated for me speaking out by filing a frivolous protection order",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Summit"
+      },
+      {
+        "comment_text": "She was the judge in my case, that initiated father having permanent residential soul custody of my child and me having supervised visits based on a false mental health allegation",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Summit"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/susan_steinhauer",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/oh/susan_steinhauer/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "john_j_leo",
+    "display_name": "John J. Leo",
+    "title": "",
+    "first_name": "John J.",
+    "last_name": "Leo",
+    "role": "Judge",
+    "court": "Suffolk",
+    "county": "Suffolk",
+    "court_or_county": "Suffolk",
+    "state": "New York",
+    "state_abbr": "NY",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "690e2506-b22d-4a19-a376-a8b0f60aa449",
+    "actor_bucket_key": "john leo|NY"
+  },
+  "photo": {
+    "path": "public/court-actors/ny/john_j_leo/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 136,
+    "total_submissions": 171,
+    "avg_financial_loss": 213193.71,
+    "avg_months_lost": 26.4,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "NY",
+    "state_family_count": 171,
+    "median_financial_loss": 165000,
+    "median_burden_sample_size": 69,
+    "median_months_lost": 14,
+    "pro_se_pct": 39.2,
+    "pro_se_count": 67,
+    "_pdf_state_family_count": 171,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5314,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Ignored evidence Yelled in the court room Would not let attorney speak Appointed afc who he has a relationship with Threatened child custody to father Pre judged case before trail Unfair throughout this entire process Screaming yelling throwing hands during court hearings only listening to one side Refusing to let my attorney speak Threatening me with custody of children Pre judging my case before trial",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Suffolk"
+      },
+      {
+        "comment_text": "Highly erratic and inflammatory judge. Signed off on my divorce.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Suffolk"
+      },
+      {
+        "comment_text": "Rips families apart for sport Rips children from parents",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Suffolk"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/john_j_leo",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ny/john_j_leo/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

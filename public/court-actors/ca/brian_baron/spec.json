@@ -1,0 +1,106 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "brian_baron",
+    "display_name": "Brian Baron",
+    "title": "",
+    "first_name": "Brian",
+    "last_name": "Baron",
+    "role": "GAL / Child Representative",
+    "court": "Orange",
+    "county": "Orange",
+    "court_or_county": "Orange",
+    "state": "California",
+    "state_abbr": "CA",
+    "mention_count": 0,
+    "family_count": 5,
+    "public_family_count": 5,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "8b5e7226-cffb-47a7-83cb-30280ee2dd35",
+    "actor_bucket_key": "brian baron|CA"
+  },
+  "photo": {
+    "path": "public/court-actors/ca/brian_baron/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 353,
+    "total_submissions": 439,
+    "avg_financial_loss": 288012.6,
+    "avg_months_lost": 36.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "CA",
+    "state_family_count": 439,
+    "median_financial_loss": 265100,
+    "median_burden_sample_size": 196,
+    "median_months_lost": 20,
+    "pro_se_pct": 58.8,
+    "pro_se_count": 258,
+    "_pdf_state_family_count": 439,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5303,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 5,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Refused to listen to my eldest daughter who was being physically and emotionally abused by her father despite security cam videos. Refused to enforce orders of coparent therapy in which the other party refused to attend with three different ordered therapists.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Orange"
+      },
+      {
+        "comment_text": "Brian Barron close the courtroom due to the false testimony he was giving to the judge. The judge protected the perjury of Bryon Baron and seal the transcript. The appellate court refused to release the transcript.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Orange County"
+      },
+      {
+        "comment_text": "Brian Baron/ GAL/ Minors Counsel is corrupt and makes false allegations against mothers and currently has 12 civil lawsuits filed against him including 2 prior minor clients who he sexually assaulted",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Orange County"
+      },
+      {
+        "comment_text": "Brian Baron is biased against women and attempts to put all of them on supervised visitation. He also recommended custody to a father who killed my young disabled son.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Orange"
+      },
+      {
+        "comment_text": "Biased and personal relationship with father",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/brian_baron",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ca/brian_baron/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

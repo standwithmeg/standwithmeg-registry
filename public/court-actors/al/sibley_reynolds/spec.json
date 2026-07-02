@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "sibley_reynolds",
+    "display_name": "Sibley Reynolds",
+    "title": "",
+    "first_name": "Sibley",
+    "last_name": "Reynolds",
+    "role": "Judge",
+    "court": "Chilton",
+    "county": "Chilton",
+    "court_or_county": "Chilton",
+    "state": "Alabama",
+    "state_abbr": "AL",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "00c73c36-6209-448a-824f-f9e6f912277f",
+    "actor_bucket_key": "sibley reynolds|AL"
+  },
+  "photo": {
+    "path": "public/court-actors/al/sibley_reynolds/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 103,
+    "total_submissions": 128,
+    "avg_financial_loss": 90405.41,
+    "avg_months_lost": 36.3,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "AL",
+    "state_family_count": 128,
+    "median_financial_loss": 80000,
+    "median_burden_sample_size": 59,
+    "median_months_lost": 14,
+    "pro_se_pct": 43.0,
+    "pro_se_count": 55,
+    "_pdf_state_family_count": 128,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5320,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Changed hearing date several times. The children wanted to testify on their own behalf. Grandfather did not want this to happen. Changed hearing to a date mother would not have them. He then allowed the GAL to say that the children spoke with him and he could confidently say they were safe and happy with Grandfather. Refused to look at messages I had from the children disproving this statement. The judge knew my case was heavily dependent on audio and video since he would not allow the children to testify in person. Moved our hearing to a room that had no audio visual capabilities. Allowed my father to submit the childrens report cards as evidence of their \"well-being\" and dismissed the entire case.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Autuaga"
+      },
+      {
+        "comment_text": "I moved 23 miles away from the marital house. My ex objected. The judge agreed and stopped the mood. Finally got approved to move but my children had to continue going to the previous school system for a year and a half. I had to drive 35 to 45 minutes twice a day to take my kids to and from school for a whole school year and a half of another. He dismissed everything. Evidence, subpoenas, contempt charges, everything.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Chilton"
+      },
+      {
+        "comment_text": "Was a cousin by marriage to the other party",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Chilton"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/sibley_reynolds",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/al/sibley_reynolds/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

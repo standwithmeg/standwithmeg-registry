@@ -1,0 +1,100 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "jason_williams",
+    "display_name": "Jason Williams",
+    "title": "",
+    "first_name": "Jason",
+    "last_name": "Williams",
+    "role": "Judge",
+    "court": "Beaufort County",
+    "county": "Beaufort County",
+    "court_or_county": "Beaufort County",
+    "state": "North Carolina",
+    "state_abbr": "NC",
+    "mention_count": 0,
+    "family_count": 4,
+    "public_family_count": 4,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "942bf179-539f-4b49-8e64-74b9ef6f5327",
+    "actor_bucket_key": "jason wiliams|NC"
+  },
+  "photo": {
+    "path": "public/court-actors/nc/jason_williams/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 161,
+    "total_submissions": 213,
+    "avg_financial_loss": 186966.14,
+    "avg_months_lost": 36.1,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "NC",
+    "state_family_count": 213,
+    "median_financial_loss": 140000,
+    "median_burden_sample_size": 71,
+    "median_months_lost": 16,
+    "pro_se_pct": 50.7,
+    "pro_se_count": 108,
+    "_pdf_state_family_count": 213,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5317,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 4,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "I want to start by saying I think this man was trying to work the good ol boy system to bring about change and fight for parents the best way he knew how within that system. I think advocating for me and parents like me is what cost him his judges seat in the last election. That being said he still signed orders that were unconstitutional and allowed in lies without the parents ever getting to speak or present evidence. He allowed us to be silenced and blocked. He allowed delays. He allowed full hearings against my teenage son without my son ever being notified or present knowing my son ran claiming abuse. He allowed back door meetings in his chambers without us as parents being represented or our children. He did give unlimited visitation with our parents present and all rights to appointments to be present and have records and our children to be able to contact one another freely. He had a responsibility though to say it was illegal and abolish it but he chose not to. He did so trying to hold that seat n still lost it because he was playing both sides.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Beaufort County"
+      },
+      {
+        "comment_text": "He would accept no proof or documentation from my mother. He violated due process and kept continuing hearings for DSS. In my juvenile case started by DSS he held full hearings without me being present or notified. He signed an order for my property ordering that my mother get this items or be jailed. He refused to investigate my claims of abuse at the facility I ran from. He turned a blind eye to me being placed in locked facilities without reason because I was speaking out about the care I received and the abuse. He did not report that abuse either to the authorities.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Beaufort County"
+      },
+      {
+        "comment_text": "At the time he was my court appointed attorney. Failed to file any motions and misrepresenton",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Beaufort County"
+      },
+      {
+        "comment_text": "He signed and reinforced the unconstitutional seizure of my children, after the fact.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Beaufort County"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/jason_williams",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/nc/jason_williams/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

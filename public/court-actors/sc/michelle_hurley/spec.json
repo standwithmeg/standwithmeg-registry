@@ -1,0 +1,100 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "michelle_hurley",
+    "display_name": "Michelle Hurley",
+    "title": "",
+    "first_name": "Michelle",
+    "last_name": "Hurley",
+    "role": "Judge",
+    "court": "Richland",
+    "county": "Richland",
+    "court_or_county": "Richland",
+    "state": "South Carolina",
+    "state_abbr": "SC",
+    "mention_count": 0,
+    "family_count": 4,
+    "public_family_count": 4,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "c0358257-598d-4d80-9c8d-e879163d99b8",
+    "actor_bucket_key": "michele hurley|SC"
+  },
+  "photo": {
+    "path": "public/court-actors/sc/michelle_hurley/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 82,
+    "total_submissions": 105,
+    "avg_financial_loss": 287649.02,
+    "avg_months_lost": 25.9,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "SC",
+    "state_family_count": 105,
+    "median_financial_loss": 127500,
+    "median_burden_sample_size": 66,
+    "median_months_lost": 19,
+    "pro_se_pct": 57.1,
+    "pro_se_count": 60,
+    "_pdf_state_family_count": 105,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5316,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 4,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "She was supposed to rule on a change in school and instead she flipped a switch and made my ex primary on everything regarding decision making (after I was primary for years). She also changed our custody schedule from week to week to me only seeing the kids every other weekend. There was no cause for this, the schedule was not the issue. Gave my ex primary on everything and primary custody after years of me being primary. He had never been to the dentist, orthodontist, doctor appointments, etc, probably couldn’t tell you who their doctors are. She saw me as a conservative and she is very liberal. She pushed her ideas onto me and “judged” me for being different than her. The funny part is that my ex is similar in political viewpoints, but his lawyer is slick and had him pretend. The lawyer also insinuated strongly that my husband and I are racist (ridiculous) and she is an African American judge.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Richland"
+      },
+      {
+        "comment_text": "Separated children from mother without due process Put me in my 18 month old out of the house with no financial income, and no place to go. because I left the abusive partner she said a forfeit in my home. And gave the home and three other children primary to dad who had income and family in the state and a business he could stay at.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Richland"
+      },
+      {
+        "comment_text": "Ignored evidence proving false allegations and flipped custody.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Richland"
+      },
+      {
+        "comment_text": "Judged solely on hearsay",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Richland"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/michelle_hurley",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/sc/michelle_hurley/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

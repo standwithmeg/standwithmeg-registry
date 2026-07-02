@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "ransom_bailey",
+    "display_name": "Ransom Bailey",
+    "title": "",
+    "first_name": "Ransom",
+    "last_name": "Bailey",
+    "role": "Judge",
+    "court": "Ada County, 4th district",
+    "county": "Ada",
+    "court_or_county": "Ada County, 4th district",
+    "state": "ID",
+    "state_abbr": "ID",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": "ransom bailey|ID"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 30,
+    "total_submissions": 37,
+    "avg_financial_loss": 430509.47,
+    "avg_months_lost": 25.2,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "ID",
+    "state_family_count": 37,
+    "median_financial_loss": 230000,
+    "median_burden_sample_size": 27,
+    "median_months_lost": 18,
+    "pro_se_pct": 43.2,
+    "pro_se_count": 16,
+    "_pdf_state_family_count": 37,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5207,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Biased, one sided, talks in circles, doesn't keep his word, assists when not asked nor warranted, over talks pro-se parties, asks way too much about opinions from ignorant attorneys, and let's them walk all over him making him appear WEAK. Fails to actually HEAR what people are saying, only listens to what he feels is relevant. Hang up the robe man, you're done!",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Ada"
+      },
+      {
+        "comment_text": "After I voluntarily accepted the temp protection order, he said 50/50 would come back after criminal case was resolved. (There should have never been a criminal case to begin with)",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Ada County, 4th district"
+      },
+      {
+        "comment_text": "Modified my custody based on false accusations, and continues to allow my Ex Wife to bully me waste my money and hurt our daughter.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Ada"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/ransom_bailey",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/id/ransom_bailey/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

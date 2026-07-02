@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "donna_heller",
+    "display_name": "Judge Donna Heller",
+    "title": "Judge",
+    "first_name": "Donna",
+    "last_name": "Heller",
+    "role": "Judge",
+    "court": "Stamford",
+    "county": "Stamford",
+    "court_or_county": "Stamford",
+    "state": "Connecticut",
+    "state_abbr": "CT",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "e2293044-0cf9-4728-93b5-84a523ebd358",
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/ct/donna_heller/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 46,
+    "total_submissions": 64,
+    "avg_financial_loss": 390441.48,
+    "avg_months_lost": 31.2,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "CT",
+    "state_family_count": 64,
+    "median_financial_loss": 211500,
+    "median_burden_sample_size": 37,
+    "median_months_lost": 20,
+    "pro_se_pct": 68.8,
+    "pro_se_count": 44,
+    "_pdf_state_family_count": 64,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5225,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "She handed down defective orders stripping me of custody, granted my ex sole legal and primary physical. He has lengthy criminal history, substance abuse and mental health history. I don't have any of these issues... Heller completely ignored best interests statutes, made procedural errors, abused her discretion. Her order essentially alienated me from my son with no contact for 30 days then limited visitation. No findings of abuse or neglect against me. My son has been depressed and disregulated, and lost weight since the transfer from my home in CT to his father in NY 70 miles away. She made false claims in her Memorandum of Decision.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Stamford"
+      },
+      {
+        "comment_text": "Has been a part of our case in and out for years never making decisions, allowing exes attorney to threaten me and present clearly fraudulent financial documents and withhold hundreds of other production and Discovery material. I've also seen production of orders that completely destroy mother's from this judge and use blatantly false facts and information to back these insane orders. She is the same judge in Jennifer Dulos case that resulted in her murder 2019",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Stamford"
+      },
+      {
+        "comment_text": "Biases toward opposing counsel",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Fairfield"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/donna_heller",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ct/donna_heller/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

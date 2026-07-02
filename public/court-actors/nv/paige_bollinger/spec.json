@@ -1,0 +1,95 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "paige_bollinger",
+    "display_name": "Paige Bollinger",
+    "title": "",
+    "first_name": "Paige",
+    "last_name": "Bollinger",
+    "role": "Judge",
+    "court": "Washoe",
+    "county": "Washoe",
+    "court_or_county": "Washoe",
+    "state": "NV",
+    "state_abbr": "NV",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": "paige bolinger|NV"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 33,
+    "total_submissions": 45,
+    "avg_financial_loss": 151813.42,
+    "avg_months_lost": 27.5,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "NV",
+    "state_family_count": 45,
+    "median_financial_loss": 220750,
+    "median_burden_sample_size": 16,
+    "median_months_lost": 10,
+    "pro_se_pct": 55.6,
+    "pro_se_count": 25,
+    "_pdf_state_family_count": 45,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5291,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "She has allowed my daughters predator reunification with her. (He molested her at age 2 and raped his older daughter a year later. Now has to register as a aex offender) she has ignored evidence that shows the cps allegations made against me were either flat out lies or extremely exaggerated. She also allowed the removal of my child from my custody across state lines and has not made any progress in loving my daughter closer to me for visits. Im now in Texas and am awaiting that here instead of in california. There has been massive communications between the hospital (reno behavioral health) that reported me because I didnt have health insurance for my daughter in nevada and the washoe County courts. This is retaliation because I reported this hospital to authorities for their discrimination of my daughter and I She has upheld perjury from the case worker in my case and ignored extenuating circumstances for my case like the fact that im disabled and and crippled. Still working. And have provided ample medical care for my daughter her entire life.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Washoe"
+      },
+      {
+        "comment_text": "Made custody and case decisions despite unresolved disputes regarding evidence and due process concerns.\"",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Washoe"
+      },
+      {
+        "comment_text": "Ignored all court filings relied solely on CPs’ word",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Washoe"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/paige_bollinger",
+  "unresolved": [
+    "public_family_count_api: no match for display_name='Paige Bollinger' bucket='paige bolinger|NV' slug='paige_bollinger' in NV (2 actors)",
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/nv/paige_bollinger/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "christi_zerega",
+    "display_name": "Christi Zerega",
+    "title": "",
+    "first_name": "Christi",
+    "last_name": "Zerega",
+    "role": "Therapist / Counselor",
+    "court": "Charleston, South Carolina",
+    "county": "Charleston",
+    "court_or_county": "Charleston, South Carolina",
+    "state": "South Carolina",
+    "state_abbr": "SC",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "6b0d87fc-67fd-446e-a4e4-ebdcd4c7639f",
+    "actor_bucket_key": "christi zerega|SC"
+  },
+  "photo": {
+    "path": "public/court-actors/sc/christi_zerega/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 82,
+    "total_submissions": 105,
+    "avg_financial_loss": 287649.02,
+    "avg_months_lost": 25.9,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "SC",
+    "state_family_count": 105,
+    "median_financial_loss": 127500,
+    "median_burden_sample_size": 66,
+    "median_months_lost": 19,
+    "pro_se_pct": 57.1,
+    "pro_se_count": 60,
+    "_pdf_state_family_count": 105,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5316,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Can't take notes, passes the buck, zero accountability, seems to have NO ACTUAL PURPOSE other than charging fees for a service set up by a GAL, changes her stories from minute to minute. Keep a careful eye on her and take perfect notes. She is off the chains. HER NAME IS MISPELLED! it is Christi Zerega. She is a liar, useless, can't keep anything together, covers her ass, and puts blame on anyone but herself. She lies, her job to \"reunify\" is a total joke. She doesn't have any capacity or authority to do anything. Moving goal posts, no clear role, changes story, false reporting to GAL, literally no idea what her purpose is other than to pass the buck",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Charleston, South Carolina"
+      },
+      {
+        "comment_text": "She is a liar. She plays all sides and will tell you exactly what you want to hear and then completely dog you to everyone else. She is a puppet to the GALs and so unethical it’s truly unbelievable. My lawyer deposed and she was a huge mess and was caught in lies multiple times. I tell everyone I know to make sure you audio record all of your sessions with her.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Charleston"
+      },
+      {
+        "comment_text": "Ignored all safety concerns, did not listen to the children, Ex parte communication with OC, GAL, defendant, prior to her testimony",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Charleston"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/christi_zerega",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/sc/christi_zerega/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

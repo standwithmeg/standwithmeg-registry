@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "katarina_cook",
+    "display_name": "Katarina V. Cook",
+    "title": "",
+    "first_name": "Katarina V.",
+    "last_name": "Cook",
+    "role": "Judge",
+    "court": "Summit",
+    "county": "Summit",
+    "court_or_county": "Summit",
+    "state": "Ohio",
+    "state_abbr": "OH",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": "katarina cook|OH"
+  },
+  "photo": {
+    "path": "public/court-actors/oh/katarina_cook/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 205,
+    "total_submissions": 260,
+    "avg_financial_loss": 113532.41,
+    "avg_months_lost": 31.4,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OH",
+    "state_family_count": 260,
+    "median_financial_loss": 81125,
+    "median_burden_sample_size": 126,
+    "median_months_lost": 18,
+    "pro_se_pct": 52.7,
+    "pro_se_count": 137,
+    "_pdf_state_family_count": 260,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5303,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Denied hearings for over 21 months, while significant decisions were made in unrecorded status conferences with attorneys only, regarding finances, visitation and custody, and involvement of legal and mental health professionals and payment without my knowledge or consent. encouraged alienation. Allowed non-court appointed GAL to influence decisions; remove me from the marital home without any hearing based on false allegations of opposing council, denied financial support to stay at home parent, and gave minor children, after being alienated from me because of absence and only influence of the other parent, visitation authority over me.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Summit"
+      },
+      {
+        "comment_text": "Senior judge-she sucks and allows the lying and keeps known liar GALS, including the director Randy Flick who is gay and wears it proudly-so am I but it’s innapropriate when you are representing a county as a whole-she told me if I emailed him again, she would press charges from the court-completely insane when you call out their corruption!",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Summit"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/katarina_cook",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/oh/katarina_cook/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

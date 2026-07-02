@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "joshua_ray_welch",
+    "display_name": "Joshua Ray Welch",
+    "title": "",
+    "first_name": "Joshua Ray",
+    "last_name": "Welch",
+    "role": "Attorney / GAL / Child Representative",
+    "court": "Hall County",
+    "county": "Hall County",
+    "court_or_county": "Hall County",
+    "state": "Georgia",
+    "state_abbr": "GA",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "a0c01c30-c999-4fd7-832e-02ef12b63a9f",
+    "actor_bucket_key": "joshua ray welch|GA"
+  },
+  "photo": {
+    "path": "public/court-actors/ga/joshua_ray_welch/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 122,
+    "total_submissions": 149,
+    "avg_financial_loss": 222633.06,
+    "avg_months_lost": 32.5,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "GA",
+    "state_family_count": 149,
+    "median_financial_loss": 148000,
+    "median_burden_sample_size": 84,
+    "median_months_lost": 18,
+    "pro_se_pct": 45.6,
+    "pro_se_count": 68,
+    "_pdf_state_family_count": 149,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5275,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Performed zero investigation into false allegations and lies, recommended the proven self admitted abuser have full custody of my daughter. Briefly spoke w my daughter on 2 occasions in 4 years. Wrote a 29 page report of thoughts and feelings vs facts and evidence as the basis of his recommendations. Chose traumatic immediate removal from me by the police prior to any investigation of claims against me. Didn’t investigate lies and false accusations. Final report based on thoughts and feelings, zero evidence. Traumatically removed child by the police without doing any investigation into false allegations. Placed child with father who self admitted to sexual act of repeatedly putting his tongue in my daughters mouth for more than a year. Lies on the stand to cover up for the abuser Took my mother’s affidavit at face value and completely turned against me. Wrote a 29 page report of feelings and thoughts about why I shouldn’t have custody, zero evidence. Falsified a paper I wrote to my daughter’s 5th grade teacher, twisting my words. Chose immediate removal vs investigating. Never interviewed any of my witnesses. In 4 years he briefly spoke to my daughter twice. Colluded with my daughter’s therapist to remove her from me immediately, by the police, and give her to her father that only had supervised visits with her because of his admitted and proven abuse. Lies on the stand about her fathers sexual act",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Hall County"
+      },
+      {
+        "comment_text": "Didn't interview mom, step dad, kids therapist. Ignored concerns of mom's witnesses to emotional abuse and coercive control. Refused to acknowledge his claim of mental health that was cleared by HIS psych evaluator. Ignored years of evidence. Ignored alienation. Handed kids over to the abuser. Took my kids way, refused to do a investigation, refused to interview moms side of things including mom and husband. Refused to show up to be questioned. Bias, and fear driven.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Hall County"
+      },
+      {
+        "comment_text": "My daughter's attorney. He has been amazing. He is the only one that will hold dfacs accountable for their wrongs or short comings",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Hall County"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/joshua_ray_welch",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ga/joshua_ray_welch/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

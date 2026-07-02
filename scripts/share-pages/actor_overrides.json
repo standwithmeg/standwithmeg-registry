@@ -1,0 +1,245 @@
+{
+  "_doc": "Per-actor display overrides applied on top of Supabase data. spotlight_build.py loads this file when running from scripts/share-pages/ (CI bot) and falls back to court-actor-posts/_scripts/actor_overrides.json for local manual runs. Keep both copies in sync if you edit either one. Slug stays the URL-safe key — only display fields change.",
+  "elizabeth_faulkner": {
+    "comment_rewrites": [
+      {
+        "match": "married my ex-husband",
+        "replace": "A judge called her a non-credible witness at trial."
+      }
+    ],
+    "_note": "Safety de-identification 2026-06-08 per Meg. The reporting parent is scared of retaliation because this actor is still her children's stepmother. Her original comment named the family relationship (\"married my ex-husband\"), the child (\"younger son\"), and a recorded phone call — all identifying. comment_rewrites replaces the FULL comment text with a court-backed, de-identified line (the trial decision found the testimony non-credible) so the public spec.json, slide, and PDF carry only the softened version. The other 6 comments about this actor are unaffected."
+  },
+  "gallagher": {
+    "display_name": "Pat Gallagher",
+    "first_name": "Pat",
+    "last_name": "Gallagher",
+    "quote_char_budget": 150,
+    "_note": "Real name is 'Pat Gallagher' (Judge, Monroe Co. NY). The canonical court_actors name resolves the surname but the bot regen left display_name as bare 'Gallagher', so the draft header and manifest showed 'Gallagher' without the first name. Override locks the full name for every future regen. first/last drive the big card headline 'PAT GALLAGHER'. quote_char_budget=150 lets the curated DV-narrative line render fully. Quote curation: Will Haley row e10a4d02 is trimmed in court_actor_comment_merges to its first sentence so the share card does NOT surface the third-party Affronti / $100M-lawsuit content (legal care); Jamie O'Dell row 766ef04b supplies the clean 'maliciously prosecuting me with false charges' quote."
+  },
+  "anika_collins": {
+    "display_name": "Hon. Anneka P. Collins",
+    "first_name": "Hon. Anneka P.",
+    "last_name": "Collins",
+    "title": "",
+    "role": "Judge",
+    "_note": "Court actor's actual name is 'Hon. Anneka P. Collins' (double n, 'Hon.' honorific in first-name slot so it renders in the big headline). Role is Judge — not Attorney (Opposing) as some families submitted."
+  },
+  "hon_anneka_p_collins": {
+    "display_name": "Hon. Anneka P. Collins",
+    "first_name": "Hon. Anneka P.",
+    "last_name": "Collins",
+    "title": "",
+    "role": "Judge",
+    "_note": "Deployed URL slug for the same Ohio actor currently returned by the public API as 'Anika Collins'. Keep the public display as Hon. Anneka P. Collins while using the API bucket key for count consistency."
+  },
+  "cynthia_hucks": {
+    "role": "Attorney",
+    "county": "Wapello",
+    "court_or_county": "Wapello",
+    "_note": "Role is Attorney (she is an attorney, not a judge) — corrected 2026-05-31 per Meg. Matches the registry/admin card and the original family submissions ('Attorney (Opposing)'). A prior override incorrectly locked 'Judge'; that was wrong. County is Wapello; the canonical Supabase court_actors row does not carry a county so the bot regen would drop it. Override locks both fields in for every future regen, manual or automated."
+  },
+  "ashley_wine": {
+    "exclude_quote_substrings": [
+      "Fat Ashley"
+    ],
+    "_note": "The 'Fat Ashley said the TPO filed was unnecessary...' quote contains name-calling, not a conduct claim. Drop it from the share slide. Once the Supabase row in court_actor_comment_merges is cleaned (remove 'Fat ' from the merged_comment text), this override can be removed."
+  },
+  "hon_amy_poehling_eddy": {
+    "last_name": "Eddy",
+    "county": "Flathead",
+    "court_or_county": "Flathead",
+    "exclude_quote_substrings": [
+      "intertwines between criminal charges"
+    ],
+    "_note": "Surname is 'Eddy' — the canonical court_actors row (ff08ce71, '[extracted_regex] Amy Eddie') mistypes it as 'Eddie', so the bot regen renders the big card name 'AMY EDDIE'. Override locks 'Eddy' to match her real name (Hon. Amy Poehling Eddy) (the duplicate amy_eddy page was removed 2026-06-11; its bucket no longer resolved). County is Flathead (the canonical court_actors row carries 'Unknown' so the bot regen renders 'UNKNOWN CO.' — lock Flathead like cynthia_hucks). exclude_quote_substrings drops the 'Everything. I have some reason downloaded...' note (row 321e9795): it has no real conduct statement. The two strong, publicly-shareable quotes ('She ignored the domestic violence...' row 333ad64e, 'Confidential information was handed to the other side.' row 183662e0) are curated in court_actor_comment_merges. The 'emergency ex parte' report (row 99646a9a) is data_only/unapproved and is correctly suppressed — do not feature it."
+  },
+  "naomi_cataudella": {
+    "county": "Johnson",
+    "court_or_county": "Johnson",
+    "_note": "Naomi practices in Johnson County, KS. The canonical court_actors row carried Franklin (one reporter's case venue) but she is known and reported across Johnson County. Multiple family reports + comments specify Johnson Co. Override locks the correct practice county for every future regen."
+  },
+  "dianna_russell": {
+    "quote_char_budget": 280,
+    "_note": "TN/Sevier judge-GAL. Only 2 of 7 rows are approved/public (the other 5 are data_only/unapproved and correctly hidden), so the slide can show at most 2 quotes. Widen the budget to 280 so BOTH approved family quotes render in full ('Ordered removal of child across state lines... had to turn my daughter over by 7pm... 4 hours away' and 'Committed perjury on motions and in hearings... brought her misconduct to light, but the damage was done') instead of truncating to fragments. Tuned for her current 2-quote set; revisit if more comments get approved."
+  },
+  "randy_mccalla": {
+    "quote_char_budget": 150,
+    "_note": "Founder's own GAL (Johnson Co. KS). Feature page: widen the family-quotes frame budget from the default count-based value (98 for 5 quotes) to 150 so all approved comments render fuller instead of truncating mid-sentence. All 5 approved family comments (PUBLIC/ANONYMOUS/FIRST_NAME) display; the data_only/unapproved rachel weigel row is correctly suppressed."
+  },
+  "kirk_felthoelter": {
+    "display_name": "Kirk M. Fellhoelter",
+    "first_name": "Kirk M.",
+    "last_name": "Fellhoelter",
+    "role": "Attorney",
+    "_note": "Corrected 2026-06-02 per Meg. Surname is 'Fellhoelter' (double L) — the slug and canonical court_actors row carry the misspelling 'felthoelter', so the bot regen rendered the big card 'KIRK FELTHOELTER'. Override locks the correct name (first_name 'Kirk M.' so the headline shows the middle initial like anika_collins) and pins role to 'Attorney': he is actually the county attorney, but families submitted 'Attorney (Opposing)' and Meg wants the slide + PDF to read just 'Attorney'. Slug stays kirk_felthoelter so the deployed URL is unchanged."
+  },
+  "kimberly_walson": {
+    "display_name": "Kimberly Blair Walson",
+    "first_name": "Kimberly Blair",
+    "last_name": "Walson",
+    "role": "Judge",
+    "county": "Clark",
+    "court_or_county": "Clark",
+    "_note": "Corrected 2026-06-02 per Meg. Public/PDF helper data currently resolves this KY actor as 'Kimberly  Walson', which drops the middle name and caused the deployed share spec to miss the Judge role and row-backed quotes. Override locks the admin-confirmed public display as Kimberly Blair Walson, role Judge, Clark County, while keeping the deployed slug kimberly_walson."
+  },
+  "jon_gann": {
+    "display_name": "Jon Gann",
+    "first_name": "Jon",
+    "last_name": "Gann",
+    "role": "Attorney",
+    "county": "Santa rosa",
+    "court_or_county": "Santa rosa",
+    "_note": "Name corrected to 'Jon Gann' (the deployed slide rendered 'JOHN GANN' from a stale display value; first/last/display lock the spelling). Quotes curated in court_actor_comment_merges 2026-06-02 per Meg (rows 4ef2d609 / ad20d8f5 / efc3305a): replaced the auto-picked fragment 'She was denied of course', dropped the 'Piece of garbage' name-calling, cleaned the motions quote. The renderer hard-caps each quote near 112 chars (4-quote tier in render_spotlight._quote_char_budget — the override quote_char_budget field is not wired to it), so the grandmother quote is curated to ~104 chars to render in full without an ellipsis. Raw un-curated originals are suppressed by the fully_curated guard added to spotlight_build (every public row here has a merge). Role/county locked from the original admin auto-repair."
+  },
+  "samer_touma": {
+    "quote_char_budget": 150,
+    "prefer_quote_substrings": [
+      "turning a blind eye"
+    ],
+    "_note": "Quote preference added 2026-06-04 per Meg. The approved family quote has two clean sentences; the first sentence is safe but misses the important allegation clause. Prefer the second sentence containing 'turning a blind eye' so the share slide surfaces the strongest family-reported point while keeping the data_only/unapproved 'lies/unorganized' row hidden."
+  },
+  "cara_d_hutson": {
+    "display_name": "Cara D. Hutson",
+    "first_name": "Cara D.",
+    "last_name": "Hutson",
+    "role": "Judge",
+    "county": "San Bernardino",
+    "court_or_county": "San Bernardino",
+    "_note": "Auto-repaired from the admin actor detail on 2026-06-05. Locks the current approved display name, role, and court/county before forcing state PDF and actor slide regeneration."
+  },
+  "prairie_state_legal_services": {
+    "display_name": "Prairie State Legal Services",
+    "first_name": "Prairie State Legal",
+    "last_name": "Services",
+    "role": "Attorney",
+    "county": "McLean",
+    "court_or_county": "McLean",
+    "_note": "Auto-repaired from the admin actor detail on 2026-06-05. Locks the current approved display name, role, and court/county before forcing state PDF and actor slide regeneration."
+  },
+  "anthony_mcginty": {
+    "display_name": "Anthony McGinty",
+    "first_name": "Anthony",
+    "last_name": "McGinty",
+    "role": "Judge",
+    "county": "Ulster County Family Court",
+    "court_or_county": "Ulster County Family Court",
+    "_note": "Auto-repaired from the admin actor detail on 2026-06-05. Locks the current approved display name, role, and court/county before forcing state PDF and actor slide regeneration."
+  },
+  "andrew_bolton": {
+    "display_name": "Andrew Bolton",
+    "first_name": "Andrew",
+    "last_name": "Bolton",
+    "role": "GAL / Child Representative / Other",
+    "county": "Miami",
+    "court_or_county": "Miami",
+    "_note": "Auto-repaired from the admin actor detail on 2026-06-08. Locks the current approved display name, role, and court/county before forcing state PDF and actor slide regeneration."
+  },
+  "dr_gage_stermenski": {
+    "display_name": "Dr. Gage Stermenski",
+    "first_name": "Dr. Gage",
+    "last_name": "Stermenski",
+    "role": "Psychological Evaluator",
+    "county": "Psychologist",
+    "court_or_county": "Psychologist",
+    "_note": "Auto-repaired from the admin actor detail on 2026-06-08. Locks the current approved display name, role, and court/county before forcing state PDF and actor slide regeneration."
+  },
+  "keven_o_grady": {
+    "display_name": "Keven O'Grady",
+    "first_name": "Keven",
+    "last_name": "O'Grady",
+    "role": "Judge",
+    "county": "Johnson",
+    "court_or_county": "Johnson",
+    "_note": "Auto-repaired from the admin actor detail on 2026-06-08. Locks the current approved display name, role, and court/county before forcing state PDF and actor slide regeneration."
+  },
+  "tammy_smith": {
+    "quote_char_budget": 210,
+    "prefer_quote_substrings": [
+      "lock eyes and nod"
+    ],
+    "_note": "Quote fix 2026-06-12 per Meg. The texting comment names two people: 'She' (Tammy, the attorney) was texting the judge and 'He' (the judge) would check his phone. The renderer used to excerpt the middle sentence alone ('He would check his phone ...'), which made the female attorney read as male; render_spotlight now rejects dangling-pronoun excerpts like that. quote_char_budget=210 lets the full 204-char comment ('She was texting the judge ... And they would lock eyes and nod.') and the 185-char 'Refused to make copies ... ask the questions.' comment render whole instead of truncating. prefer_quote_substrings pins the full three-sentence passage as the winner for that comment."
+  },
+  "jonathon_sargeant": {
+    "display_name": "Jonathon Sargeant",
+    "first_name": "Jonathon",
+    "last_name": "Sargeant",
+    "role": "Judge",
+    "_note": "Canonical spelling is 'Jonathon Sargeant' per the curated alias decision (eb31f7a9) merging 'Johnathan/Jonathan/John Sargeant' (NC). Family submissions mostly spell it 'Johnathan', so the bot regen rendered that and the public-count lookup could not match the canonical name. Override locks the canonical spelling; the old jonathan_sargeant card was removed 2026-06-11. If the spelling is ever corrected, fix the alias decision canonical_name and this override together."
+  },
+  "marc_crotteau": {
+    "comment_rewrites": [
+      {
+        "match": "Betos",
+        "replace": "He also took two cases at the same time, which was my girlfriend‘s case in my case a custody he didn’t recuse himself from one and he used my girlfriend‘s to coincide with my case."
+      }
+    ],
+    "_note": "Quote curation 2026-06-12. The original run-on comment names third parties (the mother's drug allegations, Shannon Smith, 'Betos') and ends in rambling transcript talk; after the dangling-pronoun guard was added the renderer's fallback pick surfaced the 'Betos ... Word for Word what she says..' tail on the slide. Rewrite keeps the family's own recusal sentence verbatim — the exact quote the deployed slide already showed — and drops the third-party content from the public spec. The second comment (Ignored evidence / hearsay order) is unaffected."
+  },
+  "emily_mueller": {
+    "display_name": "Emily Mueller",
+    "first_name": "Emily",
+    "last_name": "Mueller",
+    "role": "Judge",
+    "county": "Potawatomi in Shawnee Oklahoma",
+    "court_or_county": "Potawatomi in Shawnee Oklahoma",
+    "_note": "Auto-repaired from the admin actor detail on 2026-06-13. Locks the current approved display name, role, and court/county before forcing state PDF and actor slide regeneration."
+  },
+  "steve_henry": {
+    "display_name": "Steven D. Henry",
+    "first_name": "Steven D.",
+    "last_name": "Henry",
+    "role": "Mediator",
+    "county": "Johnson",
+    "court_or_county": "Johnson",
+    "_note": "Auto-repaired 2026-06-14. Alias decision canonical is 'Steven D. Henry' (Johnson Co. KS). Lock the corrected display/first/last name and bucket key so the bot regen updates the existing steve_henry card instead of spawning a duplicate steven_d_henry card. The old duplicate card was removed."
+  },
+  "keith_mason": {
+    "display_name": "Keith B. Mason",
+    "first_name": "Keith B.",
+    "last_name": "Mason",
+    "role": "Judge",
+    "county": "Beaufort County",
+    "court_or_county": "Beaufort County",
+    "_note": "Auto-repaired from the admin actor detail on 2026-06-17. Locks the current approved display name, role, and court/county before forcing state PDF and actor slide regeneration."
+  },
+  "jared_paul_hastey": {
+    "display_name": "Jared Paul Hastey",
+    "first_name": "Jared Paul",
+    "last_name": "Hastey",
+    "actor_bucket_key": "jared paul hastey|CA",
+    "exclude_quote_substrings": [
+      "dirty shit head",
+      "criminal organizations"
+    ],
+    "replace_public_comments": [
+      "Used clear breach of proper ethics to serve default judgments.",
+      "Does not communicate to pro per or pro se and frequently abuses sharp tactics during custody and divorce hearings.",
+      "Due process does not exist here. Evidence didnt exist for DVROs and no authentic evidence was used.",
+      "Encourages forged documents and manipulates dates, court meeting minutes, and the mail system to foul the process.",
+      "Pressures bankrupting homes and families while profiting dually."
+    ],
+    "quote_char_budget": 160,
+    "_note": "Auto-repaired from the admin actor detail on 2026-06-22. Locks the current approved display name, role, and court/county before forcing state PDF and actor slide regeneration.",
+    "role": "Attorney",
+    "county": "Sutter",
+    "court_or_county": "Sutter"
+  },
+  "daphne_bacon": {
+    "display_name": "Daphne Bacon",
+    "first_name": "Daphne",
+    "last_name": "Bacon",
+    "role": "GAL / Child Representative / Attorney / GAL / Child Representative",
+    "county": "Beaufort",
+    "court_or_county": "Beaufort",
+    "_note": "Auto-repaired from the admin actor detail on 2026-06-17. Locks the current approved display name, role, and court/county before forcing state PDF and actor slide regeneration."
+  },
+  "michelle_puckett": {
+    "display_name": "Michele C. Puckett",
+    "first_name": "Michele C.",
+    "last_name": "Puckett",
+    "role": "Attorney",
+    "county": "Clinton, DeKalb, and Caldwell",
+    "court_or_county": "Clinton, DeKalb, and Caldwell",
+    "_note": "Auto-repaired from the admin actor detail on 2026-06-22. Locks the current approved display name, role, and court/county before forcing state PDF and actor slide regeneration."
+  }
+}

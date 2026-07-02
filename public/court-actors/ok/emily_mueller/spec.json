@@ -1,0 +1,120 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "emily_mueller",
+    "display_name": "Emily Mueller",
+    "title": "",
+    "first_name": "Emily",
+    "last_name": "Mueller",
+    "role": "Judge",
+    "court": "Potawatomi in Shawnee Oklahoma",
+    "county": "Potawatomi in Shawnee Oklahoma",
+    "court_or_county": "Potawatomi in Shawnee Oklahoma",
+    "state": "Oklahoma",
+    "state_abbr": "OK",
+    "mention_count": 0,
+    "family_count": 8,
+    "public_family_count": 8,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "b0651ca9-b9c4-4ea4-9c59-d94593ed65e6",
+    "actor_bucket_key": "emily mueler|OK",
+    "_overrides_applied": [
+      "county",
+      "court_or_county",
+      "display_name",
+      "first_name",
+      "last_name",
+      "role"
+    ]
+  },
+  "photo": {
+    "path": "public/court-actors/ok/emily_mueller/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 128,
+    "total_submissions": 160,
+    "avg_financial_loss": 120211.96,
+    "avg_months_lost": 24.6,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OK",
+    "state_family_count": 160,
+    "median_financial_loss": 100500,
+    "median_burden_sample_size": 84,
+    "median_months_lost": 12,
+    "pro_se_pct": 44.4,
+    "pro_se_count": 71,
+    "_pdf_state_family_count": 160,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5291,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 8,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Ignored a motion for a hearing, ignored evidence, made rulings based on emotions and her best friends desires, allowed reunification with the perp even though abuse was being disclosed on the child’s behalf. She also got rid of the recording for the hearing where she ordered my dad could no longer be around my son.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Potawatomi in Shawnee Oklahoma"
+      },
+      {
+        "comment_text": "This Judge threatened and acted inappropriately multiple times in open court. She contacted the child CAC and instructed them not to do any forensic interviews for the child. Then she took the child into custody on a false affidavit.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Pottawatomie in Shawnee Oklahoma"
+      },
+      {
+        "comment_text": "Did not include my children on PO, advised their father was allowed to contact me about them even though there was a no contact order. Miscommunication began here.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Potawatomi in Shawnee Oklahoma"
+      },
+      {
+        "comment_text": "Judge Mueller called the Mary Abbott House and told them NOT to do a forensic interview of the child for sexual abuse because she didn't like me as a father.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Pottawatomie in Shawnee Oklahoma"
+      },
+      {
+        "comment_text": "My attorney and my son's attorney brought forward the evidence that CPS was lying during trial and she said she was denying my right to a new trial.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lincoln County Chandler ok"
+      },
+      {
+        "comment_text": "She's been disrespectful to me the entire time throughout the process of dealing with this",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Potawatomi in Shawnee Oklahoma"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/emily_mueller",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ok/emily_mueller/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

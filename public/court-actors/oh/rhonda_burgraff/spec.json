@@ -1,0 +1,100 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "rhonda_burgraff",
+    "display_name": "Rhonda G. Burggraf",
+    "title": "",
+    "first_name": "Rhonda G.",
+    "last_name": "Burggraf",
+    "role": "Judge",
+    "court": "Marion",
+    "county": "Marion",
+    "court_or_county": "Marion",
+    "state": "Ohio",
+    "state_abbr": "OH",
+    "mention_count": 0,
+    "family_count": 4,
+    "public_family_count": 4,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "9afc989f-777f-412a-91ff-c8cd7446e48a",
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/oh/rhonda_burgraff/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 205,
+    "total_submissions": 260,
+    "avg_financial_loss": 113532.41,
+    "avg_months_lost": 31.4,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OH",
+    "state_family_count": 260,
+    "median_financial_loss": 81125,
+    "median_burden_sample_size": 126,
+    "median_months_lost": 18,
+    "pro_se_pct": 52.7,
+    "pro_se_count": 137,
+    "_pdf_state_family_count": 260,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5303,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 4,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "I obtained custody of the child through kinship care and now have permanent custody. He has been displaying increasingly unruly behavior. Rhonda has instructed me to allow him to remain out running the streets until 11:00 p.m. and not report him missing until 1:00 a.m. I have serious concerns about this approach given his history. He has known violent behavior, a history of drug use, an assault on a police officer charge, and has tested positive for drugs while on probation. Despite these incidents, I have not seen any meaningful action taken to address these ongoing safety concerns.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Marion"
+      },
+      {
+        "comment_text": "Rhonda ordered that I should have zero medical rights to my daughter because I didn’t give her medication. This decision is a personal choice in which all parents have the right to choose for their child. However Rhonda takes these personal rights away from the parent and demands her own authority. Her decision has caused my child to experience even greater harm from the medical field. One in which her life is forever changed.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Marion"
+      },
+      {
+        "comment_text": "Denied any safety issues after documented drugs in the home and a dangerous dog bite.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Marion"
+      },
+      {
+        "comment_text": "Refused to hear a motion Denied my motion without hearing",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Marion"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/rhonda_burgraff",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/oh/rhonda_burgraff/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

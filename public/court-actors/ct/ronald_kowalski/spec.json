@@ -1,0 +1,124 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "ronald_kowalski",
+    "display_name": "Ronald Kowalski",
+    "title": "",
+    "first_name": "Ronald",
+    "last_name": "Kowalski",
+    "role": "Judge",
+    "court": "Stamford",
+    "county": "Stamford",
+    "court_or_county": "Stamford",
+    "state": "CT",
+    "state_abbr": "CT",
+    "mention_count": 0,
+    "family_count": 9,
+    "public_family_count": 9,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": "ronald kowalski|CT"
+  },
+  "photo": {
+    "path": "public/court-actors/ct/ronald_kowalski/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 46,
+    "total_submissions": 64,
+    "avg_financial_loss": 390441.48,
+    "avg_months_lost": 31.2,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "CT",
+    "state_family_count": 64,
+    "median_financial_loss": 211500,
+    "median_burden_sample_size": 37,
+    "median_months_lost": 20,
+    "pro_se_pct": 68.8,
+    "pro_se_count": 44,
+    "_pdf_state_family_count": 64,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5225,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 9,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "She's the head judge in stamford. Has ignored multiple motions of mine asking for judge recusal, void of Judges orders, a mistrial, and a judgment for payment. I demanded I'd be removed from that Courthouse based on him and two other judges. They actually did it because I stood up and called him out. Like every case it's dystopian and insane. I know through other parties that he totally abused his ex-wife in their divorce. And this guy is overseeing and making rulings on the lives of women and children?",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Stamford"
+      },
+      {
+        "comment_text": "Rescheduled my ex parte hearing causing an additional 2 weeks delay - from another judge's calendar to his - at the request of Alicia Chalumeau. Ignored all of my evidence proving my child was facing emotional harm and neglect. Denied my ex parte with no basis. Habitually ignores or denies all of my motions and requests.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Stamford"
+      },
+      {
+        "comment_text": "Heavy pro father’s rights…holds ex parte communications with GALs and will ignore bias Denied a motion about imminent harm to my child because the heading wasn’t formatted correctly with no concern to the damage being done to the child",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Stamford family court"
+      },
+      {
+        "comment_text": "Same has previously listed “Ronald Kowalski” Played favorites and hated even hearing from pro se- allowed violations of court orders for years with no concern for the children",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Stamford family court"
+      },
+      {
+        "comment_text": "Same judge as Ronald kowalksi Denied motions continuously with no explanation and denied my right to even speak at hearings leading to bankruptcy for myself and my children",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Stamford family court"
+      },
+      {
+        "comment_text": "Denied a motion about imminent harm to my child because the heading wasn’t formatted correctly with no concern to the damage being done to the child",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Stamford"
+      },
+      {
+        "comment_text": "Made sua sponte orders with no hearing, makes key decisions in chambers with attorneys that went strongly against my wishes.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Stamford"
+      },
+      {
+        "comment_text": "Denied multiple motions without any hearings or cause.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Stamford"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/ronald_kowalski",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ct/ronald_kowalski/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

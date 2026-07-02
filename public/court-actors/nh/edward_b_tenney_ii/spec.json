@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "edward_b_tenney_ii",
+    "display_name": "TENNEY",
+    "title": "",
+    "first_name": "",
+    "last_name": "TENNEY",
+    "role": "Judge",
+    "court": "Franklin NH",
+    "county": "Franklin and Sullivan",
+    "court_or_county": "Franklin NH",
+    "state": "NH",
+    "state_abbr": "NH",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": "edward teney|NH"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 29,
+    "total_submissions": 35,
+    "avg_financial_loss": 153639.7,
+    "avg_months_lost": 25.3,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "NH",
+    "state_family_count": 35,
+    "median_financial_loss": 76000,
+    "median_burden_sample_size": 19,
+    "median_months_lost": 18,
+    "pro_se_pct": 51.4,
+    "pro_se_count": 18,
+    "_pdf_state_family_count": 35,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5211,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Denied me my time to speak in hearings, denied my right to call my witnesses, denied all my evidence of complying with court orders from evaluations to certificates I had submitted to this court. Has denied my right to be a mother to my 2 boys. Has accepted all the hearsay made up allegations from the father without any evidence to back up anything he has stated.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Franklin NH"
+      },
+      {
+        "comment_text": "Ignored evidence. Bias on that I'm a male, bias against teachers",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Franklin"
+      },
+      {
+        "comment_text": "Ignored facts and placed children with a dangerous individual.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Franklin and Sullivan"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/edward_b_tenney_ii",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/nh/edward_b_tenney_ii/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

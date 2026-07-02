@@ -1,0 +1,76 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "paige_dollinger",
+    "display_name": "Paige Dollinger",
+    "title": "",
+    "first_name": "Paige",
+    "last_name": "Dollinger",
+    "role": "Judge",
+    "court": null,
+    "county": null,
+    "court_or_county": null,
+    "state": "Nevada",
+    "state_abbr": "NV",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "385ed76b-e03c-419d-9e98-704bcd98255f",
+    "actor_bucket_key": "paige dollinger|NV"
+  },
+  "photo": {
+    "path": "public/court-actors/nv/paige_dollinger/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 33,
+    "total_submissions": 45,
+    "avg_financial_loss": 151813.42,
+    "avg_months_lost": 27.5,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "NV",
+    "state_family_count": 45,
+    "median_financial_loss": 220750,
+    "median_burden_sample_size": 16,
+    "median_months_lost": 10,
+    "pro_se_pct": 55.6,
+    "pro_se_count": 25,
+    "_pdf_state_family_count": 45,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5291,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": []
+  },
+  "export_dir": "New Final Post and Capcut template/export/paige_dollinger",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available",
+    "pdf_public_actor: no 'Paige Dollinger' in cache for NV"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/nv/paige_dollinger/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

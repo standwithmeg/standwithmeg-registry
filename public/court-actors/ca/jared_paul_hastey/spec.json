@@ -1,0 +1,116 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "jared_paul_hastey",
+    "display_name": "Jared Paul Hastey",
+    "title": "",
+    "first_name": "Jared Paul",
+    "last_name": "Hastey",
+    "role": "Attorney",
+    "court": "Sutter",
+    "county": "Sutter",
+    "court_or_county": "Sutter",
+    "state": "CA",
+    "state_abbr": "CA",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": "jared paul hastey|CA",
+    "_overrides_applied": [
+      "actor_bucket_key",
+      "county",
+      "court_or_county",
+      "display_name",
+      "first_name",
+      "last_name",
+      "role"
+    ]
+  },
+  "photo": {
+    "path": "public/court-actors/ca/jared_paul_hastey/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 353,
+    "total_submissions": 439,
+    "avg_financial_loss": 288012.6,
+    "avg_months_lost": 36.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "CA",
+    "state_family_count": 439,
+    "median_financial_loss": 265100,
+    "median_burden_sample_size": 196,
+    "median_months_lost": 20,
+    "pro_se_pct": 58.8,
+    "pro_se_count": 258,
+    "_pdf_state_family_count": 439,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5303,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Used clear breach of proper ethics to serve default judgments.",
+        "author": "Anonymous parent",
+        "source": "actor_overrides",
+        "court_or_county": "Sutter"
+      },
+      {
+        "comment_text": "Does not communicate to pro per or pro se and frequently abuses sharp tactics during custody and divorce hearings.",
+        "author": "Anonymous parent",
+        "source": "actor_overrides",
+        "court_or_county": "Sutter"
+      },
+      {
+        "comment_text": "Due process does not exist here. Evidence didnt exist for DVROs and no authentic evidence was used.",
+        "author": "Anonymous parent",
+        "source": "actor_overrides",
+        "court_or_county": "Sutter"
+      },
+      {
+        "comment_text": "Encourages forged documents and manipulates dates, court meeting minutes, and the mail system to foul the process.",
+        "author": "Anonymous parent",
+        "source": "actor_overrides",
+        "court_or_county": "Sutter"
+      },
+      {
+        "comment_text": "Pressures bankrupting homes and families while profiting dually.",
+        "author": "Anonymous parent",
+        "source": "actor_overrides",
+        "court_or_county": "Sutter"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/jared_paul_hastey",
+  "unresolved": [
+    "family_reports: no submission_ids on actor"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ca/jared_paul_hastey/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "quote_char_budget": 160
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

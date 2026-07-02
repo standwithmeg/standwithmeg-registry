@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "louis_alvin_luke_duel_jr",
+    "display_name": "Louis Duel",
+    "title": "",
+    "first_name": "Louis",
+    "last_name": "Duel",
+    "role": "Judge",
+    "court": "Logan County/Pottawatomie County",
+    "county": "Logan",
+    "court_or_county": "Logan County/Pottawatomie County",
+    "state": "Oklahoma",
+    "state_abbr": "OK",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/ok/louis_alvin_luke_duel_jr/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 128,
+    "total_submissions": 160,
+    "avg_financial_loss": 120211.96,
+    "avg_months_lost": 24.6,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OK",
+    "state_family_count": 160,
+    "median_financial_loss": 100500,
+    "median_burden_sample_size": 84,
+    "median_months_lost": 12,
+    "pro_se_pct": 44.4,
+    "pro_se_count": 71,
+    "_pdf_state_family_count": 160,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5291,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Did not follow processes allowed significant delays of trial. rule based on emotions such as my protective order he signed and then the next trial day he was angry he had to ask the other side witnesses to leave courtroom as he had every single. He literally tossed the court binder and then took away my protective order. in which he still has to ask the people to leave. Other side but angry I asked. He repeatedly accepted false claims with no evidence and put me in contempt. My ex never followed his orders and yet nothing was done except granting my ex more of what he wanted. Example ex stopped taking alcohol tests and with bank statements showing his alcohol purchases, Judge did nothing but start allowing full visitation. My ex was court ordered to move out of my house and get a job with no deadlines so it took as solid 2 years. my ex refused to do the appraisal process with nothing appraised and I was awarded purchase price yet 2 years later the Judge allowed them to come in and say the travel trailer was to old and such and Judge literally just took it off the balance. while Knowing Kim Rennie Mitchel has stolen all my court documents and he would not let me defend myself. even denying my first ever request for continuation. The court house records do not reflect when I was in court and we have requested the records over a month ago. The court does not show accurate purchase of transcripts either. absolutely ignored court rules and process. no transcripts for 2 years and 5 years later claims he made a fair decision after reviewing evidence. He knew my documents were stolen by my paid off fraudulent attorney and refused to help and denied a continuation forcing me to argue on financial items with no facts. He ruled multiple times and would just unrule those things based on his mood.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Logan"
+      },
+      {
+        "comment_text": "Judge Duel stated in open court the child's wishes but followed that by saying the father needed to do other things before being allowed in her life, like another psych eval. The Judge ignored all the Sexual abuse by the stepfather.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Logan County/Pottawatomie County"
+      },
+      {
+        "comment_text": "Ignored all abuse warnings and the testimony of a witness of crimes against my daughter.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Pottawatomie in Shawnee Oklahoma"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/louis_alvin_luke_duel_jr",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ok/louis_alvin_luke_duel_jr/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

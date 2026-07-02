@@ -1,0 +1,77 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "gabriela_garcia",
+    "display_name": "Gabriela Garcia",
+    "title": "",
+    "first_name": "Gabriela",
+    "last_name": "Garcia",
+    "role": "Judge",
+    "court": "138",
+    "county": null,
+    "court_or_county": "138",
+    "state": "Texas",
+    "state_abbr": "TX",
+    "mention_count": 0,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/tx/gabriela_garcia/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 243,
+    "total_submissions": 307,
+    "avg_financial_loss": 232914.17,
+    "avg_months_lost": 32.4,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "TX",
+    "state_family_count": 307,
+    "median_financial_loss": 125500,
+    "median_burden_sample_size": 146,
+    "median_months_lost": 20,
+    "pro_se_pct": 49.2,
+    "pro_se_count": 151,
+    "_pdf_state_family_count": 307,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5314,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 2,
+    "family_reports": [],
+    "public_comments": []
+  },
+  "export_dir": "New Final Post and Capcut template/export/gabriela_garcia",
+  "unresolved": [
+    "public_family_count_api: no match for display_name='Gabriela Garcia' bucket=None slug='gabriela_garcia' in TX (13 actors)",
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available",
+    "pdf_public_actor: no 'Gabriela Garcia' in cache for TX"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/tx/gabriela_garcia/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

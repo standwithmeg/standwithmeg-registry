@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "alexandra_fong",
+    "display_name": "Alexandra Fong",
+    "title": "",
+    "first_name": "Alexandra",
+    "last_name": "Fong",
+    "role": "Attorney",
+    "court": "Riverside",
+    "county": "Riverside",
+    "court_or_county": "Riverside",
+    "state": "California",
+    "state_abbr": "CA",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "a91536c2-14d3-4586-b562-00d88fc9ff2b",
+    "actor_bucket_key": "alexandra fong|CA"
+  },
+  "photo": {
+    "path": "public/court-actors/ca/alexandra_fong/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 353,
+    "total_submissions": 439,
+    "avg_financial_loss": 288012.6,
+    "avg_months_lost": 36.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "CA",
+    "state_family_count": 439,
+    "median_financial_loss": 265100,
+    "median_burden_sample_size": 196,
+    "median_months_lost": 20,
+    "pro_se_pct": 58.8,
+    "pro_se_count": 258,
+    "_pdf_state_family_count": 439,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5303,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "She ignored real evidence and forced a restraining order when the two parties didn't even want one",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Riverside"
+      },
+      {
+        "comment_text": "Suppressed evidence, false accusations with clear proof it was opposite",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Riverside"
+      },
+      {
+        "comment_text": "Ignored evidence, lied in court",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Riverside"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/alexandra_fong",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ca/alexandra_fong/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

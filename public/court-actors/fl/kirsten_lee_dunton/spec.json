@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "kirsten_lee_dunton",
+    "display_name": "Kirsten \"Kiki\" Dunton",
+    "title": "",
+    "first_name": "Kirsten \"Kiki\"",
+    "last_name": "Dunton",
+    "role": "GAL / Child Representative",
+    "court": "Leon County",
+    "county": null,
+    "court_or_county": "Leon",
+    "state": "Florida",
+    "state_abbr": "FL",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/fl/kirsten_lee_dunton/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 237,
+    "total_submissions": 302,
+    "avg_financial_loss": 204328.82,
+    "avg_months_lost": 28.1,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "FL",
+    "state_family_count": 302,
+    "median_financial_loss": 176500,
+    "median_burden_sample_size": 131,
+    "median_months_lost": 18,
+    "pro_se_pct": 57.9,
+    "pro_se_count": 175,
+    "_pdf_state_family_count": 302,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5299,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "My Florida family court case lasted 3 years and left me with serious concerns about the investigative process, transparency, and accountability within the system. My greatest concern was the Guardian ad Litem assigned to my case. Throughout the proceedings, I provided documentation that I believed could objectively verify disputed issues, including transportation records, school information, medical records, and written communications. In my experience, those records were not consistently used to verify competing claims, while unsupported narratives were given significant weight. For more than two years, I assumed the overwhelming majority of the transportation required by the parenting schedule, resulting in substantial mileage, lost work opportunities, and financial hardship. I was advised that financial considerations were not part of the Guardian ad Litem's evaluation. However, the practical burdens of a parenting plan directly affect a parent's ability to maintain employment, provide stability, and meet a child's needs. I believe those realities should be considered when evaluating a child's best interests. I also presented documentation regarding concerns for my child's safety and medical care. I did not believe those concerns received the level of independent investigation they warranted before recommendations were made. Another concern involved transparency. After I retained a court reporter, I observed that recommendations were no longer announced during meetings on the record. Instead, recommendations were communicated a few days later through email correspond",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Leon County"
+      },
+      {
+        "comment_text": "There are concerns regarding this Guardian ad Litem’s pattern of involvement in cases connected to the same attorney representing fathers in family law matters. In multiple cases, serious allegations involving the fathers appear to receive limited scrutiny, while allegations against mothers are amplified and emphasized. A recurring issue raised by several mothers involves accusations related to eating disorders and nutritional concerns, despite questions regarding the Guardian ad Litem’s qualifications to make clinical or nutritional assessments. There are also concerns that allegations involving sexual abuse by fathers are minimized or dismissed without meaningful investigation. Additionally, the Guardian ad Litem appears to place significant weight on collateral sources aligned with the father, while responding negatively or dismissively when collateral witnesses supporting the mother provide conflicting information or perspectives. Taken together, these patterns raise concerns regarding neutrality, investigative balance, and the consistent treatment of allegations across cases.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Leon"
+      },
+      {
+        "comment_text": "This guardian ad litem is incredibly biased and ignores child abuse reports by mandatory reports if the report does not favor her preferred parent. Her preferred parents are consistently represented by the same law firm. This woman needs to be stopped before she ruins more lives.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Leon"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/kirsten_lee_dunton",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/fl/kirsten_lee_dunton/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

@@ -1,0 +1,124 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "karen_mcfadden",
+    "display_name": "Karen McFadden",
+    "title": "",
+    "first_name": "Karen",
+    "last_name": "McFadden",
+    "role": "GAL / Child Representative",
+    "court": "Montcalm",
+    "county": "Montcalm",
+    "court_or_county": "Montcalm",
+    "state": "Michigan",
+    "state_abbr": "MI",
+    "mention_count": 0,
+    "family_count": 8,
+    "public_family_count": 8,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "fdaf5b2f-6d0c-4fb3-9f19-147ec6df94d6",
+    "actor_bucket_key": "karen mcfaden|MI"
+  },
+  "photo": {
+    "path": "public/court-actors/mi/karen_mcfadden/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 145,
+    "total_submissions": 176,
+    "avg_financial_loss": 182391.52,
+    "avg_months_lost": 36.1,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "MI",
+    "state_family_count": 176,
+    "median_financial_loss": 97500,
+    "median_burden_sample_size": 77,
+    "median_months_lost": 16,
+    "pro_se_pct": 43.8,
+    "pro_se_count": 77,
+    "_pdf_state_family_count": 176,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5241,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 8,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Told me she would fight for me to come home in court but then also told me that she would not fight for my siblings because I was treated differently and that my parents had no right to have their other kids back and she would trash talk my parents to me, she lied in court paperwork",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Montcalm"
+      },
+      {
+        "comment_text": "Misrepresented children, lied about what they really wanted. Lied about what the children said. Still misrepresting children. Keeps children away from there siblings. Lied to children about the case.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Montcalm"
+      },
+      {
+        "comment_text": "Cyber stalks me and submits shared posts to the court about my outcry of unjust actions. Supports and defends the department when their own attorney is not present.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Montcalm"
+      },
+      {
+        "comment_text": "Karen McFadden was the 3rd GAL my family had in the 2 years we went threw Montcalm county. She was cruel and didn't listen to what my children had to say.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Montcalm"
+      },
+      {
+        "comment_text": "She lis Everytime she opens her mouth. She said I prostituted my daughter as a child. That is a lie and could have had me on charges.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Montcalm"
+      },
+      {
+        "comment_text": "Fabricated stories about relatives. Foster parents are her friends",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Montcalm"
+      },
+      {
+        "comment_text": "Huge liar. Not for kids best interests.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Montcalm"
+      },
+      {
+        "comment_text": "Gave false information",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Montcalm"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/karen_mcfadden",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/mi/karen_mcfadden/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

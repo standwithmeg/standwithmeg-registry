@@ -1,0 +1,112 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "patricia_brady",
+    "display_name": "Patricia Brady",
+    "title": "",
+    "first_name": "Patricia",
+    "last_name": "Brady",
+    "role": "GAL / Child Representative",
+    "court": "Medford MA",
+    "county": "Medford MA",
+    "court_or_county": "Medford MA",
+    "state": "Massachusetts",
+    "state_abbr": "MA",
+    "mention_count": 0,
+    "family_count": 6,
+    "public_family_count": 6,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "cad85417-8a04-45b2-ba22-0c4ab0b0a2e5",
+    "actor_bucket_key": "patricia brady|MA"
+  },
+  "photo": {
+    "path": "public/court-actors/ma/patricia_brady/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 75,
+    "total_submissions": 104,
+    "avg_financial_loss": 235880.44,
+    "avg_months_lost": 26.3,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "MA",
+    "state_family_count": 104,
+    "median_financial_loss": 136300,
+    "median_burden_sample_size": 44,
+    "median_months_lost": 18,
+    "pro_se_pct": 57.7,
+    "pro_se_count": 60,
+    "_pdf_state_family_count": 104,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5207,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 6,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "This is a very well known offender in Massachusetts she runs a business profiteering on children acting as both a guardian ad litem as well as expert witness and supervisor. I have a lot of information on her as well as records where she had ex parte Communications with the father asked the father if he was happy with the report while collecting money as well as concealing evidence including felony illegal wiretapping",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
+      },
+      {
+        "comment_text": "Delayed finishing and completing GAL report for over a year Took over a year and a half to complete a GAL investigation recommended that there be no contact between father and daughter because of the seriousness of allegations recommended that the boys have transition plan with Dad and parenting time as well as family therapy.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Medford MA"
+      },
+      {
+        "comment_text": "Patricia Brady (Visitation Center) – Managed the supervised visitation services in my case. Supervisors who documented concerns regarding the children’s welfare and caregiving arrangements were later removed from the case, and I was not provided with clear or consistent explanations for those decisions.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Medford MA"
+      },
+      {
+        "comment_text": "She testified against me in custody proceedings back 2015 . I never met this individual nor did she ever witness me with my daughter. She is an awful person.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Essex"
+      },
+      {
+        "comment_text": "Locked my kid in room. Supports who ever pays her bill. Does not look out for best interest of children",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Medford MA"
+      },
+      {
+        "comment_text": "Spoke to both parents, talked to 3 children, mother made false allegations and she knew and did nothing",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Medford MA"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/patricia_brady",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ma/patricia_brady/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

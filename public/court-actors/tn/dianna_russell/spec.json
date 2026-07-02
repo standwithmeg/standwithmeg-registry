@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "dianna_russell",
+    "display_name": "Dianna Russell",
+    "title": "",
+    "first_name": "Dianna",
+    "last_name": "Russell",
+    "role": "Judge/GAL / Child Representative",
+    "court": "Sevier",
+    "county": "Sevier",
+    "court_or_county": "Sevier",
+    "state": "Tennessee",
+    "state_abbr": "TN",
+    "mention_count": 0,
+    "family_count": 5,
+    "public_family_count": 5,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": "diana rusel|TN"
+  },
+  "photo": {
+    "path": "public/court-actors/tn/dianna_russell/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 88,
+    "total_submissions": 119,
+    "avg_financial_loss": 111954.91,
+    "avg_months_lost": 38.2,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "TN",
+    "state_family_count": 119,
+    "median_financial_loss": 83375,
+    "median_burden_sample_size": 52,
+    "median_months_lost": 17,
+    "pro_se_pct": 44.5,
+    "pro_se_count": 53,
+    "_pdf_state_family_count": 119,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5293,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 5,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Ordered removal of child across state lines for a custody case in a third state, I wasn’t even served with the order but had to turn my daughter over by 7pm that day and I live 4 hours away from that court.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Sevier"
+      },
+      {
+        "comment_text": "Committed perjury on motions and in hearings, Judge Rader threw her off the case only AFTER my attorney brought her misconduct to light, but the damage was done",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Sevier"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/dianna_russell",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/tn/dianna_russell/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "quote_char_budget": 280
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

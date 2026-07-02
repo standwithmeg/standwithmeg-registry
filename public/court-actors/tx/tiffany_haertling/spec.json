@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "tiffany_haertling",
+    "display_name": "Tiffany Haertling",
+    "title": "",
+    "first_name": "Tiffany",
+    "last_name": "Haertling",
+    "role": "Judge",
+    "court": "442nd District Court Denton county",
+    "county": "442nd District Court Denton county",
+    "court_or_county": "442nd District Court Denton county",
+    "state": "Texas",
+    "state_abbr": "TX",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": "tifany haertling|TX"
+  },
+  "photo": {
+    "path": "public/court-actors/tx/tiffany_haertling/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 243,
+    "total_submissions": 307,
+    "avg_financial_loss": 232914.17,
+    "avg_months_lost": 32.4,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "TX",
+    "state_family_count": 307,
+    "median_financial_loss": 125500,
+    "median_burden_sample_size": 146,
+    "median_months_lost": 20,
+    "pro_se_pct": 49.2,
+    "pro_se_count": 151,
+    "_pdf_state_family_count": 307,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5314,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Handled issues unfairly, even though she seen the text messages she acknowledged that they were very concerning that failed to act on them allowed Casa workers Cps workers, the district attorney herself and the Children’s attorneys to point and laugh at me while I was on STAN and humiliate me in her courtroom. Allowed them to lie allowed them to give false testimony denied all motions that was filed by me laughed in my face for not knowing how to fight my case per se even though she took my Court appointed Attorney away denied my mom and Attorney and my mom actually had custody of two of my children she won’t even put in the record my daughter‘s forensic interview which is the biggest part of the evidence in our case",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "442nd District Court Denton county"
+      },
+      {
+        "comment_text": "She basically granted, a false TRO that my child’s father requested. Before she even heard my story of abuse that I was going through with him she assumed that I ran away with my daughter, and I actually escaped his abuse. She granted him majority of what he wanted in the temporary of our own. We do have another hearing, but she was a witch to me.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "442nd District Court Denton county"
+      },
+      {
+        "comment_text": "Ignored tactics by opposing counsel that contradicted her ruling.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Denton"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/tiffany_haertling",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/tx/tiffany_haertling/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

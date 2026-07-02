@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "prairie_state_legal_services",
+    "display_name": "Prairie State Legal Services",
+    "title": "",
+    "first_name": "Prairie State Legal",
+    "last_name": "Services",
+    "role": "Attorney",
+    "court": "Kankakee",
+    "county": "McLean",
+    "court_or_county": "McLean",
+    "state": "Illinois",
+    "state_abbr": "IL",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "5055198c-66e5-45a2-87ab-820376d88b23",
+    "actor_bucket_key": "prairie state legal services|IL",
+    "_overrides_applied": [
+      "county",
+      "court_or_county",
+      "display_name",
+      "first_name",
+      "last_name",
+      "role"
+    ]
+  },
+  "photo": {
+    "path": "public/court-actors/il/prairie_state_legal_services/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 109,
+    "total_submissions": 145,
+    "avg_financial_loss": 231062.16,
+    "avg_months_lost": 28.7,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "IL",
+    "state_family_count": 145,
+    "median_financial_loss": 141500,
+    "median_burden_sample_size": 90,
+    "median_months_lost": 16,
+    "pro_se_pct": 48.3,
+    "pro_se_count": 70,
+    "_pdf_state_family_count": 145,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5308,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Useless. They only help if you have an OP and or criminal case. They then have an insane waitlist. They called me 3 yrs later and said they could take my case.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Kankakee and Lake"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/prairie_state_legal_services",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/il/prairie_state_legal_services/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

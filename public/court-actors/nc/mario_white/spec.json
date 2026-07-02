@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "mario_white",
+    "display_name": "Mario M. White",
+    "title": "",
+    "first_name": "Mario M.",
+    "last_name": "White",
+    "role": "Judge",
+    "court": "Sampson County",
+    "county": "Sampson County",
+    "court_or_county": "Sampson County",
+    "state": "North Carolina",
+    "state_abbr": "NC",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": "mario white|NC"
+  },
+  "photo": {
+    "path": "public/court-actors/nc/mario_white/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 161,
+    "total_submissions": 213,
+    "avg_financial_loss": 186966.14,
+    "avg_months_lost": 36.1,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "NC",
+    "state_family_count": 213,
+    "median_financial_loss": 140000,
+    "median_burden_sample_size": 71,
+    "median_months_lost": 16,
+    "pro_se_pct": 50.7,
+    "pro_se_count": 108,
+    "_pdf_state_family_count": 213,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5317,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Entered chamber with my attorney on 7/30/25 after I told my attorney that I was going to submit a flash drive into evidence to press charges on caseworker Karissa Henasey for committing pergery on the witness stand. After they came out of the chambers, a mistrial was called to protect the caseworker, and the next day a warrant was taken out for false charges against me. I believe this was planned so that my evidence would have been confiscated, in an attempt to save attorneys and caseworkers from criminal charges.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Sampson County"
+      },
+      {
+        "comment_text": "He never gave us an option to answer to anything, gave unsupervised visitation to the oldest, he already had crimes against nature charges, but since he wasn't convicted, it was not even considered. 1 yr later he's arrested an charged some horrific charges of the same nature with his other daughter. They literally handed her up on a silver platter to this animal, but we don't have any contact with the middle girl, an very very limited with the other 2",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Sampson County"
+      },
+      {
+        "comment_text": "Unfair he gives you no voice listens to DSS lawyer & that's it",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Sampson County"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/mario_white",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/nc/mario_white/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

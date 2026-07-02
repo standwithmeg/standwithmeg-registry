@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "maureen_monks",
+    "display_name": "Maureen Monks",
+    "title": "",
+    "first_name": "Maureen",
+    "last_name": "Monks",
+    "role": "Judge",
+    "court": "County not listed",
+    "county": "County not listed",
+    "court_or_county": "County not listed",
+    "state": "Massachusetts",
+    "state_abbr": "MA",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "2486b76e-2434-4be6-aa50-5d8707d0644c",
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/ma/maureen_monks/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 75,
+    "total_submissions": 104,
+    "avg_financial_loss": 235880.44,
+    "avg_months_lost": 26.3,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "MA",
+    "state_family_count": 104,
+    "median_financial_loss": 136300,
+    "median_burden_sample_size": 44,
+    "median_months_lost": 18,
+    "pro_se_pct": 57.7,
+    "pro_se_count": 60,
+    "_pdf_state_family_count": 104,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5207,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "The judge denied a continuance despite missing evidence, imposed restrictions neither parent requested, and justified them with unsupported safety concerns that contradicted the GAL’s findings.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
+      },
+      {
+        "comment_text": "Original judge from 2020 supported seriousness of sexual abuse allegations and most protective of children. She was replaced in 2023 by Christine Anthony who was replace by Elena tier in 2026",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "County not listed"
+      },
+      {
+        "comment_text": "Denied a gatekeeper motion",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Middlesex"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/maureen_monks",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ma/maureen_monks/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

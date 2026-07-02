@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "george_l_jenkins",
+    "display_name": "George L. Jenkins",
+    "title": "",
+    "first_name": "George L.",
+    "last_name": "Jenkins",
+    "role": "Attorney / GAL / Child Representative",
+    "court": "Lenoir",
+    "county": "Lenoir",
+    "court_or_county": "Lenoir",
+    "state": "NC",
+    "state_abbr": "NC",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": "george jenkins|NC"
+  },
+  "photo": {
+    "path": "public/court-actors/nc/george_l_jenkins/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 161,
+    "total_submissions": 213,
+    "avg_financial_loss": 186966.14,
+    "avg_months_lost": 36.1,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "NC",
+    "state_family_count": 213,
+    "median_financial_loss": 140000,
+    "median_burden_sample_size": 71,
+    "median_months_lost": 16,
+    "pro_se_pct": 50.7,
+    "pro_se_count": 108,
+    "_pdf_state_family_count": 213,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5317,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Supported continued separation from my child while failing to address evidence, due process concerns, and reunification efforts.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lenoir"
+      },
+      {
+        "comment_text": "Overing cor dss mistakes, lying under oath, using legal language to trick, demoralize and try to force adoption of kids",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lenoir"
+      },
+      {
+        "comment_text": "Opposed reunification efforts and supported decisions that limited visitation and family placement options.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lenoir"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/george_l_jenkins",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/nc/george_l_jenkins/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

@@ -1,0 +1,96 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "anthony_mcginty",
+    "display_name": "Anthony McGinty",
+    "title": "",
+    "first_name": "Anthony",
+    "last_name": "McGinty",
+    "role": "Judge",
+    "court": "Ulster County Family Court",
+    "county": "Ulster County Family Court",
+    "court_or_county": "Ulster County Family Court",
+    "state": "New York",
+    "state_abbr": "NY",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "989d2769-55d1-4f0e-a5b7-cc3329c138c8",
+    "actor_bucket_key": "anthony mcginty|NY",
+    "_overrides_applied": [
+      "county",
+      "court_or_county",
+      "display_name",
+      "first_name",
+      "last_name",
+      "role"
+    ]
+  },
+  "photo": {
+    "path": "public/court-actors/ny/anthony_mcginty/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 136,
+    "total_submissions": 171,
+    "avg_financial_loss": 213193.71,
+    "avg_months_lost": 26.4,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "NY",
+    "state_family_count": 171,
+    "median_financial_loss": 165000,
+    "median_burden_sample_size": 69,
+    "median_months_lost": 14,
+    "pro_se_pct": 39.2,
+    "pro_se_count": 67,
+    "_pdf_state_family_count": 171,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5314,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "During my year long trial my lawyer and myself begged for reunification therapy for me and my children. Prior to trial I had already been alienated for almost a year. During the entire trial when asked for reunification, he said he would not make any decisions about therapy until all evidence was presented. Following the trial, I waited seven additional months for a trial decision. The decision allowed me to being reunification therapy with my kids.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Ulster"
+      },
+      {
+        "comment_text": "No due process, advocates and writes his opinion as fact, referred opposing counsel to refer to supreme court and \"talk to them\" about it!!- avoiding evidence",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Ulster County Family Court"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/anthony_mcginty",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ny/anthony_mcginty/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

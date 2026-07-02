@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Training — Stand With Meg Partner Portal</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/tokens.css" />
+  <link rel="stylesheet" href="styles/global.css" />
+  <link rel="stylesheet" href="styles/portal.css" />
+</head>
+<body>
+  <div class="shell" id="shell">
+    <div class="backdrop" id="backdrop"></div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div>
+        <p class="wordmark sidebar__brand">
+          <span>Stand</span><span class="w-with">With</span><span>Meg</span>
+        </p>
+        <p class="sidebar__greeting">Welcome, <strong id="greet-name">Partner</strong> · <span id="greet-state">Your state</span></p>
+      </div>
+
+      <div class="progress">
+        <div class="progress__track"><div class="progress__fill" id="progress-fill"></div></div>
+        <p class="progress__label"><span id="progress-count">0</span> of <span id="progress-total">0</span> lessons complete</p>
+      </div>
+
+      <nav class="nav" id="nav" aria-label="Training modules"></nav>
+
+      <button class="btn btn--ghost btn--sm sidebar__signout" id="signout">Sign out</button>
+    </aside>
+
+    <!-- Main -->
+    <div>
+      <header class="topbar">
+        <button class="hamburger" id="hamburger" aria-label="Open menu">☰</button>
+        <p class="wordmark" style="font-size:1.1rem;"><span>Stand</span><span class="w-with">With</span><span>Meg</span></p>
+        <span style="width:42px"></span>
+      </header>
+      <main class="main" id="main" tabindex="-1"></main>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="scripts/auth.js"></script>
+  <script src="scripts/progress.js"></script>
+  <script src="content/lessons.js"></script>
+  <script src="scripts/calculator.js"></script>
+  <script src="scripts/app.js"></script>
+</body>
+</html>

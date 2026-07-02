@@ -1,0 +1,100 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "amanda_mueller",
+    "display_name": "Amanda Mueller",
+    "title": "",
+    "first_name": "Amanda",
+    "last_name": "Mueller",
+    "role": "Mediator",
+    "court": "Lexington",
+    "county": "Lexington",
+    "court_or_county": "Lexington",
+    "state": "South Carolina",
+    "state_abbr": "SC",
+    "mention_count": 0,
+    "family_count": 4,
+    "public_family_count": 4,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "e77cbe77-6d59-4d1e-8e18-ec473d7bd960",
+    "actor_bucket_key": "amanda mueler|SC"
+  },
+  "photo": {
+    "path": "public/court-actors/sc/amanda_mueller/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 82,
+    "total_submissions": 105,
+    "avg_financial_loss": 287649.02,
+    "avg_months_lost": 25.9,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "SC",
+    "state_family_count": 105,
+    "median_financial_loss": 127500,
+    "median_burden_sample_size": 66,
+    "median_months_lost": 19,
+    "pro_se_pct": 57.1,
+    "pro_se_count": 60,
+    "_pdf_state_family_count": 105,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5316,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 4,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "“The mediation process exposed what I believe is one of the most dangerous realities of family court: temporary emergency allegations can evolve into long-term parental erasure through financial pressure, stigma, and procedural imbalance — even without criminal findings, DSS involvement, or updated judicial review. Instead of functioning as a neutral space for resolution, mediation with Mrs. Mueller felt like pressure to accept permanent restrictions and invasive conditions that would never be tolerated in many other areas of civil or constitutional law.”",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lexington"
+      },
+      {
+        "comment_text": "Has had only 1 in person interaction with me which was an initial interview in September of 2024 & no contact since. She maintains VERY consistent contact/communication/interaction with estranged spouse and I get the excessive bill for half. Court won’t do a thing about it.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lexington"
+      },
+      {
+        "comment_text": "Worked for CPS prior to atty, also a GAL, Told me my ex’s stories are more ‘believable’ and said “I don’t know what to tell you” when I asked her what I should do if I hypothetically had another very real concern about kids safety.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lexington"
+      },
+      {
+        "comment_text": "She did not prepare for my court date and didn’t listen to me when I said he would take my son from me. She did not prepare a defense for me at all.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lexington"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/amanda_mueller",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/sc/amanda_mueller/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

@@ -1,0 +1,100 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "matthew_jackson",
+    "display_name": "Matthew Jackson",
+    "title": "",
+    "first_name": "Matthew",
+    "last_name": "Jackson",
+    "role": "Attorney (Opposing)",
+    "court": "Beaufort County",
+    "county": "Beaufort",
+    "court_or_county": "Beaufort County",
+    "state": "North Carolina",
+    "state_abbr": "NC",
+    "mention_count": 0,
+    "family_count": 4,
+    "public_family_count": 4,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "907c5562-907d-4cc4-ad0f-59dc7b674d70",
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/nc/matthew_jackson/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 161,
+    "total_submissions": 213,
+    "avg_financial_loss": 186966.14,
+    "avg_months_lost": 36.1,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "NC",
+    "state_family_count": 213,
+    "median_financial_loss": 140000,
+    "median_burden_sample_size": 71,
+    "median_months_lost": 16,
+    "pro_se_pct": 50.7,
+    "pro_se_count": 108,
+    "_pdf_state_family_count": 213,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5317,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 4,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Submitted lies to the judge to obtain a non secured custody order. Gave documentation to him to show he d made an error which he refused to correct because his social workers would not give him false information. Interviewed children without anyone else present. Told my son he would never see me again if he changed his story. Threatened me directly saying I could keep fighting the allegations but I was only making it harder on the children because I would never see them and would be severely restricted in my contact with them, which they did until I got louder and louder and making complaints with the state and making TikTok’s. Would not authorize my son’s picture to be released to news outlets when he ran away from placement for the 4th time and was missing two months. Help suppress evidence and threatened law enforcement with law suites that were trying to help my son as he claimed physically and sexual assault by the facility he was placed in without a court order.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Beaufort County"
+      },
+      {
+        "comment_text": "He was the DSS attorney and reported falsely to the judge statements he said I made. Said the workers would not lie and that I was just changing my story now. I told him the statement Abby Williams made me write n that I was in a locked room. He said I just don’t believe that but he still submitted that letter as fact. He told a judge I was fearful of my parents and that was a lie. He told a judge there was no one else to take me also a lie proven by many letters my mother has that she submitted to him from herself and my family. He also tried to block me from speaking with the judge.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Beaufort"
+      },
+      {
+        "comment_text": "Has lied continuously, his court interpretations are quite warped and it's alarming he is still allowed to practice law without a serious psychological evaluation. MANY families have grievances with him. He has enabled the abuse of my children and acts as though he's untouchable. He throws tantrums when the judges don't do exactly what he wants, I've actually seen him storm out of the courtroom and I've also seen him so mad he started to pack up his belongings as the judge was still speaking. I have several pages of complaints against this one.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Beaufort"
+      },
+      {
+        "comment_text": "Continues to delay my case. It's been a year without an initial hearing yet.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Beaufort"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/matthew_jackson",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/nc/matthew_jackson/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "adam_wilgus",
+    "display_name": "Adam W. Wilgus",
+    "title": "",
+    "first_name": "Adam W.",
+    "last_name": "Wilgus",
+    "role": "Judge",
+    "court": "Tuscarawas",
+    "county": "Tuscarawas",
+    "court_or_county": "Tuscarawas",
+    "state": "Ohio",
+    "state_abbr": "OH",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": "adam wilgus|OH"
+  },
+  "photo": {
+    "path": "public/court-actors/oh/adam_wilgus/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 205,
+    "total_submissions": 260,
+    "avg_financial_loss": 113532.41,
+    "avg_months_lost": 31.4,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OH",
+    "state_family_count": 260,
+    "median_financial_loss": 81125,
+    "median_burden_sample_size": 126,
+    "median_months_lost": 18,
+    "pro_se_pct": 52.7,
+    "pro_se_count": 137,
+    "_pdf_state_family_count": 260,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5303,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Ignored my son bruised every visit and evidence from my parents and my dad collapsed in their parking lot they let jfs continue court where my dad couldn't cross examine and made me stay there while my dad died twice",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Tuscarawas"
+      },
+      {
+        "comment_text": "It was his court room his magistrates making rulings and orders and he later after 1 whole year removed himself for conflict of interest is the biggest thing so how is this even still happening",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Tuscarawas"
+      },
+      {
+        "comment_text": "He allowed lies and hearsay in the permenancy trial",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Tuscarawas"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/adam_wilgus",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/oh/adam_wilgus/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

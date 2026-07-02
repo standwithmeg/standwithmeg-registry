@@ -1,0 +1,112 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "cynthia_pickering",
+    "display_name": "Cynthia Pickering",
+    "title": "",
+    "first_name": "Cynthia",
+    "last_name": "Pickering",
+    "role": "Judge",
+    "court": "Okmulgee county",
+    "county": "Okmulgee",
+    "court_or_county": "Okmulgee county",
+    "state": "Oklahoma",
+    "state_abbr": "OK",
+    "mention_count": 0,
+    "family_count": 6,
+    "public_family_count": 6,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "93afafa5-c00b-46c3-a78a-f8aa69cf3bb2",
+    "actor_bucket_key": "cynthia pickering|OK"
+  },
+  "photo": {
+    "path": "public/court-actors/ok/cynthia_pickering/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 128,
+    "total_submissions": 160,
+    "avg_financial_loss": 120211.96,
+    "avg_months_lost": 24.6,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OK",
+    "state_family_count": 160,
+    "median_financial_loss": 100500,
+    "median_burden_sample_size": 84,
+    "median_months_lost": 12,
+    "pro_se_pct": 44.4,
+    "pro_se_count": 71,
+    "_pdf_state_family_count": 160,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5291,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 6,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Took my kids in an ex parte guardianship with no evidence other than a sworn statement from my abusers parents and him terminating his legal rights to them. I'm currently facing arraignment for indirect contempt for speaking about my case and answering my kids messages when they ran away from abuse suffered at the home of the guardians/ paternal grandparents",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Okmulgee county"
+      },
+      {
+        "comment_text": "This judge signed off on an emergency custody with no grounds to take my children, took my children for 21 days I wasn’t allowed to see, talk or hear from my children, signed off on denial of paternity papers after proving my ex wasn’t the father of my two younger children but still forces my children who are no relation to this man to goto his home.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Okmulgee"
+      },
+      {
+        "comment_text": "My son and his wife were telling doctors and other people that I had been doing drugs while I was pregnant with my daughter. The judge told them that they had to correct that statement and tell everyone that it was untrue. She did not do anything about the inappropriate letter that was not true. I still lost my being able to contact my daughter.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Okmulgee"
+      },
+      {
+        "comment_text": "Ignored evidence on my part. Had a private meeting with the defendants attorney without my attorney present with lead the defendant to know exactly how our case was going to turn out.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Okmulgee county family court"
+      },
+      {
+        "comment_text": "She has left it up to the attorneys to figure out details regarding visitations and we have not been to court since. Even though the schedules are not being followed correctly.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Okmulgee"
+      },
+      {
+        "comment_text": "I will send you what I sent to the news stations",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Okmulgee"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/cynthia_pickering",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ok/cynthia_pickering/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

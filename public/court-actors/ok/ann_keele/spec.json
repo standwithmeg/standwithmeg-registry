@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "ann_keele",
+    "display_name": "Ann Keele",
+    "title": "",
+    "first_name": "Ann",
+    "last_name": "Keele",
+    "role": "Attorney (Opposing)",
+    "court": "Wagoner",
+    "county": "Tulsa County",
+    "court_or_county": "Wagoner",
+    "state": "Oklahoma",
+    "state_abbr": "OK",
+    "mention_count": 0,
+    "family_count": 4,
+    "public_family_count": 4,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "904b1937-2568-42a3-88cf-9bff6e58c486",
+    "actor_bucket_key": "ann kele|OK"
+  },
+  "photo": {
+    "path": "public/court-actors/ok/ann_keele/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 128,
+    "total_submissions": 160,
+    "avg_financial_loss": 120211.96,
+    "avg_months_lost": 24.6,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OK",
+    "state_family_count": 160,
+    "median_financial_loss": 100500,
+    "median_burden_sample_size": 84,
+    "median_months_lost": 12,
+    "pro_se_pct": 44.4,
+    "pro_se_count": 71,
+    "_pdf_state_family_count": 160,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5291,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 4,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Has stalled the whole case. Worked closely with GAL went to lunch with gal during trial. Anne and GAL worked together to take my little girl. Anne helped a multi felon walk away with my baby a woman who served federal prison time for over 10years and gave birth to my daughter’s dad in prison. She has government proffers against her that is child abuse, child neglect and child abandonment. Anne helped this woman kidnap my daughter with help of gal Megan Beck. Now I pay child support to my daughter’s dad who does not even live with my daughter.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Wagoner County"
+      },
+      {
+        "comment_text": "To be disclosed if my testimony is required. I have paper, digital, and video evidence of all of my above statements. The judge dismissed all as evidence.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Wagoner"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/ann_keele",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ok/ann_keele/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

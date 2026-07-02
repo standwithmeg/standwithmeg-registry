@@ -1,0 +1,16 @@
+{
+  "crons": [
+    {
+      "path": "/api/cron/refresh-public-actor-cache",
+      "schedule": "0 * * * *"
+    },
+    {
+      "path": "/api/cron/auto-stage-court-actor-posts",
+      "schedule": "15 8 * * *"
+    },
+    {
+      "path": "/api/cron/scan-social-post-replies",
+      "schedule": "*/15 * * * *"
+    }
+  ]
+}

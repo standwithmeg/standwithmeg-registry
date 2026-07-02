@@ -1,0 +1,106 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "kelli_miller",
+    "display_name": "Kelli Miller",
+    "title": "",
+    "first_name": "Kelli",
+    "last_name": "Miller",
+    "role": "CPS Worker",
+    "court": "Hancock",
+    "county": "Hancock",
+    "court_or_county": "Hancock",
+    "state": "Ohio",
+    "state_abbr": "OH",
+    "mention_count": 0,
+    "family_count": 5,
+    "public_family_count": 5,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "7f8e88a8-e81f-4501-9e42-6390fad16c1d",
+    "actor_bucket_key": "keli miler|OH"
+  },
+  "photo": {
+    "path": "public/court-actors/oh/kelli_miller/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 205,
+    "total_submissions": 260,
+    "avg_financial_loss": 113532.41,
+    "avg_months_lost": 31.4,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OH",
+    "state_family_count": 260,
+    "median_financial_loss": 81125,
+    "median_burden_sample_size": 126,
+    "median_months_lost": 18,
+    "pro_se_pct": 52.7,
+    "pro_se_count": 137,
+    "_pdf_state_family_count": 260,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5303,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 5,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Said I was unsafe, never did background check or home study. Said I didn’t protect my grandchildren when in fact I had and always have. Had him since he was 2 months old every single weekend. She filed a false report stating FRESH RIBS PLURAL and that he was SEEN in person by their doctor- a lie. He had a single old hairline fix rib nobody knew about. Perjury, met children one time, attended my sons criminal hearing with foster parents. Trial by ambush.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Hancock county cps"
+      },
+      {
+        "comment_text": "Falsified reports, changed drug test to a positive. Changed documents after signed. Lied on the stand. Claimed to attempt a home visit when no contact was ever made. Also claimed that home visits were denied but were done every month and recording of them prove it.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Hancock"
+      },
+      {
+        "comment_text": "Lied about the results of a drug test, that was eventually overturned at court by Judge Kristen Johnson. Delayed granting my visitation request for months, my lawyer had to contact her and demand à response",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Hancock"
+      },
+      {
+        "comment_text": "She altered drugs tests lied twisted everything said my son was adopted he has not been pay childsupport currently no visits or contact or response from cps or family court",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Hancock county cps"
+      },
+      {
+        "comment_text": "Lied on stand. Did NOT contact any family. Never returned phone calls for outreach and placement. Did dual roles at agency. Abuse of power and relatiation.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Hancock"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/kelli_miller",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/oh/kelli_miller/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

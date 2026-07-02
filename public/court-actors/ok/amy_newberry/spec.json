@@ -1,0 +1,100 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "amy_newberry",
+    "display_name": "Amy Newberry",
+    "title": "",
+    "first_name": "Amy",
+    "last_name": "Newberry",
+    "role": "Therapist / Counselor",
+    "court": "Oklahoma",
+    "county": "Oklahoma",
+    "court_or_county": "Oklahoma",
+    "state": "OK",
+    "state_abbr": "OK",
+    "mention_count": 0,
+    "family_count": 5,
+    "public_family_count": 5,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": "amy newbery|OK"
+  },
+  "photo": {
+    "path": "public/court-actors/ok/amy_newberry/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 128,
+    "total_submissions": 160,
+    "avg_financial_loss": 120211.96,
+    "avg_months_lost": 24.6,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OK",
+    "state_family_count": 160,
+    "median_financial_loss": 100500,
+    "median_burden_sample_size": 84,
+    "median_months_lost": 12,
+    "pro_se_pct": 44.4,
+    "pro_se_count": 71,
+    "_pdf_state_family_count": 160,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5291,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 5,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Cancelled 15+ appointments at the last minute mostly to attend emergency court hearings. Parents and siblings locked out of her office during therapy sessions, asked to wait in the car with no access to bathroom or lobby. Allowed her associate to provide court ordered anger management to the father, and graduated him while he was still sending regular harassing messages. Fraudulently presented herself as a trauma specialist doctor, she was sued twice in 2022, with multiple other families affected as well. Lying about credentials, improper notetaking storage, making false allegations to CPS, fraud, lying under oath and on reports. Currently relying on a loophole that protects LPC counselors from consequences. Files numerous aggressively false DHS reports (5 families affected that I know of, including the public lawsuits.). Lied to the psych evaluator, which impacted the outcome and integrity of the process. I am connected with one additional mother who experienced the same pattern with Newberry. The most painful part is the damage done to all of the kids involved. Mental health wise. She should not have access to traumatized kids.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Oklahoma"
+      },
+      {
+        "comment_text": "Hired by Rob Hopkins to force my male child to believe my ex was a man. Has personal relationships as their children go to same private school. Forced my son on visits that he repeatedly told her violated the rules of that visit.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Oklahoma"
+      },
+      {
+        "comment_text": "The safe parents she’s lied about fit the same profile. She has a type she goes after. Similar appearance, financial status, education level, with very young kids whose words can be twisted.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Oklahoma"
+      },
+      {
+        "comment_text": "Was in the same office with Larissa and fed the drama of false allegations by making up her own",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/amy_newberry",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ok/amy_newberry/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

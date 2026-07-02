@@ -1,0 +1,112 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "joy_booth",
+    "display_name": "Joy Pace Booth",
+    "title": "",
+    "first_name": "Joy Pace",
+    "last_name": "Booth",
+    "role": "Judge",
+    "court": "Autauga",
+    "county": "Autauga",
+    "court_or_county": "Autauga",
+    "state": "Alabama",
+    "state_abbr": "AL",
+    "mention_count": 0,
+    "family_count": 8,
+    "public_family_count": 8,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/al/joy_booth/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 103,
+    "total_submissions": 128,
+    "avg_financial_loss": 90405.41,
+    "avg_months_lost": 36.3,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "AL",
+    "state_family_count": 128,
+    "median_financial_loss": 80000,
+    "median_burden_sample_size": 59,
+    "median_months_lost": 14,
+    "pro_se_pct": 43.0,
+    "pro_se_count": 55,
+    "_pdf_state_family_count": 128,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5320,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 8,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Refused Forensic Interview, Hospital Reports, Police Reports, & Therapy Reports into evidence. No due process. Ex-husband tested positive in court for Methamphetamine & Amphetamines, has 7 current warrents, and was on probation. He got full custody. All my rights have been taken. She refused forensic interview, hospital reports, therapy and psychiatric reports on children into evidence. The opposing party tested positive for Amphetamines & Methamphetamine. Oppsing party was on probation with 6 warrents and got given full custody.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Autauga"
+      },
+      {
+        "comment_text": "Denied rights. Jailed me for not paying Gal. My ex husband still hasn't paid Gal. Judged me to pay my ex husband's attorney fees. Took my children with no explanation Took my visitation with no hearing. Forced vaccines on my children. Allowed my attorney to quit after 2 years, a month before trial. Denied my right to fair trial. Denied motion to continue for time to get attorney. Etc!",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Autauga"
+      },
+      {
+        "comment_text": "Evidence was presented that showed that my child’s father was threatening to harm both me and my child. She said “this was in the past and is irrelevant.” My child was approximately 9 months old at the time and the threats were made after he was born.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Autauga"
+      },
+      {
+        "comment_text": "Failed to uphold requirements of a safety plan. Declined to accept testimony on Mother's behalf. Discussed details of the case to people that were outside of the case and made her judgement without ever seeing the mother.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Autauga"
+      },
+      {
+        "comment_text": "Completely ignored the constitution, deprived me and my daughter of our rights, no due process. Friends with my ex and his new wife. She’s a horrible judge.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Autauga"
+      },
+      {
+        "comment_text": "Ignored evidence, denied my rights and blocked my attempts to get in front of her with the evidence in question",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Autauga"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/joy_booth",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/al/joy_booth/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

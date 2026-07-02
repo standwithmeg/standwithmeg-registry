@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "kyle_hancock",
+    "display_name": "Dr Kyle Hancock",
+    "title": "Dr",
+    "first_name": "Kyle",
+    "last_name": "Hancock",
+    "role": "Custody Evaluator",
+    "court": "Box Elder",
+    "county": "Cache",
+    "court_or_county": "Davis County",
+    "state": "Utah",
+    "state_abbr": "UT",
+    "mention_count": 0,
+    "family_count": 4,
+    "public_family_count": 4,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/ut/kyle_hancock/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 43,
+    "total_submissions": 56,
+    "avg_financial_loss": 276098.88,
+    "avg_months_lost": 18.8,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "UT",
+    "state_family_count": 56,
+    "median_financial_loss": 166000,
+    "median_burden_sample_size": 35,
+    "median_months_lost": 6,
+    "pro_se_pct": 55.4,
+    "pro_se_count": 31,
+    "_pdf_state_family_count": 56,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5207,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 4,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "He lied in one of his letters to the court by stating his job is to evaluate both homes with my child. That never happened. He then stated in a hearing that he only evaluated one home as that was all he needed to do. Evaluator only evaluated my son with the petitioner’s family at their home but never evaluated my son at our home with his only sibling. He questioned my son so the Petitioners home about the abuse they did while they were present. He thinks it’s a good idea to question a child victim in a comfortable setting. How can it be a comfortable setting when the child is being questioned in the very place the abuse occurred?",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Cache"
+      },
+      {
+        "comment_text": "Dr. Kyle Hancock completely abandoned his role as an objective psychologist and court investigator to act as a private advocate for a parent who has engaged in documented written perjury, severe medical neglect, asset spoliation, financial fraud, and systemic parental alienation.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Davis County"
+      },
+      {
+        "comment_text": "Has never presented the crimes of which my abuser has committed. My son continues to be injured but the custody evaluator and GAL are very inter related.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Box Elder"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/kyle_hancock",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ut/kyle_hancock/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "jeffrey_bagley",
+    "display_name": "Jeffrey Bagley",
+    "title": "",
+    "first_name": "Jeffrey",
+    "last_name": "Bagley",
+    "role": "Judge",
+    "court": "Forsyth county",
+    "county": "Forsyth county",
+    "court_or_county": "Forsyth county",
+    "state": "Georgia",
+    "state_abbr": "GA",
+    "mention_count": 0,
+    "family_count": 4,
+    "public_family_count": 4,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "28e51a6f-c79f-42df-b062-cb5fce91084c",
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/ga/jeffrey_bagley/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 122,
+    "total_submissions": 149,
+    "avg_financial_loss": 222633.06,
+    "avg_months_lost": 32.5,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "GA",
+    "state_family_count": 149,
+    "median_financial_loss": 148000,
+    "median_burden_sample_size": 84,
+    "median_months_lost": 18,
+    "pro_se_pct": 45.6,
+    "pro_se_count": 68,
+    "_pdf_state_family_count": 149,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5275,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 4,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Signed orders the day that motions were filed from imposing council ignored Portugal evaluator, as well as psychologist, refused to acknowledge evidence ordered money that was to be paid in form of gifts from my family, knowing that I did not have the money and that they were not going to help me pay, orchestra the loss of my house to opposing Party and gave them majority of the equity screwed me out of $200,000 had emergency hearings repeatedly out of jerk station when giving full custody of my son, who was never even legitimized by his father it goes on and on he is the most corrupt person in this world. He is the devil.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Forsyth county"
+      },
+      {
+        "comment_text": "Has personal interest in my case and has made that clear many times in the stand will have things filed the same day in court dates on the docket immediately upon opposing cancel filing paperwork when taking four months for Mom‘s friends Board divorced to finalize because he has a personal interest in my case and I believe the pedophile and sex trafficker",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Forsyth county"
+      },
+      {
+        "comment_text": "Called me and my daughter and 12 year old neighbor liers for reporting sexual abuse of my daughter then forced her to go alone with abuser and punished me in court (5 hearings in 2 years )",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Forsyth county"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/jeffrey_bagley",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ga/jeffrey_bagley/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

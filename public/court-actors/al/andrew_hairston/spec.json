@@ -1,0 +1,100 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "andrew_hairston",
+    "display_name": "Andrew Hairston",
+    "title": "",
+    "first_name": "Andrew",
+    "last_name": "Hairston",
+    "role": "Judge",
+    "court": "Cherokee county",
+    "county": "Cherokee county",
+    "court_or_county": "Cherokee county",
+    "state": "Alabama",
+    "state_abbr": "AL",
+    "mention_count": 0,
+    "family_count": 4,
+    "public_family_count": 4,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "e5e23912-c4c0-4a12-8071-76b5f432ff9d",
+    "actor_bucket_key": "andrew hairston|AL"
+  },
+  "photo": {
+    "path": "public/court-actors/al/andrew_hairston/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 103,
+    "total_submissions": 128,
+    "avg_financial_loss": 90405.41,
+    "avg_months_lost": 36.3,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "AL",
+    "state_family_count": 128,
+    "median_financial_loss": 80000,
+    "median_burden_sample_size": 59,
+    "median_months_lost": 14,
+    "pro_se_pct": 43.0,
+    "pro_se_count": 55,
+    "_pdf_state_family_count": 128,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5320,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 4,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Refused to hear the abuse to me and my siblings . Sent my baby brother with an abusive step father w/out seeing evidence exparte . Refused to hear emergency hearing protection orders and lied on orders that he heard all witnesses and both parties when transcripts prove only one side was heard . Threatened me and my siblings and my mother . Violated Alabama laws federal laws and civil and constitutional rights . Refuses to hear, domestic violence protection orders Refuses to allow emergency hearings when children are in danger Rules export in sciences, export orders for Chad Hopper, and as favors for attorneys in the back room Violate constitutional rights, Alabama constitution and United States constitution He is biased and does not protect children He is in the masons and rules for as favors for Masons that are in the secret society with him He does not uphold Alabama law, federal laws, or domestic violence protection laws He signs illegal orders above his authority to prevent domestic violence, parents from being able to move even it’s if it’s in the Alabama guidelines for parents to be able to move within 77 miles he still signs formed to prevent them from moving He does not protect children and follow the Alabama laws or federal laws as far as protecting children or the best interest of the child He has one-sided hearings and only hears one side of the hearing and then makes a ruling He has threatened women that if they present their domestic violence cases, or if they present their modification hearings or if they present their cases of child abuse against their abuser that he will arrest them and hold them in contempt and take their children from them He is not concerned with the safety of children or abuse of children He has signed numerous ex parte orders for attorneys behind closed door and then he has signed order stating that he heard the full case and heard all evidence when the transcripts do not match that He has prolonged hearings that last three for six years while children are having to visit abusive parents He also refuses to hear that a father was absent for 4 1/2 years and it’s not the biological father in order ex parte orders that one of four children has to go with a parent that he does not know that is not biological without a hearing And he also separates siblings. There is numerous cases where he has deliberately separated, siblings permanently, and also in my case, he separates siblings every holiday. He does not enforce that of father supports all children. He lets the father’s chief which children the father likes and wants to see, and he also supports fathers neglecting and abusing three or four children.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Cherokee county"
+      },
+      {
+        "comment_text": "He signed exparte orders and denied me the route. I have my protection orders heard he also failed to look at evidence or hear witnesses or to protect children which by law he is supposed to and he is allowing my children not to be abused installed continuously by my ex, he is not upholding the law and he’s violating constitutional rights. He is also a Mason with my ex-husband and he is not making decisions by the laws and is not upholding the law. The judge made threats to me, and he never allowed me to present my cases. None of my cases have been heard. My modification has not been heard my protection orders have not been heard and abuse has been reported to him and neglect to my son and he refuses to hear it. he does not want to hear it at all.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Cherokee county"
+      },
+      {
+        "comment_text": "Denied my request for continuance due to not having representation or preparation to represent myself, made a final ruling stripping my rights based off of false accusations and beliefs with absolutely no evidence and dismissed my initial hearing for temporary custody even after supporting evidence was presented to the court. The judge made a final ruling without supporting evidence and dismissed the initial case even with supporting evidence provided.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Dekalb county"
+      },
+      {
+        "comment_text": "He heard abuse to children and to ex spouse and ignored . Ruled basis one sided and denied the abused protection and ignored all abuse evidence",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Circuit court Cherokee county"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/andrew_hairston",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/al/andrew_hairston/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

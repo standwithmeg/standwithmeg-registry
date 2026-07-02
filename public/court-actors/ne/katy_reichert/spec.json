@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "katy_reichert",
+    "display_name": "Katy Reichert",
+    "title": "",
+    "first_name": "Katy",
+    "last_name": "Reichert",
+    "role": "GAL / Child Representative",
+    "court": "Scottsbluff",
+    "county": "Scottsbluff",
+    "court_or_county": "Scottsbluff",
+    "state": "Nebraska",
+    "state_abbr": "NE",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": "katy reichert|NE"
+  },
+  "photo": {
+    "path": "public/court-actors/ne/katy_reichert/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 35,
+    "total_submissions": 42,
+    "avg_financial_loss": 179170.13,
+    "avg_months_lost": 36.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "NE",
+    "state_family_count": 42,
+    "median_financial_loss": 176750,
+    "median_burden_sample_size": 16,
+    "median_months_lost": 22,
+    "pro_se_pct": 50.0,
+    "pro_se_count": 21,
+    "_pdf_state_family_count": 42,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5207,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "She was done with my kids case in the middle of it and transferred it to Audrey and accused me of taking doctors notes because that’s what the school had said even though they were legitimate and I had sent her the legitimate doctors notes.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Scottsbluff"
+      },
+      {
+        "comment_text": "She dint care I was sober or doing better she had her mind made up",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Scottsbluff"
+      },
+      {
+        "comment_text": "She did not hear me out because I’m a ma",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Scottsbluff"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/katy_reichert",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ne/katy_reichert/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

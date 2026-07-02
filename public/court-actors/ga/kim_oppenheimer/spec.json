@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "kim_oppenheimer",
+    "display_name": "Kim C. Oppenheimer",
+    "title": "",
+    "first_name": "Kim C.",
+    "last_name": "Oppenheimer",
+    "role": "Custody Evaluator",
+    "court": "Gwinnett County",
+    "county": "Fulton",
+    "court_or_county": "Gwinnett County",
+    "state": "Georgia",
+    "state_abbr": "GA",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "1c2178a8-8062-4959-8bdc-1ee00b97a300",
+    "actor_bucket_key": "kim openheimer|GA"
+  },
+  "photo": {
+    "path": "public/court-actors/ga/kim_oppenheimer/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 122,
+    "total_submissions": 149,
+    "avg_financial_loss": 222633.06,
+    "avg_months_lost": 32.5,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "GA",
+    "state_family_count": 149,
+    "median_financial_loss": 148000,
+    "median_burden_sample_size": 84,
+    "median_months_lost": 18,
+    "pro_se_pct": 45.6,
+    "pro_se_count": 68,
+    "_pdf_state_family_count": 149,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5275,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Allegedly made the very statements that Kathryn Franklin would use against me in court to take custody of my kids away from me. Kim Oppenheimer never evaluated me nor produced a written report she gave me my full $3500 retainer back. Never cooperated with Dr. Eddie Beal who cleared me of all mental illnesses.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Gwinnett County"
+      },
+      {
+        "comment_text": "Conducted an incomplete and one-sided evaluation process that harmed my parental relationship without providing a meaningful written report or fair opportunity to challenge her conclusions.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Cobb County Superior Court"
+      },
+      {
+        "comment_text": "Falsied records, misrepresented evidence, falsely accused me, ignored witnesses, ignored medical records, ignored therapist",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Fulton"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/kim_oppenheimer",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ga/kim_oppenheimer/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

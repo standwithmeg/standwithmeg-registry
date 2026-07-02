@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "april_harris_britt",
+    "display_name": "April Harris Britt",
+    "title": "",
+    "first_name": "April Harris",
+    "last_name": "Britt",
+    "role": "Psychological Evaluator",
+    "court": "Wake",
+    "county": "Wake",
+    "court_or_county": "Wake",
+    "state": "North Carolina",
+    "state_abbr": "NC",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "c3e0dd53-dc9a-48bf-9027-82508d4ca18a",
+    "actor_bucket_key": "april haris brit|NC"
+  },
+  "photo": {
+    "path": "public/court-actors/nc/april_harris_britt/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 161,
+    "total_submissions": 213,
+    "avg_financial_loss": 186966.14,
+    "avg_months_lost": 36.1,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "NC",
+    "state_family_count": 213,
+    "median_financial_loss": 140000,
+    "median_burden_sample_size": 71,
+    "median_months_lost": 16,
+    "pro_se_pct": 50.7,
+    "pro_se_count": 108,
+    "_pdf_state_family_count": 213,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5317,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Never even saw my kids and wrote false affidavit against me making up lies. Had LLC with attorney on the case and made money off hundreds of families - Look at her reviews- should NEVER be allowed to work with any families as she should have her license revoked !!! Never even saw my children and wrote affidavit against me in relation to them",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Wake"
+      },
+      {
+        "comment_text": "Lied about everything told to her by us as kids and twisted in court",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Wake"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/april_harris_britt",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/nc/april_harris_britt/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

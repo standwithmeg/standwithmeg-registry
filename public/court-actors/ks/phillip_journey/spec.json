@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "phillip_journey",
+    "display_name": "Phillip Journey",
+    "title": "",
+    "first_name": "Phillip",
+    "last_name": "Journey",
+    "role": "Judge",
+    "court": "Sedgwick County",
+    "county": "Sedgwick",
+    "court_or_county": "Sedgwick County",
+    "state": "Kansas",
+    "state_abbr": "KS",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/ks/phillip_journey/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 179,
+    "total_submissions": 244,
+    "avg_financial_loss": 119293.76,
+    "avg_months_lost": 30.2,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "KS",
+    "state_family_count": 244,
+    "median_financial_loss": 96100,
+    "median_burden_sample_size": 129,
+    "median_months_lost": 16,
+    "pro_se_pct": 50.4,
+    "pro_se_count": 123,
+    "_pdf_state_family_count": 244,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5317,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "After a long tedious divorce process finalized in 2023, I asked for 50/50 custody and no child support. My ex was insidiously infiltrating our son's mind, and before I knew it, my son was completely against me. In 2024 my ex filed a motion for full custody using outlandish allegations and emergency custody with no evidence or due process — the judge signed the order that same day. It's been a year now since I've seen my son and I have yet to have one hearing.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Sedgwick"
+      },
+      {
+        "comment_text": "Ignored evidence that supported my case. Accepted evidence that was incomplete and only hear say as support to keep my children away from me. Delayed hearings; ignored motions; wasted time while my life and my kids' life was in his hands; left family court with no progress in my case for a year.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Sedgwick"
+      },
+      {
+        "comment_text": "Laughs and Denies disabled litigants ADA (American with Disabilities Act) rights.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Sedgwick County"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/phillip_journey",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ks/phillip_journey/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

@@ -1,0 +1,93 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "samer_touma",
+    "display_name": "Samer Touma",
+    "title": "",
+    "first_name": "Samer",
+    "last_name": "Touma",
+    "role": "Custody Evaluator",
+    "court": "Lexington",
+    "county": "Lexington",
+    "court_or_county": "Lexington",
+    "state": "South Carolina",
+    "state_abbr": "SC",
+    "mention_count": 0,
+    "family_count": 4,
+    "public_family_count": 4,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "19ac5e36-c975-4c85-bbdc-c70790f9ab5b",
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/sc/samer_touma/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 82,
+    "total_submissions": 105,
+    "avg_financial_loss": 287649.02,
+    "avg_months_lost": 25.9,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "SC",
+    "state_family_count": 105,
+    "median_financial_loss": 127500,
+    "median_burden_sample_size": 66,
+    "median_months_lost": 19,
+    "pro_se_pct": 57.1,
+    "pro_se_count": 60,
+    "_pdf_state_family_count": 105,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5316,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 4,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Completely sided with my husband and bullied me relentlessly. It was torturous. He would brag about his kids the whole time. “If I can get along with my ex, I don’t see why you can’t,” was his basic principle. He became very impatient if I would not agree to things on the spot under pressure from him and my ex husband. A horrible person. WAY overpriced!",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Richland"
+      },
+      {
+        "comment_text": "Extremely unqualified. Dr. Touma was unable to detect a severe mental disorder that every other therapist detected immediately. Either that or he was turning a blind eye to obvious facts and evidence that was presented",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lexington"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/samer_touma",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/sc/samer_touma/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "quote_char_budget": 150,
+    "prefer_quote_substrings": [
+      "turning a blind eye"
+    ]
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

@@ -1,0 +1,77 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "michelle_bell",
+    "display_name": "Michelle Bell",
+    "title": "",
+    "first_name": "Michelle",
+    "last_name": "Bell",
+    "role": "Judge",
+    "court": "Orange",
+    "county": "Orange",
+    "court_or_county": "Orange",
+    "state": "California",
+    "state_abbr": "CA",
+    "mention_count": 0,
+    "family_count": 1,
+    "public_family_count": 1,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/ca/michelle_bell/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 353,
+    "total_submissions": 439,
+    "avg_financial_loss": 288012.6,
+    "avg_months_lost": 36.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "CA",
+    "state_family_count": 439,
+    "median_financial_loss": 265100,
+    "median_burden_sample_size": 196,
+    "median_months_lost": 20,
+    "pro_se_pct": 58.8,
+    "pro_se_count": 258,
+    "_pdf_state_family_count": 439,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5303,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 1,
+    "family_reports": [],
+    "public_comments": []
+  },
+  "export_dir": "New Final Post and Capcut template/export/michelle_bell",
+  "unresolved": [
+    "public_family_count_api: no match for display_name='Michelle Bell' bucket=None slug='michelle_bell' in CA (19 actors)",
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available",
+    "pdf_public_actor: no 'Michelle Bell' in cache for CA"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ca/michelle_bell/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

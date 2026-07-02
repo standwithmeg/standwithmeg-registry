@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "kelly_bernstein",
+    "display_name": "Kelly Bernstein",
+    "title": "",
+    "first_name": "Kelly",
+    "last_name": "Bernstein",
+    "role": "Therapist / Counselor",
+    "court": "Bexar",
+    "county": "Bexar",
+    "court_or_county": "Bexar",
+    "state": "Texas",
+    "state_abbr": "TX",
+    "mention_count": 0,
+    "family_count": 4,
+    "public_family_count": 4,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "86e4c73b-dfd0-4e3c-95d6-f9ae8a88ffb9",
+    "actor_bucket_key": "kely bernstein|TX"
+  },
+  "photo": {
+    "path": "public/court-actors/tx/kelly_bernstein/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 243,
+    "total_submissions": 307,
+    "avg_financial_loss": 232914.17,
+    "avg_months_lost": 32.4,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "TX",
+    "state_family_count": 307,
+    "median_financial_loss": 125500,
+    "median_burden_sample_size": 146,
+    "median_months_lost": 20,
+    "pro_se_pct": 49.2,
+    "pro_se_count": 151,
+    "_pdf_state_family_count": 307,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5314,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 4,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "She forced us to weekly visits that my child would refuse to go in. She invited the child's abuser to attend without notice. She failed to report disclosed abuse to CPS. She continued to bill for sessions after sessions were stopped. Would not allow cancelations and would bill excessive fees for no shows. Extremely cold, rigid and not welcoming. She gets family court cases to require sessions, and just does everything she can to keep you on the payroll. We attended weekly for 2 years and my child hated every session and would refuse to speak with her. She would get personally offended when my child would refuse. She failed to report abuse. Worked with criminal defense attorney, and Amicus to secretly bring the abuser into therapy. Continued to charge after visits stopped. Would act like a child and be personally offended when my child did not want to talk to her.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Bexar"
+      },
+      {
+        "comment_text": "Led me on for more than a year with absolutely zero effort in actually reuniting my children and I. Was not lacking in billing me immediately for everything she possibly could bill for. Kept telling me to admit to something I didn't do. Took the mother's side just like everyone else involved in the reunification process.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Bexar"
+      },
+      {
+        "comment_text": "Being manipulated by mother. Easy manipulated. She is part of the problem and not the solution. Unclear what he role is and overstep boundaries all the time. Takes sides",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Bexar"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/kelly_bernstein",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/tx/kelly_bernstein/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

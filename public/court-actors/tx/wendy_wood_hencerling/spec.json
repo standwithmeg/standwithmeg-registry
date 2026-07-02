@@ -1,0 +1,100 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "wendy_wood_hencerling",
+    "display_name": "Wendy Wood Hencerling",
+    "title": "",
+    "first_name": "Wendy Wood",
+    "last_name": "Hencerling",
+    "role": "Judge",
+    "court": "Brazos County",
+    "county": "Brazos County",
+    "court_or_county": "Brazos County",
+    "state": "Texas",
+    "state_abbr": "TX",
+    "mention_count": 0,
+    "family_count": 4,
+    "public_family_count": 4,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/tx/wendy_wood_hencerling/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 243,
+    "total_submissions": 307,
+    "avg_financial_loss": 232914.17,
+    "avg_months_lost": 32.4,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "TX",
+    "state_family_count": 307,
+    "median_financial_loss": 125500,
+    "median_burden_sample_size": 146,
+    "median_months_lost": 20,
+    "pro_se_pct": 49.2,
+    "pro_se_count": 151,
+    "_pdf_state_family_count": 307,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5314,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 4,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Ignored evidence, repeatedly mimicked me or spoke down to me, constantly made side bar comments, ignored all facts and evidence that I presented and only acknowledged the word of mouth that the opposing attorney put forth, delayed all hearings ,denied my indigency without even looking at one paper, one paycheck, one anything from me, gave false legal definitions, retaliated when I filed for appeal by taking even more time from me.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Brazos"
+      },
+      {
+        "comment_text": "Denied my due process as she allowed my ex-wife 40 minutes to testify and allowed me 8 minutes to testify. Same actor as Wendy Wood Hencerling and Wendy Wood-Hencerling Same actor as Wendy Wood Hencerling",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Brazos County"
+      },
+      {
+        "comment_text": "- day of court appeal judge got changed to her court room (with her stepping in as Judge) even though it was her previous court case that was being appealed",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Brazos County"
+      },
+      {
+        "comment_text": "Put me on supervised visits and called my brother a pervert based off allegations that were proven false.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Brazos County"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/wendy_wood_hencerling",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/tx/wendy_wood_hencerling/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

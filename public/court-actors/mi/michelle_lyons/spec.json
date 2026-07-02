@@ -1,0 +1,100 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "michelle_lyons",
+    "display_name": "Michelle Lyons",
+    "title": "",
+    "first_name": "Michelle",
+    "last_name": "Lyons",
+    "role": "Attorney (Mine)",
+    "court": "Montcalm",
+    "county": "Montcalm",
+    "court_or_county": "Montcalm",
+    "state": "Michigan",
+    "state_abbr": "MI",
+    "mention_count": 0,
+    "family_count": 4,
+    "public_family_count": 4,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "971025d4-7f8a-4bc4-b75b-cb9bb963ed2a",
+    "actor_bucket_key": "michele lyons|MI"
+  },
+  "photo": {
+    "path": "public/court-actors/mi/michelle_lyons/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 145,
+    "total_submissions": 176,
+    "avg_financial_loss": 182391.52,
+    "avg_months_lost": 36.1,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "MI",
+    "state_family_count": 176,
+    "median_financial_loss": 97500,
+    "median_burden_sample_size": 77,
+    "median_months_lost": 16,
+    "pro_se_pct": 43.8,
+    "pro_se_count": 77,
+    "_pdf_state_family_count": 176,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5241,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 4,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Did not present evidence we had to the courts. Asked that lawyer represent my family the way a lawyer is supposed to. It was not done.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Montcalm"
+      },
+      {
+        "comment_text": "Represented my wife, lied, falysfied evidence. Held Ex parte hearings without wife present.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Montcalm"
+      },
+      {
+        "comment_text": "Doesn’t communicate with client. Refuses evidence in court",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Montcalm"
+      },
+      {
+        "comment_text": "Told me to sign over my kids & go have more babies.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Montcalm"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/michelle_lyons",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/mi/michelle_lyons/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

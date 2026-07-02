@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "marissa_bigelli",
+    "display_name": "Marissa Bigelli",
+    "title": "",
+    "first_name": "Marissa",
+    "last_name": "Bigelli",
+    "role": "GAL / Child Representative",
+    "court": "Fairfield",
+    "county": "Fairfield",
+    "court_or_county": "Fairfield",
+    "state": "Connecticut",
+    "state_abbr": "CT",
+    "mention_count": 0,
+    "family_count": 4,
+    "public_family_count": 4,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "4ac3348a-4fd2-41fe-b84f-7d2cc4904896",
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/ct/marissa_bigelli/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 46,
+    "total_submissions": 64,
+    "avg_financial_loss": 390441.48,
+    "avg_months_lost": 31.2,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "CT",
+    "state_family_count": 64,
+    "median_financial_loss": 211500,
+    "median_burden_sample_size": 37,
+    "median_months_lost": 20,
+    "pro_se_pct": 68.8,
+    "pro_se_count": 44,
+    "_pdf_state_family_count": 64,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5225,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 4,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Zero concern for the best interests of children. Completely money driven therefore markets herself to the pro fathers rights movement in the state and county. this is the same gal/pro fathers rights attorney as Marissa Bigelli- divorced from Hernandez and now using Bigelli Pro father’s rights attorney and GAL- highly unethical behaviors and communications. Personal bias relationship with numerous other pro father’s rights judges and attorneys",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Fairfield"
+      },
+      {
+        "comment_text": "Same as Marissa Hernandez- made custody recommendations in complete opposition of numerous child experts in favor of the parent paying her Provided information to the other side that was privileged and made custody recommendations contrary to numerous child experts",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Fairfield"
+      },
+      {
+        "comment_text": "Used threats against my child to get the outcome the party paying her wanted Used threats of loss of visitation or custody to have compliance with her requests",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Fairfield"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/marissa_bigelli",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ct/marissa_bigelli/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

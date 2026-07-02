@@ -1,0 +1,114 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "jon_gann",
+    "display_name": "Jon Gann",
+    "title": "",
+    "first_name": "Jon",
+    "last_name": "Gann",
+    "role": "Attorney",
+    "court": "Escambia",
+    "county": "Santa rosa",
+    "court_or_county": "Santa rosa",
+    "state": "Florida",
+    "state_abbr": "FL",
+    "mention_count": 0,
+    "family_count": 5,
+    "public_family_count": 5,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": null,
+    "_overrides_applied": [
+      "county",
+      "court_or_county",
+      "display_name",
+      "first_name",
+      "last_name",
+      "role"
+    ]
+  },
+  "photo": {
+    "path": "public/court-actors/fl/jon_gann/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 237,
+    "total_submissions": 302,
+    "avg_financial_loss": 204328.82,
+    "avg_months_lost": 28.1,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "FL",
+    "state_family_count": 302,
+    "median_financial_loss": 176500,
+    "median_burden_sample_size": 131,
+    "median_months_lost": 18,
+    "pro_se_pct": 57.9,
+    "pro_se_count": 175,
+    "_pdf_state_family_count": 302,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5290,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 5,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Charged six thousand to throw my case. He had plenty of opportunities to bring to the attention of the court, all of the negligence and unlawful ways of FFN, DCF, and CPS. He had no interest in any of that. His exact words were he came late into the case. He can't discuss anything that happened before the came onto the case. He sabotaged it from the start. It was okd by him for FFN to move my child outside the ciuntu with out telling me. He had no rebuttal for my accusers during court. He's an appeaser. He appeases you with I'll file a motion tomorrow but never does. He's drags his feet on everything and has no intention on winning your case for you. Brace yourself for deception.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Escambia"
+      },
+      {
+        "comment_text": "Ignored evidence of Abuse in State custody. Refused to file any motions, ignored evidence of extrinsic fraud on the court, never would meet up or strategized... Refused to report to proper authorities regarding Judicial Fraud, shelter order granted but shelter petition filed 5 days later. SabotageMg case and who was ineffective and ignored the fraud on the court by Judges and direct evidence of abuse of my children in state custody.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Santa rosa"
+      },
+      {
+        "comment_text": "Never filed the motions I requested, and worked against me — my rights and my child’s rights were violated.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Santa rosa"
+      },
+      {
+        "comment_text": "Took $5,000 from my grandmother to help place my children, then didn’t file any paperwork on the case.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Santa rosa"
+      },
+      {
+        "comment_text": "Told me if I fought to clear my name, I’d lose my kids.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Santa rosa"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/jon_gann",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/fl/jon_gann/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

@@ -1,0 +1,100 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "lawrence_army_jr",
+    "display_name": "Lawrence Army Jr.",
+    "title": "",
+    "first_name": "Lawrence",
+    "last_name": "Army Jr.",
+    "role": "Judge",
+    "court": "Worcester Probate",
+    "county": "Worcester Probate",
+    "court_or_county": "Worcester Probate",
+    "state": "Massachusetts",
+    "state_abbr": "MA",
+    "mention_count": 0,
+    "family_count": 4,
+    "public_family_count": 4,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "fe88de15-e87b-4b6d-8ad7-16eb9bad3bc0",
+    "actor_bucket_key": "lawrence army|MA"
+  },
+  "photo": {
+    "path": "public/court-actors/ma/lawrence_army_jr/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 75,
+    "total_submissions": 104,
+    "avg_financial_loss": 235880.44,
+    "avg_months_lost": 26.3,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "MA",
+    "state_family_count": 104,
+    "median_financial_loss": 136300,
+    "median_burden_sample_size": 44,
+    "median_months_lost": 18,
+    "pro_se_pct": 57.7,
+    "pro_se_count": 60,
+    "_pdf_state_family_count": 104,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5207,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 4,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Judge Army switched custody overnight to my abusive ex husband who my children had been refusing to go with out of fear. When I brought forth a conflict of interest with the GAL and myself (we worked together, I contracted her husband for work for years and her daughter was a student in my school and worked directly with my children) he then removed all contact between me and my children without findings. Within weeks he aburuptly \"retired\" effectively leaving my family stuck in this situation without another judge. 5 months later it was announced by the state that he was found guilty of misconduct and was fined and no longer allowed to practice law, however, over a year later his decisions still stand. We finally have a new judge and an upcoming trial but regardless of what happens the damage has been done and there is no recourse for my family and my children who have suffered greatly through all of this. Happy healthy honors student teenagers who were very involved in activities are now failing, having severe physical and mental health issues, no longer participate in activites, are self harming, not adeuately nourished, constant DCF involvement for neglect and failure to mainta",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Hampden Country Family Probate Court"
+      },
+      {
+        "comment_text": "Came in from no were kangaroo judge just fir my hearing . Later found he signed off before trial custody from mother to father. He's very corrupt . He was involved lots of playoffs his own contempt of court in his divorce alimony and his own custody stealing his kids ..women hater .",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Worcester Probate"
+      },
+      {
+        "comment_text": "He took away my custodial rights after a false allegations",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Hampden"
+      },
+      {
+        "comment_text": "Will not hear past nor see any evidence",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Worcester Probate"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/lawrence_army_jr",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ma/lawrence_army_jr/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

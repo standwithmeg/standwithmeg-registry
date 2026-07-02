@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "adam_bello",
+    "display_name": "Adam J. Bello",
+    "title": "",
+    "first_name": "Adam J.",
+    "last_name": "Bello",
+    "role": "Government Agency",
+    "court": "Monroe",
+    "county": "Monroe county",
+    "court_or_county": "Monroe",
+    "state": "NY",
+    "state_abbr": "NY",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": "adam belo|NY"
+  },
+  "photo": {
+    "path": "public/court-actors/ny/adam_bello/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 136,
+    "total_submissions": 171,
+    "avg_financial_loss": 213193.71,
+    "avg_months_lost": 26.4,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "NY",
+    "state_family_count": 171,
+    "median_financial_loss": 165000,
+    "median_burden_sample_size": 69,
+    "median_months_lost": 14,
+    "pro_se_pct": 39.2,
+    "pro_se_count": 67,
+    "_pdf_state_family_count": 171,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5314,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "County executive who sabotaged my business and used a Halloween prop in 2023 to label me a threat to him even though his apex acceleration program was already being bused to my company and his IT ppl were already sabotaging my biz. He has placed his people in my court cases to go against me. He’s from Binghamton NY. The attorney referee John Menard approved the first OOP in December of 2023 that had false alienation in it and the two perjurious orders of protection by the mom and fiance on August 29, 2025. Menard use to work at the public defenders office AND is from Binghamton NY. On may 23rd 2024, Darius Lind extended that Meritless OOP for a year. Lind has 3 phone numbers with Binghamton area code 607. Darius Lind’s campaign for judge url connected to my second business. Lind has employment background as an IT engineer. Bello’s assistant Anthony Figueroa is super shady. He is connected to almost everyone and seems to be the main source to tons of hackers in the area. Bello was a part of an insurance fraud scam on my $209k project with Christa construction. With only two weeks left and $75k profit waiting for me, Christa refused to make a payment to me, then used that insurance being cancelled as a reason to kick my company off of the job site. One of my Angi leads campaigns had a 607 routing phone system where I got no jobs and all customers came up with an excuse. One customer was Jim Whalen. He appears to be related to Gerald Whalen- chief judge of the appellate division in Monroe county. A token identity theft occurred on my new iPhone. The name associated was “Gigi ceravalo”. Gail ceravalo is related to Gigi and James Bello. James is Adam’s brother. (Some of this may have been spoofed on purpose to make me look crazy. But I have the screenshots and screen recordings that show proof of everything I’ve said.)",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Monroe county"
+      },
+      {
+        "comment_text": "He knows what's taking place and ignores the issues. Doesn't return call or emails. He's no good He knows what is taking place and refuses to respond to emails and calls I've called and emailed and tried to get help and never responds and he knows what's going on and had one of his security guards follow me one day",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Monroe county"
+      },
+      {
+        "comment_text": "Is nothing but a fraud. Doesn't help out the people and ignored evidence of wrong doing",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Monroe"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/adam_bello",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ny/adam_bello/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

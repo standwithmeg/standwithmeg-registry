@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "sheri_wampler",
+    "display_name": "Sheri Wampler",
+    "title": "",
+    "first_name": "Sheri",
+    "last_name": "Wampler",
+    "role": "CPS Worker",
+    "court": "Cowely",
+    "county": "Cowley",
+    "court_or_county": "Cowely",
+    "state": "Kansas",
+    "state_abbr": "KS",
+    "mention_count": 0,
+    "family_count": 4,
+    "public_family_count": 4,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "aa0724bf-7655-43e7-9d4d-46c38921f122",
+    "actor_bucket_key": "sheri wampler|KS"
+  },
+  "photo": {
+    "path": "public/court-actors/ks/sheri_wampler/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 179,
+    "total_submissions": 244,
+    "avg_financial_loss": 119293.76,
+    "avg_months_lost": 30.2,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "KS",
+    "state_family_count": 244,
+    "median_financial_loss": 96100,
+    "median_burden_sample_size": 129,
+    "median_months_lost": 16,
+    "pro_se_pct": 50.4,
+    "pro_se_count": 123,
+    "_pdf_state_family_count": 244,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5317,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 4,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "She told me that if the biological mother disappeared that I would get my son back. I had been told my a friend to watch my back with her. I know that she talked with my girlfriend about disappearing for a while so that I could get my son back. She helped me get my son away from his grandmother and to a foster home. After I lost my son I found out that the foster parents were friends of hers and they wanted a baby boy.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Cowley"
+      },
+      {
+        "comment_text": "She tells the court that I have not been doing what she asks me to do to see my baby. 2 of the last four visits she has told me that I was there on the wrong day I have always had visit on the same day at the same time this month and it was saved in my phone. She tells me how happy my baby is with the foster parents. I met them and the Puchella's are strange.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Cowely"
+      },
+      {
+        "comment_text": "Judge was a classmate and family friend of the case worker. Sheri Wampler from TFI was a \"drinking buddy\" with the bio father's attorney for one of the children. Wampler human-trafficked 3 siblings to her friend.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Cowley"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/sheri_wampler",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ks/sheri_wampler/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

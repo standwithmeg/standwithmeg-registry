@@ -1,0 +1,112 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "dennis_kirk",
+    "display_name": "Dennis Kirk",
+    "title": "",
+    "first_name": "Dennis",
+    "last_name": "Kirk",
+    "role": "GAL / Child Representative",
+    "court": "Highland",
+    "county": "Highland county",
+    "court_or_county": "Highland",
+    "state": "Ohio",
+    "state_abbr": "OH",
+    "mention_count": 0,
+    "family_count": 6,
+    "public_family_count": 6,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "84523aae-6f04-4471-b0c2-f5dcb914fbd7",
+    "actor_bucket_key": "denis kirk|OH"
+  },
+  "photo": {
+    "path": "public/court-actors/oh/dennis_kirk/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 205,
+    "total_submissions": 260,
+    "avg_financial_loss": 113532.41,
+    "avg_months_lost": 31.4,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OH",
+    "state_family_count": 260,
+    "median_financial_loss": 81125,
+    "median_burden_sample_size": 126,
+    "median_months_lost": 18,
+    "pro_se_pct": 52.7,
+    "pro_se_count": 137,
+    "_pdf_state_family_count": 260,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5303,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 6,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Didn’t do his job, just went off cos and the prosecutor and lied on oath Didn’t do his job didn’t supervise any visits didn’t watch me with my daughter at all. I called and his secretary told me that they don’t do that right now at the beginning, but I did call and then he said on that I never called and then he just went with everything piggyback off the prosecutor and everything, and he even used the word piggyback He didn’t meet with us or do his job he lied on stand saying we never called him but I showed a recording we did talk to his assistant and played it for the court",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Highland County"
+      },
+      {
+        "comment_text": "Denied motion and ignored evidence!! None of them did their job they made up everything. The judge didn’t want to listen to us whatsoever that we gave him evidence and they didn’t show him any evidence and that he ruled with them over us. He delayed hearings gave them more time biased, he didn’t sign half of his records he had to click record sign it things like that you can put well. She really really wasn’t on our case that much it was mainly James he was the one he was his assistant prosecutor. Please help me!!!!",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Highland"
+      },
+      {
+        "comment_text": "My children’s therapists and myself reached out to Mr Kirk from Oct 2024 to March 2025 with no return communication. He then made claims as facts, brought to him via an email from a concerned citizen, yet never spoke to myself or others to verify this concern. While communication was not provided to myself or the therapists, Mr Kirk kept communications with the defendant and his counsel. As of May 5 2026, he has been voted in to Higjland County’s Juvenike judge position set to take oath in November.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Highland county"
+      },
+      {
+        "comment_text": "Mr kirk made no reasonable efforts to put my daughter back in my care, despite having long term housing and employment. He filed no motions with the court on my daughter's behalf. Never came to my house for a visit and I called his office early in the case to setup a home visit and he said that he doesn't complete home visits till after the adjudication and deposition. He is now taking Judge Greers position as the juvenile judge.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Highland County"
+      },
+      {
+        "comment_text": "He would seem like your friend and on the children's side then go into court and deny any change or say was not in best interest for children to be returned home",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Highland county/juvenile guardian"
+      },
+      {
+        "comment_text": "Fabricated evidence",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Highland"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/dennis_kirk",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/oh/dennis_kirk/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

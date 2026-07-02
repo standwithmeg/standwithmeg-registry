@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Stand With Meg">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="30%" r="80%">
+      <stop offset="0%" stop-color="#112842"/>
+      <stop offset="100%" stop-color="#050a14"/>
+    </radialGradient>
+    <style>
+      .serif { font-family: "Playfair Display", Georgia, serif; font-weight: 800; fill: #f2ead6; }
+      .gold { fill: #c9a227; }
+    </style>
+  </defs>
+  <rect width="400" height="400" rx="64" fill="url(#bg)"/>
+  <text x="200" y="158" text-anchor="middle" class="gold" font-family="Arial, sans-serif" font-size="46">★</text>
+  <text x="200" y="245" text-anchor="middle" class="serif" font-size="62">Stand</text>
+  <text x="200" y="300" text-anchor="middle" class="serif gold" font-size="62">With</text>
+  <text x="200" y="355" text-anchor="middle" class="serif" font-size="62">Meg</text>
+</svg>

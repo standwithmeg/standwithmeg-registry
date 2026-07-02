@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "danny_phillips",
+    "display_name": "Danny Phillips",
+    "title": "",
+    "first_name": "Danny",
+    "last_name": "Phillips",
+    "role": "Attorney",
+    "court": "Leon",
+    "county": "Leon",
+    "court_or_county": "Leon",
+    "state": "Florida",
+    "state_abbr": "FL",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "3ce69a55-7139-454f-be01-b6e9f7d63b78",
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/fl/danny_phillips/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 237,
+    "total_submissions": 302,
+    "avg_financial_loss": 204328.82,
+    "avg_months_lost": 28.1,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "FL",
+    "state_family_count": 302,
+    "median_financial_loss": 176500,
+    "median_burden_sample_size": 131,
+    "median_months_lost": 18,
+    "pro_se_pct": 57.9,
+    "pro_se_count": 175,
+    "_pdf_state_family_count": 302,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5290,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Before retaining counsel, I consulted with Danny Phillips regarding my family law case. We discussed the matter for approximately 13 minutes before he disclosed that he shared office space and a paralegal with Toby Norris, who represented the opposing party. Upon learning of that relationship, I did not retain Mr. Phillips. Later in the litigation, Mr. Phillips filed a Notice of Appearance on behalf of the opposing party. Because I had previously consulted with him about my case, this raised significant concerns for me regarding conflict screening and the appearance of impartiality. Mr. Phillips denied this communication on several occurances. Phone records later confirmed our consultation after its occurrence had initially been disputed. Regardless of whether any ethical violation occurred, my experience highlighted the importance of clear conflict-screening procedures and transparency to ensure litigants have confidence in the fairness and integrity of the family court process.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Leon"
+      },
+      {
+        "comment_text": "Conspired with psychologist (Rachel Scharlepp) to attempt to incarcerate mother for alienation. Danny is close friends with Rachel Scharlepp. Danny conspired with opposing counsel (John Kenny) to threaten mother with losing her children if she didn’t sign a contract. He filed motions without notifying parties. He contacted the judges assistant ex parte. He conspired with Rosie Harkness to facilitate further abuse to 6 children. He conspired to withhold evidence from the court when emails were subpoenaed. He took the case after the mother consulted with his colleague Toby Norris, which was a conflict of interest having previous knowledge of opposing party consultation. Works with other court actors to be profitable and he uses people in a position of power to threaten victims",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Leon"
+      },
+      {
+        "comment_text": "Concerns have been raised regarding this attorney’s candor and professional conduct in court proceedings, including allegations that statements made in litigation have at times been inconsistent with the likely facts of the situation. Additional concerns relate to the attorney’s personal relationship with a former client whom he previously represented before later marrying. Critics argue that this history raises questions regarding professional boundaries, judgment, and potential ethical considerations surrounding attorney-client relationships. Taken together, these issues have contributed to broader concerns regarding credibility, professionalism, and adherence to the ethical standards expected of attorneys practicing within sensitive family law matters.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Leon"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/danny_phillips",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/fl/danny_phillips/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

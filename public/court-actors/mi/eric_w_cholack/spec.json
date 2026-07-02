@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "eric_w_cholack",
+    "display_name": "Eric W. Cholack",
+    "title": "",
+    "first_name": "Eric W.",
+    "last_name": "Cholack",
+    "role": "Judge",
+    "court": "Wayne",
+    "county": "Wayne",
+    "court_or_county": "Wayne",
+    "state": "Michigan",
+    "state_abbr": "MI",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/mi/eric_w_cholack/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 145,
+    "total_submissions": 176,
+    "avg_financial_loss": 182391.52,
+    "avg_months_lost": 36.1,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "MI",
+    "state_family_count": 176,
+    "median_financial_loss": 97500,
+    "median_burden_sample_size": 77,
+    "median_months_lost": 16,
+    "pro_se_pct": 43.8,
+    "pro_se_count": 77,
+    "_pdf_state_family_count": 176,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5241,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Cholak never let me have a trail he would schedule the trail then have the Attorney's and GAL go to chambers then come out and have me state i did not want the trial well here is the truth he told my attorney if we go through with the trail he already decided for my ex. even when my ex and the current GF went on a 3 month shoplifting spree and got caught by Kohl's even when my ex moved 4 different time and even when my ex had 4 different GF's and insisted my son call them MOM the GAL would only bring up my past but was Abies for my ex because he was in the Army not to mention the Army my ex was DC for being LAZY and could not meet expectation and was liable on the Aircraft he was in charge of that same Aircraft crashed during a Training mission that caused the pilot and copilot to die. Cholack would not allow that into evidence. Cholack would not look at the time my ex beat one of my sons butt so bad he was purple for 3 weeks instead i had to go to therapy. Meanwhile Cholack would cancel court dates hoping i would just go away Cholack drug my case out so much that my sons became 18 never listen to my side i had 15 witness judge made his decision that my ex was a better parent ex only worked 17 hours a week 4 different GF's 4 different places he moved oh the best part his 2 gf and him went on a 2 county crime spree shoplifting with her kid and mine robbing Kohl's got caught Judge Cholak did not think that was a bad thing",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Wayne"
+      },
+      {
+        "comment_text": "Allowed my ex husband to continue to abuse me and my children and he didn’t lose custody",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Wayne"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/eric_w_cholack",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/mi/eric_w_cholack/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

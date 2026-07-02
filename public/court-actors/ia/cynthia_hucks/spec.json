@@ -1,0 +1,165 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "cynthia_hucks",
+    "display_name": "Cynthia Hucks",
+    "title": "",
+    "first_name": "Cynthia",
+    "last_name": "Hucks",
+    "role": "Attorney",
+    "court": "Unknown",
+    "county": "Wapello",
+    "court_or_county": "Wapello",
+    "state": "Iowa",
+    "state_abbr": "IA",
+    "mention_count": 0,
+    "family_count": 14,
+    "public_family_count": 14,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "964260ec-f170-4010-8c58-77d09bf2ca79",
+    "actor_bucket_key": "cynthia hucks|IA",
+    "_overrides_applied": [
+      "county",
+      "court_or_county",
+      "role"
+    ]
+  },
+  "photo": {
+    "path": "public/court-actors/ia/cynthia_hucks/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 72,
+    "total_submissions": 92,
+    "avg_financial_loss": 133050.55,
+    "avg_months_lost": 40.7,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "IA",
+    "state_family_count": 92,
+    "median_financial_loss": 180000,
+    "median_burden_sample_size": 25,
+    "median_months_lost": 23,
+    "pro_se_pct": 53.3,
+    "pro_se_count": 49,
+    "_pdf_state_family_count": 92,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5308,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 14,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Barely touched my case- did not prepare me at all for our temp custody hearing. I should have gotten primary custody and she had every thing in her back pocket to use. I ended up getting 50/50. Never responded to emails. Charged me for every single one I sent her though. I paid a $3,000 retainer and she is now trying to bill me another $900. When my soon to be ex husband was calling my work multiple times and I notified her she said “how does this affect you?” I fired her, and while switching attorneys my soon to be ex husband was filing a complaint with the state to get me fired.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Wapello"
+      },
+      {
+        "comment_text": "There is a lot to list but the two major take aways. 1. I paid her to file and argue a contempt of court for non visitation. She filed however she never scheduled a court date. 2. I have paid her nearly 15k and I honestly believe I would be far better off if I represented myself.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Wapello"
+      },
+      {
+        "comment_text": "Filed a petition for custody WITHOUT stating a TPO was in effect, then continued the TPO hearing - twice, against 1st judge's orders - to July 30th, then filed to take custody to TRIAL, now scheduled July 13th - as per Judge Joel Yates, of course",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Jefferson"
+      },
+      {
+        "comment_text": "She lied to me in her office and said it would be a conflict of interest if she were my attorney but proceeded to be the opposing parties attorney. I can give more detail if needed just email me.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Wapello"
+      },
+      {
+        "comment_text": "She helped me leave my abuser and fight for what was fair for my children. She is a busy attorney just like any good one, but her job is implacable!",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Wapello"
+      },
+      {
+        "comment_text": "She failed to provide me with court dates and tell me that i needed character affidavits in my daughter's custody case in 2010",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Wapello"
+      },
+      {
+        "comment_text": "She used manipulation tactics to get her way, lied to court, pressured me to resolve our case outside of court, and very rude!",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Wapello"
+      },
+      {
+        "comment_text": "Amazing lawyer, did everything I asked. She has helped me and so many other families",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Wapello"
+      },
+      {
+        "comment_text": "Produced illegal documents. Placed me in a room alone with her and my abuse.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Wapello"
+      },
+      {
+        "comment_text": "They moved up my court date. They tried to make me quick claim my house",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Wapello"
+      },
+      {
+        "comment_text": "Read above notes regarding this individual",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Wapello"
+      },
+      {
+        "comment_text": "Litigation harassment and abuse",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Wapello"
+      },
+      {
+        "comment_text": "Incredible attorney!",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Wapello"
+      },
+      {
+        "comment_text": "She’s one sided",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Wapello"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/cynthia_hucks",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ia/cynthia_hucks/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

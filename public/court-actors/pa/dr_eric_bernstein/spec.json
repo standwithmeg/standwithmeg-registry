@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "dr_eric_bernstein",
+    "display_name": "Dr. Eric Bernstein",
+    "title": "Dr.",
+    "first_name": "Eric",
+    "last_name": "Bernstein",
+    "role": "Psychological Evaluator",
+    "court": "Allegheny",
+    "county": "Allegheny",
+    "court_or_county": "Allegheny",
+    "state": "Pennsylvania",
+    "state_abbr": "PA",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/pa/dr_eric_bernstein/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 114,
+    "total_submissions": 147,
+    "avg_financial_loss": 136043.02,
+    "avg_months_lost": 31.9,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "PA",
+    "state_family_count": 147,
+    "median_financial_loss": 125000,
+    "median_burden_sample_size": 59,
+    "median_months_lost": 19,
+    "pro_se_pct": 51.7,
+    "pro_se_count": 76,
+    "_pdf_state_family_count": 147,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5320,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "He made a lot of assumptions that needed litigated, repeated the other party’s false accusations and didn’t listen to my children’s attorney or the family counselor’s research who both were working closely with my children, their dad and I. In our “high conflict” “contentious” case where I was told the court system is “not equipped” to handle our case. He made a report based on opinion and ex’s sabotage. Didn’t investigate but made a statement there was not abuse or alienation— which both were happening.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Allegheny"
+      },
+      {
+        "comment_text": "Complete misrepresentation of administered MMPI in order to benefit opposing counsel. Was not available for rebuttal, only offered written testimony during trial. Administered an MMPI and then completely misrepresented the results and subsequent conversations in a skewed fashion to benefit only opposing side. Has been accused of this several times over 15 years.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Allegheny"
+      },
+      {
+        "comment_text": "Said one thing in report and said another in court and was bias",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Allegheny"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/dr_eric_bernstein",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/pa/dr_eric_bernstein/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

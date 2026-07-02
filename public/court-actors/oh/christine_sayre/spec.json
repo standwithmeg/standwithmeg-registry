@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "christine_sayre",
+    "display_name": "Christine Sayre",
+    "title": "",
+    "first_name": "Christine",
+    "last_name": "Sayre",
+    "role": "Custody Evaluator",
+    "court": "Stark",
+    "county": "Stark",
+    "court_or_county": "Stark",
+    "state": "Ohio",
+    "state_abbr": "OH",
+    "mention_count": 0,
+    "family_count": 4,
+    "public_family_count": 4,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "a146b80a-4dcd-47aa-ac46-5331ba219310",
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/oh/christine_sayre/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 205,
+    "total_submissions": 260,
+    "avg_financial_loss": 113532.41,
+    "avg_months_lost": 31.4,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OH",
+    "state_family_count": 260,
+    "median_financial_loss": 81125,
+    "median_burden_sample_size": 126,
+    "median_months_lost": 18,
+    "pro_se_pct": 52.7,
+    "pro_se_count": 137,
+    "_pdf_state_family_count": 260,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5303,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 4,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Deemed an “expert” after 2 years of being a therapist. Has no idea what she is doing and Summit uses her findings as the bible, but she’s terrible! Had to have 4 others dispute her findings, including pros way above her, like psychiatry level! She believes in reunification camps and punishing children from rightfully turning away from abusive parents. She’s sick and has caused several moms in our county to lose custody for false findings.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Summit"
+      },
+      {
+        "comment_text": "Recommended increased time and custody rights to father despite documented DV towards mother and children via ER records and with no involvement in their medical care or schooling in the past or present.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Stark"
+      },
+      {
+        "comment_text": "Diagnosed my child with an unknown trauma knowing exactly what that trauma was… ABUSE! Just another actor protecting the system!",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Stark"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/christine_sayre",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/oh/christine_sayre/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

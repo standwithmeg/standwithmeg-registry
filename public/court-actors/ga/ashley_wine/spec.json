@@ -1,0 +1,124 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "ashley_wine",
+    "display_name": "Ashley White",
+    "title": "",
+    "first_name": "Ashley",
+    "last_name": "White",
+    "role": "GAL / Child Representative",
+    "court": "Fulton",
+    "county": "Fulton",
+    "court_or_county": "Fulton",
+    "state": "Georgia",
+    "state_abbr": "GA",
+    "mention_count": 0,
+    "family_count": 8,
+    "public_family_count": 8,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "5a1490f1-e68f-4a24-a41c-5a8be1c2fe5b",
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/ga/ashley_wine/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 122,
+    "total_submissions": 149,
+    "avg_financial_loss": 222633.06,
+    "avg_months_lost": 32.5,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "GA",
+    "state_family_count": 149,
+    "median_financial_loss": 148000,
+    "median_burden_sample_size": 84,
+    "median_months_lost": 18,
+    "pro_se_pct": 45.6,
+    "pro_se_count": 68,
+    "_pdf_state_family_count": 149,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5275,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 8,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "She represented me in a very high conflict case, she was fair ethical and child oriented, she never fueled or worsened the situation and constantly worked to defuse and ensure as much stability as possible for the kids",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Fulton"
+      },
+      {
+        "comment_text": "My ex husband sexually assaulted me (and admitted to it on recording) after I served him with papers. Ashley said the TPO filed was unnecessary and the allegations we unfounded.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
+      },
+      {
+        "comment_text": "Did not go speak to child alone without informing dad of visits first and giving dad full control over days, time, and places she would see or talk to my daughter",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
+      },
+      {
+        "comment_text": "Spoke with father, fathers attorney, fathers girlfriend over 80% more than mothers attorney or mother according to the invoices sent by GAL.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Forsyth"
+      },
+      {
+        "comment_text": "She ignored the best interest of the child Did not follow the law. She didn’t consider the best interest of the child. Broke the law.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
+      },
+      {
+        "comment_text": "Biased, siding with father, and not protecting the child. Disregarding professional recommendations and lying.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Dekalb"
+      },
+      {
+        "comment_text": "Dismissed detailed claims of abuse from the children as well as reports from the children's therapists.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Fulton"
+      },
+      {
+        "comment_text": "Concerns for the kids were ignored. Concerns for my daughter emotional needs were ignored.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Fulton"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/ashley_wine",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ga/ashley_wine/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

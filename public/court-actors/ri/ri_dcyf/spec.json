@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "ri_dcyf",
+    "display_name": "RI DCYF",
+    "title": "",
+    "first_name": "RI",
+    "last_name": "DCYF",
+    "role": "CPS Worker",
+    "court": "Providence",
+    "county": "Providence",
+    "court_or_county": "Providence",
+    "state": "Rhode Island",
+    "state_abbr": "RI",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "1cee14c6-67e3-4a03-99fc-06cabddcd13d",
+    "actor_bucket_key": "ri dcyf|RI"
+  },
+  "photo": {
+    "path": "public/court-actors/ri/ri_dcyf/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 16,
+    "total_submissions": 19,
+    "avg_financial_loss": 293433.82,
+    "avg_months_lost": 28.5,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "RI",
+    "state_family_count": 19,
+    "median_financial_loss": 164000,
+    "median_burden_sample_size": 9,
+    "median_months_lost": 25,
+    "pro_se_pct": 47.4,
+    "pro_se_count": 9,
+    "_pdf_state_family_count": 19,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5226,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "From regional director to supervisors to case workers all ignored evidence and continued with a false case and violate rights to abuse their power instead of help reunify families They came saw my children were in a family shelter with supervised case workers with federal Marshalls don’t know why they came but they spoke with my children saw the suite we were in at the extended stay where Amos house was running their family shelter from said they are healthy safe and looks like very loved after speaking to them but DCYF still took them against every law and policy",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Providence"
+      },
+      {
+        "comment_text": "Jessica from DCYF could have cared less about my children and how my child’s father threw my child into a wall. She even admitted she smacks her own son.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Providence"
+      },
+      {
+        "comment_text": "Unwilling to get involved despite numerous abuse complaints",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Providence"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/ri_dcyf",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ri/ri_dcyf/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

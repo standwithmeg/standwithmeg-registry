@@ -1,0 +1,100 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "abigail_williams",
+    "display_name": "Abigail Williams",
+    "title": "",
+    "first_name": "Abigail",
+    "last_name": "Williams",
+    "role": "CPS Worker",
+    "court": "Beaufort",
+    "county": "Beaufort",
+    "court_or_county": "Beaufort",
+    "state": "NC",
+    "state_abbr": "NC",
+    "mention_count": 0,
+    "family_count": 4,
+    "public_family_count": 4,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": "abigail wiliams|NC"
+  },
+  "photo": {
+    "path": "public/court-actors/nc/abigail_williams/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 161,
+    "total_submissions": 213,
+    "avg_financial_loss": 186966.14,
+    "avg_months_lost": 36.1,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "NC",
+    "state_family_count": 213,
+    "median_financial_loss": 140000,
+    "median_burden_sample_size": 71,
+    "median_months_lost": 16,
+    "pro_se_pct": 50.7,
+    "pro_se_count": 108,
+    "_pdf_state_family_count": 213,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5317,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 4,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "She yelled at my mother at the hospital telling her she was an irresponsible mother and didn’t deserve her children. She refused to leave my hospital room until the Dr made her when I was throwing an absolute fit. This was before any safety plan or order done. She made me leave my mother that night even tho I just wanted to go home. Two days later she wouldn’t let me leave a room at DSS until I finished writing a statement which she was telling me what to write and gave spelling for words as I struggle. That letter was also back dated by two days. She lied in the order she got signed by Regina Parker. She has statements in there I never said. She would not allow me to see my family at all for a month. Then it was only my mother even tho I asked for my dad and siblings. She told me my family did not want to see me and I found out later that was a lie and my family both close and in WV had reach out to see and speak with me as well as my girlfriend.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Beaufort"
+      },
+      {
+        "comment_text": "She threatened me while at the hospital with my son. Refused to leave his room even when asked. Yelled at me in front of my son and hospital staff. (Recorded) Falsified her records to obtain non secured custody. Laughed in court when I asked that they show evidence because I was due a 7-10 hearing and they had continued it and never had to show any proof. Approached my teenage son telling him I was a horrible parent and not meeting his needs. Spoke with our pastor telling it was proven we were abusive parents. Spoke with our children’s school telling them they were forbidden to speak with us as we had no rights to our children at this time.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Beaufort County"
+      },
+      {
+        "comment_text": "Perjury and lied to have my kids removed a out the condition of my house. Worked with the town to have my utilities cut off so she could remove my kids. Dss never stepped foot in my home to confirm the condition of my home She also tried to have a surgery preformed on my son who is a cardiac paitient without the approval of his cardiologist",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Beaufort"
+      },
+      {
+        "comment_text": "She perjured herself many times on the stand. Lied during intake, has lied repeatedly. There are MANY families she has wronged.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Beaufort"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/abigail_williams",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/nc/abigail_williams/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

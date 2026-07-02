@@ -1,0 +1,93 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "yvette_allivato",
+    "display_name": "Yvette Allivato",
+    "title": "",
+    "first_name": "Yvette",
+    "last_name": "Allivato",
+    "role": "Therapist / Counselor",
+    "court": "Stanislaus Superior Court",
+    "county": "Stanislaus Superior Court",
+    "court_or_county": "Stanislaus Superior Court",
+    "state": "CA",
+    "state_abbr": "CA",
+    "mention_count": null,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 3,
+    "supabase_row_ids": null,
+    "actor_row_id": null,
+    "actor_bucket_key": "yvete alivato|CA"
+  },
+  "photo": {
+    "path": "public/court-actors/ca/yvette_allivato/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 353,
+    "total_submissions": 439,
+    "avg_financial_loss": 288012.6,
+    "avg_months_lost": 36.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "CA",
+    "state_family_count": 439,
+    "median_financial_loss": 265100,
+    "median_burden_sample_size": 196,
+    "median_months_lost": 20,
+    "pro_se_pct": 58.8,
+    "pro_se_count": 258,
+    "_pdf_state_family_count": 439,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5303,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Spoke privately to opposing party council and did not look at any evidence I had readily available. First mediation with her she spoke privately with Opposing party and his council. I asked to be updated on conversation and she said, “No. It’s okay. I have a clear understanding of what’s going on here.” Even with the father rarely being a party of daughter’s life, she continued to give father more parental time, including offering for him to have her every weekend and extended holidays. Shortly after she granted overnights with father, daughter notified me of SA. Once daughter spoke up to CPS Social Worker, father was spoken to by worker. He immediately filed for Emergency Full Custody and it was granted by this Mediator. I told her I have all of the CPS paperwork in hand but refused to look at any of it.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Stanislaus Superior Court"
+      },
+      {
+        "comment_text": "False reports. Misreporting the truth the court. Stripping my parental rights to keep me from accessing these reports.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
+      },
+      {
+        "comment_text": "Assigned to my case Cancellations for therapy appointments.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Stanislaus Superior Court"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/yvette_allivato",
+  "unresolved": [
+    "court_actors: no rows match name~'Yvette Allivato' state='CA'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ca/yvette_allivato/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

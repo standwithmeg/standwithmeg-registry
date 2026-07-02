@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "deborah_o_day",
+    "display_name": "Deborah O. Day",
+    "title": "",
+    "first_name": "Deborah",
+    "last_name": "O. Day",
+    "role": "Custody Evaluator",
+    "court": "Volusia",
+    "county": "Volusia",
+    "court_or_county": "Volusia",
+    "state": "Florida",
+    "state_abbr": "FL",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "34c3ce8a-ebc9-493d-903a-68539bcc7898",
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/fl/deborah_o_day/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 237,
+    "total_submissions": 302,
+    "avg_financial_loss": 204328.82,
+    "avg_months_lost": 28.1,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "FL",
+    "state_family_count": 302,
+    "median_financial_loss": 176500,
+    "median_burden_sample_size": 131,
+    "median_months_lost": 18,
+    "pro_se_pct": 57.9,
+    "pro_se_count": 175,
+    "_pdf_state_family_count": 302,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5290,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Dr. Day dismissed, ignored and suppressed credible evidence of child sexual abuse, gave a false diagnosis of pediatric bipolar to my 8 year old daughter and said that negates child sexual abuse. She didn’t have bipolar and then she dismissed her pediatrician proving no bipolar then helped the family court give sole custody to their identified perpetrator, their father and erased me from their lives. Dr. Deborah Day of Psychological Affiliates in Winter Park, Florida was assigned to my case. She ignored credible evidence of child abuse and told the court \"in this examiner's opinion R (at 8 years old) has pediatric bipolar and that negates child sexual abuse.\" R's pediatrician since birth said she did not have pediatric bipolar and that was ignored by Day. Day has a history of giving custody to abusive parents. She dismissed my daughter's explicit disclosures of sexual abuse to school teachers, her sexual acting out in kindergarten, and her drawings of her father with an erect penis. My family was destroyed by family court and Dr. Deborah O. Day.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Volusia"
+      },
+      {
+        "comment_text": "Conducted Social Investigation which ignored and/or minimized facts and evidence which led to a biased opinion (in favor of the party paying her bill).",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Palm Beach"
+      },
+      {
+        "comment_text": "Judges ignored her evaluation",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Alaucha"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/deborah_o_day",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/fl/deborah_o_day/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

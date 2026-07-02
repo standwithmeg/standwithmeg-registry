@@ -1,0 +1,106 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "jamie_vogt",
+    "display_name": "Jamie Vogt",
+    "title": "",
+    "first_name": "Jamie",
+    "last_name": "Vogt",
+    "role": "Therapist / Counselor",
+    "court": "Tulsa County",
+    "county": "Tulsa County",
+    "court_or_county": "Tulsa County",
+    "state": "Oklahoma",
+    "state_abbr": "OK",
+    "mention_count": 0,
+    "family_count": 6,
+    "public_family_count": 6,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "f6137388-78cb-4525-8d2c-50bc99c17a45",
+    "actor_bucket_key": "jamie vogt|OK"
+  },
+  "photo": {
+    "path": "public/court-actors/ok/jamie_vogt/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 128,
+    "total_submissions": 160,
+    "avg_financial_loss": 120211.96,
+    "avg_months_lost": 24.6,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OK",
+    "state_family_count": 160,
+    "median_financial_loss": 100500,
+    "median_burden_sample_size": 84,
+    "median_months_lost": 12,
+    "pro_se_pct": 44.4,
+    "pro_se_count": 71,
+    "_pdf_state_family_count": 160,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5291,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 6,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Jamie Vogt did EFE on both my children. My daughter layed in my lap in her office after not seeing me for 1 year my first time seeing her was in Jamie Vogt office for one hour. My daughter layed in my lap crying begging me not to leave saying I was the only one who can keep her safe. Jamie did noting to help my baby! Took 10 thousand dollars to see both my kids and helped paternal grandmother kidnap my daughter. Let abusers bring her to Jamie’s office and never had a visit with my daughter and her father. My daughter begged for help and was ignored. She never even mentioned this in my daughter’s report for court.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Wagoner county"
+      },
+      {
+        "comment_text": "She discredited my daughter's abuse disclosure because of her different (monotone) tone of voice and emotional shutdown when talking about it. My daughter has PTSD. That's exactly how traumatized individuals describe trauma. They disassociate. She ruled that my daughter's disclosure of SA was coached because she had a flat affect and became emotionally distant when discussing the abuse. My daughter has PTSD. That is the typical presentation. My daughter was denied advocacy and protection as a result.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Creek County"
+      },
+      {
+        "comment_text": "Coerced me to give details about a situation with my kids in counseling with my ex while the divorce was still taking place. I expressed that my ex was using the session to fish for information to use against me and she allowed her to do it, even telling me that if I didn’t she would report back to the GAL how difficult I was being.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Tulsa County"
+      },
+      {
+        "comment_text": "To be disclosed if my testimony is required. I have paper, digital, and video evidence of all of my above statements. The judge dismissed all as evidence.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Wagoner"
+      },
+      {
+        "comment_text": "Ignored evidence Failed to report domestic violence to DHS Manipulative of kids’ emotions Encourages contact with abusers and their children Lies",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Tulsa County"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/jamie_vogt",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ok/jamie_vogt/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

@@ -1,0 +1,102 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "dr_gage_stermenski",
+    "display_name": "Dr. Gage Stermenski",
+    "title": "Dr.",
+    "first_name": "Dr. Gage",
+    "last_name": "Stermenski",
+    "role": "Psychological Evaluator",
+    "court": "Psychologist",
+    "county": "Psychologist",
+    "court_or_county": "Psychologist",
+    "state": "NE",
+    "state_abbr": "NE",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": "gage stermenski|NE",
+    "_overrides_applied": [
+      "county",
+      "court_or_county",
+      "display_name",
+      "first_name",
+      "last_name",
+      "role"
+    ]
+  },
+  "photo": {
+    "path": "public/court-actors/ne/dr_gage_stermenski/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 35,
+    "total_submissions": 42,
+    "avg_financial_loss": 179170.13,
+    "avg_months_lost": 36.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "NE",
+    "state_family_count": 42,
+    "median_financial_loss": 176750,
+    "median_burden_sample_size": 16,
+    "median_months_lost": 22,
+    "pro_se_pct": 50.0,
+    "pro_se_count": 21,
+    "_pdf_state_family_count": 42,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5207,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "This man gave a biased parent capacity evaluation, saying that I was likely to be a not safe parent when I have never been accused of abusing my kids or neglecting my kids and I’ve taken care of them by myself for over 15 years, I know there was lots of personal disputes because his son is best friends with my nephew whom he blames for his son’s behaviors .",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Psychologist"
+      },
+      {
+        "comment_text": "He said I was antisocial and I’m not. Never abused anyone always had a job. Always get along with ppl",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Psychologist"
+      },
+      {
+        "comment_text": "Put everything the CPS worker said in my report for my mental health",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Psychologist"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/dr_gage_stermenski",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ne/dr_gage_stermenski/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

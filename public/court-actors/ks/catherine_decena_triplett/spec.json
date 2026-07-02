@@ -1,0 +1,100 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "catherine_decena_triplett",
+    "display_name": "Catherine Decena Triplett",
+    "title": "",
+    "first_name": "Catherine Decena",
+    "last_name": "Triplett",
+    "role": "Judge",
+    "court": "Johnson",
+    "county": "Johnson",
+    "court_or_county": "Johnson County",
+    "state": "KS",
+    "state_abbr": "KS",
+    "mention_count": 0,
+    "family_count": 5,
+    "public_family_count": 5,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": "catherine decena triplet|KS"
+  },
+  "photo": {
+    "path": "public/court-actors/ks/catherine_decena_triplett/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 179,
+    "total_submissions": 244,
+    "avg_financial_loss": 119293.76,
+    "avg_months_lost": 30.2,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "KS",
+    "state_family_count": 244,
+    "median_financial_loss": 96100,
+    "median_burden_sample_size": 129,
+    "median_months_lost": 16,
+    "pro_se_pct": 50.4,
+    "pro_se_count": 123,
+    "_pdf_state_family_count": 244,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5317,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 5,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Ignored all domestic violence. I hate Judge Triplett, Judge Sloan, and CASA. Abusive dad teamed up with my abusive parents who worked with CASA to take my kids. 2 children in foster care and 1 with his dad. I have only supervised visitation. CASA of Wyandotte and Johnson County has ruined my life.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Johnson"
+      },
+      {
+        "comment_text": "Would not recognize the child’s disability or the hiring of a special Education law firm. Would not provide clarity of the case. Is associated with the city of USD232. Unconventional court appearances that were not recorded. Recused herself from the case and did not provide any explanation.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Johnson"
+      },
+      {
+        "comment_text": "She puts restrictions on me as a non party and didn't give me a chance to defend myself against the allegations that led to the restrictions and required no proof. She was moved off our cases and now we have new judges, waiting to see if anything changes",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Johnson"
+      },
+      {
+        "comment_text": "Did not care about any evidence I presented, gave everything to my ex and her POS lawyer and is making me pay her attorneys fees just for defending myself",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Johnson County"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/catherine_decena_triplett",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ks/catherine_decena_triplett/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

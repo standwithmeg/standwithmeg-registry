@@ -1,0 +1,106 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "jennifer_eichorn",
+    "display_name": "Jennifer Eichorn",
+    "title": "",
+    "first_name": "Jennifer",
+    "last_name": "Eichorn",
+    "role": "Court Clerk / Court Staff",
+    "court": "Lenoir County Courthouse Recovery Court Coordinator",
+    "county": "Lenoir County Courthouse Recovery Court Coordinator",
+    "court_or_county": "Lenoir County Courthouse Recovery Court Coordinator",
+    "state": "North Carolina",
+    "state_abbr": "NC",
+    "mention_count": 0,
+    "family_count": 5,
+    "public_family_count": 5,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": "jenifer eichorn|NC"
+  },
+  "photo": {
+    "path": "public/court-actors/nc/jennifer_eichorn/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 161,
+    "total_submissions": 213,
+    "avg_financial_loss": 186966.14,
+    "avg_months_lost": 36.1,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "NC",
+    "state_family_count": 213,
+    "median_financial_loss": 140000,
+    "median_burden_sample_size": 71,
+    "median_months_lost": 16,
+    "pro_se_pct": 50.7,
+    "pro_se_count": 108,
+    "_pdf_state_family_count": 213,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5317,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 5,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Jennifer Eichorn provided questionable drug test documentation, including a positive result before a sample was submitted, which affected my visitation. She lied on a lot of parents and treated them badly.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lenoir County Courthouse Recovery Court Coordinator"
+      },
+      {
+        "comment_text": "Presented a positive drug test result before I gave a urine sample, causing my visitation and reunification progress to be harmed.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lenoir County Courthouse Recovery Court Coordinator"
+      },
+      {
+        "comment_text": "Provided disputed positive drug test results that were used to delay reunification and prevent family restoration.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lenoir County Courthouse Recovery Court Coordinator"
+      },
+      {
+        "comment_text": "coordinator for recovery court falsified drug tests to prevent parents from reunification with their children",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lenoir County"
+      },
+      {
+        "comment_text": "Saying I got to do group twice a week",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lenoir County Courthouse Recovery Court Coordinator"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/jennifer_eichorn",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/nc/jennifer_eichorn/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

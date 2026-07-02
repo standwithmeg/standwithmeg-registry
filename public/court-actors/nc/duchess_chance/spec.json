@@ -1,0 +1,100 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "duchess_chance",
+    "display_name": "Duchess Chance",
+    "title": "",
+    "first_name": "Duchess",
+    "last_name": "Chance",
+    "role": "Attorney / GAL / Child Representative",
+    "court": "Beaufort",
+    "county": "Beaufort county",
+    "court_or_county": "Beaufort",
+    "state": "North Carolina",
+    "state_abbr": "NC",
+    "mention_count": 0,
+    "family_count": 4,
+    "public_family_count": 4,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "23ee2409-ab6c-4df6-b398-65eb021e3831",
+    "actor_bucket_key": "duches chance|NC"
+  },
+  "photo": {
+    "path": "public/court-actors/nc/duchess_chance/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 161,
+    "total_submissions": 213,
+    "avg_financial_loss": 186966.14,
+    "avg_months_lost": 36.1,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "NC",
+    "state_family_count": 213,
+    "median_financial_loss": 140000,
+    "median_burden_sample_size": 71,
+    "median_months_lost": 16,
+    "pro_se_pct": 50.7,
+    "pro_se_count": 108,
+    "_pdf_state_family_count": 213,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5317,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 4,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "She was my GAL. I reported abuse to her which she did nothing about. I reported my money was being held by DSS from my job and she did nothing. I reported Abby Williams making me write a statement she was giving and spelling words for me and she did nothing. I told her the truth about my parents and why I kept trying to go home to them but it was never reported. She wouldn’t allow me to see my siblings. She came to locked facilities I was in and told me I had to stay because there was no where else for me but there was. I had more family in WV willing to take me. I was also 17. She allowed dss to keep me out of school which delayed my graduation and threw me behind. She lied on her court report stating she saw and spoke with me each week and I barely saw her or spoke to her. She told a judge it wasn’t in my best interest to speak with him and tried to quash my subpoena to testify from my mother’s attorney when I specifically kept asking to speak with a judge. She at one point told me I was nothing but trouble to her.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Beaufort county"
+      },
+      {
+        "comment_text": "Falsified her reports to the judge. Did not visit or talk with the children as reported. Allowed children’s visits with abuser to continue even after she struck children on several occasions and children were refusing visits she made them attend stating it is an order and you and your dad will be in trouble with the judge if you do not go. She allowed contact with siblings to be severely restricted. She allowed one child’s paydays to go to the social worker with him never seeing those wages again. She did not show up to juvenile court when child had ran away from abusive placement and dss was trying to have him charged for disorderly conduct. She did not help in getting his picture released to search for him. She did no advocacy for the children. She and lead social workers are friends and do a podcast online about wine outside of work. She was not neutral. She also did not respect DVPO in place with the parents.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Beaufort County"
+      },
+      {
+        "comment_text": "Lied to my children repeatedly. Participated in letting my daughter think I didn't want her home. Said she only \"has\" to speak to my children once every 90 days. Has hung up on my grandmother before and me as well. Her GAL reports are filled with lies and inconsistencies.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Beaufort"
+      },
+      {
+        "comment_text": "Believe everything child said",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Beaufort county"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/duchess_chance",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/nc/duchess_chance/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

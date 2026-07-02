@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "brittany_obando",
+    "display_name": "Brittany Obando",
+    "title": "",
+    "first_name": "Brittany",
+    "last_name": "Obando",
+    "role": "Parenting Coordinator",
+    "court": "Elkhart County Family Court Coordinator",
+    "county": "Elkhart",
+    "court_or_county": "Elkhart County Family Court Coordinator",
+    "state": "IN",
+    "state_abbr": "IN",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": "britany obando|IN"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 128,
+    "total_submissions": 153,
+    "avg_financial_loss": 121922.6,
+    "avg_months_lost": 30.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "IN",
+    "state_family_count": 153,
+    "median_financial_loss": 63875,
+    "median_burden_sample_size": 76,
+    "median_months_lost": 18,
+    "pro_se_pct": 45.8,
+    "pro_se_count": 70,
+    "_pdf_state_family_count": 153,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5298,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Brittney Obando was assigned to our case following the removal of Mary from our case to evaluate potential direct communication methods between me and my abuser dispite documented PTSD diagnosis which states isolation from my abuser was important for my recovery and already having an established third party point of contact in place. This was in December 2024 since then there has been no report submitted to date. Now in 2026 there is only an approximate time line for completion due to me filing for status update in March 2026 to which she said she needed an additional [redacted] days. It wasnt until this week that she contacted care providers for myself and my son (me for thr ptsd information my son for his play and behavioral therapist reports) ive had to resubmit disclosure permission paperwork due to previous approval expiring. When I was asked to recount the criminal action my ex husband took against us she downplayed the actions stating he was playing a character and that character was who threatened my son with harm and that character who said they would cut my breaks in an effort to dismiss action that resulted in a felony conviction in criminal court under David Bonfiglio. When I reported further attempts at parental alienation with witnesses documented and available for statement or testimonials she never contacted them instead contacting my ex husband for his opinion to which my ex basically said I was the one committing parental alienation against him and when obando contacted me to follow up said I should refrain from adult topics being discussed infront of my son. This is after discussion already documented that IF adult topics need discussed with my son it is done in the presence and guidance of his therapist to ensure my son is not negatively impacted like when my ex-husband was in jail we did not talk about it until his therapist could lead the discussion and provide materials to evaluate at home to help james grasp what was being communicated to him.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Elkhart"
+      },
+      {
+        "comment_text": "Refused to give evidence of child abuse to judge, committed perjury, covering for the judge took a bribe from my kids' mom and her family",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Elkhart County Family Court Coordinator"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/brittany_obando",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/in/brittany_obando/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "thea_langley",
+    "display_name": "Thea Barnes Langley",
+    "title": "",
+    "first_name": "Thea Barnes",
+    "last_name": "Langley",
+    "role": "Therapist / Counselor",
+    "court": "Autauga",
+    "county": "Autauga",
+    "court_or_county": "Autauga",
+    "state": "Alabama",
+    "state_abbr": "AL",
+    "mention_count": 0,
+    "family_count": 5,
+    "public_family_count": 5,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "07ad67d2-a9aa-4435-adde-4b714101d63f",
+    "actor_bucket_key": "thea langley|AL"
+  },
+  "photo": {
+    "path": "public/court-actors/al/thea_langley/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 103,
+    "total_submissions": 128,
+    "avg_financial_loss": 90405.41,
+    "avg_months_lost": 36.3,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "AL",
+    "state_family_count": 128,
+    "median_financial_loss": 80000,
+    "median_burden_sample_size": 59,
+    "median_months_lost": 14,
+    "pro_se_pct": 43.0,
+    "pro_se_count": 55,
+    "_pdf_state_family_count": 128,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5320,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 5,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Judge ordered two visits with children. Another therapist who worked with children for 1.5 years called Thea to report the abuse, including fractured skull x 2, participle hearing loss, Black eyes, bruises & welts, the children disclosed with their father as the perpetrator. Other therapist & hospital informed Thea that ongoing contact with father would exasperated children symptoms. Thea did not include any of the information in her report that was disclosed by other therapist or hospital. Infact, Thea reported children were happy, healthy and well dressed and never disclosed any of the other therapist or hospital reports or findings in her report. Children have since been given to their father.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Autauga"
+      },
+      {
+        "comment_text": "Very manipulative with children, highly unqualified for the position, extremely unprofessional, unethical and causes extreme damage to an already delicate situation. She cares nothing about a parent and child relationship and promotes separation.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Autauga"
+      },
+      {
+        "comment_text": "Helped cover up evidence, ignored my evidence, was knowledgeable and covered up for the misconduct of the GAL and the attorney.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Autauga"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/thea_langley",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/al/thea_langley/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

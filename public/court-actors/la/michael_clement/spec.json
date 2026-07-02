@@ -1,0 +1,106 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "michael_clement",
+    "display_name": "Michael Clement",
+    "title": "",
+    "first_name": "Michael",
+    "last_name": "Clement",
+    "role": "Judge",
+    "court": "Plaquemines",
+    "county": "Plaquemines",
+    "court_or_county": "Plaquemines",
+    "state": "Louisiana",
+    "state_abbr": "LA",
+    "mention_count": 0,
+    "family_count": 5,
+    "public_family_count": 5,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "7cb9d065-8d62-481d-8627-95e38a61c7aa",
+    "actor_bucket_key": "michael clement|LA"
+  },
+  "photo": {
+    "path": "public/court-actors/la/michael_clement/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 47,
+    "total_submissions": 63,
+    "avg_financial_loss": 170452.26,
+    "avg_months_lost": 38.4,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "LA",
+    "state_family_count": 63,
+    "median_financial_loss": 201600,
+    "median_burden_sample_size": 31,
+    "median_months_lost": 24,
+    "pro_se_pct": 50.8,
+    "pro_se_count": 32,
+    "_pdf_state_family_count": 63,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5320,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 5,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "The judge made a ruling that I had to live with my dad who molested me. I know there is evidence, I had to talk to the police and I was in therapy so they had to have said something but it didn't matter.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Plaquemines"
+      },
+      {
+        "comment_text": "Ignored evidence from the child’s teacher about sexual abuse disclosure, then refused her affidavit after refusing to allow her to testify",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Plaquemines"
+      },
+      {
+        "comment_text": "Ignored evidence, allowed opposing counsel to call witnesses you never spoke with child or mother, no best interest factors in ruling.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Plaquemines"
+      },
+      {
+        "comment_text": "Unethical, endgangered children, Ignored evidence, improper courtroom behavior, bias, retaliatory conduct, improper use of authority",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Plaquemines"
+      },
+      {
+        "comment_text": "Denied my evidence that perjured ex’s witnesses, refused to allow my professionals to testify",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Plaquemines"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/michael_clement",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/la/michael_clement/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

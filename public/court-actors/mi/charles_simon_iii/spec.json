@@ -1,0 +1,130 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "charles_simon_iii",
+    "display_name": "Charles Simon III",
+    "title": "",
+    "first_name": "Charles",
+    "last_name": "Simon III",
+    "role": "Judge",
+    "court": "Montcalm",
+    "county": "Montcalm County Michigan",
+    "court_or_county": "Montcalm County Michigan",
+    "state": "Michigan",
+    "state_abbr": "MI",
+    "mention_count": 0,
+    "family_count": 9,
+    "public_family_count": 9,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/mi/charles_simon_iii/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 145,
+    "total_submissions": 176,
+    "avg_financial_loss": 182391.52,
+    "avg_months_lost": 36.1,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "MI",
+    "state_family_count": 176,
+    "median_financial_loss": 97500,
+    "median_burden_sample_size": 77,
+    "median_months_lost": 16,
+    "pro_se_pct": 43.8,
+    "pro_se_count": 77,
+    "_pdf_state_family_count": 176,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5241,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 9,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "He makes decisions in his chambers before court proceedings happens. Before hearing any thing. He slanders the parents in court, tells you how much he thinks your a piece of crap.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Montcalm County Michigan"
+      },
+      {
+        "comment_text": "Sent a detective to my home to question my about a tik tok repost that he was informed about by “ one of his minions”. After that he removed himself from my case admitting bias.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Montcalm County Michigan"
+      },
+      {
+        "comment_text": "Doesn’t allow evidence or you to defend yourself. Biased. Not for families Biased. Not for families He’s a biased lying judge who is against families",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Montcalm"
+      },
+      {
+        "comment_text": "Very prejudiced against my family, talked down to us in court. Judge Simons Rude, judgemental, prejudice. Talked down to us in open court.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Montcalm County Michigan"
+      },
+      {
+        "comment_text": "He lied and said my daughter threatened to kill him. To get himself off the case because he broke so many laws and rules.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Montcalm County Michigan"
+      },
+      {
+        "comment_text": "He did not listen to childrens wishes or needs, did not let my parents speak, did an ex parte to take visits away.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Montcalm County Michigan"
+      },
+      {
+        "comment_text": "Ignored evidence and denied reunification.we have not seen or heard from our child in 4 years",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Montcalm County Michigan"
+      },
+      {
+        "comment_text": "He is bias? And has a drug problem",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Montcalm County Michigan"
+      },
+      {
+        "comment_text": "Doesn’t follow laws!",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Montcalm"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/charles_simon_iii",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/mi/charles_simon_iii/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

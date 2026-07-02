@@ -1,0 +1,100 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "carol_cook_carter",
+    "display_name": "Carol Cook Carter",
+    "title": "",
+    "first_name": "Carol Cook",
+    "last_name": "Carter",
+    "role": "Judge",
+    "court": "Autauga",
+    "county": "Autauga",
+    "court_or_county": "Autauga",
+    "state": "Alabama",
+    "state_abbr": "AL",
+    "mention_count": 0,
+    "family_count": 5,
+    "public_family_count": 5,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "18272499-962e-44f9-b4c3-0c43b2f561b1",
+    "actor_bucket_key": "carol cook carter|AL"
+  },
+  "photo": {
+    "path": "public/court-actors/al/carol_cook_carter/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 103,
+    "total_submissions": 128,
+    "avg_financial_loss": 90405.41,
+    "avg_months_lost": 36.3,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "AL",
+    "state_family_count": 128,
+    "median_financial_loss": 80000,
+    "median_burden_sample_size": 59,
+    "median_months_lost": 14,
+    "pro_se_pct": 43.0,
+    "pro_se_count": 55,
+    "_pdf_state_family_count": 128,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5320,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 5,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Saw the evidence presented where my child’s father was threatening to harm both me and my child. She still advocated for the father and he ultimately received joint custody. I fully believe this is because she was, and is, very close friends with the father’s attorney.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Autauga"
+      },
+      {
+        "comment_text": "Told me she would get her money one way or the other. Had me jailed with no way out but to pay. Ex husband still hasn't paid her.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Autauga"
+      },
+      {
+        "comment_text": "Served as counsel for father at one point, offered to represent me at another.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Autauga"
+      },
+      {
+        "comment_text": "Been blocked from reviewing her website",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Autauga"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/carol_cook_carter",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/al/carol_cook_carter/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

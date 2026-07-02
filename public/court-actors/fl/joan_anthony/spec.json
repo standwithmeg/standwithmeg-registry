@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "joan_anthony",
+    "display_name": "Joan Anthony",
+    "title": "",
+    "first_name": "Joan",
+    "last_name": "Anthony",
+    "role": "Judge",
+    "court": "Seventh Circuit Court",
+    "county": "Seventh Circuit Court",
+    "court_or_county": "Seventh Circuit Court",
+    "state": "Florida",
+    "state_abbr": "FL",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "6e2bd141-759a-4694-a30b-c8e36ed76619",
+    "actor_bucket_key": "joan anthony|FL"
+  },
+  "photo": {
+    "path": "public/court-actors/fl/joan_anthony/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 237,
+    "total_submissions": 302,
+    "avg_financial_loss": 204328.82,
+    "avg_months_lost": 28.1,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "FL",
+    "state_family_count": 302,
+    "median_financial_loss": 176500,
+    "median_burden_sample_size": 131,
+    "median_months_lost": 18,
+    "pro_se_pct": 57.9,
+    "pro_se_count": 175,
+    "_pdf_state_family_count": 302,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5290,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "She was a defendant in my federal case while she presided over my tpr hearing and refused to recuse. She had me thrown in jail when i filed a motion to have her recuse for suppressing domestic violence evidence I disclosed and a motion for ADA accommodations for online court record viewing. The court window would not give me copies of filings or orders. She appointed counsel in abstentia on February 5, 2024 and had the attorney representing my husband substitute for the absent attorney. I was a domestic violence victim in my husband’s current criminal case. The substitute attorney over talked me when i tried to disclose i was a victim of dv. He said he had to protect his clients interests, so he silenced me. Judge Anthony silenced me also when i tried to explain about the dv my husband did to me in front of my children. This happened during the continued shelter hearing. The first shelter hearing was held while I was at the Orlando Advent Children’s hospital signing off on emergency brain surgery, Feb 2, 2024 for my special needs child. Judge Anthony issued a retroactive nunc pro tunc order on May 30, 2024 to conceal the conflicted counsel. Judge Kathleen McNeilly removed my disability attorney who was advocating for me during the Feb 2, 2024 shelter hearing. I had no attorney and there were three structural errors during the shelter hearings. Judge Anthony had the clerk not docket my filings. The appeal record was irregular and incomplete yet the 5th DCA knew this and issued a PCA to cover everything the lower tribunal did up. Finally, i informed her i was coerced into signing consent with no counsel present. The consebt form was misdsing the attorney signature block. And the attached notary was fraudulent voiding the document under Florida law. I informed Anthony, CPC, cm, pulled my mother’s Florida homestudy out of the FSFN system foreclosing her guardian candidacy and changing the trajectory of the tpr. She deleted my filing. She committed judicial misconduct throughout my case and harmed my family.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Seventh Circuit Court"
+      },
+      {
+        "comment_text": "Florida DCF and its state contractors (Community Partnership for Children, Seventh Circuit Court, Volusia County) ignored altered and fraudulent coerced consent documents used to remove parental rights from a disabled woman under duress. The fraudulent consent forms, fraudulent notary certificate, an unnegotiated and unsigned case plan — and the judicial forms Judge Anthony altered — are all filed in our federal Appeal case (Fla. 11th Cir. Appeal No. [redacted] G) as irrefutable evidence of improper documents used to procure federal Title IV-E funding in Volusia County. Judge Anthony failed to recuse and my disability attorney was told to withdraw 3 days before my shelter hearing. Judge Anthony did not have the court clerk docket my pro se filings. They were substantive filings, including a motion to vacate and written opposition to TPR. She silenced me when I disclosed I was a victim of domestic violence. She mocked me during the proceedings and had me arrested after I filed motions for her recusal and ADA accommodations. She deleted emergency filings for medical care for my special needs infant to have a comprehensive evaluation. Florida DCF uses Behavioral Assessment reports to guide medical care in their cases in place of qualified medical professionals. This medical neglect and judicial misconduct is threatening my infant daughter’s life. She ignored and suppressed dv in my case. As a result my children were nearly transferred back into a cycle of domestic violence when my husband filed for jurisdiction in AK. The court was provided multiple FOIA’d law enforcement reports documenting my husband’s dv, kidnapping, rape and strangling me in front of my two younger children. She and the DCF attorneys and GALs kept laughing and doing inside jokes during the hearing.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Volusia"
+      },
+      {
+        "comment_text": "Presided over my daughter’s TPR trial while named as a defendant in her civil rights case. Appointed counsel in abstention, and has the father’s lawyer represent both parents conflict. Father has a criminal case where my daughter was victim. The substitute lawyer stopped my daughter from disclosing she was a victim of dv during the shelter hearing. Judge Anthony allowed FL DCF to use Devereux Behavioral Assessment reports and foster heresay to keep my granddaughter on a g-tube. FL DCF and the CBC, Community Partnership for Children removed an Easter Seals oral-motor evaluation documenting oral motor capacity from the case file to deny my daughter’s request for a g-tube weaning evaluation. As a result of the medical neglect, my granddaughter had her right brain surgery on January 30, 2026. she is special needs and not seeing qualified medical specialists. Judge Anthony denied ADA accommodations to my daughter and I. She deleted all the substantive filings in the dependency case. She ignored my daughter disclosing she was coerced into signing consent, without counsel, by the fl DCF mediator who was the attorney appointed in absentia. The case manger altered the consent form to remove the attorney signature block. The case plan was never negotiated or signed. Fl DCF never had jurisdiction, bit the judge ignored every violation. Despite all these procedural due process violations, The 5th DCA issued a PCA on 4-[redacted].",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Volusia"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/joan_anthony",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/fl/joan_anthony/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

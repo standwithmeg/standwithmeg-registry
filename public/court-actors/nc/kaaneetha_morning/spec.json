@@ -1,0 +1,100 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "kaaneetha_morning",
+    "display_name": "Kaaneetha Morning",
+    "title": "",
+    "first_name": "Kaaneetha",
+    "last_name": "Morning",
+    "role": "CPS Worker",
+    "court": "Lenoir",
+    "county": "Lenoir",
+    "court_or_county": "Lenoir",
+    "state": "NC",
+    "state_abbr": "NC",
+    "mention_count": 0,
+    "family_count": 4,
+    "public_family_count": 4,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": "kanetha morning|NC"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 161,
+    "total_submissions": 213,
+    "avg_financial_loss": 186966.14,
+    "avg_months_lost": 36.1,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "NC",
+    "state_family_count": 213,
+    "median_financial_loss": 140000,
+    "median_burden_sample_size": 71,
+    "median_months_lost": 16,
+    "pro_se_pct": 50.7,
+    "pro_se_count": 108,
+    "_pdf_state_family_count": 213,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5317,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 4,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Kaaneetha likes to degrade families and talk down to them like we are lesser of a person. She tries to turn every situation around to make the parent look bad. Since she became supervisor she hasmade my caseworker Shy-Kendra Lawson stop communicating with me completely and Kaaneetha has stopped all supervised visits with my children without a court order. She is disrespectful and has pushed for adoption and away from reunification since she started a few months ago. The last supervisor got up in the middle of work left everything at his desk, quit, and walked out. I believe that he couldn't go along with the orders he was being pushed to do to me. He had denied my visit on my baby's bday at first and then he called me the morning of my visit to tell me he was going to allow my visit after sleeping on it all night. He had started having compassion near the end and relating with me more and then he got up and just walked out and quit. Suspended my court-ordered visits with my children and told me visits would not resume unless I completed a hair follicle test, despite my prior negative drug screens and no new court order being shown to me. She is so unprofessional and acts ghetto!! Kaaneetha Morning informed me my visits were suspended, which further delayed reunification and caused continued separation from my children. She is really rude and degrades me every chance she gets.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lenoir"
+      },
+      {
+        "comment_text": "Restricted my visitation, ignored evidence and concerns I raised, and supported continued separation from my child in foster care. Was rude and tried degrading me every chance she got.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lenoir"
+      },
+      {
+        "comment_text": "Li3s, under oath, tampered srugs screena, not baving children's best interests at forefront",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lenoir"
+      },
+      {
+        "comment_text": "Saying I cannot been delivering with my daughter and being and cannot get my kids up",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lenoir"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/kaaneetha_morning",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/nc/kaaneetha_morning/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

@@ -1,0 +1,95 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "w_scott_kimberly",
+    "display_name": "Kimberly Turner",
+    "title": "",
+    "first_name": "Kimberly",
+    "last_name": "Turner",
+    "role": "Attorney",
+    "court": "Rutherford",
+    "county": "Rutherford County",
+    "court_or_county": "Montgomery County, TN",
+    "state": "TN",
+    "state_abbr": "TN",
+    "mention_count": 0,
+    "family_count": 0,
+    "public_family_count": 0,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": "w scot kimberly|TN"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 88,
+    "total_submissions": 119,
+    "avg_financial_loss": 111954.91,
+    "avg_months_lost": 38.2,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "TN",
+    "state_family_count": 119,
+    "median_financial_loss": 83375,
+    "median_burden_sample_size": 52,
+    "median_months_lost": 17,
+    "pro_se_pct": 44.5,
+    "pro_se_count": 53,
+    "_pdf_state_family_count": 119,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5298,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 0,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "He made several false allegations against me never proved anything or he would try to take something and twist it. He is very manipulative and conniving. I know that there was a court reporter in that room, but yet they are claiming that there wasn't.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Rutherford County"
+      },
+      {
+        "comment_text": "Abusive litigator, tricky aggrements, files false documents and money hungry. Uses manipulation tactics by making a statement and then asking questions so you get trapped.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Rutherford County"
+      },
+      {
+        "comment_text": "Plays golf with judges. Litigated while another state had jurisdiction and did not catch on until a few months and several thousands in.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Rutherford County"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/w_scott_kimberly",
+  "unresolved": [
+    "public_family_count_api: no match for display_name='Kimberly Turner' bucket='w scot kimberly|TN' slug='w_scott_kimberly' in TN (6 actors)",
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/tn/w_scott_kimberly/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

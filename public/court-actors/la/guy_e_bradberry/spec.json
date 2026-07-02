@@ -1,0 +1,77 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "guy_e_bradberry",
+    "display_name": "Guy E. Bradberry",
+    "title": "",
+    "first_name": "Guy E.",
+    "last_name": "Bradberry",
+    "role": "Judge",
+    "court": "14th Judicial District Family & Juvenile Court",
+    "county": null,
+    "court_or_county": "14th Judicial District Family & Juvenile Court",
+    "state": "Louisiana",
+    "state_abbr": "LA",
+    "mention_count": 0,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "a05df472-16d4-4963-ad85-f18acecfc0e8",
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/la/guy_e_bradberry/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 47,
+    "total_submissions": 63,
+    "avg_financial_loss": 170452.26,
+    "avg_months_lost": 38.4,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "LA",
+    "state_family_count": 63,
+    "median_financial_loss": 201600,
+    "median_burden_sample_size": 31,
+    "median_months_lost": 24,
+    "pro_se_pct": 50.8,
+    "pro_se_count": 32,
+    "_pdf_state_family_count": 63,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5320,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 2,
+    "family_reports": [],
+    "public_comments": []
+  },
+  "export_dir": "New Final Post and Capcut template/export/guy_e_bradberry",
+  "unresolved": [
+    "public_family_count_api: no match for display_name='Guy E. Bradberry' bucket=None slug='guy_e_bradberry' in LA (2 actors)",
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available",
+    "pdf_public_actor: no 'Guy E. Bradberry' in cache for LA"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/la/guy_e_bradberry/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

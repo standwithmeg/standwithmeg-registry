@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "dina_richman",
+    "display_name": "Dina Richman",
+    "title": "",
+    "first_name": "Dina",
+    "last_name": "Richman",
+    "role": "Judge",
+    "court": "Chatsworth",
+    "county": "Chatsworth",
+    "court_or_county": "Chatsworth",
+    "state": "California",
+    "state_abbr": "CA",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "f16caa9e-5260-4d48-9938-ac2156f69e90",
+    "actor_bucket_key": "dina richman|CA"
+  },
+  "photo": {
+    "path": "public/court-actors/ca/dina_richman/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 353,
+    "total_submissions": 439,
+    "avg_financial_loss": 288012.6,
+    "avg_months_lost": 36.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "CA",
+    "state_family_count": 439,
+    "median_financial_loss": 265100,
+    "median_burden_sample_size": 196,
+    "median_months_lost": 20,
+    "pro_se_pct": 58.8,
+    "pro_se_count": 258,
+    "_pdf_state_family_count": 439,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5303,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Denied my DVRO request after father falsely accused me of child abuse multiple times and was allowing father to violate orders. This led to me losing custody and having to eventually go on visitations even though there was no safety concerns by any social worker, SVU detective or parenting plan evaluator. This judge doesn’t review anything and simply relies on hear say from a minors counsel that doesn’t even do an investigation and lies under oath.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Chatsworth"
+      },
+      {
+        "comment_text": "She gave my rights to my abuser and closed case",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Chatsworth Supreme courthouse"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/dina_richman",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ca/dina_richman/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

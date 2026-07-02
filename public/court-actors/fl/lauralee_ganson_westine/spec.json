@@ -1,0 +1,100 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "lauralee_ganson_westine",
+    "display_name": "Lauralee Ganson Westine",
+    "title": "",
+    "first_name": "Lauralee Ganson",
+    "last_name": "Westine",
+    "role": "Judge",
+    "court": "Pasco",
+    "county": "Pasco",
+    "court_or_county": "Pasco",
+    "state": "Florida",
+    "state_abbr": "FL",
+    "mention_count": 0,
+    "family_count": 4,
+    "public_family_count": 4,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "f657d59e-2b25-4620-bc99-4d95867644e0",
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/fl/lauralee_ganson_westine/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 237,
+    "total_submissions": 302,
+    "avg_financial_loss": 204328.82,
+    "avg_months_lost": 28.1,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "FL",
+    "state_family_count": 302,
+    "median_financial_loss": 176500,
+    "median_burden_sample_size": 131,
+    "median_months_lost": 18,
+    "pro_se_pct": 57.9,
+    "pro_se_count": 175,
+    "_pdf_state_family_count": 302,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5290,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 4,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "This judge does not care about evidence and played around on her notebook while we testified. Ignored all evidence we presented. Multiple witnesses speaking on our behalf were ignored while she made jokes with the opposing council. She acknowledged during trial I had done nothing wrong and still terminated my rights. She ignored several times I presented proof that the state had lied to her during hearings and didn't want to hear it. She failed to get my son adequate mental health help despite me asking for almost a year in every single hearing. He made comments about how we were going to lose before the trial was even over. She ignored a nationally renowned children's orthopedic specialists and decided to believe a radiologist with a tenth of the experience of the doctor that we had testifying on our behalf. She visibly rolled her eyes every single time somebody said something positive about us. The only single social worker that ever interacted with us ended up testifying on our behalf and she rolled her eyes the entire time he talked. She placed my children with my brother who is a sexual predator self-confessed and I begged her not to because it was dangerous and she did not care. She refused to get genetic testing on my daughter even when I begged. She is the absolute picture of corruption and all you have to do is look at our closing arguments versus her ruling. The document is unprofessional, scathing, and ignores every shred of tangible evidence we presented.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Pasco"
+      },
+      {
+        "comment_text": "She refused to listen to anything I had to say she told me to shut up and refused to hear from any witnesses and sealed my case the same day.and accepted a home DNA test as proof of paternity Refused my test6and refuses testimonies of witnesses. Accepted home DNA test at proof af paternity",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Pasco"
+      },
+      {
+        "comment_text": "Called an Evidentiary Hearing Sua Sponte, played jury, judge and executioner and single handedly removed my child because I took him to the police station to have a picture taken when the case manager said he had a red mark on his face.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Pasco"
+      },
+      {
+        "comment_text": "ignored evidence, etc",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Pasco"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/lauralee_ganson_westine",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/fl/lauralee_ganson_westine/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

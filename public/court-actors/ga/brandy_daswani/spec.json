@@ -1,0 +1,112 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "brandy_daswani",
+    "display_name": "Brandy J. Daswani",
+    "title": "",
+    "first_name": "Brandy J.",
+    "last_name": "Daswani",
+    "role": "GAL / Child Representative",
+    "court": "Cobb",
+    "county": "Cobb",
+    "court_or_county": "Cobb County Superior Court",
+    "state": "Georgia",
+    "state_abbr": "GA",
+    "mention_count": 0,
+    "family_count": 7,
+    "public_family_count": 7,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/ga/brandy_daswani/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 122,
+    "total_submissions": 149,
+    "avg_financial_loss": 222633.06,
+    "avg_months_lost": 32.5,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "GA",
+    "state_family_count": 149,
+    "median_financial_loss": 148000,
+    "median_burden_sample_size": 84,
+    "median_months_lost": 18,
+    "pro_se_pct": 45.6,
+    "pro_se_count": 68,
+    "_pdf_state_family_count": 149,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5275,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 7,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "A low life scum of an attorney with ZERO integrity. She farms out work getting appointed to her by the judges so she can bill whatever she deems necessary. She never traveled to both houses to ensure child welfare yet reported that she did. She sat on her reports for months and denied any input, when I called to ask about care she told me it was none of my business. She only talked to me when it was about getting billed. She told me I don’t care where you come up with $20K, you better borrow it from friends and pay me. Yet she hasn’t produced any documents. 10 months to produce a 2 page document that explained nothing. Her exact statement “I do not award 50/50 custody or primary custody to Fathers” She was annoyed when clients leave bad reviews online via google and yelp. So much so she tried to sue for defamation making threats yet no comments were untrue and I refused to take them down. She proceeded to have a friend who is federal law enforcement intimidate me with his position. He called and harassed me utilizing his badge and fbi credentials to intimidate me. I filed a formal complaint via an attorney directly to the DOJ to stop his illegal use of his position. Brandy continues to beg for cases so that she can get paid and do little to no work. She is a complete incompetent person with zero integrity. May she rot in hell",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Cobb"
+      },
+      {
+        "comment_text": "Made up evidence (including a false criminal record on an excel spreadsheet), told me she is sick of our family’s religion (we are Christians), ignored convicted criminal activity on the other side and said it wasn’t a crime - victim shamed and threatened a bad outcome if we cooperated with law enforcement. That’s exactly what happened. Lied in testimony, made up evidence (including totally fake drug charges she submitted on an excel spreadsheet), ignored actual convicted criminal activity of the other side, currently being sued by another victim parent for collusion with the very firm who entered the case just in time to be handed a win in our temporary hearing.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Cobb"
+      },
+      {
+        "comment_text": "She loved the grandparents and are up any lies and narrative they fed her, blatantly ignored facts and at final mediation realized her mistake after ten hours of seeing true colors from opposing side, shrugged her shoulders and told me “good luck”, because of her terrible work we ended up back in court within 2 years and spent another 44 months and almost $500k. Brandy Daswani is a collaborator with multiple attorneys in Cobb and this severely impacted my case and our children’s entire childhood",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Cobb"
+      },
+      {
+        "comment_text": "Acted with bias rather than neutrality by disregarding evidence I provided, relying on one-sided narratives, participating in communications outside my presence, and supporting restrictions that delayed and damaged my relationship with my child without adequate findings of harm or unfitness. Failed to act neutrally, ignored or minimized evidence I provided, and supported knowingly false narratives and recommendations that effectively severed my relationship with my child.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Cobb"
+      },
+      {
+        "comment_text": "Perjury- false testimony Recommend evaluations and experts and ignored their recommendations because they were against what my ex husband wanted Made up evidence against me Tried to have my special needs son removed from his school and therapy because my ex didn’t want to pay for it.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Cobb"
+      },
+      {
+        "comment_text": "Lied on recommendations to be one sided",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Fulton"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/brandy_daswani",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ga/brandy_daswani/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

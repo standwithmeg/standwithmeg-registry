@@ -1,0 +1,76 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "jenifer_berger",
+    "display_name": "Jennifer Berger",
+    "title": "",
+    "first_name": "Jennifer",
+    "last_name": "Berger",
+    "role": "Attorney",
+    "court": "Jackson/Shawnee",
+    "county": "Jackson/Shawnee",
+    "court_or_county": "Jackson/Shawnee",
+    "state": "Kansas",
+    "state_abbr": "KS",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": "jenifer berger|KS"
+  },
+  "photo": {
+    "path": "public/court-actors/ks/jenifer_berger/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 179,
+    "total_submissions": 244,
+    "avg_financial_loss": 119293.76,
+    "avg_months_lost": 30.2,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "KS",
+    "state_family_count": 244,
+    "median_financial_loss": 96100,
+    "median_burden_sample_size": 129,
+    "median_months_lost": 16,
+    "pro_se_pct": 50.4,
+    "pro_se_count": 123,
+    "_pdf_state_family_count": 244,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5317,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": []
+  },
+  "export_dir": "New Final Post and Capcut template/export/jenifer_berger",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available",
+    "pdf_public_actor: no 'Jennifer Berger' in cache for KS"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ks/jenifer_berger/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

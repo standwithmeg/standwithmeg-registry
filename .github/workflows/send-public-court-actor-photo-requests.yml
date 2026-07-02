@@ -1,0 +1,75 @@
+name: Send Public Court Actor Photo Requests
+
+# Triggers:
+#   - Every day at 14:00 UTC (10:00 ET / 09:00 CT) — daytime so anything
+#     odd shows up in the action log when Meg is awake.
+#   - Manual dispatch from the Actions tab. Use the dry_run input to
+#     preview without sending.
+#
+# What this does:
+#   For every court actor that has crossed the public reporting threshold
+#   (3+ distinct families, form_direct only) and where a contributing
+#   reporter has not yet been emailed for that bucket, send the locked
+#   photo-request email and record a row in court_actor_public_notifications.
+#
+# What this does NOT do:
+#   - Reveal one reporter to another.
+#   - Send to a reporter twice for the same actor.
+#   - Publish any image automatically.
+#   - Modify court_actors counts.
+#
+# Required repo secrets:
+#   NEXT_PUBLIC_SUPABASE_URL
+#   SUPABASE_SERVICE_ROLE_KEY
+#   GOOGLE_SMTP_USER
+#   GOOGLE_SMTP_PASSWORD
+#   GOOGLE_SMTP_FROM       (optional; defaults to GOOGLE_SMTP_USER)
+#   GOOGLE_SMTP_REPLY_TO   (optional; defaults to GOOGLE_SMTP_FROM)
+
+on:
+  schedule:
+    - cron: "0 14 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Preview only — list pending sends and exit without emailing."
+        required: false
+        default: "false"
+
+permissions:
+  contents: read
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Set up Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Run dry-run preview
+        if: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.dry_run == 'true' }}
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: npx tsx scripts/send-public-court-actor-photo-requests.ts --dry-run
+
+      - name: Send photo-request emails
+        if: ${{ github.event_name == 'schedule' || github.event.inputs.dry_run != 'true' }}
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          GOOGLE_SMTP_USER: ${{ secrets.GOOGLE_SMTP_USER }}
+          GOOGLE_SMTP_PASSWORD: ${{ secrets.GOOGLE_SMTP_PASSWORD }}
+          GOOGLE_SMTP_FROM: ${{ secrets.GOOGLE_SMTP_FROM }}
+          GOOGLE_SMTP_REPLY_TO: ${{ secrets.GOOGLE_SMTP_REPLY_TO }}
+        run: npx tsx scripts/send-public-court-actor-photo-requests.ts --send

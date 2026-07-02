@@ -1,0 +1,87 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "hon_amy_poehling_eddy",
+    "display_name": "Hon. Amy Poehling Eddy",
+    "title": "Hon.",
+    "first_name": "Amy Poehling",
+    "last_name": "Eddy",
+    "role": "Judge",
+    "court": "Unknown",
+    "county": "Flathead",
+    "court_or_county": "Flathead",
+    "state": "Montana",
+    "state_abbr": "MT",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "ff08ce71-8808-402a-b14d-595d1d5ae578",
+    "actor_bucket_key": "amy poehling eddy|MT",
+    "_overrides_applied": [
+      "county",
+      "court_or_county",
+      "last_name"
+    ]
+  },
+  "photo": {
+    "path": "public/court-actors/mt/hon_amy_poehling_eddy/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 40,
+    "total_submissions": 56,
+    "avg_financial_loss": 188465.43,
+    "avg_months_lost": 46.7,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "MT",
+    "state_family_count": 56,
+    "median_financial_loss": 150500,
+    "median_burden_sample_size": 27,
+    "median_months_lost": 20,
+    "pro_se_pct": 57.1,
+    "pro_se_count": 32,
+    "_pdf_state_family_count": 56,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5207,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Confidential information was handed to the other side.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Flathead county"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/hon_amy_poehling_eddy",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/mt/hon_amy_poehling_eddy/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "karen_alexander",
+    "display_name": "Karen Alexander",
+    "title": "",
+    "first_name": "Karen",
+    "last_name": "Alexander",
+    "role": "Judge",
+    "court": "Denton 393",
+    "county": "Denton 393",
+    "court_or_county": "Denton 393",
+    "state": "Texas",
+    "state_abbr": "TX",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "e093bfba-f0c8-4ba0-8d24-09babfcd4e86",
+    "actor_bucket_key": "karen alexander|TX"
+  },
+  "photo": {
+    "path": "public/court-actors/tx/karen_alexander/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 243,
+    "total_submissions": 307,
+    "avg_financial_loss": 232914.17,
+    "avg_months_lost": 32.4,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "TX",
+    "state_family_count": 307,
+    "median_financial_loss": 125500,
+    "median_burden_sample_size": 146,
+    "median_months_lost": 20,
+    "pro_se_pct": 49.2,
+    "pro_se_count": 151,
+    "_pdf_state_family_count": 307,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5314,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Judge accused me of alienation for begging the court to protect my baby. We escaped Domestic violence (me & my child who was only 1.5 yrs old at the time). After we left and were living in the dv shelter, we discovered that he had a previous history of abusing another woman and her situation was the same pattern as mine, we got out in time and she didn’t. The judge ignored it. The judge ignored his illegal possession of firearms that our child had access to. The judge ignored the failed drug tests, history of dv, his choices not to pay child support & repeated neglect of our child by ignoring doctors orders and denying her diagnoses. The judge ignored all of it that was documented on record throughout the trial and gave him 50/50 for me trying to protect her after she came home with bruises and naming him as her abuser. CPS got involved multiple times from mandated reporters. He refused to comply with them and they closed all the cases. No one protected my child. No one is still protecting my child and she continues to cry out abuse when he has her.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Denton 393"
+      },
+      {
+        "comment_text": "Has violated my due process numerous times, flipped custody, without cause, and exceeded what was even plead. Denied due process. Biased. Ignores evidence.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "393rd"
+      },
+      {
+        "comment_text": "Bias. Illegal rulings. Due process violations. ADA violations. Improper relationships.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "393"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/karen_alexander",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/tx/karen_alexander/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "monica_schocken",
+    "display_name": "Dr. Monica Schocken",
+    "title": "Dr.",
+    "first_name": "Monica",
+    "last_name": "Schocken",
+    "role": "Psychological Evaluator",
+    "court": "Collin",
+    "county": "Collin",
+    "court_or_county": "Collin",
+    "state": "Texas",
+    "state_abbr": "TX",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "c61fbbce-377e-4ba7-8c7d-6f11a8ed3be3",
+    "actor_bucket_key": "monica schocken|TX"
+  },
+  "photo": {
+    "path": "public/court-actors/tx/monica_schocken/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 243,
+    "total_submissions": 307,
+    "avg_financial_loss": 232914.17,
+    "avg_months_lost": 32.4,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "TX",
+    "state_family_count": 307,
+    "median_financial_loss": 125500,
+    "median_burden_sample_size": 146,
+    "median_months_lost": 20,
+    "pro_se_pct": 49.2,
+    "pro_se_count": 151,
+    "_pdf_state_family_count": 307,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5314,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Called to tell me my ex hired her and began making threats before we met to have me jailed for six months if I couldn’t pay her. I was filed indigent with the court. Harassed me and threatened the boys with jail and her sending them to foster homes. Also a friend of the judge and altered evidence and was caught",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Collin"
+      },
+      {
+        "comment_text": "Admitted to coaching child to ignore her father. Admitted ex was alienating children. Made up \"sexual abuse\" claims after CPS had already cleared me 13 times.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Collin"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/monica_schocken",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/tx/monica_schocken/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

@@ -1,0 +1,106 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "elizabeth_faulkner",
+    "display_name": "Elizabeth Faulkner",
+    "title": "",
+    "first_name": "Elizabeth",
+    "last_name": "Faulkner",
+    "role": "Attorney",
+    "court": "Ulster County",
+    "county": "Ulster County",
+    "court_or_county": "Ulster County",
+    "state": "New York",
+    "state_abbr": "NY",
+    "mention_count": 0,
+    "family_count": 5,
+    "public_family_count": 5,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "ba41f027-8be3-45fa-af1f-0135100d23c0",
+    "actor_bucket_key": "elizabeth faulkner|NY"
+  },
+  "photo": {
+    "path": "public/court-actors/ny/elizabeth_faulkner/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 136,
+    "total_submissions": 171,
+    "avg_financial_loss": 213193.71,
+    "avg_months_lost": 26.4,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "NY",
+    "state_family_count": 171,
+    "median_financial_loss": 165000,
+    "median_burden_sample_size": 69,
+    "median_months_lost": 14,
+    "pro_se_pct": 39.2,
+    "pro_se_count": 67,
+    "_pdf_state_family_count": 171,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5314,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 5,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Represented the opposing party and, in my experience, advanced false accusations, relied on disputed documents, supported proceedings based on information I believe was inaccurate, and engaged in litigation tactics that I allege contributed to significant financial harm, loss of parenting time, and ongoing due process concerns that are now the subject of my federal civil rights lawsuit. Opposing counsel engaged in a pattern of conduct that interfered with Plaintiff’s ability to participate meaningfully in the proceedings, including inconsistent and duplicative financial requests, unilateral communications and decision-making regarding the child, and actions that contributed to Plaintiff’s exclusion from key aspects of the child’s life. Counsel also submitted and relied upon filings that Plaintiff contends do not accurately reflect the terms placed on the record, while failing to provide access to underlying exhibits and documentation despite repeated requests, thereby limiting Plaintiff’s ability to verify the accuracy of the record and respond effectively.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Ulster County"
+      },
+      {
+        "comment_text": "Liz Faulkner threatened my arrest to force me to surrender custody and support, manipulated court filings and exchange schedules without notice to suspend my child support, made false statements to the court about my daughter’s medical care, submitted incomplete records to her providers, and facilitated a coerced $80,000 settlement by threatening that I would be jailed and lose my children. She has lied, changed orders that were signed, tried to extort, manipulate and threaten me with being arrested if I didn’t give up custody. She used her sheriff connection to have me arrested for child endangerment. She’s filed over 20 petitions and violations against me over a ten year period.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Ulster County"
+      },
+      {
+        "comment_text": "A judge called her a non-credible witness at trial.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Ulster"
+      },
+      {
+        "comment_text": "She told my ex-husband that he would receive full custody and pushed the case to trial. At trial, the judge stated that it was a 50/50 custody case and that she would not hear any further argument on the issue. By that time, he had already spent $80,000 on her representation, and not contributing to health insurance for his children.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Ulster County, Family Court"
+      },
+      {
+        "comment_text": "She’s created lies about me for two years so that my ex and I have to keep going back. She does not care about the well being of our children",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Ulster County"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/elizabeth_faulkner",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ny/elizabeth_faulkner/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

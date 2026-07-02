@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "darik_anderson",
+    "display_name": "Darik Anderson",
+    "title": "",
+    "first_name": "Darik",
+    "last_name": "Anderson",
+    "role": "GAL / Child Representative",
+    "court": "Winona County MN",
+    "county": "Winona",
+    "court_or_county": "Winona County MN",
+    "state": "Minnesota",
+    "state_abbr": "MN",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "3530d98e-bba4-4670-9222-aee137be4994",
+    "actor_bucket_key": "darik anderson|MN"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 58,
+    "total_submissions": 72,
+    "avg_financial_loss": 160812.82,
+    "avg_months_lost": 32.8,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "MN",
+    "state_family_count": 72,
+    "median_financial_loss": 111300,
+    "median_burden_sample_size": 31,
+    "median_months_lost": 13,
+    "pro_se_pct": 56.9,
+    "pro_se_count": 41,
+    "_pdf_state_family_count": 72,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5241,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Not conducting an independent study, filling false documentation into court, Lying on the stand.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Winona County MN"
+      },
+      {
+        "comment_text": "She failed to do her job. She never evaluated, visited or spoke with anyone",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Winona"
+      },
+      {
+        "comment_text": "Refused documents",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Winona"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/darik_anderson",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/mn/darik_anderson/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

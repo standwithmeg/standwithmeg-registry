@@ -1,0 +1,100 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "manisha_bhatt",
+    "display_name": "Manisha Bhatt",
+    "title": "",
+    "first_name": "Manisha",
+    "last_name": "Bhatt",
+    "role": "Judge",
+    "court": "Family Court Div.",
+    "county": "Family Court Div.",
+    "court_or_county": "Family Court Div.",
+    "state": "Massachusetts",
+    "state_abbr": "MA",
+    "mention_count": 0,
+    "family_count": 4,
+    "public_family_count": 4,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "1a20b9b2-7ec9-4f56-b55a-7cffd467d474",
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/ma/manisha_bhatt/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 75,
+    "total_submissions": 104,
+    "avg_financial_loss": 235880.44,
+    "avg_months_lost": 26.3,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "MA",
+    "state_family_count": 104,
+    "median_financial_loss": 136300,
+    "median_burden_sample_size": 44,
+    "median_months_lost": 18,
+    "pro_se_pct": 57.7,
+    "pro_se_count": 60,
+    "_pdf_state_family_count": 104,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5207,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 4,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "She's currently the judge over seeing our case. So far, she seems fair and kind. She listened to both sides and asked appropriate questions. She didn't seem to show favoritism towards either side, which honestly, is great. Family court in MA has caused me such anxiety due to my former spouse using it to as a means of control and harm towards our children. However, I have hope after our interactions with her as our judge.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Family Court Div."
+      },
+      {
+        "comment_text": "Judge Manisha Bhatt – Currently presides over my ongoing case. She denied requests to hear testimony from a witness with firsthand knowledge of the children’s living situation, allowed the children’s father and guardian to obtain Brazilian passports and travel internationally with the children over my objection, and denied my request for regular weekly phone contact with my daughters.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Family Court Div."
+      },
+      {
+        "comment_text": "She’s the one who allowed my son to just not come home. She never ordered anything there was no due process and it was on a contempt that I filed against my sons father a week after he stopped coming to my house.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Family Court Div."
+      },
+      {
+        "comment_text": "Haven’t seen children in two years, contempts were not taken seriously and there were no consequences and found not guilty for continuously violating orders!",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Family Court Div."
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/manisha_bhatt",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ma/manisha_bhatt/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

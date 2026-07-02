@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Partner Portal — Stand With Meg</title>
+  <meta name="description" content="The Stand With Meg State Partner training portal." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/tokens.css" />
+  <link rel="stylesheet" href="styles/global.css" />
+  <link rel="stylesheet" href="styles/portal.css" />
+</head>
+<body>
+  <main class="login">
+    <section class="card login__card" aria-labelledby="login-title">
+      <p class="eyebrow">State Partner Portal</p>
+      <h1 class="wordmark login__mark" id="login-title">
+        <span>Stand</span><span class="w-with">With</span><span>Meg</span>
+      </h1>
+      <p class="login__sub">Welcome to the team. Log in to start your training.</p>
+
+      <form id="login-form" novalidate>
+        <label class="field">
+          <span>Your first name</span>
+          <input type="text" id="partner-name" name="name" autocomplete="given-name" placeholder="e.g. Alishia" required />
+        </label>
+        <label class="field">
+          <span>Your state</span>
+          <input type="text" id="partner-state" name="state" autocomplete="off" placeholder="e.g. Oklahoma" required />
+        </label>
+        <label class="field">
+          <span>Access code</span>
+          <input type="password" id="access-code" name="code" autocomplete="off" placeholder="Given to you by your team lead" required />
+        </label>
+        <p class="login__error" id="login-error" role="alert" aria-live="polite"></p>
+        <button type="submit" class="btn btn--gold btn--block">Enter the portal →</button>
+      </form>
+
+      <p class="login__foot">Don't have a code? Text your team lead. 💛</p>
+    </section>
+  </main>
+
+  <script src="scripts/auth.js"></script>
+  <script>
+    document.getElementById('login-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var name = document.getElementById('partner-name').value.trim();
+      var state = document.getElementById('partner-state').value.trim();
+      var code = document.getElementById('access-code').value.trim();
+      var err = document.getElementById('login-error');
+      if (!name || !state) { err.textContent = 'Please add your name and state.'; return; }
+      if (!SWM_Auth.checkCode(code)) { err.textContent = "That code didn't work. Check with your team lead."; return; }
+      SWM_Auth.login(name, state);
+      window.location.href = 'portal.html';
+    });
+  </script>
+</body>
+</html>

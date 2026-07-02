@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "jennifer_hyler",
+    "display_name": "Jennifer Hyler",
+    "title": "",
+    "first_name": "Jennifer",
+    "last_name": "Hyler",
+    "role": "GAL / Child Representative",
+    "court": "Lenoir",
+    "county": "Lenoir",
+    "court_or_county": "Lenoir",
+    "state": "North Carolina",
+    "state_abbr": "NC",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "99136e22-8302-4873-9caf-bf0e379b8664",
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/nc/jennifer_hyler/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 161,
+    "total_submissions": 213,
+    "avg_financial_loss": 186966.14,
+    "avg_months_lost": 36.1,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "NC",
+    "state_family_count": 213,
+    "median_financial_loss": 140000,
+    "median_burden_sample_size": 71,
+    "median_months_lost": 16,
+    "pro_se_pct": 50.7,
+    "pro_se_count": 108,
+    "_pdf_state_family_count": 213,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5317,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "She lied to me several times concerning my kids and how they were adjusting in their foster home. She moved my children to a different foster home without informing me. She has refused to speak to me for 6 months or longer now. She has made false statements on my character in court multiple times based on opinions. She never went to see my kids in person at their foster home or school/daycare. Always video chat so she has never actually seen their environment",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lenoir"
+      },
+      {
+        "comment_text": "She literally never visited or saw the children except on a FaceTime video, and only went by what the caregiver was telling them and wrote her reports according to what the caregivers would say. Meanwhile, my granddaughters were being physically and sexually abused and Foster Care.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lenoir Count GAL"
+      },
+      {
+        "comment_text": "Saying I cannot get my kids back",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lenoir"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/jennifer_hyler",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/nc/jennifer_hyler/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

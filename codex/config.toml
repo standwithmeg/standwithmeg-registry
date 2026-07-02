@@ -1,0 +1,17 @@
+# Minimal project-local Codex config template.
+# Keep this file safe to commit. Do not add API keys, tokens, cookies, or
+# machine-specific private paths.
+
+model = "gpt-5.5"
+reasoning_effort = "medium"
+sandbox_mode = "workspace-write"
+approval_policy = "on-request"
+
+[project]
+name = "standwithmeg-registry"
+root = "."
+
+[verification]
+lint = "npm run lint"
+typecheck = "npx tsc --noEmit"
+build = "npm run build"

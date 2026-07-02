@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "robert_danaher",
+    "display_name": "Robert Danaher",
+    "title": "",
+    "first_name": "Robert",
+    "last_name": "Danaher",
+    "role": "Custody Evaluator",
+    "court": "Grady county court",
+    "county": "Grady county court",
+    "court_or_county": "Grady county court",
+    "state": "Oklahoma",
+    "state_abbr": "OK",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "202b8364-a2e7-4628-879b-d04a5d56a10d",
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/ok/robert_danaher/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 128,
+    "total_submissions": 160,
+    "avg_financial_loss": 120211.96,
+    "avg_months_lost": 24.6,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OK",
+    "state_family_count": 160,
+    "median_financial_loss": 100500,
+    "median_burden_sample_size": 84,
+    "median_months_lost": 12,
+    "pro_se_pct": 44.4,
+    "pro_se_count": 71,
+    "_pdf_state_family_count": 160,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5291,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Dr. Danaher charged $XK and concluded his report without making contact to some of the most important references. He considered statements from a counselor with multiple lawsuits filed against her for fraud, lying under oath, etc that mirrored my experience. ignored years of audio recordings of children, refusing to go with their father and said the problem had resolved, which was not the case provided by extensive documentation.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Oklahoma county court"
+      },
+      {
+        "comment_text": "My ex was court ordered to take a parental comp and psychosexual. He took neither . Danaher gave him a regular psychological evaluation. Not the same. Also questioned his parents about his demeanor. Whaylt did u expect them to be honest",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Grady county court"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/robert_danaher",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ok/robert_danaher/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

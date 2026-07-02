@@ -1,0 +1,172 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "william_e_scully_jr",
+    "display_name": "William E. Scully, Jr.",
+    "title": "",
+    "first_name": "William E.",
+    "last_name": "Scully, Jr.",
+    "role": "Judge",
+    "court": "Baldwin",
+    "county": "Baldwin",
+    "court_or_county": "Baldwin",
+    "state": "Alabama",
+    "state_abbr": "AL",
+    "mention_count": 0,
+    "family_count": 17,
+    "public_family_count": 17,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/al/william_e_scully_jr/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 103,
+    "total_submissions": 128,
+    "avg_financial_loss": 90405.41,
+    "avg_months_lost": 36.3,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "AL",
+    "state_family_count": 128,
+    "median_financial_loss": 80000,
+    "median_burden_sample_size": 59,
+    "median_months_lost": 14,
+    "pro_se_pct": 43.0,
+    "pro_se_count": 55,
+    "_pdf_state_family_count": 128,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5320,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 17,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "The custody case remained stayed for an extended period while related criminal proceedings were pending. During a related hearing, evidence was presented but the court indicated the issues should be addressed through family court proceedings.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Baldwin"
+      },
+      {
+        "comment_text": "He has been my judge for my 6 previous accusations of abuse by my coparent in attempts to modify custody. He has always awarded me primary physical custody of my children. He has always upheld the law but did sway towards DHR recommendations.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Baldwin"
+      },
+      {
+        "comment_text": "He wouldn't except none of my drug test i paid for and it was like he had his mind up already he didn't care to listen to what i had and everyone was so against me and I have never abused my kids or anything it didn't make sense",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Baldwin"
+      },
+      {
+        "comment_text": "Another judge that doesn’t want listen to evidence just wants to listen to what DHR says no matter that they don’t have proof. All just “feelings” and what they think a person might do.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Baldwin"
+      },
+      {
+        "comment_text": "I had to get on the ladder and he will take her side punish me get onto me without listening to any facts and and believe her lies in her attorneys, fabricated instances",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Baldwin"
+      },
+      {
+        "comment_text": "Violated my civil rights and never considered the best interest of my daughter Dismissed case without following proper procedures and violated my civil rights",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Baldwin"
+      },
+      {
+        "comment_text": "Repeatedly ignored evidence, engages in ex parte comms, ignores domestic violence, blames victims, denies notice and due process",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Baldwin"
+      },
+      {
+        "comment_text": "Dismissed a long-standing protective order without reviewing documentary evidence I had submitted or requested to present.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Baldwin"
+      },
+      {
+        "comment_text": "Didn’t care to hear me plead my case believed everything he was told knowing it was lies n defamation of character",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Baldwin"
+      },
+      {
+        "comment_text": "Did not listen to my testimony. Lied and said my daughter had left rehab. She was still there.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Baldwin"
+      },
+      {
+        "comment_text": "He took away my children with no evidence hearing Has never been given an evidentiary hearing.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Baldwin"
+      },
+      {
+        "comment_text": "ONLY LISTENING TO DHR NOT LETTIN ME SPEAK NOR WAS DHR LETTIN ME TALK",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Baldwin"
+      },
+      {
+        "comment_text": "Drags out court cases also believes false reports",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Baldwin"
+      },
+      {
+        "comment_text": "He keeps children away without hearings.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Baldwin"
+      },
+      {
+        "comment_text": "All of the listed issues plus more",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Baldwin"
+      },
+      {
+        "comment_text": "They didnt even let me testify",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Baldwin"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/william_e_scully_jr",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/al/william_e_scully_jr/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

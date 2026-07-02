@@ -1,0 +1,106 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "raymond_de_jesus",
+    "display_name": "Raymond De Jesus",
+    "title": "",
+    "first_name": "Raymond",
+    "last_name": "De Jesus",
+    "role": "Judge",
+    "court": "Placer",
+    "county": "Placer",
+    "court_or_county": "Placer",
+    "state": "California",
+    "state_abbr": "CA",
+    "mention_count": 0,
+    "family_count": 6,
+    "public_family_count": 6,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/ca/raymond_de_jesus/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 353,
+    "total_submissions": 439,
+    "avg_financial_loss": 288012.6,
+    "avg_months_lost": 36.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "CA",
+    "state_family_count": 439,
+    "median_financial_loss": 265100,
+    "median_burden_sample_size": 196,
+    "median_months_lost": 20,
+    "pro_se_pct": 58.8,
+    "pro_se_count": 258,
+    "_pdf_state_family_count": 439,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5303,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 6,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "I wrote about it but added his name incorrectly Ignores prior DV, denying req. for protection and FAM CODE 3044, continues case on courts own following disqualification, objections, DV, motions to vacate. Stopped me recently from noticing court for record because I challenged jurisdiction and said they'd decide at trial which was being pushed again despite no due process. Then vacated trial soon after at trial confirming conference when I was objecting all along due to prolonged delay, separation and harm.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Placer"
+      },
+      {
+        "comment_text": "Discharge initially granted me an evidentiary hearing then per Brooke Stephens manipulation of the Court the judge changed it days before the evidentiary trial into a long hearing and refused evidence, subpoenas, witnesses, and completely shut me down at the hearing. Then order is a 20 Page evidential hearing which has been not rolled on and did some weird stuff by having me refile my May 5th filing to the order to set aside which has been delayed or denied to date.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Placer"
+      },
+      {
+        "comment_text": "Asian Judge Raymond De Jesus smerked at me as he gave my ex half custody. My DRVO was accepted in Sutter County and granted after a trial — only to be rebutted in Placer County by Judge Raymond De Jesus. The lawyer lied and I couldn't get a word in edgewise. Denied justice and ignored an active DRVO from Sutter County. Got silenced and couldn't speak the truth. Took my abuser's money and allowed him to continuously lie and manipulate court to benefit him.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Placer"
+      },
+      {
+        "comment_text": "Wouldn’t let me speak, didn’t review the case, didn’t know pertinent info (ie: dad convicted of felony child abuse against the children in the case).",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Placer"
+      },
+      {
+        "comment_text": "Ignored evidence of abuse and domestic violence",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Placer"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/raymond_de_jesus",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ca/raymond_de_jesus/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

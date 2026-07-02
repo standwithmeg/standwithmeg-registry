@@ -1,0 +1,1 @@
+export const REPORT_KIT_PRICE_CENTS = 7900;

@@ -1,0 +1,106 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "stephanie_fajardo",
+    "display_name": "Stephanie Fajardo",
+    "title": "",
+    "first_name": "Stephanie",
+    "last_name": "Fajardo",
+    "role": "GAL / Child Representative",
+    "court": "Lexington",
+    "county": "Richland",
+    "court_or_county": "Lexington",
+    "state": "South Carolina",
+    "state_abbr": "SC",
+    "mention_count": 0,
+    "family_count": 5,
+    "public_family_count": 5,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "cf035421-ca71-4396-bfbf-997853fb9111",
+    "actor_bucket_key": "stephanie fajardo|SC"
+  },
+  "photo": {
+    "path": "public/court-actors/sc/stephanie_fajardo/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 82,
+    "total_submissions": 105,
+    "avg_financial_loss": 287649.02,
+    "avg_months_lost": 25.9,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "SC",
+    "state_family_count": 105,
+    "median_financial_loss": 127500,
+    "median_burden_sample_size": 66,
+    "median_months_lost": 19,
+    "pro_se_pct": 57.1,
+    "pro_se_count": 60,
+    "_pdf_state_family_count": 105,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5316,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 5,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "She ignored that a child abused was best friends with my ex. Nathan Ginter is best friend with my ex and he is serving 40 yrs in prison for child abuse, my ex talked to him daily in prison before he bonded out. She ignored all of my concerns of safety for my son. My ex is a drug addict with no childcare plan and no legitimate place of employment. No one knows where his income comes from our where he gets money to pay bills. She called out parental alienation and did nothing about it. My lawyer and her agreed it was severe. She sent my son to a biase counselor and caused more harm to my son. The psychological abuse is severe and on going.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Richland"
+      },
+      {
+        "comment_text": "She was biased towards father and spent little time with or listen to kids. Also pursued contempt charges towards me regardless of my ongoing $30 monthly payments- she expected 300 min monthly. And then essentially told me I shouldn’t expect her to do her job- it was father who wanted her and I said I could not afford but had no choice.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lexington"
+      },
+      {
+        "comment_text": "Did not seem to care that I had always been my children’s primary caregiver, and my three year old daughter was given to her father with primary custody. When I would address issues she did not seem concerned about my children.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Richland"
+      },
+      {
+        "comment_text": "She did little, never even met children, booked over 5k in fees",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Richland"
+      },
+      {
+        "comment_text": "Ignored evidence",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Richland"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/stephanie_fajardo",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/sc/stephanie_fajardo/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

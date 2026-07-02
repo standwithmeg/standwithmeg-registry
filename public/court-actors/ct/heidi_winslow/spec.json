@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "heidi_winslow",
+    "display_name": "Heidi Winslow",
+    "title": "",
+    "first_name": "Heidi",
+    "last_name": "Winslow",
+    "role": "Judge",
+    "court": "Danbury CT",
+    "county": "Danbury CT",
+    "court_or_county": "Danbury CT",
+    "state": "Connecticut",
+    "state_abbr": "CT",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "b6c0b4a3-d65c-4dad-a8a6-c2df5f5e30c6",
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/ct/heidi_winslow/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 46,
+    "total_submissions": 64,
+    "avg_financial_loss": 390441.48,
+    "avg_months_lost": 31.2,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "CT",
+    "state_family_count": 64,
+    "median_financial_loss": 211500,
+    "median_burden_sample_size": 37,
+    "median_months_lost": 20,
+    "pro_se_pct": 68.8,
+    "pro_se_count": 44,
+    "_pdf_state_family_count": 64,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5225,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Delayed reunification, taking in to account ex-parte statements and used off the record statements made by defense council and GAL, as facts without myself present, nor any sworn testimony from myself/petitioner. (She is now retired)",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Danbury CT"
+      },
+      {
+        "comment_text": "ignored my son and my rights. She is now retired. I filed the appropriate paperwork for a complaint in a timely manner, yet they denied my request. I filed a FOIA request that they ignored, and now I go to FOIC for a hearing.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Danbury"
+      },
+      {
+        "comment_text": "She gave the father full custody and the right to decide my visitation after saying it was a tragedy that the children allegedly did not want to see me. I appealed and won, but nothing changed. The delays were intentional.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Danbury CT"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/heidi_winslow",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ct/heidi_winslow/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

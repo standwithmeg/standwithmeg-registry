@@ -1,0 +1,106 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "brian_kirkham",
+    "display_name": "Brian Kirkham",
+    "title": "",
+    "first_name": "Brian",
+    "last_name": "Kirkham",
+    "role": "Judge",
+    "court": "Calhoun",
+    "county": "Calhoun",
+    "court_or_county": "Calhoun",
+    "state": "Michigan",
+    "state_abbr": "MI",
+    "mention_count": 0,
+    "family_count": 7,
+    "public_family_count": 7,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/mi/brian_kirkham/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 145,
+    "total_submissions": 176,
+    "avg_financial_loss": 182614.09,
+    "avg_months_lost": 36.1,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "MI",
+    "state_family_count": 176,
+    "median_financial_loss": 97500,
+    "median_burden_sample_size": 77,
+    "median_months_lost": 16,
+    "pro_se_pct": 43.8,
+    "pro_se_count": 77,
+    "_pdf_state_family_count": 176,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5291,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 7,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Horrible judge had proof of dads medical neglect, drinking and driving, nothing i did was change enough to get custody Sided with dad on multiple occasions even when not in best interests of my daughter. Gave dad full custody of my youngest at the time, even with reunification in place, cps case was kept open for 2 years and they made it impossible for me to get my kids back and keep them. Not allowing me to live with family in a safe environment instead drug infested apartment housing. The list is long I have been removed from central Registry because I don't fit the neglect abuse criteria",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Calhoun"
+      },
+      {
+        "comment_text": "Motion was filed for referee, molder’s orders. But since my orders were sent to a different address, Judge Kirkham through the motion out and forced child support child time and custody all to be filed based off allegations and false information. Told me to come back after dna test results to change the orders.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Calhoun"
+      },
+      {
+        "comment_text": "Laughed at the other attorney lying about transcript and a witnessed credibility, refused to look at the evidence or proof just denyed my objection.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Calhoun"
+      },
+      {
+        "comment_text": "He ignored my clear evidence of my exes csc charge and evidence of another sex offender living with him and still granted him full custody.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Calhoun county"
+      },
+      {
+        "comment_text": "No due process twice! Ex parte with sworn affidavit of no child abuse. Still to this day -year to date no visitation.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Calhoun"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/brian_kirkham",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/mi/brian_kirkham/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

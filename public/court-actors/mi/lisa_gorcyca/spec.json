@@ -1,0 +1,112 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "lisa_gorcyca",
+    "display_name": "Lisa Gorcyca",
+    "title": "",
+    "first_name": "Lisa",
+    "last_name": "Gorcyca",
+    "role": "Judge",
+    "court": "Oakland County Court, Pontiac Michigan",
+    "county": "Oakland",
+    "court_or_county": "Oakland",
+    "state": "Michigan",
+    "state_abbr": "MI",
+    "mention_count": 0,
+    "family_count": 6,
+    "public_family_count": 6,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/mi/lisa_gorcyca/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 145,
+    "total_submissions": 176,
+    "avg_financial_loss": 182391.52,
+    "avg_months_lost": 36.1,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "MI",
+    "state_family_count": 176,
+    "median_financial_loss": 97500,
+    "median_burden_sample_size": 77,
+    "median_months_lost": 16,
+    "pro_se_pct": 43.8,
+    "pro_se_count": 77,
+    "_pdf_state_family_count": 176,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5241,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 6,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "I had a court order concerning threats being made by my ex. As Pro Se I requested that the court order be fulfilled. I was not allowed to finish going through my motion before Judge Gorcyca allowed the opposing counsel to interrupt me. They both decided that it was 'past the time' for the court order to be fulfilled. Another item, Judge Gorcyca would not follow the JOD. Tutoring was supposed to be paid by both. Even though I had a 2 doctor's stating tutoring was needed for my daughter's dyslexia, I still had to to pay for it by myself. Last, the Judge was supposed to review the evidence in my case. Instead she decided to 'trust' the opposing counsel and not review the evidence. The opposing counsel manipulated the facts to the point one could construe that here statements were false. In her judgement she put me down viciously when all I was doing was trying to get some fairness, and equal treatment by the FOC.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Oakland"
+      },
+      {
+        "comment_text": "He ignored everything that she ordered and did not make my ex do it and only me, even though she ordered and threatened him with jail over it she just kept sweeping it under the rock where I finally gave up pressure in it. She said stuff on the record I have court transcripts to prove it even brought them into her to remind her and she pretty much told me too bad. I don’t care what I said previously I’m gonna change it just to make your ex happy for whatever reason it was disgusting I don’t know what she had going on with him, but there was something. He had a lawyer and his lawyer was actually a pretty shady person himself, but he my ex would laugh at me and say that him and the judge were at parties together, so I would never beat him and that he keep getting away with it.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Oakland"
+      },
+      {
+        "comment_text": "She pushed my trial 3 time with no explanation. Then stated she was not going to look at all the evidence of a disabled child being abused / neglected by his mother. She signed off and granted the stop of a surgery that our special needs child needs to breath better. Clearly not in the best interest of the child. Not sure. Postponed the trial 3 times now nothing",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Oakland"
+      },
+      {
+        "comment_text": "She has on several occasions, denied motions for support enforcement and for parenting time adjustment… “ I was left home alone, so no harm no foul” at the time, my daughter was between ages of four and 10 and was left in a hotel room alone while her dad and her stepmother went to the casino, gambling and drinking",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Oakland"
+      },
+      {
+        "comment_text": "Signed all court documents and went along with whatever the referee, child protective services, and the pediatrician stated although is false information.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Oakland County Court, Pontiac Michigan"
+      },
+      {
+        "comment_text": "Lisa Gorcyca pushed me into an unfair settlement with my abusive ex husband.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Oakland"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/lisa_gorcyca",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/mi/lisa_gorcyca/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

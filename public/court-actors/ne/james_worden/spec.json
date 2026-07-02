@@ -1,0 +1,106 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "james_worden",
+    "display_name": "James Worden",
+    "title": "",
+    "first_name": "James",
+    "last_name": "Worden",
+    "role": "Judge",
+    "court": null,
+    "county": null,
+    "court_or_county": null,
+    "state": "Nebraska",
+    "state_abbr": "NE",
+    "mention_count": 0,
+    "family_count": 5,
+    "public_family_count": 5,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "7931607c-ce23-402d-95ad-7ea9a6bf3869",
+    "actor_bucket_key": "james worden|NE"
+  },
+  "photo": {
+    "path": "public/court-actors/ne/james_worden/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 35,
+    "total_submissions": 42,
+    "avg_financial_loss": 179170.13,
+    "avg_months_lost": 36.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "NE",
+    "state_family_count": 42,
+    "median_financial_loss": 176750,
+    "median_burden_sample_size": 16,
+    "median_months_lost": 22,
+    "pro_se_pct": 50.0,
+    "pro_se_count": 21,
+    "_pdf_state_family_count": 42,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5207,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 5,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "He ignored the kids please ignored my profession as a therapist ignored my status as a veteran, and only listened to their father who is still active duty and showed up in his uniform when he shouldn’t be and they continue to address him as captain MCLAMB instead of the kids, father.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
+      },
+      {
+        "comment_text": "His mind was already made up, we were never attempted to reunify. He gave my kids to my exes parents because they looked more fit. Yet their kid is not a good person and they let him see my children whenever he wants, even though his rights are terminated as well.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
+      },
+      {
+        "comment_text": "Resigned in the middle of my case and would never listen to me even though my attorney didn’t say anything in my defende",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
+      },
+      {
+        "comment_text": "He assumed I was a crazy mom cause I cried when they took my 2 yr old but let him visit his junkie dad unsupervised",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
+      },
+      {
+        "comment_text": "He just agreees with DHHS every time even when they lie",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/james_worden",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ne/james_worden/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

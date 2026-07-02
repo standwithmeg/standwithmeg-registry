@@ -1,0 +1,112 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "terri_campesta",
+    "display_name": "Terry Campesta",
+    "title": "",
+    "first_name": "Terry",
+    "last_name": "Campesta",
+    "role": "Custody Evaluator",
+    "court": "Plaquemines",
+    "county": "Plaquemines",
+    "court_or_county": "Plaquemines",
+    "state": "Louisiana",
+    "state_abbr": "LA",
+    "mention_count": 0,
+    "family_count": 6,
+    "public_family_count": 6,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "2050a180-89b9-4ce2-8293-1df074d18c6c",
+    "actor_bucket_key": "teri campesta|LA"
+  },
+  "photo": {
+    "path": "public/court-actors/la/terri_campesta/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 47,
+    "total_submissions": 63,
+    "avg_financial_loss": 170452.26,
+    "avg_months_lost": 38.4,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "LA",
+    "state_family_count": 63,
+    "median_financial_loss": 201600,
+    "median_burden_sample_size": 31,
+    "median_months_lost": 24,
+    "pro_se_pct": 50.8,
+    "pro_se_count": 32,
+    "_pdf_state_family_count": 63,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5320,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 6,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Husband at the time hurt the children and me. I provided evidence of bruises on the children and when he tried to strangle me and my daughter disclosed sexual abuse by her father. I called 911 on him twice. Terri Campesta recommended the father get sole custody and he did.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
+      },
+      {
+        "comment_text": "Custody evaluation was biased, she met with the father 12 times and with the mother three, she ignored Mother’s report regarding the father‘s child pornography addiction, she recommended sole custody to the father",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Plaquemines"
+      },
+      {
+        "comment_text": "She lied about my mom and it's because my dad told her iles and she believed him. My dad molested me and she wrote a report that said I have to live with him and I don't get to see my mom now.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Plaquemines"
+      },
+      {
+        "comment_text": "Falsified information, ignored evidence, violated confidentiality laws, conducted evaluation outside their area of competence, accepted bribes, knowlingly made false statements to the court",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Plaquemines"
+      },
+      {
+        "comment_text": "Did not believe the child’s disclosures of sexual abuse even though substantiated by CPS, refused to speak to child’s therapist",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Plaquemines"
+      },
+      {
+        "comment_text": "Became romantically involved with my ex during court case. Lied about me to give him sole custody",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Plaquemines"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/terri_campesta",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/la/terri_campesta/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

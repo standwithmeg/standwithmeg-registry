@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "lori_shearer",
+    "display_name": "Lori Shearer",
+    "title": "",
+    "first_name": "Lori",
+    "last_name": "Shearer",
+    "role": "GAL / Child Representative",
+    "court": "Montcalm County",
+    "county": "Montcalm County",
+    "court_or_county": "Montcalm County",
+    "state": "Michigan",
+    "state_abbr": "MI",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "f0fd31ea-6d78-4567-b87f-980981600d76",
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/mi/lori_shearer/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 145,
+    "total_submissions": 176,
+    "avg_financial_loss": 182391.52,
+    "avg_months_lost": 36.1,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "MI",
+    "state_family_count": 176,
+    "median_financial_loss": 97500,
+    "median_burden_sample_size": 77,
+    "median_months_lost": 16,
+    "pro_se_pct": 43.8,
+    "pro_se_count": 77,
+    "_pdf_state_family_count": 176,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5241,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "My eldest daughter got in some trouble with truancy at school, and Lori Shearer represented my daughter, kept trying to force her take a plea deal, when we refused they dismissed the case, then when Cps got involved Lori Shearer represented my kids again, where she completely and utterly used every single thing we told her personally against us. It's was biased to make her my children's GAL. She didn't listen to the kids and lied on the stand and fabricated evidence. Prejudiced. Was My eldest daughters trucnat lawyer before this case. Had a conflict of interest as she represented my little brother in a different case.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Montcalm County"
+      },
+      {
+        "comment_text": "She represented my uncle knowing he was family because we all have the same last name. She was also my lawyer for truency.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Montcalm"
+      },
+      {
+        "comment_text": "Falsifys evidence, doesn't listen to the children to what they want and needs. Misrepresentes the kids wants and needs.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Montcalm County Michigan"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/lori_shearer",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/mi/lori_shearer/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

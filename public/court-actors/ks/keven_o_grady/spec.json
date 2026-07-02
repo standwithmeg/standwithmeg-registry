@@ -1,0 +1,132 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "keven_o_grady",
+    "display_name": "Keven O'Grady",
+    "title": "",
+    "first_name": "Keven",
+    "last_name": "O'Grady",
+    "role": "Judge",
+    "court": "Johnson",
+    "county": "Johnson",
+    "court_or_county": "Johnson",
+    "state": "Kansas",
+    "state_abbr": "KS",
+    "mention_count": 0,
+    "family_count": 9,
+    "public_family_count": 9,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": "kevin grady|KS",
+    "_overrides_applied": [
+      "county",
+      "court_or_county",
+      "display_name",
+      "first_name",
+      "last_name",
+      "role"
+    ]
+  },
+  "photo": {
+    "path": "public/court-actors/ks/keven_o_grady/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 179,
+    "total_submissions": 244,
+    "avg_financial_loss": 119293.76,
+    "avg_months_lost": 30.2,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "KS",
+    "state_family_count": 244,
+    "median_financial_loss": 96100,
+    "median_burden_sample_size": 129,
+    "median_months_lost": 16,
+    "pro_se_pct": 50.4,
+    "pro_se_count": 123,
+    "_pdf_state_family_count": 244,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5317,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 9,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Ordered removal of my five children without a full hearing, without any witnesses or ever asking me if the allegations were true, and still has not given me a real hearing while I have been separated from my kids for over two years, and requires me to find and pay for supervisors with unrealistic requirements like providing their full case history before he will even set a hearing, which has made it nearly impossible to see my children.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Johnson"
+      },
+      {
+        "comment_text": "My child was drowning in a river and Judge O’Grady just stood there and watched while coldly eating a fresh baked pretzel from the mall across the street. I said “Judge O’Grady! Please do something!” And he looked at me, chuckled, and said “Sana, Sana, colita de rana.”",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Johnson"
+      },
+      {
+        "comment_text": "Ignored evidence. Made me pay for supervised visits for my ex who attempted suicide in front of my 5 year old. Ignored evidence. Didnt question false statement from custody evaluator",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Johnson"
+      },
+      {
+        "comment_text": "The court system has taken away my son's mother, my other kids' brother. Kevin O'Grady needs to be exposed — he claims he does things for the kids' safety. No, he breaks families.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Johnson"
+      },
+      {
+        "comment_text": "Doesn't do shit. Named alongside attorney Katie McClaflin and GAL Andrew Bolton in the conflict that \"fucked us all up.\"",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Johnson"
+      },
+      {
+        "comment_text": "It has taken my life. Father alleging parental alienation versus actual emotional abuse and neglect of children by him.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Johnson"
+      },
+      {
+        "comment_text": "This is testing to see if I can connect",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Johnson"
+      },
+      {
+        "comment_text": "Testing this to see it connects",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/keven_o_grady",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ks/keven_o_grady/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

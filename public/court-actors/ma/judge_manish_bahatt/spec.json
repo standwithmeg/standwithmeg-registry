@@ -1,0 +1,76 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "judge_manish_bahatt",
+    "display_name": "Judge Manish Bahatt",
+    "title": "Judge",
+    "first_name": "Manish",
+    "last_name": "Bahatt",
+    "role": "Judge",
+    "court": "Family court mass",
+    "county": "Family court mass",
+    "court_or_county": null,
+    "state": "MA",
+    "state_abbr": "MA",
+    "mention_count": null,
+    "family_count": 0,
+    "public_family_count": 0,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": null,
+    "supabase_row_ids": null,
+    "actor_row_id": null,
+    "actor_bucket_key": "manish bahat|MA"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 75,
+    "total_submissions": 104,
+    "avg_financial_loss": 235880.44,
+    "avg_months_lost": 26.3,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "MA",
+    "state_family_count": 104,
+    "median_financial_loss": 136300,
+    "median_burden_sample_size": 44,
+    "median_months_lost": 18,
+    "pro_se_pct": 57.7,
+    "pro_se_count": 60,
+    "_pdf_state_family_count": 104,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5207,
+  "supabase": {
+    "report_count": null,
+    "actor_report_count": null,
+    "family_count": 0,
+    "family_reports": [],
+    "public_comments": []
+  },
+  "export_dir": "New Final Post and Capcut template/export/judge_manish_bahatt",
+  "unresolved": [
+    "court_actors: no rows match name~'Judge Manish Bahatt' state='MA'",
+    "public_family_count_api: no match for display_name='Judge Manish Bahatt' bucket='manish bahat|MA' slug='judge_manish_bahatt' in MA (7 actors)",
+    "pdf_public_actor: no 'Judge Manish Bahatt' in cache for MA"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ma/judge_manish_bahatt/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

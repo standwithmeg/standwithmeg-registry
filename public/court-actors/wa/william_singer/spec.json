@@ -1,0 +1,106 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "william_singer",
+    "display_name": "William Singer",
+    "title": "",
+    "first_name": "William",
+    "last_name": "Singer",
+    "role": "GAL / Child Representative",
+    "court": "King",
+    "county": "King",
+    "court_or_county": "King",
+    "state": "WA",
+    "state_abbr": "WA",
+    "mention_count": 0,
+    "family_count": 5,
+    "public_family_count": 5,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": "wiliam singer|WA"
+  },
+  "photo": {
+    "path": "public/court-actors/wa/william_singer/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 90,
+    "total_submissions": 123,
+    "avg_financial_loss": 298864.67,
+    "avg_months_lost": 28.8,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "WA",
+    "state_family_count": 123,
+    "median_financial_loss": 149000,
+    "median_burden_sample_size": 66,
+    "median_months_lost": 14,
+    "pro_se_pct": 63.4,
+    "pro_se_count": 78,
+    "_pdf_state_family_count": 123,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5298,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 5,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "omitted crucial evidence that was given to him failed to investigate Domestic Violence judges finding actually Leyde when A investigation was done failed to correct billing errors that were obvious and when I refuse to pay them or ask him, he sued me a year later. Had expert communication with my ex during life trial and his attorney admitted it on record failed to investigate. DV did not make choices. Best interest to the kids and did the opposite of commissioners rulings omitted bad behavior and falsified abuse a conflict against me also cared more about DAD’s gun rights than anything else.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "king, snohomish, kitsap, pierce"
+      },
+      {
+        "comment_text": "Never allowed me to show interaction of me with my.kids but allowed my ex wife to show him her relationship with our kids. Spoke to her 6 month boyfriend and used his testimony but refused to use my wife's testimony who has been in our kids lives for 6 years and they have a better relationship with her then their own mom. He refused to consider evidence and instead just took my exes word for things.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "King"
+      },
+      {
+        "comment_text": "He gave an evaluation for DV for my ex without talking to me. He brought my ex from a 3 to a 0 despite police reports, prior evaluation and documentation from me. He is under investigation in other cases now as well for the same actions.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "King"
+      },
+      {
+        "comment_text": "Ignored evidence, blamed the abused child Hired gun. Whitewashes DV by father, blames child for making up abuse and me for alienating the child.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "King"
+      },
+      {
+        "comment_text": "He did not report my ex not paying child support and paused DV program",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/william_singer",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/wa/william_singer/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

@@ -1,0 +1,100 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "greg_seigler",
+    "display_name": "Greg Seigler",
+    "title": "",
+    "first_name": "Greg",
+    "last_name": "Seigler",
+    "role": "Judge",
+    "court": "Lexington, SC",
+    "county": "Lexington, SC",
+    "court_or_county": "Lexington",
+    "state": "South Carolina",
+    "state_abbr": "SC",
+    "mention_count": 0,
+    "family_count": 5,
+    "public_family_count": 5,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/sc/greg_seigler/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 82,
+    "total_submissions": 105,
+    "avg_financial_loss": 287649.02,
+    "avg_months_lost": 25.9,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "SC",
+    "state_family_count": 105,
+    "median_financial_loss": 127500,
+    "median_burden_sample_size": 66,
+    "median_months_lost": 19,
+    "pro_se_pct": 57.1,
+    "pro_se_count": 60,
+    "_pdf_state_family_count": 105,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5316,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 5,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Judge Seigler gave my ex husband primary custody of young children from exes first and second wife. Both wives were the primary parent during the marriage. Once dad was finished with each marriage he was all of a sudden interested in parenting by filing “Emergency Motions” and stating the mother’s were “unfit.” Gave my ex husband primary custody of our two daughters who were 3 and 7 when I had always been their primary caregiver. He also gave my ex husband primary custody of his two older daughters when their mother had always been the primary caregiver. I raised his older daughters because my ex husband alienated his older daughters from their mother. Judge Seigler is not trained in Domestic Violence or Coercive Control.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lexington"
+      },
+      {
+        "comment_text": "“ scheduling clerk have been advised (by him) can not schedule this motion on his docket till I am instructed by him. I do understand that it is hindering your other motions and rules from being scheduled.” Motion was heard-",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lexington"
+      },
+      {
+        "comment_text": "Ignored factual evidence",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lexington"
+      },
+      {
+        "comment_text": "Judged on hearsay",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lexington, SC"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/greg_seigler",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/sc/greg_seigler/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

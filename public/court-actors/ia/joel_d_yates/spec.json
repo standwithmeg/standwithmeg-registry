@@ -1,0 +1,106 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "joel_d_yates",
+    "display_name": "Joel D. Yates",
+    "title": "",
+    "first_name": "Joel D.",
+    "last_name": "Yates",
+    "role": "Judge",
+    "court": "Wapello",
+    "county": "Wapello",
+    "court_or_county": "Wapello",
+    "state": "Iowa",
+    "state_abbr": "IA",
+    "mention_count": 0,
+    "family_count": 5,
+    "public_family_count": 5,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "026a6c55-551f-42b3-95b6-a9f94f32e71b",
+    "actor_bucket_key": "joel yates|IA"
+  },
+  "photo": {
+    "path": "public/court-actors/ia/joel_d_yates/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 72,
+    "total_submissions": 92,
+    "avg_financial_loss": 133050.55,
+    "avg_months_lost": 40.7,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "IA",
+    "state_family_count": 92,
+    "median_financial_loss": 180000,
+    "median_burden_sample_size": 25,
+    "median_months_lost": 23,
+    "pro_se_pct": 53.3,
+    "pro_se_count": 49,
+    "_pdf_state_family_count": 92,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5308,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 5,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "I was told to settle before a trial because this judge would not roll in my favor, no matter what because I wasn’t man. The opposing party I had Cynthia Hucks and I was told she had him in her pocket. Was told he does not believe in [redacted] or joint. I was told by my last attorney to not go up against my ex with this judge because he does not rule in favor of father’s and does not think [redacted] is ever in the best interest of the child always rules for mothers. I was told Cynthia has him in her pocket.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Wapello"
+      },
+      {
+        "comment_text": "Ignored violations of TPO, extended TPO hearing without addressing violations or following previous judge's orders ( Amber Thompson), told me to file an answer to the mediation petition filed against me (Cynthia D. Hucks) and postponed TPO hearing to July 30th. Now has signed a motion to go to TRIAL FOR CUSTODY on July 13th for a child PROTECTED FROM PETITIONER by the TPO which isn't to be heard (if not continued AGAIN) on July 30th...",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Jefferson"
+      },
+      {
+        "comment_text": "DHS allowed the father do a bridge for child support even though the child stays with him two days a week. I requested to move the date to another date any other date but one it is set for due to my appeal hearing being on that date. He refused. It's clear they all work together when I can't get one court date moved. Extremely frustrating.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Henry"
+      },
+      {
+        "comment_text": "He denied me constitutional rights to direct the care and upbringing of my children. There was a hearing over the childrens cell phones I wanted access too. He ordered phones be turned over to CFR Magistrate Misty White and all evidence was deleted that I needed for evidence of opposing parties psychological abuse to my children",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Wapello"
+      },
+      {
+        "comment_text": "Read above notes regarding this individual",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Wapello"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/joel_d_yates",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ia/joel_d_yates/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

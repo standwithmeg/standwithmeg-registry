@@ -1,0 +1,100 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "judge_kimble",
+    "display_name": "Judge Judge Kimble",
+    "title": "Judge",
+    "first_name": "Judge",
+    "last_name": "Kimble",
+    "role": "Judge",
+    "court": "Harnett county",
+    "county": "Harnett county",
+    "court_or_county": "Harnett county",
+    "state": "North Carolina",
+    "state_abbr": "NC",
+    "mention_count": 0,
+    "family_count": 4,
+    "public_family_count": 4,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "29fbf7cc-c00f-4a06-ade8-735d24c15f4f",
+    "actor_bucket_key": "kimble|NC"
+  },
+  "photo": {
+    "path": "public/court-actors/nc/judge_kimble/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 161,
+    "total_submissions": 213,
+    "avg_financial_loss": 186966.14,
+    "avg_months_lost": 36.1,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "NC",
+    "state_family_count": 213,
+    "median_financial_loss": 140000,
+    "median_burden_sample_size": 71,
+    "median_months_lost": 16,
+    "pro_se_pct": 50.7,
+    "pro_se_count": 108,
+    "_pdf_state_family_count": 213,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5317,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 4,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "He dragged the case out over months and months because he kept claiming he didn’t have time to listen to the testimonies. It cost our family tens of thousands of dollars. He claimed he lost his notes and extended the case yet another day for the father to say his piece all over again. Pushed and pushed his decision as far as he possible could. The father had zero case against the mother. All his accusations were proved false. The entire thing was weird and suspicious and showed favoritism towards the father. Justice was not served. Seemed the entire time the judge did not give a care at all about the case.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Harnett"
+      },
+      {
+        "comment_text": "Very inappropriate comments during the trial. He joked about himself not knowing when to stop drinking alcohol - knowing that he was arrested for a DUI from picking up his kids from school. He also was talking inappropriately with the attorney - he allowed heresay numerous times for her client. Didn’t ask for proof. Discarded all evidence of her client being abusive and neglected to make a ruling several times until it was far enough out to claim comfort.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Harnett county"
+      },
+      {
+        "comment_text": "Ruled on emergency ex parte, never had an emergency hearing. Took my son from me with no evidence Made a ruling with no evidence. Left child with abuser. Took months and months to make a ruling on emergency ex parte order",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Harnett county"
+      },
+      {
+        "comment_text": "Took entirely too long to rule on an emergency case.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Harnett"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/judge_kimble",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/nc/judge_kimble/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

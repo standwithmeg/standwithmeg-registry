@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "jennifer_j_decastro_tunnard",
+    "display_name": "Jennifer de Castro Tunnard",
+    "title": "",
+    "first_name": "Jennifer de Castro",
+    "last_name": "Tunnard",
+    "role": "Judge",
+    "court": "Stamford",
+    "county": "Stamford",
+    "court_or_county": "Stamford",
+    "state": "Connecticut",
+    "state_abbr": "CT",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/ct/jennifer_j_decastro_tunnard/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 46,
+    "total_submissions": 64,
+    "avg_financial_loss": 390441.48,
+    "avg_months_lost": 31.2,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "CT",
+    "state_family_count": 64,
+    "median_financial_loss": 211500,
+    "median_burden_sample_size": 37,
+    "median_months_lost": 20,
+    "pro_se_pct": 68.8,
+    "pro_se_count": 44,
+    "_pdf_state_family_count": 64,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5225,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "After already 10 years, this judge came in New. It was my contempt hearing for ongoing non-payment of child support and alimony. No new exhibits no new information and literally dismantled a six-figure judgment and Order stating that my ex must not have any money and doesn't need to pay except for small monthly payments over the course of many many years in the future. The most insane ruling ever had in all these years. I have filed numerous motions because her order was void at Livio pending appellate decision which completely Vindicated and verified my position yet no judge has ruled that I get this money and it's been over 2 years. It's the goddamn Wild Wild West. And I was told by Insiders she never should have been appointed. Our governor appoints all the judges. Insane and no accountability as always.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Stamford"
+      },
+      {
+        "comment_text": "Made sua sponte orders on custody with no hearing or evidence. Made me pay legal fees of ex despite zero income and immense debt and no wrongdoing on my part.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Stamford"
+      },
+      {
+        "comment_text": "Honestly, too much to write about her, but she wears her bias on her sleeve and makes unfounded sua sponte decisions",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/jennifer_j_decastro_tunnard",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ct/jennifer_j_decastro_tunnard/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

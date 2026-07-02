@@ -1,0 +1,100 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "tom_brandon_iii",
+    "display_name": "Tom Brandon III",
+    "title": "",
+    "first_name": "Tom",
+    "last_name": "Brandon III",
+    "role": "Attorney",
+    "court": "Beaufort",
+    "county": "Beaufort",
+    "court_or_county": "Beaufort",
+    "state": "NC",
+    "state_abbr": "NC",
+    "mention_count": 0,
+    "family_count": 4,
+    "public_family_count": 4,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": "tom brandon|NC"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 161,
+    "total_submissions": 213,
+    "avg_financial_loss": 186966.14,
+    "avg_months_lost": 36.1,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "NC",
+    "state_family_count": 213,
+    "median_financial_loss": 140000,
+    "median_burden_sample_size": 71,
+    "median_months_lost": 16,
+    "pro_se_pct": 50.7,
+    "pro_se_count": 108,
+    "_pdf_state_family_count": 213,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5317,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 4,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Was court appointed but would not take my calls. Told me I messaged him to much. Would not respect my wishes. Would not push the issue of no 7-10 day hearing. Would not push visitation or file a motion for it even tho I asked. Would not attend meetings at DSS with us. Kept pushing me to sign papers for DSS that he did not even review. They would call him in front of me telling me I wouldn’t sign assessment of 1. Safety requirements (which had me admitting to changes I needed to make) when I signed and wrote closely beside my name I do not agree with this it was tore up n I was told I would have to do it again not doing that. 2. Giving up my medical rights to my autistic son ( I straight refused) I still have all of Mr Brandon’s texts and emails and his refusal to represent me as he was only representing Beaufort county dss",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Beaufort County"
+      },
+      {
+        "comment_text": "This was my mother’s court appointed attorney she started with. I reach out to him asking him to get me in front of the judge and telling him what they put in the motion with my statements was a lie. I told him of the forced written statement was had to do with Abby Williams in a locked room. He did not submit anything or get me in front of a judge. He would t even prepare a motion for my mother making it known what I had told him so he could fight back for her and for us.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Beaufort"
+      },
+      {
+        "comment_text": "He has steadily ignored me, refused to file what I've asked, but my biggest issue is he allowed my 15 year old daughter to be interrogated by the dss attorney for the better part of an hour causing her to be quite ill for several days following.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Beaufort"
+      },
+      {
+        "comment_text": "When I told him about a fight at the visit with the dss worker he told me I was lying even though I had five witnesses to the fight. He is my lawyer and has not filed a single motion on anything. He is suppose to be fighting for me not for dss",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Beaufort"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/tom_brandon_iii",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/nc/tom_brandon_iii/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

@@ -1,0 +1,100 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "coreen_b_khoury",
+    "display_name": "Coreen khoury",
+    "title": "",
+    "first_name": "Coreen",
+    "last_name": "khoury",
+    "role": "Judge",
+    "court": "Lancaster County Family Court Sixth Judicial Circuit",
+    "county": "Chester, Fairfield, Lancaster",
+    "court_or_county": "Lancaster",
+    "state": "South Carolina",
+    "state_abbr": "SC",
+    "mention_count": 0,
+    "family_count": 4,
+    "public_family_count": 4,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/sc/coreen_b_khoury/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 82,
+    "total_submissions": 105,
+    "avg_financial_loss": 287649.02,
+    "avg_months_lost": 25.9,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "SC",
+    "state_family_count": 105,
+    "median_financial_loss": 127500,
+    "median_burden_sample_size": 66,
+    "median_months_lost": 19,
+    "pro_se_pct": 57.1,
+    "pro_se_count": 60,
+    "_pdf_state_family_count": 105,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5316,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 4,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Coreen Khoury participates in ex parte communication. She will use your kids as leverage ( place them in foster care) to make you comply. She has no understanding or knowledge of domestic violence and therefore should never be allowed to make rulings in such cases. This places children's lives and well being in very serious danger. During the divorce from my ex who was highly abusive she threatened to put my child in foster care if I didn't alter my sworn testimony so it wasn't so damning to my ex. She also separated my two daughters. Gave custody of my oldest to her father because of the domestic violence at my house that was perpetrated by my ex who I hadn't been with in over a year. She allowed me to have joint custody of the youngest daughter that I share with my abuser.After court my ex kidnapped my daughter it took two years to get a court date that she continued and then dismissed after I told her I had not seen my child in 2 years. She gave advice to my ex on how to obtain custody during a child support collection hearing. I wasn't present for . . Signed papers saying I abondaned my child . Signed search warrants for DSS with no real complaint. Has never made my ex pay a dime in child support. Actually suspended his obligation in exparte communication. . After I locate my daughter 4 + years later this judge gives my ex temporary primary custody. He hasn't allowed me a single visit. My daughter finally run away from his home and discloses the abuse with audio evidence she has endured for years so the judge puts her in foster care where she has been since the discoosure . Currently in a group home and they are still allowing visits from her father not to mention I was forced to proceed unrepresented each hearing.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lancaster County Family Court Sixth Judicial Circuit"
+      },
+      {
+        "comment_text": "Since my ex got a new attorney over a year ago, every time this judge hears our case, no matter how much it is obvious that my ex has not followed orders and is in the wrong, this judge sides with him and his attorney. She has refused for me to have my rule to show cause motion heard for over a year, despite clear evidence that my ex has committed perjury in court and is refusing to follow over ten orders, leaving me and our children in financial ruin with $0 in support from him. She has refused to order child support or alimony in my case. She has continued trial with no documentation that supports the need to do so. She has refused to hear multiple motions of mine asking for reconsideration of temporary orders.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lancaster County Family Court Sixth Judicial Circuit"
+      },
+      {
+        "comment_text": "With no reason whatsoever other than an unfounded dss case, discontinued all of my visitation for a year now. Had a hearing a few months ago, she refused to change anything at all. We were supposed to be pending a GAL investigation. GAL was done with her report before 2025 was over. It was only supposed to be 60 days.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lancaster"
+      },
+      {
+        "comment_text": "Used my disability of multiple sclerosis against me after she acquired my medical records illegally and she was the cause of my house burning down because of her negligence Used my medical condition of multiple sclerosis to discriminate against me and alienate me from my son.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Chester, Fairfield, Lancaster"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/coreen_b_khoury",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/sc/coreen_b_khoury/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

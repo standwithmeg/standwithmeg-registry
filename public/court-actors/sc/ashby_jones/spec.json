@@ -1,0 +1,124 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "ashby_jones",
+    "display_name": "Ashby Jones",
+    "title": "",
+    "first_name": "Ashby",
+    "last_name": "Jones",
+    "role": "Attorney",
+    "court": "Lexington",
+    "county": "Lexington",
+    "court_or_county": "Lexington",
+    "state": "South Carolina",
+    "state_abbr": "SC",
+    "mention_count": 0,
+    "family_count": 9,
+    "public_family_count": 9,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "c01e7f46-f1d8-4c8c-b781-2e8a10ea9b6d",
+    "actor_bucket_key": "ashby jones|SC"
+  },
+  "photo": {
+    "path": "public/court-actors/sc/ashby_jones/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 82,
+    "total_submissions": 105,
+    "avg_financial_loss": 287649.02,
+    "avg_months_lost": 25.9,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "SC",
+    "state_family_count": 105,
+    "median_financial_loss": 127500,
+    "median_burden_sample_size": 66,
+    "median_months_lost": 19,
+    "pro_se_pct": 57.1,
+    "pro_se_count": 60,
+    "_pdf_state_family_count": 105,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5316,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 9,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "After April Sampson advised she could no longer handle my case, representation was transferred to Ashby Jones. Before and during representation, my husband and I disclosed the full background of the case, including his prior history, DSS-related matters, and the concerns we believed would arise in litigation. Despite this, we were later told that counsel had not been provided the “full report” or complete information regarding my husband’s history, which I dispute. The primary goals we retained counsel to pursue remained: * removal or challenge of the Temporary Restraining Order, and * addressing concerns involving the Guardian ad Litem. Despite substantial legal fees, little substantive progress was made toward those objectives. Much of the work appeared focused on reviewing emails and communications, after which additional retainers were requested. I also experienced concerns regarding: * communication, * strategy, * responsiveness, * and failure to aggressively pursue requested relief. After terminating representation, I experienced delays obtaining my complete client file, including physical documents I had personally delivered to the office and communications exchanged on my behalf. These delays impaired my ability to continue protecting my legal interests in an ongoing custody matter. Given the seriousness of the issues involved, the substantial fees incurred, and the limited progress toward the objectives for which counsel was retained, I am requesting review of the representation and billing practices in this matter.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lexington"
+      },
+      {
+        "comment_text": "She listened to the false information Jane Waters was telling her about me instead of listening to what I was saying, she placed blame on me so she could remove herself from my case instead of telling me she didn’t want this case anymore bc of how dangerous my ex is. She left me 2 wks before mediation. She told me she would do a deposition and never did it. I spent a month working on material for her to use for the deposition.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lexington"
+      },
+      {
+        "comment_text": "Highly unethical. Labeled me as racist, right winged, “anti-vax” (even though it was only covid vaccine), etc to throw the emotions of the judge. Ashby has zero concern for the welfare of children. She is very expensive and if you have money, she can unethically flip a case for you.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lexington"
+      },
+      {
+        "comment_text": "Absolutely unscrupulous in false allegations in court…no police reports, no arrests, nothing to substantiate it but the court continues to allow it. Dragging on for more than 2 years.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lexington"
+      },
+      {
+        "comment_text": "Thinks she’s God, forces her clients to follow HER strategy or she’ll drop them. It is strategy over safety no matter what.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lexington"
+      },
+      {
+        "comment_text": "Represented my ex despite my prior consultation. Caught telling lay, court appointed GAL to “make me look bad.”",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lexington"
+      },
+      {
+        "comment_text": "She doesn’t care about the mistakes she makes or her associates makes. She is big bully.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lexington"
+      },
+      {
+        "comment_text": "Please see all the above for context.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Richland County"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/ashby_jones",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/sc/ashby_jones/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

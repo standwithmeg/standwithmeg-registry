@@ -1,0 +1,106 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "jessica_rachwal",
+    "display_name": "Jessica Rachwal",
+    "title": "",
+    "first_name": "Jessica",
+    "last_name": "Rachwal",
+    "role": "CPS Worker",
+    "court": "Erie county",
+    "county": "Erie county",
+    "court_or_county": "Erie county",
+    "state": "NY",
+    "state_abbr": "NY",
+    "mention_count": 0,
+    "family_count": 5,
+    "public_family_count": 5,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": "jesica rachwal|NY"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 136,
+    "total_submissions": 171,
+    "avg_financial_loss": 213193.71,
+    "avg_months_lost": 26.4,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "NY",
+    "state_family_count": 171,
+    "median_financial_loss": 165000,
+    "median_burden_sample_size": 69,
+    "median_months_lost": 14,
+    "pro_se_pct": 39.2,
+    "pro_se_count": 67,
+    "_pdf_state_family_count": 171,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5314,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 5,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "She’s lied, she forged documents, she works with foster mom to come up with lies, She coarse me into signing a court menu, she threatens me She lies she ignores the truth. She false lies documents. She doesn’t listen to anything that I say and everything she does is almost illegal.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Erie county"
+      },
+      {
+        "comment_text": "I was doing a kinship foster for my nieces for her two children, and they violated her due process and then came and took the children out of my house while she was in the process of communication and had no legal stance on it and lied about it",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Erie County"
+      },
+      {
+        "comment_text": "She’s lied, she has worked to prolong my case with foster families, they continue to violate my parental rights",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Erie county"
+      },
+      {
+        "comment_text": "She lies and falsify documents. She coerced children violates parental rights.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Erie county"
+      },
+      {
+        "comment_text": "She lies and cohesive children and falsified documents.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Erie county"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/jessica_rachwal",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ny/jessica_rachwal/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

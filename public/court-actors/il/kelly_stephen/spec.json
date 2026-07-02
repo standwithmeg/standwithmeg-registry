@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "kelly_stephen",
+    "display_name": "Kelly Stephen",
+    "title": "",
+    "first_name": "Kelly",
+    "last_name": "Stephen",
+    "role": "GAL / Child Representative",
+    "court": "Madison",
+    "county": "Madison",
+    "court_or_county": "Madison",
+    "state": "Illinois",
+    "state_abbr": "IL",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "4d0da49b-00db-4c18-8e70-61056ebc70cd",
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/il/kelly_stephen/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 109,
+    "total_submissions": 145,
+    "avg_financial_loss": 231062.16,
+    "avg_months_lost": 28.7,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "IL",
+    "state_family_count": 145,
+    "median_financial_loss": 141500,
+    "median_burden_sample_size": 90,
+    "median_months_lost": 16,
+    "pro_se_pct": 48.3,
+    "pro_se_count": 70,
+    "_pdf_state_family_count": 145,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5308,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Refused to investigate children to include their home(s), friends, people at their school. Ignored vital information submitted. Did not investigate children, not any calls to me, no home visits, didn’t talk to teachers. She told my attorney that me not agreeing to 50/50 custody on a Friday forced an interruption on his Disney trip and I was told v cause of that my children would be moved to their fathers. They were moved the next court date",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Madison"
+      },
+      {
+        "comment_text": "Denied my due process for her personal vacation. Running court continuance to keep the case open to take money from hurting parents. She charges $8500 to hire for family court because she controls family court without her position.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Madison"
+      },
+      {
+        "comment_text": "Support abuser to have custody",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Madison"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/kelly_stephen",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/il/kelly_stephen/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

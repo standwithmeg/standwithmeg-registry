@@ -1,0 +1,77 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "teresa_mahoney_mullen",
+    "display_name": "Theresa Mahoney Mullen",
+    "title": "",
+    "first_name": "Theresa Mahoney",
+    "last_name": "Mullen",
+    "role": "GAL / Child Representative",
+    "court": "Hampton",
+    "county": null,
+    "court_or_county": "County not listed",
+    "state": "New Hampshire",
+    "state_abbr": "NH",
+    "mention_count": 0,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/nh/teresa_mahoney_mullen/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 29,
+    "total_submissions": 35,
+    "avg_financial_loss": 153639.7,
+    "avg_months_lost": 25.3,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "NH",
+    "state_family_count": 35,
+    "median_financial_loss": 76000,
+    "median_burden_sample_size": 19,
+    "median_months_lost": 18,
+    "pro_se_pct": 51.4,
+    "pro_se_count": 18,
+    "_pdf_state_family_count": 35,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5308,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 2,
+    "family_reports": [],
+    "public_comments": []
+  },
+  "export_dir": "New Final Post and Capcut template/export/teresa_mahoney_mullen",
+  "unresolved": [
+    "public_family_count_api: no match for display_name='Theresa Mahoney Mullen' bucket=None slug='teresa_mahoney_mullen' in NH (1 actors)",
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available",
+    "pdf_public_actor: no 'Theresa Mahoney Mullen' in cache for NH"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/nh/teresa_mahoney_mullen/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

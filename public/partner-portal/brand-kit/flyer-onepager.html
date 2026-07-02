@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<style>
+  :root{ --navy:#0b1a2d; --navy-deep:#050a14; --bg:#050a14; --gold:#c9a227; --gold2:#e3c25b; --crimson:#b91c1c; --cream:#f2ead6; --muted:#9aaabd; }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{width:850px;height:1100px;overflow:hidden;}
+  .page{position:relative;width:850px;height:1100px;background:var(--bg);font-family:"Oswald",sans-serif;color:var(--cream);overflow:hidden;}
+  .grain{position:absolute;inset:0;pointer-events:none;opacity:.07;mix-blend-mode:overlay;z-index:5;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");}
+
+  .hero{position:relative;height:486px;overflow:hidden;}
+  .hero .photo{position:absolute;inset:0;background:url("meg-portrait.png") center/cover;background-position:60% center;}
+  .hero .veil{position:absolute;inset:0;
+    background:linear-gradient(90deg,var(--navy) 10%,rgba(11,26,45,.92) 44%,rgba(11,26,45,.4) 70%,transparent 90%),
+               linear-gradient(180deg,rgba(5,10,20,.5),transparent 30%,rgba(5,10,20,.96));}
+  .hero .inner{position:absolute;left:58px;top:52px;right:58px;z-index:3;}
+  .eyebrow{font-family:"Space Mono",monospace;font-weight:700;letter-spacing:.3em;font-size:19px;color:var(--gold);text-transform:uppercase;margin-bottom:24px;}
+  h1{font-family:"Anton";text-transform:uppercase;font-size:82px;line-height:.92;letter-spacing:.5px;color:var(--cream);text-shadow:0 3px 20px rgba(0,0,0,.7);}
+  h1 .g{color:var(--gold);}
+  .hero .tag{position:absolute;left:58px;bottom:34px;right:58px;font-weight:500;font-size:26px;color:var(--cream);z-index:3;}
+
+  .body{padding:42px 58px 0;position:relative;z-index:2;}
+  .steps{display:flex;flex-direction:column;gap:22px;margin-bottom:32px;}
+  .step{display:flex;gap:20px;align-items:flex-start;}
+  .step .n{flex:0 0 52px;height:52px;border-radius:50%;background:var(--gold);color:var(--navy-deep);
+    font-family:"Anton";font-size:28px;display:flex;align-items:center;justify-content:center;}
+  .step b{font-size:23px;font-weight:700;display:block;color:var(--cream);}
+  .step span{font-size:18px;color:var(--muted);}
+
+  .earn{display:flex;justify-content:space-between;background:#0c2036;border:1px solid rgba(201,162,39,.35);padding:24px 20px;margin-bottom:26px;}
+  .earn .col{flex:1;text-align:center;}
+  .earn .big{font-family:"Anton";font-size:50px;color:var(--gold2);line-height:1;}
+  .earn .lbl{font-family:"Space Mono",monospace;font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-top:8px;}
+
+  .proof{text-align:center;font-size:19px;color:var(--cream);margin-bottom:22px;}
+  .proof b{color:var(--gold2);}
+  .cta{display:block;width:fit-content;margin:0 auto;background:var(--crimson);color:#fff;font-weight:700;font-size:30px;padding:22px 56px;box-shadow:0 18px 40px -16px rgba(185,28,28,.8);}
+  .url{text-align:center;color:var(--gold2);font-family:"Space Mono",monospace;font-weight:700;letter-spacing:.08em;font-size:20px;margin-top:20px;}
+  .disclaimer{text-align:center;font-family:"Space Mono",monospace;font-size:14px;letter-spacing:.1em;color:var(--muted);
+    text-transform:uppercase;margin-top:18px;border-top:1px solid rgba(201,162,39,.2);padding-top:16px;}
+</style></head>
+<body>
+  <div class="page">
+    <div class="hero">
+      <div class="photo"></div><div class="veil"></div>
+      <div class="inner">
+        <div class="eyebrow">Stand With Meg</div>
+        <h1>Get <span class="g">Paid</span><br/>To Stand<br/>With Families</h1>
+      </div>
+      <div class="tag">Become a State Partner — real income, real purpose.</div>
+    </div>
+
+    <div class="body">
+      <div class="steps">
+        <div class="step"><div class="n">1</div><div><b>Find mission-aligned local businesses</b><span>in your state who'd be proud to stand with families.</span></div></div>
+        <div class="step"><div class="n">2</div><div><b>They sponsor your state's report</b><span>their logo on the page families share with lawmakers.</span></div></div>
+        <div class="step"><div class="n">3</div><div><b>You earn — every month they stay</b><span>sell once, get paid monthly, build a real income.</span></div></div>
+      </div>
+
+      <div class="earn">
+        <div class="col"><div class="big">20%</div><div class="lbl">recurring</div></div>
+        <div class="col"><div class="big">+10%</div><div class="lbl">fast-start</div></div>
+        <div class="col"><div class="big">$900+</div><div class="lbl">/mo at 30</div></div>
+      </div>
+
+      <p class="proof"><b>4,700+</b> families · <b>$825M+</b> reported loss · <b>53</b> states · a <b>250K+</b> following</p>
+      <div class="cta">Apply to become a partner →</div>
+      <div class="url">my.standwithmeg.com/partners</div>
+      <div class="disclaimer">Family-reported. Not court findings.</div>
+    </div>
+    <div class="grain"></div>
+  </div>
+</body></html>

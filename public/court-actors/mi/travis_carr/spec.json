@@ -1,0 +1,124 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "travis_carr",
+    "display_name": "Travis Carr",
+    "title": "",
+    "first_name": "Travis",
+    "last_name": "Carr",
+    "role": "Attorney / GAL / Child Representative",
+    "court": "Montcalm",
+    "county": "Montcalm",
+    "court_or_county": "Montcalm",
+    "state": "Michigan",
+    "state_abbr": "MI",
+    "mention_count": 0,
+    "family_count": 8,
+    "public_family_count": 8,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "dd61d479-f89e-44d6-a592-b99c761b037b",
+    "actor_bucket_key": "travis carr|MI"
+  },
+  "photo": {
+    "path": "public/court-actors/mi/travis_carr/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 145,
+    "total_submissions": 176,
+    "avg_financial_loss": 182391.52,
+    "avg_months_lost": 36.1,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "MI",
+    "state_family_count": 176,
+    "median_financial_loss": 97500,
+    "median_burden_sample_size": 77,
+    "median_months_lost": 16,
+    "pro_se_pct": 43.8,
+    "pro_se_count": 77,
+    "_pdf_state_family_count": 176,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5241,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 8,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Misrepresented me, threatens me, refused to call witness's in a major court proceeding, spoke to the judge about about things I did not know, also things I did not want him to, the. Went on to represent my children in the same case, That is a clear conflict of interest. Also held an ex parte hearing that we never had a court hearing to, and filed for termination of parental rights.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Montcalm"
+      },
+      {
+        "comment_text": "Travis Carr was first my husband's Lawyer in this case for 1 day covering for his actual lawyer, and a few months later he was then my kids 2nd GAL in this case. When it came to termination of rights they finally then decided it was a conflict of interest. This man represented my husband and my children in the same case. How is that fair? It's not.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Montcalm"
+      },
+      {
+        "comment_text": "He met with us literally once and then lied about everything we said in the court paperwork. He talked to me for maybe 10 to 20 minutes everything that he had written in the paperwork that I said had to at least have been in hours zoom not no [redacted] minutes.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Montcalm"
+      },
+      {
+        "comment_text": "Lied on the record to the Judge, after a closed meeting with my children and without my daughter representation present.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Montcalm"
+      },
+      {
+        "comment_text": "Told my boyfriend to file for custody of our daughter & leave me to go raise our daughter",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Montcalm"
+      },
+      {
+        "comment_text": "Told my grandson to lie in court to get charges on himself dropped",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Montcalm"
+      },
+      {
+        "comment_text": "Friends with foster care worker on case.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Montcalm"
+      },
+      {
+        "comment_text": "Tell me to leave my\\nSignificant other",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Montcalm"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/travis_carr",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/mi/travis_carr/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

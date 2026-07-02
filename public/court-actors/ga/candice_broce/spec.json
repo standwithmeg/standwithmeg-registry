@@ -1,0 +1,100 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "candice_broce",
+    "display_name": "Commissioner Candice Broce",
+    "title": "",
+    "first_name": "Commissioner Candice",
+    "last_name": "Broce",
+    "role": "Other",
+    "court": "Commissioner of CPS",
+    "county": "Commissioner of CPS",
+    "court_or_county": "Commissioner of CPS",
+    "state": "Georgia",
+    "state_abbr": "GA",
+    "mention_count": 0,
+    "family_count": 4,
+    "public_family_count": 4,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "4237adc5-d8e8-4ff9-90fc-9df60c576cfb",
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/ga/candice_broce/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 122,
+    "total_submissions": 149,
+    "avg_financial_loss": 222633.06,
+    "avg_months_lost": 32.5,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "GA",
+    "state_family_count": 149,
+    "median_financial_loss": 148000,
+    "median_burden_sample_size": 84,
+    "median_months_lost": 18,
+    "pro_se_pct": 45.6,
+    "pro_se_count": 68,
+    "_pdf_state_family_count": 149,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5275,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 4,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Personally created the Special Victims Unit to remove children from adoptive homes or in pre adoptive status and place them in states custody and allege false allegations of trafficking.She was personally involved in my cases causing influence due to her position. She regularly had x parte communication with judges.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Georgia DHS"
+      },
+      {
+        "comment_text": "She attended every one of our hearings and directly contributed to our son’s removal from our home.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Commissioner of CPS"
+      },
+      {
+        "comment_text": "Ms. Broce sat in on my last hearing, personally, as the head of Georgia DFCS.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Georgia DHS Director"
+      },
+      {
+        "comment_text": "She’s placing me on a shines registry for being a victim of domestic violence",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Commissioner of CPS"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/candice_broce",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ga/candice_broce/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

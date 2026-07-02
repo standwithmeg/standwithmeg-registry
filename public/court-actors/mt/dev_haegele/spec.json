@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "dev_haegele",
+    "display_name": "Dev Haegele",
+    "title": "",
+    "first_name": "Dev",
+    "last_name": "Haegele",
+    "role": "CPS Worker",
+    "court": "Flathead County",
+    "county": "Flathead",
+    "court_or_county": "Flathead County",
+    "state": "Montana",
+    "state_abbr": "MT",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "22a48302-347a-4a6b-a6ee-5891c60e3fbe",
+    "actor_bucket_key": "dev haegele|MT"
+  },
+  "photo": {
+    "path": "public/court-actors/mt/dev_haegele/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 40,
+    "total_submissions": 56,
+    "avg_financial_loss": 188465.43,
+    "avg_months_lost": 46.7,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "MT",
+    "state_family_count": 56,
+    "median_financial_loss": 150500,
+    "median_burden_sample_size": 27,
+    "median_months_lost": 20,
+    "pro_se_pct": 57.1,
+    "pro_se_count": 32,
+    "_pdf_state_family_count": 56,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5207,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "She came on the case and the 1st visit she was terrible to us. Then said she was returning the kids to the abusive parents. We are the aunt and uncle to the birth mother.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
+      },
+      {
+        "comment_text": "CPS worker. She is allowing the kids to stay in an abusive environment. Treats the kinship foster parents extremely bad",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Flathead County"
+      },
+      {
+        "comment_text": "She lies and put children in harms way all the time",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Flathead"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/dev_haegele",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/mt/dev_haegele/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

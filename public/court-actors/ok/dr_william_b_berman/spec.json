@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "dr_william_b_berman",
+    "display_name": "Dr. William B. Berman",
+    "title": "Dr.",
+    "first_name": "William B.",
+    "last_name": "Berman",
+    "role": "Psychological Evaluator",
+    "court": "Tulsa",
+    "county": "Tulsa",
+    "court_or_county": "Tulsa",
+    "state": "Oklahoma",
+    "state_abbr": "OK",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/ok/dr_william_b_berman/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 128,
+    "total_submissions": 160,
+    "avg_financial_loss": 120211.96,
+    "avg_months_lost": 24.6,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OK",
+    "state_family_count": 160,
+    "median_financial_loss": 100500,
+    "median_burden_sample_size": 84,
+    "median_months_lost": 12,
+    "pro_se_pct": 44.4,
+    "pro_se_count": 71,
+    "_pdf_state_family_count": 160,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5291,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Lengthy custody evaluation that took over one year to complete. Very costly. Couldn’t even remember how many kids involved in the custody case. Never asked about events reported to him as fact by the other side and was never given evidence of events but reported it as fact in his final report. Never asked for my take or if I had a different take on the events ( I have body cam and audio/video recordings of the events in question. Nice enough, but not thorough and I think his memory is on the way out unfortunately.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Tulsa"
+      },
+      {
+        "comment_text": "Dr Burman made one party pay the others bill and then refused to see that party’s witnesses. In his final report he acknowledges that the father has violent tendencies but says that his girlfriend is good for him and the child in question and recommends that the child be placed with the father for summers and school breaks when he will be at home more often even after acknowledging mom is more stable and has provided a safe and loving environment where he has thrived.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Tulsa"
+      },
+      {
+        "comment_text": "Violated professional conduct, violated court order",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Tulsa"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/dr_william_b_berman",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ok/dr_william_b_berman/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

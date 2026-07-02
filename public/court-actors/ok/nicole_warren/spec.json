@@ -1,0 +1,100 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "nicole_warren",
+    "display_name": "Nicole warren",
+    "title": "",
+    "first_name": "Nicole",
+    "last_name": "warren",
+    "role": "CPS Worker",
+    "court": "Canadian",
+    "county": "Canadian",
+    "court_or_county": "Canadian",
+    "state": "Oklahoma",
+    "state_abbr": "OK",
+    "mention_count": 0,
+    "family_count": 4,
+    "public_family_count": 4,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "f726f53f-67c6-4853-a00c-0503236ede53",
+    "actor_bucket_key": "nicole waren|OK"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 128,
+    "total_submissions": 160,
+    "avg_financial_loss": 120211.96,
+    "avg_months_lost": 24.6,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OK",
+    "state_family_count": 160,
+    "median_financial_loss": 100500,
+    "median_burden_sample_size": 84,
+    "median_months_lost": 12,
+    "pro_se_pct": 44.4,
+    "pro_se_count": 71,
+    "_pdf_state_family_count": 160,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5291,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 4,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "She was the sup of the cps worker who ignored and dropped my case at her authority without even investigating after substantial evidence. Disgrace CPS this was the supervisor of the DHS worker Canton that investigated my claims. Nicole advised Canton to close my case before it was even investigated after I provided proof of abuse, numerous documents, proof, video, audio. Absolutely horrible.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Canadian"
+      },
+      {
+        "comment_text": "took kids without warrants or consent and lied to judge under oath she lied under oath during my initial hearing",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Canadian"
+      },
+      {
+        "comment_text": "Light on the stand in tampered with evidence and witness well also failing to vet witnesses",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Canadian"
+      },
+      {
+        "comment_text": "She committed perjury, omitted information from an affidavit used to remove my child",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Canadian"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/nicole_warren",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ok/nicole_warren/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

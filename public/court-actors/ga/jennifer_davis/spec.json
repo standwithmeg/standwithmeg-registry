@@ -1,0 +1,130 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "jennifer_davis",
+    "display_name": "Jennifer Davis",
+    "title": "",
+    "first_name": "Jennifer",
+    "last_name": "Davis",
+    "role": "Judge",
+    "court": "Cherokee",
+    "county": "Cherokee",
+    "court_or_county": "Cherokee",
+    "state": "Georgia",
+    "state_abbr": "GA",
+    "mention_count": 0,
+    "family_count": 9,
+    "public_family_count": 9,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "5e8de302-a37f-4f76-b517-a4a91132762d",
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/ga/jennifer_davis/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 122,
+    "total_submissions": 149,
+    "avg_financial_loss": 222633.06,
+    "avg_months_lost": 32.5,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "GA",
+    "state_family_count": 149,
+    "median_financial_loss": 148000,
+    "median_burden_sample_size": 84,
+    "median_months_lost": 18,
+    "pro_se_pct": 45.6,
+    "pro_se_count": 68,
+    "_pdf_state_family_count": 149,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5275,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 9,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Denied specialists medical care for my daughter. Denied access to courtroom during key hearings. Pro se but never included in any meetings or case conferences. No mediation offered. No real DFCS oversight. Dfcs was allowed this set all visitation parameters. Extreme bias. No CASA Advisory committee status disclosure. Conflict of interest being on Cherokee CASA Advisory Committee with Cherokee County DFCS Director Brooke Ford, for ex parte' communications concerns. Judge Davis basically allowed Cherokee County DFCS to run the hearings. Judge Davis set CRP or Citizen Review Panel meetings the day before a major hearing twice. No opportunity to challenge the recommendations of the panel this way. Judge Davis was named as the person responsible for moving the entire division of juvenile records out of the safety of the Cherokee Clerk of Courts Office downstairs to upstairs outside her chambers, where parents have concerns for the records being altered with no oversight. Judge Davis had an extremely dark tinted glass retrofitted over the new Juvenile Clerk of Courts window to conceal activities.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Cherokee County, Georgia"
+      },
+      {
+        "comment_text": "She was one of my GAL in my daughters case that continue to ignore evidence claiming just let him hang himself , or telling me I had to have proof of my daughters reaction to visiting dad and once a video was shown to her she stated I should be in trouble for recording my daughter, in that State instead of comforting her more and telling her it would be OK to go visit her dad",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Cherokee"
+      },
+      {
+        "comment_text": "She refused to consider my tax returns for my income, and scolded me for not calling the opposing attorney “Mr.” as if I should have known that was required for due process. I was nothing but kind and respectful. I was threatened with criminal contempt if I didn’t settle, once my admissible evidence was treated as non-admissible.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Cherokee"
+      },
+      {
+        "comment_text": "Helped with fabrication of documents and evidence to remove a child no signs of danger etc as well as signed off to put child in foster care bypassing parents and family all together. All done without any Court hearings or due process",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Cherokee County Juvenile Court/Cherokee County Superior Court"
+      },
+      {
+        "comment_text": "Ignored evidence, told me I was lying on the stand, interrupted my testimony to tell me she didn't care, clearly acted towards me in a way in which I knew she disliked me and did not want to hear me out.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Cherokee"
+      },
+      {
+        "comment_text": "Took the attorneys in chambers and threatened our counsel not to attack a GAL in her courtroom, in violation of due process. Abdicated her judgment to the GAL without any finding of fact.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Cherokee"
+      },
+      {
+        "comment_text": "Falsified documents that led to the removal of my son. Had the court stamp documents via “ her memory” from years ago.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Cherokee"
+      },
+      {
+        "comment_text": "Refusing to see the evidence that proves my innocence while allowing my ex to continue the abuse through the courts.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Cherokee"
+      },
+      {
+        "comment_text": "Jennifer Davis approved an adoption while awaiting a pending retrial hearing in Cherokee County Juvenile Court.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Cherokee County"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/jennifer_davis",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ga/jennifer_davis/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "emily_davidson",
+    "display_name": "Emily Davidson",
+    "title": "",
+    "first_name": "Emily",
+    "last_name": "Davidson",
+    "role": "CPS Worker",
+    "court": "Montcalm",
+    "county": "Montcalm County Michigan",
+    "court_or_county": "Montcalm",
+    "state": "MI",
+    "state_abbr": "MI",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": "emily davidson|MI"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 145,
+    "total_submissions": 176,
+    "avg_financial_loss": 182391.52,
+    "avg_months_lost": 36.1,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "MI",
+    "state_family_count": 176,
+    "median_financial_loss": 97500,
+    "median_burden_sample_size": 77,
+    "median_months_lost": 16,
+    "pro_se_pct": 43.8,
+    "pro_se_count": 77,
+    "_pdf_state_family_count": 176,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5241,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Lies about literally everything doesn't fight for any reunification whatsoever, she will sit there and be so nice to you and she will tell you that you're doing so good in that she wouldn't lie to you and that you're going to get your kids back soon because you're doing awesome but then she'll go back and put in the paperwork nothing good that you did she'll go in the paperwork and lie and just write a bunch of bad things that happen that never actually happened.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Montcalm"
+      },
+      {
+        "comment_text": "Falsifys evidence, lies about children's wants and needs. Lies to the children about the case. Puts children into dangerous situons/homes,rather then Return them to there safenvironment. Perjurs herself repeatly.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Montcalm County  Michigan"
+      },
+      {
+        "comment_text": "Emily Davidson was our CPS case worker that was supposed to be helping us get the kids back. She consistantly lied to us and on reports to the judge. Impeded our progress.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Montcalm County Michigan"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/emily_davidson",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/mi/emily_davidson/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

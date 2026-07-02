@@ -1,0 +1,106 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "reyna_wilkens",
+    "display_name": "Reyna Wilkens",
+    "title": "",
+    "first_name": "Reyna",
+    "last_name": "Wilkens",
+    "role": "Attorney / GAL / Child Representative",
+    "court": "Louisa",
+    "county": "Louisa",
+    "court_or_county": "Des Moines County",
+    "state": "Iowa",
+    "state_abbr": "IA",
+    "mention_count": 0,
+    "family_count": 5,
+    "public_family_count": 5,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/ia/reyna_wilkens/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 72,
+    "total_submissions": 92,
+    "avg_financial_loss": 133050.55,
+    "avg_months_lost": 40.7,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "IA",
+    "state_family_count": 92,
+    "median_financial_loss": 180000,
+    "median_burden_sample_size": 25,
+    "median_months_lost": 23,
+    "pro_se_pct": 53.3,
+    "pro_se_count": 49,
+    "_pdf_state_family_count": 92,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5308,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 5,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Removed my kids from me without knowing the exact situation nor having met my kids and I at all—at that time. She is also completely against me getting my kids back when I have 14 NEGATIVE test results— one being a hair stat. Repeatedly asks the judge to put a pat ch on me when I am allergic to adhesive and have shown proof of my allergies and submitted them as evidence.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Des Moines County"
+      },
+      {
+        "comment_text": "Made life altering decisions for both MY DAUGHTERS initially with out ever actually talking to or meeting either one of them. She did finally have a phone conversation with them towards the very end of my termination case.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Louisa"
+      },
+      {
+        "comment_text": "She was completely one sided and unprofessional in staff meetings as well as in court. Refused to admit there was no evidence and that the child was a habitual story teller which she also repeatedly admitted in court.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "HENRY"
+      },
+      {
+        "comment_text": "Gal had not even met with my 2 granddaughters until we brought it up in court. She would chohurse them on what to say! She told me, just let LHawk take them, who knows he may just hand them over in 3-4 years.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Louisa"
+      },
+      {
+        "comment_text": "One phone call and hasn’t spoke to me since.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Louisa"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/reyna_wilkens",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ia/reyna_wilkens/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

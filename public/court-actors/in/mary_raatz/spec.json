@@ -1,0 +1,130 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "mary_raatz",
+    "display_name": "Mary Raatz",
+    "title": "",
+    "first_name": "Mary",
+    "last_name": "Raatz",
+    "role": "GAL / Child Representative",
+    "court": "Elkhart County",
+    "county": "Elkhart County",
+    "court_or_county": "Elkhart County",
+    "state": "Indiana",
+    "state_abbr": "IN",
+    "mention_count": 0,
+    "family_count": 10,
+    "public_family_count": 10,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "5e8449ee-321a-45aa-ac7d-993eadd45a6f",
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/in/mary_raatz/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 128,
+    "total_submissions": 153,
+    "avg_financial_loss": 121922.6,
+    "avg_months_lost": 30.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "IN",
+    "state_family_count": 153,
+    "median_financial_loss": 63875,
+    "median_burden_sample_size": 76,
+    "median_months_lost": 18,
+    "pro_se_pct": 45.8,
+    "pro_se_count": 70,
+    "_pdf_state_family_count": 153,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5298,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 10,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "She failed to fulfill her duties as GAL failure to comply with GAL guidelines. Told a judge in open court i was being \"petty\" due to stating safety concerns as cause for objection to her reccomendations for expanded visits. She never even met my child never spoke to care providers made reccomendations that created interference with the standing and still active protective order against my ex husband granted by Judge Bonfiglio as part of the plea deal to the felony case against him. Disregarded evidence of threats to harm my child. Would make unnecessary personal jabs at me in reports supposed to be intended to evaluate my ex husband's actions within supervised visits. Never did home inspections, never asked for pictures of anyone's environments. Disregarded claims of my ex husband's attempts at parental alienation and documented patterns of behavioral regression my son displayed as a direct result to the visitation schedule my sons autism has never been considered in reports or reccomendations and in one phone conversation I offered to submit a full diagnostic report to Mary for her report from the lighthouse autism center and said it was not needed only to then file a report stating \"i claimed my son had autism but she has yet to have been provided any documents to verify that diagnosis\" to which i submitted the full report directly to the court so it was its one admission to the court record. She was \"removed\" from our case due to supposed retirement yet she is still overseeing cases of other families.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Elkhart superior court"
+      },
+      {
+        "comment_text": "She is not legally qualified under Indiana law to be a GAL. She didn’t belong to any state GAL/CASA Program, she isn’t an attorney and she isn’t employed by the court. She is self employed. None of her reports contain a signature. Her email is a personal gmail address, her phone is a personal cell phone and payments are to be sent to a PO Box. She has now retired, only after ABC57 investigated her…she belongs in jail.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Elkhart"
+      },
+      {
+        "comment_text": "Never spoke to me only father wrote several reports with no evidence and nothing but hearsay. Threatened by email to remove my child. Did not follow gal guidelines. Spoke only to father and his attorney Len Gullota refused to write updated report with evidence from dcs and teachers and reports",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Elkhart county"
+      },
+      {
+        "comment_text": "She had been assigned in 2019. Went thru the initial hearing and backed me. After took and refilled she absolutely refused to acknowledge anything I said and had proof of. Used the whole Dcs case against me that I actually won and had dismissed.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Superior Court 6"
+      },
+      {
+        "comment_text": "She falsifies evidence, lies under oath and takes pleasure in separating families. She pretends to be a GAL but doesn’t legally qualify under Indiana Law. If this were any other profession she’d be in jail for “impersonating.”",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Elkhart"
+      },
+      {
+        "comment_text": "Lied in reports, failed to talk to me or meet with children Lied over and over and was never qualified to be a gal in the first place She lied vehemently about me Made reports with no evidence against me",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Elkhart County"
+      },
+      {
+        "comment_text": "She sided with everything the mother said because I stated the mother was high conflict and Mary called me immature for stating that",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Elkhart"
+      },
+      {
+        "comment_text": "Handled my case with undisclosed conflicts and relied on misleading or inaccurate information in her report.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Elkhart County"
+      },
+      {
+        "comment_text": "She ignored evidence and lied in her reports.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Elkhart County"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/mary_raatz",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/in/mary_raatz/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

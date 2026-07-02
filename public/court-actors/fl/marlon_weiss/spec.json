@@ -1,0 +1,118 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "marlon_weiss",
+    "display_name": "Marlon Weiss",
+    "title": "",
+    "first_name": "Marlon",
+    "last_name": "Weiss",
+    "role": "Judge",
+    "court": "Broward",
+    "county": "Broward",
+    "court_or_county": "Broward",
+    "state": "Florida",
+    "state_abbr": "FL",
+    "mention_count": 0,
+    "family_count": 6,
+    "public_family_count": 6,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "41050936-6282-44d9-8dd9-49226cbb1c53",
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/fl/marlon_weiss/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 237,
+    "total_submissions": 302,
+    "avg_financial_loss": 204328.82,
+    "avg_months_lost": 28.1,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "FL",
+    "state_family_count": 302,
+    "median_financial_loss": 176500,
+    "median_burden_sample_size": 131,
+    "median_months_lost": 18,
+    "pro_se_pct": 57.9,
+    "pro_se_count": 175,
+    "_pdf_state_family_count": 302,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5299,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 6,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Judge Weiss was assigned to my case after successive disqualification of other judges (Kanner and Lott). I had filed ex parte emergency motions and his JA emailed me saying she was aware of them but that Jude Weiss was \"out of office\" and unable to respond for two weeks. I was told I either had to wait, or go into the courthouse to submit in person, despite residing in Georgia. He then entered a sua sponte recusal after I informed his JA that by law, if the assigned judicial officer wasn't available to review emergency ex parte it needed to be routed to the duty judge. The JA refused to route my motion, and Judge Weiss entered sua sponte recusal while emergency child harm matters were before the court. This lead to ongoing delay and the motions were never addressed by subsequent judges.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Broward"
+      },
+      {
+        "comment_text": "Declined to find contempt despite acknowledged unpaid parenting-plan expenses and evidence of the ability to pay. The Judge also declined to restore parenting time lost when the other party unilaterally changed court-ordered exchange times and locations during an active protective order that required adherence to the Parenting Plan.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Broward"
+      },
+      {
+        "comment_text": "My kids were taken from me through false accusations, DCF and the GAL agree the accusations were false. I’ve been without my kids for 2 weeks now and he cannot “hear” my evidence until mid June.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Broward"
+      },
+      {
+        "comment_text": "Ignores every motion and petition. Is aware of the child neglect and criminal activity father is doing, and refuses to let me speak",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Broward County"
+      },
+      {
+        "comment_text": "Allows personal beliefs and feelings to interfere with following the law; did not want to hear testimony that supported the motion.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Broward"
+      },
+      {
+        "comment_text": "No due process, child endangerment, biased, corrupt, unethical, destroying lives, needs to not have his job.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Broward"
+      },
+      {
+        "comment_text": "None of them follow case law.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/marlon_weiss",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/fl/marlon_weiss/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

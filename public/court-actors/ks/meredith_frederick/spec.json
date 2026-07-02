@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "meredith_frederick",
+    "display_name": "Meredith Frederick",
+    "title": "",
+    "first_name": "Meredith",
+    "last_name": "Frederick",
+    "role": "Judge",
+    "court": "Cherokee County Courthouse",
+    "county": "Cherokee County Courthouse",
+    "court_or_county": "Cherokee County Courthouse",
+    "state": "Kansas",
+    "state_abbr": "KS",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "1cf8f754-ec50-4c29-8eb2-9161718a3932",
+    "actor_bucket_key": "meredith frederick|KS"
+  },
+  "photo": {
+    "path": "public/court-actors/ks/meredith_frederick/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 179,
+    "total_submissions": 244,
+    "avg_financial_loss": 119293.76,
+    "avg_months_lost": 30.2,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "KS",
+    "state_family_count": 244,
+    "median_financial_loss": 96100,
+    "median_burden_sample_size": 129,
+    "median_months_lost": 16,
+    "pro_se_pct": 50.4,
+    "pro_se_count": 123,
+    "_pdf_state_family_count": 244,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5317,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Judge Frederick denied my due process and took primary custody from me to give to mother based on 4 false claims. Judge told reporter to leave court room and failed to record hearing. When I requested transcript, she recused herself, with no reasoning.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Cherokee County Courthouse"
+      },
+      {
+        "comment_text": "Judicial misconduct: perjury: knowingly filing false statements to United States court system: official misconduct: criminal restraint: intimidation of a victim: abuse of discretionary ignoring of evidence and ex parte communication",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Cherokee County Courthouse"
+      },
+      {
+        "comment_text": "Was my attorney in 2016",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Cherokee County Courthouse"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/meredith_frederick",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ks/meredith_frederick/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

@@ -1,0 +1,118 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "jordan_dalgleish",
+    "display_name": "Jordan Dalgleish",
+    "title": "",
+    "first_name": "Jordan",
+    "last_name": "Dalgleish",
+    "role": "GAL / Child Representative",
+    "court": "Wagoner",
+    "county": "Tulsa County",
+    "court_or_county": "Tulsa County",
+    "state": "Oklahoma",
+    "state_abbr": "OK",
+    "mention_count": 0,
+    "family_count": 7,
+    "public_family_count": 7,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/ok/jordan_dalgleish/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 128,
+    "total_submissions": 160,
+    "avg_financial_loss": 120211.96,
+    "avg_months_lost": 24.6,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OK",
+    "state_family_count": 160,
+    "median_financial_loss": 100500,
+    "median_burden_sample_size": 84,
+    "median_months_lost": 12,
+    "pro_se_pct": 44.4,
+    "pro_se_count": 71,
+    "_pdf_state_family_count": 160,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5291,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 7,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Failed to follow through with meetings with the children and investigations. Failed to follow through with investigations and meetings with the children, she knew of lies being told by the opposing party but allowed the case to move forward and her to be removed from my care and be given to him.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Wagoner"
+      },
+      {
+        "comment_text": "Claims to mail things out (ie: motion for status conf, I never served with anything until I reached out to my judges court clerk and asked if I’m supposed to be there or not. Right after that I was surprisingly served suddenly 2 days after my call to judges office.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Tulsa County"
+      },
+      {
+        "comment_text": "Spent countless hours with my ex and the kids during our divorce. Spent less than an hour with me and the kids. Never objectively considered both parent’s roles and value in the kids lives. Effectively helped my ex’s side throughout the divorce process.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Tulsa County"
+      },
+      {
+        "comment_text": "Conflict of interest with opposing counsel Atty discussed client details outside of case facts with opposing council and vice versa Talked client out of VPO",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Tulsa County"
+      },
+      {
+        "comment_text": "Failure to report abuse, bias, failure to provide evidence, removal of custody without basis",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Tulsa County"
+      },
+      {
+        "comment_text": "Lied to judge and GAL, said if I didn't drop vpo I should lose my kids",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Okmulgee county"
+      },
+      {
+        "comment_text": "Won't do a full investigation and is very bias",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Tulsa County"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/jordan_dalgleish",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ok/jordan_dalgleish/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

@@ -1,0 +1,45 @@
+{
+  "_doc": "Locked mapping for the court-actor share-page generator. This versioned copy lets GitHub Actions regenerate public share pages without the unversioned court-actor-posts checkout.",
+  "court_actors": {
+    "table": "court_actors",
+    "id_column": "id",
+    "name_column": "name",
+    "state_code_column": "state_code",
+    "court_or_county_column": "court_or_county",
+    "role_column": "role",
+    "notes_column": "notes",
+    "submission_link_column": "submission_id",
+    "created_column": "created_at"
+  },
+  "survey_submissions": {
+    "table": "survey_submissions",
+    "id_column": "id",
+    "quote_column": "impact_quote",
+    "approved_column": "approved",
+    "permission_column": "permission_to_share",
+    "state_column": "state_of_occurrence",
+    "county_column": "case_county",
+    "created_column": "created_at"
+  },
+  "comment_merges": {
+    "table": "court_actor_comment_merges",
+    "actor_link_column": "primary_row_id",
+    "merged_text_column": "merged_comment"
+  },
+  "state_stats": {
+    "table": "movement_stats_by_state",
+    "fallback_table": "survey_stats_by_state",
+    "state_match_column": "state",
+    "approved_count_column": "approved_count",
+    "total_submissions_column": "total_submissions",
+    "avg_financial_loss_column": "avg_financial_loss",
+    "avg_months_lost_column": "avg_months_lost",
+    "pro_se_count_column": "pro_se_count"
+  },
+  "limits": {
+    "max_quote_words": 14,
+    "reports_in_frame_3": 6,
+    "comments_in_set_d": 8,
+    "fetch_pool_size": 16
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "audrey_long",
+    "display_name": "Audrey Long",
+    "title": "",
+    "first_name": "Audrey",
+    "last_name": "Long",
+    "role": "GAL / Child Representative",
+    "court": "Gal/ educational surrogate",
+    "county": "Gal/ educational surrogate",
+    "court_or_county": "Gal/ educational surrogate",
+    "state": "Nebraska",
+    "state_abbr": "NE",
+    "mention_count": 0,
+    "family_count": 8,
+    "public_family_count": 8,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "c0b8ebbd-d928-4213-875c-05fcfc165a04",
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/ne/audrey_long/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 35,
+    "total_submissions": 42,
+    "avg_financial_loss": 179170.13,
+    "avg_months_lost": 36.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "NE",
+    "state_family_count": 42,
+    "median_financial_loss": 176750,
+    "median_burden_sample_size": 16,
+    "median_months_lost": 22,
+    "pro_se_pct": 50.0,
+    "pro_se_count": 21,
+    "_pdf_state_family_count": 42,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5207,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 8,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "She refused to listen to my children and their wants and need for their mother, she never attempted to unify me and my children. Even when I accomplished tasks, they asked me, nothing lived forward in a direction to me getting my children back..",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Gal/ educational surrogate"
+      },
+      {
+        "comment_text": "Was my court appointed attorney but never fought for me, asked the judge to extra time like I asked because I was post partum and had to walk everywhere",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Gal/ educational surrogate"
+      },
+      {
+        "comment_text": "She never listened to any of the concerns. The children told her about with their father and continue to be biased against myself.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Gal/ educational surrogate"
+      },
+      {
+        "comment_text": "She never used the evidence I gave her, or called anyone to testify on my behalf, she saw me as a crimnal and not a father.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Gal/ educational surrogate"
+      },
+      {
+        "comment_text": "She didn’t even believe my toddler was autistic because she said she knows what autistic kids look like.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Gal/ educational surrogate"
+      },
+      {
+        "comment_text": "She didn’t even try to represent me. She filed nothing in my case for me",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Gal/ educational surrogate"
+      },
+      {
+        "comment_text": "Was court appointed and didn’t help once or try to help me get my kids",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Gal/ educational surrogate"
+      },
+      {
+        "comment_text": "DID NOT listen to my oldest daughter when she said she was abused!",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Gal/ educational surrogate"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/audrey_long",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ne/audrey_long/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

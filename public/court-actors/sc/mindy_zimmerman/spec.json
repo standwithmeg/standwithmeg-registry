@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "mindy_zimmerman",
+    "display_name": "Mindy W. Zimmerman",
+    "title": "",
+    "first_name": "Mindy W.",
+    "last_name": "Zimmerman",
+    "role": "Judge",
+    "court": "LAURENS",
+    "county": "LAURENS",
+    "court_or_county": "LAURENS",
+    "state": "South Carolina",
+    "state_abbr": "SC",
+    "mention_count": 0,
+    "family_count": 4,
+    "public_family_count": 4,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "6c5e1fbb-7e32-4a7a-a572-0cc6ffddc2c3",
+    "actor_bucket_key": "mindy zimerman|SC"
+  },
+  "photo": {
+    "path": "public/court-actors/sc/mindy_zimmerman/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 82,
+    "total_submissions": 105,
+    "avg_financial_loss": 287649.02,
+    "avg_months_lost": 25.9,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "SC",
+    "state_family_count": 105,
+    "median_financial_loss": 127500,
+    "median_burden_sample_size": 66,
+    "median_months_lost": 19,
+    "pro_se_pct": 57.1,
+    "pro_se_count": 60,
+    "_pdf_state_family_count": 105,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5316,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 4,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Entered contempt findings and rulings that suspended my financial support and transferred future medical appointment authority for my children solely to the other parent while I was self-represented in court",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Horry County, SC"
+      },
+      {
+        "comment_text": "Was assigned to portions of your case at different times. You have raised concerns about scheduling, notice, and procedural issues during the litigation.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Horry County, SC"
+      },
+      {
+        "comment_text": "DENIED ME THE RIGHT TO KNOW WHERE MY CHILDREN WHERE AT FOR CHRISTMAS THEY WERE OUT OF STATE WITH FOSTER CARE",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "LAURENS"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/mindy_zimmerman",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/sc/mindy_zimmerman/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

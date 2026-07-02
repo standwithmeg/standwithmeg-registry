@@ -1,0 +1,4 @@
+/submit       /survey  301
+/submit/*     /survey/:splat  301
+/impact       /report  301
+/impact/*     /report/:splat  301

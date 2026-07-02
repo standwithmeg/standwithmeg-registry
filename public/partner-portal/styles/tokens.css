@@ -1,0 +1,70 @@
+/* Stand With Meg — Partner Portal design tokens
+   Locked to the official Brand Visual Direction:
+   documentary · sober · evidence-grade · broadcast news. */
+
+:root {
+  /* Official palette */
+  --color-bg: #050a14;          /* near-black navy — page base */
+  --color-midnight: #0b1a2d;    /* navy */
+  --color-midnight-2: #081522;
+  --color-navy-card: #0c2036;   /* case-file panel */
+  --color-navy-line: #20384f;   /* hairline */
+  --color-gold: #c9a227;
+  --color-gold-soft: #e3c25b;   /* bright gold */
+  --color-red: #b91c1c;         /* crimson */
+  --color-red-hover: #d22626;
+  --color-cream: #f2ead6;       /* primary text on dark */
+  --color-white: #f5f5f5;
+  --color-ink: #050a14;
+  --color-muted: #9aaabd;
+  --color-muted-2: #64788f;
+  --color-success: #3fae6a;
+
+  /* Surfaces */
+  --surface-page: var(--color-bg);
+  --surface-card: var(--color-navy-card);
+  --surface-card-raised: #123150;
+
+  /* Typography */
+  --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-condensed: "Anton", "Oswald", Impact, sans-serif;
+  --font-mono: "Space Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --font-sans: "Oswald", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  --text-xs: 0.78rem;
+  --text-sm: 0.875rem;
+  --text-base: clamp(1rem, 0.96rem + 0.2vw, 1.075rem);
+  --text-lg: 1.25rem;
+  --text-xl: clamp(1.5rem, 1.2rem + 1.2vw, 2rem);
+  --text-2xl: clamp(2rem, 1.4rem + 2.6vw, 3.25rem);
+  --text-hero: clamp(2.6rem, 1.6rem + 4.5vw, 5rem);
+
+  --leading-tight: 1.12;
+  --leading-snug: 1.4;
+  --leading-normal: 1.65;
+
+  --space-1: 0.375rem;
+  --space-2: 0.625rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2.25rem;
+  --space-6: 3.5rem;
+  --space-section: clamp(3rem, 2rem + 5vw, 6rem);
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-pill: 999px;
+
+  --shadow-card: 0 18px 50px -24px rgba(0, 0, 0, 0.85);
+  --shadow-raised: 0 30px 80px -28px rgba(0, 0, 0, 0.9);
+  --shadow-gold: 0 14px 40px -18px rgba(201, 162, 39, 0.5);
+
+  --duration-fast: 150ms;
+  --duration-normal: 320ms;
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --content-max: 1080px;
+  --reading-max: 720px;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@500;600;700&family=Space+Mono:wght@700&display=swap" rel="stylesheet" />
+<style>
+  :root{ --navy:#0b1a2d; --bg:#050a14; --gold:#c9a227; --gold2:#e3c25b; --crimson:#b91c1c; --cream:#f2ead6; }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{width:1080px;height:1080px;overflow:hidden;}
+  .c{position:relative;width:1080px;height:1080px;font-family:"Oswald",sans-serif;color:var(--cream);
+    background:radial-gradient(120% 90% at 50% 0%,#112842 0%,var(--navy) 36%,var(--bg) 100%);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:110px;}
+  .grain{position:absolute;inset:0;pointer-events:none;opacity:.07;mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");}
+  .border{position:absolute;inset:42px;border:2px solid rgba(201,162,39,.4);pointer-events:none;}
+  .eyebrow{font-family:"Space Mono",monospace;font-weight:700;letter-spacing:.34em;
+    font-size:25px;color:var(--gold);text-transform:uppercase;}
+  .star{display:flex;align-items:center;gap:18px;margin:24px 0 40px;color:var(--gold);font-size:20px;}
+  .star::before,.star::after{content:"";width:80px;height:2px;background:var(--gold);}
+  h1{font-family:"Anton";text-transform:uppercase;font-size:130px;line-height:.94;letter-spacing:1px;
+    color:var(--cream);text-shadow:0 3px 24px rgba(0,0,0,.5);}
+  h1 .g{color:var(--gold);}
+  .sub{font-weight:500;font-size:38px;color:var(--cream);margin-top:48px;}
+  .cta{margin-top:64px;background:var(--crimson);color:#fff;font-weight:700;font-size:38px;
+    padding:28px 62px;box-shadow:0 18px 40px -16px rgba(185,28,28,.8);}
+  .foot{position:absolute;bottom:66px;font-family:"Space Mono",monospace;font-weight:700;letter-spacing:.12em;
+    font-size:22px;color:var(--gold2);text-transform:uppercase;}
+</style></head>
+<body>
+  <div class="c">
+    <div class="grain"></div><div class="border"></div>
+    <div class="eyebrow">Stand With Meg</div>
+    <div class="star">★</div>
+    <h1>One Sponsor<br/><span class="g">Per State.</span></h1>
+    <p class="sub">Your competitor's already looking. 👀</p>
+    <div class="cta">Claim your state →</div>
+    <div class="foot">my.standwithmeg.com/sponsor</div>
+  </div>
+</body></html>

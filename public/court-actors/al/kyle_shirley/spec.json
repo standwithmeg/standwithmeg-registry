@@ -1,0 +1,100 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "kyle_shirley",
+    "display_name": "Kyle Shirley",
+    "title": "",
+    "first_name": "Kyle",
+    "last_name": "Shirley",
+    "role": "Attorney",
+    "court": "Autauga County",
+    "county": "Autauga County",
+    "court_or_county": "Autauga County",
+    "state": "Alabama",
+    "state_abbr": "AL",
+    "mention_count": 0,
+    "family_count": 6,
+    "public_family_count": 6,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "afe13363-7b0f-41e0-afc5-c7604cf20e75",
+    "actor_bucket_key": "kyle shirley|AL"
+  },
+  "photo": {
+    "path": "public/court-actors/al/kyle_shirley/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 103,
+    "total_submissions": 128,
+    "avg_financial_loss": 90405.41,
+    "avg_months_lost": 36.3,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "AL",
+    "state_family_count": 128,
+    "median_financial_loss": 80000,
+    "median_burden_sample_size": 59,
+    "median_months_lost": 14,
+    "pro_se_pct": 43.0,
+    "pro_se_count": 55,
+    "_pdf_state_family_count": 128,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5320,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 6,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "He has repeatedly helped a rapist and kidnapper get custody. He persisted in pushing charges on me for interference with custody when I tried to get my children to the hospital covered in bruises & welts. My children cried out that their dad beat them with belts. Attorney to my ex-husband who has continuously defended a documented abuser and has repeatedly reported false accusations. Opposing party attorney helping to mask the abuse.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Autauga County"
+      },
+      {
+        "comment_text": "He hid evidence, we subpoenaed her medical records. He said he never received so I went to the medical office, pretending to be from his office. They confirmed they had sent them and provided me with another copy. He colluded with the other side against me opposing attorney is it was his best friend in high school. They are all in it together.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Autauga County"
+      },
+      {
+        "comment_text": "GAL didn’t interview, talk or visit with me concerning my parenting and relationship with my child. Not a phone call or meeting with me. He played a huge role in the decision in court and the court of civil appeals.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Autauga County"
+      },
+      {
+        "comment_text": "Represented the other party. Had undisclosed personal and familial ties to his client. Conflict of interest.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Autauga County"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/kyle_shirley",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/al/kyle_shirley/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

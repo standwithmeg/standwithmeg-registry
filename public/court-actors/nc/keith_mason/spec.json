@@ -1,0 +1,102 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "keith_mason",
+    "display_name": "Keith B. Mason",
+    "title": "",
+    "first_name": "Keith B.",
+    "last_name": "Mason",
+    "role": "Judge",
+    "court": "Beaufort County",
+    "county": "Beaufort County",
+    "court_or_county": "Beaufort County",
+    "state": "North Carolina",
+    "state_abbr": "NC",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "590a6087-0d69-4166-8d3e-5b3c396e3746",
+    "actor_bucket_key": "keith mason|NC",
+    "_overrides_applied": [
+      "county",
+      "court_or_county",
+      "display_name",
+      "first_name",
+      "last_name",
+      "role"
+    ]
+  },
+  "photo": {
+    "path": "public/court-actors/nc/keith_mason/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 161,
+    "total_submissions": 213,
+    "avg_financial_loss": 186966.14,
+    "avg_months_lost": 36.1,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "NC",
+    "state_family_count": 213,
+    "median_financial_loss": 140000,
+    "median_burden_sample_size": 71,
+    "median_months_lost": 16,
+    "pro_se_pct": 50.7,
+    "pro_se_count": 108,
+    "_pdf_state_family_count": 213,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5317,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "He was the first judge and continued the 7-10 day hearing without my parents consent and refused to let them or myself or siblings speak. He continued the next hearing as well. At neither hearing he would accept none of my mother’s proof. He also did not require or ask DSS to show any proof to keep the nonsecured custody.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Beaufort County"
+      },
+      {
+        "comment_text": "Refused and continued a 7-10 hearing which is not allowed by law. When we made it known he did this and we wrote a letter directly to him he refused to hear anything else with our case or have contact with us at all. I did also name him in a TikTok.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Beaufort County"
+      },
+      {
+        "comment_text": "Allowed my children to be removed from my grandmother over nonsense and yelled at her when she was on the stand (she's almost 80).",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Beaufort County"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/keith_mason",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/nc/keith_mason/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "carla_a_salvucci",
+    "display_name": "Carla A. Salvucci",
+    "title": "",
+    "first_name": "Carla A.",
+    "last_name": "Salvucci",
+    "role": "Judge",
+    "court": "Middlesex County",
+    "county": "Middlesex Probate and Family Court",
+    "court_or_county": "Middlesex County",
+    "state": "Massachusetts",
+    "state_abbr": "MA",
+    "mention_count": 0,
+    "family_count": 4,
+    "public_family_count": 4,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "ee282700-9575-425d-a7b5-5ed4e3bf4035",
+    "actor_bucket_key": "carla salvuci|MA"
+  },
+  "photo": {
+    "path": "public/court-actors/ma/carla_a_salvucci/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 75,
+    "total_submissions": 104,
+    "avg_financial_loss": 235880.44,
+    "avg_months_lost": 26.3,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "MA",
+    "state_family_count": 104,
+    "median_financial_loss": 136300,
+    "median_burden_sample_size": 44,
+    "median_months_lost": 18,
+    "pro_se_pct": 57.7,
+    "pro_se_count": 60,
+    "_pdf_state_family_count": 104,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5207,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 4,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "In my counter-complaint for modification and my pre-trial memo, I outlined very specific concerns relating to alcohol and substance abuse by my ex-wife and her family, and also illegal firearm possession, including around our daughter. I mentioned that some of this evidence was publicly available on their Instagram accounts. Opposing counsel classified my concerns as \"baseless allegations\" in two written filings. Then during the pre-trial hearing, opposing counsel stated: \"I don’t think this is the time or the place to get into details about what he thinks of mother’s various family members.\" Judge Carla A. Salvucci gave absolutely ZERO push back to opposing counsel, showed no concern for the safety or well being of my daughter at any point during the hearing, and even dismissed my daughter saying multiple times on a video call that she \"needs to run away\" as not being concerning because \"three year-olds say things.\" Carla Salvucci has to this day, completely ignored a motion to dismiss based on subject matter jurisdiction (sitting unanswered on the docket since August 2025), which outlines how my ex-wife established Massachusetts residency of our daughter through blatant, provable fraud. In addition, during a pre-trial hearing, she allowed opposing counsel, Wendy Overbaugh Hickey, to characterize my concerns about my ex-wife's family abusing alcohol, marijuana, and other substances (including around my daughter), as well as illegal weapons possession, as \"the way father feels about mother's family\" without so much as a word of push back. Carla Salvucci was more concerned about my income, than she was with my daughter's safety.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Middlesex Probate and Family Court"
+      },
+      {
+        "comment_text": "Has denied virtually every motion I filed, including the December 2025 emergency motion to vacate the June 16, 2025 temporary suspension order despite attached police reports proving Father’s perjury, denied Short Order of Notice and immediate relief on my April 2026 emergency motion following my son’s hospitalization (hearing delayed until June 22, 2026), issued a factually incorrect handwritten denial on May 1, 2026 claiming the GAL report was due April 30, and refused to clarify or enforce my basic communication rights despite Father’s own claim of access.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Middlesex Probate and Family Court"
+      },
+      {
+        "comment_text": "She suspended my parenting time on 10/1/24 for no reason.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Essex"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/carla_a_salvucci",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ma/carla_a_salvucci/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

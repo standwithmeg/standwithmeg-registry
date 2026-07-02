@@ -1,0 +1,136 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "kristen_k_johnson",
+    "display_name": "Judge Kristen K. Johnson",
+    "title": "Judge",
+    "first_name": "Kristen K.",
+    "last_name": "Johnson",
+    "role": "Judge",
+    "court": "Hancock",
+    "county": "Hancock",
+    "court_or_county": "Hancock",
+    "state": "Ohio",
+    "state_abbr": "OH",
+    "mention_count": 0,
+    "family_count": 10,
+    "public_family_count": 10,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "02012677-e69a-4ba3-b2bf-635b3acfa3f5",
+    "actor_bucket_key": "kristen johnson|OH"
+  },
+  "photo": {
+    "path": "public/court-actors/oh/kristen_k_johnson/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 205,
+    "total_submissions": 260,
+    "avg_financial_loss": 113532.41,
+    "avg_months_lost": 31.4,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OH",
+    "state_family_count": 260,
+    "median_financial_loss": 81125,
+    "median_burden_sample_size": 126,
+    "median_months_lost": 18,
+    "pro_se_pct": 52.7,
+    "pro_se_count": 137,
+    "_pdf_state_family_count": 260,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5303,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 10,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "She refused to admit my emails with CPS as evidence in my trial for custody. However during appeal the Ohio Thrid District court of Appeals did accept jurisdiction of my emails but still upheld her judgment. Denied due process. Failed to accept my emails (that proved i was in contact with the agency) as evidence saying they looked copy and pasted. Appointed me a lawyer without my consent and allowed that lawyer to represent me in a motions hearing i had notification of",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Hancock County"
+      },
+      {
+        "comment_text": "She never once spoke to me. I was never given due process nor aware of my first court date the day they where removed. Wasn't till after the court date susan from cps told me I had a chance to speak and wasn't there. They fumbled bad with my case. And still to this date the man that rapped my daughter walks free. Never once questioned or brought in. Because she was 16 just turned 16 they said it was consensual and brushed it under the rug",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Hancock"
+      },
+      {
+        "comment_text": "Used blanket statements on all family not there to represent themselves. Allows Kelli Millet to lie on the stand. Overruled many objections. Cherry picked the lines she wanted to deny and progress with family.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Hancock"
+      },
+      {
+        "comment_text": "She refused to admit my emails with CPS as evidence in my trial for custody. However during appeal the Ohio Thrid District court of Appeals did accept jurisdiction of my emails but still upheld her judgment.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Hancock County"
+      },
+      {
+        "comment_text": "Prior cps prosecuting attorney, no due process, denied intervention, kinship, supervised visits, and custody. Cherry picked evidence and twisted it to fit the narrative .",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Hancock"
+      },
+      {
+        "comment_text": "She added and listened to false information. She took my children away from a mother based off false information and continues to keep them away for absolutely no reason!",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Hancock"
+      },
+      {
+        "comment_text": "She refuses kinship makes up false allegations makes doin anything requested by the court impossible or looses an doesnt submitt paper work or evidence",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Hancock county"
+      },
+      {
+        "comment_text": "She didn’t look at my case at all and just decided the mother was the best choice without looking at evidence and blatantly ignored eveidence in court",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Hancock"
+      },
+      {
+        "comment_text": "stepped in hours before mediation to rule dad (Indicated forensic interview) would get next day over night weekends.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Hancock"
+      },
+      {
+        "comment_text": "didnt show up for court",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "hancock"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/kristen_k_johnson",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/oh/kristen_k_johnson/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

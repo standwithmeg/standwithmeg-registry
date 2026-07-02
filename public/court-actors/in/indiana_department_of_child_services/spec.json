@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "indiana_department_of_child_services",
+    "display_name": "Indiana Department of Child services",
+    "title": "",
+    "first_name": "Indiana Department of Child",
+    "last_name": "services",
+    "role": "CPS Worker",
+    "court": "marion",
+    "county": "marion",
+    "court_or_county": "marion",
+    "state": "Indiana",
+    "state_abbr": "IN",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "fea9993b-1698-47d7-a9ee-c067fc100096",
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/in/indiana_department_of_child_services/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 128,
+    "total_submissions": 153,
+    "avg_financial_loss": 121922.6,
+    "avg_months_lost": 30.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "IN",
+    "state_family_count": 153,
+    "median_financial_loss": 63875,
+    "median_burden_sample_size": 76,
+    "median_months_lost": 18,
+    "pro_se_pct": 45.8,
+    "pro_se_count": 70,
+    "_pdf_state_family_count": 153,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5298,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Lindsey from dcs send Ohio in to do her work and then wouldn’t listen to their recommendations blocking them from keeping my child home with me and safe after being beaten severely. Attempted to meet with her after preparing hours worth of evidence and driving the hour and 45 minutes she wouldn’t drive and she canceled the meeting five minutes before it pitiful. Do your job.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "marion"
+      },
+      {
+        "comment_text": "Delayed reunification, acted out of convenience and made rules up as they went theough the case",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Perry"
+      },
+      {
+        "comment_text": "They did not listen to me. They believed the party that reported my to DCS.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/indiana_department_of_child_services",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/in/indiana_department_of_child_services/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

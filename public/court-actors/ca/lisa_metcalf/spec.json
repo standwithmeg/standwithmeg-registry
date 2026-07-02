@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "lisa_metcalf",
+    "display_name": "Lisa Metcalf",
+    "title": "",
+    "first_name": "Lisa",
+    "last_name": "Metcalf",
+    "role": "Custody Evaluator",
+    "court": "Sutter county",
+    "county": "Sutter county",
+    "court_or_county": "Sutter county",
+    "state": "California",
+    "state_abbr": "CA",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "bc27c0f9-c9e2-41e8-b475-219b0b4f1b0d",
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/ca/lisa_metcalf/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 353,
+    "total_submissions": 439,
+    "avg_financial_loss": 288012.6,
+    "avg_months_lost": 36.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "CA",
+    "state_family_count": 439,
+    "median_financial_loss": 265100,
+    "median_burden_sample_size": 196,
+    "median_months_lost": 20,
+    "pro_se_pct": 58.8,
+    "pro_se_count": 258,
+    "_pdf_state_family_count": 439,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5303,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "I was ordered to participate in therapy for parental alienation, no evidence was available to provide by the court. Attended 7 sessions, told by her that I had to attend despite no evidence to focus on. At $195/hr, no reports were given that the therapy had been completed and why parental alienation was not discussed.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Sutter county"
+      },
+      {
+        "comment_text": "Took our money and did nothing. Six months went by and all she got completed was our psych evaluations ( she refused to let me see my results) She asked for a $8,500 retainer and once the case was sent over to CPS she said she couldn’t do anything with the evaluation until the case in CPS was closed",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Sutter county"
+      },
+      {
+        "comment_text": "She was chosen by opposing party council to be daughter’s therapist. Mediator admitted to her being a biased party because father chose her to be his personal therapist. Mediator doesn’t see a need to change child therapist.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Sutter county"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/lisa_metcalf",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ca/lisa_metcalf/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

@@ -1,0 +1,128 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "naomi_cataudella",
+    "display_name": "Naomi Cataudella",
+    "title": "",
+    "first_name": "Naomi",
+    "last_name": "Cataudella",
+    "role": "Reunification Therapist",
+    "court": "Johnson",
+    "county": "Johnson",
+    "court_or_county": "Johnson",
+    "state": "Kansas",
+    "state_abbr": "KS",
+    "mention_count": 0,
+    "family_count": 10,
+    "public_family_count": 10,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": null,
+    "_overrides_applied": [
+      "county",
+      "court_or_county"
+    ]
+  },
+  "photo": {
+    "path": "public/court-actors/ks/naomi_cataudella/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 179,
+    "total_submissions": 244,
+    "avg_financial_loss": 119293.76,
+    "avg_months_lost": 30.2,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "KS",
+    "state_family_count": 244,
+    "median_financial_loss": 96100,
+    "median_burden_sample_size": 129,
+    "median_months_lost": 16,
+    "pro_se_pct": 50.4,
+    "pro_se_count": 123,
+    "_pdf_state_family_count": 244,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5317,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 10,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "She refused to let me have a pen and paper. She took my phone so I could not make notes. She was the first supervisor assigned to me after my children were taken on January 29, 2024. During our meetings, she gave me constantly shifting and conflicting rules about how I was allowed to behave. I was told I could not cry in front of my children—even though they had just been taken from me without the chance to say goodbye—and that if I did, they would be removed from the visit and I would not be allowed to see them again for two weeks. She denied ever saying those things, despite having clearly stated them before. Without warning, she told me she would no longer serve as my supervisor. I left that meeting in tears, completely broken. That moment was not just an isolated incident—it was the beginning of a pattern that has kept me separated from my children for over two years.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Johnson"
+      },
+      {
+        "comment_text": "Absolutely the worst person of the case. I believe she has been given some unexplainable reign over the court system and went on a power trip. Maybe she had one successful case and was since considered an \"expert\"? However, no one kept that in check. Not only did she destroy me emotionally and mentally, but she did so to my children as well. We've all needed therapy to help us recover from HER. She has flat lied in court reports. She has flat out caused more chaos and \"high-conflict\" than was originally even there. Unfortunately, I am too scared of what she can still do with my case if I say more. I'm sorry for everyone that has to deal with her. If she is recommended to you by anyone in the court system, absolutely object and RUN.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Johnson"
+      },
+      {
+        "comment_text": "We had to see her, pay $170 each time, for her to yell and tell us we were messing our kids up by not getting along. We didn’t get along because my ex husband would lie, call CPS on me which never amounted to anything, she would tell me how awful we were. I literally had to sit with my abuser in a room with her & listen to her tell me I wasn’t fair.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Johnson"
+      },
+      {
+        "comment_text": "She believed every single lie from the father in my case because he was charming in sessions. She allowed the father a thousand delays and excuses and was brutally harsh on me. She would say she hates working with us. She would give horrible stares downs. She was rude and unprofessional near every session. She never solved our issues.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Johnson"
+      },
+      {
+        "comment_text": "Reintegration therapist forced on me by Andy Bolton — described as Bolton's buddy. Located 2.5 hours away from my home. I was required to use her, not allowed to choose my own.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Johnson"
+      },
+      {
+        "comment_text": "She gave me 1 hour and then issued a report to my detriment. Never saw me with our kids. In my opinion is part of a corrupt system used in Johnson County KS.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Johnson"
+      },
+      {
+        "comment_text": "Complete waste of time. Nothing accomplished. 2 years going almost weekly to Naomi. No progress.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Johnson"
+      },
+      {
+        "comment_text": "She manipulated me with our GAL and said things that were my true.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Johnson"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/naomi_cataudella",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ks/naomi_cataudella/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

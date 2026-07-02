@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "jane_c_levy",
+    "display_name": "Jane C. Levy",
+    "title": "",
+    "first_name": "Jane C.",
+    "last_name": "Levy",
+    "role": "Judge",
+    "court": "Bernalillo",
+    "county": "Bernalillo",
+    "court_or_county": "Bernalillo",
+    "state": "New Mexico",
+    "state_abbr": "NM",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "e2462ecf-6e58-49d6-b41e-c8611ab3f457",
+    "actor_bucket_key": "jane c levy|NM"
+  },
+  "photo": {
+    "path": "public/court-actors/nm/jane_c_levy/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 23,
+    "total_submissions": 28,
+    "avg_financial_loss": 121927.5,
+    "avg_months_lost": 51.6,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "NM",
+    "state_family_count": 28,
+    "median_financial_loss": 101000,
+    "median_burden_sample_size": 10,
+    "median_months_lost": 35,
+    "pro_se_pct": 57.1,
+    "pro_se_count": 16,
+    "_pdf_state_family_count": 28,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5207,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Ignored extortion by my I, wife to see my child, refused to set scheduled visitation between my son and instead stated visitation was at my ex wife discretion. Which entitled her to bribery and extortion this effective means the state of NM aided the extortion. There is other things but as I am currently still fighting I don't want to show all my cards.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Bernalillo"
+      },
+      {
+        "comment_text": "Fabricated findings, held hearings without my knowledge of findings, obstructed a scheduled hearing, due to retaliation.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Bernalillo"
+      },
+      {
+        "comment_text": "Ignored clear evidence",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Second Judicial"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/jane_c_levy",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/nm/jane_c_levy/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

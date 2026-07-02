@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "edward_page",
+    "display_name": "Edward Page",
+    "title": "",
+    "first_name": "Edward",
+    "last_name": "Page",
+    "role": "Judge",
+    "court": "Jefferson",
+    "county": "Jefferson County",
+    "court_or_county": "Jefferson",
+    "state": "Missouri",
+    "state_abbr": "MO",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "3ca5899d-f0ed-4ac2-9e08-cc2b58bccd94",
+    "actor_bucket_key": "edward page|MO"
+  },
+  "photo": {
+    "path": "public/court-actors/mo/edward_page/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 149,
+    "total_submissions": 194,
+    "avg_financial_loss": 111944.2,
+    "avg_months_lost": 41.5,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "MO",
+    "state_family_count": 194,
+    "median_financial_loss": 101000,
+    "median_burden_sample_size": 91,
+    "median_months_lost": 24,
+    "pro_se_pct": 53.6,
+    "pro_se_count": 104,
+    "_pdf_state_family_count": 194,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5314,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "He kidnapped my son for profit and spite after husband told him to his face CPS is a childtrafficking ring. Ignored Constitution, due process and did not enforce prosecuting attorney David Casey's subpoena which required a continuance a month later. Tyrant loves destroying families. Total tyrant ignoring subpoenas, evidence and facts. Tyrant using power to destroy American families. Ignored Constitution, subpoena and evidence. Ignored Constitution, ignored subpoenas and motions ruled on hearsay Ignored Constitution, ruled by feelings, ignored subpoenas from Prosecuting Attorney, ignored evidence",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Jefferson County"
+      },
+      {
+        "comment_text": "Ignored the Constitution and told us to take the issues to a higher court, ignored evidence, invoked stronger supervised visitation because of our beliefs, ignored a lawful subpoena, delaying the case further, and ignored the best interest of the child.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Jefferson County"
+      },
+      {
+        "comment_text": "Denied motions, made threats of contempt, denied evidence. Did not follow MO §452.375. Refused to revised or correct judgment that did not follow this statute. He's currently retiring after just announcing re-election.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Jefferson County"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/edward_page",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/mo/edward_page/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

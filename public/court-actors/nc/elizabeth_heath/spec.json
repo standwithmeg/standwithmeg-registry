@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "elizabeth_heath",
+    "display_name": "Elizabeth Heath",
+    "title": "",
+    "first_name": "Elizabeth",
+    "last_name": "Heath",
+    "role": "Judge",
+    "court": "Lenoir DSS court",
+    "county": "Lenoir",
+    "court_or_county": "Lenoir DSS court",
+    "state": "North Carolina",
+    "state_abbr": "NC",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/nc/elizabeth_heath/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 161,
+    "total_submissions": 213,
+    "avg_financial_loss": 186966.14,
+    "avg_months_lost": 36.1,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "NC",
+    "state_family_count": 213,
+    "median_financial_loss": 140000,
+    "median_burden_sample_size": 71,
+    "median_months_lost": 16,
+    "pro_se_pct": 50.7,
+    "pro_se_count": 108,
+    "_pdf_state_family_count": 213,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5317,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "On multiple occasions she ignored evidence that the social workers on my case had falsified information against me. She made judgements solely based on her personal opinion of me . She signed an order to have two of my children removed from my moms care and placed in foster homes when my daughter fell off the trampoline and broke her wrist. She claimed it was improper supervision. The next morning cps and police came to my home with a non secured custody order for my 6month old baby girl. The petition was 4 paragraphs long. In court my lawyer was able to completely disprove everything on the petition with pictures, paperwork, questioning the case workers on stand. The judge still ruled against me getting my baby back and she was placed into the same foster as my other two kids. Ignored evidence,. Made judgements based on her opinion and personal vendettas rather than from law and general statutes She did not go by the laws and was unfair and she made her judgments and her decision based on her own opinions instead of evidence in the case and instead of going by statutes and laws. She ordered me to 30 days in jail because I left a detox center early by 1 day,. I was 8 months pregnant and ended up having my daughter while still incarcerated.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lenoir"
+      },
+      {
+        "comment_text": "Silently retaliate against misusing her authority, bias abusive court proceedings Asisted in the kidnapping of my minor child. Ignored evidence, collusion. Enabling child abuse, domestic violence an parental alienating.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lenior county  Kinston NC"
+      },
+      {
+        "comment_text": "She refused to listen to any evidence from our side. She strictly went by the court report from DSS in the Guardian at Leitem.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lenoir DSS court"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/elizabeth_heath",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/nc/elizabeth_heath/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

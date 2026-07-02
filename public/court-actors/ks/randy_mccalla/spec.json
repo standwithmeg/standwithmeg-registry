@@ -1,0 +1,120 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "randy_mccalla",
+    "display_name": "Randy McCalla",
+    "title": "",
+    "first_name": "Randy",
+    "last_name": "McCalla",
+    "role": "GAL / Child Representative",
+    "court": "Johnson",
+    "county": "Johnson",
+    "court_or_county": "Johnson",
+    "state": "Kansas",
+    "state_abbr": "KS",
+    "mention_count": 0,
+    "family_count": 8,
+    "public_family_count": 8,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": "randy mcala|KS"
+  },
+  "photo": {
+    "path": "public/court-actors/ks/randy_mccalla/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 179,
+    "total_submissions": 244,
+    "avg_financial_loss": 119293.76,
+    "avg_months_lost": 30.2,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "KS",
+    "state_family_count": 244,
+    "median_financial_loss": 96100,
+    "median_burden_sample_size": 129,
+    "median_months_lost": 16,
+    "pro_se_pct": 50.4,
+    "pro_se_count": 123,
+    "_pdf_state_family_count": 244,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5317,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 8,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "This is the single biggest trauma of my life. Guardian Ad Litems are the biggest threat to the family court system and their power must be checked. Randy McCalla ambushed me in court in 2013 — a standard custody hearing — claiming my rights needed to be terminated due to parental alienation. He presented no evidence, and I left court shocked and without my kids. Randy didn't allow me to talk to my kids for 5 weeks. He told me in his office that he knew the judge personally as if to imply she would do whatever he wanted. The therapist Randy insisted on using shared an office with him.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Johnson"
+      },
+      {
+        "comment_text": "Caused permanent and irreparable harm to my children's mental and physical health as well as to my entire family. Blackmailed by Randy McCalla. Ex parte communication between attorneys and court appointed medical professionals. Falsified court hearings with custody-modifying orders when no hearing ever occurred.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Johnson"
+      },
+      {
+        "comment_text": "Randy McCalla, GAL in my custody case; ordered psychological evaluations, multiple interviews with children, but in my experience the findings/recommendations and children’s concerns were disregarded, which escalated conflict and harmed family stability. He ignored years of documented abuse.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Johnson"
+      },
+      {
+        "comment_text": "Filed the emergency motion that led to my children being taken, never spoke to me, and instead worked with my ex, his attorney, therapists, and DCF while leaving me completely out and continuing to push for me to stay separated from my kids.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Johnson"
+      },
+      {
+        "comment_text": "Functioned more as an advocate for a third-party visitation claim than as a neutral representative for the child and did not submit a formal written GAL report.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Johnson"
+      },
+      {
+        "comment_text": "Biased information, speaks with other party and not me. Has only spoken with children once.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Johnson"
+      },
+      {
+        "comment_text": "Let’s personal opinion guide decisions",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Johnson"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/randy_mccalla",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ks/randy_mccalla/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "quote_char_budget": 150
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

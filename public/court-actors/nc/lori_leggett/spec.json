@@ -1,0 +1,100 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "lori_leggett",
+    "display_name": "Lori leggett",
+    "title": "",
+    "first_name": "Lori",
+    "last_name": "leggett",
+    "role": "CPS Worker",
+    "court": "Beaufort county",
+    "county": "Beaufort",
+    "court_or_county": "Beaufort county",
+    "state": "North Carolina",
+    "state_abbr": "NC",
+    "mention_count": 0,
+    "family_count": 4,
+    "public_family_count": 4,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/nc/lori_leggett/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 161,
+    "total_submissions": 213,
+    "avg_financial_loss": 186966.14,
+    "avg_months_lost": 36.1,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "NC",
+    "state_family_count": 213,
+    "median_financial_loss": 140000,
+    "median_burden_sample_size": 71,
+    "median_months_lost": 16,
+    "pro_se_pct": 50.7,
+    "pro_se_count": 108,
+    "_pdf_state_family_count": 213,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5317,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 4,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "She is the director. I kept asking to speak to someone because I wasn’t allowed to see my family at all. She also told me my family did not wish to see me right now and no one was willing to take me. I later found this to not be true as many family members, my girlfriend, and even my friends had asked to see me and some to take me in. I also told her what Abby Williams had wrote and said in court was not true and she just kept saying I know her and she would not lie. It’s like it didn’t matter what I said. Lori Leggett is also who made me go to the first locked facility saying it was there or she would go for a petition to have me placed in juvie. I reported the abuse to her also at one facility and she did nothing. I also told her I did not like sleeping in their office and their couches weren’t even long enough to hold me and she said I could always make a bed on the floor. She does not care.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Beaufort"
+      },
+      {
+        "comment_text": "She's the director. She has been stealing children for 25 years now, I will run out of room in this box to name everything she has allowed to happen.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Beaufort"
+      },
+      {
+        "comment_text": "Signed off on paperwork and acts like she has no knowledge of title 4e and 4d funding",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Beaufort county"
+      },
+      {
+        "comment_text": "No license ingores us",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Beaufort county"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/lori_leggett",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/nc/lori_leggett/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

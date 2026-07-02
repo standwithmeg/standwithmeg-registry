@@ -1,0 +1,89 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "joseph_woody_woodruff",
+    "display_name": "Joseph \"Woody\" Woodruff",
+    "title": "",
+    "first_name": "Joseph \"Woody\"",
+    "last_name": "Woodruff",
+    "role": "Judge",
+    "court": "Williamson",
+    "county": "Williamson",
+    "court_or_county": "Williamson",
+    "state": "Tennessee",
+    "state_abbr": "TN",
+    "mention_count": 0,
+    "family_count": 1,
+    "public_family_count": 1,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/tn/joseph_woody_woodruff/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 88,
+    "total_submissions": 119,
+    "avg_financial_loss": 111954.91,
+    "avg_months_lost": 38.2,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "TN",
+    "state_family_count": 119,
+    "median_financial_loss": 83375,
+    "median_burden_sample_size": 52,
+    "median_months_lost": 17,
+    "pro_se_pct": 44.5,
+    "pro_se_count": 53,
+    "_pdf_state_family_count": 119,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5293,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 1,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Made judgement without hearing any evidence. Referred to court cases that never occurred in his judgement. Failed to review actual evidence and investigative reports from child welfare and law enforcement and ignored exonerating evidence including audio recording of opposing party admission of guilt under oath.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Williamson"
+      },
+      {
+        "comment_text": "Denied my motion without hearing, gender discrimination and bias. Abuse Discrimination and abuse",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Williamson"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/joseph_woody_woodruff",
+  "unresolved": [
+    "public_family_count_api: no match for display_name='Joseph \"Woody\" Woodruff' bucket=None slug='joseph_woody_woodruff' in TN (6 actors)",
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/tn/joseph_woody_woodruff/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

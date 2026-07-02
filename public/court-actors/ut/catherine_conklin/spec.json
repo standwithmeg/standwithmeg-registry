@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "catherine_conklin",
+    "display_name": "Catherine Conklin",
+    "title": "",
+    "first_name": "Catherine",
+    "last_name": "Conklin",
+    "role": "Judge",
+    "court": "Weber",
+    "county": "Weber",
+    "court_or_county": "Weber",
+    "state": "Utah",
+    "state_abbr": "UT",
+    "mention_count": 0,
+    "family_count": 5,
+    "public_family_count": 5,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": "48eedfe3-e658-489e-b189-ddd9e79e697a",
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "public/court-actors/ut/catherine_conklin/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 43,
+    "total_submissions": 56,
+    "avg_financial_loss": 276098.88,
+    "avg_months_lost": 18.8,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "UT",
+    "state_family_count": 56,
+    "median_financial_loss": 166000,
+    "median_burden_sample_size": 35,
+    "median_months_lost": 6,
+    "pro_se_pct": 55.4,
+    "pro_se_count": 31,
+    "_pdf_state_family_count": 56,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5207,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 5,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Same person... so the same reason. Kept delaying hearings to give abuser more chance for custody of kids.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Weber county"
+      },
+      {
+        "comment_text": "Imputed at full time wages, affecting ability to obtain financial aid and live.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Weber county"
+      },
+      {
+        "comment_text": "Ignored domestic violence protections in favor of abusive parent.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Weber"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/catherine_conklin",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ut/catherine_conklin/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}
