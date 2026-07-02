@@ -27,22 +27,22 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 243,
-    "total_submissions": 307,
-    "avg_financial_loss": 232914.17,
-    "avg_months_lost": 32.4,
+    "families_approved": 244,
+    "total_submissions": 308,
+    "avg_financial_loss": 232329.33,
+    "avg_months_lost": 32.2,
     "_source_table": "movement_stats_by_state",
     "_match_value": "TX",
-    "state_family_count": 307,
-    "median_financial_loss": 125500,
-    "median_burden_sample_size": 146,
+    "state_family_count": 308,
+    "median_financial_loss": 122000,
+    "median_burden_sample_size": 147,
     "median_months_lost": 20,
-    "pro_se_pct": 49.2,
-    "pro_se_count": 151,
-    "_pdf_state_family_count": 307,
+    "pro_se_pct": 49.4,
+    "pro_se_count": 152,
+    "_pdf_state_family_count": 308,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5314,
+  "movement_total": 5321,
   "supabase": {
     "report_count": 0,
     "actor_report_count": 0,
@@ -52,7 +52,7 @@
   },
   "export_dir": "New Final Post and Capcut template/export/gabriela_garcia",
   "unresolved": [
-    "public_family_count_api: no match for display_name='Gabriela Garcia' bucket=None slug='gabriela_garcia' in TX (13 actors)",
+    "public_family_count_api: no match for display_name='Gabriela Garcia' bucket=None slug='gabriela_garcia' in TX (14 actors)",
     "family_reports: no submission_ids on actor",
     "public_comments: no merged comments or raw notes available",
     "pdf_public_actor: no 'Gabriela Garcia' in cache for TX"
