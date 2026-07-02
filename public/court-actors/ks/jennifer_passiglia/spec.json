@@ -2,69 +2,79 @@
   "schema_version": 2,
   "actor": {
     "slug": "jennifer_passiglia",
-    "display_name": "Jennifer Passiglia",
+    "display_name": "Jennifer Anne Passiglia",
     "title": "",
-    "first_name": "Jennifer",
+    "first_name": "Jennifer Anne",
     "last_name": "Passiglia",
     "role": "Attorney",
     "court": "Cowley",
-    "county": "Cowley",
+    "county": null,
     "court_or_county": "Cowley",
-    "state": "KS",
+    "state": "Kansas",
     "state_abbr": "KS",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
-    "public_family_count": 3,
-    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
-    "actor_row_id": null,
-    "actor_bucket_key": "jenifer pasiglia|KS"
+    "public_family_count": null,
+    "public_family_count_source": null,
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "9ef6e285-5290-4ccd-acf0-e862756873f8",
+      "e430e47c-a61e-4f3d-96cb-b12fa06ddacb",
+      "b56e5cc8-0664-4efa-917b-036c4df64ded"
+    ],
+    "actor_row_id": "9ef6e285-5290-4ccd-acf0-e862756873f8",
+    "actor_bucket_key": "jennifer passiglia|KS"
   },
   "photo": {
-    "path": null,
-    "exists": false,
+    "path": "kansas/jennifer_passiglia/image_1080.png",
+    "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 179,
-    "total_submissions": 244,
-    "avg_financial_loss": 119293.76,
-    "avg_months_lost": 30.2,
+    "total_submissions": 245,
+    "avg_financial_loss": 118756.41,
+    "avg_months_lost": 30.0,
     "_source_table": "movement_stats_by_state",
     "_match_value": "KS",
-    "state_family_count": 244,
+    "state_family_count": 245,
     "median_financial_loss": 96100,
     "median_burden_sample_size": 129,
     "median_months_lost": 16,
-    "pro_se_pct": 50.4,
+    "pro_se_pct": 50.2,
     "pro_se_count": 123,
-    "_pdf_state_family_count": 244,
+    "_pdf_state_family_count": 245,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5317,
+  "movement_total": 5322,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "I lost my son, my job, and my girlfriend because of TFI, Sheri Wampler and Judge St. Peter.",
+        "state": "KS",
+        "county": "cowley",
+        "row_id": "e353eeb5-8395-40eb-99c0-898192569d73"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "She acted like to was on the side of the caseworkers and Judge St. Peters. She would not respond to my phone calls or emails in a timely manner. Eventhough I had a good job and worked a lot of hours she refused to try and get me out of the drug court and counseling. I lost my job because I had to take time off for visit, court appearances, and counseling.",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Cowley"
+        "source": "court_actors.notes"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/jennifer_passiglia",
   "unresolved": [
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
+    "public_family_count_api: no match for display_name='Jennifer Passiglia' bucket='jennifer passiglia|KS' slug='jennifer_passiglia' in KS (28 actors)",
+    "pdf_public_actor: helper missing at /Users/meghannmiller/Code/court-actor-posts/scripts/pdf/public_actor_for_share.py"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
-    "footer": "Family-reported submissions.",
+    "footer": "Family-reported submissions · not court findings.",
     "strike_through_reserved_for": [
       "isolated",
       "dismissed",
