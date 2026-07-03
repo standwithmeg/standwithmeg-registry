@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "walter_h_honeycutt",
+    "display_name": "Walter H. Honeycutt",
+    "title": "",
+    "first_name": "Walter H.",
+    "last_name": "Honeycutt",
+    "role": "Judge",
+    "court": "Mobile",
+    "county": "Mobile",
+    "court_or_county": "Mobile",
+    "state": "AL",
+    "state_abbr": "AL",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": "walter honeycut|AL"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 104,
+    "total_submissions": 129,
+    "avg_financial_loss": 90605.36,
+    "avg_months_lost": 35.9,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "AL",
+    "state_family_count": 129,
+    "median_financial_loss": 81316,
+    "median_burden_sample_size": 60,
+    "median_months_lost": 13,
+    "pro_se_pct": 43.4,
+    "pro_se_count": 56,
+    "_pdf_state_family_count": 129,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5328,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Ignored evidence of abuse. Ignored a filed protection order while granting my ex husbands emergency orders for pickup and to have my custody stripped based on hersay and false allegations",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Mobile"
+      },
+      {
+        "comment_text": "Ignored evidence, victim’s testimony, and impeachments (proven multiple times with evidence That the father lied on the stand in the hearing).",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Mobile"
+      },
+      {
+        "comment_text": "Only cared that the child was born in Alabama and how much the father made for support",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/walter_h_honeycutt",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/al/walter_h_honeycutt/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}
