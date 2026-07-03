@@ -13,8 +13,8 @@
     "state": "North Carolina",
     "state_abbr": "NC",
     "mention_count": 0,
-    "family_count": 4,
-    "public_family_count": 4,
+    "family_count": 5,
+    "public_family_count": 5,
     "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
     "actor_report_count": 0,
     "supabase_row_ids": [],
@@ -28,25 +28,25 @@
   },
   "state_stats": {
     "families_approved": 161,
-    "total_submissions": 213,
-    "avg_financial_loss": 186966.14,
-    "avg_months_lost": 36.1,
+    "total_submissions": 214,
+    "avg_financial_loss": 186023.31,
+    "avg_months_lost": 36.2,
     "_source_table": "movement_stats_by_state",
     "_match_value": "NC",
-    "state_family_count": 213,
+    "state_family_count": 214,
     "median_financial_loss": 140000,
     "median_burden_sample_size": 71,
     "median_months_lost": 16,
-    "pro_se_pct": 50.7,
-    "pro_se_count": 108,
-    "_pdf_state_family_count": 213,
+    "pro_se_pct": 50.9,
+    "pro_se_count": 109,
+    "_pdf_state_family_count": 214,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5317,
+  "movement_total": 5334,
   "supabase": {
     "report_count": 0,
     "actor_report_count": 0,
-    "family_count": 4,
+    "family_count": 5,
     "family_reports": [],
     "public_comments": [
       {
@@ -57,6 +57,12 @@
       },
       {
         "comment_text": "Falsified reports to GAL and judge. Placed one son in facilities without a court order. Restricted access to children with parents, family, and siblings. Took personal possessions from children. Took paydays of one teenage son which he has never seen to this day. Perjured herself on the stand regarding missing son and efforts made and he came to be in a facility with no court order. Followed and stalked our family. Got physically aggressive with me personally saying and what are you gonna do about it? Refused to follow the court order and restricted parents access to medical and educational records, events, Dr appts, and had medication changed without parents knowledge or consent. Refused to follow a DVPO in place making parents be in a room with their abuser and not respecting the fear and concerns they had with the abuser. Placed children with abuser when visits were reported of going badly to the point social Workers had to intervene and children tried to refuse visits and she made them go anyway. Children were struck at visits with their mother but visits were not stopped nor did social worker do anything to the mother.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Beaufort"
+      },
+      {
+        "comment_text": "She has proven to be very power hungry. Has admitted that she does not like children, publicly. It is abundantly clear that she acts out of emotion and malice, and not professionally. In turn, this becomes priority, not the welfare of the children. She does not act in their best interest.",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Beaufort"

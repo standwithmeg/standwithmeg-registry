@@ -8,25 +8,21 @@
     "last_name": "Bowen",
     "role": "GAL / Child Representative",
     "court": "Lexington",
-    "county": null,
+    "county": "Lexington",
     "court_or_county": "Lexington",
     "state": "South Carolina",
     "state_abbr": "SC",
-    "mention_count": 3,
+    "mention_count": 0,
     "family_count": 3,
     "public_family_count": 3,
     "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
-    "actor_report_count": 3,
-    "supabase_row_ids": [
-      "2433e507-e120-4bb2-8857-eb57103f2eb2",
-      "60cc5cf6-4e69-48f5-b888-c5cbfa1cccfe",
-      "a74a693a-59b8-41a6-980b-920fd661654d"
-    ],
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
     "actor_row_id": null,
     "actor_bucket_key": "wendy bowen|SC"
   },
   "photo": {
-    "path": "south_carolina/wendy_bowen/image_1080.png",
+    "path": "public/court-actors/sc/wendy_bowen/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -46,45 +42,35 @@
     "_pdf_state_family_count": 105,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5322,
+  "movement_total": 5334,
   "supabase": {
-    "report_count": 3,
-    "actor_report_count": 3,
+    "report_count": 0,
+    "actor_report_count": 0,
     "family_count": 3,
-    "family_reports": [
-      {
-        "body": "Traumatized the children, destroyed their childhoods and bankrupt me all in the name of greed.",
-        "state": "SC",
-        "county": "Lexington",
-        "row_id": "c29d0d0e-dcbf-47a1-affb-7bacec77f873"
-      },
-      {
-        "body": "I rebuilt my life in 4 years from nothing when we left our abuser to 6 figure salary, purchased two homes, children had security, and I was healing and thriving. Alienation claims and a notoriously corrupt attorney have taken it all away to punish us but despite the gift of PTSD they expect us to continue to suffer from, we have found our hope in God’s love, justice, and mercy. Praise God for His renewal and peace in the midst of our persecutions and suffering!",
-        "state": "SC",
-        "county": "Lexington",
-        "row_id": "90d2b9b2-e761-4329-bed1-5d2d697ee1d0"
-      }
-    ],
+    "family_reports": [],
     "public_comments": [
       {
         "comment_text": "She was listed as an option the attorneys were reviewing, but was clearly following an agenda and aligning with the other attorney we came to learn. She showed extreme bias during first contact and we later found out she had an undisclosed conflict of interest which explained things. Very unethical",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lexington"
       },
       {
         "comment_text": "First meeting told me “those abuse allegations aren’t going to hold up in court”. Asked me about DV history, wouldn’t let me answer. When my son tested pos for marijuana, she advised I “stop pointing fingers at one person”. Her L.O.V.E. Lounge Substack/podcast is hysterical.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lexington"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/wendy_bowen",
   "unresolved": [
-    "pdf_public_actor: helper missing at /Users/meghannmiller/Code/court-actor-posts/scripts/pdf/public_actor_for_share.py"
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
-    "footer": "Family-reported submissions · not court findings.",
+    "footer": "Family-reported submissions.",
     "strike_through_reserved_for": [
       "isolated",
       "dismissed",

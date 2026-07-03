@@ -13,8 +13,8 @@
     "state": "North Carolina",
     "state_abbr": "NC",
     "mention_count": 0,
-    "family_count": 4,
-    "public_family_count": 4,
+    "family_count": 5,
+    "public_family_count": 5,
     "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
     "actor_report_count": 0,
     "supabase_row_ids": [],
@@ -28,25 +28,25 @@
   },
   "state_stats": {
     "families_approved": 161,
-    "total_submissions": 213,
-    "avg_financial_loss": 186966.14,
-    "avg_months_lost": 36.1,
+    "total_submissions": 214,
+    "avg_financial_loss": 186023.31,
+    "avg_months_lost": 36.2,
     "_source_table": "movement_stats_by_state",
     "_match_value": "NC",
-    "state_family_count": 213,
+    "state_family_count": 214,
     "median_financial_loss": 140000,
     "median_burden_sample_size": 71,
     "median_months_lost": 16,
-    "pro_se_pct": 50.7,
-    "pro_se_count": 108,
-    "_pdf_state_family_count": 213,
+    "pro_se_pct": 50.9,
+    "pro_se_count": 109,
+    "_pdf_state_family_count": 214,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5317,
+  "movement_total": 5334,
   "supabase": {
     "report_count": 0,
     "actor_report_count": 0,
-    "family_count": 4,
+    "family_count": 5,
     "family_reports": [],
     "public_comments": [
       {
@@ -60,6 +60,12 @@
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Beaufort County"
+      },
+      {
+        "comment_text": "She only becomes involved and advocates when it is convenient for her. Contradicted herself multiple times on whether removals impact children dependent on what fits the current narrative. Does not advocate independently but clearly makes recommendations in conjunction with DSS. Even if it is not in the best interest of the child.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Beaufort county"
       },
       {
         "comment_text": "Lied to my children repeatedly. Participated in letting my daughter think I didn't want her home. Said she only \"has\" to speak to my children once every 90 days. Has hung up on my grandmother before and me as well. Her GAL reports are filled with lies and inconsistencies.",

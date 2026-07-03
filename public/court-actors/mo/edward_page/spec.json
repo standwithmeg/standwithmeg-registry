@@ -2,10 +2,10 @@
   "schema_version": 2,
   "actor": {
     "slug": "edward_page",
-    "display_name": "Edward Page",
+    "display_name": "Edward Paige",
     "title": "",
     "first_name": "Edward",
-    "last_name": "Page",
+    "last_name": "Paige",
     "role": "Judge",
     "court": "Jefferson",
     "county": "Jefferson County",
@@ -13,8 +13,8 @@
     "state": "Missouri",
     "state_abbr": "MO",
     "mention_count": 0,
-    "family_count": 3,
-    "public_family_count": 3,
+    "family_count": 4,
+    "public_family_count": 4,
     "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
     "actor_report_count": 0,
     "supabase_row_ids": [],
@@ -42,11 +42,11 @@
     "_pdf_state_family_count": 194,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5314,
+  "movement_total": 5334,
   "supabase": {
     "report_count": 0,
     "actor_report_count": 0,
-    "family_count": 3,
+    "family_count": 4,
     "family_reports": [],
     "public_comments": [
       {
@@ -66,6 +66,12 @@
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Jefferson County"
+      },
+      {
+        "comment_text": "He told me that the violation and deprivation of my Civil Rights were water under the bridge and there's nothing we could do about it because we can't go back in time.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Jefferson County MO"
       }
     ]
   },
