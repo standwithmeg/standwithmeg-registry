@@ -8,22 +8,26 @@
     "last_name": "Pincus",
     "role": "Judge",
     "court": "Richland",
-    "county": "Richland",
+    "county": null,
     "court_or_county": "Richland",
-    "state": "SC",
+    "state": "South Carolina",
     "state_abbr": "SC",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
     "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "4b85ef30-34c1-4261-bf72-cd37afa4f7b6",
+      "cff0bdb5-7fe5-4f62-86eb-4eb3c4b289cb",
+      "536310e7-a2d9-4f6d-988b-c4042dab7ca8"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "monet pincus|SC"
   },
   "photo": {
-    "path": null,
-    "exists": false,
+    "path": "south_carolina/monet_pincus/image_1080.png",
+    "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
@@ -42,41 +46,56 @@
     "_pdf_state_family_count": 105,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5317,
+  "movement_total": 5335,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Went in as a DV victim and mother who raised her 2 kids only to be subjected to half a million dollars to even see my kids. Removed to father who don’t even take of them.",
+        "state": "SC",
+        "county": "Richland",
+        "row_id": "78673ec4-b2cf-4ba4-acc0-91d3f45682fb"
+      },
+      {
+        "body": "It has crushed me and torn me down to pieces. I still have my belongings in the house from 3 yrs ago because my ex is that dangerous. My son is scared for his life living with his father 65% of the time. He has had to lie about things he knows are not true to the sake of his life being in danger. He is forced to be around my abusive father against his will. My son has had 3 unknown causes of injury. My ex keeps needles for illegal drugs on the counter in the bathroom next to my son’s toothbrush. My son has missed over 20 days of school majority with his father in the last 3 school years.",
+        "state": "SC",
+        "county": "Richland",
+        "row_id": "c0c49784-9ffb-43de-91a0-3a7445798665"
+      },
+      {
+        "body": "Richland Family Court is a chess board of paid players and you are a pawn. They bring in more actors at your expense (for no justified reason), prolonging the game and padding their \"friends\" pockets. It's sad, abusive, and has damaged my children and me financially and emotionally.",
+        "state": "SC",
+        "county": "Richland",
+        "row_id": "b9a60e20-9364-4133-8d13-f9400c321077"
+      }
+    ],
     "public_comments": [
+      {
+        "comment_text": "Gag order biased",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
       {
         "comment_text": "Had no evidence to the accusations my ex claimed against me and believed everything he said.",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Richland"
+        "source": "court_actors.notes"
       },
       {
         "comment_text": "Accepted testimony of lies as truth with no evidence, corroborating evidence or proof",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Richland"
-      },
-      {
-        "comment_text": "Gag order biased",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Richland"
+        "source": "court_actors.notes"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/monet_pincus",
   "unresolved": [
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
+    "pdf_public_actor: helper missing at /Users/meghannmiller/Code/court-actor-posts/scripts/pdf/public_actor_for_share.py"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
-    "footer": "Family-reported submissions.",
+    "footer": "Family-reported submissions · not court findings.",
     "strike_through_reserved_for": [
       "isolated",
       "dismissed",
