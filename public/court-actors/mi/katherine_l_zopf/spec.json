@@ -1,0 +1,88 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "katherine_l_zopf",
+    "display_name": "Katherine L. Zopf",
+    "title": "",
+    "first_name": "Katherine L.",
+    "last_name": "Zopf",
+    "role": "Other",
+    "court": "Oakland",
+    "county": "Oakland",
+    "court_or_county": "Oakland",
+    "state": "MI",
+    "state_abbr": "MI",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": "katherine zopf|MI"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 145,
+    "total_submissions": 176,
+    "avg_financial_loss": 182614.09,
+    "avg_months_lost": 36.1,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "MI",
+    "state_family_count": 176,
+    "median_financial_loss": 97500,
+    "median_burden_sample_size": 77,
+    "median_months_lost": 16,
+    "pro_se_pct": 43.8,
+    "pro_se_count": 77,
+    "_pdf_state_family_count": 176,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5351,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "From the 1st time my daughter disclosed CSA, she has lied to the court about the status of the CPS investigation. She took away my parenting time and I had to jump through multiple hoops over a year to get custody of my daughter back. A year later, my daughter disclosed again. This time her forensic interview resulted in CPS filing to terminate the parental rights of my daughter's father. The GAL lied to the court on March 24, 2021 saying that CPS had no filed to terminate parental rights. She claimed i was also being investigated. And she asked thst she be able to do her own investigation. The Judge turned her into an L-GAL. She then worked with the court-appointed child psychologist to create an affidavit claiming my daughter recanted. She had the psychologist send that to the prosecutor, who then declined to press charges due to conflicting evidence. She admitted this in the recorded in July 2021.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Oakland"
+      },
+      {
+        "comment_text": "She falsified court documents stating that my home was not safe. She testified that I told her this and I did not. She also sent my 5 year old child to be tested for ADHD without including his past medical history and encouraging me to administer 15 mg of Adderrall to my at the time 5 year old child who did not display any behaviors/and or symptoms of ADHD. She over charged for basically no service. She also failed to speak with my family and get the proper information for the case. She suggested that my child should not stay overnight at my home, and never visited my home. She suggested the administering of medicine by Zoom everyday with the father to monitor. Even though I gave my son the medicine against my own will and judgement she accused me of not giving it. It was recoreded daily and sent to my attorney. This affected my custody.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Oakland"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/katherine_l_zopf",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/mi/katherine_l_zopf/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}
