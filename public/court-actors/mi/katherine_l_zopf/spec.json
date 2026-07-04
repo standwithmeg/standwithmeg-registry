@@ -8,22 +8,26 @@
     "last_name": "Zopf",
     "role": "Other",
     "court": "Oakland",
-    "county": "Oakland",
+    "county": null,
     "court_or_county": "Oakland",
-    "state": "MI",
+    "state": "Michigan",
     "state_abbr": "MI",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
     "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "9cbb2e83-68de-4b26-a358-145b7162a53c",
+      "0021b2e5-89f7-4a5b-aef9-9754c33c1d99",
+      "c96e3e76-6a89-42f8-a20b-367f27ff00f8"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "katherine zopf|MI"
   },
   "photo": {
-    "path": null,
-    "exists": false,
+    "path": "michigan/katherine_l_zopf/image_1080.png",
+    "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
@@ -34,43 +38,53 @@
     "_source_table": "movement_stats_by_state",
     "_match_value": "MI",
     "state_family_count": 176,
-    "median_financial_loss": 97500,
-    "median_burden_sample_size": 77,
+    "median_financial_loss": 95250,
+    "median_burden_sample_size": 78,
     "median_months_lost": 16,
     "pro_se_pct": 43.8,
     "pro_se_count": 77,
     "_pdf_state_family_count": 176,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5351,
+  "movement_total": 5364,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
-    "public_comments": [
+    "family_reports": [
       {
-        "comment_text": "From the 1st time my daughter disclosed CSA, she has lied to the court about the status of the CPS investigation. She took away my parenting time and I had to jump through multiple hoops over a year to get custody of my daughter back. A year later, my daughter disclosed again. This time her forensic interview resulted in CPS filing to terminate the parental rights of my daughter's father. The GAL lied to the court on March 24, 2021 saying that CPS had no filed to terminate parental rights. She claimed i was also being investigated. And she asked thst she be able to do her own investigation. The Judge turned her into an L-GAL. She then worked with the court-appointed child psychologist to create an affidavit claiming my daughter recanted. She had the psychologist send that to the prosecutor, who then declined to press charges due to conflicting evidence. She admitted this in the recorded in July 2021.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Oakland"
+        "body": "The Family Court has failed my family countless times...this traumatic experience has pained us all. I was forced to abandon my child and my motherhood stolen, my son lost his childhood to satisfy others and all of this happened, with no basis at all.",
+        "state": "MI",
+        "county": "Wayne County",
+        "row_id": "fbad0a61-b2b2-47f6-8aee-8841bd5fa007"
       },
+      {
+        "body": "The litigation abuse and trauma from the last 5 years has resulted in me developing an autoimmune disorder. When the Defendant filed a motion to compel discovery on my daughter's 10th birthday, it suffered a TIA while responding to their motion. I have also lost jobs because of them.",
+        "state": "MI",
+        "county": "Oakland",
+        "row_id": "c05385c6-a368-4d15-8aea-6c3e5476df65"
+      }
+    ],
+    "public_comments": [
       {
         "comment_text": "She falsified court documents stating that my home was not safe. She testified that I told her this and I did not. She also sent my 5 year old child to be tested for ADHD without including his past medical history and encouraging me to administer 15 mg of Adderrall to my at the time 5 year old child who did not display any behaviors/and or symptoms of ADHD. She over charged for basically no service. She also failed to speak with my family and get the proper information for the case. She suggested that my child should not stay overnight at my home, and never visited my home. She suggested the administering of medicine by Zoom everyday with the father to monitor. Even though I gave my son the medicine against my own will and judgement she accused me of not giving it. It was recoreded daily and sent to my attorney. This affected my custody.",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Oakland"
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "From the 1st time my daughter disclosed CSA, she has lied to the court about the status of the CPS investigation. She took away my parenting time and I had to jump through multiple hoops over a year to get custody of my daughter back. A year later, my daughter disclosed again. This time her forensic interview resulted in CPS filing to terminate the parental rights of my daughter's father. The GAL lied to the court on March 24, 2021 saying that CPS had no filed to terminate parental rights. She claimed i was also being investigated. And she asked thst she be able to do her own investigation. The Judge turned her into an L-GAL. She then worked with the court-appointed child psychologist to create an affidavit claiming my daughter recanted. She had the psychologist send that to the prosecutor, who then declined to press charges due to conflicting evidence. She admitted this in the recorded in July 2021.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/katherine_l_zopf",
   "unresolved": [
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
+    "pdf_public_actor: helper missing at /Users/meghannmiller/Code/court-actor-posts/scripts/pdf/public_actor_for_share.py"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
-    "footer": "Family-reported submissions.",
+    "footer": "Family-reported submissions · not court findings.",
     "strike_through_reserved_for": [
       "isolated",
       "dismissed",
