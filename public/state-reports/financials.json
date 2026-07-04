@@ -1,10 +1,10 @@
 {
   "_comment": "Capped (<=5M/submission) total reported loss from the movement_stats_by_state view. Auto-refreshed by scripts/pdf/sync_state_financials.py in the hourly regen workflow. Consumed by lib/static-public-report-fallback.ts so the public report's loss card shows a real figure even when live Supabase is briefly unreachable.",
-  "generated_at": "2026-07-04T08:44:21.715284+00:00",
+  "generated_at": "2026-07-04T10:02:31.562052+00:00",
   "source": "movement_stats_by_state",
-  "total_financial_loss": 948424044,
+  "total_financial_loss": 948429044,
   "by_state": {
-    "CA": 112922939,
+    "CA": 112927939,
     "TX": 64207396,
     "FL": 54117151,
     "NC": 35911499,

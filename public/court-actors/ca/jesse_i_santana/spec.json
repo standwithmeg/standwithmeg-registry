@@ -27,28 +27,34 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 353,
-    "total_submissions": 439,
-    "avg_financial_loss": 288012.6,
+    "families_approved": 354,
+    "total_submissions": 441,
+    "avg_financial_loss": 286619.13,
     "avg_months_lost": 36.0,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CA",
-    "state_family_count": 439,
-    "median_financial_loss": 265100,
-    "median_burden_sample_size": 196,
+    "state_family_count": 441,
+    "median_financial_loss": 261000,
+    "median_burden_sample_size": 197,
     "median_months_lost": 20,
-    "pro_se_pct": 58.8,
-    "pro_se_count": 258,
-    "_pdf_state_family_count": 439,
+    "pro_se_pct": 58.7,
+    "pro_se_count": 259,
+    "_pdf_state_family_count": 441,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5303,
+  "movement_total": 5362,
   "supabase": {
     "report_count": 0,
     "actor_report_count": 0,
     "family_count": 7,
     "family_reports": [],
     "public_comments": [
+      {
+        "comment_text": "Ignored evidence of domestic violence and allowed my ex-husband to accuse me of parental alienation and a non existent criminal record - no evidence provided. Covered up my ex-husbands criminal history, Brady listed cop - fired. Performed an in-camera interview with my 12 year old son who reported to him the abuse. Judge Santana didn’t believe him, had him hauls out of the courtroom by 3 deputies screaming and begging not to make him go. Had but been with him for over 4 1/2 years. When he returned the following Monday, 7 CPS reports were filed, evaluated out, stating it was being handled by family court. Then allowed physical and legal custody to be given to my and my child’s abuser taking away my due process and placing hard-stop dates where evidence of abuse could not be submitted. This is still continuing. I am still forced to be on supervised visits at my ex’s convenience. Unsubstantiated accusations are being made against me. My son testified again and his testimony to come home was given no weight at all.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Sutter County"
+      },
       {
         "comment_text": "Has used clear breach of proper ethics to serve default judgments, does not communicate to pro per or pro se and frequently abuses \"sharp tactics\" and dishonest practices during custody and divorce hearings. Due process does not exist here. Evidence didnt exist for DVROs and no authentic evidence was used. Heavily linked to other criminal organizations. Wife charged for forging documents on a felony level at which docs were used to gain DVRO and custody of children. Santana allows women to bankrupt men and takes children from the healthy parent. Constantly siding with the women and disregards men’s testimony and facts of evidence. Allows false evidence of texts and false allegations in and using as evidence against other party.",
         "author": "Anonymous parent",
@@ -75,12 +81,6 @@
       },
       {
         "comment_text": "Lack of due process, embroiled, abuse of authority. Forced victims into contact with their abuser. Yelled in court.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Sutter County"
-      },
-      {
-        "comment_text": "Ignored evidence, allowed physical and legal custody to be given to my and child’s abuser",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Sutter County"

@@ -32,22 +32,22 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 72,
+    "families_approved": 73,
     "total_submissions": 92,
-    "avg_financial_loss": 133050.55,
-    "avg_months_lost": 40.7,
+    "avg_financial_loss": 132885.49,
+    "avg_months_lost": 40.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "IA",
     "state_family_count": 92,
     "median_financial_loss": 180000,
     "median_burden_sample_size": 25,
     "median_months_lost": 23,
-    "pro_se_pct": 53.3,
-    "pro_se_count": 49,
+    "pro_se_pct": 52.2,
+    "pro_se_count": 48,
     "_pdf_state_family_count": 92,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5308,
+  "movement_total": 5362,
   "supabase": {
     "report_count": 0,
     "actor_report_count": 0,

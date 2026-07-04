@@ -35,22 +35,22 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 179,
-    "total_submissions": 245,
-    "avg_financial_loss": 118756.41,
+    "families_approved": 180,
+    "total_submissions": 246,
+    "avg_financial_loss": 118463.78,
     "avg_months_lost": 30.0,
     "_source_table": "movement_stats_by_state",
     "_match_value": "KS",
-    "state_family_count": 245,
-    "median_financial_loss": 96100,
-    "median_burden_sample_size": 129,
+    "state_family_count": 246,
+    "median_financial_loss": 94050,
+    "median_burden_sample_size": 130,
     "median_months_lost": 16,
-    "pro_se_pct": 50.2,
+    "pro_se_pct": 50.0,
     "pro_se_count": 123,
-    "_pdf_state_family_count": 245,
+    "_pdf_state_family_count": 246,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5334,
+  "movement_total": 5362,
   "supabase": {
     "report_count": 0,
     "actor_report_count": 0,
@@ -94,7 +94,7 @@
         "court_or_county": "Johnson"
       },
       {
-        "comment_text": "This is testing to see if I can connect",
+        "comment_text": "No Due Process and never looked at the evidence",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Johnson"

@@ -1,0 +1,83 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "alison_hibler",
+    "display_name": "Allison Maxwell Hibler",
+    "title": "",
+    "first_name": "Allison Maxwell",
+    "last_name": "Hibler",
+    "role": "GAL / Child Representative",
+    "court": "Jackson/Shawnee",
+    "county": "Jackson/Shawnee",
+    "court_or_county": "Jackson/Shawnee",
+    "state": "KS",
+    "state_abbr": "KS",
+    "mention_count": 0,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": "alison hibler|KS"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 180,
+    "total_submissions": 246,
+    "avg_financial_loss": 118463.78,
+    "avg_months_lost": 30.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "KS",
+    "state_family_count": 246,
+    "median_financial_loss": 94050,
+    "median_burden_sample_size": 130,
+    "median_months_lost": 16,
+    "pro_se_pct": 50.0,
+    "pro_se_count": 123,
+    "_pdf_state_family_count": 246,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5362,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 2,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Lacks initiative to end delay tactics. Lacks effective explanatory communication. Truly believe she means well in my case, however is overly busy resulting in borderline neglect of active cases until necessary to respond just prior to approaching court dates. AKA Allison Maxwell Hibler, appears in log under both names needing merged.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Douglas"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/alison_hibler",
+  "unresolved": [
+    "public_family_count_api: no match for display_name='Alison Hibler' bucket='alison hibler|KS' slug='alison_hibler' in KS (28 actors)",
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ks/alison_hibler/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

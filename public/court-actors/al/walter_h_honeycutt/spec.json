@@ -8,94 +8,75 @@
     "last_name": "Honeycutt",
     "role": "Judge",
     "court": "Mobile",
-    "county": null,
+    "county": "Mobile",
     "court_or_county": "Mobile",
     "state": "Alabama",
     "state_abbr": "AL",
-    "mention_count": 3,
+    "mention_count": 0,
     "family_count": 3,
     "public_family_count": 3,
     "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
-    "actor_report_count": 3,
-    "supabase_row_ids": [
-      "02698b15-6536-4010-aae7-0f1ef4a1f5ab",
-      "6409cc27-a08f-4e7b-87bf-ef519b445f94",
-      "5459424c-4703-4b7f-a256-25b3e81d412e"
-    ],
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
     "actor_row_id": null,
     "actor_bucket_key": "walter honeycut|AL"
   },
   "photo": {
-    "path": "alabama/walter_h_honeycutt/image_1080.png",
+    "path": "public/court-actors/al/walter_h_honeycutt/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 104,
-    "total_submissions": 129,
-    "avg_financial_loss": 90605.36,
-    "avg_months_lost": 35.9,
+    "families_approved": 105,
+    "total_submissions": 130,
+    "avg_financial_loss": 89873.69,
+    "avg_months_lost": 35.6,
     "_source_table": "movement_stats_by_state",
     "_match_value": "AL",
-    "state_family_count": 129,
+    "state_family_count": 130,
     "median_financial_loss": 81316,
     "median_burden_sample_size": 60,
     "median_months_lost": 13,
-    "pro_se_pct": 43.4,
+    "pro_se_pct": 43.1,
     "pro_se_count": 56,
-    "_pdf_state_family_count": 129,
+    "_pdf_state_family_count": 130,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5335,
+  "movement_total": 5362,
   "supabase": {
-    "report_count": 3,
-    "actor_report_count": 3,
+    "report_count": 0,
+    "actor_report_count": 0,
     "family_count": 3,
-    "family_reports": [
-      {
-        "body": "I will never forget the look of devastation and tears running down on my children’s face when I walked out of the courtroom fighting back my own tears and had to tell them they were not able to go home with me that day.",
-        "state": "AL",
-        "county": "Mobile",
-        "row_id": "8850732f-eba4-4003-af2f-bf1a13b8a17c"
-      },
-      {
-        "body": "It has cost me a lot of money and a lot of loss. It caused me 2 wrecks and health issues",
-        "state": "AL",
-        "county": "Mobile",
-        "row_id": "7aea24dc-fa5c-4fee-9ea1-3de8437bcdea"
-      },
-      {
-        "body": "Allowed an abusive person to have custody of a vulnerable child and use the courts to continue to abuse me. My child has now been exposed to abuse and been the victim of abuse.",
-        "state": "AL",
-        "county": "Mobile",
-        "row_id": "32856f64-7e2b-4ae8-aff1-687dbe4374be"
-      }
-    ],
+    "family_reports": [],
     "public_comments": [
-      {
-        "comment_text": "Ignored evidence, victim’s testimony, and impeachments (proven multiple times with evidence That the father lied on the stand in the hearing).",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
       {
         "comment_text": "Ignored evidence of abuse. Ignored a filed protection order while granting my ex husbands emergency orders for pickup and to have my custody stripped based on hersay and false allegations",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Mobile"
+      },
+      {
+        "comment_text": "Ignored evidence, victim’s testimony, and impeachments (proven multiple times with evidence That the father lied on the stand in the hearing).",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Mobile"
       },
       {
         "comment_text": "Only cared that the child was born in Alabama and how much the father made for support",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/walter_h_honeycutt",
   "unresolved": [
-    "pdf_public_actor: helper missing at /Users/meghannmiller/Code/court-actor-posts/scripts/pdf/public_actor_for_share.py"
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
-    "footer": "Family-reported submissions · not court findings.",
+    "footer": "Family-reported submissions.",
     "strike_through_reserved_for": [
       "isolated",
       "dismissed",
