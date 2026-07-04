@@ -8,22 +8,26 @@
     "last_name": "Witt",
     "role": "Judge",
     "court": "Putnam County",
-    "county": "Putnam County",
+    "county": null,
     "court_or_county": "Putnam County",
-    "state": "WV",
+    "state": "West Virginia",
     "state_abbr": "WV",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
     "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "44ac417a-2240-45db-9ab2-6c1205301423",
+      "12cbc36d-a874-4d05-8f5f-39fcf220d1bb",
+      "9a2ab0fe-d3a2-42ae-83a1-6392e6d3cfca"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "richard witt|WV"
   },
   "photo": {
-    "path": null,
-    "exists": false,
+    "path": "west_virginia/judge_richard_witt/image_1080.png",
+    "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
@@ -42,41 +46,56 @@
     "_pdf_state_family_count": 57,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5361,
+  "movement_total": 5364,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "This system has ripped apart my family, cost me my business, sanity and ruined my boys childhoods.",
+        "state": "WV",
+        "county": "Putnam",
+        "row_id": "d870f383-31fc-4542-b0e2-d616a273f932"
+      },
+      {
+        "body": "Family court proved that abuse can be rewarded and those who never abuse their kids can be punished. As soon as my children were ordered into the full custody of their father, opposing counsel sent an email offering to return the children if I obtained a “do not prosecute” to spare the father from the fallout of his crimes. Unable to get that, the smear campaign continued and I am still without my children. The theory of parental alienation is being misused and weaponized in true, substantiated abuse cases. I lost complete faith in our legal system.",
+        "state": "WV",
+        "county": "Putnam",
+        "row_id": "bd204428-c254-4e8a-b295-e6b3e3dbd7a3"
+      },
+      {
+        "body": "The system has destroyed relationships, legacies, holidays, milestones, but it has cost me a beautiful relationship with my sons, one that I had with my father, and he had with his father, and it will affect both of these young men for the rest of their lifetime. I’m not a perfect man, and I have made mistakes and I have reacted to some situations that I have been put in in not the best way, but I have never jeopardize my son safety I have always thought about the best interest of my son’s future, their financial longevity, their success in business and in relationships and family and growth. I’ve went from a hero to a zero on the sidelines cheering, my son, being a part of every minute to being ripped away like a villain, no arrest, The physical and Dangerman just false allegations, small town good old boy, clubs, and manipulation by a system. That is the biggest Ponzi scheme money making garbage I’ve ever had the disgust to experience in my 38 years on this earth. This place is where dreams go to die!!",
+        "state": "WV",
+        "county": "Putnam County",
+        "row_id": "03d6fd34-053e-4a8b-a161-1bbd557947d1"
+      }
+    ],
     "public_comments": [
+      {
+        "comment_text": "Told me if I spoke he would make sure I never seen my children again",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
       {
         "comment_text": "Said that if I had an attorney, I probably would not have lost my kids.",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": ""
+        "source": "court_actors.notes"
       },
       {
         "comment_text": "Friends with my exes father, along with ruling against me for 12 years.",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Putnam County"
-      },
-      {
-        "comment_text": "Told me if I spoke he would make sure I never seen my children again",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Putnam County"
+        "source": "court_actors.notes"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/judge_richard_witt",
   "unresolved": [
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
+    "pdf_public_actor: helper missing at /Users/meghannmiller/Code/court-actor-posts/scripts/pdf/public_actor_for_share.py"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
-    "footer": "Family-reported submissions.",
+    "footer": "Family-reported submissions · not court findings.",
     "strike_through_reserved_for": [
       "isolated",
       "dismissed",
