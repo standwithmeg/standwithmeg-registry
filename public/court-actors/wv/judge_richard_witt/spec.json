@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "judge_richard_witt",
+    "display_name": "Judge Richard Witt",
+    "title": "Judge",
+    "first_name": "Richard",
+    "last_name": "Witt",
+    "role": "Judge",
+    "court": "Putnam County",
+    "county": "Putnam County",
+    "court_or_county": "Putnam County",
+    "state": "WV",
+    "state_abbr": "WV",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": "richard witt|WV"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 50,
+    "total_submissions": 57,
+    "avg_financial_loss": 108124.94,
+    "avg_months_lost": 38.5,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "WV",
+    "state_family_count": 57,
+    "median_financial_loss": 150499,
+    "median_burden_sample_size": 14,
+    "median_months_lost": 25,
+    "pro_se_pct": 49.1,
+    "pro_se_count": 28,
+    "_pdf_state_family_count": 57,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5361,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Said that if I had an attorney, I probably would not have lost my kids.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
+      },
+      {
+        "comment_text": "Friends with my exes father, along with ruling against me for 12 years.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Putnam County"
+      },
+      {
+        "comment_text": "Told me if I spoke he would make sure I never seen my children again",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Putnam County"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/judge_richard_witt",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/wv/judge_richard_witt/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}
