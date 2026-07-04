@@ -6,7 +6,7 @@
     "title": "",
     "first_name": "Katherine L.",
     "last_name": "Zopf",
-    "role": "GAL / Child Representative",
+    "role": "GAL / Child Representative / Other / Parenting Coordinator",
     "court": "Oakland",
     "county": "Oakland",
     "court_or_county": "Oakland",
@@ -19,7 +19,15 @@
     "actor_report_count": 0,
     "supabase_row_ids": [],
     "actor_row_id": null,
-    "actor_bucket_key": "katherine zopf|MI"
+    "actor_bucket_key": "katherine zopf|MI",
+    "_overrides_applied": [
+      "county",
+      "court_or_county",
+      "display_name",
+      "first_name",
+      "last_name",
+      "role"
+    ]
   },
   "photo": {
     "path": "public/court-actors/mi/katherine_l_zopf/image_1080.png",
