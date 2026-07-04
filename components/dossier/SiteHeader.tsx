@@ -3,13 +3,13 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+// Admin is deliberately OFF the public nav (launch rule — direct link only).
 const LINKS = [
   { href: "/report", label: "The Report" },
   { href: "/actors", label: "Court Actors" },
   { href: "/connect", label: "Circles" },
   { href: "/sponsor", label: "Sponsor" },
   { href: "/survey", label: "Share your story" },
-  { href: "/admin", label: "Admin" },
 ];
 
 export function SiteHeader() {
@@ -29,10 +29,10 @@ export function SiteHeader() {
           ))}
         </nav>
         <div className="flex items-center gap-2.5">
-          <a href="#" className="action-pill" style={{ padding: "0.55rem 1.15rem", fontSize: "0.8rem" }}>
+          <a href="https://standwithmeg.com/donate" className="action-pill" style={{ padding: "0.55rem 1.15rem", fontSize: "0.8rem" }}>
             Donate
           </a>
-          <a href="#" className="btn-quiet hidden sm:inline-flex" style={{ padding: "0.5rem 1rem", fontSize: "0.72rem" }}>
+          <a href="https://standwithmeg.com/donate" className="btn-quiet hidden sm:inline-flex" style={{ padding: "0.5rem 1rem", fontSize: "0.72rem" }}>
             Give monthly
           </a>
         </div>

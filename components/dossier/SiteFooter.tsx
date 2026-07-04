@@ -43,7 +43,7 @@ export function SiteFooter() {
             </nav>
             <nav aria-label="Footer actions" className="flex flex-col gap-2 text-sm">
               <Link href="/survey" className="nav-link">Share your story</Link>
-              <Link href="/report/KS" className="nav-link">State reports</Link>
+              <Link href="/report" className="nav-link">State reports</Link>
               <Link href="/sponsor" className="nav-link">Become a sponsor</Link>
               <Link href="/partners" className="nav-link">State partners</Link>
               <a href="https://www.shoutout.fans/standwithmeg" target="_blank" rel="noreferrer" className="nav-link">
@@ -56,9 +56,6 @@ export function SiteFooter() {
         <div className="flex flex-wrap items-center justify-between gap-4">
           <p className="disclaimer-strip">@standwithmeg · standwithmeg.com</p>
           <p className="disclaimer-strip">Family-reported submissions.</p>
-          <p className="disclaimer-strip" style={{ color: "var(--alert)" }}>
-            Preview — sample data, not live numbers
-          </p>
         </div>
       </div>
     </footer>

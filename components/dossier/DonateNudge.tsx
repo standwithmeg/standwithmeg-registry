@@ -45,10 +45,10 @@ export function DonateNudge({ seed = 0, compact = false, withEmail = false }: { 
         {withEmail && joined && <span className="badge badge--ok" style={{ padding: "0.6rem 1rem" }}>You&rsquo;re in ✓ (mock)</span>}
         {!withEmail && (
           <>
-            <a href="#" className="action-pill" style={compact ? { padding: "0.65rem 1.3rem", fontSize: "0.85rem" } : {}}>
+            <a href="https://standwithmeg.com/donate" className="action-pill" style={compact ? { padding: "0.65rem 1.3rem", fontSize: "0.85rem" } : {}}>
               Donate
             </a>
-            <a href="#" className="btn-quiet">Give monthly</a>
+            <a href="https://standwithmeg.com/donate" className="btn-quiet">Give monthly</a>
           </>
         )}
       </div>
