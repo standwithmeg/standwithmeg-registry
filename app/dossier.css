@@ -1,0 +1,954 @@
+
+/* ==========================================================================
+   STAND WITH MEG — PREVIEW DESIGN SYSTEM
+   Two complete visual directions driven by [data-theme] on <html>:
+     "dossier" — dark cinematic investigative (case file at night)
+     "record"  — light editorial newsroom (public archive in daylight)
+   ========================================================================== */
+
+:root {
+  /* Brand constants (shared) */
+  --navy: #0b1a2d;
+  --navy-deep: #050a14;
+  --gold: #c9a227;
+  --gold-soft: #e0b93c;
+  --gold-dark: #8a6d14;
+  --crimson: #b91c1c;
+  --flag-red: #9f1f2c;
+  --cream: #f2ead6;
+  --paper: #faf6ec;
+  --white: #f5f5f5;
+
+  --action-red: #b91c2e;
+  --action-red-hot: #d92639;
+  --sponsor-green: #059669; /* locked — matches the live site's sponsor CTA, do not change */
+  --sponsor-green-hover: #047857;
+
+  --space-section: clamp(2.75rem, 2rem + 2.5vw, 4.5rem);
+  --text-hero: clamp(2.8rem, 1.2rem + 6.5vw, 7rem);
+  --text-display: clamp(2rem, 1.2rem + 3vw, 3.6rem);
+  --duration: 300ms;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ------------------------- THE DOSSIER (dark) ------------------------- */
+[data-theme="dossier"] {
+  --bg: radial-gradient(120% 90% at 50% 0%, #10233c 0%, #0b1a2d 42%, #030710 100%);
+  --bg-solid: #081527;
+  --panel: rgba(245, 245, 245, 0.04);
+  --panel-raised: rgba(245, 245, 245, 0.07);
+  --ink: #f5f5f5;
+  --ink-70: rgba(245, 245, 245, 0.7);
+  --ink-45: rgba(245, 245, 245, 0.45);
+  --ink-30: rgba(245, 245, 245, 0.3);
+  --hairline: rgba(255, 255, 255, 0.1);
+  --hairline-accent: rgba(217, 38, 57, 0.38);
+  --hairline-gold: rgba(201, 162, 39, 0.3);
+  --accent: var(--gold);
+  --accent-contrast: #0b1a2d;
+  --alert: #ef6363;
+  --font-display: var(--font-anton);
+  --font-headline: var(--font-oswald);
+  --pill-bg: var(--cream);
+  --pill-ink: var(--navy);
+  --lockup-shadow: rgba(0, 0, 0, 0.55);
+  --card-shadow: 0 20px 50px -24px rgba(0, 0, 0, 0.8);
+}
+
+/* ------------------------- THE RECORD (light) ------------------------- */
+[data-theme="record"] {
+  --bg: #f2ead6;
+  --bg-solid: #f2ead6;
+  --panel: #faf6ec;
+  --panel-raised: #ffffff;
+  --ink: #10243f;
+  --ink-70: rgba(16, 36, 63, 0.74);
+  --ink-45: rgba(16, 36, 63, 0.5);
+  --ink-30: rgba(16, 36, 63, 0.34);
+  --hairline: rgba(16, 36, 63, 0.16);
+  --hairline-accent: rgba(138, 109, 20, 0.45);
+  --accent: #8a6d14;
+  --accent-contrast: #faf6ec;
+  --alert: var(--crimson);
+  --font-display: var(--font-fraunces);
+  --font-headline: var(--font-oswald);
+  --pill-bg: #10243f;
+  --pill-ink: #f2ead6;
+  --lockup-shadow: rgba(201, 162, 39, 0.45);
+  --card-shadow: 0 14px 34px -22px rgba(16, 36, 63, 0.35);
+}
+
+/* ------------------------------ Base ---------------------------------- */
+html {
+  scroll-behavior: smooth;
+}
+/* Jump-link targets land BELOW the sticky header, never under it */
+[id] {
+  scroll-margin-top: 6rem;
+}
+body {
+  background: var(--bg);
+  background-attachment: fixed;
+  color: var(--ink);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+::selection {
+  background: var(--gold);
+  color: var(--navy);
+}
+a {
+  color: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* --------------------------- Type roles -------------------------------- */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--action-red-hot);
+}
+.eyebrow--gold {
+  color: var(--gold-soft);
+}
+.eyebrow--muted {
+  color: var(--ink-45);
+}
+.display {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  line-height: 0.94;
+  letter-spacing: -0.015em;
+}
+[data-theme="record"] .display {
+  text-transform: none;
+  letter-spacing: -0.03em;
+  line-height: 1.02;
+  font-weight: 600;
+}
+.headline {
+  font-family: var(--font-headline);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.serif-note {
+  font-family: var(--font-fraunces);
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* One gold word per headline */
+.accent-word {
+  color: var(--gold);
+}
+/* Hand-drawn red underline — the live site's hero signature (Dossier) */
+[data-theme="dossier"] .accent-underline {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 14' preserveAspectRatio='none'%3E%3Cpath d='M4 9 C 45 4, 90 12, 130 7 S 200 5, 216 8' fill='none' stroke='%23d92639' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  /* squiggle sits inside the line box (uppercase display type has no
+     descenders) so it can never paint over the text below the heading */
+  background-position: 0 100%;
+  background-size: 100% 0.11em;
+  padding-bottom: 0;
+}
+[data-theme="record"] .accent-word {
+  color: inherit;
+  background: linear-gradient(180deg, transparent 52%, rgba(201, 162, 39, 0.55) 52%, rgba(201, 162, 39, 0.55) 94%, transparent 94%);
+  padding: 0 0.06em;
+}
+
+/* Signature name lockup: last name in gold with offset shadow */
+.lockup-first {
+  font-family: var(--font-anton);
+  text-transform: uppercase;
+  line-height: 0.9;
+  color: var(--ink);
+}
+.lockup-last {
+  font-family: var(--font-anton);
+  text-transform: uppercase;
+  line-height: 0.9;
+  color: var(--gold);
+  text-shadow: 0.045em 0.05em 0 var(--lockup-shadow);
+}
+/* Stacked lockups breathe — names must never look smashed together */
+.lockup-first + .lockup-last,
+p.lockup-first + p.lockup-last {
+  margin-top: 0.14em;
+  display: block;
+}
+[data-theme="record"] .lockup-last {
+  color: #a07f14;
+}
+
+/* --------------------------- Structure -------------------------------- */
+.wrap {
+  width: min(1120px, 100% - 2.5rem);
+  margin-inline: auto;
+}
+.section {
+  padding-block: var(--space-section);
+}
+
+.hairline {
+  border: 0;
+  border-top: 1px solid var(--hairline);
+}
+.hairline--accent {
+  border-top-color: var(--hairline-accent);
+}
+/* Broadsheet double rule — The Record's section signature, in newspaper red */
+.rule-double {
+  border: 0;
+  border-top: 3px solid var(--flag-red);
+  position: relative;
+}
+.rule-double::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 0;
+  right: 0;
+  border-top: 1px solid var(--flag-red);
+}
+[data-theme="dossier"] .rule-double {
+  border-top: 1px solid color-mix(in srgb, var(--action-red) 45%, transparent);
+}
+[data-theme="dossier"] .rule-double::after {
+  display: none;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--hairline);
+  box-shadow: var(--card-shadow);
+}
+[data-theme="record"] .panel {
+  border-radius: 2px;
+}
+.panel--raised {
+  background: var(--panel-raised);
+}
+
+/* ----------------------------- CTA pill -------------------------------- */
+.gold-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  background: var(--pill-bg);
+  color: var(--pill-ink);
+  font-family: var(--font-oswald);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.95rem;
+  padding: 0.85rem 1.6rem;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: transform var(--duration) var(--ease), box-shadow var(--duration) var(--ease);
+}
+.gold-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px -14px rgba(201, 162, 39, 0.55);
+}
+.gold-pill:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+.pill-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--gold-soft);
+  box-shadow: 0 0 8px rgba(224, 185, 60, 0.8);
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.8); }
+}
+
+/* Primary action — RED. Donate / share your story / report experience. */
+.action-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  background: var(--action-red);
+  color: #fff;
+  font-family: var(--font-oswald);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.95rem;
+  padding: 0.85rem 1.6rem;
+  border-radius: 999px;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 16px 34px -16px color-mix(in srgb, var(--action-red) 70%, transparent);
+  transition: transform var(--duration) var(--ease), background var(--duration) var(--ease), box-shadow var(--duration) var(--ease);
+}
+.action-pill:hover {
+  background: var(--action-red-hot);
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px -16px color-mix(in srgb, var(--action-red) 85%, transparent);
+}
+.action-pill:focus-visible {
+  outline: 2px solid var(--action-red-hot);
+  outline-offset: 3px;
+}
+
+/* Sponsor CTA — GREEN, locked to the live site's #059669. Sponsor use only. */
+.sponsor-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  background: var(--sponsor-green);
+  color: #fff;
+  font-family: var(--font-oswald);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.95rem;
+  padding: 0.85rem 1.6rem;
+  border-radius: 999px;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 18px 38px -18px rgb(5 150 105 / 0.55);
+  transition: transform var(--duration) var(--ease), background var(--duration) var(--ease);
+}
+.sponsor-pill:hover {
+  background: var(--sponsor-green-hover);
+  transform: translateY(-1px);
+}
+.sponsor-pill:focus-visible {
+  outline: 2px solid var(--sponsor-green);
+  outline-offset: 3px;
+}
+
+/* Cream pill — the "see what it builds first" secondary from Meg's concept. */
+.cream-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  background: var(--cream);
+  color: #0b1a2d;
+  font-family: var(--font-oswald);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.95rem;
+  padding: 0.85rem 1.6rem;
+  border-radius: 999px;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform var(--duration) var(--ease), box-shadow var(--duration) var(--ease);
+}
+.cream-pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px -14px rgba(242, 234, 214, 0.4);
+}
+.cream-pill:focus-visible {
+  outline: 2px solid var(--cream);
+  outline-offset: 3px;
+}
+
+/* Gold ring icon holder — scales-of-justice medallions, circle-arrow CTAs. */
+.icon-ring {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 1.5px solid var(--gold);
+  color: var(--gold);
+  flex-shrink: 0;
+  text-decoration: none;
+  transition: transform var(--duration) var(--ease), box-shadow var(--duration) var(--ease);
+}
+a.icon-ring:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 24px rgba(201, 162, 39, 0.35);
+}
+
+/* Round red member-handle chip (H1 / D2) from the Circles preview. */
+.avatar-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--action-red);
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+}
+
+/* Secondary/tertiary — must read clickable, never disabled/ghosted. */
+.btn-quiet {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-oswald);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.82rem;
+  color: var(--ink);
+  border: 1.5px solid color-mix(in srgb, var(--ink) 38%, transparent);
+  padding: 0.6rem 1.1rem;
+  text-decoration: none;
+  transition: border-color var(--duration) var(--ease), color var(--duration) var(--ease), background var(--duration) var(--ease), transform var(--duration) var(--ease);
+  background: var(--panel-raised);
+  cursor: pointer;
+}
+.btn-quiet:hover {
+  border-color: var(--gold);
+  color: var(--ink);
+  transform: translateY(-1px);
+}
+.btn-quiet:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+.btn-quiet[data-active="true"] {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+[data-theme="record"] .btn-quiet[data-active="true"] {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* --------------------------- Stat blocks ------------------------------- */
+.stat-number {
+  font-family: var(--font-anton);
+  font-size: clamp(2.6rem, 1.6rem + 3.4vw, 4.6rem);
+  line-height: 0.95;
+  color: var(--gold);
+}
+[data-theme="record"] .stat-number {
+  color: var(--ink);
+}
+.stat-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--ink-45);
+  margin-top: 0.55rem;
+}
+
+/* --------------------------- Ledger table ------------------------------ */
+.ledger {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+.ledger th {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-45);
+  text-align: left;
+  font-weight: 500;
+  padding: 0.7rem 0.9rem;
+  border-bottom: 1px solid var(--hairline-accent);
+}
+.ledger td {
+  padding: 0.85rem 0.9rem;
+  border-bottom: 1px solid var(--hairline);
+  vertical-align: middle;
+}
+.ledger tbody tr {
+  position: relative;
+  transition: background var(--duration) var(--ease);
+}
+.ledger tbody tr:hover {
+  background: var(--panel);
+  box-shadow: inset 3px 0 0 var(--action-red);
+}
+
+/* --------------------------- Quote cards ------------------------------- */
+.pull-quote {
+  font-family: var(--font-fraunces);
+  font-style: italic;
+  font-size: 1.15rem;
+  line-height: 1.55;
+  color: var(--ink-70);
+  border-left: 3px solid var(--action-red);
+  padding-left: 1.2rem;
+}
+
+/* --------------------------- Doc slips (downloads) --------------------- */
+.doc-slip {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  padding: 1.1rem 1.3rem;
+  background: var(--panel-raised);
+  border: 1px solid var(--hairline);
+  text-decoration: none;
+  transition: transform var(--duration) var(--ease), border-color var(--duration) var(--ease), box-shadow var(--duration) var(--ease);
+}
+.doc-slip:hover {
+  transform: translateY(-3px);
+  border-color: var(--hairline-accent);
+  box-shadow: var(--card-shadow);
+}
+.doc-stamp {
+  font-family: var(--font-anton);
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--accent-contrast);
+  background: var(--accent);
+  padding: 0.55rem 0.6rem;
+  min-width: 3.1rem;
+  text-align: center;
+}
+[data-theme="record"] .doc-slip {
+  border-left: 4px solid var(--ink);
+}
+
+/* --------------------------- Disclaimer strip -------------------------- */
+.disclaimer-strip {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-30);
+}
+
+/* --------------------------- Nav / header ------------------------------ */
+.site-header {
+  border-bottom: 1px solid var(--hairline);
+  background: color-mix(in srgb, var(--bg-solid) 88%, transparent);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+.nav-link {
+  font-family: var(--font-oswald);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+  color: var(--ink-70);
+  text-decoration: none;
+  padding: 0.4rem 0;
+  border-bottom: 2px solid transparent;
+  transition: color var(--duration) var(--ease), border-color var(--duration) var(--ease);
+}
+.nav-link:hover,
+.nav-link[data-active="true"] {
+  color: var(--ink);
+  border-bottom-color: var(--action-red);
+}
+
+/* --------------------------- Admin bits -------------------------------- */
+.badge {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 0.28rem 0.6rem;
+  border: 1px solid var(--hairline);
+  color: var(--ink-70);
+  white-space: nowrap;
+}
+.badge--new {
+  background: var(--action-red);
+  color: #fff;
+  border-color: var(--action-red);
+  font-weight: 500;
+}
+.badge--gold { color: var(--gold); border-color: var(--hairline-accent); }
+[data-theme="record"] .badge--gold { color: var(--accent); }
+.badge--alert { color: var(--alert); border-color: color-mix(in srgb, var(--alert) 40%, transparent); }
+.badge--ok { color: #4ade80; border-color: rgba(74, 222, 128, 0.35); }
+[data-theme="record"] .badge--ok { color: #15803d; border-color: rgba(21, 128, 61, 0.4); }
+
+/* Actor placeholder portrait (never real photos in preview) */
+.portrait-ph {
+  background:
+    radial-gradient(circle at 50% 32%, color-mix(in srgb, var(--gold) 26%, transparent) 0 18%, transparent 19%),
+    radial-gradient(circle at 50% 78%, color-mix(in srgb, var(--gold) 20%, transparent) 0 30%, transparent 31%),
+    var(--panel);
+  border: 1px dashed var(--hairline-accent);
+}
+
+/* Motion: fade-and-rise on scroll (dossier only; record stays print-calm) */
+[data-theme="dossier"] .rise {
+  animation: rise 0.7s var(--ease) both;
+}
+@keyframes rise {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Record: newspaper kicker — eyebrows go flag-red for warmth + urgency */
+[data-theme="record"] .eyebrow {
+  color: var(--flag-red);
+}
+[data-theme="record"] .eyebrow--muted {
+  color: var(--ink-45);
+}
+/* Record: warmer raised sheets */
+[data-theme="record"] {
+  --panel-raised: #fffdf6;
+}
+/* Dossier: crimson-edged stat emphasis, like the live countdown boxes */
+[data-theme="dossier"] .stat-crimson {
+  border: 1px solid color-mix(in srgb, var(--action-red) 55%, transparent);
+  background: color-mix(in srgb, var(--action-red) 12%, transparent);
+  padding: 1.2rem 1.4rem;
+}
+[data-theme="record"] .stat-crimson {
+  border-left: 4px solid var(--flag-red);
+  background: var(--panel-raised);
+  padding: 1.2rem 1.4rem;
+}
+
+/* --------------------------- Video walkthrough cards ------------------- */
+.video-card {
+  display: block;
+  text-decoration: none;
+  border: 1px solid var(--hairline);
+  background: var(--panel-raised);
+  transition: transform var(--duration) var(--ease), box-shadow var(--duration) var(--ease), border-color var(--duration) var(--ease);
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+  width: 100%;
+}
+.video-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--card-shadow);
+  border-color: var(--hairline-accent);
+}
+.video-thumb {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--navy-deep);
+}
+.video-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.video-badge {
+  position: absolute;
+  top: 0.8rem;
+  left: 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: rgba(5, 10, 20, 0.82);
+  color: var(--white);
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid rgba(245, 245, 245, 0.25);
+}
+.video-badge b {
+  color: var(--gold-soft);
+  font-weight: 500;
+}
+.video-play {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+}
+.video-play span {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--action-red) 92%, transparent);
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-size: 1.3rem;
+  padding-left: 4px;
+  box-shadow: 0 12px 30px -8px rgba(0, 0, 0, 0.6);
+  transition: transform var(--duration) var(--ease);
+}
+.video-card:hover .video-play span {
+  transform: scale(1.08);
+}
+.video-caption {
+  padding: 0.9rem 1.1rem;
+}
+
+/* --------------------------- Donate nudge ------------------------------ */
+.donate-nudge {
+  border: 1px solid var(--hairline);
+  border-left: 4px solid var(--action-red);
+  background: var(--panel-raised);
+  padding: 1.6rem 1.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.2rem;
+}
+[data-theme="dossier"] .donate-nudge {
+  background: color-mix(in srgb, var(--action-red) 8%, transparent);
+}
+
+/* --------------------------- Admin readability ------------------------- */
+/* The admin is Meg-only — crank contrast and color way past public-site
+   restraint so the important info jumps out. */
+.admin-ui {
+  --ink-70: rgba(245, 245, 245, 0.88);
+  --ink-45: rgba(245, 245, 245, 0.62);
+  --ink-30: rgba(245, 245, 245, 0.42);
+}
+.admin-ui .panel--raised {
+  background: rgba(245, 245, 245, 0.07);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+.admin-ui article h3 {
+  color: var(--gold-soft);
+  font-size: 1.08rem;
+}
+.admin-ui .headline {
+  color: var(--gold-soft);
+}
+.admin-ui h2.headline {
+  color: var(--ink);
+  font-size: 1.35rem;
+}
+.admin-ui .badge {
+  font-size: 0.68rem;
+}
+.hi-gold { color: var(--gold-soft); font-weight: 600; }
+.hi-red { color: var(--action-red-hot); font-weight: 600; }
+.hi-green { color: #4ade80; font-weight: 600; }
+/* Admin rail: horizontal scrolling chips on mobile (labels always visible),
+   full-width rows with truncation only on desktop's vertical rail */
+.admin-ui nav[aria-label="Admin workspaces"] .btn-quiet {
+  gap: 0.4rem;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+.admin-ui nav[aria-label="Admin workspaces"] .btn-quiet .badge {
+  flex-shrink: 0;
+}
+@media (min-width: 1024px) {
+  .admin-ui nav[aria-label="Admin workspaces"] .btn-quiet {
+    width: 100%;
+    min-width: 0;
+  }
+  .admin-ui nav[aria-label="Admin workspaces"] .btn-quiet > span:first-child {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 0;
+    flex: 1 1 auto;
+    text-align: left;
+  }
+}
+.hi-num {
+  font-family: var(--font-anton);
+  font-size: 1.25rem;
+  color: var(--gold);
+  margin-right: 0.35rem;
+}
+
+/* Gold hand-drawn squiggle — for step numbers and gold-accent headings */
+.accent-underline--gold {
+  display: inline-block;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 14' preserveAspectRatio='none'%3E%3Cpath d='M4 9 C 45 4, 90 12, 130 7 S 200 5, 216 8' fill='none' stroke='%23E0B93C' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 100% 0.14em;
+  padding-bottom: 0.08em;
+}
+
+/* Progress toward the 30-submission PDF unlock */
+.unlock-bar {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  white-space: nowrap;
+}
+.unlock-bar .track {
+  width: 74px;
+  height: 7px;
+  background: var(--panel-raised);
+  border: 1px solid var(--hairline);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.unlock-bar .fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--gold-dark), var(--gold));
+  border-radius: 999px;
+}
+.report-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: color-mix(in srgb, var(--gold) 16%, transparent);
+  border: 1px solid var(--hairline-gold);
+  color: var(--gold-soft);
+  font-family: var(--font-oswald);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  font-size: 0.78rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background var(--duration) var(--ease), transform var(--duration) var(--ease);
+}
+.report-chip:hover {
+  background: color-mix(in srgb, var(--gold) 30%, transparent);
+  transform: translateY(-1px);
+}
+
+/* ChatGPT-concept harvest: gold glow, star dividers, red short rules */
+.gold-glow {
+  background: radial-gradient(closest-side, rgba(201, 162, 39, 0.34), rgba(201, 162, 39, 0.1) 55%, transparent 78%);
+}
+.rule-red {
+  border: 0;
+  border-top: 3px solid var(--action-red);
+  width: 130px;
+  margin: 1.1rem 0 0;
+}
+.star-divider {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: var(--gold);
+}
+.star-divider::before,
+.star-divider::after {
+  content: "";
+  flex: 1;
+  border-top: 1px solid var(--hairline-gold);
+}
+.open-chip {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--action-red-hot);
+  border: 1px solid color-mix(in srgb, var(--action-red) 55%, transparent);
+  padding: 0.3rem 0.7rem;
+}
+.dotsep {
+  color: var(--action-red-hot);
+}
+.portrait-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid var(--hairline-gold);
+  background:
+    radial-gradient(circle at 50% 38%, rgba(10, 16, 28, 0.9) 0 26%, transparent 27%),
+    radial-gradient(circle at 50% 95%, rgba(10, 16, 28, 0.9) 0 38%, transparent 39%),
+    radial-gradient(closest-side, rgba(201, 162, 39, 0.2), transparent 80%),
+    var(--panel-raised);
+}
+
+/* Mobile-only "swipe the table" hint */
+.swipe-hint {
+  display: none;
+}
+@media (max-width: 768px) {
+  .swipe-hint {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold-soft);
+    margin-bottom: 0.75rem;
+  }
+  .swipe-hint::after {
+    content: "⟶";
+    color: var(--action-red-hot);
+    animation: nudge 1.6s infinite;
+  }
+}
+@keyframes nudge {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(8px); }
+}
+
+/* On-page section jumper (esp. for long phone scrolls) */
+.page-jumper {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.page-jumper a {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-70);
+  border: 1px solid var(--hairline);
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  text-decoration: none;
+  background: var(--panel-raised);
+}
+.page-jumper a:hover {
+  border-color: var(--action-red);
+  color: var(--ink);
+}
+
+/* Hero sections breathe less on phones — no dead space under the photo */
+@media (max-width: 768px) {
+  .hero-tight {
+    padding-bottom: 0.75rem;
+  }
+  .hero-tight .rise figcaption {
+    margin-bottom: 0;
+  }
+}
+
+/* Strike-through — SYSTEM CLAIMS ONLY, never a person's name */
+.strike-claim {
+  position: relative;
+  white-space: nowrap;
+}
+.strike-claim::after {
+  content: "";
+  position: absolute;
+  left: -2%;
+  right: -2%;
+  top: 52%;
+  border-top: 3px solid var(--crimson);
+  transform: rotate(-2deg);
+}
