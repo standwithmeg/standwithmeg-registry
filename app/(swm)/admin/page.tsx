@@ -1743,8 +1743,11 @@ export default function AdminPage() {
     for (const row of adminActors) {
       if ((row.source ?? "form_direct") !== "form_direct") continue;
       const rowLocation = row.location_key ?? row.state_code ?? "";
+      const rowLooseNameKey = actorLooseNameKey(row.name);
       const blob = [
         row.name,
+        rowLooseNameKey,
+        row.effective_actor_bucket_key ?? "",
         row.role,
         row.location_key ?? "",
         row.state_code ?? "",
@@ -1757,7 +1760,7 @@ export default function AdminPage() {
       const exactKey = row.effective_actor_bucket_key ?? actorBucketKeyWithLocation(row.name, row.role, rowLocation);
       if (!exact.has(exactKey)) exact.set(exactKey, []);
       exact.get(exactKey)!.push(blob);
-      const looseKey = `${rowLocation}|${actorLooseNameKey(row.name)}`;
+      const looseKey = `${rowLocation}|${rowLooseNameKey}`;
       if (!loose.has(looseKey)) loose.set(looseKey, []);
       loose.get(looseKey)!.push(blob);
     }
@@ -1902,7 +1905,7 @@ export default function AdminPage() {
         const filterKey = normalizeActorRole(actorRoleFilter);
         if (!normalizeActorRole(a.role).includes(filterKey)) return false;
       }
-      const blob = `${a.name} ${a.role} ${a.location_key ?? ""} ${a.state_code ?? ""} ${a.court_or_county ?? ""} ${a.source} ${a.notes ?? ""} ${a.reporter_email ?? ""} ${a.reporter_name ?? ""}`;
+      const blob = `${a.name} ${actorLooseNameKey(a.name)} ${a.effective_actor_bucket_key ?? ""} ${a.role} ${a.location_key ?? ""} ${a.state_code ?? ""} ${a.court_or_county ?? ""} ${a.source} ${a.notes ?? ""} ${a.reporter_email ?? ""} ${a.reporter_name ?? ""}`;
       return actorMatchesQuery(blob);
     });
     if (actorSortMode === "group_near_dupes") {
