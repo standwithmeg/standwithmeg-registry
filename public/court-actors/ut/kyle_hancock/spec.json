@@ -29,7 +29,7 @@
   "state_stats": {
     "families_approved": 43,
     "total_submissions": 56,
-    "avg_financial_loss": 276098.88,
+    "avg_financial_loss": 284771.98,
     "avg_months_lost": 18.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "UT",
@@ -42,7 +42,7 @@
     "_pdf_state_family_count": 56,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5207,
+  "movement_total": 5374,
   "supabase": {
     "report_count": 0,
     "actor_report_count": 0,

@@ -6,10 +6,10 @@
     "title": "",
     "first_name": "Allison Maxwell",
     "last_name": "Hibler",
-    "role": "GAL / Child Representative",
+    "role": "Attorney",
     "court": "Jackson/Shawnee",
     "county": "Jackson/Shawnee",
-    "court_or_county": "Jackson/Shawnee",
+    "court_or_county": null,
     "state": "KS",
     "state_abbr": "KS",
     "mention_count": 0,
@@ -27,41 +27,35 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 180,
-    "total_submissions": 246,
-    "avg_financial_loss": 118463.78,
-    "avg_months_lost": 30.0,
+    "families_approved": 182,
+    "total_submissions": 248,
+    "avg_financial_loss": 118206.1,
+    "avg_months_lost": 30.2,
     "_source_table": "movement_stats_by_state",
     "_match_value": "KS",
-    "state_family_count": 246,
-    "median_financial_loss": 94050,
-    "median_burden_sample_size": 130,
+    "state_family_count": 248,
+    "median_financial_loss": 96100,
+    "median_burden_sample_size": 131,
     "median_months_lost": 16,
-    "pro_se_pct": 50.0,
+    "pro_se_pct": 49.6,
     "pro_se_count": 123,
-    "_pdf_state_family_count": 246,
+    "_pdf_state_family_count": 248,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5362,
+  "movement_total": 5374,
   "supabase": {
     "report_count": 0,
     "actor_report_count": 0,
     "family_count": 2,
     "family_reports": [],
-    "public_comments": [
-      {
-        "comment_text": "Lacks initiative to end delay tactics. Lacks effective explanatory communication. Truly believe she means well in my case, however is overly busy resulting in borderline neglect of active cases until necessary to respond just prior to approaching court dates. AKA Allison Maxwell Hibler, appears in log under both names needing merged.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Douglas"
-      }
-    ]
+    "public_comments": []
   },
   "export_dir": "New Final Post and Capcut template/export/alison_hibler",
   "unresolved": [
-    "public_family_count_api: no match for display_name='Alison Hibler' bucket='alison hibler|KS' slug='alison_hibler' in KS (28 actors)",
+    "public_family_count_api: no match for display_name='Allison Maxwell Hibler' bucket='alison hibler|KS' slug='alison_hibler' in KS (28 actors)",
     "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
+    "public_comments: no merged comments or raw notes available",
+    "pdf_public_actor: no 'Allison Maxwell Hibler' in cache for KS"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",

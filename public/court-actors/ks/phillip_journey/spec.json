@@ -9,12 +9,12 @@
     "role": "Judge",
     "court": "Sedgwick County",
     "county": "Sedgwick",
-    "court_or_county": "Sedgwick County",
+    "court_or_county": "Sedgwick",
     "state": "Kansas",
     "state_abbr": "KS",
     "mention_count": 0,
-    "family_count": 3,
-    "public_family_count": 3,
+    "family_count": 4,
+    "public_family_count": 4,
     "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
     "actor_report_count": 0,
     "supabase_row_ids": [],
@@ -27,26 +27,26 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 180,
-    "total_submissions": 246,
-    "avg_financial_loss": 118463.78,
-    "avg_months_lost": 30.0,
+    "families_approved": 182,
+    "total_submissions": 248,
+    "avg_financial_loss": 118206.1,
+    "avg_months_lost": 30.2,
     "_source_table": "movement_stats_by_state",
     "_match_value": "KS",
-    "state_family_count": 246,
-    "median_financial_loss": 94050,
-    "median_burden_sample_size": 130,
+    "state_family_count": 248,
+    "median_financial_loss": 96100,
+    "median_burden_sample_size": 131,
     "median_months_lost": 16,
-    "pro_se_pct": 50.0,
+    "pro_se_pct": 49.6,
     "pro_se_count": 123,
-    "_pdf_state_family_count": 246,
+    "_pdf_state_family_count": 248,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5362,
+  "movement_total": 5374,
   "supabase": {
     "report_count": 0,
     "actor_report_count": 0,
-    "family_count": 3,
+    "family_count": 4,
     "family_reports": [],
     "public_comments": [
       {
@@ -57,6 +57,12 @@
       },
       {
         "comment_text": "Ignored evidence that supported my case. Accepted evidence that was incomplete and only hear say as support to keep my children away from me. Delayed hearings; ignored motions; wasted time while my life and my kids' life was in his hands; left family court with no progress in my case for a year.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Sedgwick"
+      },
+      {
+        "comment_text": "Ignored evidence, refused to hear motion, laughed at child abuse stating something to the effect of “when I was young I was just glad the beating was over now kids get in their emotions these days”",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Sedgwick"
