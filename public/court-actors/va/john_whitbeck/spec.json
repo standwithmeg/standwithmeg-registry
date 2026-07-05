@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "john_whitbeck",
+    "display_name": "John Whitbeck",
+    "title": "",
+    "first_name": "John",
+    "last_name": "Whitbeck",
+    "role": "Attorney",
+    "court": "Powhatan",
+    "county": "Loudoun county",
+    "court_or_county": "Powhatan",
+    "state": "VA",
+    "state_abbr": "VA",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": "john whitbeck|VA"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 100,
+    "total_submissions": 124,
+    "avg_financial_loss": 185557.97,
+    "avg_months_lost": 30.1,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "VA",
+    "state_family_count": 124,
+    "median_financial_loss": 142900,
+    "median_burden_sample_size": 52,
+    "median_months_lost": 20,
+    "pro_se_pct": 60.5,
+    "pro_se_count": 75,
+    "_pdf_state_family_count": 124,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5371,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "John Whitbeck claimed to have an understanding of DV/coercive control and its impact on divorce and custody cases. He did not do anything to protect me and my children from our abuser and instead caused us more harm by angrily advising me I had to “just let things go” and “be the bigger person” which ended up with me being verbally and emotionally abused by my ex spouse. The firm is poorly run and the attorneys are unnecessarily arrogant, rude and demeaning.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Powhatan"
+      },
+      {
+        "comment_text": "Is literal drinking bunnies with plowman and Fisher and my attorneys the Graham law firm and Miriam Ibrahimi both owned by John Whitbeck.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Loudoun county"
+      },
+      {
+        "comment_text": "Opposing counsel",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Loudoun county"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/john_whitbeck",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/va/john_whitbeck/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

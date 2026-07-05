@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-04T19:15:36.310976+00:00",
+  "generated_at": "2026-07-05T01:14:33.377842+00:00",
   "actors": [
     {
       "slug": "ali_upchurch_patterson",
@@ -2664,6 +2664,15 @@
       "actor_bucket_key": null,
       "photo_url": "/court-actors/ut/kyle_hancock/image_1080.png",
       "share_url": "/court-actors/ut/kyle_hancock/share.html"
+    },
+    {
+      "slug": "john_whitbeck",
+      "state_abbr": "VA",
+      "display_name": "John Whitbeck",
+      "canonical_name": "John Whitbeck",
+      "actor_bucket_key": "john whitbeck|VA",
+      "photo_url": null,
+      "share_url": "/court-actors/va/john_whitbeck/share.html"
     },
     {
       "slug": "william_singer",
