@@ -138,14 +138,14 @@ export default async function Home() {
             <figure className="rise m-0">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/meg/just-me.jpg"
-                alt="Meg surrounded by mini versions of herself doing every job — recording, reviewing surveys, designing, emailing, mailing lawmakers, moderating chats"
+                src="/meg/meg-hero.jpg"
+                alt="Meg — Stand With Meg, the fight for America's families"
                 width={561}
                 height={701}
-                className="w-full"
+                className="w-full object-cover"
                 style={{ border: "1px solid var(--hairline-gold)", boxShadow: "var(--card-shadow)" }}
               />
-              <figcaption className="disclaimer-strip mt-3">No staff. No team. Just Meg.</figcaption>
+              <figcaption className="disclaimer-strip mt-3">Meg · Investigative journalist</figcaption>
             </figure>
           </div>
         </section>
@@ -225,14 +225,14 @@ export default async function Home() {
               <figure className="m-0">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/meg/meg-hero.jpg"
-                  alt="Meg, investigative journalist and founder of Stand With Meg"
+                  src="/meg/just-me.jpg"
+                  alt="Meg surrounded by mini versions of herself doing every job — recording, reviewing surveys, designing, emailing, mailing lawmakers, moderating chats"
                   width={420}
-                  height={280}
-                  className="w-full object-cover"
+                  height={520}
+                  className="w-full"
                   style={{ border: "1px solid var(--hairline)", boxShadow: "var(--card-shadow)" }}
                 />
-                <figcaption className="disclaimer-strip mt-3">Meg · Investigative journalist</figcaption>
+                <figcaption className="disclaimer-strip mt-3">No staff. No team. Just Meg.</figcaption>
               </figure>
               <div>
                 <p className="eyebrow mb-4">Who&rsquo;s behind this</p>
