@@ -1,21 +1,21 @@
 "use client";
 
 import { useState, useEffect, useCallback, useRef, type ReactNode } from "react";
-import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
 import { CourtActorPanel, CourtActorListModal, type PublicActor } from "./CourtActorPanel";
-import { DonateBand, FEATURED_DONATE_LINE } from "./DonateBand";
 import { SponsorCtaButton } from "../../SponsorCtaButton";
 import type { ReportInitialCourtActors } from "../../../../lib/report-initial-court-actors";
-import { DONATION_URL, HOW_TO_USE_VIDEO_EMBED_URL } from "../../../../lib/site-links";
-import { GOLD, BG, colors, shadows } from "../../../../lib/design-tokens";
+import { DONATION_URL } from "../../../../lib/site-links";
+import { GOLD, BG } from "../../../../lib/design-tokens";
 import { Skeleton } from "@/components/ui/Skeleton";
+import { DonateNudge } from "@/components/dossier/DonateNudge";
+import { CirclesBand } from "@/components/dossier/CirclesBand";
+import { VideoWalkthroughCard } from "@/components/dossier/VideoWalkthroughCard";
 
 const StateTable = dynamic(() => import("./StateTable").then(m => ({ default: m.StateTable })), { loading: () => <SectionSkeleton /> });
 const InviteFriendModal = dynamic(() => import("./InviteFriendModal").then(m => ({ default: m.InviteFriendModal })), { loading: () => null });
 const SponsorBand = dynamic(() => import("./SponsorBand").then(m => ({ default: m.SponsorBand })), { loading: () => <SectionSkeleton /> });
 const PrintKitBand = dynamic(() => import("./PrintKitBand").then(m => ({ default: m.PrintKitBand })), { loading: () => <SectionSkeleton /> });
-const ConnectionCirclesCta = dynamic(() => import("../../ConnectionCirclesCta").then(m => ({ default: m.ConnectionCirclesCta })), { loading: () => <SectionSkeleton /> });
 
 const REQUIRED_API_TIMEOUT_MS = 10000;
 const OPTIONAL_API_TIMEOUT_MS = 8000;
@@ -267,39 +267,8 @@ function DashboardSkeleton() {
 }
 
 // ============================================================================
-// Motion variants for card hover effects
+// Snapshot detection
 // ============================================================================
-
-const cardHoverVariants = {
-  initial: { 
-    y: 0,
-    boxShadow: "0 0 0 rgba(201,162,39,0)",
-  },
-  hover: { 
-    y: -4,
-    boxShadow: shadows.goldGlow,
-    transition: { duration: 0.2, ease: [0, 0, 0.2, 1] as const },
-  },
-};
-
-const staggerContainerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.08,
-    },
-  },
-};
-
-const staggerItemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { 
-    opacity: 1, 
-    y: 0,
-    transition: { duration: 0.4, ease: [0, 0, 0.2, 1] as const },
-  },
-};
 
 function isGeneratedSnapshotWarning(message: string | null | undefined) {
   if (!message) return false;
@@ -504,528 +473,280 @@ export function DashboardView({ initialCourtActors }: DashboardViewProps) {
   }
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: BG }}>
-      {/* Background */}
-      <div className="fixed inset-0 pointer-events-none" style={{
-        backgroundImage: "url('/swm/swm-banner.webp')",
-        backgroundSize: "cover", backgroundPosition: "center", opacity: 0.06, zIndex: 0,
-      }} />
-
-      {/* Gold top bar */}
-      <div className="relative z-10 h-1" style={{ backgroundColor: GOLD }} />
-
-      {/* Sticky top bar — always-visible "Share Your Story" CTA */}
-      <div className="sticky top-0 z-40 px-6 py-3 flex items-center justify-between backdrop-blur"
-        style={{
-          backgroundColor: "rgba(15,30,48,0.85)",
-          borderBottom: "1px solid rgba(201,162,39,0.15)",
-        }}>
-        <div className="flex items-center gap-2">
-          <div className="w-7 h-7 bg-red-700 rounded-md flex items-center justify-center flex-shrink-0">
-            <svg className="w-3.5 h-3.5 text-white" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd" />
-            </svg>
-          </div>
-          <span className="text-white font-black text-sm tracking-wide hidden sm:inline">STAND WITH MEG</span>
-        </div>
-        <div className="flex items-center gap-3 sm:gap-4">
-          <a href="/connect"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden sm:inline text-xs font-semibold tracking-wide transition-opacity hover:opacity-80"
-            style={{ color: "rgba(201,162,39,0.85)" }}>
-            Connect
+    <div className="wrap flex flex-col gap-10 pb-16">
+      {/* HERO — The Public Record */}
+      <section className="pt-12" aria-labelledby="report-heading">
+        <p className="eyebrow mb-5">The public record · Rebuilt with every submission</p>
+        <h1 id="report-heading" className="display" style={{ fontSize: "var(--text-hero)", maxWidth: "13ch" }}>
+          THE PUBLIC <span className="accent-word accent-underline">RECORD.</span>
+        </h1>
+        <p className="serif-note mt-7 max-w-2xl text-lg" style={{ color: "var(--ink-70)" }}>
+          Real data from real families documenting what is happening inside our
+          family court and child welfare systems — across the country and beyond it.
+        </p>
+        <div className="mt-9 flex flex-wrap items-center gap-4">
+          <a href="/survey" className="action-pill">
+            <span className="pill-dot" aria-hidden />
+            Share your story ↗
           </a>
-          <a href="/partners"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden sm:inline text-xs font-semibold tracking-wide transition-opacity hover:opacity-80"
-            style={{ color: "rgba(201,162,39,0.85)" }}>
-            Partner with us
-          </a>
-          <a href="/survey"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-xs md:text-sm px-4 py-2 rounded-lg font-bold tracking-wide transition-colors hover:opacity-90"
-            style={{ backgroundColor: "#B91C1C", color: "white" }}>
-            Share Your Story →
-          </a>
+          <a href="/actors" className="gold-pill">Track the Court Actors</a>
+          <a href={DONATION_URL} target="_blank" rel="noopener noreferrer" className="btn-quiet">Donate</a>
+          <button type="button" onClick={() => setInviteOpen(true)} className="btn-quiet">
+            Know someone affected? Invite them
+          </button>
+          <SponsorCtaButton newTab />
         </div>
-      </div>
+        <nav aria-label="Jump to section" className="mt-8 flex flex-wrap gap-2.5">
+          {[["#numbers", "The numbers"], ["#court-actors", "On the public record"], ["#state-reports", "Your state"], ["#voices", "Family voices"]].map(([href, label]) => (
+            <a key={href} href={href} className="badge badge--gold" style={{ padding: "0.5rem 0.95rem", textDecoration: "none" }}>
+              {label} ↓
+            </a>
+          ))}
+        </nav>
+      </section>
 
-      {/* Header */}
-      <header className="relative z-10 px-6 py-8 border-b" style={{ borderColor: "rgba(201,162,39,0.2)" }}>
-        <div className="max-w-5xl mx-auto text-center">
-          <h1 className="text-3xl md:text-4xl font-black text-white leading-tight mb-3">
-            The Impact of Family Court
-          </h1>
-          <p className="text-sm md:text-base max-w-2xl mx-auto mb-6" style={{ color: "rgba(245,245,245,0.55)" }}>
-            Real data from real families documenting what is happening inside our family court
-            and child welfare systems across the country.
-          </p>
+      {/* Data ownership */}
+      <p className="panel disclaimer-strip px-5 py-3.5 leading-relaxed">
+        Stand With Meg data and reports are compiled from submitted family experiences
+        in the family court and child welfare system. This data belongs to the families
+        who shared it and to Stand With Meg. Unauthorized reproduction, scraping, or
+        commercial use is prohibited.
+      </p>
 
-          {/* Hero CTAs: share personally, browse the registry, donate, or invite someone else */}
-          <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-3">
-            <a href="/survey"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg font-bold text-sm transition-colors hover:opacity-90"
-              style={{ backgroundColor: "#B91C1C", color: "white" }}>
-              Share Your Story →
-            </a>
-            <a href="/actors"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg font-bold text-sm transition-colors hover:opacity-90"
-              style={{
-                backgroundColor: "rgba(201,162,39,0.18)",
-                color: GOLD,
-                border: `1px solid ${GOLD}`,
-              }}>
-              Track the Court Actors →
-            </a>
-            <a href={DONATION_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg font-bold text-sm transition-colors hover:opacity-90"
-              style={{ backgroundColor: GOLD, color: BG }}>
-              Donate to Keep This Public →
-            </a>
-            <SponsorCtaButton newTab />
-            <button onClick={() => setInviteOpen(true)}
-              className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg font-bold text-sm transition-colors"
-              style={{
-                backgroundColor: "rgba(201,162,39,0.12)",
-                color: GOLD,
-                border: `1px solid rgba(201,162,39,0.4)`,
-              }}>
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-              </svg>
-              Know Someone Affected? Invite Them
-            </button>
+      {/* Video guide — Meg re-records for the new site */}
+      <VideoWalkthroughCard page="report" variant="wide" />
+
+      {warnings.length > 0 && (
+        <div className="panel px-5 py-4" style={{ borderColor: "var(--hairline-gold)" }} role="status">
+          <p className="eyebrow eyebrow--gold mb-2">{isSnapshot ? "Live data unavailable" : "Partial data loaded"}</p>
+          <ul className="flex flex-col gap-1">
+            {warnings.map(w => (
+              <li key={w.key} className="text-xs leading-relaxed" style={{ color: "var(--ink-70)" }}>{w.message}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {/* THE NUMBERS */}
+      <section id="numbers" aria-labelledby="numbers-heading">
+        <hr className="rule-double mb-8" />
+        <h2 id="numbers-heading" className="eyebrow eyebrow--muted mb-8">The movement, counted</h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
+          <div className="stat-crimson">
+            <p className="stat-number"><AnimatedCounter value={total} /></p>
+            <p className="stat-label">{isSnapshot ? "Families · latest snapshot" : "Families reporting"}</p>
           </div>
-
-          {/* Mini donate ask — primes the gold Donate button above */}
-          <p className="text-xs md:text-sm mt-5 max-w-lg mx-auto italic leading-relaxed"
-            style={{ color: "rgba(201,162,39,0.7)" }}>
-            Donations help keep the Stand With Meg registry, public dashboard, state reports, and family-submitted documentation online, searchable, and free for the families who need it.
-          </p>
-        </div>
-      </header>
-
-      <div className="relative z-10 max-w-5xl mx-auto px-6 py-8 space-y-8">
-
-        {/* Data ownership banner */}
-        <div className="rounded-xl px-5 py-3"
-          style={{ backgroundColor: "rgba(201,162,39,0.08)", border: `1px solid rgba(201,162,39,0.2)` }}>
-          <p className="text-xs leading-relaxed" style={{ color: "rgba(201,162,39,0.8)" }}>
-            Stand With Meg data and reports are compiled from submitted family experiences in the family court
-            and child welfare system. This data belongs to the families who shared it and to Stand With Meg.
-            Unauthorized reproduction, scraping, or commercial use is prohibited.
-          </p>
-        </div>
-
-        {/* How to use this page — small click-to-play short for first-time visitors */}
-        <div
-          className="rounded-2xl p-5 flex flex-col gap-4 sm:flex-row sm:items-center"
-          style={{ backgroundColor: "rgba(255,255,255,0.04)", border: "1px solid rgba(201,162,39,0.22)" }}
-        >
-          <div
-            className="w-40 sm:w-44 flex-shrink-0 aspect-[9/16] rounded-xl overflow-hidden mx-auto sm:mx-0"
-            style={{ border: "1px solid rgba(201,162,39,0.25)" }}
-          >
-            <iframe
-              className="w-full h-full"
-              src={HOW_TO_USE_VIDEO_EMBED_URL}
-              title="How to use the Stand With Meg report page"
-              loading="lazy"
-              allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-            />
-          </div>
-          <div className="flex-1 text-center sm:text-left">
-            <p className="text-xs font-black uppercase tracking-widest mb-1" style={{ color: GOLD }}>
-              New here?
+          <div className="stat-crimson">
+            <p className="stat-number">
+              <AnimatedCounter value={usStates.length} />
+              <span style={{ fontSize: "0.5em", color: "var(--ink-45)" }}>{` + ${intlCountries.length} countries`}</span>
             </p>
-            <h2 className="text-base md:text-lg font-black text-white mb-1.5">
-              How to use this page
-            </h2>
-            <p className="text-sm leading-relaxed" style={{ color: "rgba(245,245,245,0.65)" }}>
-              A quick walkthrough &mdash; under a minute &mdash; of what you can see here and how to put
-              it in front of your state legislators.
+            <p className="stat-label">{isSnapshot ? "Report reach shown" : "US states · global reach"}</p>
+          </div>
+          <div className="stat-crimson">
+            <p className="stat-number">
+              {hasSnapshotOnlyLoss ? "In state reports" : <AnimatedCounter value={Math.round(totalLoss)} prefix="$" duration={2000} />}
             </p>
+            <p className="stat-label">Reported family losses</p>
+          </div>
+          <div className="stat-crimson">
+            <p className="stat-number"><AnimatedCounter value={statesOver30} /></p>
+            <p className="stat-label">States with 30+ families</p>
           </div>
         </div>
-
-        {warnings.length > 0 && (
-          <div className="rounded-xl px-5 py-3"
-            style={{ backgroundColor: "rgba(201,162,39,0.10)", border: "1px solid rgba(201,162,39,0.28)" }}>
-            <div className="text-xs font-black uppercase tracking-widest mb-1" style={{ color: GOLD }}>
-              {isSnapshot ? "Live data unavailable" : "Partial data loaded"}
-            </div>
-            <ul className="space-y-1">
-              {warnings.map(w => (
-                <li key={w.key} className="text-xs leading-relaxed" style={{ color: "rgba(245,245,245,0.65)" }}>
-                  {w.message}
-                </li>
-              ))}
-            </ul>
-          </div>
+        {isSnapshot && snapshotUnallocatedSubmissions > 0 && (
+          <p className="disclaimer-strip mt-4">
+            {`${snapshotUnallocatedSubmissions.toLocaleString()} submissions are outside the static location snapshot.`}
+          </p>
         )}
-
-        {/* Stat Cards */}
-        <motion.div 
-          className="grid grid-cols-2 md:grid-cols-4 gap-4"
-          variants={staggerContainerVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          <motion.div 
-            className="rounded-2xl p-6 cursor-default"
-            style={{ backgroundColor: "rgba(255,255,255,0.05)", border: `1px solid ${colors.gold.border}` }}
-            variants={staggerItemVariants}
-            whileHover="hover"
-            initial="initial"
-            animate="initial"
-            custom={0}
-          >
-            <motion.div
-              variants={cardHoverVariants}
-              className="h-full"
-            >
-              <div className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: "rgba(201,162,39,0.7)" }}>
-                Families Documented
-              </div>
-              <div className="text-4xl font-black leading-none" style={{ color: GOLD }}>
-                <AnimatedCounter value={total} />
-              </div>
-              <div className="text-xs mt-2" style={{ color: "rgba(245,245,245,0.35)" }}>
-                {isSnapshot ? "latest generated report snapshot" : "and counting"}
-              </div>
-            </motion.div>
-          </motion.div>
-
-          <motion.div 
-            className="rounded-2xl p-6 cursor-default"
-            style={{ backgroundColor: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)" }}
-            variants={staggerItemVariants}
-            whileHover={{ y: -4, boxShadow: "0 0 20px rgba(255,255,255,0.1)" }}
-            transition={{ duration: 0.2 }}
-            custom={1}
-          >
-            <div className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: "rgba(245,245,245,0.45)" }}>
-              {isSnapshot ? "Known Report Reach" : "Global Reach"}
-            </div>
-            <div className="grid grid-cols-2 gap-3">
-              <div>
-                <div className="text-4xl font-black text-white leading-none">
-                  <AnimatedCounter value={usStates.length} />
-                </div>
-                <div className="text-xs mt-2" style={{ color: "rgba(245,245,245,0.35)" }}>
-                  {isSnapshot && snapshotUnallocatedSubmissions > 0 ? "US states shown" : "US states"}
-                </div>
-              </div>
-              <div>
-                <div className="text-4xl font-black text-white leading-none">
-                  <AnimatedCounter value={intlCountries.length} />
-                </div>
-                <div className="text-xs mt-2" style={{ color: "rgba(245,245,245,0.35)" }}>
-                  {isSnapshot && snapshotUnallocatedSubmissions > 0
-                    ? `${intlCountries.length === 1 ? "country" : "countries"} shown`
-                    : `${intlCountries.length === 1 ? "country" : "countries"} worldwide`}
-                </div>
-              </div>
-            </div>
-            {isSnapshot && snapshotUnallocatedSubmissions > 0 && (
-              <div className="text-xs mt-3" style={{ color: "rgba(245,245,245,0.35)" }}>
-                {snapshotUnallocatedSubmissions.toLocaleString()} submissions are outside the static location snapshot.
-              </div>
-            )}
-          </motion.div>
-
-          <motion.div 
-            className="rounded-2xl p-6 relative overflow-hidden cursor-default"
-            style={{ backgroundColor: "rgba(185,28,28,0.12)", border: "1px solid rgba(185,28,28,0.35)" }}
-            variants={staggerItemVariants}
-            whileHover={{ y: -4, boxShadow: shadows.evidenceGlow }}
-            transition={{ duration: 0.2 }}
-            custom={2}
-          >
-            <div className="text-xs font-bold uppercase tracking-widest mb-2 text-red-400">
-              Total Reported Loss
-            </div>
-            <div className="text-2xl md:text-4xl font-black text-red-400 leading-none break-all">
-              {hasSnapshotOnlyLoss ? "In state reports" : (
-                <AnimatedCounter 
-                  value={Math.round(totalLoss)} 
-                  prefix="$" 
-                  duration={2000}
-                />
-              )}
-            </div>
-            <div className="text-xs mt-2" style={{ color: "rgba(245,245,245,0.35)" }}>
-              {hasSnapshotOnlyLoss ? "generated snapshot excludes live totals" : "dollars reported by families"}
-            </div>
-          </motion.div>
-
-          <motion.div 
-            className="rounded-2xl p-6 cursor-default"
-            style={{ backgroundColor: "rgba(255,255,255,0.05)", border: `1px solid ${colors.gold.border}` }}
-            variants={staggerItemVariants}
-            whileHover="hover"
-            initial="initial"
-            animate="initial"
-            custom={3}
-          >
-            <motion.div
-              variants={cardHoverVariants}
-              className="h-full"
-            >
-              <div className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: "rgba(201,162,39,0.7)" }}>
-                Report-Eligible States
-              </div>
-              <div className="text-4xl font-black leading-none" style={{ color: GOLD }}>
-                <AnimatedCounter value={statesOver30} />
-              </div>
-              <div className="text-xs mt-2" style={{ color: "rgba(245,245,245,0.35)" }}>states with 30+ families</div>
-            </motion.div>
-          </motion.div>
-        </motion.div>
-
-        {/* Donate band — sits between the headline stats and the actor list */}
-        <DonateBand line={FEATURED_DONATE_LINE} className="rounded-2xl" />
-
-        {/* National sponsors — lazy loaded below the fold */}
-        <LazyInView>
-          <SponsorBand placement="main_page" variant="national" />
-        </LazyInView>
-
-        {/* Print & Share kit — lazy loaded below the fold */}
-        <LazyInView>
-          <PrintKitBand />
-        </LazyInView>
-
-        {/* Connection Circles CTA — lazy loaded below the fold */}
-        <LazyInView>
-          <ConnectionCirclesCta placement="report" />
-        </LazyInView>
-
-        {/* Named Court Actor Patterns — loaded immediately after paint; pagination + sort live here */}
-        <div id="court-actors">
-          <CourtActorPanel
-            actors={publicActors}
-            threshold={actorThreshold}
-            totalCount={actorTotal}
-            stateCounts={courtActorCounts}
-          />
+        <div className="mt-8">
+          <DonateNudge seed={4} />
         </div>
+      </section>
+
+      {/* National sponsors — real slot data */}
+      <LazyInView>
+        <SponsorBand placement="main_page" variant="national" />
+      </LazyInView>
+
+      {/* Print & share kit */}
+      <LazyInView>
+        <PrintKitBand />
+      </LazyInView>
+
+      {/* How your state unlocks its report */}
+      <section className="panel panel--raised p-8 md:p-10" aria-labelledby="unlock-heading">
+        <div className="grid md:grid-cols-2 gap-10">
+          <div>
+            <h2 id="unlock-heading" className="display text-2xl md:text-3xl mb-4">
+              HOW YOUR STATE GETS ITS <span className="accent-word">REPORT</span>
+            </h2>
+            <p className="text-sm leading-relaxed" style={{ color: "var(--ink-70)" }}>
+              At 30 family submissions, a state unlocks its own downloadable PDF report —
+              the document families print for hearings and mail to their lawmakers.
+              Under 30? The progress bar below shows exactly how many more voices your
+              state needs.
+            </p>
+          </div>
+          <div>
+            <h3 className="display text-2xl md:text-3xl mb-4" style={{ color: "var(--gold-soft)" }}>
+              COME BACK — THIS PAGE NEVER SITS STILL
+            </h3>
+            <p className="text-sm leading-relaxed" style={{ color: "var(--ink-70)" }}>
+              Every new submission rebuilds its state&rsquo;s PDF. The report you download
+              today is not the report you&rsquo;ll download next month — it grows with
+              every family who speaks up.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ON THE PUBLIC RECORD — named court actors */}
+      <section id="court-actors" aria-labelledby="actors-heading">
+        <hr className="rule-double mb-8" />
+        <p className="eyebrow mb-2">Named by three or more unrelated families</p>
+        <h2 id="actors-heading" className="display mb-8" style={{ fontSize: "var(--text-display)" }}>
+          ON THE PUBLIC <span className="accent-word">RECORD</span>
+        </h2>
+        <CourtActorPanel
+          actors={publicActors}
+          threshold={actorThreshold}
+          totalCount={actorTotal}
+          stateCounts={courtActorCounts}
+        />
         {hasMoreActors && (
-          <div className="mt-4 flex justify-center">
+          <div className="mt-6 flex justify-center">
             <button
               type="button"
               onClick={loadMoreActors}
               disabled={loadingMoreActors}
-              className="rounded-xl px-6 py-3 text-sm font-black transition-opacity disabled:opacity-50"
-              style={{ backgroundColor: GOLD, color: BG }}
+              className="gold-pill disabled:opacity-50"
             >
               {loadingMoreActors ? (
-                <span className="inline-flex items-center gap-2">
-                  <Spinner />
-                  Loading...
-                </span>
+                <span className="inline-flex items-center gap-2"><Spinner />Loading...</span>
               ) : (
                 `Load more patterns (${actorOffset.toLocaleString()} of ${actorTotal.toLocaleString()})`
               )}
             </button>
           </div>
         )}
+        <p className="disclaimer-strip mt-6">Family-reported submissions.</p>
+      </section>
 
-        {/* State Table — loaded immediately after paint */}
-        <div id="state-reports" className="scroll-mt-20">
-          <StateTable
-            byState={byState}
-            resources={resources}
-            commentCounts={commentCounts}
-            courtActorCounts={courtActorCounts}
-            actorThreshold={actorThreshold}
-            onCourtActorsClick={state => setActorListState(state)}
-          />
-        </div>
+      {/* EVERY STATE, COUNTED */}
+      <section id="state-reports" aria-labelledby="states-heading">
+        <hr className="rule-double mb-8" />
+        <p className="eyebrow mb-2">Find your state — or your country</p>
+        <h2 id="states-heading" className="display mb-8" style={{ fontSize: "var(--text-display)" }}>
+          EVERY STATE, <span className="accent-word">COUNTED</span>
+        </h2>
+        <StateTable
+          byState={byState}
+          resources={resources}
+          commentCounts={commentCounts}
+          courtActorCounts={courtActorCounts}
+          actorThreshold={actorThreshold}
+          onCourtActorsClick={state => setActorListState(state)}
+        />
+      </section>
 
-        {/* Voices Section */}
-        {quotes.length > 0 && (
-          <div className="rounded-2xl overflow-hidden"
-            style={{ backgroundColor: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.1)" }}>
-            <div className="px-6 py-4 border-b"
-              style={{ borderColor: "rgba(255,255,255,0.08)", backgroundColor: "rgba(30,58,95,0.4)" }}>
-              <h2 className="font-black text-white text-base tracking-wide">Voices From the Movement</h2>
-              <p className="text-xs mt-0.5" style={{ color: "rgba(245,245,245,0.4)" }}>
-                In their own words — families speaking out about what they experienced.
-              </p>
-            </div>
-            <motion.div 
-              className="grid md:grid-cols-2 gap-px" 
-              style={{ backgroundColor: "rgba(255,255,255,0.06)" }}
-              variants={staggerContainerVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-50px" }}
-            >
-              {quotes.slice(0, 12).map((q, index) => (
-                <motion.div 
-                  key={q.id} 
-                  className="px-6 py-5" 
-                  style={{ backgroundColor: BG }}
-                  variants={staggerItemVariants}
-                  custom={index}
-                >
-                  <blockquote className="text-sm italic pl-3"
-                    style={{ borderLeft: `2px solid rgba(201,162,39,0.4)`, color: "rgba(245,245,245,0.7)" }}>
-                    &ldquo;{q.quote && q.quote.length > 200 ? q.quote.slice(0, 200) + "…" : q.quote}&rdquo;
-                  </blockquote>
-                  <div className="mt-2 flex items-center gap-2 pl-3 flex-wrap">
-                    <span className="text-xs font-semibold" style={{ color: GOLD }}>— {q.attribution}</span>
-                    {q.state && (
-                      <span className="text-xs" style={{ color: "rgba(245,245,245,0.3)" }}>· {q.state}</span>
-                    )}
-                  </div>
-                </motion.div>
-              ))}
-            </motion.div>
+      {/* FAMILY VOICES */}
+      {quotes.length > 0 && (
+        <section id="voices" aria-labelledby="voices-heading">
+          <hr className="rule-double mb-8" />
+          <h2 id="voices-heading" className="eyebrow eyebrow--muted mb-8">Voices from the movement</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {quotes.slice(0, 12).map(q => (
+              <blockquote key={q.id} className="panel p-6 m-0" style={{ borderLeft: "3px solid var(--gold)" }}>
+                <p className="serif-note text-base m-0" style={{ color: "var(--ink)" }}>
+                  &ldquo;{q.quote && q.quote.length > 200 ? `${q.quote.slice(0, 200)}…` : q.quote}&rdquo;
+                </p>
+                <footer className="disclaimer-strip mt-3">
+                  {`— ${q.attribution}`}{q.state ? <span> <span className="dotsep">·</span> {q.state}</span> : null}
+                </footer>
+              </blockquote>
+            ))}
           </div>
-        )}
+          <p className="disclaimer-strip mt-6">Family-reported submissions.</p>
+        </section>
+      )}
 
-        {/* Survey CTA */}
-        <div className="rounded-2xl overflow-hidden"
-          style={{ border: "1px solid rgba(185,28,28,0.4)" }}>
-          <div className="p-8 md:p-10 text-center"
-            style={{ backgroundColor: "rgba(185,28,28,0.12)" }}>
-            <h3 className="text-2xl font-black text-white mb-3">Take the Survey</h3>
-            <p className="text-sm mb-3 max-w-xl mx-auto" style={{ color: "rgba(245,245,245,0.6)" }}>
-              Your story matters. Every submission adds to the national evidence base.
-              Takes about 5 minutes. You choose how your story is shared.
-            </p>
-            <a href="/survey"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block text-base px-8 py-4 rounded-xl font-black tracking-wide transition-colors"
-              style={{ backgroundColor: "#B91C1C", color: "white" }}>
-              Share Your Story Now →
-            </a>
-          </div>
-          <div className="px-6 py-3 flex items-center justify-center gap-6"
-            style={{ backgroundColor: "rgba(185,28,28,0.06)", borderTop: "1px solid rgba(185,28,28,0.2)" }}>
-            <div className="text-center">
-              <div className="text-lg font-black" style={{ color: GOLD }}>{total.toLocaleString()}</div>
-              <div className="text-xs" style={{ color: "rgba(245,245,245,0.4)" }}>families have shared</div>
-            </div>
-            <div className="w-px h-8" style={{ backgroundColor: "rgba(255,255,255,0.1)" }} />
-            <div className="text-center">
-              <div className="text-lg font-black text-white">{usStates.length}</div>
-              <div className="text-xs" style={{ color: "rgba(245,245,245,0.4)" }}>states</div>
-            </div>
-            <div className="w-px h-8" style={{ backgroundColor: "rgba(255,255,255,0.1)" }} />
-            <div className="text-center">
-              <div className="text-lg font-black text-green-400">{quotes.length}+</div>
-              <div className="text-xs" style={{ color: "rgba(245,245,245,0.4)" }}>public voices</div>
-            </div>
-          </div>
-        </div>
-
-        {/* Court Actor Registry CTA — every actor named, gated for survey-takers */}
-        <div className="rounded-2xl overflow-hidden"
-          style={{ border: `1px solid ${GOLD}` }}>
-          <div className="p-8 md:p-10 text-center"
-            style={{
-              background:
-                "linear-gradient(180deg, rgba(201,162,39,0.14) 0%, rgba(201,162,39,0.06) 100%)",
-            }}>
-            <div className="text-xs font-bold uppercase tracking-widest mb-3"
-              style={{ color: "rgba(201,162,39,0.85)" }}>
-              Court Actor Registry
-            </div>
-            <h3 className="text-2xl md:text-3xl font-black text-white mb-4 max-w-2xl mx-auto leading-tight">
-              Track the Court Actors
-            </h3>
-            <p className="text-sm mb-2 max-w-xl mx-auto leading-relaxed"
-              style={{ color: "rgba(245,245,245,0.75)" }}>
-              Every judge, attorney, GAL, evaluator, and caseworker named by Stand With Meg
-              families. When <strong className="text-white">{actorThreshold} or more families</strong>{" "}
-              independently name the same person, their name goes public.
-            </p>
-            <p className="text-sm mb-6 max-w-xl mx-auto leading-relaxed"
-              style={{ color: "rgba(245,245,245,0.6)" }}>
-              See if anyone on your case is here. If you&rsquo;ve already taken the survey,
-              you&rsquo;re already in.
-            </p>
-            <a href="/actors"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block text-base px-8 py-4 rounded-xl font-black tracking-wide transition-colors hover:opacity-90"
-              style={{ backgroundColor: GOLD, color: BG }}>
-              Track the Court Actors →
-            </a>
-            <p className="text-xs mt-5 max-w-md mx-auto leading-relaxed italic"
-              style={{ color: "rgba(245,245,245,0.4)" }}>
-              Access is limited to survey-takers. Haven&rsquo;t taken it yet? Start with{" "}
-              <a href="/survey" target="_blank" rel="noopener noreferrer" className="underline" style={{ color: "rgba(201,162,39,0.85)" }}>
-                Share Your Story
-              </a>
-              .
+      {/* SURVEY CTA */}
+      <section className="panel panel--raised p-8 md:p-10" aria-labelledby="survey-cta-heading">
+        <div className="flex flex-wrap items-center justify-between gap-6">
+          <div>
+            <h2 id="survey-cta-heading" className="display text-2xl md:text-3xl">
+              YOUR STORY IS A <span className="accent-word">DATA POINT.</span>
+            </h2>
+            <p className="mt-2 text-sm max-w-xl" style={{ color: "var(--ink-70)" }}>
+              About nine minutes. Fully private. You choose how your story is shared —
+              and it makes the pattern impossible to dismiss.
             </p>
           </div>
-        </div>
-
-        {/* Donate */}
-        <div className="rounded-2xl overflow-hidden"
-          style={{ border: `1px solid rgba(201,162,39,0.4)` }}>
-          <div className="p-8 md:p-10 text-center"
-            style={{ backgroundColor: "rgba(201,162,39,0.10)" }}>
-            <div className="text-xs font-bold uppercase tracking-widest mb-3"
-              style={{ color: "rgba(201,162,39,0.7)" }}>
-              Why donations matter
-            </div>
-            <h3 className="text-2xl md:text-3xl font-black text-white mb-4 max-w-2xl mx-auto leading-tight">
-              Keep this record public and free.
-            </h3>
-            <p className="text-sm mb-4 max-w-xl mx-auto leading-relaxed" style={{ color: "rgba(245,245,245,0.7)" }}>
-              Donations help keep the Stand With Meg registry, public dashboard, state reports, and family-submitted documentation online, searchable, and free for the families who need it.
-            </p>
-            <p className="text-sm mb-6 max-w-xl mx-auto leading-relaxed" style={{ color: "rgba(245,245,245,0.75)" }}>
-              Stand With Meg runs on hosting, document storage, and the platform powering the state reports and public dashboard. Recurring contributions are what keep this record online and accessible to the families who come after.
-            </p>
-            <a href={DONATION_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block text-base px-8 py-4 rounded-xl font-black tracking-wide transition-colors hover:opacity-90"
-              style={{ backgroundColor: GOLD, color: BG }}>
-              Support the Registry →
-            </a>
-            <p className="text-xs mt-5 max-w-md mx-auto leading-relaxed"
-              style={{ color: "rgba(245,245,245,0.4)" }}>
-              PayPal and major cards accepted. Worldwide donors welcome &mdash; works in 200+ countries.
-              Recurring monthly donations supported. Donations are not yet tax-deductible.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Footer */}
-      <footer className="relative z-10 text-center px-6 py-5 mt-4 text-xs border-t"
-        style={{ color: "rgba(245,245,245,0.2)", borderColor: "rgba(255,255,255,0.06)" }}>
-        <div>Stand With Meg &nbsp;·&nbsp; Courage to Stand, Power to Change &nbsp;·&nbsp; standwithmeg.com</div>
-        <div className="mt-2 flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
-          <a href="/partners" target="_blank" rel="noopener noreferrer" className="font-semibold transition-opacity hover:opacity-80"
-            style={{ color: "rgba(201,162,39,0.6)" }}>
-            Partner with us — earn by signing sponsors →
+          <a href="/survey" className="action-pill" style={{ fontSize: "1rem", padding: "1rem 2rem" }}>
+            <span className="pill-dot" aria-hidden />
+            Share your story ↗
           </a>
-          <a href="/about" target="_blank" rel="noopener noreferrer" className="transition-opacity hover:opacity-80">About</a>
-          <a href="/contact" target="_blank" rel="noopener noreferrer" className="transition-opacity hover:opacity-80">Contact</a>
-          <a href="/privacy" target="_blank" rel="noopener noreferrer" className="transition-opacity hover:opacity-80">Privacy</a>
         </div>
-      </footer>
+        <div className="mt-7 flex flex-wrap gap-8 pt-6" style={{ borderTop: "1px solid var(--hairline)" }}>
+          <div>
+            <p className="stat-number" style={{ fontSize: "1.6rem", color: "var(--gold-soft)" }}>{total.toLocaleString()}</p>
+            <p className="stat-label">families have shared</p>
+          </div>
+          <div>
+            <p className="stat-number" style={{ fontSize: "1.6rem" }}>{usStates.length}</p>
+            <p className="stat-label">states</p>
+          </div>
+          <div>
+            <p className="stat-number" style={{ fontSize: "1.6rem", color: "var(--gold-soft)" }}>{`${quotes.length}+`}</p>
+            <p className="stat-label">public voices</p>
+          </div>
+        </div>
+      </section>
+
+      {/* COURT ACTOR REGISTRY CTA */}
+      <section className="panel p-8 md:p-10" style={{ borderColor: "var(--hairline-gold)" }} aria-labelledby="registry-cta-heading">
+        <p className="eyebrow eyebrow--gold mb-3">The Court Actors</p>
+        <h2 id="registry-cta-heading" className="display text-2xl md:text-3xl mb-4">
+          TRACK THE COURT <span className="accent-word">ACTORS</span>
+        </h2>
+        <p className="text-sm mb-2 max-w-xl leading-relaxed" style={{ color: "var(--ink-70)" }}>
+          Every judge, attorney, GAL, evaluator, and caseworker named by Stand With Meg
+          families. When {actorThreshold} or more families independently name the same
+          person, their name goes public.
+        </p>
+        <p className="text-sm mb-6 max-w-xl leading-relaxed" style={{ color: "var(--ink-45)" }}>
+          See if anyone on your case is here. If you&rsquo;ve already taken the survey,
+          you&rsquo;re already in.
+        </p>
+        <div className="flex flex-wrap items-center gap-5">
+          <a href="/actors" className="gold-pill">Track the Court Actors →</a>
+          <p className="disclaimer-strip m-0">
+            Access is limited to survey-takers — start with <a href="/survey" style={{ color: "var(--gold-soft)" }}>Share Your Story</a>.
+          </p>
+        </div>
+      </section>
+
+      {/* DONATE */}
+      <section className="panel p-8 md:p-10" style={{ borderColor: "var(--hairline-gold)" }} aria-labelledby="donate-heading">
+        <p className="eyebrow eyebrow--gold mb-3">Why donations matter</p>
+        <h2 id="donate-heading" className="display text-2xl md:text-3xl mb-4">
+          KEEP THIS RECORD PUBLIC AND <span className="accent-word">FREE.</span>
+        </h2>
+        <p className="text-sm mb-6 max-w-xl leading-relaxed" style={{ color: "var(--ink-70)" }}>
+          Donations keep the registry, the public dashboard, the state reports, and
+          family-submitted documentation online, searchable, and free for the families
+          who need it. Recurring contributions are what keep this record online for the
+          families who come after.
+        </p>
+        <div className="flex flex-wrap items-center gap-5">
+          <a href={DONATION_URL} target="_blank" rel="noopener noreferrer" className="gold-pill">Support the Registry →</a>
+          <p className="disclaimer-strip m-0">PayPal and major cards · 200+ countries · monthly supported</p>
+        </div>
+      </section>
+
+      {/* Connection Circles */}
+      <CirclesBand />
 
       {inviteOpen && <InviteFriendModal onClose={() => setInviteOpen(false)} />}
 
