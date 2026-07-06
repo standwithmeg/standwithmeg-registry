@@ -1,0 +1,64 @@
+name: Reconcile Actor Publications
+
+# Keeps actor_publications (the migration-061 source of truth) in sync with the
+# live public court-actor list so the report / actor cards / share pages can
+# never disagree about who's live, who has a photo, or whose slides are stale.
+#
+# Triggers:
+#   - Daily at 13:00 UTC (09:00 ET / 08:00 CT) — daytime so any change shows up
+#     in the log while Meg is awake. Runs a few hours before the photo-request
+#     job so publication state is fresh when that job reads it.
+#   - Manual dispatch from the Actions tab. Use dry_run to preview.
+#
+# What it does:  promote new public actors, refresh family counts, mark a photo
+#   approved (and queue its auto-publish) the first time one appears.
+# What it does NOT do:  touch surveys, real actor rows, or the live report; it
+#   only writes actor_publications. Idempotent — a no-op when already in sync.
+#
+# Required repo secrets (already present for the photo-request job):
+#   NEXT_PUBLIC_SUPABASE_URL
+#   SUPABASE_SERVICE_ROLE_KEY
+
+on:
+  schedule:
+    - cron: "0 13 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Preview only — report what would change and exit without writing."
+        required: false
+        default: "false"
+
+permissions:
+  contents: read
+
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Set up Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Dry-run preview
+        if: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.dry_run == 'true' }}
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: npx tsx scripts/reconcile-actor-publications.ts --dry-run
+
+      - name: Reconcile
+        if: ${{ github.event_name == 'schedule' || github.event.inputs.dry_run != 'true' }}
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: npx tsx scripts/reconcile-actor-publications.ts --apply
