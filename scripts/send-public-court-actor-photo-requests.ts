@@ -117,13 +117,74 @@ function indexExisting(rows: ExistingNotificationRow[]): ExistingIndex {
   return { alreadySentKeys, prior };
 }
 
+type ManifestPhotoIndex = {
+  bucketKeys: Set<string>;
+  nameStateKeys: Set<string>;
+};
+
+/** "Judge Bethany M. Roberts" + "KS" → "ks|bethanymroberts" (honorific/spelling tolerant). */
+function nameStateKey(name: string, state: string | null | undefined): string {
+  const cleaned = String(name || "")
+    .toLowerCase()
+    .replace(/\b(honorable|hon|judge|justice|dr|mr|mrs|ms|esq|jr|sr|ii|iii|iv)\b\.?/g, "")
+    .replace(/[^a-z0-9]/g, "");
+  return `${String(state || "").toLowerCase()}|${cleaned}`;
+}
+
+/**
+ * Actors that already have a live photo (per the deployed manifest) must
+ * never trigger photo-request emails — families were being asked for
+ * photos of actors whose portrait was already published (Bethany bug,
+ * reported 2026-07-06). Older manifest entries can have a null bucket
+ * key, so we also match on state + normalized name.
+ */
+function loadManifestPhotoIndex(): ManifestPhotoIndex {
+  const bucketKeys = new Set<string>();
+  const nameStateKeys = new Set<string>();
+  try {
+    const file = path.join(process.cwd(), "public", "court-actors", "manifest.json");
+    const parsed = JSON.parse(readFileSync(file, "utf8"));
+    const entries: Array<{
+      actor_bucket_key?: string | null;
+      canonical_name?: string | null;
+      display_name?: string | null;
+      state_abbr?: string | null;
+      photo_url?: string | null;
+    }> = Array.isArray(parsed) ? parsed : parsed?.actors ?? [];
+    for (const e of entries) {
+      if (!e?.photo_url) continue;
+      if (e.actor_bucket_key) bucketKeys.add(e.actor_bucket_key);
+      const name = e.canonical_name || e.display_name;
+      if (name && e.state_abbr) nameStateKeys.add(nameStateKey(name, e.state_abbr));
+    }
+  } catch (err) {
+    // A broken manifest must not block photo requests entirely — fall back
+    // to "no photos known" and let dedupe rows do their normal job.
+    console.warn(`[warn] could not read manifest for photo skip: ${err instanceof Error ? err.message : err}`);
+  }
+  return { bucketKeys, nameStateKeys };
+}
+
+function bucketHasLivePhoto(bucket: PublicActorBucket, photos: ManifestPhotoIndex): boolean {
+  if (bucket.actor_bucket_key && photos.bucketKeys.has(bucket.actor_bucket_key)) return true;
+  const state = bucket.state_code || bucket.location_key;
+  return photos.nameStateKeys.has(nameStateKey(bucket.canonical_name, state));
+}
+
 function planSends(buckets: PublicActorBucket[], existing: ExistingIndex): {
   plan: PlannedSend[];
   alreadySent: Array<{ bucket: PublicActorBucket; reporter: PublicActorReporter }>;
+  photoAlreadyLive: PublicActorBucket[];
 } {
   const plan: PlannedSend[] = [];
   const alreadySent: Array<{ bucket: PublicActorBucket; reporter: PublicActorReporter }> = [];
+  const photoAlreadyLive: PublicActorBucket[] = [];
+  const photos = loadManifestPhotoIndex();
   for (const bucket of buckets) {
+    if (bucketHasLivePhoto(bucket, photos)) {
+      photoAlreadyLive.push(bucket);
+      continue;
+    }
     for (const reporter of bucket.reporters) {
       const key = notificationDedupeKey(reporter.reporter_email, bucket.actor_bucket_key);
       if (existing.alreadySentKeys.has(key)) {
@@ -138,7 +199,7 @@ function planSends(buckets: PublicActorBucket[], existing: ExistingIndex): {
       plan.push({ bucket, reporter, subject, body });
     }
   }
-  return { plan, alreadySent };
+  return { plan, alreadySent, photoAlreadyLive };
 }
 
 function ensureSupabaseEnv() {
@@ -269,7 +330,14 @@ async function main() {
   }
   const existingIndex = indexExisting(existingRows);
 
-  const { plan, alreadySent } = planSends(buckets, existingIndex);
+  const { plan, alreadySent, photoAlreadyLive } = planSends(buckets, existingIndex);
+
+  if (photoAlreadyLive.length > 0) {
+    console.log(`\nSkipped — photo already live on the public record (${photoAlreadyLive.length}):`);
+    for (const b of photoAlreadyLive) {
+      console.log(`  • ${b.canonical_name} — ${b.location_key} (no photo request needed)`);
+    }
+  }
 
   logPreview({ buckets, plan, alreadySent, prior: existingIndex.prior });
 
