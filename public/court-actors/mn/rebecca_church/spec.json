@@ -1,16 +1,16 @@
 {
   "schema_version": 2,
   "actor": {
-    "slug": "darik_anderson",
-    "display_name": "Darik Anderson",
+    "slug": "rebecca_church",
+    "display_name": "Rebecca Church",
     "title": "",
-    "first_name": "Darik",
-    "last_name": "Anderson",
-    "role": "GAL / Child Representative",
-    "court": "Winona County MN",
+    "first_name": "Rebecca",
+    "last_name": "Church",
+    "role": "Attorney",
+    "court": "Winona",
     "county": "Winona",
-    "court_or_county": "Winona County MN",
-    "state": "Minnesota",
+    "court_or_county": "Winona",
+    "state": "MN",
     "state_abbr": "MN",
     "mention_count": 0,
     "family_count": 3,
@@ -18,8 +18,8 @@
     "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
     "actor_report_count": 0,
     "supabase_row_ids": [],
-    "actor_row_id": "3530d98e-bba4-4670-9222-aee137be4994",
-    "actor_bucket_key": "darik anderson|MN"
+    "actor_row_id": null,
+    "actor_bucket_key": "rebeca church|MN"
   },
   "photo": {
     "path": null,
@@ -50,26 +50,26 @@
     "family_reports": [],
     "public_comments": [
       {
-        "comment_text": "Not conducting an independent study, filling false documentation into court, Lying on the stand.",
+        "comment_text": "Crooked Assistans attorney who is completely out of line and lies",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Winona County MN"
+        "court_or_county": ""
       },
       {
-        "comment_text": "Never evaluated the child’s current living situation and lied on the stand.",
+        "comment_text": "lying to the judge, denning family placement, ignoring evidence",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Winona"
+        "court_or_county": "Winona county MN"
       },
       {
-        "comment_text": "Refused documents",
+        "comment_text": "Refused paperwork",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Winona"
       }
     ]
   },
-  "export_dir": "New Final Post and Capcut template/export/darik_anderson",
+  "export_dir": "New Final Post and Capcut template/export/rebecca_church",
   "unresolved": [
     "family_reports: no submission_ids on actor",
     "public_comments: no merged comments or raw notes available"
@@ -86,7 +86,7 @@
     "no_case_numbers": true
   },
   "public_share": {
-    "recommended_route": "/court-actors/mn/darik_anderson/share.html",
+    "recommended_route": "/court-actors/mn/rebecca_church/share.html",
     "draft_only": true
   },
   "render": {},
