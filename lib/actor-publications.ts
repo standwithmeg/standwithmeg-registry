@@ -159,3 +159,72 @@ export async function deletePublication(bucketKey: string): Promise<void> {
   const { error } = await sb.from("actor_publications").delete().eq("actor_bucket_key", bucketKey);
   if (error) throw new Error(`deletePublication: ${error.message}`);
 }
+
+export interface LiveActorInput {
+  name: string;
+  role: string;
+  state_code: string | null;
+  location_key: string | null;
+  count: number;
+  photo_url: string | null;
+  latest_reported_at: string | null;
+}
+
+export interface ReconcileResult {
+  total: number;
+  promoted: number;          // actors newly added / made report-visible
+  photoNewlyApproved: number; // photo appeared since last sync → queued for publish
+  countUpdated: number;       // family count changed
+}
+
+/**
+ * Reconcile actor_publications against the current live public-actor list.
+ * Idempotent safety net: promotes new actors, refreshes counts, and flips
+ * photo_status → approved (queuing the auto-publish) the first time a photo
+ * appears. Caller provides the list (real fetch in prod, synthetic in tests),
+ * so this is pure, injectable, and easy to prove.
+ */
+export async function reconcileActorPublications(actors: LiveActorInput[]): Promise<ReconcileResult> {
+  // Collapse spelling variants to one row per person (richest wins).
+  const byKey = new Map<string, LiveActorInput>();
+  for (const a of actors) {
+    const key = publicationKey(a.name, a.role, a.location_key ?? a.state_code);
+    const cur = byKey.get(key);
+    if (!cur || (a.photo_url && !cur.photo_url) || a.count > cur.count) byKey.set(key, a);
+  }
+
+  const result: ReconcileResult = { total: byKey.size, promoted: 0, photoNewlyApproved: 0, countUpdated: 0 };
+
+  for (const [key, a] of byKey) {
+    const existing = await getActorPublication(key);
+    if (!existing) {
+      await onActorPromotedToReport({
+        name: a.name, role: a.role, stateCode: a.state_code,
+        locationKey: a.location_key ?? a.state_code, familyCount: a.count,
+        visibleAt: a.latest_reported_at ?? undefined,
+      });
+      result.promoted += 1;
+    } else if (existing.family_count !== a.count) {
+      await onActorPromotedToReport({
+        name: a.name, role: a.role, stateCode: a.state_code,
+        locationKey: a.location_key ?? a.state_code, familyCount: a.count,
+      });
+      result.countUpdated += 1;
+    }
+
+    // A photo appeared since last sync (and wasn't already approved) → publish path.
+    if (a.photo_url && (!existing || existing.photo_status !== "approved")) {
+      await onActorPhotoAssigned({ bucketKey: key, storagePath: a.photo_url, approvedBy: "system:reconcile" });
+      result.photoNewlyApproved += 1;
+    }
+  }
+  return result;
+}
+
+/** Production wrapper: fetch the live public actor list and reconcile. */
+export async function reconcileFromLiveApi(apiBase = process.env.NEXT_PUBLIC_APP_URL || "https://my.standwithmeg.com"): Promise<ReconcileResult> {
+  const res = await fetch(`${apiBase}/api/survey/court-actors?limit=1000`);
+  if (!res.ok) throw new Error(`reconcileFromLiveApi: court-actors ${res.status}`);
+  const data = (await res.json()) as { actors?: LiveActorInput[] };
+  return reconcileActorPublications(data.actors ?? []);
+}
