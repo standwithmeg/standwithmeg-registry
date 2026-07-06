@@ -8,22 +8,24 @@
     "last_name": "Cafazzo",
     "role": "Judge",
     "court": "Middlesex",
-    "county": "Middlesex",
+    "county": null,
     "court_or_county": "Middlesex",
     "state": "Massachusetts",
     "state_abbr": "MA",
-    "mention_count": 0,
+    "mention_count": 1,
     "family_count": 3,
     "public_family_count": 3,
     "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "actor_report_count": 1,
+    "supabase_row_ids": [
+      "45826789-f2e4-4125-a16f-b166a24a4bdb"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
   "photo": {
-    "path": null,
-    "exists": false,
+    "path": "massachusetts/terri_klug_cafazzo/image_1080.png",
+    "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
@@ -42,41 +44,34 @@
     "_pdf_state_family_count": 105,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5388,
+  "movement_total": 5392,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 1,
+    "actor_report_count": 1,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Tens of thousands of dollars spent on a \"parenting agreement\" that only gets followed when it is convenient for him. And the court does nothing to uphold said agreement, they just take more of your money to hear your case and do nothing.",
+        "state": "MA",
+        "county": "Middlesex",
+        "row_id": "c38191fe-1153-4ec8-932d-56878c3c40d4"
+      }
+    ],
     "public_comments": [
-      {
-        "comment_text": "She ignored ALL claims of abuse, she told me to have a third party witness to drop offs, I had one, then she said I enabled the children having one and made us go alone to his house where he harassed us and then asked why I didn't bring a third party. She is pro-bad to a point where she doesn't like to GALs or Court Clinicians. She is lazy to a degree that her orders let high conflict coercive control people get away with it. There was a court order for parenting time, the court clinician said he had to make calls on certain days, he was so mean that the kids hung up (which they were allowed to do) and she didn't hold him accountable.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Middlsex"
-      },
-      {
-        "comment_text": "I hadn't even started speaking yet, and she was already pissed at me because my wife was old.My ex wife, my first x wife was allowed to come into court and give statements when I wasn't there",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Middlesex"
-      },
       {
         "comment_text": "Allowed ex's motion for school placement based on intention of residency rather than an established residency.",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Middlesex"
+        "source": "court_actors.notes"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/terri_klug_cafazzo",
   "unresolved": [
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
+    "pdf_public_actor: helper missing at /Users/meghannmiller/Code/court-actor-posts/scripts/pdf/public_actor_for_share.py"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
-    "footer": "Family-reported submissions.",
+    "footer": "Family-reported submissions · not court findings.",
     "strike_through_reserved_for": [
       "isolated",
       "dismissed",
