@@ -1,0 +1,94 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "kenneth_a_lundberg",
+    "display_name": "Kenneth A. Lundberg",
+    "title": "",
+    "first_name": "Kenneth A.",
+    "last_name": "Lundberg",
+    "role": "Judge",
+    "court": "Ellis county 378th district court",
+    "county": "Ellis",
+    "court_or_county": "Ellis county 378th district court",
+    "state": "TX",
+    "state_abbr": "TX",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": "keneth lundberg|TX"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 249,
+    "total_submissions": 314,
+    "avg_financial_loss": 230056.57,
+    "avg_months_lost": 32.1,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "TX",
+    "state_family_count": 314,
+    "median_financial_loss": 118900,
+    "median_burden_sample_size": 149,
+    "median_months_lost": 20,
+    "pro_se_pct": 49.7,
+    "pro_se_count": 156,
+    "_pdf_state_family_count": 314,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5397,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "He signed the orders, allowing the father who had an active order of protection against him for the sexual assault and beating of the mother. He went and filed papers after two CPS reports were made against him and his Living girlfriend the first was made by me the grandmother on February 27, 2025 after my daughter sent me a video that she had started recording of a FaceTime call she had with her children where he walks over and picks up their four-year-old son by the wrist and he was a hefty built like a linebacker, and he’s telling him to shut the hell up and carries them off camera while his Living girlfriend is sitting there, and he had told his mother that the Living girlfriend had hit him and he wanted to come home and this was on February 24, 2025 and Cps testified in court that they did absolutely nothing so on March 13, 2025 I had a doctors appointment and my doctor asked why I was so anxious and I told her that story and how the children had coming home and stating that daddy was allowing the Living girlfriend to beat them and that he was saying they needed that beating and that he was drinking and they didn’t want to go to his house and he wasn’t supposed to be drinking and so she called child protective services and that’s when they acted and on March 26, 2025 court papers were signed by Kenneth Lundberg and giving the father who had a protective order against him who testified that he knew the mother‘s address only the last two weeks and that her mental decline had been concerning him since the entry of their divorce in 2022 and ever sell more recently the past several weeks and he proceeded to give false statements in an unsworn affidavit, which means that he is saying that under oath he’s telling the truth so being on probation and out on bond for the rape and beating of our daughter, I feel like you should be thrown in jail once you commit perjury which that did not happen, this judge refused to hear testimony when the children were taking to Cook Children’s on May 4, 2025 because when I picked them up from the Midlothian police station, I recorded the father‘s mother and Living girlfriend pulling off of 67 in Midlothian Texas into the parking lot of the police station and I recorded until they left the parking lot and you can see the black eye on the four-year-old at that point in time. I was not believing that an actual adult gave this black eye to the four-year-old and I had 17 people at my house celebrating the seventh birthday of her eldest child that she had to miss so it wasn’t until the next day that we found out that the black guy was given by Emily Noll when she got her second supervised visit that I was supervising, and once he told my daughter that Emily gave him the blackeye and that she was hitting him about the back and my daughter looked down his shirt. She had him come and tell me and we were at her sister‘s house and I went and I called Cook Children’s and explained to them that we have Called or I we meaning myself and my doctor at called child protective services and they have done nothing to help these children and the courts refused to do anything you know they took the kids and gave custody to the father temporarily without even holding a hearing or alerting my daughter, and there’s a order of protection against the father. They said yes bring the kids affair so we did that and then when they called in child protective services child protective services activated, a priority level one case because they’re the ones who decide what level it is. not the hospital well, the father we didn’t return the children on May 4 so the father did a habeas corpus and judge Lundberg refused to even hold a hearing but had Christie Blanchard our daughter‘s first attorney call us and tell us that the children were gonna be in the judges chambers because she did request that the judge speak to the Children and she did request that the judge look at the paperwork that the kids were taken to Cook Children’s ER and sent to the police station and he didn’t let her finish a sentence and told my daughter to stay in the courtroom and myself and told Mr. Putman you can go get your Children and the courtroom got quiet because you heard screaming and crying by the children out in the hallway, and the judge looked at me made eye contact, and then just told the attorneys to come into his chambers. He made no attempt whatsoever to hold a habeas corpus hearing other than nope will discuss that on another day just totally ignored even though there was a picture of the black Eye submitted. He did not care at all.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Associate Judge but not sure if he is assigned to any courts, but he provided as if he was over the 378th judicial district court in Ellis County, Texas"
+      },
+      {
+        "comment_text": "Signed emergency removal order without evidence or any actual immediate danger",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Ellis county 378th district court"
+      },
+      {
+        "comment_text": "Signed a TRO taking all my rights away without a hearing.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "378th judicial district court Ellis county"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/kenneth_a_lundberg",
+  "unresolved": [
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/tx/kenneth_a_lundberg/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}
