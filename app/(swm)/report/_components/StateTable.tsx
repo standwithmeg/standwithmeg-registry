@@ -7,7 +7,7 @@ import { StateQuoteModal } from "./StateQuoteModal";
 import { DonateBand, DONATE_LINES } from "./DonateBand";
 import { GOLD } from "../../../../lib/design-tokens";
 import { US_JURISDICTION_NAMES } from "../../../../lib/us-jurisdictions";
-const THRESHOLD = 30;
+import { REPORT_THRESHOLD } from "../../../../lib/court-actors";
 
 // Drop a donate band into the table after every Nth location row.
 const DONATE_EVERY_STATES = 8;
@@ -112,7 +112,7 @@ export function StateTable({
   // else opens the quotes modal so people can still read what's been shared.
   function handleRowClick(row: StateRow) {
     const res = resourceMap.get(row.state);
-    if (row.total_submissions >= THRESHOLD && res?.report_available && res.drive_folder_url) {
+    if (row.total_submissions >= REPORT_THRESHOLD && res?.report_available && res.drive_folder_url) {
       window.open(res.drive_folder_url, "_blank", "noopener,noreferrer");
       return;
     }
@@ -153,8 +153,9 @@ export function StateTable({
             <div>
               <h2 className="font-black text-white text-base tracking-wide">Data by Location</h2>
               <p className="text-xs mt-0.5" style={{ color: "rgba(245,245,245,0.4)" }}>
-                Locations with 30+ submissions become eligible for a Family Rights Report. Click a location
-                with a published report to download it. Click any other location to read what families shared.
+                Every location with at least one submission is shown. Locations with {REPORT_THRESHOLD}+
+                submissions become eligible for a Family Rights Report. Click a location with a published
+                report to download it. Click any other location to read what families shared.
               </p>
             </div>
             <div className="relative w-full md:w-64">
@@ -198,6 +199,8 @@ export function StateTable({
                 <SortHeader field="state" label="Location" {...headerProps} />
                 <SortHeader field="total_submissions" label="Families" {...headerProps} />
                 <th className="px-3 py-3 text-left text-xs font-bold uppercase tracking-wide whitespace-nowrap"
+                  style={{ color: "rgba(245,245,245,0.45)" }} title="Families still needed before this location gets a downloadable report">Left</th>
+                <th className="px-3 py-3 text-left text-xs font-bold uppercase tracking-wide whitespace-nowrap"
                   style={{ color: "rgba(245,245,245,0.45)" }}>Shareable Quotes</th>
                 <th className="px-3 py-3 text-left text-xs font-bold uppercase tracking-wide whitespace-nowrap"
                   style={{ color: "rgba(245,245,245,0.45)" }}>Court Actors</th>
@@ -213,7 +216,7 @@ export function StateTable({
             <tbody>
               {states.map((row, i) => {
                 const res = resourceMap.get(row.state);
-                const isHighlighted = row.total_submissions >= THRESHOLD;
+                const isHighlighted = row.total_submissions >= REPORT_THRESHOLD;
                 const commentCount = commentCounts[row.state] ?? 0;
                 const actorCount = courtActorCounts[row.state] ?? 0;
                 return (
@@ -232,6 +235,9 @@ export function StateTable({
                     }}>
                     <td className="px-3 py-3 font-black text-sm" style={{ color: GOLD }}>{row.state}</td>
                     <td className="px-3 py-3 text-sm font-bold text-white">{row.total_submissions}</td>
+                    <td className="px-3 py-3 text-sm font-bold tabular-nums" style={{ color: "rgba(245,245,245,0.7)" }}>
+                      {Math.max(0, REPORT_THRESHOLD - row.total_submissions)}
+                    </td>
                     <td className="px-3 py-3 text-sm">
                       {commentCount > 0 ? (
                         <button
@@ -280,7 +286,7 @@ export function StateTable({
                   </motion.tr>
                   {(i + 1) % DONATE_EVERY_STATES === 0 && i !== states.length - 1 && (
                     <tr>
-                      <td colSpan={10} className="p-0">
+                      <td colSpan={11} className="p-0">
                         <DonateBand line={DONATE_LINES[Math.floor(i / DONATE_EVERY_STATES) % DONATE_LINES.length]} />
                       </td>
                     </tr>
@@ -290,7 +296,7 @@ export function StateTable({
               })}
               {states.length === 0 && (
                 <tr>
-                  <td colSpan={10} className="px-6 py-12 text-center text-sm" style={{ color: "rgba(245,245,245,0.3)" }}>
+                  <td colSpan={11} className="px-6 py-12 text-center text-sm" style={{ color: "rgba(245,245,245,0.3)" }}>
                     {normalizedQuery ? (
                       <>No locations match “{searchQuery.trim()}”. Try a different spelling or clear the search.</>
                     ) : (

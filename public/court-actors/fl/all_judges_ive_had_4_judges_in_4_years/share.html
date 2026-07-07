@@ -532,6 +532,21 @@ html,body { background:#06070A; color:var(--white); font-family:Inter,system-ui,
 .review li { margin:8px 0; }
 
 @media (min-width:760px) { .share-scroll { padding-top:28px; } }
+/* Sponsor spotlight slot */
+.sponsor-slot { width:min(100%,540px); margin:14px auto 0; padding:0 12px; }
+.sponsor-slot-label { font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--gold); margin-bottom:8px; }
+.sponsor-card { background:linear-gradient(180deg,#ffffff,#f4f6f9); border-radius:14px; padding:16px; color:#15202b; box-shadow:0 16px 36px -16px rgba(0,0,0,.55); }
+.sponsor-card img { max-height:44px; width:auto; margin-bottom:10px; display:block; }
+.sponsor-card .services { font-size:13px; font-weight:800; }
+.sponsor-card .location { font-size:11px; color:#5b6675; margin-top:2px; }
+.sponsor-card .divider { height:1px; background:#e6e9ee; margin:12px 0; }
+.sponsor-card .phone { font-size:13px; font-weight:800; }
+.sponsor-card .tagline { font-size:11px; color:#7a8493; font-style:italic; margin-top:2px; }
+.sponsor-card .cta { display:inline-block; padding:8px 14px; border-radius:8px; font-size:12px; font-weight:800; color:#fff; text-decoration:none; }
+.sponsor-empty { display:block; border:2px dashed rgba(201,162,39,.4); border-radius:14px; padding:16px; text-align:center; text-decoration:none; }
+.sponsor-empty .eyebrow { font-size:10px; font-weight:800; text-transform:uppercase; letter-spacing:.14em; color:rgba(245,245,245,.45); }
+.sponsor-empty .headline { font-size:14px; font-weight:800; color:var(--gold); margin-top:6px; }
+.sponsor-empty .sub { font-size:11px; color:rgba(245,245,245,.5); margin-top:2px; }
 </style>
 </head>
 <body>
@@ -545,6 +560,13 @@ html,body { background:#06070A; color:var(--white); font-family:Inter,system-ui,
   </button>
 </div>
 <div class="bulk-progress" id="bulk-progress"></div>
+<section class="sponsor-slot" id="sponsor-slot" data-state="FL">
+  <a href="/sponsor" target="_blank" rel="noopener noreferrer" class="sponsor-empty">
+    <div class="eyebrow">Sponsor this spotlight</div>
+    <div class="headline">Your business here</div>
+    <div class="sub">Become a sponsor →</div>
+  </a>
+</section>
 <main class="share-scroll">
 <section class="phone-frame">
 <article class="frame frame-image" id="frame-01">
@@ -1304,6 +1326,44 @@ async function shareAllFrames() {
 
 document.getElementById('save-all-btn')?.addEventListener('click', saveAllFrames);
 document.getElementById('share-all-btn')?.addEventListener('click', shareAllFrames);
+// Sponsor spotlight slot — populated from /api/sponsors if an approved sponsor exists.
+(function() {
+  const slot = document.getElementById('sponsor-slot');
+  if (!slot) return;
+  const state = (slot.dataset.state || '').trim();
+  function esc(t) {
+    return String(t ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+  function domainLabel(url) {
+    return url ? url.replace(/^https?:\/\//,'').replace(/\/$/,'') : 'Visit website';
+  }
+  function renderEmpty() {
+    slot.innerHTML = '<a href="/sponsor" target="_blank" rel="noopener noreferrer" class="sponsor-empty"><div class="eyebrow">Sponsor this spotlight</div><div class="headline">Your business here</div><div class="sub">Become a sponsor →</div></a>';
+  }
+  function renderCard(s) {
+    const accent = s.brand_color || '#1f93c7';
+    let html = '<div class="sponsor-card">';
+    if (s.logo_url) html += '<img src="' + esc(s.logo_url) + '" alt="' + esc(s.business_name) + '">';
+    if (s.services) html += '<div class="services">' + esc(s.services) + '</div>';
+    if (s.location_label) html += '<div class="location">' + esc(s.location_label) + '</div>';
+    html += '<div class="divider"></div><div style="display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap;">';
+    html += '<div>';
+    if (s.phone) html += '<div class="phone">' + esc(s.phone) + '</div>';
+    if (s.tagline) html += '<div class="tagline">' + esc(s.tagline) + '</div>';
+    html += '</div>';
+    if (s.website_url) html += '<a href="' + esc(s.website_url) + '" target="_blank" rel="noopener noreferrer" class="cta" style="background-color:' + esc(accent) + '">' + domainLabel(s.website_url) + '</a>';
+    html += '</div></div>';
+    slot.innerHTML = '<div class="sponsor-slot-label">Sponsored by</div>' + html;
+  }
+  fetch('/api/sponsors?placement=court_actor_spotlight&state=' + encodeURIComponent(state))
+    .then(r => r.json())
+    .then(d => {
+      const sponsors = Array.isArray(d && d.sponsors) ? d.sponsors : [];
+      const match = sponsors.find(x => x.slot === 'court_actor_spotlight') || sponsors[0];
+      if (match) renderCard(match); else renderEmpty();
+    })
+    .catch(() => renderEmpty());
+})();
 </script>
 </body>
 </html>

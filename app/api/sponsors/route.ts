@@ -7,17 +7,18 @@ export const runtime = "nodejs";
 const PUBLIC_FIELDS =
   "id,business_name,website_url,phone,services,tagline,location_label,brand_color,logo_url,slot,tier,sort_order";
 
-type Placement = "state_page" | "main_page" | "pdf";
+type Placement = "state_page" | "main_page" | "pdf" | "court_actor_spotlight";
 
 // Which slot types appear on each surface.
 const SLOTS_BY_PLACEMENT: Record<Placement, string[]> = {
   main_page: ["presenting", "co_sponsor", "movement_partner"],
   state_page: ["state_exclusive", "community_supporter"],
   pdf: ["state_exclusive"],
+  court_actor_spotlight: ["court_actor_spotlight"],
 };
 
 function parsePlacement(value: string | null): Placement {
-  if (value === "main_page" || value === "pdf") return value;
+  if (value === "main_page" || value === "pdf" || value === "court_actor_spotlight") return value;
   return "state_page";
 }
 
