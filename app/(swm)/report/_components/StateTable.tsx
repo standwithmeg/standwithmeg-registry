@@ -6,6 +6,7 @@ import { ThresholdBadge } from "./ThresholdBadge";
 import { StateQuoteModal } from "./StateQuoteModal";
 import { DonateBand, DONATE_LINES } from "./DonateBand";
 import { GOLD } from "../../../../lib/design-tokens";
+import { US_JURISDICTION_NAMES } from "../../../../lib/us-jurisdictions";
 const THRESHOLD = 30;
 
 // Drop a donate band into the table after every Nth location row.
@@ -103,6 +104,7 @@ export function StateTable({
   const [sortField, setSortField] = useState<keyof StateRow>("total_submissions");
   const [sortDir, setSortDir] = useState<"asc" | "desc">("desc");
   const [quoteState, setQuoteState] = useState<StateRow | null>(null);
+  const [searchQuery, setSearchQuery] = useState("");
 
   const resourceMap = new Map(resources.map(r => [r.state_code, r]));
 
@@ -117,6 +119,15 @@ export function StateTable({
     setQuoteState(row);
   }
 
+  function searchableText(row: StateRow): string {
+    const parts = [row.state];
+    const fullName = US_JURISDICTION_NAMES[row.state as keyof typeof US_JURISDICTION_NAMES];
+    if (fullName) parts.push(fullName);
+    const res = resourceMap.get(row.state);
+    if (res?.state_name) parts.push(res.state_name);
+    return parts.join(" ").toLowerCase();
+  }
+
   function sortedStates() {
     return [...byState].sort((a, b) => {
       const av = a[sortField] ?? 0, bv = b[sortField] ?? 0;
@@ -126,7 +137,10 @@ export function StateTable({
   }
 
   const headerProps = { sortField, sortDir, setSortField, setSortDir };
-  const states = sortedStates();
+  const normalizedQuery = searchQuery.trim().toLowerCase();
+  const states = sortedStates().filter(row =>
+    !normalizedQuery || searchableText(row).includes(normalizedQuery)
+  );
 
   return (
     <>
@@ -135,11 +149,46 @@ export function StateTable({
 
         <div className="px-6 py-4 border-b"
           style={{ borderColor: "rgba(255,255,255,0.08)", backgroundColor: "rgba(30,58,95,0.4)" }}>
-          <h2 className="font-black text-white text-base tracking-wide">Data by Location</h2>
-          <p className="text-xs mt-0.5" style={{ color: "rgba(245,245,245,0.4)" }}>
-            Locations with 30+ submissions become eligible for a Family Rights Report. Click a location
-            with a published report to download it. Click any other location to read what families shared.
-          </p>
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
+            <div>
+              <h2 className="font-black text-white text-base tracking-wide">Data by Location</h2>
+              <p className="text-xs mt-0.5" style={{ color: "rgba(245,245,245,0.4)" }}>
+                Locations with 30+ submissions become eligible for a Family Rights Report. Click a location
+                with a published report to download it. Click any other location to read what families shared.
+              </p>
+            </div>
+            <div className="relative w-full md:w-64">
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={e => setSearchQuery(e.target.value)}
+                placeholder="Search state or country…"
+                className="w-full px-3 py-2 rounded-lg text-sm"
+                style={{
+                  backgroundColor: "rgba(0,0,0,0.28)",
+                  border: `1px solid rgba(201,162,39,0.32)`,
+                  color: "white",
+                  outline: "none",
+                }}
+              />
+              {searchQuery && (
+                <button
+                  type="button"
+                  onClick={() => setSearchQuery("")}
+                  className="absolute right-2 top-1/2 -translate-y-1/2 text-xs font-bold"
+                  style={{ color: GOLD }}
+                  aria-label="Clear search"
+                >
+                  ✕
+                </button>
+              )}
+            </div>
+          </div>
+          {normalizedQuery && (
+            <p className="text-xs mt-3" style={{ color: "rgba(245,245,245,0.45)" }}>
+              Showing {states.length} of {byState.length} location{byState.length === 1 ? "" : "s"} matching “{searchQuery.trim()}”.
+            </p>
+          )}
         </div>
 
         <div className="overflow-x-auto">
@@ -242,7 +291,11 @@ export function StateTable({
               {states.length === 0 && (
                 <tr>
                   <td colSpan={10} className="px-6 py-12 text-center text-sm" style={{ color: "rgba(245,245,245,0.3)" }}>
-                    No data yet. Be the first to share your story.
+                    {normalizedQuery ? (
+                      <>No locations match “{searchQuery.trim()}”. Try a different spelling or clear the search.</>
+                    ) : (
+                      "No data yet. Be the first to share your story."
+                    )}
                   </td>
                 </tr>
               )}
