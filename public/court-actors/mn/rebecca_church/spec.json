@@ -8,26 +8,21 @@
     "last_name": "Church",
     "role": "Attorney (Opposing)",
     "court": "Winona county MN",
-    "county": null,
+    "county": "Winona",
     "court_or_county": "Winona county MN",
     "state": "Minnesota",
     "state_abbr": "MN",
-    "mention_count": 4,
+    "mention_count": 0,
     "family_count": 3,
     "public_family_count": 3,
     "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
-    "actor_report_count": 4,
-    "supabase_row_ids": [
-      "25bb5ed2-079e-486e-9a26-a1e2c0415a6f",
-      "d14bff55-3593-4fcc-8e17-e95fba5976e7",
-      "b2c34904-e26a-4684-bd3f-816288288ddf",
-      "e326aba6-cc6e-4391-bb28-1f3c62f8f16c"
-    ],
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
     "actor_row_id": "25bb5ed2-079e-486e-9a26-a1e2c0415a6f",
     "actor_bucket_key": "rebecca church|MN"
   },
   "photo": {
-    "path": "minnesota/rebecca_church/image_1080.png",
+    "path": "public/court-actors/mn/rebecca_church/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -47,56 +42,41 @@
     "_pdf_state_family_count": 73,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5391,
+  "movement_total": 5397,
   "supabase": {
-    "report_count": 4,
-    "actor_report_count": 4,
+    "report_count": 0,
+    "actor_report_count": 0,
     "family_count": 3,
-    "family_reports": [
-      {
-        "body": "It has broken a special bond between a grandmother and grandchild. It has caused mental harm to the child and our family suffers every day missing him.",
-        "state": "MN",
-        "county": "Winona County",
-        "row_id": "a492c217-f18f-4cde-969d-57b00ef3eff8"
-      },
-      {
-        "body": "As a party to my grandson's case, and other stories in this county I was able to see the TRUTH of what CPS really is. Through the documents of CPS there are clear patterns on what these people do to family's most importantly to our children. The harm that was caused to my family is indescribable. I have not seen my grandson in a year and a half, there is clear evidence that he would never return to his family. He was SOLD, The county's make more money if children are adopted out to non-family members. I pray daily that I will see this child again soon, until then, I vow to get the documents that I have into the right hands. I pray for justice for all family's experiencing CPS / Corrupt profiting system.",
-        "state": "MN",
-        "county": "Winona",
-        "row_id": "ce613637-b889-4fb7-9a70-5b8cd89e9b47"
-      },
-      {
-        "body": "My whole body shakes and now I have GAD which causes issues like going to the post office, answering phone, checking emails, fear of a knock at the door and these agents Violated our Liberty and to top it off non of them have a lawful oath of office.",
-        "state": "MN",
-        "county": "Winona",
-        "row_id": "9ea0a4cb-9832-4b75-96ee-a3062004ba57"
-      }
-    ],
+    "family_reports": [],
     "public_comments": [
-      {
-        "comment_text": "lying to the judge, denning family placement, ignoring evidence",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
       {
         "comment_text": "Lied and blocked court documents Crooked Assistans attorney who is completely out of line and lies",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Winona"
+      },
+      {
+        "comment_text": "lying to the judge, denning family placement, ignoring evidence",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Winona county MN"
       },
       {
         "comment_text": "Refused paperwork",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Winona"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/rebecca_church",
   "unresolved": [
-    "pdf_public_actor: helper missing at /Users/meghannmiller/Code/court-actor-posts/scripts/pdf/public_actor_for_share.py"
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
-    "footer": "Family-reported submissions · not court findings.",
+    "footer": "Family-reported submissions.",
     "strike_through_reserved_for": [
       "isolated",
       "dismissed",

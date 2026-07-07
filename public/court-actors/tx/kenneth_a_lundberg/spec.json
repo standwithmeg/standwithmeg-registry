@@ -9,7 +9,7 @@
     "role": "Judge",
     "court": "Ellis county 378th district court",
     "county": "Ellis",
-    "court_or_county": "Ellis county 378th district court",
+    "court_or_county": "Ellis",
     "state": "TX",
     "state_abbr": "TX",
     "mention_count": 0,
@@ -59,7 +59,7 @@
         "comment_text": "Signed emergency removal order without evidence or any actual immediate danger",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Ellis county 378th district court"
+        "court_or_county": "Ellis"
       },
       {
         "comment_text": "Signed a TRO taking all my rights away without a hearing.",

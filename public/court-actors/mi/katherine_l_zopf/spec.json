@@ -13,9 +13,9 @@
     "state": "Michigan",
     "state_abbr": "MI",
     "mention_count": 0,
-    "family_count": 3,
-    "public_family_count": 3,
-    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "family_count": 5,
+    "public_family_count": 5,
+    "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 0,
     "supabase_row_ids": [],
     "actor_row_id": null,
@@ -37,12 +37,12 @@
   "state_stats": {
     "families_approved": 146,
     "total_submissions": 177,
-    "avg_financial_loss": 182140.67,
+    "avg_financial_loss": 182280.06,
     "avg_months_lost": 36.1,
     "_source_table": "movement_stats_by_state",
     "_match_value": "MI",
     "state_family_count": 177,
-    "median_financial_loss": 98250,
+    "median_financial_loss": 100250,
     "median_burden_sample_size": 78,
     "median_months_lost": 16,
     "pro_se_pct": 44.1,
@@ -50,13 +50,25 @@
     "_pdf_state_family_count": 177,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5388,
+  "movement_total": 5397,
   "supabase": {
     "report_count": 0,
     "actor_report_count": 0,
-    "family_count": 3,
+    "family_count": 5,
     "family_reports": [],
     "public_comments": [
+      {
+        "comment_text": "In my opinion, the GAL assigned to my case is not impartial and failed to act in my child’s best interests. Throughout this process, I felt that recommendations were made to support predetermined outcomes rather than to objectively evaluate the facts and circumstances of the case. What has been particularly concerning is that the same GAL continues to be appointed in cases before the same judge, despite widespread concerns expressed by parents who have appeared before them. Over the course of this litigation, I have spoken with numerous mothers who have had experiences with this judge and GAL, and many expressed similar concerns regarding fairness, objectivity, and accountability. The perception among many parents is that recommendations are often accepted without meaningful scrutiny, even when significant evidence exists to the contrary. This creates a sense that outcomes are predetermined and that parents are not receiving the independent evaluation that a GAL is supposed to provide. Whether those concerns are ultimately justified is for others to determine. What I can say is that my experience left me with little confidence that my voice, my concerns, or the evidence I presented were given fair consideration. The consequences for my son and for my family have been profound.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "6th Judicial Circuit (Oakland County)"
+      },
+      {
+        "comment_text": "She falsified court documents stating that my home was not safe. She testified that I told her this and I did not. She also sent my 5 year old child to be tested for ADHD without including his past medical history and encouraging me to administer 15 mg of Adderrall to my at the time 5 year old child who did not display any behaviors/and or symptoms of ADHD. She over charged for basically no service. She also failed to speak with my family and get the proper information for the case. She suggested that my child should not stay overnight at my home, and never visited my home. She suggested the administering of medicine by Zoom everyday with the father to monitor. Even though I gave my son the medicine against my own will and judgement she accused me of not giving it. It was recoreded daily and sent to my attorney. This affected my custody. Falsified records and recommended my son not return home provided false testimony without speaking to me or visiting my home Provided false testimony, ordered stop visitation with my son without evidence",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Oakland"
+      },
       {
         "comment_text": "From the 1st time my daughter disclosed CSA, she has lied to the court about the status of the CPS investigation. She took away my parenting time and I had to jump through multiple hoops over a year to get custody of my daughter back. A year later, my daughter disclosed again. This time her forensic interview resulted in CPS filing to terminate the parental rights of my daughter's father. The GAL lied to the court on March 24, 2021 saying that CPS had no filed to terminate parental rights. She claimed i was also being investigated. And she asked thst she be able to do her own investigation. The Judge turned her into an L-GAL. She then worked with the court-appointed child psychologist to create an affidavit claiming my daughter recanted. She had the psychologist send that to the prosecutor, who then declined to press charges due to conflicting evidence. She admitted this in the recorded in July 2021.",
         "author": "Anonymous parent",
@@ -64,7 +76,7 @@
         "court_or_county": "Oakland"
       },
       {
-        "comment_text": "She falsified court documents stating that my home was not safe. She testified that I told her this and I did not. She also sent my 5 year old child to be tested for ADHD without including his past medical history and encouraging me to administer 15 mg of Adderrall to my at the time 5 year old child who did not display any behaviors/and or symptoms of ADHD. She over charged for basically no service. She also failed to speak with my family and get the proper information for the case. She suggested that my child should not stay overnight at my home, and never visited my home. She suggested the administering of medicine by Zoom everyday with the father to monitor. Even though I gave my son the medicine against my own will and judgement she accused me of not giving it. It was recoreded daily and sent to my attorney. This affected my custody.",
+        "comment_text": "When I was in DV shelter, rather than call me or respond to my attorney, she filed a missing persons report against me and called the police numerous times to make it seem like I was endangering the kids.",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Oakland"
@@ -73,6 +85,7 @@
   },
   "export_dir": "New Final Post and Capcut template/export/katherine_l_zopf",
   "unresolved": [
+    "public_family_count_api: no match for display_name='Katherine L. Zopf' bucket='katherine zopf|MI' slug='katherine_l_zopf' in MI (14 actors)",
     "family_reports: no submission_ids on actor",
     "public_comments: no merged comments or raw notes available"
   ],
