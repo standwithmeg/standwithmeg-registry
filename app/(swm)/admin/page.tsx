@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
-import { COURT_ACTOR_PUBLIC_THRESHOLD, actorBucketKeyWithLocation, actorLooseNameKey } from "../../../lib/court-actors";
+import { COURT_ACTOR_PUBLIC_THRESHOLD, REPORT_THRESHOLD, actorBucketKeyWithLocation, actorLooseNameKey } from "../../../lib/court-actors";
 import { COURT_ACTOR_ROLE_OPTIONS, courtActorRoleOptionOrOther, normalizeCourtActorRoleLabel } from "../../../lib/court-actor-roles";
 import { PossibleMatchesPanel } from "./_components/PossibleMatchesPanel";
 import { SocialPostQueuePanel } from "./_components/SocialPostQueuePanel";
@@ -2403,6 +2403,15 @@ export default function AdminPage() {
     });
   }
 
+  function publicActorsForState(state: string): number | null {
+    const auditRow = auditRows.find(r => r.state === state);
+    return auditRow ? auditRow.public_court_actors : null;
+  }
+
+  function remainingUntilPdf(total: number): number {
+    return Math.max(0, REPORT_THRESHOLD - total);
+  }
+
   function SortHeader({
     field,
     label,
@@ -2543,6 +2552,11 @@ export default function AdminPage() {
             </div>
           </div>
           <div className="flex gap-3">
+            <a href="#admin-submissions-location"
+              className="text-sm px-4 py-2 rounded-lg font-semibold transition-colors"
+              style={{ backgroundColor: "rgba(255,255,255,0.07)", color: "rgba(245,245,245,0.7)", border: "1px solid rgba(255,255,255,0.12)" }}>
+              State Submissions
+            </a>
             <a href="/report?admin_preview=1" target="_blank" rel="noopener noreferrer"
               className="text-sm px-4 py-2 rounded-lg font-semibold transition-colors"
               style={{ backgroundColor: "rgba(255,255,255,0.07)", color: "rgba(245,245,245,0.7)", border: "1px solid rgba(255,255,255,0.12)" }}>
@@ -3978,17 +3992,21 @@ export default function AdminPage() {
             <table className="w-full table-fixed text-xs">
               <thead>
                 <tr style={{ backgroundColor: "rgba(30,58,95,0.6)", borderBottom: `1px solid rgba(201,162,39,0.2)` }}>
-                  <SortHeader field="state" label="State" className="w-[12%]" />
-                  <th className="w-[11%] px-2 py-3 text-left text-[10px] font-bold uppercase tracking-wide"
+                  <SortHeader field="state" label="State" className="w-[10%]" />
+                  <th className="w-[8%] px-2 py-3 text-left text-[10px] font-bold uppercase tracking-wide"
                     style={{ color: "rgba(245,245,245,0.45)" }}>PDF</th>
-                  <SortHeader field="total_submissions" label="Total" className="w-[8%]" />
-                  <SortHeader field="approved_count" label="Quotes" className="w-[8%]" title="Approved public quotes" />
-                  <SortHeader field="avg_financial_loss" label="Avg $" className="w-[11%]" title="Average reported loss" />
-                  <SortHeader field="total_financial_loss" label="Total $" className="w-[13%]" title="Total reported loss" />
-                  <SortHeader field="avg_months_lost" label="Mos." className="w-[9%]" title="Average months lost" />
-                  <SortHeader field="total_loss_count" label="No Contact" className="w-[10%]" />
-                  <SortHeader field="pro_se_count" label="Pro Se" className="w-[8%]" />
-                  <SortHeader field="last_submission_at" label="Latest" className="w-[10%]" title="Latest in State" />
+                  <SortHeader field="total_submissions" label="Total" className="w-[7%]" />
+                  <th className="w-[7%] px-2 py-3 text-left text-[10px] font-bold uppercase tracking-wide"
+                    style={{ color: "rgba(245,245,245,0.45)" }} title="Families left until PDF is generated">Left</th>
+                  <SortHeader field="approved_count" label="Quotes" className="w-[7%]" title="Approved public quotes" />
+                  <th className="w-[7%] px-2 py-3 text-left text-[10px] font-bold uppercase tracking-wide"
+                    style={{ color: "rgba(245,245,245,0.45)" }} title="Live public court actors in this state">Actors</th>
+                  <SortHeader field="avg_financial_loss" label="Avg $" className="w-[9%]" title="Average reported loss" />
+                  <SortHeader field="total_financial_loss" label="Total $" className="w-[11%]" title="Total reported loss" />
+                  <SortHeader field="avg_months_lost" label="Mos." className="w-[8%]" title="Average months lost" />
+                  <SortHeader field="total_loss_count" label="No Contact" className="w-[8%]" />
+                  <SortHeader field="pro_se_count" label="Pro Se" className="w-[7%]" />
+                  <SortHeader field="last_submission_at" label="Latest" className="w-[9%]" title="Latest in State" />
                 </tr>
               </thead>
               <tbody>
@@ -4004,13 +4022,16 @@ export default function AdminPage() {
                   >
                     <td className="px-2 py-3 font-black text-xs break-words" style={{ color: GOLD }}>{row.state}</td>
                     <td className="px-2 py-3 text-xs">
-                      {row.total_submissions >= 30 ? (
+                      {row.total_submissions >= REPORT_THRESHOLD ? (
                         <RegenerateStateButton state={row.state} />
                       ) : (
                         <span style={{ color: "rgba(245,245,245,0.15)" }}>—</span>
                       )}
                     </td>
                     <td className="px-2 py-3 text-xs font-bold text-white">{row.total_submissions}</td>
+                    <td className="px-2 py-3 text-xs font-bold tabular-nums" style={{ color: "rgba(245,245,245,0.7)" }}>
+                      {remainingUntilPdf(row.total_submissions)}
+                    </td>
                     <td className="px-2 py-3 text-xs">
                       {row.approved_count > 0 ? (
                         <button
@@ -4023,6 +4044,9 @@ export default function AdminPage() {
                       ) : (
                         <span style={{ color: "rgba(245,245,245,0.25)" }}>0</span>
                       )}
+                    </td>
+                    <td className="px-2 py-3 text-xs font-bold tabular-nums" style={{ color: "rgba(245,245,245,0.7)" }}>
+                      {publicActorsForState(row.state) ?? "—"}
                     </td>
                     <td className="px-2 py-3 text-xs break-words" style={{ color: "rgba(245,245,245,0.6)" }}>{fmt$(row.avg_financial_loss)}</td>
                     <td className="px-2 py-3 text-xs font-semibold text-red-400 break-words">{fmt$(row.total_financial_loss)}</td>
@@ -4040,7 +4064,7 @@ export default function AdminPage() {
                 ))}
                 {sortedStates().length === 0 && (
                   <tr>
-                    <td colSpan={10} className="px-6 py-12 text-center text-sm" style={{ color: "rgba(245,245,245,0.3)" }}>
+                    <td colSpan={12} className="px-6 py-12 text-center text-sm" style={{ color: "rgba(245,245,245,0.3)" }}>
                       No submissions yet. Share /survey to start collecting data.
                     </td>
                   </tr>

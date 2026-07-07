@@ -2,11 +2,10 @@ import reportIndex from "../../../../public/state-reports/index.json";
 import { createServerSupabaseClient } from "../../../../lib/supabase";
 import { createAdminSupabaseClient } from "../../../../lib/supabase-admin";
 import { isAdminEmail } from "../../../../lib/require-auth";
-import { actorBucketKey, COURT_ACTOR_PUBLIC_THRESHOLD } from "../../../../lib/court-actors";
+import { actorBucketKey, COURT_ACTOR_PUBLIC_THRESHOLD, REPORT_THRESHOLD } from "../../../../lib/court-actors";
 import { normalizeOutsideCountryForReporting } from "../../../../lib/survey-location";
 
 const PUBLIC_PERMISSIONS = ["public", "anonymous", "first_name"];
-const REPORT_THRESHOLD = 30;
 // Single source of truth — a local copy of this constant previously sat at 5
 // and made the audit undercount actors that the public site actually shows.
 const PUBLIC_ACTOR_THRESHOLD = COURT_ACTOR_PUBLIC_THRESHOLD;

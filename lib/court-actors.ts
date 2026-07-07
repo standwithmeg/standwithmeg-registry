@@ -4,6 +4,10 @@ const NAME_PUNCT_RE = /[.,'"`´‘’]/g;
 
 export const COURT_ACTOR_PUBLIC_THRESHOLD = 3;
 
+// Number of unique families required before a state's report PDF is generated
+// and the public dashboard can show a downloadable state report.
+export const REPORT_THRESHOLD = 30;
+
 // Conservative first-name aliases/misspellings observed in the court-actor data.
 // We only rewrite the first token, so distinct people with different last names
 // stay separate.
