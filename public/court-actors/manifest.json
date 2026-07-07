@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-07T11:04:41.081128+00:00",
+  "generated_at": "2026-07-07T14:15:36.926033+00:00",
   "actors": [
     {
       "slug": "ali_upchurch_patterson",
@@ -1240,7 +1240,7 @@
       "display_name": "Katherine \"Katie\" Zopf",
       "canonical_name": "Katherine \"Katie\" Zopf",
       "actor_bucket_key": "katherine katie zopf|MI",
-      "photo_url": null,
+      "photo_url": "/court-actors/mi/katherine_katie_zopf/image_1080.png",
       "share_url": "/court-actors/mi/katherine_katie_zopf/share.html"
     },
     {
@@ -2608,8 +2608,17 @@
       "display_name": "Kenneth A. Lundberg",
       "canonical_name": "Kenneth A. Lundberg",
       "actor_bucket_key": "keneth lundberg|TX",
-      "photo_url": null,
+      "photo_url": "/court-actors/tx/kenneth_a_lundberg/image_1080.png",
       "share_url": "/court-actors/tx/kenneth_a_lundberg/share.html"
+    },
+    {
+      "slug": "kenneth_lundberg",
+      "state_abbr": "TX",
+      "display_name": "Kenneth Lundberg",
+      "canonical_name": "Kenneth Lundberg",
+      "actor_bucket_key": "kenneth lundberg|TX",
+      "photo_url": "/court-actors/tx/kenneth_lundberg/image_1080.png",
+      "share_url": "/court-actors/tx/kenneth_lundberg/share.html"
     },
     {
       "slug": "lindsey_wynne",
