@@ -13,9 +13,9 @@
     "state": "Nevada",
     "state_abbr": "NV",
     "mention_count": 0,
-    "family_count": 3,
-    "public_family_count": 3,
-    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "family_count": 4,
+    "public_family_count": 4,
+    "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 0,
     "supabase_row_ids": [],
     "actor_row_id": "91e39b71-1b73-4162-9528-798d7c074151",
@@ -27,26 +27,26 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 35,
-    "total_submissions": 47,
-    "avg_financial_loss": 159872.75,
+    "families_approved": 36,
+    "total_submissions": 48,
+    "avg_financial_loss": 155973.41,
     "avg_months_lost": 27.1,
     "_source_table": "movement_stats_by_state",
     "_match_value": "NV",
-    "state_family_count": 47,
+    "state_family_count": 48,
     "median_financial_loss": 220750,
     "median_burden_sample_size": 16,
     "median_months_lost": 10,
-    "pro_se_pct": 53.2,
-    "pro_se_count": 25,
-    "_pdf_state_family_count": 47,
+    "pro_se_pct": 54.2,
+    "pro_se_count": 26,
+    "_pdf_state_family_count": 48,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5374,
+  "movement_total": 5404,
   "supabase": {
     "report_count": 0,
     "actor_report_count": 0,
-    "family_count": 3,
+    "family_count": 4,
     "family_reports": [],
     "public_comments": [
       {
@@ -54,6 +54,12 @@
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Clark county family law Las Vegas"
+      },
+      {
+        "comment_text": "Three days before my family court trial, I filed a complaint regarding a member of the judge's courtroom staff because I believed my concerns were not being properly addressed. During the trial, I perceived a significant change in how I was treated. I believe Judge Adriana Rincon White abandoned her role as a neutral judicial officer by assisting the opposing party during his testimony, interrupting him to develop his claims, directing him to call my personal cell phone and my child's device, putting on gloves, instructing the bailiff to take my phone, and telling me not to touch it. I believed there was no warrant or court order authorizing those actions. I was repeatedly interrupted, limited in my ability to present evidence and cross-examine, and I felt humiliated and disrespected throughout the proceedings. I also believe important evidence I presented, including evidence relating to the opposing party's financial issues, was not given appropriate consideration, while the written order included negative statements about me that I believe were unsupported by the evidence presented at trial. In my view, the order mischaracterized my conduct and omitted important findings that I believed were supported by the evidence. After the trial, I sought Judge White's disqualification and filed judicial complaints. My request for disqualification was heard by Chief Judge Jerry A. Wiese II, who concluded that my description of the phone incident was an exaggeration. I respectfully disagree with that conclusion and questioned whether the courtroom recording had been meaningfully reviewed before the decision was issued. My judicial complaint was also dismissed, which left me concerned that my allegations had not received an independent review. Judge White remained assigned to my case, and I currently have a pending appeal because I believe I was denied due process and did not receive a fair and impartial hearing.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "District Court"
       },
       {
         "comment_text": "All of my constitutional rights have been violated and apparently she is a hearing master and she is very experienced with coercive and abusive behavior but all of my motions were suddenly vacated and now I'm a vexatious litigant and I'm the plaintiff mother and pro se. This eighth district Nevada family court is a disaster made for money grabbing honorable justices. I haven't seen my minor daughter for over 200 days and the judge has no idea and all decisions have been made in chambers or scheduled for future 3 am hearings. Sad state of affairs for mothers and children. Expose these criminals who are protecting the abusers. Pushing all of my motions to July Docket manipulating 3 am hearings for me Entertaining a vexatious litigate hearing that opposing counsel is demanding without addressing flagrant lack of financial disclosure Said that discovery hadn't started yet yet he was served in September. I think she wants to be recused",
@@ -71,6 +77,7 @@
   },
   "export_dir": "New Final Post and Capcut template/export/adriana_rincon_white",
   "unresolved": [
+    "public_family_count_api: no actors returned for state='NV'",
     "family_reports: no submission_ids on actor",
     "public_comments: no merged comments or raw notes available"
   ],

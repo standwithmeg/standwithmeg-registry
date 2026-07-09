@@ -8,125 +8,58 @@
     "last_name": "Bell",
     "role": "Judge",
     "court": "Orange",
-    "county": null,
+    "county": "Orange",
     "court_or_county": "Orange",
     "state": "California",
     "state_abbr": "CA",
-    "mention_count": 7,
-    "family_count": 6,
-    "public_family_count": null,
-    "public_family_count_source": null,
-    "actor_report_count": 7,
-    "supabase_row_ids": [
-      "4330c777-e82c-4425-8715-3adc883e0019",
-      "8184110b-369b-4760-92c2-fb46eddc2bc9",
-      "458a5318-16b6-4c48-af53-1a57c1f0cf43",
-      "71a55770-735f-4b27-b13e-0cf1f8ba2180",
-      "46216f37-b7c0-438f-8c8e-973af43d25f8",
-      "543e9ddf-f2f7-4952-a4aa-7df5e7e34736",
-      "396fe1e0-08b8-4b88-b936-e029f87348d2"
-    ],
+    "mention_count": 0,
+    "family_count": 1,
+    "public_family_count": 1,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
     "actor_row_id": "4330c777-e82c-4425-8715-3adc883e0019",
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "california/michele_bell/image_1080.png",
+    "path": "public/court-actors/ca/michele_bell/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 354,
-    "total_submissions": 441,
-    "avg_financial_loss": 286619.13,
-    "avg_months_lost": 36.0,
+    "families_approved": 356,
+    "total_submissions": 443,
+    "avg_financial_loss": 286214.49,
+    "avg_months_lost": 35.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CA",
-    "state_family_count": 441,
-    "median_financial_loss": 261000,
-    "median_burden_sample_size": 197,
+    "state_family_count": 443,
+    "median_financial_loss": 265100,
+    "median_burden_sample_size": 198,
     "median_months_lost": 20,
     "pro_se_pct": 58.7,
-    "pro_se_count": 259,
-    "_pdf_state_family_count": 441,
+    "pro_se_count": 260,
+    "_pdf_state_family_count": 443,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5401,
+  "movement_total": 5404,
   "supabase": {
-    "report_count": 7,
-    "actor_report_count": 7,
-    "family_count": 6,
-    "family_reports": [
-      {
-        "body": "This system has wrongfully ripped away two children from a loving/involved father. The system has repeatedly violated my due process and ignored all factual evidence in its rulings.",
-        "state": "CA",
-        "county": "Orange County",
-        "row_id": "f8458ca3-d0ab-4e78-94d0-bbf84a5a62d5"
-      },
-      {
-        "body": "This system has destroyed my once healthy relationship with our son. The life long negative effects have yet to be realized in our son. Has taken me many years to recover from this abuse.",
-        "state": "CA",
-        "county": "Orange",
-        "row_id": "07abcbed-a0a2-437d-9d56-a675916f1885"
-      },
-      {
-        "body": "They used the courts to turn a present, involved father into a visitor in his own children’s lives — and every professional appointed to protect those kids either looked the other way or made it worse. My children grew up primarily in my care, and now the parent who functioned more as a visitor has been elevated to full custody based on allegations that were false, misleading, or later contradicted by evidence. The emotional damage this has caused my children and our family is impossible to fully describe.",
-        "state": "CA",
-        "county": "Orange County",
-        "row_id": "e47cf812-3969-42a2-b1d1-eab7ec1e203b"
-      },
-      {
-        "body": "Permanent fracturing of child-mother bond. Orange County, CA = Complete Corruption!",
-        "state": "CA",
-        "county": "Orange",
-        "row_id": "55418383-edee-4dc2-bacb-5ad337af2ed6"
-      },
-      {
-        "body": "Destroyed me emotionally and financially. Revoked my parental role.",
-        "state": "CA",
-        "county": "Orange county",
-        "row_id": "f99ee049-4966-4fd8-81f0-084aadfb9dac"
-      }
-    ],
-    "public_comments": [
-      {
-        "comment_text": "• Denied ex parte request • Awarded ex-wife sole legal custody based on allegations later acknowledged during the ruling to be false or unsupported • Failure to review and/or properly weigh all evidence presented • Failure to award sanctions against opposing counsel despite documented concerns • Ordered reimbursement of 20% of ex-wife’s legal fees based on allegedly false Income and Expense Declaration • Refused to consider evidence contradicting Income and Expense Declaration claims • Applied incorrect legal standard in custody ruling, resulting in reversal by the Court of Appeal",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Lamoreaux Justice Center"
-      },
-      {
-        "comment_text": "Ignored 730 evaluators report in move away, ignore income documentation, issued orders without considering evidence, issued $80k in sanctions and attorney fees and support orders that I cannot afford.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Orange Superior"
-      },
-      {
-        "comment_text": "Does not look into the history of cases, illegal/out of jurisdiction orders, misconduct.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Orange"
-      },
-      {
-        "comment_text": "Issued prejudiced orders, ignored/forgot standard cost procedures, ignored evidence,",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Orange"
-      },
-      {
-        "comment_text": "Ignored evidence",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Orange"
-      }
-    ]
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 1,
+    "family_reports": [],
+    "public_comments": []
   },
   "export_dir": "New Final Post and Capcut template/export/michele_bell",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='CA'"
+    "public_family_count_api: no actors returned for state='CA'",
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available",
+    "pdf_public_actor: no 'Michelle Bell' in cache for CA"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
-    "footer": "Family-reported submissions · not court findings.",
+    "footer": "Family-reported submissions.",
     "strike_through_reserved_for": [
       "isolated",
       "dismissed",

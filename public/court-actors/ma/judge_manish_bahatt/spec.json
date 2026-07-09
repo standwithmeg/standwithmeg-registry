@@ -42,7 +42,7 @@
     "_pdf_state_family_count": 106,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5397,
+  "movement_total": 5404,
   "supabase": {
     "report_count": null,
     "actor_report_count": null,
@@ -53,7 +53,7 @@
   "export_dir": "New Final Post and Capcut template/export/judge_manish_bahatt",
   "unresolved": [
     "court_actors: no rows match name~'Judge Manish Bahatt' state='MA'",
-    "public_family_count_api: no match for display_name='Judge Manish Bahatt' bucket='manish bahat|MA' slug='judge_manish_bahatt' in MA (8 actors)",
+    "public_family_count_api: no actors returned for state='MA'",
     "pdf_public_actor: no 'Judge Manish Bahatt' in cache for MA"
   ],
   "guardrails": {

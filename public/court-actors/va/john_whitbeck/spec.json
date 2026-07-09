@@ -15,7 +15,7 @@
     "mention_count": 0,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 0,
     "supabase_row_ids": [],
     "actor_row_id": "018956c5-35d7-424d-936a-81345399079f",
@@ -27,22 +27,22 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 103,
-    "total_submissions": 127,
-    "avg_financial_loss": 181829.95,
+    "families_approved": 104,
+    "total_submissions": 128,
+    "avg_financial_loss": 180304.68,
     "avg_months_lost": 29.6,
     "_source_table": "movement_stats_by_state",
     "_match_value": "VA",
-    "state_family_count": 127,
+    "state_family_count": 128,
     "median_financial_loss": 139000,
     "median_burden_sample_size": 53,
     "median_months_lost": 20,
-    "pro_se_pct": 62.2,
-    "pro_se_count": 79,
-    "_pdf_state_family_count": 127,
+    "pro_se_pct": 62.5,
+    "pro_se_count": 80,
+    "_pdf_state_family_count": 128,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5388,
+  "movement_total": 5404,
   "supabase": {
     "report_count": 0,
     "actor_report_count": 0,
@@ -71,6 +71,7 @@
   },
   "export_dir": "New Final Post and Capcut template/export/john_whitbeck",
   "unresolved": [
+    "public_family_count_api: no actors returned for state='VA'",
     "family_reports: no submission_ids on actor",
     "public_comments: no merged comments or raw notes available"
   ],

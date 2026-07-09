@@ -15,7 +15,7 @@
     "mention_count": 0,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 0,
     "supabase_row_ids": [],
     "actor_row_id": "a0c01c30-c999-4fd7-832e-02ef12b63a9f",
@@ -42,7 +42,7 @@
     "_pdf_state_family_count": 152,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5388,
+  "movement_total": 5404,
   "supabase": {
     "report_count": 0,
     "actor_report_count": 0,
@@ -71,6 +71,7 @@
   },
   "export_dir": "New Final Post and Capcut template/export/joshua_ray_welch",
   "unresolved": [
+    "public_family_count_api: no actors returned for state='GA'",
     "family_reports: no submission_ids on actor",
     "public_comments: no merged comments or raw notes available"
   ],

@@ -1,0 +1,89 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "bridget_childers",
+    "display_name": "Bridget Childrers",
+    "title": "",
+    "first_name": "Bridget",
+    "last_name": "Childrers",
+    "role": "Judge",
+    "court": "Cleveland",
+    "county": "Cleveland",
+    "court_or_county": "Cleveland",
+    "state": "OK",
+    "state_abbr": "OK",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": "bridget childers|OK"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 129,
+    "total_submissions": 162,
+    "avg_financial_loss": 119430.5,
+    "avg_months_lost": 24.7,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OK",
+    "state_family_count": 162,
+    "median_financial_loss": 94750,
+    "median_burden_sample_size": 86,
+    "median_months_lost": 12,
+    "pro_se_pct": 43.8,
+    "pro_se_count": 71,
+    "_pdf_state_family_count": 162,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5404,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "An EPO was placed on me without my knowledge. Without all the evidence brought before the judge. This was December. End of January the judge heard all of the evidence apologized to me said the story was the craziest thing she ever heard. I’m going back in at the end of July to get my visatation back hopefully, and officially get the EPO removed since my ex doesn’t want to remove it.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Cleveland County"
+      },
+      {
+        "comment_text": "Denied due process, lied multiple times in court, wouldn't allow me to present evidence, blamed me for my own abuse Refusing to look at evidence, ignoring laws protecting DV survivors",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Cleveland"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/bridget_childers",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='OK'",
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ok/bridget_childers/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}

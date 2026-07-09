@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-08T21:58:07.042117+00:00",
+  "generated_at": "2026-07-09T11:42:13.719877+00:00",
   "actors": [
     {
       "slug": "ali_upchurch_patterson",
@@ -270,15 +270,6 @@
       "actor_bucket_key": null,
       "photo_url": "/court-actors/ca/michele_bell/image_1080.png",
       "share_url": "/court-actors/ca/michele_bell/share.html"
-    },
-    {
-      "slug": "michelle_bell",
-      "state_abbr": "CA",
-      "display_name": "Michelle Bell",
-      "canonical_name": "Michelle Bell",
-      "actor_bucket_key": null,
-      "photo_url": "/court-actors/ca/michelle_bell/image_1080.png",
-      "share_url": "/court-actors/ca/michelle_bell/share.html"
     },
     {
       "slug": "raymond_de_jesus",
@@ -1276,7 +1267,7 @@
       "display_name": "Katherine \"Katie\" Zopf",
       "canonical_name": "Katherine \"Katie\" Zopf",
       "actor_bucket_key": "katherine katie zopf|MI",
-      "photo_url": "/court-actors/mi/katherine_katie_zopf/image_1080.png",
+      "photo_url": null,
       "share_url": "/court-actors/mi/katherine_katie_zopf/share.html"
     },
     {
@@ -2180,6 +2171,15 @@
       "share_url": "/court-actors/ok/ann_keele/share.html"
     },
     {
+      "slug": "bridget_childers",
+      "state_abbr": "OK",
+      "display_name": "Bridget Childrers",
+      "canonical_name": "Bridget Childrers",
+      "actor_bucket_key": "bridget childers|OK",
+      "photo_url": null,
+      "share_url": "/court-actors/ok/bridget_childers/share.html"
+    },
+    {
       "slug": "cynthia_pickering",
       "state_abbr": "OK",
       "display_name": "Cynthia Pickering",
@@ -2644,7 +2644,7 @@
       "display_name": "Kenneth A. Lundberg",
       "canonical_name": "Kenneth A. Lundberg",
       "actor_bucket_key": "keneth lundberg|TX",
-      "photo_url": "/court-actors/tx/kenneth_a_lundberg/image_1080.png",
+      "photo_url": null,
       "share_url": "/court-actors/tx/kenneth_a_lundberg/share.html"
     },
     {

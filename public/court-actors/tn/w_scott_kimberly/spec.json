@@ -42,7 +42,7 @@
     "_pdf_state_family_count": 123,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5388,
+  "movement_total": 5404,
   "supabase": {
     "report_count": 0,
     "actor_report_count": 0,
@@ -71,7 +71,7 @@
   },
   "export_dir": "New Final Post and Capcut template/export/w_scott_kimberly",
   "unresolved": [
-    "public_family_count_api: no match for display_name='Kimberly Turner' bucket='w scot kimberly|TN' slug='w_scott_kimberly' in TN (6 actors)",
+    "public_family_count_api: no actors returned for state='TN'",
     "family_reports: no submission_ids on actor",
     "public_comments: no merged comments or raw notes available"
   ],

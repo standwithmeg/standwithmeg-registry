@@ -13,9 +13,9 @@
     "state": "Ohio",
     "state_abbr": "OH",
     "mention_count": 0,
-    "family_count": 3,
-    "public_family_count": 3,
-    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "family_count": 4,
+    "public_family_count": 4,
+    "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 0,
     "supabase_row_ids": [],
     "actor_row_id": null,
@@ -27,28 +27,34 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 206,
-    "total_submissions": 262,
-    "avg_financial_loss": 112698.66,
-    "avg_months_lost": 31.6,
+    "families_approved": 207,
+    "total_submissions": 263,
+    "avg_financial_loss": 112413.01,
+    "avg_months_lost": 31.5,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OH",
-    "state_family_count": 262,
-    "median_financial_loss": 80000,
-    "median_burden_sample_size": 127,
-    "median_months_lost": 19,
-    "pro_se_pct": 53.1,
-    "pro_se_count": 139,
-    "_pdf_state_family_count": 262,
+    "state_family_count": 263,
+    "median_financial_loss": 79250,
+    "median_burden_sample_size": 128,
+    "median_months_lost": 18,
+    "pro_se_pct": 53.2,
+    "pro_se_count": 140,
+    "_pdf_state_family_count": 263,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5374,
+  "movement_total": 5404,
   "supabase": {
     "report_count": 0,
     "actor_report_count": 0,
-    "family_count": 3,
+    "family_count": 4,
     "family_reports": [],
     "public_comments": [
+      {
+        "comment_text": "He assured me that I would be offered communication accommodations due to being autistic. IT NEVER HAPPENED. CPS is DEMANDING I change myself to suit their communication styles. I HAVE AUTISM and I AM RIGID. THAT DOES NOT MEAN I AM INEPT. IT MEANS I AM DIFFERENT. I have the right to fully participate in this case but I haven't been given the chance. Things are happening TO ME, without letting me be apart of the conversation. My case is based on rumors started by people who USED TO CONTROL MY LIFE.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Tuscarawas"
+      },
       {
         "comment_text": "Ignored my son bruised every visit and evidence from my parents and my dad collapsed in their parking lot they let jfs continue court where my dad couldn't cross examine and made me stay there while my dad died twice",
         "author": "Anonymous parent",
@@ -71,6 +77,7 @@
   },
   "export_dir": "New Final Post and Capcut template/export/adam_wilgus",
   "unresolved": [
+    "public_family_count_api: no actors returned for state='OH'",
     "family_reports: no submission_ids on actor",
     "public_comments: no merged comments or raw notes available"
   ],

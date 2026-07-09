@@ -15,7 +15,7 @@
     "mention_count": 0,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 0,
     "supabase_row_ids": [],
     "actor_row_id": null,
@@ -29,20 +29,20 @@
   "state_stats": {
     "families_approved": 118,
     "total_submissions": 151,
-    "avg_financial_loss": 139432.71,
-    "avg_months_lost": 31.5,
+    "avg_financial_loss": 139343.23,
+    "avg_months_lost": 31.1,
     "_source_table": "movement_stats_by_state",
     "_match_value": "PA",
     "state_family_count": 151,
-    "median_financial_loss": 128200,
-    "median_burden_sample_size": 61,
+    "median_financial_loss": 131600,
+    "median_burden_sample_size": 60,
     "median_months_lost": 18,
     "pro_se_pct": 53.0,
     "pro_se_count": 80,
     "_pdf_state_family_count": 151,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5374,
+  "movement_total": 5404,
   "supabase": {
     "report_count": 0,
     "actor_report_count": 0,
@@ -71,6 +71,7 @@
   },
   "export_dir": "New Final Post and Capcut template/export/dr_eric_bernstein",
   "unresolved": [
+    "public_family_count_api: no actors returned for state='PA'",
     "family_reports: no submission_ids on actor",
     "public_comments: no merged comments or raw notes available"
   ],

@@ -12,19 +12,17 @@
     "court_or_county": "White county",
     "state": "Arkansas",
     "state_abbr": "AR",
-    "mention_count": 1,
-    "family_count": 1,
-    "public_family_count": null,
-    "public_family_count_source": null,
-    "actor_report_count": 1,
-    "supabase_row_ids": [
-      "9ee4a914-6c75-4bd8-816a-667364d43704"
-    ],
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "arkansas/craig_hannah/image_1080.png",
+    "path": "public/court-actors/ar/craig_hannah/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -44,35 +42,24 @@
     "_pdf_state_family_count": 56,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5401,
+  "movement_total": 5404,
   "supabase": {
-    "report_count": 1,
-    "actor_report_count": 1,
-    "family_count": 1,
-    "family_reports": [
-      {
-        "body": "It has destroyed my family, my piece of mind, made me fear the police and DHS, permanently injured my spine, but exposed what happens In Arkansas.",
-        "state": "AR",
-        "county": "White",
-        "row_id": "fb68a505-118b-4345-8813-0fa5e5b0ec1c"
-      }
-    ],
-    "public_comments": [
-      {
-        "comment_text": "Did not let me present my evidence cut the court hearing short. Has ignored evidence",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      }
-    ]
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": []
   },
   "export_dir": "New Final Post and Capcut template/export/craig_hannah",
   "unresolved": [
     "public_family_count_api: no actors returned for state='AR'",
-    "pdf_public_actor: helper exit 1: no public actor match for 'Craig Hannah' in AR"
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available",
+    "pdf_public_actor: no 'Craig Hannah' in cache for AR"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
-    "footer": "Family-reported submissions · not court findings.",
+    "footer": "Family-reported submissions.",
     "strike_through_reserved_for": [
       "isolated",
       "dismissed",

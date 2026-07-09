@@ -12,19 +12,17 @@
     "court_or_county": "Ada",
     "state": "Idaho",
     "state_abbr": "ID",
-    "mention_count": 1,
-    "family_count": 1,
-    "public_family_count": null,
-    "public_family_count_source": null,
-    "actor_report_count": 1,
-    "supabase_row_ids": [
-      "5c5ab86e-4954-4684-8eac-222c52ca1e08"
-    ],
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "idaho/andrew_ellis/image_1080.png",
+    "path": "public/court-actors/id/andrew_ellis/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -44,35 +42,24 @@
     "_pdf_state_family_count": 39,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5401,
+  "movement_total": 5404,
   "supabase": {
-    "report_count": 1,
-    "actor_report_count": 1,
-    "family_count": 1,
-    "family_reports": [
-      {
-        "body": "Boise CPS Rachael Lara & Saira Locke, Jennifer Flatt, judge Andrew Ellis the do no investigation, make tons of false allegations without investigation leads to job loss, attorney fees, and a 16 year old that is thought to tell no lies and they have given her all control of the case",
-        "state": "ID",
-        "county": "Ada",
-        "row_id": "19a2a845-be62-4c1f-bd8b-d3100a00ebdc"
-      }
-    ],
-    "public_comments": [
-      {
-        "comment_text": "Still on case",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      }
-    ]
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": []
   },
   "export_dir": "New Final Post and Capcut template/export/andrew_ellis",
   "unresolved": [
     "public_family_count_api: no actors returned for state='ID'",
-    "pdf_public_actor: helper exit 1: no public actor match for 'Andrew ellis' in ID"
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available",
+    "pdf_public_actor: no 'Andrew ellis' in cache for ID"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
-    "footer": "Family-reported submissions · not court findings.",
+    "footer": "Family-reported submissions.",
     "strike_through_reserved_for": [
       "isolated",
       "dismissed",

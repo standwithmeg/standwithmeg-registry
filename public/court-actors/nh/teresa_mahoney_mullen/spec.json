@@ -42,7 +42,7 @@
     "_pdf_state_family_count": 36,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5374,
+  "movement_total": 5404,
   "supabase": {
     "report_count": 0,
     "actor_report_count": 0,
@@ -52,7 +52,7 @@
   },
   "export_dir": "New Final Post and Capcut template/export/teresa_mahoney_mullen",
   "unresolved": [
-    "public_family_count_api: no match for display_name='Theresa Mahoney Mullen' bucket=None slug='teresa_mahoney_mullen' in NH (1 actors)",
+    "public_family_count_api: no actors returned for state='NH'",
     "family_reports: no submission_ids on actor",
     "public_comments: no merged comments or raw notes available",
     "pdf_public_actor: no 'Theresa Mahoney Mullen' in cache for NH"

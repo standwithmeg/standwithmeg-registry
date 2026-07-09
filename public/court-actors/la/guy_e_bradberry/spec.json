@@ -42,7 +42,7 @@
     "_pdf_state_family_count": 64,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5374,
+  "movement_total": 5404,
   "supabase": {
     "report_count": 0,
     "actor_report_count": 0,
@@ -52,7 +52,7 @@
   },
   "export_dir": "New Final Post and Capcut template/export/guy_e_bradberry",
   "unresolved": [
-    "public_family_count_api: no match for display_name='Guy E. Bradberry' bucket=None slug='guy_e_bradberry' in LA (2 actors)",
+    "public_family_count_api: no actors returned for state='LA'",
     "family_reports: no submission_ids on actor",
     "public_comments: no merged comments or raw notes available",
     "pdf_public_actor: no 'Guy E. Bradberry' in cache for LA"

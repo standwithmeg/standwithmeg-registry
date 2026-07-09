@@ -27,53 +27,35 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 35,
-    "total_submissions": 47,
-    "avg_financial_loss": 159872.75,
+    "families_approved": 36,
+    "total_submissions": 48,
+    "avg_financial_loss": 155973.41,
     "avg_months_lost": 27.1,
     "_source_table": "movement_stats_by_state",
     "_match_value": "NV",
-    "state_family_count": 47,
+    "state_family_count": 48,
     "median_financial_loss": 220750,
     "median_burden_sample_size": 16,
     "median_months_lost": 10,
-    "pro_se_pct": 53.2,
-    "pro_se_count": 25,
-    "_pdf_state_family_count": 47,
+    "pro_se_pct": 54.2,
+    "pro_se_count": 26,
+    "_pdf_state_family_count": 48,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5374,
+  "movement_total": 5404,
   "supabase": {
     "report_count": 0,
     "actor_report_count": 0,
     "family_count": 3,
     "family_reports": [],
-    "public_comments": [
-      {
-        "comment_text": "She has allowed my daughters predator reunification with her. (He molested her at age 2 and raped his older daughter a year later. Now has to register as a aex offender) she has ignored evidence that shows the cps allegations made against me were either flat out lies or extremely exaggerated. She also allowed the removal of my child from my custody across state lines and has not made any progress in loving my daughter closer to me for visits. Im now in Texas and am awaiting that here instead of in california. There has been massive communications between the hospital (reno behavioral health) that reported me because I didnt have health insurance for my daughter in nevada and the washoe County courts. This is retaliation because I reported this hospital to authorities for their discrimination of my daughter and I She has upheld perjury from the case worker in my case and ignored extenuating circumstances for my case like the fact that im disabled and and crippled. Still working. And have provided ample medical care for my daughter her entire life.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Washoe"
-      },
-      {
-        "comment_text": "Made custody and case decisions despite unresolved disputes regarding evidence and due process concerns.\"",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Washoe"
-      },
-      {
-        "comment_text": "Ignored all court filings relied solely on CPs’ word",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Washoe"
-      }
-    ]
+    "public_comments": []
   },
   "export_dir": "New Final Post and Capcut template/export/paige_bollinger",
   "unresolved": [
-    "public_family_count_api: no match for display_name='Paige Bollinger' bucket='paige bolinger|NV' slug='paige_bollinger' in NV (2 actors)",
+    "public_family_count_api: no actors returned for state='NV'",
     "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
+    "public_comments: no merged comments or raw notes available",
+    "pdf_public_actor: no 'Paige Bollinger' in cache for NV"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",

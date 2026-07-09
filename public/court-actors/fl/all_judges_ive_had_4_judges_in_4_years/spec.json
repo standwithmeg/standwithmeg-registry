@@ -42,7 +42,7 @@
     "_pdf_state_family_count": 306,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5374,
+  "movement_total": 5404,
   "supabase": {
     "report_count": 0,
     "actor_report_count": 0,
@@ -52,7 +52,7 @@
   },
   "export_dir": "New Final Post and Capcut template/export/all_judges_ive_had_4_judges_in_4_years",
   "unresolved": [
-    "public_family_count_api: no match for display_name='All Judges - I’ve had 4 judges in 4 years' bucket='all judges - ve had 4 judges in 4 years|FL' slug='all_judges_ive_had_4_judges_in_4_years' in FL (16 actors)",
+    "public_family_count_api: no actors returned for state='FL'",
     "family_reports: no submission_ids on actor",
     "public_comments: no merged comments or raw notes available",
     "pdf_public_actor: no 'All Judges - I’ve had 4 judges in 4 years' in cache for FL"

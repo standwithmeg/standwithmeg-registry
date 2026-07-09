@@ -8,25 +8,21 @@
     "last_name": "Stringer",
     "role": "GAL / Child Representative",
     "court": "Berkeley",
-    "county": null,
+    "county": "Charleston County",
     "court_or_county": "Berkeley",
     "state": "South Carolina",
     "state_abbr": "SC",
-    "mention_count": 3,
+    "mention_count": 0,
     "family_count": 3,
-    "public_family_count": null,
-    "public_family_count_source": null,
-    "actor_report_count": 3,
-    "supabase_row_ids": [
-      "ed94c3c7-2017-4390-b604-a9d0dced6faa",
-      "ad39c9fc-e50b-4286-92cd-5439b8fbf7b6",
-      "429751d5-92cb-4461-8ed4-76a5e837bda7"
-    ],
+    "public_family_count": 3,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
     "actor_row_id": null,
     "actor_bucket_key": "elizabeth stringer|SC"
   },
   "photo": {
-    "path": "south_carolina/elizabeth_stringer/image_1080.png",
+    "path": "public/court-actors/sc/elizabeth_stringer/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -46,25 +42,12 @@
     "_pdf_state_family_count": 107,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5401,
+  "movement_total": 5404,
   "supabase": {
-    "report_count": 3,
-    "actor_report_count": 3,
+    "report_count": 0,
+    "actor_report_count": 0,
     "family_count": 3,
-    "family_reports": [
-      {
-        "body": "Family Court is nothing but an extortion ring filled with corrupt court actors lining their pockets at the cost of children. Biggest child trafficking agency in the world. Children left traumatized over and over again while stable loving parents loose everything.",
-        "state": "SC",
-        "county": "Berkeley county",
-        "row_id": "23f1a9bd-c499-4c48-ba41-8af1fbb2a0ce"
-      },
-      {
-        "body": "The system has traumatized my family while allowing the abuser to lie, conceal assets, dismantle a business, and still be awarded over $100,000 in attorney’s fees.",
-        "state": "SC",
-        "county": "Charleston County",
-        "row_id": "b757b2f0-dfc0-4b5a-b3fb-76e6eb1dcac5"
-      }
-    ],
+    "family_reports": [],
     "public_comments": [
       {
         "comment_text": "Did not contact school officials or witnesses, twisted or completely fabricated children’s statements, false testimony, did not follow up on safety concerns brought up by the children. Lied under oath multiple times.",
@@ -82,11 +65,13 @@
   },
   "export_dir": "New Final Post and Capcut template/export/elizabeth_stringer",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='SC'"
+    "public_family_count_api: no actors returned for state='SC'",
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
-    "footer": "Family-reported submissions · not court findings.",
+    "footer": "Family-reported submissions.",
     "strike_through_reserved_for": [
       "isolated",
       "dismissed",
