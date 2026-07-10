@@ -12,12 +12,16 @@
     "court_or_county": "Ada",
     "state": "Idaho",
     "state_abbr": "ID",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "5c5ab86e-4954-4684-8eac-222c52ca1e08",
+      "2cf26e63-d674-4b5c-b892-05e42a8d4ff5",
+      "5d02a51f-c328-4b79-bc75-6cf7f9e00ad9"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
@@ -42,19 +46,51 @@
     "_pdf_state_family_count": 39,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5416,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
-    "public_comments": []
+    "family_reports": [
+      {
+        "body": "Boise CPS Rachael Lara & Saira Locke, Jennifer Flatt, judge Andrew Ellis the do no investigation, make tons of false allegations without investigation leads to job loss, attorney fees, and a 16 year old that is thought to tell no lies and they have given her all control of the case",
+        "state": "ID",
+        "county": "Ada",
+        "row_id": "19a2a845-be62-4c1f-bd8b-d3100a00ebdc"
+      },
+      {
+        "body": "I tried to ask for help and justice for child molestation, and instead, I have spent 7 years without my daughter. And another 5 until she's 18.",
+        "state": "ID",
+        "county": "Ada",
+        "row_id": "f9e859ad-9a8a-4131-8fe0-cac3571edcf0"
+      },
+      {
+        "body": "The courts have protected the abuser of my children and I, allowed unlawful hearings/filings and orders without my knowledge, refused our civil/constitutional/due process rights, in Washington State and Idaho. My children have spent the last six years never knowing when or where their abusive biological father will show up. Their last few years of childhood/teenage years have been extremely difficult to have joy as hearing have been scheduled ongoing, my preparation of answering motions/filings as pro se takes a tremendous amount of time away from my children/teenagers, continues to take a toll on my health with diagnosis of ADHD/CPTSD/Anxiety/Depression/Battered Wife Syndrome/Lupus/Connective Tissue Disorder/Fibromyalgia brought on by the massive stress from the abusive litigation I'm encountering. Our family finances have been very very strained leaving my teenagers and I below poverty, on state assistance, needing help from others, not meeting our most basic needs. My children/teenagers have anger management issues, SPD/ADHD/Anxiety/ODD/Depression/CPTSD, fear of being forced again and again to face their abusive biological father through reunification or placed in his/his enabling families custody. The judges made it known that no matter what this abusive man has done to me or our children/teenagers he will be reunited and I will be forced to endure as many hearings as he drags me through for as long as he wants and pay for all of it. My family has lost almost everything! These judges use their immunity to abuse people and families like mine, torture us, financially abuse us, steal years of goodness with our children away, creating a dead lock in our lives, approving coercive control, supplying a way to force mothers and children/teenagers bond to grow thin by applying pressure to how long we can endure the evil corruption. I have begged for help from advocacy offices, attorneys, judges, and no one has been willing or able to help my family. Now the Idaho courts are ignoring the laws, will not provide protection for us, nor stop the vexatious litigation from my abusive ex-husband or his attorneys. My children/teenagers and I are facing losing our house, what health we have left, our dignity and happiness. The only way we have barely made it this far is because we have faith in God.",
+        "state": "WA",
+        "county": "San Juan",
+        "row_id": "71a856cd-edb0-44f7-bb18-26616a105558"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Still on case",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "I applied for an oder of protection to be put in place to protect my kids and I from my abusive ex husband harassing me through emails and stalking us in Idaho. My ex husband lives in Oklahoma and still won't stop litigating, harassing, and stalking me and my kids through other people. Judge Ellis said that the Superior court in Washington State had already through a ex parte filed by my ex husband, signed an emergency ordered that the emails weren't real and that they gave my ex husband a order for protection against me as well. Judge Ellis allowed my ex husbands Washington state attorney, Selby Lighthill to attend the Idaho hearing via zoom and represent my ex husband Aaron V. Tucker. The attorney Selby Lighthill can only represent and litigate in Washington State and California, not in Idaho. Judge Ellis did NOT and would not allow me to see this \"Washington State order\" and dismissed the case. On another occasion I came back to to Ada County Court house with harassment proof through text messages, phone logs, and pictures of a threatening note dropped off at my residence. Judge Ellis denied my request for protection again! Infact Judge Ellis told me that I DIDN'T HAVE ENOUGH EV",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "DIsmissed evidence that worked in my favor. Allowed perjury during testimony and allowed testimony to reflect my illegal \"objection\" and the story changed mid testimony. Told me to pass a class that taught dangerous doctrine (child sex assault is the parents/child's fault, and if you don't thing child predators can be rehabilitated, you are the problem) and because I didn't prescribe to their doctrine and refused extra \"therapy\" to get on the same page, I didn't learn anything and my rights were teminated. Retaliated when I told other parents in the class to put alleged in written statements to the court about what brought them to the class.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
   },
   "export_dir": "New Final Post and Capcut template/export/andrew_ellis",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='ID'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available",
     "pdf_public_actor: no 'Andrew ellis' in cache for ID"
   ],
   "guardrails": {
@@ -72,6 +108,18 @@
     "recommended_route": "/court-actors/id/andrew_ellis/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Judge Ellis allowed my ex husbands Washington state attorney, Selby Lighthill to attend the Idaho hearing via zoom and represent my ex husband Aaron V. Tucker.",
+        "kind": "comment"
+      },
+      {
+        "body": "DIsmissed evidence that worked in my favor.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }
