@@ -19,6 +19,14 @@ on:
         description: "Optional: one deployed actor slug (for example andrew_ellis). Rebuilds only that actor's share page and slides; skips state PDFs."
         required: false
         default: ""
+      actor_name:
+        description: "Optional canonical actor display name supplied by the rebuild admin."
+        required: false
+        default: ""
+      actor_bucket_key:
+        description: "Optional canonical actor bucket key supplied by the rebuild admin."
+        required: false
+        default: ""
       force:
         description: "Bypass the activity gate AND the actor share-page cache: run even with no new data and rebuild selected actor pages with the current renderer. Use sparingly — forced full runs cost real GitHub minutes."
         required: false
@@ -126,6 +134,8 @@ jobs:
         if: steps.activity_gate.outputs.should_run == 'true'
         env:
           ACTOR_INPUT: ${{ github.event.inputs.actor || '' }}
+          ACTOR_NAME: ${{ github.event.inputs.actor_name || '' }}
+          ACTOR_BUCKET_KEY: ${{ github.event.inputs.actor_bucket_key || '' }}
           NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
           SWM_PUBLIC_API_BASE: https://my.standwithmeg.com
@@ -143,7 +153,14 @@ jobs:
               echo "Invalid actor slug: $ACTOR_INPUT"
               exit 1
             fi
-            python scripts/share-pages/regenerate_deployed_actors.py --actor "$ACTOR_INPUT" --force
+            actor_args=(--actor "$ACTOR_INPUT" --force)
+            if [ -n "$ACTOR_NAME" ]; then
+              actor_args+=(--display-name "$ACTOR_NAME")
+            fi
+            if [ -n "$ACTOR_BUCKET_KEY" ]; then
+              actor_args+=(--actor-bucket-key "$ACTOR_BUCKET_KEY")
+            fi
+            python scripts/share-pages/regenerate_deployed_actors.py "${actor_args[@]}"
           elif [ -n "${{ github.event.inputs.state }}" ] && [[ "${{ github.event.inputs.state }}" =~ ^[A-Za-z]{2}$ ]]; then
             python scripts/share-pages/regenerate_deployed_actors.py --state "${{ github.event.inputs.state }}" $force_args
           elif [ -n "${{ github.event.inputs.state }}" ]; then

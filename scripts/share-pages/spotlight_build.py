@@ -724,6 +724,17 @@ def _likely_same_actor_name(candidate: Any, canonical: Any) -> bool:
     return _edit_distance_lte(candidate_first, canonical_first, limit=2)
 
 
+def allow_unconfirmed_spelling_expansion(actor_bucket_key: str | None) -> bool:
+    """Whether resolve_actor may pull one-edit surname spelling variants.
+
+    An explicit public actor_bucket_key is already an identity decision
+    (e.g. rebuild admin sent `michele bell|CA`). In that case, do not merge
+    unconfirmed variants like Michele/Michelle Bell — they are separate
+    public records until an admin confirms an alias decision.
+    """
+    return not bool(str(actor_bucket_key or "").strip())
+
+
 _ALIAS_CLUSTERS_CACHE: dict[str, set[str]] | None = None
 
 
@@ -869,7 +880,11 @@ def resolve_actor(
     # inherit each other's public notes.
     canonical_for_match = (head or {}).get(block["name_column"]) or name_search
     canonical_tokens = _name_tokens_for_actor_match(canonical_for_match)
-    if canonical_tokens:
+    # An explicit public actor bucket is already an identity decision. Do not
+    # pull unconfirmed one-edit spelling variants into it (Michele/Michelle
+    # Bell are separate public buckets). Confirmed alias-cluster expansion
+    # below still applies when the admin has explicitly merged spellings.
+    if canonical_tokens and allow_unconfirmed_spelling_expansion(actor_bucket_key):
         surname = canonical_tokens[-1]
         surname_filters = [f"{block['name_column']}=ilike.*{surname}*"]
         if state_abbr:

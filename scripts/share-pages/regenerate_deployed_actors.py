@@ -272,11 +272,13 @@ def submission_count_from_spec(spec: dict[str, Any] | None) -> str:
     if not spec:
         return "-"
     actor = spec.get("actor") or {}
-    # The share slide now renders the survey-submission count.
+    # Prefer the same family count the public card and cover slide use.
     value = (
-        actor.get("actor_report_count")
-        or actor.get("mention_count")
+        actor.get("public_family_count")
         or actor.get("family_count")
+        or actor.get("actor_report_count")
+        or actor.get("mention_count")
+        or (spec.get("supabase") or {}).get("public_family_count")
         or (spec.get("supabase") or {}).get("actor_report_count")
         or (spec.get("supabase") or {}).get("mention_count")
         or (spec.get("supabase") or {}).get("family_count")
@@ -287,6 +289,28 @@ def submission_count_from_spec(spec: dict[str, Any] | None) -> str:
         return f"{int(float(value)):,}"
     except (TypeError, ValueError):
         return str(value)
+
+
+def apply_actor_cli_overrides(
+    entries: list[dict[str, Any]],
+    display_name: str | None = None,
+    actor_bucket_key: str | None = None,
+) -> list[dict[str, Any]]:
+    """Apply single-actor identity overrides from admin/workflow dispatch.
+
+    Explicit display_name + actor_bucket_key pin Michele Bell to her public
+    bucket even when the on-disk manifest still says 'Michelle Bell'.
+    """
+    if not (display_name or actor_bucket_key):
+        return entries
+    if len(entries) != 1:
+        raise ValueError("--display-name/--actor-bucket-key require exactly one matched --actor")
+    if display_name:
+        entries[0]["display_name"] = display_name.strip()
+        entries[0]["canonical_name"] = display_name.strip()
+    if actor_bucket_key:
+        entries[0]["actor_bucket_key"] = actor_bucket_key.strip()
+    return entries
 
 
 def run(cmd: list[str], env: dict[str, str]) -> tuple[int, str, str]:
@@ -574,6 +598,8 @@ def main(argv: list[str]) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--state", help="Optional 2-letter state filter. Omit for every manifest actor.")
     parser.add_argument("--actor", action="append", help="Optional actor slug filter. Repeat to regenerate several actors.")
+    parser.add_argument("--display-name", help="Canonical display name override for a single --actor rebuild.")
+    parser.add_argument("--actor-bucket-key", help="Canonical actor bucket key override for a single --actor rebuild.")
     parser.add_argument("--skip-frames", action="store_true", help="Regenerate share.html/spec.json only.")
     parser.add_argument("--force", action="store_true", help="Bypass .regen-cache.json and regenerate every selected actor.")
     parser.add_argument("--changed-only", action="store_true", default=True, help="Regenerate only changed actors. Default unless --force is set.")
@@ -595,6 +621,14 @@ def main(argv: list[str]) -> int:
     entries, pruned_results = prune_existing_duplicate_actor_dirs(entries)
     if actor_filter:
         entries = [entry for entry in entries if str(entry.get("slug") or "") in actor_filter]
+    try:
+        entries = apply_actor_cli_overrides(
+            entries,
+            display_name=args.display_name,
+            actor_bucket_key=args.actor_bucket_key,
+        )
+    except ValueError as exc:
+        parser.error(str(exc))
     if not entries:
         print("no manifest or public-threshold actors matched")
         return 0
@@ -677,7 +711,7 @@ def main(argv: list[str]) -> int:
             cmd.extend(["--county", str(county)])
         if photo_path.exists():
             cmd.extend(["--photo", str(photo_path.relative_to(WEBSITE_ROOT))])
-        if actor.get("actor_row_id"):
+        if actor.get("actor_row_id") and not args.actor_bucket_key:
             cmd.extend(["--actor-row-id", str(actor["actor_row_id"])])
         actor_bucket_key = entry.get("actor_bucket_key") or actor.get("actor_bucket_key")
         if actor_bucket_key:

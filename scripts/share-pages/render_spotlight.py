@@ -1651,7 +1651,7 @@ def frame_1_who(actor: dict, role: str, court: str, state: str, state_abbr: str,
     <div class="f1-role">{esc(role)}</div>
     <div class="f1-report-count">
       <b>{fmt_int(actor_submission_count)}</b>
-      <span>survey submissions named this person on the public record</span>
+      <span>families named this person on the public record</span>
     </div>
     {state_count_html}
   </div>
@@ -1899,18 +1899,16 @@ def render(spec: dict, web_mode: bool = False, image_mode: bool = False) -> str:
     county = first_nonempty(actor.get("county"), actor.get("court_or_county")) or ""
     state = actor.get("state") or ""
     state_abbr = (actor.get("state_abbr") or "").upper()
-    # The public card now displays the number of survey submissions that named
-    # this actor. Use the submission/report count first, falling back to the
-    # legacy family count only for older specs that do not have a submission
-    # count written yet.
+    # Match the public actor card and admin exactly: distinct families first.
+    # Report/mention counts are only a fallback for older specs.
     actor_submission_count = first_positive(
-        actor.get("actor_report_count"),
-        supabase.get("actor_report_count"),
-        actor.get("mention_count"),
         actor.get("public_family_count"),
         supabase.get("public_family_count"),
         actor.get("family_count"),
         supabase.get("family_count"),
+        actor.get("actor_report_count"),
+        supabase.get("actor_report_count"),
+        actor.get("mention_count"),
         supabase.get("report_count"),
         0,
     )
