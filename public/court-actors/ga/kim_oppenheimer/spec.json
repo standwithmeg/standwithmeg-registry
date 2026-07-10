@@ -13,8 +13,8 @@
     "state": "Georgia",
     "state_abbr": "GA",
     "mention_count": 0,
-    "family_count": 3,
-    "public_family_count": 3,
+    "family_count": 4,
+    "public_family_count": 4,
     "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 0,
     "supabase_row_ids": [],
@@ -27,28 +27,34 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 124,
-    "total_submissions": 152,
-    "avg_financial_loss": 215723.27,
+    "families_approved": 125,
+    "total_submissions": 153,
+    "avg_financial_loss": 214225.19,
     "avg_months_lost": 32.3,
     "_source_table": "movement_stats_by_state",
     "_match_value": "GA",
-    "state_family_count": 152,
+    "state_family_count": 153,
     "median_financial_loss": 142000,
     "median_burden_sample_size": 85,
     "median_months_lost": 18,
-    "pro_se_pct": 44.7,
+    "pro_se_pct": 44.4,
     "pro_se_count": 68,
-    "_pdf_state_family_count": 152,
+    "_pdf_state_family_count": 153,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5415,
   "supabase": {
     "report_count": 0,
     "actor_report_count": 0,
-    "family_count": 3,
+    "family_count": 4,
     "family_reports": [],
     "public_comments": [
+      {
+        "comment_text": "Biased and money hungry. Evaluation lasted over a year and a half. Changed opinion to avoid testifying and would not put in writing her recommendation and would only talk to the attorneys. Wanted temporary custody order and to involve many professionals before offering a final opinion. Seemed to want to drag matter on until financial exhausted forced a side to give on. Recommendation was entirely in conflict and opposition to test results.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Fulton County Superior Court"
+      },
       {
         "comment_text": "Allegedly made the very statements that Kathryn Franklin would use against me in court to take custody of my kids away from me. Kim Oppenheimer never evaluated me nor produced a written report she gave me my full $3500 retainer back. Never cooperated with Dr. Eddie Beal who cleared me of all mental illnesses.",
         "author": "Anonymous parent",

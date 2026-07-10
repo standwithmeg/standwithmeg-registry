@@ -9,7 +9,7 @@
     "role": "Judge",
     "court": "Cleveland",
     "county": "Cleveland",
-    "court_or_county": "Cleveland",
+    "court_or_county": "Cleveland county",
     "state": "OK",
     "state_abbr": "OK",
     "mention_count": 0,
@@ -27,47 +27,35 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 129,
-    "total_submissions": 162,
-    "avg_financial_loss": 119430.5,
-    "avg_months_lost": 24.7,
+    "families_approved": 131,
+    "total_submissions": 164,
+    "avg_financial_loss": 119502.36,
+    "avg_months_lost": 24.6,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OK",
-    "state_family_count": 162,
+    "state_family_count": 164,
     "median_financial_loss": 94750,
-    "median_burden_sample_size": 86,
+    "median_burden_sample_size": 88,
     "median_months_lost": 12,
-    "pro_se_pct": 43.8,
-    "pro_se_count": 71,
-    "_pdf_state_family_count": 162,
+    "pro_se_pct": 43.9,
+    "pro_se_count": 72,
+    "_pdf_state_family_count": 164,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5415,
   "supabase": {
     "report_count": 0,
     "actor_report_count": 0,
     "family_count": 3,
     "family_reports": [],
-    "public_comments": [
-      {
-        "comment_text": "An EPO was placed on me without my knowledge. Without all the evidence brought before the judge. This was December. End of January the judge heard all of the evidence apologized to me said the story was the craziest thing she ever heard. I’m going back in at the end of July to get my visatation back hopefully, and officially get the EPO removed since my ex doesn’t want to remove it.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Cleveland County"
-      },
-      {
-        "comment_text": "Denied due process, lied multiple times in court, wouldn't allow me to present evidence, blamed me for my own abuse Refusing to look at evidence, ignoring laws protecting DV survivors",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Cleveland"
-      }
-    ]
+    "public_comments": []
   },
   "export_dir": "New Final Post and Capcut template/export/bridget_childers",
   "unresolved": [
     "public_family_count_api: no actors returned for state='OK'",
     "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
+    "public_comments: no merged comments or raw notes available",
+    "pdf_public_actor: no 'Bridget Childrers' in cache for OK"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",

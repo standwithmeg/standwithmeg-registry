@@ -1,0 +1,95 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "jacob_aycock",
+    "display_name": "Jacob Aycock",
+    "title": "",
+    "first_name": "Jacob",
+    "last_name": "Aycock",
+    "role": "Parenting Coordinator",
+    "court": "Tulsa",
+    "county": "Tulsa",
+    "court_or_county": "Tulsa",
+    "state": "OK",
+    "state_abbr": "OK",
+    "mention_count": 0,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": "jacob aycock|OK"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 131,
+    "total_submissions": 164,
+    "avg_financial_loss": 119502.36,
+    "avg_months_lost": 24.6,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OK",
+    "state_family_count": 164,
+    "median_financial_loss": 94750,
+    "median_burden_sample_size": 88,
+    "median_months_lost": 12,
+    "pro_se_pct": 43.9,
+    "pro_se_count": 72,
+    "_pdf_state_family_count": 164,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5415,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Woman hater. Contradicted everything he would say. Made changes to accommodate father and being a quote \"businessman\" and nothing in the best interest of the children. Condescending and does not like you to ask for understandings to his decisions.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Tulsa"
+      },
+      {
+        "comment_text": "He started out unbiased but later seemed to just comply with ex's new attorney. It became apparent that they were friends.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Tulsa"
+      },
+      {
+        "comment_text": "Misled court, led witness, violated professional conduct and oath",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Tulsa"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/jacob_aycock",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='OK'",
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ok/jacob_aycock/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}
