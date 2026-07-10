@@ -201,7 +201,7 @@ jobs:
             if git push; then
               echo "Push succeeded on attempt ${attempt}."
               pushed_sha="$(git rev-parse HEAD)"
-              VERCEL_AUTOMATION_BYPASS_SECRET="${{ secrets.VERCEL_AUTOMATION_BYPASS_SECRET }}" bash scripts/ci/wait-for-vercel-deploy.sh "$pushed_sha" "https://my.standwithmeg.com"
+              VERCEL_AUTOMATION_BYPASS_SECRET="${{ secrets.VERCEL_AUTOMATION_BYPASS_SECRET }}" bash scripts/ci/wait-for-vercel-deploy.sh "$pushed_sha" "https://standwithmeg-registry-clean.vercel.app"
               exit 0
             fi
             echo "Push rejected on attempt ${attempt}; rebasing on origin/main."

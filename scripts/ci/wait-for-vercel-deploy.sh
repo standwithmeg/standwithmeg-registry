@@ -2,7 +2,7 @@
 set -euo pipefail
 
 expected_sha="${1:-}"
-site_url="${2:-https://my.standwithmeg.com}"
+site_url="${2:-https://standwithmeg-registry-clean.vercel.app}"
 
 if [ -z "$expected_sha" ]; then
   echo "usage: wait-for-vercel-deploy.sh <expected-commit-sha> [site-url]" >&2
