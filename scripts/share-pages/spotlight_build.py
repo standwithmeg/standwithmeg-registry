@@ -432,6 +432,29 @@ def _load_submission_visibility_map(submission_ids: list[str], config: dict) -> 
     return out
 
 
+def _countable_actor_rows(
+    rows: list[dict],
+    submission_link_column: str,
+    hidden_submission_ids: set[str],
+    visibility_by_submission_id: dict[str, dict],
+) -> list[dict]:
+    """Keep rows whose linked survey may count publicly.
+
+    Court-actor queries normally do not embed `survey_submissions`, so the
+    explicit visibility map is the primary path and the embedded join is only
+    an optimization. Keeping this pure makes the ordering regression testable.
+    """
+    out: list[dict] = []
+    for row in rows:
+        submission_id = str(row.get(submission_link_column) or "")
+        if not submission_id or submission_id in hidden_submission_ids:
+            continue
+        visibility = _joined_submission(row) or visibility_by_submission_id.get(submission_id)
+        if _is_countable_submission(visibility):
+            out.append(row)
+    return out
+
+
 def _load_alias_resolver() -> dict[str, dict[str, str | None]]:
     try:
         rows = select_all(
@@ -917,16 +940,29 @@ def resolve_actor(
     name = pick_most_complete_name(rows, block["name_column"]) or head.get(block["name_column"]) or name_search
     title, first, last = split_name(name)
     hidden_submission_ids = _load_hidden_submission_ids()
-    public_rows = [
-        r for r in rows
-        if str(r.get(block["submission_link_column"]) or "") not in hidden_submission_ids
-        and _is_countable_submission(_joined_submission(r))
+    # `select(table, ["*"])` does not embed the linked survey row, so most
+    # court_actor records reach this point without permission/approval fields.
+    # Load visibility for every candidate submission BEFORE filtering. The old
+    # ordering tried to build this map from `public_rows` after filtering,
+    # creating a circular empty set that erased family_reports/public_comments
+    # during forced regeneration (Andrew Ellis was the visible regression).
+    candidate_submission_ids = [
+        str(r.get(block["submission_link_column"]) or "")
+        for r in rows
+        if r.get(block["submission_link_column"])
+        and str(r.get(block["submission_link_column"]) or "") not in hidden_submission_ids
     ]
-    submission_ids = [r[block["submission_link_column"]] for r in public_rows if r.get(block["submission_link_column"])]
     visibility_by_submission_id = _load_submission_visibility_map(
-        [str(sid) for sid in submission_ids if sid],
+        candidate_submission_ids,
         config,
     )
+    public_rows = _countable_actor_rows(
+        rows,
+        block["submission_link_column"],
+        hidden_submission_ids,
+        visibility_by_submission_id,
+    )
+    submission_ids = [r[block["submission_link_column"]] for r in public_rows if r.get(block["submission_link_column"])]
     public_comment_rows: list[dict] = []
     for r in public_rows:
         sid = str(r.get(block["submission_link_column"]) or "")

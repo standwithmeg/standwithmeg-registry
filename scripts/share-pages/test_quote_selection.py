@@ -586,6 +586,56 @@ def test_no_sentence_break_after_preposition_before_capitalized_my() -> None:
     assert render_spotlight.select_best_quote(raw, 210) == raw
 
 
+def test_invalid_actor_comment_falls_back_to_real_survey_quote() -> None:
+    """Andrew Ellis regression: a non-statement actor note must not suppress
+    the family's publishable survey impact quote and force a placeholder."""
+    family_quote = (
+        "Boise CPS made tons of false allegations without investigation, "
+        "leading to job loss and attorney fees."
+    )
+    spec = {
+        "supabase": {
+            "public_comments": [{"comment_text": "Still on case"}],
+            "family_reports": [{"body": family_quote}],
+        }
+    }
+
+    quotes = render_spotlight.story_quotes(spec, n=None)
+
+    assert len(quotes) == 1
+    assert quotes[0]["kind"] == "family_report"
+    assert "false allegations" in quotes[0]["body"].lower()
+    assert render_spotlight.story_quote(spec)[1] == "family_report"
+
+
+def test_valid_actor_comments_remain_exclusive_from_survey_quotes() -> None:
+    spec = {
+        "supabase": {
+            "public_comments": [{"comment_text": "Ignored evidence during the hearing."}],
+            "family_reports": [{"body": "The whole system changed our lives."}],
+        }
+    }
+
+    quotes = render_spotlight.story_quotes(spec, n=None)
+
+    assert quotes == [{"body": "Ignored evidence during the hearing.", "kind": "comment"}]
+
+
+def test_render_metadata_records_exact_selected_quotes() -> None:
+    spec = {
+        "supabase": {
+            "public_comments": [{"comment_text": "Still on case"}],
+            "family_reports": [{"body": "The court ignored evidence during the hearing."}],
+        }
+    }
+
+    selected = render_spotlight.record_rendered_quote_metadata(spec)
+
+    assert selected == [{"body": "The court ignored evidence during the hearing.", "kind": "family_report"}]
+    assert spec["render"]["selected_quotes"] == selected
+    assert spec["render"]["quote_page_count"] == 1
+
+
 if __name__ == "__main__":
     import traceback
 

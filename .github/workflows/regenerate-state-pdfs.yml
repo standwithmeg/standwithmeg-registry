@@ -1,4 +1,5 @@
 name: Regenerate State PDFs and Actor Shares
+run-name: Regenerate actor=${{ inputs.actor || 'all' }} state=${{ inputs.state || 'all' }}
 
 # Triggers:
 #   - Daily (reduced from every 6h) — the activity gate now also applies to manual
@@ -12,6 +13,10 @@ on:
     inputs:
       state:
         description: "Optional: single state code or country name (e.g. MD, Canada). Leave blank for all 30+ locations."
+        required: false
+        default: ""
+      actor:
+        description: "Optional: one deployed actor slug (for example andrew_ellis). Rebuilds only that actor's share page and slides; skips state PDFs."
         required: false
         default: ""
       force:
@@ -70,7 +75,7 @@ jobs:
         run: python -m playwright install --with-deps chromium
 
       - name: Regenerate PDFs
-        if: steps.activity_gate.outputs.should_run == 'true'
+        if: steps.activity_gate.outputs.should_run == 'true' && (github.event_name != 'workflow_dispatch' || github.event.inputs.actor == '')
         env:
           NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
@@ -87,7 +92,7 @@ jobs:
           fi
 
       - name: Copy generated PDFs into website/public/state-reports
-        if: steps.activity_gate.outputs.should_run == 'true'
+        if: steps.activity_gate.outputs.should_run == 'true' && (github.event_name != 'workflow_dispatch' || github.event.inputs.actor == '')
         run: |
           mkdir -p public/state-reports
           shopt -s nullglob
@@ -99,7 +104,7 @@ jobs:
           fi
 
       - name: Sync public PDF index and prune stale PDFs
-        if: steps.activity_gate.outputs.should_run == 'true'
+        if: steps.activity_gate.outputs.should_run == 'true' && (github.event_name != 'workflow_dispatch' || github.event.inputs.actor == '')
         env:
           NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
@@ -111,7 +116,7 @@ jobs:
           fi
 
       - name: Refresh public report financials snapshot
-        if: steps.activity_gate.outputs.should_run == 'true'
+        if: steps.activity_gate.outputs.should_run == 'true' && (github.event_name != 'workflow_dispatch' || github.event.inputs.actor == '')
         env:
           NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
@@ -120,6 +125,7 @@ jobs:
       - name: Regenerate court actor share pages
         if: steps.activity_gate.outputs.should_run == 'true'
         env:
+          ACTOR_INPUT: ${{ github.event.inputs.actor || '' }}
           NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
           SWM_PUBLIC_API_BASE: https://my.standwithmeg.com
@@ -132,7 +138,13 @@ jobs:
           if [ "${{ github.event.inputs.force }}" = "true" ]; then
             force_args="--force"
           fi
-          if [ -n "${{ github.event.inputs.state }}" ] && [[ "${{ github.event.inputs.state }}" =~ ^[A-Za-z]{2}$ ]]; then
+          if [ -n "$ACTOR_INPUT" ]; then
+            if [[ ! "$ACTOR_INPUT" =~ ^[a-z0-9_]+$ ]]; then
+              echo "Invalid actor slug: $ACTOR_INPUT"
+              exit 1
+            fi
+            python scripts/share-pages/regenerate_deployed_actors.py --actor "$ACTOR_INPUT" --force
+          elif [ -n "${{ github.event.inputs.state }}" ] && [[ "${{ github.event.inputs.state }}" =~ ^[A-Za-z]{2}$ ]]; then
             python scripts/share-pages/regenerate_deployed_actors.py --state "${{ github.event.inputs.state }}" $force_args
           elif [ -n "${{ github.event.inputs.state }}" ]; then
             echo "Skipping court actor share-page state filter for non-US location: ${{ github.event.inputs.state }}"
@@ -150,13 +162,16 @@ jobs:
       - name: Verify court actor share consistency
         if: steps.activity_gate.outputs.should_run == 'true'
         env:
+          ACTOR_INPUT: ${{ github.event.inputs.actor || '' }}
           NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
           SWM_PUBLIC_API_BASE: https://my.standwithmeg.com
           SWM_NEXT_REPO: ${{ github.workspace }}
           VERCEL_AUTOMATION_BYPASS_SECRET: ${{ secrets.VERCEL_AUTOMATION_BYPASS_SECRET }}
         run: |
-          if [ -n "${{ github.event.inputs.state }}" ] && [[ "${{ github.event.inputs.state }}" =~ ^[A-Za-z]{2}$ ]]; then
+          if [ -n "$ACTOR_INPUT" ]; then
+            python scripts/share-pages/verify_share_consistency.py --skip-states --actor "$ACTOR_INPUT"
+          elif [ -n "${{ github.event.inputs.state }}" ] && [[ "${{ github.event.inputs.state }}" =~ ^[A-Za-z]{2}$ ]]; then
             python scripts/share-pages/verify_share_consistency.py --skip-states --states "${{ github.event.inputs.state }}"
           else
             python scripts/share-pages/verify_share_consistency.py --asset-only

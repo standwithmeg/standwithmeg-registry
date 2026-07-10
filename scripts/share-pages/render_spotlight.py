@@ -136,13 +136,9 @@ def story_quote(spec: dict) -> tuple[str, str]:
     Then survey_submissions.impact_quote family_reports as the secondary
     source for actors whose admin-curated comments are short or missing.
     """
-    sb = spec.get("supabase") or {}
-    comments = sb.get("public_comments") or []
-    family_reports = sb.get("family_reports") or []
-    if comments:
-        return (comments[0].get("comment_text") or "", "comment")
-    if family_reports:
-        return (family_reports[0].get("body") or "", "family_report")
+    quotes = story_quotes(spec, n=1)
+    if quotes:
+        return (quotes[0]["body"], quotes[0]["kind"])
     return (
         "Families are adding their reports to the public record.",
         "fallback",
@@ -1333,14 +1329,16 @@ def _quote_dedupe_keys(body: str) -> tuple[str, str]:
 def story_quotes(spec: dict, n: int | None = 3) -> list[dict]:
     """Returns {body, kind} dicts for the quote frame(s).
 
-    Precedence — strict, EXCLUSIVE sources:
+    Precedence — strict, EXCLUSIVE sources after validation:
       1. spec.supabase.public_comments  (admin-curated court_actors.notes —
          the actor-SPECIFIC family quotes the state PDF shows for this
-         exact actor). If ANY are present, the slide uses ONLY these.
+         exact actor). If any produce a valid rendered quote, the slide uses
+         ONLY these.
       2. spec.supabase.family_reports   (survey_submissions.impact_quote —
          broad survey responses from submissions that mentioned this
-         actor; not actor-specific). ONLY used when there are zero
-         public_comments. We do not mix the two: a top-up from
+         actor; not actor-specific). Used when there are zero public_comments
+         OR every public_comment is rejected as empty/junk/non-statement.
+         We do not mix the two: a top-up from
          family_reports would put broad survey text alongside the PDF's
          actor-specific text on the same slide.
 
@@ -1353,72 +1351,55 @@ def story_quotes(spec: dict, n: int | None = 3) -> list[dict]:
     comments = sb.get("public_comments") or []
     reports = sb.get("family_reports") or []
 
-    raw_items: list[dict] = []
+    def _select(source_items: list[dict], raw_field: str, kind: str) -> list[dict]:
+        raw_items = [
+            {"raw": str(item.get(raw_field) or "").strip(), "kind": kind}
+            for item in source_items
+            if str(item.get(raw_field) or "").strip()
+        ]
 
-    def _add(raw: str, kind: str) -> None:
-        text = (raw or "").strip()
-        if not text:
-            return
-        raw_items.append({"raw": text, "kind": kind})
+        # Budget follows the REAL number of quotes that will share a page —
+        # 1 approved quote gets the whole card (460 chars), 8 get 86 each.
+        if n is None:
+            page_count = min(len(raw_items), QUOTES_PER_PAGE)
+        else:
+            page_count = min(len(raw_items), n)
+        char_budget = _quote_char_budget(page_count or 3)
 
-    if comments:
-        for c in comments:
-            if n is not None and len(raw_items) >= n:
+        override_budget = (spec.get("render") or {}).get("quote_char_budget")
+        if isinstance(override_budget, int) and override_budget > 0:
+            char_budget = override_budget
+
+        out: list[dict] = []
+        seen_full_keys: set[str] = set()
+        seen_prefix_keys: set[str] = set()
+        accepted_bodies: list[str] = []
+        for item in raw_items:
+            body = select_best_quote(
+                item["raw"],
+                char_budget=char_budget,
+                prefer_substrings=(spec.get("render") or {}).get("prefer_quote_substrings"),
+            )
+            if not body:
+                continue
+            full_key, prefix_key = _quote_dedupe_keys(body)
+            if full_key in seen_full_keys or (prefix_key and prefix_key in seen_prefix_keys):
+                continue
+            if any(full_key in accepted or accepted in full_key for accepted in accepted_bodies):
+                continue
+            seen_full_keys.add(full_key)
+            if prefix_key:
+                seen_prefix_keys.add(prefix_key)
+            accepted_bodies.append(full_key)
+            out.append({"body": body, "kind": item["kind"]})
+            if n is not None and len(out) >= n:
                 break
-            _add(c.get("comment_text") or "", "comment")
-    else:
-        for r in reports:
-            if n is not None and len(raw_items) >= n:
-                break
-            _add(r.get("body") or "", "family_report")
+        return out
 
-    # Budget follows the REAL number of quotes that will share a page —
-    # 1 approved quote gets the whole card (460 chars), 8 get 86 each.
-    # Previously this was clamped to max(4, …), which truncated a lone
-    # long comment to 112 chars and left the slide mostly empty.
-    if n is None:
-        page_count = min(len(raw_items), QUOTES_PER_PAGE)
-    else:
-        page_count = min(len(raw_items), n)
-    char_budget = _quote_char_budget(page_count or 3)
-
-    # Per-actor opt-in: spec.render.quote_char_budget widens the budget so
-    # high-priority actors' quotes render fuller instead of truncating.
-    override_budget = (spec.get("render") or {}).get("quote_char_budget")
-    if isinstance(override_budget, int) and override_budget > 0:
-        char_budget = override_budget
-
-    out: list[dict] = []
-    seen_full_keys: set[str] = set()
-    seen_prefix_keys: set[str] = set()
-    accepted_bodies: list[str] = []
-    for item in raw_items:
-        body = select_best_quote(
-            item["raw"],
-            char_budget=char_budget,
-            prefer_substrings=(spec.get("render") or {}).get("prefer_quote_substrings"),
-        )
-        if not body:
-            continue
-        full_key, prefix_key = _quote_dedupe_keys(body)
-        if full_key in seen_full_keys or (prefix_key and prefix_key in seen_prefix_keys):
-            continue
-        # Containment dedup: skip a quote that is a substring of an already
-        # accepted quote, or that fully contains one. Catches overlapping
-        # quotes the full-text / prefix keys miss.
-        if any(
-            full_key in accepted or accepted in full_key
-            for accepted in accepted_bodies
-        ):
-            continue
-        seen_full_keys.add(full_key)
-        if prefix_key:
-            seen_prefix_keys.add(prefix_key)
-        accepted_bodies.append(full_key)
-        out.append({"body": body, "kind": item["kind"]})
-        if n is not None and len(out) >= n:
-            break
-    return out
+    selected_comments = _select(comments, "comment_text", "comment")
+    if selected_comments:
+        return selected_comments
+    return _select(reports, "body", "family_report")
 
 
 # Max family quotes stacked on a single "What families say" frame before a
@@ -1432,6 +1413,21 @@ def chunk_quote_pages(quotes: list[dict], per_page: int = QUOTES_PER_PAGE) -> li
     if not quotes:
         return [[]]
     return [quotes[i:i + per_page] for i in range(0, len(quotes), per_page)]
+
+
+def record_rendered_quote_metadata(spec: dict) -> list[dict]:
+    """Record exactly what the quote frame renderer selected.
+
+    The rebuild admin and Blotato preview read this generated spec. Persisting
+    the final selected text keeps their readiness status honest without
+    reimplementing this renderer's filtering/scoring rules in TypeScript.
+    """
+    quotes = story_quotes(spec, n=None)
+    render_meta = dict(spec.get("render") or {})
+    render_meta["selected_quotes"] = quotes
+    render_meta["quote_page_count"] = len(chunk_quote_pages(quotes))
+    spec["render"] = render_meta
+    return quotes
 
 
 # ---------------------------------------------------------------------------
@@ -2932,6 +2928,8 @@ def main(argv: list[str]) -> int:
         return 1
 
     spec = json.loads(spec_path.read_text())
+    record_rendered_quote_metadata(spec)
+    spec_path.write_text(json.dumps(spec, indent=2, ensure_ascii=False) + "\n")
     html = "\n".join(
         line.rstrip()
         for line in render(spec, web_mode=args.web, image_mode=args.web and not args.live_html).splitlines()
