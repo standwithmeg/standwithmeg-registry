@@ -1869,7 +1869,19 @@ def write_spec(base: Path, resolved: Resolved, args: argparse.Namespace) -> Path
                 first_name_key
                 and display_first_key.startswith(f"{first_name_key} ")
             )
-            if not first_name or display_has_more_given_names:
+            # Explicit admin rebuilds send a canonical display_name + bucket key
+            # (Michele Bell / michele bell|CA). Prefer that spelling over a
+            # one-edit resolved row name (Michelle) so the cover matches the
+            # public record the admin selected.
+            explicit_identity = bool(str(getattr(args, "actor_bucket_key", None) or "").strip())
+            spelling_differs = bool(
+                first_name_key and display_first_key and first_name_key != display_first_key
+            )
+            if (
+                not first_name
+                or display_has_more_given_names
+                or (explicit_identity and spelling_differs)
+            ):
                 title = title or display_title
                 first_name = display_first
                 last_name = display_last

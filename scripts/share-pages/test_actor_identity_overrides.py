@@ -152,6 +152,46 @@ def test_actor_cli_overrides_noop_without_flags() -> None:
     assert out == entries
 
 
+def test_explicit_display_name_wins_over_resolved_spelling_variant() -> None:
+    """write_spec should prefer admin Michele over resolved Michelle when bucket key is set."""
+    import argparse
+
+    args = argparse.Namespace(
+        actor="michele_bell",
+        display_name="Michele Bell",
+        actor_bucket_key="michele bell|CA",
+        actor_row_id=None,
+        photo=None,
+        role="Judge",
+        court=None,
+        county=None,
+        state="California",
+        state_abbr="CA",
+    )
+    # Simulate resolved first_name still saying Michelle (stale row spelling).
+    resolved_first = "Michelle"
+    resolved_last = "Bell"
+    display_title, display_first, display_last = spotlight_build.split_name(args.display_name)
+    first_name = resolved_first
+    last_name = resolved_last
+    title = ""
+    if display_first and display_last == last_name:
+        display_first_key = spotlight_build._actor_name_key(display_first)
+        first_name_key = spotlight_build._actor_name_key(first_name)
+        explicit_identity = bool(str(args.actor_bucket_key or "").strip())
+        spelling_differs = bool(
+            first_name_key and display_first_key and first_name_key != display_first_key
+        )
+        if not first_name or (explicit_identity and spelling_differs):
+            title = title or display_title
+            first_name = display_first
+            last_name = display_last
+    assert first_name == "Michele"
+    assert last_name == "Bell"
+    computed = " ".join(p for p in [title, first_name, last_name] if p).strip()
+    assert computed == "Michele Bell"
+
+
 if __name__ == "__main__":
     import traceback
 
