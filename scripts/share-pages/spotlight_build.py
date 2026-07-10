@@ -1003,10 +1003,10 @@ def resolve_actor(
 
 
 # ---------------------------------------------------------------------------
-# Live public-API mirror — read the count straight from /api/survey/court-actors
+# Live public-API mirror — read the count straight from /api/actors/all
 # so the share page can never drift from the public card. The Python alias
 # resolver gets close, but the TypeScript route is authoritative; we ask it
-# directly and cache the per-state response within a single build run.
+# directly and cache the full response within a single build run.
 # ---------------------------------------------------------------------------
 PUBLIC_API_BASE = os.environ.get("SWM_PUBLIC_API_BASE", "https://my.standwithmeg.com").rstrip("/")
 
@@ -1034,22 +1034,27 @@ def _fetch_public_actors_for_state(state_abbr: str) -> list[dict]:
         return []
     if state_abbr in _public_api_cache:
         return _public_api_cache[state_abbr]
-    url = f"{PUBLIC_API_BASE}/api/survey/court-actors?state={urllib.parse.quote(state_abbr)}"
-    try:
-        with urllib.request.urlopen(_public_api_request(url), timeout=15) as resp:
-            data = json.loads(resp.read().decode("utf-8"))
-    except (
-        urllib.error.HTTPError,
-        urllib.error.URLError,
-        TimeoutError,
-        socket.timeout,
-        json.JSONDecodeError,
-    ) as exc:
-        print(f"[public-api] {state_abbr}: {type(exc).__name__} while reading {url}", file=sys.stderr)
-        _public_api_cache[state_abbr] = []
-        return []
-    actors = data.get("actors") if isinstance(data, dict) else None
-    actors = actors if isinstance(actors, list) else []
+    if "__all__" not in _public_api_cache:
+        url = f"{PUBLIC_API_BASE}/api/actors/all"
+        try:
+            with urllib.request.urlopen(_public_api_request(url), timeout=60) as resp:
+                data = json.loads(resp.read().decode("utf-8"))
+        except (
+            urllib.error.HTTPError,
+            urllib.error.URLError,
+            TimeoutError,
+            socket.timeout,
+            json.JSONDecodeError,
+        ) as exc:
+            print(f"[public-api] {type(exc).__name__} while reading {url}", file=sys.stderr)
+            _public_api_cache["__all__"] = []
+        else:
+            actors = data.get("actors") if isinstance(data, dict) else None
+            _public_api_cache["__all__"] = actors if isinstance(actors, list) else []
+    actors = [
+        actor for actor in _public_api_cache["__all__"]
+        if str(actor.get("state_code") or actor.get("location_key") or "").upper() == state_abbr
+    ]
     _public_api_cache[state_abbr] = actors
     return actors
 
@@ -1084,7 +1089,7 @@ def resolve_public_family_count_via_api(
         for actor in actors:
             for url_field in ("photo_url", "share_url"):
                 if slug_token in (actor.get(url_field) or ""):
-                    return int(actor.get("count") or 0), None
+                    return int(actor.get("family_count") if actor.get("family_count") is not None else actor.get("count") or 0), None
 
     name_key = _actor_loose_name_key(display_name or "")
     target_bucket = (actor_bucket_key or "").split("|", 1)[0].strip().lower() if actor_bucket_key else ""
@@ -1092,9 +1097,10 @@ def resolve_public_family_count_via_api(
         api_name = actor.get("name") or actor.get("display_name") or ""
         api_key = _actor_loose_name_key(api_name)
         if name_key and api_key == name_key:
-            return int(actor.get("count") or 0), None
+            return int(actor.get("family_count") if actor.get("family_count") is not None else actor.get("count") or 0), None
         if target_bucket and api_key == target_bucket:
-            return int(actor.get("count") or 0), None
+            count = actor.get("family_count") if actor.get("family_count") is not None else actor.get("count")
+            return int(count or 0), None
     return None, (
         f"public_family_count_api: no match for display_name={display_name!r} "
         f"bucket={actor_bucket_key!r} slug={slug!r} in {state_abbr} ({len(actors)} actors)"
@@ -1110,7 +1116,7 @@ def resolve_public_actor_family_count(
     """Count distinct families for the public actor bucket using the same
     source/form_direct + row-review + alias decision rules as the public card.
 
-    This mirrors the Next.js /api/survey/court-actors route closely enough that
+    This mirrors the Next.js /api/actors/all route closely enough that
     the share-page family count stays in sync with the public card count.
     """
     block = config["court_actors"]
@@ -1968,7 +1974,7 @@ def write_spec(base: Path, resolved: Resolved, args: argparse.Namespace) -> Path
     ]
 
     # Build the actor dict, then apply per-actor overrides on top of it.
-    # public_family_count is the value the live /api/survey/court-actors
+    # public_family_count is the value the live /api/actors/all
     # route returns — render_spotlight uses it first so the share page and
     # the public actor card can never disagree.
     # Build the public display name from the resolved title/first/last computed
@@ -2122,7 +2128,7 @@ def main(argv: list[str]) -> int:
             resolved.unresolved.append(api_err)
         if public_count is not None:
             resolved.public_family_count = public_count
-            resolved.public_family_count_source = f"{PUBLIC_API_BASE}/api/survey/court-actors"
+            resolved.public_family_count_source = f"{PUBLIC_API_BASE}/api/actors/all"
             # The API is the single source of truth — collapse the legacy
             # `family_count` field to the same number so the regression
             # checker (and any older consumer that still reads family_count)

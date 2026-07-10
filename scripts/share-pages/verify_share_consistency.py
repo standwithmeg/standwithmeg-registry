@@ -3,7 +3,7 @@
 Pre-push consistency gate for the deployed court-actor share pages.
 
 For every actor in the deployed manifest:
-  * the public API count for the actor (live /api/survey/court-actors)
+  * the public API count for the actor (live /api/actors/all)
   * the spec.json `public_family_count` (and legacy `family_count`)
   * the count rendered into the share.html Frame 1 number block
 must agree. For every state that appears in the manifest, the share-page
@@ -173,16 +173,21 @@ def fetch_state_actors(state_abbr: str) -> list[dict]:
     state_abbr = (state_abbr or "").upper()
     if state_abbr in _api_cache:
         return _api_cache[state_abbr]
-    url = f"{PUBLIC_API_BASE}/api/survey/court-actors?state={urllib.parse.quote(state_abbr)}"
-    try:
-        with urllib.request.urlopen(_public_api_request(url), timeout=30) as resp:
-            data = json.loads(resp.read().decode("utf-8"))
-    except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError, socket.timeout, json.JSONDecodeError) as e:
-        print(f"[warn] API fetch failed for {state_abbr}: {e}", file=sys.stderr)
-        _api_cache[state_abbr] = []
-        return []
-    actors = data.get("actors") if isinstance(data, dict) else None
-    actors = actors if isinstance(actors, list) else []
+    if "__all__" not in _api_cache:
+        url = f"{PUBLIC_API_BASE}/api/actors/all"
+        try:
+            with urllib.request.urlopen(_public_api_request(url), timeout=60) as resp:
+                data = json.loads(resp.read().decode("utf-8"))
+        except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError, socket.timeout, json.JSONDecodeError) as e:
+            print(f"[warn] API fetch failed: {e}", file=sys.stderr)
+            _api_cache["__all__"] = []
+        else:
+            all_actors = data.get("actors") if isinstance(data, dict) else None
+            _api_cache["__all__"] = all_actors if isinstance(all_actors, list) else []
+    actors = [
+        actor for actor in _api_cache["__all__"]
+        if str(actor.get("state_code") or actor.get("location_key") or "").upper() == state_abbr
+    ]
     _api_cache[state_abbr] = actors
     return actors
 
@@ -210,16 +215,19 @@ def api_count_for_actor(
         for a in actors:
             for url_field in ("photo_url", "share_url"):
                 if slug_token in (a.get(url_field) or ""):
-                    return int(a.get("count") or 0), f"matched_by_{url_field}"
+                    count = a.get("family_count") if a.get("family_count") is not None else a.get("count")
+                    return int(count or 0), f"matched_by_{url_field}"
 
     name_key = loose_name_key(display_name or "")
     target_bucket = (bucket_key or "").split("|", 1)[0].strip().lower() if bucket_key else ""
     for a in actors:
         api_key = loose_name_key(a.get("name") or a.get("display_name") or "")
         if name_key and api_key == name_key:
-            return int(a.get("count") or 0), "matched_by_name"
+            count = a.get("family_count") if a.get("family_count") is not None else a.get("count")
+            return int(count or 0), "matched_by_name"
         if target_bucket and api_key == target_bucket:
-            return int(a.get("count") or 0), "matched_by_bucket"
+            count = a.get("family_count") if a.get("family_count") is not None else a.get("count")
+            return int(count or 0), "matched_by_bucket"
 
     return None, "below_threshold_or_unmatched"
 
