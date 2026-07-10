@@ -8,22 +8,29 @@
     "last_name": "(Marrero)",
     "role": "Attorney",
     "court": "Erie",
-    "county": "Erie",
+    "county": null,
     "court_or_county": "Erie",
-    "state": "NY",
+    "state": "New York",
     "state_abbr": "NY",
-    "mention_count": 0,
+    "mention_count": 6,
     "family_count": 3,
-    "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count": null,
+    "public_family_count_source": null,
+    "actor_report_count": 6,
+    "supabase_row_ids": [
+      "102ffbc8-6431-4bf7-9614-8451fdd50e3e",
+      "b4ed1f21-b342-49f5-bd7a-a990d9c3206e",
+      "51c6098e-d43d-4cff-ac96-447dca8640a2",
+      "9755dc11-2495-41a4-a078-242654bc83b2",
+      "0e44757d-7f61-445b-b977-38cb4571286d",
+      "9fba31b3-f723-40a9-8dc3-eff33c801f8a"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "rachel saeli (marero)|NY"
   },
   "photo": {
-    "path": null,
-    "exists": false,
+    "path": "new_york/rachel_k_saeli_marrero/image_1080.png",
+    "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
@@ -42,12 +49,31 @@
     "_pdf_state_family_count": 173,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5416,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 6,
+    "actor_report_count": 6,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "This system has destroyed my family when all I was asking for was help. It has cost me my mental health, my children’s sense of security, and feeling a loss so big that it hurts us all. It has hurt innocent children and left them with unanswered questions and where their “mom” is.",
+        "state": "NY",
+        "county": "Erie County",
+        "row_id": "fc14f364-7e5f-47ae-a9b1-0d16cddf760f"
+      },
+      {
+        "body": "The family court system deprived me of my life, liberty and the persuit of happiness. I never thought I would experience grieving the loss of my children while knowing they're still alive and being abused on a daily basis without being able to heal and live a normal childhood. Going from tucking them in at a night to crying myself to sleep, I am forced to muster up the strength to keep going and I feel as if I'm fighting for my life every single day, this has truly been the most excruciatingly painful thing I could ever imagine, and I would not wish this upon anyone.",
+        "state": "NY",
+        "county": "Erie County",
+        "row_id": "b4603791-6793-4923-9950-d35b57c93556"
+      },
+      {
+        "body": "This system has caused irreparable damage to my children and I. Their lives have been negatively impacted due to the inability of the system to function properly!",
+        "state": "NY",
+        "county": "Erie",
+        "row_id": "198513f6-0fa4-4bcd-ad0d-6384814aa1d3"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "She goes by 2 names Rachel saeli and Rachel marrero her maden name. Refused to file motions on my behalf. Lied about filing motions. Had multiple exparte communications with opposing counsel. Telling me to shut my mouth about appeal because opposing counsel goes to her for help and she can sway her to our side. Lied on record stating she filed a motion that was never filed. Told me dss attorney goes to her for help so keep my mouth shut and she might be able to get dss to change their minds. Refused to file appeals. Refused to give me documents regarding my case. Spoke with judge many time ex parte while refusing to speak with me.",
@@ -71,13 +97,11 @@
   },
   "export_dir": "New Final Post and Capcut template/export/rachel_k_saeli_marrero",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='NY'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
+    "public_family_count_api: no actors returned for state='NY'"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
-    "footer": "Family-reported submissions.",
+    "footer": "Family-reported submissions · not court findings.",
     "strike_through_reserved_for": [
       "isolated",
       "dismissed",
