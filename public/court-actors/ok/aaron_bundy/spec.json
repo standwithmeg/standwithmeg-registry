@@ -8,14 +8,14 @@
     "last_name": "Bundy",
     "role": "Attorney (Opposing)",
     "court": "Wagoner",
-    "county": "Wagoner county",
+    "county": null,
     "court_or_county": "Wagoner",
     "state": "Oklahoma",
     "state_abbr": "OK",
     "mention_count": 4,
-    "family_count": 3,
-    "public_family_count": 3,
-    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "family_count": 4,
+    "public_family_count": null,
+    "public_family_count_source": null,
     "actor_report_count": 4,
     "supabase_row_ids": [
       "190e4783-1c49-4fe3-b918-d4070817eaaf",
@@ -23,11 +23,11 @@
       "ea95409d-1a58-40a0-b574-8b46fc537b8c",
       "5f0f44a0-50bb-48dd-927b-c4338558219d"
     ],
-    "actor_row_id": "190e4783-1c49-4fe3-b918-d4070817eaaf",
+    "actor_row_id": null,
     "actor_bucket_key": "aron bundy|OK"
   },
   "photo": {
-    "path": "public/court-actors/ok/aaron_bundy/image_1080.png",
+    "path": "oklahoma/aaron_bundy/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -47,11 +47,11 @@
     "_pdf_state_family_count": 164,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5421,
+  "movement_total": 5427,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
-    "family_count": 3,
+    "family_count": 4,
     "family_reports": [
       {
         "body": "The system has destroyed my family. Happy children are now in constant chaos, the court is more concerned about 50/50 pro dad than stability for the children. I have been told so many times children are resilient. They will be ok. This has take a toll on myself mentally and physically. Now because I am fighting back or questioning I am classified as combative and confrontational. Which adds additional stress and feels like an intimidation tactic. The system and abuser has stolen precious time that you can never get back.",
@@ -106,10 +106,12 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/aaron_bundy",
-  "unresolved": [],
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='OK'"
+  ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
-    "footer": "Family-reported submissions.",
+    "footer": "Family-reported submissions · not court findings.",
     "strike_through_reserved_for": [
       "isolated",
       "dismissed",
@@ -122,26 +124,6 @@
     "recommended_route": "/court-actors/ok/aaron_bundy/share.html",
     "draft_only": true
   },
-  "render": {
-    "selected_quotes": [
-      {
-        "body": "Its been a slow process that allowed the opposing side to dissipate more than 50% of marital funds.",
-        "kind": "comment"
-      },
-      {
-        "body": "I have paper, digital, and video evidence of all of my above statements. The judge dismissed all as evidence.",
-        "kind": "comment"
-      },
-      {
-        "body": "Doesn’t respond to other atty emails in a timely manner. Plays delay tactic games",
-        "kind": "comment"
-      },
-      {
-        "body": "Delayed hearings, stalled case for years. Ignored evidence",
-        "kind": "comment"
-      }
-    ],
-    "quote_page_count": 1
-  },
+  "render": {},
   "cta": "STANDWITHMEG.COM ↗"
 }
