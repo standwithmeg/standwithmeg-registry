@@ -748,6 +748,25 @@ def main(argv: list[str]) -> int:
                 existing_identities.setdefault(state_abbr, set()).add(resolved_identity)
 
         if not args.skip_frames:
+            # Always stage the live portrait next to the export share.html before
+            # frame screenshots. Spec/photo paths can resolve wrong under
+            # SWM_SHARE_WORKDIR / CI, which re-bakes cover frames with a stale
+            # or missing face while public image_1080.png stays correct (Aaron
+            # Bundy regression: pages showed the new photo, frame-01 the old).
+            if photo_path.exists():
+                export_dir = EXPORT_ROOT / slug
+                export_dir.mkdir(parents=True, exist_ok=True)
+                staged = export_dir / "image_1080.png"
+                if photo_path.resolve() != staged.resolve():
+                    shutil.copy2(photo_path, staged)
+                built_spec_path = export_dir / "spec.json"
+                built_spec = read_json(built_spec_path) or {}
+                photo_meta = dict(built_spec.get("photo") or {})
+                photo_meta["path"] = str(staged)
+                photo_meta["exists"] = True
+                built_spec["photo"] = photo_meta
+                built_spec_path.write_text(json.dumps(built_spec, indent=2) + "\n")
+
             code, out, err = run([sys.executable, "scripts/share-pages/render_spotlight.py", slug, "--web", "--live-html"], env)
             if code != 0:
                 failed = True
