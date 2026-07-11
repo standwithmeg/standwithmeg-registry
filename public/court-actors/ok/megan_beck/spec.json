@@ -7,28 +7,28 @@
     "first_name": "Megan",
     "last_name": "Beck",
     "role": "GAL / Child Representative",
-    "court": "Tulsa",
-    "county": "Tulsa county",
-    "court_or_county": "Tulsa",
-    "state": "OK",
+    "court": "Wagoner",
+    "county": null,
+    "court_or_county": "Wagoner",
+    "state": "Oklahoma",
     "state_abbr": "OK",
     "mention_count": 4,
     "family_count": 3,
-    "public_family_count": 3,
-    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "public_family_count": null,
+    "public_family_count_source": null,
     "actor_report_count": 4,
     "supabase_row_ids": [
-      "63d2077d-2bfb-4f3f-b3a7-a63f39774732",
       "b683cec7-176e-43b3-b33f-cd7b2c7906da",
+      "63d2077d-2bfb-4f3f-b3a7-a63f39774732",
       "4b1a0648-01e5-4aba-80ec-c5460f4ffa58",
       "e850c171-bbe1-4d30-ab8a-84da8cc56ab9"
     ],
-    "actor_row_id": null,
+    "actor_row_id": "b683cec7-176e-43b3-b33f-cd7b2c7906da",
     "actor_bucket_key": "megan beck|OK"
   },
   "photo": {
-    "path": null,
-    "exists": false,
+    "path": "oklahoma/megan_beck/image_1080.png",
+    "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
@@ -47,7 +47,7 @@
     "_pdf_state_family_count": 164,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5421,
+  "movement_total": 5427,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -94,10 +94,12 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/megan_beck",
-  "unresolved": [],
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='OK'"
+  ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
-    "footer": "Family-reported submissions.",
+    "footer": "Family-reported submissions · not court findings.",
     "strike_through_reserved_for": [
       "isolated",
       "dismissed",
@@ -110,22 +112,6 @@
     "recommended_route": "/court-actors/ok/megan_beck/share.html",
     "draft_only": true
   },
-  "render": {
-    "selected_quotes": [
-      {
-        "body": "Ignored my daughter pleas for help. Lied to keep my daughter in tn.",
-        "kind": "comment"
-      },
-      {
-        "body": "Changing custody schedule to limit time with mom, to help minor child have a reunification with father, while child continues to show distress with time with dad.",
-        "kind": "comment"
-      },
-      {
-        "body": "To be disclosed if my testimony is required. I have paper, digital, and video evidence of all of my above statements. The judge dismissed all as evidence.",
-        "kind": "comment"
-      }
-    ],
-    "quote_page_count": 1
-  },
+  "render": {},
   "cta": "STANDWITHMEG.COM ↗"
 }
