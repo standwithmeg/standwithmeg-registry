@@ -12,12 +12,20 @@
     "court_or_county": "Medford MA",
     "state": "Massachusetts",
     "state_abbr": "MA",
-    "mention_count": 0,
+    "mention_count": 7,
     "family_count": 6,
     "public_family_count": 6,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 7,
+    "supabase_row_ids": [
+      "cad85417-8a04-45b2-ba22-0c4ab0b0a2e5",
+      "4f3f76d7-f4b0-4929-aba1-18bfcb47800c",
+      "0b0d32b9-5ae5-4c51-9634-ff32a7deb5e2",
+      "a8d1eb19-4d6f-427e-bc68-a63e318e7f87",
+      "beb21b23-88a7-4f73-ab58-ec83748eec60",
+      "41cb8746-86b1-4f98-bf94-6ff7ab3c3c28",
+      "2df81e94-c860-4d0c-9950-69dfad28ac11"
+    ],
     "actor_row_id": "cad85417-8a04-45b2-ba22-0c4ab0b0a2e5",
     "actor_bucket_key": "patricia brady|MA"
   },
@@ -42,12 +50,49 @@
     "_pdf_state_family_count": 106,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 7,
+    "actor_report_count": 7,
     "family_count": 6,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Destroyed my children, her alienation has driven a wedge with my oldest but lies to all my children and plays the victim, while financially trying to ruin me, my oldest she put on Prozac and put her in mental hospitals and the doctors and courts allowed it, horrible abuse.",
+        "state": "MA",
+        "county": "Essex",
+        "row_id": "74d8a25d-5b3b-4214-90ad-75a16b662322"
+      },
+      {
+        "body": "A system that was supposed to protect my children ignored their voices, separated us for years, and turned motherhood into a battle for survival.",
+        "state": "MA",
+        "county": "Middlesex County",
+        "row_id": "be00f6c2-e70a-43cd-861a-021d18fa61dd"
+      },
+      {
+        "body": "Denied me any contact with my daughter for a year.",
+        "state": "MA",
+        "county": "Essex County",
+        "row_id": "91f36a17-d7cf-4ece-94ae-44066f9b13c8"
+      },
+      {
+        "body": "Judge Teixeira didn't just take the lives of my children, she reached through time and also stole who they could have been.",
+        "state": "MA",
+        "county": "Suffolk County",
+        "row_id": "22380fe9-3d2e-4760-98cb-ff080f9424da"
+      },
+      {
+        "body": "Destroyed by the system built to protect us. Safety and our voice doesn’t matter as much as you income in the family system.",
+        "state": "MA",
+        "county": "Middlesex",
+        "row_id": "c38db479-920e-436a-9908-23eaf1fc2749"
+      },
+      {
+        "body": "It has been the worst 7 years of my life. Courts dont listen to domestic abused victims, blame everything on us. Instead of realizing we are protecting they threaten to put us in jail and fine us.",
+        "state": "MA",
+        "county": "Plymouth county",
+        "row_id": "bc501092-9eb7-4434-bff2-f30bda66c6d7"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "This is a very well known offender in Massachusetts she runs a business profiteering on children acting as both a guardian ad litem as well as expert witness and supervisor. I have a lot of information on her as well as records where she had ex parte Communications with the father asked the father if he was happy with the report while collecting money as well as concealing evidence including felony illegal wiretapping",
@@ -88,11 +133,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/patricia_brady",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='MA'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -108,6 +149,34 @@
     "recommended_route": "/court-actors/ma/patricia_brady/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "This is a very well known offender in Massachusetts she runs a business…",
+        "kind": "comment"
+      },
+      {
+        "body": "Delayed finishing and completing GAL report for over a year Took over a year and a…",
+        "kind": "comment"
+      },
+      {
+        "body": "I was not provided with clear or consistent explanations for those decisions.",
+        "kind": "comment"
+      },
+      {
+        "body": "She testified against me in custody proceedings back 2015 .",
+        "kind": "comment"
+      },
+      {
+        "body": "Locked my kid in room. Supports who ever pays her bill.",
+        "kind": "comment"
+      },
+      {
+        "body": "Spoke to both parents, talked to 3 children, mother made false allegations.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

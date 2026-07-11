@@ -12,12 +12,17 @@
     "court_or_county": "Cherokee County Courthouse",
     "state": "Kansas",
     "state_abbr": "KS",
-    "mention_count": 0,
+    "mention_count": 4,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "1cf8f754-ec50-4c29-8eb2-9161718a3932",
+      "7e176b75-29f8-4249-84d2-c7026f4a9e68",
+      "4f3d801a-cd78-4647-8985-99f8c795bff8",
+      "28534033-cb31-404b-a142-6a2aba843fdd"
+    ],
     "actor_row_id": "1cf8f754-ec50-4c29-8eb2-9161718a3932",
     "actor_bucket_key": "meredith frederick|KS"
   },
@@ -42,12 +47,31 @@
     "_pdf_state_family_count": 251,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Taken away the most valuable time from their youth. They treated my child like a commodity and not a human life.",
+        "state": "KS",
+        "county": "Crawford / Cherokee",
+        "row_id": "79294f14-3a98-427e-9d42-5148bf71690d"
+      },
+      {
+        "body": "Robbed memories, broken my family apart, and turned my kids against me",
+        "state": "KS",
+        "county": "Cherokee",
+        "row_id": "4a37636e-4419-4f65-bd2c-6ae51f415682"
+      },
+      {
+        "body": "This case has ripped my family apart. It has destroyed our home, my life, the lives of my children, the lives of my parents, the lives of every family member, the lives of everyone that I loved. This case has destroyed our whole entire town. It has destroyed everything that I've worked for. Has ruined my work reputation and everything that I work so hard my whole entire life for. My home is physically devastated. I am financially devastated. And everything that is written in the court is based on all false accusations that have completely been disproven and the whole case is legally null and void in all five counties. It truly is based completely on fruit of the poisonous tree from the very second the concept completely started. And the fact that I have to go to the United States federal court system to undo what a criminal was allowed to do to my family the fact that any criminal can go into anyone's home and be able to tear up someone's life based on hearsay and fraud at any given point and our law enforcement agency just stands by and does nothing about it something is so broken in the United States that that is allowed to happen. That is not the country that are forefathers built the Constitution of the United States on. Where is are God given rights of Protection in this Country??",
+        "state": "KS",
+        "county": "Cherokee",
+        "row_id": "2b778bec-0fb2-46a8-9d2a-427604e9d534"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Judge Frederick denied my due process and took primary custody from me to give to mother based on 4 false claims. Judge told reporter to leave court room and failed to record hearing. When I requested transcript, she recused herself, with no reasoning.",
@@ -70,11 +94,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/meredith_frederick",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='KS'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +110,18 @@
     "recommended_route": "/court-actors/ks/meredith_frederick/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Judge Frederick denied my due process and took primary custody from me to give to mother based on 4 false claims.",
+        "kind": "comment"
+      },
+      {
+        "body": "Was my attorney in 2016",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

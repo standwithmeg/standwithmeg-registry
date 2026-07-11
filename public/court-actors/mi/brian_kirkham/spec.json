@@ -12,12 +12,22 @@
     "court_or_county": "Calhoun",
     "state": "Michigan",
     "state_abbr": "MI",
-    "mention_count": 0,
+    "mention_count": 9,
     "family_count": 7,
     "public_family_count": 7,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 9,
+    "supabase_row_ids": [
+      "e1fb1888-7306-4793-9247-ced7f611220b",
+      "825055f8-3251-4a07-ad28-faf478abbf21",
+      "1766e89e-d947-45c5-a37e-4296ce4ed6a0",
+      "466bf704-8c10-4543-8c0e-afa715cec726",
+      "1045f7ce-d451-4c76-ab4e-28110a5e25ad",
+      "b1810927-1723-47c3-8dba-5f19c0e90359",
+      "0ba3e222-7643-43d0-9316-832f20b21030",
+      "aa9c69a8-dc9c-4fcd-aad4-c70cf0c28871",
+      "27e7fba6-0c9b-42db-bafb-be9249fb1e21"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
@@ -42,12 +52,43 @@
     "_pdf_state_family_count": 178,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 9,
+    "actor_report_count": 9,
     "family_count": 7,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Everything I tried to change the court order. They never gave me a new judge. So I've been stuck in a consistent cycle that will never change.",
+        "state": "MI",
+        "county": "Calhoun",
+        "row_id": "ab55048d-3e0f-4474-806f-fa1bdc885f17"
+      },
+      {
+        "body": "Not a damn thing",
+        "state": "MI",
+        "county": "Calhoun",
+        "row_id": "80107286-478a-44d1-b6a9-971f23062726"
+      },
+      {
+        "body": "FOC has suppressed the relationship with my son with no care about his heart in the future.",
+        "state": "MI",
+        "county": "Calhoun",
+        "row_id": "c49f51da-f66b-46d1-b2d6-0972aa832855"
+      },
+      {
+        "body": "They have put wrong information down. They’ve given me zero custody straight off the bat which have taken my daughter‘s time away from me, which is my only child. They’ve taken advantage of me by using my PTSD and mental health issues.",
+        "state": "MI",
+        "county": "Calhoun",
+        "row_id": "57e2b514-05c6-41a3-83d1-5e8eb966bf24"
+      },
+      {
+        "body": "Gave me PTSD my oldest a drug problem and broke our family apart",
+        "state": "MI",
+        "county": "Calhoun",
+        "row_id": "8ce6e311-b8fb-44b8-99d6-4a0733f5d8cb"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Horrible judge had proof of dads medical neglect, drinking and driving, nothing i did was change enough to get custody Sided with dad on multiple occasions even when not in best interests of my daughter. Gave dad full custody of my youngest at the time, even with reunification in place, cps case was kept open for 2 years and they made it impossible for me to get my kids back and keep them. Not allowing me to live with family in a safe environment instead drug infested apartment housing. The list is long I have been removed from central Registry because I don't fit the neglect abuse criteria",
@@ -82,11 +123,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/brian_kirkham",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='MI'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -102,6 +139,30 @@
     "recommended_route": "/court-actors/mi/brian_kirkham/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "The list is long I have been removed from central Registry.",
+        "kind": "comment"
+      },
+      {
+        "body": "Told me to come back after dna test results to change the orders.",
+        "kind": "comment"
+      },
+      {
+        "body": "Refused to look at the evidence or proof just denyed my objection",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored my clear evidence of my exes csc charge",
+        "kind": "comment"
+      },
+      {
+        "body": "Ex parte with sworn affidavit of no child abuse.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

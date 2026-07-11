@@ -12,12 +12,16 @@
     "court_or_county": "Ada County, 4th district",
     "state": "ID",
     "state_abbr": "ID",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "6ebb35fb-612f-4566-baf5-12538a119c54",
+      "69b2957a-59ac-4d3e-9ba7-7195db20abe8",
+      "702e2f08-f194-4895-b40b-1330e43e4801"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "ransom bailey|ID"
   },
@@ -42,12 +46,31 @@
     "_pdf_state_family_count": 39,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Between P.D. lack of enforcement of custody orders as part of their job, interference with rights because they think they know what's best, listening to children make a false statement \"my mom told me\" and passing judgements from a lie rehearsed with a minor, falsification of reports, it's time all of these heartless people are held accountable for their voluntary ignorance and deliberate meddling in places they don't belong!",
+        "state": "ID",
+        "county": "Ada",
+        "row_id": "1ea1a706-68d0-4a3d-8f03-881777db72c2"
+      },
+      {
+        "body": "Having been my son's rock his whole life, to now having to ask for permission to provide basic necessities to him, shows that the wrong parent is repeatedly punished and silenced.",
+        "state": "ID",
+        "county": "Ada County",
+        "row_id": "44da392c-e95d-4855-9e32-e7fdc5c63c27"
+      },
+      {
+        "body": "It’s destroyed me as a person. I believed that if I did what was right and tried to be a good stable person for my children everything will be ok. The courts have destroyed my relationship with my kids. I’ve always done everything and sacrificed all my time for my children. I volunteered at their schools and coached their sports. Now I don’t know what to do.",
+        "state": "ID",
+        "county": "Ada",
+        "row_id": "4f140592-09f1-4861-bfbb-afc5cf7d3cf1"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Biased, one sided, talks in circles, doesn't keep his word, assists when not asked nor warranted, over talks pro-se parties, asks way too much about opinions from ignorant attorneys, and let's them walk all over him making him appear WEAK. Fails to actually HEAR what people are saying, only listens to what he feels is relevant. Hang up the robe man, you're done!",
@@ -70,11 +93,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/ransom_bailey",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='ID'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +109,22 @@
     "recommended_route": "/court-actors/id/ransom_bailey/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Fails to actually HEAR what people are saying, only listens to what he feels is relevant. Hang up the robe man, you're done!",
+        "kind": "comment"
+      },
+      {
+        "body": "After I voluntarily accepted the temp protection order, he said 50/50 would come back after criminal case was resolved.",
+        "kind": "comment"
+      },
+      {
+        "body": "Modified my custody based on false accusations, and continues to allow my Ex Wife to bully me waste my money and hurt our daughter.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

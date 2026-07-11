@@ -12,12 +12,19 @@
     "court_or_county": "Will",
     "state": "IL",
     "state_abbr": "IL",
-    "mention_count": 0,
+    "mention_count": 6,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 6,
+    "supabase_row_ids": [
+      "ddf6debf-d683-48f6-8c3f-dddf7833c1fc",
+      "ace595a3-bcea-4bd2-a8d9-1ef75a2471e6",
+      "e1bf5a15-6a29-42b5-83e8-d578028359cc",
+      "bb808481-46a3-4eff-8d04-e66747dbd925",
+      "035bb620-2cd6-4c30-b08b-26639d84f61c",
+      "0123ffd9-a054-453f-871c-356487df5384"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "antoinete granholm|IL"
   },
@@ -29,12 +36,12 @@
   "state_stats": {
     "families_approved": 113,
     "total_submissions": 150,
-    "avg_financial_loss": 220843.1,
+    "avg_financial_loss": 219529.23,
     "avg_months_lost": 28.0,
     "_source_table": "movement_stats_by_state",
     "_match_value": "IL",
     "state_family_count": 150,
-    "median_financial_loss": 129500,
+    "median_financial_loss": 126875,
     "median_burden_sample_size": 92,
     "median_months_lost": 15,
     "pro_se_pct": 48.7,
@@ -42,12 +49,25 @@
     "_pdf_state_family_count": 150,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 6,
+    "actor_report_count": 6,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "False allegations, false orders of protection.",
+        "state": "IL",
+        "county": "Will",
+        "row_id": "d66abbf6-cd60-42eb-94d1-a3a3972b60b7"
+      },
+      {
+        "body": "I have made it to the other side, my fear is that it will take my son a long time to heal from the emotional damage. I have NEVER lost my faith in God and he has carried me through.",
+        "state": "IL",
+        "county": "Unknown",
+        "row_id": "8692333d-423b-466d-be3f-296b0b6488d4"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "No, due process, ignored evidence, unethical, harassment, denied motions, defamation of professionals publicly. Denied hearings, denied my emotions, defamation of medical professionals Denied hearing, and ignored evidence, delayed notification, not the call, bias, edited documents, dismiss motions, unprofessional, no due process Denied motion without hearing without due process",
@@ -58,11 +78,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/antoinette_l_granholm",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='IL'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -78,6 +94,14 @@
     "recommended_route": "/court-actors/il/antoinette_l_granholm/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "No, due process, ignored evidence, unethical, harassment, denied motions, defamation of professionals publicly. Denied hearings, denied my emotions, defamation of medical professionals Denied hearing, and ignored evidence, delayed notification, not the call, bias, edited documents, dismiss motions, unprofessional, no due process Denied motion without hearing without due process",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

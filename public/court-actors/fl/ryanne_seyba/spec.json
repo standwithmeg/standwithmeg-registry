@@ -12,12 +12,18 @@
     "court_or_county": "Broward",
     "state": "Florida",
     "state_abbr": "FL",
-    "mention_count": 0,
+    "mention_count": 5,
     "family_count": 4,
     "public_family_count": 4,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 5,
+    "supabase_row_ids": [
+      "36d6fc5e-3bfe-4b0a-9926-99ad9c66ef19",
+      "e54e00f8-30b6-480d-a982-ecd8798546c2",
+      "f8a6f421-ac27-4527-9a43-ce7be4a50dda",
+      "374c1481-4bdb-4561-9e7f-0d128f4dcdb7",
+      "e9e0949a-1cce-4c29-8d85-f6b2aa1ef6be"
+    ],
     "actor_row_id": "36d6fc5e-3bfe-4b0a-9926-99ad9c66ef19",
     "actor_bucket_key": "ryane seyba|FL"
   },
@@ -42,12 +48,37 @@
     "_pdf_state_family_count": 306,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 5,
+    "actor_report_count": 5,
     "family_count": 4,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "The Family Court system is a giant money making machine. It has nothing to do with the best interests of our children.",
+        "state": "FL",
+        "county": "Broward",
+        "row_id": "0fabfcfa-6f44-4842-8f26-e538a5d9f245"
+      },
+      {
+        "body": "The Broward County family court system has left me feeling unheard despite presenting evidence and repeatedly raising concerns about my relationship with my children. After months of litigation, delays, and mounting expenses, I believe the system failed to adequately protect my parental rights and my children’s relationship with their father",
+        "state": "FL",
+        "county": "Broward",
+        "row_id": "0301c293-4d7c-474b-b722-85ce3a24dfbb"
+      },
+      {
+        "body": "Put a little girl in danger and took her away from her sister and mother who raised her",
+        "state": "FL",
+        "county": "Broward County",
+        "row_id": "1855a090-dbcf-4981-8b48-84f7fbf58e38"
+      },
+      {
+        "body": "The court system has taken a survivor of domestic violence and has punished her and her children for seeking relief from the very person who harmed them. (Broward County, FL- FMCE [redacted])",
+        "state": "FL",
+        "county": "Unknown",
+        "row_id": "4cb1a622-d5b1-484d-9a83-387dfa34bb96"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Ryanne Seyba was appointed as Guardian ad Litem in my case after being suggested by Father’s attorney. At the time, I did not object because I was unfamiliar with many of the dynamics of high-conflict family court litigation. My experience with Mrs. Seyba was overwhelmingly negative. I felt that she did not act in my child’s best interests and instead aligned herself with Father’s position throughout the proceedings. Among other things, I perceived her as attempting to reduce my role in my child’s life, questioning my mental and emotional stability, and supporting interventions that I believed were harmful to my son. She recommended reunification services and professionals, including Dr. Eric Reznik and FACES visitation center, whose involvement in our case I also viewed negatively. Over time, I came to believe that Mrs. Seyba had formed conclusions about me early in the case and interpreted subsequent events through that lens. I felt that concerns I raised were routinely dismissed, while Father’s allegations were given significant weight. As a result, I lost confidence in her neutrality and her ability to serve as an independent advocate for my child. My personal belief is that, had I not persistently challenged recommendations and advocated for myself, the outcome could have been significantly more damaging to my relationship with my son. My experience with Ms. Seyba left me feeling that she contributed to escalating the conflict rather than helping resolve it in a manner that genuinely prioritized the child’s welfare. I also know several other mothers, who had her on their case, and she also sided with fathers, and played against the mothers, and most definitely NOT in the children’s interest.",
@@ -76,11 +107,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/ryanne_seyba",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='FL'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -96,6 +123,26 @@
     "recommended_route": "/court-actors/fl/ryanne_seyba/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "I felt that concerns I raised were routinely dismissed.",
+        "kind": "comment"
+      },
+      {
+        "body": "Allowed harassment to take place by Nicole Vette",
+        "kind": "comment"
+      },
+      {
+        "body": "In my experience, Guardian ad Litem Ryanne Sebya did not adequately address my repeated concerns regarding…",
+        "kind": "comment"
+      },
+      {
+        "body": "Lie after lie.. Then put an order on me so I couldn't tell my truth",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

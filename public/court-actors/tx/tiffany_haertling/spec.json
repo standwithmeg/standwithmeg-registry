@@ -12,12 +12,16 @@
     "court_or_county": "442nd District Court Denton county",
     "state": "Texas",
     "state_abbr": "TX",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "d356bf10-363e-4a6c-9fd8-0694b7b44265",
+      "a6d833ba-0d04-409d-ad21-7d71b2dc3288",
+      "ea6a8679-3718-481b-976b-fc99e5788972"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "tifany haertling|TX"
   },
@@ -27,27 +31,46 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 250,
-    "total_submissions": 315,
-    "avg_financial_loss": 229240.77,
-    "avg_months_lost": 32.1,
+    "families_approved": 251,
+    "total_submissions": 316,
+    "avg_financial_loss": 228661.33,
+    "avg_months_lost": 32.0,
     "_source_table": "movement_stats_by_state",
     "_match_value": "TX",
-    "state_family_count": 315,
-    "median_financial_loss": 118900,
-    "median_burden_sample_size": 149,
-    "median_months_lost": 20,
-    "pro_se_pct": 49.8,
-    "pro_se_count": 157,
-    "_pdf_state_family_count": 315,
+    "state_family_count": 316,
+    "median_financial_loss": 117950,
+    "median_burden_sample_size": 150,
+    "median_months_lost": 19,
+    "pro_se_pct": 50.0,
+    "pro_se_count": 158,
+    "_pdf_state_family_count": 316,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Drain me of my finances and support my exes lies without hearing my story.",
+        "state": "TX",
+        "county": "Denton",
+        "row_id": "7781b302-26bc-492b-b49c-70bd8bba2778"
+      },
+      {
+        "body": "Did cause the lifelong trauma to four of my babies and to my husband and I to my mom, his mom, grandparents aunts uncles they’ve ripped our family completely apart they’ve taken time that cannot be made up. They have stolen our character, identities, and so much more they have completely broken us to where we will never heal from this trauma. They’ve made my husband look like somebody he’s not, and he still held his head high and walked in that courtroom most importantly, it costs so much pain in my kids life I don’t know that they will ever heal from this again. They taken their names. They’ve taken the very people that protect them through everything and are still here protecting them and they may not even see this they’ve taken their mommy and daddy away.",
+        "state": "TX",
+        "county": "Denton",
+        "row_id": "1b23ed03-9bea-4227-998c-4f561015470d"
+      },
+      {
+        "body": "My children are both diagnosed with panic and anxiety disorders. There has been in hospital and outpatient treatments for multiple issues. My children do not know “normal.” They beg me to stop fighting for them as they are retaliated against for bringing issues to light. It’s soul crushing. I have so much to say, but I am unsure if I will every fully trust anything, or anyone surrounding family court as it is so blatantly corrupt.",
+        "state": "TX",
+        "county": "Denton",
+        "row_id": "5b2d96f1-b960-4b27-966e-e608b94614e4"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Handled issues unfairly, even though she seen the text messages she acknowledged that they were very concerning that failed to act on them allowed Casa workers Cps workers, the district attorney herself and the Children’s attorneys to point and laugh at me while I was on STAN and humiliate me in her courtroom. Allowed them to lie allowed them to give false testimony denied all motions that was filed by me laughed in my face for not knowing how to fight my case per se even though she took my Court appointed Attorney away denied my mom and Attorney and my mom actually had custody of two of my children she won’t even put in the record my daughter‘s forensic interview which is the biggest part of the evidence in our case",
@@ -70,11 +93,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/tiffany_haertling",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='TX'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +109,22 @@
     "recommended_route": "/court-actors/tx/tiffany_haertling/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Took my Court appointed Attorney away denied my mom",
+        "kind": "comment"
+      },
+      {
+        "body": "She basically granted, a false TRO that my child’s father requested.",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored tactics by opposing counsel that contradicted her ruling.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

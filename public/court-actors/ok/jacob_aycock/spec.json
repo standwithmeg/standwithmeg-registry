@@ -12,12 +12,16 @@
     "court_or_county": "Tulsa",
     "state": "OK",
     "state_abbr": "OK",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "941821ac-996b-4287-9098-786f29dc1d16",
+      "4150889f-2636-4d82-866f-b06adf65492d",
+      "01b2847d-ee97-4d4c-a07e-e809b41294fd"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "jacob aycock|OK"
   },
@@ -42,12 +46,31 @@
     "_pdf_state_family_count": 164,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "The system has destroyed my family. Happy children are now in constant chaos, the court is more concerned about 50/50 pro dad than stability for the children. I have been told so many times children are resilient. They will be ok. This has take a toll on myself mentally and physically. Now because I am fighting back or questioning I am classified as combative and confrontational. Which adds additional stress and feels like an intimidation tactic. The system and abuser has stolen precious time that you can never get back.",
+        "state": "OK",
+        "county": "Tulsa",
+        "row_id": "1734a704-ed48-41a2-b5e8-83bf9a1d781e"
+      },
+      {
+        "body": "Family court is the most corrupt thing that I have witnessed. I have watched judges, attorneys, parenting coordinator, GAL, and mediators colluded to extort fathers financially. I have witnessed multiple times of going off the record where the actors discuss their upcoming cases with each other. They make it near impossible to have a court reporter and charge you exorbitant amounts for the transcript. We believe the transcript was altered but how can you prove it. The fact that they fight to keep cameras out of the courtrooms should prove their motives.",
+        "state": "OK",
+        "county": "Tulsa",
+        "row_id": "acefd2d8-9d56-4b6f-993a-7d37174d5419"
+      },
+      {
+        "body": "This system has torn my family apart, stripped me of my role as a mother, and forced me into a relentless fight against abusive exes, distortion, imbalance, and Court decisions that have harmed both me and my child.",
+        "state": "OK",
+        "county": "Tulsa county",
+        "row_id": "1db6b144-e2d7-410e-a9ef-7b22ac61e32d"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Woman hater. Contradicted everything he would say. Made changes to accommodate father and being a quote \"businessman\" and nothing in the best interest of the children. Condescending and does not like you to ask for understandings to his decisions.",
@@ -70,11 +93,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/jacob_aycock",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='OK'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +109,22 @@
     "recommended_route": "/court-actors/ok/jacob_aycock/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Woman hater. Contradicted everything he would say. Made changes to accommodate father and being a quote \"businessman\" and nothing in the best interest of the children.",
+        "kind": "comment"
+      },
+      {
+        "body": "He started out unbiased but later seemed to just comply with ex's new attorney. It became apparent that they were friends.",
+        "kind": "comment"
+      },
+      {
+        "body": "Misled court, led witness, violated professional conduct and oath",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

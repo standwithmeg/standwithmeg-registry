@@ -12,12 +12,17 @@
     "court_or_county": "Johnson 10th judicial district",
     "state": "Kansas",
     "state_abbr": "KS",
-    "mention_count": 0,
+    "mention_count": 4,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "4b7990b7-d85d-4011-b64e-e258618d3942",
+      "2415f440-407a-4a8a-b700-3df9e080457b",
+      "407422df-640d-4dec-bea9-1c01674007d0",
+      "27e88d4f-9347-4099-8171-f4e4af1bcf05"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
@@ -42,12 +47,31 @@
     "_pdf_state_family_count": 251,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "The system has deprive me of the opportunity to raise, love, and shape my daughter. The system has lied, destroyed, and robbed me of not only my daughter, but my entire relationship with my family.",
+        "state": "KS",
+        "county": "Johnson County",
+        "row_id": "0deabd06-b3cc-421f-858f-9c5190206159"
+      },
+      {
+        "body": "System was complicit in alienating my children from me. Attorneys, GAL's, a Case Manager, Therapists, Judges, KVC. I have spent well over $150,000 over a two year period of time only to have two of my 3 children go no contact. No abuse, no drugs or addiction problems. All of this over screens and permissive parenting.",
+        "state": "KS",
+        "county": "Johnson County",
+        "row_id": "87cd907e-3928-4f1c-8191-aacf997ed156"
+      },
+      {
+        "body": "My family and life were ripped apart to keep USD 232 from consequences, and the lies told by multiple bad actors only impact me since there is no accountability for them.The only evidence available is the same evidence that would exonerate me but it would require unbiased court actors to look at it that way.",
+        "state": "KS",
+        "county": "Johnson County",
+        "row_id": "93d75118-1a41-46b0-91c0-f43a3386ff40"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Denied changes of judge to debilitate me. Turned a blind eye. Allowed my daughter to see a therapist my mom saw to keep her from ne Denied my many requests for a new public defender after my lawyer was vacationing in Cancun multiple times during hearings and not representing me on numerous occasions for years",
@@ -70,11 +94,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/kathleen_sloan",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='KS'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +110,22 @@
     "recommended_route": "/court-actors/ks/kathleen_sloan/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Denied changes of judge to debilitate me. Turned a blind eye.",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored the hiring of a special education law firm. She did not demand evidence and would not recognize the dissent showed by my court appointed lawyer.",
+        "kind": "comment"
+      },
+      {
+        "body": "Ruled one parent emotionally abusive of child, then approved reintegration of child back into that home.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

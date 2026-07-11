@@ -12,12 +12,18 @@
     "court_or_county": "Fort Bend",
     "state": "Texas",
     "state_abbr": "TX",
-    "mention_count": 0,
+    "mention_count": 5,
     "family_count": 4,
     "public_family_count": 4,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 5,
+    "supabase_row_ids": [
+      "cf71cf13-1232-4c4a-8a2a-d36a8348f396",
+      "c2eb5b0b-7d48-4871-adea-b82a84852c30",
+      "774626cb-496c-4260-a729-d6d338cd571e",
+      "4f6ed74c-70f0-4748-a116-76e9565338aa",
+      "390a54f1-af69-48bc-9d79-4a029287252a"
+    ],
     "actor_row_id": "cf71cf13-1232-4c4a-8a2a-d36a8348f396",
     "actor_bucket_key": "monica rawlins|TX"
   },
@@ -27,27 +33,52 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 250,
-    "total_submissions": 315,
-    "avg_financial_loss": 229240.77,
-    "avg_months_lost": 32.1,
+    "families_approved": 251,
+    "total_submissions": 316,
+    "avg_financial_loss": 228661.33,
+    "avg_months_lost": 32.0,
     "_source_table": "movement_stats_by_state",
     "_match_value": "TX",
-    "state_family_count": 315,
-    "median_financial_loss": 118900,
-    "median_burden_sample_size": 149,
-    "median_months_lost": 20,
-    "pro_se_pct": 49.8,
-    "pro_se_count": 157,
-    "_pdf_state_family_count": 315,
+    "state_family_count": 316,
+    "median_financial_loss": 117950,
+    "median_burden_sample_size": 150,
+    "median_months_lost": 19,
+    "pro_se_pct": 50.0,
+    "pro_se_count": 158,
+    "_pdf_state_family_count": 316,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 5,
+    "actor_report_count": 5,
     "family_count": 4,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "“The court stripped me of my rights and contact with my children based on unproven allegations, ignored evidence of ongoing custody interference and emotional abuse, and allowed my ex to repeatedly violate court orders without consequence. While my children suffered and my family was torn apart, the judge took two months just to issue a ruling, leaving us trapped in limbo and devastation.”",
+        "state": "TX",
+        "county": "Fort Bend",
+        "row_id": "32f81c60-5205-4d93-ad46-44863dfda313"
+      },
+      {
+        "body": "This system has definitely destroyed my children mentally know they have to say with their mom by force. They cry to me about they don’t know who is good or bad.",
+        "state": "TX",
+        "county": "Fort bend",
+        "row_id": "bf838093-a621-4e5d-8a61-681a5e0ebdfe"
+      },
+      {
+        "body": "Judge Rawlins has granted my ex husband full custody and given me SPO without exemptions to significantly reduce my time with my 3 children and won't even allow me to eat lunch with them at school. She took the false testimony given by the Amicus Cindy Aguirre without any evidence of harm/neglect to my children and no reason to reduce my custody.",
+        "state": "TX",
+        "county": "Fort Bend",
+        "row_id": "0b65cb4b-bbe8-4007-884c-0961af6f8b85"
+      },
+      {
+        "body": "The 328th family court in fort bend county TX has been a complete disaster for my family. Judge Monica Rawlins is a lousy Judge that separates families and doesn’t review evidence submitted to the court. I have had to pay over $50k to an attorney to fight a false TRO and false allegations that were allowed in this courtz and when I couldn’t afford anymore, I became pro se. Still in the process of trying to get some visitation but this judge has a corrupt system and thinks she is above the law. Also the amicus (Danny Hoke) that was appointed by judge Rawlins, to my case, contributes to her election campaign and is not a neutral officer of the court. Who ever said that is lying. They are both lousy at their jobs. Hopefully she will lose this November 2026 election and not be able to do this to other families. Hopefully this help someone else who needs to be informed. It’s all a pay to play system at its worst.",
+        "state": "TX",
+        "county": "Fort Bend",
+        "row_id": "4d07e32d-3424-468f-8660-f3ea6c19470b"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Judge Monica Rawlins issued a restraining order against me based on allegations made by my ex-husband despite the lack of any direct evidence supporting his claims. She also issued a restraining order against my current husband, even though he was not present during the conflict between me and my daughter and had no involvement in the alleged incident. During the first hearing, the judge laughed about the restraining order against him before ultimately dismissing it and minimized it as “just a formality,” despite the emotional and financial harm it caused us, including the need to hire legal counsel to defend him against the allegations. After the second hearing, Judge Monica Rawlins took approximately two months to issue a ruling, leaving my family in limbo while I remained under severe custody restrictions and continued paying substantial legal fees. Before the second hearing took place, Texas House Bill 3783 (HB 3783), also known as the Safe Haven Act, became effective and prohibited Texas family courts from using reunification-style interventions that require children to have no contact with a parent as a condition of therapy or reunification. Despite this major legislative change, and despite my attorney specifically arguing that the law constituted a substantial change warranting modification of the existing order, my case continued operating under a framework that severely restricted my contact with my children and no timely corrective action was taken by the court. Judge Monica Rawlins ignored significant evidence I presented during the case, including documentation of repeated custody interference by my ex-husband. Even while I was limited to only one hour of parenting time per week during family therapy, my ex repeatedly scheduled trips and vacations that caused the children to miss my already extremely limited court-ordered visitation. Despite ongoing violations of my parenting time, the court did not take any corrective action or enforce the existing custody orders. I was the only one who had to follow the court order. Concerns regarding underage alcohol exposure involving the minor children were also ignored. Both I and the family therapist raised concerns that the children were allegedly being provided alcohol or exposed to inappropriate alcohol-related situations during parties and family trips at my ex-husband’s home. Despite these concerns being brought before the court, no action was taken and no investigation was done.",
@@ -76,11 +107,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/monica_rawlins",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='TX'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -96,6 +123,26 @@
     "recommended_route": "/court-actors/tx/monica_rawlins/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Took approximately two months to issue a ruling",
+        "kind": "comment"
+      },
+      {
+        "body": "Have separated family and have to desire to reunify",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored evidence of my ex husband violating the temporary orders",
+        "kind": "comment"
+      },
+      {
+        "body": "Didn’t acknowledge ex wife assault",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

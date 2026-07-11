@@ -12,12 +12,16 @@
     "court_or_county": "Volusia",
     "state": "Florida",
     "state_abbr": "FL",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "e907bd65-d1a0-4fd8-b421-55e06827af42",
+      "92df62e3-c374-4f90-99ba-c191419a9144",
+      "71accc58-9433-440a-a5d2-1112b8976d92"
+    ],
     "actor_row_id": "e907bd65-d1a0-4fd8-b421-55e06827af42",
     "actor_bucket_key": "shayla rodney|FL"
   },
@@ -42,12 +46,31 @@
     "_pdf_state_family_count": 306,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Lea Case ignored dependency court retaliation against my family",
+        "state": "FL",
+        "county": "Volusia",
+        "row_id": "4a08abb2-b0d1-45cf-b134-5236e8d5ab02"
+      },
+      {
+        "body": "Florida DCF medically kidnapped my specials needs child who was weaning. The agency put her back on a g-tube and used behavioral assessment reports by Licensed Mental Health Counselors instead of qualified professionals to unnecessarily keep her g-tube dependent for 3 years. She is not seeing proper neurologists and suffering medical neglect.",
+        "state": "FL",
+        "county": "Volusia",
+        "row_id": "4c63f799-5d2f-4526-8ce1-9061d62c8425"
+      },
+      {
+        "body": "Fl DCF is endangering my infant granddaughters life. She has complex special needs and is not receiving adequate medical care.",
+        "state": "FL",
+        "county": "Daytona Beach",
+        "row_id": "32c1079d-4f48-408f-955e-7e0173f25c19"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Florida DCF and its contracted Case Managers relied on Licensed Mental Health Counselors (LMHCs) to interpret my infant grandchild’s medical records, summarize medical findings, and make recommendations about medical conditions outside their scope of practice. These LMHC reports were used in place of qualified medical evaluations and specialists, and their interpretations were treated as authoritative despite the LMHCs lacking medical licensure. This practice denied my daughter meaningful participation in her baby’s medical care, obstructed access to accurate medical information and endangering the child’s life. The LMHC summaries were repeatedly used to justify decisions affecting the medically fragile infant and her 3 siblings without proper medical oversight. Also, the foster caregiver authorized genetic testing on medically fragile infant, my grandchild, without consent while my daughter’s parental rights were intact. After my daughter requested a weaning evaluation, DCF and the case mangers removed an oral motor weaning assessment showing swallow capacity from the case file, leaving my grandchild on a g-tube unnecessarily for 3 years.",
@@ -70,11 +93,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/shayla_rodney",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='FL'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +109,22 @@
     "recommended_route": "/court-actors/fl/shayla_rodney/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "The case mangers removed an oral motor weaning assessment showing swallow capacity from the case file, leaving my grandchild on a g-tube unnecessarily for 3 years.",
+        "kind": "comment"
+      },
+      {
+        "body": "She removed the Easter Seals report from the file.",
+        "kind": "comment"
+      },
+      {
+        "body": "Removed relative Kim Florida Homestudy from the FSFN database to foreclose guardian candidacy",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

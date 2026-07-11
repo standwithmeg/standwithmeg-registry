@@ -12,12 +12,20 @@
     "court_or_county": "Johnson County",
     "state": "Kansas",
     "state_abbr": "KS",
-    "mention_count": 0,
+    "mention_count": 7,
     "family_count": 5,
     "public_family_count": 5,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 7,
+    "supabase_row_ids": [
+      "da08c769-c799-4f0a-a7e2-50bbc067bb48",
+      "a51b94a6-0902-479c-a064-892887e77273",
+      "b8c7d4da-2dbf-4ef2-a95b-9519a20d4a7a",
+      "37628adb-46b0-4126-8903-014d7307be52",
+      "b232bee3-5ba7-465f-b7c2-cbfa3cffe3f1",
+      "d3801b77-4de5-43e8-bdc4-8a4e704c2921",
+      "4b2280ce-4ed2-4dfc-85d9-ddaa67f07e34"
+    ],
     "actor_row_id": "da08c769-c799-4f0a-a7e2-50bbc067bb48",
     "actor_bucket_key": null
   },
@@ -42,12 +50,37 @@
     "_pdf_state_family_count": 251,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 7,
+    "actor_report_count": 7,
     "family_count": 5,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "The system has destroyed the mental and emotional health of me and my children and are nervous systems. We will be forever changed by this experience. we pray every day that we're together again, and that justice is truly served.",
+        "state": "KS",
+        "county": "Johnson County",
+        "row_id": "52cca651-a48b-4815-95cc-17fbbaf47d55"
+      },
+      {
+        "body": "“In our experience before Judge Rokusek in Johnson County, Kansas, the family court system appeared to favor one parent while allowing repeated violations, prolonged litigation, and unequal accountability, forcing our family into severe financial hardship, including foreclosure risk, additional jobs, and plasma donation to survive. The years of conflict, interference with therapy and activities, and instability imposed on our children damaged their well-being and relationships, while concerns regarding incomplete financial disclosures and misconduct went largely unaddressed. 45 months later, fighting a new teal appeal after our first was appealed.”",
+        "state": "KS",
+        "county": "Johnson County",
+        "row_id": "b6b7c8e7-bbee-41f8-8dc7-23d67e1d8822"
+      },
+      {
+        "body": "The system has caused unneeded separation from my autistic son and his service dog! The system has stripped me of my medical rights and the funds needed for the betterment of my children have been spent instead on the system.",
+        "state": "KS",
+        "county": "Johnson County",
+        "row_id": "98482270-c1d7-48ce-9afa-cfad9f53fb8f"
+      },
+      {
+        "body": "Ripped two children from the only home they had ever known and from their mother and the maternal family who raised them. Haven't been able to see children outside of strictly supervised visitation, for no more than 2 to 4 hours per week in nearly 2 full years.",
+        "state": "KS",
+        "county": "Johnson",
+        "row_id": "35ad29b0-090c-4d64-95b0-8ba4a9979b97"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "“In our experience before Judge Rokusek in Johnson County, Kansas, the family court system appeared to favor one parent while allowing repeated violations, prolonged litigation, and unequal accountability, forcing our family into severe financial hardship, including foreclosure risk, additional jobs, and plasma donation to survive. The years of conflict, interference with therapy and activities, and instability imposed on our children damaged their well-being and relationships, while concerns regarding incomplete financial disclosures and misconduct went largely unaddressed.” Judge Rokusek has allowed the ex wife’s hidden assets and financial fraud and overwhelming litigation initiated by ex wife and multiple missed discovery deadlines to go without sanctions or consequences.",
@@ -76,11 +109,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/jacquelyn_ellen_rokusek",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='KS'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -96,6 +125,22 @@
     "recommended_route": "/court-actors/ks/jacquelyn_ellen_rokusek/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Refused to revisit the case",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored evidence, ignored the children. Made harsh judgments on allegations rather than facts.",
+        "kind": "comment"
+      },
+      {
+        "body": "Never questioned the GAL recommendations or where he received any of his falsified information.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

@@ -12,12 +12,18 @@
     "court_or_county": "County not listed",
     "state": "New Hampshire",
     "state_abbr": "NH",
-    "mention_count": 0,
-    "family_count": 2,
-    "public_family_count": 2,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "mention_count": 5,
+    "family_count": 1,
+    "public_family_count": 1,
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 5,
+    "supabase_row_ids": [
+      "7635ef8f-7eee-46c5-8aab-739aefb60086",
+      "6b8be7bd-5157-4610-9793-fe446231add5",
+      "0552e60a-32bf-4d4f-ab84-2edeb25e8570",
+      "57c621c5-2068-4900-811b-35999f2f0a7e",
+      "b78c29ea-a25d-4ada-8b8d-d16ca7f18f52"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
@@ -42,19 +48,40 @@
     "_pdf_state_family_count": 36,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
-    "family_count": 2,
-    "family_reports": [],
-    "public_comments": []
+    "report_count": 5,
+    "actor_report_count": 5,
+    "family_count": 1,
+    "family_reports": [
+      {
+        "body": "How can a child be taken away from the mother with to professional proof she's mentally unstable and no court order for a evaluation... Doesn't 3 domestic violence show mental instability... He didn't have to attend any therapy even after a court order, he's in contempt and the judges does not even mention the fact he hasn't gone even though we keep asking why he hasn't gone to therapy when it was a court order. The Judge ignores our please, my daughter was hospitalized and was sepsis, she almost died... But she was denied a continuance on a important court date, physically and mentally she couldn't represent herself, she was sepsis... Court denied, and that's when everything fell apart, because she was ill.",
+        "state": "NH",
+        "county": "Hampton",
+        "row_id": "bd8434f8-e94e-479f-925c-01243026243c"
+      },
+      {
+        "body": "The system has forced a father to pay in order to maintain the 50% custody that he had been having since the child was born simply because the mother was jealous that he had moved on. There were no false allegations there were no reasons to limit the father's time other than the mother decided that even though her child had been with his father equally for his entire life that the child should now only see the father on the weekends every other weekend. Changing the child's School has caused him emotional distress change in his behavior and personality. It has stressed our family as a unit his siblings are separated from him they all go to one school and he is forced to go to a separate School on a separate schedule. He was 8 years old at the time of this decision and was not given an opportunity to speak about his wishes. The focus was on the mother and her feelings.",
+        "state": "NH",
+        "county": "Concord",
+        "row_id": "bd23fe72-4700-47bb-915c-a1772a2920b3"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Behaved as a mediator when she was hired only as a GAL Did not fully investigate allegations. Did not visit father only mother. Made false statements. Did not speak to the child about their wishes. Made her report based on the wishes of the mother not the stability of the child. This gal used to reports to make sarcastic comments to both parents at separate times based on different things that they did that she did not like. She behaved as though she was a mediator between the two lawyers and the two parents I have copies of emails between them where she was negotiating terms showing that she knew that whatever she recommended would be adopted by the judge. She showed favoritism towards the mother by visiting her twice in person. She told the father that she did not need to visit him it wasn't necessary discouraged him from doing so and even made fun of the mother to the father and stepmother because the mother was being so pushy about her visiting her at home. It caused the father to be scared to request a home visit when she was advising against it. She was hostile towards the father for unknown reasons and changed her opinion about the child's School location in such close proximity to the final hearing that it left us unprepared to fight against it. She made false statements about the stepmother that she did not research she made false statements about the quality of the school that she did not research and she used an arbitrary reason for switching the child's School stating that he was doing well in the school that he was in but because the mother didn't feel welcome there she was going to switch his school because even though it would be hard for him she thought he could do it he was in third grade.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "False accusations Bias, not sure what she does, doesn't help the child in least bit, doesn't even have the correct name on most documents",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
   },
   "export_dir": "New Final Post and Capcut template/export/teresa_mahoney_mullen",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='NH'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available",
     "pdf_public_actor: no 'Theresa Mahoney Mullen' in cache for NH"
   ],
   "guardrails": {
@@ -72,6 +99,18 @@
     "recommended_route": "/court-actors/nh/teresa_mahoney_mullen/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Made her report based on the wishes of the mother not the stability of the child. This gal used to reports to make sarcastic comments to both parents at separate times based on different things that they did that she did not like.",
+        "kind": "comment"
+      },
+      {
+        "body": "False accusations Bias, not sure what she does, doesn't help the child in least bit, doesn't even have the correct name on most documents",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

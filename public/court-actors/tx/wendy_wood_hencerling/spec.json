@@ -12,12 +12,20 @@
     "court_or_county": "Brazos County",
     "state": "Texas",
     "state_abbr": "TX",
-    "mention_count": 0,
+    "mention_count": 7,
     "family_count": 4,
     "public_family_count": 4,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 7,
+    "supabase_row_ids": [
+      "a402dc7a-b6a5-4425-8596-d6f565567178",
+      "1ff1099c-00d2-4b80-a2ad-ec6b3ef1f0ae",
+      "bc0f7727-4590-4d7d-9efa-a035fa243d5e",
+      "5b769424-f9b6-4e53-a123-ca5a92465a09",
+      "b2ef4dab-fd49-4504-9962-8f1d69e7cab2",
+      "c5f5adc5-e009-48df-ae7e-4ed0ad4310d7",
+      "c77dbdc7-b20d-4144-bf26-a1c80471a223"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
@@ -27,27 +35,52 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 250,
-    "total_submissions": 315,
-    "avg_financial_loss": 229240.77,
-    "avg_months_lost": 32.1,
+    "families_approved": 251,
+    "total_submissions": 316,
+    "avg_financial_loss": 228661.33,
+    "avg_months_lost": 32.0,
     "_source_table": "movement_stats_by_state",
     "_match_value": "TX",
-    "state_family_count": 315,
-    "median_financial_loss": 118900,
-    "median_burden_sample_size": 149,
-    "median_months_lost": 20,
-    "pro_se_pct": 49.8,
-    "pro_se_count": 157,
-    "_pdf_state_family_count": 315,
+    "state_family_count": 316,
+    "median_financial_loss": 117950,
+    "median_burden_sample_size": 150,
+    "median_months_lost": 19,
+    "pro_se_pct": 50.0,
+    "pro_se_count": 158,
+    "_pdf_state_family_count": 316,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 7,
+    "actor_report_count": 7,
     "family_count": 4,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "I have lost time with my kids and have been legally bullied.",
+        "state": "TX",
+        "county": "Brazos County",
+        "row_id": "17c5c0a6-3c4d-42bc-8f37-2092160d34f7"
+      },
+      {
+        "body": "I lost precious years with my children, my successful business, and my reputation while fighting a system that too often rewards conflict and turns children into leverage. No parent should have to watch their children weaponized while being financially and emotionally destroyed just to remain in their lives.",
+        "state": "TX",
+        "county": "Brazos",
+        "row_id": "1a43f4f9-ba94-4866-a487-ecb2efa13962"
+      },
+      {
+        "body": "This has destroyed us. The one thing the kids could count on is that no matter what I was there. And now I just watch more and more as they become the little girls that I've become due to the constant mental and emotional warfare that they are subjected to daily. As a cop's daughter and somebody that used to believe in the law, I have absolutely no faith whatsoever that any of the system is anything but broken.",
+        "state": "TX",
+        "county": "Brazos",
+        "row_id": "8d4c894b-2e5d-40e2-836a-ce1add1fc922"
+      },
+      {
+        "body": "The Brazos County court system has left my family deeply fractured after I was ordered with only 24 hours’ notice to relocate my four children to the same town as their father, forcing immediate school changes, housing decisions, and major financial disruption. I was told the alternative was incarceration and that my children would be placed in their father’s sole custody. This has had a lasting impact on my family’s stability and well-being.",
+        "state": "TX",
+        "county": "Brazos",
+        "row_id": "6c6e99b2-fe66-4ea6-a619-ddf6ac68a551"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Ignored evidence, repeatedly mimicked me or spoke down to me, constantly made side bar comments, ignored all facts and evidence that I presented and only acknowledged the word of mouth that the opposing attorney put forth, delayed all hearings ,denied my indigency without even looking at one paper, one paycheck, one anything from me, gave false legal definitions, retaliated when I filed for appeal by taking even more time from me.",
@@ -76,11 +109,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/wendy_wood_hencerling",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='TX'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -96,6 +125,26 @@
     "recommended_route": "/court-actors/tx/wendy_wood_hencerling/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Denied my indigency without even looking at one paper",
+        "kind": "comment"
+      },
+      {
+        "body": "Denied my due process as she allowed my ex-wife 40 minutes to testify and allowed me 8 minutes to testify.",
+        "kind": "comment"
+      },
+      {
+        "body": "Day of court appeal judge got changed to her court room (with her stepping in as Judge).",
+        "kind": "comment"
+      },
+      {
+        "body": "Put me on supervised visits and called my brother a pervert based off allegations that were proven false.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

@@ -12,12 +12,19 @@
     "court_or_county": "Lenoir County Courthouse",
     "state": "NC",
     "state_abbr": "NC",
-    "mention_count": 0,
+    "mention_count": 6,
     "family_count": 5,
     "public_family_count": 5,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 6,
+    "supabase_row_ids": [
+      "a535713e-0ef2-4c3e-b7de-7a17d23496d9",
+      "6195ba8a-a15f-455b-a877-45d63aa27e03",
+      "b95c6895-baa3-4a5a-a823-efb32f49f305",
+      "a09d0f99-779f-485d-876e-7aad27a03025",
+      "7e55a590-30e5-4763-867b-60b12bbf14fd",
+      "79bac6c1-b5b4-4818-82cb-50a91e3e487a"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "cindy cronkhite|NC"
   },
@@ -42,12 +49,43 @@
     "_pdf_state_family_count": 216,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 6,
+    "actor_report_count": 6,
     "family_count": 5,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "I have missed moments with my baby that I will never get back, and the pain of being separated from my child has affected every part of my life. I want people to know that parents and children should not be torn apart without real evidence, fairness, and due process.",
+        "state": "NC",
+        "county": "LENOIR",
+        "row_id": "420db232-15eb-4cd6-821c-15a34778db95"
+      },
+      {
+        "body": "I have personally seen Holly do everything she can to advocate for herself and her children, only to feel silenced and treated unfairly. I have seen the damage caused by the system and how much the separation from her girls have hurt her in many ways.",
+        "state": "NC",
+        "county": "Lenoir",
+        "row_id": "110b3433-2330-4495-a08b-1d5f7f0c67bb"
+      },
+      {
+        "body": "It has stole my natural right as a mother to build bond with child qnd the wmotional stress on the children and the mother.. in the be batudal qorkd what effecta does it have on aby other mother that has its baby taken or hurt...",
+        "state": "NC",
+        "county": "Lenoir",
+        "row_id": "6e34d8fc-75be-4232-a5c5-24861713b993"
+      },
+      {
+        "body": "This system took my children, our time, our milestones, and our peace, while forcing me to fight to prove the love and bond that never should have been questioned. I want people to know that family separation is not just a court case, it is lifelong harm to children and parents.",
+        "state": "NC",
+        "county": "Lenoir",
+        "row_id": "0b0ff1a5-9314-4a68-8dc4-21f4137cffd3"
+      },
+      {
+        "body": "This system didn’t just fail my family — it systematically punished me for protecting my children, tore them from their mother, and caused irreversible trauma under the guise of ‘justice.’ What was done to us wasn’t protection; it was sanctioned harm.",
+        "state": "NC",
+        "county": "Lenoir",
+        "row_id": "871f5456-f005-43f3-9c4c-47a7ec9c6aad"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Provided or relied on false and misleading information while ignoring evidence supporting reunification and my relationship with my child. Appeared to favor the foster placement while minimizing my parental bond, my evidence, and reunification efforts. Cindy failed to fully investigate my child’s best interests, ignored key evidence, and supported continued separation from me.",
@@ -82,11 +120,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/cindy_cronkhite",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='NC'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -102,6 +136,30 @@
     "recommended_route": "/court-actors/nc/cindy_cronkhite/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "My relationship with my child.",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored key evidence supporting reunification",
+        "kind": "comment"
+      },
+      {
+        "body": "Nothing she has done has been in the best interest of the children, she has kept the mother…",
+        "kind": "comment"
+      },
+      {
+        "body": "Supported agency recommendations that limited reunification, visitation, and family placement…",
+        "kind": "comment"
+      },
+      {
+        "body": "Lied under oath, deprived mothers visits.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

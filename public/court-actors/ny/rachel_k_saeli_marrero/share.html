@@ -532,6 +532,21 @@ html,body { background:#06070A; color:var(--white); font-family:Inter,system-ui,
 .review li { margin:8px 0; }
 
 @media (min-width:760px) { .share-scroll { padding-top:28px; } }
+/* Sponsor spotlight slot */
+.sponsor-slot { width:min(100%,540px); margin:14px auto 0; padding:0 12px; }
+.sponsor-slot-label { font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--gold); margin-bottom:8px; }
+.sponsor-card { background:linear-gradient(180deg,#ffffff,#f4f6f9); border-radius:14px; padding:16px; color:#15202b; box-shadow:0 16px 36px -16px rgba(0,0,0,.55); }
+.sponsor-card img { max-height:44px; width:auto; margin-bottom:10px; display:block; }
+.sponsor-card .services { font-size:13px; font-weight:800; }
+.sponsor-card .location { font-size:11px; color:#5b6675; margin-top:2px; }
+.sponsor-card .divider { height:1px; background:#e6e9ee; margin:12px 0; }
+.sponsor-card .phone { font-size:13px; font-weight:800; }
+.sponsor-card .tagline { font-size:11px; color:#7a8493; font-style:italic; margin-top:2px; }
+.sponsor-card .cta { display:inline-block; padding:8px 14px; border-radius:8px; font-size:12px; font-weight:800; color:#fff; text-decoration:none; }
+.sponsor-empty { display:block; border:2px dashed rgba(201,162,39,.4); border-radius:14px; padding:16px; text-align:center; text-decoration:none; }
+.sponsor-empty .eyebrow { font-size:10px; font-weight:800; text-transform:uppercase; letter-spacing:.14em; color:rgba(245,245,245,.45); }
+.sponsor-empty .headline { font-size:14px; font-weight:800; color:var(--gold); margin-top:6px; }
+.sponsor-empty .sub { font-size:11px; color:rgba(245,245,245,.5); margin-top:2px; }
 </style>
 </head>
 <body>
@@ -545,10 +560,17 @@ html,body { background:#06070A; color:var(--white); font-family:Inter,system-ui,
   </button>
 </div>
 <div class="bulk-progress" id="bulk-progress"></div>
+<section class="sponsor-slot" id="sponsor-slot" data-state="NY">
+  <a href="/sponsor" target="_blank" rel="noopener noreferrer" class="sponsor-empty">
+    <div class="eyebrow">Sponsor this spotlight</div>
+    <div class="headline">Your business here</div>
+    <div class="sub">Become a sponsor →</div>
+  </a>
+</section>
 <main class="share-scroll">
 <section class="phone-frame">
 <article class="frame frame-image" id="frame-01">
-  <img class="frame-img" src="frame-01.jpg" alt="RACHEL K. SAELI (Marrero) share slide 1 of 7">
+  <img class="frame-img" src="frame-01.jpg?v=b3a2136416" alt="RACHEL K. SAELI (Marrero) share slide 1 of 7">
 </article>
 
 <div class="frame-actions" aria-label="Frame 1 actions">
@@ -558,7 +580,7 @@ html,body { background:#06070A; color:var(--white); font-family:Inter,system-ui,
 </section>
 <section class="phone-frame">
 <article class="frame frame-image" id="frame-02">
-  <img class="frame-img" src="frame-02.jpg" alt="RACHEL K. SAELI (Marrero) share slide 2 of 7">
+  <img class="frame-img" src="frame-02.jpg?v=749e152e2a" alt="RACHEL K. SAELI (Marrero) share slide 2 of 7">
 </article>
 
 <div class="frame-actions" aria-label="Frame 2 actions">
@@ -568,7 +590,7 @@ html,body { background:#06070A; color:var(--white); font-family:Inter,system-ui,
 </section>
 <section class="phone-frame">
 <article class="frame frame-image" id="frame-03">
-  <img class="frame-img" src="frame-03.jpg" alt="RACHEL K. SAELI (Marrero) share slide 3 of 7">
+  <img class="frame-img" src="frame-03.jpg?v=92bcccf030" alt="RACHEL K. SAELI (Marrero) share slide 3 of 7">
 </article>
 
 <div class="frame-actions" aria-label="Frame 3 actions">
@@ -578,7 +600,7 @@ html,body { background:#06070A; color:var(--white); font-family:Inter,system-ui,
 </section>
 <section class="phone-frame">
 <article class="frame frame-image" id="frame-04">
-  <img class="frame-img" src="frame-04.jpg" alt="RACHEL K. SAELI (Marrero) share slide 4 of 7">
+  <img class="frame-img" src="frame-04.jpg?v=6dbc8aa367" alt="RACHEL K. SAELI (Marrero) share slide 4 of 7">
 </article>
 
 <div class="frame-actions" aria-label="Frame 4 actions">
@@ -588,7 +610,7 @@ html,body { background:#06070A; color:var(--white); font-family:Inter,system-ui,
 </section>
 <section class="phone-frame">
 <article class="frame frame-image" id="frame-05">
-  <img class="frame-img" src="frame-05.jpg" alt="RACHEL K. SAELI (Marrero) share slide 5 of 7">
+  <img class="frame-img" src="frame-05.jpg?v=3104b3ded5" alt="RACHEL K. SAELI (Marrero) share slide 5 of 7">
 </article>
 
 <div class="frame-actions" aria-label="Frame 5 actions">
@@ -598,7 +620,7 @@ html,body { background:#06070A; color:var(--white); font-family:Inter,system-ui,
 </section>
 <section class="phone-frame">
 <article class="frame frame-image" id="frame-06">
-  <img class="frame-img" src="frame-06.jpg" alt="RACHEL K. SAELI (Marrero) share slide 6 of 7">
+  <img class="frame-img" src="frame-06.jpg?v=80f441f629" alt="RACHEL K. SAELI (Marrero) share slide 6 of 7">
 </article>
 
 <div class="frame-actions" aria-label="Frame 6 actions">
@@ -608,7 +630,7 @@ html,body { background:#06070A; color:var(--white); font-family:Inter,system-ui,
 </section>
 <section class="phone-frame">
 <article class="frame frame-image" id="frame-07">
-  <img class="frame-img" src="frame-07.jpg" alt="RACHEL K. SAELI (Marrero) share slide 7 of 7">
+  <img class="frame-img" src="frame-07.jpg?v=91ceaf17bc" alt="RACHEL K. SAELI (Marrero) share slide 7 of 7">
 </article>
 
 <div class="frame-actions" aria-label="Frame 7 actions">
@@ -678,7 +700,7 @@ html,body { background:#06070A; color:var(--white); font-family:Inter,system-ui,
   <div class="mf-url">STANDWITHMEG.COM</div>
 </div>
 
-  <div class="legal">Family-reported submissions · not court findings.</div>
+  <div class="legal">Family-reported submissions.</div>
 </article>
 
 
@@ -739,7 +761,7 @@ html,body { background:#06070A; color:var(--white); font-family:Inter,system-ui,
   <div class="mf-url">STANDWITHMEG.COM</div>
 </div>
 
-  <div class="legal">Family-reported submissions · not court findings.</div>
+  <div class="legal">Family-reported submissions.</div>
 </article>
 
 
@@ -816,7 +838,7 @@ html,body { background:#06070A; color:var(--white); font-family:Inter,system-ui,
   <div class="mf-url">STANDWITHMEG.COM</div>
 </div>
 
-  <div class="legal">Family-reported submissions · not court findings.</div>
+  <div class="legal">Family-reported submissions.</div>
 </article>
 
 
@@ -868,7 +890,7 @@ html,body { background:#06070A; color:var(--white); font-family:Inter,system-ui,
 
   <div class="frame-tag">COUNTED · PUBLIC RECORD</div>
   <div class="f5-stack">
-    <div class="f5-mega-number">5,416</div>
+    <div class="f5-mega-number">5,421</div>
     <div class="f5-mega-label">FAMILIES<br>NATIONWIDE</div>
     <div class="f5-italic">— and now global.</div>
     <div class="f5-pattern">
@@ -888,7 +910,7 @@ html,body { background:#06070A; color:var(--white); font-family:Inter,system-ui,
   <div class="mf-url">STANDWITHMEG.COM</div>
 </div>
 
-  <div class="legal">Family-reported submissions · not court findings.</div>
+  <div class="legal">Family-reported submissions.</div>
 </article>
 
 
@@ -955,7 +977,7 @@ html,body { background:#06070A; color:var(--white); font-family:Inter,system-ui,
   <div class="mf-url">STANDWITHMEG.COM</div>
 </div>
 
-  <div class="legal">Family-reported submissions · not court findings.</div>
+  <div class="legal">Family-reported submissions.</div>
 </article>
 
 
@@ -1007,7 +1029,7 @@ html,body { background:#06070A; color:var(--white); font-family:Inter,system-ui,
     <span class="gold">MEG.</span>
   </div>
   <div class="f7-cta-text">
-    Join over <b class="f7-count">5,416</b><br>
+    Join over <b class="f7-count">5,421</b><br>
     families nationwide &amp; global<br>
     exposing the truth.
   </div>
@@ -1015,7 +1037,7 @@ html,body { background:#06070A; color:var(--white); font-family:Inter,system-ui,
     <div class="f7-visit">VISIT</div>
     <div class="url-pill"><span class="dot"></span>STANDWITHMEG.COM</div>
   </div>
-  <div class="legal f7-legal">FAMILY-REPORTED · NOT COURT FINDINGS</div>
+  <div class="legal f7-legal">FAMILY-REPORTED SUBMISSIONS.</div>
 </article>
 
 </div>
@@ -1024,7 +1046,7 @@ html,body { background:#06070A; color:var(--white); font-family:Inter,system-ui,
   <details>
     <summary>Audit notes</summary>
     <p>Spec source: <code>New Final Post and Capcut template/export/rachel_k_saeli_marrero</code></p>
-    <ul><li>public_family_count_api: no actors returned for state=&#x27;NY&#x27;</li></ul>
+    <ul><li>No unresolved fields recorded.</li></ul>
   </details>
 </aside>
 <script>
@@ -1304,6 +1326,44 @@ async function shareAllFrames() {
 
 document.getElementById('save-all-btn')?.addEventListener('click', saveAllFrames);
 document.getElementById('share-all-btn')?.addEventListener('click', shareAllFrames);
+// Sponsor spotlight slot — populated from /api/sponsors if an approved sponsor exists.
+(function() {
+  const slot = document.getElementById('sponsor-slot');
+  if (!slot) return;
+  const state = (slot.dataset.state || '').trim();
+  function esc(t) {
+    return String(t ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+  function domainLabel(url) {
+    return url ? url.replace(/^https?:\/\//,'').replace(/\/$/,'') : 'Visit website';
+  }
+  function renderEmpty() {
+    slot.innerHTML = '<a href="/sponsor" target="_blank" rel="noopener noreferrer" class="sponsor-empty"><div class="eyebrow">Sponsor this spotlight</div><div class="headline">Your business here</div><div class="sub">Become a sponsor →</div></a>';
+  }
+  function renderCard(s) {
+    const accent = s.brand_color || '#1f93c7';
+    let html = '<div class="sponsor-card">';
+    if (s.logo_url) html += '<img src="' + esc(s.logo_url) + '" alt="' + esc(s.business_name) + '">';
+    if (s.services) html += '<div class="services">' + esc(s.services) + '</div>';
+    if (s.location_label) html += '<div class="location">' + esc(s.location_label) + '</div>';
+    html += '<div class="divider"></div><div style="display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap;">';
+    html += '<div>';
+    if (s.phone) html += '<div class="phone">' + esc(s.phone) + '</div>';
+    if (s.tagline) html += '<div class="tagline">' + esc(s.tagline) + '</div>';
+    html += '</div>';
+    if (s.website_url) html += '<a href="' + esc(s.website_url) + '" target="_blank" rel="noopener noreferrer" class="cta" style="background-color:' + esc(accent) + '">' + domainLabel(s.website_url) + '</a>';
+    html += '</div></div>';
+    slot.innerHTML = '<div class="sponsor-slot-label">Sponsored by</div>' + html;
+  }
+  fetch('/api/sponsors?placement=court_actor_spotlight&state=' + encodeURIComponent(state))
+    .then(r => r.json())
+    .then(d => {
+      const sponsors = Array.isArray(d && d.sponsors) ? d.sponsors : [];
+      const match = sponsors.find(x => x.slot === 'court_actor_spotlight') || sponsors[0];
+      if (match) renderCard(match); else renderEmpty();
+    })
+    .catch(() => renderEmpty());
+})();
 </script>
 </body>
 </html>

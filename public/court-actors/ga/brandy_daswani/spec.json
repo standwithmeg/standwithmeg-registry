@@ -12,12 +12,22 @@
     "court_or_county": "Cobb County Superior Court",
     "state": "Georgia",
     "state_abbr": "GA",
-    "mention_count": 0,
+    "mention_count": 9,
     "family_count": 7,
     "public_family_count": 7,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 9,
+    "supabase_row_ids": [
+      "1f59a920-ee53-4e00-9ff8-210628987167",
+      "9b20eaf2-6a1b-4703-84db-e61d7b295d24",
+      "7b0dd3d8-2065-43c2-9e63-3975427b270b",
+      "d24d3164-f6f1-4336-ab13-9f1d4e14118f",
+      "951dc4e1-ef8a-49df-be42-777cf33df0e5",
+      "7f0ee247-6d04-455a-93a0-e1fa93a2dcfc",
+      "76dcb1ca-24f2-4e00-88fc-a1fea29ada54",
+      "153d2c5a-13dc-4a47-bd6b-2e05e6cbd1f1",
+      "b0a871bb-505c-484a-a79a-de6f86b7335b"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
@@ -42,12 +52,49 @@
     "_pdf_state_family_count": 153,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 9,
+    "actor_report_count": 9,
     "family_count": 7,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "I had to navigate a complex and difficult system and ultimately prevailed thanks to facts and my attorney Ashley Wine who was by my for all six years.",
+        "state": "GA",
+        "county": "Fulton",
+        "row_id": "0ce22cc5-3376-46b7-a597-40e3c93d763c"
+      },
+      {
+        "body": "This is a flawed and failed system that encourages bad actors so they can monetize the process. In the end families and children are destroyed for the future",
+        "state": "GA",
+        "county": "Cobb County",
+        "row_id": "8bf6886a-be57-4c4a-b9bf-e84ac2804fa2"
+      },
+      {
+        "body": "Brandy Daswani gave my children to an abuser. 4 years later my oldest son is in residential treatment after years of reported abuse and my youngest son has been expelled from 2 schools and has a plethora of documented behavior issues at only 9 years old. Brandy Daswani should be incarcerated.",
+        "state": "GA",
+        "county": "Cobb",
+        "row_id": "22d5230c-ba9d-4507-b19c-0d425202fa51"
+      },
+      {
+        "body": "She was hired to protect my son and give a non partisan opinion and instead used her power to manipulate my child and took advantage of our situation to get paid more and while making the settlement process almost 2 years vs 6 months.",
+        "state": "GA",
+        "county": "Fulton",
+        "row_id": "05d2dd9b-f4d4-4306-b6d2-132c948981f9"
+      },
+      {
+        "body": "This system took a fit and loving father and used state machinery, financial pressure, false narratives, and incarceration threats to separate me from my son without ever giving me a fair chance to be heard. It has cost my family years we can never get back, and I want people to know that this can happen to good parents when custody courts stop looking for truth and start protecting the system (revenue generation).",
+        "state": "GA",
+        "county": "Cobb County",
+        "row_id": "672701a7-9d68-48e4-bb86-119f6bf35865"
+      },
+      {
+        "body": "This system has stolen years of our lives, and I can’t honestly teach my children basic third grade civics because our civil infrastructure has failed to perform on a basic level.",
+        "state": "GA",
+        "county": "Cherokee County",
+        "row_id": "4261fe2d-1017-4108-8e5e-66d4d84e0408"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "A low life scum of an attorney with ZERO integrity. She farms out work getting appointed to her by the judges so she can bill whatever she deems necessary. She never traveled to both houses to ensure child welfare yet reported that she did. She sat on her reports for months and denied any input, when I called to ask about care she told me it was none of my business. She only talked to me when it was about getting billed. She told me I don’t care where you come up with $20K, you better borrow it from friends and pay me. Yet she hasn’t produced any documents. 10 months to produce a 2 page document that explained nothing. Her exact statement “I do not award 50/50 custody or primary custody to Fathers” She was annoyed when clients leave bad reviews online via google and yelp. So much so she tried to sue for defamation making threats yet no comments were untrue and I refused to take them down. She proceeded to have a friend who is federal law enforcement intimidate me with his position. He called and harassed me utilizing his badge and fbi credentials to intimidate me. I filed a formal complaint via an attorney directly to the DOJ to stop his illegal use of his position. Brandy continues to beg for cases so that she can get paid and do little to no work. She is a complete incompetent person with zero integrity. May she rot in hell",
@@ -88,11 +135,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/brandy_daswani",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='GA'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -108,6 +151,34 @@
     "recommended_route": "/court-actors/ga/brandy_daswani/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "When I called to ask about care she told me it was none of my business.",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored convicted criminal activity on the other side",
+        "kind": "comment"
+      },
+      {
+        "body": "She loved the grandparents and are up any lies and narrative they fed her…",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored or minimized evidence I provided",
+        "kind": "comment"
+      },
+      {
+        "body": "Perjury- false testimony Recommend evaluations and experts and ignored their…",
+        "kind": "comment"
+      },
+      {
+        "body": "Lied on recommendations to be one sided",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

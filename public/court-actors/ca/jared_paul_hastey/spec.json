@@ -12,12 +12,17 @@
     "court_or_county": "Sutter",
     "state": "CA",
     "state_abbr": "CA",
-    "mention_count": 0,
+    "mention_count": 4,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "93ab394c-33c5-4bcc-812d-79de0341e833",
+      "c6d0aec4-792e-4007-99d7-a25f7a3a5186",
+      "4db78b2a-caee-420b-9553-9751b5709e9e",
+      "ebd0486b-2e25-4da1-8e9f-05344024c0ed"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "jared paul hastey|CA",
     "_overrides_applied": [
@@ -36,27 +41,46 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 357,
-    "total_submissions": 444,
-    "avg_financial_loss": 285669.87,
+    "families_approved": 359,
+    "total_submissions": 446,
+    "avg_financial_loss": 285125.16,
     "avg_months_lost": 35.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CA",
-    "state_family_count": 444,
-    "median_financial_loss": 265100,
-    "median_burden_sample_size": 198,
+    "state_family_count": 446,
+    "median_financial_loss": 269200,
+    "median_burden_sample_size": 199,
     "median_months_lost": 20,
-    "pro_se_pct": 58.6,
-    "pro_se_count": 260,
-    "_pdf_state_family_count": 444,
+    "pro_se_pct": 58.7,
+    "pro_se_count": 262,
+    "_pdf_state_family_count": 446,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "This has torched generations ahead of me. Completely dismantling my childrens safety of what truth and good parents are supposed to be. Having their mother make such forged and false statements to take them from their very affectionate and loving father is insane. The court enables this.",
+        "state": "CA",
+        "county": "Sutter",
+        "row_id": "3a920572-661d-4e9d-a681-bf5917f59f64"
+      },
+      {
+        "body": "Sutter county and the paid Sherrifs, judges, and attorneys are all in bed together. They have siphoned off our perusal assets, our savings, our way of keeping our families safe and together … and robbed our children of justice and what should be a wonderful life.",
+        "state": "CA",
+        "county": "Sutter",
+        "row_id": "f5a244ff-6036-476d-bf5e-a4f557a4cdc3"
+      },
+      {
+        "body": "Forgery and felony fraud didn’t stop the courts to giving children to mother, even after felony DV arrest and Distrcit attorney charges.",
+        "state": "CA",
+        "county": "Sutter",
+        "row_id": "c194a5d6-923d-4309-9d41-953635d048b3"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Used clear breach of proper ethics to serve default judgments.",
@@ -91,10 +115,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/jared_paul_hastey",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='CA'",
-    "family_reports: no submission_ids on actor"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -111,7 +132,30 @@
     "draft_only": true
   },
   "render": {
-    "quote_char_budget": 160
+    "quote_char_budget": 160,
+    "selected_quotes": [
+      {
+        "body": "Used clear breach of proper ethics to serve default judgments.",
+        "kind": "comment"
+      },
+      {
+        "body": "Does not communicate to pro per or pro se and frequently abuses sharp tactics during custody and divorce hearings.",
+        "kind": "comment"
+      },
+      {
+        "body": "Due process does not exist here. Evidence didnt exist for DVROs and no authentic evidence was used.",
+        "kind": "comment"
+      },
+      {
+        "body": "Encourages forged documents and manipulates dates, court meeting minutes, and the mail system to foul the process.",
+        "kind": "comment"
+      },
+      {
+        "body": "Pressures bankrupting homes and families while profiting dually.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

@@ -12,12 +12,17 @@
     "court_or_county": "Johnson",
     "state": "Kansas",
     "state_abbr": "KS",
-    "mention_count": 0,
+    "mention_count": 4,
     "family_count": 4,
     "public_family_count": 4,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "a17e7647-a519-438e-88a7-32e3bb9ef71b",
+      "27ae93b4-bd2f-499a-ba0a-35e3bc2296ac",
+      "5254ca1d-b70a-4d03-8b71-ddc833692c40",
+      "7cd47d13-ff3b-4b03-ab06-db4eb0e08319"
+    ],
     "actor_row_id": "a17e7647-a519-438e-88a7-32e3bb9ef71b",
     "actor_bucket_key": "dan livingston|KS"
   },
@@ -42,12 +47,25 @@
     "_pdf_state_family_count": 251,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 4,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Court assigned officials in JoCo are not all fit. There MUST be a way for the very people this system is intended to “benefit” to have feedback of providers. Checks and balances of providers should be visible and traceable. JoCo is very much pro-white man privilege. Men are rewarded for providing a fraction of effort (time and money) compared to the expectation of women. Women are held to such a very different standard. Any emotion is considered to make us unreliable and crazy when really we are so exhausted from the very system not listening and changing judges or changing court assigned officials to the highest paid attorney’s demands. Men are not held accountable in family courts at JoCo. They just aren’t.",
+        "state": "KS",
+        "county": "Johnson County",
+        "row_id": "13c6a06f-4cb4-485d-b4dd-00a60b2c0dfa"
+      },
+      {
+        "body": "This system removed my children without due process, ignored evidence that cleared me, and created financial and procedural barriers that have kept me separated from them for years. The court actors built a system where I have to pay thousands just to try to be their mom again.",
+        "state": "KS",
+        "county": "Johnson County",
+        "row_id": "79a2d570-52fe-40f1-a0c8-1f41ca10d5b6"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Has had counseling with my daughters for eight months and will not listen to them that they do not want to return to 50% custody with their father and says that they have to go back and otherwise they have to keep coming to him. My girls have told Dan that they know that Dan lies, and Dan minimize their problems that they are addressing… And that he only sides with the father. He has made a point that only stepmother is a problem and that that’s going to be fixed. He does not believe the girls issues and has told case management that there’s enough alienation from my part that they don’t trust anything the girls have said or that I have said. He rolls his eyes back in his head, and does this weird expression when he doesn’t like what somebody is saying. It’s been seen enough times that people laugh about it. My daughters have a friend who they have ran into at his Counseling and they have all discussed conversations that none of them like him because he doesn’t listen to the girls, and he only sides with the fathers. Any female is to not be listened to, and only the men’s point of view matters.",
@@ -64,11 +82,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/dan_livingston",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='KS'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -84,6 +98,18 @@
     "recommended_route": "/court-actors/ks/dan_livingston/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Has had counseling with my daughters for eight months and will not listen to them that they do not want to return to 50% custody with their father and says that they have to go back and otherwise they have to keep coming to him.",
+        "kind": "comment"
+      },
+      {
+        "body": "Was assigned to help restore contact with my kids but allowed my ex to keep them from sessions, canceled visits over payment, made me spend over $5,000 before I could even see them, I spent over $10,000 total.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

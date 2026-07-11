@@ -12,12 +12,25 @@
     "court_or_county": "Richland county",
     "state": "Ohio",
     "state_abbr": "OH",
-    "mention_count": 0,
-    "family_count": 0,
-    "public_family_count": 0,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "mention_count": 12,
+    "family_count": 5,
+    "public_family_count": 5,
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 12,
+    "supabase_row_ids": [
+      "6be4fed5-6968-44f1-9711-e9f08cc6400c",
+      "d002569a-00b5-4e8c-b536-f9b98defb26c",
+      "9aa1b2c1-b563-4dfb-89d6-ffa8638e1101",
+      "2841e239-e905-4502-adcb-f63b323ad646",
+      "33905349-ff6e-4e85-8619-3842dbb48cdc",
+      "812d83c6-0488-45b8-82b6-e6f089a330c5",
+      "ff7caa45-a7fe-4bcb-8ea5-a04c5d62e572",
+      "ce332c31-79e3-4dfa-847a-88301cd39bc8",
+      "ba71f2a1-e685-4bd5-8fdb-eb772ab2e47a",
+      "706cae35-19e9-442d-af00-b4a892c682dc",
+      "5780a8f0-0416-4af4-892c-56295582d9a5",
+      "8b5e02b2-ada3-43c4-b02a-7f1f2e71617e"
+    ],
     "actor_row_id": "6be4fed5-6968-44f1-9711-e9f08cc6400c",
     "actor_bucket_key": "aime thomas|OH"
   },
@@ -42,12 +55,37 @@
     "_pdf_state_family_count": 264,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
-    "family_count": 0,
-    "family_reports": [],
+    "report_count": 12,
+    "actor_report_count": 12,
+    "family_count": 5,
+    "family_reports": [
+      {
+        "body": "As a Honorable Veteran, I have witnessed a pattern of corruption and abuse of power in this system concerning my children and I for years. This system has continuously cycled trauma with no relief for victims.",
+        "state": "OH",
+        "county": "Stark",
+        "row_id": "26bea9f9-5361-49cb-bbe0-d03d3cf2f037"
+      },
+      {
+        "body": "These people have absolutely broken everything I spent 40 years of my life building. A family and career, a future. They have taken my most precious babies, who they traumatized. They stole my kids from me and broken their psyches, and have squandered their future. These people need to be punished for allowing the abuser to abuse with impunity, and covering for him.",
+        "state": "OH",
+        "county": "Richland county",
+        "row_id": "a920d553-d489-4994-a095-ca0ce52b6aa7"
+      },
+      {
+        "body": "there are no words that can adequately describe what the system has cost us.",
+        "state": "OH",
+        "county": "Summit",
+        "row_id": "af26e45c-0a72-45b2-964d-4449635c9524"
+      },
+      {
+        "body": "A corrupt system doesn’t fear evil, they already possess that, it fears witnesses.. of which my family and I have been and well documented our experiences during the months and months I filed every motion and in sept of 2024 was granted the compel to care order against the Tuscarawas JFS.",
+        "state": "OH",
+        "county": "Tuscarawas",
+        "row_id": "e94fc7ea-04d4-4003-8ef2-4a0a497b126f"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Dr. Thomas handled my case unjustly, and set the foundation for the removal of my children indefinitely conspiring with opposing counsel. I had a self defense case in Carroll county Ohio that brought me to this office by the courts and abusers family with the intent to separate me from my child. My parental fitness was never brought up prior to this. They took so long delaying the process, I requested a different evaluator and was denied by the guardian ad litem. This doctor relayed questions from the party that paid for the exam to use against me in order to remove my child in a deceitful manner. Thomas contacted me via telephone and interrogated me relaying questions from the opposing party. When I told her that I wanted to speak with my attorney, she continued asking questions. She explained that she would write that I refused to answer making it look like I wasn't cooperating. She claimed I was devoid in showing affection to my child because I chose to allow my child to lead play time during her observation. Thomas took it upon herself leading my child to the restroom while having me complete a written test without notifying myself or my mother sitting in the waiting room. I had to dismiss myself to check on my child that she had in a restroom with the door closed. Because of her report, my child was removed from my family, and sent to an abusive home in Mississippi where they are alienating me from my child. The family continues to utilize Thomas’ report in the courts at every attempt I make to fight for my child and has defamed my character in various states. I was ordered to undergo a parenting class as part of Thomas' recommendations where we were taught to report the very thing I witness My child going through currently. My child has never been harmed by me or any of my family members. Thomas provided all these recommendations to the court, but did not provide me with any contacts or sources to get these things completed. Thomas recommended I take medication indefinitely against recommendations from the Department of Veteran Affairs. Thomas set the foundation demonstrating a pattern of incompetence as well as corruption drafting a report I have been denied full access to. This report has been circulated with court officials and used in retaliation without my consent. I am an honorable Veteran that was misdiagnosed and mistreated by this evaluator in her participation in this case.",
@@ -70,11 +108,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/aimee_thomas",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='OH'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +124,22 @@
     "recommended_route": "/court-actors/oh/aimee_thomas/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "I was ordered to undergo a parenting class as part of Thomas' recommendations where we were taught to report the very thing I witness. My child going through currently.",
+        "kind": "comment"
+      },
+      {
+        "body": "She completed her psychological eval after 2 of the mandated 4 visits.",
+        "kind": "comment"
+      },
+      {
+        "body": "Did not review any of my evidence before filing a false report",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

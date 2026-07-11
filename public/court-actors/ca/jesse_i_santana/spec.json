@@ -12,12 +12,21 @@
     "court_or_county": "Sutter County",
     "state": "California",
     "state_abbr": "CA",
-    "mention_count": 0,
+    "mention_count": 8,
     "family_count": 7,
     "public_family_count": 7,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 8,
+    "supabase_row_ids": [
+      "d75c3213-cd6d-4736-842f-da2da234e063",
+      "d9103b4a-e868-4fcf-80f3-0f8302780ff8",
+      "848ff73e-fbcb-4d97-9d0e-9cbbb4ff60aa",
+      "1f41031a-1919-4989-ae55-ed17ccd0c8c8",
+      "c1e4c256-8a42-49dc-ac3c-563872c20232",
+      "6eeba191-0155-4a25-8525-fe3c402f6375",
+      "4dd4db03-c1ee-4470-889b-8ce8fa2186a2",
+      "8350883b-0dd7-4d95-93d4-bf61f8352100"
+    ],
     "actor_row_id": "d75c3213-cd6d-4736-842f-da2da234e063",
     "actor_bucket_key": "jese santana|CA"
   },
@@ -27,27 +36,64 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 357,
-    "total_submissions": 444,
-    "avg_financial_loss": 285669.87,
+    "families_approved": 359,
+    "total_submissions": 446,
+    "avg_financial_loss": 285125.16,
     "avg_months_lost": 35.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CA",
-    "state_family_count": 444,
-    "median_financial_loss": 265100,
-    "median_burden_sample_size": 198,
+    "state_family_count": 446,
+    "median_financial_loss": 269200,
+    "median_burden_sample_size": 199,
     "median_months_lost": 20,
-    "pro_se_pct": 58.6,
-    "pro_se_count": 260,
-    "_pdf_state_family_count": 444,
+    "pro_se_pct": 58.7,
+    "pro_se_count": 262,
+    "_pdf_state_family_count": 446,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 8,
+    "actor_report_count": 8,
     "family_count": 7,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "This has torched generations ahead of me. Completely dismantling my childrens safety of what truth and good parents are supposed to be. Having their mother make such forged and false statements to take them from their very affectionate and loving father is insane. The court enables this.",
+        "state": "CA",
+        "county": "Sutter",
+        "row_id": "3a920572-661d-4e9d-a681-bf5917f59f64"
+      },
+      {
+        "body": "Sutter county and the paid Sherrifs, judges, and attorneys are all in bed together. They have siphoned off our perusal assets, our savings, our way of keeping our families safe and together … and robbed our children of justice and what should be a wonderful life.",
+        "state": "CA",
+        "county": "Sutter",
+        "row_id": "f5a244ff-6036-476d-bf5e-a4f557a4cdc3"
+      },
+      {
+        "body": "Forgery and felony fraud didn’t stop the courts to giving children to mother, even after felony DV arrest and Distrcit attorney charges.",
+        "state": "CA",
+        "county": "Sutter",
+        "row_id": "c194a5d6-923d-4309-9d41-953635d048b3"
+      },
+      {
+        "body": "Sutter county family court is corrupt. It is not protecting victims of domestic violence. They grant access to abusers.",
+        "state": "CA",
+        "county": "Sutter County",
+        "row_id": "3eb36330-1723-4760-b9f1-9200f9a82ba2"
+      },
+      {
+        "body": "The system is abusing victims and denying our rights to safety. Abused women and children do not need to \"get over it\" because time has passed. We deserve to maintain our safe and stable living without fear of the judge abusing authority and the court ordering contact with our abuser.",
+        "state": "CA",
+        "county": "Sutter County",
+        "row_id": "174423e9-c2ff-484c-940a-5350dc07e3b3"
+      },
+      {
+        "body": "Constantly driving controversy. Individuals are encouraged to nit pick every negative aspect of their coparent instead of working to compromise and legitimately find the best interest of the child. Ridiculous kangaroo court where one biased judge can take everything from you based on lies and constant deciet. Even after the lies are documented and proven Judge Santana has continuously ignored fact for fiction and allowed the local attorney to say or do whatever she wants in court with no accountability or retribution.",
+        "state": "CA",
+        "county": "Sutter",
+        "row_id": "b3ff0f9d-6298-4135-8322-44883b4e1166"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Ignored evidence of domestic violence and allowed my ex-husband to accuse me of parental alienation and a non existent criminal record - no evidence provided. Covered up my ex-husbands criminal history, Brady listed cop - fired. Performed an in-camera interview with my 12 year old son who reported to him the abuse. Judge Santana didn’t believe him, had him hauls out of the courtroom by 3 deputies screaming and begging not to make him go. Had but been with him for over 4 1/2 years. When he returned the following Monday, 7 CPS reports were filed, evaluated out, stating it was being handled by family court. Then allowed physical and legal custody to be given to my and my child’s abuser taking away my due process and placing hard-stop dates where evidence of abuse could not be submitted. This is still continuing. I am still forced to be on supervised visits at my ex’s convenience. Unsubstantiated accusations are being made against me. My son testified again and his testimony to come home was given no weight at all.",
@@ -94,11 +140,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/jesse_i_santana",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='CA'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -114,6 +156,34 @@
     "recommended_route": "/court-actors/ca/jesse_i_santana/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Then allowed physical and legal custody to be given to my.",
+        "kind": "comment"
+      },
+      {
+        "body": "Used clear breach of proper ethics to serve default judgments",
+        "kind": "comment"
+      },
+      {
+        "body": "No 3044 findings, no change in circumstances warranting hearings, no due process.",
+        "kind": "comment"
+      },
+      {
+        "body": "This is a judge who is linked to cartel and other bad faith behavior in community.",
+        "kind": "comment"
+      },
+      {
+        "body": "Removed my child from my life as punishment for false claims from ex.",
+        "kind": "comment"
+      },
+      {
+        "body": "Forced victims into contact with their abuser. Yelled in court.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

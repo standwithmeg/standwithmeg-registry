@@ -12,12 +12,20 @@
     "court_or_county": "Hays",
     "state": "Texas",
     "state_abbr": "TX",
-    "mention_count": 0,
+    "mention_count": 7,
     "family_count": 7,
     "public_family_count": 7,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 7,
+    "supabase_row_ids": [
+      "516aac31-93e6-4212-b229-8edc32f26314",
+      "4f5d4da0-a282-4a80-943a-b1f9319a94b5",
+      "1deabeb9-84b9-42d4-8bab-49118f142dcf",
+      "9643b5fe-9bd5-4c7f-9fab-476cd5b3418a",
+      "a37d9061-30cf-494e-93ad-09502a5aa266",
+      "2be18465-744d-4be2-b607-72da17bd8008",
+      "21d18253-111e-4ac4-8f86-543ee52583e9"
+    ],
     "actor_row_id": "516aac31-93e6-4212-b229-8edc32f26314",
     "actor_bucket_key": "karl hays|TX"
   },
@@ -27,27 +35,64 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 250,
-    "total_submissions": 315,
-    "avg_financial_loss": 229240.77,
-    "avg_months_lost": 32.1,
+    "families_approved": 251,
+    "total_submissions": 316,
+    "avg_financial_loss": 228661.33,
+    "avg_months_lost": 32.0,
     "_source_table": "movement_stats_by_state",
     "_match_value": "TX",
-    "state_family_count": 315,
-    "median_financial_loss": 118900,
-    "median_burden_sample_size": 149,
-    "median_months_lost": 20,
-    "pro_se_pct": 49.8,
-    "pro_se_count": 157,
-    "_pdf_state_family_count": 315,
+    "state_family_count": 316,
+    "median_financial_loss": 117950,
+    "median_burden_sample_size": 150,
+    "median_months_lost": 19,
+    "pro_se_pct": 50.0,
+    "pro_se_count": 158,
+    "_pdf_state_family_count": 316,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 7,
+    "actor_report_count": 7,
     "family_count": 7,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "The family judicial system has actively participated in parental abuse and alienation, gone with the money, neglected the needs of my young child, and negatively impacted not just my immediate family, that includes siblings of the child this suit is affecting, but has out-poured into extended family and our community. Irreparable harm has been done to my baby girl’s psychological, physical, mental, and emotional well-being; the court system has allowed physical and mental abuse, emotional neglect, coercion and manipulation, and they do it with a smile on their face, to protect the parent who provides a socio-economic benefit to the lawyers, amicus attorney, GAL, and judge, and neglected to protect the child, as is their DUTY. They should all be behind bars.",
+        "state": "TX",
+        "county": "Hays County",
+        "row_id": "5e8fc15e-581b-44a9-a93f-52096b0991c8"
+      },
+      {
+        "body": "There are serious concerns about how Karl Hays and his appointed GALs such as Tahlia Stewart approach these cases. It often feels as though reports of abuse are met with skepticism rather than careful consideration, and that the legal process is being shaped to fit a specific narrative rather than the full set of facts. It is deeply troubling to see any position of authority used in a way that could undermine trust in the process.",
+        "state": "TX",
+        "county": "hays",
+        "row_id": "13c33e2a-fe0e-43fa-bfec-d6b04dafcb44"
+      },
+      {
+        "body": "My experience within the family court system was nothing short of a living nightmare. During a global pandemic, my children were taken from me, and my parental rights were suspended “until further order of the court.” I felt completely alone, with nowhere to turn, and was forced to cease all communication with my children this lasted for almost 2 years. The emotional toll including the stress, anxiety, and anguish has had lasting effects that I continue to carry with me to this day. I’ve lost years that I will never get back. I can’t help but think, “This should have never happened. We didn’t deserve this.” When I pictured raising my family, this is not how I envisioned it. Now, after an long drawn out battle I only see my children every other weekend, and it often feels like I’m watching someone else raise them. It is truly heartbreaking.",
+        "state": "TX",
+        "county": "Hays",
+        "row_id": "5451bf33-1a1d-44be-8140-f698aa7128ac"
+      },
+      {
+        "body": "A 6 year old has been diagnosed with PTSD and severe trauma, due to Karl hays not paying attention or acting in the best interest of the CHILD. Our family has been broken for 5.5 years.",
+        "state": "TX",
+        "county": "Hays county",
+        "row_id": "3f6aecad-dbe8-4bc8-9054-b4c7fd730379"
+      },
+      {
+        "body": "Completely took the side of the mother without giving me a chance to give my side of the story. Mother has lied on multiple affidavits and under oath in court multiple times.",
+        "state": "TX",
+        "county": "Bexar country",
+        "row_id": "83962e75-7534-4654-9f91-bb3c333cb7bb"
+      },
+      {
+        "body": "This has cost me money, my health, my children.",
+        "state": "TX",
+        "county": "Hays",
+        "row_id": "1f336a63-1d4b-4e54-8f10-e330078bd3a9"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Ignored evidence from criminal indictments, multiple CPS reports, court ordered psych evals; denied right to jury, gone back and reversed previous rulings to favor one side, signed orders without a proper notice or hearing, disregarded unconstitutional international travel, educational alienation; just to name a few!",
@@ -94,11 +139,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/karl_hays",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='TX'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -114,6 +155,38 @@
     "recommended_route": "/court-actors/tx/karl_hays/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Reversed previous rulings to favor one side",
+        "kind": "comment"
+      },
+      {
+        "body": "He has a whole team of appointed GAL/Ad litems that do his dirty work.",
+        "kind": "comment"
+      },
+      {
+        "body": "I have been fighting for my day in court since 2023 to speak/see my children.",
+        "kind": "comment"
+      },
+      {
+        "body": "Violation of due process, lack of jurisdiction, combingling of cases, ex parte…",
+        "kind": "comment"
+      },
+      {
+        "body": "Facts were ignored.",
+        "kind": "comment"
+      },
+      {
+        "body": "Acting out not on behalf of best interest of the child.",
+        "kind": "comment"
+      },
+      {
+        "body": "Abuse and adultry are not considered.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

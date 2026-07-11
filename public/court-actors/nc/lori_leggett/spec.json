@@ -12,12 +12,18 @@
     "court_or_county": "Beaufort",
     "state": "North Carolina",
     "state_abbr": "NC",
-    "mention_count": 0,
+    "mention_count": 5,
     "family_count": 5,
     "public_family_count": 5,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 5,
+    "supabase_row_ids": [
+      "6f8f4f35-aae2-4604-a627-d28cb8b5210b",
+      "30c95a2b-ad0b-400d-8758-d234d1a753c9",
+      "26820721-adf4-48b0-a2ab-3f57cef277b8",
+      "d6344b1e-07d3-49c9-a11e-feb086e77378",
+      "b6ea6f22-481b-4b4c-a2e6-82065c0878c1"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
@@ -42,12 +48,43 @@
     "_pdf_state_family_count": 216,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 5,
+    "actor_report_count": 5,
     "family_count": 5,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "I have never experienced such heartbreak and distrust in individuals and a system built to protect children. NCDHHS should be appalled at the gross oversight and atrocities being committed.",
+        "state": "NC",
+        "county": "Beaufort",
+        "row_id": "af1505c2-fc41-4aea-8cdd-53fb7ce7624c"
+      },
+      {
+        "body": "The system has torn my family apart",
+        "state": "NC",
+        "county": "Beaufort",
+        "row_id": "0801015a-23f4-439c-a72f-6cba458f385b"
+      },
+      {
+        "body": "Took our autistic nephew form is caused depression caused him to to sneek ways to communicate we have not seen or heard from him in 3 years HE WAS 8 2 DAYS FORM BEING 9 AND HE IS NOW 12",
+        "state": "NC",
+        "county": "Beaufort county",
+        "row_id": "cde1665e-5c09-4a1b-a210-54799a70910f"
+      },
+      {
+        "body": "Former pissed off foster kid",
+        "state": "NC",
+        "county": "Beaufort",
+        "row_id": "312755d7-a7d0-49af-acc3-436fc7d8a05d"
+      },
+      {
+        "body": "They lost my son, he has been missing since September 23, 2025. They have consistently tried to cover up the unconstitutional seizure of my children. They scrubbed reports and gave my 8 year old daughter to our abuser and placed my 15 year old daughter with a pedophile.",
+        "state": "NC",
+        "county": "Beaufort County",
+        "row_id": "1f3c4576-e9e3-4d97-8308-93200d270032"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "She is the director. I kept asking to speak to someone because I wasn’t allowed to see my family at all. She also told me my family did not wish to see me right now and no one was willing to take me. I later found this to not be true as many family members, my girlfriend, and even my friends had asked to see me and some to take me in. I also told her what Abby Williams had wrote and said in court was not true and she just kept saying I know her and she would not lie. It’s like it didn’t matter what I said. Lori Leggett is also who made me go to the first locked facility saying it was there or she would go for a petition to have me placed in juvie. I reported the abuse to her also at one facility and she did nothing. I also told her I did not like sleeping in their office and their couches weren’t even long enough to hold me and she said I could always make a bed on the floor. She does not care.",
@@ -82,11 +119,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/lori_leggett",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='NC'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -102,6 +135,22 @@
     "recommended_route": "/court-actors/nc/lori_leggett/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "I kept asking to speak to someone because I wasn’t allowed to see my family at all.",
+        "kind": "comment"
+      },
+      {
+        "body": "When challenged she hides behind very general statements vs.",
+        "kind": "comment"
+      },
+      {
+        "body": "Signed off on paperwork and acts like she has no knowledge of title 4e and 4d funding",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

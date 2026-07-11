@@ -12,12 +12,22 @@
     "court_or_county": "Cleveland",
     "state": "Oklahoma",
     "state_abbr": "OK",
-    "mention_count": 0,
+    "mention_count": 9,
     "family_count": 6,
     "public_family_count": 6,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 9,
+    "supabase_row_ids": [
+      "0220ac55-fc63-49fc-af19-721fe61e8e7a",
+      "e0ee88b8-c557-4db0-bec2-c044ba7d845a",
+      "bfb02b54-2ce3-43b4-8d1b-7451e42aab64",
+      "1dd868f4-5de8-439a-8238-1359d7dc07b3",
+      "739e4683-1ca6-4e3a-bd70-495c572b45c3",
+      "5359c87a-9235-4e13-8b15-6fba9fb549cb",
+      "5053021c-988f-42dc-9ed2-3105a17536d6",
+      "3ff8babe-059f-42e5-a45e-f87fd318cbca",
+      "78b0cd8f-f6e5-47f0-b860-1de81c8284e0"
+    ],
     "actor_row_id": "0220ac55-fc63-49fc-af19-721fe61e8e7a",
     "actor_bucket_key": "kim conyers|OK"
   },
@@ -42,12 +52,37 @@
     "_pdf_state_family_count": 164,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 9,
+    "actor_report_count": 9,
     "family_count": 6,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Absolutely ruined our lives both mentally and financially. It has prevented us being the parents that we were and want to be.",
+        "state": "OK",
+        "county": "Cleveland",
+        "row_id": "1e7aef16-1e86-48b0-94f9-15874ecb13a8"
+      },
+      {
+        "body": "Our daughter was taken with out any evidence of potential harm or court order its cost me time and bonding with our daughter Kim Conyers is a selfish judge thats in it for the money not the law",
+        "state": "OK",
+        "county": "Cleveland",
+        "row_id": "eb7c3d05-2e1c-459c-8b70-8b8b3f69b93d"
+      },
+      {
+        "body": "“The system has fractured our family, turning our love into paperwork and our lives into evidence, leaving us fighting every day to reclaim the time and dignity it stole.”",
+        "state": "OK",
+        "county": "Cleveland",
+        "row_id": "70b17c96-dbef-47c3-92b0-67b63fd1ba2e"
+      },
+      {
+        "body": "Trauma to my daughters. Placed with absent father",
+        "state": "OK",
+        "county": "Cleveland",
+        "row_id": "76a84ea9-4a6d-40f5-8e98-90c263b860a0"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Made a court order despite disability belittled defendant during court has not heard the parents story at all Belittled me in court and yelled ignored disability accommodation",
@@ -76,11 +111,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/kim_conyers",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='OK'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -96,6 +127,22 @@
     "recommended_route": "/court-actors/ok/kim_conyers/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Did not review the case, did not allow any kind of defense, berated me in court.",
+        "kind": "comment"
+      },
+      {
+        "body": "Screamed and denied disability accommodation and bias towards father",
+        "kind": "comment"
+      },
+      {
+        "body": "Will not release DHS affidavit until trial.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

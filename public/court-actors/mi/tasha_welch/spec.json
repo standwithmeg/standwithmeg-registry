@@ -12,12 +12,18 @@
     "court_or_county": "Montcalm",
     "state": "Michigan",
     "state_abbr": "MI",
-    "mention_count": 0,
+    "mention_count": 5,
     "family_count": 5,
     "public_family_count": 5,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 5,
+    "supabase_row_ids": [
+      "55044c0a-f4f8-43d5-a660-fb62a005e639",
+      "f17f3146-f454-46fd-b431-08d683cceee7",
+      "1ca69a7c-16ce-4a4d-9f7c-520fba9a0cbc",
+      "d3905970-fce8-44f5-b0c5-56bd1c2e42f6",
+      "dc074023-2139-41bf-b47c-00d0bbde9b17"
+    ],
     "actor_row_id": "55044c0a-f4f8-43d5-a660-fb62a005e639",
     "actor_bucket_key": "tasha welch|MI"
   },
@@ -42,12 +48,43 @@
     "_pdf_state_family_count": 178,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 5,
+    "actor_report_count": 5,
     "family_count": 5,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "The system has did nothing but ruin my life. Try to take my kid or in the middle of trying to take my kid and some false accusations boom.",
+        "state": "MI",
+        "county": "Montcalm",
+        "row_id": "2baefa2c-5f9c-472a-b6ab-11a469450655"
+      },
+      {
+        "body": "The hurt is unmeasurable. Total loss of fairness and justice in the court that is supposed to serve and protect the people and children. Instead it's ripping them apart and destroying them. The trauma is coming from the court.",
+        "state": "MI",
+        "county": "Montcalm",
+        "row_id": "36edfc72-caee-42ee-95eb-cee123b8a84c"
+      },
+      {
+        "body": "Destroyed my whole family. Can’t see my grandkids grow up! My son in law committed suicide over the removal of his kids!",
+        "state": "MI",
+        "county": "Mntcalm",
+        "row_id": "fe7f27ec-8f68-4d76-a5c8-10339f6f761b"
+      },
+      {
+        "body": "Destroyed our whole lives. Drove my love to committ suicide. Robbed us of time with my kids!",
+        "state": "MI",
+        "county": "Montcalm",
+        "row_id": "9167440a-9686-4bf1-82e0-c4e69d7d428a"
+      },
+      {
+        "body": "The system has exploited my mental health crisis for funding, along with keeping their caseloads up.",
+        "state": "MI",
+        "county": "Montcalm",
+        "row_id": "aee874ac-0bd8-4c90-8e24-7d5331f3e428"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Didn't follow the d h s book was never notified that my daughter was in the hospital when we still had medical rights",
@@ -82,11 +119,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/tasha_welch",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='MI'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -102,6 +135,30 @@
     "recommended_route": "/court-actors/mi/tasha_welch/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Didn't follow the d h s book was never notified that my daughter was in the hospital when we…",
+        "kind": "comment"
+      },
+      {
+        "body": "While stating it was in my home with zero history of DV in my home.",
+        "kind": "comment"
+      },
+      {
+        "body": "She makes up things that never happened even when it's recorded.",
+        "kind": "comment"
+      },
+      {
+        "body": "Doesn’t follow DHHS handbook. Her way or no way! Doesn’t work with families!",
+        "kind": "comment"
+      },
+      {
+        "body": "Is rude & bitchy!",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

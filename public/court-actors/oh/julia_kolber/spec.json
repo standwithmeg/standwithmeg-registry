@@ -12,12 +12,14 @@
     "court_or_county": "Montgomery County",
     "state": "Ohio",
     "state_abbr": "OH",
-    "mention_count": 0,
+    "mention_count": 1,
     "family_count": 1,
     "public_family_count": 1,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 1,
+    "supabase_row_ids": [
+      "9e8e9467-bf07-408e-8edf-82e411ca5f84"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
@@ -42,19 +44,29 @@
     "_pdf_state_family_count": 264,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 1,
+    "actor_report_count": 1,
     "family_count": 1,
-    "family_reports": [],
-    "public_comments": []
+    "family_reports": [
+      {
+        "body": "Took our health, finances and entrapped us into never ending horrific cycles of abuse. It gaslit us and turned every good thing about parenting and our bonds into a “problem”. It’s an upside down land that makes you fight everyday to hold onto reality.",
+        "state": "OH",
+        "county": "Montgomery County",
+        "row_id": "272c3703-8c2a-490e-93b4-e33843b22f6d"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Engaged judge in ex parte communications, violated rules of professional conduct, failed to report abuse",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
   },
   "export_dir": "New Final Post and Capcut template/export/julia_kolber",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='OH'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available",
     "pdf_public_actor: no 'Julia C. Kolber' in cache for OH"
   ],
   "guardrails": {
@@ -72,6 +84,14 @@
     "recommended_route": "/court-actors/oh/julia_kolber/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Engaged judge in ex parte communications, violated rules of professional conduct, failed to report abuse",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

@@ -12,12 +12,18 @@
     "court_or_county": "Harnett county",
     "state": "North Carolina",
     "state_abbr": "NC",
-    "mention_count": 0,
+    "mention_count": 5,
     "family_count": 4,
     "public_family_count": 4,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 5,
+    "supabase_row_ids": [
+      "29fbf7cc-c00f-4a06-ade8-735d24c15f4f",
+      "2cce2617-a6ae-4475-ae6f-5adf455e530f",
+      "0e098b53-c73f-4ae7-b1c4-55e366115ca0",
+      "3c8f75cc-178f-497f-adbe-648cc3b81980",
+      "194c1fd0-f298-401d-a79c-984821d99193"
+    ],
     "actor_row_id": "29fbf7cc-c00f-4a06-ade8-735d24c15f4f",
     "actor_bucket_key": "kimble|NC"
   },
@@ -42,12 +48,37 @@
     "_pdf_state_family_count": 216,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 5,
+    "actor_report_count": 5,
     "family_count": 4,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "This has cost my parents their retirement savings. They will now have to work until they die because the judge did not handle it in a reasonable or even remotely timely manner. It has cost my sister and her children a lot of trauma and sadness over the last year because the judge showed favoritism. It is absolutely mind boggling that the case when the way it did. Unheard of.",
+        "state": "NC",
+        "county": "Harnett County",
+        "row_id": "a26881a1-9303-4de8-9a72-6e1ea7032341"
+      },
+      {
+        "body": "Due to the emergency case being drug out for entirely too long, there has been lost time with the child. The system has proved to be incredible corrupt with this judge and attorney.",
+        "state": "NC",
+        "county": "Harnett",
+        "row_id": "3dfb7e80-74a2-4ebf-8afc-b3f06937add7"
+      },
+      {
+        "body": "I’ve witnessed a very unfair and concerning amount of corruption in this court room as a witness. I am deeply concerned for the justice system in this county and have lost faith in honorable decision making.",
+        "state": "NC",
+        "county": "Harnett",
+        "row_id": "03a099b6-3763-4dc1-aaca-25abaf6d4ac7"
+      },
+      {
+        "body": "My boys that I raised alone were instantly ripped from their mother and have been told horrible untrue things about me to try and turn them against me. After domestic violence testimony and tons of evidence the judge still took my babies.",
+        "state": "NC",
+        "county": "Harnett",
+        "row_id": "b84405c6-56b1-4cde-84e8-e6dbaa50d323"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "He dragged the case out over months and months because he kept claiming he didn’t have time to listen to the testimonies. It cost our family tens of thousands of dollars. He claimed he lost his notes and extended the case yet another day for the father to say his piece all over again. Pushed and pushed his decision as far as he possible could. The father had zero case against the mother. All his accusations were proved false. The entire thing was weird and suspicious and showed favoritism towards the father. Justice was not served. Seemed the entire time the judge did not give a care at all about the case.",
@@ -76,11 +107,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/judge_kimble",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='NC'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -96,6 +123,26 @@
     "recommended_route": "/court-actors/nc/judge_kimble/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Pushed and pushed his decision as far as he possible could. The father had zero case against the mother.",
+        "kind": "comment"
+      },
+      {
+        "body": "He also was talking inappropriately with the attorney - he allowed heresay numerous times for her client.",
+        "kind": "comment"
+      },
+      {
+        "body": "Left child with abuser. Took months and months to make a ruling on emergency ex parte order",
+        "kind": "comment"
+      },
+      {
+        "body": "Took entirely too long to rule on an emergency case.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

@@ -12,12 +12,19 @@
     "court_or_county": "Autauga",
     "state": "Alabama",
     "state_abbr": "AL",
-    "mention_count": 0,
+    "mention_count": 6,
     "family_count": 5,
     "public_family_count": 5,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 6,
+    "supabase_row_ids": [
+      "07ad67d2-a9aa-4435-adde-4b714101d63f",
+      "d8895fe0-50a1-4a05-9a53-3dbf7aed857b",
+      "b28f6b2f-7bbd-493c-ab32-e079e207694d",
+      "574c8a3f-d583-4e8d-99a1-1266be9bd995",
+      "baacf7af-0642-4301-8d73-4dfdab1f5191",
+      "a56923a7-6408-4cbc-b100-734d285a7b1b"
+    ],
     "actor_row_id": "07ad67d2-a9aa-4435-adde-4b714101d63f",
     "actor_bucket_key": "thea langley|AL"
   },
@@ -42,12 +49,31 @@
     "_pdf_state_family_count": 130,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 6,
+    "actor_report_count": 6,
     "family_count": 5,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "This system has ripped me apart and taken advantage of my children and myself in every conceivable way. Every actor in it is corrupt, they are all in it together and seeking only personal gain and satisfaction rather than justice for the children. It’s evil , sick and killing our children and community.",
+        "state": "AL",
+        "county": "Autauga",
+        "row_id": "95ec688d-3ac4-4404-8d7f-db2d63d0c02c"
+      },
+      {
+        "body": "It cost me everything.",
+        "state": "AL",
+        "county": "Autauga",
+        "row_id": "8189d499-bf1e-4ca7-b34f-dc6c1dbcb61a"
+      },
+      {
+        "body": "Judge has placed my two children right back into the hands of our abuser who has many prior convictions, refused all documented evidence, ripped us all out of the protection program and destroyed my family.",
+        "state": "AL",
+        "county": "Autauga County",
+        "row_id": "9959c79a-fc7f-49de-999a-70f0c032896c"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Judge ordered two visits with children. Another therapist who worked with children for 1.5 years called Thea to report the abuse, including fractured skull x 2, participle hearing loss, Black eyes, bruises & welts, the children disclosed with their father as the perpetrator. Other therapist & hospital informed Thea that ongoing contact with father would exasperated children symptoms. Thea did not include any of the information in her report that was disclosed by other therapist or hospital. Infact, Thea reported children were happy, healthy and well dressed and never disclosed any of the other therapist or hospital reports or findings in her report. Children have since been given to their father.",
@@ -70,11 +96,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/thea_langley",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='AL'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +112,22 @@
     "recommended_route": "/court-actors/al/thea_langley/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Called Thea to report the abuse",
+        "kind": "comment"
+      },
+      {
+        "body": "Very manipulative with children, highly unqualified for the position, extremely unprofessional, unethical and causes extreme damage to an already delicate situation.",
+        "kind": "comment"
+      },
+      {
+        "body": "Helped cover up evidence, ignored my evidence, was knowledgeable and covered up for the misconduct of the GAL and the attorney.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

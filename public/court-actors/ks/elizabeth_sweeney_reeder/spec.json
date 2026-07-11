@@ -12,12 +12,17 @@
     "court_or_county": "Miami",
     "state": "KS",
     "state_abbr": "KS",
-    "mention_count": 0,
+    "mention_count": 4,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "d9f621e4-3da5-45a2-a059-20dc0c05a1b7",
+      "8dd3106b-e8e9-44fb-b416-f3b380abc13f",
+      "2d840b6d-9a79-41d1-94f4-81291367d0e3",
+      "ea630d4f-a00e-48e6-aac5-20f9d10cb9e3"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "elizabeth sweney-reder|KS"
   },
@@ -42,12 +47,31 @@
     "_pdf_state_family_count": 251,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Miami county doesn’t have the child best interest at all, they literally take children away from a parent who wants to protect them from abuse and drugs and tells the parent that wants to keep them safe that they are a vindictive ex who is mad!",
+        "state": "KS",
+        "county": "Miami county",
+        "row_id": "8b0eaa72-5dd3-411b-9dc4-0f25f7d91268"
+      },
+      {
+        "body": "The system took my kids a whole year without due process. It cost me everything that I value. I'm sharing this because I want people to know that this is immoral, illegal, and unconstitutional. These people need to be held accountable for all their actions. Meg I need your help please.",
+        "state": "KS",
+        "county": "Miami county",
+        "row_id": "eb3d041a-e093-45be-9ef1-dd6db6c8219d"
+      },
+      {
+        "body": "The system and those in it s have systematically and meticulously destroyed the relationship I had with my son and the relationship between siblings based upon nothing more than their personal biases",
+        "state": "KS",
+        "county": "Miami county",
+        "row_id": "c62b3dbe-3d83-47e5-85cd-aa1ddeb33f5e"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "She would only listen to therapy reports never any other side just what they wrote even though children and parent would say it was false Only listen to the therapy people",
@@ -70,11 +94,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/elizabeth_sweeney_reeder",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='KS'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +110,22 @@
     "recommended_route": "/court-actors/ks/elizabeth_sweeney_reeder/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Children and parent would say it was false Only listen to the therapy people",
+        "kind": "comment"
+      },
+      {
+        "body": "The judge ignored all evidence, refused to allow me testimony, denied my rights and my child’s rights and removed custody without reason.",
+        "kind": "comment"
+      },
+      {
+        "body": "Conflict of interest with Craig Cole.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

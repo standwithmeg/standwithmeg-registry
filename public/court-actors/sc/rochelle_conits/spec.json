@@ -12,12 +12,19 @@
     "court_or_county": "Greenville",
     "state": "South Carolina",
     "state_abbr": "SC",
-    "mention_count": 0,
+    "mention_count": 6,
     "family_count": 4,
     "public_family_count": 4,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 6,
+    "supabase_row_ids": [
+      "ba4d3c2b-c975-477c-814d-56506c1ba188",
+      "099c9d0f-718e-4aec-bdfe-061b9ee0a354",
+      "28d37c6e-b3f5-4040-ab3d-07759e06998d",
+      "7802e04d-353b-442a-958e-58ae5b2cb564",
+      "1660956e-6242-41d2-94b6-b081628981da",
+      "c41e87f8-3a1d-4cfe-9437-086a65b9f822"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
@@ -42,12 +49,31 @@
     "_pdf_state_family_count": 108,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 6,
+    "actor_report_count": 6,
     "family_count": 4,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Absolute familial and financial destruction. I was the primary parent, and they are with an abuser and have been for 11 month. This is the most corrupt system I have ever seen.",
+        "state": "SC",
+        "county": "Charleston",
+        "row_id": "f6da603b-0c3c-4bed-ac66-999321e5a851"
+      },
+      {
+        "body": "Multiple people in the DSS system repeatedly apologized and said this should never happen. I don't trust DSS leadership, I learned they are a love, hate relationship. We were great for 3 years, and then in the final hearing so many lies. DSS turned on us. In the end our grandaughter has been adopted. We see her all the time.......She asks us all the time why she could not live with us. Greenville SCDSS is evil, they lie and manipulate, they create orders, (not always legal) and then Cherry Pick how the order outcome should be--its not about the child!",
+        "state": "SC",
+        "county": "greenville",
+        "row_id": "a08fa2eb-bc21-4966-85c2-565b73df0065"
+      },
+      {
+        "body": "They destroyed us.",
+        "state": "SC",
+        "county": "Greenville",
+        "row_id": "92d80a92-eeb8-4854-9b54-5ebb5b564dac"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "she allowed my attorney to withdraw just a couple weeks before a highly critical financial hearing that had been continued for months. I had to proceed pro se against the top lawyer in Charleston thanks to this visiting judge's decision, and now have filed an appeal due to another unbelievable ruling. Allowed my attorney to withdraw right before a critical financial hearing, so I was left to appear pro se",
@@ -64,11 +90,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/rochelle_conits",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='SC'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -84,6 +106,18 @@
     "recommended_route": "/court-actors/sc/rochelle_conits/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "I had to proceed pro se against the top lawyer in Charleston thanks to this visiting judge's decision, and now have filed an appeal due to another unbelievable ruling.",
+        "kind": "comment"
+      },
+      {
+        "body": "Violated our due process rights",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

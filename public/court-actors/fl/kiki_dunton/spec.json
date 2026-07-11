@@ -12,12 +12,16 @@
     "court_or_county": "Leon",
     "state": "Florida",
     "state_abbr": "FL",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "35117f68-f92d-4040-b42d-670a88387fe1",
+      "6ee3e4c4-81c0-495a-bd2c-75599b924cfe",
+      "45e198a9-e2e7-4097-92c8-836122f25288"
+    ],
     "actor_row_id": "35117f68-f92d-4040-b42d-670a88387fe1",
     "actor_bucket_key": "kiki dunton|FL"
   },
@@ -42,12 +46,31 @@
     "_pdf_state_family_count": 306,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Nightmare!!!",
+        "state": "FL",
+        "county": "Leon",
+        "row_id": "6dbdd908-02bb-4319-b020-3e1b448be9c2"
+      },
+      {
+        "body": "The system is corrupt and it destroys families and children.",
+        "state": "FL",
+        "county": "Leon",
+        "row_id": "2f0d8aea-9f6e-4994-9876-6216d4468cb4"
+      },
+      {
+        "body": "Family court has destroyed my children.",
+        "state": "FL",
+        "county": "Leon",
+        "row_id": "a01ca4a6-5047-4e42-a626-709059f29e2d"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "The Guardian ad Litem appeared to place significant emphasis on relatively minor school attendance concerns, including a small number of tardies, while giving comparatively limited attention to more serious allegations involving the father’s history and conduct. According to the information available, the father had previously experienced a removal/loss of custody involving other children. There were also allegations involving the father’s association with an individual described as a pedophile who was reportedly attempting to gain access to the child, as well as allegations concerning large handprint bruises observed on the child and attributed to the father. These issues were not meaningfully addressed or emphasized in the Guardian ad Litem’s report. At the same time, the report reportedly recommended a reverse custody provision if the child accumulated more than two tardies for any reason. There are also concerns regarding imbalance in the investigative process. The Guardian ad Litem reportedly conducted extensive communication with individuals aligned with the father while failing to contact or meaningfully engage with collateral sources identified by the mother. Taken together, these circumstances raise concerns regarding proportionality, neutrality, and the consistency with which allegations and risk factors were evaluated.",
@@ -70,11 +93,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/kiki_dunton",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='FL'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +109,22 @@
     "recommended_route": "/court-actors/fl/kiki_dunton/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "According to the information available, the father had previously experienced a removal/loss of custody involving other children.",
+        "kind": "comment"
+      },
+      {
+        "body": "There are also concerns that allegations involving sexual abuse by fathers are minimized or dismissed without meaningful investigation.",
+        "kind": "comment"
+      },
+      {
+        "body": "She allowed a complete violation of time-sharing and decision making and didn't budge when a therapist called DCF on the Father after speaking to the child once.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

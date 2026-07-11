@@ -12,12 +12,17 @@
     "court_or_county": "Wake",
     "state": "North Carolina",
     "state_abbr": "NC",
-    "mention_count": 0,
+    "mention_count": 4,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "c3e0dd53-dc9a-48bf-9027-82508d4ca18a",
+      "d95d7be4-8c28-4b62-8dcc-a47b7954189a",
+      "ba80c4ad-2b5a-4857-a2fe-614f7605554a",
+      "a7011a34-fd50-4b05-b54b-2685cdc3d838"
+    ],
     "actor_row_id": "c3e0dd53-dc9a-48bf-9027-82508d4ca18a",
     "actor_bucket_key": "april haris brit|NC"
   },
@@ -42,12 +47,25 @@
     "_pdf_state_family_count": 216,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "The lies that were told and upheld in family court allowed my dad to win because he had all the money, and it cost us as teenagers to be forced to go live with him again after he was abusive to us through our childhood.",
+        "state": "NC",
+        "county": "wake",
+        "row_id": "990b3b28-9c0e-4822-8a68-0b1dd88c72ef"
+      },
+      {
+        "body": "Family court was a nightmare that felt as though it would never end. It nearly killed me. It tore our family apart and left my daughters (both) destroyed with PTSD on top of the abuse their father did to them- then family court punished them even further.",
+        "state": "NC",
+        "county": "Wake",
+        "row_id": "43a7d9e9-3595-4024-a5ec-09d9811c39c8"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Never even saw my kids and wrote false affidavit against me making up lies. Had LLC with attorney on the case and made money off hundreds of families - Look at her reviews- should NEVER be allowed to work with any families as she should have her license revoked !!! Never even saw my children and wrote affidavit against me in relation to them",
@@ -64,11 +82,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/april_harris_britt",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='NC'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -84,6 +98,18 @@
     "recommended_route": "/court-actors/nc/april_harris_britt/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Had LLC with attorney on the case and made money off hundreds of families - Look at her reviews- should NEVER be allowed to work with any families as she should have her license revoked !!!",
+        "kind": "comment"
+      },
+      {
+        "body": "Lied about everything told to her by us as kids and twisted in court",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

@@ -12,12 +12,16 @@
     "court_or_county": "Seventh Circuit, Volusia County",
     "state": "Florida",
     "state_abbr": "FL",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "8d4c054b-5fcd-40be-bdc2-94c2348f7ae8",
+      "ac346869-2b05-4ca9-bf6b-88d85da9680b",
+      "3a93d2d6-fdb6-4ecc-87c1-c54d88c35455"
+    ],
     "actor_row_id": "8d4c054b-5fcd-40be-bdc2-94c2348f7ae8",
     "actor_bucket_key": "leah case|FL"
   },
@@ -42,12 +46,31 @@
     "_pdf_state_family_count": 306,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Lea Case ignored dependency court retaliation against my family",
+        "state": "FL",
+        "county": "Volusia",
+        "row_id": "4a08abb2-b0d1-45cf-b134-5236e8d5ab02"
+      },
+      {
+        "body": "Chief Judge Leah Case was notified that Judge Anthony, a judicial defendant in the related federal action, refused to recuse and that altered consent documents, a fraudulent notary certificate, and docket scrubbing had occurred; despite a Canon 3E request for review, no action was taken.",
+        "state": "FL",
+        "county": "Volusia County",
+        "row_id": "cca49cbe-9d66-40c1-aa02-00b72f42c902"
+      },
+      {
+        "body": "EVERY judicial actor in the 7th judicial Circuit has violated their oath and stripped me of my parental rights, freedom of speech through gag orders and injunctive relief with no hearing, and access to the courts to seek redress to my government. This is PURE retaliation for my protected reporting of judicial and ethical misconduct.",
+        "state": "FL",
+        "county": "Volusia County",
+        "row_id": "d57d50b6-bace-4282-a78b-df1f51c87174"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Chief Judge Leah Case (Seventh Circuit, Florida) Reported for failure to act on a Canon 3E judicial‑review request involving structural defects in an active dependency/TPR case. The report detailed: • The presiding judge (Anthony) was a judicial defendant in a related federal action yet continued to preside over the TPR trial without recusal. • Altered consent documents and a fraudulent notary certificate attached to the case file. • Docket scrubbing that concealed the appointment of conflicted counsel. • A request for review under Canon 3E authority was submitted, but no action was taken, and the TPR trial proceeded despite unresolved conflicts and record‑integrity concerns.",
@@ -70,11 +93,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/leah_case",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='FL'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +109,22 @@
     "recommended_route": "/court-actors/fl/leah_case/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "• Altered consent documents and a fraudulent notary certificate attached to the case file. • Docket scrubbing that concealed the appointment of conflicted counsel.",
+        "kind": "comment"
+      },
+      {
+        "body": "Raising these concerns, including the grandparent’s report of retaliation and record‑integrity issues, Chief Judge Case took no action.",
+        "kind": "comment"
+      },
+      {
+        "body": "Chief judge Leah Case barred me from FULL access to the Courts and placed an entire communication ban to the ENTIRE 7th judicial circuit, clerks, court…",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

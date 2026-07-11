@@ -12,12 +12,17 @@
     "court_or_county": "Wagoner",
     "state": "Oklahoma",
     "state_abbr": "OK",
-    "mention_count": 0,
-    "family_count": 4,
-    "public_family_count": 4,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "mention_count": 4,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "190e4783-1c49-4fe3-b918-d4070817eaaf",
+      "a10dafc0-d53d-4a7d-892d-9a6abb5f21ae",
+      "ea95409d-1a58-40a0-b574-8b46fc537b8c",
+      "5f0f44a0-50bb-48dd-927b-c4338558219d"
+    ],
     "actor_row_id": "190e4783-1c49-4fe3-b918-d4070817eaaf",
     "actor_bucket_key": "aron bundy|OK"
   },
@@ -42,12 +47,37 @@
     "_pdf_state_family_count": 164,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
-    "family_count": 4,
-    "family_reports": [],
+    "report_count": 4,
+    "actor_report_count": 4,
+    "family_count": 3,
+    "family_reports": [
+      {
+        "body": "The system has destroyed my family. Happy children are now in constant chaos, the court is more concerned about 50/50 pro dad than stability for the children. I have been told so many times children are resilient. They will be ok. This has take a toll on myself mentally and physically. Now because I am fighting back or questioning I am classified as combative and confrontational. Which adds additional stress and feels like an intimidation tactic. The system and abuser has stolen precious time that you can never get back.",
+        "state": "OK",
+        "county": "Tulsa",
+        "row_id": "1734a704-ed48-41a2-b5e8-83bf9a1d781e"
+      },
+      {
+        "body": "Destroyed my faith in child court and what is supposed to be the absolute wellbeing of our kids as a priority. Took years from me and my kids/family we will never get back and has caused trauma to my kids they may never recover from.",
+        "state": "OK",
+        "county": "Wagoner",
+        "row_id": "d8843cb7-6aff-48f7-8687-d3f895db0be8"
+      },
+      {
+        "body": "The court process and DHS involvement have had a profound impact on our family over an extended period of time. While these systems are intended to protect children and address concerns, the ongoing investigations, litigation, hearings, evaluations, and co-parenting disputes have created significant emotional strain, instability, and stress within our family. The children have experienced disruptions to their routines, schooling, therapy, and parent-child relationships, along with ongoing uncertainty surrounding visitation, communication, and household transitions. The prolonged conflict and involvement of multiple agencies and professionals has shifted much of our family’s focus away from healing and normal childhood experiences and toward surviving legal processes, documenting concerns, and navigating continued conflict. Throughout this process, there has also been an ongoing lack of meaningful accountability regarding unmet parental responsibilities, including the absence of consistent financial support, which has placed additional emotional and financial strain on the household without clear resolution or enforcement through the court process. In addition, the repeated failure to meaningfully recognize or address patterns commonly associated with coercive control, reactive responses to prolonged conflict, and the broader dynamics of domestic abuse has left me feeling that the systems involved have not been adequately informed or equipped to fully understand the realities and long-term effects of these dynamics on both myself and the children. I was also left feeling intimidated and discouraged from seeking further court intervention after being warned that continued returns to court over co-parenting conflict could place my custody at risk, despite my concerns being rooted in what I believed was necessary to protect the children from ongoing abuse and harmful conditions within the other household. Rather than feeling supported in raising concerns for the children’s well-being, the process often left me feeling that the context and seriousness of those concerns were minimized or overlooked. As a parent, I have experienced the emotional, financial, and mental burden of trying to maintain stability, advocate for the children’s needs, comply with court requirements, and support the children through an environment that has often felt adversarial and emotionally exhausting for everyone involved.",
+        "state": "OK",
+        "county": "Wagoner",
+        "row_id": "e0d2ca9c-a3d8-4cb5-9927-995e25204ca5"
+      },
+      {
+        "body": "Destroyed my family for over 6 years now! Took every penny we have down to savings and retirement fighting for justice for my two small children! Traumatized my children so bad they will be in therapy rest of their lives!! Because of wagoner county Oklahoma family courts my son was SA by TWO different people while at his dads for 2 years and alienated from me! I find out 2 years later when I finally get my first visit with him! His dad never reported! Never called police nor cps and did not take my son for medical treatment… he called my son a liar and went about life!! He admitted on stand to all this and walks away with no consequences!! This is on the record! Literally destroying my kids, family and my life still to this day! My son has light he’s sent to come to me full sole custody [redacted] there is no light for my daughter to this day! I’m on supervised visits for no reason!!",
+        "state": "OK",
+        "county": "Wagoner",
+        "row_id": "8b70ebcd-62ae-4250-8e33-a8a4f74e16d9"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Is fighting the financial side, but its been a slow process that allowed the opposing side to dissipate more than 50% of marital funds. One minute he says let's make changes then the next he says no.",
@@ -76,11 +106,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/aaron_bundy",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='OK'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -96,6 +122,26 @@
     "recommended_route": "/court-actors/ok/aaron_bundy/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Its been a slow process that allowed the opposing side to dissipate more than 50% of marital funds.",
+        "kind": "comment"
+      },
+      {
+        "body": "I have paper, digital, and video evidence of all of my above statements. The judge dismissed all as evidence.",
+        "kind": "comment"
+      },
+      {
+        "body": "Doesn’t respond to other atty emails in a timely manner. Plays delay tactic games",
+        "kind": "comment"
+      },
+      {
+        "body": "Delayed hearings, stalled case for years. Ignored evidence",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

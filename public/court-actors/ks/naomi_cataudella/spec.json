@@ -12,12 +12,24 @@
     "court_or_county": "Johnson",
     "state": "Kansas",
     "state_abbr": "KS",
-    "mention_count": 0,
+    "mention_count": 11,
     "family_count": 10,
     "public_family_count": 10,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 11,
+    "supabase_row_ids": [
+      "43d878a4-385f-41f3-99bd-3abfe7cae4c7",
+      "1104ec7d-7e00-4901-8454-5cb099cf99e4",
+      "4dfb1f39-949d-4660-8712-6d2f625b83ad",
+      "66edfd65-9802-401e-b71a-613781cb675a",
+      "83f8e625-f4d1-4d74-a65b-87aab62f5d99",
+      "380d12c9-22bd-40df-9859-e5aa65f08e21",
+      "5580a201-fcf4-476c-bab1-f50ac7e86414",
+      "84e401d5-8d8e-4cb6-a245-765bced77b14",
+      "4bff0d2a-b069-4f2e-8f01-eebff3fe268d",
+      "02dcabd7-63ff-44f3-b70a-91f939a2fa0b",
+      "88c9fffc-636b-4a19-9cdf-6d16bc7f92a7"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": null,
     "_overrides_applied": [
@@ -46,12 +58,49 @@
     "_pdf_state_family_count": 251,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 11,
+    "actor_report_count": 11,
     "family_count": 10,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "The system ultimately failed my kids. My kids had to deal with years of harassment, lies, manipulation from their father, and the court still hasn’t held him accountable for it. Now myself and children are in therapy, I still have to make my 2 youngest go [redacted] with him. He lost custody of our oldest 1.5 years ago due to GAL recommendations. I’ve been put into financial hardships from paying for attorneys, therapists, and other fees only for him to get away with the horrible things he’s done. They don’t care about families. They care about lining their pockets.",
+        "state": "KS",
+        "county": "Johnson County",
+        "row_id": "3731bd25-d63a-4a44-bc51-32ccb24008a1"
+      },
+      {
+        "body": "The system has caused unneeded separation from my autistic son and his service dog! The system has stripped me of my medical rights and the funds needed for the betterment of my children have been spent instead on the system.",
+        "state": "KS",
+        "county": "Johnson County",
+        "row_id": "98482270-c1d7-48ce-9afa-cfad9f53fb8f"
+      },
+      {
+        "body": "The only power I truly have, is that over myself, and lucky for me, and you, we can choose peace NO MATTER WHAT ANYONE ELSE IS CHOOSING. Make your reality what you want it to be, once choice at a time.",
+        "state": "KS",
+        "county": "Franklin",
+        "row_id": "8b0ae4f7-a87d-46d6-93de-a96c5654cb8a"
+      },
+      {
+        "body": "Naomi Cataudella’s involvement did not heal our family’s trauma — it prolonged and deepened it. Instead of helping rebuild trust and emotional safety, Naomi’s approach empowered an abuser, left our children feeling unheard, intensified family division, and reinforced a system where fear and dysfunction were repeatedly overlooked.",
+        "state": "KS",
+        "county": "Johnson",
+        "row_id": "2b770771-fd1c-492b-a679-c7fabc626742"
+      },
+      {
+        "body": "Court assigned officials in JoCo are not all fit. There MUST be a way for the very people this system is intended to “benefit” to have feedback of providers. Checks and balances of providers should be visible and traceable. JoCo is very much pro-white man privilege. Men are rewarded for providing a fraction of effort (time and money) compared to the expectation of women. Women are held to such a very different standard. Any emotion is considered to make us unreliable and crazy when really we are so exhausted from the very system not listening and changing judges or changing court assigned officials to the highest paid attorney’s demands. Men are not held accountable in family courts at JoCo. They just aren’t.",
+        "state": "KS",
+        "county": "Johnson County",
+        "row_id": "13c6a06f-4cb4-485d-b4dd-00a60b2c0dfa"
+      },
+      {
+        "body": "My exhusband had criminal charges for taking the life of our unborn child through DV and would not allow my daughter to get me medical help.He was charged for 1 misdemeanor (domestic battery) and 1 felony charge (intimidation of a minor) in 2022. GAL Heather Landon was on the case at the time and continued to force the children into reintegration therapy even though the DA said it would taint the case. I had sole custody of all three children from 2021 to 2024. The children started talking with Father, made claims against me now, which caused a CINC case against me. Father’s charges were dropped due to him gaining contact with the older children through GAL John Domoney and TFI agents. My youngest daughter was with me still until October of 2025, I could no longer afford to take her to reintegration with Naomi Catadeulla 2 1:2 hrs away from my home once a week and 4 other appointments with sandy Boltons case managers and therapist Janderon Lyold. The GAL believes all allegations against me. Won’t allow me any contact with the kids. I don’t even know where they are living, go to school nothing and on paper, I still have sole custody. Andy will not allow me to chose my own reintegration therapist, I have to go to the one father demands, his buddy Naomi Catadella. My youngest daughter is 10, she can’t sleep without me. The therapist are lying that she is scared of me. I lost my kids to the REAL abuser and Andy Bolton and Richard Fisher painted me as crazy, took my voice. Please let there be someone that can help me.",
+        "state": "KS",
+        "county": "Miami",
+        "row_id": "6e86678b-939a-4835-92a8-777f488aa5ce"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "She refused to let me have a pen and paper. She took my phone so I could not make notes. She was the first supervisor assigned to me after my children were taken on January 29, 2024. During our meetings, she gave me constantly shifting and conflicting rules about how I was allowed to behave. I was told I could not cry in front of my children—even though they had just been taken from me without the chance to say goodbye—and that if I did, they would be removed from the visit and I would not be allowed to see them again for two weeks. She denied ever saying those things, despite having clearly stated them before. Without warning, she told me she would no longer serve as my supervisor. I left that meeting in tears, completely broken. That moment was not just an isolated incident—it was the beginning of a pattern that has kept me separated from my children for over two years.",
@@ -104,11 +153,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/naomi_cataudella",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='KS'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -124,6 +169,42 @@
     "recommended_route": "/court-actors/ks/naomi_cataudella/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "She refused to let me have a pen and paper.",
+        "kind": "comment"
+      },
+      {
+        "body": "We've all needed therapy to help us recover from HER.",
+        "kind": "comment"
+      },
+      {
+        "body": "We didn’t get along.",
+        "kind": "comment"
+      },
+      {
+        "body": "She believed every single lie from the father in my case.",
+        "kind": "comment"
+      },
+      {
+        "body": "Reintegration therapist forced on me by Andy Bolton — described as Bolton's buddy.",
+        "kind": "comment"
+      },
+      {
+        "body": "She gave me 1 hour and then issued a report to my detriment.",
+        "kind": "comment"
+      },
+      {
+        "body": "Complete waste of time. Nothing accomplished. 2 years going almost weekly to Naomi.",
+        "kind": "comment"
+      },
+      {
+        "body": "She manipulated me with our GAL and said things that were my true.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

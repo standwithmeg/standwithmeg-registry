@@ -12,12 +12,22 @@
     "court_or_county": "Fairfield",
     "state": "Connecticut",
     "state_abbr": "CT",
-    "mention_count": 0,
+    "mention_count": 9,
     "family_count": 4,
     "public_family_count": 4,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 9,
+    "supabase_row_ids": [
+      "4ac3348a-4fd2-41fe-b84f-7d2cc4904896",
+      "10a446eb-d997-4b40-ba66-a47bb27830e3",
+      "d8588fe4-61f3-430e-abd6-e7c2c2ca6de5",
+      "ae5f130d-8e90-4427-a9e3-9fac172a3b2b",
+      "03584306-901c-4d1e-bf0c-b9e64d5bd012",
+      "4062bac8-5ccc-4196-bf59-e28319a4a715",
+      "a974eb6f-f29b-4926-92ea-7e947ff8b1b4",
+      "5565cb92-2a83-4dc6-950c-30c7bb73a194",
+      "c389fec3-8718-4239-8de5-19b98c425743"
+    ],
     "actor_row_id": "4ac3348a-4fd2-41fe-b84f-7d2cc4904896",
     "actor_bucket_key": null
   },
@@ -42,12 +52,31 @@
     "_pdf_state_family_count": 65,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 9,
+    "actor_report_count": 9,
     "family_count": 4,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "The Family Court allowed all my assets to be lost without any concern to the financial and emotional damage done to myself and my child.",
+        "state": "CT",
+        "county": "Fairfield County",
+        "row_id": "6d23739e-f481-452c-9016-fb1c3173e649"
+      },
+      {
+        "body": "The family court allowed fraudulent “experts” and then ignored the recommendations of legitimate experts hiding behind the shield of judicial immunity and playing a congeniality game with people’s lives.",
+        "state": "CT",
+        "county": "Fairfield",
+        "row_id": "60741b2a-b2aa-4252-b450-df5e75e38afa"
+      },
+      {
+        "body": "The system has destroyed my health, my child’s development and mental health, and violated constitutional and human rights with no concern for the damage they have done.",
+        "state": "CT",
+        "county": "Fairfield county",
+        "row_id": "de60c1be-a0e6-4368-8265-3db358b9c452"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Zero concern for the best interests of children. Completely money driven therefore markets herself to the pro fathers rights movement in the state and county. this is the same gal/pro fathers rights attorney as Marissa Bigelli- divorced from Hernandez and now using Bigelli Pro father’s rights attorney and GAL- highly unethical behaviors and communications. Personal bias relationship with numerous other pro father’s rights judges and attorneys",
@@ -70,11 +99,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/marissa_bigelli",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='CT'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +115,22 @@
     "recommended_route": "/court-actors/ct/marissa_bigelli/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Zero concern for the best interests of children.",
+        "kind": "comment"
+      },
+      {
+        "body": "Same as Marissa Hernandez- made custody recommendations in complete opposition of numerous child experts in favor of the parent paying her Provided information to…",
+        "kind": "comment"
+      },
+      {
+        "body": "Used threats against my child to get the outcome the party paying her wanted Used threats of loss of visitation or custody to have compliance with her requests",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

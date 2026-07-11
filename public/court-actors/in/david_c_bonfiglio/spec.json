@@ -12,12 +12,37 @@
     "court_or_county": "Ellhart Superior Court 6",
     "state": "Indiana",
     "state_abbr": "IN",
-    "mention_count": 0,
+    "mention_count": 24,
     "family_count": 18,
     "public_family_count": 18,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 24,
+    "supabase_row_ids": [
+      "558cc1d8-3a89-4066-bee1-4aad93635779",
+      "a776eab9-2e3d-412d-93f1-3f2e1dbb6858",
+      "7a5c932e-fdca-4623-992f-7c3c13ba8edc",
+      "98042a5b-9a24-473f-a1d5-9941839e2002",
+      "d3a06e3f-441f-43f1-8660-dacd93977c34",
+      "21176fad-0127-480e-a2ba-c7b6543b345c",
+      "c7b2eb0b-b32d-4a60-b960-183dfc3a34c5",
+      "64621400-f62c-4c5b-9139-c4e3a7957f2f",
+      "74541115-a445-4750-a56b-a94bbcdaa687",
+      "2b1121b4-36aa-4305-a02b-e8f908fc27e1",
+      "bcfe1d87-0dc3-4d1b-8110-4fddad16aad0",
+      "e7751767-82c1-4182-b84c-4a9f6618b985",
+      "288b0fd8-7441-4051-9df5-e963c5e4f8ed",
+      "1e185a91-c96e-473b-855c-5b0aeca62a94",
+      "db3401e1-900d-468c-bcb2-40beab66760c",
+      "77654954-d71f-424f-8012-e8b0808b38c5",
+      "440dc061-d6eb-4cc3-b998-957375a7dab0",
+      "c1d230f0-15f1-4de3-ae36-48bb10e6bd12",
+      "e3e5fe8e-4da3-42f8-83a5-6c5b2e8fd81a",
+      "76d5fc96-393b-421b-b5bb-ffaf8e6078b4",
+      "ffde1178-eeb1-4dd1-a53c-0f32eb29ac5f",
+      "18aeb5a7-359e-46f8-9680-85696021de36",
+      "f9b6c8a7-607d-4a20-a08e-17d0f069ddc2",
+      "c114aabf-d2ad-4db6-ad90-ad5cdc96ed1d"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
@@ -42,12 +67,49 @@
     "_pdf_state_family_count": 153,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 24,
+    "actor_report_count": 24,
     "family_count": 18,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "I’ve lost precious time with my children because I was forced to pay a stranger to pretend she knows what’s best for my children. The judge clearly doesn’t know the constitution and continues to violate the rights of families everyday. Mary and Bonfiglio ruined their own reputations by the corruption they’ve created.",
+        "state": "IN",
+        "county": "Elkhart",
+        "row_id": "eaa524e1-e2b4-4694-a33c-1b4203d7f168"
+      },
+      {
+        "body": "The system has allowed my girls to be in the custody of child abusers",
+        "state": "IN",
+        "county": "Elkhart County",
+        "row_id": "64c04f1b-4d3e-4831-9766-aed24fc56a42"
+      },
+      {
+        "body": "This system tore my family apart with false accusations, ignored evidence, and let an absent parent take my child without protection or due process. It has cost us years of lost time, emotional damage, and a bond I’ve fought every day to rebuild.",
+        "state": "IN",
+        "county": "ELKHART",
+        "row_id": "f2b1ab74-994e-49dc-bb1d-47d308c04daa"
+      },
+      {
+        "body": "Judge Bonfiglio and GAL Mary Raatz belong in jail. There are hundreds of us demanding these people are deeply investigated and we won’t stop until they are.",
+        "state": "IN",
+        "county": "Elkhart",
+        "row_id": "f1ab7824-6ede-48ae-a8a9-e4607b34d795"
+      },
+      {
+        "body": "This judge denied my children proper financial support from their father and also put the burden of providing insurance on me.",
+        "state": "IN",
+        "county": "Elkhart",
+        "row_id": "65c30845-9ed5-42d1-b5f5-203a2a26ab3f"
+      },
+      {
+        "body": "I'm going through a high conflict divorce because of feelings. Mother filed a fake protection order on me June 3rd to try to get the courts to keep me from seeing our daughter but ordered me to pay child support. Judge bonfiglio put the protection order with the divorce when it should be separate. I turned in evidence at that time last June and the order still hasn't been heard. So I've gone a year without being able to have any communication with our daughter which is going to make it harder trying to build our bond back since she has been under the influence of negativity. I've missed time and it's costing me and haven't gotten anywhere. I've turned in proof from witnesses stating that mom is out to ruin me. With that order they took away my rights to carry and protect myself and my family. There's a bunch more. This is wrong on all levels. Girls need their dad's without feeling guilty",
+        "state": "IN",
+        "county": "Elkhart",
+        "row_id": "8a8a1240-e8be-45fa-a360-fb629d655d3e"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Judge Bonfiglio uses aggressive, hostile and abusive language towards pro se litigants. He’s an embarrassment to the entire county of Elkhart. He gave custody to an abuser without due process. He ignores constitutional rights of parents and families. He would rather destroy families than actually obey the oath he took. I’ve never witnessed a more unhinged judge in my life. He is a disgrace to judges everywhere. He should have removed from the bench years ago, he’s almost 80 years old. He DOES NOT care about children or families at all. He threatens, yells and refuses due process. Judge Bonfiglio is ruining Elkhart County. His family should be embarrassed by his pure lack of empathy for families in his county.",
@@ -154,11 +216,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/david_c_bonfiglio",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='IN'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -174,6 +232,78 @@
     "recommended_route": "/court-actors/in/david_c_bonfiglio/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "He gave custody to an abuser without due process.",
+        "kind": "comment"
+      },
+      {
+        "body": "He will issue warrants, contempt threats and fees without due process.",
+        "kind": "comment"
+      },
+      {
+        "body": "A month later she turned around and gave him full custody.",
+        "kind": "comment"
+      },
+      {
+        "body": "Disregarded what that judge said to keep my daughter w her other siblings",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored sexual abuse concerns.",
+        "kind": "comment"
+      },
+      {
+        "body": "A hearing and ignored evidence in my custody modification case.",
+        "kind": "comment"
+      },
+      {
+        "body": "Lied on my dad countless times for things he didn’t do",
+        "kind": "comment"
+      },
+      {
+        "body": "Judgment was made on a 15 minute contested hearing with a flawed biased gal report.",
+        "kind": "comment"
+      },
+      {
+        "body": "Not hearing Truth that's supported by facts filed. Giving mother everything",
+        "kind": "comment"
+      },
+      {
+        "body": "Removed child at status hearing based solely on father and gal testimony.",
+        "kind": "comment"
+      },
+      {
+        "body": "Just took my ex-husband's claim for his income as fact",
+        "kind": "comment"
+      },
+      {
+        "body": "Refused to hear child abuse police report Sided with corrupt gal",
+        "kind": "comment"
+      },
+      {
+        "body": "He refused to hear m.",
+        "kind": "comment"
+      },
+      {
+        "body": "Denied my attorney to represent me and considered me pro se",
+        "kind": "comment"
+      },
+      {
+        "body": "Decided with the gal report when the gal did not like me",
+        "kind": "comment"
+      },
+      {
+        "body": "He completely ignores due process of any kind.",
+        "kind": "comment"
+      },
+      {
+        "body": "Denied motions",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 3
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

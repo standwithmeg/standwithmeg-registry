@@ -12,12 +12,22 @@
     "court_or_county": "Broward",
     "state": "Florida",
     "state_abbr": "FL",
-    "mention_count": 0,
-    "family_count": 0,
-    "public_family_count": 0,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "mention_count": 9,
+    "family_count": 7,
+    "public_family_count": 7,
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 9,
+    "supabase_row_ids": [
+      "ae76a23b-c86f-41d6-a9c8-3a2379b9cfdb",
+      "5ea9a083-5e4c-4238-b41c-9faf6817af07",
+      "645918f5-1286-4d8b-906c-d54eb5faaafa",
+      "9edf7e55-834b-4d6c-a96b-47e960c830cd",
+      "f1257d8e-9d8e-4733-9be2-e49266ac929d",
+      "8b760b90-8485-4d98-a64b-321f4d3174cf",
+      "2668078d-7146-40d8-9877-2b1699f1d143",
+      "ecfb8d60-dd46-4c41-b078-59efbf2ad698",
+      "64f2e4a4-a3d4-4f32-b77d-6070a84e2a36"
+    ],
     "actor_row_id": "ae76a23b-c86f-41d6-a9c8-3a2379b9cfdb",
     "actor_bucket_key": "kristin kaner|FL"
   },
@@ -42,12 +52,49 @@
     "_pdf_state_family_count": 306,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
-    "family_count": 0,
-    "family_reports": [],
+    "report_count": 9,
+    "actor_report_count": 9,
+    "family_count": 7,
+    "family_reports": [
+      {
+        "body": "This litigation has had a profound impact on every aspect of my life. Financially, I have incurred substantial attorney’s fees, the ongoing costs of Soberlink monitoring, evaluations, testing, and litigation, all while working as a teacher on a limited income. I have relied on child support to help meet my monthly expenses, and the prospect of now paying child support while also having my parenting time reduced creates a significant financial hardship. More importantly, the greatest loss has not been financial—it has been the loss of time with my son. During what are likely the last two years before he reaches adulthood, my parenting time has been reduced from equal timesharing to one-third of his time. Time with a child cannot be replaced or recovered. Every missed holiday, family dinner, conversation, and ordinary day together is something I will never get back. Throughout this case, I have completed every evaluation requested of me, participated in therapy, submitted to extensive Soberlink monitoring, and ultimately passed the Court-ordered ETG hair test. Although the Court was satisfied enough with those results to terminate Soberlink, I nevertheless lost significant parenting time. That has been emotionally devastating.",
+        "state": "FL",
+        "county": "Broward",
+        "row_id": "fa895aef-8632-44da-b94b-fd2fab3731e2"
+      },
+      {
+        "body": "The Broward County family court system has left me feeling unheard despite presenting evidence and repeatedly raising concerns about my relationship with my children. After months of litigation, delays, and mounting expenses, I believe the system failed to adequately protect my parental rights and my children’s relationship with their father",
+        "state": "FL",
+        "county": "Broward",
+        "row_id": "0301c293-4d7c-474b-b722-85ce3a24dfbb"
+      },
+      {
+        "body": "This system has taken years of my children’s lives, placed us in poverty while protecting a criminal and denying my constitutionally protected rights.",
+        "state": "FL",
+        "county": "Broward",
+        "row_id": "19c0b0b0-1378-4003-9d29-bfa192a7036d"
+      },
+      {
+        "body": "This Broward County Family Court system caused devastating harm to our family long before the seizure of my granddaughter, including the loss of multiple family members as a result of prolonged proceedings. The court then ordered her taken across state lines from my daughter in Darien, Georgia—while the father resides in Miami—returning her to a dangerous environment despite evidence of abuse. I was physically present and personally witnessed the seizure as armed police took my granddaughter while she was crying, screaming, and begging not to be taken. This caused further irreversible harm, including medical collapse, trauma to multiple disabled family members, and the destruction of our entire family structure. All of this has been repeatedly documented and reported to multiple courts, agencies, and oversight bodies, with no meaningful action taken. I worry every single day about my daughter and granddaughter, and that my partner or I may pass away before ever being able to see my granddaughter again.",
+        "state": "FL",
+        "county": "Broward",
+        "row_id": "896e496a-5c19-4bdb-9121-fbd8beb758b0"
+      },
+      {
+        "body": "My child was taken through backroom orders with no hearing, no proof, and no accountability, and every attempt I made to protect her was ignored while the system closed ranks to protect itself. This system stripped me of my child through unrecorded, unsupported orders and then denied me any meaningful way to fight back, turning due process into an illusion and leaving my family devastated.",
+        "state": "FL",
+        "county": "Broward",
+        "row_id": "a6fe87f9-00be-429e-a6c1-dc51b3a08d7c"
+      },
+      {
+        "body": "The court system has taken a survivor of domestic violence and has punished her and her children for seeking relief from the very person who harmed them. (Broward County, FL- FMCE [redacted])",
+        "state": "FL",
+        "county": "Unknown",
+        "row_id": "4cb1a622-d5b1-484d-9a83-387dfa34bb96"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Judge kanner recently ruled that she is going to take the recommendation of the GAL’s and finalized my time sharing to be at 1/3 as opposed to 50/50 when the GAL testified that her recommendation was for Summer purposes and should be a “jolt“ to me and should be revisited in August however, this judge ordered it as a final order restricting my parenting schedule. She also said that there are seasons for parenting. And that maybe my parenting style for Asher at this time i doesn’t work. I have full transcripts of what she said.",
@@ -88,11 +135,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/kristin_kanner",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='FL'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -108,6 +151,34 @@
     "recommended_route": "/court-actors/fl/kristin_kanner/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "This judge ordered it as a final order restricting my parenting schedule.",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored a pending motion to disqualify",
+        "kind": "comment"
+      },
+      {
+        "body": "Then she recused herself.",
+        "kind": "comment"
+      },
+      {
+        "body": "Issued a cross-state child pickup order leading to the forced removal of my…",
+        "kind": "comment"
+      },
+      {
+        "body": "Judge Kanner is allowing it to persist, too. 3.5 years and counting!",
+        "kind": "comment"
+      },
+      {
+        "body": "Denied me due process resulting in tens of thousands of material loss",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

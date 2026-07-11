@@ -12,12 +12,19 @@
     "court_or_county": "Johnson County",
     "state": "Kansas",
     "state_abbr": "KS",
-    "mention_count": 0,
+    "mention_count": 6,
     "family_count": 6,
     "public_family_count": 6,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 6,
+    "supabase_row_ids": [
+      "2991db4e-8f2e-4292-8ae4-f55dc3a5b0e1",
+      "f58c5f8b-b7ce-4774-a8f2-15db5835a8cf",
+      "c64ba6fc-feff-4a99-9371-d2f20b9d4f77",
+      "b52fb1cd-631e-4bfd-8646-c8e6600e8745",
+      "5af261d5-a6df-445e-9aea-8d0d7de433de",
+      "728ad597-5a4c-4b11-b55d-ebff0f2f52c7"
+    ],
     "actor_row_id": "2991db4e-8f2e-4292-8ae4-f55dc3a5b0e1",
     "actor_bucket_key": null
   },
@@ -42,12 +49,31 @@
     "_pdf_state_family_count": 251,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 6,
+    "actor_report_count": 6,
     "family_count": 6,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "The system ultimately failed my kids. My kids had to deal with years of harassment, lies, manipulation from their father, and the court still hasn’t held him accountable for it. Now myself and children are in therapy, I still have to make my 2 youngest go [redacted] with him. He lost custody of our oldest 1.5 years ago due to GAL recommendations. I’ve been put into financial hardships from paying for attorneys, therapists, and other fees only for him to get away with the horrible things he’s done. They don’t care about families. They care about lining their pockets.",
+        "state": "KS",
+        "county": "Johnson County",
+        "row_id": "3731bd25-d63a-4a44-bc51-32ccb24008a1"
+      },
+      {
+        "body": "System was complicit in alienating my children from me. Attorneys, GAL's, a Case Manager, Therapists, Judges, KVC. I have spent well over $150,000 over a two year period of time only to have two of my 3 children go no contact. No abuse, no drugs or addiction problems. All of this over screens and permissive parenting.",
+        "state": "KS",
+        "county": "Johnson County",
+        "row_id": "87cd907e-3928-4f1c-8191-aacf997ed156"
+      },
+      {
+        "body": "It had destroyed my children's mental health and mine. My youngest has became suicidal, which is everyday.",
+        "state": "KS",
+        "county": "Johnson County",
+        "row_id": "5743fc9c-b65d-4033-ab3f-1e711e67009d"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Ignored the domestic violence, Ignored the abuse that happened to my daughter that was done by her father, whom had charges in the same county. Ignored evidence. Allowed the derailing. Ignored that I had been a victim of domestic violence and all abuse done by the father many years and much more.",
@@ -70,11 +96,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/stephanie_goodenow",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='KS'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +112,22 @@
     "recommended_route": "/court-actors/ks/stephanie_goodenow/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Ignored evidence. Allowed the derailing. Ignored that I had been a victim of domestic violence and all abuse done by the father many years and much more.",
+        "kind": "comment"
+      },
+      {
+        "body": "She wouldn’t listen to me or my attorneys about the abuse, drugs, disregarded everything.",
+        "kind": "comment"
+      },
+      {
+        "body": "Inserted punitive orders against me without any evidence",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

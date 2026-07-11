@@ -12,12 +12,16 @@
     "court_or_county": "Danbury CT",
     "state": "Connecticut",
     "state_abbr": "CT",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "b6c0b4a3-d65c-4dad-a8a6-c2df5f5e30c6",
+      "b1e81090-d636-4d96-b980-00df89ed00a1",
+      "a64e3268-e30c-4eaf-bb27-1dd2e545475a"
+    ],
     "actor_row_id": "b6c0b4a3-d65c-4dad-a8a6-c2df5f5e30c6",
     "actor_bucket_key": null
   },
@@ -42,12 +46,31 @@
     "_pdf_state_family_count": 65,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Tarnished my favorable opinion of the court/justice system. My distrust is immeasurable and my belief of absolute corruption is steadfast. Both kids had to deal with the stress of alienation and displaced family.",
+        "state": "CT",
+        "county": "Fairfield",
+        "row_id": "06f5a5ba-6929-4c59-9f6c-eed0ce2bb361"
+      },
+      {
+        "body": "My son no longer speaks with my side of the family. The court set things up so my communication with our son was so limited. Then she selects a therapist who doesn't use me for onboarding our son, refused to speak with me the first 3 months of therapy, includes my ex in therapy and never me, then terminates care, blaming me for his issues. My ex was given what she originally intended with a complicit court, to erase my son's father and his family from his life.",
+        "state": "CT",
+        "county": "Fairfield",
+        "row_id": "d5ea6a6b-70b8-4176-ac2d-c877e9c370d2"
+      },
+      {
+        "body": "The system cost my children a mother, grandmother, cousins, and a future surrounded by people who loved them. Instead, they were left with anger, division, and loss.",
+        "state": "CT",
+        "county": "Fairfield",
+        "row_id": "9aae4d3d-c94e-434d-bd39-1741a02f27cf"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Delayed reunification, taking in to account ex-parte statements and used off the record statements made by defense council and GAL, as facts without myself present, nor any sworn testimony from myself/petitioner. (She is now retired)",
@@ -70,11 +93,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/heidi_winslow",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='CT'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +109,22 @@
     "recommended_route": "/court-actors/ct/heidi_winslow/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "(She is now retired)",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored my son and my rights. She is now retired. I filed the appropriate paperwork for a complaint in a timely manner, yet they denied my request.",
+        "kind": "comment"
+      },
+      {
+        "body": "She gave the father full custody and the right to decide my visitation after saying it was a tragedy that the children allegedly did not want to see me.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

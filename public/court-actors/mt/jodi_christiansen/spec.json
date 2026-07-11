@@ -12,12 +12,16 @@
     "court_or_county": "Flathead County",
     "state": "Montana",
     "state_abbr": "MT",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "3bcea224-4705-4495-82bc-0a3bb84a90dc",
+      "0cda1d77-86cd-48de-8087-2a3d5d87ec45",
+      "ea693500-63fc-4001-90db-7ed5130e0d55"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
@@ -42,12 +46,31 @@
     "_pdf_state_family_count": 56,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Our nephews and niece have been removed from our care, and placed back into an extremely abusive home. Lots of new allegations of abuse.",
+        "state": "MT",
+        "county": "Flathead",
+        "row_id": "a24a81cb-b146-49a8-99ec-f9fa0003ba28"
+      },
+      {
+        "body": "We are in constant worry mode for the safety of the children.",
+        "state": "MT",
+        "county": "Flathead",
+        "row_id": "d2151ba0-6fd5-497e-ba18-f07168f156cf"
+      },
+      {
+        "body": "Jodi should be fired for all she has done to children.",
+        "state": "MT",
+        "county": "Flathead",
+        "row_id": "0cd566bf-5afc-4992-a299-25f362c6e1c2"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Ahe is the cps supervisor. She neglects to supervise. She lets all the workers under her play God and just goes along with it.",
@@ -70,11 +93,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/jodi_christiansen",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='MT'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +109,22 @@
     "recommended_route": "/court-actors/mt/jodi_christiansen/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Ahe is the cps supervisor. She neglects to supervise. She lets all the workers under her play God and just goes along with it.",
+        "kind": "comment"
+      },
+      {
+        "body": "Cps supervisor. Lets all the workers under her go rogue and do what they want. Will not return calls.",
+        "kind": "comment"
+      },
+      {
+        "body": "She is the CPS supervisor she allows the people under her to go rogue and do whatever they want.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

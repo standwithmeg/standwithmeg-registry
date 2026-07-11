@@ -12,12 +12,18 @@
     "court_or_county": "Pasco",
     "state": "Florida",
     "state_abbr": "FL",
-    "mention_count": 0,
+    "mention_count": 5,
     "family_count": 4,
     "public_family_count": 4,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 5,
+    "supabase_row_ids": [
+      "f657d59e-2b25-4620-bc99-4d95867644e0",
+      "a4c926c9-2409-4b42-adff-cbdef37adbfa",
+      "eacabcc4-1345-472c-8ba3-a8b87d98f9e8",
+      "81b5c8aa-108f-415b-ad5f-27d9505069bc",
+      "0c3b73e5-6969-4b4c-b6da-f0ed635f3e68"
+    ],
     "actor_row_id": "f657d59e-2b25-4620-bc99-4d95867644e0",
     "actor_bucket_key": null
   },
@@ -42,12 +48,37 @@
     "_pdf_state_family_count": 306,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 5,
+    "actor_report_count": 5,
     "family_count": 4,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "The system destroyed my 2 childrens’ lives. One sibling was reunified with the abusive father who had abandoned him since birth, the other was adopted out. The kids lived together with me, the grandmother, for 2 years before the final crushing blows",
+        "state": "FL",
+        "county": "Pasco",
+        "row_id": "70723331-d355-4ec8-adc6-df05125f346a"
+      },
+      {
+        "body": "Case was sealed on day of first appearance",
+        "state": "FL",
+        "county": "Pasco",
+        "row_id": "d183969d-fa2b-4a1a-bbac-0eb9ae0eb697"
+      },
+      {
+        "body": "The system destroyed four people who had never done a single thing wrong and who were just trying to live their life happily and together. All evidence was ignored, assumptions were made, and it destroyed us completely. There was not a single shred of evidence anywhere that would even imply that we would hurt our children and it was ignored, and We went from a happy family in a good neighborhood with great friends and family to absolutely nothing.",
+        "state": "FL",
+        "county": "Pasco",
+        "row_id": "7b9d0a22-b2b1-47b1-87dd-d6d515a838d6"
+      },
+      {
+        "body": "When they walked into my life this last time I had Recently married my boyfriend from when I was 16 years old, we had three kids. We lived across the street from his parents. We had a new pick up truck . We needed help with housing upgrades and communication and some other things but, my husband is now in prison and has been 2 years, my children have never gotten to open presents together on Christmas morning let alone other millions of missed connections, love and quality time. my daughter was in an incident and when I finally got a call from the abuse hotline about the incident the stories were different. They even lied about the date the incident happened and told me it was normal curiosity!!!!!! My baby was only 5 years old he is 13 years old!!!! And I told my judge and everyone I spoke to for 2 years that something was wrong with my daughter and I was told to shut up and stop putting ideas in her head!!!! I knew something was wrong with my baby! I want them back.",
+        "state": "FL",
+        "county": "Pasco",
+        "row_id": "52f1a4a7-f224-4b60-95bb-92581cef9934"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "This judge does not care about evidence and played around on her notebook while we testified. Ignored all evidence we presented. Multiple witnesses speaking on our behalf were ignored while she made jokes with the opposing council. She acknowledged during trial I had done nothing wrong and still terminated my rights. She ignored several times I presented proof that the state had lied to her during hearings and didn't want to hear it. She failed to get my son adequate mental health help despite me asking for almost a year in every single hearing. He made comments about how we were going to lose before the trial was even over. She ignored a nationally renowned children's orthopedic specialists and decided to believe a radiologist with a tenth of the experience of the doctor that we had testifying on our behalf. She visibly rolled her eyes every single time somebody said something positive about us. The only single social worker that ever interacted with us ended up testifying on our behalf and she rolled her eyes the entire time he talked. She placed my children with my brother who is a sexual predator self-confessed and I begged her not to because it was dangerous and she did not care. She refused to get genetic testing on my daughter even when I begged. She is the absolute picture of corruption and all you have to do is look at our closing arguments versus her ruling. The document is unprofessional, scathing, and ignores every shred of tangible evidence we presented.",
@@ -76,11 +107,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/lauralee_ganson_westine",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='FL'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -96,6 +123,26 @@
     "recommended_route": "/court-actors/fl/lauralee_ganson_westine/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Ignored several times I presented proof that the state had lied to her during hearings",
+        "kind": "comment"
+      },
+      {
+        "body": "Refused to listen to anything I had to say she told me to shut up",
+        "kind": "comment"
+      },
+      {
+        "body": "Called an Evidentiary Hearing Sua Sponte",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored evidence, etc",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

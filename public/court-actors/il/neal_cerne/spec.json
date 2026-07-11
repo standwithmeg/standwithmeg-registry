@@ -12,12 +12,17 @@
     "court_or_county": "DuPage County 18th Judicial Circuit",
     "state": "Illinois",
     "state_abbr": "IL",
-    "mention_count": 0,
+    "mention_count": 4,
     "family_count": 4,
     "public_family_count": 4,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "22804beb-5591-4709-8ed3-8af74fe84767",
+      "362b44a1-fcbc-4946-a70c-fa24c3b5e0b7",
+      "29da0547-4b6d-43f0-8a0e-01b2602e630f",
+      "f7cc7473-a8dc-4c83-8c1c-0d28646cc3b1"
+    ],
     "actor_row_id": "22804beb-5591-4709-8ed3-8af74fe84767",
     "actor_bucket_key": null
   },
@@ -29,12 +34,12 @@
   "state_stats": {
     "families_approved": 113,
     "total_submissions": 150,
-    "avg_financial_loss": 220843.1,
+    "avg_financial_loss": 219529.23,
     "avg_months_lost": 28.0,
     "_source_table": "movement_stats_by_state",
     "_match_value": "IL",
     "state_family_count": 150,
-    "median_financial_loss": 129500,
+    "median_financial_loss": 126875,
     "median_burden_sample_size": 92,
     "median_months_lost": 15,
     "pro_se_pct": 48.7,
@@ -42,12 +47,37 @@
     "_pdf_state_family_count": 150,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 4,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "I have been a victim of ongoing domestic violence and financial abuse since 2023, which was facilitated by four DuPage County family court judges. Today this is happening to me. Tomorrow, it could happen to you or someone you love seeking protection under the law.",
+        "state": "IL",
+        "county": "DuPage County",
+        "row_id": "97aa89c1-a71c-4ae4-99fa-f3fdf5227c67"
+      },
+      {
+        "body": "This traumatized my family because my daughter was punished for speaking up about abuse and I was punished for protecting her.",
+        "state": "IL",
+        "county": "Kane",
+        "row_id": "c9db9d30-dbc3-4cd6-9fab-1b20278b5b03"
+      },
+      {
+        "body": "The family court ecosystem specifically provided over by the second judge in my dissolution, deprive me of my peace, my joy, my health, my reputation, my assets, my stability, my future. I got my kids back on my own.",
+        "state": "IL",
+        "county": "DuPage County",
+        "row_id": "ef85c30c-5dff-4bc9-8815-7a94db1477da"
+      },
+      {
+        "body": "A judge suspended all of my parenting time with my son, relief no one asked for, despite every single evaluator opposing restriction, no finding of endangerment, and a written order acknowledging my conduct didn’t warrant professional intervention; my child was taken not because I failed him, but because a system with no accountability decided it could.",
+        "state": "IL",
+        "county": "DuPage",
+        "row_id": "04f27b0c-2bb7-4e27-b96c-116b88a2e587"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Violated my ADA Rights under Title II. Knowingly accepted my spouse's fraudulent financial affidavits, Ex-parte collusion to refuse to reinstate the financial status quo after Madison unlawfully took sole control over millions of dollars of my assets, leaving me penniless. Collusion refusal to enforce all financial protective orders on dissipation of over $700,000 within months by Madison while the court facilitated domestic violence against me, and more. Colluded in a scheme to divert the possession of my home and it equity to a third party. Facilitated my spouse in stealing $5,000,000 in crypto currency and other assets, forcing me to rely on welfare. Facilitated my spouse in depriving me of health care and medical treatment.",
@@ -76,11 +106,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/neal_cerne",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='IL'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -96,6 +122,26 @@
     "recommended_route": "/court-actors/il/neal_cerne/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Took sole control over millions of dollars of my assets",
+        "kind": "comment"
+      },
+      {
+        "body": "Suspended all Father’s parenting time sua sponte, relief no party requested.",
+        "kind": "comment"
+      },
+      {
+        "body": "Basically refused anything that would prove my case",
+        "kind": "comment"
+      },
+      {
+        "body": "Denied an order of protection my teenage daughter filed against her father after there was substantial…",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

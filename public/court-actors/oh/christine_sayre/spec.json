@@ -12,12 +12,18 @@
     "court_or_county": "Stark",
     "state": "Ohio",
     "state_abbr": "OH",
-    "mention_count": 0,
+    "mention_count": 5,
     "family_count": 4,
     "public_family_count": 4,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 5,
+    "supabase_row_ids": [
+      "a146b80a-4dcd-47aa-ac46-5331ba219310",
+      "ee40ef06-9447-4847-a97a-61ac56cd9647",
+      "46a135ee-2512-48ca-8754-095121ca2261",
+      "c33f7b1c-d090-496f-9047-bf8d447b084f",
+      "0acfa246-ac25-4370-8534-fd6686a1d01a"
+    ],
     "actor_row_id": "a146b80a-4dcd-47aa-ac46-5331ba219310",
     "actor_bucket_key": null
   },
@@ -42,12 +48,31 @@
     "_pdf_state_family_count": 264,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 5,
+    "actor_report_count": 5,
     "family_count": 4,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "The system has gaslighted my children just as their abuser has, dismissed abuse repeatedly to the point of betrayal, and minimized the years of single parenting under coercive control I have survived. The court has belittled my children and I in the most damaging ways.",
+        "state": "OH",
+        "county": "Stark",
+        "row_id": "81e34b48-b8e0-4e0c-9de6-465686f3e37f"
+      },
+      {
+        "body": "Family Court is the battlefield of psychological warfare. They are causing lifetime traumas with no accountability or oversight!",
+        "state": "OH",
+        "county": "Stark",
+        "row_id": "90797f86-ad03-492c-897e-8f59ad0cbc54"
+      },
+      {
+        "body": "Took my 4 children from a mother they all 4 testified to stay with in an in-camera interview-to retaliate, the court covered it up as MOOT and said I coached OLDER TEENAGERS and SEALED THE DOCKET to cover it up. They allow dad to get away with murder while forcing me to take punishments for lies and false allegations that have never been proven! Dad has a DV record and a diagnosed personality disorder and allowed him to commit felonies while I remain childless. This is damaging my kids and confusing them. It is beyond criminal and illegal! Thank God for appeals but this judge purposely withholds cases so they don’t go to appellate court!",
+        "state": "OH",
+        "county": "Summit",
+        "row_id": "cbf138c8-7987-4ad2-9bca-1890c2024819"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Deemed an “expert” after 2 years of being a therapist. Has no idea what she is doing and Summit uses her findings as the bible, but she’s terrible! Had to have 4 others dispute her findings, including pros way above her, like psychiatry level! She believes in reunification camps and punishing children from rightfully turning away from abusive parents. She’s sick and has caused several moms in our county to lose custody for false findings.",
@@ -70,11 +95,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/christine_sayre",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='OH'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +111,22 @@
     "recommended_route": "/court-actors/oh/christine_sayre/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Deemed an “expert” after 2 years of being a therapist. Has no idea what she is doing and Summit uses her findings as the bible, but she’s terrible!",
+        "kind": "comment"
+      },
+      {
+        "body": "Recommended increased time and custody rights to father.",
+        "kind": "comment"
+      },
+      {
+        "body": "Just another actor protecting the system!",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

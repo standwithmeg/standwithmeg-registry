@@ -12,12 +12,14 @@
     "court_or_county": "Calhoun",
     "state": "MI",
     "state_abbr": "MI",
-    "mention_count": 0,
+    "mention_count": 1,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 1,
+    "supabase_row_ids": [
+      "2fd21470-0439-4bd5-a006-c787e430d702"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "marc croteau|MI"
   },
@@ -42,12 +44,19 @@
     "_pdf_state_family_count": 178,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 1,
+    "actor_report_count": 1,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "FOC has suppressed the relationship with my son with no care about his heart in the future.",
+        "state": "MI",
+        "county": "Calhoun",
+        "row_id": "c49f51da-f66b-46d1-b2d6-0972aa832855"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "He also took two cases at the same time, which was my girlfriend‘s case in my case a custody he didn’t recuse himself from one and he used my girlfriend‘s to coincide with my case.",
@@ -64,11 +73,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/marc_crotteau",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='MI'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -84,6 +89,18 @@
     "recommended_route": "/court-actors/mi/marc_crotteau/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "He also took two cases at the same time, which was my girlfriend‘s case in my case a custody he didn’t recuse himself from one and he used my girlfriend‘s to coincide with my case.",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored evidence, wrote my court order based on hearsay, labeling my partner a alcoholic with domestic violence tendencies even though we had his counselor testify on his sobriety.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

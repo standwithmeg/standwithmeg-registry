@@ -12,12 +12,19 @@
     "court_or_county": "Essex County",
     "state": "Massachusetts",
     "state_abbr": "MA",
-    "mention_count": 0,
+    "mention_count": 6,
     "family_count": 5,
     "public_family_count": 5,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 6,
+    "supabase_row_ids": [
+      "129be829-7ec9-419f-9cdc-0ec6e07b3fad",
+      "9602bcfe-ca64-48d4-b13d-375dc39cdd81",
+      "cc950e98-0f09-477b-bbaa-4c5e30f0274e",
+      "69902b58-ed90-4c0a-9f93-2bb953ab8c08",
+      "fbff5334-ec8d-4fb0-8afd-b2b18d0bc262",
+      "c5f8336d-c5f4-4630-9ba4-1ec3d822eb1d"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
@@ -42,12 +49,37 @@
     "_pdf_state_family_count": 106,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 6,
+    "actor_report_count": 6,
     "family_count": 5,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "The stress I deal with daily. I am a present, active father and spend outside of the court order child support. Which is $578 a week. Financial it crippling me. High credit card debt, etc. I cry most day because I lost my oldest kids and I feel like I could be losing my youngest soon. No one will look at the evidence of her false allegations. I feel like a criminal and prisoner in my own life.",
+        "state": "MA",
+        "county": "Essex",
+        "row_id": "88e9f8d2-b4ba-41c1-8de7-12538b61b579"
+      },
+      {
+        "body": "When a parent feels unheard in Court, the loss isn’t measured in legal orders-it’s measured in missed birthdays, unanswered messages, and years you never get back.. decisions I believed were shaped by false allegations in narratives, I could not overcome.",
+        "state": "MA",
+        "county": "Essex",
+        "row_id": "13a5b0eb-5064-4575-8aae-85d01fe7b375"
+      },
+      {
+        "body": "Stripped us of everything in order to keep us stuck in the legal system game",
+        "state": "MA",
+        "county": "Essex County",
+        "row_id": "18c15191-3bd4-45f5-ab7f-3325e005d07a"
+      },
+      {
+        "body": "\"To give you an idea of what the last two years have looked like for me:Total Financial Loss: Lost my career and all savings due to false allegations.Restricted Contact: My relationship with my 3-year-old son is limited to video calls that are intentionally ended within seconds.Severed Bonds: My older children have been completely cut out of their brother's life.Constant Erasure: Every step forward is met with more of my rights and my family being stripped away.",
+        "state": "MA",
+        "county": "Essex",
+        "row_id": "f123c8f9-62a3-4ab4-9b2e-e7acf216a97e"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "On 01/2024 when I first filed the contempt , She found my son’s father in contempt and said he had to return him for parenting time. She ordered me to start therapy becauee they were saying that I wanted to kill my children etc. then she said I’ll see you back in court in a month. So we went back and we were supposed to see her that day. I was handed a complaint for contempt and modification in custody by my son’s father’s attorney. I told the clerk I wanted to continue the contempt hearing that day because I now felt uncomfortable about all these lies and false accusations against me that I was just given by the other party. They refused to allow me to reschedule and on top of that they waited until almost 4pm when the court was about to close to have us called. When we got to the courtroom. Judge Giordano supposedly had to leave right at 4 for a family emergency. So we had judge Manisha Bhatt who has never presided over a hearing as a judge until this day when the court was about to close(keeping in mind I asked for a continuance so I could obtain counsel around 9am that morning and sat there the entire day after being told NO! Judge Bhatt was just nominated in December 2023 and she was now making this huge life changing decision for my case which ruined my world. She again wouldn’t let me continue the case and I asked her and told her I needed an attorney because they’re now accusing me of things that are not true. She didn’t care and proceeded with the contempt hearing. She overruled judge Giordanos findings that dad was in contempt and she said now he’s not in contempt and here we are 28 months later and I’ve never had parenting time with my son. He was just erased from our lives in a blink of an eye. I’m not even sure she was legally allowed to to rule on my care. She was in the court room that entire day sitting with judge Giordano and she was training. I don’t know how things like this are allowed to happen.",
@@ -76,11 +108,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/frances_m_giordano",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='MA'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -96,6 +124,26 @@
     "recommended_route": "/court-actors/ma/frances_m_giordano/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "When we got to the courtroom. Judge Giordano supposedly had to leave right at 4 for a family emergency.",
+        "kind": "comment"
+      },
+      {
+        "body": "Denied motions rushed to judgment told me that she doesn’t care what’s happened in the criminal court",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored evidence and decided to rule on false allegations. Lost time with children.",
+        "kind": "comment"
+      },
+      {
+        "body": "Evidence and testimony was ignored by the judge",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

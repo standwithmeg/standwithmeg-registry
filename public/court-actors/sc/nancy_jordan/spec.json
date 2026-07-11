@@ -12,12 +12,16 @@
     "court_or_county": "Lexington",
     "state": "South Carolina",
     "state_abbr": "SC",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "f7beb173-8e60-4cf3-9902-53b5afa8cf85",
+      "0afc8c7b-e556-4323-86e6-6eda065b8ee5",
+      "f847115d-35c8-4edb-9f0e-3de30ed19bd4"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "nancy jordan|SC"
   },
@@ -42,12 +46,25 @@
     "_pdf_state_family_count": 108,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Richland Family Court is a chess board of paid players and you are a pawn. They bring in more actors at your expense (for no justified reason), prolonging the game and padding their \"friends\" pockets. It's sad, abusive, and has damaged my children and me financially and emotionally.",
+        "state": "SC",
+        "county": "Richland",
+        "row_id": "b9a60e20-9364-4133-8d13-f9400c321077"
+      },
+      {
+        "body": "Permanent irreparable damage to my kids- homelessness three times, constant terror, bankruptcy two times, unspeakable horrors and losses. The abuser called all the shots and those of us that tried to advocate for the child- mom, therapist and child themselves- all lost everything and were discredited. Hold them accountable",
+        "state": "SC",
+        "county": "Lexington",
+        "row_id": "3b78bc02-a7e9-4656-9540-13b3360604bd"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Clear bias to father despite clear evidence she ignored and made her opinion known that she favored him and didn’t care for mom- not factual just opinion. She spent little time with kids.",
@@ -64,11 +81,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/nancy_jordan",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='SC'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -84,6 +97,18 @@
     "recommended_route": "/court-actors/sc/nancy_jordan/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Clear bias to father despite clear evidence she ignored and made her opinion known that she favored him and didn’t care for mom- not factual just opinion. She spent little time with kids.",
+        "kind": "comment"
+      },
+      {
+        "body": "Did not believe children despite forensic interview confirming domestic violence",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

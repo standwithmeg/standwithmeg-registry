@@ -12,12 +12,17 @@
     "court_or_county": "Dallas",
     "state": "Texas",
     "state_abbr": "TX",
-    "mention_count": 0,
+    "mention_count": 4,
     "family_count": 4,
     "public_family_count": 4,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "cd41de62-14b5-4e4e-97ed-a01aa345eb63",
+      "4a4f8de4-dc8e-4921-be90-cf11d3076bc4",
+      "1848a550-173a-455a-88ff-deec6e5df839",
+      "f9e95755-3ce2-41c4-81a2-a17f763db869"
+    ],
     "actor_row_id": "cd41de62-14b5-4e4e-97ed-a01aa345eb63",
     "actor_bucket_key": "jean lee|TX"
   },
@@ -27,27 +32,46 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 250,
-    "total_submissions": 315,
-    "avg_financial_loss": 229240.77,
-    "avg_months_lost": 32.1,
+    "families_approved": 251,
+    "total_submissions": 316,
+    "avg_financial_loss": 228661.33,
+    "avg_months_lost": 32.0,
     "_source_table": "movement_stats_by_state",
     "_match_value": "TX",
-    "state_family_count": 315,
-    "median_financial_loss": 118900,
-    "median_burden_sample_size": 149,
-    "median_months_lost": 20,
-    "pro_se_pct": 49.8,
-    "pro_se_count": 157,
-    "_pdf_state_family_count": 315,
+    "state_family_count": 316,
+    "median_financial_loss": 117950,
+    "median_burden_sample_size": 150,
+    "median_months_lost": 19,
+    "pro_se_pct": 50.0,
+    "pro_se_count": 158,
+    "_pdf_state_family_count": 316,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 4,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Hoffnagle",
+        "state": "TX",
+        "county": "Dallas",
+        "row_id": "76051672-c47c-4c44-be87-d631a7fd2c33"
+      },
+      {
+        "body": "My ex husband is an abusive child and adolescent psychiatrist who physically abused our children, gaslight me for years, drugged me and and the kids to mask our trauma, and attempted to kidnap the children twice. The first time he used false claims and a restraining order and I got them back. He failed at sending the boys to wilderness camp, he was restricted to therapeutic visitation due to physical abuse of the children, numerous children and times, including severe strangulation. He deceptively worked with all the therapists and attorneys to take them to a 4 day reunification camp and never returned them and without due process or proper service or hearing, blocking my rights, he then got full conservatorship of all four children and removed and erased me from their lives with no rationale, cause or without any evidence. He did this to hide the abuse that was with the DAs office and to brainwash the children. He is also the child psychiatrist who does this to numerous other families all over, with the same pattern of abuse, and with overprescribing of medications to harm children and families.",
+        "state": "TX",
+        "county": "Dallas County",
+        "row_id": "865f7a32-05e8-4e82-87e1-95681efa93db"
+      },
+      {
+        "body": "It has broken my family. It is broken my spirit. Almost led me to suicide",
+        "state": "TX",
+        "county": "Dallas",
+        "row_id": "ba7022bb-9113-479e-9b6b-9a454c1ee406"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Jean Lee was the judge who ordered my children to a reunification camp and then after the 45 days of no contact, she extend it to \"indefinite.\" She did not follow up on the two week reporting stated that was required of the reunification therapist named Ellen Hutton for any accountability. She allowed the children to be taken via transporter to a camp led by Lisa Rothfus out of town, where they were forced, threatened with psychiatric hospitalization if they did not go with transporter and then extended their time away from their mother for the rest of their lives. She ruins families by giving children to their abuser, and commits fraud with child support payments, allowing them to be re-routed to pay the children's therapists instead of actual care for the children at home. She is a villian and not to be trusted. She stole my children's childhood which can never be returned.",
@@ -64,11 +88,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/jean_lee",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='TX'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -84,6 +104,18 @@
     "recommended_route": "/court-actors/tx/jean_lee/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "She allowed the children to be taken via transporter to a camp led by Lisa Rothfus out of town, where they were forced, threatened with psychiatric hospitalization if they did not go with transporter.",
+        "kind": "comment"
+      },
+      {
+        "body": "Judge was listening to YouTube and music played out while I was testifying. Judge allowed claims of abuse with no evidence. Judge used her personal opinions over evidence presented",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

@@ -12,12 +12,23 @@
     "court_or_county": "Highland",
     "state": "Ohio",
     "state_abbr": "OH",
-    "mention_count": 0,
+    "mention_count": 10,
     "family_count": 8,
     "public_family_count": 8,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 10,
+    "supabase_row_ids": [
+      "f91d83ec-f75a-42b4-bf45-e7ef4f31e52a",
+      "ec9fb17b-d001-436c-be4a-3ef2c50ea959",
+      "91d538c8-9a85-4a0a-909c-7a592a3c33b7",
+      "0b5a0697-6a05-48b7-8851-b0b765440e5e",
+      "311a49cd-8965-452f-b71b-f83c03ec0205",
+      "d0bc8b2c-33f7-44a9-a1ab-a0d37502f8d0",
+      "a156ed04-c2ca-443f-9bea-7bfb498323ba",
+      "f9abaf89-f846-4376-b35e-52aefdd5ea4e",
+      "f0fa47ac-4490-4f60-a0ef-04ca70bcb8ae",
+      "161c01c8-598c-4887-a6f5-b0f54e7d550c"
+    ],
     "actor_row_id": "f91d83ec-f75a-42b4-bf45-e7ef4f31e52a",
     "actor_bucket_key": "kevin grer|OH"
   },
@@ -42,12 +53,49 @@
     "_pdf_state_family_count": 264,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 10,
+    "actor_report_count": 10,
     "family_count": 8,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Highland County is corrupt and has their minds made up before court even takes place. i’ve lost three years on my sons life, growth, milestones and a bond for all that time.",
+        "state": "OH",
+        "county": "highland county",
+        "row_id": "2da29dc8-981f-4964-96ad-10318b91dbb7"
+      },
+      {
+        "body": "The system ripped my family apart. Broke our unity, our circle, caused major anxiety problems, behavior issues and cost the respect my oldest son had for me. He idolized me and now he doesnt respect me,he has been brainwashed my the system and his father whom they gave full custody to because of this last wrongful accusation. Has cause me so much emotional guilt and pain from not having my children with me,the pain of having your infants taken from your arms is the worst pain a mother can have. My children have separation issues and I have major PTSD even from the door being knocked on. It has destroyed our family.",
+        "state": "OH",
+        "county": "Highland",
+        "row_id": "92533d98-ca96-4eac-8521-9e7fc2b1df11"
+      },
+      {
+        "body": "Tore my family apart is currently still causing ptsd pain sadness my kids are brainwashed anxiety depression stresses",
+        "state": "OH",
+        "county": "Highland",
+        "row_id": "c138a12c-344c-4b00-ad24-a22b485715c3"
+      },
+      {
+        "body": "Denied motion and ignored evidence!! None of them did their job they made up everything. The judge didn’t want to listen to us whatsoever that we gave him evidence and they didn’t show him any evidence and that he ruled with them over us. He delayed hearings gave them more time biased, he didn’t sign half of his records he had to click record sign it things like that you can put well. She really really wasn’t on our case that much it was mainly James he was the one he was his assistant prosecutor. They have kept me away from my daughter since she was born. Have false documents and have been proven but no one will listen to me. Please help me!!!!",
+        "state": "OH",
+        "county": "Highland county",
+        "row_id": "93b9ae0f-56b2-4e79-ab9c-427da47455a6"
+      },
+      {
+        "body": "This system has lied and tore my family apart causing emotional damage",
+        "state": "OH",
+        "county": "Highland county",
+        "row_id": "6caec907-d638-46ce-ac09-9cde3975ad8e"
+      },
+      {
+        "body": "The system has destroyed my entire family and when I asked the corrupt judge greer to tell me why, he simply told me he don't have to explain why he made the decision to terminate my rights. Let that sink in....",
+        "state": "OH",
+        "county": "HIGHLAND",
+        "row_id": "899c1aec-eb22-48b6-91a7-613a0f0bb684"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Denied motion and ignored evidence!! None of them did their job they made up everything. The judge didn’t want to listen to us whatsoever that we gave him evidence and they didn’t show him any evidence and that he ruled with them over us. He delayed hearings gave them more time biased, he didn’t sign half of his records he had to click record sign it things like that you can put well. She really really wasn’t on our case that much it was mainly James he was the one he was his assistant prosecutor. Please help me!!!!",
@@ -94,11 +142,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/kevin_greer",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='OH'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -114,6 +158,34 @@
     "recommended_route": "/court-actors/oh/kevin_greer/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Denied motion and ignored evidence!!",
+        "kind": "comment"
+      },
+      {
+        "body": "He still decided to go with them.",
+        "kind": "comment"
+      },
+      {
+        "body": "My attorney evidence, assumed my side was lying no matter the statements",
+        "kind": "comment"
+      },
+      {
+        "body": "Judge refuse evidences would not allow me to speak other then yes or no didnt want…",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored my evidence and motions filed throughout case, terminating my rights.",
+        "kind": "comment"
+      },
+      {
+        "body": "Denied motion, ignored evidence",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

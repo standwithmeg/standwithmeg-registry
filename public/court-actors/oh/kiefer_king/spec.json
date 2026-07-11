@@ -12,12 +12,16 @@
     "court_or_county": "Miami",
     "state": "Ohio",
     "state_abbr": "OH",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "01ad5e65-7712-4bd4-ae93-f345b447103b",
+      "538f6e50-9cba-43d3-9c7b-63418641f4d1",
+      "dd1595a0-00ad-437b-b5e4-59c5f0065075"
+    ],
     "actor_row_id": "01ad5e65-7712-4bd4-ae93-f345b447103b",
     "actor_bucket_key": "kiefer king|OH"
   },
@@ -42,12 +46,31 @@
     "_pdf_state_family_count": 264,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Lost time and crucial relationship with my kids and has destroyed my reputation with anyone in this town or County and made me lose a job due to the pressure",
+        "state": "OH",
+        "county": "Shelby",
+        "row_id": "5321231e-69de-4e1c-98ce-43ec25e6c261"
+      },
+      {
+        "body": "Removed valuable time with my children and broken their mental health and mine, caused more problems than i had in the abusive marriage",
+        "state": "OH",
+        "county": "Shelby",
+        "row_id": "a52dab93-1163-49d4-abcd-8433c5a4c696"
+      },
+      {
+        "body": "This system is a joke. They gave custody of my son to a man actively under investigation for molesting a minor and who admitted on the stand to 3 felonies and having a child porn problem.",
+        "state": "OH",
+        "county": "Shelby",
+        "row_id": "ceee542e-f3aa-440a-a450-ec1975f5f07e"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Admitted in open court to not accurately reporting his time spent with the Plaintiff so things would appear more even. Admitted to taking the expert advice from a witness and claiming her to be an expert witness even though evidence was shown the person was not who they said they were (posing as a therapist but unlicensed and practicing without a license)",
@@ -70,11 +93,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/kiefer_king",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='OH'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +109,22 @@
     "recommended_route": "/court-actors/oh/kiefer_king/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Admitted to taking the expert advice from a witness and claiming her to be an expert witness.",
+        "kind": "comment"
+      },
+      {
+        "body": "Failed to file things in time, spent more time with the other party, refused to do research and accepted false statements about medical diagnoses to make me look bad",
+        "kind": "comment"
+      },
+      {
+        "body": "Biased time spent with opposing party and misquoted me in report",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

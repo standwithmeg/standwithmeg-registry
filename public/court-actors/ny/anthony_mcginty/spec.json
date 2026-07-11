@@ -12,12 +12,16 @@
     "court_or_county": "Ulster County Family Court",
     "state": "New York",
     "state_abbr": "NY",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "989d2769-55d1-4f0e-a5b7-cc3329c138c8",
+      "76955f86-4143-4341-8a52-8959acc7f240",
+      "37cab105-a3bd-4ee7-8baf-9baba34b6ab8"
+    ],
     "actor_row_id": "989d2769-55d1-4f0e-a5b7-cc3329c138c8",
     "actor_bucket_key": "anthony mcginty|NY",
     "_overrides_applied": [
@@ -50,12 +54,25 @@
     "_pdf_state_family_count": 173,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Family Court allowed court players to fabricate information about me that affected my professional reputation and standing in the community. I have spent thousands of dollars during this ordeal and my children and myself have endured unnecessary emotional trauma.",
+        "state": "NY",
+        "county": "Ulster",
+        "row_id": "03f5c749-6475-435c-9f1c-1c98b50e0459"
+      },
+      {
+        "body": "This court ignored facts, perpetuated FRAUD, conspired to deprive me and my children of life, liberty, justice and our assets, while the stalking and abuse continue.",
+        "state": "NY",
+        "county": "Sullivan County",
+        "row_id": "928f52a3-24b9-405c-8c4f-4802cf224646"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "During my year long trial my lawyer and myself begged for reunification therapy for me and my children. Prior to trial I had already been alienated for almost a year. During the entire trial when asked for reunification, he said he would not make any decisions about therapy until all evidence was presented. Following the trial, I waited seven additional months for a trial decision. The decision allowed me to being reunification therapy with my kids.",
@@ -72,11 +89,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/anthony_mcginty",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='NY'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -92,6 +105,18 @@
     "recommended_route": "/court-actors/ny/anthony_mcginty/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "During my year long trial my lawyer and myself begged for reunification therapy for me and my children. Prior to trial I had already been alienated for almost a year.",
+        "kind": "comment"
+      },
+      {
+        "body": "No due process, advocates and writes his opinion as fact, referred opposing counsel to refer to supreme court and \"talk to them\" about it!!- avoiding evidence",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

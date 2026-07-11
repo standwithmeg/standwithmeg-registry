@@ -12,12 +12,18 @@
     "court_or_county": "Fairfield County",
     "state": "Connecticut",
     "state_abbr": "CT",
-    "mention_count": 0,
+    "mention_count": 5,
     "family_count": 5,
     "public_family_count": 5,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 5,
+    "supabase_row_ids": [
+      "fda4dd96-a524-49b9-8e47-bb5182c4994f",
+      "242522eb-8d5d-43d0-9aa7-b58ab14b3ad5",
+      "7ebd68fd-ddca-4388-967e-f8bbda723200",
+      "6ae012de-5573-4ae3-a392-0dcdb6be745f",
+      "91b9b2bf-90b8-410f-a2ef-f73a6828ba0d"
+    ],
     "actor_row_id": "fda4dd96-a524-49b9-8e47-bb5182c4994f",
     "actor_bucket_key": null
   },
@@ -42,12 +48,31 @@
     "_pdf_state_family_count": 65,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 5,
+    "actor_report_count": 5,
     "family_count": 5,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "The Family Court allowed all my assets to be lost without any concern to the financial and emotional damage done to myself and my child.",
+        "state": "CT",
+        "county": "Fairfield County",
+        "row_id": "6d23739e-f481-452c-9016-fb1c3173e649"
+      },
+      {
+        "body": "The family court allowed fraudulent “experts” and then ignored the recommendations of legitimate experts hiding behind the shield of judicial immunity and playing a congeniality game with people’s lives.",
+        "state": "CT",
+        "county": "Fairfield",
+        "row_id": "60741b2a-b2aa-4252-b450-df5e75e38afa"
+      },
+      {
+        "body": "The judges in family court abuse judicial immunity to make decisions “at their own discretion” against the advice of experts and even legal statutes. If you aren’t the one they “like” they simply destroy your life and your children’s.",
+        "state": "CT",
+        "county": "Fairfield",
+        "row_id": "52d80440-6ed9-44b5-95f3-3804e3d37264"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Blatantly violated attorney/client privilege to provide the other counsel with private information going against her own client",
@@ -70,11 +95,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/heidi_opinsky",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='CT'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +111,22 @@
     "recommended_route": "/court-actors/ct/heidi_opinsky/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Blatantly violated attorney/client privilege to provide the other counsel with private information going against her own client",
+        "kind": "comment"
+      },
+      {
+        "body": "Played favorites with GALs and attorneys in opposition of her client or the children to gain connections",
+        "kind": "comment"
+      },
+      {
+        "body": "Forced me into settlement arrangements to better her career with threats",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

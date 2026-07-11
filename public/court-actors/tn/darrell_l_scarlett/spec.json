@@ -12,12 +12,16 @@
     "court_or_county": "Rutherford County",
     "state": "Tennessee",
     "state_abbr": "TN",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "1f8db8ae-3d8a-4fb4-a33a-207462795fc8",
+      "a4da524d-5a6e-4041-9ffe-081c84e79bb5",
+      "d7d42871-4e85-49e1-941d-2bac4bb63b5f"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "darel scarlet|TN"
   },
@@ -42,12 +46,31 @@
     "_pdf_state_family_count": 123,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Panic disorder for me, son hurt himself many times, he overworked my son with excessive exercise",
+        "state": "TN",
+        "county": "Rutherford",
+        "row_id": "86e8c62f-c5f0-4b95-9d1e-16e31257c0aa"
+      },
+      {
+        "body": "I went to the court trusting they would help my children and I. They have made it exponentially worse making me regret not fleeing instead.",
+        "state": "TN",
+        "county": "Rutherford",
+        "row_id": "e7ee8bfa-72df-46fd-811f-8d3da8d5ff35"
+      },
+      {
+        "body": "Strode",
+        "state": "TN",
+        "county": "Rutherford",
+        "row_id": "584f720a-c43f-41ea-9488-9dad19b3d136"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Shortly presided after judge #2 recusal (Atwood). He was aware of corruption and refused to address it. He is also a judge mentioned in \"Charlotte's Story\" of the book Framed.",
@@ -70,11 +93,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/darrell_l_scarlett",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='TN'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +109,22 @@
     "recommended_route": "/court-actors/tn/darrell_l_scarlett/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Shortly presided after judge #2 recusal (Atwood). He was aware of corruption and refused to address it.",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored evidence, prolonged reunification which caused estrangement",
+        "kind": "comment"
+      },
+      {
+        "body": "Denied a motion for a protective order",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

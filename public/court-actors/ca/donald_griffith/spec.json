@@ -12,12 +12,17 @@
     "court_or_county": "Kern",
     "state": "California",
     "state_abbr": "CA",
-    "mention_count": 0,
+    "mention_count": 4,
     "family_count": 4,
     "public_family_count": 4,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "6b0faaac-5290-4f43-9697-2266e8ac11e5",
+      "78d339ce-48d0-498c-b1f6-7904461b0e68",
+      "f0acaab3-1bfd-4f7f-a59b-077c76181172",
+      "daf66b0f-d348-420d-8bdc-9b2158224cbd"
+    ],
     "actor_row_id": "6b0faaac-5290-4f43-9697-2266e8ac11e5",
     "actor_bucket_key": "donald grifith|CA"
   },
@@ -27,27 +32,52 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 357,
-    "total_submissions": 444,
-    "avg_financial_loss": 285669.87,
+    "families_approved": 359,
+    "total_submissions": 446,
+    "avg_financial_loss": 285125.16,
     "avg_months_lost": 35.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CA",
-    "state_family_count": 444,
-    "median_financial_loss": 265100,
-    "median_burden_sample_size": 198,
+    "state_family_count": 446,
+    "median_financial_loss": 269200,
+    "median_burden_sample_size": 199,
     "median_months_lost": 20,
-    "pro_se_pct": 58.6,
-    "pro_se_count": 260,
-    "_pdf_state_family_count": 444,
+    "pro_se_pct": 58.7,
+    "pro_se_count": 262,
+    "_pdf_state_family_count": 446,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 4,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Family court failed to protect me and my children, ignored the evidence, and allowed the abuse to continue. Civil court did not, when presented with the same facts, a jury held my ex‑husband and his wife liable for a long list of abuse.",
+        "state": "CA",
+        "county": "Kern",
+        "row_id": "31bc0636-eb9a-4331-83a8-7539334404c8"
+      },
+      {
+        "body": "The family court has stolen time with my kids memories I can never get back and made someone who worked hard play harder a prisoner not only in my mind but in everyday life. I find myself in my own my own prison not wanting to go anywhere or talk to anyone and can find days become night. Family court has broken me down where I have lost any hope that justice exists.",
+        "state": "CA",
+        "county": "Kern",
+        "row_id": "2844c883-a0a9-4fda-9149-25249ff964f1"
+      },
+      {
+        "body": "On false allegations with no evidence, I was reduced from full physical and legal custody to a 15 minute phone call once a month. I have never been adjudicated of doing any harm to anyone and never been allowed to defend myself after numerous false allegations.",
+        "state": "CA",
+        "county": "Kern",
+        "row_id": "ee51eb76-08db-4afc-84a1-5568d199cb26"
+      },
+      {
+        "body": "I now have two emotionally damaged children and have been barred from helping them. If I had learned to lie, maybe I could have more than 15 minutes a month with my 14 year-old daughter.",
+        "state": "CA",
+        "county": "Kern",
+        "row_id": "ab1e3d84-ca27-4d7f-a09d-77705cf44616"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "As court commissioner removed all of Fathers visitation rights on a contested false ex parte order. As a judge, refused to self recuse on the ground with bias at the very first hearing in the case as a judge. The next hearing he almost completely removed all visitation rights of the father based on a nickname that the father had used with the minor all her life. This was contested an open court, and the hearing that was supposedly scheduled was denied outright by the judge’s own mouth saying “you never asked for a hearing“",
@@ -76,11 +106,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/donald_griffith",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='CA'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -96,6 +122,26 @@
     "recommended_route": "/court-actors/ca/donald_griffith/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "As court commissioner removed all of Fathers visitation rights on a contested false ex parte order.",
+        "kind": "comment"
+      },
+      {
+        "body": "Allowed custody interference without action",
+        "kind": "comment"
+      },
+      {
+        "body": "This was my ex’s attorney’s last attempt to make my case go away.",
+        "kind": "comment"
+      },
+      {
+        "body": "Sides with dads. Blatantly says how he doesn’t follow the law. We don’t have him on record saying these things.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

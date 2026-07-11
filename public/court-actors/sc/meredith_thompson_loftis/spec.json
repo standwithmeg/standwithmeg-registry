@@ -12,12 +12,17 @@
     "court_or_county": "Greenville",
     "state": "South Carolina",
     "state_abbr": "SC",
-    "mention_count": 0,
+    "mention_count": 4,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "b1723154-de8d-4065-ac0b-3de3f8fb2fa1",
+      "59131010-dede-4d80-8b10-8f90fcd576d5",
+      "8f357529-a931-473d-83f3-8e21aa3bb865",
+      "e81a03aa-edbb-471f-9a33-75761b9bfa6d"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
@@ -42,12 +47,19 @@
     "_pdf_state_family_count": 108,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "The family court system has failed myself and my daughter greatly by turning the abuser into the victim an giving him full power over our lives. Ten years in and my daughter’s meantal health will be impacted forever.",
+        "state": "SC",
+        "county": "Greenville",
+        "row_id": "0c2f1f06-af44-4c39-8dd8-2b22808319aa"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Court appointee therapist disregarded all claims of abuse from father. Changed affidavits at last minute asking for over night stays when father didn’t even ask for them. So much on her, she is very corrupt and holds protective parents hostage while she runs 1-2 late for appointments. She gave my ex FMLA paperwork when she wasn’t his therapist but childs. Fabricates narratives.",
@@ -58,11 +70,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/meredith_thompson_loftis",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='SC'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -78,6 +86,14 @@
     "recommended_route": "/court-actors/sc/meredith_thompson_loftis/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Court appointee therapist disregarded all claims of abuse from father. Changed affidavits at last minute asking for over night stays when father didn’t even ask for them.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

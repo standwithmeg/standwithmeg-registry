@@ -12,12 +12,21 @@
     "court_or_county": "Johnson County",
     "state": "KS",
     "state_abbr": "KS",
-    "mention_count": 0,
+    "mention_count": 8,
     "family_count": 5,
     "public_family_count": 5,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 8,
+    "supabase_row_ids": [
+      "d0942e79-2a6d-49a4-8aea-e59e0fa7584c",
+      "1a3f6c32-b083-44a7-b31c-2f9f2a81996f",
+      "878e2d48-8a44-496e-98e6-c9d7a6b8e507",
+      "e210f756-c55e-416c-ab26-052682e9e731",
+      "fb3f3f64-3bae-4885-afd6-253c2c47755b",
+      "fa7641c6-5c59-4524-9ea5-caa5fef6c45f",
+      "f014a505-648c-4bfe-8b97-865bab0351d1",
+      "52972d7c-4483-47d3-922a-9bff3c2d3c7b"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "catherine decena triplet|KS"
   },
@@ -42,12 +51,37 @@
     "_pdf_state_family_count": 251,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 8,
+    "actor_report_count": 8,
     "family_count": 5,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "THE SYSTEM IS CORRUPT AND YOU HAVE TO PAY TO PLAY! GOOD PARENTS ARE LOSING THEIR CHILDREN OVER $$$$$!",
+        "state": "KS",
+        "county": "Johnson County",
+        "row_id": "9b0c7669-60d0-4c2d-bb79-27debb0c0eae"
+      },
+      {
+        "body": "it has completely turned our lives upside down.",
+        "state": "KS",
+        "county": "JOhnson COunty",
+        "row_id": "ff93255f-08a2-428d-921a-3c0fcfe84ecc"
+      },
+      {
+        "body": "My family and life were ripped apart to keep USD 232 from consequences, and the lies told by multiple bad actors only impact me since there is no accountability for them.The only evidence available is the same evidence that would exonerate me but it would require unbiased court actors to look at it that way.",
+        "state": "KS",
+        "county": "Johnson County",
+        "row_id": "93d75118-1a41-46b0-91c0-f43a3386ff40"
+      },
+      {
+        "body": "I'm a survivor of domestic violence. My 2 abusive exes constantly made false allegations against me. CASA ignored the mountains of evidence that I had. I lost my kids due to false allegations and CASA. DCF knew all the reports were false and had no concerns with me.",
+        "state": "KS",
+        "county": "Johnson",
+        "row_id": "81ddf145-57cd-4faf-a0cf-cea3a1f1ac06"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Ignored all domestic violence. I hate Judge Triplett, Judge Sloan, and CASA. Abusive dad teamed up with my abusive parents who worked with CASA to take my kids. 2 children in foster care and 1 with his dad. I have only supervised visitation. CASA of Wyandotte and Johnson County has ruined my life.",
@@ -76,11 +110,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/catherine_decena_triplett",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='KS'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -96,6 +126,26 @@
     "recommended_route": "/court-actors/ks/catherine_decena_triplett/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Ignored all domestic violence. I hate Judge Triplett, Judge Sloan, and CASA.",
+        "kind": "comment"
+      },
+      {
+        "body": "Would not provide clarity of the case. Is associated with the city of USD232.",
+        "kind": "comment"
+      },
+      {
+        "body": "She was moved off our cases and now we have new judges, waiting to see if anything changes",
+        "kind": "comment"
+      },
+      {
+        "body": "Gave everything to my ex",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

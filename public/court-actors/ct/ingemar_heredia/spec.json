@@ -12,12 +12,23 @@
     "court_or_county": "Fairfield Attorney",
     "state": "Connecticut",
     "state_abbr": "CT",
-    "mention_count": 0,
+    "mention_count": 10,
     "family_count": 5,
     "public_family_count": 5,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 10,
+    "supabase_row_ids": [
+      "90b30b64-4e5f-48b0-8dfc-8688edcf9a8c",
+      "e1a94f09-16fd-4a36-a4ca-bbea6e60e18f",
+      "cd32180c-0f4d-4787-a55b-d5e9fe1373fe",
+      "3d1edd67-a618-47b9-b5a2-bbd56c76dc16",
+      "dde9df10-7cf1-46f4-b419-cb04e6f11b5f",
+      "58fa905f-708b-4bf3-b6ee-00f06506e273",
+      "d19e6c6b-8376-424b-95f0-d1e46336eec3",
+      "ccdb2105-e241-4194-96da-25509afad324",
+      "dda7aa61-2adc-4eb7-be43-6af3196dd8fa",
+      "ec0448c7-1f78-41a1-b5d5-75ac1470116e"
+    ],
     "actor_row_id": "90b30b64-4e5f-48b0-8dfc-8688edcf9a8c",
     "actor_bucket_key": null
   },
@@ -42,12 +53,37 @@
     "_pdf_state_family_count": 65,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 10,
+    "actor_report_count": 10,
     "family_count": 5,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "The Family Court allowed all my assets to be lost without any concern to the financial and emotional damage done to myself and my child.",
+        "state": "CT",
+        "county": "Fairfield County",
+        "row_id": "6d23739e-f481-452c-9016-fb1c3173e649"
+      },
+      {
+        "body": "The family court allowed fraudulent “experts” and then ignored the recommendations of legitimate experts hiding behind the shield of judicial immunity and playing a congeniality game with people’s lives.",
+        "state": "CT",
+        "county": "Fairfield",
+        "row_id": "60741b2a-b2aa-4252-b450-df5e75e38afa"
+      },
+      {
+        "body": "The judges in family court abuse judicial immunity to make decisions “at their own discretion” against the advice of experts and even legal statutes. If you aren’t the one they “like” they simply destroy your life and your children’s.",
+        "state": "CT",
+        "county": "Fairfield",
+        "row_id": "52d80440-6ed9-44b5-95f3-3804e3d37264"
+      },
+      {
+        "body": "The system has destroyed my health, my child’s development and mental health, and violated constitutional and human rights with no concern for the damage they have done.",
+        "state": "CT",
+        "county": "Fairfield county",
+        "row_id": "de60c1be-a0e6-4368-8265-3db358b9c452"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Contacted numerous people in my life and the public to spread lies slandering my character Encouraged his client to withhold ordered support of his child while charging and receiving 6 digits in legal fees. Recently fired from The Prince Law Firm for unethical conduct Ethics nonexistent- heavy DARVO litigator",
@@ -76,11 +112,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/ingemar_heredia",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='CT'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -96,6 +128,26 @@
     "recommended_route": "/court-actors/ct/ingemar_heredia/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Recently fired from The Prince Law Firm for unethical conduct Ethics nonexistent- heavy DARVO litigator",
+        "kind": "comment"
+      },
+      {
+        "body": "Withheld child support sent through his office if I wasn’t up to date with legal fees Mischaracterized",
+        "kind": "comment"
+      },
+      {
+        "body": "Gave his client complete false hope costing my family (and children!) their home to support his legal fees",
+        "kind": "comment"
+      },
+      {
+        "body": "Kept child support payments that go through him if his legal fees aren’t up to date",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

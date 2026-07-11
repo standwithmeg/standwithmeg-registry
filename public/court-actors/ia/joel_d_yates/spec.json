@@ -12,12 +12,18 @@
     "court_or_county": "Wapello",
     "state": "Iowa",
     "state_abbr": "IA",
-    "mention_count": 0,
+    "mention_count": 5,
     "family_count": 5,
     "public_family_count": 5,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 5,
+    "supabase_row_ids": [
+      "026a6c55-551f-42b3-95b6-a9f94f32e71b",
+      "313b6274-7673-4940-8a8f-ce764e252241",
+      "5596d7e9-dbc2-4a60-8d46-58dd597311e1",
+      "38ac3a35-9484-4556-89c3-1818db58ce23",
+      "25bfa967-20a4-4d04-9320-a1097ff08006"
+    ],
     "actor_row_id": "026a6c55-551f-42b3-95b6-a9f94f32e71b",
     "actor_bucket_key": "joel yates|IA"
   },
@@ -27,27 +33,58 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 73,
-    "total_submissions": 92,
-    "avg_financial_loss": 132885.49,
+    "families_approved": 74,
+    "total_submissions": 93,
+    "avg_financial_loss": 131303.52,
     "avg_months_lost": 40.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "IA",
-    "state_family_count": 92,
+    "state_family_count": 93,
     "median_financial_loss": 180000,
     "median_burden_sample_size": 25,
     "median_months_lost": 23,
-    "pro_se_pct": 52.2,
+    "pro_se_pct": 51.6,
     "pro_se_count": 48,
-    "_pdf_state_family_count": 92,
+    "_pdf_state_family_count": 93,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 5,
+    "actor_report_count": 5,
     "family_count": 5,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "They are continuing to ensure that my children and I cannot have peace or space to heal, we are forced to deal with a landlord who has been seeking to evict us since \"the breadwinner\" left, we are displaced, and my constitutional rights are being blatantly, obviously and outright violated - continually - as they aren't even sticking to the orders being filed. They won't even let me file electronically, but my abuser was given an exemption from e-filing previously! I have a special needs child from a previous relationship, a son who is NOT biologically of the abuser, either - this is outright warfare against the innocent. I ended a 7 year abusive relationship last September and they STILL will NOT stop coming at us! I am forced to continue to do everything myself as well as I can and they just keep coming. I could represent myself, if not for the blatant allowance of contempt and conflicting court orders and JOEL YATES!",
+        "state": "IA",
+        "county": "Jefferson",
+        "row_id": "36ef2c02-1240-41c5-bea9-5cb800af377f"
+      },
+      {
+        "body": "Judge Joel Yates and the Wapello county court and family system have zero interest in learning about parental alienation. They are not therapists and do not take actual therapists recommendations into account. Joel Yates is incompetent in family court matters as he does not keep up with research, therapy recommendations, nor does he see any issues in separating siblings and families due to parental alienation.",
+        "state": "IA",
+        "county": "Wapello",
+        "row_id": "74b2763e-bba9-45c9-8492-b81ef2225ec3"
+      },
+      {
+        "body": "Family court’s six-year custody battle has ignored evidence, alienated your son, and cost your family milestones",
+        "state": "IA",
+        "county": "Wapello",
+        "row_id": "618a7583-9f44-4732-b1be-2886da5dc390"
+      },
+      {
+        "body": "The courts were allowed to violate every constitutional protected right of parent and children. Record everything, video footage, audio, document.",
+        "state": "IA",
+        "county": "Wapello",
+        "row_id": "6a3e604d-a40c-41d5-9726-ce14ebb3c8bb"
+      },
+      {
+        "body": "DHS refused to encourage reunification. Put my daughter in teachers home instead of family. My daughter has been manipulated against me. I can’t concentrate at work, depression, PTSD, anxiety. This has destroyed our family!!",
+        "state": "IA",
+        "county": "Henry",
+        "row_id": "9c3ae0f2-9cf9-4da0-a942-1f127b3209b5"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "I was told to settle before a trial because this judge would not roll in my favor, no matter what because I wasn’t man. The opposing party I had Cynthia Hucks and I was told she had him in her pocket. Was told he does not believe in [redacted] or joint. I was told by my last attorney to not go up against my ex with this judge because he does not rule in favor of father’s and does not think [redacted] is ever in the best interest of the child always rules for mothers. I was told Cynthia has him in her pocket.",
@@ -82,11 +119,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/joel_d_yates",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='IA'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -102,6 +135,30 @@
     "recommended_route": "/court-actors/ia/joel_d_yates/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "The opposing party I had Cynthia Hucks and I was told she had him in her pocket.",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored violations of TPO, extended TPO hearing.",
+        "kind": "comment"
+      },
+      {
+        "body": "DHS allowed the father do a bridge for child support.",
+        "kind": "comment"
+      },
+      {
+        "body": "Ordered phones be turned over to CFR Magistrate Misty White",
+        "kind": "comment"
+      },
+      {
+        "body": "Read above notes regarding this individual",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

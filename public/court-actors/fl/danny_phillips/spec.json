@@ -12,12 +12,17 @@
     "court_or_county": "Leon",
     "state": "Florida",
     "state_abbr": "FL",
-    "mention_count": 0,
+    "mention_count": 4,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "3ce69a55-7139-454f-be01-b6e9f7d63b78",
+      "461d976c-22ed-418b-8808-c9a9580cfb5f",
+      "730d9d5c-8e03-430d-8d48-9a3412ee9c02",
+      "a1e59325-8ae5-4da6-9267-66a9550ba224"
+    ],
     "actor_row_id": "3ce69a55-7139-454f-be01-b6e9f7d63b78",
     "actor_bucket_key": null
   },
@@ -42,12 +47,31 @@
     "_pdf_state_family_count": 306,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Years of litigation within the family court system had a profound impact on my family. The prolonged conflict resulted in significant financial hardship, including legal expenses, lost income, and ongoing costs associated with the case. The chronic stress contributed to health complications, emotional exhaustion, and uncertainty that affected nearly every aspect of our daily lives. Beyond the financial burden, the litigation altered family relationships and consumed years that should have been spent providing stability and creating positive memories for my children. Instead of focusing on healing and moving forward, much of our time, energy, and resources were devoted to responding to conflict, correcting misinformation, and navigating an adversarial legal process. The greatest loss cannot be measured financially. It is the emotional toll on a family that simply wanted fairness, stability, and the opportunity to move forward. My hope in sharing my experience is that meaningful reforms will help reduce unnecessary conflict, improve accountability, and ensure that future families are better protected from the long-term consequences of prolonged family court litigation. In my experience, family law became one of the most insidious and financially destructive systems I have ever encountered. Rather than serving as a pathway toward resolution and stability, I experienced a process that, at times, felt psychologically abusive, one that rewarded prolonged conflict, depleted financial resources, and left families emotionally exhausted. The cumulative effect of years of litigation, repeated false allegations, escalating legal costs, and inconsistent accountability created a system that I experienced as both psychologically and financially devastating. My hope is that future reforms recognize not only the legal outcomes of family court proceedings but also the profound human cost they can impose on parents and children. No family should leave the courtroom carrying lasting financial devastation, emotional trauma, and the feeling that the process itself became another source of harm.",
+        "state": "FL",
+        "county": "Leon County",
+        "row_id": "7f28cc13-c697-4136-8169-a678c83a88be"
+      },
+      {
+        "body": "I expected the system to save me and my 6 children from 17 years of abuse and domestic violence, knowing how dangerous my ex with a history of law enforcement is, after multiple attempts at my life and finding confessions on his phone of “a man that got tired of waiting for his wife to sleep with another man, so he came up with a plan to drug her and posted an ad on Craigslist…”. The court didn’t save us, they didn’t even protect us. The court found a way to make money off of our desperate pleas to break free from abuse—by keeping us in a place of abuse…and that’s what we became—a story, a number, and a dollar sign.",
+        "state": "FL",
+        "county": "Leon",
+        "row_id": "e1db8870-7b51-4ef3-b79d-2599f5713349"
+      },
+      {
+        "body": "Family court has destroyed my children.",
+        "state": "FL",
+        "county": "Leon",
+        "row_id": "a01ca4a6-5047-4e42-a626-709059f29e2d"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Before retaining counsel, I consulted with Danny Phillips regarding my family law case. We discussed the matter for approximately 13 minutes before he disclosed that he shared office space and a paralegal with Toby Norris, who represented the opposing party. Upon learning of that relationship, I did not retain Mr. Phillips. Later in the litigation, Mr. Phillips filed a Notice of Appearance on behalf of the opposing party. Because I had previously consulted with him about my case, this raised significant concerns for me regarding conflict screening and the appearance of impartiality. Mr. Phillips denied this communication on several occurances. Phone records later confirmed our consultation after its occurrence had initially been disputed. Regardless of whether any ethical violation occurred, my experience highlighted the importance of clear conflict-screening procedures and transparency to ensure litigants have confidence in the fairness and integrity of the family court process.",
@@ -70,11 +94,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/danny_phillips",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='FL'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +110,22 @@
     "recommended_route": "/court-actors/fl/danny_phillips/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Mr. Phillips denied this communication on several occurances. Phone records later confirmed our consultation after its occurrence had initially been disputed.",
+        "kind": "comment"
+      },
+      {
+        "body": "Conspired with psychologist (Rachel Scharlepp) to attempt to incarcerate mother for alienation. Danny is close friends with Rachel Scharlepp.",
+        "kind": "comment"
+      },
+      {
+        "body": "Additional concerns relate to the attorney’s personal relationship with a former client whom he previously represented before later marrying.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

@@ -12,12 +12,16 @@
     "court_or_county": "Cowley",
     "state": "Kansas",
     "state_abbr": "KS",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "9ef6e285-5290-4ccd-acf0-e862756873f8",
+      "e430e47c-a61e-4f3d-96cb-b12fa06ddacb",
+      "b56e5cc8-0664-4efa-917b-036c4df64ded"
+    ],
     "actor_row_id": "9ef6e285-5290-4ccd-acf0-e862756873f8",
     "actor_bucket_key": "jennifer passiglia|KS"
   },
@@ -42,12 +46,19 @@
     "_pdf_state_family_count": 251,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "I lost my son, my job, and my girlfriend because of TFI, Sheri Wampler and Judge St. Peter.",
+        "state": "KS",
+        "county": "cowley",
+        "row_id": "e353eeb5-8395-40eb-99c0-898192569d73"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "She acted like to was on the side of the caseworkers and Judge St. Peters. She would not respond to my phone calls or emails in a timely manner. Eventhough I had a good job and worked a lot of hours she refused to try and get me out of the drug court and counseling. I lost my job because I had to take time off for visit, court appearances, and counseling.",
@@ -58,11 +69,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/jennifer_passiglia",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='KS'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -78,6 +85,14 @@
     "recommended_route": "/court-actors/ks/jennifer_passiglia/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "She acted like to was on the side of the caseworkers and Judge St. Peters. She would not respond to my phone calls or emails in a timely manner. Eventhough I had a good job and worked a lot of hours she refused to try and get me out of the drug court and counseling. I lost my job because I had to take time off for visit, court appearances, and counseling.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

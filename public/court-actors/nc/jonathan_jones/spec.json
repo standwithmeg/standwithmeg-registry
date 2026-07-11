@@ -12,12 +12,16 @@
     "court_or_county": "Beaufort county",
     "state": "NC",
     "state_abbr": "NC",
-    "mention_count": 0,
-    "family_count": 3,
-    "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "mention_count": 3,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "165d308b-4bb9-410b-9548-fb647a8dbd94",
+      "bc8efa02-e763-4ab4-8c07-4942669df1bb",
+      "e62cd3f0-53ec-4f70-b7bf-6f85a510793e"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "jonathan jones|NC"
   },
@@ -42,19 +46,51 @@
     "_pdf_state_family_count": 216,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
-    "family_count": 3,
-    "family_reports": [],
-    "public_comments": []
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "The system has torn my family apart",
+        "state": "NC",
+        "county": "Beaufort",
+        "row_id": "0801015a-23f4-439c-a72f-6cba458f385b"
+      },
+      {
+        "body": "They lost my son, he has been missing since September 23, 2025. They have consistently tried to cover up the unconstitutional seizure of my children. They scrubbed reports and gave my 8 year old daughter to our abuser and placed my 15 year old daughter with a pedophile.",
+        "state": "NC",
+        "county": "Beaufort County",
+        "row_id": "1f3c4576-e9e3-4d97-8308-93200d270032"
+      },
+      {
+        "body": "The system tried to destroy and break our family simply for money because three of our children have disabilities they could cash in on. That same system tried to silence us l, paint us as liars, when the proof didn’t match the story they were telling. WE WILL NEVER STOP TELLING OUR STORY!!! If we help and save just one other family it was not for nothing. We are together. Our family fights together. They chose the wrong ones. All of my children are home because our voices, our proof, MATTERED.",
+        "state": "NC",
+        "county": "Beaufort County",
+        "row_id": "c314b71a-3fb5-41be-af03-3f07d97018cd"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Put me in jail for 30 days over birth certificate issue that was never mentioned in any petitions or orders. Was also a lawyer representing another in a case against me.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "He allowed \"witnesses\" to lie on the stand. Denied me ADA access, the list goes on and on.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "This man came in on the tail end of my case as a new judge appointed. I truly do not think he knew or understood what he was up against. He had no reason at that time to disbelieve the dss or gal attorney. He did sign orders that were unconstitutional. He did not verify facts nor speak with parents or allow them to speak on the record or verify the order in court. Six months later in 50 b custody court he undid everything that was put in that original order giving full n sole custody of two of our children back to my husband, their father, after a full trial and him understanding much was hidden and kept from the record in dss court and the kids had in fact been placed with their abuser. This should buy him grace is my book. At great risk to himself and his career here he made it right.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
   },
   "export_dir": "New Final Post and Capcut template/export/jonathan_jones",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='NC'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available",
     "pdf_public_actor: no 'Johnathan jones' in cache for NC"
   ],
   "guardrails": {
@@ -72,6 +108,22 @@
     "recommended_route": "/court-actors/nc/jonathan_jones/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Put me in jail for 30 days over birth certificate issue that was never mentioned in any petitions or orders.",
+        "kind": "comment"
+      },
+      {
+        "body": "He allowed \"witnesses\" to lie on the stand. Denied me ADA access, the list goes on and on.",
+        "kind": "comment"
+      },
+      {
+        "body": "I truly do not think he knew or understood what he was up against. He had no reason at that time to disbelieve the dss or gal attorney.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

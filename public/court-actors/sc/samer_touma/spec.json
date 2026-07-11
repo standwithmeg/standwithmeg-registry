@@ -12,12 +12,17 @@
     "court_or_county": "Lexington",
     "state": "South Carolina",
     "state_abbr": "SC",
-    "mention_count": 0,
+    "mention_count": 4,
     "family_count": 4,
     "public_family_count": 4,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "19ac5e36-c975-4c85-bbdc-c70790f9ab5b",
+      "7b22112c-d4e3-4710-aa15-1eeaf1af47ed",
+      "c5460832-9bef-415a-9d75-7f1a3d6f7fbf",
+      "36a16d66-93da-4b8a-a629-a8e2d917100a"
+    ],
     "actor_row_id": "19ac5e36-c975-4c85-bbdc-c70790f9ab5b",
     "actor_bucket_key": null
   },
@@ -42,12 +47,25 @@
     "_pdf_state_family_count": 108,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 4,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "The family court system has singlehandedly destroyed my family. We have been separated for years and only see them a few times a year. It will probably cause my younger kids to go through therapy at some point.",
+        "state": "SC",
+        "county": "Richland",
+        "row_id": "0f147f67-5318-4fd3-a19e-ab8b39fccf68"
+      },
+      {
+        "body": "The system has taken my oldest son from a large, loving family with over 30+ extended family members including three siblings that miss him dearly, and given him to a mentally sick chronically single woman who lives with her mentally sick chronically single mother. It has robbed us of every penny my wife of 12 years and I had in our retirement, savings, and bank accounts. It continues to pull us back and impose extra fines for inability to pay previous fines. We have three small children and are now forced to give up our home due to financial ruin.",
+        "state": "SC",
+        "county": "Richland",
+        "row_id": "f99b24e0-92ca-44ef-9d60-7f82f0be24da"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Completely sided with my husband and bullied me relentlessly. It was torturous. He would brag about his kids the whole time. “If I can get along with my ex, I don’t see why you can’t,” was his basic principle. He became very impatient if I would not agree to things on the spot under pressure from him and my ex husband. A horrible person. WAY overpriced!",
@@ -64,11 +82,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/samer_touma",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='SC'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -88,7 +102,18 @@
     "quote_char_budget": 150,
     "prefer_quote_substrings": [
       "turning a blind eye"
-    ]
+    ],
+    "selected_quotes": [
+      {
+        "body": "Completely sided with my husband and bullied me relentlessly. It was torturous. He would brag about his kids the whole time.",
+        "kind": "comment"
+      },
+      {
+        "body": "Either that or he was turning a blind eye to obvious facts and evidence that was presented",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

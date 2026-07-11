@@ -12,12 +12,18 @@
     "court_or_county": "Beaufort",
     "state": "North Carolina",
     "state_abbr": "NC",
-    "mention_count": 0,
+    "mention_count": 5,
     "family_count": 5,
     "public_family_count": 5,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 5,
+    "supabase_row_ids": [
+      "c51aeeb9-1a59-4575-93e7-8d5491e82611",
+      "002af5b9-351b-4f21-b227-8987ffcb6996",
+      "6c09b7f8-8b61-45ea-a802-a4e7474cd76d",
+      "a656b5ca-93cf-4ecd-9d63-299794e20e83",
+      "0236b7ce-ab8a-4a31-8e66-aea0009fa392"
+    ],
     "actor_row_id": "c51aeeb9-1a59-4575-93e7-8d5491e82611",
     "actor_bucket_key": "latesha boseman|NC"
   },
@@ -42,12 +48,43 @@
     "_pdf_state_family_count": 216,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 5,
+    "actor_report_count": 5,
     "family_count": 5,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "I have never experienced such heartbreak and distrust in individuals and a system built to protect children. NCDHHS should be appalled at the gross oversight and atrocities being committed.",
+        "state": "NC",
+        "county": "Beaufort",
+        "row_id": "af1505c2-fc41-4aea-8cdd-53fb7ce7624c"
+      },
+      {
+        "body": "The system has torn my family apart",
+        "state": "NC",
+        "county": "Beaufort",
+        "row_id": "0801015a-23f4-439c-a72f-6cba458f385b"
+      },
+      {
+        "body": "Former pissed off foster kid",
+        "state": "NC",
+        "county": "Beaufort",
+        "row_id": "312755d7-a7d0-49af-acc3-436fc7d8a05d"
+      },
+      {
+        "body": "They lost my son, he has been missing since September 23, 2025. They have consistently tried to cover up the unconstitutional seizure of my children. They scrubbed reports and gave my 8 year old daughter to our abuser and placed my 15 year old daughter with a pedophile.",
+        "state": "NC",
+        "county": "Beaufort County",
+        "row_id": "1f3c4576-e9e3-4d97-8308-93200d270032"
+      },
+      {
+        "body": "The system tried to destroy and break our family simply for money because three of our children have disabilities they could cash in on. That same system tried to silence us l, paint us as liars, when the proof didn’t match the story they were telling. WE WILL NEVER STOP TELLING OUR STORY!!! If we help and save just one other family it was not for nothing. We are together. Our family fights together. They chose the wrong ones. All of my children are home because our voices, our proof, MATTERED.",
+        "state": "NC",
+        "county": "Beaufort County",
+        "row_id": "c314b71a-3fb5-41be-af03-3f07d97018cd"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "She had me placed in locked facilities without a court order because I wanted to speak to a judge and kept running away from bad homes they placed me in. She refused to report the abuse in the last facility I was in. She took my paydays from my job and I never received the funds back. She cancelled my dental surgery 3 times so almost a year later when my mom could get it done I had curved roots around my jaw and had to be cut more with a longer recovery time. She lied to me saying my family didn’t want to see me. She wouldn’t allow me to go to my church in the community. She wouldn’t allow me to see my siblings. She frequently would take my personal belongings, many of which I’ve never gotten back, esp my cellphone. She would t allow me to go to my family in WV even tho I was wanted there. She lied on the stand about my behaviors. She lied on the stand saying I never told her I wanted to go home and stated I was afraid of my father. I watched her get really close to my mother when she told Latesha you will not speak to my son that way and Latesha told her what are you going to do about it? He’s in our custody and he will do what we say. She would allow me to have no contact even with mys school or peers when I was telling of the abuse in the places she put me. That’s when I was moved to a facility out of my community 2 hours away and taken from school completely with no schooling being done.",
@@ -82,11 +119,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/latesha_boseman",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='NC'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -102,6 +135,30 @@
     "recommended_route": "/court-actors/nc/latesha_boseman/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "She took my paydays from my job and I never received the funds back.",
+        "kind": "comment"
+      },
+      {
+        "body": "Falsified reports to GAL and judge. Placed one son in facilities without a court order.",
+        "kind": "comment"
+      },
+      {
+        "body": "She has proven to be very power hungry. Has admitted that she does not like children, publicly.",
+        "kind": "comment"
+      },
+      {
+        "body": "Also lied to my 15 year old daughter regarding her coming home.",
+        "kind": "comment"
+      },
+      {
+        "body": "Supervisor of foster care that has multiple criminal offenses including armed robbery and…",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

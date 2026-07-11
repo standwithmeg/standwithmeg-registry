@@ -12,12 +12,16 @@
     "court_or_county": "Orange",
     "state": "California",
     "state_abbr": "CA",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 4,
     "public_family_count": 4,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "3999e215-1ddd-4f2c-8e67-f667aae62276",
+      "e22f40de-c51e-4f44-ba79-f1863424653a",
+      "81a363ef-0238-4bd5-baa5-0b7afe85e68b"
+    ],
     "actor_row_id": "3999e215-1ddd-4f2c-8e67-f667aae62276",
     "actor_bucket_key": "keith peterson|CA"
   },
@@ -27,27 +31,46 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 357,
-    "total_submissions": 444,
-    "avg_financial_loss": 285669.87,
+    "families_approved": 359,
+    "total_submissions": 446,
+    "avg_financial_loss": 285125.16,
     "avg_months_lost": 35.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CA",
-    "state_family_count": 444,
-    "median_financial_loss": 265100,
-    "median_burden_sample_size": 198,
+    "state_family_count": 446,
+    "median_financial_loss": 269200,
+    "median_burden_sample_size": 199,
     "median_months_lost": 20,
-    "pro_se_pct": 58.6,
-    "pro_se_count": 260,
-    "_pdf_state_family_count": 444,
+    "pro_se_pct": 58.7,
+    "pro_se_count": 262,
+    "_pdf_state_family_count": 446,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 4,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "This family court system has rewarded perjury with profit while removing a present father from his children’s lives. There are no birthdays, smiles, giggles, bike rides, holidays, and the silence truly is deafening.",
+        "state": "CA",
+        "county": "Orange",
+        "row_id": "34d3ff43-4edc-45c5-971f-3655de7d5e7c"
+      },
+      {
+        "body": "Family court has destroyed me - as a person who used to see the good in others to the point of emptiness, and my children who were previously thriving are now at varying stages of psychological and emotional dysfunction…",
+        "state": "CA",
+        "county": "Orange",
+        "row_id": "969d0df6-4565-4581-9cfe-b0d9d4d112dd"
+      },
+      {
+        "body": "This system killed my younger son by allowing his drug addicted father and his drug addicted abusive wife unsupervised visits with our son.",
+        "state": "CA",
+        "county": "Orange County",
+        "row_id": "a8dceb44-1f02-4be6-ae1e-e9a26b089832"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Assigned as Special Master/copatent Therapist. Very rude, threatened that it would cost to much for him to read manipulative controlling messaging from my ex-spouse guilting me into not submitting it. Did not hold other spouse accountable for negative behavior and portrayed gender and racial bias in favor of men and Caucasian race.",
@@ -70,11 +93,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/dr_keith_peterson",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='CA'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +109,22 @@
     "recommended_route": "/court-actors/ca/dr_keith_peterson/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Very rude, threatened that it would cost to much for him to read manipulative controlling messaging from my ex-spouse guilting me into not submitting it.",
+        "kind": "comment"
+      },
+      {
+        "body": "Keith Peterson physically assaulted me in his office. He threatened if I told anyone, that he would testify against me. He did anyway.",
+        "kind": "comment"
+      },
+      {
+        "body": "Was a signed as a therapist to my ex spouse from minors counsel",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

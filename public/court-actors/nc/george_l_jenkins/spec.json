@@ -12,12 +12,16 @@
     "court_or_county": "Lenoir",
     "state": "NC",
     "state_abbr": "NC",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "28f6b050-faed-4138-b554-e482c0e3e631",
+      "2348ce42-447d-42a0-971b-9ac93ec2fd3a",
+      "84fff0d2-99e1-4a8c-851c-7b1626689a42"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "george jenkins|NC"
   },
@@ -42,12 +46,31 @@
     "_pdf_state_family_count": 216,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "I have missed moments with my baby that I will never get back, and the pain of being separated from my child has affected every part of my life. I want people to know that parents and children should not be torn apart without real evidence, fairness, and due process.",
+        "state": "NC",
+        "county": "LENOIR",
+        "row_id": "420db232-15eb-4cd6-821c-15a34778db95"
+      },
+      {
+        "body": "It has stole my natural right as a mother to build bond with child qnd the wmotional stress on the children and the mother.. in the be batudal qorkd what effecta does it have on aby other mother that has its baby taken or hurt...",
+        "state": "NC",
+        "county": "Lenoir",
+        "row_id": "6e34d8fc-75be-4232-a5c5-24861713b993"
+      },
+      {
+        "body": "This system took my children, our time, our milestones, and our peace, while forcing me to fight to prove the love and bond that never should have been questioned. I want people to know that family separation is not just a court case, it is lifelong harm to children and parents.",
+        "state": "NC",
+        "county": "Lenoir",
+        "row_id": "0b0ff1a5-9314-4a68-8dc4-21f4137cffd3"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Supported continued separation from my child while failing to address evidence, due process concerns, and reunification efforts.",
@@ -70,11 +93,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/george_l_jenkins",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='NC'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +109,22 @@
     "recommended_route": "/court-actors/nc/george_l_jenkins/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Supported continued separation from my child while failing to address evidence, due process concerns, and reunification efforts.",
+        "kind": "comment"
+      },
+      {
+        "body": "Overing cor dss mistakes, lying under oath, using legal language to trick, demoralize and try to force adoption of kids",
+        "kind": "comment"
+      },
+      {
+        "body": "Opposed reunification efforts and supported decisions that limited visitation and family placement options.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

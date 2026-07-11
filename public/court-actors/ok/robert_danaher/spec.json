@@ -12,12 +12,16 @@
     "court_or_county": "Grady county court",
     "state": "Oklahoma",
     "state_abbr": "OK",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "202b8364-a2e7-4628-879b-d04a5d56a10d",
+      "759035ba-2417-4fac-a6ed-bc36c707a070",
+      "dd872a04-cc9c-48c5-996a-f62be6004f88"
+    ],
     "actor_row_id": "202b8364-a2e7-4628-879b-d04a5d56a10d",
     "actor_bucket_key": null
   },
@@ -42,33 +46,48 @@
     "_pdf_state_family_count": 164,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
-    "public_comments": [
+    "family_reports": [
       {
-        "comment_text": "Dr. Danaher charged $XK and concluded his report without making contact to some of the most important references.. ignored years of audio recordings of children begging not to go with their father and said the problem had resolved, which was not the case provided by extensive documentation.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Oklahoma county court"
+        "body": "An entire generation of kids is learning that their voices do not matter when they reach out to those appointed to help",
+        "state": "OK",
+        "county": "Oklahoma",
+        "row_id": "bd145df0-b4cf-4560-83b7-e6254b7e8fd0"
       },
+      {
+        "body": "It has taken mine and my childs life away from us. It has put my daughter Hracie in more danger. It has violated our constitutional rights while giving our abuser more power.",
+        "state": "OK",
+        "county": "Grady",
+        "row_id": "965eb10f-d9a0-408c-ad07-70da1488158b"
+      },
+      {
+        "body": "Family court has shown me that children and families come last. They have facilitated and enabled conflict that has cost me and my daughter years and tens of thousands of dollars.",
+        "state": "OK",
+        "county": "Tulsa",
+        "row_id": "a1abd884-3ba6-422d-af70-96645c152a8c"
+      }
+    ],
+    "public_comments": [
       {
         "comment_text": "My ex was court ordered to take a parental comp and psychosexual. He took neither . Danaher gave him a regular psychological evaluation. Not the same. Also questioned his parents about his demeanor. Whaylt did u expect them to be honest",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Grady county court"
+      },
+      {
+        "comment_text": "charged $XK and concluded report without speaking with some of the most important references, medical professionals who supported claims of abuse. Years of child begging not to go with their father felt insignificant",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Oklahoma county court"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/robert_danaher",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='OK'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -84,6 +103,18 @@
     "recommended_route": "/court-actors/ok/robert_danaher/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "My ex was court ordered to take a parental comp and psychosexual. He took neither . Danaher gave him a regular psychological evaluation. Not the same. Also questioned his parents about his demeanor. Whaylt did u expect them to be honest",
+        "kind": "comment"
+      },
+      {
+        "body": "Charged $XK and concluded report without speaking with some of the most important references, medical professionals who supported claims of abuse. Years of child begging not to go with their father felt insignificant",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

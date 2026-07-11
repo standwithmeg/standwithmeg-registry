@@ -12,12 +12,20 @@
     "court_or_county": "Ulster County",
     "state": "New York",
     "state_abbr": "NY",
-    "mention_count": 0,
+    "mention_count": 7,
     "family_count": 5,
     "public_family_count": 5,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 7,
+    "supabase_row_ids": [
+      "ba41f027-8be3-45fa-af1f-0135100d23c0",
+      "bce2a41d-2129-4b0f-9658-512d8c3f1e88",
+      "a5ee3d4d-0d2c-4e1e-81a6-16a674ebd3f4",
+      "ae55d200-8092-4f6e-9d36-43b12cacafaa",
+      "1a13db20-fb95-4c4b-b4c1-33671704b03e",
+      "da9d2f46-490e-47e2-8024-d99b69a904d7",
+      "836b33ae-12cb-4e7b-b4fa-388f1a4d4eaa"
+    ],
     "actor_row_id": "ba41f027-8be3-45fa-af1f-0135100d23c0",
     "actor_bucket_key": "elizabeth faulkner|NY"
   },
@@ -42,12 +50,49 @@
     "_pdf_state_family_count": 173,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 7,
+    "actor_report_count": 7,
     "family_count": 5,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "I went to family court seeking protection for myself and my child and left financially devastated, separated from my child, and stripped of any confidence that the truth mattered. After years of litigation abuse and watching blatant fraud, corruption and illegal activity allowed to continue under the full knowledge of law enforcement and oversight bodies, I hav encountered a system that seemed unwilling to correct itself. I have completely lost faith in the American justice system. I went to court seeking a simple divorce and became a victim of criminal conspiracy involving multiple actors in the Ulster County court system. My child has been irrevocably harmed. There has been no justice or correction. I now warn others to avoid Ulster County at all costs. This is an unsafe place for domestic violence victims, women and children. Not only will they offer no protection, as hundreds of victims here have reported to oversight bodies since 2017, they have created a profitable industry to further victimize women and children seeking protection. Cash for Kids exists in Ulster County, at the detriment to vulnerable families. These same court actors are reaping great profits in a RICO, quid pro quo criminal enterprise that repeatedly uses the same playbook, in the same patterns, in all of the cases.",
+        "state": "NY",
+        "county": "Ulster County",
+        "row_id": "1ad2db22-ebd6-4119-8390-d025b8dfb18b"
+      },
+      {
+        "body": "Family Court allowed court players to fabricate information about me that affected my professional reputation and standing in the community. I have spent thousands of dollars during this ordeal and my children and myself have endured unnecessary emotional trauma.",
+        "state": "NY",
+        "county": "Ulster",
+        "row_id": "03f5c749-6475-435c-9f1c-1c98b50e0459"
+      },
+      {
+        "body": "The family court system subjected my family to years of unnecessary conflict, delay, and financial hardship, while enabling my ex to financially abuse both me and our children for years and failing to hold him accountable.",
+        "state": "NY",
+        "county": "Ulster",
+        "row_id": "e8f76352-b24c-4e85-a1a3-4de7a5604a69"
+      },
+      {
+        "body": "Here is the revised summary: The Threat and Arrest (2021) One day before a scheduled child support trial, Faulkner called opposing counsel and delivered an ultimatum: give up custody and support, or face arrest. You refused. A family offense petition was filed the next day. Four days later, a sheriff came to your home and arrested you. Your children were brought to a police station to give statements. A second family offense petition was filed months later on the same allegations. Neither resulted in a finding of violation. Schedule and Support Manipulation Faulkner submitted a document to the court that changed the custody exchange time from 11 a.m. to 4 p.m. without serving it on your attorney. She then used the altered schedule to petition for suspension of your child support, which was granted, based on documentation your attorney never had the chance to challenge. False Statement About Your Daughter In April 2023, Faulkner told the court that a physician had recommended a psychiatric evaluation for your daughter. That statement was false and is directly contradicted by emails from your daughter’s treating providers. Incomplete Documentation to Medical Providers Faulkner submitted incomplete documentation to third-party medical providers involved in your children’s care, presenting a one-sided record of the proceedings. Coerced Settlement (December 2024) During settlement negotiations, you were told that if you did not pay $80,000, the judge would jail you and you would lose custody. You agreed under duress. The payment went through Faulkner’s office. Your attorney witnessed this. Retaliatory Filing (2026) Following domestic incidents in January 2026, during which your daughter filed a police report and an order of protection was issued, a PINS petition was filed against your daughter. Across eight years, the pattern is the same: criminal threats, manipulated filings, false statements, and financial coercion, all used to pressure you into surrendering rights rather than litigating them on the merits.",
+        "state": "NY",
+        "county": "Ulster",
+        "row_id": "3cff3520-388c-4a93-bfa0-19a01d13d6a5"
+      },
+      {
+        "body": "The system has failed myself and my two daughters, and has enabled my ex to continue her atrocious behavior and alienation tactics that are hurting our daughters and severely damaging their relationship with me. It’s truly disgusting!",
+        "state": "NY",
+        "county": "Ulster County",
+        "row_id": "28f719f1-dbfb-4365-bbe7-593d4ea20e83"
+      },
+      {
+        "body": "The system took a straightforward divorce seeking equal custody and, through a pattern of exclusion, obstruction, and imbalance, deprived me and my child of meaningful time, stability, and our fundamental parent-child relationship. It fractured not only our bond, but also our connection to extended family and critical life milestones during irreplaceable years.",
+        "state": "NY",
+        "county": "Ulster County",
+        "row_id": "ff9d11b4-8e94-4e05-83e9-9cf1c53c39ed"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Represented the opposing party and, in my experience, advanced false accusations, relied on disputed documents, supported proceedings based on information I believe was inaccurate, and engaged in litigation tactics that I allege contributed to significant financial harm, loss of parenting time, and ongoing due process concerns that are now the subject of my federal civil rights lawsuit. Opposing counsel engaged in a pattern of conduct that interfered with Plaintiff’s ability to participate meaningfully in the proceedings, including inconsistent and duplicative financial requests, unilateral communications and decision-making regarding the child, and actions that contributed to Plaintiff’s exclusion from key aspects of the child’s life. Counsel also submitted and relied upon filings that Plaintiff contends do not accurately reflect the terms placed on the record, while failing to provide access to underlying exhibits and documentation despite repeated requests, thereby limiting Plaintiff’s ability to verify the accuracy of the record and respond effectively.",
@@ -82,11 +127,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/elizabeth_faulkner",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='NY'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -102,6 +143,26 @@
     "recommended_route": "/court-actors/ny/elizabeth_faulkner/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Threatened my arrest to force me to surrender custody",
+        "kind": "comment"
+      },
+      {
+        "body": "A judge called her a non-credible witness at trial.",
+        "kind": "comment"
+      },
+      {
+        "body": "She told my ex-husband that he would receive full custody and pushed the case to trial.",
+        "kind": "comment"
+      },
+      {
+        "body": "She’s created lies about me for two years so that my ex and I have to keep going back.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

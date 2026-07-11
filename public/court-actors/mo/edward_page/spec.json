@@ -12,12 +12,25 @@
     "court_or_county": "Jefferson",
     "state": "Missouri",
     "state_abbr": "MO",
-    "mention_count": 0,
+    "mention_count": 12,
     "family_count": 4,
     "public_family_count": 4,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 12,
+    "supabase_row_ids": [
+      "3ca5899d-f0ed-4ac2-9e08-cc2b58bccd94",
+      "48d73d85-b9ed-4026-8068-a431d2169f76",
+      "2bd1d062-e959-4e4c-9ff3-1ae3f9f7e543",
+      "fc43844d-d975-471c-9c89-a477041f67ca",
+      "c9991fb7-7fff-461a-9bcb-11fbb7741acb",
+      "f8c07d7e-498e-4c1f-ac3d-84c35afc895c",
+      "ed015b58-c4e3-4504-a67d-2cb723006952",
+      "443e2194-1c1d-4c57-9b01-b48516d7dd11",
+      "780cc888-8857-4418-94fe-18e41466a3bc",
+      "ceac56b0-84fc-425b-bab4-1aa6476c6827",
+      "c21eac02-1912-43a0-a5d6-a0cf0be3d2f9",
+      "b484818f-b7a5-44e6-b5ee-5ffa13d2e6c0"
+    ],
     "actor_row_id": "3ca5899d-f0ed-4ac2-9e08-cc2b58bccd94",
     "actor_bucket_key": "edward page|MO"
   },
@@ -42,12 +55,43 @@
     "_pdf_state_family_count": 194,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 12,
+    "actor_report_count": 12,
     "family_count": 4,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "The system has caused a severe amount of trauma to my entire family. especially my daughter they came in and took my daughter away from a perfectly safe home perfectly safe parent and placed her with a rapist she was raped at gunpoint for 3 months sometimes several times each day",
+        "state": "MO",
+        "county": "Jefferson County",
+        "row_id": "f342a1df-68d3-47eb-b38f-f530681d967e"
+      },
+      {
+        "body": "The system is trying to destroy my family for profit. Evil tyrants need to be stopped.",
+        "state": "MO",
+        "county": "Jefferson County",
+        "row_id": "38c8b7c7-11e0-41ca-a947-62b8c7121c83"
+      },
+      {
+        "body": "CPS and all related agencies need to be abolished for destroying American families for no just reason.",
+        "state": "MO",
+        "county": "Jefferson County",
+        "row_id": "d6a26ba4-201f-4453-a7fc-fe8d64cd5a69"
+      },
+      {
+        "body": "They are trying to destroy my family for no reason just so they can have a kid for the federal funds.",
+        "state": "MO",
+        "county": "Jefferson",
+        "row_id": "03ca68c2-3bbe-4309-8928-1cd15b19b122"
+      },
+      {
+        "body": "The Jefferson County Court system under Edward Page had created fear of speaking out for truth and transparency while fighting for the safety and well-being of my infant child by dismissing drug use, domestic violence and proven false testimonies.",
+        "state": "MO",
+        "county": "Jefferson County",
+        "row_id": "bc5baa9b-f1a0-446d-98db-f010cb3d8dc6"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "He kidnapped my son for profit and spite after husband told him to his face CPS is a childtrafficking ring. Ignored Constitution, due process and did not enforce prosecuting attorney David Casey's subpoena which required a continuance a month later. Tyrant loves destroying families. Total tyrant ignoring subpoenas, evidence and facts. Tyrant using power to destroy American families. Ignored Constitution, subpoena and evidence. Ignored Constitution, ignored subpoenas and motions ruled on hearsay Ignored Constitution, ruled by feelings, ignored subpoenas from Prosecuting Attorney, ignored evidence",
@@ -76,11 +120,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/edward_page",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='MO'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -96,6 +136,26 @@
     "recommended_route": "/court-actors/mo/edward_page/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Tyrant using power to destroy American families. Ignored Constitution, subpoena and evidence.",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored the Constitution",
+        "kind": "comment"
+      },
+      {
+        "body": "Did not follow MO §452.375. Refused to revised or correct judgment that did not follow this statute.",
+        "kind": "comment"
+      },
+      {
+        "body": "We can't go back in time.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

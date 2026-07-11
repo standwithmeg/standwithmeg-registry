@@ -12,12 +12,19 @@
     "court_or_county": "Clark",
     "state": "Kentucky",
     "state_abbr": "KY",
-    "mention_count": 0,
+    "mention_count": 6,
     "family_count": 4,
     "public_family_count": 4,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 6,
+    "supabase_row_ids": [
+      "c4586eb2-3e83-4b34-8c5a-9ec4ab9eac71",
+      "4ae0db61-5362-4556-b9c0-bcd847f0b700",
+      "5fa27419-1b17-4b45-9aa4-34f28c0cfffe",
+      "ea054209-9c56-4385-a4df-8f584164184a",
+      "b8405d45-ea33-42bb-8542-5c58f131bc75",
+      "bf838b19-0c77-406c-87eb-d61050c527b8"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": null,
     "_overrides_applied": [
@@ -50,12 +57,37 @@
     "_pdf_state_family_count": 89,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 6,
+    "actor_report_count": 6,
     "family_count": 4,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "The family court system has destroyed my and my daughter’s life as we knew it.",
+        "state": "KY",
+        "county": "Clark County",
+        "row_id": "75c75e63-ce64-4180-aff8-bc0b352a652f"
+      },
+      {
+        "body": "Destroyed my family",
+        "state": "KY",
+        "county": "Clark",
+        "row_id": "ff3e8294-b900-4779-8507-98464d9c5ee8"
+      },
+      {
+        "body": "The system is broken, it’s destroyed 4 children’s lives",
+        "state": "KY",
+        "county": "Clark",
+        "row_id": "f47207a8-f60e-46be-a198-be8c693b27b4"
+      },
+      {
+        "body": "Alienation of the children from a loving father and stepmother",
+        "state": "KY",
+        "county": "Clark",
+        "row_id": "9fe0a0a4-cda0-4a65-a4d9-d921b0ce58db"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Bias, took kids over unrelated incidents to child safety, didn’t let me speak and hear my evidence. Biased, didn’t hear evidence but from one party, delayed reunification, took children over allegations",
@@ -78,11 +110,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/kimberly_walson",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='KY'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -98,6 +126,22 @@
     "recommended_route": "/court-actors/ky/kimberly_walson/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Bias, took kids over unrelated incidents to child safety, didn’t let me speak and hear my evidence.",
+        "kind": "comment"
+      },
+      {
+        "body": "Very biased.",
+        "kind": "comment"
+      },
+      {
+        "body": "Biased, immediately gave my kids to other party without prior reasons Biased, delayed reunification, ignored evidence",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

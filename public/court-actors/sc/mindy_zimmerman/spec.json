@@ -12,12 +12,16 @@
     "court_or_county": "LAURENS",
     "state": "South Carolina",
     "state_abbr": "SC",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 4,
     "public_family_count": 4,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "6c5e1fbb-7e32-4a7a-a572-0cc6ffddc2c3",
+      "5d4a2039-75b4-4e62-b364-df817b15284d",
+      "cc81aafa-faf7-4da5-bdb7-ea82db95619c"
+    ],
     "actor_row_id": "6c5e1fbb-7e32-4a7a-a572-0cc6ffddc2c3",
     "actor_bucket_key": "mindy zimerman|SC"
   },
@@ -42,12 +46,25 @@
     "_pdf_state_family_count": 108,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 4,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Temporary custody proceedings turned my children, medical hardship, and parental rights into a system I could barely recognize. Instead of protecting stability and communication, the process escalated conflict, isolated me from important decisions involving my daughters, and caused severe emotional and financial harm to our family",
+        "state": "SC",
+        "county": "HORRY",
+        "row_id": "8151bba7-7a74-4528-8bb9-fcd63ed34233"
+      },
+      {
+        "body": "MANIPULATED INVADED MY PRIVACY EMBARRASSED ME IN MY NEIGHBORHOOD VIOLATED MY HUMAN RIGHTS ALIENATED ME RUINED MY MARRIAGE. This is not even all of it",
+        "state": "SC",
+        "county": "LAURENS",
+        "row_id": "8698fc4f-5efe-4b00-a1cc-1c15a4d84531"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Entered contempt findings and rulings that suspended my financial support and transferred future medical appointment authority for my children solely to the other parent while I was self-represented in court",
@@ -70,11 +87,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/mindy_zimmerman",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='SC'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +103,22 @@
     "recommended_route": "/court-actors/sc/mindy_zimmerman/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Entered contempt findings and rulings that suspended my financial support and transferred future medical appointment authority for my children solely to the other…",
+        "kind": "comment"
+      },
+      {
+        "body": "Was assigned to portions of your case at different times. You have raised concerns about scheduling, notice, and procedural issues during the litigation.",
+        "kind": "comment"
+      },
+      {
+        "body": "DENIED ME THE RIGHT TO KNOW WHERE MY CHILDREN WHERE AT FOR CHRISTMAS THEY WERE OUT OF STATE WITH FOSTER CARE",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

@@ -12,12 +12,20 @@
     "court_or_county": "Elkhart County",
     "state": "Indiana",
     "state_abbr": "IN",
-    "mention_count": 0,
-    "family_count": 5,
-    "public_family_count": 5,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "mention_count": 7,
+    "family_count": 1,
+    "public_family_count": 1,
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 7,
+    "supabase_row_ids": [
+      "df53bad7-2981-463e-8eba-73c3a583a384",
+      "c9096f31-9873-416d-9cc2-dd1cb37359ed",
+      "953ca32b-6b04-427a-a226-22268229b78e",
+      "a1fd9388-fc78-48ce-8fd1-26e738a6fa93",
+      "98d8be69-738d-450c-b233-6da7b3fbe88c",
+      "9c40d832-8f5c-4beb-b2ec-4e5600cb2384",
+      "e2702454-9a69-4094-af7b-cfbd2b64321f"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
@@ -42,19 +50,68 @@
     "_pdf_state_family_count": 153,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
-    "family_count": 5,
-    "family_reports": [],
-    "public_comments": []
+    "report_count": 7,
+    "actor_report_count": 7,
+    "family_count": 1,
+    "family_reports": [
+      {
+        "body": "The system has allowed my girls to be in the custody of child abusers",
+        "state": "IN",
+        "county": "Elkhart County",
+        "row_id": "64c04f1b-4d3e-4831-9766-aed24fc56a42"
+      },
+      {
+        "body": "It has caused more damage to the children and the safe parent. Then the substantiated abusers.",
+        "state": "IN",
+        "county": "Elkhart county",
+        "row_id": "491c000e-03a3-4c46-8018-a8555e747682"
+      },
+      {
+        "body": "This high conflict divorce with children case has lasted nearly 8 years now, has cost the children and I over 40k, too much wasted time with failing Family Case Managers, and poor decision making skills from a newly promoted Magistrate. The failure of this system has caused the need for therapy and has caused the children not to trust adults in authority positions.",
+        "state": "IN",
+        "county": "Elkhart County",
+        "row_id": "38dedd54-1596-4f45-8392-dfbf6ee86687"
+      },
+      {
+        "body": "The system protects the false illusion of reunification while taking children and portective parents from each other. They lump all cases into one format and when you dont fit they punish protective parents in a speak out then watch out mentality.",
+        "state": "IN",
+        "county": "Elkhart",
+        "row_id": "eb467537-b533-4c1b-92f6-1d2271033dbe"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "This magistrate compelled parties to agree on unsupervised visitation which resulted in the children being exposed to substance abuse, domestic violence, constant police presence, and physical and psychological abuse to the children. Ordered parties to settle on Unsupervised Visitation resulting in the children being exposed to drug and alcohol usage, domestic violence, constant police presence, and physical abuse to themselves. Magistrate denied Safe Parents to speak without threat of ,\"Not ending well.\" For the parties and attorney.",
+        "author": "Anonymous parent",
+        "source": "court_actor_comment_merges",
+        "row_id": "a1fd9388-fc78-48ce-8fd1-26e738a6fa93"
+      },
+      {
+        "comment_text": "Refused to let me speak denied evidence of abuse, denied due process, didn't allow discovery, took away my ability to be with my children, only lets me have supervised visits for one hour a week. Allows mother and her family tto speak negatively in front of my children, threaten my life in front of my children, refuses to look at visit reports, only takes the mother's side",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Has not held substantiated abuser accountable for her actions.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "This magistrate compelled parties to agree on unsupervised visitation which resulted in the children being exposed to substance abuse, domestic violence, constant police presence, and physical and psychological abuse to the children. Ordered parties to settle on Unsupervised Visitation resulting in the children being exposed to drug and alcohol usage, domestic violence, constant police presence, and physical abuse to themselves. Magistrate denied Safe Parents to speak without threat of ,\"Not ending well.\" For the parties and attorney.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Hidie cintron is either a judge or referee im not sure the distinction. When my ex-husband filed contempt allegations against me citing atleast 7 issues only two where addressed in the hearing 1. I didnt provide tball information to my ex husband and 2. My ex didnt like my husband being court ordered point of contact claiming \"rudeness\" and saying he wanted direct access to me. She disregarded every other complaint and when asked about Tball I told her the schedule for Tball fell outside of the visitation schedule and per the order his visitation was once a week for 4 hours Supervised at the paternal grandmother's home. The active (still today) protective order states he cannot be where we frequent including city parks down town valparaiso james school, and other locations in or around our residences. Tball both fell out of the visitation order and protected by protection order as a place we frequent. Due to the GAL Mary raatz saying my ex should try whenever possible to attend extra curricular activities with no amendments to the visitation order she intentionally created a Grey area. When I attempted to object to the GAL report for that reason a clerk gave me I correct information I missed the court date as a result and my attempts to try and reschedule where dismissed dispite my request documented the Issues in the reccomendations. When I explained to the judge I talk to clerks following the hearing my victim assistant the local police no one could provide guidance on what to do. We decided given the criminal behavior and relocation due to safety we would error on the side of caution. When I attempted to explain this submit evidence or have my husband speak as a witness and also support when my anxiety from ptsd in the same room as my abuser he was instructed he was not allowed to stand or speak and had to remain seated also dipite him being the court ordered point of contact who fielded all communication with my ex on the topic to aid recovery. Cintron in addition to not wanting to see my evidence to address all the issues claimed against me and my husband also continued to interrupt me and state she had only alloted 15 minutes for our hearing and we where already over that and holding up other cases. When I requested re evaluation of the GAl reports due to failure to comply with multiple GAL guidelines and also due to the conflict reports created it was cintron who denied due to lack of \"timeliness\" in my filing which was made after repeated requests for my GAL case file where delayed by Mary raatz and had to threaten her with a civil lawsuit to attain compliance. I was ordered in the contempt hearing to appear to court under threat of warrant for my arrest and no accommodation was made given my diagnosis which is court record and documented she had me in the same room 5 feet from my abuser and the lack of accommodation is not an isolated issue.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
   },
   "export_dir": "New Final Post and Capcut template/export/heidi_cintron",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='IN'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available",
     "pdf_public_actor: no 'Magistrate Heidi Citron' in cache for IN"
   ],
   "guardrails": {
@@ -72,6 +129,26 @@
     "recommended_route": "/court-actors/in/heidi_cintron/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Magistrate denied Safe Parents to speak.",
+        "kind": "comment"
+      },
+      {
+        "body": "Refused to let me speak denied evidence of abuse",
+        "kind": "comment"
+      },
+      {
+        "body": "Has not held substantiated abuser accountable for her actions.",
+        "kind": "comment"
+      },
+      {
+        "body": "Dismissed dispite my request documented the Issues in the reccomendations",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

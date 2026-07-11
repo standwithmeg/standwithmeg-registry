@@ -12,12 +12,16 @@
     "court_or_county": "Riverside",
     "state": "CA",
     "state_abbr": "CA",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "9d80d4a5-1bb8-48e0-b9bf-b5f21fa556d2",
+      "54dfef73-7192-4ea1-a0d7-a7c65102a005",
+      "7b9d3e07-5199-4b8d-bd09-4a5365d7a85f"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "devin davis|CA"
   },
@@ -27,27 +31,46 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 357,
-    "total_submissions": 444,
-    "avg_financial_loss": 285669.87,
+    "families_approved": 359,
+    "total_submissions": 446,
+    "avg_financial_loss": 285125.16,
     "avg_months_lost": 35.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CA",
-    "state_family_count": 444,
-    "median_financial_loss": 265100,
-    "median_burden_sample_size": 198,
+    "state_family_count": 446,
+    "median_financial_loss": 269200,
+    "median_burden_sample_size": 199,
     "median_months_lost": 20,
-    "pro_se_pct": 58.6,
-    "pro_se_count": 260,
-    "_pdf_state_family_count": 444,
+    "pro_se_pct": 58.7,
+    "pro_se_count": 262,
+    "_pdf_state_family_count": 446,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "They took my child based on false allegations then claimed that things happened when they didn’t and would not acknowledge that they took him under false pretenses and kept claiming there was domestic violence when there really wasn’t any",
+        "state": "CA",
+        "county": "Riverside",
+        "row_id": "b95b3d29-0253-4e73-9504-87809b645bfe"
+      },
+      {
+        "body": "These false allegations have completely torn our family apart and caused immense harm to our lives. When we tried to explain that the claims were untrue, we were treated as though we were refusing to “learn our lesson,” and the situation only became worse. It often felt like we were being pressured to admit to things that never happened just to validate their narrative.",
+        "state": "CA",
+        "county": "Riverside",
+        "row_id": "8f31eaf0-1df4-4646-8c98-3915bc3c02bf"
+      },
+      {
+        "body": "Fabricated things that happened to take my son from both myself and his mother, suppressed evidence when we provided proof nothing happened, forced restraining orders said if no restraining order agreement then they’d remove parental rights completely",
+        "state": "CA",
+        "county": "Riverside",
+        "row_id": "db13273d-7601-4d55-b4bb-c9de75dcf752"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Didn't investigate the situation, had a preconceived idea of what happened (when reports and witnesses said the opposite) and took my child anyways. Then lied and made up things in her report",
@@ -70,11 +93,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/devin_davis",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='CA'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +109,22 @@
     "recommended_route": "/court-actors/ca/devin_davis/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Didn't investigate the situation, had a preconceived idea of what happened (when reports and witnesses said the opposite) and took my child anyways.",
+        "kind": "comment"
+      },
+      {
+        "body": "Made up completely false statements about what happened to justify taking my son",
+        "kind": "comment"
+      },
+      {
+        "body": "The social worker made up lies to take my child",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

@@ -12,12 +12,16 @@
     "court_or_county": "Hall county",
     "state": "GA",
     "state_abbr": "GA",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "e10f193a-2870-440d-9bf2-4650378c8404",
+      "dff44c6e-523a-47bb-8398-b81653f76c0e",
+      "0bf4d730-3a4e-4798-a5c3-b048b2a888b0"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "drug testing facility|GA"
   },
@@ -42,12 +46,25 @@
     "_pdf_state_family_count": 153,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "This system has done nothing other than cause irreversible damage to myself and my kids and taken time away that we can never get back. This system is a complete FAILURE!!",
+        "state": "GA",
+        "county": "Hall county",
+        "row_id": "a5fc91eb-abc4-4da7-9257-94361e47be99"
+      },
+      {
+        "body": "The system is a broken money scheme that does more damage to families than it does good. My visitation turned into supervised because the caseworker didnt know what to write down.",
+        "state": "GA",
+        "county": "Hart",
+        "row_id": "6b220b0f-2fc2-47b8-8c8f-e6710598822c"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Refuse to give me chain of custody for screens that have 8 to 11 wait days between collected and received and why I have confirmed positive on things ive screened negative for.",
@@ -64,11 +81,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/drug_testing_facility",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='GA'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -84,6 +97,18 @@
     "recommended_route": "/court-actors/ga/drug_testing_facility/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Refuse to give me chain of custody for screens that have 8 to 11 wait days between collected and received and why I have confirmed positive on things ive screened negative for.",
+        "kind": "comment"
+      },
+      {
+        "body": "Just involved",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

@@ -12,12 +12,16 @@
     "court_or_county": "Middlesex",
     "state": "Massachusetts",
     "state_abbr": "MA",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "45826789-f2e4-4125-a16f-b166a24a4bdb",
+      "ac68e4e9-b05c-4a30-a8c2-aaeaecdc2276",
+      "df527a9f-48ca-4c17-b247-6db9a54d1cbe"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
@@ -42,12 +46,31 @@
     "_pdf_state_family_count": 106,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "I was a father who if you look up liam's lunches of love.I was a father that had a great reputation.All around the world as being a great father and a great role model one crying female came into court made a punch of lies and my whole entire reputation is gone.And I don't have any help",
+        "state": "MA",
+        "county": "Middlesex",
+        "row_id": "829f9687-d831-43e9-a1a8-e7c3ec678d5c"
+      },
+      {
+        "body": "Tens of thousands of dollars spent on a \"parenting agreement\" that only gets followed when it is convenient for him. And the court does nothing to uphold said agreement, they just take more of your money to hear your case and do nothing.",
+        "state": "MA",
+        "county": "Middlesex",
+        "row_id": "c38191fe-1153-4ec8-932d-56878c3c40d4"
+      },
+      {
+        "body": "\"the process\" he kept claiming alienation and using coercive control and lying about his salary. he owns his own firm and we had to keep hiring people to disprove him.",
+        "state": "MA",
+        "county": "Middlesex",
+        "row_id": "1128b8c9-cbc1-4a7a-9a91-f5ac4952b5f4"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "She ignored ALL claims of abuse, she told me to have a third party witness to drop offs, I had one, then she said I enabled the children having one and made us go alone to his house where he harassed us and then asked why I didn't bring a third party. She is pro-bad to a point where she doesn't like to GALs or Court Clinicians. She is lazy to a degree that her orders let high conflict coercive control people get away with it. There was a court order for parenting time, the court clinician said he had to make calls on certain days, he was so mean that the kids hung up (which they were allowed to do) and she didn't hold him accountable.",
@@ -70,11 +93,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/terri_klug_cafazzo",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='MA'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +109,22 @@
     "recommended_route": "/court-actors/ma/terri_klug_cafazzo/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Ignored ALL claims of abuse",
+        "kind": "comment"
+      },
+      {
+        "body": "My wife was old.My ex wife, my first x wife was allowed to come into court and give statements when I wasn't there",
+        "kind": "comment"
+      },
+      {
+        "body": "Allowed ex's motion for school placement based on intention of residency rather than an established residency.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

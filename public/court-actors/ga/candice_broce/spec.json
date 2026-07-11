@@ -12,12 +12,18 @@
     "court_or_county": "Commissioner of CPS",
     "state": "Georgia",
     "state_abbr": "GA",
-    "mention_count": 0,
+    "mention_count": 5,
     "family_count": 5,
     "public_family_count": 5,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 5,
+    "supabase_row_ids": [
+      "4237adc5-d8e8-4ff9-90fc-9df60c576cfb",
+      "e8601cd1-e31b-49fd-850e-f12709746ebd",
+      "78910bc7-9a90-45ce-b0e8-337d00c4059e",
+      "dbe972f4-8f1e-4629-9bd9-fbdcc6985f7f",
+      "670985bc-6a2c-486e-a494-1a1ea9de8345"
+    ],
     "actor_row_id": "4237adc5-d8e8-4ff9-90fc-9df60c576cfb",
     "actor_bucket_key": null
   },
@@ -42,12 +48,43 @@
     "_pdf_state_family_count": 153,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 5,
+    "actor_report_count": 5,
     "family_count": 5,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "They claimed they were here to help me as a DV victim, instead they tore apart my family, gave my children & me PTSD, massively violated federal, state laws & GA cps policy",
+        "state": "GA",
+        "county": "Henry",
+        "row_id": "26e6ef49-7509-4d5d-b377-1445849add52"
+      },
+      {
+        "body": "I reached out for help and desperation, they ripped apart our family and traumatized us all",
+        "state": "GA",
+        "county": "Henry",
+        "row_id": "f1ebdc4d-8dd9-481a-8966-f99b1d27ac89"
+      },
+      {
+        "body": "The system designed to help families has destroyed us. I never thought this could ever happen to me cause I'm an excellent mother and professional who has dedicated my life to saving the lives of children and adults. I love my daughter with every fiber of my being. They have destroyed my family which was their intended goal.",
+        "state": "GA",
+        "county": "Cherokee County",
+        "row_id": "9a016a02-fa18-4e9f-9e76-84ebfc45286b"
+      },
+      {
+        "body": "Our son was unnecessarily placed into foster care and separated from our family unjustly!",
+        "state": "GA",
+        "county": "Cobb",
+        "row_id": "2c8e3ce8-69af-46f6-a1c5-38ffd9497a55"
+      },
+      {
+        "body": "They destroyed our happy family and kids as we knew it. Life will never be the same as it was, the kids trauma will never be erased and the parenting time lost will never come back.",
+        "state": "GA",
+        "county": "Cobb",
+        "row_id": "53222120-db80-43fa-b1bd-a179adbfcefb"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "She substantiated a malt treater label and did not give me a chance at a first or second level review and I’m a victim of domestic violence. I didn’t even get due process or the chance to be heard or even do a first or second level review they just put the label on me in the case isn’t even closed yet and I haven’t seen a judge since January. This is completely shutting down my job.",
@@ -82,11 +119,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/candice_broce",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='GA'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -102,6 +135,30 @@
     "recommended_route": "/court-actors/ga/candice_broce/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "I haven’t seen a judge since January.",
+        "kind": "comment"
+      },
+      {
+        "body": "She regularly had x parte communication with judges.",
+        "kind": "comment"
+      },
+      {
+        "body": "She attended every one of our hearings and directly contributed to our son’s removal from our…",
+        "kind": "comment"
+      },
+      {
+        "body": "Ms. Broce sat in on my last hearing, personally, as the head of Georgia DFCS.",
+        "kind": "comment"
+      },
+      {
+        "body": "She’s placing me on a shines registry for being a victim of domestic violence",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

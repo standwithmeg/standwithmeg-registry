@@ -12,12 +12,19 @@
     "court_or_county": "Santa rosa",
     "state": "Florida",
     "state_abbr": "FL",
-    "mention_count": 0,
+    "mention_count": 6,
     "family_count": 5,
     "public_family_count": 5,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 6,
+    "supabase_row_ids": [
+      "fd178ddb-c747-4511-b663-f5933f35ca70",
+      "636bef2c-d1b1-4ecb-ad59-36573efcf466",
+      "f14eb0e9-a8dc-45b3-a084-089b6b5b6cd4",
+      "ad20d8f5-67f3-4ddf-9159-92fd235491c7",
+      "4ef2d609-de99-490b-8999-b79e9c49ff68",
+      "efc3305a-2fa4-4d5c-8c96-26116f52873b"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": null,
     "_overrides_applied": [
@@ -50,12 +57,43 @@
     "_pdf_state_family_count": 306,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 6,
+    "actor_report_count": 6,
     "family_count": 5,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "The very system designed to keep the children in our community safe and secure, having the best interest of the child their first priority....are the very ones we have to protect our children from.",
+        "state": "FL",
+        "county": "Escambia",
+        "row_id": "2a73ba9c-cf7e-41ef-a695-71ea0047949b"
+      },
+      {
+        "body": "Disabled Combat Veteran lost 2 kids to the system.",
+        "state": "FL",
+        "county": "Escambia",
+        "row_id": "5a19a184-0b39-46e9-8f3f-569895c0321c"
+      },
+      {
+        "body": "My children and my nieces and nephews and my sister and my mother and grandmother are all separated from each others lives. We are heartbroken, have gone into debt and our lives are changed for the worse forever.",
+        "state": "FL",
+        "county": "Santa Rosa county",
+        "row_id": "559e2a37-e7c4-4429-b735-3268c8d94124"
+      },
+      {
+        "body": "Me & my fiancé have been traumatized by DCF and FFN. we will never get to see our twins be babies again. we will never get this time back. we have done everything right since we found out I was pregnant. these monsters destroy families and enough is enough, like how could it possibly be in the best interest of my twins babies for them to not feel comfortable in their mothers arms? Their mother that almost died and fought like hell to stay alive for them? we didn’t deserve this and somebody will answer legally for Traci Morgan destroying my family.",
+        "state": "FL",
+        "county": "Santa Rosa county",
+        "row_id": "91afed7b-3efa-4272-a2df-b775bf234ed2"
+      },
+      {
+        "body": "The system that is designed to protect children and families, manipulated all involved to tear us apart for funding. They put a price on my child's head and holds him for funding, while we are torn apart only a year after my oldest child's death.",
+        "state": "FL",
+        "county": "Escambia",
+        "row_id": "9e6ea82d-1207-4eec-8a52-b0cb41d11337"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Charged six thousand to throw my case. He had plenty of opportunities to bring to the attention of the court, all of the negligence and unlawful ways of FFN, DCF, and CPS. He had no interest in any of that. His exact words were he came late into the case. He can't discuss anything that happened before the came onto the case. He sabotaged it from the start. It was okd by him for FFN to move my child outside the ciuntu with out telling me. He had no rebuttal for my accusers during court. He's an appeaser. He appeases you with I'll file a motion tomorrow but never does. He's drags his feet on everything and has no intention on winning your case for you. Brace yourself for deception.",
@@ -90,11 +128,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/jon_gann",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='FL'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -110,6 +144,30 @@
     "recommended_route": "/court-actors/fl/jon_gann/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "He had no rebuttal for my accusers during court. He's an appeaser.",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored evidence of Abuse in State custody.",
+        "kind": "comment"
+      },
+      {
+        "body": "Never filed the motions I requested, and worked against me — my rights.",
+        "kind": "comment"
+      },
+      {
+        "body": "Took $5,000 from my grandmother to help place my children",
+        "kind": "comment"
+      },
+      {
+        "body": "Told me if I fought to clear my name, I’d lose my kids.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

@@ -12,12 +12,20 @@
     "court_or_county": "Sevier",
     "state": "Tennessee",
     "state_abbr": "TN",
-    "mention_count": 0,
+    "mention_count": 7,
     "family_count": 5,
     "public_family_count": 5,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 7,
+    "supabase_row_ids": [
+      "0407e398-6e95-409c-a356-baca88cb7774",
+      "e2038615-69c5-4692-b635-d0eca5923536",
+      "79510224-15ee-4025-ae23-f6af85b82f8a",
+      "91b787a3-e2e9-45c9-9f0b-a0d2153c58d5",
+      "ad4130aa-f098-402f-b939-f86d463ec374",
+      "643ba64e-38ec-4ba3-9955-1a7ab6c482e2",
+      "00b4043b-1e23-4a7c-87ce-5757285c2ff1"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "diana rusel|TN"
   },
@@ -42,12 +50,25 @@
     "_pdf_state_family_count": 123,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 7,
+    "actor_report_count": 7,
     "family_count": 5,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Kidnapped my child across state lines on false allegations with bad signatures and notarization on petitions based on events that took place 3+ years ago and/or in another state. 3 states total.",
+        "state": "TN",
+        "county": "Sevier",
+        "row_id": "5b69ec73-0434-40f3-b729-52270a44146f"
+      },
+      {
+        "body": "I've lost everything. And I'm still fighting for my child and I will never stop.",
+        "state": "TN",
+        "county": "Sevier",
+        "row_id": "8a247f9e-293d-463a-a7ad-063aa2dd7814"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Ordered removal of child across state lines for a custody case in a third state, I wasn’t even served with the order but had to turn my daughter over by 7pm that day and I live 4 hours away from that court.",
@@ -64,11 +85,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/dianna_russell",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='TN'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -85,7 +102,18 @@
     "draft_only": true
   },
   "render": {
-    "quote_char_budget": 280
+    "quote_char_budget": 280,
+    "selected_quotes": [
+      {
+        "body": "Ordered removal of child across state lines for a custody case in a third state, I wasn’t even served with the order but had to turn my daughter over by 7pm that day and I live 4 hours away from that court.",
+        "kind": "comment"
+      },
+      {
+        "body": "Committed perjury on motions and in hearings, Judge Rader threw her off the case only AFTER my attorney brought her misconduct to light, but the damage was done",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

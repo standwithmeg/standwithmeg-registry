@@ -12,12 +12,18 @@
     "court_or_county": "Family Court",
     "state": "North Carolina",
     "state_abbr": "NC",
-    "mention_count": 0,
+    "mention_count": 5,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 5,
+    "supabase_row_ids": [
+      "01766c6f-5de9-4b03-b4d6-75211fdebae0",
+      "5ef9b171-1cb7-433a-862c-bfb547653ccc",
+      "735fc469-0a3d-43b3-8a8a-2f4a0fcbae0f",
+      "d0635caf-56dc-4068-ad4b-7d3a665062f0",
+      "a0dd1f62-c842-43d4-9b45-e424ce969541"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "jimy love|NC"
   },
@@ -42,12 +48,31 @@
     "_pdf_state_family_count": 216,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 5,
+    "actor_report_count": 5,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "They have systematically degraded my relationship with my children, and enabled the parallel parent to alienate me and caused untold damage to the children resulting in mental health issues and prescriptions that are normally reserved for severe mental disorders.",
+        "state": "NC",
+        "county": "Johnston County",
+        "row_id": "2e0caa59-f44f-4254-aef7-98ffda600c3b"
+      },
+      {
+        "body": "This experience has left me carrying a level of grief that is difficult to put into words. I have spent nearly three years mourning children who are still alive, missing moments I can never get back, and living with a pain that follows me from the moment I wake up until I go to sleep. I’m no longer the same woman and my mental health is severely destroyed and struggling to maintain hope. I feel as if I no longer have a purpose in life and I’m not sure how much longer I can continue to hold on.",
+        "state": "NC",
+        "county": "Johnston County",
+        "row_id": "9e02eeaa-506b-41be-a634-6bbb50fb9ed2"
+      },
+      {
+        "body": "This custody battle has taught me that protecting children is not about winning against the other parent; it is about preserving stability, truth, and peace when conflict tries to rewrite the story. I will keep choosing documentation over drama, boundaries over bitterness, and my children’s well-being over public revenge.",
+        "state": "NC",
+        "county": "Johnston County",
+        "row_id": "59b36385-33a9-450d-8eff-13dfa48b6bac"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Forced me into an equitable distribution trial without an attorney, denied my request to submit evidence of separate property and cost me tens of thousands of dollars. He also refused to hear a return hearing on an ex parte order because he wasn’t the “assigned” judge in our case.",
@@ -70,11 +95,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/jimmy_l_love_jr",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='NC'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +111,22 @@
     "recommended_route": "/court-actors/nc/jimmy_l_love_jr/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Forced me into an equitable distribution trial without an attorney, denied my request to submit evidence of separate property and cost me tens of thousands of dollars.",
+        "kind": "comment"
+      },
+      {
+        "body": "He heard her case and his son as a parental coordinator when I had evidence showing medical neglect, and this was not the first time that we had medical neglect.",
+        "kind": "comment"
+      },
+      {
+        "body": "Issued rulings that maintained supervised visitation and prolonged my separation from my children. Spoke with other party before I was allowed into the court room.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

@@ -12,12 +12,20 @@
     "court_or_county": "Highland",
     "state": "Ohio",
     "state_abbr": "OH",
-    "mention_count": 0,
+    "mention_count": 7,
     "family_count": 4,
     "public_family_count": 4,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 7,
+    "supabase_row_ids": [
+      "c049fe92-77e3-40ee-8a67-c21fe2607700",
+      "1f6955d2-86af-44f1-9dae-c9636fe60c6d",
+      "447056ef-649f-4f67-943c-6e3d398798c7",
+      "851677fb-4d8a-4153-8a09-45715526723b",
+      "f869b081-4233-4a71-8a75-4425b7ef1d49",
+      "4ed619c0-5f7f-4077-aaa7-5ec13ae27ae6",
+      "9696db4a-6a17-4128-a606-caac50da896c"
+    ],
     "actor_row_id": "c049fe92-77e3-40ee-8a67-c21fe2607700",
     "actor_bucket_key": "casey cook|OH"
   },
@@ -42,12 +50,43 @@
     "_pdf_state_family_count": 264,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 7,
+    "actor_report_count": 7,
     "family_count": 4,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Denied motion and ignored evidence!! None of them did their job they made up everything. The judge didn’t want to listen to us whatsoever that we gave him evidence and they didn’t show him any evidence and that he ruled with them over us. He delayed hearings gave them more time biased, he didn’t sign half of his records he had to click record sign it things like that you can put well. She really really wasn’t on our case that much it was mainly James he was the one he was his assistant prosecutor. They have kept me away from my daughter since she was born. Have false documents and have been proven but no one will listen to me. Please help me!!!!",
+        "state": "OH",
+        "county": "Highland county",
+        "row_id": "93b9ae0f-56b2-4e79-ab9c-427da47455a6"
+      },
+      {
+        "body": "This system has lied and tore my family apart causing emotional damage",
+        "state": "OH",
+        "county": "Highland county",
+        "row_id": "6caec907-d638-46ce-ac09-9cde3975ad8e"
+      },
+      {
+        "body": "The system has destroyed my entire family and when I asked the corrupt judge greer to tell me why, he simply told me he don't have to explain why he made the decision to terminate my rights. Let that sink in....",
+        "state": "OH",
+        "county": "HIGHLAND",
+        "row_id": "899c1aec-eb22-48b6-91a7-613a0f0bb684"
+      },
+      {
+        "body": "They took the happiest and joy out of us",
+        "state": "OH",
+        "county": "Highland county",
+        "row_id": "8b35071a-b597-4615-93d0-41c8dca323bd"
+      },
+      {
+        "body": "Killed me and my family",
+        "state": "OH",
+        "county": "Highland county",
+        "row_id": "df430208-7750-49eb-9718-6825553635b6"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Lied about everything Lied on oath He maliciously came out here thought we were lying about a flat tire because we had to cancel last minute because the FAC rules that you have to follow and if you are late, you can’t go to your visit. If you’re early, you can’t be early. You can’t wait in the parking lot none of that you will get wrote up like quick as anything, but he instead of coming and calling to see if we need a ride to go see our daughter and to visit with him, he maliciously comes out here and instead of knocking on the door he gets out of his car, goes directly over to our car and starts taking pictures saying we’re lying about our flat tire and then lies on the stand saying that he was going to knock on the door and that’s what’s going on in your appeal. They’re saying that that he was coming to knock on the door. I have cameras. We had to cancel a visit one time bc of a flat tire last minute and he thought we was lying so he came out and got out of his car and went over to ours and started talking pictures",
@@ -76,11 +115,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/casey_cook",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='OH'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -96,6 +131,26 @@
     "recommended_route": "/court-actors/oh/casey_cook/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Lied about everything Lied on oath.",
+        "kind": "comment"
+      },
+      {
+        "body": "Denied motion and ignored evidence!! None of them did their job they made up everything.",
+        "kind": "comment"
+      },
+      {
+        "body": "Violated my rights on April 1, 2024, coming on my property and recording within the curtilage of my home.",
+        "kind": "comment"
+      },
+      {
+        "body": "Fabricated evidence",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

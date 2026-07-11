@@ -12,12 +12,20 @@
     "court_or_county": "Placer",
     "state": "California",
     "state_abbr": "CA",
-    "mention_count": 0,
+    "mention_count": 7,
     "family_count": 4,
     "public_family_count": 4,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 7,
+    "supabase_row_ids": [
+      "2d436cba-5e9c-4be5-8e8a-8c457be07aa4",
+      "b3469ca7-ba18-48fd-af13-5df0cd099696",
+      "e7a47623-ad4a-41e6-a662-3ea1af3ff6b0",
+      "c9842a71-54a3-4459-8f5f-242d600b8a3c",
+      "1b7fca3f-6b33-41f4-aa9e-11346c69ed21",
+      "be25fc72-da41-4025-82b0-aeed9b2d1609",
+      "77cdc620-0482-49fc-825e-05ad8512a449"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
@@ -27,27 +35,58 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 357,
-    "total_submissions": 444,
-    "avg_financial_loss": 285669.87,
+    "families_approved": 359,
+    "total_submissions": 446,
+    "avg_financial_loss": 285125.16,
     "avg_months_lost": 35.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CA",
-    "state_family_count": 444,
-    "median_financial_loss": 265100,
-    "median_burden_sample_size": 198,
+    "state_family_count": 446,
+    "median_financial_loss": 269200,
+    "median_burden_sample_size": 199,
     "median_months_lost": 20,
-    "pro_se_pct": 58.6,
-    "pro_se_count": 260,
-    "_pdf_state_family_count": 444,
+    "pro_se_pct": 58.7,
+    "pro_se_count": 262,
+    "_pdf_state_family_count": 446,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 7,
+    "actor_report_count": 7,
     "family_count": 4,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "After disputed allegations I denied on the record, Placer County Family Court issued a five-year restraining order and custody restrictions that left me with only supervised video calls. My concern is that major decisions were made through a process with serious record and due-process questions, including disputed child testimony, unclear evidence rulings, Family Code 3044 findings, and a trial day with no court reporter.",
+        "state": "CA",
+        "county": "Placer County",
+        "row_id": "1ccda0e4-e795-44b0-9cba-10d36a247076"
+      },
+      {
+        "body": "This court system has kidnapped my child under the color of law and destroyed my entire life. My life will never be the same.",
+        "state": "CA",
+        "county": "Sacramento",
+        "row_id": "125dadf7-8017-445c-a55e-af952b9c79bd"
+      },
+      {
+        "body": "The amount of dirty hands involved in this case is truly disgusting and demonic. There's many not mentioned since not entered into the court. There has been a very clear intent to deprive, knowingly putting such precious, innocent little ones in harm's way who cannot protect themselves. Even my seeking help thru federal entities has backfired on them. The lack of integrity in these local systems and beyond is disgraceful; and devastating. They're doing a great job of robbing children of the childhood they deserve, with their sister and family and the Motherhood I deserve. The crimes and abduction must cease and desist.",
+        "state": "CA",
+        "county": "Placer County",
+        "row_id": "d0b37705-361e-4417-aac2-b089082298c7"
+      },
+      {
+        "body": "-Facilitated and empowered my ex to abuse us physically/emotionally. -Sucked the life out of us (praying for death to come for me), my children are now battling court induced trauma along with their fathers’ induced trauma.",
+        "state": "CA",
+        "county": "Placer",
+        "row_id": "6268b70d-0a58-439c-b8f7-2fa158311545"
+      },
+      {
+        "body": "Destroyed my children in every aspect, mentally, emotionally. They were never heard, and simply no one cared what my ex did to me in front of them nor do they care how he abused my children in multiple ways.",
+        "state": "CA",
+        "county": "Placer",
+        "row_id": "e1a3a8a9-e0b8-4897-b73f-1aa7f2e2be3a"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Refused to let me have equal time with witnesses in trial. OC got over and hour, I got maybe 13 minutes. He announced before trial start and before letting transcriptionist in court, ‘I have already made my decision, I am granting dads request, we are just here to determine if you will be blacked out from contact or not. Temp order for two months, last almost 4 years. He also fell asleep twice in 2022 trial. Wouldn’t allow me to speak, no opening argument or response. Fell asleep during trial, announced he had made his decision regarding trial before trial began, denied evidence during trial, punished me for speaking about ex’s conviction of felony child abuse (set child support to zero from two years back to current day- I had full custody- as punishment for speaking about convictions, continues false allegations of alienation. Announced before transcriptionist arrived he had already made his decision on the trial, banned me from submitting evidence, fell asleep twice during trial, falsely alleged parent alienation, wouldn’t let me speak opening argument or response, limited my time cross examining witness.",
@@ -60,6 +99,12 @@
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Placer"
+      },
+      {
+        "comment_text": "Older commissioner/temporary-judge authority history. Father believes Jacques recognized some concerns in the case but moved them aside or did not resolve them, leaving commissioner-authority and fairness concerns unresolved.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Placer County Superior Court"
       },
       {
         "comment_text": "Not a judge but a commissioner - ignored domestic violence, ignored abuse evidence, sanctioned victim for documenting and he himself was going through a bitter divorce while on the stand",
@@ -76,11 +121,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/michael_anthony_jacques",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='CA'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -96,6 +137,30 @@
     "recommended_route": "/court-actors/ca/michael_anthony_jacques/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Refused to let me have equal time with witnesses in trial.",
+        "kind": "comment"
+      },
+      {
+        "body": "This judge was removed from my case.",
+        "kind": "comment"
+      },
+      {
+        "body": "Father believes Jacques recognized some concerns in the case.",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored domestic violence",
+        "kind": "comment"
+      },
+      {
+        "body": "Orders support without summons after DCSS freezes support to mother prior to request for order.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

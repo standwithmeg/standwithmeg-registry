@@ -12,12 +12,20 @@
     "court_or_county": "Lenoir",
     "state": "North Carolina",
     "state_abbr": "NC",
-    "mention_count": 0,
+    "mention_count": 7,
     "family_count": 5,
     "public_family_count": 5,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 7,
+    "supabase_row_ids": [
+      "5b49f34a-73df-429e-a675-c6e8842d6288",
+      "99847eae-1776-4dec-96cd-816916249524",
+      "86360bd1-368c-4b54-a4d5-845231a32f67",
+      "76268143-1eba-4982-82f0-68cdc8ff54c0",
+      "6cb67105-df08-4bb6-9d73-09e988f9682f",
+      "a89cabdd-61f0-4929-9e5b-4c88442d60ae",
+      "ce4bea33-9d20-4a1f-9bc5-74074d7d0da9"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": null,
     "_overrides_applied": [
@@ -48,12 +56,43 @@
     "_pdf_state_family_count": 216,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 7,
+    "actor_report_count": 7,
     "family_count": 5,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "I have missed moments with my baby that I will never get back, and the pain of being separated from my child has affected every part of my life. I want people to know that parents and children should not be torn apart without real evidence, fairness, and due process.",
+        "state": "NC",
+        "county": "LENOIR",
+        "row_id": "420db232-15eb-4cd6-821c-15a34778db95"
+      },
+      {
+        "body": "I have personally seen Holly do everything she can to advocate for herself and her children, only to feel silenced and treated unfairly. I have seen the damage caused by the system and how much the separation from her girls have hurt her in many ways.",
+        "state": "NC",
+        "county": "Lenoir",
+        "row_id": "110b3433-2330-4495-a08b-1d5f7f0c67bb"
+      },
+      {
+        "body": "It has stole my natural right as a mother to build bond with child qnd the wmotional stress on the children and the mother.. in the be batudal qorkd what effecta does it have on aby other mother that has its baby taken or hurt...",
+        "state": "NC",
+        "county": "Lenoir",
+        "row_id": "6e34d8fc-75be-4232-a5c5-24861713b993"
+      },
+      {
+        "body": "This system took my children, our time, our milestones, and our peace, while forcing me to fight to prove the love and bond that never should have been questioned. I want people to know that family separation is not just a court case, it is lifelong harm to children and parents.",
+        "state": "NC",
+        "county": "Lenoir",
+        "row_id": "0b0ff1a5-9314-4a68-8dc4-21f4137cffd3"
+      },
+      {
+        "body": "This system didn’t just fail my family — it systematically punished me for protecting my children, tore them from their mother, and caused irreversible trauma under the guise of ‘justice.’ What was done to us wasn’t protection; it was sanctioned harm.",
+        "state": "NC",
+        "county": "Lenoir",
+        "row_id": "871f5456-f005-43f3-9c4c-47a7ec9c6aad"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Judge Johnathan Sargeant ignored my due process concerns and allowed the case to proceed without fully addressing pending constitutional, ADA, visitation, and placement issues. Judge Johnathan Sargeant laughed at me in open court with the GAL attorney and CPS attorney while comments were made in front of the courtroom audience suggesting I did not know who my children’s fathers were, despite the fact that I had provided that information. He laughed during my hearing with opposing attorneys after they made a humiliating statement about my children’s fathers, then failed to meaningfully hear my evidence and due process concerns.",
@@ -88,11 +127,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/jonathon_sargeant",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='NC'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -108,6 +143,30 @@
     "recommended_route": "/court-actors/nc/jonathon_sargeant/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Judge Johnathan Sargeant ignored my due process concerns and allowed the case to proceed.",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored evidence, denied due process, prevented reunification.",
+        "kind": "comment"
+      },
+      {
+        "body": "Judge Jonathan Sargeant failed to meaningfully address evidence, due process concerns, DSS…",
+        "kind": "comment"
+      },
+      {
+        "body": "Denied kinship allowing them to stay in CPS custody after ICPC was approved",
+        "kind": "comment"
+      },
+      {
+        "body": "Laughed at mother in middle of court over paternity issues, doing whatever dss suggests.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

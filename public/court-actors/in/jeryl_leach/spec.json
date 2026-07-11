@@ -12,12 +12,16 @@
     "court_or_county": "Newton County",
     "state": "Indiana",
     "state_abbr": "IN",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "579de907-60bf-4061-bf1f-dc21b4480413",
+      "e7d758d0-2773-46c3-890a-d696fae5e6b0",
+      "549d1b15-bd97-4a16-82b0-e1249e3d6037"
+    ],
     "actor_row_id": "579de907-60bf-4061-bf1f-dc21b4480413",
     "actor_bucket_key": "jeryl leach|IN"
   },
@@ -42,12 +46,31 @@
     "_pdf_state_family_count": 153,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Did nothing to her. Tried to communicate and got nothing but attitude. I didn’t think professionals spoke to other humans the way she spoke to me.",
+        "state": "IN",
+        "county": "Newton County",
+        "row_id": "51446408-aa57-43ec-b0a2-67840ca699ab"
+      },
+      {
+        "body": "Murderous saboteurs and traffickers for profit, denied motherhood and transferred custody to infertile perpetrator, ex-husband, whom is not the biological father, destroyed countless extended families, relationships, career and survivor of attempted incapacitation and murder via healthcare fraud inside and outside of the Courts",
+        "state": "IN",
+        "county": "Newton County, Lake County and Tippecanoe County",
+        "row_id": "865fd202-7964-401c-b8ab-8196f59d9db9"
+      },
+      {
+        "body": "Defraud and destroy",
+        "state": "IN",
+        "county": "Newton County",
+        "row_id": "abecc014-be59-4edb-a386-3ec519d2a751"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Miss Harris was appointed to us by the court as a Guardian Ad Litem to our daughter during a custody issue. We paid her retainer fee of 1,500.00 and she turned in her report 2 days before court. Court rules are that reports need to be turned in 10 days before court. My ex-husband asked for the report to be thrown out because it was turned in late which forced the judge to r e c u s e himself a n d w e h a d to wait for a n o t h e r court date as well as a new judge. Miss Harris was very upset and charged us an additional 3,000.00 without doing any additional work.",
@@ -70,11 +93,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/jeryl_leach",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='IN'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +109,22 @@
     "recommended_route": "/court-actors/in/jeryl_leach/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Miss Harris was appointed to us by the court as a Guardian Ad Litem to our daughter during a custody issue.",
+        "kind": "comment"
+      },
+      {
+        "body": "Racketeering, conspiracyies to commit murders, attempted and threats for guardianship, tampering with record, harassment and intimidation, suppression, due process…",
+        "kind": "comment"
+      },
+      {
+        "body": "Did nothing to her. Tried to communicate and got nothing but attitude. I didn’t think professionals spoke to other humans the way she spoke to me.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

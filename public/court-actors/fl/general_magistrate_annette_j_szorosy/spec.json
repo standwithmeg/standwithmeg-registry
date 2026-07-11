@@ -12,12 +12,17 @@
     "court_or_county": "Broward",
     "state": "Florida",
     "state_abbr": "FL",
-    "mention_count": 0,
+    "mention_count": 4,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "01867f34-f718-4219-a8aa-a37d448fc085",
+      "461da7eb-e407-4617-9c8d-a304961308ae",
+      "610708fc-bf82-4f51-8666-c1b6c99e8557",
+      "41036044-036b-4963-b729-2f493558388a"
+    ],
     "actor_row_id": "01867f34-f718-4219-a8aa-a37d448fc085",
     "actor_bucket_key": "general magistrate annette szorosy|FL"
   },
@@ -42,12 +47,37 @@
     "_pdf_state_family_count": 306,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "It destroyed 30 years of around the clock hard work to build the best life and future for my 5 angels who also were destroyed in the process beyond any recognition. This is a criminal enterprise of injustice and a modern day slavery.",
+        "state": "FL",
+        "county": "Broward",
+        "row_id": "fc69cc8c-f4c7-4d55-8f88-169898d4f00b"
+      },
+      {
+        "body": "The Family Court system is a giant money making machine. It has nothing to do with the best interests of our children.",
+        "state": "FL",
+        "county": "Broward",
+        "row_id": "0fabfcfa-6f44-4842-8f26-e538a5d9f245"
+      },
+      {
+        "body": "Judge Sarduy rapidly pushed the case to final judgment and entered a final order despite extensive evidence of fraud, perjury, false UCCJEA affidavits, concealed addresses, ongoing abuse, documented harm to multiple disabled parties, and death of two family members during proceedings. This was done despite known and documented harm inflicted upon my entire family, including severe emotional, medical, financial, and psychological destruction affecting multiple vulnerable and disabled family members. Rather than investigate the fraudulent filings, abuse disclosures, and ongoing due process violations, the court accelerated proceedings in a manner that appeared designed to legitimize and cement unlawful actions already taken against me and my daughter.",
+        "state": "FL",
+        "county": "Broward",
+        "row_id": "e24dd600-04f4-461a-bfb2-070c363ca521"
+      },
+      {
+        "body": "My child was taken through backroom orders with no hearing, no proof, and no accountability, and every attempt I made to protect her was ignored while the system closed ranks to protect itself. This system stripped me of my child through unrecorded, unsupported orders and then denied me any meaningful way to fight back, turning due process into an illusion and leaving my family devastated.",
+        "state": "FL",
+        "county": "Broward",
+        "row_id": "a6fe87f9-00be-429e-a6c1-dc51b3a08d7c"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "General Magistrate Annette Szorosy exceeded her authority by forcing traumatizing supervised visitation despite repeated warnings, documented abuse concerns, and clear evidence that the process was causing severe psychological and medical harm to my daughter, who was later hospitalized twice; she and Judge Kanner then weaponized a May 16 hearing regarding attorney withdrawal to strike, suppress, and effectively erase my emergency filings and medical evidence while allowing the abuse, retaliation, and separation from my child to continue unchecked. Issued custody-related recommendations without evidentiary support, ignored documented abuse and material facts, and contributed to outcomes that removed my child without due process or consideration of safety.",
@@ -70,11 +100,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/general_magistrate_annette_j_szorosy",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='FL'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +116,22 @@
     "recommended_route": "/court-actors/fl/general_magistrate_annette_j_szorosy/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Then weaponized a May 16 hearing regarding attorney withdrawal to strike",
+        "kind": "comment"
+      },
+      {
+        "body": "GM Szorosy was involved in my case for a relatively brief period.",
+        "kind": "comment"
+      },
+      {
+        "body": "My legally and timely filed objections, then having to later retract and vacate the order to keep the case with the judges.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

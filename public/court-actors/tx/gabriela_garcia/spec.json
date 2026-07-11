@@ -12,12 +12,15 @@
     "court_or_county": "138",
     "state": "Texas",
     "state_abbr": "TX",
-    "mention_count": 0,
+    "mention_count": 2,
     "family_count": 2,
     "public_family_count": 2,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 2,
+    "supabase_row_ids": [
+      "3cf1956d-616e-4fe3-ae96-3439e0a3f30f",
+      "408e53a4-58ba-4df5-af58-bdaa1bba84e9"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
@@ -27,34 +30,55 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 250,
-    "total_submissions": 315,
-    "avg_financial_loss": 229240.77,
-    "avg_months_lost": 32.1,
+    "families_approved": 251,
+    "total_submissions": 316,
+    "avg_financial_loss": 228661.33,
+    "avg_months_lost": 32.0,
     "_source_table": "movement_stats_by_state",
     "_match_value": "TX",
-    "state_family_count": 315,
-    "median_financial_loss": 118900,
-    "median_burden_sample_size": 149,
-    "median_months_lost": 20,
-    "pro_se_pct": 49.8,
-    "pro_se_count": 157,
-    "_pdf_state_family_count": 315,
+    "state_family_count": 316,
+    "median_financial_loss": 117950,
+    "median_burden_sample_size": 150,
+    "median_months_lost": 19,
+    "pro_se_pct": 50.0,
+    "pro_se_count": 158,
+    "_pdf_state_family_count": 316,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 2,
+    "actor_report_count": 2,
     "family_count": 2,
-    "family_reports": [],
-    "public_comments": []
+    "family_reports": [
+      {
+        "body": "Has destroyed my daughter and I. Left me bankrupt and to top it off need to pay Child support to the father so he can pay his debt and have no work.",
+        "state": "TX",
+        "county": "Cameron",
+        "row_id": "bcdee06a-4757-4a5e-8aeb-5bc595860881"
+      },
+      {
+        "body": "They have destroyed my life to the point that sometimes I feel I don’t want to be in this World anymore, they took all that mattered to me",
+        "state": "TX",
+        "county": "Cameron County",
+        "row_id": "c34803e1-2fda-4f34-a6fd-a4ae6c81d4c7"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Cited with father, denied motions, ignored evidence. No due process.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "She groomed my kids and was acting like she was my ex’s attorneys helper even sitting in court next to him and consulting him all the time. Biased since the beginning. Told me that all the DV I suffer was not relevant",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
   },
   "export_dir": "New Final Post and Capcut template/export/gabriela_garcia",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='TX'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available",
     "pdf_public_actor: no 'Gabriela Garcia' in cache for TX"
   ],
   "guardrails": {
@@ -72,6 +96,18 @@
     "recommended_route": "/court-actors/tx/gabriela_garcia/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Cited with father, denied motions, ignored evidence. No due process.",
+        "kind": "comment"
+      },
+      {
+        "body": "She groomed my kids and was acting like she was my ex’s attorneys helper even sitting in court next to him and consulting him all the time. Biased since the beginning. Told me that all the DV I suffer was not relevant",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

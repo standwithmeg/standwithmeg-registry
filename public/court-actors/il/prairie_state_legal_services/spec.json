@@ -12,12 +12,16 @@
     "court_or_county": "McLean",
     "state": "Illinois",
     "state_abbr": "IL",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "5055198c-66e5-45a2-87ab-820376d88b23",
+      "9846bec9-71d0-4b95-a229-0ac0c18cbb49",
+      "b08a7283-ecc7-4ebc-a371-f28d5b1b0409"
+    ],
     "actor_row_id": "5055198c-66e5-45a2-87ab-820376d88b23",
     "actor_bucket_key": "prairie state legal services|IL",
     "_overrides_applied": [
@@ -37,12 +41,12 @@
   "state_stats": {
     "families_approved": 113,
     "total_submissions": 150,
-    "avg_financial_loss": 220843.1,
+    "avg_financial_loss": 219529.23,
     "avg_months_lost": 28.0,
     "_source_table": "movement_stats_by_state",
     "_match_value": "IL",
     "state_family_count": 150,
-    "median_financial_loss": 129500,
+    "median_financial_loss": 126875,
     "median_burden_sample_size": 92,
     "median_months_lost": 15,
     "pro_se_pct": 48.7,
@@ -50,12 +54,25 @@
     "_pdf_state_family_count": 150,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Family court has destroyed the innocence and robbed the dreams of my children and my motherhood. Family court has become the abuser and the weapon of my abuser. Family court is responsible for creating poverty homelessness and generational trauma.",
+        "state": "IL",
+        "county": "Lake",
+        "row_id": "67770c47-4f1a-4521-bc58-71c1512f4dde"
+      },
+      {
+        "body": "A system that is supposed to protect children, and protect survivors of domestic violence has put my daughter continuously In Harm's Way by forcing her to be with her abuser 50% of the time, regardless of the fact that she is still disclosing abuse. I have been diagnosed with complex PTSD, my other children, my other family members, close family friends, and myself have all struggled with severe depression, fear, and anxiety on a regular basis because of family court!",
+        "state": "IL",
+        "county": "Kankakee",
+        "row_id": "a6441b03-4ca2-4eea-845b-835a7c4a09bb"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Useless. They only help if you have an OP and or criminal case. They then have an insane waitlist. They called me 3 yrs later and said they could take my case.",
@@ -66,11 +83,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/prairie_state_legal_services",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='IL'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -86,6 +99,14 @@
     "recommended_route": "/court-actors/il/prairie_state_legal_services/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Useless. They only help if you have an OP and or criminal case. They then have an insane waitlist. They called me 3 yrs later and said they could take my case.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

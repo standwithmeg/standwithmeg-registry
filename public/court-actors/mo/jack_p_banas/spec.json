@@ -12,12 +12,16 @@
     "court_or_county": "St Charles",
     "state": "MO",
     "state_abbr": "MO",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "4b366a9c-a63a-414d-808c-462e980691e5",
+      "4bd6d7de-ef94-4c98-a05f-c05b32e14df3",
+      "9ca81740-9355-446e-b4a3-55b8831db431"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "jack banas|MO"
   },
@@ -42,12 +46,31 @@
     "_pdf_state_family_count": 194,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Messy!!!",
+        "state": "MO",
+        "county": "St charles county",
+        "row_id": "2c28922a-960e-4791-96f0-8b7da4e843b6"
+      },
+      {
+        "body": "Torn. Us. Apart",
+        "state": "MO",
+        "county": "St. Charles",
+        "row_id": "e9a50f95-0502-4c44-a2ac-14b01473ec42"
+      },
+      {
+        "body": "St Charles County Family Court was complicit in the complete alienation of my children and total financial ruin that I will likely never recover from.",
+        "state": "MO",
+        "county": "St. Charles",
+        "row_id": "45e543d2-19ef-4dab-b2da-927ad3b3799c"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "He refused to enforce my custodial time for 5 years my case was open resulting in the complete alienation of my children. He refused to hold my ex accountable for not following court orders and making false accusations against me. He drug the case out for 5 years costing me 200k in legal fees while my ex was receiving free legal representation because his mother works for his attorney.",
@@ -70,11 +93,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/jack_p_banas",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='MO'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +109,22 @@
     "recommended_route": "/court-actors/mo/jack_p_banas/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "He refused to enforce my custodial time for 5 years my case was open resulting in the complete alienation of my children.",
+        "kind": "comment"
+      },
+      {
+        "body": "Father’s rights only. Will take 11 year old child from primary caregiver and give to absent of 11 year father",
+        "kind": "comment"
+      },
+      {
+        "body": "Did not judge based on evidence.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

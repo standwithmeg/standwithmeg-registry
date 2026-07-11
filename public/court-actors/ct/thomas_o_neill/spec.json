@@ -12,12 +12,19 @@
     "court_or_county": "Stamford Family court",
     "state": "Connecticut",
     "state_abbr": "CT",
-    "mention_count": 0,
+    "mention_count": 6,
     "family_count": 5,
     "public_family_count": 5,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 6,
+    "supabase_row_ids": [
+      "d008ec3a-04f5-4f0a-84ea-45ae95552d2c",
+      "6b547e7b-bee6-4058-816e-e69716aa33f6",
+      "ad1b5d55-b2dd-4bcd-bfd4-28853990023c",
+      "05c25dec-30d8-4ae5-b662-ee51534546fd",
+      "b9fba2bf-63bf-419e-97d5-422c9893b252",
+      "575fd4e6-e16c-4658-9b57-f8c2b752c978"
+    ],
     "actor_row_id": "d008ec3a-04f5-4f0a-84ea-45ae95552d2c",
     "actor_bucket_key": null
   },
@@ -42,12 +49,43 @@
     "_pdf_state_family_count": 65,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 6,
+    "actor_report_count": 6,
     "family_count": 5,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "This system took me away from my four-year-old son on his birthday and my one-year-old-infant based on allegations the court itself later rejected. One hundred and twenty-eight days later, my boys remain without their father — not because of any finding of harm, but because in a high-net-worth divorce the legal process itself, asymmetrically applied, became the instrument of our separation.",
+        "state": "CT",
+        "county": "Stamford/Norwalk",
+        "row_id": "fd07227a-da15-4f13-858f-1297bc9bb3ca"
+      },
+      {
+        "body": "The Family Court allowed all my assets to be lost without any concern to the financial and emotional damage done to myself and my child.",
+        "state": "CT",
+        "county": "Fairfield County",
+        "row_id": "6d23739e-f481-452c-9016-fb1c3173e649"
+      },
+      {
+        "body": "The family court allowed fraudulent “experts” and then ignored the recommendations of legitimate experts hiding behind the shield of judicial immunity and playing a congeniality game with people’s lives.",
+        "state": "CT",
+        "county": "Fairfield",
+        "row_id": "60741b2a-b2aa-4252-b450-df5e75e38afa"
+      },
+      {
+        "body": "The judges in family court abuse judicial immunity to make decisions “at their own discretion” against the advice of experts and even legal statutes. If you aren’t the one they “like” they simply destroy your life and your children’s.",
+        "state": "CT",
+        "county": "Fairfield",
+        "row_id": "52d80440-6ed9-44b5-95f3-3804e3d37264"
+      },
+      {
+        "body": "The system has destroyed my health, my child’s development and mental health, and violated constitutional and human rights with no concern for the damage they have done.",
+        "state": "CT",
+        "county": "Fairfield county",
+        "row_id": "de60c1be-a0e6-4368-8265-3db358b9c452"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Schoonmaker, George, Blomberg, Bryniczka & Welsh P.C., counsel of record for the Plaintiff in Rosenwald v. Rosenwald, FST-[redacted], comprises numerous attorneys with deep, longstanding, and ongoing institutional, bar-leadership, and CLE-platform ties to the very Connecticut Superior Court bench from which the Honorable Thomas Joseph O'Neill — who, as a former Day Pitney LLP partner in the firm's Stamford commercial-litigation practice, has never disclosed under Canon 2.11(B) whether Day Pitney represented any of the Rosenwald-affiliated financial entities or trusts at issue in this dissolution — issued, without articulated reasoning, a one-line April 29, 2026 denial of the pro se Defendant's Practice Book § 13-5 motion specifically invoking the Fifth Amendment privilege against self-incrimination in light of eighty-five pending § 53a-223 criminal counts, twenty days before the Honorable Ronald E. Kowalski II then placed that same Defendant under oath at the outset of court-initiated sanctions inquiry on overlapping factual subject matter — and in a docket where multiple FST Family Judges have, per the on-record acknowledgment of the Honorable Jennifer DeCastro-Tunnard on May",
@@ -82,11 +120,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/thomas_o_neill",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='CT'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -102,6 +136,26 @@
     "recommended_route": "/court-actors/ct/thomas_o_neill/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Now notorious as the judge removed from the Ambrose case where he ignored every psychological…",
+        "kind": "comment"
+      },
+      {
+        "body": "Allowed for full financial bankruptcy of a stay at home mom by allowing for delays and…",
+        "kind": "comment"
+      },
+      {
+        "body": "Refused to hear imminent harm motions for months until the damage was already done",
+        "kind": "comment"
+      },
+      {
+        "body": "Made judicial decisions in complete opposition of child/psychology experts",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

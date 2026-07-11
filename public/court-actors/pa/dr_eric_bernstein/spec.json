@@ -12,12 +12,18 @@
     "court_or_county": "Allegheny",
     "state": "Pennsylvania",
     "state_abbr": "PA",
-    "mention_count": 0,
+    "mention_count": 5,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 5,
+    "supabase_row_ids": [
+      "557e721b-0ed2-4dd7-ae3d-aa7768e30082",
+      "9b88777e-fbe3-4248-9bbf-edcdf0568020",
+      "5c4a30eb-c445-42dd-9a6c-53a0d0bc8dd7",
+      "ac250777-27dc-408b-a178-60a7934b1a2f",
+      "6752f9b1-d65e-46eb-b10e-8c6ac47312ac"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
@@ -42,12 +48,31 @@
     "_pdf_state_family_count": 151,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 5,
+    "actor_report_count": 5,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Destroyed my mental health and caused trauma",
+        "state": "PA",
+        "county": "Butler",
+        "row_id": "7006797e-5323-40ce-a807-7d84cc62d2de"
+      },
+      {
+        "body": "Has sabotaged 10 years and precious time with my children living in survival mode, constant stress, fear and torture while family court helped and abuser commit pure psychological warfare and coercive control.",
+        "state": "PA",
+        "county": "Mercer",
+        "row_id": "b318ed9b-49b3-4ff0-a48c-b08541591c0f"
+      },
+      {
+        "body": "I waited, I worked, I behaved, I paid, I was told \"the kids will see the truth in the end\". It's almost to the end and my children have been told a vicious lie about me that I may never undo.",
+        "state": "PA",
+        "county": "Butler/Allegheny/Westmoreland",
+        "row_id": "0069b2ce-dea7-42c1-aa97-0a691e0dc301"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "He made a lot of assumptions that needed litigated, repeated the other party’s false accusations and didn’t listen to my children’s attorney or the family counselor’s research who both were working closely with my children, their dad and I. In our “high conflict” “contentious” case where I was told the court system is “not equipped” to handle our case. He made a report based on opinion and ex’s sabotage. Didn’t investigate but made a statement there was not abuse or alienation— which both were happening.",
@@ -70,11 +95,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/dr_eric_bernstein",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='PA'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +111,22 @@
     "recommended_route": "/court-actors/pa/dr_eric_bernstein/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "In our “high conflict” “contentious” case where I was told the court system is “not equipped” to handle our case. He made a report based on opinion and ex’s sabotage.",
+        "kind": "comment"
+      },
+      {
+        "body": "Administered an MMPI and then completely misrepresented the results and subsequent conversations in a skewed fashion to benefit only opposing side.",
+        "kind": "comment"
+      },
+      {
+        "body": "Said one thing in report and said another in court and was bias",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

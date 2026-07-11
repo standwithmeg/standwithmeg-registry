@@ -12,12 +12,25 @@
     "court_or_county": "Hancock",
     "state": "Ohio",
     "state_abbr": "OH",
-    "mention_count": 0,
+    "mention_count": 12,
     "family_count": 10,
     "public_family_count": 10,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 12,
+    "supabase_row_ids": [
+      "02012677-e69a-4ba3-b2bf-635b3acfa3f5",
+      "fa918d31-ec10-4615-9ac2-586c88dffcf7",
+      "ff6846e8-824d-4f95-b1d9-4309cdceb897",
+      "b2f1e246-0b01-4f63-87ca-0465a785cccc",
+      "91b68742-c036-4746-9861-dd4f51ed0810",
+      "fa461b05-ecae-42c7-9a15-705b23675895",
+      "044630e8-a388-42bc-b25c-3ae1ff2b1260",
+      "d5117ab7-c9c3-4383-bf34-229bfb923ea7",
+      "4f35e5bb-7769-45f0-b160-b10f82eae430",
+      "91ca9e6d-5bca-4fe6-9414-94aef7dad70b",
+      "03578dd3-8afa-474e-9bb5-a032935e9ec4",
+      "c3ca2584-80ba-4d89-958e-7c5f94a099e1"
+    ],
     "actor_row_id": "02012677-e69a-4ba3-b2bf-635b3acfa3f5",
     "actor_bucket_key": "kristen johnson|OH"
   },
@@ -42,12 +55,49 @@
     "_pdf_state_family_count": 264,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 12,
+    "actor_report_count": 12,
     "family_count": 10,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "This system allows legal kidnapping, because there are no checks and balances for Juvenile Court Judges. Judge Kristen Johnson has caused tremendous trauma to not only me and my son but our entire family. Director Randall Galbraith and Supervisor Karmen Lauth intentionally delayed the process of developing a caseplan for me to obtain custody. Then lied under oath about my contact with the agency",
+        "state": "OH",
+        "county": "Hancock County",
+        "row_id": "24aa6619-fec5-4a34-b177-0b7175845232"
+      },
+      {
+        "body": "“This system tore our family apart, stripped away our stability, and left us living through years of silence, fear, and unanswered pain while we fought to hold onto hope and each other.”",
+        "state": "OH",
+        "county": "hancock",
+        "row_id": "79e6da58-7685-475a-a7fe-6bd1b2c654ce"
+      },
+      {
+        "body": "Torn apart a mom from her kids and alienated a mom for 4+ years while a sex offender has had access to them Broken a mamas heart day in and day out",
+        "state": "OH",
+        "county": "Hancock",
+        "row_id": "396e8c1d-7277-4614-9d0e-46fdb3aff297"
+      },
+      {
+        "body": "It cost me my entire life. Caused my kids to have ptsd and trust issues with law enforcement. They where scared to go to school because they lied to my oldest son to take him from the school. This has caused trauma and we are 6 years free from them and still live in fear",
+        "state": "OH",
+        "county": "Hancock county",
+        "row_id": "90f7d1d1-9e3d-4717-a374-2a2b13a39c67"
+      },
+      {
+        "body": "by ignoring evidence, they allowed my child to be molested again.",
+        "state": "OH",
+        "county": "Hancock",
+        "row_id": "7cbd092f-9ba9-4026-8a55-9f328d4f8c02"
+      },
+      {
+        "body": "This system allows legal kidnapping, because there are no checks and balances for Juvenile Court Judges. Judge Kristen Johnson has caused tremendous trauma to not only me and my son but our entire family.",
+        "state": "OH",
+        "county": "Hancock County",
+        "row_id": "a7404c1e-efa9-4ace-a0d8-23b34f1b3239"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "She refused to admit my emails with CPS as evidence in my trial for custody. However during appeal the Ohio Thrid District court of Appeals did accept jurisdiction of my emails but still upheld her judgment. Denied due process. Failed to accept my emails (that proved i was in contact with the agency) as evidence saying they looked copy and pasted. Appointed me a lawyer without my consent and allowed that lawyer to represent me in a motions hearing i had notification of",
@@ -112,11 +162,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/kristen_k_johnson",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='OH'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -132,6 +178,46 @@
     "recommended_route": "/court-actors/oh/kristen_k_johnson/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "She refused to admit my emails with CPS as evidence in my trial for custody.",
+        "kind": "comment"
+      },
+      {
+        "body": "She never once spoke to me.",
+        "kind": "comment"
+      },
+      {
+        "body": "Allows Kelli Millet to lie on the stand. Overruled many objections.",
+        "kind": "comment"
+      },
+      {
+        "body": "Cherry picked evidence and twisted it to fit the narrative .",
+        "kind": "comment"
+      },
+      {
+        "body": "Took my children away from a mother based off false information",
+        "kind": "comment"
+      },
+      {
+        "body": "She refuses kinship makes up false allegations makes doin anything requested by the…",
+        "kind": "comment"
+      },
+      {
+        "body": "Looking at evidence and blatantly ignored eveidence in court",
+        "kind": "comment"
+      },
+      {
+        "body": "stepped in hours before mediation to rule dad (Indicated forensic interview) would…",
+        "kind": "comment"
+      },
+      {
+        "body": "Didnt show up for court",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 2
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

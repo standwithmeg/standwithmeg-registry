@@ -12,12 +12,17 @@
     "court_or_county": "Miami",
     "state": "Kansas",
     "state_abbr": "KS",
-    "mention_count": 0,
+    "mention_count": 4,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "20222c29-9b1f-4068-9100-dc842cd67a1f",
+      "61176c16-66bc-4b29-8508-887fabc16f0b",
+      "1c564663-bcd0-4017-a2f7-c5da556c978f",
+      "5d29b7e4-c64e-4a9b-bee6-cf44f6602788"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
@@ -42,12 +47,31 @@
     "_pdf_state_family_count": 251,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Allowed the gal and judge too much power to make a decision to separate a mother from her children with no evidence or ability to defend her self due to the unethical court process. Judge allowed a conflict of interest and did not allow any evidence to be provided. Respondent was tokd he filed first and this was the reason I was given every other weekend. This is not an ethical reason to separate a mother from her children. This case was about who had the money, not what was best for the children.",
+        "state": "KS",
+        "county": "Miami",
+        "row_id": "2d608a4a-35bc-47b2-bbba-a1b38b2a6a49"
+      },
+      {
+        "body": "My ex-husband and I filed pro se to divorce and I just remember judge Montgomery telling us that our daughter did not ask to be brought into this world and we better behave accordingly to not be back in front of him and to do right by her.",
+        "state": "KS",
+        "county": "Miami",
+        "row_id": "9df38cfe-6f8c-49fc-95dc-f51d5be9eadc"
+      },
+      {
+        "body": "Miami county doesn’t have the child best interest at all, they literally take children away from a parent who wants to protect them from abuse and drugs and tells the parent that wants to keep them safe that they are a vindictive ex who is mad!",
+        "state": "KS",
+        "county": "Miami county",
+        "row_id": "8b0eaa72-5dd3-411b-9dc4-0f25f7d91268"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Allowed an expate to remove a parent from the home eith only the information given from the petitioners filing. Was never given any evidence such as police reports to state the mother was not safe to stay in the home.",
@@ -70,11 +94,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/steven_montgomery",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='KS'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +110,22 @@
     "recommended_route": "/court-actors/ks/steven_montgomery/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Was never given any evidence such as police reports to state the mother was not safe to stay in the home.",
+        "kind": "comment"
+      },
+      {
+        "body": "Judge over divorce case involving one child Judge in divorce case",
+        "kind": "comment"
+      },
+      {
+        "body": "Told me I was a vindictive ex wife",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

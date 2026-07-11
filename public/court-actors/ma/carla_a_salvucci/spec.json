@@ -12,12 +12,18 @@
     "court_or_county": "Middlesex County",
     "state": "Massachusetts",
     "state_abbr": "MA",
-    "mention_count": 0,
-    "family_count": 0,
-    "public_family_count": 0,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "mention_count": 5,
+    "family_count": 4,
+    "public_family_count": 4,
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 5,
+    "supabase_row_ids": [
+      "ee282700-9575-425d-a7b5-5ed4e3bf4035",
+      "cea90495-d751-4880-83ed-c29f365d6fc5",
+      "ac978081-b9ad-4937-9777-5bc5117d5d27",
+      "46ec369f-05ee-4a06-8eb1-92078e8d0aeb",
+      "ef8adcb9-f273-442b-9c5d-7df532c5ad9a"
+    ],
     "actor_row_id": "ee282700-9575-425d-a7b5-5ed4e3bf4035",
     "actor_bucket_key": "carla salvuci|MA"
   },
@@ -42,12 +48,31 @@
     "_pdf_state_family_count": 106,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
-    "family_count": 0,
-    "family_reports": [],
+    "report_count": 5,
+    "actor_report_count": 5,
+    "family_count": 4,
+    "family_reports": [
+      {
+        "body": "Denied me any contact with my daughter for a year.",
+        "state": "MA",
+        "county": "Essex County",
+        "row_id": "91f36a17-d7cf-4ece-94ae-44066f9b13c8"
+      },
+      {
+        "body": "Middlesex Family Court in Massachusetts has absolutely failed my daughter, ignored evidence relating to child safety and well-being (including publicly viewable evidence on social media), allowed provable perjury by both my ex-wife and her attorney (on multiple occasions and in multiple court filings), and has continued to hold onto its fraudulently obtained jurisdiction (of which there is also overwhelming evidence).",
+        "state": "MA",
+        "county": "Middlesex County",
+        "row_id": "c0a159ee-df47-4015-858d-d2822682afc0"
+      },
+      {
+        "body": "This system has forced me to grieve my three living children every single day while they are still alive and deliberately kept from me. Their father abused and tried to destroy me in their presence, yet the court rewards him with total custody and total silence — my oldest has been hospitalized and begs to speak to me, the younger two cannot even advocate for themselves, and I am left wondering how much pain and abandonment they are carrying because they don’t understand why their mother disappeared.",
+        "state": "MA",
+        "county": "Middlesex",
+        "row_id": "9411594b-58e8-4f2a-9c1e-46edc2459908"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "In my counter-complaint for modification and my pre-trial memo, I outlined very specific concerns relating to alcohol and substance abuse by my ex-wife and her family, and also illegal firearm possession, including around our daughter. I mentioned that some of this evidence was publicly available on their Instagram accounts. Opposing counsel classified my concerns as \"baseless allegations\" in two written filings. Then during the pre-trial hearing, opposing counsel stated: \"I don’t think this is the time or the place to get into details about what he thinks of mother’s various family members.\" Judge Carla A. Salvucci gave absolutely ZERO push back to opposing counsel, showed no concern for the safety or well being of my daughter at any point during the hearing, and even dismissed my daughter saying multiple times on a video call that she \"needs to run away\" as not being concerning because \"three year-olds say things.\" Carla Salvucci has to this day, completely ignored a motion to dismiss based on subject matter jurisdiction (sitting unanswered on the docket since August 2025), which outlines how my ex-wife established Massachusetts residency of our daughter through blatant, provable fraud. In addition, during a pre-trial hearing, she allowed opposing counsel, Wendy Overbaugh Hickey, to characterize my concerns about my ex-wife's family abusing alcohol, marijuana, and other substances (including around my daughter), as well as illegal weapons possession, as \"the way father feels about mother's family\" without so much as a word of push back. Carla Salvucci was more concerned about my income, than she was with my daughter's safety.",
@@ -70,11 +95,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/carla_a_salvucci",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='MA'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +111,22 @@
     "recommended_route": "/court-actors/ma/carla_a_salvucci/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "I mentioned that some of this evidence was publicly available on their Instagram accounts.",
+        "kind": "comment"
+      },
+      {
+        "body": "Has denied virtually every motion I filed, including the December 2025 emergency motion to vacate the June 16, 2025 temporary suspension order.",
+        "kind": "comment"
+      },
+      {
+        "body": "She suspended my parenting time on 10/1/24 for no reason.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

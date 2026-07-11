@@ -12,12 +12,17 @@
     "court_or_county": "Worcester Probate",
     "state": "Massachusetts",
     "state_abbr": "MA",
-    "mention_count": 0,
+    "mention_count": 4,
     "family_count": 4,
     "public_family_count": 4,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "fe88de15-e87b-4b6d-8ad7-16eb9bad3bc0",
+      "aaf119d5-0ba6-4c70-a6a6-6bce3ba7f63b",
+      "daa2017b-9d70-4c3e-a799-1da1f8b643f0",
+      "a74a9014-cf59-4668-b72b-99eec8c38ed7"
+    ],
     "actor_row_id": "fe88de15-e87b-4b6d-8ad7-16eb9bad3bc0",
     "actor_bucket_key": "lawrence army|MA"
   },
@@ -42,12 +47,37 @@
     "_pdf_state_family_count": 106,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 4,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "I have been alienated from a special needs child, I've lost precious time that I'll never get back, all due to lies. I haven't been able to take a vacation in 5 years due to court fees being so high",
+        "state": "MA",
+        "county": "Hampden",
+        "row_id": "aa248f68-9ed3-497d-89be-1bc622b5f00a"
+      },
+      {
+        "body": "Used my past as an excuse Refused programs and things that could have had me with my child under mandated supervision 24/7 while obtaining all case plan tasks Got my housing voutire removed and refuse a letter saying ide have a chance to get my son if they have it bak Unstable housing Pt1 denial Failed parent psych evaluation even tho I passed one 3 years prior Medicallybill due to the trauma of this removal",
+        "state": "MA",
+        "county": "Worcester  county",
+        "row_id": "de12e20f-13d0-4110-8237-44ea245e9061"
+      },
+      {
+        "body": "“DCF and the entities involved dismantled our family—destroying a mother, siblings, and grandmother—and turned a place of education into a hunting ground where children are stalked, held, and taken with police force.”",
+        "state": "MA",
+        "county": "Worcester County",
+        "row_id": "48be9463-55d6-45ba-82d1-dff5cfb23ead"
+      },
+      {
+        "body": "They have abused children who had already been traumatized by their parent who abused them and their mother and then they were ripped away from a protective parent without notice based on lies and placed with an abuser. Everyone, including DCF has advocated for them to return to my custody without any success or any findings against me. I have a thriving and happy 4 year old in my current marriage and two 14 year old step daughters and yet I can't even speak to my 15 and 16 year old kids who have advocated to come home to me and DCF has a neglect case against their father.",
+        "state": "MA",
+        "county": "Unknown",
+        "row_id": "9861c733-5f17-4260-ba93-5ab5280aded5"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Judge Army switched custody overnight to my abusive ex husband who my children had been refusing to go with out of fear. When I brought forth a conflict of interest with the GAL and myself (we worked together, I contracted her husband for work for years and her daughter was a student in my school and worked directly with my children) he then removed all contact between me and my children without findings. Within weeks he aburuptly \"retired\" effectively leaving my family stuck in this situation without another judge. 5 months later it was announced by the state that he was found guilty of misconduct and was fined and no longer allowed to practice law, however, over a year later his decisions still stand. We finally have a new judge and an upcoming trial but regardless of what happens the damage has been done and there is no recourse for my family and my children who have suffered greatly through all of this. Happy healthy honors student teenagers who were very involved in activities are now failing, having severe physical and mental health issues, no longer participate in activites, are self harming, not adeuately nourished, constant DCF involvement for neglect and failure to mainta",
@@ -76,11 +106,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/lawrence_army_jr",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='MA'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -96,6 +122,26 @@
     "recommended_route": "/court-actors/ma/lawrence_army_jr/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Then removed all contact between me",
+        "kind": "comment"
+      },
+      {
+        "body": "Later found he signed off before trial custody from mother to father.",
+        "kind": "comment"
+      },
+      {
+        "body": "He took away my custodial rights after a false allegations",
+        "kind": "comment"
+      },
+      {
+        "body": "Will not hear past nor see any evidence",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

@@ -12,12 +12,16 @@
     "court_or_county": "Lee county mississippi",
     "state": "Mississippi",
     "state_abbr": "MS",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "8f8779f9-561d-4ef7-a28c-63071901dff4",
+      "cc763f6d-e0ae-4b5c-bb42-3579e6902969",
+      "07424028-c0a4-40d6-b21c-740411d4d2ee"
+    ],
     "actor_row_id": "8f8779f9-561d-4ef7-a28c-63071901dff4",
     "actor_bucket_key": "cherieka witherspoon white|MS"
   },
@@ -42,12 +46,31 @@
     "_pdf_state_family_count": 54,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Child Protection Services are suppose to protect children and if able under circumstances of reportance help in every way to keep families together. Their legal duty is to investigate, listen to children and family and do what they can to keep a family together, reunify, or place children where they are safe and can live a happy, healthy safe life to ensure a beautiful future. Instead this system takes their authority to in fact do the exact opposite. A mother of 4 that was very unprotected as a daughter resulting in being an overprotective mother, I will not let this system take that away from me for an anonymous report, laziness and their authority. I will fight until my kids are home and this systematic agency is broken, like they have done so many families !",
+        "state": "MS",
+        "county": "Lee",
+        "row_id": "62e85c01-bade-4d6d-840a-3c1f585d29bf"
+      },
+      {
+        "body": "God is the only true one that knows the truth. No words can begin to explain what cps has done",
+        "state": "MS",
+        "county": "Lee county mississippi",
+        "row_id": "d752728f-8932-4b2a-8550-b4474f70587b"
+      },
+      {
+        "body": "Its caused and continues to cause extreme trauma to me and my children.",
+        "state": "MS",
+        "county": "Lee",
+        "row_id": "c10986fa-ffa2-4d36-8fae-bc5a57d759a3"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Has not been to children’s placement ever (7 months total), making kinship travel to her to see children (never doing her legal duty) disregards children’s statements, threatens child with custody/placements if said parent doesn’t cooperate",
@@ -70,11 +93,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/cherieka_witherspoon_white",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='MS'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +109,22 @@
     "recommended_route": "/court-actors/ms/cherieka_witherspoon_white/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Said parent doesn’t cooperate",
+        "kind": "comment"
+      },
+      {
+        "body": "Misrepresentation of case facts. Lies about recommendations from therapist. Is very buddy buddy with cps workers.",
+        "kind": "comment"
+      },
+      {
+        "body": "Delay reunification not interested in doing her job correctly",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

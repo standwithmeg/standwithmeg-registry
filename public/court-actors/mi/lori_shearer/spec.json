@@ -12,12 +12,17 @@
     "court_or_county": "Montcalm County",
     "state": "Michigan",
     "state_abbr": "MI",
-    "mention_count": 0,
+    "mention_count": 4,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "f0fd31ea-6d78-4567-b87f-980981600d76",
+      "a4fc2057-d3db-4474-853c-56964f4b83f8",
+      "37d8f0d2-b973-4cd7-9a35-64377bda162d",
+      "dbd0700e-6ad6-44a9-bcbe-544525e5904c"
+    ],
     "actor_row_id": "f0fd31ea-6d78-4567-b87f-980981600d76",
     "actor_bucket_key": null
   },
@@ -42,12 +47,31 @@
     "_pdf_state_family_count": 178,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Safety is when you know you are safe, it's when you know that your parents are safe, it's when you can lay your head down at night and go to bed peacefully it's when you can tell your parents that you love them and give them a hug but once foster care takes you, you never know when you'll be safe again, you don't know when you will be able to lay your head down at night and fall asleep peacefully you don't know if your parents are okay and your biggest worry is your parents and your siblings at the end of the day but you're also so angry because the court took that all away from you.",
+        "state": "MI",
+        "county": "Edmore",
+        "row_id": "f75c3366-f0b5-4a81-8c9f-e836672a6778"
+      },
+      {
+        "body": "This destroyed my family. I have lost my children. My wife and I dont get a long well. Our married may beyond repair. I miss my babies.",
+        "state": "MI",
+        "county": "Montcalm",
+        "row_id": "7d0a93c4-1565-4a7c-a7a3-1713bc2dde90"
+      },
+      {
+        "body": "It destroyed my family. My children are not even allowed to see each other now.",
+        "state": "MI",
+        "county": "Montcalm county",
+        "row_id": "67a60d7a-9a02-4a4d-89f0-a3accaf83c6c"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "My eldest daughter got in some trouble with truancy at school, and Lori Shearer represented my daughter, kept trying to force her take a plea deal, when we refused they dismissed the case, then when Cps got involved Lori Shearer represented my kids again, where she completely and utterly used every single thing we told her personally against us. It's was biased to make her my children's GAL. She didn't listen to the kids and lied on the stand and fabricated evidence. Prejudiced. Was My eldest daughters trucnat lawyer before this case. Had a conflict of interest as she represented my little brother in a different case.",
@@ -70,11 +94,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/lori_shearer",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='MI'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +110,22 @@
     "recommended_route": "/court-actors/mi/lori_shearer/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "It's was biased to make her my children's GAL. She didn't listen to the kids and lied on the stand and fabricated evidence. Prejudiced.",
+        "kind": "comment"
+      },
+      {
+        "body": "She represented my uncle knowing he was family because we all have the same last name. She was also my lawyer for truency.",
+        "kind": "comment"
+      },
+      {
+        "body": "Falsifys evidence, doesn't listen to the children to what they want and needs. Misrepresentes the kids wants and needs.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

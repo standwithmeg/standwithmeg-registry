@@ -12,12 +12,23 @@
     "court_or_county": "Lexington",
     "state": "South Carolina",
     "state_abbr": "SC",
-    "mention_count": 0,
+    "mention_count": 10,
     "family_count": 9,
     "public_family_count": 9,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 10,
+    "supabase_row_ids": [
+      "c01e7f46-f1d8-4c8c-b781-2e8a10ea9b6d",
+      "d878d4ef-22f6-4dfe-a44c-1dca1c28b3d6",
+      "f2c9ef07-f6fa-4c5f-af0f-fae5868fc7f4",
+      "1710ad14-418e-4f58-a5a0-7547715ae88d",
+      "30785a18-aab6-48fc-9b44-99fac5cb6b6d",
+      "18433963-3332-4228-a922-beb6ddd5dac2",
+      "138db455-40fd-4f69-878f-2869043f72e5",
+      "f11daa94-d9ca-4486-8ebd-71eb98dec4cb",
+      "fd3906be-498f-4163-9dc3-0cfcc66b6b0a",
+      "ddf8a8c7-faee-4006-9a43-89f063400c93"
+    ],
     "actor_row_id": "c01e7f46-f1d8-4c8c-b781-2e8a10ea9b6d",
     "actor_bucket_key": "ashby jones|SC"
   },
@@ -42,12 +53,49 @@
     "_pdf_state_family_count": 108,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 10,
+    "actor_report_count": 10,
     "family_count": 9,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Traumatized the children, destroyed their childhoods and bankrupt me all in the name of greed.",
+        "state": "SC",
+        "county": "Lexington",
+        "row_id": "c29d0d0e-dcbf-47a1-affb-7bacec77f873"
+      },
+      {
+        "body": "It has crushed me and torn me down to pieces. I still have my belongings in the house from 3 yrs ago because my ex is that dangerous. My son is scared for his life living with his father 65% of the time. He has had to lie about things he knows are not true to the sake of his life being in danger. He is forced to be around my abusive father against his will. My son has had 3 unknown causes of injury. My ex keeps needles for illegal drugs on the counter in the bathroom next to my son’s toothbrush. My son has missed over 20 days of school majority with his father in the last 3 school years.",
+        "state": "SC",
+        "county": "Richland",
+        "row_id": "c0c49784-9ffb-43de-91a0-3a7445798665"
+      },
+      {
+        "body": "The family court system has singlehandedly destroyed my family. We have been separated for years and only see them a few times a year. It will probably cause my younger kids to go through therapy at some point.",
+        "state": "SC",
+        "county": "Richland",
+        "row_id": "0f147f67-5318-4fd3-a19e-ab8b39fccf68"
+      },
+      {
+        "body": "The hardest part of family court wasn’t the accusations — it was watching the system ignore the evidence.",
+        "state": "SC",
+        "county": "Florence",
+        "row_id": "d893a04d-73c2-4771-81de-a3807b4a40a3"
+      },
+      {
+        "body": "“I have watched a family court system operate with less accountability and fewer protections than criminal court, where stigma, financial inequality, and abuse of power can separate a devoted parent from their children without the level of due process many criminal defendants receive. False allegations can become permanent without meaningful judicial review, opinions can outweigh facts, and mental health can be weaponized and stigmatized regardless of diagnosis or actual parenting ability. No criminal charges were filed, no DSS findings existed, yet a broken system still had the power to erase me as a parent — stripping away fundamental civil liberties, due process, and years of irreplaceable time between a mother and her children. The greatest long-term damage is not what happened to me, but what happens to children forced to grow up without understanding why a loving parent disappeared from their daily lives, while financial power and control outside the courtroom pressure parents into surrendering their rights simply because they cannot afford to survive the fight.”",
+        "state": "SC",
+        "county": "Richland",
+        "row_id": "1558bb6f-b1f1-4a1d-8772-950a402c3fd0"
+      },
+      {
+        "body": "The family court system has singlehandedly destroyed my family. We have been separated for years and only see them a few times a year. It will probably cause my younger kids to go through therapy at some point.",
+        "state": "SC",
+        "county": "Richland",
+        "row_id": "b168935c-b40e-46c5-9726-cf8ed23f8a49"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "After April Sampson advised she could no longer handle my case, representation was transferred to Ashby Jones. Before and during representation, my husband and I disclosed the full background of the case, including his prior history, DSS-related matters, and the concerns we believed would arise in litigation. Despite this, we were later told that counsel had not been provided the “full report” or complete information regarding my husband’s history, which I dispute. The primary goals we retained counsel to pursue remained: * removal or challenge of the Temporary Restraining Order, and * addressing concerns involving the Guardian ad Litem. Despite substantial legal fees, little substantive progress was made toward those objectives. Much of the work appeared focused on reviewing emails and communications, after which additional retainers were requested. I also experienced concerns regarding: * communication, * strategy, * responsiveness, * and failure to aggressively pursue requested relief. After terminating representation, I experienced delays obtaining my complete client file, including physical documents I had personally delivered to the office and communications exchanged on my behalf. These delays impaired my ability to continue protecting my legal interests in an ongoing custody matter. Given the seriousness of the issues involved, the substantial fees incurred, and the limited progress toward the objectives for which counsel was retained, I am requesting review of the representation and billing practices in this matter.",
@@ -100,11 +148,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/ashby_jones",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='SC'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -120,6 +164,42 @@
     "recommended_route": "/court-actors/sc/ashby_jones/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Billing practices in this matter",
+        "kind": "comment"
+      },
+      {
+        "body": "She told me she would do a deposition and never did it.",
+        "kind": "comment"
+      },
+      {
+        "body": "Ashby has zero concern for the welfare of children.",
+        "kind": "comment"
+      },
+      {
+        "body": "Dragging on for more than 2 years.",
+        "kind": "comment"
+      },
+      {
+        "body": "Thinks she’s God, forces her clients to follow HER strategy or she’ll drop them.",
+        "kind": "comment"
+      },
+      {
+        "body": "Caught telling lay, court appointed GAL to “make me look bad.”",
+        "kind": "comment"
+      },
+      {
+        "body": "She doesn’t care about the mistakes she makes or her associates makes.",
+        "kind": "comment"
+      },
+      {
+        "body": "Please see all the above for context.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

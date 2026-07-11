@@ -12,12 +12,19 @@
     "court_or_county": "Cherokee county",
     "state": "Alabama",
     "state_abbr": "AL",
-    "mention_count": 0,
+    "mention_count": 6,
     "family_count": 4,
     "public_family_count": 4,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 6,
+    "supabase_row_ids": [
+      "e5e23912-c4c0-4a12-8071-76b5f432ff9d",
+      "69cff6ac-86b3-45a4-ac99-1497453baf5d",
+      "dfa56500-50fc-46dc-96fc-ea96207680f3",
+      "c61bf2e2-2b15-4c41-9d31-d29296695967",
+      "190463f8-d193-43e1-9f76-a73a6bb393fe",
+      "4502bdc1-a769-41c4-9007-031f59a939b1"
+    ],
     "actor_row_id": "e5e23912-c4c0-4a12-8071-76b5f432ff9d",
     "actor_bucket_key": "andrew hairston|AL"
   },
@@ -42,12 +49,37 @@
     "_pdf_state_family_count": 130,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 6,
+    "actor_report_count": 6,
     "family_count": 4,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Stolen my children’s childhood Allowed myself and children to live in stalking and abuse Supports domestic violence after divorce and helps abuser continue control . Punishes the abused and supports the abuser . Causes continued cptsd and abuse gives abuser control",
+        "state": "AL",
+        "county": "Cherokee county",
+        "row_id": "b7a51cb7-188d-459b-ad48-2192ecf760d3"
+      },
+      {
+        "body": "The system has destroyed my sibling bonds and has caused me and my siblings to live in fear and has taken my little brother and placed him in the hands of an abuser and given or abuser control to know where we are 24 hours a day",
+        "state": "AL",
+        "county": "Cherokee",
+        "row_id": "7b81f4e5-06b9-484d-9181-c717b6f053fe"
+      },
+      {
+        "body": "The corrupt family court system has permanently damaged my daughters childhoods, created painful memories that will never be forgotten, caused deep agony for my children and myself, and helped abusive people utilize the legal system to “punish” and “retaliate” by keeping me from my children when they have never gone more than the 5-6 days with their fathers without their mother. I’ve been a constant for them and I’ve been told how much my children have cried for me-the court system allowed this and created this nightmare because they would rather take the easy way out for themselves and their “colleagues” in a situation with layers of conflicting interests, than to become educated on abuse and manipulation tactics so they can appropriately face these situations.",
+        "state": "AL",
+        "county": "DeKalb",
+        "row_id": "23e299a5-2828-455a-9ef7-2c236b98fd2f"
+      },
+      {
+        "body": "We live in fear and are stalked and harassed daily . Thr court has destroyed my children mentally physically and emotionally and have robbed my children of their childhood .the family court does not protect or care about family",
+        "state": "AL",
+        "county": "Cherokee",
+        "row_id": "50af317f-e95f-462f-b025-371e461beed8"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Refused to hear the abuse to me and my siblings . Sent my baby brother with an abusive step father w/out seeing evidence exparte . Refused to hear emergency hearing protection orders and lied on orders that he heard all witnesses and both parties when transcripts prove only one side was heard . Threatened me and my siblings and my mother . Violated Alabama laws federal laws and civil and constitutional rights . Refuses to hear, domestic violence protection orders Refuses to allow emergency hearings when children are in danger Rules export in sciences, export orders for Chad Hopper, and as favors for attorneys in the back room Violate constitutional rights, Alabama constitution and United States constitution He is biased and does not protect children He is in the masons and rules for as favors for Masons that are in the secret society with him He does not uphold Alabama law, federal laws, or domestic violence protection laws He signs illegal orders above his authority to prevent domestic violence, parents from being able to move even it’s if it’s in the Alabama guidelines for parents to be able to move within 77 miles he still signs formed to prevent them from moving He does not protect children and follow the Alabama laws or federal laws as far as protecting children or the best interest of the child He has one-sided hearings and only hears one side of the hearing and then makes a ruling He has threatened women that if they present their domestic violence cases, or if they present their modification hearings or if they present their cases of child abuse against their abuser that he will arrest them and hold them in contempt and take their children from them He is not concerned with the safety of children or abuse of children He has signed numerous ex parte orders for attorneys behind closed door and then he has signed order stating that he heard the full case and heard all evidence when the transcripts do not match that He has prolonged hearings that last three for six years while children are having to visit abusive parents He also refuses to hear that a father was absent for 4 1/2 years and it’s not the biological father in order ex parte orders that one of four children has to go with a parent that he does not know that is not biological without a hearing And he also separates siblings. There is numerous cases where he has deliberately separated, siblings permanently, and also in my case, he separates siblings every holiday. He does not enforce that of father supports all children. He lets the father’s chief which children the father likes and wants to see, and he also supports fathers neglecting and abusing three or four children.",
@@ -76,11 +108,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/andrew_hairston",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='AL'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -96,6 +124,26 @@
     "recommended_route": "/court-actors/al/andrew_hairston/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Refused to hear the abuse to me and my siblings .",
+        "kind": "comment"
+      },
+      {
+        "body": "He signed exparte orders and denied me the route.",
+        "kind": "comment"
+      },
+      {
+        "body": "Dismissed my initial hearing for temporary custody even after supporting evidence was presented to the court",
+        "kind": "comment"
+      },
+      {
+        "body": "Ruled basis one sided and denied the abused protection and ignored all abuse evidence",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

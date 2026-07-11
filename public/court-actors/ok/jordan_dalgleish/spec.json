@@ -12,12 +12,23 @@
     "court_or_county": "Tulsa",
     "state": "Oklahoma",
     "state_abbr": "OK",
-    "mention_count": 0,
-    "family_count": 8,
-    "public_family_count": 8,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "mention_count": 10,
+    "family_count": 9,
+    "public_family_count": 9,
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 10,
+    "supabase_row_ids": [
+      "04e0aedd-3116-4b2e-a76c-459216e34f24",
+      "9ce3ac23-b815-429c-8701-91f5c0d5c11b",
+      "1e92171f-8d91-400e-b6c4-ad7f18a75241",
+      "b95158cf-0c4f-4091-a28b-e7287ed7845a",
+      "cb5c413d-20d9-438d-99c7-299c10b3b1c6",
+      "08bd38b3-fe28-41fa-8d99-ea6152a6e0c7",
+      "b4927d24-2ded-4e53-9174-d7b09d55e533",
+      "b0002bf0-4dd3-483d-aad7-3e1aa84d4aaa",
+      "d46148c3-fb72-4d4f-b402-42f7cb7e3001",
+      "4f4b4f8c-5a4a-4cd5-9caf-547869fe1487"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
@@ -42,12 +53,49 @@
     "_pdf_state_family_count": 164,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
-    "family_count": 8,
-    "family_reports": [],
+    "report_count": 10,
+    "actor_report_count": 10,
+    "family_count": 9,
+    "family_reports": [
+      {
+        "body": "The system has destroyed my family. Happy children are now in constant chaos, the court is more concerned about 50/50 pro dad than stability for the children. I have been told so many times children are resilient. They will be ok. This has take a toll on myself mentally and physically. Now because I am fighting back or questioning I am classified as combative and confrontational. Which adds additional stress and feels like an intimidation tactic. The system and abuser has stolen precious time that you can never get back.",
+        "state": "OK",
+        "county": "Tulsa",
+        "row_id": "1734a704-ed48-41a2-b5e8-83bf9a1d781e"
+      },
+      {
+        "body": "Jordan Dalgleish is a snake who will lie, cheat, & manipulate anyone and she is the last person who should be representing any child. Ever.",
+        "state": "OK",
+        "county": "Tulsa",
+        "row_id": "0421e7e1-4765-4779-88d3-cd6f8d2acbc7"
+      },
+      {
+        "body": "The family court system has cost me precious time with my children, furthered our traumatic experiences, favors reunification over safety, and continues to horrify me",
+        "state": "OK",
+        "county": "Tulsa",
+        "row_id": "ee6ab90f-4020-462b-9a7a-c2607822eb3d"
+      },
+      {
+        "body": "The family court system wrongfully removed my child at Jordan Dalgleish’s suggestion after accepting a fraudulent document as fact, DHS involvement and still I am missing out on important things in my child’s life, my child is extremely depressed.",
+        "state": "OK",
+        "county": "Tulsa",
+        "row_id": "4e5069bd-2d75-4581-8484-d73bee98e9fd"
+      },
+      {
+        "body": "The court system has allowed lies told by one side without evidence to be the sole decision in allowing one of my children to be taken. It has caused significant damage to my relationship with my child and the relationship with the child’s siblings.",
+        "state": "OK",
+        "county": "Wagoner",
+        "row_id": "a43487c5-82c6-46de-a68c-0b2f50a3f4a6"
+      },
+      {
+        "body": "Family court is a circus and for all of the lip service to “children’s best interest”, my kids are BY FAR, worse off today because of it.",
+        "state": "OK",
+        "county": "Tulsa",
+        "row_id": "93551a22-a4cb-4e62-b51e-b5d93de214e1"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Failed to follow through with meetings with the children and investigations. Failed to follow through with investigations and meetings with the children, she knew of lies being told by the opposing party but allowed the case to move forward and her to be removed from my care and be given to him.",
@@ -100,11 +148,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/jordan_dalgleish",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='OK'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -120,6 +164,42 @@
     "recommended_route": "/court-actors/ok/jordan_dalgleish/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Allowed the case to move forward",
+        "kind": "comment"
+      },
+      {
+        "body": "I’m supposed to be there or not.",
+        "kind": "comment"
+      },
+      {
+        "body": "Effectively helped my ex’s side throughout the divorce process.",
+        "kind": "comment"
+      },
+      {
+        "body": "Opposing Attorney changed several things and it was filed.",
+        "kind": "comment"
+      },
+      {
+        "body": "Conflict of interest with opposing counsel Atty discussed client details outside of…",
+        "kind": "comment"
+      },
+      {
+        "body": "Failure to report abuse, bias, failure to provide evidence, removal of custody.",
+        "kind": "comment"
+      },
+      {
+        "body": "Lied to judge and GAL, said if I didn't drop vpo I should lose my kids",
+        "kind": "comment"
+      },
+      {
+        "body": "Won't do a full investigation and is very bias",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

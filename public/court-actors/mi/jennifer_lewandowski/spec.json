@@ -12,12 +12,16 @@
     "court_or_county": "Montcalm",
     "state": "MI",
     "state_abbr": "MI",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "27d0af35-f22d-4e52-be13-a6f76f2da7b5",
+      "c872bdf3-be8b-4580-a581-8fe2d59700aa",
+      "05b58ddc-1574-46a3-b977-ad1f4f736d41"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "jenifer lewandowski|MI"
   },
@@ -42,12 +46,31 @@
     "_pdf_state_family_count": 178,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Destroyed my whole family. Can’t see my grandkids grow up! My son in law committed suicide over the removal of his kids!",
+        "state": "MI",
+        "county": "Mntcalm",
+        "row_id": "fe7f27ec-8f68-4d76-a5c8-10339f6f761b"
+      },
+      {
+        "body": "Destroyed our whole lives. Drove my love to committ suicide. Robbed us of time with my kids!",
+        "state": "MI",
+        "county": "Montcalm",
+        "row_id": "9167440a-9686-4bf1-82e0-c4e69d7d428a"
+      },
+      {
+        "body": "The system has exploited my mental health crisis for funding, along with keeping their caseloads up.",
+        "state": "MI",
+        "county": "Montcalm",
+        "row_id": "aee874ac-0bd8-4c90-8e24-7d5331f3e428"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "This worker supervised one of my parenting times, she was a breath of fresh air after dealing with Tasha Welch. She did however badger us on what we were doing during our unsupervised time and roll down my license plate and car making year and then it was put into the case service plan for everybody who reads it to know my license plate number.",
@@ -70,11 +93,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/jennifer_lewandowski",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='MI'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +109,22 @@
     "recommended_route": "/court-actors/mi/jennifer_lewandowski/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "This worker supervised one of my parenting times, she was a breath of fresh air after dealing with Tasha Welch.",
+        "kind": "comment"
+      },
+      {
+        "body": "Said I’m losing my daughter because I lost my other kids.",
+        "kind": "comment"
+      },
+      {
+        "body": "Filed to remove by child over an abnormal drug test",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

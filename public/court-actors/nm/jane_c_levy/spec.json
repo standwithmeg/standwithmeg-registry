@@ -12,12 +12,15 @@
     "court_or_county": "Bernalillo",
     "state": "New Mexico",
     "state_abbr": "NM",
-    "mention_count": 0,
+    "mention_count": 2,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 2,
+    "supabase_row_ids": [
+      "e2462ecf-6e58-49d6-b41e-c8611ab3f457",
+      "a04f5175-0027-4ab1-b0ad-00ec5bb3808a"
+    ],
     "actor_row_id": "e2462ecf-6e58-49d6-b41e-c8611ab3f457",
     "actor_bucket_key": "jane c levy|NM"
   },
@@ -42,12 +45,25 @@
     "_pdf_state_family_count": 28,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 2,
+    "actor_report_count": 2,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "I wasn't ever given scheduled visitation with my son after a divorce. Family court said it was at the mother discretion. So when I would drive 3 hours to visit my ex-wife would make me pay her on top of the already court ordered child support or force me to stay at her home the entire time I was in town and sleep with her. I made the court aware even offered text and voice recordings. Nothing was done and I eventually had to quit going to visit as there was always a conflict but the court still wouldn't set scheduled visitation.",
+        "state": "NM",
+        "county": "Bernalillo",
+        "row_id": "af133a5d-d76e-4bce-81cd-1eb47687e79c"
+      },
+      {
+        "body": "Made me and my child unsafe, distressed my household, stole precious bonding time with my child, gave me and my child mental health problems.",
+        "state": "NM",
+        "county": "Bernalillo",
+        "row_id": "a9a8e700-b00b-4f52-8b96-d573dfb9cc20"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Ignored extortion by my I, wife to see my child, refused to set scheduled visitation between my son and instead stated visitation was at my ex wife discretion. Which entitled her to bribery and extortion this effective means the state of NM aided the extortion. There is other things but as I am currently still fighting I don't want to show all my cards.",
@@ -70,11 +86,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/jane_c_levy",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='NM'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +102,22 @@
     "recommended_route": "/court-actors/nm/jane_c_levy/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Ignored extortion by my I, wife to see my child, refused to set scheduled visitation between my son and instead stated visitation was at my ex wife discretion.",
+        "kind": "comment"
+      },
+      {
+        "body": "Fabricated findings, held hearings without my knowledge of findings, obstructed a scheduled hearing, due to retaliation.",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored clear evidence",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

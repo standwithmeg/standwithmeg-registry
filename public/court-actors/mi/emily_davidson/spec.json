@@ -12,12 +12,16 @@
     "court_or_county": "Montcalm",
     "state": "MI",
     "state_abbr": "MI",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "6fac1328-9da4-4934-a475-bc4a629b53c4",
+      "1dcd74f2-d8cb-41ae-9791-6e7953936aab",
+      "b0ba98e5-55ec-400b-9188-92205045e39b"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "emily davidson|MI"
   },
@@ -42,12 +46,31 @@
     "_pdf_state_family_count": 178,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Safety is when you know you are safe, it's when you know that your parents are safe, it's when you can lay your head down at night and go to bed peacefully it's when you can tell your parents that you love them and give them a hug but once foster care takes you, you never know when you'll be safe again, you don't know when you will be able to lay your head down at night and fall asleep peacefully you don't know if your parents are okay and your biggest worry is your parents and your siblings at the end of the day but you're also so angry because the court took that all away from you.",
+        "state": "MI",
+        "county": "Edmore",
+        "row_id": "f75c3366-f0b5-4a81-8c9f-e836672a6778"
+      },
+      {
+        "body": "This destroyed my family. I have lost my children. My wife and I dont get a long well. Our married may beyond repair. I miss my babies.",
+        "state": "MI",
+        "county": "Montcalm",
+        "row_id": "7d0a93c4-1565-4a7c-a7a3-1713bc2dde90"
+      },
+      {
+        "body": "It destroyed my family. My children are not even allowed to see each other now.",
+        "state": "MI",
+        "county": "Montcalm county",
+        "row_id": "67a60d7a-9a02-4a4d-89f0-a3accaf83c6c"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Lies about literally everything doesn't fight for any reunification whatsoever, she will sit there and be so nice to you and she will tell you that you're doing so good in that she wouldn't lie to you and that you're going to get your kids back soon because you're doing awesome but then she'll go back and put in the paperwork nothing good that you did she'll go in the paperwork and lie and just write a bunch of bad things that happen that never actually happened.",
@@ -70,11 +93,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/emily_davidson",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='MI'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +109,22 @@
     "recommended_route": "/court-actors/mi/emily_davidson/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Lies about literally everything doesn't fight for any reunification whatsoever, she will sit there and be so nice to you.",
+        "kind": "comment"
+      },
+      {
+        "body": "Falsifys evidence, lies about children's wants and needs. Lies to the children about the case.",
+        "kind": "comment"
+      },
+      {
+        "body": "Emily Davidson was our CPS case worker that was supposed to be helping us get the kids back. She consistantly lied to us and on reports to the judge.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

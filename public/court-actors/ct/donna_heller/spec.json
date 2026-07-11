@@ -12,12 +12,16 @@
     "court_or_county": "Stamford",
     "state": "Connecticut",
     "state_abbr": "CT",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "e2293044-0cf9-4728-93b5-84a523ebd358",
+      "9ff09027-91fd-45cb-b802-0d58e9dcc6f8",
+      "9888b139-48ab-4d25-b79d-fcd474b9d69b"
+    ],
     "actor_row_id": "e2293044-0cf9-4728-93b5-84a523ebd358",
     "actor_bucket_key": null
   },
@@ -42,12 +46,31 @@
     "_pdf_state_family_count": 65,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Destroyed father, mother child relationship to the point that our family is destroyed. Father tried to commit suicide and left both parents with no money left; harmed child irreversibly.",
+        "state": "CT",
+        "county": "Fairfield",
+        "row_id": "07189d9f-7de6-4ffb-8f1a-3cb58ce82f61"
+      },
+      {
+        "body": "The custody proceedings and transfer devastated both me and my autistic son, causing severe emotional trauma, fear, and instability as he began crying, begging to return home, and expressing fear and resentment toward his father. The prolonged litigation also financially destroyed me, ultimately resulting in foreclosure proceedings against my home after years of living under threats that my son would be taken away from me.",
+        "state": "CT",
+        "county": "Fairfield",
+        "row_id": "da70fa63-8b46-4a46-9e07-c09a609c5758"
+      },
+      {
+        "body": "Financially devastated and bankrupt me and our three kids. Financially, emotionally, and psychologically. While he has amassed millions in properties and cars Etc. This was about torturing me and making me pay using our three kids. I've said going to court has been his drug of choice. With no end in sight but I refuse to go back to Family Court. I will never stop. People like all of us, and my Rock the Walls this year will be different and we will be so loud they can't ignore any of us anymore. I'M DONE!!!",
+        "state": "CT",
+        "county": "Fairfield",
+        "row_id": "afe02b18-fc1d-4a01-acb0-a09bb3193e12"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "She handed down defective orders stripping me of custody, granted my ex sole legal and primary physical. He has lengthy criminal history, substance abuse and mental health history. I don't have any of these issues... Heller completely ignored best interests statutes, made procedural errors, abused her discretion. Her order essentially alienated me from my son with no contact for 30 days then limited visitation. No findings of abuse or neglect against me. My son has been depressed and disregulated, and lost weight since the transfer from my home in CT to his father in NY 70 miles away. She made false claims in her Memorandum of Decision.",
@@ -70,11 +93,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/donna_heller",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='CT'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +109,22 @@
     "recommended_route": "/court-actors/ct/donna_heller/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "I don't have any of these issues... Heller completely ignored best interests statutes, made procedural errors, abused her discretion.",
+        "kind": "comment"
+      },
+      {
+        "body": "I've also seen production of orders that completely destroy mother's from this judge and use blatantly false facts and information to back these insane orders.",
+        "kind": "comment"
+      },
+      {
+        "body": "Biases toward opposing counsel",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

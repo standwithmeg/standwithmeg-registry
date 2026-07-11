@@ -12,12 +12,19 @@
     "court_or_county": "Lexington, SC",
     "state": "SC",
     "state_abbr": "SC",
-    "mention_count": 0,
-    "family_count": 5,
-    "public_family_count": 5,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "mention_count": 6,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 6,
+    "supabase_row_ids": [
+      "0b7544c7-6029-4212-846f-622e05399d66",
+      "4c2ff128-81c3-4290-b1b8-a22be70b8744",
+      "4563efb6-9129-4963-a62b-7214b052e6a9",
+      "be82e144-777c-408c-9cd3-08fea4fba4ad",
+      "2f1e885a-d316-4231-9e87-57fa6859561d",
+      "b093c79c-4ccd-4a93-b85d-284672ac2979"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "michele gorski|SC"
   },
@@ -42,19 +49,62 @@
     "_pdf_state_family_count": 108,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
-    "family_count": 5,
-    "family_reports": [],
-    "public_comments": []
+    "report_count": 6,
+    "actor_report_count": 6,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "Went in as a DV victim and mother who raised her 2 kids only to be subjected to half a million dollars to even see my kids. Removed to father who don’t even take of them.",
+        "state": "SC",
+        "county": "Richland",
+        "row_id": "78673ec4-b2cf-4ba4-acc0-91d3f45682fb"
+      },
+      {
+        "body": "Traumatized the children, destroyed their childhoods and bankrupt me all in the name of greed.",
+        "state": "SC",
+        "county": "Lexington",
+        "row_id": "c29d0d0e-dcbf-47a1-affb-7bacec77f873"
+      },
+      {
+        "body": "Richland Family Court is a chess board of paid players and you are a pawn. They bring in more actors at your expense (for no justified reason), prolonging the game and padding their \"friends\" pockets. It's sad, abusive, and has damaged my children and me financially and emotionally.",
+        "state": "SC",
+        "county": "Richland",
+        "row_id": "b9a60e20-9364-4133-8d13-f9400c321077"
+      },
+      {
+        "body": "It has taken everything from me, torn my family apart at a cost/debt that will be paid ultimately by my children. Everyone close to me has been affectedband are at a lose.",
+        "state": "SC",
+        "county": "Chester",
+        "row_id": "da4e4c4c-335f-48d8-9e57-68c523d2423e"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Submitted false information in reports, misquoted others in order to mislead the court, agreed to “make me look bad” I found out from an attorney and billed for obtained medical records, but the doctor’s office confirmed they didn’t charge her?",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Husband represented father in his divorce. On recording OC told her to stay in her lane and make me look worse. Didn’t protect my child. Hired as 3rd gal and her husband represented father in previous divorce. Recorded her telling me Brian Dumas said to stay in her lane and make me look worse.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Primary concern is money not the children she represents or the lifelong devastating effects her report will have on them.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Threatened the children",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
   },
   "export_dir": "New Final Post and Capcut template/export/michelle_s_gorski",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='SC'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available",
     "pdf_public_actor: no 'Michelle Smith Gorski' in cache for SC"
   ],
   "guardrails": {
@@ -72,6 +122,26 @@
     "recommended_route": "/court-actors/sc/michelle_s_gorski/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Billed for obtained medical records",
+        "kind": "comment"
+      },
+      {
+        "body": "Husband represented father in his divorce. On recording OC told her to stay in her lane and make me look worse.",
+        "kind": "comment"
+      },
+      {
+        "body": "Primary concern is money not the children she represents or the lifelong devastating effects her report will…",
+        "kind": "comment"
+      },
+      {
+        "body": "Threatened the children",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

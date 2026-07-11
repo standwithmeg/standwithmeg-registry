@@ -12,12 +12,23 @@
     "court_or_county": "Autauga",
     "state": "Alabama",
     "state_abbr": "AL",
-    "mention_count": 0,
+    "mention_count": 10,
     "family_count": 8,
     "public_family_count": 8,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 10,
+    "supabase_row_ids": [
+      "e758a26d-c1bf-4d0d-b365-ff35caeeff9b",
+      "47ff05e0-c220-48ed-855e-141837b27e00",
+      "443d9066-4669-49f5-8e28-2289ff053868",
+      "f7dabf3e-9325-4a45-969f-23f7922071c5",
+      "5197bb5e-b1cf-4ee7-b6dd-9f872bc3c8f8",
+      "9a957b10-5045-4feb-93ed-9656c1b597e4",
+      "e87a4576-fabd-4087-bbe4-258d83f727c2",
+      "8decafae-00d9-4bdb-8526-673dd01d2308",
+      "ebabebe1-a858-4e29-8d33-33e12f961afa",
+      "ab4d37c8-1730-453d-877c-d49c4a0a016c"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
@@ -42,12 +53,49 @@
     "_pdf_state_family_count": 130,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 10,
+    "actor_report_count": 10,
     "family_count": 8,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Cox",
+        "state": "AL",
+        "county": "Autauga",
+        "row_id": "fb57d660-ed7c-4f78-a13f-c400fe7549b4"
+      },
+      {
+        "body": "Tried to make me kill myself",
+        "state": "AL",
+        "county": "Autauga",
+        "row_id": "a6573b09-819e-446b-9da1-abff72f1d47d"
+      },
+      {
+        "body": "Carol Cook Carter and Joy Booth both put my child’s life in danger. They both looked at evidence showing where my child’s father was abusive to me during our relationship and also where he had threatened both my life and my child’s, and they still sided for him to receive joint custody of our child.",
+        "state": "AL",
+        "county": "Autauga",
+        "row_id": "e4398409-f5aa-43bc-9b61-217f5986ff18"
+      },
+      {
+        "body": "This system has ripped me apart and taken advantage of my children and myself in every conceivable way. Every actor in it is corrupt, they are all in it together and seeking only personal gain and satisfaction rather than justice for the children. It’s evil , sick and killing our children and community.",
+        "state": "AL",
+        "county": "Autauga",
+        "row_id": "95ec688d-3ac4-4404-8d7f-db2d63d0c02c"
+      },
+      {
+        "body": "It cost me everything.",
+        "state": "AL",
+        "county": "Autauga",
+        "row_id": "8189d499-bf1e-4ca7-b34f-dc6c1dbcb61a"
+      },
+      {
+        "body": "Autauga County family court has failed my children and me over and over again. More than 30 years of mental and physchological abuse has been legally perpetuated at the hands of the court system.",
+        "state": "AL",
+        "county": "AUTAUGA",
+        "row_id": "42f38311-aa7b-40fb-8b1c-d016074bc870"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Refused Forensic Interview, Hospital Reports, Police Reports, & Therapy Reports into evidence. No due process. Ex-husband tested positive in court for Methamphetamine & Amphetamines, has 7 current warrents, and was on probation. He got full custody. All my rights have been taken. She refused forensic interview, hospital reports, therapy and psychiatric reports on children into evidence. The opposing party tested positive for Amphetamines & Methamphetamine. Oppsing party was on probation with 6 warrents and got given full custody.",
@@ -88,11 +136,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/joy_booth",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='AL'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -108,6 +152,34 @@
     "recommended_route": "/court-actors/al/joy_booth/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Refused Forensic Interview",
+        "kind": "comment"
+      },
+      {
+        "body": "Denied rights. Jailed me for not paying Gal. My ex husband still hasn't paid Gal.",
+        "kind": "comment"
+      },
+      {
+        "body": "The threats were made after he was born.",
+        "kind": "comment"
+      },
+      {
+        "body": "Failed to uphold requirements of a safety plan.",
+        "kind": "comment"
+      },
+      {
+        "body": "Completely ignored the constitution, deprived me.",
+        "kind": "comment"
+      },
+      {
+        "body": "Blocked my attempts to get in front of her with the evidence in question",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

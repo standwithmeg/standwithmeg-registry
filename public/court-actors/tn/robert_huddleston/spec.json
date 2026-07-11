@@ -12,12 +12,16 @@
     "court_or_county": "Sevier County court",
     "state": "Tennessee",
     "state_abbr": "TN",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "bcb20cf9-e095-433c-bc36-2fbe55dd298d",
+      "4ac647c4-8453-4bef-8bd0-0520d2e383dd",
+      "457bc86d-5081-4cec-bd82-e3a3426528c6"
+    ],
     "actor_row_id": "bcb20cf9-e095-433c-bc36-2fbe55dd298d",
     "actor_bucket_key": null
   },
@@ -42,18 +46,16 @@
     "_pdf_state_family_count": 123,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
     "family_reports": [],
     "public_comments": []
   },
   "export_dir": "New Final Post and Capcut template/export/robert_huddleston",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='TN'",
-    "family_reports: no submission_ids on actor",
     "public_comments: no merged comments or raw notes available"
   ],
   "guardrails": {
@@ -71,6 +73,9 @@
     "recommended_route": "/court-actors/tn/robert_huddleston/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

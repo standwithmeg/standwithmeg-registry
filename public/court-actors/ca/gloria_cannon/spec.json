@@ -12,12 +12,16 @@
     "court_or_county": "Kern",
     "state": "California",
     "state_abbr": "CA",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "d8d6783b-ac23-4961-b40c-a70f91409b74",
+      "ce2ce040-b13c-4608-a62b-5684565df16a",
+      "34d1de87-f737-4012-9996-03f61c6d1642"
+    ],
     "actor_row_id": "d8d6783b-ac23-4961-b40c-a70f91409b74",
     "actor_bucket_key": "gloria cannon|CA"
   },
@@ -27,27 +31,46 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 357,
-    "total_submissions": 444,
-    "avg_financial_loss": 285669.87,
+    "families_approved": 359,
+    "total_submissions": 446,
+    "avg_financial_loss": 285125.16,
     "avg_months_lost": 35.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CA",
-    "state_family_count": 444,
-    "median_financial_loss": 265100,
-    "median_burden_sample_size": 198,
+    "state_family_count": 446,
+    "median_financial_loss": 269200,
+    "median_burden_sample_size": 199,
     "median_months_lost": 20,
-    "pro_se_pct": 58.6,
-    "pro_se_count": 260,
-    "_pdf_state_family_count": 444,
+    "pro_se_pct": 58.7,
+    "pro_se_count": 262,
+    "_pdf_state_family_count": 446,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "System failed us, we have life long trauma, my kids have issues sleeping, and day to day activity, my daughter had suicidal thoughts . The system ruined our spirits",
+        "state": "CA",
+        "county": "Kern",
+        "row_id": "a40aa6d8-322e-405c-8a7f-1f8745dac257"
+      },
+      {
+        "body": "On false allegations with no evidence, I was reduced from full physical and legal custody to a 15 minute phone call once a month. I have never been adjudicated of doing any harm to anyone and never been allowed to defend myself after numerous false allegations.",
+        "state": "CA",
+        "county": "Kern",
+        "row_id": "ee51eb76-08db-4afc-84a1-5568d199cb26"
+      },
+      {
+        "body": "I now have two emotionally damaged children and have been barred from helping them. If I had learned to lie, maybe I could have more than 15 minutes a month with my 14 year-old daughter.",
+        "state": "CA",
+        "county": "Kern",
+        "row_id": "ab1e3d84-ca27-4d7f-a09d-77705cf44616"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Handled issue unfairly, would not allow my evidence of abuse to be shown, would not allow kids in the court to speak the truth on what was happening in the home. My children's trauma is partly Gloria cannons fault. My children never should have found Dad dead, if she only listened and didn't side with the one with the lawyer.",
@@ -70,11 +93,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/gloria_cannon",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='CA'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +109,22 @@
     "recommended_route": "/court-actors/ca/gloria_cannon/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "My children's trauma is partly Gloria cannons fault. My children never should have found Dad dead, if she only listened and didn't side with the one with the lawyer.",
+        "kind": "comment"
+      },
+      {
+        "body": "Removed minors from father’s permanent custody to mother in violation of California family code 3044 without proper hearing.",
+        "kind": "comment"
+      },
+      {
+        "body": "Remove Fathers Custody to the mother who is not eligible to assume Custody without due process",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

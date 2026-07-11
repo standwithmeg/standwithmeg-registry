@@ -12,12 +12,22 @@
     "court_or_county": "Osage",
     "state": "Kansas",
     "state_abbr": "KS",
-    "mention_count": 0,
+    "mention_count": 9,
     "family_count": 8,
     "public_family_count": 8,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 9,
+    "supabase_row_ids": [
+      "b953390b-5647-4054-a73b-5bf7093d0818",
+      "704cfe5d-e9c1-4614-8256-4981a43425f1",
+      "3e715af9-17e0-4153-8b9b-d027e5856dd5",
+      "8759460b-4365-41e8-811a-07d645668ff0",
+      "a477c06e-df1b-4b65-8873-2f5ac9667832",
+      "fb6e6a66-6959-4ecc-8a2d-45f9692d4e1c",
+      "6616515e-7b65-4ac6-90b8-8bbe714ac652",
+      "2d3ef218-332e-4b30-a0b4-34266f27c044",
+      "645f4cb1-55e0-40fc-96b1-91d29890fb4a"
+    ],
     "actor_row_id": "b953390b-5647-4054-a73b-5bf7093d0818",
     "actor_bucket_key": "bethany roberts|KS"
   },
@@ -42,12 +52,49 @@
     "_pdf_state_family_count": 251,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 9,
+    "actor_report_count": 9,
     "family_count": 8,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "My custody time was decreased due to lack of investigative efforts by CPS and GAL, resulting in progressive and ongoing psychological and physical harm being inflicted upon my children.",
+        "state": "KS",
+        "county": "Douglas County",
+        "row_id": "442c436a-a305-4de4-b161-b5aaaf7b3f24"
+      },
+      {
+        "body": "The only power I truly have, is that over myself, and lucky for me, and you, we can choose peace NO MATTER WHAT ANYONE ELSE IS CHOOSING. Make your reality what you want it to be, once choice at a time.",
+        "state": "KS",
+        "county": "Franklin",
+        "row_id": "8b0ae4f7-a87d-46d6-93de-a96c5654cb8a"
+      },
+      {
+        "body": "I am an adult, and in no way a victim. However, I have had to watch my child suffer at the hands of people that are in no way shape or form doing it for the \"best interest of the child\". Alienation, abduction, lack of education, psychological abuse, financial abuse, reactive abuse, and a situation where the child almost lost their life.",
+        "state": "KS",
+        "county": "Johnson County",
+        "row_id": "1cab1094-c843-49f5-9bda-5100a8d11d02"
+      },
+      {
+        "body": "Wore out. Detrimental to children’s mental, emotional, psychological health by ignoring what’s best for the children.",
+        "state": "KS",
+        "county": "Osage",
+        "row_id": "da936fa6-adbd-4673-90d0-a48e516d82b3"
+      },
+      {
+        "body": "My life revolves around soul crushing court ordered abuse. My child has been legally kidnapped to our abuser.",
+        "state": "KS",
+        "county": "Franklin",
+        "row_id": "0797cb5c-c120-4f8d-80af-b40f9e60232e"
+      },
+      {
+        "body": "My children’s childhood was stolen from them. They were taken on false allegations over 3 years. Which were all determined unsubstantiated- they still have not returned home. They have been withheld court ordered therapy treatment for 3 years with no enforcement that could help them heal",
+        "state": "KS",
+        "county": "Shawnee",
+        "row_id": "c9ca7851-1cad-40da-b1d2-5c9dd4622db9"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "This lady is oblivious to evidence, psychology, and anything relevant to a \"child's best interest\". What a disgrace to family law...period. She has allowed numerous court ordered violations, that literally show the mental issues with the other parent, which were discussed and she literally tried to make me the perpetrator. That was the end of it for me, I have gone 100% gray rock for all the people involved except the child. I really hoped for one non-corrupt person in all this, but I literally found none other than my own attorney at the time.",
@@ -94,11 +141,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/bethany_roberts",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='KS'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -114,6 +157,38 @@
     "recommended_route": "/court-actors/ks/bethany_roberts/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "She literally tried to make me the perpetrator.",
+        "kind": "comment"
+      },
+      {
+        "body": "She didn’t know the children’s teachers, coaches or counselors.",
+        "kind": "comment"
+      },
+      {
+        "body": "Made a court recommendation based on this single 15 minutes conversation.",
+        "kind": "comment"
+      },
+      {
+        "body": "Dismissed allegations of abuse without meaningful inquiry",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored and still ignores drug/alcohol abuse and neglect.",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored evidence, no communication, increased custody to harmful parent, sealed…",
+        "kind": "comment"
+      },
+      {
+        "body": "Wrongful reporting, dismissal of evidence",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

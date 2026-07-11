@@ -12,12 +12,16 @@
     "court_or_county": "Lenoir",
     "state": "North Carolina",
     "state_abbr": "NC",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "99136e22-8302-4873-9caf-bf0e379b8664",
+      "2c40da60-7db5-4fd2-b55d-d5faa3e450c6",
+      "e3c763c9-5053-4b1a-84ea-2935211217b8"
+    ],
     "actor_row_id": "99136e22-8302-4873-9caf-bf0e379b8664",
     "actor_bucket_key": null
   },
@@ -42,12 +46,31 @@
     "_pdf_state_family_count": 216,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "They took my kids for false report and now I'm gonna go to court Tuesday the 16 and I was told I was gonna get unsupervised visit but not they asking for me to have supervised visit",
+        "state": "NC",
+        "county": "Lenoir",
+        "row_id": "217eeae7-7d59-494e-ad3c-172708805898"
+      },
+      {
+        "body": "It destroyed me emotionally and psychologically. It destroyed the innocence of three little girls. It took them away from their families, their friends, their schools and their two brothers. Their grandfather had a stroke while all this was going on and his last wish was to get those girls home. He died, knowing that his granddaughters were in Foster Care being molested by a 40+ year-old man. It has destroyed my daughter emotionally and made her drug use hundred times worse. It has affected every single person in our family.",
+        "state": "NC",
+        "county": "Lenoir County",
+        "row_id": "6f33a7cf-a6ae-4562-8dbd-ee8ec6d19a33"
+      },
+      {
+        "body": "Lenoir county DSS came into our lives with the notion that they were there to help us rebuild after a brutal and traumatic experience. Instead,they came in and completely ripped my family apart . Slandered my name and character. Caused my kids emotional, mental, and even physical trauma throughout this case . And they have done this unlawfully, illegally, and maliciously.",
+        "state": "NC",
+        "county": "Lenoir",
+        "row_id": "4fe7b923-14e3-41b5-b379-c6d641ef2532"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "She lied to me several times concerning my kids and how they were adjusting in their foster home. She moved my children to a different foster home without informing me. She has refused to speak to me for 6 months or longer now. She has made false statements on my character in court multiple times based on opinions. She never went to see my kids in person at their foster home or school/daycare. Always video chat so she has never actually seen their environment",
@@ -70,11 +93,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/jennifer_hyler",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='NC'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +109,22 @@
     "recommended_route": "/court-actors/nc/jennifer_hyler/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "She moved my children to a different foster home without informing me. She has refused to speak to me for 6 months or longer now.",
+        "kind": "comment"
+      },
+      {
+        "body": "Meanwhile, my granddaughters were being physically and sexually abused and Foster Care.",
+        "kind": "comment"
+      },
+      {
+        "body": "Saying I cannot get my kids back",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

@@ -12,12 +12,17 @@
     "court_or_county": "Family Court Div.",
     "state": "Massachusetts",
     "state_abbr": "MA",
-    "mention_count": 0,
+    "mention_count": 4,
     "family_count": 4,
     "public_family_count": 4,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "1a20b9b2-7ec9-4f56-b55a-7cffd467d474",
+      "076ab722-fe04-4fb8-a646-738d5351d13c",
+      "42583ec7-a568-43aa-a8cf-dd12b2485e4d",
+      "cc5adefb-d6af-4960-a7c1-1652cc354098"
+    ],
     "actor_row_id": "1a20b9b2-7ec9-4f56-b55a-7cffd467d474",
     "actor_bucket_key": null
   },
@@ -42,12 +47,37 @@
     "_pdf_state_family_count": 106,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 4,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Haven’t seen children in two years. Children have had chronic absenteeism from school and has a false reporting case pending…Bhatt has done nothing to help my children and has further helped isolate them from me!",
+        "state": "MA",
+        "county": "Middlesex Lowell Probate court",
+        "row_id": "bfbe8d9a-73f4-4fdb-88a1-cdc1376946fe"
+      },
+      {
+        "body": "A system that was supposed to protect my children ignored their voices, separated us for years, and turned motherhood into a battle for survival.",
+        "state": "MA",
+        "county": "Middlesex County",
+        "row_id": "be00f6c2-e70a-43cd-861a-021d18fa61dd"
+      },
+      {
+        "body": "When a parent feels unheard in Court, the loss isn’t measured in legal orders-it’s measured in missed birthdays, unanswered messages, and years you never get back.. decisions I believed were shaped by false allegations in narratives, I could not overcome.",
+        "state": "MA",
+        "county": "Essex",
+        "row_id": "13a5b0eb-5064-4575-8aae-85d01fe7b375"
+      },
+      {
+        "body": "This system has affected my children's mental health SIGNIFICANTLY. To this day, my children who are now 25, 21, 19, and 17....are still in counseling. The emotional (and some physical) abuse they experienced while with their father has affected the greatly.",
+        "state": "MA",
+        "county": "Middlesex",
+        "row_id": "f6c4544c-7620-4913-a8cc-6b813dbc35b7"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "She's currently the judge over seeing our case. So far, she seems fair and kind. She listened to both sides and asked appropriate questions. She didn't seem to show favoritism towards either side, which honestly, is great. Family court in MA has caused me such anxiety due to my former spouse using it to as a means of control and harm towards our children. However, I have hope after our interactions with her as our judge.",
@@ -76,11 +106,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/manisha_bhatt",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='MA'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -96,6 +122,26 @@
     "recommended_route": "/court-actors/ma/manisha_bhatt/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "She's currently the judge over seeing our case. So far, she seems fair and kind.",
+        "kind": "comment"
+      },
+      {
+        "body": "Denied requests to hear testimony from a witness with firsthand knowledge of the children’s living situation",
+        "kind": "comment"
+      },
+      {
+        "body": "She’s the one who allowed my son to just not come home.",
+        "kind": "comment"
+      },
+      {
+        "body": "Haven’t seen children in two years, contempts were not taken seriously and there were no consequences and…",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

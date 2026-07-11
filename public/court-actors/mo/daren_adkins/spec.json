@@ -12,12 +12,17 @@
     "court_or_county": "Livingston County",
     "state": "Missouri",
     "state_abbr": "MO",
-    "mention_count": 0,
+    "mention_count": 4,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "898e18a5-b863-46de-aec6-e6b474c1639d",
+      "42967ed0-db7e-4b29-8820-51caa3c87d01",
+      "1347ba1c-d4fe-4a47-9f8e-004bef2a3f30",
+      "373c8e39-21dc-4db0-b066-ca84fe333a33"
+    ],
     "actor_row_id": "898e18a5-b863-46de-aec6-e6b474c1639d",
     "actor_bucket_key": null
   },
@@ -42,12 +47,31 @@
     "_pdf_state_family_count": 194,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "I’ll never get this time back with my beautiful girls. The system failed us.",
+        "state": "MO",
+        "county": "Livingston",
+        "row_id": "8f5e3c88-27a2-40e3-b2c4-bcdd41d4706c"
+      },
+      {
+        "body": "This has damaged our Family, Our Children have been traumatized by this so badly that we can see how much they are hurting, Children should not have to suffer because of people who are corrupt..",
+        "state": "MO",
+        "county": "Livingston County",
+        "row_id": "0fb6a1f2-08c9-4819-8a23-33e5b4b02819"
+      },
+      {
+        "body": "False accusations removed me from family home. Lost union job for a year 100,000+ in wages. Fraudulent family court dismissed my testimony and evidence in court trial filing judgements against me that ultimately allowed my ex wife to get home all 67 ac of farm by adopting her lies at trial as truth. She claimed assets owned by others failed to report marital debt all to come out with an extreme favorable judgement. False accusations required me to take 26 wk domestic violence class and 8 wk anger control. Completed 26 wk class virtual, now still trying to cause problems through court with that. Still don’t have my personal items from marital home and she has not refinanced the home as court ordered her to do over 8 months ago.At the beginning my kids were kept away from me for 6 months going through multiple attorneys until I finally got visitation a few months before trial.",
+        "state": "MO",
+        "county": "Unknown",
+        "row_id": "94494491-033b-40ec-9d56-94638ac976c8"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Ignored evidence at trial, then denied reconsideration after meeting with my attorney and opposing counsel Michelle Puckett at the reconsideration hearing. Even after my attorney showed the big mistakes that were made in figuring asset division. Show cause hearing gave me 10 days to comply with his fraudulent judgements paying 209,000+ or go to jail…",
@@ -70,11 +94,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/daren_adkins",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='MO'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +110,22 @@
     "recommended_route": "/court-actors/mo/daren_adkins/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Ignored evidence at trial, then denied reconsideration after meeting with my attorney and opposing counsel Michelle Puckett at the reconsideration hearing.",
+        "kind": "comment"
+      },
+      {
+        "body": "Judge didn’t allow me to speak or represent myself. Idk if it was illegal or wrong but he did not allow me the chance to speak.",
+        "kind": "comment"
+      },
+      {
+        "body": "Removed by going to Missouri Supreme court",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

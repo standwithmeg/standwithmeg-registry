@@ -12,12 +12,16 @@
     "court_or_county": "362nd Court",
     "state": "Texas",
     "state_abbr": "TX",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "b4211bf6-2e79-49f0-9e0e-ab3add861385",
+      "d8736fe4-9b23-4027-91b8-3c0136be1770",
+      "df8ee5b4-0ec4-4af7-bfa8-4506f797e1e1"
+    ],
     "actor_row_id": "b4211bf6-2e79-49f0-9e0e-ab3add861385",
     "actor_bucket_key": "bruce mcfarling|TX"
   },
@@ -27,27 +31,40 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 250,
-    "total_submissions": 315,
-    "avg_financial_loss": 229240.77,
-    "avg_months_lost": 32.1,
+    "families_approved": 251,
+    "total_submissions": 316,
+    "avg_financial_loss": 228661.33,
+    "avg_months_lost": 32.0,
     "_source_table": "movement_stats_by_state",
     "_match_value": "TX",
-    "state_family_count": 315,
-    "median_financial_loss": 118900,
-    "median_burden_sample_size": 149,
-    "median_months_lost": 20,
-    "pro_se_pct": 49.8,
-    "pro_se_count": 157,
-    "_pdf_state_family_count": 315,
+    "state_family_count": 316,
+    "median_financial_loss": 117950,
+    "median_burden_sample_size": 150,
+    "median_months_lost": 19,
+    "pro_se_pct": 50.0,
+    "pro_se_count": 158,
+    "_pdf_state_family_count": 316,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "It is removed the rights of fathers that were not even in the same state and couldn’t be due to Covid. They manipulated and lied to very small children, as well as other family members. They have committed slander fraud and perjury. Every bit of this can be backed up with evidence. These people messed with the wrong person because I spent years of my life being a document management specialist and I document everything.",
+        "state": "TX",
+        "county": "Denton",
+        "row_id": "29072017-e1c0-4816-bb36-b4267b107639"
+      },
+      {
+        "body": "My heart and spirit have been shattered due to the abuse of family court and CPS. Now I pay our abuser child support arrears and my children have aged out of the system!",
+        "state": "TX",
+        "county": "Denton",
+        "row_id": "ef572d35-e6e3-43fc-b80f-bd29083d4527"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Judge required psych evals from both of us. My attorney disclosed he was found to be a danger to children and should never be alone with them. Children disclosed to me that ex paid $50k for them (to take custody away from me.)",
@@ -64,11 +81,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/bruce_mcfarling",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='TX'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -84,6 +97,18 @@
     "recommended_route": "/court-actors/tx/bruce_mcfarling/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Judge required psych evals from both of us. My attorney disclosed he was found to be a danger to children and should never be alone with them. Children disclosed to me that ex paid $50k for them (to take custody away from me.)",
+        "kind": "comment"
+      },
+      {
+        "body": "This judge is guilty of signing multiple affidavits and orders that he never obviously read or did any due diligent or had the court do any anything that was brought to him was just instantly signed",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

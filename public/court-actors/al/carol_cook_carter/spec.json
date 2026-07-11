@@ -12,12 +12,18 @@
     "court_or_county": "Autauga",
     "state": "Alabama",
     "state_abbr": "AL",
-    "mention_count": 0,
+    "mention_count": 5,
     "family_count": 5,
     "public_family_count": 5,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 5,
+    "supabase_row_ids": [
+      "18272499-962e-44f9-b4c3-0c43b2f561b1",
+      "bbd88aef-8d13-42d0-9858-e3ed051c71c2",
+      "86ef06b0-ef0f-4912-b18f-0d23d0739d59",
+      "d050bfee-18af-40b3-a9bc-ff124212bfef",
+      "0dc3a46e-746f-49d0-85f7-b08b36e372ce"
+    ],
     "actor_row_id": "18272499-962e-44f9-b4c3-0c43b2f561b1",
     "actor_bucket_key": "carol cook carter|AL"
   },
@@ -42,12 +48,37 @@
     "_pdf_state_family_count": 130,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 5,
+    "actor_report_count": 5,
     "family_count": 5,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Tried to make me kill myself",
+        "state": "AL",
+        "county": "Autauga",
+        "row_id": "a6573b09-819e-446b-9da1-abff72f1d47d"
+      },
+      {
+        "body": "Carol Cook Carter and Joy Booth both put my child’s life in danger. They both looked at evidence showing where my child’s father was abusive to me during our relationship and also where he had threatened both my life and my child’s, and they still sided for him to receive joint custody of our child.",
+        "state": "AL",
+        "county": "Autauga",
+        "row_id": "e4398409-f5aa-43bc-9b61-217f5986ff18"
+      },
+      {
+        "body": "Autauga County family court has failed my children and me over and over again. More than 30 years of mental and physchological abuse has been legally perpetuated at the hands of the court system.",
+        "state": "AL",
+        "county": "AUTAUGA",
+        "row_id": "42f38311-aa7b-40fb-8b1c-d016074bc870"
+      },
+      {
+        "body": "If you wanted to destroy a powerful woman... you wouldn't go after her directly. You'd go after her heart. Her children. Her sanity. This is family court and it’s destroying the heart and soul of our children",
+        "state": "AL",
+        "county": "Ataugua county",
+        "row_id": "96bf21b3-e73b-4ea6-8d0d-965d80dee883"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Saw the evidence presented where my child’s father was threatening to harm both me and my child. She still advocated for the father and he ultimately received joint custody. I fully believe this is because she was, and is, very close friends with the father’s attorney.",
@@ -76,11 +107,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/carol_cook_carter",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='AL'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -96,6 +123,26 @@
     "recommended_route": "/court-actors/al/carol_cook_carter/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "She still advocated for the father and he ultimately received joint custody.",
+        "kind": "comment"
+      },
+      {
+        "body": "Told me she would get her money one way or the other. Had me jailed with no way out but to pay.",
+        "kind": "comment"
+      },
+      {
+        "body": "Served as counsel for father at one point, offered to represent me at another.",
+        "kind": "comment"
+      },
+      {
+        "body": "Been blocked from reviewing her website",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

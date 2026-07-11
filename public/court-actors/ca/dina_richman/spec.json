@@ -12,12 +12,16 @@
     "court_or_county": "Chatsworth",
     "state": "California",
     "state_abbr": "CA",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "f16caa9e-5260-4d48-9938-ac2156f69e90",
+      "6337b3a8-ab7a-45da-a22a-3df800187a45",
+      "aa2d468f-341d-486e-8fc0-af41a6713f76"
+    ],
     "actor_row_id": "f16caa9e-5260-4d48-9938-ac2156f69e90",
     "actor_bucket_key": "dina richman|CA"
   },
@@ -27,27 +31,40 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 357,
-    "total_submissions": 444,
-    "avg_financial_loss": 285669.87,
+    "families_approved": 359,
+    "total_submissions": 446,
+    "avg_financial_loss": 285125.16,
     "avg_months_lost": 35.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CA",
-    "state_family_count": 444,
-    "median_financial_loss": 265100,
-    "median_burden_sample_size": 198,
+    "state_family_count": 446,
+    "median_financial_loss": 269200,
+    "median_burden_sample_size": 199,
     "median_months_lost": 20,
-    "pro_se_pct": 58.6,
-    "pro_se_count": 260,
-    "_pdf_state_family_count": 444,
+    "pro_se_pct": 58.7,
+    "pro_se_count": 262,
+    "_pdf_state_family_count": 446,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "They took our rights, freedom and justice and handed to our abuser we courageously attempted to escape the home and had and threw away the keys leaving us in the dark and freightened.",
+        "state": "CA",
+        "county": "Chatsworth",
+        "row_id": "197ccce6-993a-41eb-b365-b26bb16e9f95"
+      },
+      {
+        "body": "I’ve lost so much time with my child, but the worst part is that they have put him with a man that left me to bleed out and die after a reconstructive surgery. Now my son is begging to come home and I’m the only one that understands why. I never wanted our son to see this side of his father.",
+        "state": "CA",
+        "county": "Los Angeles",
+        "row_id": "aebcb268-cac2-4c5b-a8ce-5f9006d0d274"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Denied my DVRO request after father falsely accused me of child abuse multiple times and was allowing father to violate orders. This led to me losing custody and having to eventually go on visitations even though there was no safety concerns by any social worker, SVU detective or parenting plan evaluator. This judge doesn’t review anything and simply relies on hear say from a minors counsel that doesn’t even do an investigation and lies under oath.",
@@ -64,11 +81,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/dina_richman",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='CA'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -84,6 +97,18 @@
     "recommended_route": "/court-actors/ca/dina_richman/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "This led to me losing custody and having to eventually go on visitations even though there was no safety concerns by any social worker, SVU detective or parenting plan evaluator.",
+        "kind": "comment"
+      },
+      {
+        "body": "She gave my rights to my abuser and closed case",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

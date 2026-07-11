@@ -12,12 +12,17 @@
     "court_or_county": "Leon",
     "state": "Florida",
     "state_abbr": "FL",
-    "mention_count": 0,
-    "family_count": 3,
-    "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "mention_count": 4,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "51eaba09-4b39-45bd-93f6-55a86f199491",
+      "047a126d-4f2d-48da-b78e-084b3d615d12",
+      "68837b36-6cc8-4916-807a-47269b4cc6e4",
+      "32e131f6-2da0-4842-8660-6931e76eb25e"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
@@ -42,12 +47,31 @@
     "_pdf_state_family_count": 306,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
-    "family_count": 3,
-    "family_reports": [],
+    "report_count": 4,
+    "actor_report_count": 4,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "Family court destroyed my family.",
+        "state": "FL",
+        "county": "Leon",
+        "row_id": "5551df4a-f030-4c80-9e8a-ebb35b83a81b"
+      },
+      {
+        "body": "Years of litigation within the family court system had a profound impact on my family. The prolonged conflict resulted in significant financial hardship, including legal expenses, lost income, and ongoing costs associated with the case. The chronic stress contributed to health complications, emotional exhaustion, and uncertainty that affected nearly every aspect of our daily lives. Beyond the financial burden, the litigation altered family relationships and consumed years that should have been spent providing stability and creating positive memories for my children. Instead of focusing on healing and moving forward, much of our time, energy, and resources were devoted to responding to conflict, correcting misinformation, and navigating an adversarial legal process. The greatest loss cannot be measured financially. It is the emotional toll on a family that simply wanted fairness, stability, and the opportunity to move forward. My hope in sharing my experience is that meaningful reforms will help reduce unnecessary conflict, improve accountability, and ensure that future families are better protected from the long-term consequences of prolonged family court litigation. In my experience, family law became one of the most insidious and financially destructive systems I have ever encountered. Rather than serving as a pathway toward resolution and stability, I experienced a process that, at times, felt psychologically abusive, one that rewarded prolonged conflict, depleted financial resources, and left families emotionally exhausted. The cumulative effect of years of litigation, repeated false allegations, escalating legal costs, and inconsistent accountability created a system that I experienced as both psychologically and financially devastating. My hope is that future reforms recognize not only the legal outcomes of family court proceedings but also the profound human cost they can impose on parents and children. No family should leave the courtroom carrying lasting financial devastation, emotional trauma, and the feeling that the process itself became another source of harm.",
+        "state": "FL",
+        "county": "Leon County",
+        "row_id": "7f28cc13-c697-4136-8169-a678c83a88be"
+      },
+      {
+        "body": "The system is corrupt and it destroys families and children.",
+        "state": "FL",
+        "county": "Leon",
+        "row_id": "2f0d8aea-9f6e-4994-9876-6216d4468cb4"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "My Florida family court case lasted 3 years and left me with serious concerns about the investigative process, transparency, and accountability within the system. My greatest concern was the Guardian ad Litem assigned to my case. Throughout the proceedings, I provided documentation that I believed could objectively verify disputed issues, including transportation records, school information, medical records, and written communications. In my experience, those records were not consistently used to verify competing claims, while unsupported narratives were given significant weight. For more than two years, I assumed the overwhelming majority of the transportation required by the parenting schedule, resulting in substantial mileage, lost work opportunities, and financial hardship. I was advised that financial considerations were not part of the Guardian ad Litem's evaluation. However, the practical burdens of a parenting plan directly affect a parent's ability to maintain employment, provide stability, and meet a child's needs. I believe those realities should be considered when evaluating a child's best interests. I also presented documentation regarding concerns for my child's safety and medical care. I did not believe those concerns received the level of independent investigation they warranted before recommendations were made. Another concern involved transparency. After I retained a court reporter, I observed that recommendations were no longer announced during meetings on the record. Instead, recommendations were communicated a few days later through email correspond",
@@ -70,11 +94,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/kirsten_lee_dunton",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='FL'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +110,22 @@
     "recommended_route": "/court-actors/fl/kirsten_lee_dunton/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "In my experience, those records were not consistently used to verify competing claims, while unsupported narratives were given significant weight.",
+        "kind": "comment"
+      },
+      {
+        "body": "There are also concerns that allegations involving sexual abuse by fathers are minimized or dismissed without meaningful investigation.",
+        "kind": "comment"
+      },
+      {
+        "body": "Her preferred parents are consistently represented by the same law firm. This woman needs to be stopped before she ruins more lives.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

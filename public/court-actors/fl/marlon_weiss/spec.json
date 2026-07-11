@@ -12,12 +12,20 @@
     "court_or_county": "Broward",
     "state": "Florida",
     "state_abbr": "FL",
-    "mention_count": 0,
+    "mention_count": 7,
     "family_count": 7,
     "public_family_count": 7,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 7,
+    "supabase_row_ids": [
+      "41050936-6282-44d9-8dd9-49226cbb1c53",
+      "cf6109df-cfce-4108-90a1-2abc4eb2e884",
+      "24924850-6b41-4236-a971-7e97168820bc",
+      "f3c36214-73e1-402b-9489-6a4e5166f179",
+      "0181e712-d550-49fb-ade2-dad87c9536a9",
+      "1ed898ad-7c45-476f-86a1-a9f749078eb3",
+      "d3e62706-42a3-488b-9ff7-bf85df61b2f4"
+    ],
     "actor_row_id": "41050936-6282-44d9-8dd9-49226cbb1c53",
     "actor_bucket_key": null
   },
@@ -42,12 +50,49 @@
     "_pdf_state_family_count": 306,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 7,
+    "actor_report_count": 7,
     "family_count": 7,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Family court has created a hostile environment where abuse has continued to be allowed. My children continue to suffer emotional, verbal, and physical abuse and neglect at the hands of a parent because the GAL and judge are set on the belief that both parents must have unlimited access to the children.",
+        "state": "FL",
+        "county": "Broward County",
+        "row_id": "f92a3692-0972-4200-ad75-4b5117603614"
+      },
+      {
+        "body": "The family court system separated my child from his primary caregiver based on unproven allegations and without allowing a meaningful opportunity to respond, causing years of emotional, financial, and developmental harm to our family. What should have protected a child instead prolonged conflict, instability, and unnecessary trauma.",
+        "state": "FL",
+        "county": "Broward",
+        "row_id": "8e6f8595-a59e-4c6b-93e1-33061e6183b9"
+      },
+      {
+        "body": "Has devasted my child and family's life. Literally stole my child once more, believes that a good parent shouldn't be involved in a minors childs life, also believes academic, sports and a social life is not important for a child. They have removed my son from a stable loving home and routine and gave him to the arms of a undocumented criminal Steven Noel French.",
+        "state": "FL",
+        "county": "Broward County",
+        "row_id": "1029f3c8-1fdc-43a7-9e9c-5aff39f101a5"
+      },
+      {
+        "body": "Family court destroyed my family.",
+        "state": "FL",
+        "county": "Leon",
+        "row_id": "5551df4a-f030-4c80-9e8a-ebb35b83a81b"
+      },
+      {
+        "body": "Broward County Family Court refuses due process and evidence. This allows the high conflict parent to repeatedly manipulate, lie and file false allegations and wins by not seeing actual evidence, just hearsay, and because they are “too busy” your case sits for years, losing your kids and money despite all reports saying the high conflict parent is a liar.",
+        "state": "FL",
+        "county": "Broward",
+        "row_id": "2b23ff43-40b5-45cb-9dde-82fa66a11547"
+      },
+      {
+        "body": "This system in Broward county 17th judicial circuit family courts is destroying families and protective parents on purpose. My child is severely mentally harmed and I have no way to help her. We need urgent help in this courthouse",
+        "state": "FL",
+        "county": "Broward county",
+        "row_id": "b1d71537-9636-4adc-83af-955ebe56f66e"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Judge Weiss was assigned to my case after successive disqualification of other judges (Kanner and Lott). I had filed ex parte emergency motions and his JA emailed me saying she was aware of them but that Jude Weiss was \"out of office\" and unable to respond for two weeks. I was told I either had to wait, or go into the courthouse to submit in person, despite residing in Georgia. He then entered a sua sponte recusal after I informed his JA that by law, if the assigned judicial officer wasn't available to review emergency ex parte it needed to be routed to the duty judge. The JA refused to route my motion, and Judge Weiss entered sua sponte recusal while emergency child harm matters were before the court. This lead to ongoing delay and the motions were never addressed by subsequent judges.",
@@ -94,11 +139,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/marlon_weiss",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='FL'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -114,6 +155,34 @@
     "recommended_route": "/court-actors/fl/marlon_weiss/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Refused to route my motion",
+        "kind": "comment"
+      },
+      {
+        "body": "Acknowledged unpaid parenting-plan expenses and evidence of the ability to pay.",
+        "kind": "comment"
+      },
+      {
+        "body": "My kids for 2 weeks now and he cannot “hear” my evidence until mid June.",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignores every motion and petition.",
+        "kind": "comment"
+      },
+      {
+        "body": "Allows personal beliefs and feelings to interfere with following the law.",
+        "kind": "comment"
+      },
+      {
+        "body": "None of them follow case law.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

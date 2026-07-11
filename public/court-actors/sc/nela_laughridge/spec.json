@@ -1,0 +1,85 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "nela_laughridge",
+    "display_name": "Nela Laughridge",
+    "title": "",
+    "first_name": "Nela",
+    "last_name": "Laughridge",
+    "role": "GAL / Child Representative",
+    "court": "Anderson County",
+    "county": "Anderson County",
+    "court_or_county": "Anderson County",
+    "state": "SC",
+    "state_abbr": "SC",
+    "mention_count": 7,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 7,
+    "supabase_row_ids": [
+      "78ed4833-fedf-43d9-b904-d531306b3cf8",
+      "d6aece63-8125-460b-ab87-ae219f05f5e8",
+      "2d686205-a978-4234-9ef0-be4aeeaea258",
+      "5e9261d3-96e0-4f88-b15d-36cc659363fe",
+      "77c44325-0925-4468-b1df-e50257c5d7d4",
+      "00d65d6b-e07a-47d8-91d0-4806c9bd6a62",
+      "9195924a-a276-42a9-95db-1f4faca35371"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "nela laughridge|SC"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 85,
+    "total_submissions": 108,
+    "avg_financial_loss": 279773.07,
+    "avg_months_lost": 26.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "SC",
+    "state_family_count": 108,
+    "median_financial_loss": 120500,
+    "median_burden_sample_size": 68,
+    "median_months_lost": 18,
+    "pro_se_pct": 55.6,
+    "pro_se_count": 60,
+    "_pdf_state_family_count": 108,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5421,
+  "supabase": {
+    "report_count": 7,
+    "actor_report_count": 7,
+    "family_count": 2,
+    "family_reports": [],
+    "public_comments": []
+  },
+  "export_dir": "New Final Post and Capcut template/export/nela_laughridge",
+  "unresolved": [
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/sc/nela_laughridge/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

@@ -12,12 +12,20 @@
     "court_or_county": "Hancock",
     "state": "Ohio",
     "state_abbr": "OH",
-    "mention_count": 0,
-    "family_count": 0,
-    "public_family_count": 0,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "mention_count": 7,
+    "family_count": 5,
+    "public_family_count": 5,
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 7,
+    "supabase_row_ids": [
+      "7f8e88a8-e81f-4501-9e42-6390fad16c1d",
+      "000b885c-39b1-4863-a194-b02431ba066d",
+      "c3ba57b3-d1d8-44d8-9911-d7326bd28e97",
+      "b59bf58c-ed99-41d1-ab12-06d4c5db4895",
+      "b44a360c-6d64-4a84-bfbe-a2c820e4836c",
+      "3829a770-3b5e-43d8-957c-c5325b143d54",
+      "d7c0b30c-cb1c-494b-a540-58c94f7ff728"
+    ],
     "actor_row_id": "7f8e88a8-e81f-4501-9e42-6390fad16c1d",
     "actor_bucket_key": "keli miler|OH"
   },
@@ -42,12 +50,49 @@
     "_pdf_state_family_count": 264,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
-    "family_count": 0,
-    "family_reports": [],
+    "report_count": 7,
+    "actor_report_count": 7,
+    "family_count": 5,
+    "family_reports": [
+      {
+        "body": "This system allows legal kidnapping, because there are no checks and balances for Juvenile Court Judges. Judge Kristen Johnson has caused tremendous trauma to not only me and my son but our entire family. Director Randall Galbraith and Supervisor Karmen Lauth intentionally delayed the process of developing a caseplan for me to obtain custody. Then lied under oath about my contact with the agency",
+        "state": "OH",
+        "county": "Hancock County",
+        "row_id": "24aa6619-fec5-4a34-b177-0b7175845232"
+      },
+      {
+        "body": "Torn apart a mom from her kids and alienated a mom for 4+ years while a sex offender has had access to them Broken a mamas heart day in and day out",
+        "state": "OH",
+        "county": "Hancock",
+        "row_id": "396e8c1d-7277-4614-9d0e-46fdb3aff297"
+      },
+      {
+        "body": "The system has DESTROYED my whole family we had a living family full of MEDICAL PROFESSIONALS and a retired Police Chief- none of us are able to get kinship!!! Children have been traumatized by the state and NEVER WERE. THEY WERE HAPPY, HEALTHY, & THRIVING.",
+        "state": "OH",
+        "county": "Hancock county",
+        "row_id": "661a9d9b-df22-4aa9-bfe5-57c439c836ac"
+      },
+      {
+        "body": "Complete destroyed us my daughters are in my life we are trying to get their brother home his GAL is who has him lied said he was adopted as well to his sister's they asked her about the childsupport an she freaked out stopped all contact he will be 12 this year jayden joe alexander lopez ERIKA CERVI HAS MY SON",
+        "state": "OH",
+        "county": "Hancock",
+        "row_id": "495a058c-3c9c-464d-8755-e3d5abb136d3"
+      },
+      {
+        "body": "This system allows legal kidnapping, because there are no checks and balances for Juvenile Court Judges. Judge Kristen Johnson has caused tremendous trauma to not only me and my son but our entire family.",
+        "state": "OH",
+        "county": "Hancock County",
+        "row_id": "a7404c1e-efa9-4ace-a0d8-23b34f1b3239"
+      },
+      {
+        "body": "I am the grandmother trying to get kinship, visitation, custody intervention and was denied. All family were denied kinship without background checks or home studies. the agency oushes everyone INTO COURT. Our backgrounds include medical which means we have nothing in our backgrounds, a foster family that includes retired pikice chief and a director of nursing, and i al a Licensed Medical Massage therapist and have hosted 6 foreign exchange students exchange students, which means deeply vetted. The system is keeping kids systemically in this county for profit. The childrens regression has been blamed on their mother and shes never been anything but a good mother. It has ruined our entire family.",
+        "state": "OH",
+        "county": "Hancock",
+        "row_id": "8600b24c-832a-4022-98e8-f7aca792a7b4"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Said I was unsafe, never did background check or home study. Said I didn’t protect my grandchildren when in fact I had and always have. Had him since he was 2 months old every single weekend. She filed a false report stating FRESH RIBS PLURAL and that he was SEEN in person by their doctor- a lie. He had a single old hairline fix rib nobody knew about. Perjury, met children one time, attended my sons criminal hearing with foster parents. Trial by ambush.",
@@ -82,11 +127,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/kelli_miller",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='OH'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -102,6 +143,30 @@
     "recommended_route": "/court-actors/oh/kelli_miller/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Had him since he was 2 months old every single weekend.",
+        "kind": "comment"
+      },
+      {
+        "body": "Falsified reports, changed drug test to a positive. Changed documents after signed.",
+        "kind": "comment"
+      },
+      {
+        "body": "Overturned at court by Judge Kristen Johnson",
+        "kind": "comment"
+      },
+      {
+        "body": "She altered drugs tests lied twisted everything said my son was adopted he has not been pay…",
+        "kind": "comment"
+      },
+      {
+        "body": "Lied on stand. Did NOT contact any family. Never returned phone calls for outreach and placement.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

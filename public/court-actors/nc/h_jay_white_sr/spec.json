@@ -12,12 +12,17 @@
     "court_or_county": "Cabarrus County",
     "state": "North Carolina",
     "state_abbr": "NC",
-    "mention_count": 0,
+    "mention_count": 4,
     "family_count": 4,
     "public_family_count": 4,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "29e93a8e-53cc-4e21-97b0-d11b9adf2dff",
+      "6611d12e-014d-4409-833c-06b8265a61c2",
+      "2aba17a3-4f31-490f-b5ac-f3c2bd05347b",
+      "d93054ec-becd-41cd-b3d1-2153df330c9d"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
@@ -42,12 +47,37 @@
     "_pdf_state_family_count": 216,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 4,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Decades of lost time, legal abuse, financial abuse, and emotional abuse to those that were the victims of domestic violence. Silence is death do not stop fighting for your children no matter the threats or the attacks because God will help you stand for justice.",
+        "state": "NC",
+        "county": "Cabarrus County",
+        "row_id": "f1a8cae3-117d-400f-a5b6-ac2ef08269a0"
+      },
+      {
+        "body": "My family was torn apart and all the trama and lies and hurt myself and kids have had to endure is so wrong",
+        "state": "NC",
+        "county": "Cabbarus",
+        "row_id": "65cc5345-4f4b-4ad7-be60-062f5717ae30"
+      },
+      {
+        "body": "Every government board im there to speak for justice. I been put in jail, charged and retailiated against for telling this veterans story",
+        "state": "NC",
+        "county": "Cabarrus",
+        "row_id": "50ef6ce9-399b-4f78-a771-3110de587024"
+      },
+      {
+        "body": "The system has systematically torn apart our loving family under the guise of ‘best interests of the children,’ while the court and DSS—driven by profit, not justice—have violated our constitutional rights, ignored documented corruption and perjury, and now illegally demand that I abandon my own home for six months to a year as a condition for reunification, forcing us to choose between our rights and our children! UNITED WE STAND AND UNITED WE FIGHT!",
+        "state": "NC",
+        "county": "Cabarrus County",
+        "row_id": "3cee2d1d-87ee-46e2-873a-a5efa1bae649"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Says things that aren’t true and is either allowing DSS to lie or telling them to lie . He’s the most powerful man in Cabarrus County no one will go against him. He’s asking me to stop taking my prescribed medication that I’ve been taking for over 20 years and the foster mom is on the same medication and is allowed to care for our children but he’s stating I can’t.",
@@ -76,11 +106,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/h_jay_white_sr",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='NC'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -96,6 +122,22 @@
     "recommended_route": "/court-actors/nc/h_jay_white_sr/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "The foster mom is on the same medication and is allowed to care for our children but he’s stating I can’t.",
+        "kind": "comment"
+      },
+      {
+        "body": "He represents all Dhs cases and still does and he lies and falsified papers",
+        "kind": "comment"
+      },
+      {
+        "body": "Withheld evidence",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

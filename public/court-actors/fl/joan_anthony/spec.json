@@ -12,12 +12,17 @@
     "court_or_county": "Seventh Circuit Court",
     "state": "Florida",
     "state_abbr": "FL",
-    "mention_count": 0,
+    "mention_count": 4,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "6e2bd141-759a-4694-a30b-c8e36ed76619",
+      "2c0950c8-d6b0-4b36-82bb-7d5c87e82861",
+      "a5b013d5-72b1-4719-ae07-2fc202b90728",
+      "eecc0c12-9516-405d-9b0e-5801dbca854b"
+    ],
     "actor_row_id": "6e2bd141-759a-4694-a30b-c8e36ed76619",
     "actor_bucket_key": "joan anthony|FL"
   },
@@ -42,12 +47,31 @@
     "_pdf_state_family_count": 306,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Florida DCF medically kidnapped my specials needs child who was weaning. The agency put her back on a g-tube and used behavioral assessment reports by Licensed Mental Health Counselors instead of qualified professionals to unnecessarily keep her g-tube dependent for 3 years. She is not seeing proper neurologists and suffering medical neglect.",
+        "state": "FL",
+        "county": "Volusia",
+        "row_id": "4c63f799-5d2f-4526-8ce1-9061d62c8425"
+      },
+      {
+        "body": "Fl DCF is endangering my infant granddaughters life. She has complex special needs and is not receiving adequate medical care.",
+        "state": "FL",
+        "county": "Daytona Beach",
+        "row_id": "32c1079d-4f48-408f-955e-7e0173f25c19"
+      },
+      {
+        "body": "Our entire family is shattered beyond repair, physically, emotionally and psychologically.",
+        "state": "FL",
+        "county": "Volusia",
+        "row_id": "d575c70d-4163-490a-8c75-a33d394eee4b"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "She was a defendant in my federal case while she presided over my tpr hearing and refused to recuse. She had me thrown in jail when i filed a motion to have her recuse for suppressing domestic violence evidence I disclosed and a motion for ADA accommodations for online court record viewing. The court window would not give me copies of filings or orders. She appointed counsel in abstentia on February 5, 2024 and had the attorney representing my husband substitute for the absent attorney. I was a domestic violence victim in my husband’s current criminal case. The substitute attorney over talked me when i tried to disclose i was a victim of dv. He said he had to protect his clients interests, so he silenced me. Judge Anthony silenced me also when i tried to explain about the dv my husband did to me in front of my children. This happened during the continued shelter hearing. The first shelter hearing was held while I was at the Orlando Advent Children’s hospital signing off on emergency brain surgery, Feb 2, 2024 for my special needs child. Judge Anthony issued a retroactive nunc pro tunc order on May 30, 2024 to conceal the conflicted counsel. Judge Kathleen McNeilly removed my disability attorney who was advocating for me during the Feb 2, 2024 shelter hearing. I had no attorney and there were three structural errors during the shelter hearings. Judge Anthony had the clerk not docket my filings. The appeal record was irregular and incomplete yet the 5th DCA knew this and issued a PCA to cover everything the lower tribunal did up. Finally, i informed her i was coerced into signing consent with no counsel present. The consebt form was misdsing the attorney signature block. And the attached notary was fraudulent voiding the document under Florida law. I informed Anthony, CPC, cm, pulled my mother’s Florida homestudy out of the FSFN system foreclosing her guardian candidacy and changing the trajectory of the tpr. She deleted my filing. She committed judicial misconduct throughout my case and harmed my family.",
@@ -70,11 +94,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/joan_anthony",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='FL'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +110,22 @@
     "recommended_route": "/court-actors/fl/joan_anthony/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Judge Anthony issued a retroactive nunc pro tunc order on May 30, 2024 to conceal the conflicted counsel.",
+        "kind": "comment"
+      },
+      {
+        "body": "11th Cir. Appeal No. [redacted] G) as irrefutable evidence of improper documents used to procure federal Title IV-E funding in Volusia County.",
+        "kind": "comment"
+      },
+      {
+        "body": "She ignored my daughter disclosing she was coerced into signing consent, without counsel, by the fl DCF mediator who was the attorney appointed in absentia.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

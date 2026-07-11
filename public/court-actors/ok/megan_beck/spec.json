@@ -12,12 +12,17 @@
     "court_or_county": "Tulsa",
     "state": "OK",
     "state_abbr": "OK",
-    "mention_count": 0,
+    "mention_count": 4,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "63d2077d-2bfb-4f3f-b3a7-a63f39774732",
+      "b683cec7-176e-43b3-b33f-cd7b2c7906da",
+      "4b1a0648-01e5-4aba-80ec-c5460f4ffa58",
+      "e850c171-bbe1-4d30-ab8a-84da8cc56ab9"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "megan beck|OK"
   },
@@ -42,12 +47,31 @@
     "_pdf_state_family_count": 164,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "The system has destroyed my family. Happy children are now in constant chaos, the court is more concerned about 50/50 pro dad than stability for the children. I have been told so many times children are resilient. They will be ok. This has take a toll on myself mentally and physically. Now because I am fighting back or questioning I am classified as combative and confrontational. Which adds additional stress and feels like an intimidation tactic. The system and abuser has stolen precious time that you can never get back.",
+        "state": "OK",
+        "county": "Tulsa",
+        "row_id": "1734a704-ed48-41a2-b5e8-83bf9a1d781e"
+      },
+      {
+        "body": "Destroyed my faith in child court and what is supposed to be the absolute wellbeing of our kids as a priority. Took years from me and my kids/family we will never get back and has caused trauma to my kids they may never recover from.",
+        "state": "OK",
+        "county": "Wagoner",
+        "row_id": "d8843cb7-6aff-48f7-8687-d3f895db0be8"
+      },
+      {
+        "body": "Destroyed my family for over 6 years now! Took every penny we have down to savings and retirement fighting for justice for my two small children! Traumatized my children so bad they will be in therapy rest of their lives!! Because of wagoner county Oklahoma family courts my son was SA by TWO different people while at his dads for 2 years and alienated from me! I find out 2 years later when I finally get my first visit with him! His dad never reported! Never called police nor cps and did not take my son for medical treatment… he called my son a liar and went about life!! He admitted on stand to all this and walks away with no consequences!! This is on the record! Literally destroying my kids, family and my life still to this day! My son has light he’s sent to come to me full sole custody [redacted] there is no light for my daughter to this day! I’m on supervised visits for no reason!!",
+        "state": "OK",
+        "county": "Wagoner",
+        "row_id": "8b70ebcd-62ae-4250-8e33-a8a4f74e16d9"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Denied motion without hearing. Allowed me to have custody of my daughter then when judge granted motion she moved mountains to have order reversed on me within 24 hours. My daughter begged and cried to her at wagoner county court house saying the people she lived with hurt her and talk very bad about me her mother. Ignored video evidence of my baby begging and pleading for help telling me to call Donald trump he’s the only one who can hep her. Then Megan get it court ordered where I can not record but other party can record. 3 tracking devices were put on my daughter hidden. I removed one and was placed on supervised visitation because I removed one tracker out of 3 and none were court ordered! She saw my children twice over 2 years and never visited my children together. She went to Nashville to visit my daughter in the home there. Never came to my home or visited my other child in home. My children were SA and abused due to Megan becks corruption. She was paid over 18 k saw my children once. Ignored my daughter pleas for help. Lied to keep my daughter in tn. She went to Nashville to visit my daughter and went the the home my daughter claims she is being abused in to interview her. She saw my daughter screaming and crying at court house scared to death if Megan because she saw her in tn. Lied numerous times about who truly had custody of my daughter. My daughter was placed in a third party placement not a guardianship likely son. The courts gave my daughter to a multi time felon who served 10 plus years in federal prison for ripping off capital one for over a million dollars. My daughter’s grandmother was married to Pablo escabuars number one cocain pilot tirso Dominguez. Had a podcast called cocaine air. I brought all evidence to Megan and she still told the courts my daughter was thriving in this environment even though she is in first grade with 3 Fs on her report card.ignored evidence All evidence",
@@ -70,11 +94,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/megan_beck",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='OK'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +110,22 @@
     "recommended_route": "/court-actors/ok/megan_beck/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Ignored my daughter pleas for help. Lied to keep my daughter in tn.",
+        "kind": "comment"
+      },
+      {
+        "body": "Changing custody schedule to limit time with mom, to help minor child have a reunification with father, while child continues to show distress with time with dad.",
+        "kind": "comment"
+      },
+      {
+        "body": "To be disclosed if my testimony is required. I have paper, digital, and video evidence of all of my above statements. The judge dismissed all as evidence.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

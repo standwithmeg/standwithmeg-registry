@@ -12,12 +12,23 @@
     "court_or_county": "Johnson",
     "state": "Kansas",
     "state_abbr": "KS",
-    "mention_count": 0,
+    "mention_count": 10,
     "family_count": 9,
     "public_family_count": 9,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 10,
+    "supabase_row_ids": [
+      "70c4db89-24ff-4a9a-903f-5f9797cfc2ff",
+      "f543a634-f368-4d11-8d58-185e536798ae",
+      "13b87fd3-dbc8-47cb-ab92-4d7d0315ef5d",
+      "9cf3cb18-0e59-435f-9275-2902667adb83",
+      "7e034096-07c2-4ff3-9a16-38b0d103b941",
+      "61378384-4639-45ab-a481-dbcf0e2ff56d",
+      "84a15cef-8673-4fdf-965e-c1d8110aa535",
+      "55fa38a3-0d62-4f43-9ae0-8b7df7e8cce7",
+      "7202fcb1-30a9-4da1-8599-6ca52e6c4aa4",
+      "2b02ae4e-c9b0-4d7b-ab2e-bf4d7dd2ac2a"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "kevin grady|KS",
     "_overrides_applied": [
@@ -50,12 +61,49 @@
     "_pdf_state_family_count": 251,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 10,
+    "actor_report_count": 10,
     "family_count": 9,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Judge Keven O’Grady forced me to pay for supervised visits for a mother that attempted suicide in front of a 5 year old. “As many visits as she wants” at $100/hour.",
+        "state": "KS",
+        "county": "Johnson County",
+        "row_id": "e2d1cbe2-3ba3-4b1a-bdf8-bbc15d78c41a"
+      },
+      {
+        "body": "Testing the connections",
+        "state": "KS",
+        "county": "JOhnson county",
+        "row_id": "dbccb8f9-68cd-46fc-8093-4f36ee331e6c"
+      },
+      {
+        "body": "My life is in ruins. I have started shooting up and selling my body for McDonald’s rewards points.",
+        "state": "KS",
+        "county": "Johnson County",
+        "row_id": "93b8d272-2f0d-4da5-805e-2270184126de"
+      },
+      {
+        "body": "Fucked us all up",
+        "state": "KS",
+        "county": "Johnson county",
+        "row_id": "29d87f00-3f28-436e-b17b-2904016a38c1"
+      },
+      {
+        "body": "This system removed my children without due process, ignored evidence that cleared me, and created financial and procedural barriers that have kept me separated from them for years. The court actors built a system where I have to pay thousands just to try to be their mom again.",
+        "state": "KS",
+        "county": "Johnson County",
+        "row_id": "79a2d570-52fe-40f1-a0c8-1f41ca10d5b6"
+      },
+      {
+        "body": "It has taken my life",
+        "state": "KS",
+        "county": "Johnson County",
+        "row_id": "411c77d2-7d3d-4fd3-bfe9-b117bff9c3e5"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Ordered removal of my five children without a full hearing, without any witnesses or ever asking me if the allegations were true, and still has not given me a real hearing while I have been separated from my kids for over two years, and requires me to find and pay for supervisors with unrealistic requirements like providing their full case history before he will even set a hearing, which has made it nearly impossible to see my children.",
@@ -108,11 +156,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/keven_o_grady",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='KS'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -128,6 +172,42 @@
     "recommended_route": "/court-actors/ks/keven_o_grady/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Ordered removal of my five children.",
+        "kind": "comment"
+      },
+      {
+        "body": "He looked at me, chuckled, and said “Sana, Sana, colita de rana.”",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored evidence. Didnt question false statement from custody evaluator",
+        "kind": "comment"
+      },
+      {
+        "body": "Kevin O'Grady needs to be exposed — he claims he does things for the kids' safety.",
+        "kind": "comment"
+      },
+      {
+        "body": "Doesn't do shit.",
+        "kind": "comment"
+      },
+      {
+        "body": "It has taken my life.",
+        "kind": "comment"
+      },
+      {
+        "body": "No Due Process and never looked at the evidence",
+        "kind": "comment"
+      },
+      {
+        "body": "Testing this to see it connects",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

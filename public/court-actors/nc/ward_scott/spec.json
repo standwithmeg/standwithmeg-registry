@@ -12,12 +12,19 @@
     "court_or_county": "Buncombe",
     "state": "North Carolina",
     "state_abbr": "NC",
-    "mention_count": 0,
-    "family_count": 5,
-    "public_family_count": 5,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "mention_count": 6,
+    "family_count": 1,
+    "public_family_count": 1,
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 6,
+    "supabase_row_ids": [
+      "2ee6a5ff-da78-444e-901e-86dde7e1942b",
+      "0588437c-7aeb-43a4-a8ef-20b3045d3c29",
+      "6bdd9809-8306-4842-b3db-ecbad685c992",
+      "59f76e31-f267-4730-ba48-76be22056076",
+      "020fd876-1a3e-42a7-ab76-734929ce8abb",
+      "f286683e-5c6a-4453-aef6-b436fa25a1b3"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
@@ -42,19 +49,62 @@
     "_pdf_state_family_count": 216,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
-    "family_count": 5,
-    "family_reports": [],
-    "public_comments": []
+    "report_count": 6,
+    "actor_report_count": 6,
+    "family_count": 1,
+    "family_reports": [
+      {
+        "body": "This dark, greedy, ego-driven system has crushed my children's innocence, obviated their ability to trust any adult, removed them from safety, and delivered them into the home of their predator. Instead of protecting my children from a manipulative, coercive, abusive parent, this system has invested its resources into gaslighting my young children and severing them from the only adult who has been brave enough to advocate for them in the face of years of threats and harm.",
+        "state": "NC",
+        "county": "Buncombe",
+        "row_id": "a26979f2-dcfd-4fe2-8f1b-2bf763298316"
+      },
+      {
+        "body": "This system re-traumatized myself and my children in an unnecessarily cruel manner that one would never anticipate experiencing in a democratic, law-abiding society.",
+        "state": "NC",
+        "county": "Buncombe County",
+        "row_id": "78611abe-8be1-4170-9296-5c99860faec1"
+      },
+      {
+        "body": "I can’t protect my kids from their abusive father. It was very clear to me in family court that because I was accusing my ex of being violent, I was immediately seen to be the problem, as though I was making accusations simply to get full custody of my kids.",
+        "state": "NC",
+        "county": "Buncombe",
+        "row_id": "50bda2ca-9fc4-4fd9-8e43-f9ddb2e3d435"
+      },
+      {
+        "body": "They destroyed my family abused my children and sold them for bonuses and profit from me and adopted them out to strangers",
+        "state": "NC",
+        "county": "Buncombe County",
+        "row_id": "e30606d0-99e2-451b-bd90-363ac7a51a61"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Ward exhibited clear bias from the inception of the case; sustained every objection to all my evidence of harm and trauma caused to my children by their father, then told me, \"Looks like you have no evidence of any of this. I find you unbelievable,\" threatened to imprison me if I did not reveal the name of my attorney who advised me to flee this jurisdiction to keep my boys safe, then decided I was lying when I refused to give him the name; violates many of the Rules of Judicial Procedure but threatened to sanction me when I pointed this out; pretended not to understand what a conflict of interest was, and decided that the wisest action to take to determine the existence of a conflict was for *the conflicted person* to make this determination; withheld that he had a conflict of interest due to his former employment with NC's DSS, even after I mentioned numerous times that DSS behaved unethically and perhaps illegally, and that I've been told that DSS is trying to harm me; has a fantastical ego that is a major danger to anyone entering family court in Buncombe County, particularly if you are a woman and your children have suffered abuse caused by a man.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Ignored Evidence",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Terminated my parental rights and they called me to court that morning without notice and I was in class at the local technical College not sure why I wasn't informed on this hearing that I knew NOTHING ABOUT",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "He laughed when he saw an evidence photo of a hole punched in a door by my ex, then looked at my ex and said “you know they make keys, don’t you?”",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
   },
   "export_dir": "New Final Post and Capcut template/export/ward_scott",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='NC'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available",
     "pdf_public_actor: no 'Ward Douglas Scott' in cache for NC"
   ],
   "guardrails": {
@@ -72,6 +122,26 @@
     "recommended_route": "/court-actors/nc/ward_scott/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "I find you unbelievable,\" threatened to imprison me.",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored Evidence",
+        "kind": "comment"
+      },
+      {
+        "body": "Terminated my parental rights and they called me to court that morning.",
+        "kind": "comment"
+      },
+      {
+        "body": "He laughed when he saw an evidence photo of a hole punched in a door by my ex, then looked at my ex and said…",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

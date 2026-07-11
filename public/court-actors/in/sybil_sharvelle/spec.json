@@ -12,12 +12,17 @@
     "court_or_county": "Tippecanoe",
     "state": "Indiana",
     "state_abbr": "IN",
-    "mention_count": 0,
+    "mention_count": 4,
     "family_count": 4,
     "public_family_count": 4,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "15ca6e4c-5579-411c-9631-0197dcce3629",
+      "b0aaa577-98dc-41c0-9f6e-dcdb8171e9c7",
+      "96bb236e-8598-4f6a-aa8e-2f177a5d2739",
+      "6320434a-140a-4317-be2c-16653769a6c6"
+    ],
     "actor_row_id": "15ca6e4c-5579-411c-9631-0197dcce3629",
     "actor_bucket_key": "sybil sharvele|IN"
   },
@@ -42,12 +47,37 @@
     "_pdf_state_family_count": 153,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 4,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Judge Persin ignored evidence from two forensic interviews and a medical exam that the father sexually molested our two children. He gave the father sole custody after one hearing. This has destroyed two children's lives. Judge Persin endangered children and decided to ruin their lives despite evidence and expert testimony. One child has made another disclosure of sexual abuse since being forced to live with their abuser.",
+        "state": "IN",
+        "county": "Tippecanoe",
+        "row_id": "9271b677-cde8-4506-88c3-d0316bb5ec4c"
+      },
+      {
+        "body": "Sean Persin has endangered enough children and needs to be held accountable for destroying families. He sides with abusers and rules against the female regardless of the heinous crime the man has committed including abusing an innocent child. Enough is enough.",
+        "state": "IN",
+        "county": "Tippecanoe",
+        "row_id": "f3c7d56e-9f93-40e9-ba4f-06279e39d0c3"
+      },
+      {
+        "body": "The system worked with the father to take my children away from their loving mother because father hates mom.",
+        "state": "LA",
+        "county": "Plaquemines",
+        "row_id": "a0496d45-bf2f-43b2-8078-77a0f4ad19a7"
+      },
+      {
+        "body": "The Guardian ad Litem, Sybil Sharvelle, appears to have been brainwashed by the father and claimed the mother is psychologically abusing the child after the child disclosed sexual abuse by the father for the second time and a PO was issued by a preponderance of the evidence by one judge, then transferred to another judge who dropped the PO and the child was taken by the father who received sole custody.",
+        "state": "IN",
+        "county": "Tippecanoe",
+        "row_id": "a2559f03-f534-485e-8254-256a3b2df1b5"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Sybil Sharvelle ignored evidence of child molestation by DCS and the childrens' therapists. She falsified information in her report. She withheld her report until the hearing with no copy to the mother but gave the father and his attorney one week advanced notice of the report.",
@@ -76,11 +106,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/sybil_sharvelle",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='IN'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -96,6 +122,26 @@
     "recommended_route": "/court-actors/in/sybil_sharvelle/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Sybil Sharvelle ignored evidence of child molestation by DCS and the childrens' therapists.",
+        "kind": "comment"
+      },
+      {
+        "body": "Rather the mother is abusing the child by brainwashing her.",
+        "kind": "comment"
+      },
+      {
+        "body": "Lied about the other party",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored evidence, lied in GAL report, recommendations endangered children",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

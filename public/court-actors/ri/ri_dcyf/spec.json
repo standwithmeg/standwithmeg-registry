@@ -12,12 +12,17 @@
     "court_or_county": "Providence",
     "state": "Rhode Island",
     "state_abbr": "RI",
-    "mention_count": 0,
+    "mention_count": 4,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "1cee14c6-67e3-4a03-99fc-06cabddcd13d",
+      "d3f0e84a-2784-446e-a1cc-b7ed55b6ad45",
+      "be91cb92-1cc8-42dd-b430-252836c37a26",
+      "d5acfb5b-c40e-4ff1-a643-a686a787ebda"
+    ],
     "actor_row_id": "1cee14c6-67e3-4a03-99fc-06cabddcd13d",
     "actor_bucket_key": "ri dcyf|RI"
   },
@@ -42,12 +47,31 @@
     "_pdf_state_family_count": 19,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "They took my children without proof, silenced my voice without due process, and called it justice. Family court and DCYF didn’t just break laws they broke my family. They gave me a life sentence to live and the punishment doesn’t fit the crime.",
+        "state": "RI",
+        "county": "Kent county",
+        "row_id": "df1e8615-3cea-4ad1-89c3-0a7ec6ac2cf3"
+      },
+      {
+        "body": "It has ruined my children by placing them in the care of an abuser. My youngest child suffers from mental illnesses and has to take medication. She refuses to see her father due to ongoing abuse. The court doesn’t care.",
+        "state": "RI",
+        "county": "Providence",
+        "row_id": "ecfb038f-c040-4016-b8f1-4655e5769af8"
+      },
+      {
+        "body": "Turned a father and his children into strangers. Lost time that can never be returned",
+        "state": "RI",
+        "county": "Providence",
+        "row_id": "b68a036c-7a1a-4415-afbc-2b1e72d064f6"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "From regional director to supervisors to case workers all ignored evidence and continued with a false case and violate rights to abuse their power instead of help reunify families They came saw my children were in a family shelter with supervised case workers with federal Marshalls don’t know why they came but they spoke with my children saw the suite we were in at the extended stay where Amos house was running their family shelter from said they are healthy safe and looks like very loved after speaking to them but DCYF still took them against every law and policy",
@@ -70,11 +94,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/ri_dcyf",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='RI'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +110,22 @@
     "recommended_route": "/court-actors/ri/ri_dcyf/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Took them against every law",
+        "kind": "comment"
+      },
+      {
+        "body": "Jessica from DCYF could have cared less about my children and how my child’s father threw my child into a wall. She even admitted she smacks her own son.",
+        "kind": "comment"
+      },
+      {
+        "body": "Unwilling to get involved despite numerous abuse complaints",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

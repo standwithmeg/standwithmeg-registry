@@ -12,12 +12,18 @@
     "court_or_county": "Orange",
     "state": "California",
     "state_abbr": "CA",
-    "mention_count": 0,
+    "mention_count": 5,
     "family_count": 5,
     "public_family_count": 5,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 5,
+    "supabase_row_ids": [
+      "8b5e7226-cffb-47a7-83cb-30280ee2dd35",
+      "cadb105d-63d7-477e-9983-52a870dd9326",
+      "18309f59-ba4c-4b86-8d72-e191455e83b0",
+      "6fec0d63-9745-49f6-94ee-1d8bb00a0a3a",
+      "67b0a9c3-374f-4b71-ae09-d6599039eab6"
+    ],
     "actor_row_id": "8b5e7226-cffb-47a7-83cb-30280ee2dd35",
     "actor_bucket_key": "brian baron|CA"
   },
@@ -27,27 +33,58 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 357,
-    "total_submissions": 444,
-    "avg_financial_loss": 285669.87,
+    "families_approved": 359,
+    "total_submissions": 446,
+    "avg_financial_loss": 285125.16,
     "avg_months_lost": 35.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CA",
-    "state_family_count": 444,
-    "median_financial_loss": 265100,
-    "median_burden_sample_size": 198,
+    "state_family_count": 446,
+    "median_financial_loss": 269200,
+    "median_burden_sample_size": 199,
     "median_months_lost": 20,
-    "pro_se_pct": 58.6,
-    "pro_se_count": 260,
-    "_pdf_state_family_count": 444,
+    "pro_se_pct": 58.7,
+    "pro_se_count": 262,
+    "_pdf_state_family_count": 446,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 5,
+    "actor_report_count": 5,
     "family_count": 5,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Brian Baron is the head of the alleged corruption",
+        "state": "CA",
+        "county": "COUNTY",
+        "row_id": "04c72090-41a4-467d-8288-8c4ee3a883aa"
+      },
+      {
+        "body": "As a teacher and school Principal, I’m in charge of an entire school of children with the teaching credentials from the state of California. My son was kidnapped by family court and medically abused. My son will have lifelong medical complications as a result of the medical abuse. This is why I’m running for public office (Board of Supervisors) to bring reform and justice to family Court!",
+        "state": "CA",
+        "county": "Orange County",
+        "row_id": "f6d40c17-bca8-4962-bd73-0ef6a23270fe"
+      },
+      {
+        "body": "Family court has destroyed me - as a person who used to see the good in others to the point of emptiness, and my children who were previously thriving are now at varying stages of psychological and emotional dysfunction…",
+        "state": "CA",
+        "county": "Orange",
+        "row_id": "969d0df6-4565-4581-9cfe-b0d9d4d112dd"
+      },
+      {
+        "body": "This has destroyed the family, drained us financially and killed extended family due to stress",
+        "state": "CA",
+        "county": "Orange County",
+        "row_id": "6f10f340-81ee-4d8d-b320-c0eabb4f151c"
+      },
+      {
+        "body": "This system killed my younger son by allowing his drug addicted father and his drug addicted abusive wife unsupervised visits with our son.",
+        "state": "CA",
+        "county": "Orange County",
+        "row_id": "a8dceb44-1f02-4be6-ae1e-e9a26b089832"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Refused to listen to my eldest daughter who was being physically and emotionally abused by her father despite security cam videos. Refused to enforce orders of coparent therapy in which the other party refused to attend with three different ordered therapists.",
@@ -82,11 +119,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/brian_baron",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='CA'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -102,6 +135,26 @@
     "recommended_route": "/court-actors/ca/brian_baron/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Refused to attend with three different ordered therapists",
+        "kind": "comment"
+      },
+      {
+        "body": "Brian Barron close the courtroom due to the false testimony he was giving to the judge.",
+        "kind": "comment"
+      },
+      {
+        "body": "He also recommended custody to a father who killed my young disabled son.",
+        "kind": "comment"
+      },
+      {
+        "body": "Biased and personal relationship with father",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

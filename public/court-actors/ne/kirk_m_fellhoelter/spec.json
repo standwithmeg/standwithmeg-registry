@@ -12,12 +12,17 @@
     "court_or_county": "Count my attorney",
     "state": "NE",
     "state_abbr": "NE",
-    "mention_count": 0,
+    "mention_count": 4,
     "family_count": 4,
     "public_family_count": 4,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "0eac92f9-c25a-4608-ba28-d2530cb22c4f",
+      "cb5cc500-fc0c-42b5-9ee1-3a3a8de37846",
+      "424f1af5-c5c5-42e7-a0f3-d8b049dfe046",
+      "fed78dc2-e7f0-4bc7-9965-4a78d8bd5da1"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "kirk felhoelter|NE"
   },
@@ -42,12 +47,37 @@
     "_pdf_state_family_count": 43,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 4,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Scotts Bluff County is disgustingly corrupt and you can tell that the attorneys talk to each other without their paid customers. No morals.",
+        "state": "NE",
+        "county": "SCOTTS BLUFF",
+        "row_id": "283ff0a6-52d9-4609-a3ad-10cfb9423b34"
+      },
+      {
+        "body": "I hate to admit, but I gave up because I haven’t seen anyone else win in this “good ole boy” town. I’m hoping one day my son will understand I don’t want him to have to go through watching me lose him",
+        "state": "NE",
+        "county": "Scott’s Bluff",
+        "row_id": "c7a61386-f5f2-47c9-99a7-528f37e534a4"
+      },
+      {
+        "body": "Juvenile court has become punitive and not rehabilitative. The state is making money off of destroying families",
+        "state": "NE",
+        "county": "Scott’s bluff",
+        "row_id": "9ea6ffec-c8c0-4b27-8f2e-493c44ebfcb9"
+      },
+      {
+        "body": "After working for DHHS and wanting to be the person to help me make a positive change and then seeing how DHHS tore my family apart, it showed how much people care more about power and being right than what is in the right interest of children. Now as a therapist, I hope it can help others, including my own children someday heal from this trauma.",
+        "state": "NE",
+        "county": "Scotts Bluff County",
+        "row_id": "2d798e82-c2a8-467c-aa70-124a1eefa288"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "He laughed at all of my concerns, and when I would talk about my children’s special needs, tell me that I didn’t know what I was talking about. He laughed at me quite a bit in court, and I asked the judge if this was allowed and I was ignored.",
@@ -76,11 +106,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/kirk_m_fellhoelter",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='NE'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -96,6 +122,26 @@
     "recommended_route": "/court-actors/ne/kirk_m_fellhoelter/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "He laughed at me quite a bit in court, and I asked the judge if this was allowed and I was ignored.",
+        "kind": "comment"
+      },
+      {
+        "body": "This man doesn't seem educated at all and always talks negative about everyone and doesn't care to find…",
+        "kind": "comment"
+      },
+      {
+        "body": "He was so condescending when he looked at me and just didn’t care what evidence there was",
+        "kind": "comment"
+      },
+      {
+        "body": "He doesn’t care what’s right or wrong he labels you once he’s seen you one time",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

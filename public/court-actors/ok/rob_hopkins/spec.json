@@ -12,12 +12,18 @@
     "court_or_county": "Grady County",
     "state": "Oklahoma",
     "state_abbr": "OK",
-    "mention_count": 0,
+    "mention_count": 5,
     "family_count": 5,
     "public_family_count": 5,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 5,
+    "supabase_row_ids": [
+      "9519d5f8-c654-498b-9f21-5aef1f1be380",
+      "35917ab0-6404-4d7d-96d6-37db6b99db8b",
+      "b525a24c-1b8c-4506-9302-0b92724d8369",
+      "fbf7e18c-f60c-49e6-b4f6-be4a59c1991d",
+      "2cba2c1b-d397-4fbf-9f99-2a7f6852583c"
+    ],
     "actor_row_id": "9519d5f8-c654-498b-9f21-5aef1f1be380",
     "actor_bucket_key": "rob hopkins|OK"
   },
@@ -42,12 +48,43 @@
     "_pdf_state_family_count": 164,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 5,
+    "actor_report_count": 5,
     "family_count": 5,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Family Court has allowed my abuser to continue his abuse to me and my child. They have placed my daughter with a known perpetrator of women and long DV history.",
+        "state": "OK",
+        "county": "Oklahoma",
+        "row_id": "cad1c55f-96e2-45c9-a10d-ae631e84bb9e"
+      },
+      {
+        "body": "It has taken mine and my childs life away from us. It has put my daughter Hracie in more danger. It has violated our constitutional rights while giving our abuser more power.",
+        "state": "OK",
+        "county": "Grady",
+        "row_id": "965eb10f-d9a0-408c-ad07-70da1488158b"
+      },
+      {
+        "body": "It is psychologically messing up my children.",
+        "state": "OK",
+        "county": "Oklahoma",
+        "row_id": "c8475a63-a3e5-4a18-8c45-a3af064592e5"
+      },
+      {
+        "body": "I has threated in front of my counsel who did not come to my aid but opposing counsel in an informal mediation I was pressured into that if I didnt accept the terms of opposing counsel, they would seek full custody and I would have one weekend a month and would continue to file motions until this happened. My son was uprooted from a school he did well at as a neurodivergent child and it has caused problems every since. I am limited in the medical care I can get for my son and its hard to fight for his school rights in this new school because I dont have school decision making authority. You can connect me and I can tell more but my case is stuck in court so I need to protect my identity",
+        "state": "OK",
+        "county": "Unknown",
+        "row_id": "e02d439a-c22a-48f2-adf6-a731ad9eb853"
+      },
+      {
+        "body": "Being a low income single black mother in Oklahoma is apparently cause to be deemed unfit.",
+        "state": "OK",
+        "county": "Cleveland",
+        "row_id": "4b4dfc99-a3f6-4c9b-977b-cc655c814177"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Conspired with my transgender ex by forcing me to have them adopt my kids. Also conspired to have my children by hiding my ex’s transition and calling my mental health into question. Helped me gain criminal charges",
@@ -76,11 +113,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/rob_hopkins",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='OK'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -96,6 +129,26 @@
     "recommended_route": "/court-actors/ok/rob_hopkins/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Conspired with my transgender ex by forcing me to have them adopt my kids.",
+        "kind": "comment"
+      },
+      {
+        "body": "He caused me to lose my child. He lied even to supreme Court Refs about things that occurred in my case.",
+        "kind": "comment"
+      },
+      {
+        "body": "Rob quit showing up. Wouldn't file anything. Just personal things too i dont want to talk about.",
+        "kind": "comment"
+      },
+      {
+        "body": "Lied and made up stories about me that could be disproven",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

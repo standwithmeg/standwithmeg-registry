@@ -12,12 +12,17 @@
     "court_or_county": "Baldwin County",
     "state": "Alabama",
     "state_abbr": "AL",
-    "mention_count": 0,
+    "mention_count": 4,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "1f7b5f87-b48f-412e-b306-109beb9a5a1c",
+      "ca732bd1-dbb0-4be7-9f33-c83969065098",
+      "7cdc2ec3-5817-4821-b4bb-681a8820b16e",
+      "bf2f9bde-7c82-47d0-8ab9-401bea44c310"
+    ],
     "actor_row_id": "1f7b5f87-b48f-412e-b306-109beb9a5a1c",
     "actor_bucket_key": "natalie jones|AL"
   },
@@ -42,12 +47,31 @@
     "_pdf_state_family_count": 130,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "I spent years trying to protect my family, only to watch prolonged litigation drain our finances, destroy our stability, and leave us homeless. My daughter has special needs, and the system that should have helped us instead made it harder to keep her safe, housed, and connected to the services she needs.",
+        "state": "AL",
+        "county": "Baldwin",
+        "row_id": "4d42edee-6460-4a10-9e6e-d774f6fcac70"
+      },
+      {
+        "body": "My children send me videos daily crying. They think they don’t get to ever come home.",
+        "state": "AL",
+        "county": "Baldwin County",
+        "row_id": "a3b0b25f-2b74-4388-be35-1ac964c4d938"
+      },
+      {
+        "body": "Has kept my family apart for 11 months this",
+        "state": "AL",
+        "county": "Baldwin County",
+        "row_id": "e8176c1e-c9ab-4bd4-b561-8270f80f6748"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "I believe the litigation strategy prioritized continued conflict over timely resolution. The prolonged proceedings consumed resources that could have been used to support my daughter’s care, treatment, housing, and stability. My daughter has special needs and depends on consistent services and routine. The ongoing litigation contributed to disruption, instability, and hardship during a critical period of her development. Repeatedly litigated custody issues while domestic violence issues remained unresolved. Positions taken during the case contributed to prolonged proceedings, escalating legal expenses exceeding $100,000, and significant delays in achieving stability for my child. Used delay tactics, and imposed costly mediations and proposals.",
@@ -70,11 +94,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/natalie_jones",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='AL'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +110,22 @@
     "recommended_route": "/court-actors/al/natalie_jones/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "The prolonged proceedings consumed resources that could have been used to support my daughter’s care, treatment, housing, and stability.",
+        "kind": "comment"
+      },
+      {
+        "body": "Refuses to listen to my children regardless of video evidence.",
+        "kind": "comment"
+      },
+      {
+        "body": "My child has sent numerous videos of their other parent abusing them and the GAL has never addressed it.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

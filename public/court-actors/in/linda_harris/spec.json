@@ -12,12 +12,17 @@
     "court_or_county": "Newton Circuit Court",
     "state": "Indiana",
     "state_abbr": "IN",
-    "mention_count": 0,
+    "mention_count": 4,
     "family_count": 4,
     "public_family_count": 4,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "c363192d-bb66-4957-a621-4bf6a76bc206",
+      "7fec2ca7-d5f3-41ad-8d3f-36037b16b4a2",
+      "d3791fd6-b5fe-4ace-837a-5bc72a126c34",
+      "dc5c2702-5505-4916-add1-af8e36e74faf"
+    ],
     "actor_row_id": "c363192d-bb66-4957-a621-4bf6a76bc206",
     "actor_bucket_key": "linda haris|IN"
   },
@@ -42,12 +47,37 @@
     "_pdf_state_family_count": 153,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 4,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Did nothing to her. Tried to communicate and got nothing but attitude. I didn’t think professionals spoke to other humans the way she spoke to me.",
+        "state": "IN",
+        "county": "Newton County",
+        "row_id": "51446408-aa57-43ec-b0a2-67840ca699ab"
+      },
+      {
+        "body": "lost custody to father, given supervision, subsequently threatened with an ultimiatum and flawed justification to remove the negative review or face legal action to force removal",
+        "state": "IN",
+        "county": "Lake County",
+        "row_id": "ed19cad6-a2ae-4d72-ab2a-56d49205a07b"
+      },
+      {
+        "body": "Murderous saboteurs and traffickers for profit, denied motherhood and transferred custody to infertile perpetrator, ex-husband, whom is not the biological father, destroyed countless extended families, relationships, career and survivor of attempted incapacitation and murder via healthcare fraud inside and outside of the Courts",
+        "state": "IN",
+        "county": "Newton County, Lake County and Tippecanoe County",
+        "row_id": "865fd202-7964-401c-b8ab-8196f59d9db9"
+      },
+      {
+        "body": "Defraud and destroy",
+        "state": "IN",
+        "county": "Newton County",
+        "row_id": "abecc014-be59-4edb-a386-3ec519d2a751"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Miss Harris was appointed to us by the court as a Guardian Ad Litem to our daughter during a custody issue. We paid her retainer fee of 1,500.00 and she turned in her report 2 days before court. Court rules are that reports need to be turned in 10 days before court. My ex-husband asked for the report to be thrown out because it was turned in late which forced the judge to r e c u s e himself a n d w e h a d to wait for a n o t h e r court date as well as a new judge. Miss Harris was very upset and charged us an additional 3,000.00 without doing any additional work.",
@@ -76,11 +106,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/linda_harris",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='IN'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -96,6 +122,26 @@
     "recommended_route": "/court-actors/in/linda_harris/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Miss Harris was appointed to us by the court as a Guardian Ad Litem to our daughter during a custody issue.",
+        "kind": "comment"
+      },
+      {
+        "body": "Racketeering, conspiracies to commit murders, attempted and threats for guardianship, tampering with record…",
+        "kind": "comment"
+      },
+      {
+        "body": "Did nothing to her. Tried to communicate and got nothing but attitude.",
+        "kind": "comment"
+      },
+      {
+        "body": "“Too scared to put why”",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

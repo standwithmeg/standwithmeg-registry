@@ -12,12 +12,17 @@
     "court_or_county": "Lexington",
     "state": "South Carolina",
     "state_abbr": "SC",
-    "mention_count": 0,
+    "mention_count": 4,
     "family_count": 4,
     "public_family_count": 4,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "e77cbe77-6d59-4d1e-8e18-ec473d7bd960",
+      "c96efd6a-683a-47dd-93d0-cc41943990ef",
+      "e133f57e-dad1-49df-900f-e0eae606e71f",
+      "275288f9-47f7-49d8-badc-bd82521d1f79"
+    ],
     "actor_row_id": "e77cbe77-6d59-4d1e-8e18-ec473d7bd960",
     "actor_bucket_key": "amanda mueler|SC"
   },
@@ -42,12 +47,37 @@
     "_pdf_state_family_count": 108,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 4,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "It has crushed me and torn me down to pieces. I still have my belongings in the house from 3 yrs ago because my ex is that dangerous. My son is scared for his life living with his father 65% of the time. He has had to lie about things he knows are not true to the sake of his life being in danger. He is forced to be around my abusive father against his will. My son has had 3 unknown causes of injury. My ex keeps needles for illegal drugs on the counter in the bathroom next to my son’s toothbrush. My son has missed over 20 days of school majority with his father in the last 3 school years.",
+        "state": "SC",
+        "county": "Richland",
+        "row_id": "c0c49784-9ffb-43de-91a0-3a7445798665"
+      },
+      {
+        "body": "“I have watched a family court system operate with less accountability and fewer protections than criminal court, where stigma, financial inequality, and abuse of power can separate a devoted parent from their children without the level of due process many criminal defendants receive. False allegations can become permanent without meaningful judicial review, opinions can outweigh facts, and mental health can be weaponized and stigmatized regardless of diagnosis or actual parenting ability. No criminal charges were filed, no DSS findings existed, yet a broken system still had the power to erase me as a parent — stripping away fundamental civil liberties, due process, and years of irreplaceable time between a mother and her children. The greatest long-term damage is not what happened to me, but what happens to children forced to grow up without understanding why a loving parent disappeared from their daily lives, while financial power and control outside the courtroom pressure parents into surrendering their rights simply because they cannot afford to survive the fight.”",
+        "state": "SC",
+        "county": "Richland",
+        "row_id": "1558bb6f-b1f1-4a1d-8772-950a402c3fd0"
+      },
+      {
+        "body": "I’m a Combat Veteran who is being railroaded by the SC Family Court. I have been denied due process, alienated from my children for 767 days & counting as of May 15, 2026 & I have had to spend almost $50K in attorney fees, court costs & GAL fees with nothing to show & seemingly no end in sight.",
+        "state": "SC",
+        "county": "Lexington",
+        "row_id": "b3ccf7d6-922e-4447-ab54-b758628aa5a8"
+      },
+      {
+        "body": "I rebuilt my life in 4 years from nothing when we left our abuser to 6 figure salary, purchased two homes, children had security, and I was healing and thriving. Alienation claims and a notoriously corrupt attorney have taken it all away to punish us but despite the gift of PTSD they expect us to continue to suffer from, we have found our hope in God’s love, justice, and mercy. Praise God for His renewal and peace in the midst of our persecutions and suffering!",
+        "state": "SC",
+        "county": "Lexington",
+        "row_id": "90d2b9b2-e761-4329-bed1-5d2d697ee1d0"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "“The mediation process exposed what I believe is one of the most dangerous realities of family court: temporary emergency allegations can evolve into long-term parental erasure through financial pressure, stigma, and procedural imbalance — even without criminal findings, DSS involvement, or updated judicial review. Instead of functioning as a neutral space for resolution, mediation with Mrs. Mueller felt like pressure to accept permanent restrictions and invasive conditions that would never be tolerated in many other areas of civil or constitutional law.”",
@@ -76,11 +106,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/amanda_mueller",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='SC'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -96,6 +122,26 @@
     "recommended_route": "/court-actors/sc/amanda_mueller/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Criminal findings, DSS involvement, or updated judicial review.",
+        "kind": "comment"
+      },
+      {
+        "body": "She maintains VERY consistent contact/communication/interaction with estranged spouse.",
+        "kind": "comment"
+      },
+      {
+        "body": "I hypothetically had another very real concern about kids safety.",
+        "kind": "comment"
+      },
+      {
+        "body": "She did not prepare for my court date and didn’t listen to me when I said he would take my son from me.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

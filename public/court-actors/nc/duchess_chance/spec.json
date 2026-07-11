@@ -12,12 +12,18 @@
     "court_or_county": "Beaufort",
     "state": "North Carolina",
     "state_abbr": "NC",
-    "mention_count": 0,
+    "mention_count": 5,
     "family_count": 5,
     "public_family_count": 5,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 5,
+    "supabase_row_ids": [
+      "23ee2409-ab6c-4df6-b398-65eb021e3831",
+      "03c83c86-0170-46d7-9c9f-fdfc3fd66763",
+      "11eb8eeb-3006-4a65-9b01-7383cea36ea3",
+      "8273b34b-d0d0-4140-8eb8-c96b068cac0f",
+      "7ed1e11d-1f42-4cf1-a922-7b08570f33c8"
+    ],
     "actor_row_id": "23ee2409-ab6c-4df6-b398-65eb021e3831",
     "actor_bucket_key": "duches chance|NC"
   },
@@ -42,12 +48,43 @@
     "_pdf_state_family_count": 216,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 5,
+    "actor_report_count": 5,
     "family_count": 5,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "I have never experienced such heartbreak and distrust in individuals and a system built to protect children. NCDHHS should be appalled at the gross oversight and atrocities being committed.",
+        "state": "NC",
+        "county": "Beaufort",
+        "row_id": "af1505c2-fc41-4aea-8cdd-53fb7ce7624c"
+      },
+      {
+        "body": "Former pissed off foster kid",
+        "state": "NC",
+        "county": "Beaufort",
+        "row_id": "312755d7-a7d0-49af-acc3-436fc7d8a05d"
+      },
+      {
+        "body": "Loss of time with child. Loss of job traumatizing to child and family",
+        "state": "NC",
+        "county": "Beaufort",
+        "row_id": "7db8e3d9-c37b-404c-9f39-10ece9310a93"
+      },
+      {
+        "body": "They lost my son, he has been missing since September 23, 2025. They have consistently tried to cover up the unconstitutional seizure of my children. They scrubbed reports and gave my 8 year old daughter to our abuser and placed my 15 year old daughter with a pedophile.",
+        "state": "NC",
+        "county": "Beaufort County",
+        "row_id": "1f3c4576-e9e3-4d97-8308-93200d270032"
+      },
+      {
+        "body": "The system tried to destroy and break our family simply for money because three of our children have disabilities they could cash in on. That same system tried to silence us l, paint us as liars, when the proof didn’t match the story they were telling. WE WILL NEVER STOP TELLING OUR STORY!!! If we help and save just one other family it was not for nothing. We are together. Our family fights together. They chose the wrong ones. All of my children are home because our voices, our proof, MATTERED.",
+        "state": "NC",
+        "county": "Beaufort County",
+        "row_id": "c314b71a-3fb5-41be-af03-3f07d97018cd"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "She was my GAL. I reported abuse to her which she did nothing about. I reported my money was being held by DSS from my job and she did nothing. I reported Abby Williams making me write a statement she was giving and spelling words for me and she did nothing. I told her the truth about my parents and why I kept trying to go home to them but it was never reported. She wouldn’t allow me to see my siblings. She came to locked facilities I was in and told me I had to stay because there was no where else for me but there was. I had more family in WV willing to take me. I was also 17. She allowed dss to keep me out of school which delayed my graduation and threw me behind. She lied on her court report stating she saw and spoke with me each week and I barely saw her or spoke to her. She told a judge it wasn’t in my best interest to speak with him and tried to quash my subpoena to testify from my mother’s attorney when I specifically kept asking to speak with a judge. She at one point told me I was nothing but trouble to her.",
@@ -82,11 +119,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/duchess_chance",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='NC'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -102,6 +135,30 @@
     "recommended_route": "/court-actors/nc/duchess_chance/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "She allowed dss to keep me out of school which delayed my graduation and threw me behind.",
+        "kind": "comment"
+      },
+      {
+        "body": "Falsified her reports to the judge. Did not visit or talk with the children as reported.",
+        "kind": "comment"
+      },
+      {
+        "body": "She only becomes involved and advocates when it is convenient for her.",
+        "kind": "comment"
+      },
+      {
+        "body": "Lied to my children repeatedly. Participated in letting my daughter think I didn't want her home.",
+        "kind": "comment"
+      },
+      {
+        "body": "Believe everything child said",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

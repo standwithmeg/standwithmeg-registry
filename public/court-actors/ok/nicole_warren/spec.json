@@ -12,12 +12,19 @@
     "court_or_county": "Canadian",
     "state": "Oklahoma",
     "state_abbr": "OK",
-    "mention_count": 0,
-    "family_count": 0,
-    "public_family_count": 0,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "mention_count": 6,
+    "family_count": 4,
+    "public_family_count": 4,
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 6,
+    "supabase_row_ids": [
+      "f726f53f-67c6-4853-a00c-0503236ede53",
+      "ccdcc8b0-aeba-4d6d-b5ee-de255705a9b3",
+      "1aec2c67-ae75-4254-a746-83553820409f",
+      "28d762c3-c760-4224-9883-0c8cd563cc33",
+      "7d8eefc9-5ef0-439b-b2d2-045ec3937a62",
+      "71732e54-a7a6-472a-a60f-b1124adb2ede"
+    ],
     "actor_row_id": "f726f53f-67c6-4853-a00c-0503236ede53",
     "actor_bucket_key": "nicole waren|OK"
   },
@@ -42,12 +49,37 @@
     "_pdf_state_family_count": 164,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
-    "family_count": 0,
-    "family_reports": [],
+    "report_count": 6,
+    "actor_report_count": 6,
+    "family_count": 4,
+    "family_reports": [
+      {
+        "body": "Has caused me and my daughter ongoing trauma for the last six years. I’ve had to watch my daughter, lose the light from her eyes because of these people while I try desperately to save what’s left.",
+        "state": "OK",
+        "county": "Canadian County",
+        "row_id": "6a3e9b82-ab18-4dee-ac68-8ef8c220dc43"
+      },
+      {
+        "body": "Took my grandkids from their family and placed them into a foster home traumatizing them and my daughter",
+        "state": "OK",
+        "county": "Canadian",
+        "row_id": "b578de7c-b917-4c4b-9d5c-1ddbb9eb35ec"
+      },
+      {
+        "body": "they locked my fiancé up on false accusations then used TDC to get my mom to sign a paper giving them access to her phone cps gave me our kids back for a day and a half then showed up and snatched them all over agsin",
+        "state": "OK",
+        "county": "canadian county",
+        "row_id": "ed0d80c7-f9d5-4c37-a430-80f9fa4f730b"
+      },
+      {
+        "body": "It’s an ‘our way or no way’ system that tries to force compliance, tears families apart, and leaves lasting harm in its wake.",
+        "state": "OK",
+        "county": "Canadian",
+        "row_id": "c7955da2-1eb5-4731-872c-390f3fcaae5c"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "She was the sup of the cps worker who ignored and dropped my case at her authority without even investigating after substantial evidence. Disgrace CPS this was the supervisor of the DHS worker Canton that investigated my claims. Nicole advised Canton to close my case before it was even investigated after I provided proof of abuse, numerous documents, proof, video, audio. Absolutely horrible.",
@@ -76,11 +108,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/nicole_warren",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='OK'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -96,6 +124,26 @@
     "recommended_route": "/court-actors/ok/nicole_warren/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "She was the sup of the cps worker who ignored and dropped my case at her authority.",
+        "kind": "comment"
+      },
+      {
+        "body": "Took kids without warrants or consent and lied to judge under oath she lied under oath during my initial hearing",
+        "kind": "comment"
+      },
+      {
+        "body": "Light on the stand in tampered with evidence and witness well also failing to vet witnesses",
+        "kind": "comment"
+      },
+      {
+        "body": "She committed perjury, omitted information from an affidavit used to remove my child",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

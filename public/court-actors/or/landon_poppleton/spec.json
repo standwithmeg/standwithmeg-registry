@@ -12,12 +12,20 @@
     "court_or_county": "Oregon",
     "state": "OR",
     "state_abbr": "OR",
-    "mention_count": 0,
+    "mention_count": 7,
     "family_count": 6,
     "public_family_count": 6,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 7,
+    "supabase_row_ids": [
+      "3d1c5950-c241-4e3e-b6a2-4dee76e7a821",
+      "d01d987f-ee84-401e-b28a-6b4ec10a4046",
+      "f28b264c-87f9-417a-a1e3-70f884297431",
+      "243b7f14-4d7d-4cea-aaf2-1337c9a0d4d8",
+      "619a9131-8bda-4652-a51e-2f674efba353",
+      "ab4559c4-5bbb-4d25-8394-02804ddb6e6a",
+      "9b4b45d6-0358-407b-a4b9-e8f00f45a1c8"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "landon popleton|OR"
   },
@@ -42,12 +50,43 @@
     "_pdf_state_family_count": 75,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 7,
+    "actor_report_count": 7,
     "family_count": 6,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Failed my family.",
+        "state": "OR",
+        "county": "Washington County",
+        "row_id": "17a04adc-34b8-42d4-903e-54f7b93a990a"
+      },
+      {
+        "body": "The court took my daughter from me based on an emergency order that was neither jurisdictionally valid nor supported by anything more than a hearsay written statement, kept temporary orders in place for three years during the most important formative years of her life, ignored every piece of evidence that favored me, turned a mother fighting for her child into the problem for fighting at all, and has stolen her childhood since this began.",
+        "state": "OR",
+        "county": "Multnomah",
+        "row_id": "1fc72ac9-ea2a-4477-9766-67a2d2af1fbb"
+      },
+      {
+        "body": "Biggest waste of time and money to get nowhere.",
+        "state": "OR",
+        "county": "Clackamas",
+        "row_id": "23df782d-f01d-498d-b473-ac78c556848b"
+      },
+      {
+        "body": "When I filed for the court to enforce the existing parenting plan due to documented custodial interference and and to protect my child from abuse, the court rewarded my ex's perjury and retaliation by reversing custody and giving full custody and 100% parenting time to my ex. The court severed my relationship with my child and caused more harm than had already occurred before court. My child is now legally trapped with an abusive parent and has lost access to our whole side of the family.",
+        "state": "OR",
+        "county": "Multnomah",
+        "row_id": "f1fcb3ba-6403-43c4-946e-1b46eb06ed62"
+      },
+      {
+        "body": "My son is currently a competent and clear 13 year old young man who is speaking out about the current abuse he is experiencing, he tried to fire his attorney with a letter to her and she tired to bury and spun lies about it. The system of family court has only protected the documented abusive person and protected itself. My son is currently expressing suicidal ideation. The family court is hurting him and forcing him to be where he is afraid and unsafe.",
+        "state": "OR",
+        "county": "Unknown",
+        "row_id": "58f51c2a-e059-4276-b459-64b8cf0e1334"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Supervising psychologist at NW Family Psychology and Jessica McBride's supervisor. Admitted to Mother over the phone that psychological evaluation reports are used as a mechanism to get evidence into court that could not otherwise be admitted through normal evidentiary procedures. Stated in writing that \"the court is the client,\" not the person being evaluated, confirming the evaluation was conducted to serve the court's interests rather than as an independent clinical assessment. Looped Rachel Finn into email communications and referred to her as \"counsel for a party,\" despite Finn being the child's attorney, not counsel for either parent. Refused to communicate directly with Mother about concerns with the evaluation, requiring all communication go through counsel, effectively cutting off the evaluated party's ability to challenge the methodology. Initially offered Mother a phone call but then reversed course and refused to take one without counsel present.",
@@ -82,11 +121,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/landon_poppleton",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='OR'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -102,6 +137,26 @@
     "recommended_route": "/court-actors/or/landon_poppleton/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Initially offered Mother a phone call but then reversed course and refused to take one.",
+        "kind": "comment"
+      },
+      {
+        "body": "He tried to convey that to the other court actors including the child’s attorney Sandy Faber.",
+        "kind": "comment"
+      },
+      {
+        "body": "Reviewed case and determined there was a high likelihood of psychological abuse, took payment.",
+        "kind": "comment"
+      },
+      {
+        "body": "Basically paid off by mother to grant full custody",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

@@ -12,12 +12,16 @@
     "court_or_county": "Putnam County",
     "state": "West Virginia",
     "state_abbr": "WV",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "e26acfce-3759-4795-809c-35de424dd36b",
+      "c2b4314b-ee9c-4f45-abfc-0e2f9285906e",
+      "ba2e472c-efa3-4c81-b689-17bd66d267f5"
+    ],
     "actor_row_id": "e26acfce-3759-4795-809c-35de424dd36b",
     "actor_bucket_key": "magie kuhl|WV"
   },
@@ -27,13 +31,13 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 49,
-    "total_submissions": 57,
-    "avg_financial_loss": 108812.13,
-    "avg_months_lost": 38.5,
+    "families_approved": 50,
+    "total_submissions": 58,
+    "avg_financial_loss": 109700.04,
+    "avg_months_lost": 38.7,
     "_source_table": "movement_stats_by_state",
     "_match_value": "WV",
-    "state_family_count": 57,
+    "state_family_count": 58,
     "median_financial_loss": 65000,
     "median_burden_sample_size": 15,
     "median_months_lost": 25,
@@ -42,12 +46,31 @@
     "_pdf_state_family_count": 57,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Neither attorney acknowledged that my son is specials needs bc father doesnt want him labeled. son is almost 3 and non verbal. court gave father 50/50 custody and he does not attend doc appts or therapy and cannot communicate with child. child does not get proper hygiene with the father and father repeatedly reports to me that child refuses to eat or drink on his time.",
+        "state": "WV",
+        "county": "Putnam",
+        "row_id": "1212d22f-a220-4e1f-85e6-f667997f3e62"
+      },
+      {
+        "body": "Family court proved that abuse can be rewarded and those who never abuse their kids can be punished. As soon as my children were ordered into the full custody of their father, opposing counsel sent an email offering to return the children if I obtained a “do not prosecute” to spare the father from the fallout of his crimes. Unable to get that, the smear campaign continued and I am still without my children. The theory of parental alienation is being misused and weaponized in true, substantiated abuse cases. I lost complete faith in our legal system.",
+        "state": "WV",
+        "county": "Putnam",
+        "row_id": "bd204428-c254-4e8a-b295-e6b3e3dbd7a3"
+      },
+      {
+        "body": "The system has destroyed relationships, legacies, holidays, milestones, but it has cost me a beautiful relationship with my sons, one that I had with my father, and he had with his father, and it will affect both of these young men for the rest of their lifetime. I’m not a perfect man, and I have made mistakes and I have reacted to some situations that I have been put in in not the best way, but I have never jeopardize my son safety I have always thought about the best interest of my son’s future, their financial longevity, their success in business and in relationships and family and growth. I’ve went from a hero to a zero on the sidelines cheering, my son, being a part of every minute to being ripped away like a villain, no arrest, The physical and Dangerman just false allegations, small town good old boy, clubs, and manipulation by a system. That is the biggest Ponzi scheme money making garbage I’ve ever had the disgust to experience in my 38 years on this earth. This place is where dreams go to die!!",
+        "state": "WV",
+        "county": "Putnam County",
+        "row_id": "03d6fd34-053e-4a8b-a161-1bbd557947d1"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Maggie Kuhl works at Putnam County Courthouse multiple times during the week. She is also represented Cara Branham my ex for the majority of the court proceedings over the 11 years and the 22 times that she has sued me for contempt and there’s only one twice both financial both because the other Party owes me $4000 and refuses to pay any of accrued cost on my side of the fence. Maggie Kuhl works at Putnam County Courthouse multiple times during the week. She is also represented Cara Branham my ex for the majority of the court proceedings over the 11 years and the 22 times that she has sued me for contempt and there’s only one twice both financial both because the other Party owes me $4000 and refuses to pay any of accrued cost on my side of the fence. She also has violated professional codes of conduct like that is her main job with lying coming in right before court and filing something knowing that I’m representing myself and don’t have time to respond going outside of the quart room with Joseph Hunter to then take my decision making away when I was representing myself so they had a closed-door discussion about who was going to have decision-making without me present, and I’m representing myself. She has tried to embarrass me at my workplace by having somebody come in, and serve me multiple times even though I have my cell phone number that hasn’t changed for almost 17 years and stated the first time I was served at my workplace to call me and I will meet them anywhere to get the paperwork. They do not need to come to my employment and try to embarrass me at my employer. They still continue to do so",
@@ -70,11 +93,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/maggie_kuhl",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='WV'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +109,22 @@
     "recommended_route": "/court-actors/wv/maggie_kuhl/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "The other Party owes me $4000 and refuses to pay any of accrued cost on my side of the fence.",
+        "kind": "comment"
+      },
+      {
+        "body": "Even when I gave her alot of evidence to us",
+        "kind": "comment"
+      },
+      {
+        "body": "At one point, she went over a year without speaking to the kids, yet continued to write reports and make recommendations.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

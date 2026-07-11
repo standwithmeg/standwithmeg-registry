@@ -12,12 +12,16 @@
     "court_or_county": "Stamford",
     "state": "Connecticut",
     "state_abbr": "CT",
-    "mention_count": 0,
-    "family_count": 3,
-    "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "mention_count": 3,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "abf09ad3-0e3a-495c-a3c4-2b4ae60d1e11",
+      "8f50fd3d-cff9-4262-871f-a66451fceb7a",
+      "603bc713-76ca-45ee-9157-b78a173e133d"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
@@ -42,12 +46,31 @@
     "_pdf_state_family_count": 65,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
-    "family_count": 3,
-    "family_reports": [],
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "Connecticut's custody industry, particularly the Fairfield County bar, has made me lose my faith in humanity. It is a system fueled not by children's needs and safety, but by money, false parental alienation claims against mothers, and referrals.",
+        "state": "CT",
+        "county": "Fairfield",
+        "row_id": "8f3127d7-af66-4c6a-b5a1-4120ea6df3e2"
+      },
+      {
+        "body": "Being coerced into cooperating with child services a decade ago taught me that speaking out about abuse only leads to endless court battles where money matters more than the truth. Over the past ten years, this nightmare has cost me my peace and millions in assets, leaving me with nothing but debt and sleepless nights.",
+        "state": "CT",
+        "county": "Fairfield",
+        "row_id": "611eb305-6a2b-4a71-a528-6714f5b4df20"
+      },
+      {
+        "body": "Financially devastated and bankrupt me and our three kids. Financially, emotionally, and psychologically. While he has amassed millions in properties and cars Etc. This was about torturing me and making me pay using our three kids. I've said going to court has been his drug of choice. With no end in sight but I refuse to go back to Family Court. I will never stop. People like all of us, and my Rock the Walls this year will be different and we will be so loud they can't ignore any of us anymore. I'M DONE!!!",
+        "state": "CT",
+        "county": "Fairfield",
+        "row_id": "afe02b18-fc1d-4a01-acb0-a09bb3193e12"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "After already 10 years, this judge came in New. It was my contempt hearing for ongoing non-payment of child support and alimony. No new exhibits no new information and literally dismantled a six-figure judgment and Order stating that my ex must not have any money and doesn't need to pay except for small monthly payments over the course of many many years in the future. The most insane ruling ever had in all these years. I have filed numerous motions because her order was void at Livio pending appellate decision which completely Vindicated and verified my position yet no judge has ruled that I get this money and it's been over 2 years. It's the goddamn Wild Wild West. And I was told by Insiders she never should have been appointed. Our governor appoints all the judges. Insane and no accountability as always.",
@@ -70,11 +93,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/jennifer_j_decastro_tunnard",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='CT'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +109,22 @@
     "recommended_route": "/court-actors/ct/jennifer_j_decastro_tunnard/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "After already 10 years, this judge came in New. It was my contempt hearing for ongoing non-payment of child support and alimony.",
+        "kind": "comment"
+      },
+      {
+        "body": "Made sua sponte orders on custody with no hearing or evidence. Made me pay legal fees of ex despite zero income and immense debt and no wrongdoing on my part.",
+        "kind": "comment"
+      },
+      {
+        "body": "Honestly, too much to write about her, but she wears her bias on her sleeve and makes unfounded sua sponte decisions",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

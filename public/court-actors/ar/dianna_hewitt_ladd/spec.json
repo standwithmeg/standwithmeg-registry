@@ -12,12 +12,16 @@
     "court_or_county": "Sebastian County",
     "state": "AR",
     "state_abbr": "AR",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "94f8e238-7a98-4329-ae52-7e61ffb4dffe",
+      "aa9b42a2-61d3-46a3-bef4-4cac5c11ace2",
+      "3c8a218c-d743-49fb-94e3-19c380876d56"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "diana hewit ladd|AR"
   },
@@ -42,12 +46,25 @@
     "_pdf_state_family_count": 57,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "The system cost us two years of my sister’s life and our family can never get that time back. We went to court seeking justice, but the judge refused to hear our case, leaving us feeling powerless and unheard.",
+        "state": "AR",
+        "county": "Sebastian",
+        "row_id": "9919b1ef-ac3e-4ba2-8efa-ad9d23c70f7a"
+      },
+      {
+        "body": "I've been robbed of being a full-time mother for with both of my planned pregnancies, missing out on school milestones and participation in learning, as well as missing years of goodnight kisses, trust in the system, and being forced to abruptly stop breastfeeding as my child was agreeable to weaning. It has caused continuous compound trauma that has impacted my daily life which the court continues to weaponize and also do nothing to reconcile the damage caused, eroding any and all trust in the system to protect my children from harm.",
+        "state": "AR",
+        "county": "Sebastian County",
+        "row_id": "1e30c94a-bb88-40e4-ba2d-b03c33813503"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Denied ex parte following arrest of my ex and cover up that denied me visitation",
@@ -64,11 +81,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/dianna_hewitt_ladd",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='AR'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -84,6 +97,18 @@
     "recommended_route": "/court-actors/ar/dianna_hewitt_ladd/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Denied ex parte following arrest of my ex and cover up that denied me visitation",
+        "kind": "comment"
+      },
+      {
+        "body": "Refused to hear our case ans a separate case from our moms and pushed it out.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

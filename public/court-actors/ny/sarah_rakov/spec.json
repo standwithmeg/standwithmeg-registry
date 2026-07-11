@@ -12,12 +12,16 @@
     "court_or_county": "Ulster",
     "state": "New York",
     "state_abbr": "NY",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "fe158dc7-9e62-4a58-bc44-1dc4196fcbd8",
+      "5acc4dd6-2971-4ccd-af96-16e933e45a0c",
+      "28f35144-ede7-43c3-9f45-e85ecae402e4"
+    ],
     "actor_row_id": "fe158dc7-9e62-4a58-bc44-1dc4196fcbd8",
     "actor_bucket_key": "sarah rakov|NY"
   },
@@ -42,12 +46,31 @@
     "_pdf_state_family_count": 173,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "My daughter reported the abuse, and then she placed with her abuser’s family.",
+        "state": "NY",
+        "county": "Ulster",
+        "row_id": "94ae30a6-d729-4a78-b9c1-b548205261d3"
+      },
+      {
+        "body": "I went to family court seeking protection for myself and my child and left financially devastated, separated from my child, and stripped of any confidence that the truth mattered. After years of litigation abuse and watching blatant fraud, corruption and illegal activity allowed to continue under the full knowledge of law enforcement and oversight bodies, I hav encountered a system that seemed unwilling to correct itself. I have completely lost faith in the American justice system. I went to court seeking a simple divorce and became a victim of criminal conspiracy involving multiple actors in the Ulster County court system. My child has been irrevocably harmed. There has been no justice or correction. I now warn others to avoid Ulster County at all costs. This is an unsafe place for domestic violence victims, women and children. Not only will they offer no protection, as hundreds of victims here have reported to oversight bodies since 2017, they have created a profitable industry to further victimize women and children seeking protection. Cash for Kids exists in Ulster County, at the detriment to vulnerable families. These same court actors are reaping great profits in a RICO, quid pro quo criminal enterprise that repeatedly uses the same playbook, in the same patterns, in all of the cases.",
+        "state": "NY",
+        "county": "Ulster County",
+        "row_id": "1ad2db22-ebd6-4119-8390-d025b8dfb18b"
+      },
+      {
+        "body": "The family court system subjected my family to years of unnecessary conflict, delay, and financial hardship, while enabling my ex to financially abuse both me and our children for years and failing to hold him accountable.",
+        "state": "NY",
+        "county": "Ulster",
+        "row_id": "e8f76352-b24c-4e85-a1a3-4de7a5604a69"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Called my attorney's office and threatened retaliation if my attorney continued to represent me and I did not remove my social media posts, signed an ex parte emergency order removing custody, issued a broad gag order restricting my speech, and later recused herself from the case.",
@@ -70,11 +93,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/sarah_rakov",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='NY'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +109,22 @@
     "recommended_route": "/court-actors/ny/sarah_rakov/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Called my attorney's office and threatened retaliation.",
+        "kind": "comment"
+      },
+      {
+        "body": "Judge Rakov recused herself from the case after Liz Faulkner sent an email accusing her of bias.",
+        "kind": "comment"
+      },
+      {
+        "body": "Sarah has denied me due process and has given custody to grandparents with no legal standing.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

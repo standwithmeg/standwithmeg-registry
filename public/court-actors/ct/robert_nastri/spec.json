@@ -12,12 +12,17 @@
     "court_or_county": "Hartford",
     "state": "Connecticut",
     "state_abbr": "CT",
-    "mention_count": 0,
+    "mention_count": 4,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "3385909b-1b83-4dd3-8031-9a6f3539059a",
+      "3ce47a41-3760-4d40-808e-f619e3585874",
+      "8e88818e-3858-45c7-b951-8293e48c8da1",
+      "cff232ef-7123-41c7-8f06-f7bdc48bb09e"
+    ],
     "actor_row_id": "3385909b-1b83-4dd3-8031-9a6f3539059a",
     "actor_bucket_key": "robert nastri|CT"
   },
@@ -42,12 +47,31 @@
     "_pdf_state_family_count": 65,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Five years in court has stolen precious time that my daughter and I will never get back. Instead of finding protection and justice, we found a system that left us feeling powerless while enabling continued abuse. The greatest cost has not been financial, but the childhood my daughter deserved.",
+        "state": "CT",
+        "county": "New Haven",
+        "row_id": "3d8fb810-c233-4954-8600-02cee7026008"
+      },
+      {
+        "body": "This agonizing separation has deeply fractured my family, leaving me to endure years of heartbreaking alienation from my son, while navigating a devastating emotional and financial toll. This systemic battle against the courts has exhausted and traumatized me while simultaneously needing to muster strength to fight to protect my son from the founded abuse and to have a safe return home.",
+        "state": "CT",
+        "county": "Hartford",
+        "row_id": "f506f6c9-7fe1-4025-bcf1-83f4db6139ff"
+      },
+      {
+        "body": "Cpstd. No trust in the legal system. Which is extremely scary. Don't trust the legislators",
+        "state": "CT",
+        "county": "Hartford",
+        "row_id": "a4e2ba15-f88b-4458-809b-fd94fa113e77"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Suppressed evidence at trial, issued an ambiguous court order that incites on-going conflict.",
@@ -70,11 +94,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/robert_nastri",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='CT'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +110,22 @@
     "recommended_route": "/court-actors/ct/robert_nastri/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Suppressed evidence at trial, issued an ambiguous court order that incites on-going conflict.",
+        "kind": "comment"
+      },
+      {
+        "body": "He allowed supervised visits during the police investigation.",
+        "kind": "comment"
+      },
+      {
+        "body": "Mostly kept us in the hallway during hearings.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

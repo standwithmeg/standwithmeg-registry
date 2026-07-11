@@ -12,12 +12,20 @@
     "court_or_county": "Weber",
     "state": "Utah",
     "state_abbr": "UT",
-    "mention_count": 0,
+    "mention_count": 7,
     "family_count": 5,
     "public_family_count": 5,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 7,
+    "supabase_row_ids": [
+      "48eedfe3-e658-489e-b189-ddd9e79e697a",
+      "59c8277f-6ed4-4333-adfd-3cb4aaa16803",
+      "b1bfd28e-1514-48dd-b57a-c0c6095fc59d",
+      "60fbada1-2ab2-4453-936c-314db5dd558e",
+      "b31a4cea-6902-4ce5-ab81-f27bedd3918f",
+      "65e15864-7843-4787-bb81-3961195b1eca",
+      "4252a8f2-18ed-4f29-a5f7-e270f214f8d0"
+    ],
     "actor_row_id": "48eedfe3-e658-489e-b189-ddd9e79e697a",
     "actor_bucket_key": null
   },
@@ -42,12 +50,31 @@
     "_pdf_state_family_count": 56,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 7,
+    "actor_report_count": 7,
     "family_count": 5,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Broken systems have allowed my children to be entangled in abuse.",
+        "state": "UT",
+        "county": "Davis",
+        "row_id": "ad45fdaa-847d-4831-b5b6-d2a4c5875a91"
+      },
+      {
+        "body": "My kids are still at risk and I have to come up with more money to make sure he cant have custody as he is a abusive, addict with mental issues. If something were to happen to me they would have to go with him and he will ruin them.",
+        "state": "UT",
+        "county": "Weber",
+        "row_id": "7336c0bd-7388-404c-a5c9-19f9ea3e9486"
+      },
+      {
+        "body": "My ex husband has taken everything he threatened to with the exception of the lives of the children and I. I am terrified to fight back because I recognize all prior threats made were followed through on. I have to choose between staying silent or risking him ending our lives. It’s no place for any parent or child to exist in.",
+        "state": "UT",
+        "county": "Davis county",
+        "row_id": "959b5036-368e-4d88-ac66-ce7857a8066f"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Same person... so the same reason. Kept delaying hearings to give abuser more chance for custody of kids.",
@@ -70,11 +97,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/catherine_conklin",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='UT'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +113,22 @@
     "recommended_route": "/court-actors/ut/catherine_conklin/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Kept delaying hearings to give abuser more chance for custody of kids.",
+        "kind": "comment"
+      },
+      {
+        "body": "Imputed at full time wages, affecting ability to obtain financial aid and live.",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored domestic violence protections in favor of abusive parent.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

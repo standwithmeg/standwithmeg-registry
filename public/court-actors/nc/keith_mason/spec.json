@@ -12,12 +12,16 @@
     "court_or_county": "Beaufort County",
     "state": "North Carolina",
     "state_abbr": "NC",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "590a6087-0d69-4166-8d3e-5b3c396e3746",
+      "a5dc5f8f-44f6-4116-badf-782d606ec1fb",
+      "b81eef74-2e59-4479-91a0-22dc8ca1ad97"
+    ],
     "actor_row_id": "590a6087-0d69-4166-8d3e-5b3c396e3746",
     "actor_bucket_key": "keith mason|NC",
     "_overrides_applied": [
@@ -50,12 +54,31 @@
     "_pdf_state_family_count": 216,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Former pissed off foster kid",
+        "state": "NC",
+        "county": "Beaufort",
+        "row_id": "312755d7-a7d0-49af-acc3-436fc7d8a05d"
+      },
+      {
+        "body": "They lost my son, he has been missing since September 23, 2025. They have consistently tried to cover up the unconstitutional seizure of my children. They scrubbed reports and gave my 8 year old daughter to our abuser and placed my 15 year old daughter with a pedophile.",
+        "state": "NC",
+        "county": "Beaufort County",
+        "row_id": "1f3c4576-e9e3-4d97-8308-93200d270032"
+      },
+      {
+        "body": "The system tried to destroy and break our family simply for money because three of our children have disabilities they could cash in on. That same system tried to silence us l, paint us as liars, when the proof didn’t match the story they were telling. WE WILL NEVER STOP TELLING OUR STORY!!! If we help and save just one other family it was not for nothing. We are together. Our family fights together. They chose the wrong ones. All of my children are home because our voices, our proof, MATTERED.",
+        "state": "NC",
+        "county": "Beaufort County",
+        "row_id": "c314b71a-3fb5-41be-af03-3f07d97018cd"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "He was the first judge and continued the 7-10 day hearing without my parents consent and refused to let them or myself or siblings speak. He continued the next hearing as well. At neither hearing he would accept none of my mother’s proof. He also did not require or ask DSS to show any proof to keep the nonsecured custody.",
@@ -78,11 +101,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/keith_mason",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='NC'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -98,6 +117,22 @@
     "recommended_route": "/court-actors/nc/keith_mason/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "He was the first judge and continued the 7-10 day hearing without my parents consent and refused to let them or myself or siblings speak.",
+        "kind": "comment"
+      },
+      {
+        "body": "Refused and continued a 7-10 hearing which is not allowed by law.",
+        "kind": "comment"
+      },
+      {
+        "body": "Allowed my children to be removed from my grandmother over nonsense and yelled at her when she was on the stand (she's almost 80).",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

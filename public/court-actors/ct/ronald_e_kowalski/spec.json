@@ -12,12 +12,24 @@
     "court_or_county": "Stamford",
     "state": "Connecticut",
     "state_abbr": "CT",
-    "mention_count": 0,
+    "mention_count": 11,
     "family_count": 9,
     "public_family_count": 9,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 11,
+    "supabase_row_ids": [
+      "6da914c4-6428-4620-b53c-c4f2d21518cc",
+      "18bc8b64-7cb8-42c7-be89-95cf8c756ceb",
+      "061d0ab4-06bd-45c7-b969-a2c48dc211f7",
+      "c3d45520-4751-4500-8198-c54002012a9b",
+      "75e2a24c-c9a3-48a8-880c-44b1ae650403",
+      "5043c502-8746-4c2b-9293-4e6a93ce64a3",
+      "f1a8d849-395d-423d-a6e0-8c2d687ccfe6",
+      "b35114f9-5d33-450e-b93a-0f6ed776c3e9",
+      "cbeac019-37d2-4285-b777-04e448e9c866",
+      "5b754e40-6531-46d4-9a44-fac21ba2492f",
+      "f579e191-b554-426d-9018-4b9e02f1bba5"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
@@ -42,12 +54,49 @@
     "_pdf_state_family_count": 65,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 11,
+    "actor_report_count": 11,
     "family_count": 9,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Connecticut's custody industry, particularly the Fairfield County bar, has made me lose my faith in humanity. It is a system fueled not by children's needs and safety, but by money, false parental alienation claims against mothers, and referrals.",
+        "state": "CT",
+        "county": "Fairfield",
+        "row_id": "8f3127d7-af66-4c6a-b5a1-4120ea6df3e2"
+      },
+      {
+        "body": "This system took me away from my four-year-old son on his birthday and my one-year-old-infant based on allegations the court itself later rejected. One hundred and twenty-eight days later, my boys remain without their father — not because of any finding of harm, but because in a high-net-worth divorce the legal process itself, asymmetrically applied, became the instrument of our separation.",
+        "state": "CT",
+        "county": "Stamford/Norwalk",
+        "row_id": "fd07227a-da15-4f13-858f-1297bc9bb3ca"
+      },
+      {
+        "body": "The Family Court allowed all my assets to be lost without any concern to the financial and emotional damage done to myself and my child.",
+        "state": "CT",
+        "county": "Fairfield County",
+        "row_id": "6d23739e-f481-452c-9016-fb1c3173e649"
+      },
+      {
+        "body": "The family court allowed fraudulent “experts” and then ignored the recommendations of legitimate experts hiding behind the shield of judicial immunity and playing a congeniality game with people’s lives.",
+        "state": "CT",
+        "county": "Fairfield",
+        "row_id": "60741b2a-b2aa-4252-b450-df5e75e38afa"
+      },
+      {
+        "body": "The judges in family court abuse judicial immunity to make decisions “at their own discretion” against the advice of experts and even legal statutes. If you aren’t the one they “like” they simply destroy your life and your children’s.",
+        "state": "CT",
+        "county": "Fairfield",
+        "row_id": "52d80440-6ed9-44b5-95f3-3804e3d37264"
+      },
+      {
+        "body": "The system has destroyed my health, my child’s development and mental health, and violated constitutional and human rights with no concern for the damage they have done.",
+        "state": "CT",
+        "county": "Fairfield county",
+        "row_id": "de60c1be-a0e6-4368-8265-3db358b9c452"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "She's the head judge in stamford. Has ignored multiple motions of mine asking for judge recusal, void of Judges orders, a mistrial, and a judgment for payment. I demanded I'd be removed from that Courthouse based on him and two other judges. They actually did it because I stood up and called him out. Like every case it's dystopian and insane. I know through other parties that he totally abused his ex-wife in their divorce. And this guy is overseeing and making rulings on the lives of women and children?",
@@ -100,11 +149,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/ronald_e_kowalski",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='CT'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -120,6 +165,38 @@
     "recommended_route": "/court-actors/ct/ronald_e_kowalski/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "I demanded I'd be removed from that Courthouse based on him and two other judges.",
+        "kind": "comment"
+      },
+      {
+        "body": "Denied my ex parte with no basis.",
+        "kind": "comment"
+      },
+      {
+        "body": "Played favorites and hated even hearing from pro se- allowed violations of court…",
+        "kind": "comment"
+      },
+      {
+        "body": "Denied motions continuously with no explanation",
+        "kind": "comment"
+      },
+      {
+        "body": "Denied a motion about imminent harm to my child.",
+        "kind": "comment"
+      },
+      {
+        "body": "Made sua sponte orders with no hearing, makes key decisions in chambers with…",
+        "kind": "comment"
+      },
+      {
+        "body": "Denied multiple motions without any hearings or cause.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

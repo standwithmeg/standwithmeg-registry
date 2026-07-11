@@ -12,12 +12,16 @@
     "court_or_county": "Tulsa",
     "state": "Oklahoma",
     "state_abbr": "OK",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "0abaa84b-808e-4ba8-bdaf-5515d62585a8",
+      "8d671d3d-55a6-484f-a11f-0a0973e1b585",
+      "6971d3c8-2eb2-4cfb-bb9c-b9ca7fed63bc"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
@@ -42,12 +46,31 @@
     "_pdf_state_family_count": 164,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "In the past 7 1/2 years I’ve watched my child and grandchild die a slow death. It’s like a cancer that can’t be treated and is costing everything! The financial burden is immense but the emotional toll it takes on them is almost too much to bear. In the quest to give equal rights to fathers the system forgot about the children.",
+        "state": "OK",
+        "county": "Rogers",
+        "row_id": "82001414-28c6-4d28-94f7-f657100e6857"
+      },
+      {
+        "body": "The system has participated in the unjust, unconstitutional, persecution of a family. Most notably, the persecution of my children’s childhood at the time of separation they had two parents who loved them deeply, but had their own personal issues and their marital relationship unfortunately, that changed at the time of separation when the other party hated me more than they loved their children. This system thrives on the circumstances, it is a large club where the actors don’t make millions but make thousands upon thousands even sometimes hundred of thousands of dollars to provide a lack of resolution and eventually over 5 to 10 years on a single custody case will provide resolution that is unfavorable most importantly to the children, and violate the constitution of the United States of America. The family system thrives on unconstitutional rollings, and the name of “best interest of the child”. The court system must do better as to not affect even more families.",
+        "state": "OK",
+        "county": "Tulsa",
+        "row_id": "a1b28fca-b740-4dd5-b063-00f5e8291a57"
+      },
+      {
+        "body": "This system has torn my family apart, stripped me of my role as a mother, and forced me into a relentless fight against abusive exes, distortion, imbalance, and Court decisions that have harmed both me and my child.",
+        "state": "OK",
+        "county": "Tulsa county",
+        "row_id": "1db6b144-e2d7-410e-a9ef-7b22ac61e32d"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Lengthy custody evaluation that took over one year to complete. Very costly. Couldn’t even remember how many kids involved in the custody case. Never asked about events reported to him as fact by the other side and was never given evidence of events but reported it as fact in his final report. Never asked for my take or if I had a different take on the events ( I have body cam and audio/video recordings of the events in question. Nice enough, but not thorough and I think his memory is on the way out unfortunately.",
@@ -70,11 +93,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/dr_william_b_berman",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='OK'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +109,22 @@
     "recommended_route": "/court-actors/ok/dr_william_b_berman/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Lengthy custody evaluation that took over one year to complete. Very costly. Couldn’t even remember how many kids involved in the custody case.",
+        "kind": "comment"
+      },
+      {
+        "body": "Dr Burman made one party pay the others bill and then refused to see that party’s witnesses.",
+        "kind": "comment"
+      },
+      {
+        "body": "Violated professional conduct, violated court order",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

@@ -12,12 +12,16 @@
     "court_or_county": "Johnson county",
     "state": "Kansas",
     "state_abbr": "KS",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "f3089ed9-aa94-4916-a2ec-438984595e59",
+      "697db11e-f3ad-4285-9705-e536c70d5bff",
+      "3cf9ac50-a648-454d-ab71-1271fba52fd6"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "steven henry|KS"
   },
@@ -42,12 +46,19 @@
     "_pdf_state_family_count": 251,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Naomi Cataudella’s involvement did not heal our family’s trauma — it prolonged and deepened it. Instead of helping rebuild trust and emotional safety, Naomi’s approach empowered an abuser, left our children feeling unheard, intensified family division, and reinforced a system where fear and dysfunction were repeatedly overlooked.",
+        "state": "KS",
+        "county": "Johnson",
+        "row_id": "2b770771-fd1c-492b-a679-c7fabc626742"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Ignored evidence, ignored facts",
@@ -58,11 +69,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/steven_d_henry",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='KS'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -78,6 +85,14 @@
     "recommended_route": "/court-actors/ks/steven_d_henry/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Ignored evidence, ignored facts",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

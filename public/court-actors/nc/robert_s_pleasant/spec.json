@@ -12,12 +12,16 @@
     "court_or_county": "Johnston",
     "state": "North Carolina",
     "state_abbr": "NC",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 4,
     "public_family_count": 4,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "18975e82-0d8d-4eec-9656-94ae3e0a1434",
+      "e6d056e8-ce28-4695-b860-989c479345ab",
+      "17b12db0-4503-4dd2-a895-9a4b18a0c476"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "robert pleasant|NC"
   },
@@ -42,12 +46,31 @@
     "_pdf_state_family_count": 216,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 4,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "They have systematically degraded my relationship with my children, and enabled the parallel parent to alienate me and caused untold damage to the children resulting in mental health issues and prescriptions that are normally reserved for severe mental disorders.",
+        "state": "NC",
+        "county": "Johnston County",
+        "row_id": "2e0caa59-f44f-4254-aef7-98ffda600c3b"
+      },
+      {
+        "body": "This experience has left me carrying a level of grief that is difficult to put into words. I have spent nearly three years mourning children who are still alive, missing moments I can never get back, and living with a pain that follows me from the moment I wake up until I go to sleep. I’m no longer the same woman and my mental health is severely destroyed and struggling to maintain hope. I feel as if I no longer have a purpose in life and I’m not sure how much longer I can continue to hold on.",
+        "state": "NC",
+        "county": "Johnston County",
+        "row_id": "9e02eeaa-506b-41be-a634-6bbb50fb9ed2"
+      },
+      {
+        "body": "Parental Allination, Fraser accusations, things were said to the child that weren't true,narcissist abuser",
+        "state": "NC",
+        "county": "Johnston  County",
+        "row_id": "282c642c-ddb1-40c4-aab3-d16a740aee0e"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "I was there the entire day for a hearing and got the last five minutes of the day. I gave evidence that I was in the emergency room the day before with my son to prove that I was telling the truth. This attorney just came in there talking about he was in the emergency room with his dad, but was not required to have any proof. He just walked in and said it should be dismissed. The judge looked over the paper and dismissed it without hearing my evidence.",
@@ -70,11 +93,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/robert_s_pleasant",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='NC'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +109,22 @@
     "recommended_route": "/court-actors/nc/robert_s_pleasant/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "He just walked in and said it should be dismissed. The judge looked over the paper and dismissed it without hearing my evidence.",
+        "kind": "comment"
+      },
+      {
+        "body": "Opposing counsel represented the children’s father throughout the custody and child welfare proceedings.",
+        "kind": "comment"
+      },
+      {
+        "body": "Failed to file a motion to modify a pre trial order after consultation with client during mediation resulting in tens of thousands of dollars lost.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

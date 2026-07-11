@@ -12,12 +12,22 @@
     "court_or_county": "Fulton",
     "state": "Georgia",
     "state_abbr": "GA",
-    "mention_count": 0,
-    "family_count": 8,
-    "public_family_count": 8,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "mention_count": 9,
+    "family_count": 1,
+    "public_family_count": 1,
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 9,
+    "supabase_row_ids": [
+      "5a1490f1-e68f-4a24-a41c-5a8be1c2fe5b",
+      "4fffe758-701b-4657-8380-86d83643228a",
+      "09006ec6-bcc7-423e-ab9a-2392974419a4",
+      "30ca2f99-93b1-4f2e-82ed-af0a94d40f36",
+      "d62cd9e0-a6c6-4b2c-9aa5-94c162cf144e",
+      "ae625f43-1b18-4bd7-aff9-1690cd45ad2f",
+      "9b27fbcc-934e-4791-bb9a-99cd13cb100d",
+      "e9182733-070b-4588-9996-4eb0d3c2d19b",
+      "087a3017-b7de-4e66-b4d1-9b1abd8f2f87"
+    ],
     "actor_row_id": "5a1490f1-e68f-4a24-a41c-5a8be1c2fe5b",
     "actor_bucket_key": null
   },
@@ -42,12 +52,49 @@
     "_pdf_state_family_count": 153,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
-    "family_count": 8,
-    "family_reports": [],
+    "report_count": 9,
+    "actor_report_count": 9,
+    "family_count": 1,
+    "family_reports": [
+      {
+        "body": "Destroyed me and my 4 other kids who have been kept away and out of their sister’s life for 7years. Heart breaks everyday all over again",
+        "state": "GA",
+        "county": "Cherokee",
+        "row_id": "d4f1152a-bbc1-4346-8c6a-a015bb71fa14"
+      },
+      {
+        "body": "I had to navigate a complex and difficult system and ultimately prevailed thanks to facts and my attorney Ashley Wine who was by my for all six years.",
+        "state": "GA",
+        "county": "Fulton",
+        "row_id": "0ce22cc5-3376-46b7-a597-40e3c93d763c"
+      },
+      {
+        "body": "I trusted the process, innocent till proven guilty, followed every rule, have always been the stable, trusted, involved parent to our children. False claims with nothing but father’s word against mine. I had to prove the lies false. Facts ignored. Truth forgotten and 18 years of actual history did not matter when the GAL can’t be bothered by facts. Having to prove lies are lies is a special kind of hell.",
+        "state": "GA",
+        "county": "Forsyth",
+        "row_id": "ee1d3d3b-444b-4689-8417-f14f1921ac56"
+      },
+      {
+        "body": "The court system failed me as both a woman and a mother, separating a stay-at-home mother of 15 years from her four children while overlooking concerns I believed were critical to their well-being. The process has been emotionally devastating and has left me feeling unheard, unsupported, and deeply harmed as both a parent and caregiver.",
+        "state": "GA",
+        "county": "Fulton County",
+        "row_id": "830f8d62-829f-403d-a22a-702bddf66e81"
+      },
+      {
+        "body": "This has caused an immense amount of trauma to my children, especially my youngest. Stolen joy and peace and caused irreversible harm.",
+        "state": "GA",
+        "county": "DeKalb",
+        "row_id": "efafac2d-e4f4-4fb9-8b27-fa3840b4a5d7"
+      },
+      {
+        "body": "The GAL in my case broke every law that she is supposed to follow. The judge rubber stamped her recommendation without any evidence. She is a danger to women and children.",
+        "state": "GA",
+        "county": "Dekalb",
+        "row_id": "a1834e35-890e-4dbc-89e9-01b317526771"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "She represented me in a very high conflict case, she was fair ethical and child oriented, she never fueled or worsened the situation and constantly worked to defuse and ensure as much stability as possible for the kids",
@@ -100,11 +147,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/ashley_wine",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='GA'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -120,6 +163,42 @@
     "recommended_route": "/court-actors/ga/ashley_wine/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "She represented me in a very high conflict case, she was fair ethical and child…",
+        "kind": "comment"
+      },
+      {
+        "body": "Ashley said the TPO filed was unnecessary and the allegations we unfounded.",
+        "kind": "comment"
+      },
+      {
+        "body": "Did not go speak to child alone.",
+        "kind": "comment"
+      },
+      {
+        "body": "Spoke with father, fathers attorney, fathers girlfriend over 80% more than mothers…",
+        "kind": "comment"
+      },
+      {
+        "body": "She ignored the best interest of the child Did not follow the law.",
+        "kind": "comment"
+      },
+      {
+        "body": "Biased, siding with father, and not protecting the child.",
+        "kind": "comment"
+      },
+      {
+        "body": "Dismissed detailed claims of abuse from the children as well as reports from the…",
+        "kind": "comment"
+      },
+      {
+        "body": "Concerns for the kids were ignored.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

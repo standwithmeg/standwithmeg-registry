@@ -12,12 +12,16 @@
     "court_or_county": "Oakland",
     "state": "Michigan",
     "state_abbr": "MI",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "0cd65ac6-ca2b-4d5e-bff8-e4c804cf4f8a",
+      "f1917911-b38c-403c-a8c3-c7c1543e8f1e",
+      "fcaf7e6e-7277-444f-acd7-bac237f56005"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
@@ -42,12 +46,19 @@
     "_pdf_state_family_count": 178,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "This system has kept my family apart and kept my children from knowing each other and growing up together. The judges and the front of the court need to be held accountable for keeping families apart for no reason other than they don’t wanna do their job and see the evidence.",
+        "state": "MI",
+        "county": "Oakland",
+        "row_id": "64fb1e02-aa97-4256-9444-f7a8b98810b4"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Failed to review current situations with girls focused on half brothers case more. Refused to hear other testimony and group 2 different people together based on three other children’s removal",
@@ -64,11 +75,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/lisa_langton",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='MI'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -84,6 +91,18 @@
     "recommended_route": "/court-actors/mi/lisa_langton/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Failed to review current situations with girls focused on half brothers case more. Refused to hear other testimony and group 2 different people together based on three other children’s removal",
+        "kind": "comment"
+      },
+      {
+        "body": "Denied my motions on several occasions, is on record stating “I don’t care what the child wants I will not interview them” “I don’t owe you an explanation” “I am the end all be all “",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

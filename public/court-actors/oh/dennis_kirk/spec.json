@@ -12,12 +12,21 @@
     "court_or_county": "Highland",
     "state": "Ohio",
     "state_abbr": "OH",
-    "mention_count": 0,
+    "mention_count": 8,
     "family_count": 6,
     "public_family_count": 6,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 8,
+    "supabase_row_ids": [
+      "84523aae-6f04-4471-b0c2-f5dcb914fbd7",
+      "4f37f144-9a31-42d3-ba17-6662e8dc7da8",
+      "0e71522c-f016-4a31-8863-6867a8a64444",
+      "6b03fe85-3c4d-4691-9ce7-c77ebd69f496",
+      "55909197-8e41-4972-996c-2527ed759eb4",
+      "0a87ddb8-c789-4db7-821b-979269b5fac1",
+      "c191a17c-80c4-4107-8a8a-0d0ffea90e88",
+      "0a77a37f-d53f-4458-a348-078aa1ded4f1"
+    ],
     "actor_row_id": "84523aae-6f04-4471-b0c2-f5dcb914fbd7",
     "actor_bucket_key": "denis kirk|OH"
   },
@@ -42,12 +51,49 @@
     "_pdf_state_family_count": 264,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 8,
+    "actor_report_count": 8,
     "family_count": 6,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "The system ripped my family apart. Broke our unity, our circle, caused major anxiety problems, behavior issues and cost the respect my oldest son had for me. He idolized me and now he doesnt respect me,he has been brainwashed my the system and his father whom they gave full custody to because of this last wrongful accusation. Has cause me so much emotional guilt and pain from not having my children with me,the pain of having your infants taken from your arms is the worst pain a mother can have. My children have separation issues and I have major PTSD even from the door being knocked on. It has destroyed our family.",
+        "state": "OH",
+        "county": "Highland",
+        "row_id": "92533d98-ca96-4eac-8521-9e7fc2b1df11"
+      },
+      {
+        "body": "Denied motion and ignored evidence!! None of them did their job they made up everything. The judge didn’t want to listen to us whatsoever that we gave him evidence and they didn’t show him any evidence and that he ruled with them over us. He delayed hearings gave them more time biased, he didn’t sign half of his records he had to click record sign it things like that you can put well. She really really wasn’t on our case that much it was mainly James he was the one he was his assistant prosecutor. They have kept me away from my daughter since she was born. Have false documents and have been proven but no one will listen to me. Please help me!!!!",
+        "state": "OH",
+        "county": "Highland county",
+        "row_id": "93b9ae0f-56b2-4e79-ab9c-427da47455a6"
+      },
+      {
+        "body": "This system has lied and tore my family apart causing emotional damage",
+        "state": "OH",
+        "county": "Highland county",
+        "row_id": "6caec907-d638-46ce-ac09-9cde3975ad8e"
+      },
+      {
+        "body": "My lived experience that is still ongoing has cast me into homelessness, taken all my belongings and created a situation that is impossible to regain stability even at its simplest form, and has attempted to silence my and my children’s stories from not just being heard but from the record entirely; it has cost me the most precious and valuable thing of all, my children, as well as my and my children’s protection, belief in justice, safety, healing, my children’s voices and their childhood at ages 7 & 11.",
+        "state": "OH",
+        "county": "Clinton",
+        "row_id": "b07bca07-832d-414e-8716-f62f66e6b311"
+      },
+      {
+        "body": "The system has destroyed my entire family and when I asked the corrupt judge greer to tell me why, he simply told me he don't have to explain why he made the decision to terminate my rights. Let that sink in....",
+        "state": "OH",
+        "county": "HIGHLAND",
+        "row_id": "899c1aec-eb22-48b6-91a7-613a0f0bb684"
+      },
+      {
+        "body": "They took the happiest and joy out of us",
+        "state": "OH",
+        "county": "Highland county",
+        "row_id": "8b35071a-b597-4615-93d0-41c8dca323bd"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Didn’t do his job, just went off cos and the prosecutor and lied on oath Didn’t do his job didn’t supervise any visits didn’t watch me with my daughter at all. I called and his secretary told me that they don’t do that right now at the beginning, but I did call and then he said on that I never called and then he just went with everything piggyback off the prosecutor and everything, and he even used the word piggyback He didn’t meet with us or do his job he lied on stand saying we never called him but I showed a recording we did talk to his assistant and played it for the court",
@@ -88,11 +134,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/dennis_kirk",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='OH'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -108,6 +150,30 @@
     "recommended_route": "/court-actors/oh/dennis_kirk/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "He didn’t meet with us or do his job he lied on stand saying we never called him.",
+        "kind": "comment"
+      },
+      {
+        "body": "Denied motion and ignored evidence!!",
+        "kind": "comment"
+      },
+      {
+        "body": "Called his office early in the case to setup a home visit",
+        "kind": "comment"
+      },
+      {
+        "body": "He would seem like your friend and on the children's side then go into court and…",
+        "kind": "comment"
+      },
+      {
+        "body": "Fabricated evidence",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

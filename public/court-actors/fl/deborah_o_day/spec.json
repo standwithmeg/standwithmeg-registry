@@ -12,12 +12,18 @@
     "court_or_county": "Volusia",
     "state": "Florida",
     "state_abbr": "FL",
-    "mention_count": 0,
+    "mention_count": 5,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 5,
+    "supabase_row_ids": [
+      "34c3ce8a-ebc9-493d-903a-68539bcc7898",
+      "8793a1ab-0850-4091-a238-228eda4427f5",
+      "9c67eb11-e319-4900-8969-2b083e3be60f",
+      "0d40a049-8441-4c15-a419-1f1eb4bdf04f",
+      "b9cdc313-b077-419d-b7fb-9879bf40f359"
+    ],
     "actor_row_id": "34c3ce8a-ebc9-493d-903a-68539bcc7898",
     "actor_bucket_key": null
   },
@@ -42,12 +48,31 @@
     "_pdf_state_family_count": 306,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 5,
+    "actor_report_count": 5,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Attorney Derek Allison Folds has become a deeply controversial figure in Florida’s family court system. Critics argue that her legal career is less a result of merit and more the product of deep-rooted nepotism — allegedly benefiting from her father’s longstanding connections with local politicians, judges, court-appointed mental health professionals, and appellate courts. According to numerous families — particularly survivors of domestic violence — Folds has been accused of working against her own clients’ interests and frequently representing alleged abusers. Rather than advocating for justice or protection, she is reportedly aligned with court-appointed professionals and attorneys who have been accused of unethical behavior, including manipulation and bias. These connections are seen by many as tools used to undermine protective parents and influence case outcomes behind closed doors. Her legal work is often described by critics as careless, sloppy, and allegedly plagiarized — with claims that she recycles arguments from other attorneys and files documents that fail to meet basic professional standards. Despite this, she reportedly maintains a high success rate in appellate courts, raising serious concerns among families and advocates about the fairness and impartiality of those rulings. Folds currently serves as Vice President of the Eighth Judicial Circuit Bar Association — a voluntary bar group in North Florida. While this role does not grant her disciplinary authority through The Florida Bar, it does place her in a position of influence over local legal culture, networking, and public recognition — which some see as a serious conflict of interest. When serving as opposing counsel, Folds has been described by families and litigants as aggressive, unethical, and unprofessional. Multiple reports claim she engages in reckless tactics that retraumatize survivors and escalate conflict in already fragile legal proceedings. Her conduct, according to those who have encountered her, appears to disregard the best interests of Florida’s children and families. This growing body of allegations has fueled concerns of favoritism, judicial networking, and backroom deals — where legal outcomes are allegedly influenced by who you know rather than what is true, just, or safe. Advocates believe Folds represents a deeper problem in Florida’s family court system — one that resembles a cash-for-kids pipeline, where collusion, corruption, and cronyism override child welfare. Protective parents are being silenced. Children are reportedly being placed in harm’s way. And the people tasked with ensuring fairness and justice are allegedly using their power to protect themselves instead. The public deserves transparency, accountability, and an urgent investigation into how roles of influence — like the one held by Folds — are being used within Florida’s family courts.",
+        "state": "FL",
+        "county": "Alaucha",
+        "row_id": "acde241d-afd8-45b9-adb4-a0a4947334cc"
+      },
+      {
+        "body": "I’ve been dragged in and out of family court for nearly ten years. I’ve faced false allegations and not been able to receive justice for me or my kids related to contempt issues.",
+        "state": "FL",
+        "county": "Palm Beach",
+        "row_id": "1cd29cb9-59c2-4bf6-8fed-494a287cb004"
+      },
+      {
+        "body": "My family was destroyed by family court and Dr. Deborah O. Day. Dr. Day dismissed and ignored credible evidence of child sexual abuse and gave my daughter a false diagnosis and recommended custody be given to her father, who she identified as her perpetrator. I was erased from their lives. We were a loving family and I was their mom! My daughters were removed from my care in a hearing that the 5th District Court of Appeals said that Judge Shawn L. Briese denied Mother's due process and the hearing to determine custody should never have taken place as Mother's hand written Motion for Continuance was legally sufficient and should never have been denied. How can this happen in the United States of America? This is happening all over the US and this is a travesty of justice. Linda Marie Sacks",
+        "state": "FL",
+        "county": "Volusia",
+        "row_id": "ec7876bd-e4a4-4400-abd2-66fdc569a92c"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Dr. Day dismissed, ignored and suppressed credible evidence of child sexual abuse, gave a false diagnosis of pediatric bipolar to my 8 year old daughter and said that negates child sexual abuse. She didn’t have bipolar and then she dismissed her pediatrician proving no bipolar then helped the family court give sole custody to their identified perpetrator, their father and erased me from their lives. Dr. Deborah Day of Psychological Affiliates in Winter Park, Florida was assigned to my case. She ignored credible evidence of child abuse and told the court \"in this examiner's opinion R (at 8 years old) has pediatric bipolar and that negates child sexual abuse.\" R's pediatrician since birth said she did not have pediatric bipolar and that was ignored by Day. Day has a history of giving custody to abusive parents. She dismissed my daughter's explicit disclosures of sexual abuse to school teachers, her sexual acting out in kindergarten, and her drawings of her father with an erect penis. My family was destroyed by family court and Dr. Deborah O. Day.",
@@ -70,11 +95,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/deborah_o_day",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='FL'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +111,22 @@
     "recommended_route": "/court-actors/fl/deborah_o_day/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Dismissed her pediatrician proving no bipolar then helped the family court give sole custody to their identified perpetrator",
+        "kind": "comment"
+      },
+      {
+        "body": "Conducted Social Investigation which ignored and/or minimized facts and evidence which led to a biased opinion (in favor of the party paying her bill).",
+        "kind": "comment"
+      },
+      {
+        "body": "Judges ignored her evaluation",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

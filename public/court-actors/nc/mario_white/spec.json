@@ -12,12 +12,16 @@
     "court_or_county": "Sampson County",
     "state": "North Carolina",
     "state_abbr": "NC",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "88b2ceb2-42a3-40b0-8995-26d30993af92",
+      "4bffe316-e74d-4dd1-8fa4-005cf093e0dd",
+      "d6287c48-3a3e-42d4-84a4-3012ec692ebe"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "mario white|NC"
   },
@@ -42,12 +46,31 @@
     "_pdf_state_family_count": 216,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Torn us apart. I completed everything they asked if me and more. Separated my boys into foster homes. My youngest is in group home misbehaving the whole time he's been in the system. I still have parental rights but I can see them or speak to them. October will be a year since I have spoken with them. I finally was able to get them to let me write them letters. I have had 25 caseworkers at this point.",
+        "state": "NC",
+        "county": "Sampson",
+        "row_id": "a28a4ab6-cb3b-420e-8b24-bc1ebd8e6a13"
+      },
+      {
+        "body": "It has taken our babies an destroyed our lives, an made 2 little girls suffer unimaginable horrors, with no intentions of re-uniting",
+        "state": "NC",
+        "county": "Sampson County",
+        "row_id": "2934a2e2-3e1d-4379-b61a-e44ff5e38424"
+      },
+      {
+        "body": "I can not put a dollar amount on what has been done. I'm currently fighting to keep my home, and I am not able to find a job that I'm qualified for due to false charges that the attorneys and judge's refuse to dismiss due to lack of evidence. Due to the false charge it is more difficult to support my children while they're in custody, but I believe that this was the plan.",
+        "state": "NC",
+        "county": "Sampson",
+        "row_id": "86acfb26-46aa-4c68-977a-b1adae0b4827"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Entered chamber with my attorney on 7/30/25 after I told my attorney that I was going to submit a flash drive into evidence to press charges on caseworker Karissa Henasey for committing pergery on the witness stand. After they came out of the chambers, a mistrial was called to protect the caseworker, and the next day a warrant was taken out for false charges against me. I believe this was planned so that my evidence would have been confiscated, in an attempt to save attorneys and caseworkers from criminal charges.",
@@ -70,11 +93,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/mario_white",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='NC'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +109,22 @@
     "recommended_route": "/court-actors/nc/mario_white/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "After they came out of the chambers, a mistrial was called to protect the caseworker, and the next day a warrant was taken out for false charges against me.",
+        "kind": "comment"
+      },
+      {
+        "body": "He never gave us an option to answer to anything, gave unsupervised visitation to the oldest, he already had crimes against nature charges.",
+        "kind": "comment"
+      },
+      {
+        "body": "Unfair he gives you no voice listens to DSS lawyer & that's it",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

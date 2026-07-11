@@ -1,0 +1,78 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "j_d_wagner",
+    "display_name": "J.D. Wagner,",
+    "title": "",
+    "first_name": "J.D.",
+    "last_name": "Wagner,",
+    "role": "Attorney (Mine)",
+    "court": "Highland County",
+    "county": "Highland County",
+    "court_or_county": "Highland County",
+    "state": "OH",
+    "state_abbr": "OH",
+    "mention_count": null,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 3,
+    "supabase_row_ids": null,
+    "actor_row_id": null,
+    "actor_bucket_key": "j wagner|OH"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 208,
+    "total_submissions": 264,
+    "avg_financial_loss": 112074.3,
+    "avg_months_lost": 31.5,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OH",
+    "state_family_count": 264,
+    "median_financial_loss": 79250,
+    "median_burden_sample_size": 128,
+    "median_months_lost": 18,
+    "pro_se_pct": 53.0,
+    "pro_se_count": 140,
+    "_pdf_state_family_count": 264,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5421,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": []
+  },
+  "export_dir": "New Final Post and Capcut template/export/j_d_wagner",
+  "unresolved": [
+    "court_actors: no rows match name~'J.D. Wagner,' state='OH'",
+    "public_family_count_api: no match for display_name='J.D. Wagner,' bucket='j wagner|OH' slug='j_d_wagner' in OH (440 actors)"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/oh/j_d_wagner/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

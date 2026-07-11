@@ -12,12 +12,19 @@
     "court_or_county": "Clinton, DeKalb, and Caldwell",
     "state": "MO",
     "state_abbr": "MO",
-    "mention_count": 0,
+    "mention_count": 6,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 6,
+    "supabase_row_ids": [
+      "942ff6fb-d6b6-436d-8e9f-804b62c5268f",
+      "2eb50db9-ca33-4226-91f0-49e3a0b3bcc4",
+      "617516f3-a3df-4ac6-913f-d55f5235732c",
+      "12f3c8ab-a056-4be6-9f58-8f839d76de7e",
+      "edd53a6c-5503-42e3-a7db-787070cceb17",
+      "36d77965-87be-4104-a5b8-c86cb6932dcc"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "michele pucket|MO",
     "_overrides_applied": [
@@ -50,12 +57,25 @@
     "_pdf_state_family_count": 194,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 6,
+    "actor_report_count": 6,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "I’ll never get this time back with my beautiful girls. The system failed us.",
+        "state": "MO",
+        "county": "Livingston",
+        "row_id": "8f5e3c88-27a2-40e3-b2c4-bcdd41d4706c"
+      },
+      {
+        "body": "False accusations removed me from family home. Lost union job for a year 100,000+ in wages. Fraudulent family court dismissed my testimony and evidence in court trial filing judgements against me that ultimately allowed my ex wife to get home all 67 ac of farm by adopting her lies at trial as truth. She claimed assets owned by others failed to report marital debt all to come out with an extreme favorable judgement. False accusations required me to take 26 wk domestic violence class and 8 wk anger control. Completed 26 wk class virtual, now still trying to cause problems through court with that. Still don’t have my personal items from marital home and she has not refinanced the home as court ordered her to do over 8 months ago.At the beginning my kids were kept away from me for 6 months going through multiple attorneys until I finally got visitation a few months before trial.",
+        "state": "MO",
+        "county": "Unknown",
+        "row_id": "94494491-033b-40ec-9d56-94638ac976c8"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Did not meet this attorney I never got a chance to be in front of this attorney. He’s had 2 different ones.",
@@ -72,11 +92,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/michelle_puckett",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='MO'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -92,6 +108,18 @@
     "recommended_route": "/court-actors/mo/michelle_puckett/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Did not meet this attorney I never got a chance to be in front of this attorney. He’s had 2 different ones.",
+        "kind": "comment"
+      },
+      {
+        "body": "False allegations, lied on court documents & at trial resulting in a judgement procured by fraud.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

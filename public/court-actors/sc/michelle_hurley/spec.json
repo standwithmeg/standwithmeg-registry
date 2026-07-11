@@ -12,12 +12,19 @@
     "court_or_county": "Richland",
     "state": "South Carolina",
     "state_abbr": "SC",
-    "mention_count": 0,
-    "family_count": 0,
-    "public_family_count": 0,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "mention_count": 6,
+    "family_count": 4,
+    "public_family_count": 4,
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 6,
+    "supabase_row_ids": [
+      "c0358257-598d-4d80-9c8d-e879163d99b8",
+      "8e29b33f-6f26-4ba3-bcdc-9f4c5974f52e",
+      "f981c6fa-9311-4012-ae0d-28fe0e0ec943",
+      "d7c36374-c6a1-4161-9bd9-850c36313ba5",
+      "ef11851f-961e-4925-a0cc-ed5275c29600",
+      "708ba48b-f27c-4d37-ab56-5c2a13040100"
+    ],
     "actor_row_id": "c0358257-598d-4d80-9c8d-e879163d99b8",
     "actor_bucket_key": "michele hurley|SC"
   },
@@ -42,12 +49,43 @@
     "_pdf_state_family_count": 108,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
-    "family_count": 0,
-    "family_reports": [],
+    "report_count": 6,
+    "actor_report_count": 6,
+    "family_count": 4,
+    "family_reports": [
+      {
+        "body": "The family court system has singlehandedly destroyed my family. We have been separated for years and only see them a few times a year. It will probably cause my younger kids to go through therapy at some point.",
+        "state": "SC",
+        "county": "Richland",
+        "row_id": "0f147f67-5318-4fd3-a19e-ab8b39fccf68"
+      },
+      {
+        "body": "This has destroyed my family and my finances.",
+        "state": "SC",
+        "county": "Richland",
+        "row_id": "78e1cb5f-52d3-4bf9-b339-80191e503019"
+      },
+      {
+        "body": "The family court system has singlehandedly destroyed my family. We have been separated for years and only see them a few times a year. It will probably cause my younger kids to go through therapy at some point.",
+        "state": "SC",
+        "county": "Richland",
+        "row_id": "b168935c-b40e-46c5-9726-cf8ed23f8a49"
+      },
+      {
+        "body": "Richland County Court has continued to ignore evidence of neglect and abuse towards the children. Refuses to acknowledge litigation abuse. and if you’re the defendant, you might as well forget it you will forever be guilty. There’s no due process but haste, dramatic, major changes that traumatize parents, and children for years, waiting for resolution. Richland County family Court will push a parent and a poverty just to preserve a court order even if that parent didn’t have the ability to pay child support. They now garnish 60% of my check every two weeks and I can no longer even pay my rent and they don’t care.",
+        "state": "SC",
+        "county": "Richland",
+        "row_id": "9e29bc7f-e8ac-46af-8f32-bf816dbdae00"
+      },
+      {
+        "body": "The system has taken my oldest son from a large, loving family with over 30+ extended family members including three siblings that miss him dearly, and given him to a mentally sick chronically single woman who lives with her mentally sick chronically single mother. It has robbed us of every penny my wife of 12 years and I had in our retirement, savings, and bank accounts. It continues to pull us back and impose extra fines for inability to pay previous fines. We have three small children and are now forced to give up our home due to financial ruin.",
+        "state": "SC",
+        "county": "Richland",
+        "row_id": "f99b24e0-92ca-44ef-9d60-7f82f0be24da"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "She was supposed to rule on a change in school and instead she flipped a switch and made my ex primary on everything regarding decision making (after I was primary for years). She also changed our custody schedule from week to week to me only seeing the kids every other weekend. There was no cause for this, the schedule was not the issue. Gave my ex primary on everything and primary custody after years of me being primary. He had never been to the dentist, orthodontist, doctor appointments, etc, probably couldn’t tell you who their doctors are. She saw me as a conservative and she is very liberal. She pushed her ideas onto me and “judged” me for being different than her. The funny part is that my ex is similar in political viewpoints, but his lawyer is slick and had him pretend. The lawyer also insinuated strongly that my husband and I are racist (ridiculous) and she is an African American judge.",
@@ -76,11 +114,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/michelle_hurley",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='SC'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -96,6 +130,26 @@
     "recommended_route": "/court-actors/sc/michelle_hurley/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Gave my ex primary on everything and primary custody after years of me being primary.",
+        "kind": "comment"
+      },
+      {
+        "body": "Due process Put me in my 18 month old out of the house with no financial income, and no place to go.",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored evidence proving false allegations and flipped custody.",
+        "kind": "comment"
+      },
+      {
+        "body": "Judged solely on hearsay",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

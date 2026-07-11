@@ -12,12 +12,16 @@
     "court_or_county": "Berkeley",
     "state": "South Carolina",
     "state_abbr": "SC",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "ed94c3c7-2017-4390-b604-a9d0dced6faa",
+      "ad39c9fc-e50b-4286-92cd-5439b8fbf7b6",
+      "429751d5-92cb-4461-8ed4-76a5e837bda7"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "elizabeth stringer|SC"
   },
@@ -42,12 +46,25 @@
     "_pdf_state_family_count": 108,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Family Court is nothing but an extortion ring filled with corrupt court actors lining their pockets at the cost of children. Biggest child trafficking agency in the world. Children left traumatized over and over again while stable loving parents loose everything.",
+        "state": "SC",
+        "county": "Berkeley county",
+        "row_id": "23f1a9bd-c499-4c48-ba41-8af1fbb2a0ce"
+      },
+      {
+        "body": "The system has traumatized my family while allowing the abuser to lie, conceal assets, dismantle a business, and still be awarded over $100,000 in attorney’s fees.",
+        "state": "SC",
+        "county": "Charleston County",
+        "row_id": "b757b2f0-dfc0-4b5a-b3fb-76e6eb1dcac5"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Did not contact school officials or witnesses, twisted or completely fabricated children’s statements, false testimony, did not follow up on safety concerns brought up by the children. Lied under oath multiple times.",
@@ -64,11 +81,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/elizabeth_stringer",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='SC'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -84,6 +97,18 @@
     "recommended_route": "/court-actors/sc/elizabeth_stringer/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Did not contact school officials or witnesses, twisted or completely fabricated children’s statements, false testimony, did not follow up on safety concerns brought up by the children. Lied under oath multiple times.",
+        "kind": "comment"
+      },
+      {
+        "body": "Submitted falsified evidence, helped client hide money, made disparaging remarks to me while I was pro se. Ex parte communication with the judge in the final hearing. Litigation abuse.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

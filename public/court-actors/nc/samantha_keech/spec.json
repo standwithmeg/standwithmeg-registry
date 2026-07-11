@@ -12,12 +12,17 @@
     "court_or_county": "Beaufort",
     "state": "North Carolina",
     "state_abbr": "NC",
-    "mention_count": 0,
-    "family_count": 0,
-    "public_family_count": 0,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "mention_count": 4,
+    "family_count": 4,
+    "public_family_count": 4,
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "86e9d1f2-b28b-405f-b11b-a9d75f253a95",
+      "33e922e4-82d5-479a-b8ad-b4b93a4dbb2f",
+      "06245f68-dc5c-4d2f-a1ee-014d85dc8c68",
+      "c8efcbf8-d7a4-4b84-9931-75dd48207e84"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "samantha kech|NC"
   },
@@ -42,12 +47,37 @@
     "_pdf_state_family_count": 216,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
-    "family_count": 0,
-    "family_reports": [],
+    "report_count": 4,
+    "actor_report_count": 4,
+    "family_count": 4,
+    "family_reports": [
+      {
+        "body": "They have robbed me and my children of precious time we will never get back",
+        "state": "NC",
+        "county": "Beaufort county",
+        "row_id": "b8199e3f-3566-4096-9bf1-19354c29ffd9"
+      },
+      {
+        "body": "The system has torn my family apart",
+        "state": "NC",
+        "county": "Beaufort",
+        "row_id": "0801015a-23f4-439c-a72f-6cba458f385b"
+      },
+      {
+        "body": "Former pissed off foster kid",
+        "state": "NC",
+        "county": "Beaufort",
+        "row_id": "312755d7-a7d0-49af-acc3-436fc7d8a05d"
+      },
+      {
+        "body": "They lost my son, he has been missing since September 23, 2025. They have consistently tried to cover up the unconstitutional seizure of my children. They scrubbed reports and gave my 8 year old daughter to our abuser and placed my 15 year old daughter with a pedophile.",
+        "state": "NC",
+        "county": "Beaufort County",
+        "row_id": "1f3c4576-e9e3-4d97-8308-93200d270032"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "She stayed with me some when I had to sleep in the office at DSS. I told her the loveseats weren’t long enough for me to sleep and she told me to make a bed on the floor. I also had no breakfast on two occasions and when I asked she said she would get me something soon. Soon was lunch and she d order pizza for lunch and that was also my dinner to. It was like that each time she was with me when I had to stay in the office.",
@@ -76,11 +106,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/samantha_keech",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='NC'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -96,6 +122,26 @@
     "recommended_route": "/court-actors/nc/samantha_keech/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "I told her the loveseats weren’t long enough for me to sleep and she told me to make a bed on the floor.",
+        "kind": "comment"
+      },
+      {
+        "body": "Heard recording I have and did not investigate anything also acts dumb when it comes to the funding for…",
+        "kind": "comment"
+      },
+      {
+        "body": "Sent my 17 year to live with the man that kidnapped him for 10 years",
+        "kind": "comment"
+      },
+      {
+        "body": "She is a supervisor, she has enabled the abuse of my children.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

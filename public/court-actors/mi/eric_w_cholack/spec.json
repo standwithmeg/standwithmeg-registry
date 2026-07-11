@@ -12,12 +12,17 @@
     "court_or_county": "Wayne",
     "state": "Michigan",
     "state_abbr": "MI",
-    "mention_count": 0,
+    "mention_count": 4,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "0bd11df8-68ad-45fc-bef7-bffcab8f985b",
+      "c53e0b23-926c-4dd3-9910-f6c90e428a86",
+      "eb87c9d6-511b-49c5-b19f-2714bf98dcf3",
+      "05a89a79-fe5d-4823-9974-bfc686a06a44"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
@@ -42,12 +47,31 @@
     "_pdf_state_family_count": 178,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "complete heaviness and Trauma to my sons and their future.",
+        "state": "MI",
+        "county": "wayne",
+        "row_id": "bbff5835-0e0c-4b74-8d4d-57192bd9690e"
+      },
+      {
+        "body": "My goal was to protect my kids and then myself - instead I lost time and then overnights- slowly spent every cent I have earned on attorney fees. I have been to court over 45 times in less than seven years. All but two as a result of my ex filing motions.",
+        "state": "MI",
+        "county": "Wayne",
+        "row_id": "1e1fdccb-94b1-4fe6-a09a-519acfb1e558"
+      },
+      {
+        "body": "Judge Cholack pushing off motions to other people of the court to handle it because he doesn’t want too. It failed to see the narcissistic ways of my ex and the damage he has created to my daughter. Proof and evidence all ignored. Motions signed and ignored by ex. Haven’t spoke to my daughter since may 2nd 2025",
+        "state": "MI",
+        "county": "Wayne",
+        "row_id": "7c434ece-1107-44eb-8e55-d8dd439c0d42"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Cholak never let me have a trail he would schedule the trail then have the Attorney's and GAL go to chambers then come out and have me state i did not want the trial well here is the truth he told my attorney if we go through with the trail he already decided for my ex. even when my ex and the current GF went on a 3 month shoplifting spree and got caught by Kohl's even when my ex moved 4 different time and even when my ex had 4 different GF's and insisted my son call them MOM the GAL would only bring up my past but was Abies for my ex because he was in the Army not to mention the Army my ex was DC for being LAZY and could not meet expectation and was liable on the Aircraft he was in charge of that same Aircraft crashed during a Training mission that caused the pilot and copilot to die. Cholack would not allow that into evidence. Cholack would not look at the time my ex beat one of my sons butt so bad he was purple for 3 weeks instead i had to go to therapy. Meanwhile Cholack would cancel court dates hoping i would just go away Cholack drug my case out so much that my sons became 18 never listen to my side i had 15 witness judge made his decision that my ex was a better parent ex only worked 17 hours a week 4 different GF's 4 different places he moved oh the best part his 2 gf and him went on a 2 county crime spree shoplifting with her kid and mine robbing Kohl's got caught Judge Cholak did not think that was a bad thing",
@@ -64,11 +88,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/eric_w_cholack",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='MI'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -84,6 +104,18 @@
     "recommended_route": "/court-actors/mi/eric_w_cholack/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Cholak never let me have a trail he would schedule the trail then have the Attorney's and GAL go to chambers then come out and have me state i did not want the trial well here is the truth he told my attorney.",
+        "kind": "comment"
+      },
+      {
+        "body": "Allowed my ex husband to continue to abuse me and my children and he didn’t lose custody",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

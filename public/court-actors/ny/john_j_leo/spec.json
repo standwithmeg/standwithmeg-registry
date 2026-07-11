@@ -12,12 +12,19 @@
     "court_or_county": "Suffolk",
     "state": "New York",
     "state_abbr": "NY",
-    "mention_count": 0,
+    "mention_count": 6,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 6,
+    "supabase_row_ids": [
+      "690e2506-b22d-4a19-a376-a8b0f60aa449",
+      "96ddf7da-822b-46ca-8050-c00aaa87a5ad",
+      "cc773f0b-8209-40de-a3af-e5624bbf1d8c",
+      "89723638-32bc-4d33-8c3a-e4b2623e44e9",
+      "dd1bc77d-0cda-4243-97df-137c6cdf6a7d",
+      "54db3e36-cb0f-4fdf-973a-eb03058d4de3"
+    ],
     "actor_row_id": "690e2506-b22d-4a19-a376-a8b0f60aa449",
     "actor_bucket_key": "john leo|NY"
   },
@@ -42,12 +49,31 @@
     "_pdf_state_family_count": 173,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 6,
+    "actor_report_count": 6,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "The court chose a monied party with a lawyer over the best interest of our children.",
+        "state": "NY",
+        "county": "Suffolk",
+        "row_id": "4cf2753d-6302-4e64-ba1e-b3aa9df18eff"
+      },
+      {
+        "body": "Irreversible damage to myself and my children.",
+        "state": "NY",
+        "county": "Suffolk",
+        "row_id": "88963eb5-efad-4d45-9521-e65d8823b7a9"
+      },
+      {
+        "body": "Effected my mental health, extreme stress, depression and ruined my relationship with my children",
+        "state": "NY",
+        "county": "Suffolk",
+        "row_id": "b1be9eb6-4273-46c2-af33-15b02cf7faad"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Ignored evidence Yelled in the court room Would not let attorney speak Appointed afc who he has a relationship with Threatened child custody to father Pre judged case before trail Unfair throughout this entire process Screaming yelling throwing hands during court hearings only listening to one side Refusing to let my attorney speak Threatening me with custody of children Pre judging my case before trial",
@@ -70,11 +96,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/john_j_leo",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='NY'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +112,22 @@
     "recommended_route": "/court-actors/ny/john_j_leo/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Ignored evidence Yelled in the court room Would not let attorney speak Appointed afc who he has a relationship with Threatened child custody to father Pre judged…",
+        "kind": "comment"
+      },
+      {
+        "body": "Highly erratic and inflammatory judge. Signed off on my divorce.",
+        "kind": "comment"
+      },
+      {
+        "body": "Rips families apart for sport Rips children from parents",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

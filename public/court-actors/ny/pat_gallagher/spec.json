@@ -12,12 +12,17 @@
     "court_or_county": "Monroe",
     "state": "NY",
     "state_abbr": "NY",
-    "mention_count": 0,
+    "mention_count": 4,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "766ef04b-06e9-41b2-b747-b902ff67a7be",
+      "e10a4d02-85ed-49ab-b63c-32d213c5c53e",
+      "88a8e51f-65c2-4f97-af32-49a25299f75f",
+      "86aa65f7-9985-458c-a129-39debb2b3a71"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "pat galagher|NY"
   },
@@ -42,12 +47,37 @@
     "_pdf_state_family_count": 173,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Fucked me",
+        "state": "NY",
+        "county": "Monroe",
+        "row_id": "62db6d32-a24a-475d-b699-3fe41f9a2e86"
+      },
+      {
+        "body": "It has ruined my life. My relationship with my little girl, my business went under and lost everything I worked so hard for",
+        "state": "NY",
+        "county": "Monroe",
+        "row_id": "333eb6c0-7dbb-4f65-9b5c-2b428277ab11"
+      },
+      {
+        "body": "Obliterated it. They did illegal things, then coerced the mother into becoming a criminal and menace while kidnapping my son under the color of law because they couldn’t get him to say he wanted to be with his mom. My son is almost guaranteed at this pinto suffer from long term psychological issues because of losing his primary attachment figure and not seeing them for over 6.5 months straight while being stuck with the mother who was neglecting him on purpose to get a reaction out of me to continue a false narrative.",
+        "state": "NY",
+        "county": "Monroe",
+        "row_id": "29136b64-3413-4508-8bb3-e6a9ec1ac0d0"
+      },
+      {
+        "body": "Family court leveraged my child to financially drain me until I was forced into bankruptcy. I was then told I could not afford the defense to protect my daughter so I had to sign an unfavorable agreement or risk losing my parenting time.",
+        "state": "NY",
+        "county": "Monroe",
+        "row_id": "af23dd43-a631-489f-91c2-797f16d4dfaa"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "If his son is pat gallagher the ada in Monroe county then like father like son! Pat gallagher. Has been maliciously prosecuting me with false charges",
@@ -64,11 +94,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/pat_gallagher",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='NY'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -84,6 +110,18 @@
     "recommended_route": "/court-actors/ny/pat_gallagher/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Pat gallagher. Has been maliciously prosecuting me with false charges",
+        "kind": "comment"
+      },
+      {
+        "body": "Judge who appears to be related to the domestic violence leader Patrick Gallagher who was involved in a false narrative on me for domestic violence.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

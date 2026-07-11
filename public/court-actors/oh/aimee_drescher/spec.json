@@ -12,12 +12,16 @@
     "court_or_county": "Wood",
     "state": "Ohio",
     "state_abbr": "OH",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "ef3cc285-e10e-4ed5-9c2c-8cfee10f60ed",
+      "30adf0ab-63a0-4639-a0da-c902c4651eb7",
+      "8c892e73-444c-4e30-bb53-8568ea87fe99"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "aime drescher|OH"
   },
@@ -42,12 +46,25 @@
     "_pdf_state_family_count": 264,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "I’ve lost my son and my identity as his mother over false allegations of mental illness when i have zero addictions nor abuse documented and had full custody for 10 years. I remain stuck in supervised visits with no agreement or plan for reunification. Opposing counsel states the child is doing so much better since the removal of his mother. When the psychiatrist diagnosed him with depression related to loss of contact with his mother.",
+        "state": "OH",
+        "county": "Lucas county juvenile court",
+        "row_id": "31ab05a4-34e1-4db0-850c-9e420d45a10f"
+      },
+      {
+        "body": "The system has killed me slowly. They have taken out my heart and just stomped on it. My ex won’t let my daughter talk to me or my family. The whole family has been affected by this awful court.",
+        "state": "OH",
+        "county": "Wood County",
+        "row_id": "7f8183fe-ad56-45d4-9713-a3115ed87e1b"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Violated every single rule in psychology as she’s friends with Julie Hoffman and they refer each other clients. She was the PhD to back the gal on this safety plan. She has removed me from the ability to partake in his therapy there and did neurological psychological testing without my consent as his custodial and residential parent and without my knowledge.",
@@ -64,11 +81,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/aimee_drescher",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='OH'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -84,6 +97,18 @@
     "recommended_route": "/court-actors/oh/aimee_drescher/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "She was the PhD to back the gal on this safety plan. She has removed me from the ability to partake in his therapy there and did neurological psychological testing without my consent as his custodial and residential parent and without my knowledge.",
+        "kind": "comment"
+      },
+      {
+        "body": "She was ordered to do a court order evaluation of my husband and I. She came back and said after not talking to my therapists or psychiatrist. She said she couldn’t rule out “factitious disorder by proxy”. She had no evidence of that rule out.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

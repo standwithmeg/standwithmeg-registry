@@ -12,12 +12,14 @@
     "court_or_county": "Knox County Family Court",
     "state": "Tennessee",
     "state_abbr": "TN",
-    "mention_count": 0,
+    "mention_count": 1,
     "family_count": 1,
     "public_family_count": 1,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 1,
+    "supabase_row_ids": [
+      "21699d0b-7e0b-454d-bc28-0e7fd44455c2"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
@@ -42,19 +44,29 @@
     "_pdf_state_family_count": 123,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 1,
+    "actor_report_count": 1,
     "family_count": 1,
-    "family_reports": [],
-    "public_comments": []
+    "family_reports": [
+      {
+        "body": "My family, as with countless others, have been victimized by a corrupt system based on equity, not law and not facts! Greed has lead to the \"legal\" kidnapping of hundreds of thousands of children nationwide, the destruction of the family unit, and a gross violation of our Constitutional Right to be together as a family. WE MUST FIGHT BACK, WE MUST DESTROY EVERY SYSTEM THAT HAS TAKEN PART, WE MUST HOLD ALL INVOLVED ACCOUNTABLE!!!!",
+        "state": "TN",
+        "county": "Knox",
+        "row_id": "60af7cfa-e6c4-4439-a9eb-31f8309f2eed"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Signed the order to remove the girls, twice, without, cause, due process, or investigation",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
   },
   "export_dir": "New Final Post and Capcut template/export/magistrate_blevins",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='TN'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available",
     "pdf_public_actor: no 'Angela Blevins - magistrate' in cache for TN"
   ],
   "guardrails": {
@@ -72,6 +84,14 @@
     "recommended_route": "/court-actors/tn/magistrate_blevins/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Signed the order to remove the girls, twice, without, cause, due process, or investigation",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

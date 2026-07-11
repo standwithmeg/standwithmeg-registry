@@ -12,12 +12,16 @@
     "court_or_county": "Pierce",
     "state": "Georgia",
     "state_abbr": "GA",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "7366ffdc-dd29-4e5c-92e5-34add9b09011",
+      "d73792cb-d1c0-47ea-b650-ddd8de4971d2",
+      "3078a054-6af8-464e-a078-c5e196a81a9d"
+    ],
     "actor_row_id": "7366ffdc-dd29-4e5c-92e5-34add9b09011",
     "actor_bucket_key": "marlo ross|GA"
   },
@@ -42,18 +46,16 @@
     "_pdf_state_family_count": 153,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
     "family_reports": [],
     "public_comments": []
   },
   "export_dir": "New Final Post and Capcut template/export/marlo_ross",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='GA'",
-    "family_reports: no submission_ids on actor",
     "public_comments: no merged comments or raw notes available"
   ],
   "guardrails": {
@@ -71,6 +73,9 @@
     "recommended_route": "/court-actors/ga/marlo_ross/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

@@ -12,12 +12,16 @@
     "court_or_county": "Broward",
     "state": "Florida",
     "state_abbr": "FL",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "c490f891-ac27-46cc-893d-65ded4368ff4",
+      "6d9c4e63-3e12-4cdc-81c7-0c3276e4fe60",
+      "a0f80557-8961-4e46-8c42-37c2d4b5ea46"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "elaine carbucia|FL"
   },
@@ -42,12 +46,31 @@
     "_pdf_state_family_count": 306,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "It destroyed 30 years of around the clock hard work to build the best life and future for my 5 angels who also were destroyed in the process beyond any recognition. This is a criminal enterprise of injustice and a modern day slavery.",
+        "state": "FL",
+        "county": "Broward",
+        "row_id": "fc69cc8c-f4c7-4d55-8f88-169898d4f00b"
+      },
+      {
+        "body": "Took a breastfeeding baby into immediate 50/50 timesharing right after the judge saw video evidence of the father drinking alcohol and smoking marijuana and cigarettes in his car just days before, where the baby was forced to be transported in, just to “punish” the mother.",
+        "state": "FL",
+        "county": "Broward county",
+        "row_id": "985c5238-0e12-4e42-b4a0-2c5102716093"
+      },
+      {
+        "body": "Failure of judge to rules of civil procedure, and established laws/statutes.",
+        "state": "FL",
+        "county": "Broward",
+        "row_id": "0df7d88a-f299-4801-9f0b-c93c46b70bc3"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "She inherited my 7 years divorce case (so far), refuses to reopen the case that was dismissed incorrectly during my government verified involuntary absence, causing a legal nightmare of status quo of invalid and void orders (all orders legally die when case is dismissed, yet still being illegally enforced by Child Support) protecting DCF & DOR from being sued, refusing to enjoin them into the case per my motions, leaving my entire life and my children hanging with no due process and to be heard in a court of law.",
@@ -70,11 +93,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/elaine_carbuccia",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='FL'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +109,22 @@
     "recommended_route": "/court-actors/fl/elaine_carbuccia/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Dismissed incorrectly during my government verified involuntary absence",
+        "kind": "comment"
+      },
+      {
+        "body": "Violates Cannon 3, constitutional right to due process. 790 signatures in change.org petition to have her removed.",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored evidence and ordered timesharing prior a due process hearing when I had an active motion for an evidentiary hearing.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

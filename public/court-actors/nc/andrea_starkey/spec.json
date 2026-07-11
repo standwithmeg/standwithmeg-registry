@@ -12,12 +12,16 @@
     "court_or_county": "Beaufort County",
     "state": "North Carolina",
     "state_abbr": "NC",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "1935937c-1aae-4900-8573-01479051079e",
+      "3e313ffe-73a7-461b-9031-3aa98d72ec1a",
+      "d12055b1-a263-4a8b-aaec-95eac9cb1e80"
+    ],
     "actor_row_id": "1935937c-1aae-4900-8573-01479051079e",
     "actor_bucket_key": "andrea starkey|NC"
   },
@@ -42,12 +46,31 @@
     "_pdf_state_family_count": 216,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "They have robbed me and my children of precious time we will never get back",
+        "state": "NC",
+        "county": "Beaufort county",
+        "row_id": "b8199e3f-3566-4096-9bf1-19354c29ffd9"
+      },
+      {
+        "body": "Former pissed off foster kid",
+        "state": "NC",
+        "county": "Beaufort",
+        "row_id": "312755d7-a7d0-49af-acc3-436fc7d8a05d"
+      },
+      {
+        "body": "The system tried to destroy and break our family simply for money because three of our children have disabilities they could cash in on. That same system tried to silence us l, paint us as liars, when the proof didn’t match the story they were telling. WE WILL NEVER STOP TELLING OUR STORY!!! If we help and save just one other family it was not for nothing. We are together. Our family fights together. They chose the wrong ones. All of my children are home because our voices, our proof, MATTERED.",
+        "state": "NC",
+        "county": "Beaufort County",
+        "row_id": "c314b71a-3fb5-41be-af03-3f07d97018cd"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Told one of my sons he was nothing but a problem and he would continue to be taken further and further from home until he could learn how to listen and do as he was told. (He kept running away to home) She forbid children’s after school activities and contact with their siblings. One recording has her forbidding teenage son to go to a basketball game at school with his sister because I said so. You have no authority here she told him. She falsified records to GAL but her supervised visits with mother and own notes contradicted what she submitted to GAL and judge.",
@@ -70,11 +93,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/andrea_starkey",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='NC'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +109,22 @@
     "recommended_route": "/court-actors/nc/andrea_starkey/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Told one of my sons he was nothing.",
+        "kind": "comment"
+      },
+      {
+        "body": "She told me dss had custody and I would do what they told me or my life would become very hard. I wanted to go home.",
+        "kind": "comment"
+      },
+      {
+        "body": "I told her she needed to take it in front of a judge and she refused and threatened to take my kids. Also tried making my disabled husband work",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

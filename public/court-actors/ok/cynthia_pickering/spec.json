@@ -12,12 +12,19 @@
     "court_or_county": "Okmulgee county",
     "state": "Oklahoma",
     "state_abbr": "OK",
-    "mention_count": 0,
+    "mention_count": 6,
     "family_count": 6,
     "public_family_count": 6,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 6,
+    "supabase_row_ids": [
+      "93afafa5-c00b-46c3-a78a-f8aa69cf3bb2",
+      "c4608ef2-27be-45a8-9afe-f6222970ba41",
+      "0cf7ea48-51dd-4697-ab19-879b5792b9c2",
+      "4deee429-973b-46da-bb2e-1d23f3559f18",
+      "695be153-e464-4857-ae83-b2d6f9488aa0",
+      "43f27e93-0cb9-431d-aabd-52afd76fbd09"
+    ],
     "actor_row_id": "93afafa5-c00b-46c3-a78a-f8aa69cf3bb2",
     "actor_bucket_key": "cynthia pickering|OK"
   },
@@ -42,12 +49,49 @@
     "_pdf_state_family_count": 164,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 6,
+    "actor_report_count": 6,
     "family_count": 6,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "My daughter was to have an overnight visit with her half sister, my 26 year old daughter and instead was secretly taken to Okmulgee County dropped off to non relatives and guardianship was filed 2 days later behind my back by my 26 year old whom didn't even show up to Court cause she was on a cruise and the non relative was granted guardianship along with my 26 year old who was on a cruise and didn't even come to court. I never got a chance to speak and my child's grandfather asked for guardianship and Judge pickering denied it and gave it to the non relative and my 26 year old daughter. We were excused from Court and non relative was asked to stay in the courtroom. Tulsa County dhs cleared me of any wrong doing. I still can't see or talk to my daughter or get another hearing. My case gets even worse. I use to work for retired Judge Ken Adair whom she mentioned in my hearing. They refuse to give me another hearing.",
+        "state": "OK",
+        "county": "Okmulgee",
+        "row_id": "5cc6dac4-71dc-4db8-84b4-774a73893e87"
+      },
+      {
+        "body": "My DHS worker stated that you will be a great roll model for your daughter. You just can’t be her mom.",
+        "state": "OK",
+        "county": "Okmulgee",
+        "row_id": "1560faf3-b02d-4429-9d98-442b401845b9"
+      },
+      {
+        "body": "This system has torn our family apart, stripping me of my child through false accusations and leaving us to navigate a nightmare we never deserved. It has inflicted lasting emotional damage, replacing our stability with fear, confusion, and heartbreak.",
+        "state": "OK",
+        "county": "Okmulgee",
+        "row_id": "d364e44d-fc35-4324-95da-9d4026c2d6f5"
+      },
+      {
+        "body": "I’ve learned that if you are a man who filed for a divorce, you automatically lose every thing you worked for. To include all money and assets",
+        "state": "OK",
+        "county": "Okmulgee county",
+        "row_id": "ad52ad44-ea1a-4dbb-9571-a65c22aac210"
+      },
+      {
+        "body": "They tore us apart, they are the reason I stayed in the abuse until he finally tried to kill me because I knew what would happen to us in okmulgee county",
+        "state": "OK",
+        "county": "Okmulgee county district court",
+        "row_id": "96ab0232-dd64-4875-8986-16b8967c5f89"
+      },
+      {
+        "body": "Took my children away for 21 days with no contact with me or them, separated my children, didn’t care to listen to my case, gave my kids to an abuser, mental anguish towards my children and I.",
+        "state": "OK",
+        "county": "Okmulgee",
+        "row_id": "5f0e92c2-52c2-4edd-ad26-4baa1c1e340f"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Took my kids in an ex parte guardianship with no evidence other than a sworn statement from my abusers parents and him terminating his legal rights to them. I'm currently facing arraignment for indirect contempt for speaking about my case and answering my kids messages when they ran away from abuse suffered at the home of the guardians/ paternal grandparents",
@@ -88,11 +132,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/cynthia_pickering",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='OK'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -108,6 +148,34 @@
     "recommended_route": "/court-actors/ok/cynthia_pickering/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Took my kids in an ex parte guardianship with no evidence other than a sworn…",
+        "kind": "comment"
+      },
+      {
+        "body": "Took my children for 21 days I wasn’t allowed to see",
+        "kind": "comment"
+      },
+      {
+        "body": "I still lost my being able to contact my daughter.",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored evidence on my part.",
+        "kind": "comment"
+      },
+      {
+        "body": "Even though the schedules are not being followed correctly.",
+        "kind": "comment"
+      },
+      {
+        "body": "I will send you what I sent to the news stations",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

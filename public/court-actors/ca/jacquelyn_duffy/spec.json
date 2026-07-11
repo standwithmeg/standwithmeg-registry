@@ -12,12 +12,16 @@
     "court_or_county": "Paso Robles Branch",
     "state": "CA",
     "state_abbr": "CA",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "cbc4bab2-0ec5-4605-9d41-19890d7b2e2d",
+      "7d2bedd4-61ae-4f29-ab5c-550158f14cd1",
+      "0bfd2541-30c9-419d-b4c4-02fa88078fb0"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "jacquelyn dufy|CA"
   },
@@ -27,27 +31,46 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 357,
-    "total_submissions": 444,
-    "avg_financial_loss": 285669.87,
+    "families_approved": 359,
+    "total_submissions": 446,
+    "avg_financial_loss": 285125.16,
     "avg_months_lost": 35.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CA",
-    "state_family_count": 444,
-    "median_financial_loss": 265100,
-    "median_burden_sample_size": 198,
+    "state_family_count": 446,
+    "median_financial_loss": 269200,
+    "median_burden_sample_size": 199,
     "median_months_lost": 20,
-    "pro_se_pct": 58.6,
-    "pro_se_count": 260,
-    "_pdf_state_family_count": 444,
+    "pro_se_pct": 58.7,
+    "pro_se_count": 262,
+    "_pdf_state_family_count": 446,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "\"The system\" has abused my child and I more than any of our abusers; \"the system\" has every legal right to trap your children in an abusive life with no escape while taking every legal right you have to raise your child, protect your child and speak for your child away. \"The system\" forces you to remain silent even though the silence is literally killing you/harming your child = how the \"the system\" has gotten away with it for so long- I say fuck with this momma's baby you better hope she never gets back up, well I always get back up never quit and no longer fear anyone.",
+        "state": "CA",
+        "county": "San Luis Obispo county",
+        "row_id": "e139305f-226f-4d48-8a67-b341dde37d2f"
+      },
+      {
+        "body": "Separated me from my children and took custody because of false accusations.",
+        "state": "CA",
+        "county": "San luis obispo",
+        "row_id": "197e29b9-671f-4b3f-a8ed-4360d9e1183e"
+      },
+      {
+        "body": "Knowingly participated in parental alienation, denial of due process, denial of relief, accepting perjerous testimony as the truth and basing all outcomes on misrepresentation of facts.",
+        "state": "CA",
+        "county": "San Luis Obispo",
+        "row_id": "cba4ef5f-a915-48a3-9df0-095bee1c85b5"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Thought my reactions to physical, sexual, mental and emotional abuse was more dangerous than the abuse the abuser inflicted, that the abuser was the safer parent, when the abuser never accused the safe parent of anything abusive except yelling, throwing things and being mentally unstable no accusation of violence towards anyone or of harm on someone.",
@@ -70,11 +93,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/jacquelyn_duffy",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='CA'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +109,22 @@
     "recommended_route": "/court-actors/ca/jacquelyn_duffy/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Thought my reactions to physical, sexual, mental and emotional abuse was more dangerous than the abuse the abuser inflicted, that the abuser was the safer parent.",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignoring facts and testimony, lack of due process and extremely bias.",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored evidence",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

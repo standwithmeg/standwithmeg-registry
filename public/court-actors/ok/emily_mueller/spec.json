@@ -12,12 +12,21 @@
     "court_or_county": "Potawatomi in Shawnee Oklahoma",
     "state": "Oklahoma",
     "state_abbr": "OK",
-    "mention_count": 0,
+    "mention_count": 8,
     "family_count": 8,
     "public_family_count": 8,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 8,
+    "supabase_row_ids": [
+      "b0651ca9-b9c4-4ea4-9c59-d94593ed65e6",
+      "382ad297-dcd0-41bf-ae59-666a98e8a95b",
+      "ee2998de-041e-469b-aee0-c6900c41144b",
+      "91792c2c-9640-49f8-82c1-40ce8ba0443f",
+      "531ce291-5287-4e90-8c24-1a6ef9ac03fd",
+      "3883d258-8b23-44a9-988a-d0f6d6e1fec9",
+      "32ede291-2982-4186-9fb0-51137fa8d59e",
+      "a550ae72-5a25-43e4-bb04-2021a979c791"
+    ],
     "actor_row_id": "b0651ca9-b9c4-4ea4-9c59-d94593ed65e6",
     "actor_bucket_key": "emily mueler|OK",
     "_overrides_applied": [
@@ -50,12 +59,49 @@
     "_pdf_state_family_count": 164,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 8,
+    "actor_report_count": 8,
     "family_count": 8,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "All Judges must be held accountable for their actions, verdicts and behaviors. The fact that they ignore evidence and place children in unhealthy environments is disgraceful. That is State created danger doctrine all day long.",
+        "state": "OK",
+        "county": "Grady",
+        "row_id": "23242ec5-60d2-49df-aa77-d8cd6a3c6ca8"
+      },
+      {
+        "body": "Destroyed my family and severed my relationship with my daughter.",
+        "state": "OK",
+        "county": "Pottawatomie",
+        "row_id": "eade57ee-2453-4c8d-9a55-2a78eadd646e"
+      },
+      {
+        "body": "My child was given to his abuser, I was punished for following the law by reporting it and trying to protect him, and now I am alienated from my child by my former abuser and my sons current abuser (his father). This has ruined my son’s life and turned my family’s world completely upside down. The injustice is hard to bear.",
+        "state": "OK",
+        "county": "Pottawatomie",
+        "row_id": "7953ed95-7da2-467a-844e-1de58d4174e9"
+      },
+      {
+        "body": "They stole my son and traumatized me for life. The system is corrupt. There is nothing in this world that could take back the things me and my son have gone through.",
+        "state": "OK",
+        "county": "Lincoln",
+        "row_id": "5010053d-8800-4860-b3ee-e1b674006d11"
+      },
+      {
+        "body": "It's made it harder to see my boys and to pay my bills and harder for me to work on my work schedule I'm having to miss sleep because I work overnights and I have to go to court every two months and I have to do a mental health evaluation that I don't have time for because when I'm not working I'm asleep due to me working overnight",
+        "state": "OK",
+        "county": "Shawnee",
+        "row_id": "531e71cf-bd7c-4909-a006-e739cee84dfd"
+      },
+      {
+        "body": "My children were removed due to miscommunication, and lies by multiple parties.",
+        "state": "OK",
+        "county": "Pottawatomie",
+        "row_id": "4a818ac1-ab66-48b4-a5f6-4c50489e6dc6"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Ignored a motion for a hearing, ignored evidence, made rulings based on emotions and her best friends desires, allowed reunification with the perp even though abuse was being disclosed on the child’s behalf. She also got rid of the recording for the hearing where she ordered my dad could no longer be around my son.",
@@ -96,11 +142,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/emily_mueller",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='OK'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -116,6 +158,30 @@
     "recommended_route": "/court-actors/ok/emily_mueller/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Ignored a motion for a hearing",
+        "kind": "comment"
+      },
+      {
+        "body": "Then she took the child into custody on a false affidavit.",
+        "kind": "comment"
+      },
+      {
+        "body": "Allowed to contact me about them even though there was a no contact order",
+        "kind": "comment"
+      },
+      {
+        "body": "Called the Mary Abbott House",
+        "kind": "comment"
+      },
+      {
+        "body": "She's been disrespectful to me the entire time throughout the process of dealing…",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

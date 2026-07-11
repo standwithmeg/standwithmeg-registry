@@ -12,12 +12,18 @@
     "court_or_county": "Harnett",
     "state": "NC",
     "state_abbr": "NC",
-    "mention_count": 0,
-    "family_count": 0,
-    "public_family_count": 0,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "mention_count": 5,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 5,
+    "supabase_row_ids": [
+      "bab73730-5bdb-4956-b86e-ce27b47a0985",
+      "b4567a68-6183-4e44-84fa-1970676eadaf",
+      "03298377-68cd-42fc-92fa-a4a4e6e182c2",
+      "bf265f5d-c750-4b58-b6a7-7d23a00e97c3",
+      "97f9a06a-a5a2-4615-9ebc-cfe8ee61bb18"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "monica more|NC"
   },
@@ -42,12 +48,37 @@
     "_pdf_state_family_count": 216,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
-    "family_count": 0,
-    "family_reports": [],
+    "report_count": 5,
+    "actor_report_count": 5,
+    "family_count": 3,
+    "family_reports": [
+      {
+        "body": "Torn us apart. I completed everything they asked if me and more. Separated my boys into foster homes. My youngest is in group home misbehaving the whole time he's been in the system. I still have parental rights but I can see them or speak to them. October will be a year since I have spoken with them. I finally was able to get them to let me write them letters. I have had 25 caseworkers at this point.",
+        "state": "NC",
+        "county": "Sampson",
+        "row_id": "a28a4ab6-cb3b-420e-8b24-bc1ebd8e6a13"
+      },
+      {
+        "body": "I can not put a dollar amount on what has been done. I'm currently fighting to keep my home, and I am not able to find a job that I'm qualified for due to false charges that the attorneys and judge's refuse to dismiss due to lack of evidence. Due to the false charge it is more difficult to support my children while they're in custody, but I believe that this was the plan.",
+        "state": "NC",
+        "county": "Sampson",
+        "row_id": "86acfb26-46aa-4c68-977a-b1adae0b4827"
+      },
+      {
+        "body": "I have learned that the truth does not prevail. The only thing that previails is the agenda and that is done at any cost. My children are now alienated from me; essentially they have nothing to do with ne. During the three years DSS kept this case open with no services my son (14) became addicted to drugs, selling drugs, went from A/B honor roll to being on an IEP, both my kids got suspended from school, both became quite the experts at stealing from stores, my son had a sex tape that was leaked. The system anhilated my family!",
+        "state": "NC",
+        "county": "Harnett",
+        "row_id": "24cedd0b-7e8f-4281-9602-05388740c739"
+      },
+      {
+        "body": "I have learned that the truth does not prevail. The only thing that previails is the agenda and that is done at any cost. My children are now alienated from me; essentially they have nothing to do with ne. During the three years DSS kept this case open with no services my son (14) became addicted to drugs, selling drugs, went from A/B honor roll to being on an IEP, both my kids got suspended from school, both became quite the experts at stealing from stores, my son had a sex tape that was leaked. The system anhilated my family!",
+        "state": "NC",
+        "county": "Harnett",
+        "row_id": "327de91d-db87-4efd-b739-8500bdfb44c6"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "My daughter disclosed to her and GAL of SA by her dad. They lied about it in court reports and never did what was mandated by NC 7b laws which is to contact law enforcement and have a CME within 24 hours. Not long after the Oct 8, 2021 hearing she quit HCDSS and went to Sampson /county DSS in NC",
@@ -70,11 +101,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/monica_moore",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='NC'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +117,22 @@
     "recommended_route": "/court-actors/nc/monica_moore/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "They lied about it in court reports and never did what was mandated by NC 7b laws which is to contact law enforcement and have a CME within 24 hours.",
+        "kind": "comment"
+      },
+      {
+        "body": "Added her, because I saw her name on a nearby county complaint and know it's common for caseworkers to go to other neighboring counties.",
+        "kind": "comment"
+      },
+      {
+        "body": "She plays a good role pretends she cares and is going help you but does nothing",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

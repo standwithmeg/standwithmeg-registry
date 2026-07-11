@@ -12,12 +12,16 @@
     "court_or_county": "Cleveland County",
     "state": "Oklahoma",
     "state_abbr": "OK",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "1aa8c3b5-bd17-4f78-98bf-9fba3586c3aa",
+      "0297be22-9672-4438-884a-d0ef22487ec7",
+      "10f0e82c-c841-4810-ab6d-0f94386a3cf5"
+    ],
     "actor_row_id": "1aa8c3b5-bd17-4f78-98bf-9fba3586c3aa",
     "actor_bucket_key": "keli kelso|OK"
   },
@@ -42,12 +46,25 @@
     "_pdf_state_family_count": 164,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "This has cost me my mental and physical health(chronic illness), has nearly bankerupted me and nearly cost me my life, has taken the best mom I could possibly be away from my daughter against a man I never married. This has ruined 4 kids lives.",
+        "state": "OK",
+        "county": "Cleveland county",
+        "row_id": "f88d69d3-091e-4b08-a9ee-239792ef9a1d"
+      },
+      {
+        "body": "Has caused me and my daughter ongoing trauma for the last six years. I’ve had to watch my daughter, lose the light from her eyes because of these people while I try desperately to save what’s left.",
+        "state": "OK",
+        "county": "Canadian County",
+        "row_id": "6a3e9b82-ab18-4dee-ac68-8ef8c220dc43"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Horrible attorney made deal with the other Attorney behind the table in my divorce. Did not fight for my child does not care about anything about the money. She is the reason we are still stuck in this horrible position six years later. Lied and told me that the judge would not honor the GAL’s recommendation never even got to speak to the judge. My attorney made a deal with his attorney for [redacted] against the GAL‘s recommendations and led me to believe there was no choice",
@@ -64,11 +81,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/kelli_kelso",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='OK'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -84,6 +97,18 @@
     "recommended_route": "/court-actors/ok/kelli_kelso/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Lied and told me that the judge would not honor the GAL’s recommendation never even got to speak to the judge. My attorney made a deal with his attorney for [redacted] against the GAL‘s recommendations and led me to believe there was no choice",
+        "kind": "comment"
+      },
+      {
+        "body": "Had off record meetings with the therapist, improper investigations, excluded me from everything, and lied to my own attorney about me due to improper investigating.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

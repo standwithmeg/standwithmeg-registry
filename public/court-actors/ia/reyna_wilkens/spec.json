@@ -12,12 +12,18 @@
     "court_or_county": "Des Moines County",
     "state": "Iowa",
     "state_abbr": "IA",
-    "mention_count": 0,
+    "mention_count": 5,
     "family_count": 5,
     "public_family_count": 5,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 5,
+    "supabase_row_ids": [
+      "2ac50575-2541-41e3-b921-77e5e9ac8306",
+      "9301addb-d6b7-4927-bdcc-414e537803e1",
+      "76432214-b4fc-4291-b985-b07b33cfc672",
+      "a7e0f58b-c0d4-456f-b20e-71d95600f872",
+      "396da607-7824-42ba-9123-9f2fc1d9abdb"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
@@ -27,27 +33,58 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 73,
-    "total_submissions": 92,
-    "avg_financial_loss": 132885.49,
+    "families_approved": 74,
+    "total_submissions": 93,
+    "avg_financial_loss": 131303.52,
     "avg_months_lost": 40.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "IA",
-    "state_family_count": 92,
+    "state_family_count": 93,
     "median_financial_loss": 180000,
     "median_burden_sample_size": 25,
     "median_months_lost": 23,
-    "pro_se_pct": 52.2,
+    "pro_se_pct": 51.6,
     "pro_se_count": 48,
-    "_pdf_state_family_count": 92,
+    "_pdf_state_family_count": 93,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 5,
+    "actor_report_count": 5,
     "family_count": 5,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "It has torn my family apart. It has given my kids nightmares about being ripped away from me. Emotional and Mental abuse caused by the case workers and state workers. Constitutional Rights were violated. Etc.",
+        "state": "IA",
+        "county": "Des Moines County",
+        "row_id": "aec2fdaf-ddfd-4680-8c53-918bedafee5f"
+      },
+      {
+        "body": "I’ve missed time with my daughter. Holidays and what not. She’s been severely struggling without her mom present. No concern from the courts and no interest in reunification.",
+        "state": "IA",
+        "county": "Des Moines county",
+        "row_id": "1f2da379-a676-41fd-861e-0bb1fef58bdc"
+      },
+      {
+        "body": "They literally destroyed and tore apart my family piece by piece until I literally had NOTHING left!!!",
+        "state": "IA",
+        "county": "Louisa",
+        "row_id": "779ee45e-f920-4527-896d-960766d58b08"
+      },
+      {
+        "body": "DHS refused to encourage reunification. Put my daughter in teachers home instead of family. My daughter has been manipulated against me. I can’t concentrate at work, depression, PTSD, anxiety. This has destroyed our family!!",
+        "state": "IA",
+        "county": "Henry",
+        "row_id": "9c3ae0f2-9cf9-4da0-a942-1f127b3209b5"
+      },
+      {
+        "body": "Our family has been destroyed by DHS, Foster Care, Judicial system, Familes First, 4 Oaks, it has caused so much pain & heartache. Now I have custody of my oldest granddaughter, but the youngest is still with the Bio father of my oldest granddaughter.",
+        "state": "IA",
+        "county": "Louisa",
+        "row_id": "707cdf17-6f35-4a43-977d-6eb2270cd63d"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Removed my kids from me without knowing the exact situation nor having met my kids and I at all—at that time. She is also completely against me getting my kids back when I have 14 NEGATIVE test results— one being a hair stat. Repeatedly asks the judge to put a pat ch on me when I am allergic to adhesive and have shown proof of my allergies and submitted them as evidence.",
@@ -82,11 +119,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/reyna_wilkens",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='IA'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -102,6 +135,30 @@
     "recommended_route": "/court-actors/ia/reyna_wilkens/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Removed my kids from me.",
+        "kind": "comment"
+      },
+      {
+        "body": "She did finally have a phone conversation with them towards the very end of my termination case.",
+        "kind": "comment"
+      },
+      {
+        "body": "Refused to admit there was no evidence",
+        "kind": "comment"
+      },
+      {
+        "body": "She told me, just let LHawk take them, who knows he may just hand them over in 3-4 years.",
+        "kind": "comment"
+      },
+      {
+        "body": "One phone call and hasn’t spoke to me since.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

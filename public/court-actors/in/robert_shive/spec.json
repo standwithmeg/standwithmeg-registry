@@ -12,12 +12,17 @@
     "court_or_county": null,
     "state": "Indiana",
     "state_abbr": "IN",
-    "mention_count": 0,
-    "family_count": 2,
-    "public_family_count": 2,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "mention_count": 4,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "9deb7653-d6d7-4e7a-b427-4f0e665ddec6",
+      "c7317bcb-91fe-4122-a0c2-f41b203d54ac",
+      "1c7106db-1651-4e63-be71-54f9971266f6",
+      "eb71bb70-d31f-4b2e-a47f-c0c6c947123f"
+    ],
     "actor_row_id": "9deb7653-d6d7-4e7a-b427-4f0e665ddec6",
     "actor_bucket_key": null
   },
@@ -42,19 +47,40 @@
     "_pdf_state_family_count": 153,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
-    "family_count": 2,
-    "family_reports": [],
-    "public_comments": []
+    "report_count": 4,
+    "actor_report_count": 4,
+    "family_count": 3,
+    "family_reports": [
+      {
+        "body": "Traumatized our family took time we will never get back scared to seek medical help caused harm to my son and to my family",
+        "state": "IN",
+        "county": "Grant county",
+        "row_id": "779644b5-62d7-4370-844a-fd41f4f670b4"
+      },
+      {
+        "body": "It is a well-documented systematic network of people profiting off perpetuating the endless nightmare of abuse from my ex-husband and aiding in the slow public murder of myself and family.",
+        "state": "IN",
+        "county": "Marion",
+        "row_id": "23b5f961-f425-4fa1-9d9b-c39823ed0e24"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Took $3500 said we had a good chance but I needed to get a continuance. So I did then the dcs attorney Donna Sip contacted him before I hired him. Once I hired him he changed told me to take a plea when I told him no he dropped me weeks before my Fact-Finding my son was found to be a chins Told me to take plea refused fac finding didnt care about my evidence",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Repeatedly filed false reports with court and acted outside his appointed role.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
   },
   "export_dir": "New Final Post and Capcut template/export/robert_shive",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='IN'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available",
     "pdf_public_actor: no 'Robert Shive' in cache for IN"
   ],
   "guardrails": {
@@ -72,6 +98,18 @@
     "recommended_route": "/court-actors/in/robert_shive/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Took $3500 said we had a good chance but I needed to get a continuance. So I did then the dcs attorney Donna Sip contacted him before I hired him.",
+        "kind": "comment"
+      },
+      {
+        "body": "Repeatedly filed false reports with court and acted outside his appointed role.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

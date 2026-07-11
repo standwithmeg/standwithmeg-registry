@@ -12,12 +12,18 @@
     "court_or_county": "Lexington",
     "state": "South Carolina",
     "state_abbr": "SC",
-    "mention_count": 0,
+    "mention_count": 5,
     "family_count": 5,
     "public_family_count": 5,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 5,
+    "supabase_row_ids": [
+      "cf035421-ca71-4396-bfbf-997853fb9111",
+      "d686eb6a-7ea6-4bc1-b54a-be6c0a07c3ff",
+      "9ae93857-3df7-4492-b0f0-c449e32afc9a",
+      "62a70f62-1987-467f-903f-faadefc53000",
+      "b5bbe22f-d432-461d-836d-9a4eadf20e11"
+    ],
     "actor_row_id": "cf035421-ca71-4396-bfbf-997853fb9111",
     "actor_bucket_key": "stephanie fajardo|SC"
   },
@@ -42,12 +48,43 @@
     "_pdf_state_family_count": 108,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 5,
+    "actor_report_count": 5,
     "family_count": 5,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "It has crushed me and torn me down to pieces. I still have my belongings in the house from 3 yrs ago because my ex is that dangerous. My son is scared for his life living with his father 65% of the time. He has had to lie about things he knows are not true to the sake of his life being in danger. He is forced to be around my abusive father against his will. My son has had 3 unknown causes of injury. My ex keeps needles for illegal drugs on the counter in the bathroom next to my son’s toothbrush. My son has missed over 20 days of school majority with his father in the last 3 school years.",
+        "state": "SC",
+        "county": "Richland",
+        "row_id": "c0c49784-9ffb-43de-91a0-3a7445798665"
+      },
+      {
+        "body": "Richland Family Court is a chess board of paid players and you are a pawn. They bring in more actors at your expense (for no justified reason), prolonging the game and padding their \"friends\" pockets. It's sad, abusive, and has damaged my children and me financially and emotionally.",
+        "state": "SC",
+        "county": "Richland",
+        "row_id": "b9a60e20-9364-4133-8d13-f9400c321077"
+      },
+      {
+        "body": "Permanent irreparable damage to my kids- homelessness three times, constant terror, bankruptcy two times, unspeakable horrors and losses. The abuser called all the shots and those of us that tried to advocate for the child- mom, therapist and child themselves- all lost everything and were discredited. Hold them accountable",
+        "state": "SC",
+        "county": "Lexington",
+        "row_id": "3b78bc02-a7e9-4656-9540-13b3360604bd"
+      },
+      {
+        "body": "The South Carolina Family Court system failed my children and destroyed my motherhood. Until we have more court actors trained in Coercive Control and Domestic Violence children and families will suffer.",
+        "state": "SC",
+        "county": "Lexington County",
+        "row_id": "24a6102b-92fc-4d0e-9acd-397363f5acd9"
+      },
+      {
+        "body": "The system has taken my oldest son from a large, loving family with over 30+ extended family members including three siblings that miss him dearly, and given him to a mentally sick chronically single woman who lives with her mentally sick chronically single mother. It has robbed us of every penny my wife of 12 years and I had in our retirement, savings, and bank accounts. It continues to pull us back and impose extra fines for inability to pay previous fines. We have three small children and are now forced to give up our home due to financial ruin.",
+        "state": "SC",
+        "county": "Richland",
+        "row_id": "f99b24e0-92ca-44ef-9d60-7f82f0be24da"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "She ignored that a child abused was best friends with my ex. Nathan Ginter is best friend with my ex and he is serving 40 yrs in prison for child abuse, my ex talked to him daily in prison before he bonded out. She ignored all of my concerns of safety for my son. My ex is a drug addict with no childcare plan and no legitimate place of employment. No one knows where his income comes from our where he gets money to pay bills. She called out parental alienation and did nothing about it. My lawyer and her agreed it was severe. She sent my son to a biase counselor and caused more harm to my son. The psychological abuse is severe and on going.",
@@ -82,11 +119,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/stephanie_fajardo",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='SC'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -102,6 +135,30 @@
     "recommended_route": "/court-actors/sc/stephanie_fajardo/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "She ignored that a child abused was best friends with my ex.",
+        "kind": "comment"
+      },
+      {
+        "body": "She was biased towards father and spent little time with or listen to kids.",
+        "kind": "comment"
+      },
+      {
+        "body": "My three year old daughter was given to her father with primary custody.",
+        "kind": "comment"
+      },
+      {
+        "body": "She did little, never even met children, booked over 5k in fees",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored evidence",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

@@ -12,12 +12,18 @@
     "court_or_county": "Sedgwick",
     "state": "Kansas",
     "state_abbr": "KS",
-    "mention_count": 0,
+    "mention_count": 5,
     "family_count": 4,
     "public_family_count": 4,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 5,
+    "supabase_row_ids": [
+      "c8d07c20-967b-4b98-8af8-b809af80f5fa",
+      "4de28b77-8801-493d-b997-d19ad09edcd2",
+      "a0360edd-c778-42e5-8be8-0e5464e82471",
+      "819495b3-8afa-41bf-b3d2-f49063a717ac",
+      "8d7084c1-8661-4e40-8da6-611acb905d04"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
@@ -42,12 +48,37 @@
     "_pdf_state_family_count": 251,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 5,
+    "actor_report_count": 5,
     "family_count": 4,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Cannot trust any court system.",
+        "state": "KS",
+        "county": "Sedgwick County",
+        "row_id": "23af09d5-31a2-4bd8-981d-d8e62920bd58"
+      },
+      {
+        "body": "Sedgwick County, Kansas family court allowed parental alienation of the dad through extreme gross negligence. I suspect they are monetarily benefitting from the 'charity' that helped my lying ex without ANY evidence.",
+        "state": "KS",
+        "county": "Sedgwick",
+        "row_id": "9539a118-ff33-4db3-8f4a-ddad99658251"
+      },
+      {
+        "body": "After a long tedious divorce process that was finalized in 2023, I was thrilled to finally put it behind me. I asked for 50/50 custody and no child support (although the court enforced $200/month from my ex). He was insidiously infiltrating our sons mind though and before I knew it, my own son was completely against me insisting to me during our time together he wants to live with his father and that I was clearly an incompetent mother, etc. In 2024 my ex filed a motion for full custody using outlandish allegations against me. Shortly after and without my knowledge he filed for emergency custody with no evidence or due process that same day the judge signed the order. It’s been a year now since I’ve been able to see my son and have yet to have one hearing.",
+        "state": "KS",
+        "county": "Sedgwick",
+        "row_id": "dc421f1b-8dca-4e75-9137-9f71c5c027a1"
+      },
+      {
+        "body": "This experience has broken our family but more importantly my children they ask what the point of life is and has made suicidal statements yet no one protects them and I’m not able to either as their mother.",
+        "state": "KS",
+        "county": "Sedgwick County",
+        "row_id": "0ac62a0b-e1b6-4300-afdc-be22d9358a9c"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "After a long tedious divorce process finalized in 2023, I asked for 50/50 custody and no child support. My ex was insidiously infiltrating our son's mind, and before I knew it, my son was completely against me. In 2024 my ex filed a motion for full custody using outlandish allegations and emergency custody with no evidence or due process — the judge signed the order that same day. It's been a year now since I've seen my son and I have yet to have one hearing.",
@@ -76,11 +107,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/phillip_journey",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='KS'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -96,6 +123,26 @@
     "recommended_route": "/court-actors/ks/phillip_journey/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "After a long tedious divorce process finalized in 2023, I asked for 50/50 custody and no child support.",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored evidence that supported my case.",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored evidence, refused to hear motion, laughed at child abuse stating something to the effect of “when I…",
+        "kind": "comment"
+      },
+      {
+        "body": "Laughs and Denies disabled litigants ADA (American with Disabilities Act) rights.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

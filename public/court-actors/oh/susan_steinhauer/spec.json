@@ -12,12 +12,16 @@
     "court_or_county": "Summit",
     "state": "Ohio",
     "state_abbr": "OH",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "4204aad2-53c9-4c79-80a1-dd59f6a263ac",
+      "4196fef9-5d8a-48cd-b252-6cb1adc88e9e",
+      "efb71d3e-7b79-4a84-b90b-6324312fb77a"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "susan steinhauer|OH"
   },
@@ -42,12 +46,25 @@
     "_pdf_state_family_count": 264,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "The court system has destroyed my family, the relationship with my son and his brothers. They have walked all over my constitutional rights to parent my child.",
+        "state": "OH",
+        "county": "Summit",
+        "row_id": "333ee616-ccab-4ef8-86f8-72f760ddd839"
+      },
+      {
+        "body": "there are no words that can adequately describe what the system has cost us.",
+        "state": "OH",
+        "county": "Summit",
+        "row_id": "af26e45c-0a72-45b2-964d-4449635c9524"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "collusion between opposing counsel and judge to secure the judge a partner position at opposing counsels firm. Stripped me of custody without due process, breaking countless laws and procedures. retaliated for me speaking out by filing a frivolous protection order",
@@ -64,11 +81,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/susan_steinhauer",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='OH'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -84,6 +97,18 @@
     "recommended_route": "/court-actors/oh/susan_steinhauer/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Stripped me of custody without due process, breaking countless laws and procedures. Retaliated for me speaking out by filing a frivolous protection order",
+        "kind": "comment"
+      },
+      {
+        "body": "She was the judge in my case, that initiated father having permanent residential soul custody of my child and me having supervised visits based on a false mental health allegation",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

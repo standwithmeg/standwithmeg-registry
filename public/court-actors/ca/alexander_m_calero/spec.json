@@ -12,12 +12,16 @@
     "court_or_county": "Superior Court of California County of San Diego, Juvenile Dept Meadowlark Dr Court Room 10",
     "state": "CA",
     "state_abbr": "CA",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "42798847-7457-4d6c-a3df-e0aee882df4a",
+      "fd92f1c8-0ce6-4f6e-bcd3-65bb35df07c0",
+      "193f88e1-ac13-40f7-9764-3a76bf0bc831"
+    ],
     "actor_row_id": "42798847-7457-4d6c-a3df-e0aee882df4a",
     "actor_bucket_key": "alexander calero|CA"
   },
@@ -27,27 +31,46 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 357,
-    "total_submissions": 444,
-    "avg_financial_loss": 285669.87,
+    "families_approved": 359,
+    "total_submissions": 446,
+    "avg_financial_loss": 285125.16,
     "avg_months_lost": 35.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CA",
-    "state_family_count": 444,
-    "median_financial_loss": 265100,
-    "median_burden_sample_size": 198,
+    "state_family_count": 446,
+    "median_financial_loss": 269200,
+    "median_burden_sample_size": 199,
     "median_months_lost": 20,
-    "pro_se_pct": 58.6,
-    "pro_se_count": 260,
-    "_pdf_state_family_count": 444,
+    "pro_se_pct": 58.7,
+    "pro_se_count": 262,
+    "_pdf_state_family_count": 446,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "San Diego County has catastrophically harmed Malaika and Xayah, tortured their mother, and dragged their blood family through two years of retaliation, coercion, false records, and forced separation. Their elderly dependent great-grandmother was pulled into the crossfire before her death, and even newborn twins were targeted — but this family is still fighting, and we will not stop until Malaika and Xayah are home. freekeenan.com",
+        "state": "CA",
+        "county": "San Diego",
+        "row_id": "1465dd47-f714-45c1-b6d8-76e34be29a94"
+      },
+      {
+        "body": "San Diego County, San Diego County Sheriff Dept, Health and Human Services Child Welfare Services and the Juvenile Depenancy & Deliquency Courtroom 10 Meadowlark Location Made me Homeless for the First time in my life, took away the housing help I had for our family, THEN denied to offer services requested in order to not be homeless, Ignored a Childs Metal Health Disabilities, are letting CHILDREN make their own mental health decisions. THE COUNTY OF SAN DIEGO is teaching our children its okay to hit thier parents and its okay to hit inocent people in our county. That its okay to lie to police, judges, Social workers, family, and that our own children don't have to listen to their mother or father. #CPSMadeMeHomeless",
+        "state": "CA",
+        "county": "San Diego",
+        "row_id": "52a16a4d-9bf7-4974-9661-68e84e33dd8a"
+      },
+      {
+        "body": "Psychological Torture & ongoing trauma.",
+        "state": "CA",
+        "county": "San Diego",
+        "row_id": "c8f90b59-eb34-4411-8f4a-fd973dbb88c4"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Ignored evidence & filings. Violating due process. Retaliation & Judicial Bias. Violating 1st amendment. Prior restraint. Threats. Coercion. Fraud. Misappropriation of state & federal funding. Narrative control. Sexual abuse cover ups. Allowing our offspring to leave the country with strangers against our will.",
@@ -70,11 +93,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/alexander_m_calero",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='CA'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +109,22 @@
     "recommended_route": "/court-actors/ca/alexander_m_calero/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Ignored evidence & filings. Violating due process. Retaliation & Judicial Bias.",
+        "kind": "comment"
+      },
+      {
+        "body": "Allowed the case to proceed on a disputed record while the family objected to retaliation, false reports, and public-speech punishment.",
+        "kind": "comment"
+      },
+      {
+        "body": "Contested Hearing Calero says \"I just want to note, that there is no blame here on the mother\"",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

@@ -12,12 +12,21 @@
     "court_or_county": "Clark county family law Las Vegas",
     "state": "Nevada",
     "state_abbr": "NV",
-    "mention_count": 0,
-    "family_count": 4,
-    "public_family_count": 4,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "mention_count": 8,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 8,
+    "supabase_row_ids": [
+      "91e39b71-1b73-4162-9528-798d7c074151",
+      "6108bc47-320b-4813-bc66-adde0bc56198",
+      "b3fcfca0-e414-4f05-b5c0-ed187939c8a8",
+      "a5ad67c6-67d2-4daf-972c-ebce2e965522",
+      "3d318e1f-f074-48b8-af69-85725f8b1051",
+      "78bed6b4-2c87-449b-b9e8-80accd953f5d",
+      "42df78a5-3360-4b55-a5c9-0c74479ec02d",
+      "1e762edc-2072-4f61-af48-0f90073a28b5"
+    ],
     "actor_row_id": "91e39b71-1b73-4162-9528-798d7c074151",
     "actor_bucket_key": "adriana rincon white|NV"
   },
@@ -42,12 +51,37 @@
     "_pdf_state_family_count": 48,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
-    "family_count": 4,
-    "family_reports": [],
+    "report_count": 8,
+    "actor_report_count": 8,
+    "family_count": 3,
+    "family_reports": [
+      {
+        "body": "This experience has had a devastating impact on my family. I feel that my child and I have been denied a fair and impartial process, and instead of focusing on my child's best interests, the proceedings became focused on attacking my credibility. I left court feeling humiliated, unheard, and without confidence that my concerns for my child's safety and well-being were taken seriously. The emotional, financial, and mental toll of continuing to fight through complaints and an appeal without feeling that my concerns have been independently reviewed has been overwhelming. My trust in the family court system has been deeply shaken, and I worry not only about my own case but about other families who may be experiencing similar treatment.",
+        "state": "NV",
+        "county": "CLARK",
+        "row_id": "acc26c16-7a7b-4822-824d-0c6ef4ad2699"
+      },
+      {
+        "body": "My kids are placed with a koookooo logo scary physical abuser. Case started with mDomestic violence . Reported on husdband by myself … he divorced me for it since I wouldn’t drop it .. it took me seven years of I speak up and I had to protect my children and break the cycle by making it clear, that is not normal, that unit ok. So I thought I was protecting them … I got scammed by then courts .. took all the money the protected home stole the gun from the protected home then hit me with4 day notice cancelled all insurance took all funds took business in my names acct , box truck and all assets then the kids and I were homeless he had everything i tried to get welfare insurance and EBT but they denied me because he was approved the week prior saying he had $0 and had the kids I went to CA for safe place to stay for 12 days brought the kids back and they made me pay to visit them $40 /hr while not releasing my funds, not allowing me an attorney, and have him full custody with no batters class no sanctions nothing.",
+        "state": "NV",
+        "county": "Clark",
+        "row_id": "f4b96c97-c8d1-4798-b815-bea2dc9bb6c4"
+      },
+      {
+        "body": "Reporting is more dangerous than keeping quiet. 2 girls under 5 and mother abused by “loving father and husband”",
+        "state": "NV",
+        "county": "Clark",
+        "row_id": "9f5bbd85-515b-4d25-98c6-6cd1819b1ef5"
+      },
+      {
+        "body": "Never in my life did I think my constitutional rights would be ignored and I would be alienated from my only daughter. Over 20 years married with many sacrifices for him.",
+        "state": "NV",
+        "county": "Clarke County",
+        "row_id": "c320d28f-e5c9-40c2-aecc-89aced0579de"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Custody to abuser Children given to dv abuser by judicial Abuse I got a DV TPO for physical emotional financial abuse seeking anger management and therapy after 7 years of abuse on a day that a kindergartner was expelled from my daughters school for physically abusing her after already being removed from class and other actions. I proved proof of physical abuse form the night before in video and with markings this happened infront of children police said he would be arrested in by morning he never was Feb 2025 Match 6 25 I get a DV restraining order with full custody and the home as protected the police won’t serve him it’s been 2 weeks social worker says go to California where your family is they can’t stay with him I bring a friend back to begs for serve him he won’t accept service and stats abusing her I called 911 to have him served dv tpo revised/renewed 3 times last only on financial abuse but i DV he put a tracker on my car policies found it was him after 3 months of investigations he broke in the house and took his gun he did he paid to end the lease of the protected property cancelled insurance phone bill everything he allowed me $0 and withheld company box truck in my name and all fund from Business solely in my name u created after a 4 day notice on protected property to vacate I went to California because I had no insurance no money no home had cut it if children he say on our 35k and lived at his moms I got a restraing order in ca may 28 same day they served me with preliminary injunction they said I was kidnapping called police I took the kids back within a week in June and never got them back agian orders to pay for visitation ordered drug testing and witheld kids from tampered drug results removing my prescription of adderal form the document showing jt was sufficient, same day got true results ex party hearing pushed out and then vacated I was granted nothing but last name he got business all money kids legal and physical he sanctioned me I couldn’t pay for attorney he spent 60 grand in 10 months of my money lawyer calls Me drug addict if Xanax and cocaine and adderal only adderal was found in my hair much lower than prescription. Disclosed I was prescribed Xanax but never took in proved by 7 months 2 Hair tests ordered to pay hourly for supervised visits dieted to pay child support got noting -Kylie T",
@@ -76,11 +110,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/adriana_rincon_white",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='NV'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -96,6 +126,26 @@
     "recommended_route": "/court-actors/nv/adriana_rincon_white/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Called police I took the kids back within a week in June",
+        "kind": "comment"
+      },
+      {
+        "body": "Three days before my family court trial, I filed a complaint regarding a member of the judge's courtroom staff.",
+        "kind": "comment"
+      },
+      {
+        "body": "Sad state of affairs for mothers and children. Expose these criminals who are protecting the abusers.",
+        "kind": "comment"
+      },
+      {
+        "body": "Abused me by allowing abuse and aiding it . Inhumane rulings Abused me with him",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

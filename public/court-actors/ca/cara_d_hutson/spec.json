@@ -12,12 +12,20 @@
     "court_or_county": "San Bernardino",
     "state": "CA",
     "state_abbr": "CA",
-    "mention_count": 0,
+    "mention_count": 7,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 7,
+    "supabase_row_ids": [
+      "d0bacb7f-9861-4081-808b-72d0a12cac47",
+      "df77917d-1f67-438b-8025-15a307163b1a",
+      "85f86c47-2639-42da-883d-44b60288301d",
+      "bf2d92d3-752f-4f51-b61f-2a97a98a215e",
+      "a2e15e00-cf4a-4720-8b12-9f1dc2d38523",
+      "f1c3f56b-7347-40ea-b1d8-2555ae319e9b",
+      "5cb2ef67-56d6-49ea-abab-cc2a19dbcc2d"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "cara hutson|CA",
     "_overrides_applied": [
@@ -35,27 +43,46 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 357,
-    "total_submissions": 444,
-    "avg_financial_loss": 285669.87,
+    "families_approved": 359,
+    "total_submissions": 446,
+    "avg_financial_loss": 285125.16,
     "avg_months_lost": 35.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CA",
-    "state_family_count": 444,
-    "median_financial_loss": 265100,
-    "median_burden_sample_size": 198,
+    "state_family_count": 446,
+    "median_financial_loss": 269200,
+    "median_burden_sample_size": 199,
     "median_months_lost": 20,
-    "pro_se_pct": 58.6,
-    "pro_se_count": 260,
-    "_pdf_state_family_count": 444,
+    "pro_se_pct": 58.7,
+    "pro_se_count": 262,
+    "_pdf_state_family_count": 446,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 7,
+    "actor_report_count": 7,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "We are divided , my kids are scared , so am I on top of the un dx PTSD we all have from prior contact with Desiree salas . My runaway daughter called me wanting to come home and I can't get her she remains on the streets , and was abused by the boyfriend she is with as he got a domestic",
+        "state": "CA",
+        "county": "San Bernardino county",
+        "row_id": "d558392d-e996-4f65-9d64-c153149a0ec2"
+      },
+      {
+        "body": "“This system has taken 932 days from my children and me, because of false reports and false drug tests, and my children have suffered panic attacks, depression, behavioral decline, and emotional trauma after 900 days of abuse ive been their advocate and only now are they receiving therapy because i wont stop speaking up and i pray that one day this will be over not just for us but entirely and to CPS i have 3 words BLASPHEMY, DISMANTLE, GO! You woke the right mother up and im coming for every child not just mine!!!!",
+        "state": "CA",
+        "county": "San Bernardino",
+        "row_id": "f0c044d9-1ff1-439b-ba9f-8f918b5e50d6"
+      },
+      {
+        "body": "Has cause extreme traumatization in my family. Lost faith in systems. Opened my eyes to a larger issue in society.",
+        "state": "CA",
+        "county": "San Bernardino",
+        "row_id": "27a43661-b093-4517-a5f9-9c9be2e900a8"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Failed to report one of my children as a run away had her as present in court but she had already ran away 24hours prior I was aware cause my daughter called me and told me she was off with her boyfriend who knows I can't stand him got my baby to turn herself in a week later but they treated her bad said she won't see her sister again , she ran away the same night I got the police report #s from the placement called San Bernardino police to verify she was already reported. Neither report number was good and nothing as missing or run away by my daughter's name pd put me to sheriff's,nothing then to records nothing! The f kinda bs , failure to protect ?...not by me!shortly after another 2 weeks I went to court list my shit and these dicks act like it's no big deal no one reported a runaway , my daughter then became a victim of domestic violence , cops arrested the bf and left my @5 yo on the street... wtf.i ain't lying you guys WTF,!idk if their looking out for kids at all , more like looking out for traffickers. I went picked my kid up brought her home , they show up remove her and she aeols again , mind you she was not remover from my home .I have no allegations , paternal grandma Biasly takes everything worker says with out question ar evidence, doesn't allow me to spee",
@@ -78,11 +105,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/cara_d_hutson",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='CA'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -98,6 +121,22 @@
     "recommended_route": "/court-actors/ca/cara_d_hutson/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Called San Bernardino police to verify she was already reported",
+        "kind": "comment"
+      },
+      {
+        "body": "“Denied my request without holding a hearing. Ignored evidence showing compliance with court orders. Allowed delays that affected reunification progress.",
+        "kind": "comment"
+      },
+      {
+        "body": "Bias, sides with county always.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

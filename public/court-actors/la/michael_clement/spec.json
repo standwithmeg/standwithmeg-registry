@@ -12,12 +12,18 @@
     "court_or_county": "Plaquemines",
     "state": "Louisiana",
     "state_abbr": "LA",
-    "mention_count": 0,
+    "mention_count": 5,
     "family_count": 5,
     "public_family_count": 5,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 5,
+    "supabase_row_ids": [
+      "7cb9d065-8d62-481d-8627-95e38a61c7aa",
+      "451ae5dd-5ac7-471b-8e12-121d5669740d",
+      "efd70294-0eed-4e26-87a3-39576d23c5c4",
+      "2d8cb8fb-4d78-4513-977e-32fab2775232",
+      "90274968-e53c-474c-a3f7-6ea091add6db"
+    ],
     "actor_row_id": "7cb9d065-8d62-481d-8627-95e38a61c7aa",
     "actor_bucket_key": "michael clement|LA"
   },
@@ -42,12 +48,43 @@
     "_pdf_state_family_count": 64,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 5,
+    "actor_report_count": 5,
     "family_count": 5,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Judge Michael Clement ignored evidence that the father abused our two children and he awarded the father sole custody when he only had supervised visitation for the past three years. Judge Clement also ignored the documented history of domestic violence, photographs, 911 calls, and expert testimony. This court has destroyed two children's lives.",
+        "state": "LA",
+        "county": "Plaquemines",
+        "row_id": "6eb5a6df-5f13-4bcf-99df-a361e212e84d"
+      },
+      {
+        "body": "the court made me live with my dad who sexually molested me and the judge took me away from my mom who I love and was safe with her.",
+        "state": "LA",
+        "county": "Plaquemines",
+        "row_id": "626bc7d9-56d4-4976-b132-663795575ec4"
+      },
+      {
+        "body": "The system worked with the father to take my children away from their loving mother because father hates mom.",
+        "state": "LA",
+        "county": "Plaquemines",
+        "row_id": "a0496d45-bf2f-43b2-8078-77a0f4ad19a7"
+      },
+      {
+        "body": "The family court specifically judge Michael Clement ruled against a child’s safety and forced her to live with her abuser.",
+        "state": "LA",
+        "county": "Plaquemines",
+        "row_id": "a7bbeaf9-40a1-4fdd-832c-bb52606bd720"
+      },
+      {
+        "body": "Walking through family court felt less like seeking protection and more like trying to survive a system that abuses protective parents. I entered the process believing the truth alone would be enough, and left realizing how complicated and devastating these cases can become for families and children.",
+        "state": "LA",
+        "county": "Plaquemines",
+        "row_id": "8ad8a041-adf1-41fe-984d-a908036b4bb0"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "The judge made a ruling that I had to live with my dad who molested me. I know there is evidence, I had to talk to the police and I was in therapy so they had to have said something but it didn't matter.",
@@ -82,11 +119,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/michael_clement",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='LA'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -102,6 +135,30 @@
     "recommended_route": "/court-actors/la/michael_clement/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "The judge made a ruling that I had to live with my dad who molested me.",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored evidence from the child’s teacher about sexual abuse disclosure",
+        "kind": "comment"
+      },
+      {
+        "body": "Allowed opposing counsel to call witnesses you never spoke with child or mother",
+        "kind": "comment"
+      },
+      {
+        "body": "Unethical, endgangered children, Ignored evidence, improper courtroom behavior, bias…",
+        "kind": "comment"
+      },
+      {
+        "body": "Denied my evidence that perjured ex’s witnesses, refused to allow my professionals to testify",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

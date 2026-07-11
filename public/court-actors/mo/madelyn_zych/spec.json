@@ -12,12 +12,16 @@
     "court_or_county": "Jefferson",
     "state": "MO",
     "state_abbr": "MO",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "12a11483-690c-40b4-9ebf-d700dcd6dfb2",
+      "53ded84b-a554-45dc-980a-debd47efe7c3",
+      "4c04e4bb-8f02-4d06-972c-dfc970016030"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "madelyn zych|MO"
   },
@@ -42,12 +46,31 @@
     "_pdf_state_family_count": 194,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "The system has caused a severe amount of trauma to my entire family. especially my daughter they came in and took my daughter away from a perfectly safe home perfectly safe parent and placed her with a rapist she was raped at gunpoint for 3 months sometimes several times each day",
+        "state": "MO",
+        "county": "Jefferson County",
+        "row_id": "f342a1df-68d3-47eb-b38f-f530681d967e"
+      },
+      {
+        "body": "The system is trying to destroy my family for profit. Evil tyrants need to be stopped.",
+        "state": "MO",
+        "county": "Jefferson County",
+        "row_id": "38c8b7c7-11e0-41ca-a947-62b8c7121c83"
+      },
+      {
+        "body": "They are trying to destroy my family for no reason just so they can have a kid for the federal funds.",
+        "state": "MO",
+        "county": "Jefferson",
+        "row_id": "03ca68c2-3bbe-4309-8928-1cd15b19b122"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "She submitted false information to the court and told me I had no Civil rights",
@@ -70,11 +93,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/madelyn_zych",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='MO'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +109,22 @@
     "recommended_route": "/court-actors/mo/madelyn_zych/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "She submitted false information to the court and told me I had no Civil rights",
+        "kind": "comment"
+      },
+      {
+        "body": "Made it impossible to see child because she ordered a no contact order",
+        "kind": "comment"
+      },
+      {
+        "body": "Delayed reunification, did not investigate family placements.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

@@ -8,14 +8,14 @@
     "last_name": "(Marrero)",
     "role": "Attorney",
     "court": "Erie",
-    "county": null,
+    "county": "Erie",
     "court_or_county": "Erie",
     "state": "New York",
     "state_abbr": "NY",
     "mention_count": 6,
     "family_count": 3,
-    "public_family_count": null,
-    "public_family_count_source": null,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
     "actor_report_count": 6,
     "supabase_row_ids": [
       "102ffbc8-6431-4bf7-9614-8451fdd50e3e",
@@ -29,7 +29,7 @@
     "actor_bucket_key": "rachel saeli (marero)|NY"
   },
   "photo": {
-    "path": "new_york/rachel_k_saeli_marrero/image_1080.png",
+    "path": "public/court-actors/ny/rachel_k_saeli_marrero/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -49,7 +49,7 @@
     "_pdf_state_family_count": 173,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5416,
+  "movement_total": 5421,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
@@ -96,12 +96,10 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/rachel_k_saeli_marrero",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='NY'"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
-    "footer": "Family-reported submissions · not court findings.",
+    "footer": "Family-reported submissions.",
     "strike_through_reserved_for": [
       "isolated",
       "dismissed",
@@ -114,6 +112,22 @@
     "recommended_route": "/court-actors/ny/rachel_k_saeli_marrero/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "She goes by 2 names Rachel saeli and Rachel marrero her maden name. Refused to file motions on my behalf. Lied about filing motions.",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored evidence Was my first assigned counsel, motioned to withdraw falsely claiming I was not respecting her vacation time",
+        "kind": "comment"
+      },
+      {
+        "body": "Is my current attorney",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

@@ -12,12 +12,18 @@
     "court_or_county": "Cowely",
     "state": "Kansas",
     "state_abbr": "KS",
-    "mention_count": 0,
+    "mention_count": 5,
     "family_count": 4,
     "public_family_count": 4,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 5,
+    "supabase_row_ids": [
+      "aa0724bf-7655-43e7-9d4d-46c38921f122",
+      "1c329852-d083-41e4-b532-ac59cc1c571d",
+      "14b68f2c-498d-4a59-ac98-03b60dc75f54",
+      "49805847-a9e7-45c1-bfae-ab85354a9f5b",
+      "72cfe9d3-769c-427a-a614-3e5453e1491e"
+    ],
     "actor_row_id": "aa0724bf-7655-43e7-9d4d-46c38921f122",
     "actor_bucket_key": "sheri wampler|KS"
   },
@@ -42,12 +48,31 @@
     "_pdf_state_family_count": 251,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 5,
+    "actor_report_count": 5,
     "family_count": 4,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "I lost my son, my job, and my girlfriend because of TFI, Sheri Wampler and Judge St. Peter.",
+        "state": "KS",
+        "county": "cowley",
+        "row_id": "e353eeb5-8395-40eb-99c0-898192569d73"
+      },
+      {
+        "body": "Judge St. Peter has cost me my child.",
+        "state": "KS",
+        "county": "Cowley",
+        "row_id": "e2204b22-6c3e-44b0-8335-57a70d28f972"
+      },
+      {
+        "body": "Gaslighted and emotionally abused my family.",
+        "state": "KS",
+        "county": "Cowley",
+        "row_id": "b576c25f-ccea-4ae4-9aa5-ac836536297d"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "She told me that if the biological mother disappeared that I would get my son back. I had been told my a friend to watch my back with her. I know that she talked with my girlfriend about disappearing for a while so that I could get my son back. She helped me get my son away from his grandmother and to a foster home. After I lost my son I found out that the foster parents were friends of hers and they wanted a baby boy.",
@@ -70,11 +95,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/sheri_wampler",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='KS'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +111,22 @@
     "recommended_route": "/court-actors/ks/sheri_wampler/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "I had been told my a friend to watch my back with her. I know that she talked with my girlfriend about disappearing for a while so that I could get my son back.",
+        "kind": "comment"
+      },
+      {
+        "body": "She tells me how happy my baby is with the foster parents. I met them and the Puchella's are strange.",
+        "kind": "comment"
+      },
+      {
+        "body": "Sheri Wampler from TFI was a \"drinking buddy\" with the bio father's attorney for one of the children. Wampler human-trafficked 3 siblings to her friend.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

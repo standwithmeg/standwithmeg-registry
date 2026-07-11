@@ -12,12 +12,18 @@
     "court_or_county": "Sarasota",
     "state": "Florida",
     "state_abbr": "FL",
-    "mention_count": 0,
-    "family_count": 0,
-    "public_family_count": 0,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "mention_count": 5,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 5,
+    "supabase_row_ids": [
+      "7632d7f4-dc2a-4c82-a4e3-1b842fc8ff7d",
+      "7b07b3c1-e952-4a16-be0e-f0ffca2d3e87",
+      "1da63f10-b521-4ecd-af3b-b7b72dbc06e4",
+      "f8218096-095f-4b9e-b6db-3cc33b309b7a",
+      "da75323e-3adc-4799-94d0-d9060354cea9"
+    ],
     "actor_row_id": "7632d7f4-dc2a-4c82-a4e3-1b842fc8ff7d",
     "actor_bucket_key": "rochele curley|FL"
   },
@@ -42,12 +48,31 @@
     "_pdf_state_family_count": 306,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
-    "family_count": 0,
-    "family_reports": [],
+    "report_count": 5,
+    "actor_report_count": 5,
+    "family_count": 3,
+    "family_reports": [
+      {
+        "body": "The family court system has destroyed my family and literally taken the food off our table.",
+        "state": "FL",
+        "county": "Sarasota",
+        "row_id": "fc8ae130-1743-4c34-bf18-0ab241ad22a2"
+      },
+      {
+        "body": "Required disabled litigant to function beyond adjudicated functional capacity, using the same adjudicated limitations to deny the experts necessary to continually re-litigate permanent disability. Severely impacting my health, quality of life, housing, & mortality rate. Forced to divert life sustaining medical funds to legal costs. 11 years, health is deteriorating,,resources are depleted, legal aid can’t take complex case & this can no longer be sustained. I fear for my continued ability to survive.",
+        "state": "FL",
+        "county": "Sarasota",
+        "row_id": "aa61ee60-3385-4ee8-a27f-52d0030a50cf"
+      },
+      {
+        "body": "Fuck family court. Family court profits off abuse, parent conflict and ongoing conflict. The judges and attorneys have no oversight or accountability. They lie, cheat and steal.",
+        "state": "FL",
+        "county": "Sarasota",
+        "row_id": "aaf62ac3-11f3-4e35-aec1-ae3383b5f1be"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "This judge broke FL law, specifically code 12.407 that minor children shall not be permitted in family court proceedings without extreme circumstances that the judge can articulate. My X sent my son to Panama when I said no and I was only given 5 days warning (30 required). I filed a motion for contempt of the parenting plan. Opposing counsel filed for my son to testify. Judge Curley granted it with zero reasoning provided on the order. The trip to Panama is well documented through our family wizard, customs, and on my son’s passport. This is why the judge didn’t provide a reason for her ruling. There isn’t one that isn’t crooked. Now my son is being pitted against me because this judge is illegally trying to protect one parent who obviously is in contempt.",
@@ -70,11 +95,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/rochelle_curley",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='FL'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +111,22 @@
     "recommended_route": "/court-actors/fl/rochelle_curley/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "The trip to Panama is well documented through our family wizard, customs, and on my son’s passport. This is why the judge didn’t provide a reason for her ruling.",
+        "kind": "comment"
+      },
+      {
+        "body": "Court Findings were factually incorrect, biased and prejudiced. Made a permanent ruling without seeing 180+ pages of evidence.",
+        "kind": "comment"
+      },
+      {
+        "body": "Alleged.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

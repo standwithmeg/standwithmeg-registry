@@ -12,12 +12,17 @@
     "court_or_county": null,
     "state": "Arkansas",
     "state_abbr": "AR",
-    "mention_count": 0,
-    "family_count": 4,
-    "public_family_count": 4,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "mention_count": 4,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "1b0056ce-4435-444e-8a9e-a5fa7495bd22",
+      "9ee4a914-6c75-4bd8-816a-667364d43704",
+      "05577994-eea0-4518-b3fb-6ac62554d27d",
+      "a93cc40e-2c37-482f-a039-3320e77883e9"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
@@ -42,19 +47,51 @@
     "_pdf_state_family_count": 57,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
-    "family_count": 4,
-    "family_reports": [],
-    "public_comments": []
+    "report_count": 4,
+    "actor_report_count": 4,
+    "family_count": 3,
+    "family_reports": [
+      {
+        "body": "Kept me alienated for several years from my child, judges and attorneys let my abuser keep the control I was trying to escape with my child. Nobody cared.",
+        "state": "AR",
+        "county": "White",
+        "row_id": "54f67faa-0ec6-4656-b77a-17f069140c0a"
+      },
+      {
+        "body": "It has destroyed my family, my piece of mind, made me fear the police and DHS, permanently injured my spine, but exposed what happens In Arkansas.",
+        "state": "AR",
+        "county": "White",
+        "row_id": "fb68a505-118b-4345-8813-0fa5e5b0ec1c"
+      },
+      {
+        "body": "Wmy kids survived being abused for 12 years I am still unable to keep employment cause child support enforcement keeps my driver's licence",
+        "state": "AR",
+        "county": "White county",
+        "row_id": "8258d1c9-cf91-4848-b73b-59b289caf8e8"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "He didn’t listen to me or the evidence I had. He fell asleep during the first round of hearings",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Did not let me present my evidence cut the court hearing short. Has ignored evidence",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Kept my kids split from each other for a year",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
   },
   "export_dir": "New Final Post and Capcut template/export/craig_hannah",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='AR'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available",
     "pdf_public_actor: no 'Craig Hannah' in cache for AR"
   ],
   "guardrails": {
@@ -72,6 +109,22 @@
     "recommended_route": "/court-actors/ar/craig_hannah/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "He didn’t listen to me or the evidence I had. He fell asleep during the first round of hearings",
+        "kind": "comment"
+      },
+      {
+        "body": "Did not let me present my evidence cut the court hearing short. Has ignored evidence",
+        "kind": "comment"
+      },
+      {
+        "body": "Kept my kids split from each other for a year",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

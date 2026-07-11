@@ -12,12 +12,12 @@
     "court_or_county": "Cuyahoga county",
     "state": "OH",
     "state_abbr": "OH",
-    "mention_count": 0,
+    "mention_count": null,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": null,
     "actor_row_id": null,
     "actor_bucket_key": "christina marie joliat|OH"
   },
@@ -42,10 +42,10 @@
     "_pdf_state_family_count": 264,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
     "family_reports": [],
     "public_comments": [
@@ -65,9 +65,7 @@
   },
   "export_dir": "New Final Post and Capcut template/export/christina_marie_joliat",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='OH'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
+    "court_actors: no rows match name~'Christina Marie Joliat' state='OH'"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
@@ -84,6 +82,18 @@
     "recommended_route": "/court-actors/oh/christina_marie_joliat/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Denied motion and ignored evidence!! None of them did their job they made up everything. The judge didn’t want to listen to us whatsoever that we gave him evidence and they didn’t show him any evidence and that he ruled with them over us.",
+        "kind": "comment"
+      },
+      {
+        "body": "Sided with father gave him full custody after being burned multiple times and multiple CPS reports. Made false statements in report that could cause harm/ defamation of character.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

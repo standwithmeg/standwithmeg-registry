@@ -12,12 +12,17 @@
     "court_or_county": "Williamson",
     "state": "Tennessee",
     "state_abbr": "TN",
-    "mention_count": 0,
+    "mention_count": 4,
     "family_count": 1,
     "public_family_count": 1,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "8f1a2dea-f10d-42b8-aacf-115023fe3406",
+      "1bc430b5-23b2-42b7-85a4-bbb443ee712b",
+      "1cbdf2eb-abfc-46b6-a417-d50922d19bf8",
+      "374afbf3-14a7-4d33-a73f-1d06dcb52e8d"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
@@ -42,12 +47,25 @@
     "_pdf_state_family_count": 123,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 1,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Gender discrimination",
+        "state": "TN",
+        "county": "Williamson",
+        "row_id": "1260e224-95c1-4b32-a770-f44d5e31e5a7"
+      },
+      {
+        "body": "Judge Woodruff failed to review exonerating evidence and made ruling based on false evidence.",
+        "state": "TN",
+        "county": "Williamson",
+        "row_id": "94e65ef4-f0f2-47b8-b5ca-824daa92ada3"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Made judgement without hearing any evidence. Referred to court cases that never occurred in his judgement. Failed to review actual evidence and investigative reports from child welfare and law enforcement and ignored exonerating evidence including audio recording of opposing party admission of guilt under oath.",
@@ -64,11 +82,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/joseph_woody_woodruff",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='TN'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -84,6 +98,18 @@
     "recommended_route": "/court-actors/tn/joseph_woody_woodruff/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Made judgement without hearing any evidence. Referred to court cases that never occurred in his judgement.",
+        "kind": "comment"
+      },
+      {
+        "body": "Denied my motion without hearing, gender discrimination and bias. Abuse Discrimination and abuse",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

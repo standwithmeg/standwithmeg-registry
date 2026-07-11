@@ -12,12 +12,26 @@
     "court_or_county": "Montcalm County Michigan",
     "state": "Michigan",
     "state_abbr": "MI",
-    "mention_count": 0,
+    "mention_count": 13,
     "family_count": 9,
     "public_family_count": 9,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 13,
+    "supabase_row_ids": [
+      "40164734-d4b3-4282-830e-d4b77787cbf3",
+      "7a37ebe8-2dca-4e36-806c-8a5a2d46fc0b",
+      "701efffb-3c01-43f2-a608-fb73786f9dba",
+      "61eb47aa-5098-4827-88d1-3328c2646eb8",
+      "b7aa1a4c-7459-4895-b631-a506d76bee16",
+      "e4cf2f07-acac-4ff5-96ec-2264c8095e75",
+      "e167a3ea-c556-42ea-810c-104c311ec449",
+      "cb6082cf-6e20-4dd5-9eb5-c5d6578f691f",
+      "efb11a36-1906-4fbc-8a43-2dcf9fe47ca4",
+      "327aeba0-c3db-45cf-87cc-92c0729ce03a",
+      "f49686df-d293-4e44-84dc-3029c58774a2",
+      "f67bbc12-5927-4ca9-b1d7-f6217cb667d6",
+      "8bedef4a-57de-42d6-86fb-73c4e8e66218"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
@@ -42,12 +56,49 @@
     "_pdf_state_family_count": 178,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 13,
+    "actor_report_count": 13,
     "family_count": 9,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "The system has did nothing but ruin my life. Try to take my kid or in the middle of trying to take my kid and some false accusations boom.",
+        "state": "MI",
+        "county": "Montcalm",
+        "row_id": "2baefa2c-5f9c-472a-b6ab-11a469450655"
+      },
+      {
+        "body": "Safety is when you know you are safe, it's when you know that your parents are safe, it's when you can lay your head down at night and go to bed peacefully it's when you can tell your parents that you love them and give them a hug but once foster care takes you, you never know when you'll be safe again, you don't know when you will be able to lay your head down at night and fall asleep peacefully you don't know if your parents are okay and your biggest worry is your parents and your siblings at the end of the day but you're also so angry because the court took that all away from you.",
+        "state": "MI",
+        "county": "Edmore",
+        "row_id": "f75c3366-f0b5-4a81-8c9f-e836672a6778"
+      },
+      {
+        "body": "The hurt is unmeasurable. Total loss of fairness and justice in the court that is supposed to serve and protect the people and children. Instead it's ripping them apart and destroying them. The trauma is coming from the court.",
+        "state": "MI",
+        "county": "Montcalm",
+        "row_id": "36edfc72-caee-42ee-95eb-cee123b8a84c"
+      },
+      {
+        "body": "The system tore our family apart and made us look like monsters. All we wanted was safety in our home.tgrre has been four years of heartache and fear due to unjust court system",
+        "state": "MI",
+        "county": "Montcalm",
+        "row_id": "abf73910-6175-44a8-b857-c3290d358e67"
+      },
+      {
+        "body": "This destroyed my family. I have lost my children. My wife and I dont get a long well. Our married may beyond repair. I miss my babies.",
+        "state": "MI",
+        "county": "Montcalm",
+        "row_id": "7d0a93c4-1565-4a7c-a7a3-1713bc2dde90"
+      },
+      {
+        "body": "Destroyed my whole family. Can’t see my grandkids grow up! My son in law committed suicide over the removal of his kids!",
+        "state": "MI",
+        "county": "Mntcalm",
+        "row_id": "fe7f27ec-8f68-4d76-a5c8-10339f6f761b"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "He makes decisions in his chambers before court proceedings happens. Before hearing any thing. He slanders the parents in court, tells you how much he thinks your a piece of crap.",
@@ -106,11 +157,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/charles_simon_iii",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='MI'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -126,6 +173,46 @@
     "recommended_route": "/court-actors/mi/charles_simon_iii/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "He makes decisions in his chambers before court proceedings happens.",
+        "kind": "comment"
+      },
+      {
+        "body": "After that he removed himself from my case admitting bias.",
+        "kind": "comment"
+      },
+      {
+        "body": "Doesn’t allow evidence or you to defend yourself. Biased. Not for families Biased.",
+        "kind": "comment"
+      },
+      {
+        "body": "Judge Simons Rude, judgemental, prejudice. Talked down to us in open court.",
+        "kind": "comment"
+      },
+      {
+        "body": "He lied and said my daughter threatened to kill him.",
+        "kind": "comment"
+      },
+      {
+        "body": "He did not listen to childrens wishes or needs, did not let my parents speak, did…",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored evidence and denied reunification.we have not seen or heard from our child…",
+        "kind": "comment"
+      },
+      {
+        "body": "He is bias?",
+        "kind": "comment"
+      },
+      {
+        "body": "Doesn’t follow laws!",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 2
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

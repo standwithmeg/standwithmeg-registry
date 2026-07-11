@@ -12,12 +12,15 @@
     "court_or_county": "Broward County",
     "state": "FL",
     "state_abbr": "FL",
-    "mention_count": 0,
+    "mention_count": 2,
     "family_count": 2,
     "public_family_count": 2,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 2,
+    "supabase_row_ids": [
+      "fa707802-7f0b-4f01-b71c-5aaa5b1b3abd",
+      "64889ced-90f0-4a58-a89b-674f4911a57a"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "all judges - ve had 4 judges in 4 years|FL"
   },
@@ -42,19 +45,40 @@
     "_pdf_state_family_count": 306,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 2,
+    "actor_report_count": 2,
     "family_count": 2,
-    "family_reports": [],
-    "public_comments": []
+    "family_reports": [
+      {
+        "body": "It destroyed 30 years of around the clock hard work to build the best life and future for my 5 angels who also were destroyed in the process beyond any recognition. This is a criminal enterprise of injustice and a modern day slavery.",
+        "state": "FL",
+        "county": "Broward",
+        "row_id": "fc69cc8c-f4c7-4d55-8f88-169898d4f00b"
+      },
+      {
+        "body": "Broward County Family Court refuses due process and evidence. This allows the high conflict parent to repeatedly manipulate, lie and file false allegations and wins by not seeing actual evidence, just hearsay, and because they are “too busy” your case sits for years, losing your kids and money despite all reports saying the high conflict parent is a liar.",
+        "state": "FL",
+        "county": "Broward",
+        "row_id": "2b23ff43-40b5-45cb-9dde-82fa66a11547"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "I too had 4 or 5 judges in Broward County, They all have an organized scheme with the attorneys, GALs, etc.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "The County Family Court system denies due process and fair hearings under the guise of being too busy.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
   },
   "export_dir": "New Final Post and Capcut template/export/all_judges_ive_had_4_judges_in_4_years",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='FL'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available",
     "pdf_public_actor: no 'All Judges - I’ve had 4 judges in 4 years' in cache for FL"
   ],
   "guardrails": {
@@ -72,6 +96,18 @@
     "recommended_route": "/court-actors/fl/all_judges_ive_had_4_judges_in_4_years/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "I too had 4 or 5 judges in Broward County, They all have an organized scheme with the attorneys, GALs, etc.",
+        "kind": "comment"
+      },
+      {
+        "body": "The County Family Court system denies due process and fair hearings under the guise of being too busy.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

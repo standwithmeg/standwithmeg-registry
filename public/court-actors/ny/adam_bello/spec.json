@@ -12,12 +12,17 @@
     "court_or_county": "Monroe",
     "state": "NY",
     "state_abbr": "NY",
-    "mention_count": 0,
+    "mention_count": 4,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "ea7f55eb-fc76-4800-bf67-2ecdefa99b5b",
+      "8421bd2c-d66c-4bcc-921e-63e0c105ae3d",
+      "10b2685d-34d4-4107-af70-e7a047985755",
+      "ed140d13-97d2-4938-97de-9dcb0ccaab79"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "adam belo|NY"
   },
@@ -42,12 +47,37 @@
     "_pdf_state_family_count": 173,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Ruined me and my family. I lost everything",
+        "state": "NY",
+        "county": "Monroe",
+        "row_id": "83eb3546-256d-49ab-bbdb-c95bb28921fb"
+      },
+      {
+        "body": "Fucked me",
+        "state": "NY",
+        "county": "Monroe",
+        "row_id": "62db6d32-a24a-475d-b699-3fe41f9a2e86"
+      },
+      {
+        "body": "It has ruined my life. My relationship with my little girl, my business went under and lost everything I worked so hard for",
+        "state": "NY",
+        "county": "Monroe",
+        "row_id": "333eb6c0-7dbb-4f65-9b5c-2b428277ab11"
+      },
+      {
+        "body": "Obliterated it. They did illegal things, then coerced the mother into becoming a criminal and menace while kidnapping my son under the color of law because they couldn’t get him to say he wanted to be with his mom. My son is almost guaranteed at this pinto suffer from long term psychological issues because of losing his primary attachment figure and not seeing them for over 6.5 months straight while being stuck with the mother who was neglecting him on purpose to get a reaction out of me to continue a false narrative.",
+        "state": "NY",
+        "county": "Monroe",
+        "row_id": "29136b64-3413-4508-8bb3-e6a9ec1ac0d0"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "County executive who sabotaged my business and used a Halloween prop in 2023 to label me a threat to him even though his apex acceleration program was already being bused to my company and his IT ppl were already sabotaging my biz. He has placed his people in my court cases to go against me. He’s from Binghamton NY. The attorney referee John Menard approved the first OOP in December of 2023 that had false alienation in it and the two perjurious orders of protection by the mom and fiance on August 29, 2025. Menard use to work at the public defenders office AND is from Binghamton NY. On may 23rd 2024, Darius Lind extended that Meritless OOP for a year. Lind has 3 phone numbers with Binghamton area code 607. Darius Lind’s campaign for judge url connected to my second business. Lind has employment background as an IT engineer. Bello’s assistant Anthony Figueroa is super shady. He is connected to almost everyone and seems to be the main source to tons of hackers in the area. Bello was a part of an insurance fraud scam on my $209k project with Christa construction. With only two weeks left and $75k profit waiting for me, Christa refused to make a payment to me, then used that insurance being cancelled as a reason to kick my company off of the job site. One of my Angi leads campaigns had a 607 routing phone system where I got no jobs and all customers came up with an excuse. One customer was Jim Whalen. He appears to be related to Gerald Whalen- chief judge of the appellate division in Monroe county. A token identity theft occurred on my new iPhone. The name associated was “Gigi ceravalo”. Gail ceravalo is related to Gigi and James Bello. James is Adam’s brother. (Some of this may have been spoofed on purpose to make me look crazy. But I have the screenshots and screen recordings that show proof of everything I’ve said.)",
@@ -70,11 +100,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/adam_bello",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='NY'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +116,22 @@
     "recommended_route": "/court-actors/ny/adam_bello/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "County executive who sabotaged my business and used a Halloween prop in 2023 to label me a threat to him.",
+        "kind": "comment"
+      },
+      {
+        "body": "He knows what is taking place and refuses to respond to emails and calls I've called and emailed and tried to get help and never responds.",
+        "kind": "comment"
+      },
+      {
+        "body": "Is nothing but a fraud. Doesn't help out the people and ignored evidence of wrong doing",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

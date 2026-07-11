@@ -12,12 +12,17 @@
     "court_or_county": "Chilton",
     "state": "Alabama",
     "state_abbr": "AL",
-    "mention_count": 0,
+    "mention_count": 4,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "00c73c36-6209-448a-824f-f9e6f912277f",
+      "9f004fa2-f30e-4a2b-8d9e-719c242fe03a",
+      "b2545452-0c9d-4e84-aa17-00fb03c26bcc",
+      "5b8cc6d1-96d0-4aa9-993d-c524f024ad4c"
+    ],
     "actor_row_id": "00c73c36-6209-448a-824f-f9e6f912277f",
     "actor_bucket_key": "sibley reynolds|AL"
   },
@@ -42,12 +47,31 @@
     "_pdf_state_family_count": 130,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "One woman was allowed to change the trajectory of my whole family",
+        "state": "AL",
+        "county": "Chilton County",
+        "row_id": "d79f0e48-10bd-40b8-81b3-87a598545665"
+      },
+      {
+        "body": "Autauga County family court has failed my children and me over and over again. More than 30 years of mental and physchological abuse has been legally perpetuated at the hands of the court system.",
+        "state": "AL",
+        "county": "AUTAUGA",
+        "row_id": "42f38311-aa7b-40fb-8b1c-d016074bc870"
+      },
+      {
+        "body": "They have dragged this out and kept me in a wreck over all the lies. I moved 23 miles away from our marital home the father objected to the move and the judge agreed. We were allowed to move but I had to drive 35 to 45 minutes two times a day for a year and a half for my children for school because I was not allowed to change their school.",
+        "state": "AL",
+        "county": "Chilton",
+        "row_id": "ef014336-3bcd-43d4-981b-1209cde1e90f"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Changed hearing date several times. The children wanted to testify on their own behalf. Grandfather did not want this to happen. Changed hearing to a date mother would not have them. He then allowed the GAL to say that the children spoke with him and he could confidently say they were safe and happy with Grandfather. Refused to look at messages I had from the children disproving this statement. The judge knew my case was heavily dependent on audio and video since he would not allow the children to testify in person. Moved our hearing to a room that had no audio visual capabilities. Allowed my father to submit the childrens report cards as evidence of their \"well-being\" and dismissed the entire case.",
@@ -70,11 +94,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/sibley_reynolds",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='AL'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +110,22 @@
     "recommended_route": "/court-actors/al/sibley_reynolds/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Allowed my father to submit the childrens report cards as evidence of their \"well-being\" and dismissed the entire case.",
+        "kind": "comment"
+      },
+      {
+        "body": "I had to drive 35 to 45 minutes twice a day to take my kids to and from school for a whole school year and a half of another. He dismissed everything.",
+        "kind": "comment"
+      },
+      {
+        "body": "Was a cousin by marriage to the other party",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

@@ -12,12 +12,16 @@
     "court_or_county": "Riverside",
     "state": "California",
     "state_abbr": "CA",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "a91536c2-14d3-4586-b562-00d88fc9ff2b",
+      "512d7c4a-a95b-4995-8cdc-fdbba82952c4",
+      "090739d7-00fe-4c92-ba5a-58681c9fedac"
+    ],
     "actor_row_id": "a91536c2-14d3-4586-b562-00d88fc9ff2b",
     "actor_bucket_key": "alexandra fong|CA"
   },
@@ -27,27 +31,46 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 357,
-    "total_submissions": 444,
-    "avg_financial_loss": 285669.87,
+    "families_approved": 359,
+    "total_submissions": 446,
+    "avg_financial_loss": 285125.16,
     "avg_months_lost": 35.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CA",
-    "state_family_count": 444,
-    "median_financial_loss": 265100,
-    "median_burden_sample_size": 198,
+    "state_family_count": 446,
+    "median_financial_loss": 269200,
+    "median_burden_sample_size": 199,
     "median_months_lost": 20,
-    "pro_se_pct": 58.6,
-    "pro_se_count": 260,
-    "_pdf_state_family_count": 444,
+    "pro_se_pct": 58.7,
+    "pro_se_count": 262,
+    "_pdf_state_family_count": 446,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "They took my child based on false allegations then claimed that things happened when they didn’t and would not acknowledge that they took him under false pretenses and kept claiming there was domestic violence when there really wasn’t any",
+        "state": "CA",
+        "county": "Riverside",
+        "row_id": "b95b3d29-0253-4e73-9504-87809b645bfe"
+      },
+      {
+        "body": "These false allegations have completely torn our family apart and caused immense harm to our lives. When we tried to explain that the claims were untrue, we were treated as though we were refusing to “learn our lesson,” and the situation only became worse. It often felt like we were being pressured to admit to things that never happened just to validate their narrative.",
+        "state": "CA",
+        "county": "Riverside",
+        "row_id": "8f31eaf0-1df4-4646-8c98-3915bc3c02bf"
+      },
+      {
+        "body": "Fabricated things that happened to take my son from both myself and his mother, suppressed evidence when we provided proof nothing happened, forced restraining orders said if no restraining order agreement then they’d remove parental rights completely",
+        "state": "CA",
+        "county": "Riverside",
+        "row_id": "db13273d-7601-4d55-b4bb-c9de75dcf752"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "She ignored real evidence and forced a restraining order when the two parties didn't even want one",
@@ -70,11 +93,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/alexandra_fong",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='CA'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +109,22 @@
     "recommended_route": "/court-actors/ca/alexandra_fong/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "She ignored real evidence and forced a restraining order when the two parties didn't even want one",
+        "kind": "comment"
+      },
+      {
+        "body": "Suppressed evidence, false accusations with clear proof it was opposite",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored evidence, lied in court",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

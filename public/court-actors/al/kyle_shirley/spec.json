@@ -12,12 +12,21 @@
     "court_or_county": "Autauga County",
     "state": "Alabama",
     "state_abbr": "AL",
-    "mention_count": 0,
+    "mention_count": 8,
     "family_count": 6,
     "public_family_count": 6,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 8,
+    "supabase_row_ids": [
+      "afe13363-7b0f-41e0-afc5-c7604cf20e75",
+      "8cb85908-1d16-42a0-813f-01ce92bc7e88",
+      "dedfad75-46d5-467b-874b-e18fb9fa01a6",
+      "180f8d2f-6665-4934-b0a4-71b7879172bb",
+      "9175d4f4-4c1a-4227-b9ce-d6267d3544ec",
+      "7a211a83-a1c4-42a1-a671-2c21dd0f3e8a",
+      "d44700fc-1e50-4955-bec5-13be5c258f25",
+      "30aa4b03-fb76-445c-a858-0389525b0018"
+    ],
     "actor_row_id": "afe13363-7b0f-41e0-afc5-c7604cf20e75",
     "actor_bucket_key": "kyle shirley|AL"
   },
@@ -42,12 +51,37 @@
     "_pdf_state_family_count": 130,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 8,
+    "actor_report_count": 8,
     "family_count": 6,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "This system has ripped me apart and taken advantage of my children and myself in every conceivable way. Every actor in it is corrupt, they are all in it together and seeking only personal gain and satisfaction rather than justice for the children. It’s evil , sick and killing our children and community.",
+        "state": "AL",
+        "county": "Autauga",
+        "row_id": "95ec688d-3ac4-4404-8d7f-db2d63d0c02c"
+      },
+      {
+        "body": "It cost me everything.",
+        "state": "AL",
+        "county": "Autauga",
+        "row_id": "8189d499-bf1e-4ca7-b34f-dc6c1dbcb61a"
+      },
+      {
+        "body": "Autauga County family court has failed my children and me over and over again. More than 30 years of mental and physchological abuse has been legally perpetuated at the hands of the court system.",
+        "state": "AL",
+        "county": "AUTAUGA",
+        "row_id": "42f38311-aa7b-40fb-8b1c-d016074bc870"
+      },
+      {
+        "body": "Judge has placed my two children right back into the hands of our abuser who has many prior convictions, refused all documented evidence, ripped us all out of the protection program and destroyed my family.",
+        "state": "AL",
+        "county": "Autauga County",
+        "row_id": "9959c79a-fc7f-49de-999a-70f0c032896c"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "He has repeatedly helped a rapist and kidnapper get custody. He persisted in pushing charges on me for interference with custody when I tried to get my children to the hospital covered in bruises & welts. My children cried out that their dad beat them with belts. Attorney to my ex-husband who has continuously defended a documented abuser and has repeatedly reported false accusations. Opposing party attorney helping to mask the abuse.",
@@ -76,11 +110,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/kyle_shirley",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='AL'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -96,6 +126,26 @@
     "recommended_route": "/court-actors/al/kyle_shirley/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "He has repeatedly helped a rapist and kidnapper get custody.",
+        "kind": "comment"
+      },
+      {
+        "body": "He hid evidence, we subpoenaed her medical records.",
+        "kind": "comment"
+      },
+      {
+        "body": "GAL didn’t interview, talk or visit with me concerning my parenting and relationship with my child.",
+        "kind": "comment"
+      },
+      {
+        "body": "Represented the other party. Had undisclosed personal and familial ties to his client. Conflict of interest.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

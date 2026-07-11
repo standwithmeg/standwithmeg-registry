@@ -12,12 +12,17 @@
     "court_or_county": "Tulsa",
     "state": "Oklahoma",
     "state_abbr": "OK",
-    "mention_count": 0,
+    "mention_count": 4,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "5f39aab5-cd84-4530-8a06-9961d92dee27",
+      "e1b3b258-f937-4031-80af-327f5eb02b84",
+      "2f13b2d8-c27d-4c7d-bfcb-1f2c71d486db",
+      "75e5bad6-aa5e-4680-bf36-73f0f7bc7ca8"
+    ],
     "actor_row_id": "5f39aab5-cd84-4530-8a06-9961d92dee27",
     "actor_bucket_key": "kristin tips|OK"
   },
@@ -42,12 +47,31 @@
     "_pdf_state_family_count": 164,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "The family court system wrongfully removed my child at Jordan Dalgleish’s suggestion after accepting a fraudulent document as fact, DHS involvement and still I am missing out on important things in my child’s life, my child is extremely depressed.",
+        "state": "OK",
+        "county": "Tulsa",
+        "row_id": "4e5069bd-2d75-4581-8484-d73bee98e9fd"
+      },
+      {
+        "body": "Gal refused to actively look into anything and still doesn't reply.",
+        "state": "OK",
+        "county": "Tulsa",
+        "row_id": "7df8e3f9-729b-4fa3-b7e5-72c93e41b359"
+      },
+      {
+        "body": "This system has torn my family apart, stripped me of my role as a mother, and forced me into a relentless fight against abusive exes, distortion, imbalance, and Court decisions that have harmed both me and my child.",
+        "state": "OK",
+        "county": "Tulsa county",
+        "row_id": "1db6b144-e2d7-410e-a9ef-7b22ac61e32d"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Did not listen to any concerns. Would only meet with child 30 minutes. Didn't listen to any worries and directly told me not to tell my husband anything that happened in session. She never completed a full session with my son.",
@@ -70,11 +94,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/kristin_tipps",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='OK'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +110,22 @@
     "recommended_route": "/court-actors/ok/kristin_tipps/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Would only meet with child 30 minutes. Didn't listen to any worries and directly told me not to tell my husband anything that happened in session.",
+        "kind": "comment"
+      },
+      {
+        "body": "Violated professional conduct",
+        "kind": "comment"
+      },
+      {
+        "body": "Failed to report abuse",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

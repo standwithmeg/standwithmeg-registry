@@ -12,12 +12,17 @@
     "court_or_county": "Rutherford County",
     "state": "Tennessee",
     "state_abbr": "TN",
-    "mention_count": 0,
-    "family_count": 3,
-    "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "mention_count": 4,
+    "family_count": 1,
+    "public_family_count": 1,
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "33584d41-10de-4bc9-956e-f452df96b51d",
+      "e8f24541-7b09-4d30-a9d1-5cfa31b25839",
+      "5f928b47-b91c-4316-9f70-f6df80186176",
+      "3eba93c9-7ce4-4c22-9eea-a8585d54a277"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
@@ -42,19 +47,51 @@
     "_pdf_state_family_count": 123,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
-    "family_count": 3,
-    "family_reports": [],
-    "public_comments": []
+    "report_count": 4,
+    "actor_report_count": 4,
+    "family_count": 1,
+    "family_reports": [
+      {
+        "body": "Panic disorder for me, son hurt himself many times, he overworked my son with excessive exercise",
+        "state": "TN",
+        "county": "Rutherford",
+        "row_id": "86e8c62f-c5f0-4b95-9d1e-16e31257c0aa"
+      },
+      {
+        "body": "I went to the court trusting they would help my children and I. They have made it exponentially worse making me regret not fleeing instead.",
+        "state": "TN",
+        "county": "Rutherford",
+        "row_id": "e7ee8bfa-72df-46fd-811f-8d3da8d5ff35"
+      },
+      {
+        "body": "The system has failed me and my two children! You cannot put a price on your children, and you should not have to. Every mother and father deserve to be in their children's lives! Family court is broken! Judges need to be held accountable and not protected by the system and allowed to do whatever they want. Because of false allegations that were never proven to be true,I have had to go the past four years with not getting to see my children the way that I should have and I still have three more years to go with my son. I will do whatever it takes to help change what goes on in family court anyway that I can because it has affected me so greatly.",
+        "state": "TN",
+        "county": "Rutherford",
+        "row_id": "3875e203-62a5-45e9-a302-56c450a46a45"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Plays golf with judges. Litigated while another state had jurisdiction and did not catch on until a few months and several thousands in.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Abusive litigator, tricky aggrements, files false documents and money hungry. Uses manipulation tactics by making a statement and then asking questions so you get trapped. Opposing legal counsel, was very aggressive and accusatory for taking my son to the hospital.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "He made several false allegations against me never proved anything or he would try to take something and twist it. He is very manipulative and conniving. I know that there was a court reporter in that room, but yet they are claiming that there wasn't.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
   },
   "export_dir": "New Final Post and Capcut template/export/scott_kimberly",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='TN'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available",
     "pdf_public_actor: no 'Scott Kimberley' in cache for TN"
   ],
   "guardrails": {
@@ -72,6 +109,22 @@
     "recommended_route": "/court-actors/tn/scott_kimberly/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Plays golf with judges.",
+        "kind": "comment"
+      },
+      {
+        "body": "Uses manipulation tactics by making a statement and then asking questions so you get trapped.",
+        "kind": "comment"
+      },
+      {
+        "body": "He made several false allegations against me never proved anything or he would try to take something and twist it. He is very manipulative and conniving.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

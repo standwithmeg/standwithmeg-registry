@@ -12,12 +12,19 @@
     "court_or_county": "Charleston, South Carolina",
     "state": "South Carolina",
     "state_abbr": "SC",
-    "mention_count": 0,
+    "mention_count": 6,
     "family_count": 4,
     "public_family_count": 4,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 6,
+    "supabase_row_ids": [
+      "6b0d87fc-67fd-446e-a4e4-ebdcd4c7639f",
+      "2626ffc6-8ee6-404c-aab5-bc04125fb676",
+      "2cf8be9a-ebd3-480f-b90b-720580165564",
+      "b501586b-a039-4b0b-ad1e-40909a847830",
+      "2b7b383c-0df3-464f-b039-696786ed8b89",
+      "7583414d-2f94-4940-9c63-06d093033000"
+    ],
     "actor_row_id": "6b0d87fc-67fd-446e-a4e4-ebdcd4c7639f",
     "actor_bucket_key": "christi zerega|SC"
   },
@@ -42,12 +49,37 @@
     "_pdf_state_family_count": 108,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 6,
+    "actor_report_count": 6,
     "family_count": 4,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Allowed financial abuse through litigation. Hoping to get care for my children and experience multiple misconduct events from a therapist & lying in notes and to 3rd parties.",
+        "state": "SC",
+        "county": "Charleston county",
+        "row_id": "fa31ecb8-bccd-4c02-9cac-9277b96cc484"
+      },
+      {
+        "body": "Destroyed my finances and empowered an abuser.",
+        "state": "SC",
+        "county": "Charleston",
+        "row_id": "02bc1970-6733-4c52-992e-5594b40e4cf4"
+      },
+      {
+        "body": "Absolute familial and financial destruction. I was the primary parent, and they are with an abuser and have been for 11 month. This is the most corrupt system I have ever seen.",
+        "state": "SC",
+        "county": "Charleston",
+        "row_id": "f6da603b-0c3c-4bed-ac66-999321e5a851"
+      },
+      {
+        "body": "Family Court is nothing but an extortion ring filled with corrupt court actors lining their pockets at the cost of children. Biggest child trafficking agency in the world. Children left traumatized over and over again while stable loving parents loose everything.",
+        "state": "SC",
+        "county": "Berkeley county",
+        "row_id": "23f1a9bd-c499-4c48-ba41-8af1fbb2a0ce"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Therapist dropped my case after I shared ex partner emotional abuse event towards my children - I told the therapist prior to this event, abuse would happen to my children when using a technique she wanted me to use - she dropped my case with no referrals and lied about my participation in session. Her notes have inaccurate information reported. She reported false information about financial abuse events I experienced (victim) and presented me as paranoid - though she provided no clinical care or intake, and the services provided were supposed to be only interventions. She violated confidentiality, reported inaccurate clinical labels based on defamation from an abusive ex (she met with too) & lied about my participation - she was unwilling to speak with me after she sent this inaccurate information to 3rd parties, Multiple levels of malpractice and as I was trying to get help for my family she greatly harmed my case through lying, unethical actions based on her license, and she should loose her license. She causes harm to this client & children.",
@@ -76,11 +108,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/christi_zerega",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='SC'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -96,6 +124,22 @@
     "recommended_route": "/court-actors/sc/christi_zerega/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Lied about my participation in session",
+        "kind": "comment"
+      },
+      {
+        "body": "Keep a careful eye on her and take perfect notes. She is off the chains. HER NAME IS MISPELLED!",
+        "kind": "comment"
+      },
+      {
+        "body": "She plays all sides and will tell you exactly what you want to hear.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

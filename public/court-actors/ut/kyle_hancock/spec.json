@@ -12,12 +12,18 @@
     "court_or_county": "Davis County",
     "state": "Utah",
     "state_abbr": "UT",
-    "mention_count": 0,
+    "mention_count": 5,
     "family_count": 4,
     "public_family_count": 4,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 5,
+    "supabase_row_ids": [
+      "9b79c976-b32e-4784-94c9-40bef5fb1ddb",
+      "814f8e4a-4ed8-4d3b-b333-873723a5c8f7",
+      "e4f1f289-cadd-458b-af71-d29456d10d0d",
+      "d4fc8644-ed46-4bd1-82db-3961de1ff774",
+      "b061ee09-014d-41d2-9a49-a91b09fc22bc"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
@@ -42,12 +48,31 @@
     "_pdf_state_family_count": 56,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 5,
+    "actor_report_count": 5,
     "family_count": 4,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "He broke the system to protect the abuser, forcing me into a legal minefield where my child's physical and biological safety is traded for an abuser's convenience, turning a system meant to protect a toddler into the very mechanism that endangers his life",
+        "state": "UT",
+        "county": "Davs County",
+        "row_id": "a9223efb-866d-4342-8ecd-104bf0e927e5"
+      },
+      {
+        "body": "They have stolen the voice of an innocent child who has only shown bravery to stand up to his abuser. He has lost hope for not being abused and knows that what is going on is wrong. Anyone touching his penis, butt or forcing him to touch anyone else's is child sex abuse. The adults are too deaf to hear from my special needs child.",
+        "state": "UT",
+        "county": "Box Elder County",
+        "row_id": "f887b00d-5c3d-4731-9801-b97868b3ee09"
+      },
+      {
+        "body": "It has caused serious emotional and psychological damage to both siblings as well as myself and our family. We have done absolutely nothing that should have had my child removed.",
+        "state": "UT",
+        "county": "Cache",
+        "row_id": "9575b979-9769-41ef-b002-665072b653f5"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "He lied in one of his letters to the court by stating his job is to evaluate both homes with my child. That never happened. He then stated in a hearing that he only evaluated one home as that was all he needed to do. Evaluator only evaluated my son with the petitioner’s family at their home but never evaluated my son at our home with his only sibling. He questioned my son so the Petitioners home about the abuse they did while they were present. He thinks it’s a good idea to question a child victim in a comfortable setting. How can it be a comfortable setting when the child is being questioned in the very place the abuse occurred?",
@@ -70,11 +95,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/kyle_hancock",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='UT'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +111,18 @@
     "recommended_route": "/court-actors/ut/kyle_hancock/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "He lied in one of his letters to the court by stating his job is to evaluate both homes with my child. That never happened.",
+        "kind": "comment"
+      },
+      {
+        "body": "Has never presented the crimes of which my abuser has committed. My son continues to be injured but the custody evaluator and GAL are very inter related.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

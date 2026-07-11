@@ -12,12 +12,16 @@
     "court_or_county": "Elmore",
     "state": "AL",
     "state_abbr": "AL",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "547469d6-7459-4c97-a052-6592f0194bb8",
+      "f8d30676-d545-4cc6-9c42-814f4365fbfb",
+      "087c5ca8-6a1f-45eb-9f8d-d420280a7d90"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "dee dee calhoun|AL"
   },
@@ -42,12 +46,25 @@
     "_pdf_state_family_count": 130,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "The system has allowed continuous \"emergency\" motions to cloud the original filing, and has temporarily placed my child with other parent that has a documented history of neglect, emotional abuse, abuse of process, and placing child in harm's way on multiple occasions",
+        "state": "AL",
+        "county": "Elmore",
+        "row_id": "5ce45d9a-435b-4c8e-ab74-9afd83682a5b"
+      },
+      {
+        "body": "This court has aided in the psychological abuse and alienation of two children from their life long family support network of grandparents, cousins, and aunts and uncles that they have had no contact with, with no reason stated by parents and absolutely no evidence of harm in any fashion.",
+        "state": "AL",
+        "county": "Elmore County",
+        "row_id": "88e71691-2738-4f7a-9094-db5af2bc7886"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "She ignored crucial evidence and denied the request for a professional mental health opinion to weigh in on a case of comeplete family alienation by parents where psychological abuse was an obvious concerns as two children were removed from a whole family network when their mother alienated from her family that helped house and riase her and the children their entire lives for no good cause other than weaponizing the children due to a minor conflict between the mother and grandmother. The whole family testified to the obvious emotioanl instibility of the mother of the two children and the judge further ignored that and testimony that cohesion was witnessed by the childrens grandfather. Counseling was denied twice, by this judge as a plea for help from the family. Visitation was denied based on a photo posted on facebook by grandmother for childs birthday against mothers wishes as a sign that grandmother was no cooperating, when the childrens school regularly posted pictures on facebook. This judge completely ignored what was best for the children in this case, and they now live isolated from all family and have no interaction with other children except at school.",
@@ -64,11 +81,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/dee_dee_calhoun",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='AL'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -84,6 +97,18 @@
     "recommended_route": "/court-actors/al/dee_dee_calhoun/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Removed from a whole family network when their mother alienated from her family that helped house",
+        "kind": "comment"
+      },
+      {
+        "body": "This 'actor' needs to be added to DeAnn \"Dee Dee\" Calhoon",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

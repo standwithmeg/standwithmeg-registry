@@ -12,12 +12,17 @@
     "court_or_county": "Beaufort",
     "state": "North Carolina",
     "state_abbr": "NC",
-    "mention_count": 0,
+    "mention_count": 4,
     "family_count": 4,
     "public_family_count": 4,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "877e9311-eb4a-4df5-a4f6-3cf63764a7f4",
+      "208a074a-2cc0-4eb1-8ffd-ffe65a53b030",
+      "d5d3cb55-d986-4a8b-b3d8-61c5aacbbba0",
+      "9c089b69-44ea-4da4-aced-d9740be2dd13"
+    ],
     "actor_row_id": "877e9311-eb4a-4df5-a4f6-3cf63764a7f4",
     "actor_bucket_key": "regina parker|NC"
   },
@@ -42,12 +47,37 @@
     "_pdf_state_family_count": 216,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 4,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "The system has torn my family apart",
+        "state": "NC",
+        "county": "Beaufort",
+        "row_id": "0801015a-23f4-439c-a72f-6cba458f385b"
+      },
+      {
+        "body": "Former pissed off foster kid",
+        "state": "NC",
+        "county": "Beaufort",
+        "row_id": "312755d7-a7d0-49af-acc3-436fc7d8a05d"
+      },
+      {
+        "body": "They lost my son, he has been missing since September 23, 2025. They have consistently tried to cover up the unconstitutional seizure of my children. They scrubbed reports and gave my 8 year old daughter to our abuser and placed my 15 year old daughter with a pedophile.",
+        "state": "NC",
+        "county": "Beaufort County",
+        "row_id": "1f3c4576-e9e3-4d97-8308-93200d270032"
+      },
+      {
+        "body": "The system tried to destroy and break our family simply for money because three of our children have disabilities they could cash in on. That same system tried to silence us l, paint us as liars, when the proof didn’t match the story they were telling. WE WILL NEVER STOP TELLING OUR STORY!!! If we help and save just one other family it was not for nothing. We are together. Our family fights together. They chose the wrong ones. All of my children are home because our voices, our proof, MATTERED.",
+        "state": "NC",
+        "county": "Beaufort County",
+        "row_id": "c314b71a-3fb5-41be-af03-3f07d97018cd"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "She blindly signed nonsecured custody orders for me and my brothers. She would accept none of my mother’s proof or documents. When I ran away she signed an order stating she was not requiring house arrest or monitoring but DSS was requesting it and they continued to have custody of me even tho I was 17 and the law says I can stay or go anywhere I feel is safe. My charges for undisciplined youth (running away) was dropped because of this law but that is still wrote in the order. I was led to believe I had been ordered by her and DSS but didn’t see this order until I was already 18 as they would not allow me to have a copy of the order. I did ask. Due process was not followed or the law.",
@@ -76,11 +106,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/regina_parker",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='NC'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -96,6 +122,26 @@
     "recommended_route": "/court-actors/nc/regina_parker/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "I did ask. Due process was not followed or the law.",
+        "kind": "comment"
+      },
+      {
+        "body": "Signed a non secured custody order after DSS had taken the children.",
+        "kind": "comment"
+      },
+      {
+        "body": "She's the chief district judge and not only did she lie to me she has enabled this abuse.",
+        "kind": "comment"
+      },
+      {
+        "body": "Signed for telephonic signatures after the fact of removal.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

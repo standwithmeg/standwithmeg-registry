@@ -12,12 +12,17 @@
     "court_or_county": "Allen",
     "state": "Ohio",
     "state_abbr": "OH",
-    "mention_count": 0,
+    "mention_count": 4,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "5c6b33a3-873c-4c4f-ade6-0039f6773184",
+      "8b7a2f6d-d1e0-4af9-b0cf-2afb3f2ed737",
+      "9371326b-8304-4800-ae0e-eca8785fdb80",
+      "336d23c6-3a2e-4a8a-a74f-71104ee78a2f"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
@@ -42,12 +47,31 @@
     "_pdf_state_family_count": 264,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "The court is destroying my child. He’s being abused and neglected by his dad and stepmom, and even after proving everything, none of the officials will do anything about it. Their solution was “let’s put it in writing“. When I told them that wouldn’t matter, and he would continue violating everything as he has been, they insisted this was the way to go, and that I would have to come back and pay a lot more money to come after him again. The court is bankrupting me!",
+        "state": "OH",
+        "county": "Allen",
+        "row_id": "81f87716-197d-4827-bed2-e3eb38414afb"
+      },
+      {
+        "body": "The court stole my daughter and trafficked her to a pedophile, all for financial gain. My daughter has endured substantial harm and was taken from a safe and loving home with me.",
+        "state": "OH",
+        "county": "Allen",
+        "row_id": "40a36cb6-b382-4530-9d35-a8e17b51447a"
+      },
+      {
+        "body": "Took my entire life, my motherhood, my job, my car, my home, my safety and security, my trust in the system, my wellbeing. Most importantly my three daughters childhoods, innocence, and child parent relationship.",
+        "state": "OH",
+        "county": "Allen",
+        "row_id": "1096363d-5f0c-4ffb-a2b4-18a0e09e10c6"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "She continues to downplay everything, not take the child’s best interest in mind, even after proving abuse, and possible pedophilia she let the dad continue having joint custody. I proved he’s been attacking me, and a lot of other post separation abuse, and she does nothing. The county Prosecutor said that if I could get something from family court, proving that what he’s doing to me has nothing to do with the child, then he can prosecute. Family court won’t provid that for me. So I continue being abused. All of the police officers are livid with the courts because the courts won’t do anything, even when I have multiple police reports against him. The police have notified me that this isn’t just with me",
@@ -70,11 +94,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/magistrate_deborah_drexler",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='OH'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +110,22 @@
     "recommended_route": "/court-actors/oh/magistrate_deborah_drexler/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "The county Prosecutor said that if I could get something from family court, proving that what he’s doing to me has nothing to do with the child, then he can prosecute.",
+        "kind": "comment"
+      },
+      {
+        "body": "Denied all rights. Threatened me and gave me a gag order for as she said, \"telling the truth.\" Denied my rights to a hearing for almost 5 years now.",
+        "kind": "comment"
+      },
+      {
+        "body": "Magistrate not Judge",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

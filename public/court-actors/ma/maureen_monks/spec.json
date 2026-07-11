@@ -12,12 +12,16 @@
     "court_or_county": "County not listed",
     "state": "Massachusetts",
     "state_abbr": "MA",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "2486b76e-2434-4be6-aa50-5d8707d0644c",
+      "52bb29f6-ecd7-4ff2-a814-13612a5e6d0b",
+      "41250d4b-5024-4af1-b63e-23bc23c699e2"
+    ],
     "actor_row_id": "2486b76e-2434-4be6-aa50-5d8707d0644c",
     "actor_bucket_key": null
   },
@@ -42,12 +46,31 @@
     "_pdf_state_family_count": 106,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Years of abusive litigation by my ex -- that has gone unchecked by multiple courts in multiple jurisdictions -- destroyed my employment, savings, and mental health.",
+        "state": "MA",
+        "county": "Middlesex",
+        "row_id": "7fc31add-be13-4560-ae58-f4a32ec6492a"
+      },
+      {
+        "body": "Destroyed by the system built to protect us. Safety and our voice doesn’t matter as much as you income in the family system.",
+        "state": "MA",
+        "county": "Middlesex",
+        "row_id": "c38db479-920e-436a-9908-23eaf1fc2749"
+      },
+      {
+        "body": "This situation has caused long term emotional confusion, insecurity, and distress due to the sudden, unjust disruption of a primary bond at a young age, (4) compounded by years of instability and unsubstantiated, conflicting narratives that deprived us of a normal relationship for 4 years. Both my daughter, our extended family, and I continue to experience lingering grief, anxiety, and separation anxiety, with the pain of missing each other persisting through long stretches of time apart ... impacts will remain part of our emotional landscape forever. -Anonymous, Utah",
+        "state": "MA",
+        "county": "Cambridge and Woburn",
+        "row_id": "30cd32e3-9ce5-421d-9c29-ea23ee20cbf1"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "The judge denied a continuance despite missing evidence, imposed restrictions neither parent requested, and justified them with unsupported safety concerns that contradicted the GAL’s findings.",
@@ -70,11 +93,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/maureen_monks",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='MA'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +109,22 @@
     "recommended_route": "/court-actors/ma/maureen_monks/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "The judge denied a continuance.",
+        "kind": "comment"
+      },
+      {
+        "body": "Original judge from 2020 supported seriousness of sexual abuse allegations and most protective of children.",
+        "kind": "comment"
+      },
+      {
+        "body": "Denied a gatekeeper motion",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

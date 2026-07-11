@@ -12,12 +12,20 @@
     "court_or_county": "San Bernardino",
     "state": "California",
     "state_abbr": "CA",
-    "mention_count": 0,
-    "family_count": 3,
-    "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "mention_count": 7,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 7,
+    "supabase_row_ids": [
+      "08eda4d4-9e42-45bf-b924-56bf2ede2fce",
+      "bf4487cb-339e-4d36-bb38-09bf259c86dd",
+      "cf2f24e5-d663-4a0c-afe6-6d0167c2c62f",
+      "2aa21fb6-0ce3-4950-b7ec-ccafe55359a2",
+      "2aeaece6-a6fb-4172-85c5-daa3ff88c6e7",
+      "e365fbbb-cb68-4107-8f80-092f45409327",
+      "729a6005-1c27-4b15-aef5-4c581e51afd2"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
@@ -27,27 +35,52 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 357,
-    "total_submissions": 444,
-    "avg_financial_loss": 285669.87,
+    "families_approved": 359,
+    "total_submissions": 446,
+    "avg_financial_loss": 285125.16,
     "avg_months_lost": 35.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CA",
-    "state_family_count": 444,
-    "median_financial_loss": 265100,
-    "median_burden_sample_size": 198,
+    "state_family_count": 446,
+    "median_financial_loss": 269200,
+    "median_burden_sample_size": 199,
     "median_months_lost": 20,
-    "pro_se_pct": 58.6,
-    "pro_se_count": 260,
-    "_pdf_state_family_count": 444,
+    "pro_se_pct": 58.7,
+    "pro_se_count": 262,
+    "_pdf_state_family_count": 446,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
-    "family_count": 3,
-    "family_reports": [],
+    "report_count": 7,
+    "actor_report_count": 7,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "They have taken my granddaughters away from a loving, caring family that they had a strong bond with. They never gave us grandparents a fair opportunity to care for our granddaughters.",
+        "state": "CA",
+        "county": "San Bernardino",
+        "row_id": "9386c238-3708-45d1-94d7-8e064b28c3b5"
+      },
+      {
+        "body": "The system has traumatized myself my kids and is tearing my five-year-old apart and myself",
+        "state": "CA",
+        "county": "San Bernardino",
+        "row_id": "b8d6f4d5-fed7-44c9-a54d-0d03071b8206"
+      },
+      {
+        "body": "Has divided my children apart who were once very close, Causing Health problems seperated from grandparents who have always been there",
+        "state": "CA",
+        "county": "San Bernardino",
+        "row_id": "d972749c-d611-477b-b43b-f347e8d3fc81"
+      },
+      {
+        "body": "They have torn apart my family and removed every resource my children has to assist them with taking part of their community. They have abused because of their disabilities and there has been no help for them since they left my home.",
+        "state": "CA",
+        "county": "San Bernardino",
+        "row_id": "18993492-819a-4706-a5e6-cb1c6cc2127a"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Violating due process pushing adoptions has a 75% reversal at appeal court ignored sides with the social worker report even though it is not written correctly. Does not put the guardians in contempt When they continuously go off of hearsay. Pushes through icwa doesn’t have anyone doind through investigation on it can barely understand when he is saying when he talks He ignores evidence, due process tries to not properly go through the icwa protocol, ignore family placements",
@@ -70,11 +103,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/steven_a_mapes",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='CA'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +119,22 @@
     "recommended_route": "/court-actors/ca/steven_a_mapes/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Violating due process pushing adoptions has a 75% reversal at appeal court ignored sides with the social worker report even though it is not written correctly.",
+        "kind": "comment"
+      },
+      {
+        "body": "He allowed CFS 15 months of delays to search for evidence when they found out the original allegations were false. From there he allowed delay after delay.",
+        "kind": "comment"
+      },
+      {
+        "body": "He said a lot of nice things about me and then terminated my rights at the end of the hearing saying there was no law on it I’m never able to speak, they deny it",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

@@ -12,12 +12,18 @@
     "court_or_county": "Shawnee",
     "state": "Kansas",
     "state_abbr": "KS",
-    "mention_count": 0,
+    "mention_count": 5,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 5,
+    "supabase_row_ids": [
+      "a14d48fb-950d-42f0-9205-9f04510cb52c",
+      "1510a0cd-f735-49b3-8e55-53b5364cf2a5",
+      "0614d30e-0208-4161-832d-d8722c75eb13",
+      "c01b375f-6bb6-461b-94e5-51bcc2aa65c4",
+      "dc2af4c1-aeff-4b23-ac16-4c378d220f88"
+    ],
     "actor_row_id": "a14d48fb-950d-42f0-9205-9f04510cb52c",
     "actor_bucket_key": "bud dale|KS"
   },
@@ -42,12 +48,31 @@
     "_pdf_state_family_count": 251,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 5,
+    "actor_report_count": 5,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "My daughter being in the KVC foster care system cause further trauma for her and for our family. It place her in direct danger, lack of counseling, medical neglect, financial burden, and stress.",
+        "state": "KS",
+        "county": "Shawnee",
+        "row_id": "0af61314-fa53-45e7-bef8-103454b1b831"
+      },
+      {
+        "body": "My children’s childhood was stolen from them. They were taken on false allegations over 3 years. Which were all determined unsubstantiated- they still have not returned home. They have been withheld court ordered therapy treatment for 3 years with no enforcement that could help them heal",
+        "state": "KS",
+        "county": "Shawnee",
+        "row_id": "c9ca7851-1cad-40da-b1d2-5c9dd4622db9"
+      },
+      {
+        "body": "Protect the parent that emotionally harms and attempts to alienate our children because their hate for me is greater than their love for our children. Our counsel, the judge, nor case manager will enforce the court order allowing said parent to continue to violate without consequence, which allows ongoing emotional / financial harm and conflict with not only the other parent, but the children.",
+        "state": "KS",
+        "county": "Jefferson County",
+        "row_id": "d3e45d06-acf9-442e-b6db-fca9cfd93d66"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "I hired him initially to be my attorney for divorce and child custody. I want to try to get my money back from Bud Dale. He collected the retainer and never did anything. I even had to submit ALL paperwork twice because he lost it! Had to hire other counsel because he disappeared and kept my $. He never filed the paperwork he was hired to and missed crucial deadlines which harmed my child. After creating a much bigger mess. He is not who he portrays on his website is not what he practices. He is a fraud. He never provided itemized billing for my retainer he took and then disappeared.",
@@ -70,11 +95,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/bud_dale",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='KS'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +111,22 @@
     "recommended_route": "/court-actors/ks/bud_dale/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "He is not who he portrays on his website is not what he practices. He is a fraud. He never provided itemized billing for my retainer he took and then disappeared.",
+        "kind": "comment"
+      },
+      {
+        "body": "He refused it, after learning he met with me as counsel 9 months prior. He then retaliated after my attorney exposed his behavior on the record.",
+        "kind": "comment"
+      },
+      {
+        "body": "Creates hostile environment; cussing. Challenges the party as if on trial. Mocked the capabilities of my child’s spelling ability.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

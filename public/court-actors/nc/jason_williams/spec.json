@@ -12,12 +12,17 @@
     "court_or_county": "Beaufort County",
     "state": "North Carolina",
     "state_abbr": "NC",
-    "mention_count": 0,
-    "family_count": 0,
-    "public_family_count": 0,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "mention_count": 4,
+    "family_count": 4,
+    "public_family_count": 4,
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "942bf179-539f-4b49-8e64-74b9ef6f5327",
+      "7c1c331a-a433-4c2d-937c-00a79b9aa47d",
+      "f6564ecf-25fc-4bae-9f63-fcd20519caa8",
+      "db2202f4-6e01-4602-8ed2-5f6aa3994ed0"
+    ],
     "actor_row_id": "942bf179-539f-4b49-8e64-74b9ef6f5327",
     "actor_bucket_key": "jason wiliams|NC"
   },
@@ -42,12 +47,37 @@
     "_pdf_state_family_count": 216,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
-    "family_count": 0,
-    "family_reports": [],
+    "report_count": 4,
+    "actor_report_count": 4,
+    "family_count": 4,
+    "family_reports": [
+      {
+        "body": "The system has torn my family apart",
+        "state": "NC",
+        "county": "Beaufort",
+        "row_id": "0801015a-23f4-439c-a72f-6cba458f385b"
+      },
+      {
+        "body": "Former pissed off foster kid",
+        "state": "NC",
+        "county": "Beaufort",
+        "row_id": "312755d7-a7d0-49af-acc3-436fc7d8a05d"
+      },
+      {
+        "body": "They lost my son, he has been missing since September 23, 2025. They have consistently tried to cover up the unconstitutional seizure of my children. They scrubbed reports and gave my 8 year old daughter to our abuser and placed my 15 year old daughter with a pedophile.",
+        "state": "NC",
+        "county": "Beaufort County",
+        "row_id": "1f3c4576-e9e3-4d97-8308-93200d270032"
+      },
+      {
+        "body": "The system tried to destroy and break our family simply for money because three of our children have disabilities they could cash in on. That same system tried to silence us l, paint us as liars, when the proof didn’t match the story they were telling. WE WILL NEVER STOP TELLING OUR STORY!!! If we help and save just one other family it was not for nothing. We are together. Our family fights together. They chose the wrong ones. All of my children are home because our voices, our proof, MATTERED.",
+        "state": "NC",
+        "county": "Beaufort County",
+        "row_id": "c314b71a-3fb5-41be-af03-3f07d97018cd"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "I want to start by saying I think this man was trying to work the good ol boy system to bring about change and fight for parents the best way he knew how within that system. I think advocating for me and parents like me is what cost him his judges seat in the last election. That being said he still signed orders that were unconstitutional and allowed in lies without the parents ever getting to speak or present evidence. He allowed us to be silenced and blocked. He allowed delays. He allowed full hearings against my teenage son without my son ever being notified or present knowing my son ran claiming abuse. He allowed back door meetings in his chambers without us as parents being represented or our children. He did give unlimited visitation with our parents present and all rights to appointments to be present and have records and our children to be able to contact one another freely. He had a responsibility though to say it was illegal and abolish it but he chose not to. He did so trying to hold that seat n still lost it because he was playing both sides.",
@@ -76,11 +106,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/jason_williams",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='NC'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -96,6 +122,26 @@
     "recommended_route": "/court-actors/nc/jason_williams/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "He allowed us to be silenced and blocked. He allowed delays.",
+        "kind": "comment"
+      },
+      {
+        "body": "He violated due process and kept continuing hearings for DSS.",
+        "kind": "comment"
+      },
+      {
+        "body": "At the time he was my court appointed attorney. Failed to file any motions and misrepresenton",
+        "kind": "comment"
+      },
+      {
+        "body": "He signed and reinforced the unconstitutional seizure of my children, after the fact.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

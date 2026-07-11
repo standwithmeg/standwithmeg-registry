@@ -12,12 +12,17 @@
     "court_or_county": "Erie",
     "state": "New York",
     "state_abbr": "NY",
-    "mention_count": 0,
+    "mention_count": 4,
     "family_count": 4,
     "public_family_count": 4,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "e4ed3622-5a03-496a-92cb-cbf9988fddc5",
+      "72b65fe7-83d5-4508-9fc9-fe0e9a4d91eb",
+      "dfd8fc60-ffbe-4ded-8d44-e2937d453cdb",
+      "0aae5c42-ba5b-46aa-a3ed-69a3b40e5030"
+    ],
     "actor_row_id": "e4ed3622-5a03-496a-92cb-cbf9988fddc5",
     "actor_bucket_key": null
   },
@@ -42,12 +47,37 @@
     "_pdf_state_family_count": 173,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 4,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "The system didn't just separate me from my child—it accelerated my documented disability, pushed me into emotional crisis, and left me fighting for stability while being denied basic information about my own son.\" \"After nearly two years of barriers, delays, and unanswered requests, the damage has extended beyond the courtroom, affecting my mental health, my finances, my housing stability, and my ability to maintain a meaningful parent-child relationship.\"",
+        "state": "NY",
+        "county": "Erie County",
+        "row_id": "0b3bc7fb-737f-4248-8755-ba7fa51f6d91"
+      },
+      {
+        "body": "The system tears,family apart pushes further trauma on children and only cares about the money and greed.",
+        "state": "NY",
+        "county": "Erie",
+        "row_id": "a908efc2-2a83-47fd-affc-8899fa5085bb"
+      },
+      {
+        "body": "This system has separated my children from their family, ignored concerns I have raised, and forced us through a process that has caused significant emotional pain and disruption. The experience has strained our family relationships, affected my children’s well-being, and left us fighting to be heard",
+        "state": "NY",
+        "county": "Erie County",
+        "row_id": "49c6c05c-ef77-494c-9c43-f7abe4e0dd2e"
+      },
+      {
+        "body": "This system has caused irreparable damage to my children and I. Their lives have been negatively impacted due to the inability of the system to function properly!",
+        "state": "NY",
+        "county": "Erie",
+        "row_id": "198513f6-0fa4-4bcd-ad0d-6384814aa1d3"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "She is allowing the CPS attorney to decide basically what happens and there is proof that I wasn’t involved and she is allowing them to amend the legion and draft up new ones.",
@@ -76,11 +106,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/kelly_brinkworth",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='NY'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -96,6 +122,26 @@
     "recommended_route": "/court-actors/ny/kelly_brinkworth/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "She is allowing the CPS attorney to decide basically what happens and there is proof that I wasn’t involved.",
+        "kind": "comment"
+      },
+      {
+        "body": "Denied every motion I submitted, including discovery. Was biased and told the father to file for custody.",
+        "kind": "comment"
+      },
+      {
+        "body": "She doesn’t listen and just follows what CPS says even though they are wrong.",
+        "kind": "comment"
+      },
+      {
+        "body": "She denied my motion without a hearing",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

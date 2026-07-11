@@ -12,12 +12,17 @@
     "court_or_county": "Weld county",
     "state": "CO",
     "state_abbr": "CO",
-    "mention_count": 0,
+    "mention_count": 4,
     "family_count": 4,
     "public_family_count": 4,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "81d60776-74c9-4e9f-8435-2862a275e63b",
+      "0accef5f-48f5-44ae-b0be-b5d28df5604a",
+      "04d35390-bcc0-418b-9757-6f7397042315",
+      "fa44ae86-a221-4d89-8dfd-53a259b92eef"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
@@ -42,12 +47,31 @@
     "_pdf_state_family_count": 110,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 4,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "This situation has affected our daughter and her siblings relationship which should never happen with Family First in place.",
+        "state": "CO",
+        "county": "Weld",
+        "row_id": "dbdbb8b3-c2fa-4d47-b7df-100f5eb5dc95"
+      },
+      {
+        "body": "Weld County CPS is full of bad actors and corruption. A literal threat made by a caseworker to myself, \"I am the end all, be all of this case. \"",
+        "state": "CO",
+        "county": "Weld",
+        "row_id": "c3b21ff9-4911-4d72-b7e4-380b806ad442"
+      },
+      {
+        "body": "This family court rewarded parental alienation, restricted my relationship with my children, and gave sole decision-making authority to the parent creating barriers to our bond, despite evidence of withheld parenting time, denied contact, and gatekeeping. At the same time, it imposed financial orders based on unsupported income assumptions that created impossible obligations, pushing me into debt while weakening my ability to remain a stable and present father in my children’s lives.",
+        "state": "CO",
+        "county": "Weld",
+        "row_id": "f4a2d4c0-382b-4116-8938-b6c2c1aa09a5"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "The court’s permanent orders rewarded obstruction and parental alienation rather than protecting and restoring the father-child relationship. Despite repeated evidence of denied phone calls, withheld parenting time, gatekeeping, scheduling conflicts placed over parenting time, and lack of cooperation from the mother, the Court still awarded her sole decision-making authority over medical, education, therapy, extracurricular activities, and major parenting decisions. The Court relied heavily on historical domestic violence allegations even after the permanent protection order was denied and replaced with only a mutual limited-contact order, using those same allegations to justify denying equal parenting time and joint decision-making. The Court also criticized the lack of family therapy while ignoring that a restraining order and communication barriers made family therapy difficult to initiate, and that the children’s therapists and related recommendations were not meaningfully considered. AppClose communications were used against the father despite his efforts to document concerns professionally, while the mother’s withholding, interference, and controlling behavior were largely minimized. Independent third-party witness testimony, subcontractor financial records, therapist concerns, and corroborating statements were discounted or ignored, while the Court accepted the mother’s narrative with little accountability placed on her conduct. The result was reduced parenting time, removal of midweek parenting, sole decision-making to the parent creating barriers, and financial orders built on unsupported credibility findings rather than balanced evidence and the best interests of the children.",
@@ -70,11 +94,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/kimberly_b_schutt",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='CO'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +110,22 @@
     "recommended_route": "/court-actors/co/kimberly_b_schutt/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "AppClose communications were used against the father.",
+        "kind": "comment"
+      },
+      {
+        "body": "Opened a CPS case falsely using educational neglect as a way to start a CPS investigation that lasted 4 years and thousands of dollars.",
+        "kind": "comment"
+      },
+      {
+        "body": "She ignored Family First and listened to DHS.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

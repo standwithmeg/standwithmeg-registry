@@ -12,12 +12,17 @@
     "court_or_county": "Highland",
     "state": "Ohio",
     "state_abbr": "OH",
-    "mention_count": 0,
-    "family_count": 0,
+    "mention_count": 4,
+    "family_count": 4,
     "public_family_count": 0,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "dba1ec88-a683-44eb-bfe3-3497b4e871c0",
+      "2b9e1c55-db40-405a-b219-0f5a2e2d0e0d",
+      "aa48a20e-d0a9-43b8-9a54-7ae0c45b0d3a",
+      "58af1e58-7cfa-4633-b908-7622eb1224f6"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "anika colins|OH",
     "_overrides_applied": [
@@ -49,12 +54,37 @@
     "_pdf_state_family_count": 264,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
-    "family_count": 0,
-    "family_reports": [],
+    "report_count": 4,
+    "actor_report_count": 4,
+    "family_count": 4,
+    "family_reports": [
+      {
+        "body": "Denied motion and ignored evidence!! None of them did their job they made up everything. The judge didn’t want to listen to us whatsoever that we gave him evidence and they didn’t show him any evidence and that he ruled with them over us. He delayed hearings gave them more time biased, he didn’t sign half of his records he had to click record sign it things like that you can put well. She really really wasn’t on our case that much it was mainly James he was the one he was his assistant prosecutor. They have kept me away from my daughter since she was born. Have false documents and have been proven but no one will listen to me. Please help me!!!!",
+        "state": "OH",
+        "county": "Highland county",
+        "row_id": "93b9ae0f-56b2-4e79-ab9c-427da47455a6"
+      },
+      {
+        "body": "This system has lied and tore my family apart causing emotional damage",
+        "state": "OH",
+        "county": "Highland county",
+        "row_id": "6caec907-d638-46ce-ac09-9cde3975ad8e"
+      },
+      {
+        "body": "The system has destroyed my entire family and when I asked the corrupt judge greer to tell me why, he simply told me he don't have to explain why he made the decision to terminate my rights. Let that sink in....",
+        "state": "OH",
+        "county": "HIGHLAND",
+        "row_id": "899c1aec-eb22-48b6-91a7-613a0f0bb684"
+      },
+      {
+        "body": "They took the happiest and joy out of us",
+        "state": "OH",
+        "county": "Highland county",
+        "row_id": "8b35071a-b597-4615-93d0-41c8dca323bd"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Denied motion and ignored evidence!! None of them did their job they made up everything. The judge didn’t want to listen to us whatsoever that we gave him evidence and they didn’t show him any evidence and that he ruled with them over us. He delayed hearings gave them more time biased, he didn’t sign half of his records he had to click record sign it things like that you can put well. She really really wasn’t on our case that much it was mainly James he was the one he was his assistant prosecutor. Please help me!!!!",
@@ -84,9 +114,8 @@
   },
   "export_dir": "New Final Post and Capcut template/export/hon_anneka_p_collins",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='OH'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
+    "public_family_count_api: no match for display_name='Hon. Anneka P. Collins' bucket='anika colins|OH' slug='hon_anneka_p_collins' in OH (440 actors)",
+    "family_count: lookup and previous spec returned 0 — using report_count=4 as fallback"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
@@ -103,6 +132,26 @@
     "recommended_route": "/court-actors/oh/hon_anneka_p_collins/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Denied motion and ignored evidence!! None of them did their job they made up everything.",
+        "kind": "comment"
+      },
+      {
+        "body": "Prosecutor of highland county Ohio she got my hospital records and used them as my newborn daughters records.",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored exculpatory evidence identified presented and maliciously prosecuted my wife and I.",
+        "kind": "comment"
+      },
+      {
+        "body": "Denied motion without hearing",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

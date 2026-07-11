@@ -12,12 +12,18 @@
     "court_or_county": "Flathead",
     "state": "Montana",
     "state_abbr": "MT",
-    "mention_count": 0,
+    "mention_count": 5,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 5,
+    "supabase_row_ids": [
+      "ff08ce71-8808-402a-b14d-595d1d5ae578",
+      "99646a9a-df29-4935-86e8-bb30fb9ea8ae",
+      "183662e0-6cff-4495-a451-d4fab9d4ed59",
+      "333ad64e-a532-4322-8325-e9091210e2f0",
+      "321e9795-f40e-42c2-8015-9e71fe704800"
+    ],
     "actor_row_id": "ff08ce71-8808-402a-b14d-595d1d5ae578",
     "actor_bucket_key": "amy poehling eddy|MT",
     "_overrides_applied": [
@@ -47,12 +53,31 @@
     "_pdf_state_family_count": 56,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 5,
+    "actor_report_count": 5,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "The system stole time that can't be given back deprived of making memories that should of been remembered in stories later told that would help you feel sense of belonging, rooted with sense of family unity. Instead of feelings of loneliness worthlessness abandonment, looking for brief comfort in drugs ECT after being deprived ability to give and receive love to rebuild strengthen parent/child relationships,",
+        "state": "MT",
+        "county": "Flathead County",
+        "row_id": "a3e3e58c-81e3-4c5e-aae6-399a03a97b43"
+      },
+      {
+        "body": "They have bypassed every guideline put into place to prevent third party take over. What they did was a**backwards. Amy Eddy. Failed our children. And she preaches she loves our constitution. Really?? Certainly not the part about parents and their children. And Marybeth Sampsel Advocate for families?! That is a really cute way of saying predator.",
+        "state": "MT",
+        "county": "Flathead",
+        "row_id": "a1ac5892-636b-4251-8d14-04605c580c37"
+      },
+      {
+        "body": "Stolen time of parent-child relationship. Deprived the ability to give or show love I can create more incentive to do better for them and yourself deprived of a chance to rebuild and strengthen the bond deprived of a sense of belonging leaving feeling more lost and unwanted or abandoned which leads to more people seeking addictions for a brief high for a sense of comfort or belonging or support generalized family with unity is drifting away all for money in the system they don't want and middle working class they want a rich and a poor and people don't open their damn eyes and wake up and stand up for nothing we're going to be f***** look what our veterans fought for We the people family unity one nation under God you don't have to believe in God but I do but just means take care of one another just like Jesus Jesus try to unite people and he wanted to have a common sense and the power of what can happen and the government didn't want that hell no they try to shut his ass up man but he still Rose going to go kick their ass didn't want to have the truth because they still wanted the power that's just like religions no matter what religion you are everything and a story is still altered depending on who needs to control what and how but the root of it is there is still something more than what we are if you know when you believe because even desolate little tribal people that don't even see normal people they still have common pictures of visions of around the world and of other people and the government from the beginning didn't want that they wanted to control hence the different religions and bibles and perceived concept of story is we should be making new Bible stories we're fighting for women and children and family unity the general sense of the four foundation all for temporary materialistic b******* unless you don't believe you are something more than what you are because by the grace of God I'm still freaking here but I'm at the end of my rope emotionally and mentally but I got it all organized printed off I just need a chance to be heard I'm a glitch in the system I survived and this all began and I had to live on the street before I got into my apartment years ago if it wasn't for some people that I met on the streets that helped me reinstall my faith and made sure I didn't commit suicide when they ripped my kids away and all this kind of stuff I won't be here today and it's by the grace of God cuz they were there for me more than my real family so I have a story to tell in multiple ways with proof behind it to back it in more than one way if I can just have a chance to be heard. Because I have gone through hell things that even my psychiatrist when I first started going to her she had to talk to the public defender social workers years ago to verify what I was saying was true that's how surreal it is..",
+        "state": "MT",
+        "county": "Unknown",
+        "row_id": "8b25eb7a-ca32-42e3-9e1a-65058dac36f6"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Confidential information was handed to the other side.",
@@ -63,11 +88,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/hon_amy_poehling_eddy",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='MT'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -83,6 +104,14 @@
     "recommended_route": "/court-actors/mt/hon_amy_poehling_eddy/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Confidential information was handed to the other side.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

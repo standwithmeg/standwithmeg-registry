@@ -12,12 +12,20 @@
     "court_or_county": "Highland",
     "state": "Ohio",
     "state_abbr": "OH",
-    "mention_count": 0,
-    "family_count": 6,
-    "public_family_count": 6,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "mention_count": 7,
+    "family_count": 1,
+    "public_family_count": 1,
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 7,
+    "supabase_row_ids": [
+      "2f9858c1-56aa-4d4d-b17e-f87cc2a004c3",
+      "6cdd400a-9f94-414e-a2c7-5beef1d36bfc",
+      "83639e4e-04c3-4a28-bbc5-79c1086555ca",
+      "39e32e75-3001-494e-9aa6-67de732bc4aa",
+      "4b73b82e-df54-4627-8cde-66043e48a8a9",
+      "2810a0fc-2ac2-41a3-8f2d-85012ee81c5f",
+      "ce9f010b-d5ac-423a-af46-cbd738933c05"
+    ],
     "actor_row_id": "2f9858c1-56aa-4d4d-b17e-f87cc2a004c3",
     "actor_bucket_key": "jenifer storer|OH"
   },
@@ -42,12 +50,49 @@
     "_pdf_state_family_count": 264,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
-    "family_count": 6,
-    "family_reports": [],
+    "report_count": 7,
+    "actor_report_count": 7,
+    "family_count": 1,
+    "family_reports": [
+      {
+        "body": "I am the alienated parent, this has caused me to have PTSD and the total loss of custody, my parenting time and my parental rights now my daughter is an adult. The damage is already done but I have been through unimaginable stress and loss grieving my daughter that is still alive because of the lies and decisions of someone else. I missed out on so much of my daughter's life, memories and her graduation from high school that I can never replace or get back because of this system that chose to turn their back on me as a loving mother.",
+        "state": "OH",
+        "county": "Lorain county courts",
+        "row_id": "f0b52ab7-f066-4f96-8852-765a9ac8ff55"
+      },
+      {
+        "body": "Denied motion and ignored evidence!! None of them did their job they made up everything. The judge didn’t want to listen to us whatsoever that we gave him evidence and they didn’t show him any evidence and that he ruled with them over us. He delayed hearings gave them more time biased, he didn’t sign half of his records he had to click record sign it things like that you can put well. She really really wasn’t on our case that much it was mainly James he was the one he was his assistant prosecutor. They have kept me away from my daughter since she was born. Have false documents and have been proven but no one will listen to me. Please help me!!!!",
+        "state": "OH",
+        "county": "Highland county",
+        "row_id": "93b9ae0f-56b2-4e79-ab9c-427da47455a6"
+      },
+      {
+        "body": "This system has lied and tore my family apart causing emotional damage",
+        "state": "OH",
+        "county": "Highland county",
+        "row_id": "6caec907-d638-46ce-ac09-9cde3975ad8e"
+      },
+      {
+        "body": "The system has destroyed my entire family and when I asked the corrupt judge greer to tell me why, he simply told me he don't have to explain why he made the decision to terminate my rights. Let that sink in....",
+        "state": "OH",
+        "county": "HIGHLAND",
+        "row_id": "899c1aec-eb22-48b6-91a7-613a0f0bb684"
+      },
+      {
+        "body": "They took the happiest and joy out of us",
+        "state": "OH",
+        "county": "Highland county",
+        "row_id": "8b35071a-b597-4615-93d0-41c8dca323bd"
+      },
+      {
+        "body": "Killed me and my family",
+        "state": "OH",
+        "county": "Highland county",
+        "row_id": "df430208-7750-49eb-9718-6825553635b6"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Denied motion and ignored evidence!! None of them did their job they made up everything. The judge didn’t want to listen to us whatsoever that we gave him evidence and they didn’t show him any evidence and that he ruled with them over us. He delayed hearings gave them more time biased, he didn’t sign half of his records he had to click record sign it things like that you can put well. She really really wasn’t on our case that much it was mainly James he was the one he was his assistant prosecutor. Please help me!!!!",
@@ -88,11 +133,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/jennifer_storer",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='OH'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -108,6 +149,30 @@
     "recommended_route": "/court-actors/oh/jennifer_storer/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Denied motion and ignored evidence!!",
+        "kind": "comment"
+      },
+      {
+        "body": "Living with the prosecutor.",
+        "kind": "comment"
+      },
+      {
+        "body": "The first caseworker Get the hospital to discharge me.",
+        "kind": "comment"
+      },
+      {
+        "body": "Obtained a rule 6 based on false information and filed a false complaint.",
+        "kind": "comment"
+      },
+      {
+        "body": "Lied to me about giving my daughter back to me",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

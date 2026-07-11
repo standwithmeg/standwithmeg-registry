@@ -12,12 +12,18 @@
     "court_or_county": "Hancock CPS Director",
     "state": "Ohio",
     "state_abbr": "OH",
-    "mention_count": 0,
+    "mention_count": 5,
     "family_count": 5,
     "public_family_count": 5,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 5,
+    "supabase_row_ids": [
+      "bae0e6a0-8307-46b7-a5c5-1d0557556624",
+      "2cb472de-9643-4c41-b4de-cd58c89f5b57",
+      "6767bf7d-f091-4289-9dfc-3529e551ef95",
+      "18122619-414a-4b7e-9cdd-3a2ae033e54a",
+      "d18dbeef-9795-4c16-8faa-3f6c71a34f86"
+    ],
     "actor_row_id": "bae0e6a0-8307-46b7-a5c5-1d0557556624",
     "actor_bucket_key": "randal galbraith|OH"
   },
@@ -42,12 +48,43 @@
     "_pdf_state_family_count": 264,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 5,
+    "actor_report_count": 5,
     "family_count": 5,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "This system allows legal kidnapping, because there are no checks and balances for Juvenile Court Judges. Judge Kristen Johnson has caused tremendous trauma to not only me and my son but our entire family. Director Randall Galbraith and Supervisor Karmen Lauth intentionally delayed the process of developing a caseplan for me to obtain custody. Then lied under oath about my contact with the agency",
+        "state": "OH",
+        "county": "Hancock County",
+        "row_id": "24aa6619-fec5-4a34-b177-0b7175845232"
+      },
+      {
+        "body": "I want to see them all burn in hell. If I ever get the chance to fully tell my story, this is when I'll give the most impactful statement.",
+        "state": "OH",
+        "county": "Williams",
+        "row_id": "1146b1df-fd71-404f-93df-d257e69940d9"
+      },
+      {
+        "body": "The system has DESTROYED my whole family we had a living family full of MEDICAL PROFESSIONALS and a retired Police Chief- none of us are able to get kinship!!! Children have been traumatized by the state and NEVER WERE. THEY WERE HAPPY, HEALTHY, & THRIVING.",
+        "state": "OH",
+        "county": "Hancock county",
+        "row_id": "661a9d9b-df22-4aa9-bfe5-57c439c836ac"
+      },
+      {
+        "body": "Complete destroyed us my daughters are in my life we are trying to get their brother home his GAL is who has him lied said he was adopted as well to his sister's they asked her about the childsupport an she freaked out stopped all contact he will be 12 this year jayden joe alexander lopez ERIKA CERVI HAS MY SON",
+        "state": "OH",
+        "county": "Hancock",
+        "row_id": "495a058c-3c9c-464d-8755-e3d5abb136d3"
+      },
+      {
+        "body": "This systemic issue in Hancock county unjustly kept the children from all relatives to break bonds. They ignored phone calls and requests. They ignore ombudsman recommendations. They denied kinship with no written denials. We have missed every milestone and holidays over the past almost 2 years. It has caused many family issues. During this time Kelli tried to stop us from being licensed fosters and said we will not get these children to our first home study worker. We became licensed in July 2025. We have had several children placed with us but still requests for kinship of the children have been ignored. She cut and paste a court document and said this is why and sent it in an email. We have never been in court. We currently have a foster child that we have had placed in our home county for almost 10 months. Please make it make sense. It’s about abuse of power, retaliation, abuse of funding and just pure evil. The children have been traumatized more being in foster care than had then been placed other loving family. They never did a Kinnect case.",
+        "state": "OH",
+        "county": "Hancock",
+        "row_id": "774221b7-593e-46c4-9c39-6284aac12e18"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "False allegations were sent to Hancock County from Williams County under the guise of \"third-party, neutral investigation\". It was far from neutral, based on evidence discovered. Hancock County JFS then released confidential information through the US Postal service in a clear view window envelope. No accountability to this day.",
@@ -82,11 +119,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/randall_galbraith",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='OH'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -102,6 +135,30 @@
     "recommended_route": "/court-actors/oh/randall_galbraith/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "It was far from neutral, based on evidence discovered.",
+        "kind": "comment"
+      },
+      {
+        "body": "He ignored my attorney and her communication. He ignored my moms complaint he recieved certified.",
+        "kind": "comment"
+      },
+      {
+        "body": "Refused to investigate the handling of my case when i asked several times.",
+        "kind": "comment"
+      },
+      {
+        "body": "Refuse kinship reunification an never returns calls very disrespectful on the phone an in person",
+        "kind": "comment"
+      },
+      {
+        "body": "Would NOT file my grievance said he’d see me in court.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

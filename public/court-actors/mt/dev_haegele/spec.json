@@ -12,12 +12,16 @@
     "court_or_county": "Flathead County",
     "state": "Montana",
     "state_abbr": "MT",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "22a48302-347a-4a6b-a6ee-5891c60e3fbe",
+      "6e21515d-b695-40ab-9d82-83f53bdbd572",
+      "3c9d7068-6f5d-4795-83a2-248dc6ecac55"
+    ],
     "actor_row_id": "22a48302-347a-4a6b-a6ee-5891c60e3fbe",
     "actor_bucket_key": "dev haegele|MT"
   },
@@ -42,12 +46,31 @@
     "_pdf_state_family_count": 56,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Our nephews and niece have been removed from our care, and placed back into an extremely abusive home. Lots of new allegations of abuse.",
+        "state": "MT",
+        "county": "Flathead",
+        "row_id": "a24a81cb-b146-49a8-99ec-f9fa0003ba28"
+      },
+      {
+        "body": "We are in constant worry mode for the safety of the children.",
+        "state": "MT",
+        "county": "Flathead",
+        "row_id": "d2151ba0-6fd5-497e-ba18-f07168f156cf"
+      },
+      {
+        "body": "Flathead County Montana, all the attorneys, CPS workers and judges are friends. When we sought out hiring a private attorney, we were told by one \"i have known the caseworker for years, I find it hard to believe she could be a problem?\" My children were taken on lies. They still have not proven any of the accusations. Yet my rights will be terminated. In Montana family are suppose to be first to get the children. Our aunt who is a licensed foster home, has tried to get them since the beginning. But they were placed with a family that has been looking to adopt. We truly feel they were taken so they could be adopted.",
+        "state": "MT",
+        "county": "Flathead",
+        "row_id": "aa17ab49-363b-44cb-aef3-0a9a50fb5b24"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "She came on the case and the 1st visit she was terrible to us. Then said she was returning the kids to the abusive parents. We are the aunt and uncle to the birth mother.",
@@ -70,11 +93,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/dev_haegele",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='MT'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +109,22 @@
     "recommended_route": "/court-actors/mt/dev_haegele/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "She came on the case and the 1st visit she was terrible to us. Then said she was returning the kids to the abusive parents.",
+        "kind": "comment"
+      },
+      {
+        "body": "CPS worker. She is allowing the kids to stay in an abusive environment. Treats the kinship foster parents extremely bad",
+        "kind": "comment"
+      },
+      {
+        "body": "She lies and put children in harms way all the time",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

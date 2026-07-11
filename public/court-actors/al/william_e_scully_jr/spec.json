@@ -12,12 +12,34 @@
     "court_or_county": "Baldwin",
     "state": "Alabama",
     "state_abbr": "AL",
-    "mention_count": 0,
+    "mention_count": 21,
     "family_count": 17,
     "public_family_count": 17,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 21,
+    "supabase_row_ids": [
+      "c1ad63c0-0458-4e7d-80b8-1a20ff40ed7a",
+      "00e75318-ba1f-4fff-9a7f-ac4239e19cfe",
+      "80eb485b-ac6d-4691-b5ce-e17cf10a427f",
+      "70d2c4d0-1898-4dcd-91be-15f5a9082a64",
+      "7f2eb459-9404-45c8-875a-788c0e12bbbc",
+      "9c320ef1-3ed0-461e-bea4-b5c1e05afb84",
+      "c7714f65-e2bd-43d2-aede-2d86ba87bdec",
+      "45a2ecb3-7886-45f5-9787-081bf458d7c6",
+      "fcd9a9aa-c66b-493a-b9b2-d1ee41f908d8",
+      "e009a6a3-7d05-4fb8-bac9-5be48f36bd18",
+      "b2dd4ea3-a91b-4ab3-846e-b92d7f62c210",
+      "9da25084-0752-426b-bd39-40b316aa7ac4",
+      "6564a7b2-c8bc-43d8-a10d-f54144e06074",
+      "a1e4adf7-f55c-45c4-b52e-681a95a15bed",
+      "9032f55b-de9a-499b-8370-bb2cc71edd25",
+      "41bdabcf-5d48-47c1-8232-2c775505c744",
+      "ca96865d-0139-4e46-94e8-4954abc58176",
+      "8a0c4ae8-490f-4105-98d6-72737772d7f7",
+      "aa0d7e05-a35e-409b-9a22-49cecf55bdc3",
+      "4fc96f11-1b79-422c-baa5-bebad696c104",
+      "a0e512d3-bd66-4e69-8f15-6120597f6be8"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
@@ -42,12 +64,49 @@
     "_pdf_state_family_count": 130,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 21,
+    "actor_report_count": 21,
     "family_count": 17,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Destroyed my relationship with my granddaughter.",
+        "state": "AL",
+        "county": "Baldwin County",
+        "row_id": "8309ae51-2efb-4b59-a96f-d8d8fb04bdb4"
+      },
+      {
+        "body": "The system has broke my family down to the point that it is past the point of being repaired. They have destroyed everything we’ve worked for and I will never get that back.",
+        "state": "AL",
+        "county": "Baldwin County",
+        "row_id": "8d635be3-d43b-42e5-b448-388d6366b5e0"
+      },
+      {
+        "body": "I spent years trying to protect my family, only to watch prolonged litigation drain our finances, destroy our stability, and leave us homeless. My daughter has special needs, and the system that should have helped us instead made it harder to keep her safe, housed, and connected to the services she needs.",
+        "state": "AL",
+        "county": "Baldwin",
+        "row_id": "4d42edee-6460-4a10-9e6e-d774f6fcac70"
+      },
+      {
+        "body": "My children send me videos daily crying. They think they don’t get to ever come home.",
+        "state": "AL",
+        "county": "Baldwin County",
+        "row_id": "a3b0b25f-2b74-4388-be35-1ac964c4d938"
+      },
+      {
+        "body": "TORE UP OUR HAPPY HOME AN DESTROYED MY TWINS EMOTIONALLY AND MENTALLY",
+        "state": "AL",
+        "county": "BALDWIN",
+        "row_id": "acacbdc3-bf36-4f68-86ea-80574715cf55"
+      },
+      {
+        "body": "Tore my family apart. I haven't talked to my son in months",
+        "state": "AL",
+        "county": "Baldwin",
+        "row_id": "ea8b8e6f-a6cb-4666-9eea-cb0861c6afdc"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "The custody case remained stayed for an extended period while related criminal proceedings were pending. During a related hearing, evidence was presented but the court indicated the issues should be addressed through family court proceedings.",
@@ -148,11 +207,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/william_e_scully_jr",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='AL'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -168,6 +223,74 @@
     "recommended_route": "/court-actors/al/william_e_scully_jr/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "The court indicated the issues should be addressed through family court proceedings.",
+        "kind": "comment"
+      },
+      {
+        "body": "He has always awarded me primary physical custody of my children.",
+        "kind": "comment"
+      },
+      {
+        "body": "I have never abused my kids or anything it didn't make sense",
+        "kind": "comment"
+      },
+      {
+        "body": "All just “feelings” and what they think a person might do.",
+        "kind": "comment"
+      },
+      {
+        "body": "Listening to any facts and and believe her lies in her attorneys, fabricated instances",
+        "kind": "comment"
+      },
+      {
+        "body": "Dismissed case without following proper procedures",
+        "kind": "comment"
+      },
+      {
+        "body": "Repeatedly ignored evidence, engages in ex parte comms, ignores domestic violence…",
+        "kind": "comment"
+      },
+      {
+        "body": "Dismissed a long-standing protective order.",
+        "kind": "comment"
+      },
+      {
+        "body": "Didn’t care to hear me plead my case believed everything he was told knowing it was…",
+        "kind": "comment"
+      },
+      {
+        "body": "Did not listen to my testimony. Lied and said my daughter had left rehab.",
+        "kind": "comment"
+      },
+      {
+        "body": "He took away my children with no evidence hearing Has never been given an…",
+        "kind": "comment"
+      },
+      {
+        "body": "ONLY LISTENING TO DHR NOT LETTIN ME SPEAK NOR WAS DHR LETTIN ME TALK",
+        "kind": "comment"
+      },
+      {
+        "body": "Drags out court cases also believes false reports",
+        "kind": "comment"
+      },
+      {
+        "body": "He keeps children away without hearings.",
+        "kind": "comment"
+      },
+      {
+        "body": "All of the listed issues plus more",
+        "kind": "comment"
+      },
+      {
+        "body": "They didnt even let me testify",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 2
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

@@ -15,7 +15,7 @@
     "mention_count": null,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
     "actor_report_count": 3,
     "supabase_row_ids": null,
     "actor_row_id": null,
@@ -27,22 +27,22 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 357,
-    "total_submissions": 444,
-    "avg_financial_loss": 285669.87,
+    "families_approved": 359,
+    "total_submissions": 446,
+    "avg_financial_loss": 285125.16,
     "avg_months_lost": 35.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CA",
-    "state_family_count": 444,
-    "median_financial_loss": 265100,
-    "median_burden_sample_size": 198,
+    "state_family_count": 446,
+    "median_financial_loss": 269200,
+    "median_burden_sample_size": 199,
     "median_months_lost": 20,
-    "pro_se_pct": 58.6,
-    "pro_se_count": 260,
-    "_pdf_state_family_count": 444,
+    "pro_se_pct": 58.7,
+    "pro_se_count": 262,
+    "_pdf_state_family_count": 446,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5420,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -71,8 +71,7 @@
   },
   "export_dir": "New Final Post and Capcut template/export/yvette_allivato",
   "unresolved": [
-    "court_actors: no rows match name~'Yvette Allivato' state='CA'",
-    "public_family_count_api: no actors returned for state='CA'"
+    "court_actors: no rows match name~'Yvette Allivato' state='CA'"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
@@ -89,6 +88,22 @@
     "recommended_route": "/court-actors/ca/yvette_allivato/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Once daughter spoke up to CPS Social Worker, father was spoken to by worker. He immediately filed for Emergency Full Custody and it was granted by this Mediator.",
+        "kind": "comment"
+      },
+      {
+        "body": "False reports. Misreporting the truth the court. Stripping my parental rights to keep me from accessing these reports.",
+        "kind": "comment"
+      },
+      {
+        "body": "Assigned to my case Cancellations for therapy appointments.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

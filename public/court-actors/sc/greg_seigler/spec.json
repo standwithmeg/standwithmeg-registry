@@ -12,12 +12,19 @@
     "court_or_county": "Lexington",
     "state": "South Carolina",
     "state_abbr": "SC",
-    "mention_count": 0,
+    "mention_count": 6,
     "family_count": 5,
     "public_family_count": 5,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 6,
+    "supabase_row_ids": [
+      "90bd4b4f-e5e7-43b5-abab-ffdf616d68e5",
+      "75d65e6f-486f-4873-9e89-9114fe0802d8",
+      "d21bcaeb-0b2b-44eb-908e-ee2f17a46a07",
+      "991e9f26-6ef7-450e-a711-d9939e5e0eba",
+      "4e5c806a-6ef9-4a20-82d2-dc748e4f6380",
+      "040db707-e3c5-49b5-a91b-2fa456b68fd1"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
@@ -42,12 +49,43 @@
     "_pdf_state_family_count": 108,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 6,
+    "actor_report_count": 6,
     "family_count": 5,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Traumatized the children, destroyed their childhoods and bankrupt me all in the name of greed.",
+        "state": "SC",
+        "county": "Lexington",
+        "row_id": "c29d0d0e-dcbf-47a1-affb-7bacec77f873"
+      },
+      {
+        "body": "Lexington County Family Court has ruined my opportunity to be a mother to my children. This is why I am a strong supporter of 50/50 parenting time/custody post divorce.",
+        "state": "SC",
+        "county": "Lexington",
+        "row_id": "f1d2802d-930d-42e9-a688-fc4a5d9a2661"
+      },
+      {
+        "body": "Permanent irreparable damage to my kids- homelessness three times, constant terror, bankruptcy two times, unspeakable horrors and losses. The abuser called all the shots and those of us that tried to advocate for the child- mom, therapist and child themselves- all lost everything and were discredited. Hold them accountable",
+        "state": "SC",
+        "county": "Lexington",
+        "row_id": "3b78bc02-a7e9-4656-9540-13b3360604bd"
+      },
+      {
+        "body": "Unable to see my son for 12 months, required to pay child support (even though father did not pay in past 10 years) required to pay 6800 of the 10,000 GAL fees, required to pay half of ex's attorney fees, total of 20,000 of 40,000 total. Required to pay half of couselers fee for required continuous couseling services for son, on a weekly basis.",
+        "state": "SC",
+        "county": "Lexington,  SC",
+        "row_id": "843a9150-5e0c-4d66-af04-f7ac8b0b3223"
+      },
+      {
+        "body": "The South Carolina Family Court system failed my children and destroyed my motherhood. Until we have more court actors trained in Coercive Control and Domestic Violence children and families will suffer.",
+        "state": "SC",
+        "county": "Lexington County",
+        "row_id": "24a6102b-92fc-4d0e-9acd-397363f5acd9"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Judge Seigler gave my ex husband primary custody of young children from exes first and second wife. Both wives were the primary parent during the marriage. Once dad was finished with each marriage he was all of a sudden interested in parenting by filing “Emergency Motions” and stating the mother’s were “unfit.” Gave my ex husband primary custody of our two daughters who were 3 and 7 when I had always been their primary caregiver. He also gave my ex husband primary custody of his two older daughters when their mother had always been the primary caregiver. I raised his older daughters because my ex husband alienated his older daughters from their mother. Judge Seigler is not trained in Domestic Violence or Coercive Control.",
@@ -76,11 +114,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/greg_seigler",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='SC'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -96,6 +130,26 @@
     "recommended_route": "/court-actors/sc/greg_seigler/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Judge Seigler gave my ex husband primary custody of young children from exes first and second wife.",
+        "kind": "comment"
+      },
+      {
+        "body": "I do understand that it is hindering your other motions and rules from being scheduled.” Motion was heard",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored factual evidence",
+        "kind": "comment"
+      },
+      {
+        "body": "Judged on hearsay",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

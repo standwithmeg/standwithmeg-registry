@@ -12,12 +12,16 @@
     "court_or_county": "378th judicial district court Ellis county",
     "state": "Texas",
     "state_abbr": "TX",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "1788d09c-4233-4f90-9deb-30b0152e1426",
+      "c4d63dd1-e5e2-4020-93d4-b3a6a54d507b",
+      "deaf74b2-ea86-470d-b3de-46e5d0434a31"
+    ],
     "actor_row_id": "1788d09c-4233-4f90-9deb-30b0152e1426",
     "actor_bucket_key": "greggory lundberg|TX"
   },
@@ -27,27 +31,46 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 250,
-    "total_submissions": 315,
-    "avg_financial_loss": 229240.77,
-    "avg_months_lost": 32.1,
+    "families_approved": 251,
+    "total_submissions": 316,
+    "avg_financial_loss": 228661.33,
+    "avg_months_lost": 32.0,
     "_source_table": "movement_stats_by_state",
     "_match_value": "TX",
-    "state_family_count": 315,
-    "median_financial_loss": 118900,
-    "median_burden_sample_size": 149,
-    "median_months_lost": 20,
-    "pro_se_pct": 49.8,
-    "pro_se_count": 157,
-    "_pdf_state_family_count": 315,
+    "state_family_count": 316,
+    "median_financial_loss": 117950,
+    "median_burden_sample_size": 150,
+    "median_months_lost": 19,
+    "pro_se_pct": 50.0,
+    "pro_se_count": 158,
+    "_pdf_state_family_count": 316,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "I can’t put into words the way I feel or what it’s done. I’m a completely different person who feels like I can’t even be myself because it’ll be used against me, so I try to stay quiet and hold back even joking with family and friends.",
+        "state": "TX",
+        "county": "Ellis county",
+        "row_id": "60f306e3-c5cf-4d13-8e09-b1ba4635d7e4"
+      },
+      {
+        "body": "The family courts have contributed greatly to my son's emotional distress over time. It has drained me financially of the ability to save for my son's educational future.",
+        "state": "TX",
+        "county": "Ellis county",
+        "row_id": "d7d0647f-7053-424a-be91-d3e833a26e68"
+      },
+      {
+        "body": "This system has annihilated my confidence in our justice system. It has left my child and myself homeless and penniless and they did not care. The worst part is seeing how many more victims they have made as well as myself. Jason Price was the husband that i loved, but he assaulted me, betrayed me and lied repeatedly and these corrupt actors protected him. Law enforcement also lied — the Ovilla PD literally wrote falsehoods in the police report. I have physical injuries as well that have never been treated and are a constant source of excruciating pain.",
+        "state": "TX",
+        "county": "Ellis County",
+        "row_id": "9fe41d7a-9477-4a63-b97b-46878125ae82"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Took on my case after his son the asociate judge Kenneth Lundberg signed a TRO taking my kids away. Fired himself when I got a notarized affidavit from a witness who’d testify to false allegations about me and requested sealed medical records for child abuse",
@@ -70,11 +93,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/greggory_lundberg",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='TX'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +109,22 @@
     "recommended_route": "/court-actors/tx/greggory_lundberg/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Took on my case after his son the asociate judge Kenneth Lundberg signed a TRO taking my kids away.",
+        "kind": "comment"
+      },
+      {
+        "body": "Discouraged me from seeking enforcement and contempt for court order violations by my ex.",
+        "kind": "comment"
+      },
+      {
+        "body": "Suborned perjury, made multiple misrepresentations, conspired with judge, committed so many crimes against me as far as his legal obligations as an attorney",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

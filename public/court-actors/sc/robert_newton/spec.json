@@ -12,12 +12,16 @@
     "court_or_county": "Lexington",
     "state": "South Carolina",
     "state_abbr": "SC",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "f428f25d-6fd4-4de6-99d7-8410b5903651",
+      "de28d030-9699-4670-9061-6ee25a43a9d6",
+      "259cd082-9559-46f0-af56-8059ce38fe14"
+    ],
     "actor_row_id": "f428f25d-6fd4-4de6-99d7-8410b5903651",
     "actor_bucket_key": "robert newton|SC"
   },
@@ -42,12 +46,25 @@
     "_pdf_state_family_count": 108,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Traumatized the children, destroyed their childhoods and bankrupt me all in the name of greed.",
+        "state": "SC",
+        "county": "Lexington",
+        "row_id": "c29d0d0e-dcbf-47a1-affb-7bacec77f873"
+      },
+      {
+        "body": "Ripped my heart out and took my grandsons out of our families life, the only famiky they ever known and traumatized my grandsons emotionally and placed them in a dangerous situation despite me asking how they slept at night and why was this happening. Our lives will never be the same. Had i not actually lived this, I would never believe a system designed to care for the best interest of the children has turned into what is in the best interest of themselves and then promoted to director the same day temp custody was ordered and they had closed their case all in less than 6 months.",
+        "state": "SC",
+        "county": "Lexington",
+        "row_id": "43ed4aeb-fb22-4170-b6ab-949721c730b9"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Renoved me from court room per DSS attorneys request, despite knowing I was at emergency hearing and knowing I was there to fight for intervention and placement.",
@@ -64,11 +81,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/robert_newton",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='SC'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -84,6 +97,18 @@
     "recommended_route": "/court-actors/sc/robert_newton/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Renoved me from court room per DSS attorneys request, despite knowing I was at emergency hearing and knowing I was there to fight for intervention and placement.",
+        "kind": "comment"
+      },
+      {
+        "body": "Ex parte communications with opposing counsel and lay GAL",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

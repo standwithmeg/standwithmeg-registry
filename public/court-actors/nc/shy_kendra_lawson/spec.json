@@ -12,12 +12,20 @@
     "court_or_county": "Lenoir",
     "state": "North Carolina",
     "state_abbr": "NC",
-    "mention_count": 0,
+    "mention_count": 7,
     "family_count": 6,
     "public_family_count": 6,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 7,
+    "supabase_row_ids": [
+      "0370e907-c3b5-4270-8e2c-d26d4e6f2181",
+      "2c04b723-5dd0-4204-9cb8-14fb1e89b2e1",
+      "2fe2c164-65bf-4a63-b391-3e65028f2c90",
+      "4db410d9-92ec-4f4a-8c5b-846ff6bc123e",
+      "3cbda9c8-6cd5-4f89-b800-c689b702f240",
+      "7b7f6b4b-9991-4835-be66-09256ca603cc",
+      "5c6548c6-9223-47cf-876c-73e8d5914c2b"
+    ],
     "actor_row_id": "0370e907-c3b5-4270-8e2c-d26d4e6f2181",
     "actor_bucket_key": "shy-kendra lawson|NC"
   },
@@ -42,12 +50,49 @@
     "_pdf_state_family_count": 216,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 7,
+    "actor_report_count": 7,
     "family_count": 6,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "I have missed moments with my baby that I will never get back, and the pain of being separated from my child has affected every part of my life. I want people to know that parents and children should not be torn apart without real evidence, fairness, and due process.",
+        "state": "NC",
+        "county": "LENOIR",
+        "row_id": "420db232-15eb-4cd6-821c-15a34778db95"
+      },
+      {
+        "body": "Yoo",
+        "state": "GA",
+        "county": "Fulton",
+        "row_id": "c87a96c5-39de-40d4-a360-aed2d2665a89"
+      },
+      {
+        "body": "I have personally seen Holly do everything she can to advocate for herself and her children, only to feel silenced and treated unfairly. I have seen the damage caused by the system and how much the separation from her girls have hurt her in many ways.",
+        "state": "NC",
+        "county": "Lenoir",
+        "row_id": "110b3433-2330-4495-a08b-1d5f7f0c67bb"
+      },
+      {
+        "body": "It has stole my natural right as a mother to build bond with child qnd the wmotional stress on the children and the mother.. in the be batudal qorkd what effecta does it have on aby other mother that has its baby taken or hurt...",
+        "state": "NC",
+        "county": "Lenoir",
+        "row_id": "6e34d8fc-75be-4232-a5c5-24861713b993"
+      },
+      {
+        "body": "This system took my children, our time, our milestones, and our peace, while forcing me to fight to prove the love and bond that never should have been questioned. I want people to know that family separation is not just a court case, it is lifelong harm to children and parents.",
+        "state": "NC",
+        "county": "Lenoir",
+        "row_id": "0b0ff1a5-9314-4a68-8dc4-21f4137cffd3"
+      },
+      {
+        "body": "This system didn’t just fail my family — it systematically punished me for protecting my children, tore them from their mother, and caused irreversible trauma under the guise of ‘justice.’ What was done to us wasn’t protection; it was sanctioned harm.",
+        "state": "NC",
+        "county": "Lenoir",
+        "row_id": "871f5456-f005-43f3-9c4c-47a7ec9c6aad"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Shy-Kendra Lawson delayed reunification and failed to properly support kinship placement despite an approved relative option and my continued requests for my children to be safely placed with family. Cleaner, stronger version for the form, because apparently forms want trauma squeezed into one tiny bureaucratic sentence: Shy-Kendra Lawson delayed reunification, failed to support approved kinship placement, and contributed to my children remaining in foster care instead of being placed with safe family.",
@@ -88,11 +133,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/shy_kendra_lawson",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='NC'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -108,6 +149,34 @@
     "recommended_route": "/court-actors/nc/shy_kendra_lawson/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "My continued requests for my children to be safely placed with family.",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored evidence in my favor",
+        "kind": "comment"
+      },
+      {
+        "body": "Delayed reunification by interfering with visitation and failing to support…",
+        "kind": "comment"
+      },
+      {
+        "body": "Lied under oath, not following guidelines set beforehand",
+        "kind": "comment"
+      },
+      {
+        "body": "Told me lies, laughed at me humiliated me several times",
+        "kind": "comment"
+      },
+      {
+        "body": "Great experience. Would recommend.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

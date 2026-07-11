@@ -12,12 +12,16 @@
     "court_or_county": "Collin",
     "state": "Texas",
     "state_abbr": "TX",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "c61fbbce-377e-4ba7-8c7d-6f11a8ed3be3",
+      "8b2159a7-421e-4436-8345-40764dbbad95",
+      "90185f81-e12e-4c64-96a6-6b1858180d81"
+    ],
     "actor_row_id": "c61fbbce-377e-4ba7-8c7d-6f11a8ed3be3",
     "actor_bucket_key": "monica schocken|TX"
   },
@@ -27,27 +31,46 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 250,
-    "total_submissions": 315,
-    "avg_financial_loss": 229240.77,
-    "avg_months_lost": 32.1,
+    "families_approved": 251,
+    "total_submissions": 316,
+    "avg_financial_loss": 228661.33,
+    "avg_months_lost": 32.0,
     "_source_table": "movement_stats_by_state",
     "_match_value": "TX",
-    "state_family_count": 315,
-    "median_financial_loss": 118900,
-    "median_burden_sample_size": 149,
-    "median_months_lost": 20,
-    "pro_se_pct": 49.8,
-    "pro_se_count": 157,
-    "_pdf_state_family_count": 315,
+    "state_family_count": 316,
+    "median_financial_loss": 117950,
+    "median_burden_sample_size": 150,
+    "median_months_lost": 19,
+    "pro_se_pct": 50.0,
+    "pro_se_count": 158,
+    "_pdf_state_family_count": 316,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "I was threatened before I ever got into court. It started the second we separated. I was immediately moved out of my home and impoverished. I had to sign off everything and my ex was given 100% of the assets, or my children and I would be harmed.",
+        "state": "TX",
+        "county": "Collin",
+        "row_id": "29af5564-f482-4e59-ace8-f9111ea88a42"
+      },
+      {
+        "body": "Ignored false reports, ignored the law and my children barely see me. The judges and attorneys now let my little girls be prescribed anti depressants. My children are begging for more time with me and the judges don't care. 13 false reports to CPS and the judges ignore the evidence. CPS has testified for me that my ex is the one refusing to co parent and coaching the children to speak bad about dad. Judge didn't care.",
+        "state": "TX",
+        "county": "Collin County",
+        "row_id": "b900f847-a872-4ffe-a814-ed2189d903e9"
+      },
+      {
+        "body": "I am the only legal parent in this case. It includes an alleged father, and an unrebutted presumed father, by marriage. The judge stripped me of all rights, with no allegations of abuse, neglect, or harm, without notice that this would happen, and gave them to an alleged father that failed the court ordered drug screen, and was kicked out of the military for meth addiction.",
+        "state": "TX",
+        "county": "Denton County",
+        "row_id": "e9d27ce9-0ef3-4d40-b04f-94603743c08f"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Called to tell me my ex hired her and began making threats before we met to have me jailed for six months if I couldn’t pay her. I was filed indigent with the court. Harassed me and threatened the boys with jail and her sending them to foster homes. Also a friend of the judge and altered evidence and was caught",
@@ -64,11 +87,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/monica_schocken",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='TX'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -84,6 +103,18 @@
     "recommended_route": "/court-actors/tx/monica_schocken/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Called to tell me my ex hired her and began making threats before we met to have me jailed for six months if I couldn’t pay her. I was filed indigent with the court. Harassed me and threatened the boys with jail and her sending them to foster homes.",
+        "kind": "comment"
+      },
+      {
+        "body": "Admitted to coaching child to ignore her father. Admitted ex was alienating children. Made up \"sexual abuse\" claims after CPS had already cleared me 13 times.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

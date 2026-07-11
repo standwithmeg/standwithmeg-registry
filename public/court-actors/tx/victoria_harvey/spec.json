@@ -12,12 +12,18 @@
     "court_or_county": "Collin county Frisco Texas evaluator",
     "state": "Texas",
     "state_abbr": "TX",
-    "mention_count": 0,
+    "mention_count": 5,
     "family_count": 5,
     "public_family_count": 5,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 5,
+    "supabase_row_ids": [
+      "e909671b-52e0-42fd-b40b-aa889f9751ef",
+      "606ff89a-6af9-49b3-bb9e-8b8f2421b654",
+      "43587634-89a3-441c-a92a-deaddbb122d7",
+      "65998580-b638-472b-bd88-a285a7597bc3",
+      "883b4eeb-10aa-4544-a61f-70b3cb99d637"
+    ],
     "actor_row_id": "e909671b-52e0-42fd-b40b-aa889f9751ef",
     "actor_bucket_key": "victoria harvey|TX"
   },
@@ -27,27 +33,58 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 250,
-    "total_submissions": 315,
-    "avg_financial_loss": 229240.77,
-    "avg_months_lost": 32.1,
+    "families_approved": 251,
+    "total_submissions": 316,
+    "avg_financial_loss": 228661.33,
+    "avg_months_lost": 32.0,
     "_source_table": "movement_stats_by_state",
     "_match_value": "TX",
-    "state_family_count": 315,
-    "median_financial_loss": 118900,
-    "median_burden_sample_size": 149,
-    "median_months_lost": 20,
-    "pro_se_pct": 49.8,
-    "pro_se_count": 157,
-    "_pdf_state_family_count": 315,
+    "state_family_count": 316,
+    "median_financial_loss": 117950,
+    "median_burden_sample_size": 150,
+    "median_months_lost": 19,
+    "pro_se_pct": 50.0,
+    "pro_se_count": 158,
+    "_pdf_state_family_count": 316,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 5,
+    "actor_report_count": 5,
     "family_count": 5,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "I can’t put into words the way I feel or what it’s done. I’m a completely different person who feels like I can’t even be myself because it’ll be used against me, so I try to stay quiet and hold back even joking with family and friends.",
+        "state": "TX",
+        "county": "Ellis county",
+        "row_id": "60f306e3-c5cf-4d13-8e09-b1ba4635d7e4"
+      },
+      {
+        "body": "The family court system in Texas caused profound harm to our family. We have experienced 8 years of emotional exhaustion, financial strain, fear, and helplessness, while trying to raise concerns that were important to our child’s well-being. When families feel that evidence is ignored and decision-makers are not accountable for their actions, trust in the system is deeply damaged. Please reach out to us if you’ve had the same experience in Dallas/Collin County Texas.",
+        "state": "TX",
+        "county": "Collin county",
+        "row_id": "bb89f5aa-ef63-4576-8c9a-ec51d7b43473"
+      },
+      {
+        "body": "I was threatened before I ever got into court. It started the second we separated. I was immediately moved out of my home and impoverished. I had to sign off everything and my ex was given 100% of the assets, or my children and I would be harmed.",
+        "state": "TX",
+        "county": "Collin",
+        "row_id": "29af5564-f482-4e59-ace8-f9111ea88a42"
+      },
+      {
+        "body": "Exploited my family for money . Follow the money. Abused my baby severely, giving her to a absent dad who only had about 45 day visitation her whole life . She was taken at age 5",
+        "state": "TX",
+        "county": "Collin county court 469",
+        "row_id": "331ccd10-d538-4e72-8f12-1426ffe85afc"
+      },
+      {
+        "body": "This has torn our family down financially medically and emotionally it’s been very traumatic the most traumatic thing any one of us has ever experienced in our life time because it’s an entire system and we’ve asked for help from the bottom all the way up to the top and shown proof of innocent children in danger of losing their live’s and it’s ignored while other stories emerge mirroring our’s where time expired and another child, parent, or family member succumbed to this torture and abuse by a system that is opposed to protect the people their oaths were taken in officials were sworn in promising to protect and serve us knowing full well their intentions were to increase their bank accounts and line their pockets with the blood and lost lives of innocent little children and families of their own communities and they sleep peacefully while doing this and post all over social media how they get to spend those precious moments with their loved ones spending our money doing it.",
+        "state": "TX",
+        "county": "Ellis",
+        "row_id": "73903ea6-69cd-4627-916e-0e22c18a47ae"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Our daughter was forced while having a criminal lifetime order of protection against her ex-husband for sexually assaulting and beating her on video to go to this woman after she had already paid for kindest minds to do a psychological evaluation on her. She was forced to do this, there’s been no final given to this. She is collected no collateral evidence against her husband from my daughter, but told her now I’m collecting collateral damage against you, and there are laws in the state of Texas for qualifications you must have in order to perform a psychological evaluation when you’re accused of a mental decline, and our daughter had been under and is under the care of a psychiatrist and has seen a trauma therapist and turned over letters from him and documenting her visits and the judge is ignored this but taken as evidence testimony from the father who raped and beat her and from police officers, who showed up at her house after her house was force broken into, and after she stating you know, I believe that you know he is stalking me and you know has testimony affidavits from her ex-boyfriend where they are proving that they were followed even into Oklahoma so out of state so if it’s not a and she was followed if she’s followed out of state, they have to be if it’s a private investigator they have to be licensed in that state, but when you are under the order of a protective order, including a criminal lifetime order protection, you can’t be followed by a private investigator for your attacker. It’s illegal, even if your licensed private investigator you cannot be Followed. But they ignore it Victoria Harvey has yet to produce to my knowledge any end documentation to my daughter and my daughter has seen her children for 18 hours since March 20 and 21st. 2025, but our daughter does have evidence of what this lady is doing. The psychologist is doing so feel free to reach out. I will see if she will present it to you. She has made the psychologist aware of her protective order, and that she does not want to go through this evaluation that she has sees a psychiatrist that she is not a danger to herself or anyone else, and that she had a psychological evaluation done for the court by a nationally certified company kindest minds and all of this is just ignored and this lady said what County sorry not this lady but Victoria Harvey said what county is your case in and when our daughter says Ellis County that’s when she just doesn’t care she knows oh Judge Wallace is gonna back me. I can just break the law. That’s what I believe. That’s my opinion.",
@@ -82,11 +119,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/victoria_harvey",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='TX'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -102,6 +135,30 @@
     "recommended_route": "/court-actors/tx/victoria_harvey/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "She was forced to do this, there’s been no final given to this.",
+        "kind": "comment"
+      },
+      {
+        "body": "She takes a side in custody evaluations.",
+        "kind": "comment"
+      },
+      {
+        "body": "Lied on my psych report",
+        "kind": "comment"
+      },
+      {
+        "body": "She's a evaluator appointed by my x boyfriends friends/ lawyers .",
+        "kind": "comment"
+      },
+      {
+        "body": "Refused to acknowledge lifetime order of protection was being violated by disclosing all info…",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

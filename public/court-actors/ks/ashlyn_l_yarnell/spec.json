@@ -12,12 +12,18 @@
     "court_or_county": "Johnson",
     "state": "Kansas",
     "state_abbr": "KS",
-    "mention_count": 0,
+    "mention_count": 5,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 5,
+    "supabase_row_ids": [
+      "ab75d17e-8920-4e22-987d-ebd91058cb3c",
+      "9c0faf58-4cb9-4f25-a284-860a6319244d",
+      "0ac6b89e-c453-4073-8a25-1399bf0cb8ed",
+      "00bd01f4-1b04-4e8d-a4db-0d1d15c17452",
+      "cf925d22-c557-433b-bc6c-caeda0a218cb"
+    ],
     "actor_row_id": "ab75d17e-8920-4e22-987d-ebd91058cb3c",
     "actor_bucket_key": null
   },
@@ -42,12 +48,31 @@
     "_pdf_state_family_count": 251,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 5,
+    "actor_report_count": 5,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "The system ultimately failed my kids. My kids had to deal with years of harassment, lies, manipulation from their father, and the court still hasn’t held him accountable for it. Now myself and children are in therapy, I still have to make my 2 youngest go [redacted] with him. He lost custody of our oldest 1.5 years ago due to GAL recommendations. I’ve been put into financial hardships from paying for attorneys, therapists, and other fees only for him to get away with the horrible things he’s done. They don’t care about families. They care about lining their pockets.",
+        "state": "KS",
+        "county": "Johnson County",
+        "row_id": "3731bd25-d63a-4a44-bc51-32ccb24008a1"
+      },
+      {
+        "body": "My life has been destroyed by family courts stealing my child with false allegations. I no longer own a home or have a place to live.",
+        "state": "KS",
+        "county": "Johnson county",
+        "row_id": "36789b37-d57b-4649-a2cb-a142c77e521d"
+      },
+      {
+        "body": "It has taken my life",
+        "state": "KS",
+        "county": "Johnson County",
+        "row_id": "411c77d2-7d3d-4fd3-bfe9-b117bff9c3e5"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Issued recommendations with no substantiated evidence. Refuses to hear any narrative other by than my ex husband. Stated in open court that she will not consider a change in parenting time until she is laid in full It has taken my life. Father alleging parental alienation versus actual emotional abuse and neglect of children by him.",
@@ -70,11 +95,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/ashlyn_l_yarnell",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='KS'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +111,22 @@
     "recommended_route": "/court-actors/ks/ashlyn_l_yarnell/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Issued recommendations with no substantiated evidence. Refuses to hear any narrative other by than my ex husband.",
+        "kind": "comment"
+      },
+      {
+        "body": "Ashlyn fabricated evidence and hod evidence that the minor child was illegally living out of state with a convicted felon.",
+        "kind": "comment"
+      },
+      {
+        "body": "She was briefly my ex husbands attorney.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

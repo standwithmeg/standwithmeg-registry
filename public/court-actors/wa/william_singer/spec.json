@@ -12,12 +12,19 @@
     "court_or_county": "King",
     "state": "WA",
     "state_abbr": "WA",
-    "mention_count": 0,
-    "family_count": 0,
-    "public_family_count": 0,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "mention_count": 6,
+    "family_count": 5,
+    "public_family_count": 5,
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 6,
+    "supabase_row_ids": [
+      "28f7f4dd-af3c-4f73-84a5-6cf5585da77c",
+      "97cc8f4b-dd3e-462d-8d65-cacf89a9ce31",
+      "003667e2-273f-4f15-87e9-9076be0adfef",
+      "edcf07c9-df81-4f13-948c-11f9e17ddd79",
+      "f8bea642-c15f-44dd-a6ec-92327cf8d385",
+      "9cbf9c70-802f-424f-a277-26910d1f14d0"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "wiliam singer|WA"
   },
@@ -42,12 +49,43 @@
     "_pdf_state_family_count": 124,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
-    "family_count": 0,
-    "family_reports": [],
+    "report_count": 6,
+    "actor_report_count": 6,
+    "family_count": 5,
+    "family_reports": [
+      {
+        "body": "This system dismantled my close relationship with my children and alienated me. The court placed my kids in an unsafe environment and I lost time with them that can never be recovered. My kids and I have suffered at the hands of the court system and this is in no way in 'the best interest of the child.'",
+        "state": "WA",
+        "county": "King",
+        "row_id": "5330063b-6bea-453f-8db6-36f03b22a2f5"
+      },
+      {
+        "body": "I have had 2 ethical judges but the 3 people I mentioned harmed me and my child psychologically and financially.",
+        "state": "WA",
+        "county": "King",
+        "row_id": "291d05ef-00d0-43f3-b3a8-53259a226060"
+      },
+      {
+        "body": "The system is completely corrupt. If opposing is connected as was mine, you have no chance. Abuse was known by family for years and in family court I was exploited and my ex given everything. He couldn't hit me anymore, so he went after my kids as the last way to get me. There were multiple instances of ethical and illegal practices by judges, attorneys and evaluators. This system needs a serious review.",
+        "state": "WA",
+        "county": "Pierce",
+        "row_id": "a793c8e8-9846-4d0f-be65-b3efcf848e90"
+      },
+      {
+        "body": "The system is allowing an abuser to continue abuse and face no consequences for his actions.",
+        "state": "WA",
+        "county": "King",
+        "row_id": "8dfe17a9-6351-4512-9cc5-0fa5370c10f5"
+      },
+      {
+        "body": "I had an obvious abuse her in my case court found him to have committed domestic abuse past and present GAL in equipped to recognize recognized Domestic Violence or he just actually decides with abusers he’s known decide with abusers in King County. He has ruined many children’s lives, not just mine, but he falsely influenced the court to find me abuse a conflict on false data court adopted it protected the abuser contacted. The abuser never contacted me on the phone. His influence gave 50% custody to the father during the summer and other joint decisions when he had 191 restrictions also put 191 restrictions on me for false abusive conflict based on misinformation. Cost me thousands of 20000dollars in fees",
+        "state": "WA",
+        "county": "king",
+        "row_id": "8e65a417-6393-4f71-996e-217065106d41"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "omitted crucial evidence that was given to him failed to investigate Domestic Violence judges finding actually Leyde when A investigation was done failed to correct billing errors that were obvious and when I refuse to pay them or ask him, he sued me a year later. Had expert communication with my ex during life trial and his attorney admitted it on record failed to investigate. DV did not make choices. Best interest to the kids and did the opposite of commissioners rulings omitted bad behavior and falsified abuse a conflict against me also cared more about DAD’s gun rights than anything else.",
@@ -82,11 +120,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/william_singer",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='WA'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -102,6 +136,30 @@
     "recommended_route": "/court-actors/wa/william_singer/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Billing errors that were obvious",
+        "kind": "comment"
+      },
+      {
+        "body": "Refused to use my wife's testimony who has been in our kids lives for 6 years",
+        "kind": "comment"
+      },
+      {
+        "body": "He gave an evaluation for DV for my ex without talking to me.",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored evidence, blamed the abused child Hired gun.",
+        "kind": "comment"
+      },
+      {
+        "body": "He did not report my ex not paying child support and paused DV program",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

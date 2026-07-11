@@ -12,12 +12,16 @@
     "court_or_county": "Powhatan",
     "state": "Virginia",
     "state_abbr": "VA",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "018956c5-35d7-424d-936a-81345399079f",
+      "1dc76fd8-fc39-4f32-9533-848577022e53",
+      "a049f6a5-222a-4abd-9520-e27ae40f2a17"
+    ],
     "actor_row_id": "018956c5-35d7-424d-936a-81345399079f",
     "actor_bucket_key": "john whitbeck|VA"
   },
@@ -42,12 +46,31 @@
     "_pdf_state_family_count": 128,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Took sole legal custody-and now 50/50. 5 years in court -filed full custody 3x as punishment- his atty hired used/paid psychologists to say things that they routinely work with - said he wouldn’t stop until I have no custody left- I had 300+ pieces of evidence & testimony that was ignored and his behavior dismissed.",
+        "state": "VA",
+        "county": "Loudoun",
+        "row_id": "2aa94f39-e527-45ca-b353-d41e5df61633"
+      },
+      {
+        "body": "I asked for a divorce so that I could get at least half of my house or half of my children or half of my 401(k) or half of my car or half of my motorcycle instead they took everything now I’m homeless carless I work at 9 to 5 and I haven’t seen my kids since I met Mr. Whitbeck.",
+        "state": "VA",
+        "county": "Loudon County",
+        "row_id": "03d7f6c6-36f2-494c-a31c-6c9e8d799338"
+      },
+      {
+        "body": "This corrupt system has destroyed us as a family unit and human beings. We have been demoralized and tormented in the most inhumane ways and will never be the same again.",
+        "state": "VA",
+        "county": "Unknown",
+        "row_id": "90ee36e1-0a6f-4778-88a1-9af6d55e75fe"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "John Whitbeck claimed to have an understanding of DV/coercive control and its impact on divorce and custody cases. He did not do anything to protect me and my children from our abuser and instead caused us more harm by angrily advising me I had to “just let things go” and “be the bigger person” which ended up with me being verbally and emotionally abused by my ex spouse. The firm is poorly run and the attorneys are unnecessarily arrogant, rude and demeaning.",
@@ -70,11 +93,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/john_whitbeck",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='VA'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +109,22 @@
     "recommended_route": "/court-actors/va/john_whitbeck/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "John Whitbeck claimed to have an understanding of DV/coercive control and its impact on divorce and custody cases.",
+        "kind": "comment"
+      },
+      {
+        "body": "Is literal drinking bunnies with plowman and Fisher and my attorneys the Graham law firm and Miriam Ibrahimi both owned by John Whitbeck.",
+        "kind": "comment"
+      },
+      {
+        "body": "Opposing counsel",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

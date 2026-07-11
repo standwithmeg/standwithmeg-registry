@@ -12,12 +12,16 @@
     "court_or_county": "Sutter county",
     "state": "California",
     "state_abbr": "CA",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "bc27c0f9-c9e2-41e8-b475-219b0b4f1b0d",
+      "ef74d3ff-0fce-4b8c-8b67-57567c94cbec",
+      "d081cb09-c8b5-43d5-a99f-8834f5a6c296"
+    ],
     "actor_row_id": "bc27c0f9-c9e2-41e8-b475-219b0b4f1b0d",
     "actor_bucket_key": null
   },
@@ -27,27 +31,46 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 357,
-    "total_submissions": 444,
-    "avg_financial_loss": 285669.87,
+    "families_approved": 359,
+    "total_submissions": 446,
+    "avg_financial_loss": 285125.16,
     "avg_months_lost": 35.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CA",
-    "state_family_count": 444,
-    "median_financial_loss": 265100,
-    "median_burden_sample_size": 198,
+    "state_family_count": 446,
+    "median_financial_loss": 269200,
+    "median_burden_sample_size": 199,
     "median_months_lost": 20,
-    "pro_se_pct": 58.6,
-    "pro_se_count": 260,
-    "_pdf_state_family_count": 444,
+    "pro_se_pct": 58.7,
+    "pro_se_count": 262,
+    "_pdf_state_family_count": 446,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "If you are getting food stamps or cash aide, do not tell them the father’s name. Once they go after father he might try to avoid paying by aiming for 50/50 custody even though he could care less about parental before. Additionally, try to educate your child about the proper names of body parts so they can describe situations better. Try to get them to tell the full story when they tell the simple ones such as what time of day or exact time and location so it’s habit if really big situations come up. Recognize if there is any physical evidence or witnesses. Document all dates and times of problematic situations without sounding spiteful to a judge. My child was only 3.5 when she notified me of SA from her father. I didn’t think to teacher her these things at that young age. Learn from my mistake on that one and teach your kids boundaries and body parts names. Also, don’t trust anybody court appointed. That evaluator and therapist are not your friend.",
+        "state": "CA",
+        "county": "Stanislaus",
+        "row_id": "bb0aa7ea-908b-41e4-bf88-723a9552a2e0"
+      },
+      {
+        "body": "The system has made me believe they will not help keep myself or my children safe from a predator. They would rather make money at the suffering of families all over the world as Destruction of the family unit is the number one goal.",
+        "state": "CA",
+        "county": "Butte County",
+        "row_id": "5aae4ca4-d9f3-41c8-8a61-4062e6d7d782"
+      },
+      {
+        "body": "This system ripped my child out of my arms despite his fear, silenced the truth about what he’s been through, and shattered our sense of safety—costing us our home, our peace, and the trust my child once had in the adults meant to protect him.",
+        "state": "CA",
+        "county": "Sutter County",
+        "row_id": "a555fdf2-af2a-4106-a27f-591d027ddefd"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "I was ordered to participate in therapy for parental alienation, no evidence was available to provide by the court. Attended 7 sessions, told by her that I had to attend despite no evidence to focus on. At $195/hr, no reports were given that the therapy had been completed and why parental alienation was not discussed. Therapist found no evidence of alienation and made no such statements to the courts.",
@@ -70,11 +93,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/lisa_metcalf",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='CA'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +109,22 @@
     "recommended_route": "/court-actors/ca/lisa_metcalf/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "I was ordered to participate in therapy for parental alienation, no evidence was available to provide by the court.",
+        "kind": "comment"
+      },
+      {
+        "body": "Refused to let me see my results) She asked for a $8,500 retainer",
+        "kind": "comment"
+      },
+      {
+        "body": "Mediator admitted to her being a biased party because father chose her to be his personal therapist. Mediator doesn’t see a need to change child therapist.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

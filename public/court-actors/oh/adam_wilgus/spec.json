@@ -12,12 +12,17 @@
     "court_or_county": "Tuscarawas",
     "state": "Ohio",
     "state_abbr": "OH",
-    "mention_count": 0,
-    "family_count": 4,
-    "public_family_count": 4,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "mention_count": 4,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "01fd1b99-bbcf-4743-a6e2-506508651a75",
+      "b03929fd-344a-4acb-8532-ae37f3583dcf",
+      "2b919510-6a70-41a7-be3c-b390ce2c7c31",
+      "40522d16-bb83-4ffb-9ac2-5b7c984faac2"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "adam wilgus|OH"
   },
@@ -42,12 +47,37 @@
     "_pdf_state_family_count": 264,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
-    "family_count": 4,
-    "family_reports": [],
+    "report_count": 4,
+    "actor_report_count": 4,
+    "family_count": 3,
+    "family_reports": [
+      {
+        "body": "The system has introduced violence, manipulation, conditional love, ugliness, and worries we've never known. ALL THAT WE THOUGHT WAS A POSSIBLE NIGHTMARE HAS BECOME OUR REALITY. The 4th of July used to be our favorite holiday to celebrate. This year? We cried inside our house because when we go in public, people hurt us. We have no safe place to go. We have never known a life where we cannot move freely in the world. But now it's all we worry about, because ANYONE can misinterpret our actions, generate a rumor, and actually have a child abducted. IT IS THE SCARIEST EXPERIENCE OF OUR LIVES.",
+        "state": "OH",
+        "county": "Tuscarawas",
+        "row_id": "b1bd805e-77df-4517-b487-b1f1783ba5a6"
+      },
+      {
+        "body": "Took away two loving active present parents from 4 little ones we made our own tight nit little family with. Destroyed our family mentally emotionally and physically.",
+        "state": "OH",
+        "county": "Tuscarawas",
+        "row_id": "acc00882-8d02-4c92-8581-55c7c399bd6f"
+      },
+      {
+        "body": "I am on depression and anxiety pills my dad had full blown pneumonia and heart problems from stress",
+        "state": "OH",
+        "county": "Tuscarawas",
+        "row_id": "c4abd0f6-2e22-4b80-a88b-6d86afae32de"
+      },
+      {
+        "body": "A corrupt system doesn’t fear evil, they already possess that, it fears witnesses.. of which my family and I have been and well documented our experiences during the months and months I filed every motion and in sept of 2024 was granted the compel to care order against the Tuscarawas JFS.",
+        "state": "OH",
+        "county": "Tuscarawas",
+        "row_id": "e94fc7ea-04d4-4003-8ef2-4a0a497b126f"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "He assured me that I would be offered communication accommodations due to being autistic. IT NEVER HAPPENED. CPS is DEMANDING I change myself to suit their communication styles. I HAVE AUTISM and I AM RIGID. THAT DOES NOT MEAN I AM INEPT. IT MEANS I AM DIFFERENT. I have the right to fully participate in this case but I haven't been given the chance. Things are happening TO ME, without letting me be apart of the conversation. My case is based on rumors started by people who USED TO CONTROL MY LIFE.",
@@ -76,11 +106,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/adam_wilgus",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='OH'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -96,6 +122,26 @@
     "recommended_route": "/court-actors/oh/adam_wilgus/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "My case is based on rumors started by people who USED TO CONTROL MY LIFE.",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored my son bruised every visit and evidence from my parents.",
+        "kind": "comment"
+      },
+      {
+        "body": "Removed himself for conflict of interest is the biggest thing so how is this even still happening",
+        "kind": "comment"
+      },
+      {
+        "body": "He allowed lies and hearsay in the permenancy trial",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

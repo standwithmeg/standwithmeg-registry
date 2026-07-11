@@ -12,12 +12,18 @@
     "court_or_county": "Madison",
     "state": "Illinois",
     "state_abbr": "IL",
-    "mention_count": 0,
-    "family_count": 3,
-    "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "mention_count": 5,
+    "family_count": 4,
+    "public_family_count": 4,
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 5,
+    "supabase_row_ids": [
+      "4d0da49b-00db-4c18-8e70-61056ebc70cd",
+      "0e0c96d3-0362-48af-94d4-aaea16869e2b",
+      "d8fdfd89-d37f-400c-b428-14bf03e49f38",
+      "c8154c02-a56b-47db-93ff-59a7f67e92e6",
+      "084b4715-d0dc-43a5-b25e-e7dfee01f8a1"
+    ],
     "actor_row_id": "4d0da49b-00db-4c18-8e70-61056ebc70cd",
     "actor_bucket_key": null
   },
@@ -29,12 +35,12 @@
   "state_stats": {
     "families_approved": 113,
     "total_submissions": 150,
-    "avg_financial_loss": 220843.1,
+    "avg_financial_loss": 219529.23,
     "avg_months_lost": 28.0,
     "_source_table": "movement_stats_by_state",
     "_match_value": "IL",
     "state_family_count": 150,
-    "median_financial_loss": 129500,
+    "median_financial_loss": 126875,
     "median_burden_sample_size": 92,
     "median_months_lost": 15,
     "pro_se_pct": 48.7,
@@ -42,12 +48,37 @@
     "_pdf_state_family_count": 150,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
-    "family_count": 3,
-    "family_reports": [],
+    "report_count": 5,
+    "actor_report_count": 5,
+    "family_count": 4,
+    "family_reports": [
+      {
+        "body": "The level of stress and anxiety caused by this case has led to extreme uncertainty and has taken a lot of time away from my work and family. I have lost so much trust in attorney's and the system.",
+        "state": "IL",
+        "county": "Madison",
+        "row_id": "071b03d9-3511-4e66-b8e8-10d209f76fd8"
+      },
+      {
+        "body": "What happened cost me depression, thousands of dollars and above all time with my children I will NEVER get back. Nothing is the same anymore. NOTHING",
+        "state": "IL",
+        "county": "Madison",
+        "row_id": "f0571377-7e21-41cc-99ca-b9601c5f1009"
+      },
+      {
+        "body": "Separated a two parent family from a child over false allegations. I am an indigent american veteran with not income for over a year fighting for my benefits. They have destroyed me financially knowing I have no income.",
+        "state": "IL",
+        "county": "Madison",
+        "row_id": "15f98cf1-e030-4c48-ab21-9e7ddfc639c0"
+      },
+      {
+        "body": "The system has destroyed two children and maybe more as a sexual predator has access to the children's friends who he has started giving gifts to which he hides in his room. The GAL threaten my withness with fostercare if she didnt go back to her abuser now my child talks sexually with adult men online and I was told that I monitor her to closely and was told I could not monitor them. I am a cyber security engineer who has worked on child monitoring apps for fortune 10 companies.",
+        "state": "IL",
+        "county": "Unknown",
+        "row_id": "18507a63-88a8-4492-8ea1-5308011c3473"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Refused to investigate children to include their home(s), friends, people at their school. Ignored vital information submitted. Did not investigate children, not any calls to me, no home visits, didn’t talk to teachers. She told my attorney that me not agreeing to 50/50 custody on a Friday forced an interruption on his Disney trip and I was told v cause of that my children would be moved to their fathers. They were moved the next court date",
@@ -70,11 +101,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/kelly_stephen",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='IL'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +117,22 @@
     "recommended_route": "/court-actors/il/kelly_stephen/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "She told my attorney that me not agreeing to 50/50 custody on a Friday forced an interruption on his Disney trip.",
+        "kind": "comment"
+      },
+      {
+        "body": "Denied my due process for her personal vacation. Running court continuance to keep the case open to take money from hurting parents.",
+        "kind": "comment"
+      },
+      {
+        "body": "Support abuser to have custody",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

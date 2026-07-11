@@ -12,12 +12,17 @@
     "court_or_county": "Beaufort County",
     "state": "North Carolina",
     "state_abbr": "NC",
-    "mention_count": 0,
+    "mention_count": 4,
     "family_count": 4,
     "public_family_count": 4,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "907c5562-907d-4cc4-ad0f-59dc7b674d70",
+      "ca8c5b70-3e93-4a6f-9eb4-01a339944349",
+      "72f69946-8303-442b-8dff-216b6ec14c6d",
+      "6aa7d756-893d-4c55-adb8-5bf9eea747af"
+    ],
     "actor_row_id": "907c5562-907d-4cc4-ad0f-59dc7b674d70",
     "actor_bucket_key": null
   },
@@ -42,12 +47,37 @@
     "_pdf_state_family_count": 216,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 4,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "The system has torn my family apart",
+        "state": "NC",
+        "county": "Beaufort",
+        "row_id": "0801015a-23f4-439c-a72f-6cba458f385b"
+      },
+      {
+        "body": "Former pissed off foster kid",
+        "state": "NC",
+        "county": "Beaufort",
+        "row_id": "312755d7-a7d0-49af-acc3-436fc7d8a05d"
+      },
+      {
+        "body": "They lost my son, he has been missing since September 23, 2025. They have consistently tried to cover up the unconstitutional seizure of my children. They scrubbed reports and gave my 8 year old daughter to our abuser and placed my 15 year old daughter with a pedophile.",
+        "state": "NC",
+        "county": "Beaufort County",
+        "row_id": "1f3c4576-e9e3-4d97-8308-93200d270032"
+      },
+      {
+        "body": "The system tried to destroy and break our family simply for money because three of our children have disabilities they could cash in on. That same system tried to silence us l, paint us as liars, when the proof didn’t match the story they were telling. WE WILL NEVER STOP TELLING OUR STORY!!! If we help and save just one other family it was not for nothing. We are together. Our family fights together. They chose the wrong ones. All of my children are home because our voices, our proof, MATTERED.",
+        "state": "NC",
+        "county": "Beaufort County",
+        "row_id": "c314b71a-3fb5-41be-af03-3f07d97018cd"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Submitted lies to the judge to obtain a non secured custody order. Gave documentation to him to show he d made an error which he refused to correct because his social workers would not give him false information. Interviewed children without anyone else present. Told my son he would never see me again if he changed his story. Threatened me directly saying I could keep fighting the allegations but I was only making it harder on the children because I would never see them and would be severely restricted in my contact with them, which they did until I got louder and louder and making complaints with the state and making TikTok’s. Would not authorize my son’s picture to be released to news outlets when he ran away from placement for the 4th time and was missing two months. Help suppress evidence and threatened law enforcement with law suites that were trying to help my son as he claimed physically and sexual assault by the facility he was placed in without a court order.",
@@ -76,11 +106,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/matthew_jackson",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='NC'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -96,6 +122,26 @@
     "recommended_route": "/court-actors/nc/matthew_jackson/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Gave documentation to him to show he d made an error which he refused to correct.",
+        "kind": "comment"
+      },
+      {
+        "body": "I told him the statement Abby Williams made me write n that I was in a locked room.",
+        "kind": "comment"
+      },
+      {
+        "body": "Allowed to practice law without a serious psychological evaluation",
+        "kind": "comment"
+      },
+      {
+        "body": "Continues to delay my case. It's been a year without an initial hearing yet.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

@@ -12,12 +12,18 @@
     "court_or_county": "Clark",
     "state": "KY",
     "state_abbr": "KY",
-    "mention_count": 0,
+    "mention_count": 5,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 5,
+    "supabase_row_ids": [
+      "960142ad-0ac4-40d2-9b5a-fbe6d1fcd615",
+      "43f7528d-13e2-4171-818d-2e4068421384",
+      "10ac078c-24b4-4056-9cb1-25f276342047",
+      "27c41448-a062-41fb-b3b5-ac3277d96e55",
+      "7e784810-400d-40b4-9e08-7d06268315e6"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "dewana mclean|KY"
   },
@@ -42,12 +48,31 @@
     "_pdf_state_family_count": 89,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 5,
+    "actor_report_count": 5,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Destroyed my family",
+        "state": "KY",
+        "county": "Clark",
+        "row_id": "ff3e8294-b900-4779-8507-98464d9c5ee8"
+      },
+      {
+        "body": "The system is broken, it’s destroyed 4 children’s lives",
+        "state": "KY",
+        "county": "Clark",
+        "row_id": "f47207a8-f60e-46be-a198-be8c693b27b4"
+      },
+      {
+        "body": "Alienation of the children from a loving father and stepmother",
+        "state": "KY",
+        "county": "Clark",
+        "row_id": "9fe0a0a4-cda0-4a65-a4d9-d921b0ce58db"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Lied in petitions, biased. Didn’t investigate properly, favored mom over dad despite same allegations in both homes.",
@@ -64,11 +89,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/dewana_mclean",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='KY'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -84,6 +105,18 @@
     "recommended_route": "/court-actors/ky/dewana_mclean/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Lied in petitions, biased. Didn’t investigate properly, favored mom over dad despite same allegations in both homes.",
+        "kind": "comment"
+      },
+      {
+        "body": "Biased, didn’t properly investigate Falsifying documents",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

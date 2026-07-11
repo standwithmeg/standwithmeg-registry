@@ -12,12 +12,19 @@
     "court_or_county": "Harnett",
     "state": "North Carolina",
     "state_abbr": "NC",
-    "mention_count": 0,
-    "family_count": 0,
-    "public_family_count": 0,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "mention_count": 6,
+    "family_count": 6,
+    "public_family_count": 6,
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 6,
+    "supabase_row_ids": [
+      "c450afc9-5432-40b9-ab97-dddc0d8df62e",
+      "709775de-c0a2-4a85-926e-95be80fab96b",
+      "343193c8-6cba-453d-8b87-173fd5ce66ac",
+      "9b410481-09f0-4efb-ad85-2cba609b0684",
+      "6eae0841-80c9-4d2b-b7e6-4dd376d528bc",
+      "d443b57e-9cb1-4685-8c0b-57f7005abde1"
+    ],
     "actor_row_id": "c450afc9-5432-40b9-ab97-dddc0d8df62e",
     "actor_bucket_key": "tamy smith|NC"
   },
@@ -42,12 +49,49 @@
     "_pdf_state_family_count": 216,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
-    "family_count": 0,
-    "family_reports": [],
+    "report_count": 6,
+    "actor_report_count": 6,
+    "family_count": 6,
+    "family_reports": [
+      {
+        "body": "It brought us back together better than ever.",
+        "state": "NC",
+        "county": "Lenoir",
+        "row_id": "d7e1de29-3dc6-44c7-a8fb-e2357d68c436"
+      },
+      {
+        "body": "This has cost my parents their retirement savings. They will now have to work until they die because the judge did not handle it in a reasonable or even remotely timely manner. It has cost my sister and her children a lot of trauma and sadness over the last year because the judge showed favoritism. It is absolutely mind boggling that the case when the way it did. Unheard of.",
+        "state": "NC",
+        "county": "Harnett County",
+        "row_id": "a26881a1-9303-4de8-9a72-6e1ea7032341"
+      },
+      {
+        "body": "Due to the emergency case being drug out for entirely too long, there has been lost time with the child. The system has proved to be incredible corrupt with this judge and attorney.",
+        "state": "NC",
+        "county": "Harnett",
+        "row_id": "3dfb7e80-74a2-4ebf-8afc-b3f06937add7"
+      },
+      {
+        "body": "I’ve witnessed a very unfair and concerning amount of corruption in this court room as a witness. I am deeply concerned for the justice system in this county and have lost faith in honorable decision making.",
+        "state": "NC",
+        "county": "Harnett",
+        "row_id": "03a099b6-3763-4dc1-aaca-25abaf6d4ac7"
+      },
+      {
+        "body": "My boys that I raised alone were instantly ripped from their mother and have been told horrible untrue things about me to try and turn them against me. After domestic violence testimony and tons of evidence the judge still took my babies.",
+        "state": "NC",
+        "county": "Harnett",
+        "row_id": "b84405c6-56b1-4cde-84e8-e6dbaa50d323"
+      },
+      {
+        "body": "The system has stolen time and been completely unjust to my child, my family and myself, and not doing what is best for the minor child’s interest.",
+        "state": "NC",
+        "county": "Harnett County",
+        "row_id": "268d09b2-234c-4395-bdc1-ab41544fdea1"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "She was texting the judge from a personal number during the hearing about the hearing itself. He would check his phone after every single text she sent in the court room. And they would lock eyes and nod.",
@@ -88,11 +132,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/tammy_smith",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='NC'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -112,7 +152,30 @@
     "quote_char_budget": 210,
     "prefer_quote_substrings": [
       "lock eyes and nod"
-    ]
+    ],
+    "selected_quotes": [
+      {
+        "body": "She was texting the judge from a personal number during the hearing about the hearing itself. He would check his phone after every single text she sent in the court room. And they would lock eyes and nod.",
+        "kind": "comment"
+      },
+      {
+        "body": "Refused to make copies (in the chambers) of evidence that the trial judge Rose asked, continued to question myself about My spouse but would not subpoena My spouse to ask the questions.",
+        "kind": "comment"
+      },
+      {
+        "body": "Weird stuff going on in this county with this lawyer and judge Kimble. The case showed obvious partiality towards Tammy and her client.",
+        "kind": "comment"
+      },
+      {
+        "body": "Delay after delay. Inappropriate with the judge",
+        "kind": "comment"
+      },
+      {
+        "body": "Inappropriate relationship with the judge.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

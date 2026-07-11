@@ -12,12 +12,16 @@
     "court_or_county": "14th Judicial District Family & Juvenile Court",
     "state": "Louisiana",
     "state_abbr": "LA",
-    "mention_count": 0,
-    "family_count": 2,
-    "public_family_count": 2,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "mention_count": 3,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "a05df472-16d4-4963-ad85-f18acecfc0e8",
+      "66d59e15-9ec6-43ed-b9fe-be5ca1067b8c",
+      "8c3ac370-648a-4ab7-b3c4-b6cefef5fa50"
+    ],
     "actor_row_id": "a05df472-16d4-4963-ad85-f18acecfc0e8",
     "actor_bucket_key": null
   },
@@ -42,19 +46,40 @@
     "_pdf_state_family_count": 64,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
-    "family_count": 2,
-    "family_reports": [],
-    "public_comments": []
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 3,
+    "family_reports": [
+      {
+        "body": "Accusation of Parent alienation",
+        "state": "LA",
+        "county": "Calcasieu Parish",
+        "row_id": "2762fd4b-77fa-47f5-a39f-66866ee38610"
+      },
+      {
+        "body": "The family court system has separated my children from one another, completely ruined us financially and prevented any future plans of time together from ever happening. It has left us traumatized, fearful for our lives at times, terrified of being served and court hearings, shaken their trust in authorities, police and our justice system.",
+        "state": "LA",
+        "county": "Calcasieu Parish",
+        "row_id": "eb4d3136-d06a-4fdd-84bf-78ae9b770a7c"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Very strict judge, he didn’t do anything to me, just told our child’s father that if he sees him again, “he better bring a tooth brush” 😂",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Allowed opposing party to proceed in trial without me being properly represented in custody hearings. Allowed testimony for matters not related to the matters of the case being held.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
   },
   "export_dir": "New Final Post and Capcut template/export/guy_e_bradberry",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='LA'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available",
     "pdf_public_actor: no 'Guy E. Bradberry' in cache for LA"
   ],
   "guardrails": {
@@ -72,6 +97,18 @@
     "recommended_route": "/court-actors/la/guy_e_bradberry/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Very strict judge, he didn’t do anything to me, just told our child’s father that if he sees him again, “he better bring a tooth brush” 😂",
+        "kind": "comment"
+      },
+      {
+        "body": "Allowed opposing party to proceed in trial without me being properly represented in custody hearings. Allowed testimony for matters not related to the matters of the case being held.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

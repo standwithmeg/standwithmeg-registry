@@ -12,12 +12,21 @@
     "court_or_county": "Elkhart County Family Court Coordinator",
     "state": "IN",
     "state_abbr": "IN",
-    "mention_count": 0,
+    "mention_count": 8,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 8,
+    "supabase_row_ids": [
+      "f17ad951-4cbb-465a-b88c-3c148f30ea6c",
+      "d793b67d-e21f-40c8-82f9-c5c60cda5f06",
+      "9380ae28-ff13-4f6d-9680-45e802cd47bb",
+      "d73ba0ef-ed11-4165-b30b-e4e51de88073",
+      "b398796b-012b-4a33-b576-c3b638370639",
+      "57bc5c1c-ab4e-4892-bfaf-d02632a79527",
+      "16c8ae61-7e63-4ebc-be00-5494f9e89e97",
+      "e79e4b2c-9a71-4f6f-ab05-4673c6ea67aa"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "britany obando|IN"
   },
@@ -42,12 +51,25 @@
     "_pdf_state_family_count": 153,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 8,
+    "actor_report_count": 8,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "The system has allowed my girls to be in the custody of child abusers",
+        "state": "IN",
+        "county": "Elkhart County",
+        "row_id": "64c04f1b-4d3e-4831-9766-aed24fc56a42"
+      },
+      {
+        "body": "The system protects the false illusion of reunification while taking children and portective parents from each other. They lump all cases into one format and when you dont fit they punish protective parents in a speak out then watch out mentality.",
+        "state": "IN",
+        "county": "Elkhart",
+        "row_id": "eb467537-b533-4c1b-92f6-1d2271033dbe"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Brittney Obando was assigned to our case following the removal of Mary from our case to evaluate potential direct communication methods between me and my abuser dispite documented PTSD diagnosis which states isolation from my abuser was important for my recovery and already having an established third party point of contact in place. This was in December 2024 since then there has been no report submitted to date. Now in 2026 there is only an approximate time line for completion due to me filing for status update in March 2026 to which she said she needed an additional [redacted] days. It wasnt until this week that she contacted care providers for myself and my son (me for thr ptsd information my son for his play and behavioral therapist reports) ive had to resubmit disclosure permission paperwork due to previous approval expiring. When I was asked to recount the criminal action my ex husband took against us she downplayed the actions stating he was playing a character and that character was who threatened my son with harm and that character who said they would cut my breaks in an effort to dismiss action that resulted in a felony conviction in criminal court under David Bonfiglio. When I reported further attempts at parental alienation with witnesses documented and available for statement or testimonials she never contacted them instead contacting my ex husband for his opinion to which my ex basically said I was the one committing parental alienation against him and when obando contacted me to follow up said I should refrain from adult topics being discussed infront of my son. This is after discussion already documented that IF adult topics need discussed with my son it is done in the presence and guidance of his therapist to ensure my son is not negatively impacted like when my ex-husband was in jail we did not talk about it until his therapist could lead the discussion and provide materials to evaluate at home to help james grasp what was being communicated to him.",
@@ -64,11 +86,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/brittany_obando",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='IN'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -84,6 +102,18 @@
     "recommended_route": "/court-actors/in/brittany_obando/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Now in 2026 there is only an approximate time line for completion due to me filing for status update in March 2026 to which she said she needed an additional [redacted] days.",
+        "kind": "comment"
+      },
+      {
+        "body": "Refused to give evidence of child abuse to judge, committed perjury, covering for the judge took a bribe from my kids' mom and her family",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

@@ -12,12 +12,19 @@
     "court_or_county": "Erie county",
     "state": "NY",
     "state_abbr": "NY",
-    "mention_count": 0,
-    "family_count": 0,
-    "public_family_count": 0,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "mention_count": 6,
+    "family_count": 5,
+    "public_family_count": 5,
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 6,
+    "supabase_row_ids": [
+      "dc14db78-685e-4153-97b2-3ba0224dd6ac",
+      "c15faccd-2003-4439-9380-f3917ac5c4cf",
+      "d216727b-6433-4547-8027-e00764ac429a",
+      "703a9eeb-9cbc-46a9-8e28-64be7875b28b",
+      "d806f4ef-7ca9-45a1-a66b-6cbb8700d488",
+      "fcec16e5-3ec4-4afa-a9c7-af0bf2247fdd"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "jesica rachwal|NY"
   },
@@ -42,12 +49,43 @@
     "_pdf_state_family_count": 173,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
-    "family_count": 0,
-    "family_reports": [],
+    "report_count": 6,
+    "actor_report_count": 6,
+    "family_count": 5,
+    "family_reports": [
+      {
+        "body": "They have trauma where trauma wasn’t and they have destroyed my life. Make me feel hopeless and in fear for my babies",
+        "state": "NY",
+        "county": "Erie county",
+        "row_id": "6e8f9024-4a97-4f08-ab85-acc5d574f7e0"
+      },
+      {
+        "body": "This lady including many more are stealing children for title iv funding.",
+        "state": "NY",
+        "county": "Erie",
+        "row_id": "a90ed4cb-5b89-4298-8b7e-67482161f06f"
+      },
+      {
+        "body": "It has caused trauma in to children that didn’t have any and has broke my heart and my nieces heart",
+        "state": "NY",
+        "county": "Erie County",
+        "row_id": "927c1fa2-d797-4c04-9346-b5c6fb56a0ec"
+      },
+      {
+        "body": "The system tears,family apart pushes further trauma on children and only cares about the money and greed.",
+        "state": "NY",
+        "county": "Erie",
+        "row_id": "a908efc2-2a83-47fd-affc-8899fa5085bb"
+      },
+      {
+        "body": "This system has separated my children from their family, ignored concerns I have raised, and forced us through a process that has caused significant emotional pain and disruption. The experience has strained our family relationships, affected my children’s well-being, and left us fighting to be heard",
+        "state": "NY",
+        "county": "Erie County",
+        "row_id": "49c6c05c-ef77-494c-9c43-f7abe4e0dd2e"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "She’s lied, she forged documents, she works with foster mom to come up with lies, She coarse me into signing a court menu, she threatens me She lies she ignores the truth. She false lies documents. She doesn’t listen to anything that I say and everything she does is almost illegal.",
@@ -82,11 +120,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/jessica_rachwal",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='NY'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -102,6 +136,30 @@
     "recommended_route": "/court-actors/ny/jessica_rachwal/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "She lies she ignores the truth. She false lies documents.",
+        "kind": "comment"
+      },
+      {
+        "body": "Took the children out of my house while she was in the process of communication",
+        "kind": "comment"
+      },
+      {
+        "body": "She’s lied, she has worked to prolong my case with foster families, they continue to violate my…",
+        "kind": "comment"
+      },
+      {
+        "body": "She lies and falsify documents. She coerced children violates parental rights.",
+        "kind": "comment"
+      },
+      {
+        "body": "She lies and cohesive children and falsified documents.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

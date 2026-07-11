@@ -12,12 +12,16 @@
     "court_or_county": "Franklin NH",
     "state": "NH",
     "state_abbr": "NH",
-    "mention_count": 0,
-    "family_count": 3,
-    "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "mention_count": 3,
+    "family_count": 1,
+    "public_family_count": 1,
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "eaebcbd8-1f95-4f20-8d26-c7a19b84ebdf",
+      "ceb715e4-0a32-4626-9fac-f492e7638aaa",
+      "35c8644f-2f65-4823-81ec-b89d5c1a755f"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "edward teney|NH"
   },
@@ -42,12 +46,31 @@
     "_pdf_state_family_count": 36,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
-    "family_count": 3,
-    "family_reports": [],
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 1,
+    "family_reports": [
+      {
+        "body": "The court has robbed my kids of co parenting. The judge stamps freely on female statements",
+        "state": "NH",
+        "county": "Franklin",
+        "row_id": "bfdc04c7-8f40-4363-a108-7bce8e9a515f"
+      },
+      {
+        "body": "Family court has cost me my children, where hearsay is accepted and facts and evidence is ignored and not allowed. My boys are deteriorating mentally and miss me and don’t understand why they can’t see me. GAL Nancy Tierney has not been in the best interest of the boys at all. My boys are growing up without their mother and family members and their close cousins they loved dearly.",
+        "state": "NH",
+        "county": "Merrimack NH",
+        "row_id": "e0abfe74-4793-4d4d-bc88-d2104aa8c744"
+      },
+      {
+        "body": "They dangled my children in front of me and said if I complied with orders they would come back to me. This lie was to keep me under control while the whole time i felt like I was forced to hold my kids hands while they moved onto a life without me, and everyone knew it. And i had to do it with a smile because if i tried to talk to them they'd take away unsupervised time. Every small change, every disappointment made it easier for them to move on without me. Eventually I was tossed away like nothing more than a piece of garbage.",
+        "state": "NH",
+        "county": "Unknown",
+        "row_id": "20379605-a6ac-4463-9293-21689f8879cc"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Denied me my time to speak in hearings, denied my right to call my witnesses, denied all my evidence of complying with court orders from evaluations to certificates I had submitted to this court. Has denied my right to be a mother to my 2 boys. Has accepted all the hearsay made up allegations from the father without any evidence to back up anything he has stated.",
@@ -70,11 +93,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/edward_b_tenney_ii",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='NH'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +109,22 @@
     "recommended_route": "/court-actors/nh/edward_b_tenney_ii/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Denied me my time to speak in hearings",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored evidence. Bias on that I'm a male, bias against teachers",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored facts and placed children with a dangerous individual.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

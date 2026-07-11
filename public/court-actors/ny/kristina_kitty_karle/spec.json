@@ -12,12 +12,16 @@
     "court_or_county": "Ontario",
     "state": "New York",
     "state_abbr": "NY",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 2,
     "public_family_count": 2,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "d804e816-9cda-412f-ae6d-3eb636e7551e",
+      "38ccc87d-1dda-4258-90ef-6c715d3df1c7",
+      "242db629-719d-488f-8576-0511685e24c3"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
@@ -42,19 +46,40 @@
     "_pdf_state_family_count": 173,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 2,
-    "family_reports": [],
-    "public_comments": []
+    "family_reports": [
+      {
+        "body": "The family court system didn’t just drain my savings—it robbed my children of years of stability, holidays, memories, and opportunities that can never be replaced. Instead of addressing high-conflict abuse, the system prolonged it -enabled it, leaving me, a single and hard working and capable Mama- financially, emotionally, and psychologically exhausted. I felt ignored, humiliated, and dehumanized by the judge - while the conflict still continues! The judge’s behavior is as if she lives to see this fight - by increasing conflict, stress and drama in the courtroom. The greatest loss has been the irreplaceable years of my children’s childhood.",
+        "state": "NY",
+        "county": "Ontario County",
+        "row_id": "2efd561d-6961-436d-bc79-ad692486de6e"
+      },
+      {
+        "body": "Romero",
+        "state": "NY",
+        "county": "Ontario",
+        "row_id": "038ef00a-90cd-4287-b97e-7b16ca808d8a"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Making damaging statements to assigned council and on the record that are not backed by any factual evidence. Multiple damaging statements made to my assigned council and on the courts record that are damaging to me, my parental rights and my character - the statements she has made are not based on any factual evidence as no evidence was ever seen by the judge. She’s attacked my financial situation and stated she would personally look into my outright abuse of the system. There’s many more statements, but I’ll stop here. Upcoming hearing on Oct 15 and I have no idea what will happen or if she will hold me in contempt which will ruin my career as a Federal Aviation Safety Inspector and Helicopter Pilot.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Denied due process and review of evidence, defamation of character, slander, bias and favoritism towards opposing party and council.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
   },
   "export_dir": "New Final Post and Capcut template/export/kristina_kitty_karle",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='NY'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available",
     "pdf_public_actor: no 'Kristina \"Kitty\" Karle' in cache for NY"
   ],
   "guardrails": {
@@ -72,6 +97,18 @@
     "recommended_route": "/court-actors/ny/kristina_kitty_karle/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "There’s many more statements, but I’ll stop here. Upcoming hearing on Oct 15 and I have no idea what will happen or if she will hold me in contempt which will ruin my career as a Federal Aviation Safety Inspector and Helicopter Pilot.",
+        "kind": "comment"
+      },
+      {
+        "body": "Denied due process and review of evidence, defamation of character, slander, bias and favoritism towards opposing party and council.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

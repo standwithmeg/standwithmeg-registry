@@ -12,12 +12,20 @@
     "court_or_county": "Plaquemines",
     "state": "Louisiana",
     "state_abbr": "LA",
-    "mention_count": 0,
-    "family_count": 6,
-    "public_family_count": 6,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "mention_count": 7,
+    "family_count": 1,
+    "public_family_count": 1,
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 7,
+    "supabase_row_ids": [
+      "2050a180-89b9-4ce2-8293-1df074d18c6c",
+      "d8037229-0b55-4486-ae4c-9d5a9751eed6",
+      "e9215943-feda-429e-8b23-a4e5e3a39a6e",
+      "ba5d98a9-37e6-4b5c-a6da-1e6cdebc7222",
+      "43d6d305-a0ff-425c-8126-779e6c250425",
+      "d867810a-a647-499f-a112-a536aac93947",
+      "fa7046d6-4659-40c3-af7c-6e1f43114eb9"
+    ],
     "actor_row_id": "2050a180-89b9-4ce2-8293-1df074d18c6c",
     "actor_bucket_key": "teri campesta|LA"
   },
@@ -42,12 +50,49 @@
     "_pdf_state_family_count": 64,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
-    "family_count": 6,
-    "family_reports": [],
+    "report_count": 7,
+    "actor_report_count": 7,
+    "family_count": 1,
+    "family_reports": [
+      {
+        "body": "In 2022, while married, my husband abused our children and tried strangling me. I called 911 two times. I showed the custody evaluator and the judge evidence and the children disclosed the abuse they suffered. My daughter also disclosed sexual abuse by the father to the custody evaluator. The father hired Alicia Pellegrin to write a report. Alicia Pellegrin never met with the children or with me and she diagnosed parental alienation. She recommended the father get sole custody. The judge awarded the father sole custody.",
+        "state": "LA",
+        "county": "Jefferson",
+        "row_id": "9214138d-19db-4c8e-8688-ad839f8e78e6"
+      },
+      {
+        "body": "Judge Michael Clement ignored evidence that the father abused our two children and he awarded the father sole custody when he only had supervised visitation for the past three years. Judge Clement also ignored the documented history of domestic violence, photographs, 911 calls, and expert testimony. This court has destroyed two children's lives.",
+        "state": "LA",
+        "county": "Plaquemines",
+        "row_id": "6eb5a6df-5f13-4bcf-99df-a361e212e84d"
+      },
+      {
+        "body": "the court made me live with my dad who sexually molested me and the judge took me away from my mom who I love and was safe with her.",
+        "state": "LA",
+        "county": "Plaquemines",
+        "row_id": "626bc7d9-56d4-4976-b132-663795575ec4"
+      },
+      {
+        "body": "The system worked with the father to take my children away from their loving mother because father hates mom.",
+        "state": "LA",
+        "county": "Plaquemines",
+        "row_id": "a0496d45-bf2f-43b2-8078-77a0f4ad19a7"
+      },
+      {
+        "body": "The family court specifically judge Michael Clement ruled against a child’s safety and forced her to live with her abuser.",
+        "state": "LA",
+        "county": "Plaquemines",
+        "row_id": "a7bbeaf9-40a1-4fdd-832c-bb52606bd720"
+      },
+      {
+        "body": "Walking through family court felt less like seeking protection and more like trying to survive a system that abuses protective parents. I entered the process believing the truth alone would be enough, and left realizing how complicated and devastating these cases can become for families and children.",
+        "state": "LA",
+        "county": "Plaquemines",
+        "row_id": "8ad8a041-adf1-41fe-984d-a908036b4bb0"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Husband at the time hurt the children and me. I provided evidence of bruises on the children and when he tried to strangle me and my daughter disclosed sexual abuse by her father. I called 911 on him twice. Terri Campesta recommended the father get sole custody and he did.",
@@ -88,11 +133,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/terri_campesta",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='LA'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -108,6 +149,34 @@
     "recommended_route": "/court-actors/la/terri_campesta/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "I called 911 on him twice.",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored Mother’s report regarding the father‘s child pornography addiction",
+        "kind": "comment"
+      },
+      {
+        "body": "She lied about my mom and it's because my dad told her iles and she believed him.",
+        "kind": "comment"
+      },
+      {
+        "body": "Falsified information, ignored evidence, violated confidentiality laws, conducted…",
+        "kind": "comment"
+      },
+      {
+        "body": "Substantiated by CPS, refused to speak to child’s therapist",
+        "kind": "comment"
+      },
+      {
+        "body": "Lied about me to give him sole custody",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

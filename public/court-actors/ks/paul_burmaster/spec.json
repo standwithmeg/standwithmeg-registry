@@ -12,12 +12,17 @@
     "court_or_county": "Johnson",
     "state": "Kansas",
     "state_abbr": "KS",
-    "mention_count": 0,
+    "mention_count": 4,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "35606779-5e1c-4f86-869e-0b6515c1db29",
+      "7850e1fc-7b12-421b-ab23-f9d72ffb726f",
+      "7ad80224-dc96-49eb-8774-aa119f6927cc",
+      "b57eaf03-f023-4394-9a25-65982c84922e"
+    ],
     "actor_row_id": "35606779-5e1c-4f86-869e-0b6515c1db29",
     "actor_bucket_key": null
   },
@@ -42,12 +47,25 @@
     "_pdf_state_family_count": 251,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "This system allowed a nonparent to weaponize the courts against my family, costing us our stability, our savings, and years of peace.",
+        "state": "KS",
+        "county": "Johnson County",
+        "row_id": "7f5c3fa9-849c-4376-b76f-ff0cfece5383"
+      },
+      {
+        "body": "I havent seen my kids in 3+ years. The court enabled alienation and swept a court ordered report under rug which showed signs of alienation.",
+        "state": "KS",
+        "county": "Johnson County",
+        "row_id": "e8753d6f-4cec-4da3-8c26-dd3d0e2ccf9b"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "He was removed after committing Judicial crimes...although thats not what record says removed for Was imo paid to provide opinion in case. Ignored misconduct complaints on participants. Turned off zoom recording device mid hearing. Took atty into a breakout room where they didcussed who knows what. Returned restarted zoom device and the atty provided reasons for withdraw hed previously wasnt able to provide avoidingbsanctions and charges of abandonment.",
@@ -64,11 +82,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/paul_burmaster",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='KS'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -84,6 +98,18 @@
     "recommended_route": "/court-actors/ks/paul_burmaster/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "He was removed after committing Judicial crimes...although thats not what record says removed for Was imo paid to provide opinion in case. Ignored misconduct complaints on participants. Turned off zoom recording device mid hearing.",
+        "kind": "comment"
+      },
+      {
+        "body": "Allowed a third-party visitation matter to proceed within a divorce case that had been finalized for nearly a decade.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

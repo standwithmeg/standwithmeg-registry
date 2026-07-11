@@ -12,12 +12,12 @@
     "court_or_county": "Mobile",
     "state": "Alabama",
     "state_abbr": "AL",
-    "mention_count": 0,
+    "mention_count": null,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": null,
     "actor_row_id": null,
     "actor_bucket_key": "walter honeycut|AL"
   },
@@ -42,10 +42,10 @@
     "_pdf_state_family_count": 130,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
     "family_reports": [],
     "public_comments": [
@@ -71,9 +71,7 @@
   },
   "export_dir": "New Final Post and Capcut template/export/walter_h_honeycutt",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='AL'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
+    "court_actors: no rows match name~'Walter H. Honeycutt' state='AL'"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
@@ -90,6 +88,22 @@
     "recommended_route": "/court-actors/al/walter_h_honeycutt/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Ignored a filed protection order while granting my ex husbands emergency orders for pickup and to have my custody stripped based on hersay and false allegations",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored evidence, victim’s testimony, and impeachments (proven multiple times with evidence That the father lied on the stand in the hearing).",
+        "kind": "comment"
+      },
+      {
+        "body": "Only cared that the child was born in Alabama and how much the father made for support",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

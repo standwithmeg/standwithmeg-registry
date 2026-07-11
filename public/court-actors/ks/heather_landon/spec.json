@@ -12,12 +12,19 @@
     "court_or_county": "Johnson",
     "state": "Kansas",
     "state_abbr": "KS",
-    "mention_count": 0,
+    "mention_count": 6,
     "family_count": 5,
     "public_family_count": 5,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 6,
+    "supabase_row_ids": [
+      "eac42481-b636-46aa-a593-58127341acf3",
+      "8ef403a4-a9f1-4010-9b43-738445828ef1",
+      "309518e3-fe40-425d-961f-c05a4e5c412a",
+      "10ffe9dd-0bb7-48b1-97bd-4c65bfcb5a4d",
+      "12516e2e-c571-4e01-a206-8bd25f4dd238",
+      "d3f0a9c5-8ba8-4d82-a814-a542f1692308"
+    ],
     "actor_row_id": "eac42481-b636-46aa-a593-58127341acf3",
     "actor_bucket_key": "heather landon|KS"
   },
@@ -42,12 +49,43 @@
     "_pdf_state_family_count": 251,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 6,
+    "actor_report_count": 6,
     "family_count": 5,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Allowed the gal and judge too much power to make a decision to separate a mother from her children with no evidence or ability to defend her self due to the unethical court process. Judge allowed a conflict of interest and did not allow any evidence to be provided. Respondent was tokd he filed first and this was the reason I was given every other weekend. This is not an ethical reason to separate a mother from her children. This case was about who had the money, not what was best for the children.",
+        "state": "KS",
+        "county": "Miami",
+        "row_id": "2d608a4a-35bc-47b2-bbba-a1b38b2a6a49"
+      },
+      {
+        "body": "Ripped two children from the only home they had ever known and from their mother and the maternal family who raised them. Haven't been able to see children outside of strictly supervised visitation, for no more than 2 to 4 hours per week in nearly 2 full years.",
+        "state": "KS",
+        "county": "Johnson",
+        "row_id": "35ad29b0-090c-4d64-95b0-8ba4a9979b97"
+      },
+      {
+        "body": "The system is failing my daughter by dismissing abuse claims because the opposing attorney knows our GAL and it seems our GAL is unable to remain unbiased. My case is one sided and leaning always toward dad. What’s best for the children is no longer what the system is going off of.",
+        "state": "KS",
+        "county": "No",
+        "row_id": "8f54eaeb-3c65-4f97-917c-8ce25d11d657"
+      },
+      {
+        "body": "My exhusband had criminal charges for taking the life of our unborn child through DV and would not allow my daughter to get me medical help.He was charged for 1 misdemeanor (domestic battery) and 1 felony charge (intimidation of a minor) in 2022. GAL Heather Landon was on the case at the time and continued to force the children into reintegration therapy even though the DA said it would taint the case. I had sole custody of all three children from 2021 to 2024. The children started talking with Father, made claims against me now, which caused a CINC case against me. Father’s charges were dropped due to him gaining contact with the older children through GAL John Domoney and TFI agents. My youngest daughter was with me still until October of 2025, I could no longer afford to take her to reintegration with Naomi Catadeulla 2 1:2 hrs away from my home once a week and 4 other appointments with sandy Boltons case managers and therapist Janderon Lyold. The GAL believes all allegations against me. Won’t allow me any contact with the kids. I don’t even know where they are living, go to school nothing and on paper, I still have sole custody. Andy will not allow me to chose my own reintegration therapist, I have to go to the one father demands, his buddy Naomi Catadella. My youngest daughter is 10, she can’t sleep without me. The therapist are lying that she is scared of me. I lost my kids to the REAL abuser and Andy Bolton and Richard Fisher painted me as crazy, took my voice. Please let there be someone that can help me.",
+        "state": "KS",
+        "county": "Miami",
+        "row_id": "6e86678b-939a-4835-92a8-777f488aa5ce"
+      },
+      {
+        "body": "I havent seen my kids in 3+ years. The court enabled alienation and swept a court ordered report under rug which showed signs of alienation.",
+        "state": "KS",
+        "county": "Johnson County",
+        "row_id": "e8753d6f-4cec-4da3-8c26-dd3d0e2ccf9b"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Misled court regarding information gained about children's relationship to mother and maternal family. Failed to perform proper investigation or talk to material witnesses listed as required state procedure for GALs. Failed to disclose conflict of interest with judge. Previous history in other county courts under other names.",
@@ -82,11 +120,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/heather_landon",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='KS'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -102,6 +136,26 @@
     "recommended_route": "/court-actors/ks/heather_landon/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Failed to disclose conflict of interest with judge.",
+        "kind": "comment"
+      },
+      {
+        "body": "Shows extreme bias based on if she knows the parties representatives.",
+        "kind": "comment"
+      },
+      {
+        "body": "Continued to force the children into reintegration therapy.",
+        "kind": "comment"
+      },
+      {
+        "body": "Violated rights, handled issues for ex during hearings, failed to meet with children and me",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

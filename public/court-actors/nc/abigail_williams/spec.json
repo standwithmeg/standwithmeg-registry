@@ -12,12 +12,17 @@
     "court_or_county": "Beaufort",
     "state": "NC",
     "state_abbr": "NC",
-    "mention_count": 0,
-    "family_count": 0,
-    "public_family_count": 0,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "mention_count": 4,
+    "family_count": 4,
+    "public_family_count": 4,
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "0695035c-8e51-4abf-a5e3-d6a37de35607",
+      "c94b9e11-ddf6-48a8-98f3-25b1c6dd0848",
+      "ffcb2024-0592-4dde-b43f-36f23a3b382e",
+      "72b7237a-793d-4aff-8325-fc93df75146f"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "abigail wiliams|NC"
   },
@@ -42,12 +47,37 @@
     "_pdf_state_family_count": 216,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
-    "family_count": 0,
-    "family_reports": [],
+    "report_count": 4,
+    "actor_report_count": 4,
+    "family_count": 4,
+    "family_reports": [
+      {
+        "body": "They have robbed me and my children of precious time we will never get back",
+        "state": "NC",
+        "county": "Beaufort county",
+        "row_id": "b8199e3f-3566-4096-9bf1-19354c29ffd9"
+      },
+      {
+        "body": "Former pissed off foster kid",
+        "state": "NC",
+        "county": "Beaufort",
+        "row_id": "312755d7-a7d0-49af-acc3-436fc7d8a05d"
+      },
+      {
+        "body": "They lost my son, he has been missing since September 23, 2025. They have consistently tried to cover up the unconstitutional seizure of my children. They scrubbed reports and gave my 8 year old daughter to our abuser and placed my 15 year old daughter with a pedophile.",
+        "state": "NC",
+        "county": "Beaufort County",
+        "row_id": "1f3c4576-e9e3-4d97-8308-93200d270032"
+      },
+      {
+        "body": "The system tried to destroy and break our family simply for money because three of our children have disabilities they could cash in on. That same system tried to silence us l, paint us as liars, when the proof didn’t match the story they were telling. WE WILL NEVER STOP TELLING OUR STORY!!! If we help and save just one other family it was not for nothing. We are together. Our family fights together. They chose the wrong ones. All of my children are home because our voices, our proof, MATTERED.",
+        "state": "NC",
+        "county": "Beaufort County",
+        "row_id": "c314b71a-3fb5-41be-af03-3f07d97018cd"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "She yelled at my mother at the hospital telling her she was an irresponsible mother and didn’t deserve her children. She refused to leave my hospital room until the Dr made her when I was throwing an absolute fit. This was before any safety plan or order done. She made me leave my mother that night even tho I just wanted to go home. Two days later she wouldn’t let me leave a room at DSS until I finished writing a statement which she was telling me what to write and gave spelling for words as I struggle. That letter was also back dated by two days. She lied in the order she got signed by Regina Parker. She has statements in there I never said. She would not allow me to see my family at all for a month. Then it was only my mother even tho I asked for my dad and siblings. She told me my family did not want to see me and I found out later that was a lie and my family both close and in WV had reach out to see and speak with me as well as my girlfriend.",
@@ -76,11 +106,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/abigail_williams",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='NC'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -96,6 +122,26 @@
     "recommended_route": "/court-actors/nc/abigail_williams/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "That letter was also back dated by two days. She lied in the order she got signed by Regina Parker.",
+        "kind": "comment"
+      },
+      {
+        "body": "She threatened me while at the hospital with my son. Refused to leave his room even when asked.",
+        "kind": "comment"
+      },
+      {
+        "body": "Perjury and lied to have my kids removed a out the condition of my house.",
+        "kind": "comment"
+      },
+      {
+        "body": "She perjured herself many times on the stand. Lied during intake, has lied repeatedly.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

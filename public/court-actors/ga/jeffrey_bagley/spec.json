@@ -12,12 +12,18 @@
     "court_or_county": "Forsyth county",
     "state": "Georgia",
     "state_abbr": "GA",
-    "mention_count": 0,
+    "mention_count": 5,
     "family_count": 4,
     "public_family_count": 4,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 5,
+    "supabase_row_ids": [
+      "28e51a6f-c79f-42df-b062-cb5fce91084c",
+      "92103d5f-ec0b-4534-b927-396de6d99d7b",
+      "6e219f5d-ac71-45f3-9f44-9e4bac43a7ed",
+      "85e7da8a-f74f-4c11-90d3-63c3506c0ce9",
+      "70d7a136-1144-42c0-badf-28111cb9685c"
+    ],
     "actor_row_id": "28e51a6f-c79f-42df-b062-cb5fce91084c",
     "actor_bucket_key": null
   },
@@ -42,12 +48,31 @@
     "_pdf_state_family_count": 153,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 5,
+    "actor_report_count": 5,
     "family_count": 4,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "This has ruined my life and my family’s lives",
+        "state": "GA",
+        "county": "Forsyth",
+        "row_id": "ca5220e8-71a6-43a7-a086-d7a0df4a13c0"
+      },
+      {
+        "body": "12 year old is now cutting herself and 7 year old cries for hours till passing out every time they have to leave mom and dad told daughter he is ashamed of her for having cuts on arms ( she did this at school ) told her to stop trying to get attention",
+        "state": "GA",
+        "county": "Forsyth county",
+        "row_id": "395a35b0-ac3b-475d-bed1-15edefc3900d"
+      },
+      {
+        "body": "Absolutely destroyed, our lives taken away every sense of self and safety and security at the my children have they have ruined my life they ruined my children’s life. They have ungodly amounts of money. I truly believe that Forsyth County is trafficking children through the family court I believe that Judge Bagley has a lot to do with it. He’s the head of the superior court. He’s also on board of Bank chairs, which is the umbrella company for the Forsyth County bank in Georgia which he also has jurisdiction over divorce in property proceeding, the rotary club has a lot of these actors in it Rachel Platt the guardian at Leham is known for giving children to abusers mainly fathers regardless of the evidence Christine Seidel is in this as well. They are in this industry to make money in their crafting off of our children Forsyth County Georgia needs to be investigated. It is the most corrupt County on the planet and judge Bagley needs to be in prison along with Keith Brandon along with Rachel Platt along with Christine Seidel and every other person that they associate with in their business because they are what family court corruption is about.",
+        "state": "GA",
+        "county": "Forsyth county",
+        "row_id": "4c66c3c2-f654-4945-aab1-b27b55f6c52e"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Signed orders the day that motions were filed from imposing council ignored Portugal evaluator, as well as psychologist, refused to acknowledge evidence ordered money that was to be paid in form of gifts from my family, knowing that I did not have the money and that they were not going to help me pay, orchestra the loss of my house to opposing Party and gave them majority of the equity screwed me out of $200,000 had emergency hearings repeatedly out of jerk station when giving full custody of my son, who was never even legitimized by his father it goes on and on he is the most corrupt person in this world. He is the devil.",
@@ -70,11 +95,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/jeffrey_bagley",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='GA'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +111,22 @@
     "recommended_route": "/court-actors/ga/jeffrey_bagley/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Refused to acknowledge evidence ordered money that was to be paid in form of gifts from my family",
+        "kind": "comment"
+      },
+      {
+        "body": "He has a personal interest in my case and I believe the pedophile and sex trafficker",
+        "kind": "comment"
+      },
+      {
+        "body": "Called me.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

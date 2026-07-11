@@ -12,12 +12,16 @@
     "court_or_county": "Scottsbluff",
     "state": "Nebraska",
     "state_abbr": "NE",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "c550fe2d-57d3-4069-b97e-eb6e3634c142",
+      "4fefa9b5-da85-40dc-8b96-9a4a7d4f5f08",
+      "beb2f3ee-ae73-4b07-a0ef-705bc377ae39"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "katy reichert|NE"
   },
@@ -42,12 +46,31 @@
     "_pdf_state_family_count": 43,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Scottsbluff just wants to keep funding the sick individuals who think taking kids is “in their best interest” when they have loving parents",
+        "state": "NE",
+        "county": "Scott’s Bluff",
+        "row_id": "e8637c36-e2be-4986-86f1-b58b37e94b76"
+      },
+      {
+        "body": "Juvenile court has become punitive and not rehabilitative. The state is making money off of destroying families",
+        "state": "NE",
+        "county": "Scott’s bluff",
+        "row_id": "9ea6ffec-c8c0-4b27-8f2e-493c44ebfcb9"
+      },
+      {
+        "body": "After working for DHHS and wanting to be the person to help me make a positive change and then seeing how DHHS tore my family apart, it showed how much people care more about power and being right than what is in the right interest of children. Now as a therapist, I hope it can help others, including my own children someday heal from this trauma.",
+        "state": "NE",
+        "county": "Scotts Bluff County",
+        "row_id": "2d798e82-c2a8-467c-aa70-124a1eefa288"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "She was done with my kids case in the middle of it and transferred it to Audrey and accused me of taking doctors notes because that’s what the school had said even though they were legitimate and I had sent her the legitimate doctors notes.",
@@ -70,11 +93,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/katy_reichert",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='NE'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +109,22 @@
     "recommended_route": "/court-actors/ne/katy_reichert/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "She was done with my kids case in the middle of it and transferred it to Audrey and accused me of taking doctors notes because that’s what the school had said.",
+        "kind": "comment"
+      },
+      {
+        "body": "She dint care I was sober or doing better she had her mind made up",
+        "kind": "comment"
+      },
+      {
+        "body": "She did not hear me out because I’m a ma",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

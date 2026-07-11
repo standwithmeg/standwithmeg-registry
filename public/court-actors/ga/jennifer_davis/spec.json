@@ -12,12 +12,22 @@
     "court_or_county": "Cherokee",
     "state": "Georgia",
     "state_abbr": "GA",
-    "mention_count": 0,
+    "mention_count": 9,
     "family_count": 9,
     "public_family_count": 9,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 9,
+    "supabase_row_ids": [
+      "5e8de302-a37f-4f76-b517-a4a91132762d",
+      "c727bdc8-8ae9-445e-ac52-c06080f398b5",
+      "4429c74b-d401-4795-8712-50a6ce3fa256",
+      "a99976af-e87a-476b-aa2f-87eba254c23e",
+      "cdcf6b1d-5c29-4d45-ab2c-42da19289600",
+      "99c7aff2-4f27-4af2-b747-7f5bd08bb00f",
+      "2f5a9c8a-3540-4a85-b74d-25c6762b5fe7",
+      "de5a0728-0238-4976-99f4-90d835b96c04",
+      "94f96eee-db80-488c-a4b8-5a1d791ef23a"
+    ],
     "actor_row_id": "5e8de302-a37f-4f76-b517-a4a91132762d",
     "actor_bucket_key": null
   },
@@ -42,12 +52,49 @@
     "_pdf_state_family_count": 153,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 9,
+    "actor_report_count": 9,
     "family_count": 9,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "I have spent years in therapy recovering from the trauma of my marriage with the combined abuse by the system. My ex has been able to use this opportunity to further use coercive control against me and my children. One child continues to suffer from mental health issues, while the other has formed a loyalty bond with his father and is very defensive of him. My children continue to be harmed and reports made against their father by third parties. I have filed for bankruptcy and my attorney continues to represent me due to having a personal interest in my case despite a large unpaid balance I may never be able to pay. I will likely never own a home again, have no financial security, and struggle to make ends meet. I will never financially recover.",
+        "state": "GA",
+        "county": "Cherokee County",
+        "row_id": "f68913d2-95f4-427e-b9fc-a646f9d0914d"
+      },
+      {
+        "body": "Destroyed me and my 4 other kids who have been kept away and out of their sister’s life for 7years. Heart breaks everyday all over again",
+        "state": "GA",
+        "county": "Cherokee",
+        "row_id": "d4f1152a-bbc1-4346-8c6a-a015bb71fa14"
+      },
+      {
+        "body": "Caused my family unnecessary trauma, while being the reason my children's innocence was forever taken away from them while allowing them to endure more physical and sexual abuse all at the hands of the court.",
+        "state": "GA",
+        "county": "Cherokee",
+        "row_id": "c1c1cadf-f1f1-4f6c-bf80-05bcb0b08fec"
+      },
+      {
+        "body": "The system claimed to act in our best interest while stripping away our voices, our stability, and our family bond. What was supposed to protect my family instead tore it apart, leaving us fighting for truth, dignity, and each instead of keeping families together, its the opposite families fighting each other.",
+        "state": "GA",
+        "county": "Cherokee",
+        "row_id": "4371b9db-6cd8-45ea-9ca8-545beefa429f"
+      },
+      {
+        "body": "The system designed to help families has destroyed us. I never thought this could ever happen to me cause I'm an excellent mother and professional who has dedicated my life to saving the lives of children and adults. I love my daughter with every fiber of my being. They have destroyed my family which was their intended goal.",
+        "state": "GA",
+        "county": "Cherokee County",
+        "row_id": "9a016a02-fa18-4e9f-9e76-84ebfc45286b"
+      },
+      {
+        "body": "This has devastated our family in ways words can barely describe. After losing my sister, we have spent nearly two years fighting to keep a little girl connected to her brothers, her family, and the people who love her, while watching the system pull us apart piece by piece.",
+        "state": "GA",
+        "county": "Cherokee",
+        "row_id": "4b2fc65e-1417-463c-93ac-75fb17699aa0"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Denied specialists medical care for my daughter. Denied access to courtroom during key hearings. Pro se but never included in any meetings or case conferences. No mediation offered. No real DFCS oversight. Dfcs was allowed this set all visitation parameters. Extreme bias. No CASA Advisory committee status disclosure. Conflict of interest being on Cherokee CASA Advisory Committee with Cherokee County DFCS Director Brooke Ford, for ex parte' communications concerns. Judge Davis basically allowed Cherokee County DFCS to run the hearings. Judge Davis set CRP or Citizen Review Panel meetings the day before a major hearing twice. No opportunity to challenge the recommendations of the panel this way. Judge Davis was named as the person responsible for moving the entire division of juvenile records out of the safety of the Cherokee Clerk of Courts Office downstairs to upstairs outside her chambers, where parents have concerns for the records being altered with no oversight. Judge Davis had an extremely dark tinted glass retrofitted over the new Juvenile Clerk of Courts window to conceal activities.",
@@ -106,11 +153,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/jennifer_davis",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='GA'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -126,6 +169,46 @@
     "recommended_route": "/court-actors/ga/jennifer_davis/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "No real DFCS oversight. Dfcs was allowed this set all visitation parameters.",
+        "kind": "comment"
+      },
+      {
+        "body": "She was one of my GAL in my daughters case that continue to ignore evidence…",
+        "kind": "comment"
+      },
+      {
+        "body": "Refused to consider my tax returns for my income",
+        "kind": "comment"
+      },
+      {
+        "body": "All done without any Court hearings or due process",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored evidence, told me I was lying on the stand, interrupted my testimony to…",
+        "kind": "comment"
+      },
+      {
+        "body": "Threatened our counsel not to attack a GAL in her courtroom",
+        "kind": "comment"
+      },
+      {
+        "body": "Falsified documents that led to the removal of my son.",
+        "kind": "comment"
+      },
+      {
+        "body": "Refusing to see the evidence that proves my innocence while allowing my ex to…",
+        "kind": "comment"
+      },
+      {
+        "body": "Jennifer Davis approved an adoption while awaiting a pending retrial hearing in…",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 2
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

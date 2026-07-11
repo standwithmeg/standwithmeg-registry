@@ -12,12 +12,27 @@
     "court_or_county": "Wapello",
     "state": "Iowa",
     "state_abbr": "IA",
-    "mention_count": 0,
+    "mention_count": 14,
     "family_count": 14,
     "public_family_count": 14,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 14,
+    "supabase_row_ids": [
+      "964260ec-f170-4010-8c58-77d09bf2ca79",
+      "8f83abf2-fbe7-41b8-8ad8-a8b7ee879cfc",
+      "a80a6a5a-0200-43e8-9c1e-0a431b822392",
+      "d0c6fed4-febc-4f8e-82e2-ede86818b04c",
+      "bb4066bc-44b3-4284-8ef4-899f1e6528d4",
+      "aba9d2ca-e996-47a4-b9b5-399f319f9a3e",
+      "7c0dc075-098f-4f3c-a987-b7df38043911",
+      "66894518-3d3d-429a-8d55-0f345f8cae0d",
+      "b3b027b0-ce9c-47aa-ab0a-b25709823d02",
+      "8901e212-5aaa-40f7-a881-a47e2bf39c33",
+      "bf65852a-06dd-468f-b8fd-67e2e58759d4",
+      "02e8b574-a5b2-4f1b-9098-cd92608c4f85",
+      "39fd2d1d-ca8c-4796-bb2f-9218702bc6d4",
+      "55a728f0-bc82-48a1-bd22-9220ed466271"
+    ],
     "actor_row_id": "964260ec-f170-4010-8c58-77d09bf2ca79",
     "actor_bucket_key": "cynthia hucks|IA",
     "_overrides_applied": [
@@ -32,27 +47,64 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 73,
-    "total_submissions": 92,
-    "avg_financial_loss": 132885.49,
+    "families_approved": 74,
+    "total_submissions": 93,
+    "avg_financial_loss": 131303.52,
     "avg_months_lost": 40.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "IA",
-    "state_family_count": 92,
+    "state_family_count": 93,
     "median_financial_loss": 180000,
     "median_burden_sample_size": 25,
     "median_months_lost": 23,
-    "pro_se_pct": 52.2,
+    "pro_se_pct": 51.6,
     "pro_se_count": 48,
-    "_pdf_state_family_count": 92,
+    "_pdf_state_family_count": 93,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 14,
+    "actor_report_count": 14,
     "family_count": 14,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "They are continuing to ensure that my children and I cannot have peace or space to heal, we are forced to deal with a landlord who has been seeking to evict us since \"the breadwinner\" left, we are displaced, and my constitutional rights are being blatantly, obviously and outright violated - continually - as they aren't even sticking to the orders being filed. They won't even let me file electronically, but my abuser was given an exemption from e-filing previously! I have a special needs child from a previous relationship, a son who is NOT biologically of the abuser, either - this is outright warfare against the innocent. I ended a 7 year abusive relationship last September and they STILL will NOT stop coming at us! I am forced to continue to do everything myself as well as I can and they just keep coming. I could represent myself, if not for the blatant allowance of contempt and conflicting court orders and JOEL YATES!",
+        "state": "IA",
+        "county": "Jefferson",
+        "row_id": "36ef2c02-1240-41c5-bea9-5cb800af377f"
+      },
+      {
+        "body": "Judge Joel Yates and the Wapello county court and family system have zero interest in learning about parental alienation. They are not therapists and do not take actual therapists recommendations into account. Joel Yates is incompetent in family court matters as he does not keep up with research, therapy recommendations, nor does he see any issues in separating siblings and families due to parental alienation.",
+        "state": "IA",
+        "county": "Wapello",
+        "row_id": "74b2763e-bba9-45c9-8492-b81ef2225ec3"
+      },
+      {
+        "body": "This site is Bullshit!",
+        "state": "IA",
+        "county": "Johnston",
+        "row_id": "42cae984-37ea-427d-b1ff-227be6a6e83b"
+      },
+      {
+        "body": "Money hungry. Doesn’t do what is in the best interests of her clients. 0/10 recommend. Put your money elsewhere.",
+        "state": "IA",
+        "county": "Wappello",
+        "row_id": "4903fc14-b4d7-4771-a6e1-8c7b032cb372"
+      },
+      {
+        "body": "Riped a daughter away from her mother to place her with someone who is going to hurt her again. He is now on the run, still in active addiction, but he was the In better interest for our daughter?",
+        "state": "IA",
+        "county": "Davis county",
+        "row_id": "90e8c2a2-305a-484e-9ed7-416640c0ba04"
+      },
+      {
+        "body": "She helped my children and I even tho we had barely any money and I’m thankful with her for life!",
+        "state": "IA",
+        "county": "Wapello",
+        "row_id": "70fed271-3fa5-4236-abbd-766e63b93a97"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Barely touched my case- did not prepare me at all for our temp custody hearing. I should have gotten primary custody and she had every thing in her back pocket to use. I ended up getting 50/50. Never responded to emails. Charged me for every single one I sent her though. I paid a $3,000 retainer and she is now trying to bill me another $900. When my soon to be ex husband was calling my work multiple times and I notified her she said “how does this affect you?” I fired her, and while switching attorneys my soon to be ex husband was filing a complaint with the state to get me fired.",
@@ -141,11 +193,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/cynthia_hucks",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='IA'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -161,6 +209,58 @@
     "recommended_route": "/court-actors/ia/cynthia_hucks/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Barely touched my case- did not prepare me at all for our temp custody hearing.",
+        "kind": "comment"
+      },
+      {
+        "body": "There is a lot to list but the two major take aways.",
+        "kind": "comment"
+      },
+      {
+        "body": "Filed a petition for custody.",
+        "kind": "comment"
+      },
+      {
+        "body": "She lied to me in her office and said it would be a conflict of interest.",
+        "kind": "comment"
+      },
+      {
+        "body": "She helped me leave my abuser and fight for what was fair for my children.",
+        "kind": "comment"
+      },
+      {
+        "body": "She failed to provide me with court dates and tell me that i needed character…",
+        "kind": "comment"
+      },
+      {
+        "body": "Used manipulation tactics to get her way",
+        "kind": "comment"
+      },
+      {
+        "body": "Amazing lawyer, did everything I asked. She has helped me and so many other families",
+        "kind": "comment"
+      },
+      {
+        "body": "Produced illegal documents. Placed me in a room alone with her and my abuse.",
+        "kind": "comment"
+      },
+      {
+        "body": "They moved up my court date. They tried to make me quick claim my house",
+        "kind": "comment"
+      },
+      {
+        "body": "Read above notes regarding this individual",
+        "kind": "comment"
+      },
+      {
+        "body": "She’s one sided",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 2
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

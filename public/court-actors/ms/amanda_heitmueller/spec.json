@@ -12,12 +12,17 @@
     "court_or_county": "Lamar",
     "state": "Mississippi",
     "state_abbr": "MS",
-    "mention_count": 0,
+    "mention_count": 4,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "713a6368-7736-4448-b049-5f50854bbb6a",
+      "b6fecfe5-0784-416b-830f-38354e5915ba",
+      "30c22ac0-9a41-4294-b95e-be18eaf03b06",
+      "bd321576-aa29-4905-b482-64ecddb04435"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
@@ -42,12 +47,31 @@
     "_pdf_state_family_count": 54,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Stolen my children’s childhoods. Ripped our family apart. Placed a child permanently with his abusive father. Aided and facilitated abuse and the abuser. Opened my eyes to the real system — it is NOT “broken”.. it’s a well oiled, smooth running.. money making, family breaking machine.",
+        "state": "MS",
+        "county": "Lamar",
+        "row_id": "fe1cc797-35b9-4a6c-b90b-49c1e7504444"
+      },
+      {
+        "body": "Took three healthy kids and emotionally abused them, along with their mother and maternal family, through repeated questioning by the court therapist, CPS, judge, and GAL. Took the children away from a loving mother based on false allegations, without due process or objective evidence. Full story is surreal. I consent to the use of my quotes as long as they do not mention or include mine or my children’s private information. I copied and pasted from some of my open claims.",
+        "state": "MS",
+        "county": "Lamar",
+        "row_id": "5c1a2f45-f174-4a04-aba5-70ce8e363fb6"
+      },
+      {
+        "body": "Family court didn’t just make a ruling—it tore my children from their mother against their will and silenced their voices in the process. What was supposed to protect them broke their trust in the very system meant to help, and we’re still working to heal from that damage.",
+        "state": "MS",
+        "county": "Forrest",
+        "row_id": "7a88540f-31c0-4ee2-a7aa-692ed7920d07"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "See my Forrest/ Lamar Complaint..I. PARTIES Plaintiff is an adult resident citizen of Lamar County, Mississippi and the biological mother of three minor children. Defendant is a licensed clinical social worker who, at all relevant times, provided court-involved therapeutic services in connection with custody proceedings involving Plaintiff’s children. II. JURISDICTION AND VENUE This Court has subject matter jurisdiction pursuant to Article 6, Section 156 of the Mississippi Constitution and Miss. Code Ann. § 9-7-81. Venue is proper in Lamar County, Mississippi because the acts and omissions giving rise to this Complaint occurred in connection with proceedings before the Lamar County Chancery Court, and the resulting harm to Plaintiff occurred in this jurisdictionIII. FACTUAL ALLEGATIONS A. Limited Scope of Appointment Defendant was appointed by the Lamar County Chancery Court to provide therapeutic counseling services to the minor children. Defendant was not appointed to conduct: a custody evaluation, a forensic evaluation, a psychological examination of either parent, or any formal assessment of parental fitness. Defendant did not evaluate Plaintiff, did not perform psychological t",
@@ -70,11 +94,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/amanda_heitmueller",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='MS'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +110,18 @@
     "recommended_route": "/court-actors/ms/amanda_heitmueller/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "She made excuses for not appearing at trial or emergency custody hearing like she said she would.",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored evidence",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

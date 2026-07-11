@@ -12,12 +12,22 @@
     "court_or_county": "Tulsa County",
     "state": "Oklahoma",
     "state_abbr": "OK",
-    "mention_count": 0,
-    "family_count": 6,
-    "public_family_count": 6,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "mention_count": 9,
+    "family_count": 7,
+    "public_family_count": 7,
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 9,
+    "supabase_row_ids": [
+      "f6137388-78cb-4525-8d2c-50bc99c17a45",
+      "ae734f38-ab4d-4b8d-8e5a-5b1f522d3d39",
+      "11a74e9b-21a7-47c7-9016-ae22f76a56ce",
+      "5cc82853-1edf-459b-82fb-08205839de8d",
+      "e4abf836-635e-4759-a500-f510c57b7e90",
+      "04cb40a0-1a2e-4e80-93df-f279bcf1507a",
+      "f4ef713d-011a-4b26-87e4-2716f226943c",
+      "1394a1b6-f250-480b-b0c1-d2ce2deb42ef",
+      "c45a062c-92f7-4e09-a1bf-c6af7687be21"
+    ],
     "actor_row_id": "f6137388-78cb-4525-8d2c-50bc99c17a45",
     "actor_bucket_key": "jamie vogt|OK"
   },
@@ -42,12 +52,49 @@
     "_pdf_state_family_count": 164,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5415,
+  "movement_total": 5421,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
-    "family_count": 6,
-    "family_reports": [],
+    "report_count": 9,
+    "actor_report_count": 9,
+    "family_count": 7,
+    "family_reports": [
+      {
+        "body": "The system has destroyed my family. Happy children are now in constant chaos, the court is more concerned about 50/50 pro dad than stability for the children. I have been told so many times children are resilient. They will be ok. This has take a toll on myself mentally and physically. Now because I am fighting back or questioning I am classified as combative and confrontational. Which adds additional stress and feels like an intimidation tactic. The system and abuser has stolen precious time that you can never get back.",
+        "state": "OK",
+        "county": "Tulsa",
+        "row_id": "1734a704-ed48-41a2-b5e8-83bf9a1d781e"
+      },
+      {
+        "body": "The family court system has cost me precious time with my children, furthered our traumatic experiences, favors reunification over safety, and continues to horrify me",
+        "state": "OK",
+        "county": "Tulsa",
+        "row_id": "ee6ab90f-4020-462b-9a7a-c2607822eb3d"
+      },
+      {
+        "body": "Destroyed my faith in child court and what is supposed to be the absolute wellbeing of our kids as a priority. Took years from me and my kids/family we will never get back and has caused trauma to my kids they may never recover from.",
+        "state": "OK",
+        "county": "Wagoner",
+        "row_id": "d8843cb7-6aff-48f7-8687-d3f895db0be8"
+      },
+      {
+        "body": "Family court is a circus and for all of the lip service to “children’s best interest”, my kids are BY FAR, worse off today because of it.",
+        "state": "OK",
+        "county": "Tulsa",
+        "row_id": "93551a22-a4cb-4e62-b51e-b5d93de214e1"
+      },
+      {
+        "body": "Destroyed my family for over 6 years now! Took every penny we have down to savings and retirement fighting for justice for my two small children! Traumatized my children so bad they will be in therapy rest of their lives!! Because of wagoner county Oklahoma family courts my son was SA by TWO different people while at his dads for 2 years and alienated from me! I find out 2 years later when I finally get my first visit with him! His dad never reported! Never called police nor cps and did not take my son for medical treatment… he called my son a liar and went about life!! He admitted on stand to all this and walks away with no consequences!! This is on the record! Literally destroying my kids, family and my life still to this day! My son has light he’s sent to come to me full sole custody [redacted] there is no light for my daughter to this day! I’m on supervised visits for no reason!!",
+        "state": "OK",
+        "county": "Wagoner",
+        "row_id": "8b70ebcd-62ae-4250-8e33-a8a4f74e16d9"
+      },
+      {
+        "body": "My biggest regret in life is telling the truth and following the law. I reported abuse. My family has been destroyed as a result.",
+        "state": "OK",
+        "county": "Creek County",
+        "row_id": "d96a7040-db92-4c65-bacf-32372cd3e6f0"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Jamie Vogt did EFE on both my children. My daughter layed in my lap in her office after not seeing me for 1 year my first time seeing her was in Jamie Vogt office for one hour. My daughter layed in my lap crying begging me not to leave saying I was the only one who can keep her safe. Jamie did noting to help my baby! Took 10 thousand dollars to see both my kids and helped paternal grandmother kidnap my daughter. Let abusers bring her to Jamie’s office and never had a visit with my daughter and her father. My daughter begged for help and was ignored. She never even mentioned this in my daughter’s report for court.",
@@ -68,6 +115,12 @@
         "court_or_county": "Tulsa County"
       },
       {
+        "comment_text": "She plays parents, but wants the concerned patent to change parenting so the parent causing chaos doesn't have to handle children expressing distress. Children will survive a divorce. Her quote",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Tulsa"
+      },
+      {
         "comment_text": "To be disclosed if my testimony is required. I have paper, digital, and video evidence of all of my above statements. The judge dismissed all as evidence.",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
@@ -82,11 +135,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/jamie_vogt",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='OK'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -102,6 +151,34 @@
     "recommended_route": "/court-actors/ok/jamie_vogt/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "My daughter begged for help and was ignored.",
+        "kind": "comment"
+      },
+      {
+        "body": "My daughter was denied advocacy and protection as a result.",
+        "kind": "comment"
+      },
+      {
+        "body": "I didn’t she would report back to the GAL how difficult I was being.",
+        "kind": "comment"
+      },
+      {
+        "body": "Children will survive a divorce. Her quote",
+        "kind": "comment"
+      },
+      {
+        "body": "The judge dismissed all as evidence.",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored evidence Failed to report domestic violence to DHS Manipulative of kids’…",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

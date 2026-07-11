@@ -12,12 +12,17 @@
     "court_or_county": "Shawnee",
     "state": "Kansas",
     "state_abbr": "KS",
-    "mention_count": 0,
+    "mention_count": 4,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "d0dc790c-a547-42cd-8b05-84a45e56672f",
+      "d5f1dc71-9b35-4319-af3b-85bc5f223dce",
+      "de9160ce-418e-460a-9720-fc5ab9e6655a",
+      "904ca2ac-45e0-4a50-bc28-9f55e7751dd8"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "peny moylan|KS"
   },
@@ -42,12 +47,31 @@
     "_pdf_state_family_count": 251,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Destroyed. Children still in foster care. Kinship ignored. Creating trauma for CHILDREN, emotional regulation, safety, grossly over medicating, stability, separation, splitting full siblings apart without visitation. Good case workers who put the children first would vanish after a month or two. All for federal block grants and funding. The children's best interest was not considered. 3 judges and five lawyers in 5 years, numerous case workers. I'm fighting to make it until my babies reach 18. Systemic abuse has been deep and total.",
+        "state": "KS",
+        "county": "Shawnee county",
+        "row_id": "d51d6ed3-249e-47ce-9455-ad232ab60a57"
+      },
+      {
+        "body": "Two years without your children is a lot of time. Missing teeth and first days. It’s not just hard on us. They’re home now, But we’re all so, so very mentally and emotionally fucked, each in our own ways, and I’m scared we won’t ever be the same.",
+        "state": "KS",
+        "county": "Shawnee",
+        "row_id": "4ca040c5-c54c-42d6-987d-98d9bae038f6"
+      },
+      {
+        "body": "Used us for financial gain",
+        "state": "KS",
+        "county": "Shawnee",
+        "row_id": "f23650a5-eeb0-4ef5-820b-38f53e342cdf"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "She knew what was happening, had all the facts it was proven to her many times that kvc was purposefully giving us the run around, just trying to waste time while they tried to basically sell my children to a horrible human being.",
@@ -70,11 +94,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/penny_moylan",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='KS'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +110,22 @@
     "recommended_route": "/court-actors/ks/penny_moylan/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "She knew what was happening, had all the facts it was proven to her many times that kvc was purposefully giving us the run around, just trying to waste time while…",
+        "kind": "comment"
+      },
+      {
+        "body": "Rubber stamps orders, hands her authority over to non profit agencies like a blank check. Denied a hearing on placement, and transcript for indecent parent",
+        "kind": "comment"
+      },
+      {
+        "body": "Seemed she had already made decisions before court date. When son was mentioned to be non-verbal autistic. She seemed genuinely surprised",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

@@ -12,12 +12,16 @@
     "court_or_county": "marion",
     "state": "Indiana",
     "state_abbr": "IN",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "fea9993b-1698-47d7-a9ee-c067fc100096",
+      "b9f70283-1924-43c9-8db5-e581541f48ec",
+      "ebbc481d-7c47-413c-b2f4-358a81997a6e"
+    ],
     "actor_row_id": "fea9993b-1698-47d7-a9ee-c067fc100096",
     "actor_bucket_key": null
   },
@@ -42,12 +46,31 @@
     "_pdf_state_family_count": 153,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Taken away parenting time, almost severed a parental bond, refuse to listen, states its about safety of my child but are ok with my child entering a strangers vehicle. Misinformation, miscommunication and decietful behavior time after time.",
+        "state": "IN",
+        "county": "Perry county",
+        "row_id": "dcff2a0c-520b-42d8-881b-74a5de547d83"
+      },
+      {
+        "body": "No one believes me.",
+        "state": "IN",
+        "county": "Elkhart County",
+        "row_id": "221a0fe3-2229-4386-b69b-ef9943a07eed"
+      },
+      {
+        "body": "Traumatized us. Let an abusive sadistic man maintain control.",
+        "state": "IN",
+        "county": "Hamilton",
+        "row_id": "c5be22dd-75f2-4e9d-8d40-6e6f22891bfb"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Lindsey from dcs send Ohio in to do her work and then wouldn’t listen to their recommendations blocking them from keeping my child home with me and safe after being beaten severely. Attempted to meet with her after preparing hours worth of evidence and driving the hour and 45 minutes she wouldn’t drive and she canceled the meeting five minutes before it pitiful. Do your job.",
@@ -70,11 +93,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/indiana_department_of_child_services",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='IN'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +109,22 @@
     "recommended_route": "/court-actors/in/indiana_department_of_child_services/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Lindsey from dcs send Ohio in to do her work.",
+        "kind": "comment"
+      },
+      {
+        "body": "Delayed reunification, acted out of convenience and made rules up as they went theough the case",
+        "kind": "comment"
+      },
+      {
+        "body": "They did not listen to me. They believed the party that reported my to DCS.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

@@ -12,12 +12,16 @@
     "court_or_county": "Chilton",
     "state": "Alabama",
     "state_abbr": "AL",
-    "mention_count": 0,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "6858f773-6966-45a7-b153-dff8958d851d",
+      "f9265efd-257b-4dd9-9156-d86d66109657",
+      "b81485e0-0b2d-41fe-bdd2-680c9310517f"
+    ],
     "actor_row_id": "6858f773-6966-45a7-b153-dff8958d851d",
     "actor_bucket_key": null
   },
@@ -42,12 +46,31 @@
     "_pdf_state_family_count": 130,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Caused detrimental emotional and financial hardship, stolen years of our lives and forcing us to Fight for our constitutional rights and Justice.",
+        "state": "AL",
+        "county": "Chilton",
+        "row_id": "30ef7c09-d89e-4227-bb48-59193caaecdf"
+      },
+      {
+        "body": "Broken and destroyed our family unit and bond As a whole off of lies",
+        "state": "AL",
+        "county": "Chilton",
+        "row_id": "f2f4b813-f43b-4664-a5a5-aaca191c8659"
+      },
+      {
+        "body": "One woman was allowed to change the trajectory of my whole family",
+        "state": "AL",
+        "county": "Chilton County",
+        "row_id": "d79f0e48-10bd-40b8-81b3-87a598545665"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "She has talked down to us told on we will never get our children back i have voice recording of her telling me your a grown ass woman who cares about your feelings. She also stated \" I don't see how the judge is not going to tpr yall",
@@ -70,11 +93,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/ali_upchurch_patterson",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='AL'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -90,6 +109,22 @@
     "recommended_route": "/court-actors/al/ali_upchurch_patterson/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "She has talked down to us told on we will never get our children back i have voice recording of her telling me your a grown ass woman who cares about your feelings.",
+        "kind": "comment"
+      },
+      {
+        "body": "Failed to follow rules of court, put herself on record prior to representing opposition, violated state law in motions filed.",
+        "kind": "comment"
+      },
+      {
+        "body": "Did not investigate the mother at all in either case",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

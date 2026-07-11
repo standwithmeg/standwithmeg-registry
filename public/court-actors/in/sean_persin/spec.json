@@ -12,12 +12,20 @@
     "court_or_county": "County not listed",
     "state": "Indiana",
     "state_abbr": "IN",
-    "mention_count": 0,
+    "mention_count": 7,
     "family_count": 5,
     "public_family_count": 5,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 7,
+    "supabase_row_ids": [
+      "597076cb-c9c1-4d9b-88fc-edf0dbf8261d",
+      "5bed22ea-b8c4-4f93-988d-ee89a424ebc8",
+      "1ec1de4c-4e9b-425a-8970-01343f761ed3",
+      "9a4d49f1-1138-4527-b89d-d36242be423a",
+      "21ce4670-25b5-44dc-9f62-23eabd4564f8",
+      "4d3d7531-ec62-4968-9154-b4e88b447b74",
+      "f7b3454b-08ab-4905-9afc-3fe1fc361e90"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
@@ -42,12 +50,37 @@
     "_pdf_state_family_count": 153,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 7,
+    "actor_report_count": 7,
     "family_count": 5,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "I begged the court to intervene and act in a protective and problem solving capacity. It failed to do so, causing tremendous emotional, mental, and financial harm to our entire family.",
+        "state": "IN",
+        "county": "Tippecanoe",
+        "row_id": "7b729f6a-faaa-4f77-8aaa-28d320aed733"
+      },
+      {
+        "body": "Judge Persin ignored evidence from two forensic interviews and a medical exam that the father sexually molested our two children. He gave the father sole custody after one hearing. This has destroyed two children's lives. Judge Persin endangered children and decided to ruin their lives despite evidence and expert testimony. One child has made another disclosure of sexual abuse since being forced to live with their abuser.",
+        "state": "IN",
+        "county": "Tippecanoe",
+        "row_id": "9271b677-cde8-4506-88c3-d0316bb5ec4c"
+      },
+      {
+        "body": "Sean Persin has endangered enough children and needs to be held accountable for destroying families. He sides with abusers and rules against the female regardless of the heinous crime the man has committed including abusing an innocent child. Enough is enough.",
+        "state": "IN",
+        "county": "Tippecanoe",
+        "row_id": "f3c7d56e-9f93-40e9-ba4f-06279e39d0c3"
+      },
+      {
+        "body": "The Guardian ad Litem, Sybil Sharvelle, appears to have been brainwashed by the father and claimed the mother is psychologically abusing the child after the child disclosed sexual abuse by the father for the second time and a PO was issued by a preponderance of the evidence by one judge, then transferred to another judge who dropped the PO and the child was taken by the father who received sole custody.",
+        "state": "IN",
+        "county": "Tippecanoe",
+        "row_id": "a2559f03-f534-485e-8254-256a3b2df1b5"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Judge Sean Persin dropped the PO after the child’s therapist explained the child is diagnosed with PTSD due to sexual abuse and trauma, and the child’s teacher testified that the child is suffering from anxiety and other sexual abuse side effects and there is an active sexual abuse case at the DAs office",
@@ -76,11 +109,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/sean_persin",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='IN'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -96,6 +125,26 @@
     "recommended_route": "/court-actors/in/sean_persin/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Judge Sean Persin dropped the PO after the child’s therapist explained the child is diagnosed with PTSD due…",
+        "kind": "comment"
+      },
+      {
+        "body": "He gave the father sole custody after one hearing.",
+        "kind": "comment"
+      },
+      {
+        "body": "Then dismissed the protective order",
+        "kind": "comment"
+      },
+      {
+        "body": "Failed to act in a problem solving capacity or hold other party accountable for their continued harm to the…",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

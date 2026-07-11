@@ -12,12 +12,26 @@
     "court_or_county": "Miami",
     "state": "Kansas",
     "state_abbr": "KS",
-    "mention_count": 0,
+    "mention_count": 13,
     "family_count": 14,
     "public_family_count": 14,
-    "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 0,
-    "supabase_row_ids": [],
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "actor_report_count": 13,
+    "supabase_row_ids": [
+      "ddfd7d7b-8684-4a68-bd8a-9aa8bbc46147",
+      "3231a1bb-b9cf-47ac-84f4-a00db8c5ac9b",
+      "85b1f4e6-b504-42e9-92e0-5698294ed5e1",
+      "4faccf94-799a-424b-8ad9-2303640a7b0b",
+      "b21db2bd-3140-485e-a577-6148e78957c6",
+      "b273b18d-2e10-4fd0-9b4b-4f75eaff7003",
+      "d195b1df-97c1-43b6-bfa7-3ed05b0a309c",
+      "7e19b9be-3c22-414b-a435-6e0ad2215ad5",
+      "8932eaa1-bf75-4243-bde0-48bc4d6a429a",
+      "8b8484d0-b091-4da7-9fa8-b1a588666a12",
+      "262336c7-0a95-482a-83d6-2e2c5ac9bc44",
+      "222e95af-f209-402b-8d38-15c3e724dd8e",
+      "ffa86815-dbc4-47c6-beca-24388811b40f"
+    ],
     "actor_row_id": "ddfd7d7b-8684-4a68-bd8a-9aa8bbc46147",
     "actor_bucket_key": "andrew bolton|KS",
     "_overrides_applied": [
@@ -50,12 +64,49 @@
     "_pdf_state_family_count": 251,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5404,
+  "movement_total": 5420,
   "supabase": {
-    "report_count": 0,
-    "actor_report_count": 0,
+    "report_count": 13,
+    "actor_report_count": 13,
     "family_count": 14,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Children’s safety was ignored. We feel the court system is racially biased.",
+        "state": "KS",
+        "county": "Johnson county",
+        "row_id": "e9026edb-1f39-4c9e-8dfe-ea78b090dcd2"
+      },
+      {
+        "body": "Time with my daughter as well as putting my daughter at risk. Her dad has threatened to leave with her and go off grid if I ever reported the abuse.",
+        "state": "KS",
+        "county": "Miami county",
+        "row_id": "fbe37f50-d760-4439-9f4d-21e3a1a0a145"
+      },
+      {
+        "body": "I was falsely accused of physical abuse on my child and lost my visitation for over 2 months, this has created a fear in my child that she’s going to go for her scheduled parenting time with her father and never get to see me again. My child has to be with her alleged abuser 50% of the time that breaks my heart, but what can I do to fix it?",
+        "state": "KS",
+        "county": "Miami",
+        "row_id": "2fb796fa-23d7-4fa5-af97-a3946754ab11"
+      },
+      {
+        "body": "I have not seen my children in over 16 months. I was ordered to do counseling, of which my children seldomly attended. My children are suffering in school, failing classes, suspensions, and etc and GAL hasn't spoken to anyone of importance or done his job. Children's mother falsely accused me of abuse and has bought my children's love all while telling them lies about me. After years of fighting to do what is best for my children......I have finally given up. Once you understand how the system works, only a fool would believe they could win going against it.",
+        "state": "KS",
+        "county": "Linn",
+        "row_id": "7f9d2880-2c07-4255-88a1-eeb2880f95d6"
+      },
+      {
+        "body": "Miami county doesn’t have the child best interest at all, they literally take children away from a parent who wants to protect them from abuse and drugs and tells the parent that wants to keep them safe that they are a vindictive ex who is mad!",
+        "state": "KS",
+        "county": "Miami county",
+        "row_id": "8b0eaa72-5dd3-411b-9dc4-0f25f7d91268"
+      },
+      {
+        "body": "Ex parte orders issued taking away parenting time/no contact. I had sole custody, also taken away with the appointment of a new GAL on the case for a few months. No evidence presented, no witnesses and Judge delays setting evidentiary hearing. I have always been the primary caregiver. Ex husband had been found guilty during a custody trial of emotional and verbal abuse. The system has failed me and my kids. GALs and case managers have too much power.",
+        "state": "KS",
+        "county": "Johnson",
+        "row_id": "d1e4fa22-7ad4-438f-ba40-2533149dbb1b"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Has not spoken to anyone I asked him to speak to, including people whom are in direct contact with my children in school. Set a separate hearing inregards to his fees not being paid, which I had paid 50% of his fees. Refused to speak with me in person. Told me he always meets the first time via Zoom. I attempted to reach out to him after our Zoom call and was told that all future communications would be dealt with between attorneys.",
@@ -126,11 +177,7 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/andrew_bolton",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='KS'",
-    "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -146,6 +193,50 @@
     "recommended_route": "/court-actors/ks/andrew_bolton/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Refused to speak with me in person. Told me he always meets the first time via Zoom.",
+        "kind": "comment"
+      },
+      {
+        "body": "Hand-picked by Judge Richard Fisher. Refuses to review my evidence.",
+        "kind": "comment"
+      },
+      {
+        "body": "The system has stripped me of any belief that leaving my abuser was the right choice.",
+        "kind": "comment"
+      },
+      {
+        "body": "Gave 50/50 custody to my ex",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored evidence. Did not investigate.",
+        "kind": "comment"
+      },
+      {
+        "body": "Kept trying to get off our case and was finally dismissed by the judge.",
+        "kind": "comment"
+      },
+      {
+        "body": "Accused me of being wrong for being in an abusive relationship and didn’t talk to…",
+        "kind": "comment"
+      },
+      {
+        "body": "Didn’t interview witnesses or children involved. Was aggressive towards us, yelling.",
+        "kind": "comment"
+      },
+      {
+        "body": "Placed children into foster care refused to talk to them",
+        "kind": "comment"
+      },
+      {
+        "body": "Lied under oath about child’s wants.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 2
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }
