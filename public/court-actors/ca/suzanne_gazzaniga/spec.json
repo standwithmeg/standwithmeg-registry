@@ -2,31 +2,32 @@
   "schema_version": 2,
   "actor": {
     "slug": "suzanne_gazzaniga",
-    "display_name": "Suzanne Gazzaniga",
+    "display_name": "Suzanne I. Gazzaniga",
     "title": "",
-    "first_name": "Suzanne",
+    "first_name": "Suzanne I.",
     "last_name": "Gazzaniga",
     "role": "Judge",
-    "court": "Placer",
-    "county": "Placer",
-    "court_or_county": "Placer",
-    "state": "CA",
+    "court": "Placer County Superior Court",
+    "county": null,
+    "court_or_county": "Placer County Superior Court",
+    "state": "California",
     "state_abbr": "CA",
-    "mention_count": 2,
+    "mention_count": 3,
     "family_count": 3,
-    "public_family_count": 3,
-    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
-    "actor_report_count": 2,
+    "public_family_count": null,
+    "public_family_count_source": null,
+    "actor_report_count": 3,
     "supabase_row_ids": [
+      "59480131-2e5d-476d-9839-d4fb5be0bf12",
       "636325d1-5b23-44e7-af94-574223012238",
       "4fef5e4a-4f44-411b-b079-e570c4b8456f"
     ],
-    "actor_row_id": null,
-    "actor_bucket_key": "suzane gazaniga|CA"
+    "actor_row_id": "59480131-2e5d-476d-9839-d4fb5be0bf12",
+    "actor_bucket_key": "suzanne gazzaniga|CA"
   },
   "photo": {
-    "path": null,
-    "exists": false,
+    "path": "california/suzanne_gazzaniga/image_1080.png",
+    "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
@@ -45,12 +46,18 @@
     "_pdf_state_family_count": 446,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5421,
+  "movement_total": 5427,
   "supabase": {
-    "report_count": 2,
-    "actor_report_count": 2,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
     "family_reports": [
+      {
+        "body": "After disputed allegations I denied on the record, Placer County Family Court issued a five-year restraining order and custody restrictions that left me with only supervised video calls. My concern is that major decisions were made through a process with serious record and due-process questions, including disputed child testimony, unclear evidence rulings, Family Code 3044 findings, and a trial day with no court reporter.",
+        "state": "CA",
+        "county": "Placer County",
+        "row_id": "1ccda0e4-e795-44b0-9cba-10d36a247076"
+      },
       {
         "body": "Losing your children in Family Court is like mourning the death of a child. However there is light at the end of the tunnel. Patience will be your friend and children mature & grow mentally and emotionally. Sooner or later they’ll see the truth. Pray for Patience.",
         "state": "CA",
@@ -86,10 +93,12 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/suzanne_gazzaniga",
-  "unresolved": [],
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='CA'"
+  ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
-    "footer": "Family-reported submissions.",
+    "footer": "Family-reported submissions · not court findings.",
     "strike_through_reserved_for": [
       "isolated",
       "dismissed",
@@ -102,22 +111,6 @@
     "recommended_route": "/court-actors/ca/suzanne_gazzaniga/share.html",
     "draft_only": true
   },
-  "render": {
-    "selected_quotes": [
-      {
-        "body": "Appears in the case record as a judicial officer and order signer in [redacted] family-court proceedings. Included for the complete court-actor timeline.",
-        "kind": "comment"
-      },
-      {
-        "body": "Recuesed herself from my case sighting conflict which she never described what the conflict was so another judge (Civil) could step in.",
-        "kind": "comment"
-      },
-      {
-        "body": "This judge denied my timely request to set aside Michael Jacques orders despite the reasons why he was removed from my case.",
-        "kind": "comment"
-      }
-    ],
-    "quote_page_count": 1
-  },
+  "render": {},
   "cta": "STANDWITHMEG.COM ↗"
 }
