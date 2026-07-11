@@ -7,15 +7,15 @@
     "first_name": "Bridget",
     "last_name": "Childrers",
     "role": "Judge",
-    "court": "Cleveland",
-    "county": "Cleveland",
+    "court": "Cleveland county",
+    "county": null,
     "court_or_county": "Cleveland county",
-    "state": "OK",
+    "state": "Oklahoma",
     "state_abbr": "OK",
     "mention_count": 5,
-    "family_count": 2,
-    "public_family_count": 2,
-    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "family_count": 1,
+    "public_family_count": 1,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
     "actor_report_count": 5,
     "supabase_row_ids": [
       "e01b9ab2-5fbf-446c-82a7-c72815d01a95",
@@ -25,11 +25,11 @@
       "97d578be-3004-4a24-8c39-1720ced15922"
     ],
     "actor_row_id": null,
-    "actor_bucket_key": "bridget childers|OK"
+    "actor_bucket_key": null
   },
   "photo": {
-    "path": null,
-    "exists": false,
+    "path": "oklahoma/bridget_childers/image_1080.png",
+    "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
@@ -48,11 +48,11 @@
     "_pdf_state_family_count": 164,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5421,
+  "movement_total": 5427,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
-    "family_count": 2,
+    "family_count": 1,
     "family_reports": [
       {
         "body": "Subjected my children and me to trauma, medical abuse, and neglect, refusing to protect me from my rapist and abuser. refuses to listen to my children, who just want to come home.",
@@ -82,11 +82,11 @@
   },
   "export_dir": "New Final Post and Capcut template/export/bridget_childers",
   "unresolved": [
-    "pdf_public_actor: no 'Bridget Childrers' in cache for OK"
+    "pdf_public_actor: helper exit 1: no public actor match for 'Bridget Childrers' in OK"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
-    "footer": "Family-reported submissions.",
+    "footer": "Family-reported submissions · not court findings.",
     "strike_through_reserved_for": [
       "isolated",
       "dismissed",
@@ -99,18 +99,6 @@
     "recommended_route": "/court-actors/ok/bridget_childers/share.html",
     "draft_only": true
   },
-  "render": {
-    "selected_quotes": [
-      {
-        "body": "Denied due process, lied multiple times in court, wouldn't allow me to present evidence, blamed me for my own abuse Refusing to look at evidence, ignoring laws protecting DV survivors",
-        "kind": "comment"
-      },
-      {
-        "body": "I’m going back in at the end of July to get my visatation back hopefully, and officially get the EPO removed since my ex doesn’t want to remove it.",
-        "kind": "comment"
-      }
-    ],
-    "quote_page_count": 1
-  },
+  "render": {},
   "cta": "STANDWITHMEG.COM ↗"
 }
