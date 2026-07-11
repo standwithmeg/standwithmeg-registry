@@ -1,0 +1,127 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "kristina_jarvis",
+    "display_name": "Kristina Jarvis",
+    "title": "",
+    "first_name": "Kristina",
+    "last_name": "Jarvis",
+    "role": "Attorney (Opposing)",
+    "court": "Charleston",
+    "county": null,
+    "court_or_county": "Charleston",
+    "state": "South Carolina",
+    "state_abbr": "SC",
+    "mention_count": 6,
+    "family_count": 4,
+    "public_family_count": 4,
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "actor_report_count": 6,
+    "supabase_row_ids": [
+      "30ce99ef-e0b7-4f9f-884c-00f7329aad4f",
+      "1281e318-aeae-479f-a2de-bdda52d35005",
+      "58c1724b-b824-4b2e-a46a-48a7174eebc0",
+      "4c60d24e-dc5f-4bc9-9935-a1f40d6c392c",
+      "889c6c56-d83a-4a7d-a249-21391654bef2",
+      "0ade4ace-8304-4da3-ad41-0751fb87b478"
+    ],
+    "actor_row_id": "30ce99ef-e0b7-4f9f-884c-00f7329aad4f",
+    "actor_bucket_key": null
+  },
+  "photo": {
+    "path": "south_carolina/kristina_jarvis/image_1080.png",
+    "exists": true,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 85,
+    "total_submissions": 108,
+    "avg_financial_loss": 279773.07,
+    "avg_months_lost": 26.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "SC",
+    "state_family_count": 108,
+    "median_financial_loss": 120500,
+    "median_burden_sample_size": 68,
+    "median_months_lost": 18,
+    "pro_se_pct": 55.6,
+    "pro_se_count": 60,
+    "_pdf_state_family_count": 108,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5427,
+  "supabase": {
+    "report_count": 6,
+    "actor_report_count": 6,
+    "family_count": 4,
+    "family_reports": [
+      {
+        "body": "Absolute familial and financial destruction. I was the primary parent, and they are with an abuser and have been for 11 month. This is the most corrupt system I have ever seen.",
+        "state": "SC",
+        "county": "Charleston",
+        "row_id": "f6da603b-0c3c-4bed-ac66-999321e5a851"
+      },
+      {
+        "body": "This system has taken my child from me and left me fighting through delays, legal barriers, and financial strain that have drained my savings, my mental health, and my ability to function normally. It has cost me years of time with my children and caused deep emotional harm to my family, including my daughter losing precious time with her brother.",
+        "state": "SC",
+        "county": "Charleston",
+        "row_id": "9a353e7b-62ce-4b53-8be0-fa9c614cf1b3"
+      },
+      {
+        "body": "“I went from being my son’s primary and only caregiver to suddenly losing him through a court process I was not properly able to participate in, and years later I am still fighting to rebuild the bond that separation damaged. This system cost me precious time with my child, my financial stability, and years of emotional pain no parent should have to endure. I believe my ex-partner Kenneth latchford has used custody and separation as a way to punish and exclude me from my son’s life, and I have felt that prejudice and hostility toward me and my Latina family played a role in how we were treated and pushed aside by him and his mother April Plummer enabled by the court system including the GAL Leslie Armstrong.”",
+        "state": "SC",
+        "county": "Charleston",
+        "row_id": "d24f5da7-5d19-49b4-8469-722b46de4452"
+      },
+      {
+        "body": "Family court is where justice goes to die. All judges, attorneys, guardians ad litem, evaluators, law enforcement, child protection agencies, and anyone involved in this process in any way should be thoroughly trained and have a complete understanding of trauma and coercive control. The danger being imposed on children and families due to the family court crisis and lack of knowledge is unimaginable. There is nothing I have seen yet that is in the best interest of the child in this court system. It needs to be held accountable, scrutinized, reviewed, and reformed! My kids will be in therapy for life after the hell we are going through. It’s all a racketeering scheme. It’s truly disgraceful. More needless families will be torn apart, people will continue to lose their lives, or their livelihoods until there is real change!",
+        "state": "SC",
+        "county": "Charleston",
+        "row_id": "94382eef-d91e-4412-b8bf-13650983ff32"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "This attorney used harsh tactics on me by encouraging my ex to file for full custody and to limit their communication and my son’s communication with me she encourage him to not let me see or let me spend time with my son into use false allegations and dramatized it so she could get away with him getting full custody. She has always escalated the situation rather than the escalated. They want to delete me out of my son‘s life, and this lawyer does not care who she hurts to make it possible.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Destroyed my case Horrible! Negligent, Condescending, Coercive, Cannot Communicate to save her life, Destroyed my family and my financials Multiple acts of negligence, Bad Faith Behavior,",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "I have serious concerns about the conduct of attorney Kristina Jarvis in my custody case. From my experience, she has taken an adversarial and aggressive approach that has contributed to increased hostility between the parties rather than supporting a resolution that prioritizes the best interest of my child. I believe her actions and legal strategy have supported and encouraged the restriction of communication between my son and me, resulting in continued and prolonged separation. As the mother, I have made continuous efforts to maintain a relationship with my child. However, the positions taken by opposing counsel have contributed to the ongoing breakdown of communication and co-parenting stability. This approach has resulted in extended conflict, increased legal pressure, and further separation between me and my child, rather than steps toward reunification or a timely resolution. My concern is that the focus of the case has shifted away from the child’s best interest and toward an ongoing adversarial process that continues to deepen the separation. I am seeking a resolution that prioritizes my relationship with my child and reduces unnecessary hostility in this case moving forward.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Mishandled my case repeatedly. My kids are still not with me.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/kristina_jarvis",
+  "unresolved": [
+    "pdf_public_actor: helper exit 1: no public actor match for 'Kristina Jarvis' in SC"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions · not court findings.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/sc/kristina_jarvis/share.html",
+    "draft_only": true
+  },
+  "render": {},
+  "cta": "STANDWITHMEG.COM ↗"
+}
