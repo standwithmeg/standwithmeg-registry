@@ -8,26 +8,26 @@
     "last_name": "Aycock",
     "role": "Parenting Coordinator",
     "court": "Tulsa",
-    "county": "Tulsa",
+    "county": null,
     "court_or_county": "Tulsa",
-    "state": "OK",
+    "state": "Oklahoma",
     "state_abbr": "OK",
     "mention_count": 3,
     "family_count": 3,
-    "public_family_count": 3,
-    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "public_family_count": null,
+    "public_family_count_source": null,
     "actor_report_count": 3,
     "supabase_row_ids": [
-      "941821ac-996b-4287-9098-786f29dc1d16",
       "4150889f-2636-4d82-866f-b06adf65492d",
+      "941821ac-996b-4287-9098-786f29dc1d16",
       "01b2847d-ee97-4d4c-a07e-e809b41294fd"
     ],
-    "actor_row_id": null,
+    "actor_row_id": "4150889f-2636-4d82-866f-b06adf65492d",
     "actor_bucket_key": "jacob aycock|OK"
   },
   "photo": {
-    "path": null,
-    "exists": false,
+    "path": "oklahoma/jacob_aycock/image_1080.png",
+    "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
@@ -46,7 +46,7 @@
     "_pdf_state_family_count": 164,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5421,
+  "movement_total": 5427,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -93,10 +93,12 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/jacob_aycock",
-  "unresolved": [],
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='OK'"
+  ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
-    "footer": "Family-reported submissions.",
+    "footer": "Family-reported submissions · not court findings.",
     "strike_through_reserved_for": [
       "isolated",
       "dismissed",
@@ -109,22 +111,6 @@
     "recommended_route": "/court-actors/ok/jacob_aycock/share.html",
     "draft_only": true
   },
-  "render": {
-    "selected_quotes": [
-      {
-        "body": "Woman hater. Contradicted everything he would say. Made changes to accommodate father and being a quote \"businessman\" and nothing in the best interest of the children.",
-        "kind": "comment"
-      },
-      {
-        "body": "He started out unbiased but later seemed to just comply with ex's new attorney. It became apparent that they were friends.",
-        "kind": "comment"
-      },
-      {
-        "body": "Misled court, led witness, violated professional conduct and oath",
-        "kind": "comment"
-      }
-    ],
-    "quote_page_count": 1
-  },
+  "render": {},
   "cta": "STANDWITHMEG.COM ↗"
 }
