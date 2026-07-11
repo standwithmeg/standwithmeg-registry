@@ -6,28 +6,28 @@
     "title": "",
     "first_name": "Aaron",
     "last_name": "Bundy",
-    "role": "Attorney (Opposing)",
+    "role": "Attorney",
     "court": "Wagoner",
-    "county": null,
-    "court_or_county": "Wagoner",
+    "county": "Wagoner county",
+    "court_or_county": "Tulsa",
     "state": "Oklahoma",
     "state_abbr": "OK",
     "mention_count": 4,
     "family_count": 4,
-    "public_family_count": null,
-    "public_family_count_source": null,
+    "public_family_count": 4,
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
     "actor_report_count": 4,
     "supabase_row_ids": [
+      "5f0f44a0-50bb-48dd-927b-c4338558219d",
       "190e4783-1c49-4fe3-b918-d4070817eaaf",
       "a10dafc0-d53d-4a7d-892d-9a6abb5f21ae",
-      "ea95409d-1a58-40a0-b574-8b46fc537b8c",
-      "5f0f44a0-50bb-48dd-927b-c4338558219d"
+      "ea95409d-1a58-40a0-b574-8b46fc537b8c"
     ],
     "actor_row_id": null,
-    "actor_bucket_key": "aron bundy|OK"
+    "actor_bucket_key": "aaron bundy|OK"
   },
   "photo": {
-    "path": "oklahoma/aaron_bundy/image_1080.png",
+    "path": "public/court-actors/ok/aaron_bundy/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -106,12 +106,10 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/aaron_bundy",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='OK'"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
-    "footer": "Family-reported submissions · not court findings.",
+    "footer": "Family-reported submissions.",
     "strike_through_reserved_for": [
       "isolated",
       "dismissed",
@@ -124,6 +122,26 @@
     "recommended_route": "/court-actors/ok/aaron_bundy/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Its been a slow process that allowed the opposing side to dissipate more than 50% of marital funds.",
+        "kind": "comment"
+      },
+      {
+        "body": "I have paper, digital, and video evidence of all of my above statements. The judge dismissed all as evidence.",
+        "kind": "comment"
+      },
+      {
+        "body": "Doesn’t respond to other atty emails in a timely manner. Plays delay tactic games",
+        "kind": "comment"
+      },
+      {
+        "body": "Delayed hearings, stalled case for years. Ignored evidence",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }
