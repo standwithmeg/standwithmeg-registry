@@ -9,26 +9,20 @@
     "role": "Attorney",
     "court": "Jackson/Shawnee",
     "county": "Jackson/Shawnee",
-    "court_or_county": "Jackson/Shawnee",
+    "court_or_county": null,
     "state": "Kansas",
     "state_abbr": "KS",
-    "mention_count": 5,
+    "mention_count": 0,
     "family_count": 4,
     "public_family_count": 4,
-    "public_family_count_source": "canonical_supabase_rows_over_stale_public_api",
-    "actor_report_count": 5,
-    "supabase_row_ids": [
-      "ebeab8d9-5215-49a8-a32b-7ebaecdbc270",
-      "16d6ca21-6b8c-44be-bb51-0986f5fdd75a",
-      "f9dbb0fd-b118-490f-a679-a1a3af50763d",
-      "21509c38-3f8e-43e8-a723-8bae6de9c7ab",
-      "53165e86-7c18-42e2-873f-d88905075046"
-    ],
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
     "actor_row_id": null,
     "actor_bucket_key": "alison hibler|KS"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/alison_hibler/image_1080.png",
+    "path": "/tmp/swm-share-pages-o8lnw72t/New Final Post and Capcut template/export/alison_hibler/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -48,37 +42,20 @@
     "_pdf_state_family_count": 253,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5440,
+  "movement_total": 5441,
   "supabase": {
-    "report_count": 5,
-    "actor_report_count": 5,
+    "report_count": 0,
+    "actor_report_count": 0,
     "family_count": 4,
-    "family_reports": [
-      {
-        "body": "My custody time was decreased due to lack of investigative efforts by CPS and GAL, resulting in progressive and ongoing psychological and physical harm being inflicted upon my children.",
-        "state": "KS",
-        "county": "Douglas County",
-        "row_id": "442c436a-a305-4de4-b161-b5aaaf7b3f24"
-      },
-      {
-        "body": "The system has retraumatized me repeatedly, increased my disability symptoms from the extra stress and trauma to the point that I can't work, caused my children to be traumatized from the acts and behaviors of the other party. It has left me bankrupt, put me back in an unsafe situation, with my children experiencing threats of harm from the other party. DV doesn't stop when you leave, the abuser weaponizes the legal system.",
-        "state": "KS",
-        "county": "Douglas",
-        "row_id": "9d3bdeb1-88bb-495a-8bd4-1f1887403fd3"
-      }
-    ],
-    "public_comments": [
-      {
-        "comment_text": "Lacks initiative to end delay tactics. Lacks effective explanatory communication. Truly believe she means well in my case, however is overly busy resulting in borderline neglect of active cases until necessary to respond just prior to approaching court dates. AKA Allison Maxwell Hibler, appears in log under both names needing merged.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Douglas"
-      }
-    ]
+    "family_reports": [],
+    "public_comments": []
   },
   "export_dir": "New Final Post and Capcut template/export/alison_hibler",
   "unresolved": [
-    "public_family_count_api: returned stale lower count 3; used canonical Supabase count 4"
+    "public_family_count_api: no actors returned for state='KS'",
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available",
+    "pdf_public_actor: no 'Allison Maxwell Hibler' in cache for KS"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
@@ -96,20 +73,7 @@
     "draft_only": true
   },
   "render": {
-    "selected_quotes": [
-      {
-        "body": "AKA Allison Maxwell Hibler, appears in log under both names needing merged.",
-        "kind": "comment"
-      },
-      {
-        "body": "My custody time was decreased due to lack of investigative efforts by CPS and GAL, resulting in progressive and ongoing psychological and physical harm being…",
-        "kind": "family_report"
-      },
-      {
-        "body": "It has left me bankrupt, put me back in an unsafe situation, with my children experiencing threats of harm from the other party.",
-        "kind": "family_report"
-      }
-    ],
+    "selected_quotes": [],
     "quote_page_count": 1
   },
   "cta": "STANDWITHMEG.COM ↗"
