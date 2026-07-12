@@ -1122,6 +1122,25 @@ def resolve_public_family_count_via_api(
     )
 
 
+def choose_public_family_count(
+    local_count: int | None,
+    api_count: int | None,
+) -> tuple[int | None, str]:
+    """Choose the strongest current count without trusting a stale API cache.
+
+    The local resolver reads the canonical Supabase rows during this workflow.
+    The public API may still be serving its five-minute cache from before the
+    workflow refreshed actor publications. When both sources resolve the same
+    actor and the direct canonical count is higher, use it so a newly added
+    family and quote cannot be silently dropped from the regenerated deck.
+    """
+    if api_count is None:
+        return local_count, "local_resolver_fallback"
+    if local_count is not None and local_count > api_count:
+        return local_count, "local_resolver_over_stale_api"
+    return api_count, "public_api"
+
+
 def resolve_public_actor_family_count(
     canonical_name: str,
     state_abbr: str,
@@ -2153,19 +2172,28 @@ def main(argv: list[str]) -> int:
         )
         if api_err:
             resolved.unresolved.append(api_err)
-        if public_count is not None:
-            resolved.public_family_count = public_count
+        chosen_count, count_source = choose_public_family_count(family_count, public_count)
+        if count_source == "public_api":
+            resolved.public_family_count = chosen_count
             resolved.public_family_count_source = f"{PUBLIC_API_BASE}/api/actors/all"
             # The API is the single source of truth — collapse the legacy
             # `family_count` field to the same number so the regression
             # checker (and any older consumer that still reads family_count)
             # cannot diverge from the public card.
-            family_count = public_count
+            family_count = chosen_count
+        elif count_source == "local_resolver_over_stale_api":
+            resolved.public_family_count = chosen_count
+            resolved.public_family_count_source = "canonical_supabase_rows_over_stale_public_api"
+            resolved.unresolved.append(
+                f"public_family_count_api: returned stale lower count {public_count}; "
+                f"used canonical Supabase count {chosen_count}"
+            )
+            family_count = chosen_count
         else:
             # API lookup failed or returned no match. Fall back to the locally
             # computed distinct-family count so the spec never ships with a
             # null public_family_count.
-            resolved.public_family_count = family_count
+            resolved.public_family_count = chosen_count
             resolved.public_family_count_source = "local_resolver_fallback"
 
         # Resolve report_count and family_reports BEFORE the family_count
