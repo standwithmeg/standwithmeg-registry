@@ -2194,8 +2194,9 @@ def main(argv: list[str]) -> int:
                 resolved.report_count = int(pdf_count)
             pdf_comments = []
             for item in pdf_actor.get("comments") or []:
+                public_text = strip_internal_registry_notes(item.get("note") or "")
                 note = clean_public_text(
-                    item.get("note") or "",
+                    public_text,
                     80,
                     preserve_full_text=True,
                 )

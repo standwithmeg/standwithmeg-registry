@@ -199,6 +199,14 @@ def test_internal_registry_note_is_removed_without_losing_family_testimony():
         "She ignored my evidence and never interviewed my children."
     )
 
+    wendy = (
+        "Denied my due process as she allowed my ex-wife 40 minutes to testify and allowed me 8 minutes to testify. "
+        "Same actor as Wendy Wood Hencerling and Wendy Wood-Hencerling Same actor as Wendy Wood Hencerling"
+    )
+    assert spotlight_build.strip_internal_registry_notes(wendy) == (
+        "Denied my due process as she allowed my ex-wife 40 minutes to testify and allowed me 8 minutes to testify."
+    )
+
 
 def test_normal_use_of_merge_is_not_mistaken_for_admin_housekeeping():
     raw = "The court merged my cases without notice and denied me a hearing."
