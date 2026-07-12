@@ -15,7 +15,7 @@
     "mention_count": 7,
     "family_count": 4,
     "public_family_count": 4,
-    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 7,
     "supabase_row_ids": [
       "a402dc7a-b6a5-4425-8596-d6f565567178",
@@ -30,7 +30,7 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/wendy_wood_hencerling/image_1080.png",
+    "path": "/tmp/swm-share-pages-0tbh5l_x/New Final Post and Capcut template/export/wendy_wood_hencerling/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -109,7 +109,9 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/wendy_wood_hencerling",
-  "unresolved": [],
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='TX'"
+  ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
