@@ -9,7 +9,7 @@
     "role": "Attorney",
     "court": "Jackson/Shawnee",
     "county": "Jackson/Shawnee",
-    "court_or_county": "Jackson/Shawnee",
+    "court_or_county": null,
     "state": "Kansas",
     "state_abbr": "KS",
     "mention_count": 5,
@@ -28,7 +28,7 @@
     "actor_bucket_key": "alison hibler|KS"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-tau8345l/New Final Post and Capcut template/export/alison_hibler/image_1080.png",
+    "path": "/tmp/swm-share-pages-3j0trl8r/New Final Post and Capcut template/export/alison_hibler/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -69,16 +69,21 @@
     ],
     "public_comments": [
       {
+        "comment_text": "multiple incidents of failure to notify me of court dates. Did not place other party on child support after request. Coerced me into having a GAL and case manager against my wishes due to finances. Thousands of dollars spent with nothing done. Sent her multiple reports of abuse and harassment, nothing done. She advised me to submit a PFA/PFS then turned around, stated the incident wasn't good enough, removed a provision in divorce decree against stalking, gave my ex access to my job.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
         "comment_text": "Lacks initiative to end delay tactics. Lacks effective explanatory communication. Truly believe she means well in my case, however is overly busy resulting in borderline neglect of active cases until necessary to respond just prior to approaching court dates. AKA Allison Maxwell Hibler, appears in log under both names needing merged.",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Douglas"
+        "source": "court_actors.notes"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/alison_hibler",
   "unresolved": [
-    "public_family_count_api: returned stale lower count 3; used canonical Supabase count 4"
+    "public_family_count_api: returned stale lower count 3; used canonical Supabase count 4",
+    "pdf_public_actor: no 'Allison Maxwell Hibler' in cache for KS"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
@@ -98,8 +103,20 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Lacks initiative to end delay tactics. Lacks effective explanatory communication. Truly believe she means well in my case, however is overly busy resulting in borderline neglect of active cases until necessary to respond just prior to approaching court dates. AKA Allison Maxwell Hibler, appears in log under both names needing merged.",
+        "body": "Coerced me into having a GAL and case manager against my wishes due to finances.",
         "kind": "comment"
+      },
+      {
+        "body": "AKA Allison Maxwell Hibler, appears in log under both names needing merged.",
+        "kind": "comment"
+      },
+      {
+        "body": "My custody time was decreased due to lack of investigative efforts by CPS and GAL, resulting in progressive…",
+        "kind": "family_report"
+      },
+      {
+        "body": "DV doesn't stop when you leave, the abuser weaponizes the legal system.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1
