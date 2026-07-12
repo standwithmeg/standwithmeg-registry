@@ -608,7 +608,7 @@ def test_invalid_actor_comment_falls_back_to_real_survey_quote() -> None:
     assert render_spotlight.story_quote(spec)[1] == "family_report"
 
 
-def test_valid_actor_comments_remain_exclusive_from_survey_quotes() -> None:
+def test_valid_actor_comments_are_combined_with_permissioned_family_quotes() -> None:
     spec = {
         "supabase": {
             "public_comments": [{"comment_text": "Ignored evidence during the hearing."}],
@@ -618,7 +618,30 @@ def test_valid_actor_comments_remain_exclusive_from_survey_quotes() -> None:
 
     quotes = render_spotlight.story_quotes(spec, n=None)
 
-    assert quotes == [{"body": "Ignored evidence during the hearing.", "kind": "comment"}]
+    assert quotes == [
+        {"body": "Ignored evidence during the hearing.", "kind": "comment"},
+        {"body": "The whole system changed our lives.", "kind": "family_report"},
+    ]
+
+
+def test_allison_regression_keeps_both_public_family_reports_with_actor_comment() -> None:
+    spec = {
+        "supabase": {
+            "public_comments": [{"comment_text": "Lacks initiative to end delay tactics."}],
+            "family_reports": [
+                {"body": "My custody time was decreased due to lack of investigative efforts."},
+                {"body": "The system retraumatized me repeatedly and harmed my family."},
+            ],
+        }
+    }
+
+    quotes = render_spotlight.story_quotes(spec, n=None)
+
+    assert [quote["kind"] for quote in quotes] == [
+        "comment",
+        "family_report",
+        "family_report",
+    ]
 
 
 def test_render_metadata_records_exact_selected_quotes() -> None:

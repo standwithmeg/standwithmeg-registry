@@ -1329,18 +1329,14 @@ def _quote_dedupe_keys(body: str) -> tuple[str, str]:
 def story_quotes(spec: dict, n: int | None = 3) -> list[dict]:
     """Returns {body, kind} dicts for the quote frame(s).
 
-    Precedence — strict, EXCLUSIVE sources after validation:
+    Precedence — combined sources after validation:
       1. spec.supabase.public_comments  (admin-curated court_actors.notes —
          the actor-SPECIFIC family quotes the state PDF shows for this
-         exact actor). If any produce a valid rendered quote, the slide uses
-         ONLY these.
+         exact actor).
       2. spec.supabase.family_reports   (survey_submissions.impact_quote —
-         broad survey responses from submissions that mentioned this
-         actor; not actor-specific). Used when there are zero public_comments
-         OR every public_comment is rejected as empty/junk/non-statement.
-         We do not mix the two: a top-up from
-         family_reports would put broad survey text alongside the PDF's
-         actor-specific text on the same slide.
+         permissioned family responses from submissions that named this
+         actor). These are included after actor-specific comments instead of
+         being discarded whenever any actor comment exists.
 
     Each raw body is then routed through select_best_quote so long
     quotes truncate cleanly to the per-frame char budget. Pass n=None when
@@ -1351,12 +1347,14 @@ def story_quotes(spec: dict, n: int | None = 3) -> list[dict]:
     comments = sb.get("public_comments") or []
     reports = sb.get("family_reports") or []
 
-    def _select(source_items: list[dict], raw_field: str, kind: str) -> list[dict]:
-        raw_items = [
+    def _raw(source_items: list[dict], raw_field: str, kind: str) -> list[dict]:
+        return [
             {"raw": str(item.get(raw_field) or "").strip(), "kind": kind}
             for item in source_items
             if str(item.get(raw_field) or "").strip()
         ]
+
+    def _select(raw_items: list[dict]) -> list[dict]:
 
         # Budget follows the REAL number of quotes that will share a page —
         # 1 approved quote gets the whole card (460 chars), 8 get 86 each.
@@ -1396,10 +1394,11 @@ def story_quotes(spec: dict, n: int | None = 3) -> list[dict]:
                 break
         return out
 
-    selected_comments = _select(comments, "comment_text", "comment")
-    if selected_comments:
-        return selected_comments
-    return _select(reports, "body", "family_report")
+    raw_items = [
+        *_raw(comments, "comment_text", "comment"),
+        *_raw(reports, "body", "family_report"),
+    ]
+    return _select(raw_items)
 
 
 # Max family quotes stacked on a single "What families say" frame before a
