@@ -181,6 +181,30 @@ def test_fallback_merges_per_submission():
     assert merged[1] == FAMILY_C_NOTE
 
 
+def test_internal_registry_merge_notes_never_become_public_quotes():
+    assert spotlight_build.strip_internal_registry_notes(
+        "AKA Allison Maxwell Hibler, appears in log under both names needing merged."
+    ) == ""
+    assert spotlight_build.strip_internal_registry_notes(
+        "Duplicate actor record; merge with the canonical entry."
+    ) == ""
+
+
+def test_internal_registry_note_is_removed_without_losing_family_testimony():
+    raw = (
+        "She ignored my evidence and never interviewed my children. "
+        "Same actor as the Allison Maxwell entry; needs to be merged."
+    )
+    assert spotlight_build.strip_internal_registry_notes(raw) == (
+        "She ignored my evidence and never interviewed my children."
+    )
+
+
+def test_normal_use_of_merge_is_not_mistaken_for_admin_housekeeping():
+    raw = "The court merged my cases without notice and denied me a hearing."
+    assert spotlight_build.strip_internal_registry_notes(raw) == raw
+
+
 def test_renderer_keeps_similar_quotes_from_distinct_families():
     # Render-time dedup must NOT collapse near-identical phrasing — family
     # attribution is gone by then, and different families can phrase the

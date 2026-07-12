@@ -432,29 +432,6 @@ def _load_submission_visibility_map(submission_ids: list[str], config: dict) -> 
     return out
 
 
-def _countable_actor_rows(
-    rows: list[dict],
-    submission_link_column: str,
-    hidden_submission_ids: set[str],
-    visibility_by_submission_id: dict[str, dict],
-) -> list[dict]:
-    """Keep rows whose linked survey may count publicly.
-
-    Court-actor queries normally do not embed `survey_submissions`, so the
-    explicit visibility map is the primary path and the embedded join is only
-    an optimization. Keeping this pure makes the ordering regression testable.
-    """
-    out: list[dict] = []
-    for row in rows:
-        submission_id = str(row.get(submission_link_column) or "")
-        if not submission_id or submission_id in hidden_submission_ids:
-            continue
-        visibility = _joined_submission(row) or visibility_by_submission_id.get(submission_id)
-        if _is_countable_submission(visibility):
-            out.append(row)
-    return out
-
-
 def _load_alias_resolver() -> dict[str, dict[str, str | None]]:
     try:
         rows = select_all(
@@ -724,17 +701,6 @@ def _likely_same_actor_name(candidate: Any, canonical: Any) -> bool:
     return _edit_distance_lte(candidate_first, canonical_first, limit=2)
 
 
-def allow_unconfirmed_spelling_expansion(actor_bucket_key: str | None) -> bool:
-    """Whether resolve_actor may pull one-edit surname spelling variants.
-
-    An explicit public actor_bucket_key is already an identity decision
-    (e.g. rebuild admin sent `michele bell|CA`). In that case, do not merge
-    unconfirmed variants like Michele/Michelle Bell — they are separate
-    public records until an admin confirms an alias decision.
-    """
-    return not bool(str(actor_bucket_key or "").strip())
-
-
 _ALIAS_CLUSTERS_CACHE: dict[str, set[str]] | None = None
 
 
@@ -880,11 +846,7 @@ def resolve_actor(
     # inherit each other's public notes.
     canonical_for_match = (head or {}).get(block["name_column"]) or name_search
     canonical_tokens = _name_tokens_for_actor_match(canonical_for_match)
-    # An explicit public actor bucket is already an identity decision. Do not
-    # pull unconfirmed one-edit spelling variants into it (Michele/Michelle
-    # Bell are separate public buckets). Confirmed alias-cluster expansion
-    # below still applies when the admin has explicitly merged spellings.
-    if canonical_tokens and allow_unconfirmed_spelling_expansion(actor_bucket_key):
+    if canonical_tokens:
         surname = canonical_tokens[-1]
         surname_filters = [f"{block['name_column']}=ilike.*{surname}*"]
         if state_abbr:
@@ -955,29 +917,16 @@ def resolve_actor(
     name = pick_most_complete_name(rows, block["name_column"]) or head.get(block["name_column"]) or name_search
     title, first, last = split_name(name)
     hidden_submission_ids = _load_hidden_submission_ids()
-    # `select(table, ["*"])` does not embed the linked survey row, so most
-    # court_actor records reach this point without permission/approval fields.
-    # Load visibility for every candidate submission BEFORE filtering. The old
-    # ordering tried to build this map from `public_rows` after filtering,
-    # creating a circular empty set that erased family_reports/public_comments
-    # during forced regeneration (Andrew Ellis was the visible regression).
-    candidate_submission_ids = [
-        str(r.get(block["submission_link_column"]) or "")
-        for r in rows
-        if r.get(block["submission_link_column"])
-        and str(r.get(block["submission_link_column"]) or "") not in hidden_submission_ids
+    public_rows = [
+        r for r in rows
+        if str(r.get(block["submission_link_column"]) or "") not in hidden_submission_ids
+        and _is_countable_submission(_joined_submission(r))
     ]
+    submission_ids = [r[block["submission_link_column"]] for r in public_rows if r.get(block["submission_link_column"])]
     visibility_by_submission_id = _load_submission_visibility_map(
-        candidate_submission_ids,
+        [str(sid) for sid in submission_ids if sid],
         config,
     )
-    public_rows = _countable_actor_rows(
-        rows,
-        block["submission_link_column"],
-        hidden_submission_ids,
-        visibility_by_submission_id,
-    )
-    submission_ids = [r[block["submission_link_column"]] for r in public_rows if r.get(block["submission_link_column"])]
     public_comment_rows: list[dict] = []
     for r in public_rows:
         sid = str(r.get(block["submission_link_column"]) or "")
@@ -1018,10 +967,10 @@ def resolve_actor(
 
 
 # ---------------------------------------------------------------------------
-# Live public-API mirror — read the count straight from /api/actors/all
+# Live public-API mirror — read the count straight from /api/survey/court-actors
 # so the share page can never drift from the public card. The Python alias
 # resolver gets close, but the TypeScript route is authoritative; we ask it
-# directly and cache the full response within a single build run.
+# directly and cache the per-state response within a single build run.
 # ---------------------------------------------------------------------------
 PUBLIC_API_BASE = os.environ.get("SWM_PUBLIC_API_BASE", "https://my.standwithmeg.com").rstrip("/")
 
@@ -1049,27 +998,22 @@ def _fetch_public_actors_for_state(state_abbr: str) -> list[dict]:
         return []
     if state_abbr in _public_api_cache:
         return _public_api_cache[state_abbr]
-    if "__all__" not in _public_api_cache:
-        url = f"{PUBLIC_API_BASE}/api/actors/all"
-        try:
-            with urllib.request.urlopen(_public_api_request(url), timeout=60) as resp:
-                data = json.loads(resp.read().decode("utf-8"))
-        except (
-            urllib.error.HTTPError,
-            urllib.error.URLError,
-            TimeoutError,
-            socket.timeout,
-            json.JSONDecodeError,
-        ) as exc:
-            print(f"[public-api] {type(exc).__name__} while reading {url}", file=sys.stderr)
-            _public_api_cache["__all__"] = []
-        else:
-            actors = data.get("actors") if isinstance(data, dict) else None
-            _public_api_cache["__all__"] = actors if isinstance(actors, list) else []
-    actors = [
-        actor for actor in _public_api_cache["__all__"]
-        if str(actor.get("state_code") or actor.get("location_key") or "").upper() == state_abbr
-    ]
+    url = f"{PUBLIC_API_BASE}/api/survey/court-actors?state={urllib.parse.quote(state_abbr)}"
+    try:
+        with urllib.request.urlopen(_public_api_request(url), timeout=15) as resp:
+            data = json.loads(resp.read().decode("utf-8"))
+    except (
+        urllib.error.HTTPError,
+        urllib.error.URLError,
+        TimeoutError,
+        socket.timeout,
+        json.JSONDecodeError,
+    ) as exc:
+        print(f"[public-api] {state_abbr}: {type(exc).__name__} while reading {url}", file=sys.stderr)
+        _public_api_cache[state_abbr] = []
+        return []
+    actors = data.get("actors") if isinstance(data, dict) else None
+    actors = actors if isinstance(actors, list) else []
     _public_api_cache[state_abbr] = actors
     return actors
 
@@ -1104,7 +1048,7 @@ def resolve_public_family_count_via_api(
         for actor in actors:
             for url_field in ("photo_url", "share_url"):
                 if slug_token in (actor.get(url_field) or ""):
-                    return int(actor.get("family_count") if actor.get("family_count") is not None else actor.get("count") or 0), None
+                    return int(actor.get("count") or 0), None
 
     name_key = _actor_loose_name_key(display_name or "")
     target_bucket = (actor_bucket_key or "").split("|", 1)[0].strip().lower() if actor_bucket_key else ""
@@ -1112,33 +1056,13 @@ def resolve_public_family_count_via_api(
         api_name = actor.get("name") or actor.get("display_name") or ""
         api_key = _actor_loose_name_key(api_name)
         if name_key and api_key == name_key:
-            return int(actor.get("family_count") if actor.get("family_count") is not None else actor.get("count") or 0), None
+            return int(actor.get("count") or 0), None
         if target_bucket and api_key == target_bucket:
-            count = actor.get("family_count") if actor.get("family_count") is not None else actor.get("count")
-            return int(count or 0), None
+            return int(actor.get("count") or 0), None
     return None, (
         f"public_family_count_api: no match for display_name={display_name!r} "
         f"bucket={actor_bucket_key!r} slug={slug!r} in {state_abbr} ({len(actors)} actors)"
     )
-
-
-def choose_public_family_count(
-    local_count: int | None,
-    api_count: int | None,
-) -> tuple[int | None, str]:
-    """Choose the strongest current count without trusting a stale API cache.
-
-    The local resolver reads the canonical Supabase rows during this workflow.
-    The public API may still be serving its five-minute cache from before the
-    workflow refreshed actor publications. When both sources resolve the same
-    actor and the direct canonical count is higher, use it so a newly added
-    family and quote cannot be silently dropped from the regenerated deck.
-    """
-    if api_count is None:
-        return local_count, "local_resolver_fallback"
-    if local_count is not None and local_count > api_count:
-        return local_count, "local_resolver_over_stale_api"
-    return api_count, "public_api"
 
 
 def resolve_public_actor_family_count(
@@ -1150,7 +1074,7 @@ def resolve_public_actor_family_count(
     """Count distinct families for the public actor bucket using the same
     source/form_direct + row-review + alias decision rules as the public card.
 
-    This mirrors the Next.js /api/actors/all route closely enough that
+    This mirrors the Next.js /api/survey/court-actors route closely enough that
     the share-page family count stays in sync with the public card count.
     """
     block = config["court_actors"]
@@ -1659,6 +1583,31 @@ def resolve_family_reports(actor: dict, config: dict) -> tuple[list[dict], int |
     return out, len(submission_ids), None
 
 
+_INTERNAL_REGISTRY_NOTE_PATTERNS = (
+    re.compile(r"\bneeds? (?:to be )?merged\b", re.I),
+    re.compile(r"\bappears? in (?:the )?(?:log|registry|data|database)\b", re.I),
+    re.compile(r"\bduplicate (?:entry|record|actor|person)\b", re.I),
+    re.compile(r"\bsame (?:actor|person) as\b", re.I),
+    re.compile(r"\bmerge (?:with|into)\b", re.I),
+)
+
+
+def strip_internal_registry_notes(text: str) -> str:
+    """Remove identity/merge housekeeping before notes become public quotes.
+
+    These phrases are admin data-cleanup instructions, not family testimony.
+    Split first so a real family statement followed by a separate merge note
+    keeps the real statement instead of dropping the whole submission.
+    """
+    parts = re.split(r"(?<=[.!?])\s+|[\r\n]+", str(text or "").strip())
+    kept = [
+        part.strip()
+        for part in parts
+        if part.strip() and not any(pattern.search(part) for pattern in _INTERNAL_REGISTRY_NOTE_PATTERNS)
+    ]
+    return " ".join(kept)
+
+
 def resolve_public_comments(actor: dict, config: dict) -> tuple[list[dict], str | None]:
     """Comments displayed on the 'what people are saying' frames.
     Prefers court_actor_comment_merges.merged_comment (admin-curated). Falls back to court_actors.notes."""
@@ -1686,8 +1635,11 @@ def resolve_public_comments(actor: dict, config: dict) -> tuple[list[dict], str 
 
     out: list[dict] = []
     for m in merged:
-        text = clean_public_text(
+        public_text = strip_internal_registry_notes(
             m.get(merges_block["merged_text_column"]) or "",
+        )
+        text = clean_public_text(
+            public_text,
             30,
             preserve_full_text=True,
         )
@@ -1721,7 +1673,8 @@ def resolve_public_comments(actor: dict, config: dict) -> tuple[list[dict], str 
             raw_notes = actor.get("_raw_public_notes") if "_raw_public_notes" in actor else actor.get("_raw_notes")
             merged_notes = [str(n) for n in (raw_notes or []) if n and str(n).strip()]
         for n in merged_notes:
-            cleaned = clean_public_text(str(n), 30, preserve_full_text=True)
+            public_text = strip_internal_registry_notes(str(n))
+            cleaned = clean_public_text(public_text, 30, preserve_full_text=True)
             if not cleaned:
                 continue
             out.append({
@@ -1888,19 +1841,7 @@ def write_spec(base: Path, resolved: Resolved, args: argparse.Namespace) -> Path
                 first_name_key
                 and display_first_key.startswith(f"{first_name_key} ")
             )
-            # Explicit admin rebuilds send a canonical display_name + bucket key
-            # (Michele Bell / michele bell|CA). Prefer that spelling over a
-            # one-edit resolved row name (Michelle) so the cover matches the
-            # public record the admin selected.
-            explicit_identity = bool(str(getattr(args, "actor_bucket_key", None) or "").strip())
-            spelling_differs = bool(
-                first_name_key and display_first_key and first_name_key != display_first_key
-            )
-            if (
-                not first_name
-                or display_has_more_given_names
-                or (explicit_identity and spelling_differs)
-            ):
+            if not first_name or display_has_more_given_names:
                 title = title or display_title
                 first_name = display_first
                 last_name = display_last
@@ -2020,7 +1961,7 @@ def write_spec(base: Path, resolved: Resolved, args: argparse.Namespace) -> Path
     ]
 
     # Build the actor dict, then apply per-actor overrides on top of it.
-    # public_family_count is the value the live /api/actors/all
+    # public_family_count is the value the live /api/survey/court-actors
     # route returns — render_spotlight uses it first so the share page and
     # the public actor card can never disagree.
     # Build the public display name from the resolved title/first/last computed
@@ -2172,28 +2113,19 @@ def main(argv: list[str]) -> int:
         )
         if api_err:
             resolved.unresolved.append(api_err)
-        chosen_count, count_source = choose_public_family_count(family_count, public_count)
-        if count_source == "public_api":
-            resolved.public_family_count = chosen_count
-            resolved.public_family_count_source = f"{PUBLIC_API_BASE}/api/actors/all"
+        if public_count is not None:
+            resolved.public_family_count = public_count
+            resolved.public_family_count_source = f"{PUBLIC_API_BASE}/api/survey/court-actors"
             # The API is the single source of truth — collapse the legacy
             # `family_count` field to the same number so the regression
             # checker (and any older consumer that still reads family_count)
             # cannot diverge from the public card.
-            family_count = chosen_count
-        elif count_source == "local_resolver_over_stale_api":
-            resolved.public_family_count = chosen_count
-            resolved.public_family_count_source = "canonical_supabase_rows_over_stale_public_api"
-            resolved.unresolved.append(
-                f"public_family_count_api: returned stale lower count {public_count}; "
-                f"used canonical Supabase count {chosen_count}"
-            )
-            family_count = chosen_count
+            family_count = public_count
         else:
             # API lookup failed or returned no match. Fall back to the locally
             # computed distinct-family count so the spec never ships with a
             # null public_family_count.
-            resolved.public_family_count = chosen_count
+            resolved.public_family_count = family_count
             resolved.public_family_count_source = "local_resolver_fallback"
 
         # Resolve report_count and family_reports BEFORE the family_count
