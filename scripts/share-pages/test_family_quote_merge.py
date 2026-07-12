@@ -205,6 +205,23 @@ def test_normal_use_of_merge_is_not_mistaken_for_admin_housekeeping():
     assert spotlight_build.strip_internal_registry_notes(raw) == raw
 
 
+def test_plain_actor_row_uses_explicit_submission_visibility_fallback():
+    row = {"submission_id": "survey-1", "survey_submissions": None}
+    visibility = {
+        "survey-1": {
+            "approved": True,
+            "permission_to_share": "anonymous",
+        }
+    }
+    resolved = spotlight_build._actor_row_submission_visibility(
+        row,
+        "submission_id",
+        visibility,
+    )
+    assert resolved == visibility["survey-1"]
+    assert spotlight_build._is_countable_submission(resolved)
+
+
 def test_renderer_keeps_similar_quotes_from_distinct_families():
     # Render-time dedup must NOT collapse near-identical phrasing — family
     # attribution is gone by then, and different families can phrase the

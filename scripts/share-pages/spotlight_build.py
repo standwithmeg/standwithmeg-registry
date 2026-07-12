@@ -701,6 +701,24 @@ def _likely_same_actor_name(candidate: Any, canonical: Any) -> bool:
     return _edit_distance_lte(candidate_first, canonical_first, limit=2)
 
 
+def _actor_row_submission_visibility(
+    row: dict,
+    submission_link_column: str,
+    visibility_by_submission_id: dict[str, dict],
+) -> dict | None:
+    """Use an embedded survey when present, otherwise the explicit lookup.
+
+    Plain ``select('*')`` actor queries do not embed survey_submissions. The
+    old order filtered those rows before loading the fallback map, which could
+    empty a targeted package whenever the public API cache was unavailable.
+    """
+    joined = _joined_submission(row)
+    if joined:
+        return joined
+    submission_id = str(row.get(submission_link_column) or "")
+    return visibility_by_submission_id.get(submission_id)
+
+
 _ALIAS_CLUSTERS_CACHE: dict[str, set[str]] | None = None
 
 
@@ -917,21 +935,32 @@ def resolve_actor(
     name = pick_most_complete_name(rows, block["name_column"]) or head.get(block["name_column"]) or name_search
     title, first, last = split_name(name)
     hidden_submission_ids = _load_hidden_submission_ids()
+    all_submission_ids = [
+        str(r.get(block["submission_link_column"]) or "")
+        for r in rows
+        if r.get(block["submission_link_column"])
+    ]
+    visibility_by_submission_id = _load_submission_visibility_map(
+        all_submission_ids,
+        config,
+    )
     public_rows = [
         r for r in rows
         if str(r.get(block["submission_link_column"]) or "") not in hidden_submission_ids
-        and _is_countable_submission(_joined_submission(r))
+        and _is_countable_submission(_actor_row_submission_visibility(
+            r,
+            block["submission_link_column"],
+            visibility_by_submission_id,
+        ))
     ]
     submission_ids = [r[block["submission_link_column"]] for r in public_rows if r.get(block["submission_link_column"])]
-    visibility_by_submission_id = _load_submission_visibility_map(
-        [str(sid) for sid in submission_ids if sid],
-        config,
-    )
     public_comment_rows: list[dict] = []
     for r in public_rows:
-        sid = str(r.get(block["submission_link_column"]) or "")
-        joined = _joined_submission(r)
-        submission_visibility = joined if joined else visibility_by_submission_id.get(sid)
+        submission_visibility = _actor_row_submission_visibility(
+            r,
+            block["submission_link_column"],
+            visibility_by_submission_id,
+        )
         if _is_public_shareable_submission(submission_visibility):
             public_comment_rows.append(r)
     actor_row_ids = [r[block["id_column"]] for r in public_rows if r.get(block["id_column"])]
