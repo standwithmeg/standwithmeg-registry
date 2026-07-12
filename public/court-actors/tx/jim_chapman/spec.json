@@ -8,14 +8,14 @@
     "last_name": "Chapman",
     "role": "Judge",
     "court": "Ellis County Court at Law No. 1",
-    "county": null,
+    "county": "Ellis County Court at Law No. 1",
     "court_or_county": "Ellis County Court at Law No. 1",
     "state": "Texas",
     "state_abbr": "TX",
     "mention_count": 6,
     "family_count": 3,
-    "public_family_count": null,
-    "public_family_count_source": null,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
     "actor_report_count": 6,
     "supabase_row_ids": [
       "69b5613a-9849-466e-b169-109631b106bd",
@@ -29,7 +29,7 @@
     "actor_bucket_key": "jim chapman|TX"
   },
   "photo": {
-    "path": "texas/jim_chapman/image_1080.png",
+    "path": "/tmp/swm-share-pages-vzi61zfo/New Final Post and Capcut template/export/jim_chapman/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -49,7 +49,7 @@
     "_pdf_state_family_count": 316,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5427,
+  "movement_total": 5430,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
@@ -96,12 +96,10 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/jim_chapman",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='TX'"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
-    "footer": "Family-reported submissions · not court findings.",
+    "footer": "Family-reported submissions.",
     "strike_through_reserved_for": [
       "isolated",
       "dismissed",
@@ -114,6 +112,22 @@
     "recommended_route": "/court-actors/tx/jim_chapman/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Ignores motions without a hearing, ignored evidence, violated due process, and does not have children's best interest at heart.",
+        "kind": "comment"
+      },
+      {
+        "body": "Disregarded dr testimony saying it was an accident not intentional and let cps take my grandson.",
+        "kind": "comment"
+      },
+      {
+        "body": "Denied motions without a hearing, bias, ignoring evidence, not allowing me to speak like the other attorneys because I'm pro se. Has ex parte Communications.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

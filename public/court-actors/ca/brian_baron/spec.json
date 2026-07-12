@@ -28,27 +28,27 @@
     "actor_bucket_key": "brian baron|CA"
   },
   "photo": {
-    "path": "public/court-actors/ca/brian_baron/image_1080.png",
+    "path": "/tmp/swm-share-pages-vzi61zfo/New Final Post and Capcut template/export/brian_baron/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 359,
-    "total_submissions": 446,
-    "avg_financial_loss": 285125.16,
+    "families_approved": 360,
+    "total_submissions": 447,
+    "avg_financial_loss": 284752.35,
     "avg_months_lost": 35.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CA",
-    "state_family_count": 446,
-    "median_financial_loss": 269200,
-    "median_burden_sample_size": 199,
+    "state_family_count": 447,
+    "median_financial_loss": 265100,
+    "median_burden_sample_size": 200,
     "median_months_lost": 20,
-    "pro_se_pct": 58.7,
-    "pro_se_count": 262,
-    "_pdf_state_family_count": 446,
+    "pro_se_pct": 58.8,
+    "pro_se_count": 263,
+    "_pdf_state_family_count": 447,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5430,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,

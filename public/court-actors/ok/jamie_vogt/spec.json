@@ -32,12 +32,12 @@
     "actor_bucket_key": "jamie vogt|OK"
   },
   "photo": {
-    "path": "public/court-actors/ok/jamie_vogt/image_1080.png",
+    "path": "/tmp/swm-share-pages-vzi61zfo/New Final Post and Capcut template/export/jamie_vogt/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 131,
+    "families_approved": 130,
     "total_submissions": 164,
     "avg_financial_loss": 119502.36,
     "avg_months_lost": 24.6,
@@ -52,18 +52,12 @@
     "_pdf_state_family_count": 164,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5421,
+  "movement_total": 5430,
   "supabase": {
     "report_count": 9,
     "actor_report_count": 9,
     "family_count": 7,
     "family_reports": [
-      {
-        "body": "The system has destroyed my family. Happy children are now in constant chaos, the court is more concerned about 50/50 pro dad than stability for the children. I have been told so many times children are resilient. They will be ok. This has take a toll on myself mentally and physically. Now because I am fighting back or questioning I am classified as combative and confrontational. Which adds additional stress and feels like an intimidation tactic. The system and abuser has stolen precious time that you can never get back.",
-        "state": "OK",
-        "county": "Tulsa",
-        "row_id": "1734a704-ed48-41a2-b5e8-83bf9a1d781e"
-      },
       {
         "body": "The family court system has cost me precious time with my children, furthered our traumatic experiences, favors reunification over safety, and continues to horrify me",
         "state": "OK",
@@ -93,6 +87,12 @@
         "state": "OK",
         "county": "Creek County",
         "row_id": "d96a7040-db92-4c65-bacf-32372cd3e6f0"
+      },
+      {
+        "body": "Family court has shown me that children and families come last. They have facilitated and enabled conflict that has cost me and my daughter years and tens of thousands of dollars.",
+        "state": "OK",
+        "county": "Tulsa",
+        "row_id": "a1abd884-3ba6-422d-af70-96645c152a8c"
       }
     ],
     "public_comments": [
@@ -113,12 +113,6 @@
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Tulsa County"
-      },
-      {
-        "comment_text": "She plays parents, but wants the concerned patent to change parenting so the parent causing chaos doesn't have to handle children expressing distress. Children will survive a divorce. Her quote",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Tulsa"
       },
       {
         "comment_text": "To be disclosed if my testimony is required. I have paper, digital, and video evidence of all of my above statements. The judge dismissed all as evidence.",
@@ -154,11 +148,11 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "My daughter begged for help and was ignored.",
+        "body": "Took 10 thousand dollars to see both my kids and helped paternal grandmother kidnap my daughter.",
         "kind": "comment"
       },
       {
-        "body": "My daughter was denied advocacy and protection as a result.",
+        "body": "That is the typical presentation. My daughter was denied advocacy and protection as a result.",
         "kind": "comment"
       },
       {
@@ -166,15 +160,11 @@
         "kind": "comment"
       },
       {
-        "body": "Children will survive a divorce. Her quote",
-        "kind": "comment"
-      },
-      {
         "body": "The judge dismissed all as evidence.",
         "kind": "comment"
       },
       {
-        "body": "Ignored evidence Failed to report domestic violence to DHS Manipulative of kids’…",
+        "body": "Ignored evidence Failed to report domestic violence to DHS Manipulative of kids’ emotions…",
         "kind": "comment"
       }
     ],

@@ -27,27 +27,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "public/court-actors/ks/paul_burmaster/image_1080.png",
+    "path": "/tmp/swm-share-pages-vzi61zfo/New Final Post and Capcut template/export/paul_burmaster/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 185,
-    "total_submissions": 251,
-    "avg_financial_loss": 116720.93,
-    "avg_months_lost": 30.0,
+    "total_submissions": 253,
+    "avg_financial_loss": 116623.36,
+    "avg_months_lost": 29.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "KS",
-    "state_family_count": 251,
-    "median_financial_loss": 96100,
-    "median_burden_sample_size": 131,
+    "state_family_count": 253,
+    "median_financial_loss": 97450,
+    "median_burden_sample_size": 132,
     "median_months_lost": 16,
     "pro_se_pct": 49.4,
-    "pro_se_count": 124,
-    "_pdf_state_family_count": 251,
+    "pro_se_count": 125,
+    "_pdf_state_family_count": 253,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5430,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,

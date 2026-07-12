@@ -8,14 +8,14 @@
     "last_name": "Gazzaniga",
     "role": "Judge",
     "court": "Placer County Superior Court",
-    "county": null,
+    "county": "Placer",
     "court_or_county": "Placer County Superior Court",
     "state": "California",
     "state_abbr": "CA",
     "mention_count": 3,
     "family_count": 3,
-    "public_family_count": null,
-    "public_family_count_source": null,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
     "actor_report_count": 3,
     "supabase_row_ids": [
       "59480131-2e5d-476d-9839-d4fb5be0bf12",
@@ -26,27 +26,27 @@
     "actor_bucket_key": "suzanne gazzaniga|CA"
   },
   "photo": {
-    "path": "california/suzanne_gazzaniga/image_1080.png",
+    "path": "/tmp/swm-share-pages-vzi61zfo/New Final Post and Capcut template/export/suzanne_gazzaniga/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 359,
-    "total_submissions": 446,
-    "avg_financial_loss": 285125.16,
+    "families_approved": 360,
+    "total_submissions": 447,
+    "avg_financial_loss": 284752.35,
     "avg_months_lost": 35.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CA",
-    "state_family_count": 446,
-    "median_financial_loss": 269200,
-    "median_burden_sample_size": 199,
+    "state_family_count": 447,
+    "median_financial_loss": 265100,
+    "median_burden_sample_size": 200,
     "median_months_lost": 20,
-    "pro_se_pct": 58.7,
-    "pro_se_count": 262,
-    "_pdf_state_family_count": 446,
+    "pro_se_pct": 58.8,
+    "pro_se_count": 263,
+    "_pdf_state_family_count": 447,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5427,
+  "movement_total": 5430,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -93,12 +93,10 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/suzanne_gazzaniga",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='CA'"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
-    "footer": "Family-reported submissions · not court findings.",
+    "footer": "Family-reported submissions.",
     "strike_through_reserved_for": [
       "isolated",
       "dismissed",
@@ -111,6 +109,22 @@
     "recommended_route": "/court-actors/ca/suzanne_gazzaniga/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Appears in the case record as a judicial officer and order signer in [redacted] family-court proceedings. Included for the complete court-actor timeline.",
+        "kind": "comment"
+      },
+      {
+        "body": "Recuesed herself from my case sighting conflict which she never described what the conflict was so another judge (Civil) could step in.",
+        "kind": "comment"
+      },
+      {
+        "body": "This judge denied my timely request to set aside Michael Jacques orders despite the reasons why he was removed from my case.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

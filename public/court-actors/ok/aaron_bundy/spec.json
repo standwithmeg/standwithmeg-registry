@@ -27,12 +27,12 @@
     "actor_bucket_key": "aaron bundy|OK"
   },
   "photo": {
-    "path": "public/court-actors/ok/aaron_bundy/image_1080.png",
+    "path": "/tmp/swm-share-pages-vzi61zfo/New Final Post and Capcut template/export/aaron_bundy/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 131,
+    "families_approved": 130,
     "total_submissions": 164,
     "avg_financial_loss": 119502.36,
     "avg_months_lost": 24.6,
@@ -47,18 +47,12 @@
     "_pdf_state_family_count": 164,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5427,
+  "movement_total": 5430,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
     "family_count": 4,
     "family_reports": [
-      {
-        "body": "The system has destroyed my family. Happy children are now in constant chaos, the court is more concerned about 50/50 pro dad than stability for the children. I have been told so many times children are resilient. They will be ok. This has take a toll on myself mentally and physically. Now because I am fighting back or questioning I am classified as combative and confrontational. Which adds additional stress and feels like an intimidation tactic. The system and abuser has stolen precious time that you can never get back.",
-        "state": "OK",
-        "county": "Tulsa",
-        "row_id": "1734a704-ed48-41a2-b5e8-83bf9a1d781e"
-      },
       {
         "body": "Destroyed my faith in child court and what is supposed to be the absolute wellbeing of our kids as a priority. Took years from me and my kids/family we will never get back and has caused trauma to my kids they may never recover from.",
         "state": "OK",
@@ -79,12 +73,6 @@
       }
     ],
     "public_comments": [
-      {
-        "comment_text": "Is fighting the financial side, but its been a slow process that allowed the opposing side to dissipate more than 50% of marital funds. One minute he says let's make changes then the next he says no.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Tulsa"
-      },
       {
         "comment_text": "To be disclosed if my testimony is required. I have paper, digital, and video evidence of all of my above statements. The judge dismissed all as evidence.",
         "author": "Anonymous parent",
@@ -125,11 +113,7 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Its been a slow process that allowed the opposing side to dissipate more than 50% of marital funds.",
-        "kind": "comment"
-      },
-      {
-        "body": "I have paper, digital, and video evidence of all of my above statements. The judge dismissed all as evidence.",
+        "body": "To be disclosed if my testimony is required. I have paper, digital, and video evidence of all of my above statements. The judge dismissed all as evidence.",
         "kind": "comment"
       },
       {

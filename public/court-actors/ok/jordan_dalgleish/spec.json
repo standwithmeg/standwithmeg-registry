@@ -33,12 +33,12 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "public/court-actors/ok/jordan_dalgleish/image_1080.png",
+    "path": "/tmp/swm-share-pages-vzi61zfo/New Final Post and Capcut template/export/jordan_dalgleish/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 131,
+    "families_approved": 130,
     "total_submissions": 164,
     "avg_financial_loss": 119502.36,
     "avg_months_lost": 24.6,
@@ -53,18 +53,12 @@
     "_pdf_state_family_count": 164,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5421,
+  "movement_total": 5430,
   "supabase": {
     "report_count": 10,
     "actor_report_count": 10,
     "family_count": 9,
     "family_reports": [
-      {
-        "body": "The system has destroyed my family. Happy children are now in constant chaos, the court is more concerned about 50/50 pro dad than stability for the children. I have been told so many times children are resilient. They will be ok. This has take a toll on myself mentally and physically. Now because I am fighting back or questioning I am classified as combative and confrontational. Which adds additional stress and feels like an intimidation tactic. The system and abuser has stolen precious time that you can never get back.",
-        "state": "OK",
-        "county": "Tulsa",
-        "row_id": "1734a704-ed48-41a2-b5e8-83bf9a1d781e"
-      },
       {
         "body": "Jordan Dalgleish is a snake who will lie, cheat, & manipulate anyone and she is the last person who should be representing any child. Ever.",
         "state": "OK",
@@ -94,6 +88,12 @@
         "state": "OK",
         "county": "Tulsa",
         "row_id": "93551a22-a4cb-4e62-b51e-b5d93de214e1"
+      },
+      {
+        "body": "They tore us apart, they are the reason I stayed in the abuse until he finally tried to kill me because I knew what would happen to us in okmulgee county",
+        "state": "OK",
+        "county": "Okmulgee county district court",
+        "row_id": "96ab0232-dd64-4875-8986-16b8967c5f89"
       }
     ],
     "public_comments": [
@@ -114,12 +114,6 @@
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Tulsa County"
-      },
-      {
-        "comment_text": "Attorney- failed to double check temp order she wrote. Opposing Attorney changed several things and it was filed without my knowledge or what was originally signed.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Tulsa"
       },
       {
         "comment_text": "Conflict of interest with opposing counsel Atty discussed client details outside of case facts with opposing council and vice versa Talked client out of VPO",
@@ -176,10 +170,6 @@
       },
       {
         "body": "Effectively helped my ex’s side throughout the divorce process.",
-        "kind": "comment"
-      },
-      {
-        "body": "Opposing Attorney changed several things and it was filed.",
         "kind": "comment"
       },
       {

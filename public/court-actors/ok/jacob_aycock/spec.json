@@ -14,8 +14,8 @@
     "state_abbr": "OK",
     "mention_count": 3,
     "family_count": 3,
-    "public_family_count": null,
-    "public_family_count_source": null,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
     "actor_report_count": 3,
     "supabase_row_ids": [
       "4150889f-2636-4d82-866f-b06adf65492d",
@@ -26,12 +26,12 @@
     "actor_bucket_key": "jacob aycock|OK"
   },
   "photo": {
-    "path": "oklahoma/jacob_aycock/image_1080.png",
+    "path": "/tmp/swm-share-pages-vzi61zfo/New Final Post and Capcut template/export/jacob_aycock/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 131,
+    "families_approved": 130,
     "total_submissions": 164,
     "avg_financial_loss": 119502.36,
     "avg_months_lost": 24.6,
@@ -46,18 +46,12 @@
     "_pdf_state_family_count": 164,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5427,
+  "movement_total": 5430,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
     "family_count": 3,
     "family_reports": [
-      {
-        "body": "The system has destroyed my family. Happy children are now in constant chaos, the court is more concerned about 50/50 pro dad than stability for the children. I have been told so many times children are resilient. They will be ok. This has take a toll on myself mentally and physically. Now because I am fighting back or questioning I am classified as combative and confrontational. Which adds additional stress and feels like an intimidation tactic. The system and abuser has stolen precious time that you can never get back.",
-        "state": "OK",
-        "county": "Tulsa",
-        "row_id": "1734a704-ed48-41a2-b5e8-83bf9a1d781e"
-      },
       {
         "body": "Family court is the most corrupt thing that I have witnessed. I have watched judges, attorneys, parenting coordinator, GAL, and mediators colluded to extort fathers financially. I have witnessed multiple times of going off the record where the actors discuss their upcoming cases with each other. They make it near impossible to have a court reporter and charge you exorbitant amounts for the transcript. We believe the transcript was altered but how can you prove it. The fact that they fight to keep cameras out of the courtrooms should prove their motives.",
         "state": "OK",
@@ -73,32 +67,24 @@
     ],
     "public_comments": [
       {
-        "comment_text": "Woman hater. Contradicted everything he would say. Made changes to accommodate father and being a quote \"businessman\" and nothing in the best interest of the children. Condescending and does not like you to ask for understandings to his decisions.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Tulsa"
-      },
-      {
         "comment_text": "He started out unbiased but later seemed to just comply with ex's new attorney. It became apparent that they were friends.",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Tulsa"
+        "source": "court_actors.notes"
       },
       {
         "comment_text": "Misled court, led witness, violated professional conduct and oath",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Tulsa"
+        "source": "court_actors.notes"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/jacob_aycock",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='OK'"
+    "pdf_public_actor: no 'Jacob Aycock' in cache for OK"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
-    "footer": "Family-reported submissions · not court findings.",
+    "footer": "Family-reported submissions.",
     "strike_through_reserved_for": [
       "isolated",
       "dismissed",
@@ -111,6 +97,18 @@
     "recommended_route": "/court-actors/ok/jacob_aycock/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "He started out unbiased but later seemed to just comply with ex's new attorney. It became apparent that they were friends.",
+        "kind": "comment"
+      },
+      {
+        "body": "Misled court, led witness, violated professional conduct and oath",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

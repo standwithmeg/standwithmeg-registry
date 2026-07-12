@@ -9,7 +9,7 @@
     "role": "Judge",
     "court": "Cleveland county",
     "county": "Cleveland",
-    "court_or_county": "Cleveland",
+    "court_or_county": "Cleveland county",
     "state": "Oklahoma",
     "state_abbr": "OK",
     "mention_count": 5,
@@ -18,22 +18,22 @@
     "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
     "actor_report_count": 5,
     "supabase_row_ids": [
+      "e01b9ab2-5fbf-446c-82a7-c72815d01a95",
       "49154fa5-06ff-46e2-89d0-927904366ee7",
       "fa490eae-2c1f-4c93-b225-4e6ffc11c75e",
-      "97d578be-3004-4a24-8c39-1720ced15922",
-      "e01b9ab2-5fbf-446c-82a7-c72815d01a95",
-      "a4ebfa22-5b83-4fc8-919f-2a8113d4b4c3"
+      "a4ebfa22-5b83-4fc8-919f-2a8113d4b4c3",
+      "97d578be-3004-4a24-8c39-1720ced15922"
     ],
     "actor_row_id": null,
     "actor_bucket_key": "bridget childers|OK"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-gbouf5l7/New Final Post and Capcut template/export/bridget_childers/image_1080.png",
+    "path": "/tmp/swm-share-pages-vzi61zfo/New Final Post and Capcut template/export/bridget_childers/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 131,
+    "families_approved": 130,
     "total_submissions": 164,
     "avg_financial_loss": 119502.36,
     "avg_months_lost": 24.6,
@@ -48,7 +48,7 @@
     "_pdf_state_family_count": 164,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5427,
+  "movement_total": 5430,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -69,21 +69,21 @@
     ],
     "public_comments": [
       {
-        "comment_text": "An EPO was placed on me without my knowledge. Without all the evidence brought before the judge. This was December. End of January the judge heard all of the evidence apologized to me said the story was the craziest thing she ever heard. I’m going back in at the end of July to get my visatation back hopefully, and officially get the EPO removed since my ex doesn’t want to remove it.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Cleveland County"
-      },
-      {
         "comment_text": "Denied due process, lied multiple times in court, wouldn't allow me to present evidence, blamed me for my own abuse Refusing to look at evidence, ignoring laws protecting DV survivors",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Cleveland"
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "An EPO was placed on me without my knowledge. Without all the evidence brought before the judge. This was December. End of January the judge heard all of the evidence apologized to me said the story was the craziest thing she ever heard. I’m going back in at the end of July to get my visatation back hopefully, and officially get the EPO removed since my ex doesn’t want to remove it.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/bridget_childers",
-  "unresolved": [],
+  "unresolved": [
+    "pdf_public_actor: no 'Bridget Childrers' in cache for OK"
+  ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -102,11 +102,11 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "I’m going back in at the end of July to get my visatation back hopefully, and officially get the EPO removed since my ex doesn’t want to remove it.",
+        "body": "Denied due process, lied multiple times in court, wouldn't allow me to present evidence, blamed me for my own abuse Refusing to look at evidence, ignoring laws protecting DV survivors",
         "kind": "comment"
       },
       {
-        "body": "Denied due process, lied multiple times in court, wouldn't allow me to present evidence, blamed me for my own abuse Refusing to look at evidence, ignoring laws protecting DV survivors",
+        "body": "I’m going back in at the end of July to get my visatation back hopefully, and officially get the EPO removed since my ex doesn’t want to remove it.",
         "kind": "comment"
       }
     ],

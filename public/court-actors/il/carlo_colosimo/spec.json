@@ -8,14 +8,14 @@
     "last_name": "Colosimo",
     "role": "Judge",
     "court": "Kendall county",
-    "county": null,
+    "county": "Kendall county",
     "court_or_county": "Kendall county",
     "state": "Illinois",
     "state_abbr": "IL",
     "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
     "actor_report_count": 3,
     "supabase_row_ids": [
       "f5e550d1-b5f9-4460-983a-38c00fb7786f",
@@ -26,7 +26,7 @@
     "actor_bucket_key": "carlo colosimo|IL"
   },
   "photo": {
-    "path": "illinois/carlo_colosimo/image_1080.png",
+    "path": "/tmp/swm-share-pages-vzi61zfo/New Final Post and Capcut template/export/carlo_colosimo/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -46,7 +46,7 @@
     "_pdf_state_family_count": 151,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5427,
+  "movement_total": 5430,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -72,7 +72,7 @@
   "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
-    "footer": "Family-reported submissions · not court findings.",
+    "footer": "Family-reported submissions.",
     "strike_through_reserved_for": [
       "isolated",
       "dismissed",
@@ -85,6 +85,14 @@
     "recommended_route": "/court-actors/il/carlo_colosimo/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Denied many motions eithout reviewing my facts. Total bias!",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

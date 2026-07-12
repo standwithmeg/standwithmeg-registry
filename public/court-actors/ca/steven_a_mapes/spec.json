@@ -30,27 +30,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "public/court-actors/ca/steven_a_mapes/image_1080.png",
+    "path": "/tmp/swm-share-pages-vzi61zfo/New Final Post and Capcut template/export/steven_a_mapes/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 359,
-    "total_submissions": 446,
-    "avg_financial_loss": 285125.16,
+    "families_approved": 360,
+    "total_submissions": 447,
+    "avg_financial_loss": 284752.35,
     "avg_months_lost": 35.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CA",
-    "state_family_count": 446,
-    "median_financial_loss": 269200,
-    "median_burden_sample_size": 199,
+    "state_family_count": 447,
+    "median_financial_loss": 265100,
+    "median_burden_sample_size": 200,
     "median_months_lost": 20,
-    "pro_se_pct": 58.7,
-    "pro_se_count": 262,
-    "_pdf_state_family_count": 446,
+    "pro_se_pct": 58.8,
+    "pro_se_count": 263,
+    "_pdf_state_family_count": 447,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5430,
   "supabase": {
     "report_count": 7,
     "actor_report_count": 7,
@@ -89,6 +89,12 @@
         "court_or_county": "Juvenile dependency San Bernardino cs"
       },
       {
+        "comment_text": "The judge acknowledged that we had a relationship with our granddaughters, but then denied our right to have meaningful visitation with them. Never ask grandparents if they wanted to care for the children. Denied our 388 without a court hearing the first time around. Allow the guardians to continuously intervene in the relationship with our granddaughters.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Juvenile dependency"
+      },
+      {
         "comment_text": "He allowed CFS 15 months of delays to search for evidence when they found out the original allegations were false. From there he allowed delay after delay. My case has been delayed for 3 years and now they are trying to adopt my children based on me being out of time although i completed services 3 times.",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
@@ -122,15 +128,19 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Violating due process pushing adoptions has a 75% reversal at appeal court ignored sides with the social worker report even though it is not written correctly.",
+        "body": "Ignored sides with the social worker report even though it is not written correctly",
         "kind": "comment"
       },
       {
-        "body": "He allowed CFS 15 months of delays to search for evidence when they found out the original allegations were false. From there he allowed delay after delay.",
+        "body": "Then denied our right to have meaningful visitation with them.",
         "kind": "comment"
       },
       {
-        "body": "He said a lot of nice things about me and then terminated my rights at the end of the hearing saying there was no law on it I’m never able to speak, they deny it",
+        "body": "Allowed CFS 15 months of delays to search for evidence when they found out the original allegations were false",
+        "kind": "comment"
+      },
+      {
+        "body": "He said a lot of nice things about me.",
         "kind": "comment"
       }
     ],

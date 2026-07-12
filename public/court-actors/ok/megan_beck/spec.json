@@ -14,8 +14,8 @@
     "state_abbr": "OK",
     "mention_count": 4,
     "family_count": 3,
-    "public_family_count": null,
-    "public_family_count_source": null,
+    "public_family_count": 3,
+    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
     "actor_report_count": 4,
     "supabase_row_ids": [
       "b683cec7-176e-43b3-b33f-cd7b2c7906da",
@@ -27,12 +27,12 @@
     "actor_bucket_key": "megan beck|OK"
   },
   "photo": {
-    "path": "oklahoma/megan_beck/image_1080.png",
+    "path": "/tmp/swm-share-pages-vzi61zfo/New Final Post and Capcut template/export/megan_beck/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 131,
+    "families_approved": 130,
     "total_submissions": 164,
     "avg_financial_loss": 119502.36,
     "avg_months_lost": 24.6,
@@ -47,18 +47,12 @@
     "_pdf_state_family_count": 164,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5427,
+  "movement_total": 5430,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
     "family_count": 3,
     "family_reports": [
-      {
-        "body": "The system has destroyed my family. Happy children are now in constant chaos, the court is more concerned about 50/50 pro dad than stability for the children. I have been told so many times children are resilient. They will be ok. This has take a toll on myself mentally and physically. Now because I am fighting back or questioning I am classified as combative and confrontational. Which adds additional stress and feels like an intimidation tactic. The system and abuser has stolen precious time that you can never get back.",
-        "state": "OK",
-        "county": "Tulsa",
-        "row_id": "1734a704-ed48-41a2-b5e8-83bf9a1d781e"
-      },
       {
         "body": "Destroyed my faith in child court and what is supposed to be the absolute wellbeing of our kids as a priority. Took years from me and my kids/family we will never get back and has caused trauma to my kids they may never recover from.",
         "state": "OK",
@@ -74,32 +68,24 @@
     ],
     "public_comments": [
       {
-        "comment_text": "Denied motion without hearing. Allowed me to have custody of my daughter then when judge granted motion she moved mountains to have order reversed on me within 24 hours. My daughter begged and cried to her at wagoner county court house saying the people she lived with hurt her and talk very bad about me her mother. Ignored video evidence of my baby begging and pleading for help telling me to call Donald trump he’s the only one who can hep her. Then Megan get it court ordered where I can not record but other party can record. 3 tracking devices were put on my daughter hidden. I removed one and was placed on supervised visitation because I removed one tracker out of 3 and none were court ordered! She saw my children twice over 2 years and never visited my children together. She went to Nashville to visit my daughter in the home there. Never came to my home or visited my other child in home. My children were SA and abused due to Megan becks corruption. She was paid over 18 k saw my children once. Ignored my daughter pleas for help. Lied to keep my daughter in tn. She went to Nashville to visit my daughter and went the the home my daughter claims she is being abused in to interview her. She saw my daughter screaming and crying at court house scared to death if Megan because she saw her in tn. Lied numerous times about who truly had custody of my daughter. My daughter was placed in a third party placement not a guardianship likely son. The courts gave my daughter to a multi time felon who served 10 plus years in federal prison for ripping off capital one for over a million dollars. My daughter’s grandmother was married to Pablo escabuars number one cocain pilot tirso Dominguez. Had a podcast called cocaine air. I brought all evidence to Megan and she still told the courts my daughter was thriving in this environment even though she is in first grade with 3 Fs on her report card.ignored evidence All evidence",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Wagoner county"
-      },
-      {
-        "comment_text": "Changing custody schedule to limit time with mom, to help minor child have a reunification with father, while child continues to show distress with time with dad. Blames mom rather than dad or dad's stripper girlfriend that reprimands both children. Solution is to force children to like and be with dad, while he bodybuilds, goes on trips and wants time made back up, everything accommodates to the father who is chaotic. Accusing mother of speaking negatively about father, but the children being exposed to his new life style isn't acknowledged as the reason the children are distressed. She is the one the didn't recommend but stated she wanted Misti Center as child therapist. Jaime Vogt as coparenting therapist, Bart Trentham to reaccess minor child for adhd and psych evaluation. This is all because father recorded child under age 10 crying saying he wants to live with mom and calling his dad cuss words, the system doesn't care that dad provokes and makes someone feel helpless and emotional. Wants Kristin Tipps family therapy for father and child. It feels like its all a money scam.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Tulsa"
-      },
-      {
         "comment_text": "To be disclosed if my testimony is required. I have paper, digital, and video evidence of all of my above statements. The judge dismissed all as evidence.",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Wagoner"
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Denied motion without hearing. Allowed me to have custody of my daughter then when judge granted motion she moved mountains to have order reversed on me within 24 hours. My daughter begged and cried to her at wagoner county court house saying the people she lived with hurt her and talk very bad about me her mother. Ignored video evidence of my baby begging and pleading for help telling me to call Donald trump he’s the only one who can hep her. Then Megan get it court ordered where I can not record but other party can record. 3 tracking devices were put on my daughter hidden. I removed one and was placed on supervised visitation because I removed one tracker out of 3 and none were court ordered! She saw my children twice over 2 years and never visited my children together. She went to Nashville to visit my daughter in the home there. Never came to my home or visited my other child in home. My children were SA and abused due to Megan becks corruption. She was paid over 18 k saw my children once. Ignored my daughter pleas for help. Lied to keep my daughter in tn. She went to Nashville to visit my daughter and went the the home my daughter claims she is being abused in to interview her. She saw my daughter screaming and crying at court house scared to death if Megan because she saw her in tn. Lied numerous times about who truly had custody of my daughter. My daughter was placed in a third party placement not a guardianship likely son. The courts gave my daughter to a multi time felon who served 10 plus years in federal prison for ripping off capital one for over a million dollars. My daughter’s grandmother was married to Pablo escabuars number one cocain pilot tirso Dominguez. Had a podcast called cocaine air. I brought all evidence to Megan and she still told the courts my daughter was thriving in this environment even though she is in first grade with 3 Fs on her report card.ignored evidence All evidence",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/megan_beck",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='OK'"
+    "pdf_public_actor: no 'Megan Beck' in cache for OK"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
-    "footer": "Family-reported submissions · not court findings.",
+    "footer": "Family-reported submissions.",
     "strike_through_reserved_for": [
       "isolated",
       "dismissed",
@@ -112,6 +98,18 @@
     "recommended_route": "/court-actors/ok/megan_beck/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "To be disclosed if my testimony is required. I have paper, digital, and video evidence of all of my above statements. The judge dismissed all as evidence.",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored video evidence of my baby begging and pleading for help telling me to call Donald trump he’s the only one who can hep her. Then Megan get it court ordered where I can not record but other party can record.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

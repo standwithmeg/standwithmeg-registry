@@ -26,7 +26,7 @@
     "actor_bucket_key": "magie kuhl|WV"
   },
   "photo": {
-    "path": "public/court-actors/wv/maggie_kuhl/image_1080.png",
+    "path": "/tmp/swm-share-pages-vzi61zfo/New Final Post and Capcut template/export/maggie_kuhl/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -38,15 +38,15 @@
     "_source_table": "movement_stats_by_state",
     "_match_value": "WV",
     "state_family_count": 58,
-    "median_financial_loss": 65000,
-    "median_burden_sample_size": 15,
-    "median_months_lost": 25,
-    "pro_se_pct": 49.1,
-    "pro_se_count": 28,
-    "_pdf_state_family_count": 57,
+    "median_financial_loss": 110880,
+    "median_burden_sample_size": 16,
+    "median_months_lost": 27,
+    "pro_se_pct": 50.0,
+    "pro_se_count": 29,
+    "_pdf_state_family_count": 58,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5421,
+  "movement_total": 5430,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
