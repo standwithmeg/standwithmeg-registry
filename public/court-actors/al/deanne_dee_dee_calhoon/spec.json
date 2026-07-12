@@ -28,7 +28,7 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "public/court-actors/al/deanne_dee_dee_calhoon/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/deanne_dee_dee_calhoon/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -48,7 +48,7 @@
     "_pdf_state_family_count": 130,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -138,8 +138,24 @@
         "kind": "comment"
       },
       {
-        "body": "She ignored obvious crucial evidence and testimony and denied a plea for family counseling",
+        "body": "Ignored obvious crucial evidence",
         "kind": "comment"
+      },
+      {
+        "body": "Caused detrimental emotional and financial hardship, stolen years of our lives and…",
+        "kind": "family_report"
+      },
+      {
+        "body": "Autauga County family court has failed my children and me over and over again.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Allowed continuous \"emergency\" motions to cloud the original filing",
+        "kind": "family_report"
+      },
+      {
+        "body": "This court has aided in the psychological abuse and alienation of two children from…",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

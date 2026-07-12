@@ -46,7 +46,7 @@
     "_pdf_state_family_count": 253,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5430,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -100,12 +100,20 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "After dealing with Lewanna Bell-Lloyd and CPS, it proved to me there's no \"justice\" in the justice system. Children forced to visit bio father after CPS substantiated abuse. Lewanna Bell-Lloyd was the GAL and treated the kids horrifically.",
+        "body": "Children forced to visit bio father after CPS substantiated abuse.",
         "kind": "comment"
       },
       {
-        "body": "Fathers attorney #2 despite refusing to pay child support/alimony. Inflammatory and false allegations against mother. Unusually difficult and unpleasant. Loud and dramatic.",
+        "body": "Fathers attorney #2 despite refusing to pay child support/alimony.",
         "kind": "comment"
+      },
+      {
+        "body": "Mother consistently doing what I was told to do and providing for the children's needs.",
+        "kind": "family_report"
+      },
+      {
+        "body": "After dealing with Lewanna Bell-Lloyd, and CPS, it proved to me there’s no “justice” in the justice system.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

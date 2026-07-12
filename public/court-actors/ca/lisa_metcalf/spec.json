@@ -26,7 +26,7 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-vzi61zfo/New Final Post and Capcut template/export/lisa_metcalf/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/lisa_metcalf/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -46,7 +46,7 @@
     "_pdf_state_family_count": 447,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5430,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -112,7 +112,7 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "I was ordered to participate in therapy for parental alienation, no evidence was available to provide by the court.",
+        "body": "Ordered to participate in therapy for parental alienation",
         "kind": "comment"
       },
       {
@@ -120,8 +120,20 @@
         "kind": "comment"
       },
       {
-        "body": "Mediator admitted to her being a biased party because father chose her to be his personal therapist. Mediator doesn’t see a need to change child therapist.",
+        "body": "She was chosen by opposing party council to be daughter’s therapist.",
         "kind": "comment"
+      },
+      {
+        "body": "Once they go after father he might try to avoid paying by aiming for 50/50 custody.",
+        "kind": "family_report"
+      },
+      {
+        "body": "The system has made me believe they will not help keep myself or my children safe…",
+        "kind": "family_report"
+      },
+      {
+        "body": "Silenced the truth about what he’s been through",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

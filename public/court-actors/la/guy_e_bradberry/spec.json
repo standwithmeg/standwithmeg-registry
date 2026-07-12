@@ -26,7 +26,7 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "public/court-actors/la/guy_e_bradberry/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/guy_e_bradberry/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -46,7 +46,7 @@
     "_pdf_state_family_count": 64,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -100,12 +100,16 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Very strict judge, he didn’t do anything to me, just told our child’s father that if he sees him again, “he better bring a tooth brush” 😂",
+        "body": "He sees him again, “he better bring a tooth brush” 😂",
         "kind": "comment"
       },
       {
-        "body": "Allowed opposing party to proceed in trial without me being properly represented in custody hearings. Allowed testimony for matters not related to the matters of the case being held.",
+        "body": "Allowed opposing party to proceed in trial without me being properly represented in custody hearings.",
         "kind": "comment"
+      },
+      {
+        "body": "Separated my children from one another",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

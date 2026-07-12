@@ -34,27 +34,27 @@
     ]
   },
   "photo": {
-    "path": "public/court-actors/ne/dr_gage_stermenski/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/dr_gage_stermenski/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 36,
-    "total_submissions": 43,
-    "avg_financial_loss": 185315.88,
-    "avg_months_lost": 35.3,
+    "families_approved": 37,
+    "total_submissions": 44,
+    "avg_financial_loss": 180795.98,
+    "avg_months_lost": 35.0,
     "_source_table": "movement_stats_by_state",
     "_match_value": "NE",
-    "state_family_count": 43,
+    "state_family_count": 44,
     "median_financial_loss": 240500,
     "median_burden_sample_size": 17,
-    "median_months_lost": 20,
-    "pro_se_pct": 48.8,
+    "median_months_lost": 22,
+    "pro_se_pct": 47.7,
     "pro_se_count": 21,
-    "_pdf_state_family_count": 43,
+    "_pdf_state_family_count": 44,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5421,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -124,12 +124,20 @@
         "kind": "comment"
       },
       {
-        "body": "He said I was antisocial and I’m not. Never abused anyone always had a job. Always get along with ppl",
+        "body": "He said I was antisocial and I’m not. Never abused anyone always had a job.",
         "kind": "comment"
       },
       {
         "body": "Put everything the CPS worker said in my report for my mental health",
         "kind": "comment"
+      },
+      {
+        "body": "The state is making money off of destroying families",
+        "kind": "family_report"
+      },
+      {
+        "body": "After working for DHHS and wanting to be the person to help me make a positive change.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

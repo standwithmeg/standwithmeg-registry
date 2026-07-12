@@ -27,7 +27,7 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "public/court-actors/sc/samer_touma/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/samer_touma/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -47,7 +47,7 @@
     "_pdf_state_family_count": 108,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5421,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -111,6 +111,14 @@
       {
         "body": "Either that or he was turning a blind eye to obvious facts and evidence that was presented",
         "kind": "comment"
+      },
+      {
+        "body": "The family court system has singlehandedly destroyed my family. We have been separated for years and only see them a few times a year.",
+        "kind": "family_report"
+      },
+      {
+        "body": "We have three small children and are now forced to give up our home due to financial ruin.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

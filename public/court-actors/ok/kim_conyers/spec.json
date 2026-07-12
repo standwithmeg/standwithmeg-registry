@@ -32,27 +32,27 @@
     "actor_bucket_key": "kim conyers|OK"
   },
   "photo": {
-    "path": "public/court-actors/ok/kim_conyers/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/kim_conyers/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 131,
-    "total_submissions": 164,
-    "avg_financial_loss": 119502.36,
-    "avg_months_lost": 24.6,
+    "total_submissions": 166,
+    "avg_financial_loss": 118855.1,
+    "avg_months_lost": 24.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OK",
-    "state_family_count": 164,
-    "median_financial_loss": 94750,
-    "median_burden_sample_size": 88,
+    "state_family_count": 166,
+    "median_financial_loss": 99500,
+    "median_burden_sample_size": 89,
     "median_months_lost": 12,
-    "pro_se_pct": 43.9,
+    "pro_se_pct": 43.4,
     "pro_se_count": 72,
-    "_pdf_state_family_count": 164,
+    "_pdf_state_family_count": 166,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5421,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 9,
     "actor_report_count": 9,
@@ -140,6 +140,22 @@
       {
         "body": "Will not release DHS affidavit until trial.",
         "kind": "comment"
+      },
+      {
+        "body": "Absolutely ruined our lives both mentally and financially.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Our daughter was taken with out any evidence of potential harm or court order its…",
+        "kind": "family_report"
+      },
+      {
+        "body": "“The system has fractured our family, turning our love into paperwork and our lives…",
+        "kind": "family_report"
+      },
+      {
+        "body": "Trauma to my daughters. Placed with absent father",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

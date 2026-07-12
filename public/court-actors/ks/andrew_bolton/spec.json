@@ -13,9 +13,9 @@
     "state": "Kansas",
     "state_abbr": "KS",
     "mention_count": 13,
-    "family_count": 14,
-    "public_family_count": 14,
-    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "family_count": 15,
+    "public_family_count": 15,
+    "public_family_count_source": "canonical_supabase_rows_over_stale_public_api",
     "actor_report_count": 13,
     "supabase_row_ids": [
       "ddfd7d7b-8684-4a68-bd8a-9aa8bbc46147",
@@ -44,7 +44,7 @@
     ]
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-vzi61zfo/New Final Post and Capcut template/export/andrew_bolton/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/andrew_bolton/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -64,11 +64,11 @@
     "_pdf_state_family_count": 253,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5430,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 13,
     "actor_report_count": 13,
-    "family_count": 14,
+    "family_count": 15,
     "family_reports": [
       {
         "body": "Children’s safety was ignored. We feel the court system is racially biased.",
@@ -177,7 +177,9 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/andrew_bolton",
-  "unresolved": [],
+  "unresolved": [
+    "public_family_count_api: returned stale lower count 14; used canonical Supabase count 15"
+  ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -234,6 +236,30 @@
       {
         "body": "Lied under oath about child’s wants.",
         "kind": "comment"
+      },
+      {
+        "body": "Children’s safety was ignored. We feel the court system is racially biased.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Her dad has threatened to leave with her and go off grid if I ever reported the abuse.",
+        "kind": "family_report"
+      },
+      {
+        "body": "My child has to be with her alleged abuser 50% of the time that breaks my heart.",
+        "kind": "family_report"
+      },
+      {
+        "body": "I was ordered to do counseling, of which my children seldomly attended.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Miami county doesn’t have the child best interest at all, they literally take…",
+        "kind": "family_report"
+      },
+      {
+        "body": "Ex parte orders issued taking away parenting time/no contact.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 2

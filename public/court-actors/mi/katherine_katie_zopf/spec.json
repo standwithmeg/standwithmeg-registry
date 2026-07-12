@@ -35,22 +35,22 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 147,
-    "total_submissions": 178,
-    "avg_financial_loss": 182868.73,
-    "avg_months_lost": 36.8,
+    "families_approved": 148,
+    "total_submissions": 179,
+    "avg_financial_loss": 182082.1,
+    "avg_months_lost": 37.2,
     "_source_table": "movement_stats_by_state",
     "_match_value": "MI",
-    "state_family_count": 178,
+    "state_family_count": 179,
     "median_financial_loss": 101500,
     "median_burden_sample_size": 79,
-    "median_months_lost": 17,
-    "pro_se_pct": 43.8,
+    "median_months_lost": 18,
+    "pro_se_pct": 43.6,
     "pro_se_count": 78,
-    "_pdf_state_family_count": 178,
+    "_pdf_state_family_count": 179,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5430,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 7,
     "actor_report_count": 7,
@@ -132,16 +132,32 @@
         "kind": "comment"
       },
       {
-        "body": "Even though I gave my son the medicine against my own will and judgement she accused me of not giving it.",
+        "body": "It was recoreded daily and sent to my attorney. This affected my custody.",
         "kind": "comment"
       },
       {
-        "body": "The GAL lied to the court on March 24, 2021 saying that CPS had no filed to terminate parental rights.",
+        "body": "Lied to the court on March 24",
         "kind": "comment"
       },
       {
         "body": "Called the police numerous times to make it seem like I was endangering the kids",
         "kind": "comment"
+      },
+      {
+        "body": "They know you'll do anything to try to get them back.",
+        "kind": "family_report"
+      },
+      {
+        "body": "I was forced to abandon my child.",
+        "kind": "family_report"
+      },
+      {
+        "body": "The decisions made in my case destroyed the life I had spent years building.",
+        "kind": "family_report"
+      },
+      {
+        "body": "I have also lost jobs because of them.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

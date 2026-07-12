@@ -26,7 +26,7 @@
     "actor_bucket_key": "monica schocken|TX"
   },
   "photo": {
-    "path": "public/court-actors/tx/monica_schocken/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/monica_schocken/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -46,7 +46,7 @@
     "_pdf_state_family_count": 316,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5421,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -106,12 +106,24 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Called to tell me my ex hired her and began making threats before we met to have me jailed for six months if I couldn’t pay her. I was filed indigent with the court. Harassed me and threatened the boys with jail and her sending them to foster homes.",
+        "body": "Called to tell me my ex hired her",
         "kind": "comment"
       },
       {
-        "body": "Admitted to coaching child to ignore her father. Admitted ex was alienating children. Made up \"sexual abuse\" claims after CPS had already cleared me 13 times.",
+        "body": "Admitted to coaching child to ignore her father. Admitted ex was alienating children.",
         "kind": "comment"
+      },
+      {
+        "body": "I was threatened before I ever got into court. It started the second we separated.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Ignored false reports, ignored the law and my children barely see me.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Gave them to an alleged father that failed the court ordered drug screen",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

@@ -27,7 +27,7 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "public/court-actors/nc/matthew_jackson/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/matthew_jackson/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -47,7 +47,7 @@
     "_pdf_state_family_count": 216,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -139,6 +139,22 @@
       {
         "body": "Continues to delay my case. It's been a year without an initial hearing yet.",
         "kind": "comment"
+      },
+      {
+        "body": "The system has torn my family apart",
+        "kind": "family_report"
+      },
+      {
+        "body": "Former pissed off foster kid",
+        "kind": "family_report"
+      },
+      {
+        "body": "Gave my 8 year old daughter to our abuser",
+        "kind": "family_report"
+      },
+      {
+        "body": "The system tried to destroy and break our family simply for money.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

@@ -27,7 +27,7 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-vzi61zfo/New Final Post and Capcut template/export/daren_adkins/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/daren_adkins/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -47,7 +47,7 @@
     "_pdf_state_family_count": 195,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5430,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -113,16 +113,24 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Ignored evidence at trial, then denied reconsideration after meeting with my attorney and opposing counsel Michelle Puckett at the reconsideration hearing.",
+        "body": "Ignored evidence at trial",
         "kind": "comment"
       },
       {
-        "body": "Judge didn’t allow me to speak or represent myself. Idk if it was illegal or wrong but he did not allow me the chance to speak.",
+        "body": "Judge didn’t allow me to speak or represent myself.",
         "kind": "comment"
       },
       {
         "body": "Removed by going to Missouri Supreme court",
         "kind": "comment"
+      },
+      {
+        "body": "I’ll never get this time back with my beautiful girls. The system failed us.",
+        "kind": "family_report"
+      },
+      {
+        "body": "False accusations removed me from family home.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

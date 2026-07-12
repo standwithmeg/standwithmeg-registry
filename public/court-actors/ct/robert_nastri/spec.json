@@ -27,7 +27,7 @@
     "actor_bucket_key": "robert nastri|CT"
   },
   "photo": {
-    "path": "public/court-actors/ct/robert_nastri/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/robert_nastri/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -47,7 +47,7 @@
     "_pdf_state_family_count": 65,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -113,7 +113,7 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Suppressed evidence at trial, issued an ambiguous court order that incites on-going conflict.",
+        "body": "Suppressed evidence at trial, issued an ambiguous court order that incites on-going…",
         "kind": "comment"
       },
       {
@@ -123,6 +123,18 @@
       {
         "body": "Mostly kept us in the hallway during hearings.",
         "kind": "comment"
+      },
+      {
+        "body": "Five years in court has stolen precious time that my daughter.",
+        "kind": "family_report"
+      },
+      {
+        "body": "While navigating a devastating emotional and financial toll.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Cpstd. No trust in the legal system. Which is extremely scary.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

@@ -27,7 +27,7 @@
     "actor_bucket_key": "ri dcyf|RI"
   },
   "photo": {
-    "path": "public/court-actors/ri/ri_dcyf/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/ri_dcyf/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -47,7 +47,7 @@
     "_pdf_state_family_count": 19,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5421,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -117,12 +117,24 @@
         "kind": "comment"
       },
       {
-        "body": "Jessica from DCYF could have cared less about my children and how my child’s father threw my child into a wall. She even admitted she smacks her own son.",
+        "body": "She even admitted she smacks her own son.",
         "kind": "comment"
       },
       {
         "body": "Unwilling to get involved despite numerous abuse complaints",
         "kind": "comment"
+      },
+      {
+        "body": "Proof, silenced my voice without due process, and called it justice.",
+        "kind": "family_report"
+      },
+      {
+        "body": "She refuses to see her father due to ongoing abuse. The court doesn’t care.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Turned a father and his children into strangers. Lost time that can never be returned",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

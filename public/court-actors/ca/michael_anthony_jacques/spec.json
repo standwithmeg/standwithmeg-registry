@@ -13,9 +13,9 @@
     "state": "California",
     "state_abbr": "CA",
     "mention_count": 7,
-    "family_count": 4,
-    "public_family_count": 4,
-    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "family_count": 5,
+    "public_family_count": 5,
+    "public_family_count_source": "canonical_supabase_rows_over_stale_public_api",
     "actor_report_count": 7,
     "supabase_row_ids": [
       "2d436cba-5e9c-4be5-8e8a-8c457be07aa4",
@@ -30,7 +30,7 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-vzi61zfo/New Final Post and Capcut template/export/michael_anthony_jacques/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/michael_anthony_jacques/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -50,11 +50,11 @@
     "_pdf_state_family_count": 447,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5430,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 7,
     "actor_report_count": 7,
-    "family_count": 4,
+    "family_count": 5,
     "family_reports": [
       {
         "body": "After disputed allegations I denied on the record, Placer County Family Court issued a five-year restraining order and custody restrictions that left me with only supervised video calls. My concern is that major decisions were made through a process with serious record and due-process questions, including disputed child testimony, unclear evidence rulings, Family Code 3044 findings, and a trial day with no court reporter.",
@@ -121,7 +121,9 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/michael_anthony_jacques",
-  "unresolved": [],
+  "unresolved": [
+    "public_family_count_api: returned stale lower count 4; used canonical Supabase count 5"
+  ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -156,11 +158,31 @@
         "kind": "comment"
       },
       {
-        "body": "Orders support without summons after DCSS freezes support to mother prior to request for order.",
+        "body": "Summons after DCSS freezes support to mother prior to request for order.",
         "kind": "comment"
+      },
+      {
+        "body": "After disputed allegations I denied on the record, Placer County Family Court…",
+        "kind": "family_report"
+      },
+      {
+        "body": "My life will never be the same.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Even my seeking help thru federal entities has backfired on them.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Facilitated and empowered my ex to abuse us physically/emotionally.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Destroyed my children in every aspect, mentally, emotionally.",
+        "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 2
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

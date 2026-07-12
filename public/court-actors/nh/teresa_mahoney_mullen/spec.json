@@ -13,9 +13,9 @@
     "state": "New Hampshire",
     "state_abbr": "NH",
     "mention_count": 5,
-    "family_count": 1,
-    "public_family_count": 1,
-    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "canonical_supabase_rows_over_stale_public_api",
     "actor_report_count": 5,
     "supabase_row_ids": [
       "7635ef8f-7eee-46c5-8aab-739aefb60086",
@@ -28,7 +28,7 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "public/court-actors/nh/teresa_mahoney_mullen/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/teresa_mahoney_mullen/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -48,11 +48,11 @@
     "_pdf_state_family_count": 36,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5421,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
-    "family_count": 1,
+    "family_count": 2,
     "family_reports": [
       {
         "body": "How can a child be taken away from the mother with to professional proof she's mentally unstable and no court order for a evaluation... Doesn't 3 domestic violence show mental instability... He didn't have to attend any therapy even after a court order, he's in contempt and the judges does not even mention the fact he hasn't gone even though we keep asking why he hasn't gone to therapy when it was a court order. The Judge ignores our please, my daughter was hospitalized and was sepsis, she almost died... But she was denied a continuance on a important court date, physically and mentally she couldn't represent herself, she was sepsis... Court denied, and that's when everything fell apart, because she was ill.",
@@ -82,6 +82,7 @@
   },
   "export_dir": "New Final Post and Capcut template/export/teresa_mahoney_mullen",
   "unresolved": [
+    "public_family_count_api: returned stale lower count 1; used canonical Supabase count 2",
     "pdf_public_actor: no 'Theresa Mahoney Mullen' in cache for NH"
   ],
   "guardrails": {
@@ -102,12 +103,20 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Made her report based on the wishes of the mother not the stability of the child. This gal used to reports to make sarcastic comments to both parents at separate times based on different things that they did that she did not like.",
+        "body": "Did not visit father only mother. Made false statements. Did not speak to the child about their wishes.",
         "kind": "comment"
       },
       {
-        "body": "False accusations Bias, not sure what she does, doesn't help the child in least bit, doesn't even have the correct name on most documents",
+        "body": "False accusations Bias, not sure what she does, doesn't help the child in least bit, doesn't even have the…",
         "kind": "comment"
+      },
+      {
+        "body": "Denied a continuance on a important court date",
+        "kind": "family_report"
+      },
+      {
+        "body": "Forced to go to a separate School on a separate schedule",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

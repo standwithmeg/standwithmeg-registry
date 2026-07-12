@@ -31,27 +31,27 @@
     "actor_bucket_key": "adriana rincon white|NV"
   },
   "photo": {
-    "path": "public/court-actors/nv/adriana_rincon_white/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/adriana_rincon_white/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 36,
-    "total_submissions": 49,
-    "avg_financial_loss": 170116.9,
-    "avg_months_lost": 27.1,
+    "families_approved": 37,
+    "total_submissions": 50,
+    "avg_financial_loss": 167556.21,
+    "avg_months_lost": 26.7,
     "_source_table": "movement_stats_by_state",
     "_match_value": "NV",
-    "state_family_count": 49,
+    "state_family_count": 50,
     "median_financial_loss": 220750,
     "median_burden_sample_size": 16,
     "median_months_lost": 10,
-    "pro_se_pct": 55.1,
-    "pro_se_count": 27,
-    "_pdf_state_family_count": 49,
+    "pro_se_pct": 56.0,
+    "pro_se_count": 28,
+    "_pdf_state_family_count": 50,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5427,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 8,
     "actor_report_count": 8,
@@ -133,16 +133,32 @@
         "kind": "comment"
       },
       {
-        "body": "Three days before my family court trial, I filed a complaint regarding a member of the judge's courtroom staff.",
+        "body": "I believe I was denied due process and did not receive a fair and impartial hearing.",
         "kind": "comment"
       },
       {
-        "body": "Sad state of affairs for mothers and children. Expose these criminals who are protecting the abusers.",
+        "body": "I haven't seen my minor daughter for over 200 days.",
         "kind": "comment"
       },
       {
         "body": "Abused me by allowing abuse and aiding it . Inhumane rulings Abused me with him",
         "kind": "comment"
+      },
+      {
+        "body": "This experience has had a devastating impact on my family.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Denied me because he was approved the week prior saying he had $0",
+        "kind": "family_report"
+      },
+      {
+        "body": "2 girls under 5 and mother abused by “loving father and husband”",
+        "kind": "family_report"
+      },
+      {
+        "body": "Never in my life did I think my constitutional rights would be ignored.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

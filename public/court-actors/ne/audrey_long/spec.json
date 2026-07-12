@@ -31,27 +31,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "public/court-actors/ne/audrey_long/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/audrey_long/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 36,
-    "total_submissions": 43,
-    "avg_financial_loss": 185315.88,
-    "avg_months_lost": 35.3,
+    "families_approved": 37,
+    "total_submissions": 44,
+    "avg_financial_loss": 180795.98,
+    "avg_months_lost": 35.0,
     "_source_table": "movement_stats_by_state",
     "_match_value": "NE",
-    "state_family_count": 43,
+    "state_family_count": 44,
     "median_financial_loss": 240500,
     "median_burden_sample_size": 17,
-    "median_months_lost": 20,
-    "pro_se_pct": 48.8,
+    "median_months_lost": 22,
+    "pro_se_pct": 47.7,
     "pro_se_count": 21,
-    "_pdf_state_family_count": 43,
+    "_pdf_state_family_count": 44,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 8,
     "actor_report_count": 8,
@@ -195,9 +195,29 @@
       {
         "body": "DID NOT listen to my oldest daughter when she said she was abused!",
         "kind": "comment"
+      },
+      {
+        "body": "Audrey would argue with the judges like her word was final say. She needs fired",
+        "kind": "family_report"
+      },
+      {
+        "body": "Someone told that the attorney is the guardian ad litem.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Having your newborn taken away and given false hope that if you recover and get…",
+        "kind": "family_report"
+      },
+      {
+        "body": "I hate to admit, but I gave up.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Scottsbluff just wants to keep funding the sick individuals who think taking kids…",
+        "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 2
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

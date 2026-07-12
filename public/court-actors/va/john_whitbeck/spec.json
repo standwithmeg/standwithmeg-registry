@@ -26,27 +26,27 @@
     "actor_bucket_key": "john whitbeck|VA"
   },
   "photo": {
-    "path": "public/court-actors/va/john_whitbeck/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/john_whitbeck/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 104,
-    "total_submissions": 128,
-    "avg_financial_loss": 180304.68,
-    "avg_months_lost": 29.6,
+    "families_approved": 108,
+    "total_submissions": 131,
+    "avg_financial_loss": 187253.25,
+    "avg_months_lost": 29.5,
     "_source_table": "movement_stats_by_state",
     "_match_value": "VA",
-    "state_family_count": 128,
-    "median_financial_loss": 139000,
-    "median_burden_sample_size": 53,
+    "state_family_count": 131,
+    "median_financial_loss": 146000,
+    "median_burden_sample_size": 54,
     "median_months_lost": 20,
-    "pro_se_pct": 62.5,
-    "pro_se_count": 80,
-    "_pdf_state_family_count": 128,
+    "pro_se_pct": 63.4,
+    "pro_se_count": 83,
+    "_pdf_state_family_count": 131,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5421,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -112,16 +112,24 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "John Whitbeck claimed to have an understanding of DV/coercive control and its impact on divorce and custody cases.",
+        "body": "He did not do anything to protect me.",
         "kind": "comment"
       },
       {
-        "body": "Is literal drinking bunnies with plowman and Fisher and my attorneys the Graham law firm and Miriam Ibrahimi both owned by John Whitbeck.",
+        "body": "Is literal drinking bunnies with plowman and Fisher.",
         "kind": "comment"
       },
       {
         "body": "Opposing counsel",
         "kind": "comment"
+      },
+      {
+        "body": "Took sole legal custody-and now 50/50.",
+        "kind": "family_report"
+      },
+      {
+        "body": "I haven’t seen my kids since I met Mr.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

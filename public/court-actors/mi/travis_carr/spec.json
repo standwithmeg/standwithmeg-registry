@@ -31,27 +31,27 @@
     "actor_bucket_key": "travis carr|MI"
   },
   "photo": {
-    "path": "public/court-actors/mi/travis_carr/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/travis_carr/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 147,
-    "total_submissions": 178,
-    "avg_financial_loss": 182868.73,
-    "avg_months_lost": 36.8,
+    "families_approved": 148,
+    "total_submissions": 179,
+    "avg_financial_loss": 182082.1,
+    "avg_months_lost": 37.2,
     "_source_table": "movement_stats_by_state",
     "_match_value": "MI",
-    "state_family_count": 178,
+    "state_family_count": 179,
     "median_financial_loss": 101500,
     "median_burden_sample_size": 79,
-    "median_months_lost": 17,
-    "pro_se_pct": 43.8,
+    "median_months_lost": 18,
+    "pro_se_pct": 43.6,
     "pro_se_count": 78,
-    "_pdf_state_family_count": 178,
+    "_pdf_state_family_count": 179,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 8,
     "actor_report_count": 8,
@@ -195,9 +195,33 @@
       {
         "body": "Tell me to leave my\\nSignificant other",
         "kind": "comment"
+      },
+      {
+        "body": "The system has did nothing but ruin my life.",
+        "kind": "family_report"
+      },
+      {
+        "body": "The court took that all away from you.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Instead it's ripping them apart and destroying them.",
+        "kind": "family_report"
+      },
+      {
+        "body": "This destroyed my family. I have lost my children. My wife and I dont get a long well.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Destroyed my whole family. Can’t see my grandkids grow up!",
+        "kind": "family_report"
+      },
+      {
+        "body": "Destroyed our whole lives. Drove my love to committ suicide.",
+        "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 2
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

@@ -28,27 +28,27 @@
     "actor_bucket_key": "bridget childers|OK"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-vzi61zfo/New Final Post and Capcut template/export/bridget_childers/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/bridget_childers/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 130,
-    "total_submissions": 164,
-    "avg_financial_loss": 119502.36,
-    "avg_months_lost": 24.6,
+    "families_approved": 131,
+    "total_submissions": 166,
+    "avg_financial_loss": 118855.1,
+    "avg_months_lost": 24.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OK",
-    "state_family_count": 164,
-    "median_financial_loss": 94750,
-    "median_burden_sample_size": 88,
+    "state_family_count": 166,
+    "median_financial_loss": 99500,
+    "median_burden_sample_size": 89,
     "median_months_lost": 12,
-    "pro_se_pct": 43.9,
+    "pro_se_pct": 43.4,
     "pro_se_count": 72,
-    "_pdf_state_family_count": 164,
+    "_pdf_state_family_count": 166,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5430,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -102,12 +102,20 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Denied due process, lied multiple times in court, wouldn't allow me to present evidence, blamed me for my own abuse Refusing to look at evidence, ignoring laws protecting DV survivors",
+        "body": "Lied multiple times in court",
         "kind": "comment"
       },
       {
-        "body": "I’m going back in at the end of July to get my visatation back hopefully, and officially get the EPO removed since my ex doesn’t want to remove it.",
+        "body": "Removed since my ex doesn’t want to remove it",
         "kind": "comment"
+      },
+      {
+        "body": "Refuses to listen to my children, who just want to come home.",
+        "kind": "family_report"
+      },
+      {
+        "body": "I was separated from my son for 4 months on false allegations.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

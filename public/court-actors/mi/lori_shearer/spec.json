@@ -27,27 +27,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "public/court-actors/mi/lori_shearer/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/lori_shearer/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 147,
-    "total_submissions": 178,
-    "avg_financial_loss": 182868.73,
-    "avg_months_lost": 36.8,
+    "families_approved": 148,
+    "total_submissions": 179,
+    "avg_financial_loss": 182082.1,
+    "avg_months_lost": 37.2,
     "_source_table": "movement_stats_by_state",
     "_match_value": "MI",
-    "state_family_count": 178,
+    "state_family_count": 179,
     "median_financial_loss": 101500,
     "median_burden_sample_size": 79,
-    "median_months_lost": 17,
-    "pro_se_pct": 43.8,
+    "median_months_lost": 18,
+    "pro_se_pct": 43.6,
     "pro_se_count": 78,
-    "_pdf_state_family_count": 178,
+    "_pdf_state_family_count": 179,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -113,16 +113,28 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "It's was biased to make her my children's GAL. She didn't listen to the kids and lied on the stand and fabricated evidence. Prejudiced.",
+        "body": "Refused they dismissed the case",
         "kind": "comment"
       },
       {
-        "body": "She represented my uncle knowing he was family because we all have the same last name. She was also my lawyer for truency.",
+        "body": "She represented my uncle knowing he was family because we all have the same last name.",
         "kind": "comment"
       },
       {
-        "body": "Falsifys evidence, doesn't listen to the children to what they want and needs. Misrepresentes the kids wants and needs.",
+        "body": "Falsifys evidence, doesn't listen to the children to what they want and needs.",
         "kind": "comment"
+      },
+      {
+        "body": "The court took that all away from you.",
+        "kind": "family_report"
+      },
+      {
+        "body": "This destroyed my family. I have lost my children. My wife and I dont get a long well.",
+        "kind": "family_report"
+      },
+      {
+        "body": "It destroyed my family. My children are not even allowed to see each other now.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

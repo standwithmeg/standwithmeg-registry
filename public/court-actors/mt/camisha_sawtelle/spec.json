@@ -26,7 +26,7 @@
     "actor_bucket_key": "camisha sawtele|MT"
   },
   "photo": {
-    "path": "public/court-actors/mt/camisha_sawtelle/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/camisha_sawtelle/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -46,7 +46,7 @@
     "_pdf_state_family_count": 56,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -112,16 +112,28 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "She represents a lot of kids in this county. She is not a family lawyer, she is an environmental lawyer. She never stands up for the children.",
+        "body": "She represents a lot of kids in this county.",
         "kind": "comment"
       },
       {
-        "body": "She does not stand up for or advocate for the children. The first week the kids were back with their parents, they were choked. She didn't see anything wrong with it",
+        "body": "She does not stand up for or advocate for the children.",
         "kind": "comment"
       },
       {
-        "body": "She defamesmy character all the time. She fought tooth and nail for my children to not go with our aunt, who is already a licensed foster home",
+        "body": "She defamesmy character all the time.",
         "kind": "comment"
+      },
+      {
+        "body": "Lots of new allegations of abuse.",
+        "kind": "family_report"
+      },
+      {
+        "body": "We are in constant worry mode for the safety of the children.",
+        "kind": "family_report"
+      },
+      {
+        "body": "They still have not proven any of the accusations. Yet my rights will be terminated.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

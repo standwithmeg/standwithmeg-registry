@@ -27,27 +27,27 @@
     "actor_bucket_key": "sybil sharvele|IN"
   },
   "photo": {
-    "path": "public/court-actors/in/sybil_sharvelle/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/sybil_sharvelle/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 128,
     "total_submissions": 153,
-    "avg_financial_loss": 121922.6,
-    "avg_months_lost": 30.0,
+    "avg_financial_loss": 132589.26,
+    "avg_months_lost": 30.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "IN",
     "state_family_count": 153,
-    "median_financial_loss": 63875,
-    "median_burden_sample_size": 76,
+    "median_financial_loss": 66500,
+    "median_burden_sample_size": 79,
     "median_months_lost": 18,
     "pro_se_pct": 45.8,
     "pro_se_count": 70,
     "_pdf_state_family_count": 153,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -125,7 +125,7 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Sybil Sharvelle ignored evidence of child molestation by DCS and the childrens' therapists.",
+        "body": "Sybil Sharvelle ignored evidence of child molestation by DCS.",
         "kind": "comment"
       },
       {
@@ -139,6 +139,22 @@
       {
         "body": "Ignored evidence, lied in GAL report, recommendations endangered children",
         "kind": "comment"
+      },
+      {
+        "body": "He gave the father sole custody after one hearing.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Enough is enough.",
+        "kind": "family_report"
+      },
+      {
+        "body": "The system worked with the father to take my children away from their loving mother.",
+        "kind": "family_report"
+      },
+      {
+        "body": "The child was taken by the father who received sole custody.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

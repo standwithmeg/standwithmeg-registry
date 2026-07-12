@@ -26,7 +26,7 @@
     "actor_bucket_key": "george jenkins|NC"
   },
   "photo": {
-    "path": "public/court-actors/nc/george_l_jenkins/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/george_l_jenkins/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -46,7 +46,7 @@
     "_pdf_state_family_count": 216,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -112,16 +112,24 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Supported continued separation from my child while failing to address evidence, due process concerns, and reunification efforts.",
+        "body": "Supported continued separation from my child while failing to address evidence, due…",
         "kind": "comment"
       },
       {
-        "body": "Overing cor dss mistakes, lying under oath, using legal language to trick, demoralize and try to force adoption of kids",
+        "body": "Overing cor dss mistakes, lying under oath, using legal language to trick…",
         "kind": "comment"
       },
       {
-        "body": "Opposed reunification efforts and supported decisions that limited visitation and family placement options.",
+        "body": "Opposed reunification efforts and supported decisions that limited visitation and…",
         "kind": "comment"
+      },
+      {
+        "body": "The pain of being separated from my child has affected every part of my life.",
+        "kind": "family_report"
+      },
+      {
+        "body": "This system took my children, our time, our milestones, and our peace.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

@@ -44,7 +44,7 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "public/court-actors/al/william_e_scully_jr/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/william_e_scully_jr/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -64,7 +64,7 @@
     "_pdf_state_family_count": 130,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 21,
     "actor_report_count": 21,
@@ -288,9 +288,33 @@
       {
         "body": "They didnt even let me testify",
         "kind": "comment"
+      },
+      {
+        "body": "Destroyed my relationship with my granddaughter.",
+        "kind": "family_report"
+      },
+      {
+        "body": "They have destroyed everything we’ve worked for and I will never get that back.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Helped us instead made it harder to keep her safe",
+        "kind": "family_report"
+      },
+      {
+        "body": "My children send me videos daily crying. They think they don’t get to ever come home.",
+        "kind": "family_report"
+      },
+      {
+        "body": "TORE UP OUR HAPPY HOME AN DESTROYED MY TWINS EMOTIONALLY AND MENTALLY",
+        "kind": "family_report"
+      },
+      {
+        "body": "Tore my family apart. I haven't talked to my son in months",
+        "kind": "family_report"
       }
     ],
-    "quote_page_count": 2
+    "quote_page_count": 3
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

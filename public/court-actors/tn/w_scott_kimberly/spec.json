@@ -44,7 +44,7 @@
     "_pdf_state_family_count": 123,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5421,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 1,
     "actor_report_count": 1,
@@ -98,7 +98,7 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "He made several false allegations against me never proved anything or he would try to take something and twist it. He is very manipulative and conniving.",
+        "body": "I know that there was a court reporter in that room, but yet they are claiming that there wasn't.",
         "kind": "comment"
       },
       {
@@ -108,6 +108,10 @@
       {
         "body": "Plays golf with judges.",
         "kind": "comment"
+      },
+      {
+        "body": "The family court process moves at the speed of procedure, but childhood moves at the speed of time.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

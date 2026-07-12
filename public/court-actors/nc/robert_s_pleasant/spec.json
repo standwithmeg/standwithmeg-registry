@@ -26,7 +26,7 @@
     "actor_bucket_key": "robert pleasant|NC"
   },
   "photo": {
-    "path": "public/court-actors/nc/robert_s_pleasant/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/robert_s_pleasant/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -46,7 +46,7 @@
     "_pdf_state_family_count": 216,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -112,16 +112,24 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "He just walked in and said it should be dismissed. The judge looked over the paper and dismissed it without hearing my evidence.",
+        "body": "He just walked in and said it should be dismissed.",
         "kind": "comment"
       },
       {
-        "body": "Opposing counsel represented the children’s father throughout the custody and child welfare proceedings.",
+        "body": "I am including this attorney.",
         "kind": "comment"
       },
       {
-        "body": "Failed to file a motion to modify a pre trial order after consultation with client during mediation resulting in tens of thousands of dollars lost.",
+        "body": "Failed to file a motion to modify a pre trial order after consultation with client…",
         "kind": "comment"
+      },
+      {
+        "body": "They have systematically degraded my relationship with my children, and enabled the…",
+        "kind": "family_report"
+      },
+      {
+        "body": "My mental health is severely destroyed and struggling to maintain hope.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

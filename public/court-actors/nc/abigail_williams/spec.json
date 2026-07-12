@@ -27,7 +27,7 @@
     "actor_bucket_key": "abigail wiliams|NC"
   },
   "photo": {
-    "path": "public/court-actors/nc/abigail_williams/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/abigail_williams/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -47,7 +47,7 @@
     "_pdf_state_family_count": 216,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -125,11 +125,11 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "That letter was also back dated by two days. She lied in the order she got signed by Regina Parker.",
+        "body": "She lied in the order she got signed by Regina Parker.",
         "kind": "comment"
       },
       {
-        "body": "She threatened me while at the hospital with my son. Refused to leave his room even when asked.",
+        "body": "(Recorded) Falsified her records to obtain non secured custody.",
         "kind": "comment"
       },
       {
@@ -139,6 +139,22 @@
       {
         "body": "She perjured herself many times on the stand. Lied during intake, has lied repeatedly.",
         "kind": "comment"
+      },
+      {
+        "body": "They have robbed me and my children of precious time we will never get back",
+        "kind": "family_report"
+      },
+      {
+        "body": "Former pissed off foster kid",
+        "kind": "family_report"
+      },
+      {
+        "body": "Gave my 8 year old daughter to our abuser",
+        "kind": "family_report"
+      },
+      {
+        "body": "The system tried to destroy and break our family simply for money.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

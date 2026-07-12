@@ -26,27 +26,27 @@
     "actor_bucket_key": "katy reichert|NE"
   },
   "photo": {
-    "path": "public/court-actors/ne/katy_reichert/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/katy_reichert/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 36,
-    "total_submissions": 43,
-    "avg_financial_loss": 185315.88,
-    "avg_months_lost": 35.3,
+    "families_approved": 37,
+    "total_submissions": 44,
+    "avg_financial_loss": 180795.98,
+    "avg_months_lost": 35.0,
     "_source_table": "movement_stats_by_state",
     "_match_value": "NE",
-    "state_family_count": 43,
+    "state_family_count": 44,
     "median_financial_loss": 240500,
     "median_burden_sample_size": 17,
-    "median_months_lost": 20,
-    "pro_se_pct": 48.8,
+    "median_months_lost": 22,
+    "pro_se_pct": 47.7,
     "pro_se_count": 21,
-    "_pdf_state_family_count": 43,
+    "_pdf_state_family_count": 44,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5421,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -112,7 +112,7 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "She was done with my kids case in the middle of it and transferred it to Audrey and accused me of taking doctors notes because that’s what the school had said.",
+        "body": "They were legitimate and I had sent her the legitimate doctors notes.",
         "kind": "comment"
       },
       {
@@ -122,6 +122,18 @@
       {
         "body": "She did not hear me out because I’m a ma",
         "kind": "comment"
+      },
+      {
+        "body": "Scottsbluff just wants to keep funding the sick individuals who think taking kids…",
+        "kind": "family_report"
+      },
+      {
+        "body": "The state is making money off of destroying families",
+        "kind": "family_report"
+      },
+      {
+        "body": "After working for DHHS and wanting to be the person to help me make a positive change.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

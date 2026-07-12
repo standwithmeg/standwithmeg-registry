@@ -27,7 +27,7 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "public/court-actors/ma/manisha_bhatt/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/manisha_bhatt/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -47,7 +47,7 @@
     "_pdf_state_family_count": 106,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -129,7 +129,7 @@
         "kind": "comment"
       },
       {
-        "body": "Denied requests to hear testimony from a witness with firsthand knowledge of the children’s living situation",
+        "body": "Denied my request for regular weekly phone contact with my daughters",
         "kind": "comment"
       },
       {
@@ -137,8 +137,24 @@
         "kind": "comment"
       },
       {
-        "body": "Haven’t seen children in two years, contempts were not taken seriously and there were no consequences and…",
+        "body": "Haven’t seen children in two years, contempts were not taken seriously and there…",
         "kind": "comment"
+      },
+      {
+        "body": "Haven’t seen children in two years.",
+        "kind": "family_report"
+      },
+      {
+        "body": "A system that was supposed to protect my children ignored their voices, separated…",
+        "kind": "family_report"
+      },
+      {
+        "body": "When a parent feels unheard in Court, the loss isn’t measured in legal orders-it’s…",
+        "kind": "family_report"
+      },
+      {
+        "body": "To this day, my children who are now 25, 21, 19, and 17....are still in counseling.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

@@ -27,27 +27,27 @@
     "actor_bucket_key": "ann kele|OK"
   },
   "photo": {
-    "path": "public/court-actors/ok/ann_keele/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/ann_keele/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 131,
-    "total_submissions": 164,
-    "avg_financial_loss": 119502.36,
-    "avg_months_lost": 24.6,
+    "total_submissions": 166,
+    "avg_financial_loss": 118855.1,
+    "avg_months_lost": 24.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OK",
-    "state_family_count": 164,
-    "median_financial_loss": 94750,
-    "median_burden_sample_size": 88,
+    "state_family_count": 166,
+    "median_financial_loss": 99500,
+    "median_burden_sample_size": 89,
     "median_months_lost": 12,
-    "pro_se_pct": 43.9,
+    "pro_se_pct": 43.4,
     "pro_se_count": 72,
-    "_pdf_state_family_count": 164,
+    "_pdf_state_family_count": 166,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5421,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -107,12 +107,24 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Anne helped this woman kidnap my daughter with help of gal Megan Beck. Now I pay child support to my daughter’s dad who does not even live with my daughter.",
+        "body": "Anne helped this woman kidnap my daughter with help of gal Megan Beck.",
         "kind": "comment"
       },
       {
-        "body": "To be disclosed if my testimony is required. I have paper, digital, and video evidence of all of my above statements. The judge dismissed all as evidence.",
+        "body": "The judge dismissed all as evidence.",
         "kind": "comment"
+      },
+      {
+        "body": "Took years from me.",
+        "kind": "family_report"
+      },
+      {
+        "body": "This is on the record! Literally destroying my kids, family and my life still to this day!",
+        "kind": "family_report"
+      },
+      {
+        "body": "Family court has shown me that children and families come last.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

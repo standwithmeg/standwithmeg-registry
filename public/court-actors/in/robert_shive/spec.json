@@ -27,27 +27,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "public/court-actors/in/robert_shive/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/robert_shive/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 128,
     "total_submissions": 153,
-    "avg_financial_loss": 121922.6,
-    "avg_months_lost": 30.0,
+    "avg_financial_loss": 132589.26,
+    "avg_months_lost": 30.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "IN",
     "state_family_count": 153,
-    "median_financial_loss": 63875,
-    "median_burden_sample_size": 76,
+    "median_financial_loss": 66500,
+    "median_burden_sample_size": 79,
     "median_months_lost": 18,
     "pro_se_pct": 45.8,
     "pro_se_count": 70,
     "_pdf_state_family_count": 153,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -101,12 +101,20 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Took $3500 said we had a good chance but I needed to get a continuance. So I did then the dcs attorney Donna Sip contacted him before I hired him.",
+        "body": "Took $3500 said we had a good chance but I needed to get a continuance.",
         "kind": "comment"
       },
       {
         "body": "Repeatedly filed false reports with court and acted outside his appointed role.",
         "kind": "comment"
+      },
+      {
+        "body": "Took time we will never get back scared to seek medical help caused harm to my son",
+        "kind": "family_report"
+      },
+      {
+        "body": "It is a well-documented systematic network of people profiting off perpetuating the endless nightmare of…",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

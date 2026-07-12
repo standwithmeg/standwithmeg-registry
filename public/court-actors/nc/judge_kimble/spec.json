@@ -28,7 +28,7 @@
     "actor_bucket_key": "kimble|NC"
   },
   "photo": {
-    "path": "public/court-actors/nc/judge_kimble/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/judge_kimble/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -48,7 +48,7 @@
     "_pdf_state_family_count": 216,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -126,20 +126,28 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Pushed and pushed his decision as far as he possible could. The father had zero case against the mother.",
+        "body": "The father had zero case against the mother. All his accusations were proved false.",
         "kind": "comment"
       },
       {
-        "body": "He also was talking inappropriately with the attorney - he allowed heresay numerous times for her client.",
+        "body": "He allowed heresay numerous times for her client.",
         "kind": "comment"
       },
       {
-        "body": "Left child with abuser. Took months and months to make a ruling on emergency ex parte order",
+        "body": "Took my son from me with no evidence Made a ruling with no evidence.",
         "kind": "comment"
       },
       {
         "body": "Took entirely too long to rule on an emergency case.",
         "kind": "comment"
+      },
+      {
+        "body": "This has cost my parents their retirement savings.",
+        "kind": "family_report"
+      },
+      {
+        "body": "After domestic violence testimony and tons of evidence the judge still took my babies.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

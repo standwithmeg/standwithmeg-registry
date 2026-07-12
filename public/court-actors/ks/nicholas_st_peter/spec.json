@@ -27,7 +27,7 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-vzi61zfo/New Final Post and Capcut template/export/nicholas_st_peter/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/nicholas_st_peter/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -47,7 +47,7 @@
     "_pdf_state_family_count": 253,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5430,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -101,12 +101,20 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Judge St. Peter used his family drug court to keep me from my baby. He told me that if I did not pass his drug court he was not going to let me have my baby back.",
+        "body": "Judge St. Peter used his family drug court to keep me from my baby.",
         "kind": "comment"
       },
       {
-        "body": "Judge St. Peter forces me into his family drug court program. He told me that if I did not complete the program he would make sure that I never saw my son again.",
+        "body": "He told me that if I did not complete the program he would make sure that I never saw my son again.",
         "kind": "comment"
+      },
+      {
+        "body": "I lost my son, my job, and my girlfriend because of TFI, Sheri Wampler and Judge St. Peter.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Judge St. Peter has cost me my child.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

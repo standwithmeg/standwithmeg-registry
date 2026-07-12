@@ -24,27 +24,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "public/court-actors/oh/julia_kolber/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/julia_kolber/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 208,
-    "total_submissions": 264,
-    "avg_financial_loss": 112074.3,
-    "avg_months_lost": 31.5,
+    "families_approved": 209,
+    "total_submissions": 265,
+    "avg_financial_loss": 111611.65,
+    "avg_months_lost": 31.3,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OH",
-    "state_family_count": 264,
+    "state_family_count": 265,
     "median_financial_loss": 79250,
     "median_burden_sample_size": 128,
     "median_months_lost": 18,
-    "pro_se_pct": 53.0,
+    "pro_se_pct": 52.8,
     "pro_se_count": 140,
-    "_pdf_state_family_count": 264,
+    "_pdf_state_family_count": 265,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5421,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 1,
     "actor_report_count": 1,
@@ -89,6 +89,10 @@
       {
         "body": "Engaged judge in ex parte communications, violated rules of professional conduct, failed to report abuse",
         "kind": "comment"
+      },
+      {
+        "body": "Took our health, finances and entrapped us into never ending horrific cycles of abuse. It gaslit us and turned every good thing about parenting and our bonds into a “problem”.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

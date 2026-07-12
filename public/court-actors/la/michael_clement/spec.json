@@ -28,7 +28,7 @@
     "actor_bucket_key": "michael clement|LA"
   },
   "photo": {
-    "path": "public/court-actors/la/michael_clement/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/michael_clement/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -48,7 +48,7 @@
     "_pdf_state_family_count": 64,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -150,15 +150,35 @@
         "kind": "comment"
       },
       {
-        "body": "Unethical, endgangered children, Ignored evidence, improper courtroom behavior, bias…",
+        "body": "Unethical, endgangered children, Ignored evidence, improper courtroom behavior…",
         "kind": "comment"
       },
       {
-        "body": "Denied my evidence that perjured ex’s witnesses, refused to allow my professionals to testify",
+        "body": "Denied my evidence that perjured ex’s witnesses",
         "kind": "comment"
+      },
+      {
+        "body": "Judge Michael Clement ignored evidence that the father abused our two children.",
+        "kind": "family_report"
+      },
+      {
+        "body": "The judge took me away from my mom who I love and was safe with her.",
+        "kind": "family_report"
+      },
+      {
+        "body": "The system worked with the father to take my children away from their loving mother.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Forced her to live with her abuser",
+        "kind": "family_report"
+      },
+      {
+        "body": "Walking through family court felt less like seeking protection and more like trying…",
+        "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 2
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

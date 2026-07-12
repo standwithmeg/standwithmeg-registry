@@ -27,7 +27,7 @@
     "actor_bucket_key": "april haris brit|NC"
   },
   "photo": {
-    "path": "public/court-actors/nc/april_harris_britt/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/april_harris_britt/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -47,7 +47,7 @@
     "_pdf_state_family_count": 216,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -101,12 +101,20 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Had LLC with attorney on the case and made money off hundreds of families - Look at her reviews- should NEVER be allowed to work with any families as she should have her license revoked !!!",
+        "body": "Allowed to work with any families as she should have her license revoked !!!",
         "kind": "comment"
       },
       {
         "body": "Lied about everything told to her by us as kids and twisted in court",
         "kind": "comment"
+      },
+      {
+        "body": "The lies that were told and upheld in family court allowed my dad to win.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Family court was a nightmare that felt as though it would never end. It nearly killed me.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

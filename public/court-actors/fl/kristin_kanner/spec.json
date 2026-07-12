@@ -32,7 +32,7 @@
     "actor_bucket_key": "kristin kanner|FL"
   },
   "photo": {
-    "path": "public/court-actors/fl/kristin_kanner/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/kristin_kanner/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -52,7 +52,7 @@
     "_pdf_state_family_count": 306,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5427,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 9,
     "actor_report_count": 9,
@@ -176,9 +176,33 @@
       {
         "body": "Denied me due process resulting in tens of thousands of material loss",
         "kind": "comment"
+      },
+      {
+        "body": "I have relied on child support to help meet my monthly expenses.",
+        "kind": "family_report"
+      },
+      {
+        "body": "The Broward County family court system has left me feeling unheard.",
+        "kind": "family_report"
+      },
+      {
+        "body": "This system has taken years of my children’s lives, placed us in poverty while…",
+        "kind": "family_report"
+      },
+      {
+        "body": "Took my granddaughter while she was crying",
+        "kind": "family_report"
+      },
+      {
+        "body": "Ignored while the system closed ranks to protect itself",
+        "kind": "family_report"
+      },
+      {
+        "body": "(Broward County, FL- FMCE [redacted])",
+        "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 2
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

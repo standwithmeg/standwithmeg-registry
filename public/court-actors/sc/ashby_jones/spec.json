@@ -33,7 +33,7 @@
     "actor_bucket_key": "ashby jones|SC"
   },
   "photo": {
-    "path": "public/court-actors/sc/ashby_jones/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/ashby_jones/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -53,7 +53,7 @@
     "_pdf_state_family_count": 108,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5421,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 10,
     "actor_report_count": 10,
@@ -197,9 +197,29 @@
       {
         "body": "Please see all the above for context.",
         "kind": "comment"
+      },
+      {
+        "body": "Traumatized the children, destroyed their childhoods and bankrupt me all in the…",
+        "kind": "family_report"
+      },
+      {
+        "body": "He is forced to be around my abusive father against his will.",
+        "kind": "family_report"
+      },
+      {
+        "body": "We have been separated for years and only see them a few times a year.",
+        "kind": "family_report"
+      },
+      {
+        "body": "The hardest part of family court wasn’t the accusations.",
+        "kind": "family_report"
+      },
+      {
+        "body": "The greatest long-term damage is not what happened to me.",
+        "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 2
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

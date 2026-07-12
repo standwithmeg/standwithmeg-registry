@@ -28,7 +28,7 @@
     "actor_bucket_key": "kely bernstein|TX"
   },
   "photo": {
-    "path": "public/court-actors/tx/kelly_bernstein/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/kelly_bernstein/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -48,7 +48,7 @@
     "_pdf_state_family_count": 316,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5421,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -114,16 +114,28 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "She invited the child's abuser to attend without notice. She failed to report disclosed abuse to CPS. She continued to bill for sessions after sessions were stopped.",
+        "body": "She invited the child's abuser to attend without notice.",
         "kind": "comment"
       },
       {
-        "body": "Led me on for more than a year with absolutely zero effort in actually reuniting my children and I.",
+        "body": "Actually reuniting my children",
         "kind": "comment"
       },
       {
-        "body": "Being manipulated by mother. Easy manipulated. She is part of the problem and not the solution.",
+        "body": "Being manipulated by mother. Easy manipulated.",
         "kind": "comment"
+      },
+      {
+        "body": "There are serious concerns about how Karl Hays and his appointed GALs such as…",
+        "kind": "family_report"
+      },
+      {
+        "body": "Completely took the side of the mother.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Sad that this is allowed to happen time and time again- no accountability for the…",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

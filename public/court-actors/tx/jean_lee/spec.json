@@ -27,7 +27,7 @@
     "actor_bucket_key": "jean lee|TX"
   },
   "photo": {
-    "path": "public/court-actors/tx/jean_lee/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/jean_lee/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -47,7 +47,7 @@
     "_pdf_state_family_count": 316,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5421,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -107,12 +107,20 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "She allowed the children to be taken via transporter to a camp led by Lisa Rothfus out of town, where they were forced, threatened with psychiatric hospitalization if they did not go with transporter.",
+        "body": "Allowed the children to be taken via transporter to a camp led by Lisa Rothfus out of town",
         "kind": "comment"
       },
       {
-        "body": "Judge was listening to YouTube and music played out while I was testifying. Judge allowed claims of abuse with no evidence. Judge used her personal opinions over evidence presented",
+        "body": "Judge allowed claims of abuse with no evidence.",
         "kind": "comment"
+      },
+      {
+        "body": "The first time he used false claims and a restraining order and I got them back.",
+        "kind": "family_report"
+      },
+      {
+        "body": "It has broken my family. It is broken my spirit. Almost led me to suicide",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

@@ -13,9 +13,9 @@
     "state": "Ohio",
     "state_abbr": "OH",
     "mention_count": 7,
-    "family_count": 1,
-    "public_family_count": 1,
-    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "family_count": 6,
+    "public_family_count": 6,
+    "public_family_count_source": "canonical_supabase_rows_over_stale_public_api",
     "actor_report_count": 7,
     "supabase_row_ids": [
       "2f9858c1-56aa-4d4d-b17e-f87cc2a004c3",
@@ -30,31 +30,31 @@
     "actor_bucket_key": "jenifer storer|OH"
   },
   "photo": {
-    "path": "public/court-actors/oh/jennifer_storer/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/jennifer_storer/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 208,
-    "total_submissions": 264,
-    "avg_financial_loss": 112074.3,
-    "avg_months_lost": 31.5,
+    "families_approved": 209,
+    "total_submissions": 265,
+    "avg_financial_loss": 111611.65,
+    "avg_months_lost": 31.3,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OH",
-    "state_family_count": 264,
+    "state_family_count": 265,
     "median_financial_loss": 79250,
     "median_burden_sample_size": 128,
     "median_months_lost": 18,
-    "pro_se_pct": 53.0,
+    "pro_se_pct": 52.8,
     "pro_se_count": 140,
-    "_pdf_state_family_count": 264,
+    "_pdf_state_family_count": 265,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5421,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 7,
     "actor_report_count": 7,
-    "family_count": 1,
+    "family_count": 6,
     "family_reports": [
       {
         "body": "I am the alienated parent, this has caused me to have PTSD and the total loss of custody, my parenting time and my parental rights now my daughter is an adult. The damage is already done but I have been through unimaginable stress and loss grieving my daughter that is still alive because of the lies and decisions of someone else. I missed out on so much of my daughter's life, memories and her graduation from high school that I can never replace or get back because of this system that chose to turn their back on me as a loving mother.",
@@ -133,7 +133,9 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/jennifer_storer",
-  "unresolved": [],
+  "unresolved": [
+    "public_family_count_api: returned stale lower count 1; used canonical Supabase count 6"
+  ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -170,9 +172,25 @@
       {
         "body": "Lied to me about giving my daughter back to me",
         "kind": "comment"
+      },
+      {
+        "body": "I am the alienated parent, this has caused me to have PTSD.",
+        "kind": "family_report"
+      },
+      {
+        "body": "This system has lied and tore my family apart causing emotional damage",
+        "kind": "family_report"
+      },
+      {
+        "body": "They took the happiest and joy out of us",
+        "kind": "family_report"
+      },
+      {
+        "body": "Killed me and my family",
+        "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 2
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

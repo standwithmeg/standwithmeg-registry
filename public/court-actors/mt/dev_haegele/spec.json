@@ -26,7 +26,7 @@
     "actor_bucket_key": "dev haegele|MT"
   },
   "photo": {
-    "path": "public/court-actors/mt/dev_haegele/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/dev_haegele/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -46,7 +46,7 @@
     "_pdf_state_family_count": 56,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -112,16 +112,28 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "She came on the case and the 1st visit she was terrible to us. Then said she was returning the kids to the abusive parents.",
+        "body": "She came on the case and the 1st visit she was terrible to us.",
         "kind": "comment"
       },
       {
-        "body": "CPS worker. She is allowing the kids to stay in an abusive environment. Treats the kinship foster parents extremely bad",
+        "body": "CPS worker. She is allowing the kids to stay in an abusive environment.",
         "kind": "comment"
       },
       {
         "body": "She lies and put children in harms way all the time",
         "kind": "comment"
+      },
+      {
+        "body": "Lots of new allegations of abuse.",
+        "kind": "family_report"
+      },
+      {
+        "body": "We are in constant worry mode for the safety of the children.",
+        "kind": "family_report"
+      },
+      {
+        "body": "They still have not proven any of the accusations. Yet my rights will be terminated.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

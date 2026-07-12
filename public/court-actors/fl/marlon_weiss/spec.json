@@ -30,7 +30,7 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "public/court-actors/fl/marlon_weiss/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/marlon_weiss/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -50,7 +50,7 @@
     "_pdf_state_family_count": 306,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 7,
     "actor_report_count": 7,
@@ -180,9 +180,33 @@
       {
         "body": "None of them follow case law.",
         "kind": "comment"
+      },
+      {
+        "body": "Family court has created a hostile environment where abuse has continued to be…",
+        "kind": "family_report"
+      },
+      {
+        "body": "Separated my child from his primary caregiver based on unproven allegations",
+        "kind": "family_report"
+      },
+      {
+        "body": "Gave him to the arms of a undocumented criminal Steven Noel French",
+        "kind": "family_report"
+      },
+      {
+        "body": "Family court destroyed my family.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Broward County Family Court refuses due process and evidence.",
+        "kind": "family_report"
+      },
+      {
+        "body": "My child is severely mentally harmed and I have no way to help her.",
+        "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 2
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

@@ -26,7 +26,7 @@
     "actor_bucket_key": "andrea starkey|NC"
   },
   "photo": {
-    "path": "public/court-actors/nc/andrea_starkey/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/andrea_starkey/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -46,7 +46,7 @@
     "_pdf_state_family_count": 216,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -112,16 +112,28 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Told one of my sons he was nothing.",
+        "body": "Falsified records to GAL",
         "kind": "comment"
       },
       {
-        "body": "She told me dss had custody and I would do what they told me or my life would become very hard. I wanted to go home.",
+        "body": "I would do what they told me or my life would become very hard.",
         "kind": "comment"
       },
       {
-        "body": "I told her she needed to take it in front of a judge and she refused and threatened to take my kids. Also tried making my disabled husband work",
+        "body": "She refused and threatened to take my kids.",
         "kind": "comment"
+      },
+      {
+        "body": "They have robbed me and my children of precious time we will never get back",
+        "kind": "family_report"
+      },
+      {
+        "body": "Former pissed off foster kid",
+        "kind": "family_report"
+      },
+      {
+        "body": "The system tried to destroy and break our family simply for money.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

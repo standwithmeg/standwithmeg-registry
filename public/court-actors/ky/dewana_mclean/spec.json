@@ -48,7 +48,7 @@
     "_pdf_state_family_count": 90,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5430,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -108,12 +108,24 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Lied in petitions, biased. Didn’t investigate properly, favored mom over dad despite same allegations in both homes.",
+        "body": "Lied in petitions, biased.",
         "kind": "comment"
       },
       {
         "body": "Biased, didn’t properly investigate Falsifying documents",
         "kind": "comment"
+      },
+      {
+        "body": "Destroyed my family",
+        "kind": "family_report"
+      },
+      {
+        "body": "The system is broken, it’s destroyed 4 children’s lives",
+        "kind": "family_report"
+      },
+      {
+        "body": "Alienation of the children from a loving father and stepmother",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

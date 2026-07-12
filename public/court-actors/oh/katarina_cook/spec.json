@@ -26,27 +26,27 @@
     "actor_bucket_key": "katarina cook|OH"
   },
   "photo": {
-    "path": "public/court-actors/oh/katarina_cook/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/katarina_cook/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 208,
-    "total_submissions": 264,
-    "avg_financial_loss": 112074.3,
-    "avg_months_lost": 31.5,
+    "families_approved": 209,
+    "total_submissions": 265,
+    "avg_financial_loss": 111611.65,
+    "avg_months_lost": 31.3,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OH",
-    "state_family_count": 264,
+    "state_family_count": 265,
     "median_financial_loss": 79250,
     "median_burden_sample_size": 128,
     "median_months_lost": 18,
-    "pro_se_pct": 53.0,
+    "pro_se_pct": 52.8,
     "pro_se_count": 140,
-    "_pdf_state_family_count": 264,
+    "_pdf_state_family_count": 265,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5421,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -100,12 +100,16 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Denied hearings for over 21 months, while significant decisions were made in unrecorded status conferences with attorneys only, regarding finances, visitation and custody, and involvement of legal and mental health professionals and payment.",
+        "body": "Denied hearings for over 21 months.",
         "kind": "comment"
       },
       {
-        "body": "Senior judge-she sucks and allows the lying and keeps known liar GALS, including the director Randy Flick who is gay and wears it proudly-so am I but it’s innapropriate when you are representing a county as a whole-she told me.",
-        "kind": "comment"
+        "body": "Children’s relationship with Parents forever destroyed.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Took my 4 children from a mother they all 4 testified to stay with in an in-camera interview-to retaliate",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

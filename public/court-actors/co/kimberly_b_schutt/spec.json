@@ -27,7 +27,7 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "public/court-actors/co/kimberly_b_schutt/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/kimberly_b_schutt/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -47,7 +47,7 @@
     "_pdf_state_family_count": 110,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -117,12 +117,20 @@
         "kind": "comment"
       },
       {
-        "body": "Opened a CPS case falsely using educational neglect as a way to start a CPS investigation that lasted 4 years and thousands of dollars.",
+        "body": "Was extremely new to family court and not well versed in high conflict parenting.",
         "kind": "comment"
       },
       {
         "body": "She ignored Family First and listened to DHS.",
         "kind": "comment"
+      },
+      {
+        "body": "This situation has affected our daughter and her siblings relationship which should…",
+        "kind": "family_report"
+      },
+      {
+        "body": "Evidence of withheld parenting time, denied contact, and gatekeeping.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

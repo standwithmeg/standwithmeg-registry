@@ -37,7 +37,7 @@
     ]
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-vzi61zfo/New Final Post and Capcut template/export/kimberly_walson/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/kimberly_walson/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -57,7 +57,7 @@
     "_pdf_state_family_count": 90,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5430,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
@@ -129,7 +129,7 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Bias, took kids over unrelated incidents to child safety, didn’t let me speak and hear my evidence.",
+        "body": "Took kids over unrelated incidents to child safety",
         "kind": "comment"
       },
       {
@@ -137,8 +137,24 @@
         "kind": "comment"
       },
       {
-        "body": "Biased, immediately gave my kids to other party without prior reasons Biased, delayed reunification, ignored evidence",
+        "body": "Prior reasons Biased, delayed reunification, ignored evidence",
         "kind": "comment"
+      },
+      {
+        "body": "The family court system has destroyed my and my daughter’s life as we knew it.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Destroyed my family",
+        "kind": "family_report"
+      },
+      {
+        "body": "The system is broken, it’s destroyed 4 children’s lives",
+        "kind": "family_report"
+      },
+      {
+        "body": "Alienation of the children from a loving father and stepmother",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

@@ -26,7 +26,7 @@
     "actor_bucket_key": "nancy jordan|SC"
   },
   "photo": {
-    "path": "public/court-actors/sc/nancy_jordan/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/nancy_jordan/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -46,7 +46,7 @@
     "_pdf_state_family_count": 108,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5421,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -100,12 +100,16 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Clear bias to father despite clear evidence she ignored and made her opinion known that she favored him and didn’t care for mom- not factual just opinion. She spent little time with kids.",
+        "body": "She ignored and made her opinion known that she favored him and didn’t care for mom- not factual just opinion.",
         "kind": "comment"
       },
       {
         "body": "Did not believe children despite forensic interview confirming domestic violence",
         "kind": "comment"
+      },
+      {
+        "body": "Richland Family Court is a chess board of paid players and you are a pawn.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

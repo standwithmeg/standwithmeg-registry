@@ -32,27 +32,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "public/court-actors/mi/brian_kirkham/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/brian_kirkham/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 147,
-    "total_submissions": 178,
-    "avg_financial_loss": 182868.73,
-    "avg_months_lost": 36.8,
+    "families_approved": 148,
+    "total_submissions": 179,
+    "avg_financial_loss": 182082.1,
+    "avg_months_lost": 37.2,
     "_source_table": "movement_stats_by_state",
     "_match_value": "MI",
-    "state_family_count": 178,
+    "state_family_count": 179,
     "median_financial_loss": 101500,
     "median_burden_sample_size": 79,
-    "median_months_lost": 17,
-    "pro_se_pct": 43.8,
+    "median_months_lost": 18,
+    "pro_se_pct": 43.6,
     "pro_se_count": 78,
-    "_pdf_state_family_count": 178,
+    "_pdf_state_family_count": 179,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 9,
     "actor_report_count": 9,
@@ -160,9 +160,29 @@
       {
         "body": "Ex parte with sworn affidavit of no child abuse.",
         "kind": "comment"
+      },
+      {
+        "body": "Everything I tried to change the court order. They never gave me a new judge.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Not a damn thing",
+        "kind": "family_report"
+      },
+      {
+        "body": "FOC has suppressed the relationship with my son with no care about his heart in the…",
+        "kind": "family_report"
+      },
+      {
+        "body": "They’ve taken advantage of me by using my PTSD and mental health issues.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Gave me PTSD my oldest a drug problem and broke our family apart",
+        "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 2
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

@@ -47,7 +47,7 @@
     "_pdf_state_family_count": 73,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -113,7 +113,7 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Not conducting an independent study, filling false documentation into court, Lying on the stand.",
+        "body": "Not conducting an independent study, filling false documentation into court, Lying…",
         "kind": "comment"
       },
       {
@@ -123,6 +123,18 @@
       {
         "body": "Refused documents",
         "kind": "comment"
+      },
+      {
+        "body": "It has broken a special bond between a grandmother and grandchild.",
+        "kind": "family_report"
+      },
+      {
+        "body": "He was SOLD, The county's make more money.",
+        "kind": "family_report"
+      },
+      {
+        "body": "My whole body shakes and now I have GAD which causes issues like going to the post…",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

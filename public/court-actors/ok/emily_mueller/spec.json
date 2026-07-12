@@ -39,27 +39,27 @@
     ]
   },
   "photo": {
-    "path": "public/court-actors/ok/emily_mueller/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/emily_mueller/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 131,
-    "total_submissions": 164,
-    "avg_financial_loss": 119502.36,
-    "avg_months_lost": 24.6,
+    "total_submissions": 166,
+    "avg_financial_loss": 118855.1,
+    "avg_months_lost": 24.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OK",
-    "state_family_count": 164,
-    "median_financial_loss": 94750,
-    "median_burden_sample_size": 88,
+    "state_family_count": 166,
+    "median_financial_loss": 99500,
+    "median_burden_sample_size": 89,
     "median_months_lost": 12,
-    "pro_se_pct": 43.9,
+    "pro_se_pct": 43.4,
     "pro_se_count": 72,
-    "_pdf_state_family_count": 164,
+    "_pdf_state_family_count": 166,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5421,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 8,
     "actor_report_count": 8,
@@ -179,9 +179,33 @@
       {
         "body": "She's been disrespectful to me the entire time throughout the process of dealing…",
         "kind": "comment"
+      },
+      {
+        "body": "All Judges must be held accountable for their actions, verdicts and behaviors.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Destroyed my family and severed my relationship with my daughter.",
+        "kind": "family_report"
+      },
+      {
+        "body": "This has ruined my son’s life and turned my family’s world completely upside down.",
+        "kind": "family_report"
+      },
+      {
+        "body": "They stole my son and traumatized me for life.",
+        "kind": "family_report"
+      },
+      {
+        "body": "It's made it harder to see my boys and to pay my bills and harder for me to work on…",
+        "kind": "family_report"
+      },
+      {
+        "body": "My children were removed due to miscommunication, and lies by multiple parties.",
+        "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 2
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

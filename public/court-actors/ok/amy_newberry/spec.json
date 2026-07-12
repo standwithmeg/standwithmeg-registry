@@ -35,27 +35,27 @@
     "actor_bucket_key": "amy newbery|OK"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-vzi61zfo/New Final Post and Capcut template/export/amy_newberry/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/amy_newberry/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 130,
-    "total_submissions": 164,
-    "avg_financial_loss": 119502.36,
-    "avg_months_lost": 24.6,
+    "families_approved": 131,
+    "total_submissions": 166,
+    "avg_financial_loss": 118855.1,
+    "avg_months_lost": 24.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OK",
-    "state_family_count": 164,
-    "median_financial_loss": 94750,
-    "median_burden_sample_size": 88,
+    "state_family_count": 166,
+    "median_financial_loss": 99500,
+    "median_burden_sample_size": 89,
     "median_months_lost": 12,
-    "pro_se_pct": 43.9,
+    "pro_se_pct": 43.4,
     "pro_se_count": 72,
-    "_pdf_state_family_count": 164,
+    "_pdf_state_family_count": 166,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5430,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 12,
     "actor_report_count": 12,
@@ -133,7 +133,7 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Allowed associate to provide court ordered anger management to the father so they could work together",
+        "body": "Ordered anger management to the father so they could work together",
         "kind": "comment"
       },
       {
@@ -141,12 +141,24 @@
         "kind": "comment"
       },
       {
-        "body": "The few safe parents I know that she’s lied about fit the same profile. She seems to have a type she goes after.",
+        "body": "The few safe parents I know that she’s lied about fit the same profile.",
         "kind": "comment"
       },
       {
-        "body": "Was in the same office with Larissa and fed the drama of false allegations by making up her own",
+        "body": "Was in the same office with Larissa and fed the drama of false allegations by…",
         "kind": "comment"
+      },
+      {
+        "body": "An entire generation of kids is learning that their voices do not matter when they…",
+        "kind": "family_report"
+      },
+      {
+        "body": "It is psychologically messing up my children.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Being a low income single black mother in Oklahoma is apparently cause to be deemed…",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

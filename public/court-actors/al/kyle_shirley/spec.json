@@ -31,7 +31,7 @@
     "actor_bucket_key": "kyle shirley|AL"
   },
   "photo": {
-    "path": "public/court-actors/al/kyle_shirley/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/kyle_shirley/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -51,7 +51,7 @@
     "_pdf_state_family_count": 130,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 8,
     "actor_report_count": 8,
@@ -137,12 +137,24 @@
         "kind": "comment"
       },
       {
-        "body": "GAL didn’t interview, talk or visit with me concerning my parenting and relationship with my child.",
+        "body": "Not a phone call or meeting with me.",
         "kind": "comment"
       },
       {
-        "body": "Represented the other party. Had undisclosed personal and familial ties to his client. Conflict of interest.",
+        "body": "Represented the other party. Had undisclosed personal and familial ties to his client.",
         "kind": "comment"
+      },
+      {
+        "body": "It cost me everything.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Autauga County family court has failed my children and me over and over again.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Refused all documented evidence",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

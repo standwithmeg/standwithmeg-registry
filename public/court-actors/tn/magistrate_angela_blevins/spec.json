@@ -30,7 +30,7 @@
     "actor_bucket_key": "angela blevins|TN"
   },
   "photo": {
-    "path": "public/court-actors/tn/magistrate_angela_blevins/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/magistrate_angela_blevins/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -50,7 +50,7 @@
     "_pdf_state_family_count": 123,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5421,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 7,
     "actor_report_count": 7,
@@ -128,7 +128,7 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "She ignored a negative drug screen that was submitted by my attorney she deemed me uncredible.",
+        "body": "I needed to watch myself",
         "kind": "comment"
       },
       {
@@ -140,8 +140,24 @@
         "kind": "comment"
       },
       {
-        "body": "Talked with GAL privately before our court hearing, and granted temporary custody order IPA?",
+        "body": "To family friend’s without explaining why.",
         "kind": "comment"
+      },
+      {
+        "body": "DCS decided to take my other son on grounds of “substance abuse and unsafe sleep”",
+        "kind": "family_report"
+      },
+      {
+        "body": "Violated and traumatized my entire family.",
+        "kind": "family_report"
+      },
+      {
+        "body": "It has destroyed us my kids cry me.",
+        "kind": "family_report"
+      },
+      {
+        "body": "DCS and Juvenile Court are taking children from homes just to generate funds.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

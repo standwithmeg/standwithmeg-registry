@@ -29,7 +29,7 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "public/court-actors/sc/rochelle_conits/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/rochelle_conits/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -49,7 +49,7 @@
     "_pdf_state_family_count": 108,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5421,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
@@ -109,12 +109,24 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "I had to proceed pro se against the top lawyer in Charleston thanks to this visiting judge's decision, and now have filed an appeal due to another unbelievable ruling.",
+        "body": "Allowed my attorney to withdraw right before a critical financial hearing",
         "kind": "comment"
       },
       {
         "body": "Violated our due process rights",
         "kind": "comment"
+      },
+      {
+        "body": "I was the primary parent, and they are with an abuser and have been for 11 month.",
+        "kind": "family_report"
+      },
+      {
+        "body": "We were great for 3 years, and then in the final hearing so many lies. DSS turned on us.",
+        "kind": "family_report"
+      },
+      {
+        "body": "They destroyed us.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

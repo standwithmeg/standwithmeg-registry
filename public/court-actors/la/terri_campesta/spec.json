@@ -13,9 +13,9 @@
     "state": "Louisiana",
     "state_abbr": "LA",
     "mention_count": 7,
-    "family_count": 1,
-    "public_family_count": 1,
-    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "family_count": 6,
+    "public_family_count": 6,
+    "public_family_count_source": "canonical_supabase_rows_over_stale_public_api",
     "actor_report_count": 7,
     "supabase_row_ids": [
       "2050a180-89b9-4ce2-8293-1df074d18c6c",
@@ -30,7 +30,7 @@
     "actor_bucket_key": "teri campesta|LA"
   },
   "photo": {
-    "path": "public/court-actors/la/terri_campesta/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/terri_campesta/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -50,11 +50,11 @@
     "_pdf_state_family_count": 64,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 7,
     "actor_report_count": 7,
-    "family_count": 1,
+    "family_count": 6,
     "family_reports": [
       {
         "body": "In 2022, while married, my husband abused our children and tried strangling me. I called 911 two times. I showed the custody evaluator and the judge evidence and the children disclosed the abuse they suffered. My daughter also disclosed sexual abuse by the father to the custody evaluator. The father hired Alicia Pellegrin to write a report. Alicia Pellegrin never met with the children or with me and she diagnosed parental alienation. She recommended the father get sole custody. The judge awarded the father sole custody.",
@@ -133,7 +133,9 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/terri_campesta",
-  "unresolved": [],
+  "unresolved": [
+    "public_family_count_api: returned stale lower count 1; used canonical Supabase count 6"
+  ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -174,9 +176,33 @@
       {
         "body": "Lied about me to give him sole custody",
         "kind": "comment"
+      },
+      {
+        "body": "I called 911 two times.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Judge Michael Clement ignored evidence that the father abused our two children.",
+        "kind": "family_report"
+      },
+      {
+        "body": "The judge took me away from my mom who I love and was safe with her.",
+        "kind": "family_report"
+      },
+      {
+        "body": "The system worked with the father to take my children away from their loving mother.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Forced her to live with her abuser",
+        "kind": "family_report"
+      },
+      {
+        "body": "Walking through family court felt less like seeking protection and more like trying…",
+        "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 2
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

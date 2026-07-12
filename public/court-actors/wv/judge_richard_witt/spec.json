@@ -26,7 +26,7 @@
     "actor_bucket_key": "richard witt|WV"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-vzi61zfo/New Final Post and Capcut template/export/judge_richard_witt/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/judge_richard_witt/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -46,7 +46,7 @@
     "_pdf_state_family_count": 58,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5430,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -122,6 +122,18 @@
       {
         "body": "Told me if I spoke he would make sure I never seen my children again",
         "kind": "comment"
+      },
+      {
+        "body": "This system has ripped apart my family, cost me my business, sanity and ruined my…",
+        "kind": "family_report"
+      },
+      {
+        "body": "I obtained a “do not prosecute” to spare the father from the fallout of his crimes.",
+        "kind": "family_report"
+      },
+      {
+        "body": "The system has destroyed relationships, legacies, holidays, milestones.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

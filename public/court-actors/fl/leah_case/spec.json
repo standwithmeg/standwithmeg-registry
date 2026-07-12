@@ -26,7 +26,7 @@
     "actor_bucket_key": "leah case|FL"
   },
   "photo": {
-    "path": "public/court-actors/fl/leah_case/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/leah_case/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -46,7 +46,7 @@
     "_pdf_state_family_count": 306,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -112,16 +112,28 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "• Altered consent documents and a fraudulent notary certificate attached to the case file. • Docket scrubbing that concealed the appointment of conflicted counsel.",
+        "body": "• Docket scrubbing that concealed the appointment of conflicted counsel.",
         "kind": "comment"
       },
       {
-        "body": "Raising these concerns, including the grandparent’s report of retaliation and record‑integrity issues, Chief Judge Case took no action.",
+        "body": "Chief Judge Leah Case (Seventh Circuit, Florida) As a family member, I reported to…",
         "kind": "comment"
       },
       {
-        "body": "Chief judge Leah Case barred me from FULL access to the Courts and placed an entire communication ban to the ENTIRE 7th judicial circuit, clerks, court…",
+        "body": "Chief judge Leah Case barred me from FULL access to the Courts and placed an entire…",
         "kind": "comment"
+      },
+      {
+        "body": "Lea Case ignored dependency court retaliation against my family",
+        "kind": "family_report"
+      },
+      {
+        "body": "A Canon 3E request for review, no action was taken.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Stripped me of my parental rights",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

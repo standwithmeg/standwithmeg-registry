@@ -12,47 +12,54 @@
     "court_or_county": "Newton Circuit Court",
     "state": "Indiana",
     "state_abbr": "IN",
-    "mention_count": 4,
+    "mention_count": 5,
     "family_count": 4,
     "public_family_count": 4,
     "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
-    "actor_report_count": 4,
+    "actor_report_count": 5,
     "supabase_row_ids": [
       "c363192d-bb66-4957-a621-4bf6a76bc206",
       "7fec2ca7-d5f3-41ad-8d3f-36037b16b4a2",
       "d3791fd6-b5fe-4ace-837a-5bc72a126c34",
-      "dc5c2702-5505-4916-add1-af8e36e74faf"
+      "dc5c2702-5505-4916-add1-af8e36e74faf",
+      "4d267fbb-17d7-4c4d-bc02-d97b5c5ca4af"
     ],
     "actor_row_id": "c363192d-bb66-4957-a621-4bf6a76bc206",
     "actor_bucket_key": "linda haris|IN"
   },
   "photo": {
-    "path": "public/court-actors/in/linda_harris/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/linda_harris/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 128,
     "total_submissions": 153,
-    "avg_financial_loss": 121922.6,
-    "avg_months_lost": 30.0,
+    "avg_financial_loss": 132589.26,
+    "avg_months_lost": 30.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "IN",
     "state_family_count": 153,
-    "median_financial_loss": 63875,
-    "median_burden_sample_size": 76,
+    "median_financial_loss": 66500,
+    "median_burden_sample_size": 79,
     "median_months_lost": 18,
     "pro_se_pct": 45.8,
     "pro_se_count": 70,
     "_pdf_state_family_count": 153,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5440,
   "supabase": {
-    "report_count": 4,
-    "actor_report_count": 4,
+    "report_count": 5,
+    "actor_report_count": 5,
     "family_count": 4,
     "family_reports": [
+      {
+        "body": "Continued conspiracies to commit murders and attempts, extortion, misappropriation of funds & government programs, embezzlement, harassment, intimidation, falsification of the record, fraud upon the Courts, human and child trafficking, mail fraud, public corruption, health care fraud, perjury, fiduciary breaches, tampering with, suppression of the record, evidence, targets, witnesses, and victims, RICO violations, due process and civil rights violations, conflicts of interests, quid pro quo, sabotage, organized violence, covert government programs, theft, laundering, stalking, identity theft, death threats, discrimination, bias, endangerment, aidiing and abetting,",
+        "state": "IN",
+        "county": "Lake and Newton County",
+        "row_id": "3f5a4867-f78d-42a9-9543-c59549296f2d"
+      },
       {
         "body": "Did nothing to her. Tried to communicate and got nothing but attitude. I didn’t think professionals spoke to other humans the way she spoke to me.",
         "state": "IN",
@@ -86,16 +93,16 @@
         "court_or_county": "Newton County Circuit"
       },
       {
+        "comment_text": "Continued conspiracies to commit murders and attempts, extortion, misappropriation of funds and government programs, embezzlement, harassment, intimidation, falsification of the record, fraud upon the Courts, trafficking, mail fraud, continued public corruption, health care fraud, fiduciary breaches, tampering with the record, witnesses, and victims, RICO, conflicts of interests, quid pro quo Did nothing to her. Tried to communicate and got nothing but attitude. I didn’t think professionals spoke to other humans the way she spoke to me.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lake and Newton County"
+      },
+      {
         "comment_text": "Racketeering, conspiracies to commit murders, attempted and threats for guardianship, tampering with record, harassment and intimidation, suppression, due process violations, extortion, theft, laundering, trafficking of human and children (“CHINS”, “adoption”, “juvenile delinquency”, “TPR”, paternity, identity theft, etc.), mail fraud, RICO",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Newton Circuit Court"
-      },
-      {
-        "comment_text": "Did nothing to her. Tried to communicate and got nothing but attitude. I didn’t think professionals spoke to other humans the way she spoke to me.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Newton County"
       },
       {
         "comment_text": "“Too scared to put why”",
@@ -125,20 +132,32 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Miss Harris was appointed to us by the court as a Guardian Ad Litem to our daughter during a custody issue.",
+        "body": "We paid her retainer fee of 1,500.00 and she turned in her report 2 days before court.",
         "kind": "comment"
       },
       {
-        "body": "Racketeering, conspiracies to commit murders, attempted and threats for guardianship, tampering with record…",
+        "body": "Tried to communicate and got nothing but attitude.",
         "kind": "comment"
       },
       {
-        "body": "Did nothing to her. Tried to communicate and got nothing but attitude.",
+        "body": "Racketeering, conspiracies to commit murders, attempted and threats for…",
         "kind": "comment"
       },
       {
         "body": "“Too scared to put why”",
         "kind": "comment"
+      },
+      {
+        "body": "lost custody to father, given supervision, subsequently threatened with an…",
+        "kind": "family_report"
+      },
+      {
+        "body": "Murderous saboteurs and traffickers for profit, denied motherhood and transferred…",
+        "kind": "family_report"
+      },
+      {
+        "body": "Defraud and destroy",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

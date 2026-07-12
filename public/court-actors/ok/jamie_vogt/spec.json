@@ -32,27 +32,27 @@
     "actor_bucket_key": "jamie vogt|OK"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-vzi61zfo/New Final Post and Capcut template/export/jamie_vogt/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/jamie_vogt/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 130,
-    "total_submissions": 164,
-    "avg_financial_loss": 119502.36,
-    "avg_months_lost": 24.6,
+    "families_approved": 131,
+    "total_submissions": 166,
+    "avg_financial_loss": 118855.1,
+    "avg_months_lost": 24.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OK",
-    "state_family_count": 164,
-    "median_financial_loss": 94750,
-    "median_burden_sample_size": 88,
+    "state_family_count": 166,
+    "median_financial_loss": 99500,
+    "median_burden_sample_size": 89,
     "median_months_lost": 12,
-    "pro_se_pct": 43.9,
+    "pro_se_pct": 43.4,
     "pro_se_count": 72,
-    "_pdf_state_family_count": 164,
+    "_pdf_state_family_count": 166,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5430,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 9,
     "actor_report_count": 9,
@@ -148,11 +148,11 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Took 10 thousand dollars to see both my kids and helped paternal grandmother kidnap my daughter.",
+        "body": "My daughter begged for help and was ignored.",
         "kind": "comment"
       },
       {
-        "body": "That is the typical presentation. My daughter was denied advocacy and protection as a result.",
+        "body": "My daughter was denied advocacy and protection as a result.",
         "kind": "comment"
       },
       {
@@ -164,11 +164,31 @@
         "kind": "comment"
       },
       {
-        "body": "Ignored evidence Failed to report domestic violence to DHS Manipulative of kids’ emotions…",
+        "body": "Ignored evidence Failed to report domestic violence to DHS Manipulative of kids’…",
         "kind": "comment"
+      },
+      {
+        "body": "The family court system has cost me precious time with my children, furthered our…",
+        "kind": "family_report"
+      },
+      {
+        "body": "Took years from me.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Destroyed my family for over 6 years now!",
+        "kind": "family_report"
+      },
+      {
+        "body": "I reported abuse. My family has been destroyed as a result.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Family court has shown me that children and families come last.",
+        "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 2
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

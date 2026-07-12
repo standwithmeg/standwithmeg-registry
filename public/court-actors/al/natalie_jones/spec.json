@@ -27,7 +27,7 @@
     "actor_bucket_key": "natalie jones|AL"
   },
   "photo": {
-    "path": "public/court-actors/al/natalie_jones/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/natalie_jones/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -47,7 +47,7 @@
     "_pdf_state_family_count": 130,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -113,7 +113,7 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "The prolonged proceedings consumed resources that could have been used to support my daughter’s care, treatment, housing, and stability.",
+        "body": "Used to support my daughter’s care",
         "kind": "comment"
       },
       {
@@ -121,8 +121,20 @@
         "kind": "comment"
       },
       {
-        "body": "My child has sent numerous videos of their other parent abusing them and the GAL has never addressed it.",
+        "body": "My child has sent numerous videos of their other parent abusing them.",
         "kind": "comment"
+      },
+      {
+        "body": "Helped us instead made it harder to keep her safe",
+        "kind": "family_report"
+      },
+      {
+        "body": "My children send me videos daily crying. They think they don’t get to ever come home.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Has kept my family apart for 11 months this",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

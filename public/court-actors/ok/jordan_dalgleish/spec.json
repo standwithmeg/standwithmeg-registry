@@ -12,51 +12,50 @@
     "court_or_county": "Tulsa",
     "state": "Oklahoma",
     "state_abbr": "OK",
-    "mention_count": 10,
+    "mention_count": 9,
     "family_count": 9,
     "public_family_count": 9,
     "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
-    "actor_report_count": 10,
+    "actor_report_count": 9,
     "supabase_row_ids": [
       "04e0aedd-3116-4b2e-a76c-459216e34f24",
       "9ce3ac23-b815-429c-8701-91f5c0d5c11b",
       "1e92171f-8d91-400e-b6c4-ad7f18a75241",
       "b95158cf-0c4f-4091-a28b-e7287ed7845a",
       "cb5c413d-20d9-438d-99c7-299c10b3b1c6",
-      "08bd38b3-fe28-41fa-8d99-ea6152a6e0c7",
       "b4927d24-2ded-4e53-9174-d7b09d55e533",
       "b0002bf0-4dd3-483d-aad7-3e1aa84d4aaa",
-      "d46148c3-fb72-4d4f-b402-42f7cb7e3001",
-      "4f4b4f8c-5a4a-4cd5-9caf-547869fe1487"
+      "4f4b4f8c-5a4a-4cd5-9caf-547869fe1487",
+      "d46148c3-fb72-4d4f-b402-42f7cb7e3001"
     ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-vzi61zfo/New Final Post and Capcut template/export/jordan_dalgleish/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/jordan_dalgleish/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 130,
-    "total_submissions": 164,
-    "avg_financial_loss": 119502.36,
-    "avg_months_lost": 24.6,
+    "families_approved": 131,
+    "total_submissions": 166,
+    "avg_financial_loss": 118855.1,
+    "avg_months_lost": 24.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OK",
-    "state_family_count": 164,
-    "median_financial_loss": 94750,
-    "median_burden_sample_size": 88,
+    "state_family_count": 166,
+    "median_financial_loss": 99500,
+    "median_burden_sample_size": 89,
     "median_months_lost": 12,
-    "pro_se_pct": 43.9,
+    "pro_se_pct": 43.4,
     "pro_se_count": 72,
-    "_pdf_state_family_count": 164,
+    "_pdf_state_family_count": 166,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5430,
+  "movement_total": 5441,
   "supabase": {
-    "report_count": 10,
-    "actor_report_count": 10,
+    "report_count": 9,
+    "actor_report_count": 9,
     "family_count": 9,
     "family_reports": [
       {
@@ -98,12 +97,6 @@
     ],
     "public_comments": [
       {
-        "comment_text": "Failed to follow through with meetings with the children and investigations. Failed to follow through with investigations and meetings with the children, she knew of lies being told by the opposing party but allowed the case to move forward and her to be removed from my care and be given to him.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Wagoner"
-      },
-      {
         "comment_text": "Claims to mail things out (ie: motion for status conf, I never served with anything until I reached out to my judges court clerk and asked if I’m supposed to be there or not. Right after that I was surprisingly served suddenly 2 days after my call to judges office.",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
@@ -114,6 +107,12 @@
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Tulsa County"
+      },
+      {
+        "comment_text": "Failed to follow through with investigations and meetings with the children, she knew of lies being told by the opposing party but allowed the case to move forward and my child to be removed from my care.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Wagoner"
       },
       {
         "comment_text": "Conflict of interest with opposing counsel Atty discussed client details outside of case facts with opposing council and vice versa Talked client out of VPO",
@@ -161,15 +160,15 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Allowed the case to move forward",
-        "kind": "comment"
-      },
-      {
         "body": "I’m supposed to be there or not.",
         "kind": "comment"
       },
       {
         "body": "Effectively helped my ex’s side throughout the divorce process.",
+        "kind": "comment"
+      },
+      {
+        "body": "Allowed the case to move forward and my child to be removed from my care.",
         "kind": "comment"
       },
       {
@@ -187,9 +186,29 @@
       {
         "body": "Won't do a full investigation and is very bias",
         "kind": "comment"
+      },
+      {
+        "body": "Jordan Dalgleish is a snake who will lie, cheat, & manipulate anyone.",
+        "kind": "family_report"
+      },
+      {
+        "body": "The family court system has cost me precious time with my children, furthered our…",
+        "kind": "family_report"
+      },
+      {
+        "body": "The family court system wrongfully removed my child at Jordan Dalgleish’s…",
+        "kind": "family_report"
+      },
+      {
+        "body": "The court system has allowed lies told by one side.",
+        "kind": "family_report"
+      },
+      {
+        "body": "I knew what would happen to us in okmulgee county",
+        "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 2
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

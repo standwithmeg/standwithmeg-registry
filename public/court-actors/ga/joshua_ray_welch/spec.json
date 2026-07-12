@@ -29,27 +29,27 @@
     "actor_bucket_key": "joshua ray welch|GA"
   },
   "photo": {
-    "path": "public/court-actors/ga/joshua_ray_welch/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/joshua_ray_welch/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 125,
     "total_submissions": 153,
-    "avg_financial_loss": 214225.19,
+    "avg_financial_loss": 214294.64,
     "avg_months_lost": 32.3,
     "_source_table": "movement_stats_by_state",
     "_match_value": "GA",
     "state_family_count": 153,
     "median_financial_loss": 142000,
     "median_burden_sample_size": 85,
-    "median_months_lost": 18,
+    "median_months_lost": 19,
     "pro_se_pct": 44.4,
     "pro_se_count": 68,
     "_pdf_state_family_count": 153,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
@@ -121,16 +121,32 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Final report based on thoughts and feelings, zero evidence. Traumatically removed child by the police without doing any investigation into false allegations.",
+        "body": "Traumatically removed child by the police.",
         "kind": "comment"
       },
       {
-        "body": "Ignored concerns of mom's witnesses to emotional abuse and coercive control. Refused to acknowledge his claim of mental health that was cleared by HIS psych evaluator.",
+        "body": "Ignored years of evidence. Ignored alienation. Handed kids over to the abuser.",
         "kind": "comment"
       },
       {
-        "body": "My daughter's attorney. He has been amazing. He is the only one that will hold dfacs accountable for their wrongs or short comings",
+        "body": "He is the only one that will hold dfacs accountable for their wrongs or short comings",
         "kind": "comment"
+      },
+      {
+        "body": "This system has done nothing other than cause irreversible damage to myself.",
+        "kind": "family_report"
+      },
+      {
+        "body": "I apart while covering the truth about the real abuser, 5 years of hell.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Its like living but being dead. It takes and takes and takes.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Family court took my children.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

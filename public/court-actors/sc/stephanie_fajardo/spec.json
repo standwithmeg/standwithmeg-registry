@@ -28,7 +28,7 @@
     "actor_bucket_key": "stephanie fajardo|SC"
   },
   "photo": {
-    "path": "public/court-actors/sc/stephanie_fajardo/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/stephanie_fajardo/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -48,7 +48,7 @@
     "_pdf_state_family_count": 108,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5421,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -156,9 +156,25 @@
       {
         "body": "Ignored evidence",
         "kind": "comment"
+      },
+      {
+        "body": "He is forced to be around my abusive father against his will.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Richland Family Court is a chess board of paid players and you are a pawn.",
+        "kind": "family_report"
+      },
+      {
+        "body": "The South Carolina Family Court system failed my children and destroyed my motherhood.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Forced to give up our home due to financial ruin",
+        "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 2
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

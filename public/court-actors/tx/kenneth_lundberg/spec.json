@@ -27,7 +27,7 @@
     "actor_bucket_key": "kenneth lundberg|TX"
   },
   "photo": {
-    "path": "public/court-actors/tx/kenneth_lundberg/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/kenneth_lundberg/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -47,7 +47,7 @@
     "_pdf_state_family_count": 316,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5421,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -123,6 +123,18 @@
       {
         "body": "Signed a TRO taking all my rights away without a hearing.",
         "kind": "comment"
+      },
+      {
+        "body": "Took my children on October 6",
+        "kind": "family_report"
+      },
+      {
+        "body": "I’m a completely different person who feels like I can’t even be myself.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Help from the bottom all the way up to the top",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

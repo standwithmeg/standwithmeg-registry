@@ -37,7 +37,7 @@
     ]
   },
   "photo": {
-    "path": "public/court-actors/fl/jon_gann/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/jon_gann/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -57,7 +57,7 @@
     "_pdf_state_family_count": 306,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
@@ -165,9 +165,29 @@
       {
         "body": "Told me if I fought to clear my name, I’d lose my kids.",
         "kind": "comment"
+      },
+      {
+        "body": "The very system designed to keep the children in our community safe and secure…",
+        "kind": "family_report"
+      },
+      {
+        "body": "Disabled Combat Veteran lost 2 kids to the system.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Separated from each others lives",
+        "kind": "family_report"
+      },
+      {
+        "body": "We will never get to see our twins be babies again. We will never get this time back.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Manipulated all involved to tear us apart for funding",
+        "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 2
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

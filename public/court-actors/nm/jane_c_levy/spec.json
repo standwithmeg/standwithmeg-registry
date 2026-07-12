@@ -25,7 +25,7 @@
     "actor_bucket_key": "jane c levy|NM"
   },
   "photo": {
-    "path": "public/court-actors/nm/jane_c_levy/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/jane_c_levy/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -45,7 +45,7 @@
     "_pdf_state_family_count": 28,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5421,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 2,
     "actor_report_count": 2,
@@ -105,16 +105,24 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Ignored extortion by my I, wife to see my child, refused to set scheduled visitation between my son and instead stated visitation was at my ex wife discretion.",
+        "body": "Ignored extortion by my I",
         "kind": "comment"
       },
       {
-        "body": "Fabricated findings, held hearings without my knowledge of findings, obstructed a scheduled hearing, due to retaliation.",
+        "body": "Fabricated findings, held hearings.",
         "kind": "comment"
       },
       {
         "body": "Ignored clear evidence",
         "kind": "comment"
+      },
+      {
+        "body": "Ordered child support or force me to stay at her home the entire time I was in town",
+        "kind": "family_report"
+      },
+      {
+        "body": "Made me.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

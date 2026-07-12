@@ -28,27 +28,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "public/court-actors/ga/jeffrey_bagley/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/jeffrey_bagley/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 125,
     "total_submissions": 153,
-    "avg_financial_loss": 214225.19,
+    "avg_financial_loss": 214294.64,
     "avg_months_lost": 32.3,
     "_source_table": "movement_stats_by_state",
     "_match_value": "GA",
     "state_family_count": 153,
     "median_financial_loss": 142000,
     "median_burden_sample_size": 85,
-    "median_months_lost": 18,
+    "median_months_lost": 19,
     "pro_se_pct": 44.4,
     "pro_se_count": 68,
     "_pdf_state_family_count": 153,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -114,7 +114,7 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Refused to acknowledge evidence ordered money that was to be paid in form of gifts from my family",
+        "body": "Ignored Portugal evaluator",
         "kind": "comment"
       },
       {
@@ -124,6 +124,18 @@
       {
         "body": "Called me.",
         "kind": "comment"
+      },
+      {
+        "body": "This has ruined my life and my family’s lives",
+        "kind": "family_report"
+      },
+      {
+        "body": "12 year old is now cutting herself and 7 year old cries for hours till passing out…",
+        "kind": "family_report"
+      },
+      {
+        "body": "He’s the head of the superior court.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

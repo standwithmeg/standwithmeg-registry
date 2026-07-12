@@ -30,27 +30,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "public/court-actors/in/sean_persin/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/sean_persin/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 128,
     "total_submissions": 153,
-    "avg_financial_loss": 121922.6,
-    "avg_months_lost": 30.0,
+    "avg_financial_loss": 132589.26,
+    "avg_months_lost": 30.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "IN",
     "state_family_count": 153,
-    "median_financial_loss": 63875,
-    "median_burden_sample_size": 76,
+    "median_financial_loss": 66500,
+    "median_burden_sample_size": 79,
     "median_months_lost": 18,
     "pro_se_pct": 45.8,
     "pro_se_count": 70,
     "_pdf_state_family_count": 153,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 7,
     "actor_report_count": 7,
@@ -128,7 +128,7 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Judge Sean Persin dropped the PO after the child’s therapist explained the child is diagnosed with PTSD due…",
+        "body": "Judge Sean Persin dropped the PO after the child’s therapist explained the child is…",
         "kind": "comment"
       },
       {
@@ -140,8 +140,20 @@
         "kind": "comment"
       },
       {
-        "body": "Failed to act in a problem solving capacity or hold other party accountable for their continued harm to the…",
+        "body": "Failed to act in a problem solving capacity or hold other party accountable for…",
         "kind": "comment"
+      },
+      {
+        "body": "I begged the court to intervene and act in a protective and problem solving capacity.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Enough is enough.",
+        "kind": "family_report"
+      },
+      {
+        "body": "The child was taken by the father who received sole custody.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

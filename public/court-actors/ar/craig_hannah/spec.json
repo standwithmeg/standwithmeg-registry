@@ -13,9 +13,9 @@
     "state": "Arkansas",
     "state_abbr": "AR",
     "mention_count": 4,
-    "family_count": 3,
-    "public_family_count": 3,
-    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "family_count": 4,
+    "public_family_count": 4,
+    "public_family_count_source": "canonical_supabase_rows_over_stale_public_api",
     "actor_report_count": 4,
     "supabase_row_ids": [
       "1b0056ce-4435-444e-8a9e-a5fa7495bd22",
@@ -27,7 +27,7 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "public/court-actors/ar/craig_hannah/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/craig_hannah/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -47,11 +47,11 @@
     "_pdf_state_family_count": 57,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
-    "family_count": 3,
+    "family_count": 4,
     "family_reports": [
       {
         "body": "Kept me alienated for several years from my child, judges and attorneys let my abuser keep the control I was trying to escape with my child. Nobody cared.",
@@ -92,6 +92,7 @@
   },
   "export_dir": "New Final Post and Capcut template/export/craig_hannah",
   "unresolved": [
+    "public_family_count_api: returned stale lower count 3; used canonical Supabase count 4",
     "pdf_public_actor: no 'Craig Hannah' in cache for AR"
   ],
   "guardrails": {
@@ -112,7 +113,7 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "He didn’t listen to me or the evidence I had. He fell asleep during the first round of hearings",
+        "body": "He didn’t listen to me or the evidence I had.",
         "kind": "comment"
       },
       {
@@ -122,6 +123,18 @@
       {
         "body": "Kept my kids split from each other for a year",
         "kind": "comment"
+      },
+      {
+        "body": "Nobody cared.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Exposed what happens In Arkansas.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Wmy kids survived being abused for 12 years I am still unable to keep employment…",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

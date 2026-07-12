@@ -28,7 +28,7 @@
     "actor_bucket_key": "carla salvuci|MA"
   },
   "photo": {
-    "path": "public/court-actors/ma/carla_a_salvucci/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/carla_a_salvucci/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -48,7 +48,7 @@
     "_pdf_state_family_count": 106,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -114,16 +114,28 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "I mentioned that some of this evidence was publicly available on their Instagram accounts.",
+        "body": "Then during the pre-trial hearing, opposing counsel stated.",
         "kind": "comment"
       },
       {
-        "body": "Has denied virtually every motion I filed, including the December 2025 emergency motion to vacate the June 16, 2025 temporary suspension order.",
+        "body": "Denied Short Order of Notice",
         "kind": "comment"
       },
       {
         "body": "She suspended my parenting time on 10/1/24 for no reason.",
         "kind": "comment"
+      },
+      {
+        "body": "Denied me any contact with my daughter for a year.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Ignored evidence relating to child safety",
+        "kind": "family_report"
+      },
+      {
+        "body": "They don’t understand why their mother disappeared.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

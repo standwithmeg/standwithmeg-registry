@@ -26,7 +26,7 @@
     "actor_bucket_key": "kiki dunton|FL"
   },
   "photo": {
-    "path": "public/court-actors/fl/kiki_dunton/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/kiki_dunton/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -46,7 +46,7 @@
     "_pdf_state_family_count": 306,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -112,16 +112,20 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "According to the information available, the father had previously experienced a removal/loss of custody involving other children.",
+        "body": "At the same time, the report reportedly recommended a reverse custody provision.",
         "kind": "comment"
       },
       {
-        "body": "There are also concerns that allegations involving sexual abuse by fathers are minimized or dismissed without meaningful investigation.",
+        "body": "Dismissed without meaningful investigation",
         "kind": "comment"
       },
       {
-        "body": "She allowed a complete violation of time-sharing and decision making and didn't budge when a therapist called DCF on the Father after speaking to the child once.",
+        "body": "Called DCF on the Father after speaking to the child once",
         "kind": "comment"
+      },
+      {
+        "body": "Family court has destroyed my children.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

@@ -30,27 +30,27 @@
     "actor_bucket_key": "keli miler|OH"
   },
   "photo": {
-    "path": "public/court-actors/oh/kelli_miller/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/kelli_miller/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 208,
-    "total_submissions": 264,
-    "avg_financial_loss": 112074.3,
-    "avg_months_lost": 31.5,
+    "families_approved": 209,
+    "total_submissions": 265,
+    "avg_financial_loss": 111611.65,
+    "avg_months_lost": 31.3,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OH",
-    "state_family_count": 264,
+    "state_family_count": 265,
     "median_financial_loss": 79250,
     "median_burden_sample_size": 128,
     "median_months_lost": 18,
-    "pro_se_pct": 53.0,
+    "pro_se_pct": 52.8,
     "pro_se_count": 140,
-    "_pdf_state_family_count": 264,
+    "_pdf_state_family_count": 265,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5421,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 7,
     "actor_report_count": 7,
@@ -158,15 +158,39 @@
         "kind": "comment"
       },
       {
-        "body": "She altered drugs tests lied twisted everything said my son was adopted he has not been pay…",
+        "body": "She altered drugs tests lied twisted everything said my son was adopted he has not…",
         "kind": "comment"
       },
       {
-        "body": "Lied on stand. Did NOT contact any family. Never returned phone calls for outreach and placement.",
+        "body": "Lied on stand. Did NOT contact any family.",
         "kind": "comment"
+      },
+      {
+        "body": "Then lied under oath about my contact with the agency",
+        "kind": "family_report"
+      },
+      {
+        "body": "Torn apart a mom from her kids and alienated a mom for 4+ years while a sex…",
+        "kind": "family_report"
+      },
+      {
+        "body": "THEY WERE HAPPY, HEALTHY, & THRIVING.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Complete destroyed us my daughters are in my life we are trying to get their…",
+        "kind": "family_report"
+      },
+      {
+        "body": "There are no checks and balances for Juvenile Court Judges.",
+        "kind": "family_report"
+      },
+      {
+        "body": "All family were denied kinship without background checks or home studies.",
+        "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 2
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

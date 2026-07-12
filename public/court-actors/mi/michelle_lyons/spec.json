@@ -27,27 +27,27 @@
     "actor_bucket_key": "michele lyons|MI"
   },
   "photo": {
-    "path": "public/court-actors/mi/michelle_lyons/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/michelle_lyons/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 147,
-    "total_submissions": 178,
-    "avg_financial_loss": 182868.73,
-    "avg_months_lost": 36.8,
+    "families_approved": 148,
+    "total_submissions": 179,
+    "avg_financial_loss": 182082.1,
+    "avg_months_lost": 37.2,
     "_source_table": "movement_stats_by_state",
     "_match_value": "MI",
-    "state_family_count": 178,
+    "state_family_count": 179,
     "median_financial_loss": 101500,
     "median_burden_sample_size": 79,
-    "median_months_lost": 17,
-    "pro_se_pct": 43.8,
+    "median_months_lost": 18,
+    "pro_se_pct": 43.6,
     "pro_se_count": 78,
-    "_pdf_state_family_count": 178,
+    "_pdf_state_family_count": 179,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -129,7 +129,7 @@
         "kind": "comment"
       },
       {
-        "body": "Represented my wife, lied, falysfied evidence. Held Ex parte hearings without wife present.",
+        "body": "Represented my wife, lied, falysfied evidence.",
         "kind": "comment"
       },
       {
@@ -139,6 +139,22 @@
       {
         "body": "Told me to sign over my kids & go have more babies.",
         "kind": "comment"
+      },
+      {
+        "body": "This destroyed my family. I have lost my children. My wife and I dont get a long well.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Destroyed my whole family. Can’t see my grandkids grow up!",
+        "kind": "family_report"
+      },
+      {
+        "body": "Destroyed our whole lives. Drove my love to committ suicide.",
+        "kind": "family_report"
+      },
+      {
+        "body": "It destroyed my family. My children are not even allowed to see each other now.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

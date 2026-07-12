@@ -38,20 +38,20 @@
   "state_stats": {
     "families_approved": 128,
     "total_submissions": 153,
-    "avg_financial_loss": 121922.6,
-    "avg_months_lost": 30.0,
+    "avg_financial_loss": 132589.26,
+    "avg_months_lost": 30.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "IN",
     "state_family_count": 153,
-    "median_financial_loss": 63875,
-    "median_burden_sample_size": 76,
+    "median_financial_loss": 66500,
+    "median_burden_sample_size": 79,
     "median_months_lost": 18,
     "pro_se_pct": 45.8,
     "pro_se_count": 70,
     "_pdf_state_family_count": 153,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 8,
     "actor_report_count": 8,
@@ -105,12 +105,20 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Now in 2026 there is only an approximate time line for completion due to me filing for status update in March 2026 to which she said she needed an additional [redacted] days.",
+        "body": "Took against us she downplayed the actions stating he was playing a character",
         "kind": "comment"
       },
       {
-        "body": "Refused to give evidence of child abuse to judge, committed perjury, covering for the judge took a bribe from my kids' mom and her family",
+        "body": "The judge took a bribe from my kids' mom and her family",
         "kind": "comment"
+      },
+      {
+        "body": "The system has allowed my girls to be in the custody of child abusers",
+        "kind": "family_report"
+      },
+      {
+        "body": "The system protects the false illusion of reunification while taking children and portective parents from…",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

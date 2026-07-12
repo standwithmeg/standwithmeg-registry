@@ -26,7 +26,7 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "public/court-actors/ct/heidi_winslow/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/heidi_winslow/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -46,7 +46,7 @@
     "_pdf_state_family_count": 65,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -116,12 +116,24 @@
         "kind": "comment"
       },
       {
-        "body": "Ignored my son and my rights. She is now retired. I filed the appropriate paperwork for a complaint in a timely manner, yet they denied my request.",
+        "body": "Ignored my son and my rights. She is now retired.",
         "kind": "comment"
       },
       {
-        "body": "She gave the father full custody and the right to decide my visitation after saying it was a tragedy that the children allegedly did not want to see me.",
+        "body": "She gave the father full custody.",
         "kind": "comment"
+      },
+      {
+        "body": "Tarnished my favorable opinion of the court/justice system.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Refused to speak with me the first 3 months of therapy",
+        "kind": "family_report"
+      },
+      {
+        "body": "Instead, they were left with anger, division, and loss.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

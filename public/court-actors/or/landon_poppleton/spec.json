@@ -30,7 +30,7 @@
     "actor_bucket_key": "landon popleton|OR"
   },
   "photo": {
-    "path": "public/court-actors/or/landon_poppleton/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/landon_poppleton/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -50,7 +50,7 @@
     "_pdf_state_family_count": 75,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5421,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 7,
     "actor_report_count": 7,
@@ -140,23 +140,43 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Initially offered Mother a phone call but then reversed course and refused to take one.",
+        "body": "Refused to communicate directly with Mother about concerns with the evaluation",
         "kind": "comment"
       },
       {
-        "body": "He tried to convey that to the other court actors including the child’s attorney Sandy Faber.",
+        "body": "That made him not able to be my expert.",
         "kind": "comment"
       },
       {
-        "body": "Reviewed case and determined there was a high likelihood of psychological abuse, took payment.",
+        "body": "reviewed case and determined there was a high likelihood of psychological abuse…",
         "kind": "comment"
       },
       {
         "body": "Basically paid off by mother to grant full custody",
         "kind": "comment"
+      },
+      {
+        "body": "Failed my family.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Ignored every piece of evidence that favored me",
+        "kind": "family_report"
+      },
+      {
+        "body": "Biggest waste of time and money to get nowhere.",
+        "kind": "family_report"
+      },
+      {
+        "body": "When I filed for the court to enforce the existing parenting plan due to documented…",
+        "kind": "family_report"
+      },
+      {
+        "body": "The family court is hurting him and forcing him to be where he is afraid and unsafe.",
+        "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 2
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

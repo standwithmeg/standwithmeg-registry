@@ -35,27 +35,27 @@
     "actor_bucket_key": "aime thomas|OH"
   },
   "photo": {
-    "path": "public/court-actors/oh/aimee_thomas/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/aimee_thomas/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 208,
-    "total_submissions": 264,
-    "avg_financial_loss": 112074.3,
-    "avg_months_lost": 31.5,
+    "families_approved": 209,
+    "total_submissions": 265,
+    "avg_financial_loss": 111611.65,
+    "avg_months_lost": 31.3,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OH",
-    "state_family_count": 264,
+    "state_family_count": 265,
     "median_financial_loss": 79250,
     "median_burden_sample_size": 128,
     "median_months_lost": 18,
-    "pro_se_pct": 53.0,
+    "pro_se_pct": 52.8,
     "pro_se_count": 140,
-    "_pdf_state_family_count": 264,
+    "_pdf_state_family_count": 265,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5421,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 12,
     "actor_report_count": 12,
@@ -127,7 +127,7 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "I was ordered to undergo a parenting class as part of Thomas' recommendations where we were taught to report the very thing I witness. My child going through currently.",
+        "body": "Took so long delaying the process",
         "kind": "comment"
       },
       {
@@ -137,6 +137,18 @@
       {
         "body": "Did not review any of my evidence before filing a false report",
         "kind": "comment"
+      },
+      {
+        "body": "This system has continuously cycled trauma with no relief for victims.",
+        "kind": "family_report"
+      },
+      {
+        "body": "These people have absolutely broken everything I spent 40 years of my life building.",
+        "kind": "family_report"
+      },
+      {
+        "body": "There are no words that can adequately describe what the system has cost us.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

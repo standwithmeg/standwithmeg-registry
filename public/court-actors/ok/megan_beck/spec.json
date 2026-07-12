@@ -27,27 +27,27 @@
     "actor_bucket_key": "megan beck|OK"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-vzi61zfo/New Final Post and Capcut template/export/megan_beck/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/megan_beck/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 130,
-    "total_submissions": 164,
-    "avg_financial_loss": 119502.36,
-    "avg_months_lost": 24.6,
+    "families_approved": 131,
+    "total_submissions": 166,
+    "avg_financial_loss": 118855.1,
+    "avg_months_lost": 24.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OK",
-    "state_family_count": 164,
-    "median_financial_loss": 94750,
-    "median_burden_sample_size": 88,
+    "state_family_count": 166,
+    "median_financial_loss": 99500,
+    "median_burden_sample_size": 89,
     "median_months_lost": 12,
-    "pro_se_pct": 43.9,
+    "pro_se_pct": 43.4,
     "pro_se_count": 72,
-    "_pdf_state_family_count": 164,
+    "_pdf_state_family_count": 166,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5430,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -101,12 +101,20 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "To be disclosed if my testimony is required. I have paper, digital, and video evidence of all of my above statements. The judge dismissed all as evidence.",
+        "body": "I have paper, digital, and video evidence of all of my above statements. The judge dismissed all as evidence.",
         "kind": "comment"
       },
       {
-        "body": "Ignored video evidence of my baby begging and pleading for help telling me to call Donald trump he’s the only one who can hep her. Then Megan get it court ordered where I can not record but other party can record.",
+        "body": "Ignored my daughter pleas for help. Lied to keep my daughter in tn.",
         "kind": "comment"
+      },
+      {
+        "body": "Took years from me.",
+        "kind": "family_report"
+      },
+      {
+        "body": "This is on the record! Literally destroying my kids, family and my life still to this day!",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

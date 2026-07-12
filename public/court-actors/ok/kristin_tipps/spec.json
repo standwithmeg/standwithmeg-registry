@@ -27,27 +27,27 @@
     "actor_bucket_key": "kristin tips|OK"
   },
   "photo": {
-    "path": "public/court-actors/ok/kristin_tipps/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/kristin_tipps/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 131,
-    "total_submissions": 164,
-    "avg_financial_loss": 119502.36,
-    "avg_months_lost": 24.6,
+    "total_submissions": 166,
+    "avg_financial_loss": 118855.1,
+    "avg_months_lost": 24.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OK",
-    "state_family_count": 164,
-    "median_financial_loss": 94750,
-    "median_burden_sample_size": 88,
+    "state_family_count": 166,
+    "median_financial_loss": 99500,
+    "median_burden_sample_size": 89,
     "median_months_lost": 12,
-    "pro_se_pct": 43.9,
+    "pro_se_pct": 43.4,
     "pro_se_count": 72,
-    "_pdf_state_family_count": 164,
+    "_pdf_state_family_count": 166,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5421,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -113,7 +113,7 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Would only meet with child 30 minutes. Didn't listen to any worries and directly told me not to tell my husband anything that happened in session.",
+        "body": "Did not listen to any concerns. Would only meet with child 30 minutes.",
         "kind": "comment"
       },
       {
@@ -123,6 +123,18 @@
       {
         "body": "Failed to report abuse",
         "kind": "comment"
+      },
+      {
+        "body": "The family court system wrongfully removed my child at Jordan Dalgleish’s…",
+        "kind": "family_report"
+      },
+      {
+        "body": "Gal refused to actively look into anything and still doesn't reply.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Stripped me of my role as a mother",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

@@ -34,27 +34,27 @@
     ]
   },
   "photo": {
-    "path": "public/court-actors/oh/hon_anneka_p_collins/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/hon_anneka_p_collins/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 208,
-    "total_submissions": 264,
-    "avg_financial_loss": 112074.3,
-    "avg_months_lost": 31.5,
+    "families_approved": 209,
+    "total_submissions": 265,
+    "avg_financial_loss": 111611.65,
+    "avg_months_lost": 31.3,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OH",
-    "state_family_count": 264,
+    "state_family_count": 265,
     "median_financial_loss": 79250,
     "median_burden_sample_size": 128,
     "median_months_lost": 18,
-    "pro_se_pct": 53.0,
+    "pro_se_pct": 52.8,
     "pro_se_count": 140,
-    "_pdf_state_family_count": 264,
+    "_pdf_state_family_count": 265,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5421,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -114,7 +114,7 @@
   },
   "export_dir": "New Final Post and Capcut template/export/hon_anneka_p_collins",
   "unresolved": [
-    "public_family_count_api: no match for display_name='Hon. Anneka P. Collins' bucket='anika colins|OH' slug='hon_anneka_p_collins' in OH (440 actors)",
+    "public_family_count_api: no match for display_name='Hon. Anneka P. Collins' bucket='anika colins|OH' slug='hon_anneka_p_collins' in OH (443 actors)",
     "family_count: lookup and previous spec returned 0 — using report_count=4 as fallback"
   ],
   "guardrails": {
@@ -135,20 +135,28 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Denied motion and ignored evidence!! None of them did their job they made up everything.",
+        "body": "Denied motion and ignored evidence!!",
         "kind": "comment"
       },
       {
-        "body": "Prosecutor of highland county Ohio she got my hospital records and used them as my newborn daughters records.",
+        "body": "They didn’t even go through them in court because they was MY RECORD!!!!",
         "kind": "comment"
       },
       {
-        "body": "Ignored exculpatory evidence identified presented and maliciously prosecuted my wife and I.",
+        "body": "Ignored exculpatory evidence identified presented and maliciously prosecuted my wife.",
         "kind": "comment"
       },
       {
         "body": "Denied motion without hearing",
         "kind": "comment"
+      },
+      {
+        "body": "This system has lied and tore my family apart causing emotional damage",
+        "kind": "family_report"
+      },
+      {
+        "body": "They took the happiest and joy out of us",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

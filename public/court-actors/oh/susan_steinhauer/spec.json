@@ -26,27 +26,27 @@
     "actor_bucket_key": "susan steinhauer|OH"
   },
   "photo": {
-    "path": "public/court-actors/oh/susan_steinhauer/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/susan_steinhauer/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 208,
-    "total_submissions": 264,
-    "avg_financial_loss": 112074.3,
-    "avg_months_lost": 31.5,
+    "families_approved": 209,
+    "total_submissions": 265,
+    "avg_financial_loss": 111611.65,
+    "avg_months_lost": 31.3,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OH",
-    "state_family_count": 264,
+    "state_family_count": 265,
     "median_financial_loss": 79250,
     "median_burden_sample_size": 128,
     "median_months_lost": 18,
-    "pro_se_pct": 53.0,
+    "pro_se_pct": 52.8,
     "pro_se_count": 140,
-    "_pdf_state_family_count": 264,
+    "_pdf_state_family_count": 265,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5421,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -100,12 +100,20 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Stripped me of custody without due process, breaking countless laws and procedures. Retaliated for me speaking out by filing a frivolous protection order",
+        "body": "Stripped me of custody without due process, breaking countless laws and procedures.",
         "kind": "comment"
       },
       {
-        "body": "She was the judge in my case, that initiated father having permanent residential soul custody of my child and me having supervised visits based on a false mental health allegation",
+        "body": "She was the judge in my case, that initiated father having permanent residential soul custody of my child and…",
         "kind": "comment"
+      },
+      {
+        "body": "The court system has destroyed my family, the relationship with my son and his brothers.",
+        "kind": "family_report"
+      },
+      {
+        "body": "There are no words that can adequately describe what the system has cost us.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

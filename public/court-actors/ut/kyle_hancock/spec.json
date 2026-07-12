@@ -28,14 +28,14 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "public/court-actors/ut/kyle_hancock/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/kyle_hancock/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 43,
     "total_submissions": 56,
-    "avg_financial_loss": 276098.88,
+    "avg_financial_loss": 284771.98,
     "avg_months_lost": 18.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "UT",
@@ -48,7 +48,7 @@
     "_pdf_state_family_count": 56,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5421,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -114,12 +114,24 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "He lied in one of his letters to the court by stating his job is to evaluate both homes with my child. That never happened.",
+        "body": "He thinks it’s a good idea to question a child victim in a comfortable setting.",
         "kind": "comment"
       },
       {
-        "body": "Has never presented the crimes of which my abuser has committed. My son continues to be injured but the custody evaluator and GAL are very inter related.",
+        "body": "The custody evaluator and GAL are very inter related.",
         "kind": "comment"
+      },
+      {
+        "body": "He broke the system to protect the abuser, forcing me into a legal minefield where…",
+        "kind": "family_report"
+      },
+      {
+        "body": "He has lost hope for not being abused and knows that what is going on is wrong.",
+        "kind": "family_report"
+      },
+      {
+        "body": "We have done absolutely nothing that should have had my child removed.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

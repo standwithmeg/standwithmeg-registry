@@ -34,7 +34,7 @@
     ]
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-vzi61zfo/New Final Post and Capcut template/export/prairie_state_legal_services/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/prairie_state_legal_services/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -54,7 +54,7 @@
     "_pdf_state_family_count": 151,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5430,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -102,8 +102,12 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Useless. They only help if you have an OP and or criminal case. They then have an insane waitlist. They called me 3 yrs later and said they could take my case.",
+        "body": "They only help if you have an OP and or criminal case. They then have an insane waitlist. They called me 3 yrs later and said they could take my case.",
         "kind": "comment"
+      },
+      {
+        "body": "Family court has destroyed the innocence and robbed the dreams of my children and my motherhood. Family court has become the abuser and the weapon of my abuser.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

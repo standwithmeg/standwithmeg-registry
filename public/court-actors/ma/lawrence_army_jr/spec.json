@@ -27,7 +27,7 @@
     "actor_bucket_key": "lawrence army|MA"
   },
   "photo": {
-    "path": "public/court-actors/ma/lawrence_army_jr/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/lawrence_army_jr/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -47,7 +47,7 @@
     "_pdf_state_family_count": 106,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -139,6 +139,22 @@
       {
         "body": "Will not hear past nor see any evidence",
         "kind": "comment"
+      },
+      {
+        "body": "I haven't been able to take a vacation in 5 years due to court fees being so high",
+        "kind": "family_report"
+      },
+      {
+        "body": "Used my past as an excuse Refused programs and things that could have had me with…",
+        "kind": "family_report"
+      },
+      {
+        "body": "Dismantled our family—destroying a mother",
+        "kind": "family_report"
+      },
+      {
+        "body": "Everyone, including DCF has advocated for them to return to my custody.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

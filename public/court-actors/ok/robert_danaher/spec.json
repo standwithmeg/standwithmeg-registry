@@ -26,27 +26,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "public/court-actors/ok/robert_danaher/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/robert_danaher/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 131,
-    "total_submissions": 164,
-    "avg_financial_loss": 119502.36,
-    "avg_months_lost": 24.6,
+    "total_submissions": 166,
+    "avg_financial_loss": 118855.1,
+    "avg_months_lost": 24.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OK",
-    "state_family_count": 164,
-    "median_financial_loss": 94750,
-    "median_burden_sample_size": 88,
+    "state_family_count": 166,
+    "median_financial_loss": 99500,
+    "median_burden_sample_size": 89,
     "median_months_lost": 12,
-    "pro_se_pct": 43.9,
+    "pro_se_pct": 43.4,
     "pro_se_count": 72,
-    "_pdf_state_family_count": 164,
+    "_pdf_state_family_count": 166,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5421,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -106,12 +106,24 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "My ex was court ordered to take a parental comp and psychosexual. He took neither . Danaher gave him a regular psychological evaluation. Not the same. Also questioned his parents about his demeanor. Whaylt did u expect them to be honest",
+        "body": "My ex was court ordered to take a parental comp and psychosexual. He took neither .",
         "kind": "comment"
       },
       {
-        "body": "Charged $XK and concluded report without speaking with some of the most important references, medical professionals who supported claims of abuse. Years of child begging not to go with their father felt insignificant",
+        "body": "Years of child begging not to go with their father felt insignificant",
         "kind": "comment"
+      },
+      {
+        "body": "An entire generation of kids is learning that their voices do not matter when they reach out to…",
+        "kind": "family_report"
+      },
+      {
+        "body": "It has taken mine and my childs life away from us. It has put my daughter Hracie in more danger.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Family court has shown me that children and families come last.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

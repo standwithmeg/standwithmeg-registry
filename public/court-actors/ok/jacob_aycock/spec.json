@@ -8,48 +8,49 @@
     "last_name": "Aycock",
     "role": "Parenting Coordinator",
     "court": "Tulsa",
-    "county": null,
+    "county": "Tulsa",
     "court_or_county": "Tulsa",
     "state": "Oklahoma",
     "state_abbr": "OK",
-    "mention_count": 3,
+    "mention_count": 4,
     "family_count": 3,
     "public_family_count": 3,
     "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
-    "actor_report_count": 3,
+    "actor_report_count": 4,
     "supabase_row_ids": [
       "4150889f-2636-4d82-866f-b06adf65492d",
       "941821ac-996b-4287-9098-786f29dc1d16",
+      "08bd38b3-fe28-41fa-8d99-ea6152a6e0c7",
       "01b2847d-ee97-4d4c-a07e-e809b41294fd"
     ],
     "actor_row_id": "4150889f-2636-4d82-866f-b06adf65492d",
     "actor_bucket_key": "jacob aycock|OK"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-vzi61zfo/New Final Post and Capcut template/export/jacob_aycock/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/jacob_aycock/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 130,
-    "total_submissions": 164,
-    "avg_financial_loss": 119502.36,
-    "avg_months_lost": 24.6,
+    "families_approved": 131,
+    "total_submissions": 166,
+    "avg_financial_loss": 118855.1,
+    "avg_months_lost": 24.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OK",
-    "state_family_count": 164,
-    "median_financial_loss": 94750,
-    "median_burden_sample_size": 88,
+    "state_family_count": 166,
+    "median_financial_loss": 99500,
+    "median_burden_sample_size": 89,
     "median_months_lost": 12,
-    "pro_se_pct": 43.9,
+    "pro_se_pct": 43.4,
     "pro_se_count": 72,
-    "_pdf_state_family_count": 164,
+    "_pdf_state_family_count": 166,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5430,
+  "movement_total": 5441,
   "supabase": {
-    "report_count": 3,
-    "actor_report_count": 3,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 3,
     "family_reports": [
       {
@@ -57,6 +58,12 @@
         "state": "OK",
         "county": "Tulsa",
         "row_id": "acefd2d8-9d56-4b6f-993a-7d37174d5419"
+      },
+      {
+        "body": "The court system has allowed lies told by one side without evidence to be the sole decision in allowing one of my children to be taken. It has caused significant damage to my relationship with my child and the relationship with the child’s siblings.",
+        "state": "OK",
+        "county": "Wagoner",
+        "row_id": "a43487c5-82c6-46de-a68c-0b2f50a3f4a6"
       },
       {
         "body": "This system has torn my family apart, stripped me of my role as a mother, and forced me into a relentless fight against abusive exes, distortion, imbalance, and Court decisions that have harmed both me and my child.",
@@ -67,21 +74,27 @@
     ],
     "public_comments": [
       {
+        "comment_text": "He was our PC for 7 months and never wrote a report for our case. Said he was going to do things he didn’t follow through on. Was unresponsive when there were parenting disagreements.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Wagoner"
+      },
+      {
         "comment_text": "He started out unbiased but later seemed to just comply with ex's new attorney. It became apparent that they were friends.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Tulsa"
       },
       {
         "comment_text": "Misled court, led witness, violated professional conduct and oath",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Tulsa"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/jacob_aycock",
-  "unresolved": [
-    "pdf_public_actor: no 'Jacob Aycock' in cache for OK"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -100,12 +113,28 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "He started out unbiased but later seemed to just comply with ex's new attorney. It became apparent that they were friends.",
+        "body": "He was our PC for 7 months and never wrote a report for our case.",
+        "kind": "comment"
+      },
+      {
+        "body": "He started out unbiased but later seemed to just comply with ex's new attorney.",
         "kind": "comment"
       },
       {
         "body": "Misled court, led witness, violated professional conduct and oath",
         "kind": "comment"
+      },
+      {
+        "body": "We believe the transcript was altered but how can you prove it.",
+        "kind": "family_report"
+      },
+      {
+        "body": "The court system has allowed lies told by one side.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Stripped me of my role as a mother",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

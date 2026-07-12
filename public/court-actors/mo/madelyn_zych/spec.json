@@ -46,7 +46,7 @@
     "_pdf_state_family_count": 195,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5430,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -122,6 +122,18 @@
       {
         "body": "Delayed reunification, did not investigate family placements.",
         "kind": "comment"
+      },
+      {
+        "body": "Took my daughter away from a perfectly safe home perfectly safe parent",
+        "kind": "family_report"
+      },
+      {
+        "body": "The system is trying to destroy my family for profit.",
+        "kind": "family_report"
+      },
+      {
+        "body": "They are trying to destroy my family for no reason just so they can have a kid for…",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

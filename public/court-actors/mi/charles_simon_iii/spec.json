@@ -12,11 +12,11 @@
     "court_or_county": "Montcalm County Michigan",
     "state": "Michigan",
     "state_abbr": "MI",
-    "mention_count": 13,
+    "mention_count": 14,
     "family_count": 9,
     "public_family_count": 9,
     "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
-    "actor_report_count": 13,
+    "actor_report_count": 14,
     "supabase_row_ids": [
       "40164734-d4b3-4282-830e-d4b77787cbf3",
       "7a37ebe8-2dca-4e36-806c-8a5a2d46fc0b",
@@ -27,6 +27,7 @@
       "e167a3ea-c556-42ea-810c-104c311ec449",
       "cb6082cf-6e20-4dd5-9eb5-c5d6578f691f",
       "efb11a36-1906-4fbc-8a43-2dcf9fe47ca4",
+      "2f4c5cff-0eea-4e52-bc46-eca01c3e08aa",
       "327aeba0-c3db-45cf-87cc-92c0729ce03a",
       "f49686df-d293-4e44-84dc-3029c58774a2",
       "f67bbc12-5927-4ca9-b1d7-f6217cb667d6",
@@ -36,32 +37,38 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "public/court-actors/mi/charles_simon_iii/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/charles_simon_iii/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 147,
-    "total_submissions": 178,
-    "avg_financial_loss": 182868.73,
-    "avg_months_lost": 36.8,
+    "families_approved": 148,
+    "total_submissions": 179,
+    "avg_financial_loss": 182082.1,
+    "avg_months_lost": 37.2,
     "_source_table": "movement_stats_by_state",
     "_match_value": "MI",
-    "state_family_count": 178,
+    "state_family_count": 179,
     "median_financial_loss": 101500,
     "median_burden_sample_size": 79,
-    "median_months_lost": 17,
-    "pro_se_pct": 43.8,
+    "median_months_lost": 18,
+    "pro_se_pct": 43.6,
     "pro_se_count": 78,
-    "_pdf_state_family_count": 178,
+    "_pdf_state_family_count": 179,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5440,
   "supabase": {
-    "report_count": 13,
-    "actor_report_count": 13,
+    "report_count": 14,
+    "actor_report_count": 14,
     "family_count": 9,
     "family_reports": [
+      {
+        "body": "The destruction of my family has changed every part of my life. Living through years of separation from my daughter has created a level of grief and trauma that is hard to put into words. Every holiday, birthday, school event, and milestone that passes is another reminder of everything we’ve lost. The repeated trips back to court have only added to that trauma. Each hearing brings hope that maybe this time things will change, only to leave feeling like we’re no closer to healing or being reunited. Instead of finding solutions, we’ve spent years reliving the same pain over and over. It’s emotionally exhausting, financially draining, and has left our entire family living in a constant state of uncertainty. This hasn’t only affected me. It has affected my husband, my children, my extended family, and most importantly, my daughter. Relationships that should have been built naturally have instead been replaced with distance, missed memories, and unanswered questions. We’ve missed birthdays, holidays, sporting events, family dinners, and countless everyday moments that can never be recreated. Despite everything, I have never stopped loving my daughter or hoping for the day our family can begin to heal. No family should have to endure years of separation while repeatedly returning to court without moving any closer to a resolution. The emotional toll of living in that cycle has been devastating for all of us.",
+        "state": "MI",
+        "county": "Montcalm",
+        "row_id": "e60ba155-f4a3-4718-ab77-f793f283c0c1"
+      },
       {
         "body": "The system has did nothing but ruin my life. Try to take my kid or in the middle of trying to take my kid and some false accusations boom.",
         "state": "MI",
@@ -91,12 +98,6 @@
         "state": "MI",
         "county": "Montcalm",
         "row_id": "7d0a93c4-1565-4a7c-a7a3-1713bc2dde90"
-      },
-      {
-        "body": "Destroyed my whole family. Can’t see my grandkids grow up! My son in law committed suicide over the removal of his kids!",
-        "state": "MI",
-        "county": "Mntcalm",
-        "row_id": "fe7f27ec-8f68-4d76-a5c8-10339f6f761b"
       }
     ],
     "public_comments": [
@@ -210,6 +211,30 @@
       {
         "body": "Doesn’t follow laws!",
         "kind": "comment"
+      },
+      {
+        "body": "The destruction of my family has changed every part of my life.",
+        "kind": "family_report"
+      },
+      {
+        "body": "The system has did nothing but ruin my life.",
+        "kind": "family_report"
+      },
+      {
+        "body": "The court took that all away from you.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Instead it's ripping them apart and destroying them.",
+        "kind": "family_report"
+      },
+      {
+        "body": "The system tore our family apart and made us look like monsters.",
+        "kind": "family_report"
+      },
+      {
+        "body": "This destroyed my family. I have lost my children. My wife and I dont get a long well.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 2

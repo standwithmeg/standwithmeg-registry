@@ -28,7 +28,7 @@
     "actor_bucket_key": "rochele curley|FL"
   },
   "photo": {
-    "path": "public/court-actors/fl/rochelle_curley/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/rochelle_curley/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -48,7 +48,7 @@
     "_pdf_state_family_count": 306,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -114,16 +114,28 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "The trip to Panama is well documented through our family wizard, customs, and on my son’s passport. This is why the judge didn’t provide a reason for her ruling.",
+        "body": "This is why the judge didn’t provide a reason for her ruling.",
         "kind": "comment"
       },
       {
-        "body": "Court Findings were factually incorrect, biased and prejudiced. Made a permanent ruling without seeing 180+ pages of evidence.",
+        "body": "Lack of due process - not a fair trial -Denied equal timesharing to Mother.",
         "kind": "comment"
       },
       {
         "body": "Alleged.",
         "kind": "comment"
+      },
+      {
+        "body": "The family court system has destroyed my family and literally taken the food off…",
+        "kind": "family_report"
+      },
+      {
+        "body": "Forced to divert life sustaining medical funds to legal costs.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Family court profits off abuse, parent conflict and ongoing conflict.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

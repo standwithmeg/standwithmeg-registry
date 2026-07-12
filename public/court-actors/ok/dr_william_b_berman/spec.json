@@ -26,27 +26,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "public/court-actors/ok/dr_william_b_berman/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/dr_william_b_berman/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 131,
-    "total_submissions": 164,
-    "avg_financial_loss": 119502.36,
-    "avg_months_lost": 24.6,
+    "total_submissions": 166,
+    "avg_financial_loss": 118855.1,
+    "avg_months_lost": 24.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OK",
-    "state_family_count": 164,
-    "median_financial_loss": 94750,
-    "median_burden_sample_size": 88,
+    "state_family_count": 166,
+    "median_financial_loss": 99500,
+    "median_burden_sample_size": 89,
     "median_months_lost": 12,
-    "pro_se_pct": 43.9,
+    "pro_se_pct": 43.4,
     "pro_se_count": 72,
-    "_pdf_state_family_count": 164,
+    "_pdf_state_family_count": 166,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5421,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -112,16 +112,28 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Lengthy custody evaluation that took over one year to complete. Very costly. Couldn’t even remember how many kids involved in the custody case.",
+        "body": "Lengthy custody evaluation that took over one year to complete. Very costly.",
         "kind": "comment"
       },
       {
-        "body": "Dr Burman made one party pay the others bill and then refused to see that party’s witnesses.",
+        "body": "Refused to see that party’s witnesses.",
         "kind": "comment"
       },
       {
         "body": "Violated professional conduct, violated court order",
         "kind": "comment"
+      },
+      {
+        "body": "In the past 7 1/2 years I’ve watched my child and grandchild die a slow death.",
+        "kind": "family_report"
+      },
+      {
+        "body": "The system has participated in the unjust, unconstitutional, persecution of a family.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Stripped me of my role as a mother",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

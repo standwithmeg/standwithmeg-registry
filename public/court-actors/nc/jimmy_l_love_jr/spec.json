@@ -28,7 +28,7 @@
     "actor_bucket_key": "jimy love|NC"
   },
   "photo": {
-    "path": "public/court-actors/nc/jimmy_l_love_jr/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/jimmy_l_love_jr/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -48,7 +48,7 @@
     "_pdf_state_family_count": 216,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -114,16 +114,28 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Forced me into an equitable distribution trial without an attorney, denied my request to submit evidence of separate property and cost me tens of thousands of dollars.",
+        "body": "He also refused to hear a return hearing on an ex parte order.",
         "kind": "comment"
       },
       {
-        "body": "He heard her case and his son as a parental coordinator when I had evidence showing medical neglect, and this was not the first time that we had medical neglect.",
+        "body": "He heard her case and his son as a parental coordinator when I had evidence showing…",
         "kind": "comment"
       },
       {
-        "body": "Issued rulings that maintained supervised visitation and prolonged my separation from my children. Spoke with other party before I was allowed into the court room.",
+        "body": "Spoke with other party before I was allowed into the court room.",
         "kind": "comment"
+      },
+      {
+        "body": "They have systematically degraded my relationship with my children, and enabled the…",
+        "kind": "family_report"
+      },
+      {
+        "body": "My mental health is severely destroyed and struggling to maintain hope.",
+        "kind": "family_report"
+      },
+      {
+        "body": "I will keep choosing documentation over drama, boundaries over bitterness.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

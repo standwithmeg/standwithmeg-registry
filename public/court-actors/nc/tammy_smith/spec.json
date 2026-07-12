@@ -29,7 +29,7 @@
     "actor_bucket_key": "tamy smith|NC"
   },
   "photo": {
-    "path": "public/court-actors/nc/tammy_smith/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/tammy_smith/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -49,7 +49,7 @@
     "_pdf_state_family_count": 216,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
@@ -173,9 +173,33 @@
       {
         "body": "Inappropriate relationship with the judge.",
         "kind": "comment"
+      },
+      {
+        "body": "It brought us back together better than ever.",
+        "kind": "family_report"
+      },
+      {
+        "body": "This has cost my parents their retirement savings. They will now have to work until they die because the judge did not handle it in a reasonable or even remotely timely manner.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Due to the emergency case being drug out for entirely too long, there has been lost time with the child.",
+        "kind": "family_report"
+      },
+      {
+        "body": "I am deeply concerned for the justice system in this county and have lost faith in honorable decision making.",
+        "kind": "family_report"
+      },
+      {
+        "body": "After domestic violence testimony and tons of evidence the judge still took my babies.",
+        "kind": "family_report"
+      },
+      {
+        "body": "The system has stolen time and been completely unjust to my child, my family and myself, and not doing what is best for the minor child’s interest.",
+        "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 2
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

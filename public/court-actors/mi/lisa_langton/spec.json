@@ -26,27 +26,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "public/court-actors/mi/lisa_langton/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/lisa_langton/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 147,
-    "total_submissions": 178,
-    "avg_financial_loss": 182868.73,
-    "avg_months_lost": 36.8,
+    "families_approved": 148,
+    "total_submissions": 179,
+    "avg_financial_loss": 182082.1,
+    "avg_months_lost": 37.2,
     "_source_table": "movement_stats_by_state",
     "_match_value": "MI",
-    "state_family_count": 178,
+    "state_family_count": 179,
     "median_financial_loss": 101500,
     "median_burden_sample_size": 79,
-    "median_months_lost": 17,
-    "pro_se_pct": 43.8,
+    "median_months_lost": 18,
+    "pro_se_pct": 43.6,
     "pro_se_count": 78,
-    "_pdf_state_family_count": 178,
+    "_pdf_state_family_count": 179,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -94,12 +94,16 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Failed to review current situations with girls focused on half brothers case more. Refused to hear other testimony and group 2 different people together based on three other children’s removal",
+        "body": "Refused to hear other testimony and group 2 different people together based on three other children’s removal",
         "kind": "comment"
       },
       {
-        "body": "Denied my motions on several occasions, is on record stating “I don’t care what the child wants I will not interview them” “I don’t owe you an explanation” “I am the end all be all “",
+        "body": "Denied my motions on several occasions",
         "kind": "comment"
+      },
+      {
+        "body": "This system has kept my family apart and kept my children from knowing each other and growing up together.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

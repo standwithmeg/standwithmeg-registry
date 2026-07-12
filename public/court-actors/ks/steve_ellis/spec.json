@@ -27,7 +27,7 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-vzi61zfo/New Final Post and Capcut template/export/steve_ellis/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/steve_ellis/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -47,7 +47,7 @@
     "_pdf_state_family_count": 253,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5430,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -113,12 +113,20 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Never met with children despite claiming to represent them in court. Believed the fathers statements against mother.",
+        "body": "Never met with children despite claiming to represent them in court.",
         "kind": "comment"
       },
       {
         "body": "Only listen to the father never the kids",
         "kind": "comment"
+      },
+      {
+        "body": "Further traumatized my daughter and demonized mother.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Miami county doesn’t have the child best interest at all, they literally take…",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

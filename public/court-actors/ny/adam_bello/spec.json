@@ -27,7 +27,7 @@
     "actor_bucket_key": "adam belo|NY"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-vzi61zfo/New Final Post and Capcut template/export/adam_bello/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/adam_bello/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -47,7 +47,7 @@
     "_pdf_state_family_count": 174,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5430,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -119,16 +119,32 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "County executive who sabotaged my business and used a Halloween prop in 2023 to label me a threat to him.",
+        "body": "Refused to make a payment to me",
         "kind": "comment"
       },
       {
-        "body": "He knows what is taking place and refuses to respond to emails and calls I've called and emailed and tried to get help and never responds.",
+        "body": "He knows what's taking place and ignores the issues. Doesn't return call or emails.",
         "kind": "comment"
       },
       {
-        "body": "Is nothing but a fraud. Doesn't help out the people and ignored evidence of wrong doing",
+        "body": "Doesn't help out the people and ignored evidence of wrong doing",
         "kind": "comment"
+      },
+      {
+        "body": "Ruined me and my family. I lost everything",
+        "kind": "family_report"
+      },
+      {
+        "body": "Fucked me",
+        "kind": "family_report"
+      },
+      {
+        "body": "It has ruined my life.",
+        "kind": "family_report"
+      },
+      {
+        "body": "They couldn’t get him to say he wanted to be with his mom.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

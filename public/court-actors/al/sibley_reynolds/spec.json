@@ -27,7 +27,7 @@
     "actor_bucket_key": "sibley reynolds|AL"
   },
   "photo": {
-    "path": "public/court-actors/al/sibley_reynolds/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/sibley_reynolds/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -47,7 +47,7 @@
     "_pdf_state_family_count": 130,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -113,16 +113,28 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Allowed my father to submit the childrens report cards as evidence of their \"well-being\" and dismissed the entire case.",
+        "body": "He then allowed the GAL to say that the children spoke with him.",
         "kind": "comment"
       },
       {
-        "body": "I had to drive 35 to 45 minutes twice a day to take my kids to and from school for a whole school year and a half of another. He dismissed everything.",
+        "body": "He dismissed everything. Evidence, subpoenas, contempt charges, everything.",
         "kind": "comment"
       },
       {
         "body": "Was a cousin by marriage to the other party",
         "kind": "comment"
+      },
+      {
+        "body": "One woman was allowed to change the trajectory of my whole family",
+        "kind": "family_report"
+      },
+      {
+        "body": "Autauga County family court has failed my children and me over and over again.",
+        "kind": "family_report"
+      },
+      {
+        "body": "I was not allowed to change their school.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

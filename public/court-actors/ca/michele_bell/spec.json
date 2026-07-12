@@ -29,7 +29,7 @@
     "actor_bucket_key": "michele bell|CA"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-vzi61zfo/New Final Post and Capcut template/export/michele_bell/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/michele_bell/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -49,7 +49,7 @@
     "_pdf_state_family_count": 447,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5430,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
@@ -143,19 +143,39 @@
         "kind": "comment"
       },
       {
-        "body": "Ignored 730 evaluators report in move away, ignore income documentation, issued orders.",
+        "body": "Ignored 730 evaluators report in move away",
         "kind": "comment"
       },
       {
-        "body": "Does not look into the history of cases, illegal/out of jurisdiction orders, misconduct.",
+        "body": "Does not look into the history of cases, illegal/out of jurisdiction orders…",
         "kind": "comment"
       },
       {
         "body": "Issued prejudiced orders, ignored/forgot standard cost procedures, ignored evidence",
         "kind": "comment"
+      },
+      {
+        "body": "Ignored all factual evidence in its rulings",
+        "kind": "family_report"
+      },
+      {
+        "body": "This system has destroyed my once healthy relationship with our son.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Used the courts to turn a present",
+        "kind": "family_report"
+      },
+      {
+        "body": "Permanent fracturing of child-mother bond.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Destroyed me emotionally and financially. Revoked my parental role.",
+        "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 2
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

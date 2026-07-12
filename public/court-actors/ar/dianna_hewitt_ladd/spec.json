@@ -26,7 +26,7 @@
     "actor_bucket_key": "diana hewit ladd|AR"
   },
   "photo": {
-    "path": "public/court-actors/ar/dianna_hewitt_ladd/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/dianna_hewitt_ladd/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -46,7 +46,7 @@
     "_pdf_state_family_count": 57,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -106,6 +106,14 @@
       {
         "body": "Refused to hear our case ans a separate case from our moms and pushed it out.",
         "kind": "comment"
+      },
+      {
+        "body": "The judge refused to hear our case, leaving us feeling powerless and unheard.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Forced to abruptly stop breastfeeding as my child was agreeable to weaning",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

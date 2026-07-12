@@ -13,9 +13,9 @@
     "state": "Kansas",
     "state_abbr": "KS",
     "mention_count": 12,
-    "family_count": 10,
-    "public_family_count": 10,
-    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "family_count": 11,
+    "public_family_count": 11,
+    "public_family_count_source": "canonical_supabase_rows_over_stale_public_api",
     "actor_report_count": 12,
     "supabase_row_ids": [
       "50984d0b-c81b-4756-bd0e-20873e3791c7",
@@ -39,7 +39,7 @@
     ]
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-vzi61zfo/New Final Post and Capcut template/export/naomi_cataudella/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/naomi_cataudella/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -59,11 +59,11 @@
     "_pdf_state_family_count": 253,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5430,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 12,
     "actor_report_count": 12,
-    "family_count": 10,
+    "family_count": 11,
     "family_reports": [
       {
         "body": "The system ultimately failed my kids. My kids had to deal with years of harassment, lies, manipulation from their father, and the court still hasn’t held him accountable for it. Now myself and children are in therapy, I still have to make my 2 youngest go [redacted] with him. He lost custody of our oldest 1.5 years ago due to GAL recommendations. I’ve been put into financial hardships from paying for attorneys, therapists, and other fees only for him to get away with the horrible things he’s done. They don’t care about families. They care about lining their pockets.",
@@ -154,7 +154,9 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/naomi_cataudella",
-  "unresolved": [],
+  "unresolved": [
+    "public_family_count_api: returned stale lower count 10; used canonical Supabase count 11"
+  ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -203,9 +205,33 @@
       {
         "body": "She manipulated me with our GAL and said things that were my true.",
         "kind": "comment"
+      },
+      {
+        "body": "He lost custody of our oldest 1.5 years ago due to GAL recommendations.",
+        "kind": "family_report"
+      },
+      {
+        "body": "The system has stripped me of my medical rights.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Make your reality what you want it to be, once choice at a time.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Naomi Cataudella’s involvement did not heal our family’s trauma.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Men are not held accountable in family courts at JoCo. They just aren’t.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Please let there be someone that can help me.",
+        "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 2
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

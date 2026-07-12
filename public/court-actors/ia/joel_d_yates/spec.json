@@ -28,7 +28,7 @@
     "actor_bucket_key": "joel yates|IA"
   },
   "photo": {
-    "path": "public/court-actors/ia/joel_d_yates/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/joel_d_yates/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -48,7 +48,7 @@
     "_pdf_state_family_count": 93,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -156,9 +156,29 @@
       {
         "body": "Read above notes regarding this individual",
         "kind": "comment"
+      },
+      {
+        "body": "I am forced to continue to do everything myself as well as I can.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Judge Joel Yates.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Family court’s six-year custody battle has ignored evidence, alienated your son…",
+        "kind": "family_report"
+      },
+      {
+        "body": "Allowed to violate every constitutional protected right of parent",
+        "kind": "family_report"
+      },
+      {
+        "body": "DHS refused to encourage reunification.",
+        "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 2
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

@@ -29,7 +29,7 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "public/court-actors/ma/frances_m_giordano/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/frances_m_giordano/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -49,7 +49,7 @@
     "_pdf_state_family_count": 106,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
@@ -127,11 +127,11 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "When we got to the courtroom. Judge Giordano supposedly had to leave right at 4 for a family emergency.",
+        "body": "Overruled judge Giordanos findings that dad was in contempt",
         "kind": "comment"
       },
       {
-        "body": "Denied motions rushed to judgment told me that she doesn’t care what’s happened in the criminal court",
+        "body": "Denied motions rushed to judgment told me that she doesn’t care what’s happened in…",
         "kind": "comment"
       },
       {
@@ -141,6 +141,22 @@
       {
         "body": "Evidence and testimony was ignored by the judge",
         "kind": "comment"
+      },
+      {
+        "body": "Which is $578 a week. Financial it crippling me. High credit card debt, etc.",
+        "kind": "family_report"
+      },
+      {
+        "body": "When a parent feels unheard in Court, the loss isn’t measured in legal orders-it’s…",
+        "kind": "family_report"
+      },
+      {
+        "body": "Stripped us of everything in order to keep us stuck in the legal system game",
+        "kind": "family_report"
+      },
+      {
+        "body": "My family being stripped away.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

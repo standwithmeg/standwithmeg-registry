@@ -27,7 +27,7 @@
     "actor_bucket_key": "meredith frederick|KS"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-vzi61zfo/New Final Post and Capcut template/export/meredith_frederick/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/meredith_frederick/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -47,7 +47,7 @@
     "_pdf_state_family_count": 253,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5430,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -113,12 +113,24 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Judge Frederick denied my due process and took primary custody from me to give to mother based on 4 false claims.",
+        "body": "Took primary custody from me to give to mother based on 4 false claims",
         "kind": "comment"
       },
       {
         "body": "Was my attorney in 2016",
         "kind": "comment"
+      },
+      {
+        "body": "Taken away the most valuable time from their youth.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Robbed memories, broken my family apart, and turned my kids against me",
+        "kind": "family_report"
+      },
+      {
+        "body": "This case has destroyed our whole entire town.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

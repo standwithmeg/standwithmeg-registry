@@ -25,7 +25,7 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "public/court-actors/tx/gabriela_garcia/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/gabriela_garcia/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -45,7 +45,7 @@
     "_pdf_state_family_count": 316,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5421,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 2,
     "actor_report_count": 2,
@@ -103,8 +103,16 @@
         "kind": "comment"
       },
       {
-        "body": "She groomed my kids and was acting like she was my ex’s attorneys helper even sitting in court next to him and consulting him all the time. Biased since the beginning. Told me that all the DV I suffer was not relevant",
+        "body": "Biased since the beginning. Told me that all the DV I suffer was not relevant",
         "kind": "comment"
+      },
+      {
+        "body": "Has destroyed my daughter and I.",
+        "kind": "family_report"
+      },
+      {
+        "body": "They took all that mattered to me",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

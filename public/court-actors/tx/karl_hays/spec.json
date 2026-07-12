@@ -30,7 +30,7 @@
     "actor_bucket_key": "karl hays|TX"
   },
   "photo": {
-    "path": "public/court-actors/tx/karl_hays/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/karl_hays/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -50,7 +50,7 @@
     "_pdf_state_family_count": 316,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5421,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 7,
     "actor_report_count": 7,
@@ -184,9 +184,33 @@
       {
         "body": "Abuse and adultry are not considered.",
         "kind": "comment"
+      },
+      {
+        "body": "Has out-poured into extended family and our community.",
+        "kind": "family_report"
+      },
+      {
+        "body": "There are serious concerns about how Karl Hays and his appointed GALs such as…",
+        "kind": "family_report"
+      },
+      {
+        "body": "Forced to cease all communication with my children this lasted for almost 2 years",
+        "kind": "family_report"
+      },
+      {
+        "body": "Our family has been broken for 5.5 years.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Completely took the side of the mother.",
+        "kind": "family_report"
+      },
+      {
+        "body": "This has cost me money, my health, my children.",
+        "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 2
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

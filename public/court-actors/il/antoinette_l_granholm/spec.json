@@ -49,7 +49,7 @@
     "_pdf_state_family_count": 151,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5430,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
@@ -97,8 +97,16 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "No, due process, ignored evidence, unethical, harassment, denied motions, defamation of professionals publicly. Denied hearings, denied my emotions, defamation of medical professionals Denied hearing, and ignored evidence, delayed notification, not the call, bias, edited documents, dismiss motions, unprofessional, no due process Denied motion without hearing without due process",
+        "body": "No, due process, ignored evidence, unethical, harassment, denied motions, defamation of professionals publicly.",
         "kind": "comment"
+      },
+      {
+        "body": "False allegations, false orders of protection.",
+        "kind": "family_report"
+      },
+      {
+        "body": "I have NEVER lost my faith in God and he has carried me through.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

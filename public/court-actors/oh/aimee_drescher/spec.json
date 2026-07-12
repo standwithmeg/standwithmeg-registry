@@ -26,27 +26,27 @@
     "actor_bucket_key": "aime drescher|OH"
   },
   "photo": {
-    "path": "public/court-actors/oh/aimee_drescher/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/aimee_drescher/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 208,
-    "total_submissions": 264,
-    "avg_financial_loss": 112074.3,
-    "avg_months_lost": 31.5,
+    "families_approved": 209,
+    "total_submissions": 265,
+    "avg_financial_loss": 111611.65,
+    "avg_months_lost": 31.3,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OH",
-    "state_family_count": 264,
+    "state_family_count": 265,
     "median_financial_loss": 79250,
     "median_burden_sample_size": 128,
     "median_months_lost": 18,
-    "pro_se_pct": 53.0,
+    "pro_se_pct": 52.8,
     "pro_se_count": 140,
-    "_pdf_state_family_count": 264,
+    "_pdf_state_family_count": 265,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5421,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -100,12 +100,20 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "She was the PhD to back the gal on this safety plan. She has removed me from the ability to partake in his therapy there and did neurological psychological testing without my consent as his custodial and residential parent and without my knowledge.",
+        "body": "She has removed me from the ability to partake in his therapy there and did neurological psychological testing.",
         "kind": "comment"
       },
       {
-        "body": "She was ordered to do a court order evaluation of my husband and I. She came back and said after not talking to my therapists or psychiatrist. She said she couldn’t rule out “factitious disorder by proxy”. She had no evidence of that rule out.",
+        "body": "She was ordered to do a court order evaluation of my husband and I.",
         "kind": "comment"
+      },
+      {
+        "body": "I remain stuck in supervised visits with no agreement or plan for reunification.",
+        "kind": "family_report"
+      },
+      {
+        "body": "The system has killed me slowly. They have taken out my heart and just stomped on it.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

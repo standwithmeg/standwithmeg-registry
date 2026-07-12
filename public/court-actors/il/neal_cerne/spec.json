@@ -27,7 +27,7 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-vzi61zfo/New Final Post and Capcut template/export/neal_cerne/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/neal_cerne/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -47,7 +47,7 @@
     "_pdf_state_family_count": 151,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5430,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -137,8 +137,24 @@
         "kind": "comment"
       },
       {
-        "body": "Denied an order of protection my teenage daughter filed against her father after there was substantial…",
+        "body": "Denied an order of protection my teenage daughter filed against her father after…",
         "kind": "comment"
+      },
+      {
+        "body": "Tomorrow, it could happen to you or someone you love seeking protection under the law.",
+        "kind": "family_report"
+      },
+      {
+        "body": "This traumatized my family.",
+        "kind": "family_report"
+      },
+      {
+        "body": "I got my kids back on my own.",
+        "kind": "family_report"
+      },
+      {
+        "body": "I failed him, but because a system with no accountability decided it could.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

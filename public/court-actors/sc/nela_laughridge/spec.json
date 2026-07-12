@@ -13,8 +13,8 @@
     "state": "SC",
     "state_abbr": "SC",
     "mention_count": 7,
-    "family_count": 2,
-    "public_family_count": 2,
+    "family_count": 3,
+    "public_family_count": 3,
     "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
     "actor_report_count": 7,
     "supabase_row_ids": [
@@ -50,11 +50,11 @@
     "_pdf_state_family_count": 108,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5421,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 7,
     "actor_report_count": 7,
-    "family_count": 2,
+    "family_count": 3,
     "family_reports": [],
     "public_comments": []
   },

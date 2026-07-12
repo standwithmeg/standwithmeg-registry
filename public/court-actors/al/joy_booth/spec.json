@@ -33,7 +33,7 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "public/court-actors/al/joy_booth/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/joy_booth/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -53,7 +53,7 @@
     "_pdf_state_family_count": 130,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 10,
     "actor_report_count": 10,
@@ -177,9 +177,25 @@
       {
         "body": "Blocked my attempts to get in front of her with the evidence in question",
         "kind": "comment"
+      },
+      {
+        "body": "Tried to make me kill myself",
+        "kind": "family_report"
+      },
+      {
+        "body": "My child’s, and they still sided for him to receive joint custody of our child.",
+        "kind": "family_report"
+      },
+      {
+        "body": "It cost me everything.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Autauga County family court has failed my children and me over and over again.",
+        "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 2
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

@@ -26,27 +26,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "public/court-actors/in/indiana_department_of_child_services/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/indiana_department_of_child_services/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 128,
     "total_submissions": 153,
-    "avg_financial_loss": 121922.6,
-    "avg_months_lost": 30.0,
+    "avg_financial_loss": 132589.26,
+    "avg_months_lost": 30.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "IN",
     "state_family_count": 153,
-    "median_financial_loss": 63875,
-    "median_burden_sample_size": 76,
+    "median_financial_loss": 66500,
+    "median_burden_sample_size": 79,
     "median_months_lost": 18,
     "pro_se_pct": 45.8,
     "pro_se_count": 70,
     "_pdf_state_family_count": 153,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -116,12 +116,20 @@
         "kind": "comment"
       },
       {
-        "body": "Delayed reunification, acted out of convenience and made rules up as they went theough the case",
+        "body": "Delayed reunification, acted out of convenience and made rules up as they went…",
         "kind": "comment"
       },
       {
         "body": "They did not listen to me. They believed the party that reported my to DCS.",
         "kind": "comment"
+      },
+      {
+        "body": "Are ok with my child entering a strangers vehicle.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Traumatized us. Let an abusive sadistic man maintain control.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

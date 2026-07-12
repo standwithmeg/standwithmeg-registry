@@ -28,7 +28,7 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "public/court-actors/ct/heidi_opinsky/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/heidi_opinsky/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -48,7 +48,7 @@
     "_pdf_state_family_count": 65,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -114,16 +114,28 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Blatantly violated attorney/client privilege to provide the other counsel with private information going against her own client",
+        "body": "Blatantly violated attorney/client privilege to provide the other counsel with…",
         "kind": "comment"
       },
       {
-        "body": "Played favorites with GALs and attorneys in opposition of her client or the children to gain connections",
+        "body": "Played favorites with GALs and attorneys in opposition of her client or the…",
         "kind": "comment"
       },
       {
         "body": "Forced me into settlement arrangements to better her career with threats",
         "kind": "comment"
+      },
+      {
+        "body": "The Family Court allowed all my assets to be lost.",
+        "kind": "family_report"
+      },
+      {
+        "body": "The family court allowed fraudulent “experts”.",
+        "kind": "family_report"
+      },
+      {
+        "body": "You aren’t the one they “like” they simply destroy your life and your children’s.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

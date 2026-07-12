@@ -28,7 +28,7 @@
     "actor_bucket_key": "sadia upright|SC"
   },
   "photo": {
-    "path": "public/court-actors/sc/sadia_upright/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/sadia_upright/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -48,7 +48,7 @@
     "_pdf_state_family_count": 108,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5421,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -108,6 +108,14 @@
       {
         "body": "Contributed to the negative hearsay",
         "kind": "comment"
+      },
+      {
+        "body": "We have three small children and are now forced to give up our home due to financial ruin.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Praise God for His renewal and peace in the midst of our persecutions and suffering!",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

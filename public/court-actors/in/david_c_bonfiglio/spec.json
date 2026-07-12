@@ -38,36 +38,36 @@
       "c1d230f0-15f1-4de3-ae36-48bb10e6bd12",
       "e3e5fe8e-4da3-42f8-83a5-6c5b2e8fd81a",
       "76d5fc96-393b-421b-b5bb-ffaf8e6078b4",
+      "c114aabf-d2ad-4db6-ad90-ad5cdc96ed1d",
       "ffde1178-eeb1-4dd1-a53c-0f32eb29ac5f",
       "18aeb5a7-359e-46f8-9680-85696021de36",
-      "f9b6c8a7-607d-4a20-a08e-17d0f069ddc2",
-      "c114aabf-d2ad-4db6-ad90-ad5cdc96ed1d"
+      "f9b6c8a7-607d-4a20-a08e-17d0f069ddc2"
     ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "public/court-actors/in/david_c_bonfiglio/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/david_c_bonfiglio/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 128,
     "total_submissions": 153,
-    "avg_financial_loss": 121922.6,
-    "avg_months_lost": 30.0,
+    "avg_financial_loss": 132589.26,
+    "avg_months_lost": 30.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "IN",
     "state_family_count": 153,
-    "median_financial_loss": 63875,
-    "median_burden_sample_size": 76,
+    "median_financial_loss": 66500,
+    "median_burden_sample_size": 79,
     "median_months_lost": 18,
     "pro_se_pct": 45.8,
     "pro_se_count": 70,
     "_pdf_state_family_count": 153,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 24,
     "actor_report_count": 24,
@@ -301,6 +301,26 @@
       {
         "body": "Denied motions",
         "kind": "comment"
+      },
+      {
+        "body": "I was forced to pay a stranger to pretend she knows what’s best for my children.",
+        "kind": "family_report"
+      },
+      {
+        "body": "The system has allowed my girls to be in the custody of child abusers",
+        "kind": "family_report"
+      },
+      {
+        "body": "Judge Bonfiglio and GAL Mary Raatz belong in jail.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Denied my children proper financial support from their father",
+        "kind": "family_report"
+      },
+      {
+        "body": "Ordered me to pay child support.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 3

@@ -1,0 +1,111 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "james_patrick_celebrezze",
+    "display_name": "James Patrick Celebrezze",
+    "title": "",
+    "first_name": "James Patrick",
+    "last_name": "Celebrezze",
+    "role": "Judge",
+    "court": "Cuyahoga",
+    "county": "Cuyahoga",
+    "court_or_county": "Cuyahoga",
+    "state": "OH",
+    "state_abbr": "OH",
+    "mention_count": null,
+    "family_count": 3,
+    "public_family_count": 0,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 3,
+    "supabase_row_ids": null,
+    "actor_row_id": null,
+    "actor_bucket_key": "james patrick celebreze|OH"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 209,
+    "total_submissions": 265,
+    "avg_financial_loss": 111611.65,
+    "avg_months_lost": 31.3,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OH",
+    "state_family_count": 265,
+    "median_financial_loss": 79250,
+    "median_burden_sample_size": 128,
+    "median_months_lost": 18,
+    "pro_se_pct": 52.8,
+    "pro_se_count": 140,
+    "_pdf_state_family_count": 265,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5441,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "I am living in absolute H 3// right now. My son has a rare genetic disorder and had a bit of an episode that was unusual for him. A traumatic experience triggered him to act out of character and lock me out of my house. The police were called (not by me) and the short of it is they charged him criminally. He just turned 14 and has a 72 IQ. He is kind and has a great personality. Since i was the alleged \"victim \" of the \"crime\" i figured it would be easy to get him out of juvenile detention. His attorney, my attorney, we are both fighting to have him freed. The GAL and judge want him to go to an institution!!!! It's insanity, absolute insanity. They had the board of DD and our whole team try to get him placed inpatient. It was denied and the appeal was denied because he isn't remotely even CLOSE to needing that level of care!!! So their genius idea was to have CPS take temporary custody. I absolutely REFUSED. They held a pretend hearing (pretended that it mattered what I wanted or what my son's therapist wanted), granted CPS temporary custody, even THEY can't get him in patient and they're using juvenile detention as a day care. Meanwhile my son has been assaulted THREE TIMES, moved 3 times to different pods, and has been fed dairy every single day even though he is medically allergic to it. We are living in an unbelievable nightmare. There is no end in sight. Believe me when i say they are coming for your disabled children!!!!",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Cuyahoga"
+      },
+      {
+        "comment_text": "He has approved decisions that contained unfounded allegations and did not comply with local rules. He has refused my subpeonas while simultaneously allowing opposing parties. Has allowed a GAL to remain in a case that expressed explicit bias",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Cuyahoga County"
+      },
+      {
+        "comment_text": "Ignore evidence of child abuse/ making false statements in order.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Cuyahoga"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/james_patrick_celebrezze",
+  "unresolved": [
+    "court_actors: no rows match name~'James Patrick Celebrezze' state='OH'",
+    "public_family_count_api: no match for display_name='James Patrick Celebrezze' bucket='james patrick celebreze|OH' slug='james_patrick_celebrezze' in OH (443 actors)",
+    "family_count: lookup and previous spec returned 0 — using report_count=3 as fallback"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/oh/james_patrick_celebrezze/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "The police were called (not by me) and the short of it is they charged him criminally. He just turned 14 and has a 72 IQ. He is kind and has a great personality.",
+        "kind": "comment"
+      },
+      {
+        "body": "He has refused my subpeonas while simultaneously allowing opposing parties. Has allowed a GAL to remain in a case that expressed explicit bias",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignore evidence of child abuse/ making false statements in order.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

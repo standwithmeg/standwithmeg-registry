@@ -26,7 +26,7 @@
     "actor_bucket_key": "suzanne gazzaniga|CA"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-vzi61zfo/New Final Post and Capcut template/export/suzanne_gazzaniga/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/suzanne_gazzaniga/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -46,7 +46,7 @@
     "_pdf_state_family_count": 447,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5430,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -112,16 +112,28 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Appears in the case record as a judicial officer and order signer in [redacted] family-court proceedings. Included for the complete court-actor timeline.",
+        "body": "Included for the complete court-actor timeline.",
         "kind": "comment"
       },
       {
-        "body": "Recuesed herself from my case sighting conflict which she never described what the conflict was so another judge (Civil) could step in.",
+        "body": "Recuesed herself from my case sighting conflict which she never described what the…",
         "kind": "comment"
       },
       {
-        "body": "This judge denied my timely request to set aside Michael Jacques orders despite the reasons why he was removed from my case.",
+        "body": "This judge denied my timely request to set aside Michael Jacques orders.",
         "kind": "comment"
+      },
+      {
+        "body": "After disputed allegations I denied on the record, Placer County Family Court…",
+        "kind": "family_report"
+      },
+      {
+        "body": "Losing your children in Family Court is like mourning the death of a child.",
+        "kind": "family_report"
+      },
+      {
+        "body": "My life will never be the same.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

@@ -28,7 +28,7 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "public/court-actors/nc/elizabeth_heath/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/elizabeth_heath/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -48,7 +48,7 @@
     "_pdf_state_family_count": 216,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -114,16 +114,28 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Ignored evidence,. Made judgements based on her opinion and personal vendettas rather than from law and general statutes.",
+        "body": "Falsified information against me",
         "kind": "comment"
       },
       {
-        "body": "Silently retaliate against misusing her authority, bias abusive court proceedings Asisted in the kidnapping of my minor child. Ignored evidence, collusion.",
+        "body": "Ignored evidence, collusion.",
         "kind": "comment"
       },
       {
-        "body": "She refused to listen to any evidence from our side. She strictly went by the court report from DSS in the Guardian at Leitem.",
+        "body": "She refused to listen to any evidence from our side.",
         "kind": "comment"
+      },
+      {
+        "body": "Took them away from their families",
+        "kind": "family_report"
+      },
+      {
+        "body": "Instead,they came in and completely ripped my family apart .",
+        "kind": "family_report"
+      },
+      {
+        "body": "Using the courts to gain coercive control, custody of a child he knew wasn't his.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

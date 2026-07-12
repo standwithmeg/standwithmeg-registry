@@ -29,27 +29,27 @@
     "actor_bucket_key": "wiliam singer|WA"
   },
   "photo": {
-    "path": "public/court-actors/wa/william_singer/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/william_singer/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 91,
-    "total_submissions": 124,
-    "avg_financial_loss": 296193.93,
+    "families_approved": 92,
+    "total_submissions": 125,
+    "avg_financial_loss": 293778.94,
     "avg_months_lost": 28.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "WA",
-    "state_family_count": 124,
-    "median_financial_loss": 149000,
-    "median_burden_sample_size": 66,
-    "median_months_lost": 14,
-    "pro_se_pct": 63.7,
-    "pro_se_count": 79,
-    "_pdf_state_family_count": 124,
+    "state_family_count": 125,
+    "median_financial_loss": 137000,
+    "median_burden_sample_size": 67,
+    "median_months_lost": 16,
+    "pro_se_pct": 64.0,
+    "pro_se_count": 80,
+    "_pdf_state_family_count": 125,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5421,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
@@ -157,9 +157,29 @@
       {
         "body": "He did not report my ex not paying child support and paused DV program",
         "kind": "comment"
+      },
+      {
+        "body": "This system dismantled my close relationship with my children and alienated me.",
+        "kind": "family_report"
+      },
+      {
+        "body": "The 3 people I mentioned harmed me and my child psychologically and financially.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Abuse was known by family for years and in family court I was exploited.",
+        "kind": "family_report"
+      },
+      {
+        "body": "The system is allowing an abuser to continue abuse and face no consequences for his…",
+        "kind": "family_report"
+      },
+      {
+        "body": "Gave 50% custody to the father during the summer",
+        "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 2
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

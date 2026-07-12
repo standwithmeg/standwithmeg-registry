@@ -24,7 +24,7 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "public/court-actors/tn/magistrate_blevins/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/magistrate_blevins/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -44,7 +44,7 @@
     "_pdf_state_family_count": 123,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5421,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 1,
     "actor_report_count": 1,
@@ -89,6 +89,10 @@
       {
         "body": "Signed the order to remove the girls, twice, without, cause, due process, or investigation",
         "kind": "comment"
+      },
+      {
+        "body": "WE MUST FIGHT BACK, WE MUST DESTROY EVERY SYSTEM THAT HAS TAKEN PART, WE MUST HOLD ALL INVOLVED ACCOUNTABLE!!!!",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

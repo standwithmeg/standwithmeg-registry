@@ -28,7 +28,7 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "public/court-actors/fl/deborah_o_day/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/deborah_o_day/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -48,7 +48,7 @@
     "_pdf_state_family_count": 306,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -114,16 +114,28 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Dismissed her pediatrician proving no bipolar then helped the family court give sole custody to their identified perpetrator",
+        "body": "Then helped the family court give sole custody to their identified perpetrator",
         "kind": "comment"
       },
       {
-        "body": "Conducted Social Investigation which ignored and/or minimized facts and evidence which led to a biased opinion (in favor of the party paying her bill).",
+        "body": "Ignored and/or minimized facts",
         "kind": "comment"
       },
       {
         "body": "Judges ignored her evaluation",
         "kind": "comment"
+      },
+      {
+        "body": "Used to undermine protective parents",
+        "kind": "family_report"
+      },
+      {
+        "body": "I’ve been dragged in and out of family court for nearly ten years.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Briese denied Mother's due process.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

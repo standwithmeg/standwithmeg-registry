@@ -29,7 +29,7 @@
     "actor_bucket_key": "john leo|NY"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-vzi61zfo/New Final Post and Capcut template/export/john_j_leo/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/john_j_leo/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -49,7 +49,7 @@
     "_pdf_state_family_count": 174,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5430,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
@@ -115,7 +115,7 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Ignored evidence Yelled in the court room Would not let attorney speak Appointed afc who he has a relationship with Threatened child custody to father Pre judged…",
+        "body": "Ignored evidence Yelled in the court room Would not let attorney speak Appointed…",
         "kind": "comment"
       },
       {
@@ -125,6 +125,18 @@
       {
         "body": "Rips families apart for sport Rips children from parents",
         "kind": "comment"
+      },
+      {
+        "body": "The court chose a monied party with a lawyer over the best interest of our children.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Irreversible damage to myself and my children.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Effected my mental health, extreme stress, depression and ruined my relationship…",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

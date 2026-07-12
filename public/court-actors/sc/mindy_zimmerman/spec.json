@@ -26,7 +26,7 @@
     "actor_bucket_key": "mindy zimerman|SC"
   },
   "photo": {
-    "path": "public/court-actors/sc/mindy_zimmerman/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/mindy_zimmerman/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -46,7 +46,7 @@
     "_pdf_state_family_count": 108,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5421,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -106,16 +106,24 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Entered contempt findings and rulings that suspended my financial support and transferred future medical appointment authority for my children solely to the other…",
+        "body": "Entered contempt findings and rulings that suspended my financial support and transferred…",
         "kind": "comment"
       },
       {
-        "body": "Was assigned to portions of your case at different times. You have raised concerns about scheduling, notice, and procedural issues during the litigation.",
+        "body": "Was assigned to portions of your case at different times.",
         "kind": "comment"
       },
       {
-        "body": "DENIED ME THE RIGHT TO KNOW WHERE MY CHILDREN WHERE AT FOR CHRISTMAS THEY WERE OUT OF STATE WITH FOSTER CARE",
+        "body": "DENIED ME THE RIGHT TO KNOW WHERE MY CHILDREN WHERE AT FOR CHRISTMAS THEY WERE OUT OF STATE…",
         "kind": "comment"
+      },
+      {
+        "body": "Temporary custody proceedings turned my children, medical hardship, and parental rights into a…",
+        "kind": "family_report"
+      },
+      {
+        "body": "This is not even all of it",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

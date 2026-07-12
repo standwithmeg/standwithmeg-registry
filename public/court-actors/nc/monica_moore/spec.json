@@ -48,7 +48,7 @@
     "_pdf_state_family_count": 216,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -120,16 +120,28 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "They lied about it in court reports and never did what was mandated by NC 7b laws which is to contact law enforcement and have a CME within 24 hours.",
+        "body": "Lied about it in court reports",
         "kind": "comment"
       },
       {
-        "body": "Added her, because I saw her name on a nearby county complaint and know it's common for caseworkers to go to other neighboring counties.",
+        "body": "Currently she is on my case in Sampson.",
         "kind": "comment"
       },
       {
         "body": "She plays a good role pretends she cares and is going help you but does nothing",
         "kind": "comment"
+      },
+      {
+        "body": "I completed everything they asked if me and more. Separated my boys into foster homes.",
+        "kind": "family_report"
+      },
+      {
+        "body": "I can not put a dollar amount on what has been done.",
+        "kind": "family_report"
+      },
+      {
+        "body": "I have learned that the truth does not prevail.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

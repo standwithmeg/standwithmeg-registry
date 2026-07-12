@@ -28,27 +28,27 @@
     "actor_bucket_key": "rob hopkins|OK"
   },
   "photo": {
-    "path": "public/court-actors/ok/rob_hopkins/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/rob_hopkins/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 131,
-    "total_submissions": 164,
-    "avg_financial_loss": 119502.36,
-    "avg_months_lost": 24.6,
+    "total_submissions": 166,
+    "avg_financial_loss": 118855.1,
+    "avg_months_lost": 24.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OK",
-    "state_family_count": 164,
-    "median_financial_loss": 94750,
-    "median_burden_sample_size": 88,
+    "state_family_count": 166,
+    "median_financial_loss": 99500,
+    "median_burden_sample_size": 89,
     "median_months_lost": 12,
-    "pro_se_pct": 43.9,
+    "pro_se_pct": 43.4,
     "pro_se_count": 72,
-    "_pdf_state_family_count": 164,
+    "_pdf_state_family_count": 166,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5421,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -136,19 +136,39 @@
         "kind": "comment"
       },
       {
-        "body": "He caused me to lose my child. He lied even to supreme Court Refs about things that occurred in my case.",
+        "body": "He lied even to supreme Court Refs about things that occurred in my case.",
         "kind": "comment"
       },
       {
-        "body": "Rob quit showing up. Wouldn't file anything. Just personal things too i dont want to talk about.",
+        "body": "Wouldn't file anything. Just personal things too i dont want to talk about.",
         "kind": "comment"
       },
       {
         "body": "Lied and made up stories about me that could be disproven",
         "kind": "comment"
+      },
+      {
+        "body": "Family Court has allowed my abuser to continue his abuse to me and my child.",
+        "kind": "family_report"
+      },
+      {
+        "body": "It has taken mine and my childs life away from us.",
+        "kind": "family_report"
+      },
+      {
+        "body": "It is psychologically messing up my children.",
+        "kind": "family_report"
+      },
+      {
+        "body": "I has threated in front of my counsel who did not come to my aid.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Being a low income single black mother in Oklahoma is apparently cause to be deemed…",
+        "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 2
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

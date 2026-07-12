@@ -30,7 +30,7 @@
     "actor_bucket_key": "patricia brady|MA"
   },
   "photo": {
-    "path": "public/court-actors/ma/patricia_brady/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/patricia_brady/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -50,7 +50,7 @@
     "_pdf_state_family_count": 106,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 7,
     "actor_report_count": 7,
@@ -174,9 +174,33 @@
       {
         "body": "Spoke to both parents, talked to 3 children, mother made false allegations.",
         "kind": "comment"
+      },
+      {
+        "body": "The doctors and courts allowed it, horrible abuse.",
+        "kind": "family_report"
+      },
+      {
+        "body": "A system that was supposed to protect my children ignored their voices, separated…",
+        "kind": "family_report"
+      },
+      {
+        "body": "Denied me any contact with my daughter for a year.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Judge Teixeira didn't just take the lives of my children, she reached through time…",
+        "kind": "family_report"
+      },
+      {
+        "body": "Destroyed by the system built to protect us.",
+        "kind": "family_report"
+      },
+      {
+        "body": "It has been the worst 7 years of my life.",
+        "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 2
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

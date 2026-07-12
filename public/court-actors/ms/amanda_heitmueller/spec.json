@@ -27,7 +27,7 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "public/court-actors/ms/amanda_heitmueller/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/amanda_heitmueller/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -47,7 +47,7 @@
     "_pdf_state_family_count": 54,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -113,12 +113,24 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "She made excuses for not appearing at trial or emergency custody hearing like she said she would.",
+        "body": "Did not advocate for child with court as she assured the child, mother, & attorney…",
         "kind": "comment"
       },
       {
         "body": "Ignored evidence",
         "kind": "comment"
+      },
+      {
+        "body": "Stolen my children’s childhoods. Ripped our family apart.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Took the children away from a loving mother based on false allegations.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Silenced their voices in the process",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

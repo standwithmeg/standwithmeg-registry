@@ -27,7 +27,7 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "public/court-actors/fl/danny_phillips/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/danny_phillips/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -47,7 +47,7 @@
     "_pdf_state_family_count": 306,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -113,16 +113,28 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Mr. Phillips denied this communication on several occurances. Phone records later confirmed our consultation after its occurrence had initially been disputed.",
+        "body": "Mr. Phillips denied this communication on several occurances.",
         "kind": "comment"
       },
       {
-        "body": "Conspired with psychologist (Rachel Scharlepp) to attempt to incarcerate mother for alienation. Danny is close friends with Rachel Scharlepp.",
+        "body": "Took the case after the mother consulted with his colleague Toby Norris",
         "kind": "comment"
       },
       {
-        "body": "Additional concerns relate to the attorney’s personal relationship with a former client whom he previously represented before later marrying.",
+        "body": "Concerns have been raised regarding this attorney’s candor and professional conduct…",
         "kind": "comment"
+      },
+      {
+        "body": "Years of litigation within the family court system had a profound impact on my family.",
+        "kind": "family_report"
+      },
+      {
+        "body": "The court didn’t save us, they didn’t even protect us.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Family court has destroyed my children.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

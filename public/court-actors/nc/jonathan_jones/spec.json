@@ -13,9 +13,9 @@
     "state": "NC",
     "state_abbr": "NC",
     "mention_count": 3,
-    "family_count": 2,
-    "public_family_count": 2,
-    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "canonical_supabase_rows_over_stale_public_api",
     "actor_report_count": 3,
     "supabase_row_ids": [
       "165d308b-4bb9-410b-9548-fb647a8dbd94",
@@ -46,11 +46,11 @@
     "_pdf_state_family_count": 216,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
-    "family_count": 2,
+    "family_count": 3,
     "family_reports": [
       {
         "body": "The system has torn my family apart",
@@ -91,6 +91,7 @@
   },
   "export_dir": "New Final Post and Capcut template/export/jonathan_jones",
   "unresolved": [
+    "public_family_count_api: returned stale lower count 2; used canonical Supabase count 3",
     "pdf_public_actor: no 'Johnathan jones' in cache for NC"
   ],
   "guardrails": {
@@ -111,16 +112,28 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Put me in jail for 30 days over birth certificate issue that was never mentioned in any petitions or orders.",
+        "body": "Was also a lawyer representing another in a case against me.",
         "kind": "comment"
       },
       {
-        "body": "He allowed \"witnesses\" to lie on the stand. Denied me ADA access, the list goes on and on.",
+        "body": "He allowed \"witnesses\" to lie on the stand.",
         "kind": "comment"
       },
       {
-        "body": "I truly do not think he knew or understood what he was up against. He had no reason at that time to disbelieve the dss or gal attorney.",
+        "body": "This man came in on the tail end of my case as a new judge appointed.",
         "kind": "comment"
+      },
+      {
+        "body": "The system has torn my family apart",
+        "kind": "family_report"
+      },
+      {
+        "body": "Gave my 8 year old daughter to our abuser",
+        "kind": "family_report"
+      },
+      {
+        "body": "The system tried to destroy and break our family simply for money.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

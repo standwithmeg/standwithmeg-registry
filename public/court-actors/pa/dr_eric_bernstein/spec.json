@@ -28,7 +28,7 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "public/court-actors/pa/dr_eric_bernstein/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/dr_eric_bernstein/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -48,7 +48,7 @@
     "_pdf_state_family_count": 151,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5421,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -114,16 +114,28 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "In our “high conflict” “contentious” case where I was told the court system is “not equipped” to handle our case. He made a report based on opinion and ex’s sabotage.",
+        "body": "He made a report based on opinion and ex’s sabotage.",
         "kind": "comment"
       },
       {
-        "body": "Administered an MMPI and then completely misrepresented the results and subsequent conversations in a skewed fashion to benefit only opposing side.",
+        "body": "Complete misrepresentation of administered MMPI in order to benefit opposing counsel.",
         "kind": "comment"
       },
       {
         "body": "Said one thing in report and said another in court and was bias",
         "kind": "comment"
+      },
+      {
+        "body": "Destroyed my mental health and caused trauma",
+        "kind": "family_report"
+      },
+      {
+        "body": "Has sabotaged 10 years and precious time with my children living in survival mode…",
+        "kind": "family_report"
+      },
+      {
+        "body": "My children have been told a vicious lie about me that I may never undo.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

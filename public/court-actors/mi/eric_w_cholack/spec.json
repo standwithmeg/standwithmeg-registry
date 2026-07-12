@@ -27,27 +27,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "public/court-actors/mi/eric_w_cholack/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/eric_w_cholack/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 147,
-    "total_submissions": 178,
-    "avg_financial_loss": 182868.73,
-    "avg_months_lost": 36.8,
+    "families_approved": 148,
+    "total_submissions": 179,
+    "avg_financial_loss": 182082.1,
+    "avg_months_lost": 37.2,
     "_source_table": "movement_stats_by_state",
     "_match_value": "MI",
-    "state_family_count": 178,
+    "state_family_count": 179,
     "median_financial_loss": 101500,
     "median_burden_sample_size": 79,
-    "median_months_lost": 17,
-    "pro_se_pct": 43.8,
+    "median_months_lost": 18,
+    "pro_se_pct": 43.6,
     "pro_se_count": 78,
-    "_pdf_state_family_count": 178,
+    "_pdf_state_family_count": 179,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -107,12 +107,24 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Cholak never let me have a trail he would schedule the trail then have the Attorney's and GAL go to chambers then come out and have me state i did not want the trial well here is the truth he told my attorney.",
+        "body": "We go through with the trail he already decided for my ex.",
         "kind": "comment"
       },
       {
         "body": "Allowed my ex husband to continue to abuse me and my children and he didn’t lose custody",
         "kind": "comment"
+      },
+      {
+        "body": "Complete heaviness and Trauma to my sons and their future.",
+        "kind": "family_report"
+      },
+      {
+        "body": "I have been to court over 45 times in less than seven years.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Motions signed and ignored by ex. Haven’t spoke to my daughter since may 2nd 2025",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

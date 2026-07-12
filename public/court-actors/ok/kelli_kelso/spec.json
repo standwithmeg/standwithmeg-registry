@@ -26,27 +26,27 @@
     "actor_bucket_key": "keli kelso|OK"
   },
   "photo": {
-    "path": "public/court-actors/ok/kelli_kelso/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/kelli_kelso/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 131,
-    "total_submissions": 164,
-    "avg_financial_loss": 119502.36,
-    "avg_months_lost": 24.6,
+    "total_submissions": 166,
+    "avg_financial_loss": 118855.1,
+    "avg_months_lost": 24.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OK",
-    "state_family_count": 164,
-    "median_financial_loss": 94750,
-    "median_burden_sample_size": 88,
+    "state_family_count": 166,
+    "median_financial_loss": 99500,
+    "median_burden_sample_size": 89,
     "median_months_lost": 12,
-    "pro_se_pct": 43.9,
+    "pro_se_pct": 43.4,
     "pro_se_count": 72,
-    "_pdf_state_family_count": 164,
+    "_pdf_state_family_count": 166,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5421,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -100,12 +100,20 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Lied and told me that the judge would not honor the GAL’s recommendation never even got to speak to the judge. My attorney made a deal with his attorney for [redacted] against the GAL‘s recommendations and led me to believe there was no choice",
+        "body": "Lied and told me that the judge would not honor the GAL’s recommendation never even got to speak to the judge.",
         "kind": "comment"
       },
       {
-        "body": "Had off record meetings with the therapist, improper investigations, excluded me from everything, and lied to my own attorney about me due to improper investigating.",
+        "body": "Lied to my own attorney about me due to improper investigating",
         "kind": "comment"
+      },
+      {
+        "body": "This has ruined 4 kids lives.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Has caused me and my daughter ongoing trauma for the last six years.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

@@ -29,27 +29,27 @@
     "actor_bucket_key": "cynthia pickering|OK"
   },
   "photo": {
-    "path": "public/court-actors/ok/cynthia_pickering/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/cynthia_pickering/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 131,
-    "total_submissions": 164,
-    "avg_financial_loss": 119502.36,
-    "avg_months_lost": 24.6,
+    "total_submissions": 166,
+    "avg_financial_loss": 118855.1,
+    "avg_months_lost": 24.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OK",
-    "state_family_count": 164,
-    "median_financial_loss": 94750,
-    "median_burden_sample_size": 88,
+    "state_family_count": 166,
+    "median_financial_loss": 99500,
+    "median_burden_sample_size": 89,
     "median_months_lost": 12,
-    "pro_se_pct": 43.9,
+    "pro_se_pct": 43.4,
     "pro_se_count": 72,
-    "_pdf_state_family_count": 164,
+    "_pdf_state_family_count": 166,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5421,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
@@ -173,9 +173,33 @@
       {
         "body": "I will send you what I sent to the news stations",
         "kind": "comment"
+      },
+      {
+        "body": "Gave it to the non relative",
+        "kind": "family_report"
+      },
+      {
+        "body": "My DHS worker stated that you will be a great roll model for your daughter.",
+        "kind": "family_report"
+      },
+      {
+        "body": "This system has torn our family apart, stripping me of my child through false…",
+        "kind": "family_report"
+      },
+      {
+        "body": "To include all money and assets",
+        "kind": "family_report"
+      },
+      {
+        "body": "I knew what would happen to us in okmulgee county",
+        "kind": "family_report"
+      },
+      {
+        "body": "Took my children away for 21 days with no contact with me or them",
+        "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 2
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

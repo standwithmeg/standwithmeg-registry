@@ -26,7 +26,7 @@
     "actor_bucket_key": "elizabeth stringer|SC"
   },
   "photo": {
-    "path": "public/court-actors/sc/elizabeth_stringer/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/elizabeth_stringer/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -46,7 +46,7 @@
     "_pdf_state_family_count": 108,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5421,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -100,12 +100,20 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Did not contact school officials or witnesses, twisted or completely fabricated children’s statements, false testimony, did not follow up on safety concerns brought up by the children. Lied under oath multiple times.",
+        "body": "Completely fabricated children’s statements",
         "kind": "comment"
       },
       {
-        "body": "Submitted falsified evidence, helped client hide money, made disparaging remarks to me while I was pro se. Ex parte communication with the judge in the final hearing. Litigation abuse.",
+        "body": "Submitted falsified evidence, helped client hide money, made disparaging remarks to me while I was pro se.",
         "kind": "comment"
+      },
+      {
+        "body": "Children left traumatized over and over again while stable loving parents loose everything.",
+        "kind": "family_report"
+      },
+      {
+        "body": "The system has traumatized my family while allowing the abuser to lie, conceal assets, dismantle a business…",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

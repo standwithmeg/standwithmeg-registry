@@ -28,7 +28,7 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "public/court-actors/fl/lauralee_ganson_westine/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/lauralee_ganson_westine/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -48,7 +48,7 @@
     "_pdf_state_family_count": 306,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5420,
+  "movement_total": 5440,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -140,6 +140,22 @@
       {
         "body": "Ignored evidence, etc",
         "kind": "comment"
+      },
+      {
+        "body": "The system destroyed my 2 childrens’ lives.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Case was sealed on day of first appearance",
+        "kind": "family_report"
+      },
+      {
+        "body": "All evidence was ignored, assumptions were made, and it destroyed us completely.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Lied about the date the incident happened",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

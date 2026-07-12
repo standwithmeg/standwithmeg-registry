@@ -29,7 +29,7 @@
     "actor_bucket_key": "rachel saeli (marero)|NY"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-vzi61zfo/New Final Post and Capcut template/export/rachel_k_saeli_marrero/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/rachel_k_saeli_marrero/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -49,7 +49,7 @@
     "_pdf_state_family_count": 174,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5430,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
@@ -115,16 +115,28 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "She goes by 2 names Rachel saeli and Rachel marrero her maden name. Refused to file motions on my behalf. Lied about filing motions.",
+        "body": "Refused to file motions on my behalf. Lied about filing motions.",
         "kind": "comment"
       },
       {
-        "body": "Ignored evidence Was my first assigned counsel, motioned to withdraw falsely claiming I was not respecting her vacation time",
+        "body": "Ignored evidence Was my first assigned counsel",
         "kind": "comment"
       },
       {
         "body": "Is my current attorney",
         "kind": "comment"
+      },
+      {
+        "body": "This system has destroyed my family when all I was asking for was help.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Forced to muster up the strength to keep going",
+        "kind": "family_report"
+      },
+      {
+        "body": "This system has caused irreparable damage to my children and I.",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

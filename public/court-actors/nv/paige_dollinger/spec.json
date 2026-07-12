@@ -29,27 +29,27 @@
     "actor_bucket_key": "paige dollinger|NV"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-vzi61zfo/New Final Post and Capcut template/export/paige_dollinger/image_1080.png",
+    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/paige_dollinger/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 36,
-    "total_submissions": 49,
-    "avg_financial_loss": 170116.9,
-    "avg_months_lost": 27.1,
+    "families_approved": 37,
+    "total_submissions": 50,
+    "avg_financial_loss": 167556.21,
+    "avg_months_lost": 26.7,
     "_source_table": "movement_stats_by_state",
     "_match_value": "NV",
-    "state_family_count": 49,
+    "state_family_count": 50,
     "median_financial_loss": 220750,
     "median_burden_sample_size": 16,
     "median_months_lost": 10,
-    "pro_se_pct": 55.1,
-    "pro_se_count": 27,
-    "_pdf_state_family_count": 49,
+    "pro_se_pct": 56.0,
+    "pro_se_count": 28,
+    "_pdf_state_family_count": 50,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5430,
+  "movement_total": 5441,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
@@ -121,16 +121,32 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "She has allowed my daughters predator reunification with her. (He molested her at age 2 and raped his older daughter a year later.",
+        "body": "She has allowed my daughters predator reunification with her.",
         "kind": "comment"
       },
       {
-        "body": "Made custody and case decisions despite unresolved disputes regarding evidence and due process concerns.\" Ignored evidence",
+        "body": "Unresolved disputes regarding evidence and due process concerns.\" Ignored evidence",
         "kind": "comment"
       },
       {
         "body": "Ignored all court filings relied solely on CPs’ word",
         "kind": "comment"
+      },
+      {
+        "body": "They have created my words nightmare and enabled domestic violence at my kids expense",
+        "kind": "family_report"
+      },
+      {
+        "body": "It's taken my faith and has made my kids numb",
+        "kind": "family_report"
+      },
+      {
+        "body": "She knows he system is just using her being in the hospital for their own gains",
+        "kind": "family_report"
+      },
+      {
+        "body": "The washoe county courts has made it exceedingly clear that they operate in cohorts…",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1
