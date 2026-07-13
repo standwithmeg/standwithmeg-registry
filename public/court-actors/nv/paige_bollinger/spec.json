@@ -15,15 +15,15 @@
     "mention_count": 6,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "canonical_supabase_rows_over_stale_public_api",
+    "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 6,
     "supabase_row_ids": [
       "f3cfaacd-7b7f-4a18-924e-42f1716af515",
-      "1e502a02-980c-4ce4-90cc-ba5b93582766",
       "fede59f1-bf4c-47a7-be86-ed64e92ba8e9",
       "385ed76b-e03c-419d-9e98-704bcd98255f",
       "a3f2fb4b-c3ec-4ae7-bccb-b93daf5db7c6",
-      "2cece675-0a10-4360-a2c1-766cfd01f949"
+      "2cece675-0a10-4360-a2c1-766cfd01f949",
+      "1e502a02-980c-4ce4-90cc-ba5b93582766"
     ],
     "actor_row_id": null,
     "actor_bucket_key": "paige bolinger|NV"
@@ -49,7 +49,7 @@
     "_pdf_state_family_count": 50,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5441,
+  "movement_total": 5443,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
@@ -93,12 +93,12 @@
         "source": "court_actors.notes"
       },
       {
-        "comment_text": "Made custody and case decisions despite unresolved disputes regarding evidence and due process concerns.\" Ignored evidence",
+        "comment_text": "Ignored all court filings relied solely on CPs’ word",
         "author": "Anonymous parent",
         "source": "court_actors.notes"
       },
       {
-        "comment_text": "Ignored all court filings relied solely on CPs’ word",
+        "comment_text": "Made custody and case decisions despite unresolved disputes regarding evidence and due process concerns.\" Ignored evidence",
         "author": "Anonymous parent",
         "source": "court_actors.notes"
       },
@@ -111,7 +111,7 @@
   },
   "export_dir": "New Final Post and Capcut template/export/paige_bollinger",
   "unresolved": [
-    "public_family_count_api: returned stale lower count 1; used canonical Supabase count 3",
+    "public_family_count_api: no actors returned for state='NV'",
     "pdf_public_actor: no 'Paige Bollinger' in cache for NV"
   ],
   "guardrails": {
@@ -136,11 +136,11 @@
         "kind": "comment"
       },
       {
-        "body": "Unresolved disputes regarding evidence and due process concerns.\" Ignored evidence",
+        "body": "Ignored all court filings relied solely on CPs’ word",
         "kind": "comment"
       },
       {
-        "body": "Ignored all court filings relied solely on CPs’ word",
+        "body": "Unresolved disputes regarding evidence and due process concerns.\" Ignored evidence",
         "kind": "comment"
       },
       {

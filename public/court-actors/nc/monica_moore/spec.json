@@ -13,9 +13,9 @@
     "state": "NC",
     "state_abbr": "NC",
     "mention_count": 5,
-    "family_count": 3,
-    "public_family_count": 3,
-    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "family_count": 5,
+    "public_family_count": 0,
+    "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 5,
     "supabase_row_ids": [
       "bab73730-5bdb-4956-b86e-ce27b47a0985",
@@ -48,11 +48,11 @@
     "_pdf_state_family_count": 216,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5441,
+  "movement_total": 5443,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
-    "family_count": 3,
+    "family_count": 5,
     "family_reports": [
       {
         "body": "Torn us apart. I completed everything they asked if me and more. Separated my boys into foster homes. My youngest is in group home misbehaving the whole time he's been in the system. I still have parental rights but I can see them or speak to them. October will be a year since I have spoken with them. I finally was able to get them to let me write them letters. I have had 25 caseworkers at this point.",
@@ -101,7 +101,10 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/monica_moore",
-  "unresolved": [],
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='NC'",
+    "family_count: lookup and previous spec returned 0 — using report_count=5 as fallback"
+  ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",

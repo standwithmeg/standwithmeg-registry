@@ -13,9 +13,9 @@
     "state": "Louisiana",
     "state_abbr": "LA",
     "mention_count": 3,
-    "family_count": 3,
-    "public_family_count": 3,
-    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 3,
     "supabase_row_ids": [
       "a05df472-16d4-4963-ad85-f18acecfc0e8",
@@ -26,7 +26,7 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/guy_e_bradberry/image_1080.png",
+    "path": "/tmp/swm-share-pages-oebx6srz/New Final Post and Capcut template/export/guy_e_bradberry/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -46,11 +46,11 @@
     "_pdf_state_family_count": 64,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5440,
+  "movement_total": 5443,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
-    "family_count": 3,
+    "family_count": 2,
     "family_reports": [
       {
         "body": "Accusation of Parent alienation",
@@ -80,6 +80,7 @@
   },
   "export_dir": "New Final Post and Capcut template/export/guy_e_bradberry",
   "unresolved": [
+    "public_family_count_api: no actors returned for state='LA'",
     "pdf_public_actor: no 'Guy E. Bradberry' in cache for LA"
   ],
   "guardrails": {

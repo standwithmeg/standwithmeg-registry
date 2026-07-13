@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-12T21:04:27.977589+00:00",
+  "generated_at": "2026-07-13T11:55:04.631175+00:00",
   "actors": [
     {
       "slug": "ali_upchurch_patterson",
@@ -265,8 +265,8 @@
     {
       "slug": "michele_bell",
       "state_abbr": "CA",
-      "display_name": "Michele Bell",
-      "canonical_name": "Michele Bell",
+      "display_name": "Michelle Bell",
+      "canonical_name": "Michelle Bell",
       "actor_bucket_key": "michele bell|CA",
       "photo_url": "/court-actors/ca/michele_bell/image_1080.png",
       "share_url": "/court-actors/ca/michele_bell/share.html"
@@ -576,6 +576,15 @@
       "actor_bucket_key": null,
       "photo_url": "/court-actors/ga/brandy_daswani/image_1080.png",
       "share_url": "/court-actors/ga/brandy_daswani/share.html"
+    },
+    {
+      "slug": "brian_house",
+      "state_abbr": "GA",
+      "display_name": "Brian House",
+      "canonical_name": "Brian House",
+      "actor_bucket_key": "brian house|GA",
+      "photo_url": null,
+      "share_url": "/court-actors/ga/brian_house/share.html"
     },
     {
       "slug": "candice_broce",
@@ -2056,8 +2065,8 @@
     {
       "slug": "j_d_wagner",
       "state_abbr": "OH",
-      "display_name": "J.D. Wagner,",
-      "canonical_name": "J.D. Wagner,",
+      "display_name": "JD Wagoner",
+      "canonical_name": "JD Wagoner",
       "actor_bucket_key": "j wagner|OH",
       "photo_url": null,
       "share_url": "/court-actors/oh/j_d_wagner/share.html"
@@ -2781,6 +2790,15 @@
       "actor_bucket_key": "monica schocken|TX",
       "photo_url": "/court-actors/tx/monica_schocken/image_1080.png",
       "share_url": "/court-actors/tx/monica_schocken/share.html"
+    },
+    {
+      "slug": "reynaldo_garza",
+      "state_abbr": "TX",
+      "display_name": "Reynaldo Garza",
+      "canonical_name": "Reynaldo Garza",
+      "actor_bucket_key": "reynaldo garza|TX",
+      "photo_url": null,
+      "share_url": "/court-actors/tx/reynaldo_garza/share.html"
     },
     {
       "slug": "tiffany_haertling",

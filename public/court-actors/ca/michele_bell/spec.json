@@ -2,9 +2,9 @@
   "schema_version": 2,
   "actor": {
     "slug": "michele_bell",
-    "display_name": "Michele Bell",
+    "display_name": "Michelle Bell",
     "title": "",
-    "first_name": "Michele",
+    "first_name": "Michelle",
     "last_name": "Bell",
     "role": "Judge",
     "court": "Orange",
@@ -12,24 +12,25 @@
     "court_or_county": "Orange Superior",
     "state": "California",
     "state_abbr": "CA",
-    "mention_count": 6,
+    "mention_count": 7,
     "family_count": 5,
     "public_family_count": 5,
-    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
-    "actor_report_count": 6,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 7,
     "supabase_row_ids": [
       "458a5318-16b6-4c48-af53-1a57c1f0cf43",
       "71a55770-735f-4b27-b13e-0cf1f8ba2180",
       "46216f37-b7c0-438f-8c8e-973af43d25f8",
       "4330c777-e82c-4425-8715-3adc883e0019",
       "396fe1e0-08b8-4b88-b936-e029f87348d2",
-      "8184110b-369b-4760-92c2-fb46eddc2bc9"
+      "8184110b-369b-4760-92c2-fb46eddc2bc9",
+      "543e9ddf-f2f7-4952-a4aa-7df5e7e34736"
     ],
     "actor_row_id": null,
     "actor_bucket_key": "michele bell|CA"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/michele_bell/image_1080.png",
+    "path": "/tmp/swm-share-pages-oebx6srz/New Final Post and Capcut template/export/michele_bell/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -49,10 +50,10 @@
     "_pdf_state_family_count": 447,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5440,
+  "movement_total": 5443,
   "supabase": {
-    "report_count": 6,
-    "actor_report_count": 6,
+    "report_count": 7,
+    "actor_report_count": 7,
     "family_count": 5,
     "family_reports": [
       {
@@ -120,7 +121,9 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/michele_bell",
-  "unresolved": [],
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='CA'"
+  ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",

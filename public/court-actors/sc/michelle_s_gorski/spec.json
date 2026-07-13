@@ -15,7 +15,7 @@
     "mention_count": 6,
     "family_count": 5,
     "public_family_count": 5,
-    "public_family_count_source": "canonical_supabase_rows_over_stale_public_api",
+    "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 6,
     "supabase_row_ids": [
       "0b7544c7-6029-4212-846f-622e05399d66",
@@ -29,7 +29,7 @@
     "actor_bucket_key": "michele gorski|SC"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/michelle_s_gorski/image_1080.png",
+    "path": "/tmp/swm-share-pages-oebx6srz/New Final Post and Capcut template/export/michelle_s_gorski/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -49,7 +49,7 @@
     "_pdf_state_family_count": 108,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5441,
+  "movement_total": 5443,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
@@ -105,7 +105,7 @@
   },
   "export_dir": "New Final Post and Capcut template/export/michelle_s_gorski",
   "unresolved": [
-    "public_family_count_api: returned stale lower count 2; used canonical Supabase count 5",
+    "public_family_count_api: no actors returned for state='SC'",
     "pdf_public_actor: no 'Michelle Smith Gorski' in cache for SC"
   ],
   "guardrails": {

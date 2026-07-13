@@ -8,16 +8,17 @@
     "last_name": "Garcia",
     "role": "Judge",
     "court": "138",
-    "county": null,
-    "court_or_county": "138",
+    "county": "138th Cameron County",
+    "court_or_county": "Cameron",
     "state": "Texas",
     "state_abbr": "TX",
-    "mention_count": 2,
-    "family_count": 2,
-    "public_family_count": 2,
-    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
-    "actor_report_count": 2,
+    "mention_count": 3,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 3,
     "supabase_row_ids": [
+      "0ec83b05-c952-4f38-88e6-24c5a27e1954",
       "3cf1956d-616e-4fe3-ae96-3439e0a3f30f",
       "408e53a4-58ba-4df5-af58-bdaa1bba84e9"
     ],
@@ -25,32 +26,38 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/gabriela_garcia/image_1080.png",
+    "path": "/tmp/swm-share-pages-oebx6srz/New Final Post and Capcut template/export/gabriela_garcia/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 251,
-    "total_submissions": 316,
-    "avg_financial_loss": 228661.33,
+    "families_approved": 252,
+    "total_submissions": 317,
+    "avg_financial_loss": 227873.79,
     "avg_months_lost": 32.0,
     "_source_table": "movement_stats_by_state",
     "_match_value": "TX",
-    "state_family_count": 316,
+    "state_family_count": 317,
     "median_financial_loss": 117950,
     "median_burden_sample_size": 150,
     "median_months_lost": 19,
-    "pro_se_pct": 50.0,
-    "pro_se_count": 158,
-    "_pdf_state_family_count": 316,
+    "pro_se_pct": 50.2,
+    "pro_se_count": 159,
+    "_pdf_state_family_count": 317,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5441,
+  "movement_total": 5443,
   "supabase": {
-    "report_count": 2,
-    "actor_report_count": 2,
-    "family_count": 2,
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 3,
     "family_reports": [
+      {
+        "body": "Nothing other than take innocent children away from there mothers",
+        "state": "TX",
+        "county": "Cameron",
+        "row_id": "f78414fc-50b6-42a8-8287-3af358905d3d"
+      },
       {
         "body": "Has destroyed my daughter and I. Left me bankrupt and to top it off need to pay Child support to the father so he can pay his debt and have no work.",
         "state": "TX",
@@ -66,20 +73,28 @@
     ],
     "public_comments": [
       {
-        "comment_text": "Cited with father, denied motions, ignored evidence. No due process.",
+        "comment_text": "Due process violation and biased. Didn’t ruled mistrial when my lawyer asked her to because the other party declared that information was given to people outside the court which was one of her rules for mistrial. Also aided my ex during the trial and told him how to make my text evidence not to be admitted. Let lies to be presented as evidence when evidence proving them as false was presented. Violations of rights and due process. Biased. Let my ex stayed with kids south out ant proof after he kept them after visitations She groomed my kids and was acting like she was my ex’s attorneys helper even sitting in court next to him and consulting him all the time. Biased since the beginning. Told me that all the DV I suffer was not relevant",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "138th Cameron County"
       },
       {
-        "comment_text": "She groomed my kids and was acting like she was my ex’s attorneys helper even sitting in court next to him and consulting him all the time. Biased since the beginning. Told me that all the DV I suffer was not relevant",
+        "comment_text": "Fraud/ Corruption/ Money Greed. They take your kids away and put them in the alleged abusers home",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Cameron"
+      },
+      {
+        "comment_text": "Cited with father, denied motions, ignored evidence. No due process.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "138"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/gabriela_garcia",
   "unresolved": [
-    "pdf_public_actor: no 'Gabriela Garcia' in cache for TX"
+    "public_family_count_api: no actors returned for state='TX'"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
@@ -99,12 +114,20 @@
   "render": {
     "selected_quotes": [
       {
+        "body": "Biased since the beginning. Told me that all the DV I suffer was not relevant",
+        "kind": "comment"
+      },
+      {
+        "body": "They take your kids away and put them in the alleged abusers home",
+        "kind": "comment"
+      },
+      {
         "body": "Cited with father, denied motions, ignored evidence. No due process.",
         "kind": "comment"
       },
       {
-        "body": "Biased since the beginning. Told me that all the DV I suffer was not relevant",
-        "kind": "comment"
+        "body": "Nothing other than take innocent children away from there mothers",
+        "kind": "family_report"
       },
       {
         "body": "Has destroyed my daughter and I.",

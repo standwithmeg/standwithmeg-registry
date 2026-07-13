@@ -15,7 +15,7 @@
     "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "canonical_supabase_rows_over_stale_public_api",
+    "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 3,
     "supabase_row_ids": [
       "165d308b-4bb9-410b-9548-fb647a8dbd94",
@@ -46,7 +46,7 @@
     "_pdf_state_family_count": 216,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5441,
+  "movement_total": 5443,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -91,7 +91,7 @@
   },
   "export_dir": "New Final Post and Capcut template/export/jonathan_jones",
   "unresolved": [
-    "public_family_count_api: returned stale lower count 2; used canonical Supabase count 3",
+    "public_family_count_api: no actors returned for state='NC'",
     "pdf_public_actor: no 'Johnathan jones' in cache for NC"
   ],
   "guardrails": {

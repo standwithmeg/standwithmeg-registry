@@ -12,11 +12,11 @@
     "court_or_county": "Sutter County",
     "state": "California",
     "state_abbr": "CA",
-    "mention_count": 8,
+    "mention_count": 9,
     "family_count": 7,
     "public_family_count": 7,
-    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
-    "actor_report_count": 8,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 9,
     "supabase_row_ids": [
       "d75c3213-cd6d-4736-842f-da2da234e063",
       "d9103b4a-e868-4fcf-80f3-0f8302780ff8",
@@ -25,13 +25,14 @@
       "c1e4c256-8a42-49dc-ac3c-563872c20232",
       "6eeba191-0155-4a25-8525-fe3c402f6375",
       "4dd4db03-c1ee-4470-889b-8ce8fa2186a2",
-      "8350883b-0dd7-4d95-93d4-bf61f8352100"
+      "8350883b-0dd7-4d95-93d4-bf61f8352100",
+      "ceca5490-6dc4-440c-bc17-22f9972a9a41"
     ],
     "actor_row_id": "d75c3213-cd6d-4736-842f-da2da234e063",
     "actor_bucket_key": "jese santana|CA"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/jesse_i_santana/image_1080.png",
+    "path": "/tmp/swm-share-pages-oebx6srz/New Final Post and Capcut template/export/jesse_i_santana/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -51,10 +52,10 @@
     "_pdf_state_family_count": 447,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5440,
+  "movement_total": 5443,
   "supabase": {
-    "report_count": 8,
-    "actor_report_count": 8,
+    "report_count": 9,
+    "actor_report_count": 9,
     "family_count": 7,
     "family_reports": [
       {
@@ -140,7 +141,9 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/jesse_i_santana",
-  "unresolved": [],
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='CA'"
+  ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",

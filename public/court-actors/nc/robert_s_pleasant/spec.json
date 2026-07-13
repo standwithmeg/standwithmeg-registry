@@ -12,13 +12,14 @@
     "court_or_county": "Johnston",
     "state": "North Carolina",
     "state_abbr": "NC",
-    "mention_count": 3,
+    "mention_count": 4,
     "family_count": 4,
     "public_family_count": 4,
-    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
-    "actor_report_count": 3,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 4,
     "supabase_row_ids": [
       "18975e82-0d8d-4eec-9656-94ae3e0a1434",
+      "cdbba0a9-afe4-4560-b743-e9c677d168af",
       "e6d056e8-ce28-4695-b860-989c479345ab",
       "17b12db0-4503-4dd2-a895-9a4b18a0c476"
     ],
@@ -26,7 +27,7 @@
     "actor_bucket_key": "robert pleasant|NC"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/robert_s_pleasant/image_1080.png",
+    "path": "/tmp/swm-share-pages-oebx6srz/New Final Post and Capcut template/export/robert_s_pleasant/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -46,10 +47,10 @@
     "_pdf_state_family_count": 216,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5441,
+  "movement_total": 5443,
   "supabase": {
-    "report_count": 3,
-    "actor_report_count": 3,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 4,
     "family_reports": [
       {
@@ -63,6 +64,12 @@
         "state": "NC",
         "county": "Johnston County",
         "row_id": "9e02eeaa-506b-41be-a634-6bbb50fb9ed2"
+      },
+      {
+        "body": "This custody battle has taught me that protecting children is not about winning against the other parent; it is about preserving stability, truth, and peace when conflict tries to rewrite the story. I will keep choosing documentation over drama, boundaries over bitterness, and my children’s well-being over public revenge.",
+        "state": "NC",
+        "county": "Johnston County",
+        "row_id": "59b36385-33a9-450d-8eff-13dfa48b6bac"
       },
       {
         "body": "Parental Allination, Fraser accusations, things were said to the child that weren't true,narcissist abuser",
@@ -93,7 +100,9 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/robert_s_pleasant",
-  "unresolved": [],
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='NC'"
+  ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -129,6 +138,10 @@
       },
       {
         "body": "My mental health is severely destroyed and struggling to maintain hope.",
+        "kind": "family_report"
+      },
+      {
+        "body": "I will keep choosing documentation over drama, boundaries over bitterness.",
         "kind": "family_report"
       }
     ],

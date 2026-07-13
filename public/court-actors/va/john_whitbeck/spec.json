@@ -15,7 +15,7 @@
     "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 3,
     "supabase_row_ids": [
       "018956c5-35d7-424d-936a-81345399079f",
@@ -26,7 +26,7 @@
     "actor_bucket_key": "john whitbeck|VA"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/john_whitbeck/image_1080.png",
+    "path": "/tmp/swm-share-pages-oebx6srz/New Final Post and Capcut template/export/john_whitbeck/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -46,7 +46,7 @@
     "_pdf_state_family_count": 131,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5441,
+  "movement_total": 5443,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -93,7 +93,9 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/john_whitbeck",
-  "unresolved": [],
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='VA'"
+  ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",

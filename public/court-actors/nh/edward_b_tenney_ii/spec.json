@@ -15,7 +15,7 @@
     "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "canonical_supabase_rows_over_stale_public_api",
+    "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 3,
     "supabase_row_ids": [
       "eaebcbd8-1f95-4f20-8d26-c7a19b84ebdf",
@@ -46,7 +46,7 @@
     "_pdf_state_family_count": 36,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5441,
+  "movement_total": 5443,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -94,7 +94,7 @@
   },
   "export_dir": "New Final Post and Capcut template/export/edward_b_tenney_ii",
   "unresolved": [
-    "public_family_count_api: returned stale lower count 1; used canonical Supabase count 3"
+    "public_family_count_api: no actors returned for state='NH'"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",

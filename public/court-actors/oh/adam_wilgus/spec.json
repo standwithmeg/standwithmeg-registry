@@ -15,7 +15,7 @@
     "mention_count": 4,
     "family_count": 4,
     "public_family_count": 4,
-    "public_family_count_source": "canonical_supabase_rows_over_stale_public_api",
+    "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 4,
     "supabase_row_ids": [
       "01fd1b99-bbcf-4743-a6e2-506508651a75",
@@ -27,7 +27,7 @@
     "actor_bucket_key": "adam wilgus|OH"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/adam_wilgus/image_1080.png",
+    "path": "/tmp/swm-share-pages-oebx6srz/New Final Post and Capcut template/export/adam_wilgus/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -47,7 +47,7 @@
     "_pdf_state_family_count": 265,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5441,
+  "movement_total": 5443,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -107,7 +107,7 @@
   },
   "export_dir": "New Final Post and Capcut template/export/adam_wilgus",
   "unresolved": [
-    "public_family_count_api: returned stale lower count 3; used canonical Supabase count 4"
+    "public_family_count_api: no actors returned for state='OH'"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",

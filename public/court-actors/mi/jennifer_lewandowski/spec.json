@@ -15,7 +15,7 @@
     "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 3,
     "supabase_row_ids": [
       "27d0af35-f22d-4e52-be13-a6f76f2da7b5",
@@ -46,7 +46,7 @@
     "_pdf_state_family_count": 179,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5440,
+  "movement_total": 5443,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -93,7 +93,9 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/jennifer_lewandowski",
-  "unresolved": [],
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='MI'"
+  ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",

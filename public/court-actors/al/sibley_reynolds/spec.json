@@ -12,22 +12,23 @@
     "court_or_county": "Chilton",
     "state": "Alabama",
     "state_abbr": "AL",
-    "mention_count": 4,
+    "mention_count": 5,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
-    "actor_report_count": 4,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 5,
     "supabase_row_ids": [
       "00c73c36-6209-448a-824f-f9e6f912277f",
       "9f004fa2-f30e-4a2b-8d9e-719c242fe03a",
       "b2545452-0c9d-4e84-aa17-00fb03c26bcc",
-      "5b8cc6d1-96d0-4aa9-993d-c524f024ad4c"
+      "5b8cc6d1-96d0-4aa9-993d-c524f024ad4c",
+      "149da942-5a7e-4af7-9f88-373d749421eb"
     ],
     "actor_row_id": "00c73c36-6209-448a-824f-f9e6f912277f",
     "actor_bucket_key": "sibley reynolds|AL"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/sibley_reynolds/image_1080.png",
+    "path": "/tmp/swm-share-pages-oebx6srz/New Final Post and Capcut template/export/sibley_reynolds/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -47,10 +48,10 @@
     "_pdf_state_family_count": 130,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5440,
+  "movement_total": 5443,
   "supabase": {
-    "report_count": 4,
-    "actor_report_count": 4,
+    "report_count": 5,
+    "actor_report_count": 5,
     "family_count": 3,
     "family_reports": [
       {
@@ -94,7 +95,9 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/sibley_reynolds",
-  "unresolved": [],
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='AL'"
+  ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",

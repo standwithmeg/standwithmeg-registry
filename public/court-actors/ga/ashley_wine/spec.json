@@ -15,7 +15,7 @@
     "mention_count": 9,
     "family_count": 8,
     "public_family_count": 8,
-    "public_family_count_source": "canonical_supabase_rows_over_stale_public_api",
+    "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 9,
     "supabase_row_ids": [
       "5a1490f1-e68f-4a24-a41c-5a8be1c2fe5b",
@@ -32,7 +32,7 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/ashley_wine/image_1080.png",
+    "path": "/tmp/swm-share-pages-oebx6srz/New Final Post and Capcut template/export/ashley_wine/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -52,7 +52,7 @@
     "_pdf_state_family_count": 153,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5440,
+  "movement_total": 5443,
   "supabase": {
     "report_count": 9,
     "actor_report_count": 9,
@@ -148,7 +148,7 @@
   },
   "export_dir": "New Final Post and Capcut template/export/ashley_wine",
   "unresolved": [
-    "public_family_count_api: returned stale lower count 1; used canonical Supabase count 8"
+    "public_family_count_api: no actors returned for state='GA'"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",

@@ -15,7 +15,7 @@
     "mention_count": 6,
     "family_count": 6,
     "public_family_count": 6,
-    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 6,
     "supabase_row_ids": [
       "c1c9934c-7c50-46fa-8680-fe2b2fdb259f",
@@ -41,15 +41,15 @@
     "_source_table": "movement_stats_by_state",
     "_match_value": "IN",
     "state_family_count": 154,
-    "median_financial_loss": 66500,
-    "median_burden_sample_size": 79,
+    "median_financial_loss": 68150,
+    "median_burden_sample_size": 80,
     "median_months_lost": 18,
-    "pro_se_pct": 45.8,
-    "pro_se_count": 70,
-    "_pdf_state_family_count": 153,
+    "pro_se_pct": 46.1,
+    "pro_se_count": 71,
+    "_pdf_state_family_count": 154,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5441,
+  "movement_total": 5443,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
@@ -94,6 +94,12 @@
     ],
     "public_comments": [
       {
+        "comment_text": "\"His NPI number is [redacted]. His licenses are: IL License # [redacted] IN License # 20043169A IN License # 39002708A He is under investigation for conspiracy to attempt and commit murders, falsify evaluations, obstruction of justice, tampering with victims, witnesses, and evidence, human and child trafficking, intimidation, harassment, coercion, extortion, engaging in monetary transactions in property derived from specified unlawful activity, violence in aid of racketeering, RICO predicates, substantive RICO and conspiracy, exploitation, state-law murder predicates, healthcare fraud, retaliation, aiding and abetting, federal program fraud, false statements, wire/mail fraud, accessory to the crimes, obstruction of criminal investigations, brokering services using force fraud and coercion, fiduciary breaches His co-conspirators include Jennifer Jostes, George Galanos, Plantz, et al. Any court ordered services will not be run through insurance as the laundering of monetary instruments and engaging in monetary transactions in property derived from specified unlawful activity, in the thousands, between 2,000 and 10,000, in one instance, would not be transferred into his accounts. The reviews are monitored and flagged, through Internet Service Providers, which throttle and monitor the heartbeat of the communities and any usage. The contracts written by the legal network which support the ISPs, communities and surveillance services facilitate in preventing, distorting and resisting the timely reporting of the public record and reviews of public corruption and racketeering for profit. \"",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Newton and Lake County"
+      },
+      {
         "comment_text": "Continued conspiracies to commit murders and attempts, extortion, misappropriation of funds and government programs, embezzlement, harassment, intimidation, falsification of the record, fraud upon the Courts, trafficking, mail fraud, continued public corruption, health care fraud, fiduciary breaches, tampering with the record, witnesses, and victims, RICO, conflicts of interests, quid pro quo",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
@@ -116,11 +122,19 @@
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Lake County"
+      },
+      {
+        "comment_text": "He's a witness for hirer, major weirdo, likely has few if any friends, and he definitely hasn't been laid in the past 10 years, if ever.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lake and Newton County"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/christopher_zacny",
-  "unresolved": [],
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='IN'"
+  ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -139,6 +153,10 @@
   "render": {
     "selected_quotes": [
       {
+        "body": "His co-conspirators include Jennifer Jostes, George Galanos, Plantz, et al.",
+        "kind": "comment"
+      },
+      {
         "body": "Lied about diagnoses that I did not have that a psychiatrist",
         "kind": "comment"
       },
@@ -151,8 +169,8 @@
         "kind": "comment"
       },
       {
-        "body": "His co-conspirators include Jennifer Jostes, George Galanos, Plantz, et al.",
-        "kind": "family_report"
+        "body": "Any friends, and he definitely hasn't been laid in the past 10 years, if ever.",
+        "kind": "comment"
       },
       {
         "body": "\"He's a witness for hirer, major weirdo, likely has few.",

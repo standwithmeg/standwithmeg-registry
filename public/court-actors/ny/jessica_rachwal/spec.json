@@ -13,9 +13,9 @@
     "state": "NY",
     "state_abbr": "NY",
     "mention_count": 6,
-    "family_count": 5,
-    "public_family_count": 5,
-    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "family_count": 6,
+    "public_family_count": 0,
+    "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 6,
     "supabase_row_ids": [
       "dc14db78-685e-4153-97b2-3ba0224dd6ac",
@@ -49,11 +49,11 @@
     "_pdf_state_family_count": 174,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5441,
+  "movement_total": 5443,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
-    "family_count": 5,
+    "family_count": 6,
     "family_reports": [
       {
         "body": "They have trauma where trauma wasn’t and they have destroyed my life. Make me feel hopeless and in fear for my babies",
@@ -120,7 +120,10 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/jessica_rachwal",
-  "unresolved": [],
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='NY'",
+    "family_count: lookup and previous spec returned 0 — using report_count=6 as fallback"
+  ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",

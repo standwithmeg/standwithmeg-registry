@@ -12,20 +12,21 @@
     "court_or_county": "Bernalillo",
     "state": "New Mexico",
     "state_abbr": "NM",
-    "mention_count": 2,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
-    "actor_report_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 3,
     "supabase_row_ids": [
       "e2462ecf-6e58-49d6-b41e-c8611ab3f457",
-      "a04f5175-0027-4ab1-b0ad-00ec5bb3808a"
+      "a04f5175-0027-4ab1-b0ad-00ec5bb3808a",
+      "f4c272d1-c808-4f11-a30b-2926dee46e50"
     ],
     "actor_row_id": "e2462ecf-6e58-49d6-b41e-c8611ab3f457",
     "actor_bucket_key": "jane c levy|NM"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/jane_c_levy/image_1080.png",
+    "path": "/tmp/swm-share-pages-oebx6srz/New Final Post and Capcut template/export/jane_c_levy/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -45,10 +46,10 @@
     "_pdf_state_family_count": 28,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5441,
+  "movement_total": 5443,
   "supabase": {
-    "report_count": 2,
-    "actor_report_count": 2,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
     "family_reports": [
       {
@@ -56,6 +57,12 @@
         "state": "NM",
         "county": "Bernalillo",
         "row_id": "af133a5d-d76e-4bce-81cd-1eb47687e79c"
+      },
+      {
+        "body": "Years of therapy for both myself and child only for the other party to be inconsistent and violating the court order in its entirety",
+        "state": "NM",
+        "county": "Bernalillo",
+        "row_id": "14295976-0054-45dc-b38c-ef78cbe8aa89"
       },
       {
         "body": "Made me and my child unsafe, distressed my household, stole precious bonding time with my child, gave me and my child mental health problems.",
@@ -86,7 +93,9 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/jane_c_levy",
-  "unresolved": [],
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='NM'"
+  ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -118,6 +127,10 @@
       },
       {
         "body": "Ordered child support or force me to stay at her home the entire time I was in town",
+        "kind": "family_report"
+      },
+      {
+        "body": "Years of therapy for both myself and child only for the other party to be…",
         "kind": "family_report"
       },
       {

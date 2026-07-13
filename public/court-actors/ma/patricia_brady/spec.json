@@ -15,7 +15,7 @@
     "mention_count": 7,
     "family_count": 6,
     "public_family_count": 6,
-    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 7,
     "supabase_row_ids": [
       "cad85417-8a04-45b2-ba22-0c4ab0b0a2e5",
@@ -30,7 +30,7 @@
     "actor_bucket_key": "patricia brady|MA"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/patricia_brady/image_1080.png",
+    "path": "/tmp/swm-share-pages-oebx6srz/New Final Post and Capcut template/export/patricia_brady/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -50,7 +50,7 @@
     "_pdf_state_family_count": 106,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5440,
+  "movement_total": 5443,
   "supabase": {
     "report_count": 7,
     "actor_report_count": 7,
@@ -133,7 +133,9 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/patricia_brady",
-  "unresolved": [],
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='MA'"
+  ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",

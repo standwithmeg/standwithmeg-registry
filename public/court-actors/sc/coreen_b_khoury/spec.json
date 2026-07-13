@@ -15,7 +15,7 @@
     "mention_count": 6,
     "family_count": 4,
     "public_family_count": 4,
-    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 6,
     "supabase_row_ids": [
       "3a45002a-80da-40ef-be07-6e7ab220646b",
@@ -29,7 +29,7 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/coreen_b_khoury/image_1080.png",
+    "path": "/tmp/swm-share-pages-oebx6srz/New Final Post and Capcut template/export/coreen_b_khoury/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -49,7 +49,7 @@
     "_pdf_state_family_count": 108,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5441,
+  "movement_total": 5443,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
@@ -108,7 +108,9 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/coreen_b_khoury",
-  "unresolved": [],
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='SC'"
+  ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",

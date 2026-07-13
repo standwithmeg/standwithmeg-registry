@@ -15,7 +15,7 @@
     "mention_count": 5,
     "family_count": 4,
     "public_family_count": 4,
-    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 5,
     "supabase_row_ids": [
       "c363192d-bb66-4957-a621-4bf6a76bc206",
@@ -28,27 +28,27 @@
     "actor_bucket_key": "linda haris|IN"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/linda_harris/image_1080.png",
+    "path": "/tmp/swm-share-pages-oebx6srz/New Final Post and Capcut template/export/linda_harris/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 128,
-    "total_submissions": 153,
-    "avg_financial_loss": 132589.26,
+    "families_approved": 129,
+    "total_submissions": 154,
+    "avg_financial_loss": 140164.51,
     "avg_months_lost": 30.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "IN",
-    "state_family_count": 153,
-    "median_financial_loss": 66500,
-    "median_burden_sample_size": 79,
+    "state_family_count": 154,
+    "median_financial_loss": 68150,
+    "median_burden_sample_size": 80,
     "median_months_lost": 18,
-    "pro_se_pct": 45.8,
-    "pro_se_count": 70,
-    "_pdf_state_family_count": 153,
+    "pro_se_pct": 46.1,
+    "pro_se_count": 71,
+    "_pdf_state_family_count": 154,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5440,
+  "movement_total": 5443,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -113,7 +113,9 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/linda_harris",
-  "unresolved": [],
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='IN'"
+  ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",

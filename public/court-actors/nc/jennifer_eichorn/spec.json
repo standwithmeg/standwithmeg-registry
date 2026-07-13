@@ -14,8 +14,8 @@
     "state_abbr": "NC",
     "mention_count": 5,
     "family_count": 5,
-    "public_family_count": 5,
-    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "public_family_count": 0,
+    "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 5,
     "supabase_row_ids": [
       "91c23df7-171c-4777-acea-0ab1799b3a17",
@@ -28,7 +28,7 @@
     "actor_bucket_key": "jenifer eichorn|NC"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/jennifer_eichorn/image_1080.png",
+    "path": "/tmp/swm-share-pages-oebx6srz/New Final Post and Capcut template/export/jennifer_eichorn/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -48,7 +48,7 @@
     "_pdf_state_family_count": 216,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5441,
+  "movement_total": 5443,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -119,7 +119,10 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/jennifer_eichorn",
-  "unresolved": [],
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='NC'",
+    "family_count: lookup and previous spec returned 0 — using report_count=5 as fallback"
+  ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",

@@ -15,7 +15,7 @@
     "mention_count": 7,
     "family_count": 5,
     "public_family_count": 5,
-    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 7,
     "supabase_row_ids": [
       "48eedfe3-e658-489e-b189-ddd9e79e697a",
@@ -30,14 +30,14 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/catherine_conklin/image_1080.png",
+    "path": "/tmp/swm-share-pages-oebx6srz/New Final Post and Capcut template/export/catherine_conklin/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 43,
     "total_submissions": 56,
-    "avg_financial_loss": 284771.98,
+    "avg_financial_loss": 276098.88,
     "avg_months_lost": 18.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "UT",
@@ -50,7 +50,7 @@
     "_pdf_state_family_count": 56,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5441,
+  "movement_total": 5443,
   "supabase": {
     "report_count": 7,
     "actor_report_count": 7,
@@ -97,7 +97,9 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/catherine_conklin",
-  "unresolved": [],
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='UT'"
+  ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",

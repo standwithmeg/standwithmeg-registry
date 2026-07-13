@@ -1,0 +1,144 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "brian_house",
+    "display_name": "Brian House",
+    "title": "",
+    "first_name": "Brian",
+    "last_name": "House",
+    "role": "Judge",
+    "court": "Catoosa County",
+    "county": "Catoosa County",
+    "court_or_county": "Catoosa County",
+    "state": "GA",
+    "state_abbr": "GA",
+    "mention_count": 3,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "57459aaa-5bb6-4d70-b0d6-963d629b460b",
+      "979a23e2-9ba0-4154-a0bd-43a8be673efc",
+      "91df16ee-d2a5-43e5-be9f-97c41dd69a05"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "brian house|GA"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 125,
+    "total_submissions": 153,
+    "avg_financial_loss": 214294.64,
+    "avg_months_lost": 32.3,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "GA",
+    "state_family_count": 153,
+    "median_financial_loss": 142000,
+    "median_burden_sample_size": 85,
+    "median_months_lost": 19,
+    "pro_se_pct": 44.4,
+    "pro_se_count": 68,
+    "_pdf_state_family_count": 153,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5443,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 3,
+    "family_reports": [
+      {
+        "body": "Attempted to destroy the child bond with her mother. Altered the child’s life by denying medical treatment.",
+        "state": "GA",
+        "county": "Catoosa",
+        "row_id": "3ab71e48-9b6a-42eb-aafd-b6dd357694ba"
+      },
+      {
+        "body": "Stolen time and moments that can never be replaced",
+        "state": "GA",
+        "county": "Catoosa",
+        "row_id": "bb5785b1-e2b3-4939-a577-a0c25951bb88"
+      },
+      {
+        "body": "They have completely destroyed our family!",
+        "state": "GA",
+        "county": "Catoosa",
+        "row_id": "84e5c14c-5d55-4d80-a882-68ca8c7675f9"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Did not hold my spouse accountable for violating supervised visitation orders. Assigned a deputy court clerk in the same jurisdiction to be the GAL, conflict of interest",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Catoosa County"
+      },
+      {
+        "comment_text": "Appointed a juvenile court clerk in the same jurisdiction as my case. Ignored admission of domestic violence that caused the child to be harm.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Catoosa County"
+      },
+      {
+        "comment_text": "Issued warrants without any evidence of a crime only CPS invalidated statements.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Catoosa County"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/brian_house",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='GA'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ga/brian_house/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Did not hold my spouse accountable for violating supervised visitation orders.",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored admission of domestic violence that caused the child to be harm.",
+        "kind": "comment"
+      },
+      {
+        "body": "Issued warrants without any evidence of a crime only CPS invalidated statements.",
+        "kind": "comment"
+      },
+      {
+        "body": "Attempted to destroy the child bond with her mother.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Stolen time and moments that can never be replaced",
+        "kind": "family_report"
+      },
+      {
+        "body": "They have completely destroyed our family!",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

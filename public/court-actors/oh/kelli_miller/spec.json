@@ -13,9 +13,9 @@
     "state": "Ohio",
     "state_abbr": "OH",
     "mention_count": 7,
-    "family_count": 5,
-    "public_family_count": 5,
-    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "family_count": 7,
+    "public_family_count": 0,
+    "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 7,
     "supabase_row_ids": [
       "7f8e88a8-e81f-4501-9e42-6390fad16c1d",
@@ -30,7 +30,7 @@
     "actor_bucket_key": "keli miler|OH"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/kelli_miller/image_1080.png",
+    "path": "/tmp/swm-share-pages-oebx6srz/New Final Post and Capcut template/export/kelli_miller/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -50,11 +50,11 @@
     "_pdf_state_family_count": 265,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5441,
+  "movement_total": 5443,
   "supabase": {
     "report_count": 7,
     "actor_report_count": 7,
-    "family_count": 5,
+    "family_count": 7,
     "family_reports": [
       {
         "body": "This system allows legal kidnapping, because there are no checks and balances for Juvenile Court Judges. Judge Kristen Johnson has caused tremendous trauma to not only me and my son but our entire family. Director Randall Galbraith and Supervisor Karmen Lauth intentionally delayed the process of developing a caseplan for me to obtain custody. Then lied under oath about my contact with the agency",
@@ -127,7 +127,10 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/kelli_miller",
-  "unresolved": [],
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='OH'",
+    "family_count: lookup and previous spec returned 0 — using report_count=7 as fallback"
+  ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",

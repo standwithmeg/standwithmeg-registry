@@ -15,7 +15,7 @@
     "mention_count": 4,
     "family_count": 4,
     "public_family_count": 4,
-    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 4,
     "supabase_row_ids": [
       "fe88de15-e87b-4b6d-8ad7-16eb9bad3bc0",
@@ -27,7 +27,7 @@
     "actor_bucket_key": "lawrence army|MA"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/lawrence_army_jr/image_1080.png",
+    "path": "/tmp/swm-share-pages-oebx6srz/New Final Post and Capcut template/export/lawrence_army_jr/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -47,7 +47,7 @@
     "_pdf_state_family_count": 106,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5440,
+  "movement_total": 5443,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -106,7 +106,9 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/lawrence_army_jr",
-  "unresolved": [],
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='MA'"
+  ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",

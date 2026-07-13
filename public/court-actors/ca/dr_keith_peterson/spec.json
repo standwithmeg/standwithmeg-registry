@@ -12,21 +12,22 @@
     "court_or_county": "Orange",
     "state": "California",
     "state_abbr": "CA",
-    "mention_count": 3,
+    "mention_count": 4,
     "family_count": 4,
     "public_family_count": 4,
-    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
-    "actor_report_count": 3,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 4,
     "supabase_row_ids": [
       "3999e215-1ddd-4f2c-8e67-f667aae62276",
       "e22f40de-c51e-4f44-ba79-f1863424653a",
-      "81a363ef-0238-4bd5-baa5-0b7afe85e68b"
+      "81a363ef-0238-4bd5-baa5-0b7afe85e68b",
+      "3e21fdd2-bb85-47ae-b2dd-4a4b98f6b274"
     ],
     "actor_row_id": "3999e215-1ddd-4f2c-8e67-f667aae62276",
     "actor_bucket_key": "keith peterson|CA"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/dr_keith_peterson/image_1080.png",
+    "path": "/tmp/swm-share-pages-oebx6srz/New Final Post and Capcut template/export/dr_keith_peterson/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -46,10 +47,10 @@
     "_pdf_state_family_count": 447,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5440,
+  "movement_total": 5443,
   "supabase": {
-    "report_count": 3,
-    "actor_report_count": 3,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 4,
     "family_reports": [
       {
@@ -93,7 +94,9 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/dr_keith_peterson",
-  "unresolved": [],
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='CA'"
+  ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",

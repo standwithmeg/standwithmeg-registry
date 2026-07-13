@@ -12,24 +12,25 @@
     "court_or_county": "Hall County",
     "state": "Georgia",
     "state_abbr": "GA",
-    "mention_count": 6,
+    "mention_count": 7,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
-    "actor_report_count": 6,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 7,
     "supabase_row_ids": [
       "a0c01c30-c999-4fd7-832e-02ef12b63a9f",
       "8ee6742d-5add-4f8d-89ec-8d92946122f1",
       "03adaf80-2b54-43b3-a3df-5343737d41fb",
       "d333e014-34df-4333-b02d-5d959fc55e6d",
       "b17e4b41-de58-48b7-9c19-0ac8c02d7ecd",
-      "8da69344-088e-4c39-85e4-964a6c28de2a"
+      "8da69344-088e-4c39-85e4-964a6c28de2a",
+      "82ff445c-37c3-495b-8d40-9ed307247782"
     ],
     "actor_row_id": "a0c01c30-c999-4fd7-832e-02ef12b63a9f",
     "actor_bucket_key": "joshua ray welch|GA"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/joshua_ray_welch/image_1080.png",
+    "path": "/tmp/swm-share-pages-oebx6srz/New Final Post and Capcut template/export/joshua_ray_welch/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -49,12 +50,18 @@
     "_pdf_state_family_count": 153,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5440,
+  "movement_total": 5443,
   "supabase": {
-    "report_count": 6,
-    "actor_report_count": 6,
+    "report_count": 7,
+    "actor_report_count": 7,
     "family_count": 3,
     "family_reports": [
+      {
+        "body": "My family has become irrevocably broken with children encouraged to hate and lie to a mother trying to protect them from an abusive father.",
+        "state": "GA",
+        "county": "Hall county",
+        "row_id": "f69215c9-5470-44d8-be6e-8fb7a05df7b0"
+      },
       {
         "body": "This system has done nothing other than cause irreversible damage to myself and my kids and taken time away that we can never get back. This system is a complete FAILURE!!",
         "state": "GA",
@@ -102,7 +109,9 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/joshua_ray_welch",
-  "unresolved": [],
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='GA'"
+  ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -131,6 +140,10 @@
       {
         "body": "He is the only one that will hold dfacs accountable for their wrongs or short comings",
         "kind": "comment"
+      },
+      {
+        "body": "My family has become irrevocably broken with children encouraged to hate and lie to…",
+        "kind": "family_report"
       },
       {
         "body": "This system has done nothing other than cause irreversible damage to myself.",

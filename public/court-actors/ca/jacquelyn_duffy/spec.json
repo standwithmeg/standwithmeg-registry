@@ -15,7 +15,7 @@
     "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 3,
     "supabase_row_ids": [
       "cbc4bab2-0ec5-4605-9d41-19890d7b2e2d",
@@ -46,7 +46,7 @@
     "_pdf_state_family_count": 447,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5440,
+  "movement_total": 5443,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -93,7 +93,9 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/jacquelyn_duffy",
-  "unresolved": [],
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='CA'"
+  ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",

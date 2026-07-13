@@ -15,7 +15,7 @@
     "mention_count": 8,
     "family_count": 4,
     "public_family_count": 4,
-    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 8,
     "supabase_row_ids": [
       "6108bc47-320b-4813-bc66-adde0bc56198",
@@ -31,7 +31,7 @@
     "actor_bucket_key": "adriana rincon white|NV"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/adriana_rincon_white/image_1080.png",
+    "path": "/tmp/swm-share-pages-oebx6srz/New Final Post and Capcut template/export/adriana_rincon_white/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -51,7 +51,7 @@
     "_pdf_state_family_count": 50,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5441,
+  "movement_total": 5443,
   "supabase": {
     "report_count": 8,
     "actor_report_count": 8,
@@ -110,7 +110,9 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/adriana_rincon_white",
-  "unresolved": [],
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='NV'"
+  ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",

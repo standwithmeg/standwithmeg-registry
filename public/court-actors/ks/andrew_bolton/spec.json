@@ -12,11 +12,11 @@
     "court_or_county": "Miami",
     "state": "Kansas",
     "state_abbr": "KS",
-    "mention_count": 13,
+    "mention_count": 15,
     "family_count": 15,
     "public_family_count": 15,
-    "public_family_count_source": "canonical_supabase_rows_over_stale_public_api",
-    "actor_report_count": 13,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 15,
     "supabase_row_ids": [
       "ddfd7d7b-8684-4a68-bd8a-9aa8bbc46147",
       "3231a1bb-b9cf-47ac-84f4-a00db8c5ac9b",
@@ -30,7 +30,9 @@
       "8b8484d0-b091-4da7-9fa8-b1a588666a12",
       "262336c7-0a95-482a-83d6-2e2c5ac9bc44",
       "222e95af-f209-402b-8d38-15c3e724dd8e",
-      "ffa86815-dbc4-47c6-beca-24388811b40f"
+      "ffa86815-dbc4-47c6-beca-24388811b40f",
+      "f17e6277-1a81-4d4f-b1f7-8e84f6f6ec30",
+      "d6239682-8fda-4fbc-8d12-68297a6b8b69"
     ],
     "actor_row_id": "ddfd7d7b-8684-4a68-bd8a-9aa8bbc46147",
     "actor_bucket_key": "andrew bolton|KS",
@@ -44,30 +46,30 @@
     ]
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/andrew_bolton/image_1080.png",
+    "path": "/tmp/swm-share-pages-oebx6srz/New Final Post and Capcut template/export/andrew_bolton/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 185,
-    "total_submissions": 253,
-    "avg_financial_loss": 116623.36,
+    "families_approved": 186,
+    "total_submissions": 254,
+    "avg_financial_loss": 116170.44,
     "avg_months_lost": 29.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "KS",
-    "state_family_count": 253,
+    "state_family_count": 254,
     "median_financial_loss": 97450,
     "median_burden_sample_size": 132,
     "median_months_lost": 16,
-    "pro_se_pct": 49.4,
+    "pro_se_pct": 49.2,
     "pro_se_count": 125,
-    "_pdf_state_family_count": 253,
+    "_pdf_state_family_count": 254,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5440,
+  "movement_total": 5443,
   "supabase": {
-    "report_count": 13,
-    "actor_report_count": 13,
+    "report_count": 15,
+    "actor_report_count": 15,
     "family_count": 15,
     "family_reports": [
       {
@@ -178,7 +180,7 @@
   },
   "export_dir": "New Final Post and Capcut template/export/andrew_bolton",
   "unresolved": [
-    "public_family_count_api: returned stale lower count 14; used canonical Supabase count 15"
+    "public_family_count_api: no actors returned for state='KS'"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",

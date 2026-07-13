@@ -34,7 +34,7 @@
     ]
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/hon_anneka_p_collins/image_1080.png",
+    "path": "/tmp/swm-share-pages-oebx6srz/New Final Post and Capcut template/export/hon_anneka_p_collins/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -54,7 +54,7 @@
     "_pdf_state_family_count": 265,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5441,
+  "movement_total": 5443,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -114,7 +114,7 @@
   },
   "export_dir": "New Final Post and Capcut template/export/hon_anneka_p_collins",
   "unresolved": [
-    "public_family_count_api: no match for display_name='Hon. Anneka P. Collins' bucket='anika colins|OH' slug='hon_anneka_p_collins' in OH (443 actors)",
+    "public_family_count_api: no actors returned for state='OH'",
     "family_count: lookup and previous spec returned 0 — using report_count=4 as fallback"
   ],
   "guardrails": {

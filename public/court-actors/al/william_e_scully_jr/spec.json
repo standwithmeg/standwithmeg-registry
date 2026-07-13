@@ -15,7 +15,7 @@
     "mention_count": 21,
     "family_count": 17,
     "public_family_count": 17,
-    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 21,
     "supabase_row_ids": [
       "c1ad63c0-0458-4e7d-80b8-1a20ff40ed7a",
@@ -44,7 +44,7 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/william_e_scully_jr/image_1080.png",
+    "path": "/tmp/swm-share-pages-oebx6srz/New Final Post and Capcut template/export/william_e_scully_jr/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -64,7 +64,7 @@
     "_pdf_state_family_count": 130,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5440,
+  "movement_total": 5443,
   "supabase": {
     "report_count": 21,
     "actor_report_count": 21,
@@ -207,7 +207,9 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/william_e_scully_jr",
-  "unresolved": [],
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='AL'"
+  ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",

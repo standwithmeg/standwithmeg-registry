@@ -14,8 +14,8 @@
     "state_abbr": "TN",
     "mention_count": 1,
     "family_count": 1,
-    "public_family_count": 1,
-    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "public_family_count": 0,
+    "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 1,
     "supabase_row_ids": [
       "c85a3d07-0cc2-4a77-aa05-20ae294a5f49"
@@ -44,7 +44,7 @@
     "_pdf_state_family_count": 123,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5441,
+  "movement_total": 5443,
   "supabase": {
     "report_count": 1,
     "actor_report_count": 1,
@@ -79,7 +79,10 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/w_scott_kimberly",
-  "unresolved": [],
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='TN'",
+    "family_count: lookup and previous spec returned 0 — using report_count=1 as fallback"
+  ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",

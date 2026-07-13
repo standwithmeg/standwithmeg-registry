@@ -15,7 +15,7 @@
     "mention_count": 4,
     "family_count": 4,
     "public_family_count": 4,
-    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 4,
     "supabase_row_ids": [
       "17a3aa5f-662a-4470-99e8-4d7b7bf3dea0",
@@ -47,7 +47,7 @@
     "_pdf_state_family_count": 216,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5441,
+  "movement_total": 5443,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -106,7 +106,9 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/tom_brandon_iii",
-  "unresolved": [],
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='NC'"
+  ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",

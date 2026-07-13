@@ -12,23 +12,24 @@
     "court_or_county": "Wapello",
     "state": "Iowa",
     "state_abbr": "IA",
-    "mention_count": 5,
+    "mention_count": 6,
     "family_count": 5,
     "public_family_count": 5,
-    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
-    "actor_report_count": 5,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 6,
     "supabase_row_ids": [
       "026a6c55-551f-42b3-95b6-a9f94f32e71b",
       "313b6274-7673-4940-8a8f-ce764e252241",
       "5596d7e9-dbc2-4a60-8d46-58dd597311e1",
       "38ac3a35-9484-4556-89c3-1818db58ce23",
-      "25bfa967-20a4-4d04-9320-a1097ff08006"
+      "25bfa967-20a4-4d04-9320-a1097ff08006",
+      "f493bcd5-a6d2-4e57-8116-571fe61ed40c"
     ],
     "actor_row_id": "026a6c55-551f-42b3-95b6-a9f94f32e71b",
     "actor_bucket_key": "joel yates|IA"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/joel_d_yates/image_1080.png",
+    "path": "/tmp/swm-share-pages-oebx6srz/New Final Post and Capcut template/export/joel_d_yates/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -48,10 +49,10 @@
     "_pdf_state_family_count": 93,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5440,
+  "movement_total": 5443,
   "supabase": {
-    "report_count": 5,
-    "actor_report_count": 5,
+    "report_count": 6,
+    "actor_report_count": 6,
     "family_count": 5,
     "family_reports": [
       {
@@ -119,7 +120,9 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/joel_d_yates",
-  "unresolved": [],
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='IA'"
+  ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",

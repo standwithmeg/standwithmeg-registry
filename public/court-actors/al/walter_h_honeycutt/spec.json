@@ -12,17 +12,21 @@
     "court_or_county": "Mobile",
     "state": "Alabama",
     "state_abbr": "AL",
-    "mention_count": null,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 3,
-    "supabase_row_ids": null,
+    "supabase_row_ids": [
+      "02698b15-6536-4010-aae7-0f1ef4a1f5ab",
+      "6409cc27-a08f-4e7b-87bf-ef519b445f94",
+      "5459424c-4703-4b7f-a256-25b3e81d412e"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "walter honeycut|AL"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/walter_h_honeycutt/image_1080.png",
+    "path": "/tmp/swm-share-pages-oebx6srz/New Final Post and Capcut template/export/walter_h_honeycutt/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -42,12 +46,31 @@
     "_pdf_state_family_count": 130,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5440,
+  "movement_total": 5443,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "I will never forget the look of devastation and tears running down on my children’s face when I walked out of the courtroom fighting back my own tears and had to tell them they were not able to go home with me that day.",
+        "state": "AL",
+        "county": "Mobile",
+        "row_id": "8850732f-eba4-4003-af2f-bf1a13b8a17c"
+      },
+      {
+        "body": "It has cost me a lot of money and a lot of loss. It caused me 2 wrecks and health issues",
+        "state": "AL",
+        "county": "Mobile",
+        "row_id": "7aea24dc-fa5c-4fee-9ea1-3de8437bcdea"
+      },
+      {
+        "body": "Allowed an abusive person to have custody of a vulnerable child and use the courts to continue to abuse me. My child has now been exposed to abuse and been the victim of abuse.",
+        "state": "AL",
+        "county": "Mobile",
+        "row_id": "32856f64-7e2b-4ae8-aff1-687dbe4374be"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Ignored evidence of abuse. Ignored a filed protection order while granting my ex husbands emergency orders for pickup and to have my custody stripped based on hersay and false allegations",
@@ -71,7 +94,7 @@
   },
   "export_dir": "New Final Post and Capcut template/export/walter_h_honeycutt",
   "unresolved": [
-    "court_actors: no rows match name~'Walter H. Honeycutt' state='AL'"
+    "public_family_count_api: no actors returned for state='AL'"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
@@ -91,16 +114,28 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Ignored a filed protection order while granting my ex husbands emergency orders for pickup and to have my custody stripped based on hersay and false allegations",
+        "body": "Ignored evidence of abuse.",
         "kind": "comment"
       },
       {
-        "body": "Ignored evidence, victim’s testimony, and impeachments (proven multiple times with evidence That the father lied on the stand in the hearing).",
+        "body": "Lied on the stand in the hearing)",
         "kind": "comment"
       },
       {
         "body": "Only cared that the child was born in Alabama and how much the father made for support",
         "kind": "comment"
+      },
+      {
+        "body": "I will never forget the look of devastation and tears running down on my children’s…",
+        "kind": "family_report"
+      },
+      {
+        "body": "It caused me 2 wrecks and health issues",
+        "kind": "family_report"
+      },
+      {
+        "body": "Allowed an abusive person to have custody of a vulnerable child",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

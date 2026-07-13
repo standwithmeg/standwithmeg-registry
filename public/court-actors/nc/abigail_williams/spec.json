@@ -14,8 +14,8 @@
     "state_abbr": "NC",
     "mention_count": 4,
     "family_count": 4,
-    "public_family_count": 4,
-    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "public_family_count": 0,
+    "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 4,
     "supabase_row_ids": [
       "0695035c-8e51-4abf-a5e3-d6a37de35607",
@@ -27,7 +27,7 @@
     "actor_bucket_key": "abigail wiliams|NC"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/abigail_williams/image_1080.png",
+    "path": "/tmp/swm-share-pages-oebx6srz/New Final Post and Capcut template/export/abigail_williams/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -47,7 +47,7 @@
     "_pdf_state_family_count": 216,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5440,
+  "movement_total": 5443,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -106,7 +106,10 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/abigail_williams",
-  "unresolved": [],
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='NC'",
+    "family_count: lookup and previous spec returned 0 — using report_count=4 as fallback"
+  ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",

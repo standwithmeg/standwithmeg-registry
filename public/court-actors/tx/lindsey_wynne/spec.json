@@ -13,9 +13,9 @@
     "state": "Texas",
     "state_abbr": "TX",
     "mention_count": 7,
-    "family_count": 5,
-    "public_family_count": 5,
-    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "family_count": 7,
+    "public_family_count": 0,
+    "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 7,
     "supabase_row_ids": [
       "665796ba-f313-499a-85fe-0cc22261dd30",
@@ -30,31 +30,31 @@
     "actor_bucket_key": "lindsey wyne|TX"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/lindsey_wynne/image_1080.png",
+    "path": "/tmp/swm-share-pages-oebx6srz/New Final Post and Capcut template/export/lindsey_wynne/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 251,
-    "total_submissions": 316,
-    "avg_financial_loss": 228661.33,
+    "families_approved": 252,
+    "total_submissions": 317,
+    "avg_financial_loss": 227873.79,
     "avg_months_lost": 32.0,
     "_source_table": "movement_stats_by_state",
     "_match_value": "TX",
-    "state_family_count": 316,
+    "state_family_count": 317,
     "median_financial_loss": 117950,
     "median_burden_sample_size": 150,
     "median_months_lost": 19,
-    "pro_se_pct": 50.0,
-    "pro_se_count": 158,
-    "_pdf_state_family_count": 316,
+    "pro_se_pct": 50.2,
+    "pro_se_count": 159,
+    "_pdf_state_family_count": 317,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5441,
+  "movement_total": 5443,
   "supabase": {
     "report_count": 7,
     "actor_report_count": 7,
-    "family_count": 5,
+    "family_count": 7,
     "family_reports": [
       {
         "body": "Ignored false reports, ignored the law and my children barely see me. The judges and attorneys now let my little girls be prescribed anti depressants. My children are begging for more time with me and the judges don't care. 13 false reports to CPS and the judges ignore the evidence. CPS has testified for me that my ex is the one refusing to co parent and coaching the children to speak bad about dad. Judge didn't care.",
@@ -121,7 +121,10 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/lindsey_wynne",
-  "unresolved": [],
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='TX'",
+    "family_count: lookup and previous spec returned 0 — using report_count=7 as fallback"
+  ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",

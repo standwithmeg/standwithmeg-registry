@@ -1,0 +1,141 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "reynaldo_garza",
+    "display_name": "Reynaldo Garza",
+    "title": "",
+    "first_name": "Reynaldo",
+    "last_name": "Garza",
+    "role": "Attorney",
+    "court": "Caneron",
+    "county": "Cameron",
+    "court_or_county": "Caneron",
+    "state": "TX",
+    "state_abbr": "TX",
+    "mention_count": 4,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "1402576a-601e-4456-a063-932cfaa04395",
+      "3656a2aa-b066-4d8e-8348-38b478fd49b7",
+      "c6010dea-bb0f-411f-9eff-7202f66fadb8",
+      "a13ee2c3-f202-4d46-8504-f06fedca1d86"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "reynaldo garza|TX"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 252,
+    "total_submissions": 317,
+    "avg_financial_loss": 227873.79,
+    "avg_months_lost": 32.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "TX",
+    "state_family_count": 317,
+    "median_financial_loss": 117950,
+    "median_burden_sample_size": 150,
+    "median_months_lost": 19,
+    "pro_se_pct": 50.2,
+    "pro_se_count": 159,
+    "_pdf_state_family_count": 317,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5443,
+  "supabase": {
+    "report_count": 4,
+    "actor_report_count": 4,
+    "family_count": 3,
+    "family_reports": [
+      {
+        "body": "Nothing other than take innocent children away from there mothers",
+        "state": "TX",
+        "county": "Cameron",
+        "row_id": "f78414fc-50b6-42a8-8287-3af358905d3d"
+      },
+      {
+        "body": "Has destroyed my daughter and I. Left me bankrupt and to top it off need to pay Child support to the father so he can pay his debt and have no work.",
+        "state": "TX",
+        "county": "Cameron",
+        "row_id": "bcdee06a-4757-4a5e-8aeb-5bc595860881"
+      },
+      {
+        "body": "They have destroyed my life to the point that sometimes I feel I don’t want to be in this World anymore, they took all that mattered to me",
+        "state": "TX",
+        "county": "Cameron County",
+        "row_id": "c34803e1-2fda-4f34-a6fd-a4ae6c81d4c7"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "He is my ex attorney. He told me and my lawyer at the moment that we needed to get to an agreement with them because the judge hated me and she will give them everything they were asking for and she did. I also consulted him and paid him (he returned the money when i told him I was not going to have him as a lawyer because he changed from one time fee to per hour) and he didn’t want to leave the case and judge permitted it",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Cameron"
+      },
+      {
+        "comment_text": "Didn’t help ; just took my monies Lazy / didn’t fight / cited with the other party and took my monies. He has done it to others.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Cameron"
+      },
+      {
+        "comment_text": "Corruption and lies",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Caneron"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/reynaldo_garza",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='TX'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/tx/reynaldo_garza/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "The judge hated me and she will give them everything they were asking for and she did.",
+        "kind": "comment"
+      },
+      {
+        "body": "Just took my monies Lazy / didn’t fight / cited with the other party",
+        "kind": "comment"
+      },
+      {
+        "body": "Nothing other than take innocent children away from there mothers",
+        "kind": "family_report"
+      },
+      {
+        "body": "Has destroyed my daughter and I.",
+        "kind": "family_report"
+      },
+      {
+        "body": "They took all that mattered to me",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

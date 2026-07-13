@@ -12,21 +12,22 @@
     "court_or_county": "LAURENS",
     "state": "South Carolina",
     "state_abbr": "SC",
-    "mention_count": 3,
+    "mention_count": 4,
     "family_count": 4,
     "public_family_count": 4,
-    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
-    "actor_report_count": 3,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 4,
     "supabase_row_ids": [
       "6c5e1fbb-7e32-4a7a-a572-0cc6ffddc2c3",
       "5d4a2039-75b4-4e62-b364-df817b15284d",
-      "cc81aafa-faf7-4da5-bdb7-ea82db95619c"
+      "cc81aafa-faf7-4da5-bdb7-ea82db95619c",
+      "413bdfec-16d5-4570-94ac-c3840bc44635"
     ],
     "actor_row_id": "6c5e1fbb-7e32-4a7a-a572-0cc6ffddc2c3",
     "actor_bucket_key": "mindy zimerman|SC"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/mindy_zimmerman/image_1080.png",
+    "path": "/tmp/swm-share-pages-oebx6srz/New Final Post and Capcut template/export/mindy_zimmerman/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -46,10 +47,10 @@
     "_pdf_state_family_count": 108,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5441,
+  "movement_total": 5443,
   "supabase": {
-    "report_count": 3,
-    "actor_report_count": 3,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 4,
     "family_reports": [
       {
@@ -63,6 +64,12 @@
         "state": "SC",
         "county": "LAURENS",
         "row_id": "8698fc4f-5efe-4b00-a1cc-1c15a4d84531"
+      },
+      {
+        "body": "I have literally lost everything became homeless. Lost my special needs child due Domestic Violence and narcissist",
+        "state": "SC",
+        "county": "Horry",
+        "row_id": "48544765-bcac-4671-bac9-643c859167fd"
       }
     ],
     "public_comments": [
@@ -87,7 +94,9 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/mindy_zimmerman",
-  "unresolved": [],
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='SC'"
+  ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
@@ -106,7 +115,7 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Entered contempt findings and rulings that suspended my financial support and transferred…",
+        "body": "Entered contempt findings and rulings that suspended my financial support and…",
         "kind": "comment"
       },
       {
@@ -114,15 +123,19 @@
         "kind": "comment"
       },
       {
-        "body": "DENIED ME THE RIGHT TO KNOW WHERE MY CHILDREN WHERE AT FOR CHRISTMAS THEY WERE OUT OF STATE…",
+        "body": "DENIED ME THE RIGHT TO KNOW WHERE MY CHILDREN WHERE AT FOR CHRISTMAS THEY WERE OUT…",
         "kind": "comment"
       },
       {
-        "body": "Temporary custody proceedings turned my children, medical hardship, and parental rights into a…",
+        "body": "Temporary custody proceedings turned my children, medical hardship, and parental…",
         "kind": "family_report"
       },
       {
         "body": "This is not even all of it",
+        "kind": "family_report"
+      },
+      {
+        "body": "I have literally lost everything became homeless.",
         "kind": "family_report"
       }
     ],

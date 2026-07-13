@@ -2,22 +2,26 @@
   "schema_version": 2,
   "actor": {
     "slug": "j_d_wagner",
-    "display_name": "J.D. Wagner,",
+    "display_name": "JD Wagoner",
     "title": "",
-    "first_name": "J.D.",
-    "last_name": "Wagner,",
-    "role": "Attorney (Mine)",
+    "first_name": "JD",
+    "last_name": "Wagoner",
+    "role": "Attorney",
     "court": "Highland County",
     "county": "Highland County",
     "court_or_county": "Highland County",
     "state": "OH",
     "state_abbr": "OH",
-    "mention_count": null,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 3,
-    "supabase_row_ids": null,
+    "supabase_row_ids": [
+      "bc8eb495-681d-4a8a-9708-449c7ca5bb99",
+      "0aa4ef3a-74bf-4c9e-92b8-20f286a45324",
+      "17504a88-545b-4e52-ad7d-35af8351a69c"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "j wagner|OH"
   },
@@ -42,7 +46,7 @@
     "_pdf_state_family_count": 265,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5441,
+  "movement_total": 5443,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -52,7 +56,8 @@
   },
   "export_dir": "New Final Post and Capcut template/export/j_d_wagner",
   "unresolved": [
-    "court_actors: no rows match name~'J.D. Wagner,' state='OH'"
+    "public_family_count_api: no actors returned for state='OH'",
+    "public_comments: no merged comments or raw notes available"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",

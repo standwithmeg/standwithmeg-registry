@@ -13,9 +13,9 @@
     "state": "WA",
     "state_abbr": "WA",
     "mention_count": 6,
-    "family_count": 5,
-    "public_family_count": 5,
-    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "family_count": 6,
+    "public_family_count": 0,
+    "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 6,
     "supabase_row_ids": [
       "28f7f4dd-af3c-4f73-84a5-6cf5585da77c",
@@ -29,7 +29,7 @@
     "actor_bucket_key": "wiliam singer|WA"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/william_singer/image_1080.png",
+    "path": "/tmp/swm-share-pages-oebx6srz/New Final Post and Capcut template/export/william_singer/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -49,11 +49,11 @@
     "_pdf_state_family_count": 125,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5441,
+  "movement_total": 5443,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
-    "family_count": 5,
+    "family_count": 6,
     "family_reports": [
       {
         "body": "This system dismantled my close relationship with my children and alienated me. The court placed my kids in an unsafe environment and I lost time with them that can never be recovered. My kids and I have suffered at the hands of the court system and this is in no way in 'the best interest of the child.'",
@@ -120,7 +120,10 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/william_singer",
-  "unresolved": [],
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='WA'",
+    "family_count: lookup and previous spec returned 0 — using report_count=6 as fallback"
+  ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",

@@ -12,12 +12,17 @@
     "court_or_county": "Cuyahoga county",
     "state": "OH",
     "state_abbr": "OH",
-    "mention_count": null,
+    "mention_count": 4,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
-    "actor_report_count": 3,
-    "supabase_row_ids": null,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "4c4d23ba-39bb-4816-a1ec-0e26b77cf3fb",
+      "4c32caec-6794-45f9-8737-1929454562e0",
+      "d6060cc8-571d-43f9-98b5-4fcfec285beb",
+      "dfd9737a-e562-4642-8cf1-6604eb154b80"
+    ],
     "actor_row_id": null,
     "actor_bucket_key": "christina marie joliat|OH"
   },
@@ -42,12 +47,25 @@
     "_pdf_state_family_count": 265,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5441,
+  "movement_total": 5443,
   "supabase": {
-    "report_count": 3,
-    "actor_report_count": 3,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 3,
-    "family_reports": [],
+    "family_reports": [
+      {
+        "body": "Denied motion and ignored evidence!! None of them did their job they made up everything. The judge didn’t want to listen to us whatsoever that we gave him evidence and they didn’t show him any evidence and that he ruled with them over us. He delayed hearings gave them more time biased, he didn’t sign half of his records he had to click record sign it things like that you can put well. She really really wasn’t on our case that much it was mainly James he was the one he was his assistant prosecutor. They have kept me away from my daughter since she was born. Have false documents and have been proven but no one will listen to me. Please help me!!!!",
+        "state": "OH",
+        "county": "Highland county",
+        "row_id": "93b9ae0f-56b2-4e79-ab9c-427da47455a6"
+      },
+      {
+        "body": "Court systems has no integrity and most of all have hurt children and even children have died, they abuse their power and authority.",
+        "state": "OH",
+        "county": "Cuyahoga",
+        "row_id": "cd070946-832c-48a6-9677-2fe7cfd6b7fb"
+      }
+    ],
     "public_comments": [
       {
         "comment_text": "Denied motion and ignored evidence!! None of them did their job they made up everything. The judge didn’t want to listen to us whatsoever that we gave him evidence and they didn’t show him any evidence and that he ruled with them over us. He delayed hearings gave them more time biased, he didn’t sign half of his records he had to click record sign it things like that you can put well. She really really wasn’t on our case that much it was mainly James he was the one he was his assistant prosecutor. Please help me!!!!",
@@ -65,7 +83,7 @@
   },
   "export_dir": "New Final Post and Capcut template/export/christina_marie_joliat",
   "unresolved": [
-    "court_actors: no rows match name~'Christina Marie Joliat' state='OH'"
+    "public_family_count_api: no actors returned for state='OH'"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
@@ -85,12 +103,16 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Denied motion and ignored evidence!! None of them did their job they made up everything. The judge didn’t want to listen to us whatsoever that we gave him evidence and they didn’t show him any evidence and that he ruled with them over us.",
+        "body": "Denied motion and ignored evidence!! None of them did their job they made up everything.",
         "kind": "comment"
       },
       {
-        "body": "Sided with father gave him full custody after being burned multiple times and multiple CPS reports. Made false statements in report that could cause harm/ defamation of character.",
+        "body": "Sided with father gave him full custody after being burned multiple times and multiple CPS reports.",
         "kind": "comment"
+      },
+      {
+        "body": "Court systems has no integrity and most of all have hurt children and even children have died, they abuse…",
+        "kind": "family_report"
       }
     ],
     "quote_page_count": 1

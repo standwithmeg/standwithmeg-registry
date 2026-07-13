@@ -15,7 +15,7 @@
     "mention_count": 2,
     "family_count": 2,
     "public_family_count": 2,
-    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 2,
     "supabase_row_ids": [
       "fa707802-7f0b-4f01-b71c-5aaa5b1b3abd",
@@ -45,7 +45,7 @@
     "_pdf_state_family_count": 306,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5440,
+  "movement_total": 5443,
   "supabase": {
     "report_count": 2,
     "actor_report_count": 2,
@@ -79,6 +79,7 @@
   },
   "export_dir": "New Final Post and Capcut template/export/all_judges_ive_had_4_judges_in_4_years",
   "unresolved": [
+    "public_family_count_api: no actors returned for state='FL'",
     "pdf_public_actor: no 'All Judges - I’ve had 4 judges in 4 years' in cache for FL"
   ],
   "guardrails": {

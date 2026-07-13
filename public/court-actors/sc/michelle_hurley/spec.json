@@ -13,9 +13,9 @@
     "state": "South Carolina",
     "state_abbr": "SC",
     "mention_count": 6,
-    "family_count": 4,
-    "public_family_count": 4,
-    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "family_count": 6,
+    "public_family_count": 0,
+    "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 6,
     "supabase_row_ids": [
       "c0358257-598d-4d80-9c8d-e879163d99b8",
@@ -29,7 +29,7 @@
     "actor_bucket_key": "michele hurley|SC"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/michelle_hurley/image_1080.png",
+    "path": "/tmp/swm-share-pages-oebx6srz/New Final Post and Capcut template/export/michelle_hurley/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -49,11 +49,11 @@
     "_pdf_state_family_count": 108,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5441,
+  "movement_total": 5443,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
-    "family_count": 4,
+    "family_count": 6,
     "family_reports": [
       {
         "body": "The family court system has singlehandedly destroyed my family. We have been separated for years and only see them a few times a year. It will probably cause my younger kids to go through therapy at some point.",
@@ -114,7 +114,10 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/michelle_hurley",
-  "unresolved": [],
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='SC'",
+    "family_count: lookup and previous spec returned 0 — using report_count=6 as fallback"
+  ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",

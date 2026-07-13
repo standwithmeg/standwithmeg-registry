@@ -13,9 +13,9 @@
     "state": "Florida",
     "state_abbr": "FL",
     "mention_count": 9,
-    "family_count": 8,
-    "public_family_count": 8,
-    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "family_count": 7,
+    "public_family_count": 7,
+    "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 9,
     "supabase_row_ids": [
       "5ea9a083-5e4c-4238-b41c-9faf6817af07",
@@ -32,7 +32,7 @@
     "actor_bucket_key": "kristin kanner|FL"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/kristin_kanner/image_1080.png",
+    "path": "/tmp/swm-share-pages-oebx6srz/New Final Post and Capcut template/export/kristin_kanner/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -52,11 +52,11 @@
     "_pdf_state_family_count": 306,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5440,
+  "movement_total": 5443,
   "supabase": {
     "report_count": 9,
     "actor_report_count": 9,
-    "family_count": 8,
+    "family_count": 7,
     "family_reports": [
       {
         "body": "This litigation has had a profound impact on every aspect of my life. Financially, I have incurred substantial attorney’s fees, the ongoing costs of Soberlink monitoring, evaluations, testing, and litigation, all while working as a teacher on a limited income. I have relied on child support to help meet my monthly expenses, and the prospect of now paying child support while also having my parenting time reduced creates a significant financial hardship. More importantly, the greatest loss has not been financial—it has been the loss of time with my son. During what are likely the last two years before he reaches adulthood, my parenting time has been reduced from equal timesharing to one-third of his time. Time with a child cannot be replaced or recovered. Every missed holiday, family dinner, conversation, and ordinary day together is something I will never get back. Throughout this case, I have completed every evaluation requested of me, participated in therapy, submitted to extensive Soberlink monitoring, and ultimately passed the Court-ordered ETG hair test. Although the Court was satisfied enough with those results to terminate Soberlink, I nevertheless lost significant parenting time. That has been emotionally devastating.",
@@ -135,7 +135,9 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/kristin_kanner",
-  "unresolved": [],
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='FL'"
+  ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",

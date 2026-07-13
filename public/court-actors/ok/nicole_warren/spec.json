@@ -13,9 +13,9 @@
     "state": "Oklahoma",
     "state_abbr": "OK",
     "mention_count": 6,
-    "family_count": 4,
-    "public_family_count": 4,
-    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "family_count": 6,
+    "public_family_count": 0,
+    "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 6,
     "supabase_row_ids": [
       "f726f53f-67c6-4853-a00c-0503236ede53",
@@ -49,11 +49,11 @@
     "_pdf_state_family_count": 166,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5441,
+  "movement_total": 5443,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
-    "family_count": 4,
+    "family_count": 6,
     "family_reports": [
       {
         "body": "Has caused me and my daughter ongoing trauma for the last six years. I’ve had to watch my daughter, lose the light from her eyes because of these people while I try desperately to save what’s left.",
@@ -108,7 +108,10 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/nicole_warren",
-  "unresolved": [],
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='OK'",
+    "family_count: lookup and previous spec returned 0 — using report_count=6 as fallback"
+  ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",

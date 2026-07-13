@@ -12,22 +12,23 @@
     "court_or_county": "Monroe",
     "state": "NY",
     "state_abbr": "NY",
-    "mention_count": 4,
+    "mention_count": 5,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
-    "actor_report_count": 4,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 5,
     "supabase_row_ids": [
       "ea7f55eb-fc76-4800-bf67-2ecdefa99b5b",
       "8421bd2c-d66c-4bcc-921e-63e0c105ae3d",
       "10b2685d-34d4-4107-af70-e7a047985755",
-      "ed140d13-97d2-4938-97de-9dcb0ccaab79"
+      "ed140d13-97d2-4938-97de-9dcb0ccaab79",
+      "4d5edf3e-f35f-4c43-9d20-03728e5686dd"
     ],
     "actor_row_id": null,
     "actor_bucket_key": "adam belo|NY"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/adam_bello/image_1080.png",
+    "path": "/tmp/swm-share-pages-oebx6srz/New Final Post and Capcut template/export/adam_bello/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -47,10 +48,10 @@
     "_pdf_state_family_count": 174,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5441,
+  "movement_total": 5443,
   "supabase": {
-    "report_count": 4,
-    "actor_report_count": 4,
+    "report_count": 5,
+    "actor_report_count": 5,
     "family_count": 3,
     "family_reports": [
       {
@@ -100,7 +101,9 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/adam_bello",
-  "unresolved": [],
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='NY'"
+  ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",

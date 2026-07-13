@@ -15,7 +15,7 @@
     "mention_count": 4,
     "family_count": 3,
     "public_family_count": 3,
-    "public_family_count_source": "https://my.standwithmeg.com/api/actors/all",
+    "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 4,
     "supabase_row_ids": [
       "d0dc790c-a547-42cd-8b05-84a45e56672f",
@@ -27,27 +27,27 @@
     "actor_bucket_key": "peny moylan|KS"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-z58_lbo_/New Final Post and Capcut template/export/penny_moylan/image_1080.png",
+    "path": "/tmp/swm-share-pages-oebx6srz/New Final Post and Capcut template/export/penny_moylan/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 185,
-    "total_submissions": 253,
-    "avg_financial_loss": 116623.36,
+    "families_approved": 186,
+    "total_submissions": 254,
+    "avg_financial_loss": 116170.44,
     "avg_months_lost": 29.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "KS",
-    "state_family_count": 253,
+    "state_family_count": 254,
     "median_financial_loss": 97450,
     "median_burden_sample_size": 132,
     "median_months_lost": 16,
-    "pro_se_pct": 49.4,
+    "pro_se_pct": 49.2,
     "pro_se_count": 125,
-    "_pdf_state_family_count": 253,
+    "_pdf_state_family_count": 254,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5440,
+  "movement_total": 5443,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -94,7 +94,9 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/penny_moylan",
-  "unresolved": [],
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='KS'"
+  ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
     "footer": "Family-reported submissions.",
