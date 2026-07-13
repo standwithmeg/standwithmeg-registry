@@ -8,14 +8,14 @@
     "last_name": "Hibler",
     "role": "Attorney",
     "court": "Jackson/Shawnee",
-    "county": "Jackson/Shawnee",
+    "county": null,
     "court_or_county": "Jackson/Shawnee",
     "state": "Kansas",
     "state_abbr": "KS",
     "mention_count": 5,
     "family_count": 4,
     "public_family_count": 4,
-    "public_family_count_source": "local_resolver_fallback",
+    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
     "actor_report_count": 5,
     "supabase_row_ids": [
       "ebeab8d9-5215-49a8-a32b-7ebaecdbc270",
@@ -28,7 +28,7 @@
     "actor_bucket_key": "alison hibler|KS"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-oebx6srz/New Final Post and Capcut template/export/alison_hibler/image_1080.png",
+    "path": "kansas/alison_hibler/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -48,7 +48,7 @@
     "_pdf_state_family_count": 254,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5443,
+  "movement_total": 5445,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -69,7 +69,7 @@
     ],
     "public_comments": [
       {
-        "comment_text": "Lacks initiative to end delay tactics. Lacks effective explanatory communication. Truly believe she means well in my case, however is overly busy resulting in borderline neglect of active cases until necessary to respond just prior to approaching court dates.",
+        "comment_text": "Lacks initiative to end delay tactics. Lacks effective explanatory communication. Truly believe she means well in my case, however is overly busy resulting in borderline neglect of active cases until necessary to respond just prior to approaching court dates. AKA Allison Maxwell Hibler, appears in log under both names needing merged.",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Douglas"
@@ -77,12 +77,10 @@
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/alison_hibler",
-  "unresolved": [
-    "public_family_count_api: no actors returned for state='KS'"
-  ],
+  "unresolved": [],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
-    "footer": "Family-reported submissions.",
+    "footer": "Family-reported submissions · not court findings.",
     "strike_through_reserved_for": [
       "isolated",
       "dismissed",
@@ -95,22 +93,6 @@
     "recommended_route": "/court-actors/ks/alison_hibler/share.html",
     "draft_only": true
   },
-  "render": {
-    "selected_quotes": [
-      {
-        "body": "Lacks initiative to end delay tactics.",
-        "kind": "comment"
-      },
-      {
-        "body": "My custody time was decreased due to lack of investigative efforts by CPS and GAL, resulting in progressive and ongoing psychological and physical harm being…",
-        "kind": "family_report"
-      },
-      {
-        "body": "It has left me bankrupt, put me back in an unsafe situation, with my children experiencing threats of harm from the other party.",
-        "kind": "family_report"
-      }
-    ],
-    "quote_page_count": 1
-  },
+  "render": {},
   "cta": "STANDWITHMEG.COM ↗"
 }
