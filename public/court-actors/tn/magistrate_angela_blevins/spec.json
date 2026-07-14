@@ -2,21 +2,21 @@
   "schema_version": 2,
   "actor": {
     "slug": "magistrate_angela_blevins",
-    "display_name": "Angela Blevins",
+    "display_name": "Angela Blevins - magistrate",
     "title": "",
-    "first_name": "Angela",
-    "last_name": "Blevins",
+    "first_name": "Angela Blevins -",
+    "last_name": "magistrate",
     "role": "Judge",
     "court": "Knox",
     "county": "Knoxville",
     "court_or_county": "Knox",
     "state": "Tennessee",
     "state_abbr": "TN",
-    "mention_count": 7,
-    "family_count": 5,
-    "public_family_count": 5,
+    "mention_count": 8,
+    "family_count": 6,
+    "public_family_count": 6,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 7,
+    "actor_report_count": 8,
     "supabase_row_ids": [
       "40c00084-1caf-485b-add0-b8da57212a86",
       "36b1cc60-cb03-4b14-91a3-b11dd4fc38ca",
@@ -24,13 +24,14 @@
       "c0188de5-04d3-4888-81bd-01a9df9886a7",
       "f2a53602-eded-42fd-a18e-69af5f7ccd36",
       "8f70d0f2-9b87-4917-87bb-f2d378ef51ad",
-      "2e54b868-d845-472a-94b4-c4f162e80bd9"
+      "2e54b868-d845-472a-94b4-c4f162e80bd9",
+      "21699d0b-7e0b-454d-bc28-0e7fd44455c2"
     ],
     "actor_row_id": "40c00084-1caf-485b-add0-b8da57212a86",
     "actor_bucket_key": "angela blevins|TN"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-oebx6srz/New Final Post and Capcut template/export/magistrate_angela_blevins/image_1080.png",
+    "path": "/tmp/swm-share-pages-w205vr69/New Final Post and Capcut template/export/magistrate_angela_blevins/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -50,11 +51,11 @@
     "_pdf_state_family_count": 123,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5443,
+  "movement_total": 5450,
   "supabase": {
-    "report_count": 7,
-    "actor_report_count": 7,
-    "family_count": 5,
+    "report_count": 8,
+    "actor_report_count": 8,
+    "family_count": 6,
     "family_reports": [
       {
         "body": "My infant died and then DCS decided to take my other son on grounds of “substance abuse and unsafe sleep”",
@@ -79,6 +80,12 @@
         "state": "TN",
         "county": "knox",
         "row_id": "6c137af8-1af8-4c54-abd9-e4e262e7065f"
+      },
+      {
+        "body": "My family, as with countless others, have been victimized by a corrupt system based on equity, not law and not facts! Greed has lead to the \"legal\" kidnapping of hundreds of thousands of children nationwide, the destruction of the family unit, and a gross violation of our Constitutional Right to be together as a family. WE MUST FIGHT BACK, WE MUST DESTROY EVERY SYSTEM THAT HAS TAKEN PART, WE MUST HOLD ALL INVOLVED ACCOUNTABLE!!!!",
+        "state": "TN",
+        "county": "Knox",
+        "row_id": "60af7cfa-e6c4-4439-a9eb-31f8309f2eed"
       }
     ],
     "public_comments": [
@@ -105,6 +112,12 @@
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Knoxville"
+      },
+      {
+        "comment_text": "Signed the order to remove the girls, twice, without, cause, due process, or investigation",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Knox County Family Court"
       }
     ]
   },
@@ -146,6 +159,10 @@
         "kind": "comment"
       },
       {
+        "body": "Signed the order to remove the girls, twice.",
+        "kind": "comment"
+      },
+      {
         "body": "DCS decided to take my other son on grounds of “substance abuse and unsafe sleep”",
         "kind": "family_report"
       },
@@ -162,7 +179,7 @@
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 2
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

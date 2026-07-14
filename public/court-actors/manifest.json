@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-13T15:10:46.977985+00:00",
+  "generated_at": "2026-07-14T10:05:59.216413+00:00",
   "actors": [
     {
       "slug": "ali_upchurch_patterson",
@@ -38,13 +38,13 @@
       "share_url": "/court-actors/al/deanne_dee_dee_calhoon/share.html"
     },
     {
-      "slug": "dee_dee_calhoun",
+      "slug": "deanne_dee_dee_calhoun",
       "state_abbr": "AL",
-      "display_name": "Dee Dee Calhoun",
-      "canonical_name": "Dee Dee Calhoun",
-      "actor_bucket_key": "dee dee calhoun|AL",
+      "display_name": "DeAnne \"Dee Dee\" Calhoun",
+      "canonical_name": "DeAnne \"Dee Dee\" Calhoun",
+      "actor_bucket_key": "deane dee dee calhoun|AL",
       "photo_url": null,
-      "share_url": "/court-actors/al/dee_dee_calhoun/share.html"
+      "share_url": "/court-actors/al/deanne_dee_dee_calhoun/share.html"
     },
     {
       "slug": "joy_booth",
@@ -175,8 +175,8 @@
     {
       "slug": "dina_richman",
       "state_abbr": "CA",
-      "display_name": "Dina Richman",
-      "canonical_name": "Dina Richman",
+      "display_name": "Richman, Dina R.",
+      "canonical_name": "Richman, Dina R.",
       "actor_bucket_key": "dina richman|CA",
       "photo_url": "/court-actors/ca/dina_richman/image_1080.png",
       "share_url": "/court-actors/ca/dina_richman/share.html"
@@ -479,15 +479,6 @@
       "share_url": "/court-actors/fl/jon_gann/share.html"
     },
     {
-      "slug": "kiki_dunton",
-      "state_abbr": "FL",
-      "display_name": "Kiki Dunton",
-      "canonical_name": "Kiki Dunton",
-      "actor_bucket_key": "kiki dunton|FL",
-      "photo_url": "/court-actors/fl/kiki_dunton/image_1080.png",
-      "share_url": "/court-actors/fl/kiki_dunton/share.html"
-    },
-    {
       "slug": "kirsten_lee_dunton",
       "state_abbr": "FL",
       "display_name": "Kirsten \"Kiki\" Dunton",
@@ -686,6 +677,15 @@
       "share_url": "/court-actors/ia/reyna_wilkens/share.html"
     },
     {
+      "slug": "ryan_mitchell",
+      "state_abbr": "IA",
+      "display_name": "Ryan Mitchell",
+      "canonical_name": "Ryan Mitchell",
+      "actor_bucket_key": "ryan mitchel|IA",
+      "photo_url": null,
+      "share_url": "/court-actors/ia/ryan_mitchell/share.html"
+    },
+    {
       "slug": "andrew_ellis",
       "state_abbr": "ID",
       "display_name": "Andrew ellis",
@@ -819,6 +819,15 @@
       "actor_bucket_key": null,
       "photo_url": "/court-actors/in/mary_raatz/image_1080.png",
       "share_url": "/court-actors/in/mary_raatz/share.html"
+    },
+    {
+      "slug": "robert_a_plantz",
+      "state_abbr": "IN",
+      "display_name": "Secretary for Robert Plantz",
+      "canonical_name": "Secretary for Robert Plantz",
+      "actor_bucket_key": "robert plantz|IN",
+      "photo_url": null,
+      "share_url": "/court-actors/in/robert_a_plantz/share.html"
     },
     {
       "slug": "robert_shive",
@@ -1093,8 +1102,8 @@
     {
       "slug": "steven_d_henry",
       "state_abbr": "KS",
-      "display_name": "Steven D. Henry",
-      "canonical_name": "Steven D. Henry",
+      "display_name": "Case manager Steven Henry",
+      "canonical_name": "Case manager Steven Henry",
       "actor_bucket_key": "steven henry|KS",
       "photo_url": "/court-actors/ks/steven_d_henry/image_1080.png",
       "share_url": "/court-actors/ks/steven_d_henry/share.html"
@@ -1303,7 +1312,7 @@
       "display_name": "Katherine \"Katie\" Zopf",
       "canonical_name": "Katherine \"Katie\" Zopf",
       "actor_bucket_key": "katherine katie zopf|MI",
-      "photo_url": "/court-actors/mi/katherine_katie_zopf/image_1080.png",
+      "photo_url": null,
       "share_url": "/court-actors/mi/katherine_katie_zopf/share.html"
     },
     {
@@ -1530,6 +1539,15 @@
       "actor_bucket_key": "april haris brit|NC",
       "photo_url": "/court-actors/nc/april_harris_britt/image_1080.png",
       "share_url": "/court-actors/nc/april_harris_britt/share.html"
+    },
+    {
+      "slug": "audrey_faith_bell",
+      "state_abbr": "NC",
+      "display_name": "Audrey Faith Bell",
+      "canonical_name": "Audrey Faith Bell",
+      "actor_bucket_key": "audrey faith bell|NC",
+      "photo_url": null,
+      "share_url": "/court-actors/nc/audrey_faith_bell/share.html"
     },
     {
       "slug": "cindy_cronkhite",
@@ -2171,6 +2189,15 @@
       "share_url": "/court-actors/oh/magistrate_deborah_drexler/share.html"
     },
     {
+      "slug": "matt_kreitzer",
+      "state_abbr": "OH",
+      "display_name": "Matt Kreitzer",
+      "canonical_name": "Matt Kreitzer",
+      "actor_bucket_key": "matt kreitzer|OH",
+      "photo_url": null,
+      "share_url": "/court-actors/oh/matt_kreitzer/share.html"
+    },
+    {
       "slug": "randall_galbraith",
       "state_abbr": "OH",
       "display_name": "Randall Galbraith",
@@ -2614,20 +2641,11 @@
     {
       "slug": "magistrate_angela_blevins",
       "state_abbr": "TN",
-      "display_name": "Angela Blevins",
-      "canonical_name": "Angela Blevins",
+      "display_name": "Angela Blevins - magistrate",
+      "canonical_name": "Angela Blevins - magistrate",
       "actor_bucket_key": "angela blevins|TN",
       "photo_url": "/court-actors/tn/magistrate_angela_blevins/image_1080.png",
       "share_url": "/court-actors/tn/magistrate_angela_blevins/share.html"
-    },
-    {
-      "slug": "magistrate_blevins",
-      "state_abbr": "TN",
-      "display_name": "Angela Blevins - magistrate",
-      "canonical_name": "Angela Blevins - magistrate",
-      "actor_bucket_key": null,
-      "photo_url": "/court-actors/tn/magistrate_blevins/image_1080.png",
-      "share_url": "/court-actors/tn/magistrate_blevins/share.html"
     },
     {
       "slug": "robert_huddleston",
@@ -2743,7 +2761,7 @@
       "display_name": "Kenneth A. Lundberg",
       "canonical_name": "Kenneth A. Lundberg",
       "actor_bucket_key": "keneth lundberg|TX",
-      "photo_url": "/court-actors/tx/kenneth_a_lundberg/image_1080.png",
+      "photo_url": null,
       "share_url": "/court-actors/tx/kenneth_a_lundberg/share.html"
     },
     {
@@ -2794,8 +2812,8 @@
     {
       "slug": "reynaldo_garza",
       "state_abbr": "TX",
-      "display_name": "Reynaldo Garza",
-      "canonical_name": "Reynaldo Garza",
+      "display_name": "Reynaldo G. Garza III",
+      "canonical_name": "Reynaldo G. Garza III",
       "actor_bucket_key": "reynaldo garza|TX",
       "photo_url": null,
       "share_url": "/court-actors/tx/reynaldo_garza/share.html"

@@ -1,0 +1,144 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "ryan_mitchell",
+    "display_name": "Ryan Mitchell",
+    "title": "",
+    "first_name": "Ryan",
+    "last_name": "Mitchell",
+    "role": "Attorney",
+    "court": "Wapello",
+    "county": "Wapello",
+    "court_or_county": "Wapello",
+    "state": "IA",
+    "state_abbr": "IA",
+    "mention_count": 3,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "86d6d47c-685f-4003-b689-1403a69ce4bc",
+      "488fcb65-0e99-42f7-b34b-4a1236c6ef91",
+      "1f50f461-67f1-48cb-907e-6a0b92cb6dab"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "ryan mitchel|IA"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 74,
+    "total_submissions": 94,
+    "avg_financial_loss": 129758.78,
+    "avg_months_lost": 40.8,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "IA",
+    "state_family_count": 94,
+    "median_financial_loss": 180000,
+    "median_burden_sample_size": 25,
+    "median_months_lost": 23,
+    "pro_se_pct": 51.1,
+    "pro_se_count": 48,
+    "_pdf_state_family_count": 94,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5450,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 3,
+    "family_reports": [
+      {
+        "body": "They took a family who loved each other and tore them apart.",
+        "state": "IA",
+        "county": "Wapello",
+        "row_id": "ba3b3dbd-20a5-40fa-992a-2aba0ba956b7"
+      },
+      {
+        "body": "The courts were allowed to violate every constitutional protected right of parent and children. Record everything, video footage, audio, document.",
+        "state": "IA",
+        "county": "Wapello",
+        "row_id": "6a3e604d-a40c-41d5-9726-ce14ebb3c8bb"
+      },
+      {
+        "body": "Ruined my children’s quality of life. We lost precious years and time we will never gain back!",
+        "state": "IA",
+        "county": "Wapello",
+        "row_id": "5f7959d8-2290-4ccc-9bb3-33e6e8f7ab86"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "He was the initial attorney on my case and did not report to the judge the facts about my ex and the abuse towards my children and I and did not disclose to the judge the violation of my rights just because I went to the courthouse to get my child from my ex who had already won contempt from and my DHS case was closed none of this was brought up in court",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Wapello"
+      },
+      {
+        "comment_text": "He couldn't show content on joint legal custody and got me child support for 4 kids and I only have 3. Didn't fight to remove the dual order and then withdrew after the money ran out. He cost me over $15,000 due to his incompetence and still going up monthly",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Wapello"
+      },
+      {
+        "comment_text": "Not one time met or spoke to my children or I.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Wapello"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/ryan_mitchell",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='IA'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ia/ryan_mitchell/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "He was the initial attorney on my case and did not report to the judge the facts…",
+        "kind": "comment"
+      },
+      {
+        "body": "He couldn't show content on joint legal custody and got me child support for 4 kids.",
+        "kind": "comment"
+      },
+      {
+        "body": "Not one time met or spoke to my children or I.",
+        "kind": "comment"
+      },
+      {
+        "body": "They took a family who loved each other and tore them apart.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Allowed to violate every constitutional protected right of parent",
+        "kind": "family_report"
+      },
+      {
+        "body": "We lost precious years and time we will never gain back!",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

@@ -6,10 +6,10 @@
     "title": "",
     "first_name": "JD",
     "last_name": "Wagoner",
-    "role": "Attorney",
+    "role": "Attorney (Mine)",
     "court": "Highland County",
     "county": "Highland County",
-    "court_or_county": "Highland County",
+    "court_or_county": "Highland",
     "state": "OH",
     "state_abbr": "OH",
     "mention_count": 3,
@@ -18,9 +18,9 @@
     "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 3,
     "supabase_row_ids": [
+      "17504a88-545b-4e52-ad7d-35af8351a69c",
       "bc8eb495-681d-4a8a-9708-449c7ca5bb99",
-      "0aa4ef3a-74bf-4c9e-92b8-20f286a45324",
-      "17504a88-545b-4e52-ad7d-35af8351a69c"
+      "0aa4ef3a-74bf-4c9e-92b8-20f286a45324"
     ],
     "actor_row_id": null,
     "actor_bucket_key": "j wagner|OH"
@@ -46,7 +46,7 @@
     "_pdf_state_family_count": 265,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5443,
+  "movement_total": 5450,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -57,7 +57,8 @@
   "export_dir": "New Final Post and Capcut template/export/j_d_wagner",
   "unresolved": [
     "public_family_count_api: no actors returned for state='OH'",
-    "public_comments: no merged comments or raw notes available"
+    "public_comments: no merged comments or raw notes available",
+    "pdf_public_actor: no 'JD Wagoner' in cache for OH"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",

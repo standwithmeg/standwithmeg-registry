@@ -2,14 +2,14 @@
   "schema_version": 2,
   "actor": {
     "slug": "reynaldo_garza",
-    "display_name": "Reynaldo Garza",
+    "display_name": "Reynaldo G. Garza III",
     "title": "",
-    "first_name": "Reynaldo",
-    "last_name": "Garza",
+    "first_name": "Reynaldo G.",
+    "last_name": "Garza III",
     "role": "Attorney",
     "court": "Caneron",
     "county": "Cameron",
-    "court_or_county": "Caneron",
+    "court_or_county": "Cameron",
     "state": "TX",
     "state_abbr": "TX",
     "mention_count": 4,
@@ -20,8 +20,8 @@
     "supabase_row_ids": [
       "1402576a-601e-4456-a063-932cfaa04395",
       "3656a2aa-b066-4d8e-8348-38b478fd49b7",
-      "c6010dea-bb0f-411f-9eff-7202f66fadb8",
-      "a13ee2c3-f202-4d46-8504-f06fedca1d86"
+      "a13ee2c3-f202-4d46-8504-f06fedca1d86",
+      "c6010dea-bb0f-411f-9eff-7202f66fadb8"
     ],
     "actor_row_id": null,
     "actor_bucket_key": "reynaldo garza|TX"
@@ -47,7 +47,7 @@
     "_pdf_state_family_count": 317,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5443,
+  "movement_total": 5450,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -89,7 +89,7 @@
         "comment_text": "Corruption and lies",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Caneron"
+        "court_or_county": "Cameron"
       }
     ]
   },

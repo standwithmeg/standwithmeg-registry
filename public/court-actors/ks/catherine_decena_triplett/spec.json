@@ -31,27 +31,27 @@
     "actor_bucket_key": "catherine decena triplet|KS"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-oebx6srz/New Final Post and Capcut template/export/catherine_decena_triplett/image_1080.png",
+    "path": "/tmp/swm-share-pages-w205vr69/New Final Post and Capcut template/export/catherine_decena_triplett/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 186,
-    "total_submissions": 254,
-    "avg_financial_loss": 116170.44,
+    "total_submissions": 255,
+    "avg_financial_loss": 116221.43,
     "avg_months_lost": 29.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "KS",
-    "state_family_count": 254,
-    "median_financial_loss": 97450,
-    "median_burden_sample_size": 132,
+    "state_family_count": 255,
+    "median_financial_loss": 98800,
+    "median_burden_sample_size": 133,
     "median_months_lost": 16,
-    "pro_se_pct": 49.2,
+    "pro_se_pct": 49.0,
     "pro_se_count": 125,
-    "_pdf_state_family_count": 254,
+    "_pdf_state_family_count": 255,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5443,
+  "movement_total": 5450,
   "supabase": {
     "report_count": 8,
     "actor_report_count": 8,

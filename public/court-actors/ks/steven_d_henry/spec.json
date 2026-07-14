@@ -2,9 +2,9 @@
   "schema_version": 2,
   "actor": {
     "slug": "steven_d_henry",
-    "display_name": "Steven D. Henry",
+    "display_name": "Case manager Steven Henry",
     "title": "",
-    "first_name": "Steven D.",
+    "first_name": "Case manager Steven",
     "last_name": "Henry",
     "role": "Attorney / GAL / Child Representative",
     "court": "Johnson county",
@@ -12,46 +12,53 @@
     "court_or_county": "Johnson county",
     "state": "Kansas",
     "state_abbr": "KS",
-    "mention_count": 3,
-    "family_count": 3,
-    "public_family_count": 3,
+    "mention_count": 4,
+    "family_count": 4,
+    "public_family_count": 4,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 3,
+    "actor_report_count": 4,
     "supabase_row_ids": [
       "f3089ed9-aa94-4916-a2ec-438984595e59",
       "697db11e-f3ad-4285-9705-e536c70d5bff",
-      "3cf9ac50-a648-454d-ab71-1271fba52fd6"
+      "3cf9ac50-a648-454d-ab71-1271fba52fd6",
+      "6daef34c-1fbc-46eb-bf10-ab6dd3cf25ed"
     ],
     "actor_row_id": null,
     "actor_bucket_key": "steven henry|KS"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-oebx6srz/New Final Post and Capcut template/export/steven_d_henry/image_1080.png",
+    "path": "/tmp/swm-share-pages-w205vr69/New Final Post and Capcut template/export/steven_d_henry/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 186,
-    "total_submissions": 254,
-    "avg_financial_loss": 116170.44,
+    "total_submissions": 255,
+    "avg_financial_loss": 116221.43,
     "avg_months_lost": 29.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "KS",
-    "state_family_count": 254,
-    "median_financial_loss": 97450,
-    "median_burden_sample_size": 132,
+    "state_family_count": 255,
+    "median_financial_loss": 98800,
+    "median_burden_sample_size": 133,
     "median_months_lost": 16,
-    "pro_se_pct": 49.2,
+    "pro_se_pct": 49.0,
     "pro_se_count": 125,
-    "_pdf_state_family_count": 254,
+    "_pdf_state_family_count": 255,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5443,
+  "movement_total": 5450,
   "supabase": {
-    "report_count": 3,
-    "actor_report_count": 3,
-    "family_count": 3,
+    "report_count": 4,
+    "actor_report_count": 4,
+    "family_count": 4,
     "family_reports": [
+      {
+        "body": "Ex parte orders issued taking away parenting time/no contact. I had sole custody, also taken away with the appointment of a new GAL on the case for a few months. No evidence presented, no witnesses and Judge delays setting evidentiary hearing. I have always been the primary caregiver. Ex husband had been found guilty during a custody trial of emotional and verbal abuse. The system has failed me and my kids. GALs and case managers have too much power.",
+        "state": "KS",
+        "county": "Johnson",
+        "row_id": "d1e4fa22-7ad4-438f-ba40-2533149dbb1b"
+      },
       {
         "body": "Naomi Cataudella’s involvement did not heal our family’s trauma — it prolonged and deepened it. Instead of helping rebuild trust and emotional safety, Naomi’s approach empowered an abuser, left our children feeling unheard, intensified family division, and reinforced a system where fear and dysfunction were repeatedly overlooked.",
         "state": "KS",
@@ -60,6 +67,12 @@
       }
     ],
     "public_comments": [
+      {
+        "comment_text": "He downplayed very very serious emotional abuse evidence when HE filed a DCF report against my ex husband. Does not uphold violations of his own recommendations and takes no action when my ex husband violated court orders.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Johnson"
+      },
       {
         "comment_text": "Ignored evidence, ignored facts",
         "author": "Anonymous parent",
@@ -90,8 +103,16 @@
   "render": {
     "selected_quotes": [
       {
+        "body": "He downplayed very very serious emotional abuse evidence when HE filed a DCF report against my ex husband.",
+        "kind": "comment"
+      },
+      {
         "body": "Ignored evidence, ignored facts",
         "kind": "comment"
+      },
+      {
+        "body": "Ex parte orders issued taking away parenting time/no contact.",
+        "kind": "family_report"
       },
       {
         "body": "Naomi Cataudella’s involvement did not heal our family’s trauma — it prolonged and deepened it.",

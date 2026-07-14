@@ -1,0 +1,124 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "matt_kreitzer",
+    "display_name": "Matt Kreitzer",
+    "title": "",
+    "first_name": "Matt",
+    "last_name": "Kreitzer",
+    "role": "Judge",
+    "court": "Stark county family court",
+    "county": "Stark county family court",
+    "court_or_county": "Stark county family court",
+    "state": "OH",
+    "state_abbr": "OH",
+    "mention_count": 3,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "43cf905d-b974-457d-9e5d-9f7965d46c9b",
+      "eba23b9a-6319-4738-b64f-c676db788349",
+      "012a686f-4bba-497f-9f92-b11d2f889bd0"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "matt kreitzer|OH"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 209,
+    "total_submissions": 265,
+    "avg_financial_loss": 111611.65,
+    "avg_months_lost": 31.3,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OH",
+    "state_family_count": 265,
+    "median_financial_loss": 79250,
+    "median_burden_sample_size": 128,
+    "median_months_lost": 18,
+    "pro_se_pct": 52.8,
+    "pro_se_count": 140,
+    "_pdf_state_family_count": 265,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5450,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 3,
+    "family_reports": [
+      {
+        "body": "The system has gaslighted my children just as their abuser has, dismissed abuse repeatedly to the point of betrayal, and minimized the years of single parenting under coercive control I have survived. The court has belittled my children and I in the most damaging ways.",
+        "state": "OH",
+        "county": "Stark",
+        "row_id": "81e34b48-b8e0-4e0c-9de6-465686f3e37f"
+      },
+      {
+        "body": "Family Court is the battlefield of psychological warfare. They are causing lifetime traumas with no accountability or oversight!",
+        "state": "OH",
+        "county": "Stark",
+        "row_id": "90797f86-ad03-492c-897e-8f59ad0cbc54"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Denied a protective order with photographic evidence of recent abuse to child and prior DV/strangulation photos to mother from DV arrest.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Stark county family court"
+      },
+      {
+        "comment_text": "Denied motion for multiple motions including documented abuse for emergency custody 4 different times.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Stark county family court"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/matt_kreitzer",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='OH'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/oh/matt_kreitzer/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Denied a protective order with photographic evidence of recent abuse to child",
+        "kind": "comment"
+      },
+      {
+        "body": "Denied motion for multiple motions including documented abuse for emergency custody 4 different times.",
+        "kind": "comment"
+      },
+      {
+        "body": "Dismissed abuse repeatedly to the point of betrayal",
+        "kind": "family_report"
+      },
+      {
+        "body": "Family Court is the battlefield of psychological warfare.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

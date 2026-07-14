@@ -13,8 +13,8 @@
     "state": "TX",
     "state_abbr": "TX",
     "mention_count": 4,
-    "family_count": 3,
-    "public_family_count": 3,
+    "family_count": 4,
+    "public_family_count": 0,
     "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 4,
     "supabase_row_ids": [
@@ -47,11 +47,11 @@
     "_pdf_state_family_count": 317,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5443,
+  "movement_total": 5450,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
-    "family_count": 3,
+    "family_count": 4,
     "family_reports": [
       {
         "body": "The State took my children on October 6, 2025, claiming it was an \"emergency\" that required immediate action. But looking at their own evidence, the \"danger\" they cited was drug test results from May and June of 2025. If my children were in 'immediate danger' in May, why did the Department wait 130 days to act? By leaving my children in my care all summer long, the State admitted there was no emergency. They didn't seize my children to protect them from a crisis; they waited until it was convenient for them, bypassing the 4th Amendment requirement for a warrant by using 'stale' information to create a fake emergency. The State has handed me a \"Service Plan\" that treats me like property rather than a parent. Specifically, they have ordered that I am not allowed to cut, color, or alter my hair without their permission. This isn't about safety; it’s about absolute control. Under the 14th Amendment, I have a right to personal liberty and bodily autonomy. The State has no business telling a grown woman how to wear her hair. If they want to drug test me, there are dozens of ways to do it without dictating my physical appearance. This is a humiliating and arbitrary rule that has nothing to do with being a good mother. My son's father, lives in a separate home and has no allegations against him. Yet, the State refused to place our son with him. The State is acting as if I am the only person in the world, and because they have an issue with me, they get to keep the children in the 'system.' By bypassing a non-offending father and keeping the children in state-managed care, they are violating the law that says a child should be with a fit parent before a foster home or a kinship placement. They are purposely keeping my family apart to maintain their own conservatorship. The Department is actively trying to strike my mother’s legal intervention in this case. My mother has been the one consistent support for my children. By trying to kick her out of the courtroom, the State is trying to isolate me and ensure I have no one standing in my corner. They want to make it 'The State vs. Sarah' so they can control the outcome without my family having a voice.",
@@ -95,7 +95,8 @@
   },
   "export_dir": "New Final Post and Capcut template/export/kenneth_a_lundberg",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='TX'"
+    "public_family_count_api: no actors returned for state='TX'",
+    "family_count: lookup and previous spec returned 0 — using report_count=4 as fallback"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",

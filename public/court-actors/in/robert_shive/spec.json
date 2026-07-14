@@ -7,9 +7,9 @@
     "first_name": "Robert",
     "last_name": "Shive",
     "role": "Attorney (Mine)",
-    "court": null,
+    "court": "Lake and Newton County",
     "county": null,
-    "court_or_county": null,
+    "court_or_county": "Lake and Newton County",
     "state": "Indiana",
     "state_abbr": "IN",
     "mention_count": 4,
@@ -27,7 +27,7 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-oebx6srz/New Final Post and Capcut template/export/robert_shive/image_1080.png",
+    "path": "/tmp/swm-share-pages-w205vr69/New Final Post and Capcut template/export/robert_shive/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -47,7 +47,7 @@
     "_pdf_state_family_count": 154,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5443,
+  "movement_total": 5450,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -68,21 +68,28 @@
     ],
     "public_comments": [
       {
-        "comment_text": "Took $3500 said we had a good chance but I needed to get a continuance. So I did then the dcs attorney Donna Sip contacted him before I hired him. Once I hired him he changed told me to take a plea when I told him no he dropped me weeks before my Fact-Finding my son was found to be a chins Told me to take plea refused fac finding didnt care about my evidence",
+        "comment_text": "Continued conspiracies to commit murders and attempts, extortion, misappropriation of funds and government programs, embezzlement, harassment, intimidation, falsification of the record, fraud upon the Courts, trafficking, mail fraud, continued public corruption, health care fraud, fiduciary breaches, tampering with the record, witnesses, and victims, RICO, conflicts of interests, quid pro quo",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lake and Newton County"
       },
       {
-        "comment_text": "Repeatedly filed false reports with court and acted outside his appointed role.",
+        "comment_text": "Discrimination, intimidation, harassment, coercion, theft. He is directly a part of the collusion and trafficking, “adoption”; the black market of transferring or disposing of human and assets for profit,",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lake County"
+      },
+      {
+        "comment_text": "he is the opposing attoerney, lost custody, subsequently threatened with an ultimatum using a flawed justification for exercising my rights to post a review",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/robert_shive",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='IN'",
-    "pdf_public_actor: no 'Robert Shive' in cache for IN"
+    "public_family_count_api: no actors returned for state='IN'"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
@@ -102,11 +109,11 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Took $3500 said we had a good chance but I needed to get a continuance.",
+        "body": "He is directly a part of the collusion and trafficking, “adoption”.",
         "kind": "comment"
       },
       {
-        "body": "Repeatedly filed false reports with court and acted outside his appointed role.",
+        "body": "he is the opposing attoerney, lost custody, subsequently threatened with an ultimatum using a…",
         "kind": "comment"
       },
       {
@@ -114,7 +121,7 @@
         "kind": "family_report"
       },
       {
-        "body": "It is a well-documented systematic network of people profiting off perpetuating the endless nightmare of…",
+        "body": "It is a well-documented systematic network of people profiting off perpetuating the endless…",
         "kind": "family_report"
       }
     ],

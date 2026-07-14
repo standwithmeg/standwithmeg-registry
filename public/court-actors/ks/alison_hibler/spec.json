@@ -8,14 +8,14 @@
     "last_name": "Hibler",
     "role": "Attorney",
     "court": "Jackson/Shawnee",
-    "county": null,
-    "court_or_county": "Jackson/Shawnee",
+    "county": "Jackson/Shawnee",
+    "court_or_county": null,
     "state": "Kansas",
     "state_abbr": "KS",
     "mention_count": 5,
     "family_count": 4,
     "public_family_count": 4,
-    "public_family_count_source": "https://my.standwithmeg.com/api/survey/court-actors",
+    "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 5,
     "supabase_row_ids": [
       "ebeab8d9-5215-49a8-a32b-7ebaecdbc270",
@@ -28,27 +28,27 @@
     "actor_bucket_key": "alison hibler|KS"
   },
   "photo": {
-    "path": "kansas/alison_hibler/image_1080.png",
+    "path": "/tmp/swm-share-pages-w205vr69/New Final Post and Capcut template/export/alison_hibler/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 186,
-    "total_submissions": 254,
-    "avg_financial_loss": 116170.44,
+    "total_submissions": 255,
+    "avg_financial_loss": 116221.43,
     "avg_months_lost": 29.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "KS",
-    "state_family_count": 254,
-    "median_financial_loss": 97450,
-    "median_burden_sample_size": 132,
+    "state_family_count": 255,
+    "median_financial_loss": 98800,
+    "median_burden_sample_size": 133,
     "median_months_lost": 16,
-    "pro_se_pct": 49.2,
+    "pro_se_pct": 49.0,
     "pro_se_count": 125,
-    "_pdf_state_family_count": 254,
+    "_pdf_state_family_count": 255,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5445,
+  "movement_total": 5450,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -69,18 +69,25 @@
     ],
     "public_comments": [
       {
-        "comment_text": "Lacks initiative to end delay tactics. Lacks effective explanatory communication. Truly believe she means well in my case, however is overly busy resulting in borderline neglect of active cases until necessary to respond just prior to approaching court dates. AKA Allison Maxwell Hibler, appears in log under both names needing merged.",
+        "comment_text": "multiple incidents of failure to notify me of court dates. Did not place other party on child support after request. Coerced me into having a GAL and case manager against my wishes due to finances. Thousands of dollars spent with nothing done. Sent her multiple reports of abuse and harassment, nothing done. She advised me to submit a PFA/PFS then turned around, stated the incident wasn't good enough, removed a provision in divorce decree against stalking, gave my ex access to my job.",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Douglas"
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Lacks initiative to end delay tactics. Lacks effective explanatory communication. Truly believe she means well in my case, however is overly busy resulting in borderline neglect of active cases until necessary to respond just prior to approaching court dates.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/alison_hibler",
-  "unresolved": [],
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='KS'",
+    "pdf_public_actor: no 'Allison Maxwell Hibler' in cache for KS"
+  ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
-    "footer": "Family-reported submissions · not court findings.",
+    "footer": "Family-reported submissions.",
     "strike_through_reserved_for": [
       "isolated",
       "dismissed",
@@ -93,6 +100,26 @@
     "recommended_route": "/court-actors/ks/alison_hibler/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Coerced me into having a GAL and case manager against my wishes due to finances.",
+        "kind": "comment"
+      },
+      {
+        "body": "Lacks initiative to end delay tactics.",
+        "kind": "comment"
+      },
+      {
+        "body": "My custody time was decreased due to lack of investigative efforts by CPS and GAL, resulting in progressive…",
+        "kind": "family_report"
+      },
+      {
+        "body": "DV doesn't stop when you leave, the abuser weaponizes the legal system.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

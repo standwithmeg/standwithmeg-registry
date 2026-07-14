@@ -13,8 +13,8 @@
     "state": "Georgia",
     "state_abbr": "GA",
     "mention_count": 7,
-    "family_count": 3,
-    "public_family_count": 3,
+    "family_count": 4,
+    "public_family_count": 4,
     "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 7,
     "supabase_row_ids": [
@@ -30,7 +30,7 @@
     "actor_bucket_key": "joshua ray welch|GA"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-oebx6srz/New Final Post and Capcut template/export/joshua_ray_welch/image_1080.png",
+    "path": "/tmp/swm-share-pages-w205vr69/New Final Post and Capcut template/export/joshua_ray_welch/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -50,11 +50,11 @@
     "_pdf_state_family_count": 153,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5443,
+  "movement_total": 5450,
   "supabase": {
     "report_count": 7,
     "actor_report_count": 7,
-    "family_count": 3,
+    "family_count": 4,
     "family_reports": [
       {
         "body": "My family has become irrevocably broken with children encouraged to hate and lie to a mother trying to protect them from an abusive father.",
@@ -93,6 +93,12 @@
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Hall County"
+      },
+      {
+        "comment_text": "Mr. Welch disregarded and eliminated multiple information points in my favor, disregarded relevant criminal history, openly admitted in his report i had been the one to do the parenting to that pon, and removed my children from my home not because I had done anything wrong but because my 13yr old wanted to live with his father. His father lives with his parents and all three have a felony past. In court Mr Welch mentioned his decision was shaped by his experience with his parents divorce.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Hall county"
       },
       {
         "comment_text": "Didn't interview mom, step dad, kids therapist. Ignored concerns of mom's witnesses to emotional abuse and coercive control. Refused to acknowledge his claim of mental health that was cleared by HIS psych evaluator. Ignored years of evidence. Ignored alienation. Handed kids over to the abuser. Took my kids way, refused to do a investigation, refused to interview moms side of things including mom and husband. Refused to show up to be questioned. Bias, and fear driven.",
@@ -134,6 +140,10 @@
         "kind": "comment"
       },
       {
+        "body": "Disregarded relevant criminal history",
+        "kind": "comment"
+      },
+      {
         "body": "Ignored years of evidence. Ignored alienation. Handed kids over to the abuser.",
         "kind": "comment"
       },
@@ -162,7 +172,7 @@
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 2
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

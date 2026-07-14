@@ -26,27 +26,27 @@
     "actor_bucket_key": "jane c levy|NM"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-oebx6srz/New Final Post and Capcut template/export/jane_c_levy/image_1080.png",
+    "path": "/tmp/swm-share-pages-w205vr69/New Final Post and Capcut template/export/jane_c_levy/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 23,
-    "total_submissions": 28,
-    "avg_financial_loss": 121927.5,
+    "total_submissions": 29,
+    "avg_financial_loss": 120770.4,
     "avg_months_lost": 51.6,
     "_source_table": "movement_stats_by_state",
     "_match_value": "NM",
-    "state_family_count": 28,
-    "median_financial_loss": 101000,
-    "median_burden_sample_size": 10,
+    "state_family_count": 29,
+    "median_financial_loss": 93000,
+    "median_burden_sample_size": 11,
     "median_months_lost": 35,
-    "pro_se_pct": 57.1,
+    "pro_se_pct": 55.2,
     "pro_se_count": 16,
-    "_pdf_state_family_count": 28,
+    "_pdf_state_family_count": 29,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5443,
+  "movement_total": 5450,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,

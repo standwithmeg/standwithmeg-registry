@@ -2,55 +2,56 @@
   "schema_version": 2,
   "actor": {
     "slug": "dina_richman",
-    "display_name": "Dina Richman",
+    "display_name": "Richman, Dina R.",
     "title": "",
-    "first_name": "Dina",
-    "last_name": "Richman",
+    "first_name": "Richman, Dina",
+    "last_name": "R.",
     "role": "Judge",
     "court": "Chatsworth",
     "county": "Chatsworth",
     "court_or_county": "Chatsworth",
     "state": "California",
     "state_abbr": "CA",
-    "mention_count": 3,
-    "family_count": 3,
-    "public_family_count": 3,
+    "mention_count": 4,
+    "family_count": 4,
+    "public_family_count": 4,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 3,
+    "actor_report_count": 4,
     "supabase_row_ids": [
       "f16caa9e-5260-4d48-9938-ac2156f69e90",
       "6337b3a8-ab7a-45da-a22a-3df800187a45",
-      "aa2d468f-341d-486e-8fc0-af41a6713f76"
+      "aa2d468f-341d-486e-8fc0-af41a6713f76",
+      "bb5babb4-aedb-4c19-afd3-77e16ae37e13"
     ],
     "actor_row_id": "f16caa9e-5260-4d48-9938-ac2156f69e90",
     "actor_bucket_key": "dina richman|CA"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-oebx6srz/New Final Post and Capcut template/export/dina_richman/image_1080.png",
+    "path": "/tmp/swm-share-pages-w205vr69/New Final Post and Capcut template/export/dina_richman/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 360,
-    "total_submissions": 447,
-    "avg_financial_loss": 284752.35,
+    "total_submissions": 448,
+    "avg_financial_loss": 284042.24,
     "avg_months_lost": 35.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CA",
-    "state_family_count": 447,
+    "state_family_count": 448,
     "median_financial_loss": 265100,
     "median_burden_sample_size": 200,
     "median_months_lost": 20,
-    "pro_se_pct": 58.8,
+    "pro_se_pct": 58.7,
     "pro_se_count": 263,
-    "_pdf_state_family_count": 447,
+    "_pdf_state_family_count": 448,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5443,
+  "movement_total": 5450,
   "supabase": {
-    "report_count": 3,
-    "actor_report_count": 3,
-    "family_count": 3,
+    "report_count": 4,
+    "actor_report_count": 4,
+    "family_count": 4,
     "family_reports": [
       {
         "body": "They took our rights, freedom and justice and handed to our abuser we courageously attempted to escape the home and had and threw away the keys leaving us in the dark and freightened.",
@@ -63,11 +64,23 @@
         "state": "CA",
         "county": "Los Angeles",
         "row_id": "aebcb268-cac2-4c5b-a8ce-5f9006d0d274"
+      },
+      {
+        "body": "Sabotaged my long loving relationship with my child. The Judge and MC should be punished for all of the damages caused.",
+        "state": "CA",
+        "county": "Los Angeles",
+        "row_id": "01af0266-0ad3-40f6-b18a-b25e8af34e8b"
       }
     ],
     "public_comments": [
       {
         "comment_text": "Denied my DVRO request after father falsely accused me of child abuse multiple times and was allowing father to violate orders. This led to me losing custody and having to eventually go on visitations even though there was no safety concerns by any social worker, SVU detective or parenting plan evaluator. This judge doesn’t review anything and simply relies on hear say from a minors counsel that doesn’t even do an investigation and lies under oath.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Chatsworth"
+      },
+      {
+        "comment_text": "Didn’t read any of the Declarations with solid proof and statements that corroborated with my innocence was removed from my child and placed on monitored visits.",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Chatsworth"
@@ -106,15 +119,23 @@
         "kind": "comment"
       },
       {
+        "body": "Didn’t read any of the Declarations with solid proof and statements that…",
+        "kind": "comment"
+      },
+      {
         "body": "She gave my rights to my abuser and closed case",
         "kind": "comment"
       },
       {
-        "body": "They took our rights, freedom and justice and handed to our abuser we courageously attempted to escape the…",
+        "body": "They took our rights, freedom and justice and handed to our abuser we courageously…",
         "kind": "family_report"
       },
       {
         "body": "I’ve lost so much time with my child.",
+        "kind": "family_report"
+      },
+      {
+        "body": "The Judge and MC should be punished for all of the damages caused.",
         "kind": "family_report"
       }
     ],

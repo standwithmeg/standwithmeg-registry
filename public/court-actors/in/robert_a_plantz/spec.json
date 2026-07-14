@@ -1,0 +1,137 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "robert_a_plantz",
+    "display_name": "Secretary for Robert Plantz",
+    "title": "",
+    "first_name": "Secretary for Robert",
+    "last_name": "Plantz",
+    "role": "Attorney / GAL / Child Representative",
+    "court": "Lake and Newton County",
+    "county": "Lake and Newton County",
+    "court_or_county": "Lake and Newton County",
+    "state": "IN",
+    "state_abbr": "IN",
+    "mention_count": 4,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "a4e4cabf-8f4d-4f70-b153-7f798d705832",
+      "63dff18b-61e4-4423-88de-8a45063dfa60",
+      "b6e3a058-1d81-4c46-ab67-ce6f981c2d87",
+      "458917fb-5457-4a5d-9be4-27350a08a7af"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "robert plantz|IN"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 129,
+    "total_submissions": 154,
+    "avg_financial_loss": 140164.51,
+    "avg_months_lost": 30.4,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "IN",
+    "state_family_count": 154,
+    "median_financial_loss": 68150,
+    "median_burden_sample_size": 80,
+    "median_months_lost": 18,
+    "pro_se_pct": 46.1,
+    "pro_se_count": 71,
+    "_pdf_state_family_count": 154,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5450,
+  "supabase": {
+    "report_count": 4,
+    "actor_report_count": 4,
+    "family_count": 3,
+    "family_reports": [
+      {
+        "body": "Continued conspiracies to commit murders and attempts, extortion, misappropriation of funds & government programs, embezzlement, harassment, intimidation, falsification of the record, fraud upon the Courts, human and child trafficking, mail fraud, public corruption, health care fraud, perjury, fiduciary breaches, tampering with, suppression of the record, evidence, targets, witnesses, and victims, RICO violations, due process and civil rights violations, conflicts of interests, quid pro quo, sabotage, organized violence, covert government programs, theft, laundering, stalking, identity theft, death threats, discrimination, bias, endangerment, aidiing and abetting,",
+        "state": "IN",
+        "county": "Lake and Newton County",
+        "row_id": "3f5a4867-f78d-42a9-9543-c59549296f2d"
+      },
+      {
+        "body": "Orchestrated intentional child abuse & neglect, trafficking, elderly abuse, legal abuse financial abuse: laundering, extortion, mail fraud, attempted murder, sabotage, discrimination, torture, consumer fraud",
+        "state": "IN",
+        "county": "Newton County",
+        "row_id": "1d0d552a-e6a4-4a9c-a886-8569742b46ff"
+      },
+      {
+        "body": "lost custody to father, given supervision, subsequently threatened with an ultimiatum and flawed justification to remove the negative review or face legal action to force removal",
+        "state": "IN",
+        "county": "Lake County",
+        "row_id": "ed19cad6-a2ae-4d72-ab2a-56d49205a07b"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Continued conspiracies to commit murders and attempts, extortion, misappropriation of funds and government programs, embezzlement, harassment, intimidation, falsification of the record, fraud upon the Courts, trafficking, mail fraud, continued public corruption, health care fraud, fiduciary breaches, tampering with the record, witnesses, and victims, RICO, conflicts of interests, quid pro quo",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lake and Newton County"
+      },
+      {
+        "comment_text": "Discrimination, intimidation, harassment, coercion, theft. He is directly a part of the collusion and trafficking, “adoption”; the black market of transferring or disposing of human and assets for profit,",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lake County"
+      },
+      {
+        "comment_text": "he is the opposing attoerney, lost custody, subsequently threatened with an ultimatum using a flawed justification for exercising my rights to post a review",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/robert_a_plantz",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='IN'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/in/robert_a_plantz/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "He is directly a part of the collusion and trafficking, “adoption”.",
+        "kind": "comment"
+      },
+      {
+        "body": "he is the opposing attoerney, lost custody, subsequently threatened with an…",
+        "kind": "comment"
+      },
+      {
+        "body": "Orchestrated intentional child abuse & neglect, trafficking, elderly abuse, legal…",
+        "kind": "family_report"
+      },
+      {
+        "body": "lost custody to father, given supervision, subsequently threatened with an…",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

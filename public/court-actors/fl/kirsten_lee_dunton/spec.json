@@ -8,26 +8,29 @@
     "last_name": "Dunton",
     "role": "GAL / Child Representative",
     "court": "Leon County",
-    "county": null,
+    "county": "Leon",
     "court_or_county": "Leon",
     "state": "Florida",
     "state_abbr": "FL",
-    "mention_count": 4,
-    "family_count": 3,
-    "public_family_count": 3,
+    "mention_count": 7,
+    "family_count": 5,
+    "public_family_count": 5,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 4,
+    "actor_report_count": 7,
     "supabase_row_ids": [
       "51eaba09-4b39-45bd-93f6-55a86f199491",
       "047a126d-4f2d-48da-b78e-084b3d615d12",
       "68837b36-6cc8-4916-807a-47269b4cc6e4",
-      "32e131f6-2da0-4842-8660-6931e76eb25e"
+      "32e131f6-2da0-4842-8660-6931e76eb25e",
+      "6ee3e4c4-81c0-495a-bd2c-75599b924cfe",
+      "35117f68-f92d-4040-b42d-670a88387fe1",
+      "45e198a9-e2e7-4097-92c8-836122f25288"
     ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-oebx6srz/New Final Post and Capcut template/export/kirsten_lee_dunton/image_1080.png",
+    "path": "/tmp/swm-share-pages-w205vr69/New Final Post and Capcut template/export/kirsten_lee_dunton/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -47,11 +50,11 @@
     "_pdf_state_family_count": 306,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5443,
+  "movement_total": 5450,
   "supabase": {
-    "report_count": 4,
-    "actor_report_count": 4,
-    "family_count": 3,
+    "report_count": 7,
+    "actor_report_count": 7,
+    "family_count": 5,
     "family_reports": [
       {
         "body": "Family court destroyed my family.",
@@ -66,10 +69,22 @@
         "row_id": "7f28cc13-c697-4136-8169-a678c83a88be"
       },
       {
+        "body": "Nightmare!!!",
+        "state": "FL",
+        "county": "Leon",
+        "row_id": "6dbdd908-02bb-4319-b020-3e1b448be9c2"
+      },
+      {
         "body": "The system is corrupt and it destroys families and children.",
         "state": "FL",
         "county": "Leon",
         "row_id": "2f0d8aea-9f6e-4994-9876-6216d4468cb4"
+      },
+      {
+        "body": "Family court has destroyed my children.",
+        "state": "FL",
+        "county": "Leon",
+        "row_id": "a01ca4a6-5047-4e42-a626-709059f29e2d"
       }
     ],
     "public_comments": [
@@ -80,6 +95,12 @@
         "court_or_county": "Leon County"
       },
       {
+        "comment_text": "The Guardian ad Litem appeared to place significant emphasis on relatively minor school attendance concerns, including a small number of tardies, while giving comparatively limited attention to more serious allegations involving the father’s history and conduct. According to the information available, the father had previously experienced a removal/loss of custody involving other children. There were also allegations involving the father’s association with an individual described as a pedophile who was reportedly attempting to gain access to the child, as well as allegations concerning large handprint bruises observed on the child and attributed to the father. These issues were not meaningfully addressed or emphasized in the Guardian ad Litem’s report. At the same time, the report reportedly recommended a reverse custody provision if the child accumulated more than two tardies for any reason. There are also concerns regarding imbalance in the investigative process. The Guardian ad Litem reportedly conducted extensive communication with individuals aligned with the father while failing to contact or meaningfully engage with collateral sources identified by the mother. Taken together, these circumstances raise concerns regarding proportionality, neutrality, and the consistency with which allegations and risk factors were evaluated.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Leon"
+      },
+      {
         "comment_text": "There are concerns regarding this Guardian ad Litem’s pattern of involvement in cases connected to the same attorney representing fathers in family law matters. In multiple cases, serious allegations involving the fathers appear to receive limited scrutiny, while allegations against mothers are amplified and emphasized. A recurring issue raised by several mothers involves accusations related to eating disorders and nutritional concerns, despite questions regarding the Guardian ad Litem’s qualifications to make clinical or nutritional assessments. There are also concerns that allegations involving sexual abuse by fathers are minimized or dismissed without meaningful investigation. Additionally, the Guardian ad Litem appears to place significant weight on collateral sources aligned with the father, while responding negatively or dismissively when collateral witnesses supporting the mother provide conflicting information or perspectives. Taken together, these patterns raise concerns regarding neutrality, investigative balance, and the consistent treatment of allegations across cases.",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
@@ -87,6 +108,12 @@
       },
       {
         "comment_text": "This guardian ad litem is incredibly biased and ignores child abuse reports by mandatory reports if the report does not favor her preferred parent. Her preferred parents are consistently represented by the same law firm. This woman needs to be stopped before she ruins more lives.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Leon"
+      },
+      {
+        "comment_text": "She allowed a complete violation of time-sharing and decision making and didn't budge when a therapist called DCF on the Father after speaking to the child once.",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Leon"
@@ -119,6 +146,10 @@
         "kind": "comment"
       },
       {
+        "body": "At the same time, the report reportedly recommended a reverse custody provision.",
+        "kind": "comment"
+      },
+      {
         "body": "Dismissed without meaningful investigation",
         "kind": "comment"
       },
@@ -127,11 +158,19 @@
         "kind": "comment"
       },
       {
+        "body": "Called DCF on the Father after speaking to the child once",
+        "kind": "comment"
+      },
+      {
         "body": "Family court destroyed my family.",
         "kind": "family_report"
       },
       {
         "body": "Years of litigation within the family court system had a profound impact on my family.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Family court has destroyed my children.",
         "kind": "family_report"
       }
     ],

@@ -12,49 +12,57 @@
     "court_or_county": "Placer",
     "state": "California",
     "state_abbr": "CA",
-    "mention_count": 6,
+    "mention_count": 8,
     "family_count": 6,
     "public_family_count": 6,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 6,
+    "actor_report_count": 8,
     "supabase_row_ids": [
       "3ea1da9a-953f-4820-8b6e-af3904362958",
       "4e3f1229-03b8-456b-b761-321fb4754011",
       "2fcccd40-ac73-48af-ab9c-5fab6021363d",
       "6bae9e4e-084b-48e4-94f4-77ef3ef9e378",
       "a4d72528-62f9-4bb5-8d3b-355206361fff",
-      "66b72eeb-d0a5-454e-8702-864efd95fed9"
+      "66b72eeb-d0a5-454e-8702-864efd95fed9",
+      "ea3dfe79-be4b-4c24-8973-fdb0c434ce64",
+      "41f66154-0e33-4643-8f5d-4afda23c9b4e"
     ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-oebx6srz/New Final Post and Capcut template/export/raymond_de_jesus/image_1080.png",
+    "path": "/tmp/swm-share-pages-w205vr69/New Final Post and Capcut template/export/raymond_de_jesus/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 360,
-    "total_submissions": 447,
-    "avg_financial_loss": 284752.35,
+    "total_submissions": 448,
+    "avg_financial_loss": 284042.24,
     "avg_months_lost": 35.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CA",
-    "state_family_count": 447,
+    "state_family_count": 448,
     "median_financial_loss": 265100,
     "median_burden_sample_size": 200,
     "median_months_lost": 20,
-    "pro_se_pct": 58.8,
+    "pro_se_pct": 58.7,
     "pro_se_count": 263,
-    "_pdf_state_family_count": 447,
+    "_pdf_state_family_count": 448,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5443,
+  "movement_total": 5450,
   "supabase": {
-    "report_count": 6,
-    "actor_report_count": 6,
+    "report_count": 8,
+    "actor_report_count": 8,
     "family_count": 6,
     "family_reports": [
+      {
+        "body": "This is a continuation of my first filed testimony.",
+        "state": "CA",
+        "county": "Placer",
+        "row_id": "7795ec76-9177-4958-94f4-eb4a5b3e3e1e"
+      },
       {
         "body": "The amount of dirty hands involved in this case is truly disgusting and demonic. There's many not mentioned since not entered into the court. There has been a very clear intent to deprive, knowingly putting such precious, innocent little ones in harm's way who cannot protect themselves. Even my seeking help thru federal entities has backfired on them. The lack of integrity in these local systems and beyond is disgraceful; and devastating. They're doing a great job of robbing children of the childhood they deserve, with their sister and family and the Motherhood I deserve. The crimes and abduction must cease and desist.",
         "state": "CA",
@@ -153,6 +161,10 @@
       {
         "body": "Ignored evidence of abuse and domestic violence",
         "kind": "comment"
+      },
+      {
+        "body": "This is a continuation of my first filed testimony.",
+        "kind": "family_report"
       },
       {
         "body": "Even my seeking help thru federal entities has backfired on them.",

@@ -1,0 +1,157 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "audrey_faith_bell",
+    "display_name": "Audrey Faith Bell",
+    "title": "",
+    "first_name": "Audrey Faith",
+    "last_name": "Bell",
+    "role": "CPS Worker",
+    "court": "Beaufort",
+    "county": "Beaufort",
+    "court_or_county": "Beaufort",
+    "state": "NC",
+    "state_abbr": "NC",
+    "mention_count": 6,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 6,
+    "supabase_row_ids": [
+      "265a1f20-5908-4622-bb61-31dc4d87dd32",
+      "f119c8fd-d737-497d-a8c5-ad6a095629b5",
+      "87a99eab-5afe-4e0d-9b71-3b0c39f39e9d",
+      "19201232-8e1b-499a-acba-df1dc1a619e0",
+      "d9ac9d8c-6c83-43df-9eaa-40ef97f0d82f",
+      "0eda48a2-f6e1-40be-b50a-ec8d420083c2"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "audrey faith bell|NC"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 163,
+    "total_submissions": 216,
+    "avg_financial_loss": 183458.97,
+    "avg_months_lost": 36.3,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "NC",
+    "state_family_count": 216,
+    "median_financial_loss": 137332,
+    "median_burden_sample_size": 72,
+    "median_months_lost": 18,
+    "pro_se_pct": 50.9,
+    "pro_se_count": 110,
+    "_pdf_state_family_count": 216,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5450,
+  "supabase": {
+    "report_count": 6,
+    "actor_report_count": 6,
+    "family_count": 3,
+    "family_reports": [
+      {
+        "body": "They have robbed me and my children of precious time we will never get back",
+        "state": "NC",
+        "county": "Beaufort county",
+        "row_id": "b8199e3f-3566-4096-9bf1-19354c29ffd9"
+      },
+      {
+        "body": "Took our autistic nephew form is caused depression caused him to to sneek ways to communicate we have not seen or heard from him in 3 years HE WAS 8 2 DAYS FORM BEING 9 AND HE IS NOW 12",
+        "state": "NC",
+        "county": "Beaufort county",
+        "row_id": "cde1665e-5c09-4a1b-a210-54799a70910f"
+      },
+      {
+        "body": "They lost my son, he has been missing since September 23, 2025. They have consistently tried to cover up the unconstitutional seizure of my children. They scrubbed reports and gave my 8 year old daughter to our abuser and placed my 15 year old daughter with a pedophile.",
+        "state": "NC",
+        "county": "Beaufort County",
+        "row_id": "1f3c4576-e9e3-4d97-8308-93200d270032"
+      },
+      {
+        "body": "Judge was horrible- would not listen, finalized order that put me out of house and home. And my kids best interest not considered in the slightest.",
+        "state": "NC",
+        "county": "Wake",
+        "row_id": "aeeffa55-564a-4c6b-857e-6376391c30d7"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "She failed to protect my son. When he was being held in a facility for 8 months being abused she petitioned the facility for him to remain there longer. She placed him in unsafe environment after the other. When my son went missing she threatened my 15 year old daughter with aiding and abetting. She has been extremely inappropriate with my children. Has told my daughter that I have refused to cooperate with them at all. Made it seem to her like paperwork was the only thing standing in the way of her coming home. Placed my daughter with a pedophile. Recommended my 8 year old daughter be placed with our abuser. Has lied relentlessly in court reports, affidavits, and correspondence to other agencies. I could go on and on about everything she has done. In my opinion, she is a danger to children and I believe she may be a psychopath.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Beaufort"
+      },
+      {
+        "comment_text": "Was biased and refused to come off my case. Her dad is sitting in jail on dui charges and stealing vehicles. Her mom tried to destroy my business. She refused to let us see our lids and then hid behind a glass windows while she laughed and called the cops",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Beaufort"
+      },
+      {
+        "comment_text": "Keeping us form commitcateing Ingores any emails as well as refuses us to communicate with him",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Beaufort county"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/audrey_faith_bell",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='NC'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/nc/audrey_faith_bell/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Has told my daughter that I have refused to cooperate with them at all.",
+        "kind": "comment"
+      },
+      {
+        "body": "Was biased and refused to come off my case.",
+        "kind": "comment"
+      },
+      {
+        "body": "Keeping us form commitcateing Ingores any emails as well as refuses us to…",
+        "kind": "comment"
+      },
+      {
+        "body": "They have robbed me and my children of precious time we will never get back",
+        "kind": "family_report"
+      },
+      {
+        "body": "HE IS NOW 12",
+        "kind": "family_report"
+      },
+      {
+        "body": "Gave my 8 year old daughter to our abuser",
+        "kind": "family_report"
+      },
+      {
+        "body": "My kids best interest not considered in the slightest.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

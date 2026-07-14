@@ -12,21 +12,24 @@
     "court_or_county": "Cameron",
     "state": "Texas",
     "state_abbr": "TX",
-    "mention_count": 3,
+    "mention_count": 6,
     "family_count": 3,
     "public_family_count": 3,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 3,
+    "actor_report_count": 6,
     "supabase_row_ids": [
       "0ec83b05-c952-4f38-88e6-24c5a27e1954",
       "3cf1956d-616e-4fe3-ae96-3439e0a3f30f",
+      "805177e6-b670-432f-84db-dc9df8082286",
+      "239f0ed9-59b5-46b0-b0a4-4037841b9ad8",
+      "e1f7efd2-f17b-4b6a-8af8-b90869c39426",
       "408e53a4-58ba-4df5-af58-bdaa1bba84e9"
     ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-oebx6srz/New Final Post and Capcut template/export/gabriela_garcia/image_1080.png",
+    "path": "/tmp/swm-share-pages-w205vr69/New Final Post and Capcut template/export/gabriela_garcia/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -46,10 +49,10 @@
     "_pdf_state_family_count": 317,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5443,
+  "movement_total": 5450,
   "supabase": {
-    "report_count": 3,
-    "actor_report_count": 3,
+    "report_count": 6,
+    "actor_report_count": 6,
     "family_count": 3,
     "family_reports": [
       {
@@ -85,10 +88,10 @@
         "court_or_county": "Cameron"
       },
       {
-        "comment_text": "Cited with father, denied motions, ignored evidence. No due process.",
+        "comment_text": "No due process/ no fairness Cited with father, denied motions, ignored evidence. No due process.",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "138"
+        "court_or_county": "Garcia"
       }
     ]
   },
@@ -122,7 +125,7 @@
         "kind": "comment"
       },
       {
-        "body": "Cited with father, denied motions, ignored evidence. No due process.",
+        "body": "No due process/ no fairness Cited with father, denied motions, ignored evidence.",
         "kind": "comment"
       },
       {
