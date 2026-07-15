@@ -58,6 +58,10 @@ type PlannedSend = {
 
 type ExistingIndex = {
   alreadySentKeys: Set<string>;
+  /** email|nameStateKey — catches spelling-variant buckets ("robert plantz"
+   * vs "robert a plantz") that the exact bucket-key dedupe misses, so one
+   * family is never asked twice for the same person. */
+  alreadySentCollapsedKeys: Set<string>;
   prior: Map<string, ExistingNotificationRow[]>;
 };
 
@@ -103,10 +107,19 @@ function parseMode(argv: string[]): Mode {
 
 function indexExisting(rows: ExistingNotificationRow[]): ExistingIndex {
   const alreadySentKeys = new Set<string>();
+  const alreadySentCollapsedKeys = new Set<string>();
   const prior = new Map<string, ExistingNotificationRow[]>();
   for (const r of rows) {
     const key = notificationDedupeKey(r.reporter_email, r.actor_bucket_key);
-    if (r.status === "sent") alreadySentKeys.add(key);
+    if (r.status === "sent") {
+      alreadySentKeys.add(key);
+      const [bucketName, bucketState] = r.actor_bucket_key.split("|");
+      if (bucketName) {
+        alreadySentCollapsedKeys.add(
+          `${r.reporter_email.trim().toLowerCase()}|${nameStateKey(bucketName, bucketState ?? "")}`,
+        );
+      }
+    }
     let list = prior.get(key);
     if (!list) {
       list = [];
@@ -114,7 +127,7 @@ function indexExisting(rows: ExistingNotificationRow[]): ExistingIndex {
     }
     list.push(r);
   }
-  return { alreadySentKeys, prior };
+  return { alreadySentKeys, alreadySentCollapsedKeys, prior };
 }
 
 type ManifestPhotoIndex = {
@@ -122,11 +135,15 @@ type ManifestPhotoIndex = {
   nameStateKeys: Set<string>;
 };
 
-/** "Judge Bethany M. Roberts" + "KS" → "ks|bethanymroberts" (honorific/spelling tolerant). */
+/** "Judge Bethany M. Roberts" + "KS" → "ks|bethanyroberts" (honorific, middle-initial,
+ * and spelling tolerant — "Robert Plantz" and "Robert A. Plantz" must collapse to the
+ * same key, or dedupe/photo-skip misses spelling variants and re-emails families). */
 function nameStateKey(name: string, state: string | null | undefined): string {
   const cleaned = String(name || "")
     .toLowerCase()
     .replace(/\b(honorable|hon|judge|justice|dr|mr|mrs|ms|esq|jr|sr|ii|iii|iv)\b\.?/g, "")
+    .replace(/[^a-z0-9]+/g, " ")
+    .replace(/\b[a-z]\b/g, "")
     .replace(/[^a-z0-9]/g, "");
   return `${String(state || "").toLowerCase()}|${cleaned}`;
 }
@@ -138,31 +155,56 @@ function nameStateKey(name: string, state: string | null | undefined): string {
  * reported 2026-07-06). Older manifest entries can have a null bucket
  * key, so we also match on state + normalized name.
  */
-function loadManifestPhotoIndex(): ManifestPhotoIndex {
-  const bucketKeys = new Set<string>();
-  const nameStateKeys = new Set<string>();
+type ManifestEntryLike = {
+  slug?: string | null;
+  actor_bucket_key?: string | null;
+  canonical_name?: string | null;
+  display_name?: string | null;
+  state_abbr?: string | null;
+  photo_url?: string | null;
+};
+
+function indexManifestEntries(entries: ManifestEntryLike[], into: ManifestPhotoIndex): void {
+  for (const e of entries) {
+    if (!e?.photo_url) continue;
+    if (e.actor_bucket_key) into.bucketKeys.add(e.actor_bucket_key);
+    const name = e.canonical_name || e.display_name;
+    if (name && e.state_abbr) into.nameStateKeys.add(nameStateKey(name, e.state_abbr));
+    // The slug is often the actor's REAL name even when the display name is an
+    // editorial title (e.g. slug robert_a_plantz, display "Secretary for
+    // Robert Plantz") — index it so those decks still count as photographed.
+    if (e.slug && e.state_abbr) into.nameStateKeys.add(nameStateKey(e.slug.replace(/_/g, " "), e.state_abbr));
+  }
+}
+
+async function loadManifestPhotoIndex(): Promise<ManifestPhotoIndex> {
+  const index: ManifestPhotoIndex = { bucketKeys: new Set<string>(), nameStateKeys: new Set<string>() };
+  // The LIVE site's manifest is the authority: photos are wired into the
+  // rebuild (my.standwithmeg.com), so this repo's local copy never learns
+  // about new portraits. Reading only the local file re-asked families for
+  // photos of actors whose portrait was already published (Robert Plantz,
+  // 2026-07-15). Union both sources; a fetch failure falls back to local.
+  try {
+    const res = await fetch("https://my.standwithmeg.com/court-actors/manifest.json", { cache: "no-store" } as RequestInit);
+    if (res.ok) {
+      const parsed = await res.json();
+      indexManifestEntries(Array.isArray(parsed) ? parsed : parsed?.actors ?? [], index);
+    } else {
+      console.warn(`[warn] live manifest fetch returned ${res.status}; using local manifest only for photo skip`);
+    }
+  } catch (err) {
+    console.warn(`[warn] could not fetch live manifest for photo skip: ${err instanceof Error ? err.message : err}`);
+  }
   try {
     const file = path.join(process.cwd(), "public", "court-actors", "manifest.json");
     const parsed = JSON.parse(readFileSync(file, "utf8"));
-    const entries: Array<{
-      actor_bucket_key?: string | null;
-      canonical_name?: string | null;
-      display_name?: string | null;
-      state_abbr?: string | null;
-      photo_url?: string | null;
-    }> = Array.isArray(parsed) ? parsed : parsed?.actors ?? [];
-    for (const e of entries) {
-      if (!e?.photo_url) continue;
-      if (e.actor_bucket_key) bucketKeys.add(e.actor_bucket_key);
-      const name = e.canonical_name || e.display_name;
-      if (name && e.state_abbr) nameStateKeys.add(nameStateKey(name, e.state_abbr));
-    }
+    indexManifestEntries(Array.isArray(parsed) ? parsed : parsed?.actors ?? [], index);
   } catch (err) {
     // A broken manifest must not block photo requests entirely — fall back
     // to "no photos known" and let dedupe rows do their normal job.
     console.warn(`[warn] could not read manifest for photo skip: ${err instanceof Error ? err.message : err}`);
   }
-  return { bucketKeys, nameStateKeys };
+  return index;
 }
 
 function bucketHasLivePhoto(bucket: PublicActorBucket, photos: ManifestPhotoIndex): boolean {
@@ -171,15 +213,15 @@ function bucketHasLivePhoto(bucket: PublicActorBucket, photos: ManifestPhotoInde
   return photos.nameStateKeys.has(nameStateKey(bucket.canonical_name, state));
 }
 
-function planSends(buckets: PublicActorBucket[], existing: ExistingIndex): {
+async function planSends(buckets: PublicActorBucket[], existing: ExistingIndex): Promise<{
   plan: PlannedSend[];
   alreadySent: Array<{ bucket: PublicActorBucket; reporter: PublicActorReporter }>;
   photoAlreadyLive: PublicActorBucket[];
-} {
+}> {
   const plan: PlannedSend[] = [];
   const alreadySent: Array<{ bucket: PublicActorBucket; reporter: PublicActorReporter }> = [];
   const photoAlreadyLive: PublicActorBucket[] = [];
-  const photos = loadManifestPhotoIndex();
+  const photos = await loadManifestPhotoIndex();
   for (const bucket of buckets) {
     if (bucketHasLivePhoto(bucket, photos)) {
       photoAlreadyLive.push(bucket);
@@ -187,7 +229,8 @@ function planSends(buckets: PublicActorBucket[], existing: ExistingIndex): {
     }
     for (const reporter of bucket.reporters) {
       const key = notificationDedupeKey(reporter.reporter_email, bucket.actor_bucket_key);
-      if (existing.alreadySentKeys.has(key)) {
+      const collapsedKey = `${reporter.reporter_email.trim().toLowerCase()}|${nameStateKey(bucket.canonical_name, bucket.state_code || bucket.location_key)}`;
+      if (existing.alreadySentKeys.has(key) || existing.alreadySentCollapsedKeys.has(collapsedKey)) {
         alreadySent.push({ bucket, reporter });
         continue;
       }
@@ -330,7 +373,7 @@ async function main() {
   }
   const existingIndex = indexExisting(existingRows);
 
-  const { plan, alreadySent, photoAlreadyLive } = planSends(buckets, existingIndex);
+  const { plan, alreadySent, photoAlreadyLive } = await planSends(buckets, existingIndex);
 
   if (photoAlreadyLive.length > 0) {
     console.log(`\nSkipped — photo already live on the public record (${photoAlreadyLive.length}):`);
