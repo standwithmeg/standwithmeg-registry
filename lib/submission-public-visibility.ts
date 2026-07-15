@@ -11,8 +11,10 @@ export function isPublicShareableSubmission(submission: SubmissionVisibilityFiel
 }
 
 export function isCountableSubmission(submission: SubmissionVisibilityFields): boolean {
+  // Meg's rule (2026-07-15, mirrors the rebuild's lib/submission-public-visibility.ts):
+  // every consent level counts toward an actor's family total — `approved`
+  // gates QUOTE display only (isPublicShareableSubmission above).
   if (!submission) return false;
   const perm = (submission.permission_to_share ?? "").trim();
-  if (perm === "data_only") return true;
-  return submission.approved === true && PUBLIC_SHARE_PERMISSIONS.has(perm);
+  return perm === "data_only" || PUBLIC_SHARE_PERMISSIONS.has(perm);
 }

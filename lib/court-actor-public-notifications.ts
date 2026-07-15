@@ -8,7 +8,7 @@ import {
   resolveFamilyKey,
   type CourtActorRowReviewDecision,
 } from "./court-actors";
-import { isCountableSubmission, isPublicShareableSubmission } from "./submission-public-visibility";
+import { isCountableSubmission } from "./submission-public-visibility";
 import { createSmtpTransport } from "./smtp-email";
 import { US_JURISDICTIONS } from "./us-jurisdictions";
 
@@ -235,7 +235,11 @@ export async function getPublicActorsWithReporters(): Promise<PublicActorBucket[
     if (!location) continue;
 
     const submission = joinedSubmission(a);
-    if (!isPublicShareableSubmission(submission)) continue;
+    // Meg's rule (2026-07-15): EVERY consented family gets the photo request —
+    // quote approval gates quote display, never who we ask for a photo. The
+    // photo-already-live skip in the daily script decides whether the ask
+    // goes out at all; this only decides who is an addressable reporter.
+    if (!isCountableSubmission(submission)) continue;
 
     const fk = resolveFamilyKey({
       row_id: a.id,
