@@ -12,45 +12,43 @@
     "court_or_county": "Johnson county",
     "state": "Kansas",
     "state_abbr": "KS",
-    "mention_count": 4,
+    "mention_count": 2,
     "family_count": 4,
     "public_family_count": 4,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 4,
+    "actor_report_count": 2,
     "supabase_row_ids": [
       "f3089ed9-aa94-4916-a2ec-438984595e59",
-      "697db11e-f3ad-4285-9705-e536c70d5bff",
-      "3cf9ac50-a648-454d-ab71-1271fba52fd6",
       "6daef34c-1fbc-46eb-bf10-ab6dd3cf25ed"
     ],
     "actor_row_id": null,
     "actor_bucket_key": "steven henry|KS"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-w205vr69/New Final Post and Capcut template/export/steven_d_henry/image_1080.png",
+    "path": "/tmp/swm-share-pages-z53r0ppu/New Final Post and Capcut template/export/steven_d_henry/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 186,
-    "total_submissions": 255,
-    "avg_financial_loss": 116221.43,
+    "total_submissions": 256,
+    "avg_financial_loss": 115722.63,
     "avg_months_lost": 29.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "KS",
-    "state_family_count": 255,
+    "state_family_count": 256,
     "median_financial_loss": 98800,
     "median_burden_sample_size": 133,
     "median_months_lost": 16,
-    "pro_se_pct": 49.0,
-    "pro_se_count": 125,
-    "_pdf_state_family_count": 255,
+    "pro_se_pct": 49.2,
+    "pro_se_count": 126,
+    "_pdf_state_family_count": 256,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5450,
+  "movement_total": 5462,
   "supabase": {
-    "report_count": 4,
-    "actor_report_count": 4,
+    "report_count": 2,
+    "actor_report_count": 2,
     "family_count": 4,
     "family_reports": [
       {
@@ -68,22 +66,21 @@
     ],
     "public_comments": [
       {
-        "comment_text": "He downplayed very very serious emotional abuse evidence when HE filed a DCF report against my ex husband. Does not uphold violations of his own recommendations and takes no action when my ex husband violated court orders.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Johnson"
-      },
-      {
         "comment_text": "Ignored evidence, ignored facts",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Johnson county"
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "He downplayed very very serious emotional abuse evidence when HE filed a DCF report against my ex husband. Does not uphold violations of his own recommendations and takes no action when my ex husband violated court orders.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/steven_d_henry",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='KS'"
+    "public_family_count_api: no actors returned for state='KS'",
+    "pdf_public_actor: no 'Case manager Steven Henry' in cache for KS"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
@@ -103,11 +100,11 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "He downplayed very very serious emotional abuse evidence when HE filed a DCF report against my ex husband.",
+        "body": "Ignored evidence, ignored facts",
         "kind": "comment"
       },
       {
-        "body": "Ignored evidence, ignored facts",
+        "body": "He downplayed very very serious emotional abuse evidence when HE filed a DCF report against my ex husband.",
         "kind": "comment"
       },
       {

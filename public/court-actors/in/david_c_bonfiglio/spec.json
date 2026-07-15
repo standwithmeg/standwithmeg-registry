@@ -47,27 +47,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-oebx6srz/New Final Post and Capcut template/export/david_c_bonfiglio/image_1080.png",
+    "path": "/tmp/swm-share-pages-z53r0ppu/New Final Post and Capcut template/export/david_c_bonfiglio/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 129,
-    "total_submissions": 154,
-    "avg_financial_loss": 140164.51,
-    "avg_months_lost": 30.4,
+    "total_submissions": 155,
+    "avg_financial_loss": 139204.48,
+    "avg_months_lost": 30.2,
     "_source_table": "movement_stats_by_state",
     "_match_value": "IN",
-    "state_family_count": 154,
+    "state_family_count": 155,
     "median_financial_loss": 68150,
     "median_burden_sample_size": 80,
     "median_months_lost": 18,
-    "pro_se_pct": 46.1,
+    "pro_se_pct": 45.8,
     "pro_se_count": 71,
-    "_pdf_state_family_count": 154,
+    "_pdf_state_family_count": 155,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5443,
+  "movement_total": 5462,
   "supabase": {
     "report_count": 24,
     "actor_report_count": 24,

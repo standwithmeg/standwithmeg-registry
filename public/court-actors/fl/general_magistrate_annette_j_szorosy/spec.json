@@ -27,27 +27,27 @@
     "actor_bucket_key": "general magistrate annette szorosy|FL"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-oebx6srz/New Final Post and Capcut template/export/general_magistrate_annette_j_szorosy/image_1080.png",
+    "path": "/tmp/swm-share-pages-z53r0ppu/New Final Post and Capcut template/export/general_magistrate_annette_j_szorosy/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 241,
-    "total_submissions": 306,
-    "avg_financial_loss": 205143.42,
+    "total_submissions": 307,
+    "avg_financial_loss": 206060.49,
     "avg_months_lost": 28.0,
     "_source_table": "movement_stats_by_state",
     "_match_value": "FL",
-    "state_family_count": 306,
-    "median_financial_loss": 180750,
-    "median_burden_sample_size": 134,
+    "state_family_count": 307,
+    "median_financial_loss": 185000,
+    "median_burden_sample_size": 135,
     "median_months_lost": 18,
-    "pro_se_pct": 57.5,
+    "pro_se_pct": 57.3,
     "pro_se_count": 176,
-    "_pdf_state_family_count": 306,
+    "_pdf_state_family_count": 307,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5443,
+  "movement_total": 5462,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,

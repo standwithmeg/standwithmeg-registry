@@ -18,37 +18,37 @@
     "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 5,
     "supabase_row_ids": [
+      "dea48589-94df-4094-8aff-a2f70b33e159",
       "36d79edf-e2de-4fb0-bfcb-7c54fd73f36a",
       "9a63ebec-ae1c-4028-a28d-05d7fe1a65da",
       "e8057876-3bfb-4cbb-9348-54da753df3b6",
-      "dea48589-94df-4094-8aff-a2f70b33e159",
       "167bed4e-895c-4624-a8c2-ea187d23b114"
     ],
     "actor_row_id": null,
     "actor_bucket_key": "jennifer hagg|KS"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-w205vr69/New Final Post and Capcut template/export/jennifer_hagg/image_1080.png",
+    "path": "/tmp/swm-share-pages-z53r0ppu/New Final Post and Capcut template/export/jennifer_hagg/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 186,
-    "total_submissions": 255,
-    "avg_financial_loss": 116221.43,
+    "total_submissions": 256,
+    "avg_financial_loss": 115722.63,
     "avg_months_lost": 29.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "KS",
-    "state_family_count": 255,
+    "state_family_count": 256,
     "median_financial_loss": 98800,
     "median_burden_sample_size": 133,
     "median_months_lost": 16,
-    "pro_se_pct": 49.0,
-    "pro_se_count": 125,
-    "_pdf_state_family_count": 255,
+    "pro_se_pct": 49.2,
+    "pro_se_count": 126,
+    "_pdf_state_family_count": 256,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5450,
+  "movement_total": 5462,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
