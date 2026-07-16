@@ -1,0 +1,124 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "jonathan_rex_marvel",
+    "display_name": "Johnathan Rex Marvel",
+    "title": "",
+    "first_name": "Johnathan Rex",
+    "last_name": "Marvel",
+    "role": "Judge",
+    "court": "Charlotte-Mecklenburg",
+    "county": "Charlotte-Mecklenburg",
+    "court_or_county": "Charlotte-Mecklenburg",
+    "state": "NC",
+    "state_abbr": "NC",
+    "mention_count": 3,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "def4cf7b-3761-46e4-a4cc-9f707d9370c8",
+      "cb225c27-b9a7-40c3-822c-76037bc66b1c",
+      "3c651aeb-a55a-4869-a907-c375cfb03e12"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "johnathan rex marvel|NC"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 163,
+    "total_submissions": 216,
+    "avg_financial_loss": 183458.97,
+    "avg_months_lost": 36.3,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "NC",
+    "state_family_count": 216,
+    "median_financial_loss": 137332,
+    "median_burden_sample_size": 72,
+    "median_months_lost": 18,
+    "pro_se_pct": 50.9,
+    "pro_se_count": 110,
+    "_pdf_state_family_count": 216,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5471,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 3,
+    "family_reports": [
+      {
+        "body": "The Charlotte North Carolina Court system is incredibly corrupt. They would rather standby a repeated felon, then help a victim with a lifetime domestic violence restraining order.",
+        "state": "NC",
+        "county": "Mecklenburg",
+        "row_id": "43cc6eaa-2d7b-409e-87b3-2c450b8c0e56"
+      },
+      {
+        "body": "The Charlotte-Mecklenburg Judiciary has cost me over 6 years of an already horrific, adjudicated system of ABUSE. Irena Zarutska put this county on the map with it's bad behavior and sadly, that women, who lost her life has seemingly crossed over to a better place than this town. This town should be exposed for its injustice. (Is there an email I can provide with all of my story that I sent to ACLU?)",
+        "state": "NC",
+        "county": "Mecklenburg",
+        "row_id": "8578d3d1-2579-4bd0-9858-d2f8ae2bf98f"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Denied reviewing the current hundreds of contempts against my ex and called my charges “tit for tat” despite me having a lifetime DVRO!",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
+      },
+      {
+        "comment_text": "denied my due process, acted illegally, and shamed me",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Charlotte-Mecklenburg"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/jonathan_rex_marvel",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='NC'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/nc/jonathan_rex_marvel/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Denied reviewing the current hundreds of contempts against my ex and called my charges “tit for tat”.",
+        "kind": "comment"
+      },
+      {
+        "body": "Denied my due process, acted illegally, and shamed me",
+        "kind": "comment"
+      },
+      {
+        "body": "The Charlotte North Carolina Court system is incredibly corrupt. They would rather standby a repeated felon…",
+        "kind": "family_report"
+      },
+      {
+        "body": "(Is there an email I can provide with all of my story that I sent to ACLU?)",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

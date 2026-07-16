@@ -30,7 +30,7 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 241,
+    "families_approved": 240,
     "total_submissions": 307,
     "avg_financial_loss": 206060.49,
     "avg_months_lost": 28.0,
@@ -45,7 +45,7 @@
     "_pdf_state_family_count": 307,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5462,
+  "movement_total": 5471,
   "supabase": {
     "report_count": 2,
     "actor_report_count": 2,

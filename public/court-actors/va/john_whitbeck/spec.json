@@ -26,27 +26,27 @@
     "actor_bucket_key": "john whitbeck|VA"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-z53r0ppu/New Final Post and Capcut template/export/john_whitbeck/image_1080.png",
+    "path": "/tmp/swm-share-pages-4h0nrr7o/New Final Post and Capcut template/export/john_whitbeck/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 108,
-    "total_submissions": 132,
-    "avg_financial_loss": 185639.0,
-    "avg_months_lost": 29.3,
+    "total_submissions": 133,
+    "avg_financial_loss": 184329.69,
+    "avg_months_lost": 29.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "VA",
-    "state_family_count": 132,
+    "state_family_count": 133,
     "median_financial_loss": 146000,
     "median_burden_sample_size": 54,
     "median_months_lost": 20,
-    "pro_se_pct": 63.6,
-    "pro_se_count": 84,
-    "_pdf_state_family_count": 132,
+    "pro_se_pct": 63.9,
+    "pro_se_count": 85,
+    "_pdf_state_family_count": 133,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5462,
+  "movement_total": 5471,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,

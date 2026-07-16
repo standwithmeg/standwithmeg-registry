@@ -26,27 +26,27 @@
     "actor_bucket_key": "jennifer passiglia|KS"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-z53r0ppu/New Final Post and Capcut template/export/jennifer_passiglia/image_1080.png",
+    "path": "/tmp/swm-share-pages-4h0nrr7o/New Final Post and Capcut template/export/jennifer_passiglia/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 186,
-    "total_submissions": 256,
-    "avg_financial_loss": 115722.63,
-    "avg_months_lost": 29.9,
+    "total_submissions": 258,
+    "avg_financial_loss": 115480.04,
+    "avg_months_lost": 29.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "KS",
-    "state_family_count": 256,
-    "median_financial_loss": 98800,
-    "median_burden_sample_size": 133,
+    "state_family_count": 258,
+    "median_financial_loss": 100150,
+    "median_burden_sample_size": 134,
     "median_months_lost": 16,
     "pro_se_pct": 49.2,
-    "pro_se_count": 126,
-    "_pdf_state_family_count": 256,
+    "pro_se_count": 127,
+    "_pdf_state_family_count": 258,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5462,
+  "movement_total": 5471,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,

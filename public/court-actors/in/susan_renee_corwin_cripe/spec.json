@@ -1,0 +1,110 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "susan_renee_corwin_cripe",
+    "display_name": "Susan Renee Corwin-Cripe",
+    "title": "",
+    "first_name": "Susan Renee",
+    "last_name": "Corwin-Cripe",
+    "role": "Attorney (Opposing)",
+    "court": "Elkhart",
+    "county": "Elkhart",
+    "court_or_county": "Elkhart",
+    "state": "IN",
+    "state_abbr": "IN",
+    "mention_count": null,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 3,
+    "supabase_row_ids": null,
+    "actor_row_id": null,
+    "actor_bucket_key": "susan rene corwin-cripe|IN"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 129,
+    "total_submissions": 155,
+    "avg_financial_loss": 139204.48,
+    "avg_months_lost": 30.2,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "IN",
+    "state_family_count": 155,
+    "median_financial_loss": 68150,
+    "median_burden_sample_size": 80,
+    "median_months_lost": 18,
+    "pro_se_pct": 45.8,
+    "pro_se_count": 71,
+    "_pdf_state_family_count": 155,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5471,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 3,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "She will wait till the court date to tell what she needs. I then send her the information and never hear anything else on what she needs until the next court date where she states to the judge I did not send what was told. Making me look in compliment with requests",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Elkhart"
+      },
+      {
+        "comment_text": "Didn’t show up to represent me for a contempt hearing. When I showed up the judge said she filed to be removed and he granted it the same day as the hearing",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Elkhart"
+      },
+      {
+        "comment_text": "She's currently investigating the case but my confidence in her doing the right thing is negative based off what I continue to see with others",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Elkhart"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/susan_renee_corwin_cripe",
+  "unresolved": [
+    "court_actors: no rows match name~'Susan Renee Corwin-Cripe' state='IN'",
+    "public_family_count_api: no actors returned for state='IN'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/in/susan_renee_corwin_cripe/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "She will wait till the court date to tell what she needs.",
+        "kind": "comment"
+      },
+      {
+        "body": "Didn’t show up to represent me for a contempt hearing. When I showed up the judge said she filed to be removed and he granted it the same day as the hearing",
+        "kind": "comment"
+      },
+      {
+        "body": "She's currently investigating the case but my confidence in her doing the right thing is negative based off what I continue to see with others",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

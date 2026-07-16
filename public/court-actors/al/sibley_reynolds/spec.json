@@ -13,8 +13,8 @@
     "state": "Alabama",
     "state_abbr": "AL",
     "mention_count": 5,
-    "family_count": 3,
-    "public_family_count": 3,
+    "family_count": 4,
+    "public_family_count": 4,
     "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 5,
     "supabase_row_ids": [
@@ -28,7 +28,7 @@
     "actor_bucket_key": "sibley reynolds|AL"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-z53r0ppu/New Final Post and Capcut template/export/sibley_reynolds/image_1080.png",
+    "path": "/tmp/swm-share-pages-4h0nrr7o/New Final Post and Capcut template/export/sibley_reynolds/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -48,11 +48,11 @@
     "_pdf_state_family_count": 131,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5462,
+  "movement_total": 5471,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
-    "family_count": 3,
+    "family_count": 4,
     "family_reports": [
       {
         "body": "One woman was allowed to change the trajectory of my whole family",

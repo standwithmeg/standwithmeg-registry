@@ -26,27 +26,27 @@
     "actor_bucket_key": "susan steinhauer|OH"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-z53r0ppu/New Final Post and Capcut template/export/susan_steinhauer/image_1080.png",
+    "path": "/tmp/swm-share-pages-4h0nrr7o/New Final Post and Capcut template/export/susan_steinhauer/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 208,
-    "total_submissions": 270,
-    "avg_financial_loss": 111117.08,
+    "total_submissions": 272,
+    "avg_financial_loss": 111284.83,
     "avg_months_lost": 34.3,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OH",
-    "state_family_count": 270,
+    "state_family_count": 272,
     "median_financial_loss": 80000,
-    "median_burden_sample_size": 131,
+    "median_burden_sample_size": 133,
     "median_months_lost": 18,
     "pro_se_pct": 52.6,
-    "pro_se_count": 142,
-    "_pdf_state_family_count": 270,
+    "pro_se_count": 143,
+    "_pdf_state_family_count": 272,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5462,
+  "movement_total": 5471,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,

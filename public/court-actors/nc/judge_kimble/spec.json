@@ -2,33 +2,34 @@
   "schema_version": 2,
   "actor": {
     "slug": "judge_kimble",
-    "display_name": "Judge Judge Kimble",
-    "title": "Judge",
-    "first_name": "Judge",
-    "last_name": "Kimble",
+    "display_name": "Jason kimble",
+    "title": "",
+    "first_name": "Jason",
+    "last_name": "kimble",
     "role": "Judge",
     "court": "Harnett county",
     "county": "Harnett county",
     "court_or_county": "Harnett county",
     "state": "North Carolina",
     "state_abbr": "NC",
-    "mention_count": 5,
-    "family_count": 4,
-    "public_family_count": 4,
+    "mention_count": 6,
+    "family_count": 5,
+    "public_family_count": 5,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 5,
+    "actor_report_count": 6,
     "supabase_row_ids": [
       "29fbf7cc-c00f-4a06-ade8-735d24c15f4f",
       "2cce2617-a6ae-4475-ae6f-5adf455e530f",
       "0e098b53-c73f-4ae7-b1c4-55e366115ca0",
       "3c8f75cc-178f-497f-adbe-648cc3b81980",
-      "194c1fd0-f298-401d-a79c-984821d99193"
+      "194c1fd0-f298-401d-a79c-984821d99193",
+      "0c182464-990c-4c87-af76-8f9233e7246f"
     ],
     "actor_row_id": "29fbf7cc-c00f-4a06-ade8-735d24c15f4f",
     "actor_bucket_key": "kimble|NC"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-oebx6srz/New Final Post and Capcut template/export/judge_kimble/image_1080.png",
+    "path": "/tmp/swm-share-pages-4h0nrr7o/New Final Post and Capcut template/export/judge_kimble/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -48,11 +49,11 @@
     "_pdf_state_family_count": 216,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5443,
+  "movement_total": 5471,
   "supabase": {
-    "report_count": 5,
-    "actor_report_count": 5,
-    "family_count": 4,
+    "report_count": 6,
+    "actor_report_count": 6,
+    "family_count": 5,
     "family_reports": [
       {
         "body": "This has cost my parents their retirement savings. They will now have to work until they die because the judge did not handle it in a reasonable or even remotely timely manner. It has cost my sister and her children a lot of trauma and sadness over the last year because the judge showed favoritism. It is absolutely mind boggling that the case when the way it did. Unheard of.",
