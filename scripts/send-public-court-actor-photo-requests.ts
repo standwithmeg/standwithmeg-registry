@@ -177,20 +177,44 @@ function indexManifestEntries(entries: ManifestEntryLike[], into: ManifestPhotoI
   }
 }
 
+/** The index must never be treated as "no actor has a photo" just because a
+ * source failed — that exact failure mass-emailed families of photographed
+ * actors on 2026-07-16 (~40 wrong asks). Well below this floor means the
+ * sources are broken, not that photos disappeared. */
+const MIN_CREDIBLE_PHOTO_INDEX = 50;
+
 async function loadManifestPhotoIndex(): Promise<ManifestPhotoIndex> {
   const index: ManifestPhotoIndex = { bucketKeys: new Set<string>(), nameStateKeys: new Set<string>() };
-  // The LIVE site's manifest is the authority: photos are wired into the
-  // rebuild (my.standwithmeg.com), so this repo's local copy never learns
-  // about new portraits. Reading only the local file re-asked families for
-  // photos of actors whose portrait was already published (Robert Plantz,
-  // 2026-07-15). Union both sources; a fetch failure falls back to local.
+  // Three sources, unioned — each covers actors the others can miss:
+  //   1. actor_publications (Supabase) — the live DB record of approved
+  //      portraits. Always reachable here (the script already requires
+  //      Supabase), unlike HTTP fetches from CI runners.
+  //   2. The LIVE site's manifest — rebuild-era portraits
+  //      (my.standwithmeg.com; Robert Plantz bug, 2026-07-15).
+  //   3. This repo's local manifest — the legacy actor set.
+  try {
+    const sb = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.SUPABASE_SERVICE_ROLE_KEY!);
+    const { data, error } = await sb
+      .from("actor_publications")
+      .select("actor_bucket_key, display_name, state_code, photo_status")
+      .eq("photo_status", "approved");
+    if (error) throw new Error(error.message);
+    for (const row of data ?? []) {
+      if (row.actor_bucket_key) index.bucketKeys.add(String(row.actor_bucket_key));
+      if (row.display_name && row.state_code) {
+        index.nameStateKeys.add(nameStateKey(String(row.display_name), String(row.state_code)));
+      }
+    }
+  } catch (err) {
+    console.warn(`[warn] could not read actor_publications for photo skip: ${err instanceof Error ? err.message : err}`);
+  }
   try {
     const res = await fetch("https://my.standwithmeg.com/court-actors/manifest.json", { cache: "no-store" } as RequestInit);
     if (res.ok) {
       const parsed = await res.json();
       indexManifestEntries(Array.isArray(parsed) ? parsed : parsed?.actors ?? [], index);
     } else {
-      console.warn(`[warn] live manifest fetch returned ${res.status}; using local manifest only for photo skip`);
+      console.warn(`[warn] live manifest fetch returned ${res.status}; using remaining photo sources`);
     }
   } catch (err) {
     console.warn(`[warn] could not fetch live manifest for photo skip: ${err instanceof Error ? err.message : err}`);
@@ -200,9 +224,17 @@ async function loadManifestPhotoIndex(): Promise<ManifestPhotoIndex> {
     const parsed = JSON.parse(readFileSync(file, "utf8"));
     indexManifestEntries(Array.isArray(parsed) ? parsed : parsed?.actors ?? [], index);
   } catch (err) {
-    // A broken manifest must not block photo requests entirely — fall back
-    // to "no photos known" and let dedupe rows do their normal job.
-    console.warn(`[warn] could not read manifest for photo skip: ${err instanceof Error ? err.message : err}`);
+    console.warn(`[warn] could not read local manifest for photo skip: ${err instanceof Error ? err.message : err}`);
+  }
+  const known = index.bucketKeys.size + index.nameStateKeys.size;
+  console.log(`Photo index loaded: ${index.bucketKeys.size} bucket keys, ${index.nameStateKeys.size} name keys.`);
+  if (known < MIN_CREDIBLE_PHOTO_INDEX) {
+    // FAIL CLOSED. Sending with a broken index asks families for photos the
+    // public record already shows — worse than sending nothing today.
+    throw new Error(
+      `Photo index has only ${known} entries (< ${MIN_CREDIBLE_PHOTO_INDEX}). ` +
+      "All photo sources look unavailable — refusing to plan or send photo requests.",
+    );
   }
   return index;
 }
