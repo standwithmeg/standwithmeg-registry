@@ -62,8 +62,27 @@ type ExistingIndex = {
    * vs "robert a plantz") that the exact bucket-key dedupe misses, so one
    * family is never asked twice for the same person. */
   alreadySentCollapsedKeys: Set<string>;
+  /** email|state|firstToken…lastToken — catches middle-name variants
+   * ("christina joliat" vs "christina marie joliat") that survive the
+   * collapsed key and were about to double-ask 4 families on 2026-07-16. */
+  alreadySentEndpointKeys: Set<string>;
   prior: Map<string, ExistingNotificationRow[]>;
 };
+
+/** "christina marie joliat" + OH → "oh|christina…joliat" — first and last
+ * name token only, honorific/initial tolerant (reuses nameStateKey cleanup). */
+function nameEndpointStateKey(name: string, state: string | null | undefined): string {
+  const cleaned = String(name || "")
+    .toLowerCase()
+    .replace(/\b(honorable|hon|judge|justice|dr|mr|mrs|ms|esq|jr|sr|ii|iii|iv)\b\.?/g, "")
+    .replace(/[^a-z0-9]+/g, " ")
+    .replace(/\b[a-z]\b/g, "")
+    .trim()
+    .split(/\s+/)
+    .filter(Boolean);
+  const endpoints = cleaned.length >= 2 ? `${cleaned[0]}…${cleaned[cleaned.length - 1]}` : cleaned[0] ?? "";
+  return `${String(state || "").toLowerCase()}|${endpoints}`;
+}
 
 /**
  * Tiny .env.local loader so the script is self-contained — Next.js
@@ -108,6 +127,7 @@ function parseMode(argv: string[]): Mode {
 function indexExisting(rows: ExistingNotificationRow[]): ExistingIndex {
   const alreadySentKeys = new Set<string>();
   const alreadySentCollapsedKeys = new Set<string>();
+  const alreadySentEndpointKeys = new Set<string>();
   const prior = new Map<string, ExistingNotificationRow[]>();
   for (const r of rows) {
     const key = notificationDedupeKey(r.reporter_email, r.actor_bucket_key);
@@ -115,9 +135,9 @@ function indexExisting(rows: ExistingNotificationRow[]): ExistingIndex {
       alreadySentKeys.add(key);
       const [bucketName, bucketState] = r.actor_bucket_key.split("|");
       if (bucketName) {
-        alreadySentCollapsedKeys.add(
-          `${r.reporter_email.trim().toLowerCase()}|${nameStateKey(bucketName, bucketState ?? "")}`,
-        );
+        const email = r.reporter_email.trim().toLowerCase();
+        alreadySentCollapsedKeys.add(`${email}|${nameStateKey(bucketName, bucketState ?? "")}`);
+        alreadySentEndpointKeys.add(`${email}|${nameEndpointStateKey(bucketName, bucketState ?? "")}`);
       }
     }
     let list = prior.get(key);
@@ -127,7 +147,7 @@ function indexExisting(rows: ExistingNotificationRow[]): ExistingIndex {
     }
     list.push(r);
   }
-  return { alreadySentKeys, alreadySentCollapsedKeys, prior };
+  return { alreadySentKeys, alreadySentCollapsedKeys, alreadySentEndpointKeys, prior };
 }
 
 type ManifestPhotoIndex = {
@@ -261,8 +281,15 @@ async function planSends(buckets: PublicActorBucket[], existing: ExistingIndex):
     }
     for (const reporter of bucket.reporters) {
       const key = notificationDedupeKey(reporter.reporter_email, bucket.actor_bucket_key);
-      const collapsedKey = `${reporter.reporter_email.trim().toLowerCase()}|${nameStateKey(bucket.canonical_name, bucket.state_code || bucket.location_key)}`;
-      if (existing.alreadySentKeys.has(key) || existing.alreadySentCollapsedKeys.has(collapsedKey)) {
+      const email = reporter.reporter_email.trim().toLowerCase();
+      const state = bucket.state_code || bucket.location_key;
+      const collapsedKey = `${email}|${nameStateKey(bucket.canonical_name, state)}`;
+      const endpointKey = `${email}|${nameEndpointStateKey(bucket.canonical_name, state)}`;
+      if (
+        existing.alreadySentKeys.has(key)
+        || existing.alreadySentCollapsedKeys.has(collapsedKey)
+        || existing.alreadySentEndpointKeys.has(endpointKey)
+      ) {
         alreadySent.push({ bucket, reporter });
         continue;
       }
@@ -371,6 +398,7 @@ async function performSend(args: {
     fromAddress: args.fromAddress,
     replyToAddress: args.replyToAddress,
     onlyActorBucketKeys: new Set(plan.map(p => p.bucket.actor_bucket_key)),
+    onlyPairKeys: new Set(plan.map(p => notificationDedupeKey(p.reporter.reporter_email, p.bucket.actor_bucket_key))),
   });
   console.log(
     `\nDone. sent=${summary.sent} skipped=${summary.skipped} failed=${summary.failed}`,

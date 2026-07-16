@@ -9,6 +9,7 @@ import {
   type CourtActorRowReviewDecision,
 } from "./court-actors";
 import { isCountableSubmission } from "./submission-public-visibility";
+import { AliasResolver, type AliasDecisionRow } from "./court-actor-similarity";
 import { createSmtpTransport } from "./smtp-email";
 import { US_JURISDICTIONS } from "./us-jurisdictions";
 
@@ -208,6 +209,25 @@ export async function getPublicActorsWithReporters(): Promise<PublicActorBucket[
 
   const rowReviewMap = await loadRowReviewMap(sb);
 
+  // Apply Meg's reviewed same_actor merges, exactly like the public site.
+  // Without this, an actor whose 3+ families typed different spellings never
+  // reaches the threshold in ANY single raw bucket, so their families were
+  // never asked for a photo (Corwin-Cripe/Tenney/Laughridge gap, 2026-07-16).
+  let aliasResolver: AliasResolver | null = null;
+  {
+    const { data: decisions, error: aliasError } = await sb
+      .from("court_actor_alias_decisions")
+      .select("cluster_key, location_key, decision, canonical_name, canonical_role, name_keys")
+      .eq("decision", "same_actor");
+    if (aliasError) {
+      const missing = aliasError.code === "42P01" || aliasError.code === "PGRST205"
+        || /Could not find the table/i.test(aliasError.message ?? "");
+      if (!missing) throw new Error(`court_actor_alias_decisions select failed: ${aliasError.message}`);
+    } else {
+      aliasResolver = new AliasResolver((decisions ?? []) as AliasDecisionRow[]);
+    }
+  }
+
   type FamilyEntry = {
     reporter_email: string;
     reporter_first_name: string | null;
@@ -250,7 +270,7 @@ export async function getPublicActorsWithReporters(): Promise<PublicActorBucket[
     });
     if (fk === null) continue;
 
-    const effectiveName = a.name;
+    const effectiveName = aliasResolver?.resolve(a.name, location)?.canonical_name ?? a.name;
     const bucketKey = actorBucketKeyWithLocation(effectiveName, a.role, location);
     if (!bucketKey.split("|")[0]) continue;
 
@@ -269,7 +289,9 @@ export async function getPublicActorsWithReporters(): Promise<PublicActorBucket[
     }
 
     bucket.roleCounts.set(a.role, (bucket.roleCounts.get(a.role) ?? 0) + 1);
-    const casingName = a.name;
+    // Use the alias-resolved name for casing so a reviewed merge's canonical
+    // spelling wins over whichever raw variant happens to be most frequent.
+    const casingName = effectiveName;
     bucket.casingCounts.set(casingName, (bucket.casingCounts.get(casingName) ?? 0) + 1);
 
     const reporterEmail = submission?.email?.trim().toLowerCase();
@@ -313,7 +335,7 @@ export async function getPublicActorsWithReporters(): Promise<PublicActorBucket[
       review_decision: rowReviewMap.get(a.id) ?? null,
     });
     if (fk === null) continue;
-    const effectiveName = a.name;
+    const effectiveName = aliasResolver?.resolve(a.name, location)?.canonical_name ?? a.name;
     const bucketKey = actorBucketKeyWithLocation(effectiveName, a.role, location);
     if (!bucketKey.split("|")[0]) continue;
     let set = allFamilyCounts.get(bucketKey);
@@ -495,6 +517,10 @@ export type DispatchOptions = {
    * for actors related to the just-submitted form, not the entire DB.
    */
   onlyActorBucketKeys?: Set<string>;
+  /** Exact (reporter_email, actor_bucket_key) dedupe keys allowed to send.
+   * Passed by the guarded script plan so variant-name dedupe decisions made
+   * during planning can't be bypassed by this function's own reporter walk. */
+  onlyPairKeys?: Set<string>;
   logger?: {
     log: (msg: string) => void;
     warn: (msg: string) => void;
@@ -549,6 +575,7 @@ export async function dispatchPendingPhotoRequests(
     for (const reporter of bucket.reporters) {
       const key = notificationDedupeKey(reporter.reporter_email, bucket.actor_bucket_key);
       if (alreadySent.has(key)) continue;
+      if (options.onlyPairKeys && !options.onlyPairKeys.has(key)) continue;
       const { subject, body } = buildPhotoRequestEmail({
         firstName: reporter.reporter_first_name,
         canonicalName: bucket.canonical_name,
