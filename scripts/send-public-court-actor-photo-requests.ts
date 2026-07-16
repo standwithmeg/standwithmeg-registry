@@ -348,11 +348,29 @@ async function performSend(args: {
   fromAddress: string;
   replyToAddress: string;
 }) {
+  // THE SEND MUST GO THROUGH THE SAME GUARDED PLAN AS THE DRY RUN.
+  // dispatchPendingPhotoRequests builds its own reporter list with no
+  // photo-live skip — calling it unfiltered emailed families of ~40
+  // already-photographed actors on 2026-07-16 while every dry run looked
+  // correct. planSends applies the photo-live skip and the fail-closed
+  // empty-index guard; its bucket keys are the only ones allowed to send.
+  const buckets = await getPublicActorsWithReporters();
+  const existing = indexExisting(await loadExistingNotifications());
+  const { plan, photoAlreadyLive } = await planSends(buckets, existing);
+  console.log(
+    `\nGuarded plan: ${plan.length} sends across ${new Set(plan.map(p => p.bucket.actor_bucket_key)).size} actors; ` +
+    `${photoAlreadyLive.length} photo-live actors suppressed.`,
+  );
+  if (plan.length === 0) {
+    console.log("Nothing to send.");
+    return;
+  }
   const summary = await dispatchPendingPhotoRequests({
     smtpUser: args.smtpUser,
     smtpPass: args.smtpPass,
     fromAddress: args.fromAddress,
     replyToAddress: args.replyToAddress,
+    onlyActorBucketKeys: new Set(plan.map(p => p.bucket.actor_bucket_key)),
   });
   console.log(
     `\nDone. sent=${summary.sent} skipped=${summary.skipped} failed=${summary.failed}`,

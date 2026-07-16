@@ -399,18 +399,31 @@ export type ExistingNotificationRow = {
  */
 export async function loadExistingNotifications(): Promise<ExistingNotificationRow[]> {
   const sb = createNotificationSupabaseClient();
-  const { data, error } = await sb
-    .from("court_actor_public_notifications")
-    .select("id, actor_bucket_key, reporter_email, status, sent_at, error_message, created_at");
-  if (error) {
-    const missing =
-      error.code === "42P01" ||
-      error.code === "PGRST205" ||
-      /Could not find the table/i.test(error.message ?? "");
-    if (missing) return [];
-    throw new Error(`court_actor_public_notifications select failed: ${error.message}`);
+  // Paginate: PostgREST caps unranged selects at 1,000 rows and the ledger
+  // passed 2,000 on 2026-07-16 — an unpaged read silently dropped half the
+  // "already asked" history, so plans over-reported pending sends (only the
+  // per-send DB re-check in dispatchPendingPhotoRequests prevented actual
+  // duplicate emails). A stable id sort keeps page boundaries consistent.
+  const PAGE = 1000;
+  const rows: ExistingNotificationRow[] = [];
+  for (let from = 0; ; from += PAGE) {
+    const { data, error } = await sb
+      .from("court_actor_public_notifications")
+      .select("id, actor_bucket_key, reporter_email, status, sent_at, error_message, created_at")
+      .order("id", { ascending: true })
+      .range(from, from + PAGE - 1);
+    if (error) {
+      const missing =
+        error.code === "42P01" ||
+        error.code === "PGRST205" ||
+        /Could not find the table/i.test(error.message ?? "");
+      if (missing) return [];
+      throw new Error(`court_actor_public_notifications select failed: ${error.message}`);
+    }
+    rows.push(...((data ?? []) as ExistingNotificationRow[]));
+    if ((data ?? []).length < PAGE) break;
   }
-  return (data ?? []) as ExistingNotificationRow[];
+  return rows;
 }
 
 export function notificationDedupeKey(
