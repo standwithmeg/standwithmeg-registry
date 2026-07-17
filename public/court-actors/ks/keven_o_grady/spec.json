@@ -22,12 +22,12 @@
       "f543a634-f368-4d11-8d58-185e536798ae",
       "13b87fd3-dbc8-47cb-ab92-4d7d0315ef5d",
       "9cf3cb18-0e59-435f-9275-2902667adb83",
+      "2b02ae4e-c9b0-4d7b-ab2e-bf4d7dd2ac2a",
       "7e034096-07c2-4ff3-9a16-38b0d103b941",
       "61378384-4639-45ab-a481-dbcf0e2ff56d",
       "84a15cef-8673-4fdf-965e-c1d8110aa535",
       "55fa38a3-0d62-4f43-9ae0-8b7df7e8cce7",
-      "7202fcb1-30a9-4da1-8599-6ca52e6c4aa4",
-      "2b02ae4e-c9b0-4d7b-ab2e-bf4d7dd2ac2a"
+      "7202fcb1-30a9-4da1-8599-6ca52e6c4aa4"
     ],
     "actor_row_id": null,
     "actor_bucket_key": "kevin grady|KS",
@@ -41,27 +41,27 @@
     ]
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-4h0nrr7o/New Final Post and Capcut template/export/keven_o_grady/image_1080.png",
+    "path": "/tmp/swm-share-pages-e_1xy3n8/New Final Post and Capcut template/export/keven_o_grady/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 186,
-    "total_submissions": 258,
-    "avg_financial_loss": 115480.04,
-    "avg_months_lost": 29.8,
+    "total_submissions": 259,
+    "avg_financial_loss": 114990.72,
+    "avg_months_lost": 29.7,
     "_source_table": "movement_stats_by_state",
     "_match_value": "KS",
-    "state_family_count": 258,
+    "state_family_count": 259,
     "median_financial_loss": 100150,
     "median_burden_sample_size": 134,
     "median_months_lost": 16,
-    "pro_se_pct": 49.2,
+    "pro_se_pct": 49.0,
     "pro_se_count": 127,
-    "_pdf_state_family_count": 258,
+    "_pdf_state_family_count": 259,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5471,
+  "movement_total": 5482,
   "supabase": {
     "report_count": 10,
     "actor_report_count": 10,
@@ -72,12 +72,6 @@
         "state": "KS",
         "county": "Johnson County",
         "row_id": "e2d1cbe2-3ba3-4b1a-bdf8-bbc15d78c41a"
-      },
-      {
-        "body": "Testing the connections",
-        "state": "KS",
-        "county": "JOhnson county",
-        "row_id": "dbccb8f9-68cd-46fc-8093-4f36ee331e6c"
       },
       {
         "body": "My life is in ruins. I have started shooting up and selling my body for McDonald’s rewards points.",
@@ -102,6 +96,12 @@
         "state": "KS",
         "county": "Johnson County",
         "row_id": "411c77d2-7d3d-4fd3-bfe9-b117bff9c3e5"
+      },
+      {
+        "body": "The court system has taken Away my son's mother my other kids brother Kevin o Grady needs to be exposed he claims he does things for the kids safety no he breaks families",
+        "state": "KS",
+        "county": "Yes",
+        "row_id": "74734cda-972a-4cc2-b7c6-c381f5669df6"
       }
     ],
     "public_comments": [
@@ -146,12 +146,6 @@
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Johnson"
-      },
-      {
-        "comment_text": "Testing this to see it connects",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": ""
       }
     ]
   },
@@ -205,15 +199,7 @@
         "kind": "comment"
       },
       {
-        "body": "Testing this to see it connects",
-        "kind": "comment"
-      },
-      {
         "body": "“As many visits as she wants” at $100/hour.",
-        "kind": "family_report"
-      },
-      {
-        "body": "Testing the connections",
         "kind": "family_report"
       },
       {
@@ -226,6 +212,10 @@
       },
       {
         "body": "Removed my children without due process",
+        "kind": "family_report"
+      },
+      {
+        "body": "The court system has taken Away my son's mother my other kids brother Kevin o Grady…",
         "kind": "family_report"
       }
     ],

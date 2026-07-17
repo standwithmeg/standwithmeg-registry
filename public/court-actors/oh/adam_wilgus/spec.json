@@ -27,27 +27,27 @@
     "actor_bucket_key": "adam wilgus|OH"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-4h0nrr7o/New Final Post and Capcut template/export/adam_wilgus/image_1080.png",
+    "path": "/tmp/swm-share-pages-e_1xy3n8/New Final Post and Capcut template/export/adam_wilgus/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 208,
-    "total_submissions": 272,
-    "avg_financial_loss": 111284.83,
+    "total_submissions": 274,
+    "avg_financial_loss": 110871.24,
     "avg_months_lost": 34.3,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OH",
-    "state_family_count": 272,
-    "median_financial_loss": 80000,
-    "median_burden_sample_size": 133,
-    "median_months_lost": 18,
+    "state_family_count": 274,
+    "median_financial_loss": 81125,
+    "median_burden_sample_size": 134,
+    "median_months_lost": 20,
     "pro_se_pct": 52.6,
-    "pro_se_count": 143,
-    "_pdf_state_family_count": 272,
+    "pro_se_count": 144,
+    "_pdf_state_family_count": 274,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5471,
+  "movement_total": 5482,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,

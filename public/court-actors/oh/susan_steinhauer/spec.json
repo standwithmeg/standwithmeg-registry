@@ -18,35 +18,35 @@
     "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 3,
     "supabase_row_ids": [
+      "efb71d3e-7b79-4a84-b90b-6324312fb77a",
       "4204aad2-53c9-4c79-80a1-dd59f6a263ac",
-      "4196fef9-5d8a-48cd-b252-6cb1adc88e9e",
-      "efb71d3e-7b79-4a84-b90b-6324312fb77a"
+      "4196fef9-5d8a-48cd-b252-6cb1adc88e9e"
     ],
     "actor_row_id": null,
     "actor_bucket_key": "susan steinhauer|OH"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-4h0nrr7o/New Final Post and Capcut template/export/susan_steinhauer/image_1080.png",
+    "path": "/tmp/swm-share-pages-e_1xy3n8/New Final Post and Capcut template/export/susan_steinhauer/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 208,
-    "total_submissions": 272,
-    "avg_financial_loss": 111284.83,
+    "total_submissions": 274,
+    "avg_financial_loss": 110871.24,
     "avg_months_lost": 34.3,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OH",
-    "state_family_count": 272,
-    "median_financial_loss": 80000,
-    "median_burden_sample_size": 133,
-    "median_months_lost": 18,
+    "state_family_count": 274,
+    "median_financial_loss": 81125,
+    "median_burden_sample_size": 134,
+    "median_months_lost": 20,
     "pro_se_pct": 52.6,
-    "pro_se_count": 143,
-    "_pdf_state_family_count": 272,
+    "pro_se_count": 144,
+    "_pdf_state_family_count": 274,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5471,
+  "movement_total": 5482,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,

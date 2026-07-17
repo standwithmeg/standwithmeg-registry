@@ -19,8 +19,8 @@
     "actor_report_count": 3,
     "supabase_row_ids": [
       "5055198c-66e5-45a2-87ab-820376d88b23",
-      "9846bec9-71d0-4b95-a229-0ac0c18cbb49",
-      "b08a7283-ecc7-4ebc-a371-f28d5b1b0409"
+      "b08a7283-ecc7-4ebc-a371-f28d5b1b0409",
+      "9846bec9-71d0-4b95-a229-0ac0c18cbb49"
     ],
     "actor_row_id": "5055198c-66e5-45a2-87ab-820376d88b23",
     "actor_bucket_key": "prairie state legal services|IL",
@@ -34,27 +34,27 @@
     ]
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-oebx6srz/New Final Post and Capcut template/export/prairie_state_legal_services/image_1080.png",
+    "path": "/tmp/swm-share-pages-e_1xy3n8/New Final Post and Capcut template/export/prairie_state_legal_services/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 114,
-    "total_submissions": 151,
-    "avg_financial_loss": 217938.44,
+    "total_submissions": 152,
+    "avg_financial_loss": 216636.73,
     "avg_months_lost": 27.7,
     "_source_table": "movement_stats_by_state",
     "_match_value": "IL",
-    "state_family_count": 151,
-    "median_financial_loss": 126875,
-    "median_burden_sample_size": 92,
+    "state_family_count": 152,
+    "median_financial_loss": 126750,
+    "median_burden_sample_size": 93,
     "median_months_lost": 15,
-    "pro_se_pct": 48.3,
+    "pro_se_pct": 48.0,
     "pro_se_count": 73,
-    "_pdf_state_family_count": 151,
+    "_pdf_state_family_count": 152,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5443,
+  "movement_total": 5482,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,

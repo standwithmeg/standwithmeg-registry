@@ -24,35 +24,35 @@
       "8759460b-4365-41e8-811a-07d645668ff0",
       "a477c06e-df1b-4b65-8873-2f5ac9667832",
       "fb6e6a66-6959-4ecc-8a2d-45f9692d4e1c",
+      "645f4cb1-55e0-40fc-96b1-91d29890fb4a",
       "6616515e-7b65-4ac6-90b8-8bbe714ac652",
-      "2d3ef218-332e-4b30-a0b4-34266f27c044",
-      "645f4cb1-55e0-40fc-96b1-91d29890fb4a"
+      "2d3ef218-332e-4b30-a0b4-34266f27c044"
     ],
     "actor_row_id": "b953390b-5647-4054-a73b-5bf7093d0818",
     "actor_bucket_key": "bethany roberts|KS"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-4h0nrr7o/New Final Post and Capcut template/export/bethany_roberts/image_1080.png",
+    "path": "/tmp/swm-share-pages-e_1xy3n8/New Final Post and Capcut template/export/bethany_roberts/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 186,
-    "total_submissions": 258,
-    "avg_financial_loss": 115480.04,
-    "avg_months_lost": 29.8,
+    "total_submissions": 259,
+    "avg_financial_loss": 114990.72,
+    "avg_months_lost": 29.7,
     "_source_table": "movement_stats_by_state",
     "_match_value": "KS",
-    "state_family_count": 258,
+    "state_family_count": 259,
     "median_financial_loss": 100150,
     "median_burden_sample_size": 134,
     "median_months_lost": 16,
-    "pro_se_pct": 49.2,
+    "pro_se_pct": 49.0,
     "pro_se_count": 127,
-    "_pdf_state_family_count": 258,
+    "_pdf_state_family_count": 259,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5471,
+  "movement_total": 5482,
   "supabase": {
     "report_count": 9,
     "actor_report_count": 9,

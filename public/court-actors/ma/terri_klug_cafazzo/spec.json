@@ -12,26 +12,25 @@
     "court_or_county": "Middlesex",
     "state": "Massachusetts",
     "state_abbr": "MA",
-    "mention_count": 3,
-    "family_count": 3,
-    "public_family_count": 3,
+    "mention_count": 2,
+    "family_count": 2,
+    "public_family_count": 2,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 3,
+    "actor_report_count": 2,
     "supabase_row_ids": [
       "45826789-f2e4-4125-a16f-b166a24a4bdb",
-      "ac68e4e9-b05c-4a30-a8c2-aaeaecdc2276",
       "df527a9f-48ca-4c17-b247-6db9a54d1cbe"
     ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-oebx6srz/New Final Post and Capcut template/export/terri_klug_cafazzo/image_1080.png",
+    "path": "/tmp/swm-share-pages-e_1xy3n8/New Final Post and Capcut template/export/terri_klug_cafazzo/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 76,
+    "families_approved": 75,
     "total_submissions": 106,
     "avg_financial_loss": 231066.55,
     "avg_months_lost": 26.0,
@@ -46,18 +45,12 @@
     "_pdf_state_family_count": 106,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5443,
+  "movement_total": 5482,
   "supabase": {
-    "report_count": 3,
-    "actor_report_count": 3,
-    "family_count": 3,
+    "report_count": 2,
+    "actor_report_count": 2,
+    "family_count": 2,
     "family_reports": [
-      {
-        "body": "I was a father who if you look up liam's lunches of love.I was a father that had a great reputation.All around the world as being a great father and a great role model one crying female came into court made a punch of lies and my whole entire reputation is gone.And I don't have any help",
-        "state": "MA",
-        "county": "Middlesex",
-        "row_id": "829f9687-d831-43e9-a1a8-e7c3ec678d5c"
-      },
       {
         "body": "Tens of thousands of dollars spent on a \"parenting agreement\" that only gets followed when it is convenient for him. And the court does nothing to uphold said agreement, they just take more of your money to hear your case and do nothing.",
         "state": "MA",
@@ -73,28 +66,21 @@
     ],
     "public_comments": [
       {
-        "comment_text": "She ignored ALL claims of abuse, she told me to have a third party witness to drop offs, I had one, then she said I enabled the children having one and made us go alone to his house where he harassed us and then asked why I didn't bring a third party. She is pro-bad to a point where she doesn't like to GALs or Court Clinicians. She is lazy to a degree that her orders let high conflict coercive control people get away with it. There was a court order for parenting time, the court clinician said he had to make calls on certain days, he was so mean that the kids hung up (which they were allowed to do) and she didn't hold him accountable.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Middlsex"
-      },
-      {
-        "comment_text": "I hadn't even started speaking yet, and she was already pissed at me because my wife was old.My ex wife, my first x wife was allowed to come into court and give statements when I wasn't there",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Middlesex"
-      },
-      {
         "comment_text": "Allowed ex's motion for school placement based on intention of residency rather than an established residency.",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Middlesex"
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "She ignored ALL claims of abuse, she told me to have a third party witness to drop offs, I had one, then she said I enabled the children having one and made us go alone to his house where he harassed us and then asked why I didn't bring a third party. She is pro-bad to a point where she doesn't like to GALs or Court Clinicians. She is lazy to a degree that her orders let high conflict coercive control people get away with it. There was a court order for parenting time, the court clinician said he had to make calls on certain days, he was so mean that the kids hung up (which they were allowed to do) and she didn't hold him accountable.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/terri_klug_cafazzo",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='MA'"
+    "public_family_count_api: no actors returned for state='MA'",
+    "pdf_public_actor: no 'Terri Klug Cafazzo' in cache for MA"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
@@ -114,27 +100,19 @@
   "render": {
     "selected_quotes": [
       {
+        "body": "Allowed ex's motion for school placement based on intention of residency rather than an established residency.",
+        "kind": "comment"
+      },
+      {
         "body": "Ignored ALL claims of abuse",
         "kind": "comment"
       },
       {
-        "body": "Allowed to come into court",
-        "kind": "comment"
-      },
-      {
-        "body": "Allowed ex's motion for school placement based on intention of residency rather…",
-        "kind": "comment"
-      },
-      {
-        "body": "My whole entire reputation is gone.And I don't have any help",
+        "body": "Tens of thousands of dollars spent on a \"parenting agreement\" that only gets followed when it is convenient…",
         "kind": "family_report"
       },
       {
-        "body": "Tens of thousands of dollars spent on a \"parenting agreement\" that only gets…",
-        "kind": "family_report"
-      },
-      {
-        "body": "He owns his own firm and we had to keep hiring people to disprove him.",
+        "body": "\"the process\" he kept claiming alienation and using coercive control and lying about his salary.",
         "kind": "family_report"
       }
     ],

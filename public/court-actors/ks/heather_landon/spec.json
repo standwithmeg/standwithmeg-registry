@@ -19,38 +19,38 @@
     "actor_report_count": 7,
     "supabase_row_ids": [
       "eac42481-b636-46aa-a593-58127341acf3",
+      "599ee937-848c-4847-91d2-168d215665ba",
       "8ef403a4-a9f1-4010-9b43-738445828ef1",
       "309518e3-fe40-425d-961f-c05a4e5c412a",
       "10ffe9dd-0bb7-48b1-97bd-4c65bfcb5a4d",
       "12516e2e-c571-4e01-a206-8bd25f4dd238",
-      "599ee937-848c-4847-91d2-168d215665ba",
       "d3f0a9c5-8ba8-4d82-a814-a542f1692308"
     ],
     "actor_row_id": "eac42481-b636-46aa-a593-58127341acf3",
     "actor_bucket_key": "heather landon|KS"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-4h0nrr7o/New Final Post and Capcut template/export/heather_landon/image_1080.png",
+    "path": "/tmp/swm-share-pages-e_1xy3n8/New Final Post and Capcut template/export/heather_landon/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 186,
-    "total_submissions": 258,
-    "avg_financial_loss": 115480.04,
-    "avg_months_lost": 29.8,
+    "total_submissions": 259,
+    "avg_financial_loss": 114990.72,
+    "avg_months_lost": 29.7,
     "_source_table": "movement_stats_by_state",
     "_match_value": "KS",
-    "state_family_count": 258,
+    "state_family_count": 259,
     "median_financial_loss": 100150,
     "median_burden_sample_size": 134,
     "median_months_lost": 16,
-    "pro_se_pct": 49.2,
+    "pro_se_pct": 49.0,
     "pro_se_count": 127,
-    "_pdf_state_family_count": 258,
+    "_pdf_state_family_count": 259,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5471,
+  "movement_total": 5482,
   "supabase": {
     "report_count": 7,
     "actor_report_count": 7,

@@ -2,28 +2,29 @@
   "schema_version": 2,
   "actor": {
     "slug": "nicole_warren",
-    "display_name": "Nicole warren",
+    "display_name": "Jade Lanier, Nicole Warren",
     "title": "",
-    "first_name": "Nicole",
-    "last_name": "warren",
+    "first_name": "Jade Lanier, Nicole",
+    "last_name": "Warren",
     "role": "CPS Worker",
     "court": "Canadian",
     "county": "Canadian",
     "court_or_county": "Canadian",
     "state": "Oklahoma",
     "state_abbr": "OK",
-    "mention_count": 6,
-    "family_count": 6,
-    "public_family_count": 0,
+    "mention_count": 7,
+    "family_count": 5,
+    "public_family_count": 5,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 6,
+    "actor_report_count": 7,
     "supabase_row_ids": [
       "f726f53f-67c6-4853-a00c-0503236ede53",
       "ccdcc8b0-aeba-4d6d-b5ee-de255705a9b3",
       "1aec2c67-ae75-4254-a746-83553820409f",
       "28d762c3-c760-4224-9883-0c8cd563cc33",
       "7d8eefc9-5ef0-439b-b2d2-045ec3937a62",
-      "71732e54-a7a6-472a-a60f-b1124adb2ede"
+      "71732e54-a7a6-472a-a60f-b1124adb2ede",
+      "52017292-cd68-43f8-b216-206ec88787ab"
     ],
     "actor_row_id": "f726f53f-67c6-4853-a00c-0503236ede53",
     "actor_bucket_key": "nicole waren|OK"
@@ -35,26 +36,32 @@
   },
   "state_stats": {
     "families_approved": 131,
-    "total_submissions": 166,
-    "avg_financial_loss": 118855.1,
+    "total_submissions": 167,
+    "avg_financial_loss": 118197.79,
     "avg_months_lost": 24.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OK",
-    "state_family_count": 166,
+    "state_family_count": 167,
     "median_financial_loss": 99500,
     "median_burden_sample_size": 89,
     "median_months_lost": 12,
-    "pro_se_pct": 43.4,
+    "pro_se_pct": 43.1,
     "pro_se_count": 72,
-    "_pdf_state_family_count": 166,
+    "_pdf_state_family_count": 167,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5443,
+  "movement_total": 5482,
   "supabase": {
-    "report_count": 6,
-    "actor_report_count": 6,
-    "family_count": 6,
+    "report_count": 7,
+    "actor_report_count": 7,
+    "family_count": 5,
     "family_reports": [
+      {
+        "body": "Broke us broke our hearts broke our spirits we don't know what to do or how to act without our son please somebody anybody out there help us give us words to keep moving forward to get our son back",
+        "state": "OK",
+        "county": "Canadian County",
+        "row_id": "343bcfc6-fce6-47d5-a861-d62ae1529ecd"
+      },
       {
         "body": "Has caused me and my daughter ongoing trauma for the last six years. I’ve had to watch my daughter, lose the light from her eyes because of these people while I try desperately to save what’s left.",
         "state": "OK",
@@ -109,8 +116,7 @@
   },
   "export_dir": "New Final Post and Capcut template/export/nicole_warren",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='OK'",
-    "family_count: lookup and previous spec returned 0 — using report_count=6 as fallback"
+    "public_family_count_api: no actors returned for state='OK'"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
@@ -146,6 +152,10 @@
         "kind": "comment"
       },
       {
+        "body": "Help us give us words to keep moving forward to get our son back",
+        "kind": "family_report"
+      },
+      {
         "body": "Has caused me and my daughter ongoing trauma for the last six years.",
         "kind": "family_report"
       },
@@ -162,7 +172,7 @@
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 2
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

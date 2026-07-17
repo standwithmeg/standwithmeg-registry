@@ -2,37 +2,35 @@
   "schema_version": 2,
   "actor": {
     "slug": "michael_anderson",
-    "display_name": "Michael anderson",
+    "display_name": "Michael Anderson",
     "title": "",
     "first_name": "Michael",
-    "last_name": "anderson",
+    "last_name": "Anderson",
     "role": "Judge",
     "court": "Middlesex",
     "county": "Middlesex",
     "court_or_county": "Middlesex",
     "state": "Massachusetts",
     "state_abbr": "MA",
-    "mention_count": 4,
-    "family_count": 3,
-    "public_family_count": 3,
+    "mention_count": 2,
+    "family_count": 2,
+    "public_family_count": 2,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 4,
+    "actor_report_count": 2,
     "supabase_row_ids": [
-      "e8fb529a-9650-478d-98b8-325316e73a3c",
-      "1a8aedb9-c7da-4b36-b215-65b2536a6b79",
       "ea734e3d-8f07-425f-b4a6-4809b2f1dd04",
-      "fefbf9d4-8ce2-44dc-90e4-4cf764a458ef"
+      "1a8aedb9-c7da-4b36-b215-65b2536a6b79"
     ],
     "actor_row_id": null,
     "actor_bucket_key": "michael anderson|MA"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-oebx6srz/New Final Post and Capcut template/export/michael_anderson/image_1080.png",
+    "path": "/tmp/swm-share-pages-e_1xy3n8/New Final Post and Capcut template/export/michael_anderson/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 76,
+    "families_approved": 75,
     "total_submissions": 106,
     "avg_financial_loss": 231066.55,
     "avg_months_lost": 26.0,
@@ -47,18 +45,12 @@
     "_pdf_state_family_count": 106,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5443,
+  "movement_total": 5482,
   "supabase": {
-    "report_count": 4,
-    "actor_report_count": 4,
-    "family_count": 3,
+    "report_count": 2,
+    "actor_report_count": 2,
+    "family_count": 2,
     "family_reports": [
-      {
-        "body": "I was a father who if you look up liam's lunches of love.I was a father that had a great reputation.All around the world as being a great father and a great role model one crying female came into court made a punch of lies and my whole entire reputation is gone.And I don't have any help",
-        "state": "MA",
-        "county": "Middlesex",
-        "row_id": "829f9687-d831-43e9-a1a8-e7c3ec678d5c"
-      },
       {
         "body": "The system robbed my children of their mother- and me of my motherhood to protect abusive individuals in positions of power. My family has been forever changed because I was not believed.",
         "state": "MA",
@@ -68,22 +60,16 @@
     ],
     "public_comments": [
       {
-        "comment_text": "He suppressed evidence.He ignored due process violation Judge has suppressed evidence.Judge has ignored evidence.Judge is threatening me with sanctions when I when I was in my review for my indigency.He also proceeded to give the lawyer on the other side.All kinds of legal advice on how to beat me in court",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Middlesex"
-      },
-      {
         "comment_text": "Ignored evidence of coercive control and financial abuse to favor the abusive parent contributing more money to GAL’s and the same group of lawyers.",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Middlesex"
+        "source": "court_actors.notes"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/michael_anderson",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='MA'"
+    "public_family_count_api: no actors returned for state='MA'",
+    "pdf_public_actor: no 'Michael anderson' in cache for MA"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
@@ -103,19 +89,11 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Ignored due process violation Judge has suppressed evidence",
+        "body": "Ignored evidence of coercive control and financial abuse to favor the abusive parent contributing more money to GAL’s and the same group of lawyers.",
         "kind": "comment"
       },
       {
-        "body": "Ignored evidence of coercive control",
-        "kind": "comment"
-      },
-      {
-        "body": "My whole entire reputation is gone.And I don't have any help",
-        "kind": "family_report"
-      },
-      {
-        "body": "My family has been forever changed because I was not believed.",
+        "body": "The system robbed my children of their mother- and me of my motherhood to protect abusive individuals in positions of power. My family has been forever changed because I was not believed.",
         "kind": "family_report"
       }
     ],

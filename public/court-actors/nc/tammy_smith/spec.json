@@ -29,27 +29,27 @@
     "actor_bucket_key": "tamy smith|NC"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-oebx6srz/New Final Post and Capcut template/export/tammy_smith/image_1080.png",
+    "path": "/tmp/swm-share-pages-e_1xy3n8/New Final Post and Capcut template/export/tammy_smith/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 163,
-    "total_submissions": 216,
-    "avg_financial_loss": 183458.97,
+    "families_approved": 162,
+    "total_submissions": 217,
+    "avg_financial_loss": 184190.81,
     "avg_months_lost": 36.3,
     "_source_table": "movement_stats_by_state",
     "_match_value": "NC",
-    "state_family_count": 216,
-    "median_financial_loss": 137332,
+    "state_family_count": 217,
+    "median_financial_loss": 140750,
     "median_burden_sample_size": 72,
     "median_months_lost": 18,
-    "pro_se_pct": 50.9,
-    "pro_se_count": 110,
-    "_pdf_state_family_count": 216,
+    "pro_se_pct": 51.2,
+    "pro_se_count": 111,
+    "_pdf_state_family_count": 217,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5443,
+  "movement_total": 5482,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,

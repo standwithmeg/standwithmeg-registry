@@ -9,7 +9,7 @@
     "role": "Judge",
     "court": "Charlotte-Mecklenburg",
     "county": "Charlotte-Mecklenburg",
-    "court_or_county": "Charlotte-Mecklenburg",
+    "court_or_county": "Mecklenberg",
     "state": "NC",
     "state_abbr": "NC",
     "mention_count": 3,
@@ -18,8 +18,8 @@
     "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 3,
     "supabase_row_ids": [
-      "def4cf7b-3761-46e4-a4cc-9f707d9370c8",
       "cb225c27-b9a7-40c3-822c-76037bc66b1c",
+      "def4cf7b-3761-46e4-a4cc-9f707d9370c8",
       "3c651aeb-a55a-4869-a907-c375cfb03e12"
     ],
     "actor_row_id": null,
@@ -31,22 +31,22 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 163,
-    "total_submissions": 216,
-    "avg_financial_loss": 183458.97,
+    "families_approved": 162,
+    "total_submissions": 217,
+    "avg_financial_loss": 184190.81,
     "avg_months_lost": 36.3,
     "_source_table": "movement_stats_by_state",
     "_match_value": "NC",
-    "state_family_count": 216,
-    "median_financial_loss": 137332,
+    "state_family_count": 217,
+    "median_financial_loss": 140750,
     "median_burden_sample_size": 72,
     "median_months_lost": 18,
-    "pro_se_pct": 50.9,
-    "pro_se_count": 110,
-    "_pdf_state_family_count": 216,
+    "pro_se_pct": 51.2,
+    "pro_se_count": 111,
+    "_pdf_state_family_count": 217,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5471,
+  "movement_total": 5482,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -67,22 +67,21 @@
     ],
     "public_comments": [
       {
-        "comment_text": "Denied reviewing the current hundreds of contempts against my ex and called my charges “tit for tat” despite me having a lifetime DVRO!",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": ""
-      },
-      {
         "comment_text": "denied my due process, acted illegally, and shamed me",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Charlotte-Mecklenburg"
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Denied reviewing the current hundreds of contempts against my ex and called my charges “tit for tat” despite me having a lifetime DVRO!",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/jonathan_rex_marvel",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='NC'"
+    "public_family_count_api: no actors returned for state='NC'",
+    "pdf_public_actor: no 'Johnathan Rex Marvel' in cache for NC"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
@@ -102,11 +101,11 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Denied reviewing the current hundreds of contempts against my ex and called my charges “tit for tat”.",
+        "body": "Denied my due process, acted illegally, and shamed me",
         "kind": "comment"
       },
       {
-        "body": "Denied my due process, acted illegally, and shamed me",
+        "body": "Denied reviewing the current hundreds of contempts against my ex and called my charges “tit for tat”.",
         "kind": "comment"
       },
       {

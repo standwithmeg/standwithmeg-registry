@@ -9,7 +9,7 @@
     "role": "Judge",
     "court": "Orange",
     "county": "Orange",
-    "court_or_county": "Orange Superior",
+    "court_or_county": "Orange",
     "state": "California",
     "state_abbr": "CA",
     "mention_count": 7,
@@ -18,39 +18,39 @@
     "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 7,
     "supabase_row_ids": [
+      "8184110b-369b-4760-92c2-fb46eddc2bc9",
       "458a5318-16b6-4c48-af53-1a57c1f0cf43",
       "71a55770-735f-4b27-b13e-0cf1f8ba2180",
       "46216f37-b7c0-438f-8c8e-973af43d25f8",
       "4330c777-e82c-4425-8715-3adc883e0019",
       "396fe1e0-08b8-4b88-b936-e029f87348d2",
-      "543e9ddf-f2f7-4952-a4aa-7df5e7e34736",
-      "8184110b-369b-4760-92c2-fb46eddc2bc9"
+      "543e9ddf-f2f7-4952-a4aa-7df5e7e34736"
     ],
     "actor_row_id": null,
     "actor_bucket_key": "michele bell|CA"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-w205vr69/New Final Post and Capcut template/export/michele_bell/image_1080.png",
+    "path": "/tmp/swm-share-pages-e_1xy3n8/New Final Post and Capcut template/export/michele_bell/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 360,
-    "total_submissions": 448,
-    "avg_financial_loss": 284042.24,
+    "total_submissions": 449,
+    "avg_financial_loss": 283335.67,
     "avg_months_lost": 35.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CA",
-    "state_family_count": 448,
+    "state_family_count": 449,
     "median_financial_loss": 265100,
     "median_burden_sample_size": 200,
     "median_months_lost": 20,
-    "pro_se_pct": 58.7,
+    "pro_se_pct": 58.6,
     "pro_se_count": 263,
-    "_pdf_state_family_count": 448,
+    "_pdf_state_family_count": 449,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5450,
+  "movement_total": 5482,
   "supabase": {
     "report_count": 7,
     "actor_report_count": 7,

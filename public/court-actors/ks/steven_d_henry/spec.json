@@ -12,43 +12,45 @@
     "court_or_county": "Johnson county",
     "state": "Kansas",
     "state_abbr": "KS",
-    "mention_count": 2,
+    "mention_count": 4,
     "family_count": 4,
     "public_family_count": 4,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 2,
+    "actor_report_count": 4,
     "supabase_row_ids": [
       "f3089ed9-aa94-4916-a2ec-438984595e59",
+      "697db11e-f3ad-4285-9705-e536c70d5bff",
+      "3cf9ac50-a648-454d-ab71-1271fba52fd6",
       "6daef34c-1fbc-46eb-bf10-ab6dd3cf25ed"
     ],
     "actor_row_id": null,
     "actor_bucket_key": "steven henry|KS"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-4h0nrr7o/New Final Post and Capcut template/export/steven_d_henry/image_1080.png",
+    "path": "/tmp/swm-share-pages-e_1xy3n8/New Final Post and Capcut template/export/steven_d_henry/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 186,
-    "total_submissions": 258,
-    "avg_financial_loss": 115480.04,
-    "avg_months_lost": 29.8,
+    "total_submissions": 259,
+    "avg_financial_loss": 114990.72,
+    "avg_months_lost": 29.7,
     "_source_table": "movement_stats_by_state",
     "_match_value": "KS",
-    "state_family_count": 258,
+    "state_family_count": 259,
     "median_financial_loss": 100150,
     "median_burden_sample_size": 134,
     "median_months_lost": 16,
-    "pro_se_pct": 49.2,
+    "pro_se_pct": 49.0,
     "pro_se_count": 127,
-    "_pdf_state_family_count": 258,
+    "_pdf_state_family_count": 259,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5471,
+  "movement_total": 5482,
   "supabase": {
-    "report_count": 2,
-    "actor_report_count": 2,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 4,
     "family_reports": [
       {

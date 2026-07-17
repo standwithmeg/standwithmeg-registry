@@ -12,18 +12,17 @@
     "court_or_county": "Beaufort",
     "state": "NC",
     "state_abbr": "NC",
-    "mention_count": 6,
+    "mention_count": 5,
     "family_count": 3,
     "public_family_count": 3,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 6,
+    "actor_report_count": 5,
     "supabase_row_ids": [
       "265a1f20-5908-4622-bb61-31dc4d87dd32",
+      "0eda48a2-f6e1-40be-b50a-ec8d420083c2",
       "f119c8fd-d737-497d-a8c5-ad6a095629b5",
       "87a99eab-5afe-4e0d-9b71-3b0c39f39e9d",
-      "19201232-8e1b-499a-acba-df1dc1a619e0",
-      "d9ac9d8c-6c83-43df-9eaa-40ef97f0d82f",
-      "0eda48a2-f6e1-40be-b50a-ec8d420083c2"
+      "19201232-8e1b-499a-acba-df1dc1a619e0"
     ],
     "actor_row_id": null,
     "actor_bucket_key": "audrey faith bell|NC"
@@ -34,25 +33,25 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 163,
-    "total_submissions": 216,
-    "avg_financial_loss": 183458.97,
+    "families_approved": 162,
+    "total_submissions": 217,
+    "avg_financial_loss": 184190.81,
     "avg_months_lost": 36.3,
     "_source_table": "movement_stats_by_state",
     "_match_value": "NC",
-    "state_family_count": 216,
-    "median_financial_loss": 137332,
+    "state_family_count": 217,
+    "median_financial_loss": 140750,
     "median_burden_sample_size": 72,
     "median_months_lost": 18,
-    "pro_se_pct": 50.9,
-    "pro_se_count": 110,
-    "_pdf_state_family_count": 216,
+    "pro_se_pct": 51.2,
+    "pro_se_count": 111,
+    "_pdf_state_family_count": 217,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5450,
+  "movement_total": 5482,
   "supabase": {
-    "report_count": 6,
-    "actor_report_count": 6,
+    "report_count": 5,
+    "actor_report_count": 5,
     "family_count": 3,
     "family_reports": [
       {
