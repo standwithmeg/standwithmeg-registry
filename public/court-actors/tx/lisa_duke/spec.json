@@ -19,35 +19,35 @@
     "actor_report_count": 4,
     "supabase_row_ids": [
       "b8c137ec-d8a2-4980-9706-45cd4d26d0ca",
-      "65f1a9a2-a559-47ce-b5c3-f975913891ad",
       "b6f9f796-f046-45fe-b756-1bf09187bb1c",
-      "4ebc8988-d1e0-41fc-b00f-1d46099b4711"
+      "4ebc8988-d1e0-41fc-b00f-1d46099b4711",
+      "65f1a9a2-a559-47ce-b5c3-f975913891ad"
     ],
     "actor_row_id": "b8c137ec-d8a2-4980-9706-45cd4d26d0ca",
     "actor_bucket_key": "lisa duke|TX"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-4h0nrr7o/New Final Post and Capcut template/export/lisa_duke/image_1080.png",
+    "path": "/tmp/swm-share-pages-gic8rhaa/New Final Post and Capcut template/export/lisa_duke/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 252,
-    "total_submissions": 318,
-    "avg_financial_loss": 227775.99,
+    "families_approved": 251,
+    "total_submissions": 319,
+    "avg_financial_loss": 227265.09,
     "avg_months_lost": 31.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "TX",
-    "state_family_count": 318,
+    "state_family_count": 319,
     "median_financial_loss": 117950,
     "median_burden_sample_size": 150,
-    "median_months_lost": 19,
-    "pro_se_pct": 50.3,
+    "median_months_lost": 18,
+    "pro_se_pct": 50.2,
     "pro_se_count": 160,
-    "_pdf_state_family_count": 318,
+    "_pdf_state_family_count": 319,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5471,
+  "movement_total": 5493,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,

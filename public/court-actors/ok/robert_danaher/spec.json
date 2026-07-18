@@ -9,29 +9,28 @@
     "role": "Custody Evaluator",
     "court": "Grady county court",
     "county": "Grady county court",
-    "court_or_county": "Grady county court",
+    "court_or_county": null,
     "state": "Oklahoma",
     "state_abbr": "OK",
-    "mention_count": 3,
-    "family_count": 3,
-    "public_family_count": 3,
+    "mention_count": 2,
+    "family_count": 2,
+    "public_family_count": 2,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 3,
+    "actor_report_count": 2,
     "supabase_row_ids": [
       "202b8364-a2e7-4628-879b-d04a5d56a10d",
-      "759035ba-2417-4fac-a6ed-bc36c707a070",
       "dd872a04-cc9c-48c5-996a-f62be6004f88"
     ],
     "actor_row_id": "202b8364-a2e7-4628-879b-d04a5d56a10d",
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-e_1xy3n8/New Final Post and Capcut template/export/robert_danaher/image_1080.png",
+    "path": "/tmp/swm-share-pages-gic8rhaa/New Final Post and Capcut template/export/robert_danaher/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 131,
+    "families_approved": 130,
     "total_submissions": 167,
     "avg_financial_loss": 118197.79,
     "avg_months_lost": 24.4,
@@ -46,18 +45,12 @@
     "_pdf_state_family_count": 167,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5482,
+  "movement_total": 5493,
   "supabase": {
-    "report_count": 3,
-    "actor_report_count": 3,
-    "family_count": 3,
+    "report_count": 2,
+    "actor_report_count": 2,
+    "family_count": 2,
     "family_reports": [
-      {
-        "body": "An entire generation of kids is learning that their voices do not matter when they reach out to those appointed to help",
-        "state": "OK",
-        "county": "Oklahoma",
-        "row_id": "bd145df0-b4cf-4560-83b7-e6254b7e8fd0"
-      },
       {
         "body": "It has taken mine and my childs life away from us. It has put my daughter Hracie in more danger. It has violated our constitutional rights while giving our abuser more power.",
         "state": "OK",
@@ -75,20 +68,14 @@
       {
         "comment_text": "My ex was court ordered to take a parental comp and psychosexual. He took neither . Danaher gave him a regular psychological evaluation. Not the same. Also questioned his parents about his demeanor. Whaylt did u expect them to be honest",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Grady county court"
-      },
-      {
-        "comment_text": "charged $XK and concluded report without speaking with some of the most important references, medical professionals who supported claims of abuse. Years of child begging not to go with their father felt insignificant",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Oklahoma county court"
+        "source": "court_actors.notes"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/robert_danaher",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='OK'"
+    "public_family_count_api: no actors returned for state='OK'",
+    "pdf_public_actor: no 'Robert Danaher' in cache for OK"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
@@ -108,16 +95,8 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "My ex was court ordered to take a parental comp and psychosexual. He took neither .",
+        "body": "My ex was court ordered to take a parental comp and psychosexual. He took neither . Danaher gave him a regular psychological evaluation.",
         "kind": "comment"
-      },
-      {
-        "body": "Years of child begging not to go with their father felt insignificant",
-        "kind": "comment"
-      },
-      {
-        "body": "An entire generation of kids is learning that their voices do not matter when they reach out to…",
-        "kind": "family_report"
       },
       {
         "body": "It has taken mine and my childs life away from us. It has put my daughter Hracie in more danger.",

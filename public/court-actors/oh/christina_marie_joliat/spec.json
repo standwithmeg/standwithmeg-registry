@@ -8,52 +8,50 @@
     "last_name": "Joliat",
     "role": "GAL / Child Representative",
     "court": "Cuyahoga",
-    "county": null,
+    "county": "Cuyahoga county",
     "court_or_county": "Cuyahoga",
     "state": "Ohio",
     "state_abbr": "OH",
-    "mention_count": 6,
-    "family_count": 4,
-    "public_family_count": null,
-    "public_family_count_source": null,
-    "actor_report_count": 6,
+    "mention_count": 4,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 4,
     "supabase_row_ids": [
-      "9852a173-6a55-4fde-bcb3-0f6823b06170",
-      "36083d03-080e-4f92-9ab9-99a0f78eb324",
       "4c4d23ba-39bb-4816-a1ec-0e26b77cf3fb",
       "4c32caec-6794-45f9-8737-1929454562e0",
       "d6060cc8-571d-43f9-98b5-4fcfec285beb",
       "dfd9737a-e562-4642-8cf1-6604eb154b80"
     ],
     "actor_row_id": null,
-    "actor_bucket_key": null
+    "actor_bucket_key": "christina marie joliat|OH"
   },
   "photo": {
-    "path": "ohio/christina_marie_joliat/image_1080.png",
+    "path": "/tmp/swm-share-pages-gic8rhaa/New Final Post and Capcut template/export/christina_marie_joliat/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 208,
+    "families_approved": 207,
     "total_submissions": 276,
-    "avg_financial_loss": 110267.87,
+    "avg_financial_loss": 110328.43,
     "avg_months_lost": 34.2,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OH",
     "state_family_count": 276,
-    "median_financial_loss": 80000,
-    "median_burden_sample_size": 137,
+    "median_financial_loss": 79250,
+    "median_burden_sample_size": 136,
     "median_months_lost": 20,
     "pro_se_pct": 52.9,
     "pro_se_count": 146,
     "_pdf_state_family_count": 276,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5485,
+  "movement_total": 5493,
   "supabase": {
-    "report_count": 6,
-    "actor_report_count": 6,
-    "family_count": 4,
+    "report_count": 4,
+    "actor_report_count": 4,
+    "family_count": 3,
     "family_reports": [
       {
         "body": "Denied motion and ignored evidence!! None of them did their job they made up everything. The judge didn’t want to listen to us whatsoever that we gave him evidence and they didn’t show him any evidence and that he ruled with them over us. He delayed hearings gave them more time biased, he didn’t sign half of his records he had to click record sign it things like that you can put well. She really really wasn’t on our case that much it was mainly James he was the one he was his assistant prosecutor. They have kept me away from my daughter since she was born. Have false documents and have been proven but no one will listen to me. Please help me!!!!",
@@ -102,6 +100,22 @@
     "recommended_route": "/court-actors/oh/christina_marie_joliat/share.html",
     "draft_only": true
   },
-  "render": {},
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Denied motion and ignored evidence!! None of them did their job they made up everything.",
+        "kind": "comment"
+      },
+      {
+        "body": "Sided with father gave him full custody after being burned multiple times and multiple CPS reports.",
+        "kind": "comment"
+      },
+      {
+        "body": "Court systems has no integrity and most of all have hurt children and even children have died, they abuse…",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 1
+  },
   "cta": "STANDWITHMEG.COM ↗"
 }

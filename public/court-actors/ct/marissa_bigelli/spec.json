@@ -32,27 +32,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-w205vr69/New Final Post and Capcut template/export/marissa_bigelli/image_1080.png",
+    "path": "/tmp/swm-share-pages-gic8rhaa/New Final Post and Capcut template/export/marissa_bigelli/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 48,
-    "total_submissions": 66,
-    "avg_financial_loss": 389562.38,
+    "total_submissions": 67,
+    "avg_financial_loss": 383475.47,
     "avg_months_lost": 31.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CT",
-    "state_family_count": 66,
+    "state_family_count": 67,
     "median_financial_loss": 213250,
     "median_burden_sample_size": 38,
     "median_months_lost": 22,
-    "pro_se_pct": 68.2,
-    "pro_se_count": 45,
-    "_pdf_state_family_count": 66,
+    "pro_se_pct": 68.7,
+    "pro_se_count": 46,
+    "_pdf_state_family_count": 67,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5450,
+  "movement_total": 5493,
   "supabase": {
     "report_count": 9,
     "actor_report_count": 9,

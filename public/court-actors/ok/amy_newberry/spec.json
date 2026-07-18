@@ -12,35 +12,27 @@
     "court_or_county": "Oklahoma",
     "state": "OK",
     "state_abbr": "OK",
-    "mention_count": 12,
-    "family_count": 5,
-    "public_family_count": 5,
+    "mention_count": 4,
+    "family_count": 4,
+    "public_family_count": 4,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 12,
+    "actor_report_count": 4,
     "supabase_row_ids": [
       "7a212f28-eee2-44a7-b388-865f7ad874c4",
       "cb12f9e4-14c6-41a9-8f4f-4105d0a19f24",
-      "6ec8293d-1e05-47a1-8b6b-177d5cd0d641",
       "7fea4acd-b209-4d51-99cb-503f34808623",
-      "8b16f991-a593-4d08-811a-51ba4f7c04a6",
-      "17b364ff-ca86-4355-9275-b5feda86c073",
-      "2c03d23e-0a32-4ecb-9c8d-148cf2a84e36",
-      "72bb919d-d0a4-424f-b935-faa34f5ca10a",
-      "46167d61-9673-405f-bf0a-3880903a784a",
-      "6069718e-a5e0-40ba-8e5b-e4fffe4558f8",
-      "2bfc3ee1-f76d-40e0-82cf-88d26955aec4",
-      "120757ce-64b5-40bb-8595-10a82aebba4d"
+      "8b16f991-a593-4d08-811a-51ba4f7c04a6"
     ],
     "actor_row_id": null,
     "actor_bucket_key": "amy newbery|OK"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-e_1xy3n8/New Final Post and Capcut template/export/amy_newberry/image_1080.png",
+    "path": "/tmp/swm-share-pages-gic8rhaa/New Final Post and Capcut template/export/amy_newberry/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 131,
+    "families_approved": 130,
     "total_submissions": 167,
     "avg_financial_loss": 118197.79,
     "avg_months_lost": 24.4,
@@ -55,23 +47,17 @@
     "_pdf_state_family_count": 167,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5482,
+  "movement_total": 5493,
   "supabase": {
-    "report_count": 12,
-    "actor_report_count": 12,
-    "family_count": 5,
+    "report_count": 4,
+    "actor_report_count": 4,
+    "family_count": 4,
     "family_reports": [
       {
         "body": "Corrupt",
         "state": "OK",
         "county": "Oklahoma",
         "row_id": "b9f15e13-9f70-412c-97ad-c13104888877"
-      },
-      {
-        "body": "An entire generation of kids is learning that their voices do not matter when they reach out to those appointed to help",
-        "state": "OK",
-        "county": "Oklahoma",
-        "row_id": "bd145df0-b4cf-4560-83b7-e6254b7e8fd0"
       },
       {
         "body": "It is psychologically messing up my children.",
@@ -87,12 +73,6 @@
       }
     ],
     "public_comments": [
-      {
-        "comment_text": "Filed aggressively false DHS report against me. She was sued twice in 2022 by others, appears to be relying on a loophole that protects LPC counselors from consequences. Recurring allegations include misrepresenting professional credentials and qualifications; presenting opinions beyond the scope of licensure or expertise; failing to maintain professional records; ethical obligation concerns; exceeding the appropriate role of a treating therapist in family court matters; providing information or opinions that influenced custody and psych evaluations; making reports or recommendations alleged to be false or misleading. In my own case, I experienced many of the same, and am connected with an additional mother who did as well. Cancelled several appointments at the last minute to attend other emergency court hearings. Allowed associate to provide court ordered anger management to the father so they could work together and share notes, graduated him despite documentation of continued harassment and concerning behaviors. Years lost that could have been dedicated to kids healing instead of additional trauma. My experience left serious concerns about this pattern of practice when working with traumatized children.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Oklahoma"
-      },
       {
         "comment_text": "Hired by Rob Hopkins to force my male child to believe my ex was a man. Has personal relationships as their children go to same private school. Forced my son on visits that he repeatedly told her violated the rules of that visit.",
         "author": "Anonymous parent",
@@ -135,10 +115,6 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Ordered anger management to the father so they could work together",
-        "kind": "comment"
-      },
-      {
         "body": "Forced my son on visits that he repeatedly told her violated the rules of that visit.",
         "kind": "comment"
       },
@@ -149,10 +125,6 @@
       {
         "body": "Was in the same office with Larissa and fed the drama of false allegations by…",
         "kind": "comment"
-      },
-      {
-        "body": "An entire generation of kids is learning that their voices do not matter when they…",
-        "kind": "family_report"
       },
       {
         "body": "It is psychologically messing up my children.",

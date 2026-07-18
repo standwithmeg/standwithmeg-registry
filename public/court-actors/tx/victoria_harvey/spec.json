@@ -28,27 +28,27 @@
     "actor_bucket_key": "victoria harvey|TX"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-4h0nrr7o/New Final Post and Capcut template/export/victoria_harvey/image_1080.png",
+    "path": "/tmp/swm-share-pages-gic8rhaa/New Final Post and Capcut template/export/victoria_harvey/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 252,
-    "total_submissions": 318,
-    "avg_financial_loss": 227775.99,
+    "families_approved": 251,
+    "total_submissions": 319,
+    "avg_financial_loss": 227265.09,
     "avg_months_lost": 31.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "TX",
-    "state_family_count": 318,
+    "state_family_count": 319,
     "median_financial_loss": 117950,
     "median_burden_sample_size": 150,
-    "median_months_lost": 19,
-    "pro_se_pct": 50.3,
+    "median_months_lost": 18,
+    "pro_se_pct": 50.2,
     "pro_se_count": 160,
-    "_pdf_state_family_count": 318,
+    "_pdf_state_family_count": 319,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5471,
+  "movement_total": 5493,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,

@@ -20,12 +20,12 @@
     "supabase_row_ids": [
       "6da914c4-6428-4620-b53c-c4f2d21518cc",
       "18bc8b64-7cb8-42c7-be89-95cf8c756ceb",
+      "061d0ab4-06bd-45c7-b969-a2c48dc211f7",
       "c3d45520-4751-4500-8198-c54002012a9b",
       "5043c502-8746-4c2b-9293-4e6a93ce64a3",
       "b35114f9-5d33-450e-b93a-0f6ed776c3e9",
       "cbeac019-37d2-4285-b777-04e448e9c866",
       "f579e191-b554-426d-9018-4b9e02f1bba5",
-      "061d0ab4-06bd-45c7-b969-a2c48dc211f7",
       "75e2a24c-c9a3-48a8-880c-44b1ae650403",
       "f1a8d849-395d-423d-a6e0-8c2d687ccfe6",
       "5b754e40-6531-46d4-9a44-fac21ba2492f"
@@ -34,27 +34,27 @@
     "actor_bucket_key": "ronald kowalski|CT"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-w205vr69/New Final Post and Capcut template/export/ronald_kowalski/image_1080.png",
+    "path": "/tmp/swm-share-pages-gic8rhaa/New Final Post and Capcut template/export/ronald_kowalski/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 48,
-    "total_submissions": 66,
-    "avg_financial_loss": 389562.38,
+    "total_submissions": 67,
+    "avg_financial_loss": 383475.47,
     "avg_months_lost": 31.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CT",
-    "state_family_count": 66,
+    "state_family_count": 67,
     "median_financial_loss": 213250,
     "median_burden_sample_size": 38,
     "median_months_lost": 22,
-    "pro_se_pct": 68.2,
-    "pro_se_count": 45,
-    "_pdf_state_family_count": 66,
+    "pro_se_pct": 68.7,
+    "pro_se_count": 46,
+    "_pdf_state_family_count": 67,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5450,
+  "movement_total": 5493,
   "supabase": {
     "report_count": 11,
     "actor_report_count": 11,

@@ -25,7 +25,7 @@
     "actor_bucket_key": "michael anderson|MA"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-e_1xy3n8/New Final Post and Capcut template/export/michael_anderson/image_1080.png",
+    "path": "/tmp/swm-share-pages-gic8rhaa/New Final Post and Capcut template/export/michael_anderson/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -45,7 +45,7 @@
     "_pdf_state_family_count": 106,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5482,
+  "movement_total": 5493,
   "supabase": {
     "report_count": 2,
     "actor_report_count": 2,
@@ -69,7 +69,7 @@
   "export_dir": "New Final Post and Capcut template/export/michael_anderson",
   "unresolved": [
     "public_family_count_api: no actors returned for state='MA'",
-    "pdf_public_actor: no 'Michael anderson' in cache for MA"
+    "pdf_public_actor: no 'Michael Anderson' in cache for MA"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
