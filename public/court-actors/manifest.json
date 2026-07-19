@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T09:42:37.498697+00:00",
+  "generated_at": "2026-07-19T10:06:11.132057+00:00",
   "actors": [
     {
       "slug": "ali_upchurch_patterson",
@@ -162,6 +162,15 @@
       "actor_bucket_key": "cara hutson|CA",
       "photo_url": "/court-actors/ca/cara_d_hutson/image_1080.png",
       "share_url": "/court-actors/ca/cara_d_hutson/share.html"
+    },
+    {
+      "slug": "claire_keithley",
+      "state_abbr": "CA",
+      "display_name": "Claire Keithley",
+      "canonical_name": "Claire Keithley",
+      "actor_bucket_key": "claire keithley|CA",
+      "photo_url": null,
+      "share_url": "/court-actors/ca/claire_keithley/share.html"
     },
     {
       "slug": "devin_davis",
@@ -580,8 +589,8 @@
     {
       "slug": "candice_broce",
       "state_abbr": "GA",
-      "display_name": "Commissioner Candice Broce",
-      "canonical_name": "Commissioner Candice Broce",
+      "display_name": "Candice Broce",
+      "canonical_name": "Candice Broce",
       "actor_bucket_key": null,
       "photo_url": "/court-actors/ga/candice_broce/image_1080.png",
       "share_url": "/court-actors/ga/candice_broce/share.html"

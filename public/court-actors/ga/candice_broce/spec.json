@@ -2,14 +2,14 @@
   "schema_version": 2,
   "actor": {
     "slug": "candice_broce",
-    "display_name": "Commissioner Candice Broce",
+    "display_name": "Candice Broce",
     "title": "",
-    "first_name": "Commissioner Candice",
+    "first_name": "Candice",
     "last_name": "Broce",
-    "role": "Other",
+    "role": "Commissioner of CPS",
     "court": "Commissioner of CPS",
     "county": "Commissioner of CPS",
-    "court_or_county": "Commissioner of CPS",
+    "court_or_county": "Georgia",
     "state": "Georgia",
     "state_abbr": "GA",
     "mention_count": 5,
@@ -28,7 +28,7 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-e_1xy3n8/New Final Post and Capcut template/export/candice_broce/image_1080.png",
+    "path": "/tmp/swm-share-pages-6vd8gr45/New Final Post and Capcut template/export/candice_broce/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -48,7 +48,7 @@
     "_pdf_state_family_count": 154,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5482,
+  "movement_total": 5499,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -90,31 +90,31 @@
         "comment_text": "She substantiated a malt treater label and did not give me a chance at a first or second level review and I’m a victim of domestic violence. I didn’t even get due process or the chance to be heard or even do a first or second level review they just put the label on me in the case isn’t even closed yet and I haven’t seen a judge since January. This is completely shutting down my job.",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Commissioner of CPS"
+        "court_or_county": "Georgia"
       },
       {
         "comment_text": "Personally created the Special Victims Unit to remove children from adoptive homes or in pre adoptive status and place them in states custody and allege false allegations of trafficking.She was personally involved in my cases causing influence due to her position. She regularly had x parte communication with judges.",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Georgia DHS"
+        "court_or_county": "Georgia"
       },
       {
         "comment_text": "She attended every one of our hearings and directly contributed to our son’s removal from our home.",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Commissioner of CPS"
-      },
-      {
-        "comment_text": "Ms. Broce sat in on my last hearing, personally, as the head of Georgia DFCS.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Georgia DHS Director"
+        "court_or_county": "Georgia"
       },
       {
         "comment_text": "She’s placing me on a shines registry for being a victim of domestic violence",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Commissioner of CPS"
+        "court_or_county": "Georgia"
+      },
+      {
+        "comment_text": "Ms. Broce sat in on my last hearing, personally, as the head of Georgia DFCS.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Georgia"
       }
     ]
   },
@@ -152,11 +152,11 @@
         "kind": "comment"
       },
       {
-        "body": "Ms. Broce sat in on my last hearing, personally, as the head of Georgia DFCS.",
+        "body": "She’s placing me on a shines registry for being a victim of domestic violence",
         "kind": "comment"
       },
       {
-        "body": "She’s placing me on a shines registry for being a victim of domestic violence",
+        "body": "Ms. Broce sat in on my last hearing, personally, as the head of Georgia DFCS.",
         "kind": "comment"
       },
       {

@@ -32,27 +32,27 @@
     "actor_bucket_key": "denis kirk|OH"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-gic8rhaa/New Final Post and Capcut template/export/dennis_kirk/image_1080.png",
+    "path": "/tmp/swm-share-pages-6vd8gr45/New Final Post and Capcut template/export/dennis_kirk/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 207,
-    "total_submissions": 276,
-    "avg_financial_loss": 110328.43,
-    "avg_months_lost": 34.2,
+    "total_submissions": 279,
+    "avg_financial_loss": 109443.11,
+    "avg_months_lost": 34.0,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OH",
-    "state_family_count": 276,
-    "median_financial_loss": 79250,
-    "median_burden_sample_size": 136,
+    "state_family_count": 279,
+    "median_financial_loss": 80000,
+    "median_burden_sample_size": 137,
     "median_months_lost": 20,
-    "pro_se_pct": 52.9,
-    "pro_se_count": 146,
-    "_pdf_state_family_count": 276,
+    "pro_se_pct": 53.0,
+    "pro_se_count": 148,
+    "_pdf_state_family_count": 279,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5493,
+  "movement_total": 5499,
   "supabase": {
     "report_count": 9,
     "actor_report_count": 9,

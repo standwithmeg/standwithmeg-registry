@@ -1,0 +1,120 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "claire_keithley",
+    "display_name": "Claire Keithley",
+    "title": "",
+    "first_name": "Claire",
+    "last_name": "Keithley",
+    "role": "Judge",
+    "court": "Butte",
+    "county": "Butte",
+    "court_or_county": "Butte",
+    "state": "CA",
+    "state_abbr": "CA",
+    "mention_count": 3,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "e098f146-bc8a-4b49-a20b-e26985108df0",
+      "8d525dc8-cf5c-467c-8bf7-870166d5909d",
+      "40e1aa0b-af9f-4d40-8bff-ba163f0d5ccf"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "claire keithley|CA"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 359,
+    "total_submissions": 450,
+    "avg_financial_loss": 281935.0,
+    "avg_months_lost": 35.6,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "CA",
+    "state_family_count": 450,
+    "median_financial_loss": 269200,
+    "median_burden_sample_size": 199,
+    "median_months_lost": 20,
+    "pro_se_pct": 58.7,
+    "pro_se_count": 264,
+    "_pdf_state_family_count": 450,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5499,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 3,
+    "family_reports": [
+      {
+        "body": "I am estranged from the children I love, my kids don't know their extended family, and my ex has never been encouraged to coparent but instead been emboldened and rewarded to lie and reduce my time with them. The court knows I will try to prevail as a good father and pay whatever they charge for the hoops I have to go through.",
+        "state": "CA",
+        "county": "Butte",
+        "row_id": "379e0230-67b5-494d-8d81-da69708bb8c0"
+      },
+      {
+        "body": "The system has made me believe they will not help keep myself or my children safe from a predator. They would rather make money at the suffering of families all over the world as Destruction of the family unit is the number one goal.",
+        "state": "CA",
+        "county": "Butte County",
+        "row_id": "5aae4ca4-d9f3-41c8-8a61-4062e6d7d782"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Ignored contempt and false testimony from the defendant but shut down my turn to talk after letting her lie and accuse me of damaging allegations.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Butte"
+      },
+      {
+        "comment_text": "Signed off on a fake warrant to remove my children from my care",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Butte"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/claire_keithley",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='CA'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ca/claire_keithley/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Signed off on a fake warrant to remove my children from my care",
+        "kind": "comment"
+      },
+      {
+        "body": "Instead been emboldened and rewarded to lie and reduce my time with them.",
+        "kind": "family_report"
+      },
+      {
+        "body": "The system has made me believe they will not help keep myself or my children safe from a predator.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

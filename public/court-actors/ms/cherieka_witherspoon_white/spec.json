@@ -26,27 +26,27 @@
     "actor_bucket_key": "cherieka witherspoon white|MS"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-oebx6srz/New Final Post and Capcut template/export/cherieka_witherspoon_white/image_1080.png",
+    "path": "/tmp/swm-share-pages-6vd8gr45/New Final Post and Capcut template/export/cherieka_witherspoon_white/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 42,
-    "total_submissions": 54,
-    "avg_financial_loss": 168460.74,
+    "total_submissions": 55,
+    "avg_financial_loss": 164876.47,
     "avg_months_lost": 39.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "MS",
-    "state_family_count": 54,
+    "state_family_count": 55,
     "median_financial_loss": 65000,
     "median_burden_sample_size": 19,
     "median_months_lost": 16,
-    "pro_se_pct": 53.7,
+    "pro_se_pct": 52.7,
     "pro_se_count": 29,
-    "_pdf_state_family_count": 54,
+    "_pdf_state_family_count": 55,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5443,
+  "movement_total": 5499,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
