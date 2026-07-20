@@ -1893,7 +1893,13 @@ def render(spec: dict, web_mode: bool = False, image_mode: bool = False) -> str:
     last = (actor.get("last_name") or "").strip()
     title = (actor.get("title") or "").strip()
     display_name = actor.get("display_name") or " ".join(p for p in (first, last) if p).strip()
-    role = expand_acronyms(actor.get("role") or "Public court actor")
+    # "Other" is a survey checkbox, not a title — never render it on a card.
+    # Meg reads the surveys and sets the real title in the Quick Actor Finder;
+    # until she has, the neutral fallback keeps the card factual.
+    raw_role = (actor.get("role") or "").strip()
+    if raw_role.lower() == "other":
+        raw_role = ""
+    role = expand_acronyms(raw_role or "Public court actor")
     court = first_nonempty(actor.get("court_or_county"), actor.get("court"), actor.get("county")) or ""
     county = first_nonempty(actor.get("county"), actor.get("court_or_county")) or ""
     state = actor.get("state") or ""
