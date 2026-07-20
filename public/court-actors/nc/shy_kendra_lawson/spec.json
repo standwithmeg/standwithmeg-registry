@@ -30,27 +30,27 @@
     "actor_bucket_key": "shy-kendra lawson|NC"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-gic8rhaa/New Final Post and Capcut template/export/shy_kendra_lawson/image_1080.png",
+    "path": "/tmp/swm-share-pages-cjlk5260/New Final Post and Capcut template/export/shy_kendra_lawson/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 162,
+    "families_approved": 160,
     "total_submissions": 219,
-    "avg_financial_loss": 182522.22,
-    "avg_months_lost": 36.0,
+    "avg_financial_loss": 182417.17,
+    "avg_months_lost": 35.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "NC",
     "state_family_count": 219,
-    "median_financial_loss": 140750,
-    "median_burden_sample_size": 72,
+    "median_financial_loss": 140000,
+    "median_burden_sample_size": 73,
     "median_months_lost": 17,
-    "pro_se_pct": 50.7,
-    "pro_se_count": 111,
+    "pro_se_pct": 50.2,
+    "pro_se_count": 110,
     "_pdf_state_family_count": 219,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5493,
+  "movement_total": 5506,
   "supabase": {
     "report_count": 7,
     "actor_report_count": 7,

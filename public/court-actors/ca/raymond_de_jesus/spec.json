@@ -24,34 +24,34 @@
       "6bae9e4e-084b-48e4-94f4-77ef3ef9e378",
       "a4d72528-62f9-4bb5-8d3b-355206361fff",
       "66b72eeb-d0a5-454e-8702-864efd95fed9",
-      "ea3dfe79-be4b-4c24-8973-fdb0c434ce64",
-      "41f66154-0e33-4643-8f5d-4afda23c9b4e"
+      "41f66154-0e33-4643-8f5d-4afda23c9b4e",
+      "ea3dfe79-be4b-4c24-8973-fdb0c434ce64"
     ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-6vd8gr45/New Final Post and Capcut template/export/raymond_de_jesus/image_1080.png",
+    "path": "/tmp/swm-share-pages-cjlk5260/New Final Post and Capcut template/export/raymond_de_jesus/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 359,
-    "total_submissions": 450,
-    "avg_financial_loss": 281935.0,
-    "avg_months_lost": 35.6,
+    "total_submissions": 453,
+    "avg_financial_loss": 280915.82,
+    "avg_months_lost": 35.3,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CA",
-    "state_family_count": 450,
-    "median_financial_loss": 269200,
-    "median_burden_sample_size": 199,
+    "state_family_count": 453,
+    "median_financial_loss": 269850,
+    "median_burden_sample_size": 200,
     "median_months_lost": 20,
     "pro_se_pct": 58.7,
-    "pro_se_count": 264,
-    "_pdf_state_family_count": 450,
+    "pro_se_count": 266,
+    "_pdf_state_family_count": 453,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5499,
+  "movement_total": 5506,
   "supabase": {
     "report_count": 8,
     "actor_report_count": 8,

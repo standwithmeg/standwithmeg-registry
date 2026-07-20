@@ -27,27 +27,27 @@
     "actor_bucket_key": "meredith frederick|KS"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-6vd8gr45/New Final Post and Capcut template/export/meredith_frederick/image_1080.png",
+    "path": "/tmp/swm-share-pages-cjlk5260/New Final Post and Capcut template/export/meredith_frederick/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 186,
-    "total_submissions": 261,
-    "avg_financial_loss": 114406.76,
-    "avg_months_lost": 29.7,
+    "total_submissions": 263,
+    "avg_financial_loss": 114288.37,
+    "avg_months_lost": 29.5,
     "_source_table": "movement_stats_by_state",
     "_match_value": "KS",
-    "state_family_count": 261,
+    "state_family_count": 263,
     "median_financial_loss": 98800,
-    "median_burden_sample_size": 135,
+    "median_burden_sample_size": 137,
     "median_months_lost": 16,
     "pro_se_pct": 48.7,
-    "pro_se_count": 127,
-    "_pdf_state_family_count": 261,
+    "pro_se_count": 128,
+    "_pdf_state_family_count": 263,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5499,
+  "movement_total": 5506,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,

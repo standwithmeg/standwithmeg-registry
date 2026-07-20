@@ -37,27 +37,27 @@
     ]
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-e_1xy3n8/New Final Post and Capcut template/export/jon_gann/image_1080.png",
+    "path": "/tmp/swm-share-pages-cjlk5260/New Final Post and Capcut template/export/jon_gann/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 240,
+    "families_approved": 238,
     "total_submissions": 308,
-    "avg_financial_loss": 205498.83,
-    "avg_months_lost": 27.9,
+    "avg_financial_loss": 205539.8,
+    "avg_months_lost": 27.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "FL",
     "state_family_count": 308,
     "median_financial_loss": 180750,
     "median_burden_sample_size": 136,
     "median_months_lost": 18,
-    "pro_se_pct": 57.5,
-    "pro_se_count": 177,
+    "pro_se_pct": 57.1,
+    "pro_se_count": 176,
     "_pdf_state_family_count": 308,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5482,
+  "movement_total": 5506,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
