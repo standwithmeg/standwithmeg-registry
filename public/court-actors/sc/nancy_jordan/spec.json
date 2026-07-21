@@ -18,15 +18,15 @@
     "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 3,
     "supabase_row_ids": [
+      "f847115d-35c8-4edb-9f0e-3de30ed19bd4",
       "f7beb173-8e60-4cf3-9902-53b5afa8cf85",
-      "0afc8c7b-e556-4323-86e6-6eda065b8ee5",
-      "f847115d-35c8-4edb-9f0e-3de30ed19bd4"
+      "0afc8c7b-e556-4323-86e6-6eda065b8ee5"
     ],
     "actor_row_id": null,
     "actor_bucket_key": "nancy jordan|SC"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-z53r0ppu/New Final Post and Capcut template/export/nancy_jordan/image_1080.png",
+    "path": "/tmp/swm-share-pages-90yxu6ix/New Final Post and Capcut template/export/nancy_jordan/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -46,7 +46,7 @@
     "_pdf_state_family_count": 109,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5462,
+  "movement_total": 5516,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,

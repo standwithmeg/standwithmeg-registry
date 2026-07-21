@@ -27,15 +27,15 @@
     "actor_bucket_key": "sybil sharvele|IN"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-z53r0ppu/New Final Post and Capcut template/export/sybil_sharvelle/image_1080.png",
+    "path": "/tmp/swm-share-pages-90yxu6ix/New Final Post and Capcut template/export/sybil_sharvelle/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 129,
+    "families_approved": 128,
     "total_submissions": 155,
-    "avg_financial_loss": 139204.48,
-    "avg_months_lost": 30.2,
+    "avg_financial_loss": 139694.21,
+    "avg_months_lost": 30.0,
     "_source_table": "movement_stats_by_state",
     "_match_value": "IN",
     "state_family_count": 155,
@@ -47,7 +47,7 @@
     "_pdf_state_family_count": 155,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5462,
+  "movement_total": 5516,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,

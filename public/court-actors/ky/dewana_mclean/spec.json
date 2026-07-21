@@ -20,9 +20,9 @@
     "supabase_row_ids": [
       "960142ad-0ac4-40d2-9b5a-fbe6d1fcd615",
       "43f7528d-13e2-4171-818d-2e4068421384",
+      "7e784810-400d-40b4-9e08-7d06268315e6",
       "10ac078c-24b4-4056-9cb1-25f276342047",
-      "27c41448-a062-41fb-b3b5-ac3277d96e55",
-      "7e784810-400d-40b4-9e08-7d06268315e6"
+      "27c41448-a062-41fb-b3b5-ac3277d96e55"
     ],
     "actor_row_id": null,
     "actor_bucket_key": "dewana mclean|KY"
@@ -48,7 +48,7 @@
     "_pdf_state_family_count": 91,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5471,
+  "movement_total": 5516,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,

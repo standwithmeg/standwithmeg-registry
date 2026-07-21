@@ -29,14 +29,14 @@
     "actor_bucket_key": "john leo|NY"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-oebx6srz/New Final Post and Capcut template/export/john_j_leo/image_1080.png",
+    "path": "/tmp/swm-share-pages-90yxu6ix/New Final Post and Capcut template/export/john_j_leo/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 138,
+    "families_approved": 137,
     "total_submissions": 174,
-    "avg_financial_loss": 209097.81,
+    "avg_financial_loss": 208660.63,
     "avg_months_lost": 27.5,
     "_source_table": "movement_stats_by_state",
     "_match_value": "NY",
@@ -49,7 +49,7 @@
     "_pdf_state_family_count": 174,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5443,
+  "movement_total": 5516,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,

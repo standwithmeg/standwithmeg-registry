@@ -21,34 +21,34 @@
       "18272499-962e-44f9-b4c3-0c43b2f561b1",
       "bbd88aef-8d13-42d0-9858-e3ed051c71c2",
       "86ef06b0-ef0f-4912-b18f-0d23d0739d59",
-      "d050bfee-18af-40b3-a9bc-ff124212bfef",
-      "0dc3a46e-746f-49d0-85f7-b08b36e372ce"
+      "0dc3a46e-746f-49d0-85f7-b08b36e372ce",
+      "d050bfee-18af-40b3-a9bc-ff124212bfef"
     ],
     "actor_row_id": "18272499-962e-44f9-b4c3-0c43b2f561b1",
     "actor_bucket_key": "carol cook carter|AL"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-z53r0ppu/New Final Post and Capcut template/export/carol_cook_carter/image_1080.png",
+    "path": "/tmp/swm-share-pages-90yxu6ix/New Final Post and Capcut template/export/carol_cook_carter/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 105,
+    "families_approved": 104,
     "total_submissions": 131,
-    "avg_financial_loss": 89112.05,
+    "avg_financial_loss": 84345.1,
     "avg_months_lost": 35.6,
     "_source_table": "movement_stats_by_state",
     "_match_value": "AL",
     "state_family_count": 131,
-    "median_financial_loss": 81316,
-    "median_burden_sample_size": 60,
+    "median_financial_loss": 80000,
+    "median_burden_sample_size": 59,
     "median_months_lost": 13,
     "pro_se_pct": 42.7,
     "pro_se_count": 56,
     "_pdf_state_family_count": 131,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5462,
+  "movement_total": 5516,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,

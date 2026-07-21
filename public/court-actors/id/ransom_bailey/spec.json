@@ -9,7 +9,7 @@
     "role": "Judge",
     "court": "Ada County, 4th district",
     "county": "Ada",
-    "court_or_county": "Ada County, 4th district",
+    "court_or_county": "Ada",
     "state": "ID",
     "state_abbr": "ID",
     "mention_count": 3,
@@ -18,9 +18,9 @@
     "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 3,
     "supabase_row_ids": [
+      "702e2f08-f194-4895-b40b-1330e43e4801",
       "6ebb35fb-612f-4566-baf5-12538a119c54",
-      "69b2957a-59ac-4d3e-9ba7-7195db20abe8",
-      "702e2f08-f194-4895-b40b-1330e43e4801"
+      "69b2957a-59ac-4d3e-9ba7-7195db20abe8"
     ],
     "actor_row_id": null,
     "actor_bucket_key": "ransom bailey|ID"
@@ -46,7 +46,7 @@
     "_pdf_state_family_count": 39,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5443,
+  "movement_total": 5516,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,

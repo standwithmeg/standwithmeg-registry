@@ -9,7 +9,7 @@
     "role": "GAL / Child Representative",
     "court": "Anderson County",
     "county": "Anderson County",
-    "court_or_county": "Anderson County",
+    "court_or_county": "Greenville",
     "state": "SC",
     "state_abbr": "SC",
     "mention_count": 7,
@@ -18,13 +18,13 @@
     "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 7,
     "supabase_row_ids": [
+      "77c44325-0925-4468-b1df-e50257c5d7d4",
+      "9195924a-a276-42a9-95db-1f4faca35371",
+      "00d65d6b-e07a-47d8-91d0-4806c9bd6a62",
       "78ed4833-fedf-43d9-b904-d531306b3cf8",
       "d6aece63-8125-460b-ab87-ae219f05f5e8",
       "2d686205-a978-4234-9ef0-be4aeeaea258",
-      "5e9261d3-96e0-4f88-b15d-36cc659363fe",
-      "77c44325-0925-4468-b1df-e50257c5d7d4",
-      "00d65d6b-e07a-47d8-91d0-4806c9bd6a62",
-      "9195924a-a276-42a9-95db-1f4faca35371"
+      "5e9261d3-96e0-4f88-b15d-36cc659363fe"
     ],
     "actor_row_id": null,
     "actor_bucket_key": "nela laughridge|SC"
@@ -50,7 +50,7 @@
     "_pdf_state_family_count": 109,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5462,
+  "movement_total": 5516,
   "supabase": {
     "report_count": 7,
     "actor_report_count": 7,

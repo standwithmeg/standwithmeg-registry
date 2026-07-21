@@ -12,13 +12,12 @@
     "court_or_county": "Stark",
     "state": "Ohio",
     "state_abbr": "OH",
-    "mention_count": 5,
-    "family_count": 4,
-    "public_family_count": 4,
+    "mention_count": 4,
+    "family_count": 3,
+    "public_family_count": 3,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 5,
+    "actor_report_count": 4,
     "supabase_row_ids": [
-      "a146b80a-4dcd-47aa-ac46-5331ba219310",
       "ee40ef06-9447-4847-a97a-61ac56cd9647",
       "46a135ee-2512-48ca-8754-095121ca2261",
       "c33f7b1c-d090-496f-9047-bf8d447b084f",
@@ -28,38 +27,32 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-cjlk5260/New Final Post and Capcut template/export/christine_sayre/image_1080.png",
+    "path": "/tmp/swm-share-pages-90yxu6ix/New Final Post and Capcut template/export/christine_sayre/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 207,
-    "total_submissions": 280,
-    "avg_financial_loss": 109382.31,
-    "avg_months_lost": 34.0,
+    "families_approved": 206,
+    "total_submissions": 282,
+    "avg_financial_loss": 108925.27,
+    "avg_months_lost": 34.3,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OH",
-    "state_family_count": 280,
-    "median_financial_loss": 81125,
-    "median_burden_sample_size": 138,
+    "state_family_count": 282,
+    "median_financial_loss": 79750,
+    "median_burden_sample_size": 140,
     "median_months_lost": 20,
-    "pro_se_pct": 53.2,
-    "pro_se_count": 149,
-    "_pdf_state_family_count": 280,
+    "pro_se_pct": 53.5,
+    "pro_se_count": 151,
+    "_pdf_state_family_count": 282,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5506,
+  "movement_total": 5516,
   "supabase": {
-    "report_count": 5,
-    "actor_report_count": 5,
-    "family_count": 4,
+    "report_count": 4,
+    "actor_report_count": 4,
+    "family_count": 3,
     "family_reports": [
-      {
-        "body": "The system has gaslighted my children just as their abuser has, dismissed abuse repeatedly to the point of betrayal, and minimized the years of single parenting under coercive control I have survived. The court has belittled my children and I in the most damaging ways.",
-        "state": "OH",
-        "county": "Stark",
-        "row_id": "81e34b48-b8e0-4e0c-9de6-465686f3e37f"
-      },
       {
         "body": "Family Court is the battlefield of psychological warfare. They are causing lifetime traumas with no accountability or oversight!",
         "state": "OH",
@@ -79,12 +72,6 @@
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Summit"
-      },
-      {
-        "comment_text": "Recommended increased time and custody rights to father despite documented DV towards mother and children via ER records and with no involvement in their medical care or schooling in the past or present.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Stark"
       },
       {
         "comment_text": "Diagnosed my child with an unknown trauma knowing exactly what that trauma was… ABUSE! Just another actor protecting the system!",
@@ -116,11 +103,7 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Deemed an “expert” after 2 years of being a therapist.",
-        "kind": "comment"
-      },
-      {
-        "body": "Recommended increased time and custody rights to father.",
+        "body": "She’s sick and has caused several moms in our county to lose custody for false findings.",
         "kind": "comment"
       },
       {
@@ -128,15 +111,11 @@
         "kind": "comment"
       },
       {
-        "body": "Dismissed abuse repeatedly to the point of betrayal",
-        "kind": "family_report"
-      },
-      {
         "body": "Family Court is the battlefield of psychological warfare.",
         "kind": "family_report"
       },
       {
-        "body": "Allowed him to commit felonies while I remain childless",
+        "body": "Took my 4 children from a mother they all 4 testified to stay with in an in-camera interview-to retaliate",
         "kind": "family_report"
       }
     ],

@@ -18,17 +18,17 @@
     "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 5,
     "supabase_row_ids": [
+      "10fe98ac-d970-4ba5-8ed3-c9bcd0b5c618",
       "e370e325-c90c-4ed1-8734-32e9d6f8a84f",
       "c96071eb-bf76-4c68-bcfe-14c19ba43ec1",
       "aba3b4a4-e9d0-4bb6-aee7-2c16b78c3667",
-      "2ad39e26-c2b3-42bd-ad43-8df2e4a39f41",
-      "10fe98ac-d970-4ba5-8ed3-c9bcd0b5c618"
+      "2ad39e26-c2b3-42bd-ad43-8df2e4a39f41"
     ],
     "actor_row_id": null,
     "actor_bucket_key": "sadia upright|SC"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-z53r0ppu/New Final Post and Capcut template/export/sadia_upright/image_1080.png",
+    "path": "/tmp/swm-share-pages-90yxu6ix/New Final Post and Capcut template/export/sadia_upright/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -48,7 +48,7 @@
     "_pdf_state_family_count": 109,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5462,
+  "movement_total": 5516,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,

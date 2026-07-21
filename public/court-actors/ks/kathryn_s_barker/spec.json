@@ -1,0 +1,144 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "kathryn_s_barker",
+    "display_name": "Kathryn S. Barker",
+    "title": "",
+    "first_name": "Kathryn S.",
+    "last_name": "Barker",
+    "role": "GAL / Child Representative",
+    "court": "Johnson",
+    "county": "County not listed",
+    "court_or_county": "Johnson",
+    "state": "KS",
+    "state_abbr": "KS",
+    "mention_count": 3,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "506c37ad-ded8-45e5-8fc2-36ea79239280",
+      "d29f6a67-80bd-4114-bc44-d886a813779f",
+      "cb1b3973-fbd0-4abb-bea6-7c66b8318ff0"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "kathryn barker|KS"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 186,
+    "total_submissions": 263,
+    "avg_financial_loss": 114288.37,
+    "avg_months_lost": 29.5,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "KS",
+    "state_family_count": 263,
+    "median_financial_loss": 98800,
+    "median_burden_sample_size": 137,
+    "median_months_lost": 16,
+    "pro_se_pct": 48.7,
+    "pro_se_count": 128,
+    "_pdf_state_family_count": 263,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5516,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 3,
+    "family_reports": [
+      {
+        "body": "The system has retraumatized me repeatedly, increased my disability symptoms from the extra stress and trauma to the point that I can't work, caused my children to be traumatized from the acts and behaviors of the other party. It has left me bankrupt, put me back in an unsafe situation, with my children experiencing threats of harm from the other party. DV doesn't stop when you leave, the abuser weaponizes the legal system.",
+        "state": "KS",
+        "county": "Douglas",
+        "row_id": "9d3bdeb1-88bb-495a-8bd4-1f1887403fd3"
+      },
+      {
+        "body": "It had destroyed my children's mental health and mine. My youngest has became suicidal, which is everyday.",
+        "state": "KS",
+        "county": "Johnson County",
+        "row_id": "5743fc9c-b65d-4033-ab3f-1e711e67009d"
+      },
+      {
+        "body": "Destroyed my son mentally and emotionally, rubbed him of a childhood. I'm on 4 different anxiety meds, heart failure, autistic immune disease, debilitating depression. I trust no one, don't sleep, we both live in constant fear and anxiety",
+        "state": "KS",
+        "county": "Johnson",
+        "row_id": "f854100f-093b-4e4c-a1ed-df0e0a02ccd1"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Was selected and hired even though judge attempted to explain a GAL is not necessary for our case. I had ZERO input, she literally gave bi-monthly reports to the court on allegedly MY CHILDS best interest. Probably would be beneficial if you HAD CONTACT WITH YOUR CLIENT TO MAKE THOSE RECOMMENDATIONS. Even provided another childs medical records during a hearing, stating my child had certain diagnosis. Her response when I brought it to her attention \"oops\".",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Johnson"
+      },
+      {
+        "comment_text": "Did not do a full investigation nor interviewed anyone on my side including siblings, she ignored my daughter being suicidal if she was forced to go with her father, she had lied about many things, biased and much more.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
+      },
+      {
+        "comment_text": "Ignored abuse. Hostile towards me in the first meeting. Ignored multiple attempts to communicate with her with concerns and reports on the other party. She solved one problem, then ghosted me. I was refunded.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "County not listed"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/kathryn_s_barker",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='KS'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ks/kathryn_s_barker/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Literally gave bi-monthly reports to the court on allegedly MY CHILDS best interest",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored my daughter being suicidal if she was forced to go with her father",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored abuse. Hostile towards me in the first meeting.",
+        "kind": "comment"
+      },
+      {
+        "body": "DV doesn't stop when you leave, the abuser weaponizes the legal system.",
+        "kind": "family_report"
+      },
+      {
+        "body": "It had destroyed my children's mental health and mine.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Destroyed my son mentally and emotionally, rubbed him of a childhood.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

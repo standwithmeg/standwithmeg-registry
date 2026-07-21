@@ -27,27 +27,27 @@
     "actor_bucket_key": "natalie jones|AL"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-z53r0ppu/New Final Post and Capcut template/export/natalie_jones/image_1080.png",
+    "path": "/tmp/swm-share-pages-90yxu6ix/New Final Post and Capcut template/export/natalie_jones/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 105,
+    "families_approved": 104,
     "total_submissions": 131,
-    "avg_financial_loss": 89112.05,
+    "avg_financial_loss": 84345.1,
     "avg_months_lost": 35.6,
     "_source_table": "movement_stats_by_state",
     "_match_value": "AL",
     "state_family_count": 131,
-    "median_financial_loss": 81316,
-    "median_burden_sample_size": 60,
+    "median_financial_loss": 80000,
+    "median_burden_sample_size": 59,
     "median_months_lost": 13,
     "pro_se_pct": 42.7,
     "pro_se_count": 56,
     "_pdf_state_family_count": 131,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5462,
+  "movement_total": 5516,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,

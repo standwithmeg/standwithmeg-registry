@@ -39,27 +39,27 @@
     ]
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-e_1xy3n8/New Final Post and Capcut template/export/emily_mueller/image_1080.png",
+    "path": "/tmp/swm-share-pages-90yxu6ix/New Final Post and Capcut template/export/emily_mueller/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 131,
-    "total_submissions": 167,
-    "avg_financial_loss": 118197.79,
-    "avg_months_lost": 24.4,
+    "total_submissions": 168,
+    "avg_financial_loss": 120108.5,
+    "avg_months_lost": 24.3,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OK",
-    "state_family_count": 167,
-    "median_financial_loss": 99500,
-    "median_burden_sample_size": 89,
+    "state_family_count": 168,
+    "median_financial_loss": 100500,
+    "median_burden_sample_size": 90,
     "median_months_lost": 12,
-    "pro_se_pct": 43.1,
+    "pro_se_pct": 42.9,
     "pro_se_count": 72,
-    "_pdf_state_family_count": 167,
+    "_pdf_state_family_count": 168,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5482,
+  "movement_total": 5516,
   "supabase": {
     "report_count": 8,
     "actor_report_count": 8,

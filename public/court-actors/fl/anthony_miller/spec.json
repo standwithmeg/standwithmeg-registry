@@ -27,27 +27,27 @@
     "actor_bucket_key": "anthony miler|FL"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-cjlk5260/New Final Post and Capcut template/export/anthony_miller/image_1080.png",
+    "path": "/tmp/swm-share-pages-90yxu6ix/New Final Post and Capcut template/export/anthony_miller/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 238,
-    "total_submissions": 308,
-    "avg_financial_loss": 205539.8,
-    "avg_months_lost": 27.8,
+    "total_submissions": 309,
+    "avg_financial_loss": 204775.71,
+    "avg_months_lost": 27.7,
     "_source_table": "movement_stats_by_state",
     "_match_value": "FL",
-    "state_family_count": 308,
+    "state_family_count": 309,
     "median_financial_loss": 180750,
     "median_burden_sample_size": 136,
     "median_months_lost": 18,
-    "pro_se_pct": 57.1,
+    "pro_se_pct": 57.0,
     "pro_se_count": 176,
-    "_pdf_state_family_count": 308,
+    "_pdf_state_family_count": 309,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5506,
+  "movement_total": 5516,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,

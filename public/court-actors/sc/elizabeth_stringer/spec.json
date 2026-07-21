@@ -9,7 +9,7 @@
     "role": "GAL / Child Representative",
     "court": "Berkeley",
     "county": "Charleston County",
-    "court_or_county": "Berkeley",
+    "court_or_county": "Charleston County",
     "state": "South Carolina",
     "state_abbr": "SC",
     "mention_count": 3,
@@ -18,15 +18,15 @@
     "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 3,
     "supabase_row_ids": [
+      "429751d5-92cb-4461-8ed4-76a5e837bda7",
       "ed94c3c7-2017-4390-b604-a9d0dced6faa",
-      "ad39c9fc-e50b-4286-92cd-5439b8fbf7b6",
-      "429751d5-92cb-4461-8ed4-76a5e837bda7"
+      "ad39c9fc-e50b-4286-92cd-5439b8fbf7b6"
     ],
     "actor_row_id": null,
     "actor_bucket_key": "elizabeth stringer|SC"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-z53r0ppu/New Final Post and Capcut template/export/elizabeth_stringer/image_1080.png",
+    "path": "/tmp/swm-share-pages-90yxu6ix/New Final Post and Capcut template/export/elizabeth_stringer/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -46,7 +46,7 @@
     "_pdf_state_family_count": 109,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5462,
+  "movement_total": 5516,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
