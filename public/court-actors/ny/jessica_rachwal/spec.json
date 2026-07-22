@@ -41,15 +41,15 @@
     "_source_table": "movement_stats_by_state",
     "_match_value": "NY",
     "state_family_count": 174,
-    "median_financial_loss": 165000,
-    "median_burden_sample_size": 69,
+    "median_financial_loss": 170000,
+    "median_burden_sample_size": 68,
     "median_months_lost": 14,
     "pro_se_pct": 39.7,
     "pro_se_count": 69,
     "_pdf_state_family_count": 174,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5516,
+  "movement_total": 5524,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
