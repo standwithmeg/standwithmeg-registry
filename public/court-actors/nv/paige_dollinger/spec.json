@@ -29,27 +29,27 @@
     "actor_bucket_key": "paige dollinger|NV"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-90yxu6ix/New Final Post and Capcut template/export/paige_dollinger/image_1080.png",
+    "path": "/tmp/swm-share-pages-lpz2mnwi/New Final Post and Capcut template/export/paige_dollinger/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 37,
-    "total_submissions": 50,
-    "avg_financial_loss": 167556.21,
-    "avg_months_lost": 26.7,
+    "total_submissions": 51,
+    "avg_financial_loss": 163975.39,
+    "avg_months_lost": 27.6,
     "_source_table": "movement_stats_by_state",
     "_match_value": "NV",
-    "state_family_count": 50,
+    "state_family_count": 51,
     "median_financial_loss": 220750,
     "median_burden_sample_size": 16,
     "median_months_lost": 10,
-    "pro_se_pct": 56.0,
+    "pro_se_pct": 54.9,
     "pro_se_count": 28,
-    "_pdf_state_family_count": 50,
+    "_pdf_state_family_count": 51,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5516,
+  "movement_total": 5535,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,

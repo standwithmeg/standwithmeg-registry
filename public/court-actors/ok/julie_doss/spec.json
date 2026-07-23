@@ -1,0 +1,120 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "julie_doss",
+    "display_name": "Julie Doss",
+    "title": "",
+    "first_name": "Julie",
+    "last_name": "Doss",
+    "role": "Judge",
+    "court": "Tulsa",
+    "county": "Tulsa",
+    "court_or_county": "Tulsa",
+    "state": "OK",
+    "state_abbr": "OK",
+    "mention_count": 3,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "11fd39a4-3a2e-4d1f-93ad-732d6ca91f0a",
+      "def7ae7c-cf52-441c-9906-4703cd448c9a",
+      "13e1eeae-6acb-471c-b606-6edcb53115fc"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "julie doss|OK"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 131,
+    "total_submissions": 169,
+    "avg_financial_loss": 119357.82,
+    "avg_months_lost": 24.3,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OK",
+    "state_family_count": 169,
+    "median_financial_loss": 100500,
+    "median_burden_sample_size": 90,
+    "median_months_lost": 12,
+    "pro_se_pct": 42.6,
+    "pro_se_count": 72,
+    "_pdf_state_family_count": 169,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5535,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 3,
+    "family_reports": [
+      {
+        "body": "Family court is a circus and for all of the lip service to “children’s best interest”, my kids are BY FAR, worse off today because of it.",
+        "state": "OK",
+        "county": "Tulsa",
+        "row_id": "93551a22-a4cb-4e62-b51e-b5d93de214e1"
+      },
+      {
+        "body": "The aftermath of these proceedings affected not only me, but my children, their mental health and well-being, my livelihood, and the overall stability of my family. The court system has allowed a multi-offender DV abuser to weaponize the court system.",
+        "state": "OK",
+        "county": "Tulsa",
+        "row_id": "5144555d-35e4-4693-8c9e-3ff2e95e7f4d"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Ruled I was neglectful with my children based on the GAL’s recommendation.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Tulsa County"
+      },
+      {
+        "comment_text": "Ignored evidence, delayed reunification with my children",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Tulsa"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/julie_doss",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='OK'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ok/julie_doss/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Ruled I was neglectful with my children based on the GAL’s recommendation.",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored evidence, delayed reunification with my children",
+        "kind": "comment"
+      },
+      {
+        "body": "The court system has allowed a multi-offender DV abuser to weaponize the court system.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}
