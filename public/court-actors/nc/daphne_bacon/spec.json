@@ -35,27 +35,27 @@
     ]
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-90yxu6ix/New Final Post and Capcut template/export/daphne_bacon/image_1080.png",
+    "path": "/tmp/swm-share-pages-fpp0lnsx/New Final Post and Capcut template/export/daphne_bacon/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 160,
-    "total_submissions": 219,
-    "avg_financial_loss": 182417.17,
-    "avg_months_lost": 35.9,
+    "total_submissions": 220,
+    "avg_financial_loss": 181731.65,
+    "avg_months_lost": 36.0,
     "_source_table": "movement_stats_by_state",
     "_match_value": "NC",
-    "state_family_count": 219,
-    "median_financial_loss": 140000,
-    "median_burden_sample_size": 73,
+    "state_family_count": 220,
+    "median_financial_loss": 137332,
+    "median_burden_sample_size": 74,
     "median_months_lost": 17,
-    "pro_se_pct": 50.2,
+    "pro_se_pct": 50.0,
     "pro_se_count": 110,
-    "_pdf_state_family_count": 219,
+    "_pdf_state_family_count": 220,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5516,
+  "movement_total": 5543,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,

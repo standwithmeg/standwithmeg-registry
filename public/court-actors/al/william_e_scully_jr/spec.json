@@ -12,11 +12,11 @@
     "court_or_county": "Baldwin",
     "state": "Alabama",
     "state_abbr": "AL",
-    "mention_count": 21,
-    "family_count": 17,
-    "public_family_count": 17,
+    "mention_count": 20,
+    "family_count": 16,
+    "public_family_count": 16,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 21,
+    "actor_report_count": 20,
     "supabase_row_ids": [
       "c1ad63c0-0458-4e7d-80b8-1a20ff40ed7a",
       "00e75318-ba1f-4fff-9a7f-ac4239e19cfe",
@@ -26,7 +26,6 @@
       "9c320ef1-3ed0-461e-bea4-b5c1e05afb84",
       "c7714f65-e2bd-43d2-aede-2d86ba87bdec",
       "45a2ecb3-7886-45f5-9787-081bf458d7c6",
-      "fcd9a9aa-c66b-493a-b9b2-d1ee41f908d8",
       "e009a6a3-7d05-4fb8-bac9-5be48f36bd18",
       "b2dd4ea3-a91b-4ab3-846e-b92d7f62c210",
       "9da25084-0752-426b-bd39-40b316aa7ac4",
@@ -44,15 +43,15 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-lpz2mnwi/New Final Post and Capcut template/export/william_e_scully_jr/image_1080.png",
+    "path": "/tmp/swm-share-pages-fpp0lnsx/New Final Post and Capcut template/export/william_e_scully_jr/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 104,
+    "families_approved": 103,
     "total_submissions": 133,
     "avg_financial_loss": 83368.52,
-    "avg_months_lost": 35.3,
+    "avg_months_lost": 35.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "AL",
     "state_family_count": 133,
@@ -64,11 +63,11 @@
     "_pdf_state_family_count": 133,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5535,
+  "movement_total": 5543,
   "supabase": {
-    "report_count": 21,
-    "actor_report_count": 21,
-    "family_count": 17,
+    "report_count": 20,
+    "actor_report_count": 20,
+    "family_count": 16,
     "family_reports": [
       {
         "body": "Destroyed my relationship with my granddaughter.",
@@ -193,12 +192,6 @@
         "court_or_county": "Baldwin"
       },
       {
-        "comment_text": "All of the listed issues plus more",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Baldwin"
-      },
-      {
         "comment_text": "They didnt even let me testify",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
@@ -281,10 +274,6 @@
       },
       {
         "body": "He keeps children away without hearings.",
-        "kind": "comment"
-      },
-      {
-        "body": "All of the listed issues plus more",
         "kind": "comment"
       },
       {
