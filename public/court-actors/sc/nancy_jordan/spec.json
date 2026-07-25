@@ -26,27 +26,27 @@
     "actor_bucket_key": "nancy jordan|SC"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-90yxu6ix/New Final Post and Capcut template/export/nancy_jordan/image_1080.png",
+    "path": "/tmp/swm-share-pages-df51p8yo/New Final Post and Capcut template/export/nancy_jordan/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 85,
-    "total_submissions": 109,
-    "avg_financial_loss": 277435.47,
-    "avg_months_lost": 26.0,
+    "total_submissions": 110,
+    "avg_financial_loss": 276642.82,
+    "avg_months_lost": 25.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "SC",
-    "state_family_count": 109,
-    "median_financial_loss": 116000,
-    "median_burden_sample_size": 69,
+    "state_family_count": 110,
+    "median_financial_loss": 120500,
+    "median_burden_sample_size": 70,
     "median_months_lost": 18,
-    "pro_se_pct": 56.0,
+    "pro_se_pct": 55.5,
     "pro_se_count": 61,
-    "_pdf_state_family_count": 109,
+    "_pdf_state_family_count": 110,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5516,
+  "movement_total": 5547,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
