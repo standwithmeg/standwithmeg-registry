@@ -12,45 +12,46 @@
     "court_or_county": "Powhatan",
     "state": "Virginia",
     "state_abbr": "VA",
-    "mention_count": 3,
-    "family_count": 3,
-    "public_family_count": 3,
+    "mention_count": 4,
+    "family_count": 4,
+    "public_family_count": 4,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 3,
+    "actor_report_count": 4,
     "supabase_row_ids": [
       "018956c5-35d7-424d-936a-81345399079f",
       "1dc76fd8-fc39-4f32-9533-848577022e53",
-      "a049f6a5-222a-4abd-9520-e27ae40f2a17"
+      "a049f6a5-222a-4abd-9520-e27ae40f2a17",
+      "ad015137-31e0-4ee9-9a1d-6da82e9e0454"
     ],
     "actor_row_id": "018956c5-35d7-424d-936a-81345399079f",
     "actor_bucket_key": "john whitbeck|VA"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-lpz2mnwi/New Final Post and Capcut template/export/john_whitbeck/image_1080.png",
+    "path": "/tmp/swm-share-pages-juq85t2h/New Final Post and Capcut template/export/john_whitbeck/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 108,
-    "total_submissions": 136,
-    "avg_financial_loss": 183988.12,
-    "avg_months_lost": 30.2,
+    "families_approved": 107,
+    "total_submissions": 137,
+    "avg_financial_loss": 182284.9,
+    "avg_months_lost": 30.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "VA",
-    "state_family_count": 136,
+    "state_family_count": 137,
     "median_financial_loss": 153000,
     "median_burden_sample_size": 55,
     "median_months_lost": 20,
-    "pro_se_pct": 64.0,
+    "pro_se_pct": 63.5,
     "pro_se_count": 87,
-    "_pdf_state_family_count": 136,
+    "_pdf_state_family_count": 137,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5535,
+  "movement_total": 5551,
   "supabase": {
-    "report_count": 3,
-    "actor_report_count": 3,
-    "family_count": 3,
+    "report_count": 4,
+    "actor_report_count": 4,
+    "family_count": 4,
     "family_reports": [
       {
         "body": "Took sole legal custody-and now 50/50. 5 years in court -filed full custody 3x as punishment- his atty hired used/paid psychologists to say things that they routinely work with - said he wouldn’t stop until I have no custody left- I had 300+ pieces of evidence & testimony that was ignored and his behavior dismissed.",

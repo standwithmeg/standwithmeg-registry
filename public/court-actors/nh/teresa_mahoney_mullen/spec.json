@@ -28,27 +28,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-90yxu6ix/New Final Post and Capcut template/export/teresa_mahoney_mullen/image_1080.png",
+    "path": "/tmp/swm-share-pages-juq85t2h/New Final Post and Capcut template/export/teresa_mahoney_mullen/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 29,
-    "total_submissions": 36,
-    "avg_financial_loss": 152135.59,
-    "avg_months_lost": 24.7,
+    "total_submissions": 37,
+    "avg_financial_loss": 147788.86,
+    "avg_months_lost": 35.3,
     "_source_table": "movement_stats_by_state",
     "_match_value": "NH",
-    "state_family_count": 36,
+    "state_family_count": 37,
     "median_financial_loss": 84600,
     "median_burden_sample_size": 20,
     "median_months_lost": 14,
-    "pro_se_pct": 50.0,
-    "pro_se_count": 18,
-    "_pdf_state_family_count": 36,
+    "pro_se_pct": 51.4,
+    "pro_se_count": 19,
+    "_pdf_state_family_count": 37,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5516,
+  "movement_total": 5551,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,

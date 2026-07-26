@@ -26,27 +26,27 @@
     "actor_bucket_key": "alexandra fong|CA"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-xhlj74no/New Final Post and Capcut template/export/alexandra_fong/image_1080.png",
+    "path": "/tmp/swm-share-pages-juq85t2h/New Final Post and Capcut template/export/alexandra_fong/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 359,
-    "total_submissions": 454,
-    "avg_financial_loss": 280320.44,
-    "avg_months_lost": 35.3,
+    "total_submissions": 455,
+    "avg_financial_loss": 279720.63,
+    "avg_months_lost": 35.2,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CA",
-    "state_family_count": 454,
+    "state_family_count": 455,
     "median_financial_loss": 269850,
     "median_burden_sample_size": 200,
     "median_months_lost": 20,
-    "pro_se_pct": 58.6,
+    "pro_se_pct": 58.5,
     "pro_se_count": 266,
-    "_pdf_state_family_count": 454,
+    "_pdf_state_family_count": 455,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5524,
+  "movement_total": 5551,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
