@@ -12,14 +12,13 @@
     "court_or_county": "Johnson",
     "state": "Kansas",
     "state_abbr": "KS",
-    "mention_count": 5,
-    "family_count": 5,
-    "public_family_count": 5,
+    "mention_count": 4,
+    "family_count": 4,
+    "public_family_count": 4,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 5,
+    "actor_report_count": 4,
     "supabase_row_ids": [
       "dea48589-94df-4094-8aff-a2f70b33e159",
-      "36d79edf-e2de-4fb0-bfcb-7c54fd73f36a",
       "9a63ebec-ae1c-4028-a28d-05d7fe1a65da",
       "e8057876-3bfb-4cbb-9348-54da753df3b6",
       "167bed4e-895c-4624-a8c2-ea187d23b114"
@@ -28,38 +27,32 @@
     "actor_bucket_key": "jennifer hagg|KS"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-lpz2mnwi/New Final Post and Capcut template/export/jennifer_hagg/image_1080.png",
+    "path": "/tmp/swm-share-pages-1i7tucy6/New Final Post and Capcut template/export/jennifer_hagg/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 186,
-    "total_submissions": 264,
-    "avg_financial_loss": 114158.54,
-    "avg_months_lost": 29.5,
+    "families_approved": 185,
+    "total_submissions": 265,
+    "avg_financial_loss": 113686.81,
+    "avg_months_lost": 29.7,
     "_source_table": "movement_stats_by_state",
     "_match_value": "KS",
-    "state_family_count": 264,
+    "state_family_count": 265,
     "median_financial_loss": 97450,
     "median_burden_sample_size": 138,
     "median_months_lost": 16,
-    "pro_se_pct": 48.5,
+    "pro_se_pct": 48.3,
     "pro_se_count": 128,
-    "_pdf_state_family_count": 264,
+    "_pdf_state_family_count": 265,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5535,
+  "movement_total": 5559,
   "supabase": {
-    "report_count": 5,
-    "actor_report_count": 5,
-    "family_count": 5,
+    "report_count": 4,
+    "actor_report_count": 4,
+    "family_count": 4,
     "family_reports": [
-      {
-        "body": "Caused a lot of trauma.",
-        "state": "KS",
-        "county": "Johnson",
-        "row_id": "dfb6ae9b-f80f-43ee-9774-b0ac4cdd9c74"
-      },
       {
         "body": "The hardest lesson I learned in family court was that patterns do not disappear just because they are ignored. When abuse is treated as an isolated incident, evidence becomes negotiable, opinions become powerful, and accountability becomes optional. That is when I realized the abuse had not disappeared. It had simply found another face.",
         "state": "KS",
@@ -82,12 +75,6 @@
     "public_comments": [
       {
         "comment_text": "During her time representing me, she was also serving as a Guardian ad Litem (GAL) for other parents, and it became clear that she was overly familiar with others within the system. Furthermore, she failed to advocate for me, frequently accepting my ex-partner's claims without consulting or believing me. I fired her and I retained my former attorney, who has previously provided excellent representation.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Johnson"
-      },
-      {
-        "comment_text": "She lied and had my kids taken from me when I was staying at a hotel from a abusive relationship I got my apartment a few days later she treats people below her that receive state assistance she will think that's good enough reason to take your kids she's on 2 different cases of mine",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Johnson"
@@ -132,20 +119,12 @@
         "kind": "comment"
       },
       {
-        "body": "She lied and had my kids taken from me when I was staying at a hotel from a abusive…",
-        "kind": "comment"
-      },
-      {
         "body": "Didn’t seem to care about my case — relied on the GAL’s opinion.",
         "kind": "comment"
       },
       {
         "body": "It has taken my life.",
         "kind": "comment"
-      },
-      {
-        "body": "Caused a lot of trauma.",
-        "kind": "family_report"
       },
       {
         "body": "They are ignored.",
