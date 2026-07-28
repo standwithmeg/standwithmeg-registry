@@ -1,0 +1,124 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "steven_richard_dembo",
+    "display_name": "Steven Richard Dembo",
+    "title": "",
+    "first_name": "Steven Richard",
+    "last_name": "Dembo",
+    "role": "Judge",
+    "court": "Hartford",
+    "county": "Hartford",
+    "court_or_county": "Hartford",
+    "state": "CT",
+    "state_abbr": "CT",
+    "mention_count": 3,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "e22dc865-9bed-4934-9b89-243136d0dc16",
+      "a7cd798e-ec29-483e-831a-ccf7fbdafc68",
+      "1f74f7ff-d4dd-4972-a8ba-d77ce0fbee06"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "steven richard dembo|CT"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 48,
+    "total_submissions": 67,
+    "avg_financial_loss": 389100.47,
+    "avg_months_lost": 31.2,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "CT",
+    "state_family_count": 67,
+    "median_financial_loss": 215000,
+    "median_burden_sample_size": 39,
+    "median_months_lost": 20,
+    "pro_se_pct": 68.7,
+    "pro_se_count": 46,
+    "_pdf_state_family_count": 67,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5566,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 3,
+    "family_reports": [
+      {
+        "body": "The family court system does not truly care about what is in the best interest of the child, despite constantly claiming that it does. Instead, I watched prolonged litigation, power imbalances, and financial incentives take priority over preserving the parent-child relationship. You are welcome to reach out to me if you have any follow up questions. I can also give you my real name. I have to be careful like many of us out there.",
+        "state": "CT",
+        "county": "Fairfield County",
+        "row_id": "3f314db3-1efe-4e1a-b233-274e026b87f6"
+      },
+      {
+        "body": "Broken me emotionally, financially, physically and caused similar trauma to my children and fear of the systems including police and courts that are supposed to protect us for all involved.",
+        "state": "CT",
+        "county": "Hartford",
+        "row_id": "1b30a159-91c3-42d2-a41f-86324439fc82"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Judge Stephen Dembo has presided over my case during an extremely difficult and prolonged period of litigation. In my experience, the proceedings under his courtroom have often felt highly procedural and rigid, with insufficient consideration given to the practical and emotional realities affecting my relationship with my daughter and the broader family dynamics involved. I have struggled with what I perceive to be a system that prioritizes technical procedure and ongoing litigation over meaningful resolution and restoration of the parent-child relationship. At times, I felt that the court process lacked flexibility and failed to adequately account for the cumulative impact that years of restrictions, delays, conflict, and litigation have had on both me and my child. As a result, I have experienced the family court process as emotionally exhausting, financially devastating, and increasingly disconnected from what I believe would genuinely serve the long-term best interests of my daughter and our relationship.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Bridgeport CT"
+      },
+      {
+        "comment_text": "Now a family court judge in Connecticut. Previous work with opposing counsel. colluded with opposing counsel and negotiated a deal which wasn't in my family's interest. When I wanted to change the terms before signing it he fired me and told me to get another attorney.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Hartford"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/steven_richard_dembo",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='CT'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ct/steven_richard_dembo/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Judge Stephen Dembo has presided over my case during an extremely difficult and prolonged period of litigation.",
+        "kind": "comment"
+      },
+      {
+        "body": "When I wanted to change the terms before signing it he fired me and told me to get another attorney.",
+        "kind": "comment"
+      },
+      {
+        "body": "You are welcome to reach out to me if you have any follow up questions. I can also give you my real name.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Broken me emotionally, financially, physically and caused similar trauma to my children and fear of the…",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

@@ -34,27 +34,27 @@
     "actor_bucket_key": "ronald kowalski|CT"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-90yxu6ix/New Final Post and Capcut template/export/ronald_kowalski/image_1080.png",
+    "path": "/tmp/swm-share-pages-bfi9w2s2/New Final Post and Capcut template/export/ronald_kowalski/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 48,
     "total_submissions": 67,
-    "avg_financial_loss": 387928.59,
-    "avg_months_lost": 31.8,
+    "avg_financial_loss": 389100.47,
+    "avg_months_lost": 31.2,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CT",
     "state_family_count": 67,
     "median_financial_loss": 215000,
     "median_burden_sample_size": 39,
-    "median_months_lost": 22,
+    "median_months_lost": 20,
     "pro_se_pct": 68.7,
     "pro_se_count": 46,
     "_pdf_state_family_count": 67,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5516,
+  "movement_total": 5566,
   "supabase": {
     "report_count": 11,
     "actor_report_count": 11,

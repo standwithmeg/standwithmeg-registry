@@ -1,0 +1,104 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "brenda_copp",
+    "display_name": "Brenda Copp",
+    "title": "",
+    "first_name": "Brenda",
+    "last_name": "Copp",
+    "role": "Therapist / Counselor",
+    "court": "Johnson",
+    "county": "Johnson",
+    "court_or_county": "Johnson",
+    "state": "KS",
+    "state_abbr": "KS",
+    "mention_count": 3,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "ef637b6c-56ef-41d7-a789-e84de125a3f1",
+      "2d8951f0-052a-42aa-aaa6-192e5ff4e108",
+      "00c20249-e718-4b6a-8939-fcd9529d93d3"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "brenda copp|KS"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 185,
+    "total_submissions": 265,
+    "avg_financial_loss": 113686.81,
+    "avg_months_lost": 29.7,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "KS",
+    "state_family_count": 265,
+    "median_financial_loss": 97450,
+    "median_burden_sample_size": 138,
+    "median_months_lost": 16,
+    "pro_se_pct": 48.3,
+    "pro_se_count": 128,
+    "_pdf_state_family_count": 265,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5566,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 3,
+    "family_reports": [
+      {
+        "body": "Destroyed my son mentally and emotionally, rubbed him of a childhood. I'm on 4 different anxiety meds, heart failure, autistic immune disease, debilitating depression. I trust no one, don't sleep, we both live in constant fear and anxiety",
+        "state": "KS",
+        "county": "Johnson",
+        "row_id": "f854100f-093b-4e4c-a1ed-df0e0a02ccd1"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "This woman is dangerous and needs her license STRIPPED FROM HER!!! False reports, fraud, unethical, unprofessional, biased and caused more damage for my child than not. Absolutely evil",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Johnson"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/brenda_copp",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='KS'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ks/brenda_copp/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "This woman is dangerous and needs her license STRIPPED FROM HER!!! False reports, fraud, unethical, unprofessional, biased and caused more damage for my child than not.",
+        "kind": "comment"
+      },
+      {
+        "body": "Destroyed my son mentally and emotionally, rubbed him of a childhood. I'm on 4 different anxiety meds, heart failure, autistic immune disease, debilitating depression. I trust no one, don't sleep, we both live in constant fear and anxiety",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

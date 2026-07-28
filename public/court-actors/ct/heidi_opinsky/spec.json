@@ -12,13 +12,14 @@
     "court_or_county": "Fairfield County",
     "state": "Connecticut",
     "state_abbr": "CT",
-    "mention_count": 5,
-    "family_count": 5,
-    "public_family_count": 5,
+    "mention_count": 6,
+    "family_count": 6,
+    "public_family_count": 6,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 5,
+    "actor_report_count": 6,
     "supabase_row_ids": [
       "fda4dd96-a524-49b9-8e47-bb5182c4994f",
+      "41178f66-7224-41b7-8cec-fa9272d4acf6",
       "242522eb-8d5d-43d0-9aa7-b58ab14b3ad5",
       "7ebd68fd-ddca-4388-967e-f8bbda723200",
       "6ae012de-5573-4ae3-a392-0dcdb6be745f",
@@ -28,31 +29,31 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-90yxu6ix/New Final Post and Capcut template/export/heidi_opinsky/image_1080.png",
+    "path": "/tmp/swm-share-pages-bfi9w2s2/New Final Post and Capcut template/export/heidi_opinsky/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 48,
     "total_submissions": 67,
-    "avg_financial_loss": 387928.59,
-    "avg_months_lost": 31.8,
+    "avg_financial_loss": 389100.47,
+    "avg_months_lost": 31.2,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CT",
     "state_family_count": 67,
     "median_financial_loss": 215000,
     "median_burden_sample_size": 39,
-    "median_months_lost": 22,
+    "median_months_lost": 20,
     "pro_se_pct": 68.7,
     "pro_se_count": 46,
     "_pdf_state_family_count": 67,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5516,
+  "movement_total": 5566,
   "supabase": {
-    "report_count": 5,
-    "actor_report_count": 5,
-    "family_count": 5,
+    "report_count": 6,
+    "actor_report_count": 6,
+    "family_count": 6,
     "family_reports": [
       {
         "body": "The Family Court allowed all my assets to be lost without any concern to the financial and emotional damage done to myself and my child.",
