@@ -1,8 +1,8 @@
 {
   "_comment": "Capped (<=5M/submission) total reported loss from the movement_stats_by_state view. Auto-refreshed by scripts/pdf/sync_state_financials.py in the hourly regen workflow. Consumed by lib/static-public-report-fallback.ts so the public report's loss card shows a real figure even when live Supabase is briefly unreachable.",
-  "generated_at": "2026-07-28T10:29:51.008725+00:00",
+  "generated_at": "2026-07-29T10:37:44.547190+00:00",
   "source": "movement_stats_by_state",
-  "total_financial_loss": 970355683,
+  "total_financial_loss": 970484313,
   "by_state": {
     "CA": 114405739,
     "TX": 69197923,
@@ -14,9 +14,9 @@
     "MI": 30504710,
     "IL": 30474005,
     "SC": 28770853,
-    "OH": 28045868,
+    "OH": 28090368,
     "NJ": 27790980,
-    "KS": 27512209,
+    "KS": 27517339,
     "CO": 25158809,
     "CT": 24902430,
     "MA": 22644522,
@@ -33,10 +33,10 @@
     "TN": 11910720,
     "IA": 11036096,
     "OR": 10968515,
-    "Australia": 10623350,
+    "Australia": 10675350,
     "AL": 10004222,
+    "WI": 9529259,
     "MN": 9508426,
-    "WI": 9502259,
     "LA": 9235422,
     "MT": 8991875,
     "MD": 8353099,
@@ -74,6 +74,7 @@
     "India": 0,
     "Indonesia": 0,
     "International (location unspecified)": 0,
+    "Kenya": 0,
     "MP": 0,
     "Northern ireland": 0
   }

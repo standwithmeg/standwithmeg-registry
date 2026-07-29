@@ -35,27 +35,27 @@
     "actor_bucket_key": "aime thomas|OH"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-xhlj74no/New Final Post and Capcut template/export/aimee_thomas/image_1080.png",
+    "path": "/tmp/swm-share-pages-ah_x79ti/New Final Post and Capcut template/export/aimee_thomas/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 206,
-    "total_submissions": 283,
-    "avg_financial_loss": 109127.89,
+    "total_submissions": 284,
+    "avg_financial_loss": 108877.4,
     "avg_months_lost": 34.2,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OH",
-    "state_family_count": 283,
-    "median_financial_loss": 80000,
-    "median_burden_sample_size": 141,
+    "state_family_count": 284,
+    "median_financial_loss": 79750,
+    "median_burden_sample_size": 142,
     "median_months_lost": 20,
-    "pro_se_pct": 53.7,
+    "pro_se_pct": 53.5,
     "pro_se_count": 152,
-    "_pdf_state_family_count": 283,
+    "_pdf_state_family_count": 284,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5524,
+  "movement_total": 5577,
   "supabase": {
     "report_count": 12,
     "actor_report_count": 12,

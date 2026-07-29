@@ -26,27 +26,27 @@
     "actor_bucket_key": "magie kuhl|WV"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-90yxu6ix/New Final Post and Capcut template/export/maggie_kuhl/image_1080.png",
+    "path": "/tmp/swm-share-pages-ah_x79ti/New Final Post and Capcut template/export/maggie_kuhl/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 50,
-    "total_submissions": 58,
-    "avg_financial_loss": 109700.04,
-    "avg_months_lost": 38.7,
+    "total_submissions": 59,
+    "avg_financial_loss": 107705.49,
+    "avg_months_lost": 38.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "WV",
-    "state_family_count": 58,
+    "state_family_count": 59,
     "median_financial_loss": 110880,
     "median_burden_sample_size": 16,
-    "median_months_lost": 27,
-    "pro_se_pct": 50.0,
+    "median_months_lost": 25,
+    "pro_se_pct": 49.2,
     "pro_se_count": 29,
-    "_pdf_state_family_count": 58,
+    "_pdf_state_family_count": 59,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5516,
+  "movement_total": 5577,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,

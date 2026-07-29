@@ -2,24 +2,27 @@
   "schema_version": 2,
   "actor": {
     "slug": "niesha_miser",
-    "display_name": "Niesha Miser",
+    "display_name": "Neisha Mizer",
     "title": "",
-    "first_name": "Niesha",
-    "last_name": "Miser",
+    "first_name": "Neisha",
+    "last_name": "Mizer",
     "role": "Therapist / Counselor",
     "court": "Johnson County",
     "county": "Johnson county",
-    "court_or_county": "Johnson County",
+    "court_or_county": "Johnson county",
     "state": "KS",
     "state_abbr": "KS",
-    "mention_count": 2,
+    "mention_count": 5,
     "family_count": 5,
     "public_family_count": 5,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 2,
+    "actor_report_count": 5,
     "supabase_row_ids": [
+      "aa6cd0e4-4c5d-45f1-8a3e-4d2be3939d38",
       "71a40b33-2968-4090-a92b-c2b401c8dc4c",
-      "732cdb5c-54a9-4100-8fcc-0f8068d6329a"
+      "732cdb5c-54a9-4100-8fcc-0f8068d6329a",
+      "c5f88050-d056-4ae9-ad0d-6e64762e32a3",
+      "2a057450-1110-48ee-b0fb-52826f83bea8"
     ],
     "actor_row_id": null,
     "actor_bucket_key": "niesha miser|KS"
@@ -31,24 +34,24 @@
   },
   "state_stats": {
     "families_approved": 185,
-    "total_submissions": 265,
-    "avg_financial_loss": 113686.81,
-    "avg_months_lost": 29.7,
+    "total_submissions": 266,
+    "avg_financial_loss": 113240.08,
+    "avg_months_lost": 29.6,
     "_source_table": "movement_stats_by_state",
     "_match_value": "KS",
-    "state_family_count": 265,
-    "median_financial_loss": 97450,
-    "median_burden_sample_size": 138,
+    "state_family_count": 266,
+    "median_financial_loss": 96100,
+    "median_burden_sample_size": 139,
     "median_months_lost": 16,
-    "pro_se_pct": 48.3,
-    "pro_se_count": 128,
-    "_pdf_state_family_count": 265,
+    "pro_se_pct": 48.5,
+    "pro_se_count": 129,
+    "_pdf_state_family_count": 266,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5566,
+  "movement_total": 5577,
   "supabase": {
-    "report_count": 2,
-    "actor_report_count": 2,
+    "report_count": 5,
+    "actor_report_count": 5,
     "family_count": 5,
     "family_reports": [
       {
@@ -56,6 +59,12 @@
         "state": "KS",
         "county": "Johnson County",
         "row_id": "802aec89-e27c-40d9-a4cd-ecd901185e0a"
+      },
+      {
+        "body": "Destroyed my son mentally and emotionally, rubbed him of a childhood. I'm on 4 different anxiety meds, heart failure, autistic immune disease, debilitating depression. I trust no one, don't sleep, we both live in constant fear and anxiety",
+        "state": "KS",
+        "county": "Johnson",
+        "row_id": "f854100f-093b-4e4c-a1ed-df0e0a02ccd1"
       }
     ],
     "public_comments": [
@@ -95,15 +104,19 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "She believed mothers boohoo stories and did not believe the childrens accusations against mother, even though CINC court took children from mother.",
+        "body": "CINC court took children from mother.",
         "kind": "comment"
       },
       {
-        "body": "Actually told the court abuser was \"healed\" after only 3 visits. She's now locked in with a unethical court actor group that runs off Medicaid fraud",
+        "body": "Actually told the court abuser was \"healed\" after only 3 visits.",
         "kind": "comment"
       },
       {
         "body": "Johnson county courts are a closn court that caters to the dysfunctional pedophile parents.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Destroyed my son mentally and emotionally, rubbed him of a childhood.",
         "kind": "family_report"
       }
     ],
