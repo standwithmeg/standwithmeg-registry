@@ -1,0 +1,129 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "robert_louis_harrison_jr",
+    "display_name": "Robert Louis Harrison, Jr",
+    "title": "",
+    "first_name": "Robert Louis",
+    "last_name": "Harrison, Jr",
+    "role": "Judge",
+    "court": "Bedford",
+    "county": "Bedford",
+    "court_or_county": "Bedford",
+    "state": "VA",
+    "state_abbr": "VA",
+    "mention_count": 8,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 8,
+    "supabase_row_ids": [
+      "2a6b3359-54b4-4b41-8a1a-1f20669529ff",
+      "8571d980-5ba4-4357-8576-fb5a874979a7",
+      "82e15b5d-b152-4b42-ba97-992e1510643c",
+      "f52e0200-9f71-4d28-9d9a-2939608416e1",
+      "edb95e6c-ec41-43d5-8b93-60ad8fed81a2",
+      "985d29cb-700c-42e1-8903-2c7b64f9f9d4",
+      "8c58ff39-2cbc-4f20-9530-b9e1e44e5bc2",
+      "339b76ad-6c6a-4508-a40d-ae4be1f2e9c3"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "robert louis harison|VA"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 107,
+    "total_submissions": 142,
+    "avg_financial_loss": 175924.39,
+    "avg_months_lost": 31.3,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "VA",
+    "state_family_count": 142,
+    "median_financial_loss": 146000,
+    "median_burden_sample_size": 56,
+    "median_months_lost": 20,
+    "pro_se_pct": 64.1,
+    "pro_se_count": 91,
+    "_pdf_state_family_count": 142,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5590,
+  "supabase": {
+    "report_count": 8,
+    "actor_report_count": 8,
+    "family_count": 3,
+    "family_reports": [
+      {
+        "body": "In Bedford J&DR, fatherhood is a purchase, not a right. Mother’s statements are taken as fact and father is guilty until proven innocent. It’s clear the Bedford J&DR courts “best interest standard” is not about the child, but about the title IV D funding.",
+        "state": "VA",
+        "county": "Bedford",
+        "row_id": "0cec0dd1-dde7-4dda-b085-cf25081e4c05"
+      },
+      {
+        "body": "The court system's terrifying disregard for my family's safety has trapped us in a never-ending hell of harassment and fear. It has cost us absolutely everything, destroying a well-paying career and leaving us in debt and barely making it, but I will still spend every single breath fighting for my kids",
+        "state": "VA",
+        "county": "Bedford",
+        "row_id": "67641a10-aaea-48fd-a673-79c6b6bd55d7"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Decided the case before I stepped foot in the court room. Entertains all false allegations if they’re made by the mother in the case. Dad is guilty until proven innocent. Even the local attorneys call this fraud a squirrel and don’t know what to expect when they step into his court room. He doesn’t listen. Manipulates CS guideline calculations to maximize support obligations with zero evidence to support the claims. Suppressed evidence at the first trial. Didn’t provide clear order at the second. Mother’s interpretation of the written order provided her more time. After a motion to rehear, it became evident the judges intent was to increase my time, as 50/50 was granted but the judge has dismissed 3 motions to amend child support since then and manipulated numbers each time to dismiss as “insufficient” change. Guy was indicted on wire fraud charges prior to presiding over J&DR when he was an attorney for a grant related to a local but national memorial. Paid his way out of jail. No surprise he’s out to collect IV D funding if it means falsifying guideline calculations to do so.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Bedford"
+      },
+      {
+        "comment_text": "Was called a gatekeeping dumbass + charged with contempt for not giving my parenting time to my abuser (who harasses me daily for MY court ordered time with the kids). ZERO accountability for men. Judge Harrison engaged in conduct raising serious due process concerns, including hostile courtroom behavior, profanity toward mom, and repeated contempt proceedings based on allegations contradicted by documented evidence. Made disparaging remarks on the record and issued a contempt ruling over a custody time dispute, despite the time being explicitly granted to me under the standing court order.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Bedford"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/robert_louis_harrison_jr",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='VA'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/va/robert_louis_harrison_jr/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Dismissed 3 motions to amend child support since then",
+        "kind": "comment"
+      },
+      {
+        "body": "Made disparaging remarks on the record and issued a contempt ruling over a custody time dispute.",
+        "kind": "comment"
+      },
+      {
+        "body": "In Bedford J&DR, fatherhood is a purchase, not a right.",
+        "kind": "family_report"
+      },
+      {
+        "body": "I will still spend every single breath fighting for my kids",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

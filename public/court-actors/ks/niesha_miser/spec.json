@@ -34,21 +34,21 @@
   },
   "state_stats": {
     "families_approved": 185,
-    "total_submissions": 266,
-    "avg_financial_loss": 113240.08,
-    "avg_months_lost": 29.6,
+    "total_submissions": 267,
+    "avg_financial_loss": 112775.98,
+    "avg_months_lost": 31.1,
     "_source_table": "movement_stats_by_state",
     "_match_value": "KS",
-    "state_family_count": 266,
+    "state_family_count": 267,
     "median_financial_loss": 96100,
     "median_burden_sample_size": 139,
     "median_months_lost": 16,
-    "pro_se_pct": 48.5,
+    "pro_se_pct": 48.3,
     "pro_se_count": 129,
-    "_pdf_state_family_count": 266,
+    "_pdf_state_family_count": 267,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5577,
+  "movement_total": 5589,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -69,22 +69,21 @@
     ],
     "public_comments": [
       {
-        "comment_text": "She believed mothers boohoo stories and did not believe the childrens accusations against mother, even though CINC court took children from mother. She advocated for their mother not the children.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Johnson"
-      },
-      {
         "comment_text": "Actually told the court abuser was \"healed\" after only 3 visits. She's now locked in with a unethical court actor group that runs off Medicaid fraud",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Johnson county"
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "She believed mothers boohoo stories and did not believe the childrens accusations against mother, even though CINC court took children from mother. She advocated for their mother not the children.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/niesha_miser",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='KS'"
+    "public_family_count_api: no actors returned for state='KS'",
+    "pdf_public_actor: no 'Neisha Mizer' in cache for KS"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
@@ -104,11 +103,11 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "CINC court took children from mother.",
+        "body": "Actually told the court abuser was \"healed\" after only 3 visits.",
         "kind": "comment"
       },
       {
-        "body": "Actually told the court abuser was \"healed\" after only 3 visits.",
+        "body": "CINC court took children from mother.",
         "kind": "comment"
       },
       {

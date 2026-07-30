@@ -12,45 +12,44 @@
     "court_or_county": "Miami",
     "state": "KS",
     "state_abbr": "KS",
-    "mention_count": 4,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 4,
+    "actor_report_count": 3,
     "supabase_row_ids": [
       "d9f621e4-3da5-45a2-a059-20dc0c05a1b7",
       "8dd3106b-e8e9-44fb-b416-f3b380abc13f",
-      "2d840b6d-9a79-41d1-94f4-81291367d0e3",
-      "ea630d4f-a00e-48e6-aac5-20f9d10cb9e3"
+      "2d840b6d-9a79-41d1-94f4-81291367d0e3"
     ],
     "actor_row_id": null,
     "actor_bucket_key": "elizabeth sweney-reder|KS"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-ah_x79ti/New Final Post and Capcut template/export/elizabeth_sweeney_reeder/image_1080.png",
+    "path": "/tmp/swm-share-pages-25cypd1x/New Final Post and Capcut template/export/elizabeth_sweeney_reeder/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 185,
-    "total_submissions": 266,
-    "avg_financial_loss": 113240.08,
-    "avg_months_lost": 29.6,
+    "total_submissions": 267,
+    "avg_financial_loss": 112775.98,
+    "avg_months_lost": 31.1,
     "_source_table": "movement_stats_by_state",
     "_match_value": "KS",
-    "state_family_count": 266,
+    "state_family_count": 267,
     "median_financial_loss": 96100,
     "median_burden_sample_size": 139,
     "median_months_lost": 16,
-    "pro_se_pct": 48.5,
+    "pro_se_pct": 48.3,
     "pro_se_count": 129,
-    "_pdf_state_family_count": 266,
+    "_pdf_state_family_count": 267,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5577,
+  "movement_total": 5589,
   "supabase": {
-    "report_count": 4,
-    "actor_report_count": 4,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
     "family_reports": [
       {

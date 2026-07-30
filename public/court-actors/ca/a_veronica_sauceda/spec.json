@@ -1,0 +1,144 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "a_veronica_sauceda",
+    "display_name": "A. Beronica Sauceda",
+    "title": "",
+    "first_name": "A. Beronica",
+    "last_name": "Sauceda",
+    "role": "Judge",
+    "court": "Whittier",
+    "county": "Los Angeles",
+    "court_or_county": "Whittier",
+    "state": "CA",
+    "state_abbr": "CA",
+    "mention_count": 3,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "d5ceb605-ce26-4cba-90eb-fb5ef89c6f78",
+      "c4f07140-9f4a-4ed6-b551-c61b9d9a762e",
+      "d7c8816d-510f-4f22-9a2b-56255e17d113"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "a veronica sauceda|CA"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 359,
+    "total_submissions": 456,
+    "avg_financial_loss": 279038.39,
+    "avg_months_lost": 35.2,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "CA",
+    "state_family_count": 456,
+    "median_financial_loss": 269850,
+    "median_burden_sample_size": 200,
+    "median_months_lost": 20,
+    "pro_se_pct": 58.6,
+    "pro_se_count": 267,
+    "_pdf_state_family_count": 456,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5590,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 3,
+    "family_reports": [
+      {
+        "body": "This judge stole my kids and didn’t care.",
+        "state": "CA",
+        "county": "Los Angeles",
+        "row_id": "6881c582-e31f-4b9b-a81a-f2de6fc66653"
+      },
+      {
+        "body": "The judge's orders has cost me several years without being able to see my son in person. Time that we'll never get back. I can't help but wonder how this has changed both my son's personality and mine and how he must be hurting because his mom isn't there for him everyday. This has caused so much pain and irreversible damage.",
+        "state": "CA",
+        "county": "Whittier Family Court, LA County CA",
+        "row_id": "31d80d90-d5f3-4261-a4e7-92a93843c19b"
+      },
+      {
+        "body": "The court has stolen my kids childhood from me. Have prolonged each and every court hearing.",
+        "state": "CA",
+        "county": "Los Angeles",
+        "row_id": "5e36cc26-903a-4c70-aa08-ba97c39c0739"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "This judge is bias and works with the lawyer s in that court house, my brother asked my lawyer do you guys all get together at the bar after work to see who you can screw over? She said I'm to busy for that. So it does happen. Sauceda never took any of my evidences or any of my information. She had her mind set up and went with it. I",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Los Angeles"
+      },
+      {
+        "comment_text": "Ignored evidence, biased.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Saucedo"
+      },
+      {
+        "comment_text": "She refuses testamony",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Whittier"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/a_veronica_sauceda",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='CA'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ca/a_veronica_sauceda/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Sauceda never took any of my evidences or any of my information.",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored evidence, biased.",
+        "kind": "comment"
+      },
+      {
+        "body": "She refuses testamony",
+        "kind": "comment"
+      },
+      {
+        "body": "This judge stole my kids and didn’t care.",
+        "kind": "family_report"
+      },
+      {
+        "body": "I can't help.",
+        "kind": "family_report"
+      },
+      {
+        "body": "The court has stolen my kids childhood from me.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

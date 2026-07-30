@@ -27,27 +27,27 @@
     "actor_bucket_key": "mindy zimerman|SC"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-df51p8yo/New Final Post and Capcut template/export/mindy_zimmerman/image_1080.png",
+    "path": "/tmp/swm-share-pages-25cypd1x/New Final Post and Capcut template/export/mindy_zimmerman/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 85,
-    "total_submissions": 110,
-    "avg_financial_loss": 276642.82,
-    "avg_months_lost": 25.8,
+    "total_submissions": 111,
+    "avg_financial_loss": 274065.27,
+    "avg_months_lost": 25.5,
     "_source_table": "movement_stats_by_state",
     "_match_value": "SC",
-    "state_family_count": 110,
+    "state_family_count": 111,
     "median_financial_loss": 120500,
     "median_burden_sample_size": 70,
     "median_months_lost": 18,
-    "pro_se_pct": 55.5,
-    "pro_se_count": 61,
-    "_pdf_state_family_count": 110,
+    "pro_se_pct": 55.9,
+    "pro_se_count": 62,
+    "_pdf_state_family_count": 111,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5547,
+  "movement_total": 5590,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,

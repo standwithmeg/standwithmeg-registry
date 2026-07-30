@@ -28,27 +28,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-df51p8yo/New Final Post and Capcut template/export/jeffrey_bagley/image_1080.png",
+    "path": "/tmp/swm-share-pages-25cypd1x/New Final Post and Capcut template/export/jeffrey_bagley/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 124,
-    "total_submissions": 158,
-    "avg_financial_loss": 209505.56,
-    "avg_months_lost": 31.9,
+    "total_submissions": 159,
+    "avg_financial_loss": 208155.52,
+    "avg_months_lost": 31.7,
     "_source_table": "movement_stats_by_state",
     "_match_value": "GA",
-    "state_family_count": 158,
+    "state_family_count": 159,
     "median_financial_loss": 146500,
     "median_burden_sample_size": 86,
-    "median_months_lost": 19,
-    "pro_se_pct": 42.4,
+    "median_months_lost": 18,
+    "pro_se_pct": 42.1,
     "pro_se_count": 67,
-    "_pdf_state_family_count": 158,
+    "_pdf_state_family_count": 159,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5547,
+  "movement_total": 5589,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
