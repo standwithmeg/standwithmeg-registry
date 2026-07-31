@@ -28,27 +28,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-25cypd1x/New Final Post and Capcut template/export/reyna_wilkens/image_1080.png",
+    "path": "/tmp/swm-share-pages-o043uqjb/New Final Post and Capcut template/export/reyna_wilkens/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 74,
-    "total_submissions": 99,
-    "avg_financial_loss": 124001.08,
-    "avg_months_lost": 39.4,
+    "total_submissions": 100,
+    "avg_financial_loss": 122623.29,
+    "avg_months_lost": 39.1,
     "_source_table": "movement_stats_by_state",
     "_match_value": "IA",
-    "state_family_count": 99,
+    "state_family_count": 100,
     "median_financial_loss": 213750,
     "median_burden_sample_size": 26,
-    "median_months_lost": 22,
-    "pro_se_pct": 50.5,
+    "median_months_lost": 21,
+    "pro_se_pct": 50.0,
     "pro_se_count": 50,
-    "_pdf_state_family_count": 99,
+    "_pdf_state_family_count": 100,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5589,
+  "movement_total": 5598,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,

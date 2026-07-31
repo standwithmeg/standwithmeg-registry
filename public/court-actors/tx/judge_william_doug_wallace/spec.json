@@ -27,27 +27,27 @@
     "actor_bucket_key": "wiliam doug walace|TX"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-bfi9w2s2/New Final Post and Capcut template/export/judge_william_doug_wallace/image_1080.png",
+    "path": "/tmp/swm-share-pages-o043uqjb/New Final Post and Capcut template/export/judge_william_doug_wallace/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 250,
-    "total_submissions": 326,
-    "avg_financial_loss": 236170.39,
+    "total_submissions": 327,
+    "avg_financial_loss": 236472.53,
     "avg_months_lost": 31.3,
     "_source_table": "movement_stats_by_state",
     "_match_value": "TX",
-    "state_family_count": 326,
+    "state_family_count": 327,
     "median_financial_loss": 118900,
     "median_burden_sample_size": 155,
     "median_months_lost": 18,
-    "pro_se_pct": 50.0,
+    "pro_se_pct": 49.8,
     "pro_se_count": 163,
-    "_pdf_state_family_count": 326,
+    "_pdf_state_family_count": 327,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5566,
+  "movement_total": 5598,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,

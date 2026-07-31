@@ -12,13 +12,16 @@
     "court_or_county": "Calhoun",
     "state": "MI",
     "state_abbr": "MI",
-    "mention_count": 1,
+    "mention_count": 4,
     "family_count": 3,
     "public_family_count": 3,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 1,
+    "actor_report_count": 4,
     "supabase_row_ids": [
-      "2fd21470-0439-4bd5-a006-c787e430d702"
+      "2fd21470-0439-4bd5-a006-c787e430d702",
+      "5ae2043d-2764-4598-b871-f76f68662a34",
+      "9ccef2a5-5db6-4291-a17a-1093310ccda1",
+      "9f829ed5-6ce8-442a-8fc6-1635925cb690"
     ],
     "actor_row_id": null,
     "actor_bucket_key": "marc croteau|MI"
@@ -29,25 +32,25 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 146,
-    "total_submissions": 180,
-    "avg_financial_loss": 181063.75,
+    "families_approved": 145,
+    "total_submissions": 181,
+    "avg_financial_loss": 180501.24,
     "avg_months_lost": 36.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "MI",
-    "state_family_count": 180,
+    "state_family_count": 181,
     "median_financial_loss": 101500,
     "median_burden_sample_size": 79,
     "median_months_lost": 16,
-    "pro_se_pct": 44.4,
-    "pro_se_count": 80,
-    "_pdf_state_family_count": 180,
+    "pro_se_pct": 44.8,
+    "pro_se_count": 81,
+    "_pdf_state_family_count": 181,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5516,
+  "movement_total": 5598,
   "supabase": {
-    "report_count": 1,
-    "actor_report_count": 1,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 3,
     "family_reports": [
       {
@@ -55,6 +58,18 @@
         "state": "MI",
         "county": "Calhoun",
         "row_id": "c49f51da-f66b-46d1-b2d6-0972aa832855"
+      },
+      {
+        "body": "Me and my son’s relationship is destroyed. My son is currently failing to launch at life failing school and missing school on drugs drinking at 14 and the court system is doing nothing about it.",
+        "state": "MI",
+        "county": "Calhoun",
+        "row_id": "a1ba6d15-d389-4141-9aba-678e31e6cd14"
+      },
+      {
+        "body": "This almost killed me AND my child! I’ve lost trust and respect for the people involved in making and allowing this to happen to us, and allowing it to go on so long!",
+        "state": "MI",
+        "county": "Calhoun",
+        "row_id": "fdd68992-e0b0-4b1d-a247-3b6281c81919"
       }
     ],
     "public_comments": [
@@ -94,15 +109,23 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "He also took two cases at the same time, which was my girlfriend‘s case in my case a custody he didn’t recuse himself from one.",
+        "body": "He used my girlfriend‘s to coincide with my case.",
         "kind": "comment"
       },
       {
-        "body": "Ignored evidence, wrote my court order based on hearsay, labeling my partner a alcoholic with domestic violence tendencies.",
+        "body": "We had his counselor testify on his sobriety.",
         "kind": "comment"
       },
       {
         "body": "FOC has suppressed the relationship with my son with no care about his heart in the future.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Me and my son’s relationship is destroyed.",
+        "kind": "family_report"
+      },
+      {
+        "body": "This almost killed me AND my child!",
         "kind": "family_report"
       }
     ],

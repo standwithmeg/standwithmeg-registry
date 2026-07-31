@@ -46,7 +46,7 @@
     "_pdf_state_family_count": 456,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5590,
+  "movement_total": 5598,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -73,28 +73,26 @@
     ],
     "public_comments": [
       {
+        "comment_text": "She refuses testamony",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
         "comment_text": "This judge is bias and works with the lawyer s in that court house, my brother asked my lawyer do you guys all get together at the bar after work to see who you can screw over? She said I'm to busy for that. So it does happen. Sauceda never took any of my evidences or any of my information. She had her mind set up and went with it. I",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Los Angeles"
+        "source": "court_actors.notes"
       },
       {
         "comment_text": "Ignored evidence, biased.",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Saucedo"
-      },
-      {
-        "comment_text": "She refuses testamony",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Whittier"
+        "source": "court_actors.notes"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/a_veronica_sauceda",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='CA'"
+    "public_family_count_api: no actors returned for state='CA'",
+    "pdf_public_actor: no 'A. Beronica Sauceda' in cache for CA"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
@@ -114,15 +112,15 @@
   "render": {
     "selected_quotes": [
       {
+        "body": "She refuses testamony",
+        "kind": "comment"
+      },
+      {
         "body": "Sauceda never took any of my evidences or any of my information.",
         "kind": "comment"
       },
       {
         "body": "Ignored evidence, biased.",
-        "kind": "comment"
-      },
-      {
-        "body": "She refuses testamony",
         "kind": "comment"
       },
       {
