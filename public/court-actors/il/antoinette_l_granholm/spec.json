@@ -34,22 +34,22 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 113,
+    "families_approved": 111,
     "total_submissions": 155,
-    "avg_financial_loss": 214605.67,
-    "avg_months_lost": 27.5,
+    "avg_financial_loss": 214652.64,
+    "avg_months_lost": 28.2,
     "_source_table": "movement_stats_by_state",
     "_match_value": "IL",
     "state_family_count": 155,
-    "median_financial_loss": 126750,
-    "median_burden_sample_size": 93,
+    "median_financial_loss": 123625,
+    "median_burden_sample_size": 94,
     "median_months_lost": 15,
     "pro_se_pct": 47.7,
     "pro_se_count": 74,
     "_pdf_state_family_count": 155,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5547,
+  "movement_total": 5608,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,

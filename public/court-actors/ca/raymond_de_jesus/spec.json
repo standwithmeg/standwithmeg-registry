@@ -2,21 +2,21 @@
   "schema_version": 2,
   "actor": {
     "slug": "raymond_de_jesus",
-    "display_name": "Raymond De Jesus",
+    "display_name": "Raymonn / Raymond DeJesus",
     "title": "",
-    "first_name": "Raymond",
-    "last_name": "De Jesus",
+    "first_name": "Raymonn / Raymond",
+    "last_name": "DeJesus",
     "role": "Judge",
     "court": "Placer",
     "county": "Placer",
     "court_or_county": "Placer",
     "state": "California",
     "state_abbr": "CA",
-    "mention_count": 8,
-    "family_count": 6,
-    "public_family_count": 6,
+    "mention_count": 9,
+    "family_count": 7,
+    "public_family_count": 7,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 8,
+    "actor_report_count": 9,
     "supabase_row_ids": [
       "3ea1da9a-953f-4820-8b6e-af3904362958",
       "4e3f1229-03b8-456b-b761-321fb4754011",
@@ -24,6 +24,7 @@
       "6bae9e4e-084b-48e4-94f4-77ef3ef9e378",
       "a4d72528-62f9-4bb5-8d3b-355206361fff",
       "66b72eeb-d0a5-454e-8702-864efd95fed9",
+      "3d1fba24-f29e-4b06-a2d6-3d2d792c9198",
       "ea3dfe79-be4b-4c24-8973-fdb0c434ce64",
       "41f66154-0e33-4643-8f5d-4afda23c9b4e"
     ],
@@ -31,32 +32,38 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-bfi9w2s2/New Final Post and Capcut template/export/raymond_de_jesus/image_1080.png",
+    "path": "/tmp/swm-share-pages-l36igkjn/New Final Post and Capcut template/export/raymond_de_jesus/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 359,
-    "total_submissions": 456,
-    "avg_financial_loss": 279038.39,
-    "avg_months_lost": 35.2,
+    "total_submissions": 458,
+    "avg_financial_loss": 282234.8,
+    "avg_months_lost": 35.1,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CA",
-    "state_family_count": 456,
-    "median_financial_loss": 269850,
-    "median_burden_sample_size": 200,
+    "state_family_count": 458,
+    "median_financial_loss": 270500,
+    "median_burden_sample_size": 201,
     "median_months_lost": 20,
-    "pro_se_pct": 58.6,
-    "pro_se_count": 267,
-    "_pdf_state_family_count": 456,
+    "pro_se_pct": 58.7,
+    "pro_se_count": 269,
+    "_pdf_state_family_count": 458,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5566,
+  "movement_total": 5608,
   "supabase": {
-    "report_count": 8,
-    "actor_report_count": 8,
-    "family_count": 6,
+    "report_count": 9,
+    "actor_report_count": 9,
+    "family_count": 7,
     "family_reports": [
+      {
+        "body": "After disputed allegations I denied on the record, Placer County Family Court issued a five-year restraining order and custody restrictions that left me with only supervised video calls. My concern is that major decisions were made through a process with serious record and due-process questions, including disputed child testimony, unclear evidence rulings, Family Code 3044 findings, and a trial day with no court reporter.",
+        "state": "CA",
+        "county": "Placer County",
+        "row_id": "1ccda0e4-e795-44b0-9cba-10d36a247076"
+      },
       {
         "body": "This is a continuation of my first filed testimony.",
         "state": "CA",
@@ -161,6 +168,10 @@
       {
         "body": "Ignored evidence of abuse and domestic violence",
         "kind": "comment"
+      },
+      {
+        "body": "After disputed allegations I denied on the record, Placer County Family Court…",
+        "kind": "family_report"
       },
       {
         "body": "This is a continuation of my first filed testimony.",

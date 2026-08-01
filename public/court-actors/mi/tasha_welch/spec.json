@@ -28,27 +28,27 @@
     "actor_bucket_key": "tasha welch|MI"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-o043uqjb/New Final Post and Capcut template/export/tasha_welch/image_1080.png",
+    "path": "/tmp/swm-share-pages-l36igkjn/New Final Post and Capcut template/export/tasha_welch/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 145,
-    "total_submissions": 181,
-    "avg_financial_loss": 180501.24,
+    "total_submissions": 182,
+    "avg_financial_loss": 179439.47,
     "avg_months_lost": 36.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "MI",
-    "state_family_count": 181,
+    "state_family_count": 182,
     "median_financial_loss": 101500,
     "median_burden_sample_size": 79,
     "median_months_lost": 16,
-    "pro_se_pct": 44.8,
+    "pro_se_pct": 44.5,
     "pro_se_count": 81,
-    "_pdf_state_family_count": 181,
+    "_pdf_state_family_count": 182,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5598,
+  "movement_total": 5608,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,

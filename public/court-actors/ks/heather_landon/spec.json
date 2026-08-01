@@ -30,27 +30,27 @@
     "actor_bucket_key": "heather landon|KS"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-25cypd1x/New Final Post and Capcut template/export/heather_landon/image_1080.png",
+    "path": "/tmp/swm-share-pages-l36igkjn/New Final Post and Capcut template/export/heather_landon/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 185,
-    "total_submissions": 267,
-    "avg_financial_loss": 112775.98,
-    "avg_months_lost": 31.1,
+    "families_approved": 184,
+    "total_submissions": 269,
+    "avg_financial_loss": 112006.66,
+    "avg_months_lost": 31.2,
     "_source_table": "movement_stats_by_state",
     "_match_value": "KS",
-    "state_family_count": 267,
-    "median_financial_loss": 96100,
+    "state_family_count": 269,
+    "median_financial_loss": 98800,
     "median_burden_sample_size": 139,
     "median_months_lost": 16,
     "pro_se_pct": 48.3,
-    "pro_se_count": 129,
-    "_pdf_state_family_count": 267,
+    "pro_se_count": 130,
+    "_pdf_state_family_count": 269,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5589,
+  "movement_total": 5608,
   "supabase": {
     "report_count": 7,
     "actor_report_count": 7,
