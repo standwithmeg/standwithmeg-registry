@@ -9,7 +9,7 @@
     "role": "Judge",
     "court": "Placer",
     "county": "Placer",
-    "court_or_county": "Placer",
+    "court_or_county": "Placer County Superior Court",
     "state": "California",
     "state_abbr": "CA",
     "mention_count": 9,
@@ -18,21 +18,21 @@
     "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 9,
     "supabase_row_ids": [
+      "3d1fba24-f29e-4b06-a2d6-3d2d792c9198",
+      "ea3dfe79-be4b-4c24-8973-fdb0c434ce64",
       "3ea1da9a-953f-4820-8b6e-af3904362958",
+      "41f66154-0e33-4643-8f5d-4afda23c9b4e",
       "4e3f1229-03b8-456b-b761-321fb4754011",
       "2fcccd40-ac73-48af-ab9c-5fab6021363d",
       "6bae9e4e-084b-48e4-94f4-77ef3ef9e378",
       "a4d72528-62f9-4bb5-8d3b-355206361fff",
-      "66b72eeb-d0a5-454e-8702-864efd95fed9",
-      "3d1fba24-f29e-4b06-a2d6-3d2d792c9198",
-      "ea3dfe79-be4b-4c24-8973-fdb0c434ce64",
-      "41f66154-0e33-4643-8f5d-4afda23c9b4e"
+      "66b72eeb-d0a5-454e-8702-864efd95fed9"
     ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-l36igkjn/New Final Post and Capcut template/export/raymond_de_jesus/image_1080.png",
+    "path": "/tmp/swm-share-pages-cjdg4ct3/New Final Post and Capcut template/export/raymond_de_jesus/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -52,7 +52,7 @@
     "_pdf_state_family_count": 458,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5608,
+  "movement_total": 5617,
   "supabase": {
     "report_count": 9,
     "actor_report_count": 9,

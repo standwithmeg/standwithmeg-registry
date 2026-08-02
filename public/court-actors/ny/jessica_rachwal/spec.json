@@ -34,22 +34,22 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 136,
+    "families_approved": 135,
     "total_submissions": 177,
-    "avg_financial_loss": 204742.5,
-    "avg_months_lost": 27.3,
+    "avg_financial_loss": 204873.39,
+    "avg_months_lost": 27.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "NY",
     "state_family_count": 177,
     "median_financial_loss": 170000,
     "median_burden_sample_size": 68,
     "median_months_lost": 14,
-    "pro_se_pct": 39.0,
-    "pro_se_count": 69,
+    "pro_se_pct": 39.5,
+    "pro_se_count": 70,
     "_pdf_state_family_count": 177,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5577,
+  "movement_total": 5617,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
