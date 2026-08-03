@@ -26,27 +26,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-ah_x79ti/New Final Post and Capcut template/export/indiana_department_of_child_services/image_1080.png",
+    "path": "/tmp/swm-share-pages-24motx2s/New Final Post and Capcut template/export/indiana_department_of_child_services/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 128,
+    "families_approved": 127,
     "total_submissions": 156,
-    "avg_financial_loss": 138743.9,
-    "avg_months_lost": 29.9,
+    "avg_financial_loss": 137492.2,
+    "avg_months_lost": 29.7,
     "_source_table": "movement_stats_by_state",
     "_match_value": "IN",
     "state_family_count": 156,
-    "median_financial_loss": 68150,
-    "median_burden_sample_size": 80,
+    "median_financial_loss": 66500,
+    "median_burden_sample_size": 79,
     "median_months_lost": 18,
-    "pro_se_pct": 46.2,
-    "pro_se_count": 72,
+    "pro_se_pct": 45.5,
+    "pro_se_count": 71,
     "_pdf_state_family_count": 156,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5577,
+  "movement_total": 5624,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
