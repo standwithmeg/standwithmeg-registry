@@ -32,27 +32,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-cjdg4ct3/New Final Post and Capcut template/export/raymond_de_jesus/image_1080.png",
+    "path": "/tmp/swm-share-pages-xieuuivr/New Final Post and Capcut template/export/raymond_de_jesus/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 359,
-    "total_submissions": 458,
-    "avg_financial_loss": 282234.8,
-    "avg_months_lost": 35.1,
+    "total_submissions": 460,
+    "avg_financial_loss": 282067.0,
+    "avg_months_lost": 35.0,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CA",
-    "state_family_count": 458,
+    "state_family_count": 460,
     "median_financial_loss": 270500,
-    "median_burden_sample_size": 201,
+    "median_burden_sample_size": 203,
     "median_months_lost": 20,
     "pro_se_pct": 58.7,
-    "pro_se_count": 269,
-    "_pdf_state_family_count": 458,
+    "pro_se_count": 270,
+    "_pdf_state_family_count": 460,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5617,
+  "movement_total": 5635,
   "supabase": {
     "report_count": 9,
     "actor_report_count": 9,
@@ -97,40 +97,41 @@
     ],
     "public_comments": [
       {
+        "comment_text": "Presiding judge/judicial officer father says was the only one who let him speak fully about parental rights, constitutional rights, discrimination/bias, stolen children, harsh treatment, and lack of accountability. Father says DeJesus noted the concerns and treated him respectfully, but father believes no corrective action followed.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
         "comment_text": "I wrote about it but added his name incorrectly Ignores prior DV, denying req. for protection and FAM CODE 3044, continues case on courts own following disqualification, objections, DV, motions to vacate. Stopped me recently from noticing court for record because I challenged jurisdiction and said they'd decide at trial which was being pushed again despite no due process. Then vacated trial soon after at trial confirming conference when I was objecting all along due to prolonged delay, separation and harm.",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Placer"
-      },
-      {
-        "comment_text": "Discharge initially granted me an evidentiary hearing then per Brooke Stephens manipulation of the Court the judge changed it days before the evidentiary trial into a long hearing and refused evidence, subpoenas, witnesses, and completely shut me down at the hearing. Then order is a 20 Page evidential hearing which has been not rolled on and did some weird stuff by having me refile my May 5th filing to the order to set aside which has been delayed or denied to date.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Placer"
-      },
-      {
-        "comment_text": "Asian Judge Raymond De Jesus smerked at me as he gave my ex half custody. My DRVO was accepted in Sutter County and granted after a trial — only to be rebutted in Placer County by Judge Raymond De Jesus. The lawyer lied and I couldn't get a word in edgewise. Denied justice and ignored an active DRVO from Sutter County. Got silenced and couldn't speak the truth. Took my abuser's money and allowed him to continuously lie and manipulate court to benefit him.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Placer"
-      },
-      {
-        "comment_text": "Wouldn’t let me speak, didn’t review the case, didn’t know pertinent info (ie: dad convicted of felony child abuse against the children in the case).",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Placer"
+        "source": "court_actors.notes"
       },
       {
         "comment_text": "Ignored evidence of abuse and domestic violence",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Placer"
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Discharge initially granted me an evidentiary hearing then per Brooke Stephens manipulation of the Court the judge changed it days before the evidentiary trial into a long hearing and refused evidence, subpoenas, witnesses, and completely shut me down at the hearing. Then order is a 20 Page evidential hearing which has been not rolled on and did some weird stuff by having me refile my May 5th filing to the order to set aside which has been delayed or denied to date.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Wouldn’t let me speak, didn’t review the case, didn’t know pertinent info (ie: dad convicted of felony child abuse against the children in the case).",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Asian Judge Raymond De Jesus smerked at me as he gave my ex half custody. My DRVO was accepted in Sutter County and granted after a trial — only to be rebutted in Placer County by Judge Raymond De Jesus. The lawyer lied and I couldn't get a word in edgewise. Denied justice and ignored an active DRVO from Sutter County. Got silenced and couldn't speak the truth. Took my abuser's money and allowed him to continuously lie and manipulate court to benefit him.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/raymond_de_jesus",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='CA'"
+    "public_family_count_api: no actors returned for state='CA'",
+    "pdf_public_actor: no 'Raymonn / Raymond DeJesus' in cache for CA"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
@@ -150,7 +151,15 @@
   "render": {
     "selected_quotes": [
       {
+        "body": "Father says DeJesus noted the concerns and treated him respectfully.",
+        "kind": "comment"
+      },
+      {
         "body": "I wrote about it but added his name incorrectly Ignores prior DV, denying req.",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored evidence of abuse and domestic violence",
         "kind": "comment"
       },
       {
@@ -158,15 +167,11 @@
         "kind": "comment"
       },
       {
-        "body": "Asian Judge Raymond De Jesus smerked at me as he gave my ex half custody.",
-        "kind": "comment"
-      },
-      {
         "body": "Wouldn’t let me speak, didn’t review the case, didn’t know pertinent info (ie.",
         "kind": "comment"
       },
       {
-        "body": "Ignored evidence of abuse and domestic violence",
+        "body": "Asian Judge Raymond De Jesus smerked at me as he gave my ex half custody.",
         "kind": "comment"
       },
       {

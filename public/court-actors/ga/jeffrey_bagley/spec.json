@@ -12,28 +12,27 @@
     "court_or_county": "Forsyth county",
     "state": "Georgia",
     "state_abbr": "GA",
-    "mention_count": 5,
-    "family_count": 4,
-    "public_family_count": 4,
+    "mention_count": 4,
+    "family_count": 3,
+    "public_family_count": 3,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 5,
+    "actor_report_count": 4,
     "supabase_row_ids": [
       "28e51a6f-c79f-42df-b062-cb5fce91084c",
       "92103d5f-ec0b-4534-b927-396de6d99d7b",
       "6e219f5d-ac71-45f3-9f44-9e4bac43a7ed",
-      "85e7da8a-f74f-4c11-90d3-63c3506c0ce9",
-      "70d7a136-1144-42c0-badf-28111cb9685c"
+      "85e7da8a-f74f-4c11-90d3-63c3506c0ce9"
     ],
     "actor_row_id": "28e51a6f-c79f-42df-b062-cb5fce91084c",
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-25cypd1x/New Final Post and Capcut template/export/jeffrey_bagley/image_1080.png",
+    "path": "/tmp/swm-share-pages-xieuuivr/New Final Post and Capcut template/export/jeffrey_bagley/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 124,
+    "families_approved": 123,
     "total_submissions": 159,
     "avg_financial_loss": 208155.52,
     "avg_months_lost": 31.7,
@@ -48,23 +47,17 @@
     "_pdf_state_family_count": 159,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5589,
+  "movement_total": 5635,
   "supabase": {
-    "report_count": 5,
-    "actor_report_count": 5,
-    "family_count": 4,
+    "report_count": 4,
+    "actor_report_count": 4,
+    "family_count": 3,
     "family_reports": [
       {
         "body": "This has ruined my life and my family’s lives",
         "state": "GA",
         "county": "Forsyth",
         "row_id": "ca5220e8-71a6-43a7-a086-d7a0df4a13c0"
-      },
-      {
-        "body": "12 year old is now cutting herself and 7 year old cries for hours till passing out every time they have to leave mom and dad told daughter he is ashamed of her for having cuts on arms ( she did this at school ) told her to stop trying to get attention",
-        "state": "GA",
-        "county": "Forsyth county",
-        "row_id": "395a35b0-ac3b-475d-bed1-15edefc3900d"
       },
       {
         "body": "Absolutely destroyed, our lives taken away every sense of self and safety and security at the my children have they have ruined my life they ruined my children’s life. They have ungodly amounts of money. I truly believe that Forsyth County is trafficking children through the family court I believe that Judge Bagley has a lot to do with it. He’s the head of the superior court. He’s also on board of Bank chairs, which is the umbrella company for the Forsyth County bank in Georgia which he also has jurisdiction over divorce in property proceeding, the rotary club has a lot of these actors in it Rachel Platt the guardian at Leham is known for giving children to abusers mainly fathers regardless of the evidence Christine Seidel is in this as well. They are in this industry to make money in their crafting off of our children Forsyth County Georgia needs to be investigated. It is the most corrupt County on the planet and judge Bagley needs to be in prison along with Keith Brandon along with Rachel Platt along with Christine Seidel and every other person that they associate with in their business because they are what family court corruption is about.",
@@ -82,12 +75,6 @@
       },
       {
         "comment_text": "Has personal interest in my case and has made that clear many times in the stand will have things filed the same day in court dates on the docket immediately upon opposing cancel filing paperwork when taking four months for Mom‘s friends Board divorced to finalize because he has a personal interest in my case and I believe the pedophile and sex trafficker",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Forsyth county"
-      },
-      {
-        "comment_text": "Called me and my daughter and 12 year old neighbor liers for reporting sexual abuse of my daughter then forced her to go alone with abuser and punished me in court (5 hearings in 2 years )",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Forsyth county"
@@ -116,7 +103,7 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Ignored Portugal evaluator",
+        "body": "Refused to acknowledge evidence ordered money that was to be paid in form of gifts from my family",
         "kind": "comment"
       },
       {
@@ -124,15 +111,7 @@
         "kind": "comment"
       },
       {
-        "body": "Called me.",
-        "kind": "comment"
-      },
-      {
         "body": "This has ruined my life and my family’s lives",
-        "kind": "family_report"
-      },
-      {
-        "body": "12 year old is now cutting herself and 7 year old cries for hours till passing out…",
         "kind": "family_report"
       },
       {

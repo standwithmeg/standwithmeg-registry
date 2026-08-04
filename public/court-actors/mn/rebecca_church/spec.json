@@ -27,27 +27,27 @@
     "actor_bucket_key": "rebecca church|MN"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-l36igkjn/New Final Post and Capcut template/export/rebecca_church/image_1080.png",
+    "path": "/tmp/swm-share-pages-xieuuivr/New Final Post and Capcut template/export/rebecca_church/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 57,
-    "total_submissions": 75,
-    "avg_financial_loss": 149035.16,
-    "avg_months_lost": 34.9,
+    "total_submissions": 77,
+    "avg_financial_loss": 145189.1,
+    "avg_months_lost": 34.2,
     "_source_table": "movement_stats_by_state",
     "_match_value": "MN",
-    "state_family_count": 75,
+    "state_family_count": 77,
     "median_financial_loss": 122650,
     "median_burden_sample_size": 32,
     "median_months_lost": 18,
-    "pro_se_pct": 57.3,
-    "pro_se_count": 43,
-    "_pdf_state_family_count": 75,
+    "pro_se_pct": 58.4,
+    "pro_se_count": 45,
+    "_pdf_state_family_count": 77,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5608,
+  "movement_total": 5635,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
