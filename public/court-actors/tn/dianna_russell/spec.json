@@ -30,27 +30,27 @@
     "actor_bucket_key": "diana rusel|TN"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-cjdg4ct3/New Final Post and Capcut template/export/dianna_russell/image_1080.png",
+    "path": "/tmp/swm-share-pages-mwjh1ox2/New Final Post and Capcut template/export/dianna_russell/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 91,
-    "total_submissions": 125,
-    "avg_financial_loss": 107042.14,
+    "total_submissions": 124,
+    "avg_financial_loss": 107303.78,
     "avg_months_lost": 37.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "TN",
-    "state_family_count": 125,
+    "state_family_count": 124,
     "median_financial_loss": 83375,
     "median_burden_sample_size": 52,
     "median_months_lost": 18,
-    "pro_se_pct": 44.8,
-    "pro_se_count": 56,
-    "_pdf_state_family_count": 125,
+    "pro_se_pct": 44.4,
+    "pro_se_count": 55,
+    "_pdf_state_family_count": 124,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5617,
+  "movement_total": 5641,
   "supabase": {
     "report_count": 7,
     "actor_report_count": 7,
