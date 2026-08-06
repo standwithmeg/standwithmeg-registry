@@ -29,27 +29,27 @@
     "actor_bucket_key": "wiliam singer|WA"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-mwjh1ox2/New Final Post and Capcut template/export/william_singer/image_1080.png",
+    "path": "/tmp/swm-share-pages-lxt4tu5l/New Final Post and Capcut template/export/william_singer/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 92,
-    "total_submissions": 132,
-    "avg_financial_loss": 285987.67,
-    "avg_months_lost": 29.1,
+    "total_submissions": 133,
+    "avg_financial_loss": 283681.98,
+    "avg_months_lost": 28.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "WA",
-    "state_family_count": 132,
+    "state_family_count": 133,
     "median_financial_loss": 125000,
     "median_burden_sample_size": 71,
-    "median_months_lost": 16,
-    "pro_se_pct": 63.6,
+    "median_months_lost": 14,
+    "pro_se_pct": 63.2,
     "pro_se_count": 84,
-    "_pdf_state_family_count": 132,
+    "_pdf_state_family_count": 133,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5641,
+  "movement_total": 5647,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,

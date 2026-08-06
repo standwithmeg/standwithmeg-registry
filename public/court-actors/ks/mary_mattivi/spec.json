@@ -1,0 +1,124 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "mary_mattivi",
+    "display_name": "Mary Mattivi",
+    "title": "",
+    "first_name": "Mary",
+    "last_name": "Mattivi",
+    "role": "Judge",
+    "court": "Shawnee",
+    "county": "Shawnee",
+    "court_or_county": "Shawnee",
+    "state": "KS",
+    "state_abbr": "KS",
+    "mention_count": 3,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "d096de7f-a7f7-4b8d-875d-bbb6ed706bc5",
+      "00143871-3265-48f0-aef0-ed6b5b07204c",
+      "3169feef-c25d-4c9e-9a86-b019adf84ece"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "mary mativi|KS"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 184,
+    "total_submissions": 270,
+    "avg_financial_loss": 111553.19,
+    "avg_months_lost": 31.3,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "KS",
+    "state_family_count": 270,
+    "median_financial_loss": 98800,
+    "median_burden_sample_size": 139,
+    "median_months_lost": 16,
+    "pro_se_pct": 48.1,
+    "pro_se_count": 130,
+    "_pdf_state_family_count": 270,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5647,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 3,
+    "family_reports": [
+      {
+        "body": "My children’s childhood was stolen from them. They were taken on false allegations over 3 years. Which were all determined unsubstantiated- they still have not returned home. They have been withheld court ordered therapy treatment for 3 years with no enforcement that could help them heal",
+        "state": "KS",
+        "county": "Shawnee",
+        "row_id": "c9ca7851-1cad-40da-b1d2-5c9dd4622db9"
+      },
+      {
+        "body": "The Kansas court system is so corrupt. It’s not even funny and judge Mativi is my judge . She awarded custody to someone who had no witnesses when I had five witnesses saying he smoked marijuana with my kids in the room and abused me and the children.",
+        "state": "KS",
+        "county": "Shawnee",
+        "row_id": "5fbf145b-dbc3-4bf9-b5f1-74b50d6638e2"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Removed my children from the state via email. I had never been to the court house. GAL never met with me, reviewed any of my evidence and didn’t interview children’s school professionals or counselors. also didn’t review prior criminal cases involving the other party or the 10yr long case and court records from the case transferring from PT county",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Shawnee"
+      },
+      {
+        "comment_text": "The Kansas court system is so corrupt — it's not even funny. Judge Mativi is my judge. She awarded custody to someone who had no witnesses, when I had five witnesses saying he smoked marijuana with my kids in the room and abused me and the children.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Shawnee"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/mary_mattivi",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='KS'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ks/mary_mattivi/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Removed my children from the state via email. I had never been to the court house.",
+        "kind": "comment"
+      },
+      {
+        "body": "She awarded custody to someone who had no witnesses.",
+        "kind": "comment"
+      },
+      {
+        "body": "Withheld court ordered therapy treatment for 3 years with no enforcement that could help them heal",
+        "kind": "family_report"
+      },
+      {
+        "body": "It’s not even funny and judge Mativi is my judge .",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

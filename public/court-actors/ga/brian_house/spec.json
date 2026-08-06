@@ -12,15 +12,16 @@
     "court_or_county": "Catoosa County",
     "state": "GA",
     "state_abbr": "GA",
-    "mention_count": 3,
+    "mention_count": 4,
     "family_count": 3,
     "public_family_count": 3,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 3,
+    "actor_report_count": 4,
     "supabase_row_ids": [
       "57459aaa-5bb6-4d70-b0d6-963d629b460b",
       "979a23e2-9ba0-4154-a0bd-43a8be673efc",
-      "91df16ee-d2a5-43e5-be9f-97c41dd69a05"
+      "91df16ee-d2a5-43e5-be9f-97c41dd69a05",
+      "749e9452-52d5-4778-80ed-7d683df03135"
     ],
     "actor_row_id": null,
     "actor_bucket_key": "brian house|GA"
@@ -31,7 +32,7 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 124,
+    "families_approved": 123,
     "total_submissions": 159,
     "avg_financial_loss": 208155.52,
     "avg_months_lost": 31.7,
@@ -46,10 +47,10 @@
     "_pdf_state_family_count": 159,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5589,
+  "movement_total": 5647,
   "supabase": {
-    "report_count": 3,
-    "actor_report_count": 3,
+    "report_count": 4,
+    "actor_report_count": 4,
     "family_count": 3,
     "family_reports": [
       {
@@ -85,7 +86,7 @@
         "court_or_county": "Catoosa County"
       },
       {
-        "comment_text": "Issued warrants without any evidence of a crime only CPS invalidated statements.",
+        "comment_text": "Signed warrants without any evidence of abuse. Issued warrants without any evidence of a crime only CPS invalidated statements.",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Catoosa County"
