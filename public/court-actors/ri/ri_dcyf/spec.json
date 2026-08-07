@@ -27,27 +27,27 @@
     "actor_bucket_key": "ri dcyf|RI"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-90yxu6ix/New Final Post and Capcut template/export/ri_dcyf/image_1080.png",
+    "path": "/tmp/swm-share-pages-662bvq1w/New Final Post and Capcut template/export/ri_dcyf/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 16,
-    "total_submissions": 19,
-    "avg_financial_loss": 293433.82,
+    "total_submissions": 20,
+    "avg_financial_loss": 277798.61,
     "avg_months_lost": 28.5,
     "_source_table": "movement_stats_by_state",
     "_match_value": "RI",
-    "state_family_count": 19,
+    "state_family_count": 20,
     "median_financial_loss": 164000,
     "median_burden_sample_size": 9,
     "median_months_lost": 25,
-    "pro_se_pct": 47.4,
+    "pro_se_pct": 45.0,
     "pro_se_count": 9,
-    "_pdf_state_family_count": 19,
+    "_pdf_state_family_count": 20,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5516,
+  "movement_total": 5650,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
