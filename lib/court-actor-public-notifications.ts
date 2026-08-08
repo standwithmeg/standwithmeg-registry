@@ -4,6 +4,7 @@ import {
   actorBucketKeyWithLocation,
   actorLooseNameKey,
   courtActorLocationKey,
+  isRoleOnlyActorName,
   publicActorRoleEntries,
   resolveFamilyKey,
   type CourtActorRowReviewDecision,
@@ -251,6 +252,11 @@ export async function getPublicActorsWithReporters(): Promise<PublicActorBucket[
 
   for (const a of all) {
     if (!a.role || !a.name) continue;
+    // Role-only or placeholder "names" ("Guardian ad Litem", "Unknown", "DCF")
+    // are testimony, not people. They must never pool unrelated families into
+    // one threshold-crossing bucket, become an actor_publications row, or
+    // trigger a photo-request email (FL Guardian ad Litem incident, 2026-08-08).
+    if (isRoleOnlyActorName(a.name)) continue;
     const location = rowLocation(a);
     if (!location) continue;
 
@@ -323,6 +329,8 @@ export async function getPublicActorsWithReporters(): Promise<PublicActorBucket[
   const arrivalsByBucket = new Map<string, FamilyArrival[]>();
   for (const a of all) {
     if (!a.role || !a.name) continue;
+    // Keep the recount consistent with the bucketing loop above.
+    if (isRoleOnlyActorName(a.name)) continue;
     const location = rowLocation(a);
     if (!location) continue;
     const submission = joinedSubmission(a);

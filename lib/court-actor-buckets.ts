@@ -2,6 +2,7 @@ import "server-only";
 
 import {
   actorBucketKeyWithLocation,
+  isRoleOnlyActorName,
   publicActorRoleEntries,
   resolveFamilyKey,
   type CourtActorRowReviewDecision,
@@ -289,6 +290,10 @@ export function buildCourtActorBuckets(
 
   for (const a of rows) {
     if (!a.role || !a.name) continue;
+    // Role-only or placeholder "names" ("Guardian ad Litem", "Unknown", "DCF")
+    // are testimony, not people. They must never pool unrelated families into
+    // one threshold-crossing bucket or trigger photo requests.
+    if (isRoleOnlyActorName(a.name)) continue;
     if (hiddenSubmissionIds.has(a.submission_id)) continue;
     if (!isCountableSubmission(joinedSubmission(a))) continue;
     const location = actorLocation(a);

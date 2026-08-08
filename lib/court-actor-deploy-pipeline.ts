@@ -1,5 +1,5 @@
 import { createAdminSupabaseClient } from "./supabase-admin";
-import { COURT_ACTOR_PUBLIC_THRESHOLD, actorBucketKeyWithLocation, courtActorLocationKey, publicActorRoleEntries, resolveFamilyKey, type CourtActorRowReviewDecision } from "./court-actors";
+import { COURT_ACTOR_PUBLIC_THRESHOLD, actorBucketKeyWithLocation, courtActorLocationKey, isRoleOnlyActorName, publicActorRoleEntries, resolveFamilyKey, type CourtActorRowReviewDecision } from "./court-actors";
 import { AliasResolver, type AliasDecisionRow } from "./court-actor-similarity";
 import { isCountableSubmission } from "./submission-public-visibility";
 import {
@@ -214,6 +214,9 @@ export async function findDeployBucket(stateAbbr: string, slug: string): Promise
   for (const row of rows) {
     const submission = joinedSubmission(row);
     if (!row.role || !row.name || !isCountableSubmission(submission)) continue;
+    // Role-only or placeholder "names" ("Guardian ad Litem", "Unknown", "DCF")
+    // are testimony, not people — never a state-report actor card.
+    if (isRoleOnlyActorName(row.name)) continue;
     const location = actorLocation(row);
     if (location !== stateAbbr) continue;
     const familyKey = resolveFamilyKey({

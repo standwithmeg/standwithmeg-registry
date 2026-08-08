@@ -57,6 +57,46 @@ export function actorLooseNameKey(name: string): string {
   return collapseRepeatedLetters(actorNameKey(name));
 }
 
+// "Names" that are actually a role, an agency acronym, or a placeholder, not a
+// person. Three unrelated families each typing "Guardian ad Litem" pooled into
+// one threshold-crossing pseudo-actor (FL, 2026-08-08) and triggered photo
+// requests for a person who does not exist. Keep this list in sync with
+// standwithmeg-rebuild/lib/court-actors.ts. Entries are compared AFTER
+// actorLooseNameKey normalization (lowercased, punctuation stripped,
+// single-letter middle tokens dropped — hence "don t know" → "don know").
+const ROLE_ONLY_NAME_KEYS = new Set([
+  "guardian ad litem", "gal", "guardian",
+  "judge", "the judge", "justice", "magistrate", "commissioner", "referee",
+  "all judges", "judges",
+  "attorney", "the attorney", "lawyer", "counsel", "minors counsel",
+  "child representative", "public defender", "prosecutor",
+  "cps", "cps worker", "case worker", "caseworker", "case manager",
+  "social worker", "investigator", "supervisor",
+  "therapist", "counselor", "psychologist", "evaluator", "custody evaluator",
+  "mediator", "parenting coordinator", "visitation supervisor", "foster parent",
+  "police", "police officer", "sheriff", "deputy", "officer",
+  "dcf", "dcfs", "dhs", "dss", "dhr", "cys", "dfps", "dfcs", "acs", "dcyf",
+  "family court", "court", "the court", "court clerk", "clerk", "court staff",
+  "unknown", "n/a", "na", "none", "not sure", "unsure", "unnamed", "no name",
+  "multiple", "many", "several", "all", "all of them", "everyone", "various",
+  "dont know", "don know", "do not know", "dont remember", "don remember",
+  "do not remember", "cant remember", "can remember",
+]);
+
+/**
+ * True when a reported actor "name" is a role/title, agency acronym, or
+ * placeholder rather than an actual person or specific organization. These rows
+ * stay in the database as testimony, but they must never form a court-actor
+ * bucket, count toward the public threshold, or trigger a photo request.
+ */
+export function isRoleOnlyActorName(name: string): boolean {
+  const key = actorLooseNameKey(name);
+  if (!key) return true;
+  if (ROLE_ONLY_NAME_KEYS.has(key)) return true;
+  // "Unknown GAL", "Unknown caseworker", etc.
+  return /^unknown\b/.test(key);
+}
+
 export function actorBucketKey(name: string, _role: string, stateCode: string | null | undefined): string {
   return `${actorLooseNameKey(name)}|${stateCode ?? ""}`;
 }
