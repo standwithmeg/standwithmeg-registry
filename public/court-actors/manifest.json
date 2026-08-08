@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-07T08:56:22.269625+00:00",
+  "generated_at": "2026-08-08T08:46:06.430138+00:00",
   "actors": [
     {
       "slug": "ali_upchurch_patterson",
@@ -486,6 +486,15 @@
       "actor_bucket_key": "general magistrate annette szorosy|FL",
       "photo_url": "/court-actors/fl/general_magistrate_annette_j_szorosy/image_1080.png",
       "share_url": "/court-actors/fl/general_magistrate_annette_j_szorosy/share.html"
+    },
+    {
+      "slug": "guardian_ad_litem",
+      "state_abbr": "FL",
+      "display_name": "Guardian ad Litem",
+      "canonical_name": "Guardian ad Litem",
+      "actor_bucket_key": "guardian ad litem|FL",
+      "photo_url": null,
+      "share_url": "/court-actors/fl/guardian_ad_litem/share.html"
     },
     {
       "slug": "joan_anthony",

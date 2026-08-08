@@ -32,19 +32,19 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-25cypd1x/New Final Post and Capcut template/export/brandy_daswani/image_1080.png",
+    "path": "/tmp/swm-share-pages-wrasbp_n/New Final Post and Capcut template/export/brandy_daswani/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 124,
+    "families_approved": 122,
     "total_submissions": 159,
-    "avg_financial_loss": 208155.52,
+    "avg_financial_loss": 208750.85,
     "avg_months_lost": 31.7,
     "_source_table": "movement_stats_by_state",
     "_match_value": "GA",
     "state_family_count": 159,
-    "median_financial_loss": 146500,
+    "median_financial_loss": 153000,
     "median_burden_sample_size": 86,
     "median_months_lost": 18,
     "pro_se_pct": 42.1,
@@ -52,7 +52,7 @@
     "_pdf_state_family_count": 159,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5589,
+  "movement_total": 5656,
   "supabase": {
     "report_count": 9,
     "actor_report_count": 9,

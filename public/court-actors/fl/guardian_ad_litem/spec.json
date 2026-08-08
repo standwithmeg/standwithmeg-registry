@@ -1,0 +1,144 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "guardian_ad_litem",
+    "display_name": "Guardian ad Litem",
+    "title": "",
+    "first_name": "Guardian ad",
+    "last_name": "Litem",
+    "role": "Other",
+    "court": "County not listed",
+    "county": "County not listed",
+    "court_or_county": "County not listed",
+    "state": "FL",
+    "state_abbr": "FL",
+    "mention_count": 3,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "faafc86b-8d8f-4ec8-8eb2-c01dd4864e52",
+      "bf02465f-ab0c-4d32-94dc-5316307307fb",
+      "186a39e5-3232-42b5-813f-a36a253b1e1d"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "guardian ad litem|FL"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 237,
+    "total_submissions": 317,
+    "avg_financial_loss": 201820.09,
+    "avg_months_lost": 27.6,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "FL",
+    "state_family_count": 317,
+    "median_financial_loss": 176500,
+    "median_burden_sample_size": 137,
+    "median_months_lost": 17,
+    "pro_se_pct": 57.1,
+    "pro_se_count": 181,
+    "_pdf_state_family_count": 317,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5656,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 3,
+    "family_reports": [
+      {
+        "body": "Lied and conspired against us, ripping and stripping us mind , body, soul , bank account, civil rights ect. meanwhile allowing my nephew to be abused severely at 6",
+        "state": "FL",
+        "county": "Osceola County 9th Circuit Court",
+        "row_id": "298dd8f2-bdf7-433c-a607-447b0f35b7db"
+      },
+      {
+        "body": "It destroyed 30 years of around the clock hard work to build the best life and future for my 5 angels who also were destroyed in the process beyond any recognition. This is a criminal enterprise of injustice and a modern day slavery.",
+        "state": "FL",
+        "county": "Broward",
+        "row_id": "fc69cc8c-f4c7-4d55-8f88-169898d4f00b"
+      },
+      {
+        "body": "While DCF acted swiftly to remove our newborn based on allegations, they showed no concern for the well-being of our older children, one of whom is nonverbal and requires daily support, demonstrating a disconnect between their stated concerns and their actual actions.",
+        "state": "FL",
+        "county": "Clay County",
+        "row_id": "4ce8e942-6297-40c6-b597-c7fe99d229b7"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "GALs are the worst criminals because (Believe it or not) they don't have any government supervision and enjoy immunity for their actions.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "County not listed"
+      },
+      {
+        "comment_text": "Supported continued placement without independent investigation or documented evidence-based findings.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
+      },
+      {
+        "comment_text": "They conspire together to take children and keep them from families.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "County not listed"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/guardian_ad_litem",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='FL'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/fl/guardian_ad_litem/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "GALs are the worst criminals.",
+        "kind": "comment"
+      },
+      {
+        "body": "Supported continued placement.",
+        "kind": "comment"
+      },
+      {
+        "body": "They conspire together to take children and keep them from families.",
+        "kind": "comment"
+      },
+      {
+        "body": "Lied and conspired against us, ripping and stripping us mind , body, soul , bank…",
+        "kind": "family_report"
+      },
+      {
+        "body": "This is a criminal enterprise of injustice and a modern day slavery.",
+        "kind": "family_report"
+      },
+      {
+        "body": "While DCF acted swiftly to remove our newborn based on allegations, they showed no…",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}
