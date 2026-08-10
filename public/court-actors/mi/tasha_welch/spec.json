@@ -12,28 +12,27 @@
     "court_or_county": "Montcalm",
     "state": "Michigan",
     "state_abbr": "MI",
-    "mention_count": 5,
-    "family_count": 5,
-    "public_family_count": 5,
+    "mention_count": 4,
+    "family_count": 4,
+    "public_family_count": 4,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 5,
+    "actor_report_count": 4,
     "supabase_row_ids": [
       "55044c0a-f4f8-43d5-a660-fb62a005e639",
       "f17f3146-f454-46fd-b431-08d683cceee7",
       "1ca69a7c-16ce-4a4d-9f7c-520fba9a0cbc",
-      "d3905970-fce8-44f5-b0c5-56bd1c2e42f6",
-      "dc074023-2139-41bf-b47c-00d0bbde9b17"
+      "d3905970-fce8-44f5-b0c5-56bd1c2e42f6"
     ],
     "actor_row_id": "55044c0a-f4f8-43d5-a660-fb62a005e639",
     "actor_bucket_key": "tasha welch|MI"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-4q360ne7/New Final Post and Capcut template/export/tasha_welch/image_1080.png",
+    "path": "/tmp/swm-share-pages-l4pttpaz/New Final Post and Capcut template/export/tasha_welch/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 145,
+    "families_approved": 144,
     "total_submissions": 183,
     "avg_financial_loss": 181109.42,
     "avg_months_lost": 36.7,
@@ -48,11 +47,11 @@
     "_pdf_state_family_count": 183,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5665,
+  "movement_total": 5669,
   "supabase": {
-    "report_count": 5,
-    "actor_report_count": 5,
-    "family_count": 5,
+    "report_count": 4,
+    "actor_report_count": 4,
+    "family_count": 4,
     "family_reports": [
       {
         "body": "The system has did nothing but ruin my life. Try to take my kid or in the middle of trying to take my kid and some false accusations boom.",
@@ -65,12 +64,6 @@
         "state": "MI",
         "county": "Montcalm",
         "row_id": "36edfc72-caee-42ee-95eb-cee123b8a84c"
-      },
-      {
-        "body": "Destroyed my whole family. Can’t see my grandkids grow up! My son in law committed suicide over the removal of his kids!",
-        "state": "MI",
-        "county": "Mntcalm",
-        "row_id": "fe7f27ec-8f68-4d76-a5c8-10339f6f761b"
       },
       {
         "body": "Destroyed our whole lives. Drove my love to committ suicide. Robbed us of time with my kids!",
@@ -100,12 +93,6 @@
       },
       {
         "comment_text": "She makes up things that never happened even when it's recorded and they believe her and won't take the recording",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Montcalm"
-      },
-      {
-        "comment_text": "Doesn’t follow DHHS handbook. Her way or no way! Doesn’t work with families!",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Montcalm"
@@ -152,10 +139,6 @@
         "kind": "comment"
       },
       {
-        "body": "Doesn’t follow DHHS handbook. Her way or no way! Doesn’t work with families!",
-        "kind": "comment"
-      },
-      {
         "body": "Is rude & bitchy!",
         "kind": "comment"
       },
@@ -168,10 +151,6 @@
         "kind": "family_report"
       },
       {
-        "body": "Destroyed my whole family. Can’t see my grandkids grow up!",
-        "kind": "family_report"
-      },
-      {
         "body": "Destroyed our whole lives. Drove my love to committ suicide.",
         "kind": "family_report"
       },
@@ -180,7 +159,7 @@
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 2
+    "quote_page_count": 1
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

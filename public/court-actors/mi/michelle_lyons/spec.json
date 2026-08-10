@@ -12,27 +12,26 @@
     "court_or_county": "Montcalm",
     "state": "Michigan",
     "state_abbr": "MI",
-    "mention_count": 4,
-    "family_count": 4,
+    "mention_count": 3,
+    "family_count": 3,
     "public_family_count": 0,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 4,
+    "actor_report_count": 3,
     "supabase_row_ids": [
       "971025d4-7f8a-4bc4-b75b-cb9bb963ed2a",
       "e977f1db-00c8-487b-85bc-3a0537328145",
-      "23bbdda2-b855-4cd1-a2c1-84b3a8422a1d",
-      "756afd5d-2292-4453-be1c-d544325f0e4b"
+      "23bbdda2-b855-4cd1-a2c1-84b3a8422a1d"
     ],
     "actor_row_id": "971025d4-7f8a-4bc4-b75b-cb9bb963ed2a",
     "actor_bucket_key": "michele lyons|MI"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-4q360ne7/New Final Post and Capcut template/export/michelle_lyons/image_1080.png",
+    "path": "/tmp/swm-share-pages-l4pttpaz/New Final Post and Capcut template/export/michelle_lyons/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 145,
+    "families_approved": 144,
     "total_submissions": 183,
     "avg_financial_loss": 181109.42,
     "avg_months_lost": 36.7,
@@ -47,23 +46,17 @@
     "_pdf_state_family_count": 183,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5665,
+  "movement_total": 5669,
   "supabase": {
-    "report_count": 4,
-    "actor_report_count": 4,
-    "family_count": 4,
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 3,
     "family_reports": [
       {
         "body": "This destroyed my family. I have lost my children. My wife and I dont get a long well. Our married may beyond repair. I miss my babies.",
         "state": "MI",
         "county": "Montcalm",
         "row_id": "7d0a93c4-1565-4a7c-a7a3-1713bc2dde90"
-      },
-      {
-        "body": "Destroyed my whole family. Can’t see my grandkids grow up! My son in law committed suicide over the removal of his kids!",
-        "state": "MI",
-        "county": "Mntcalm",
-        "row_id": "fe7f27ec-8f68-4d76-a5c8-10339f6f761b"
       },
       {
         "body": "Destroyed our whole lives. Drove my love to committ suicide. Robbed us of time with my kids!",
@@ -92,12 +85,6 @@
         "court_or_county": "Montcalm"
       },
       {
-        "comment_text": "Doesn’t communicate with client. Refuses evidence in court",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Montcalm"
-      },
-      {
         "comment_text": "Told me to sign over my kids & go have more babies.",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
@@ -108,7 +95,7 @@
   "export_dir": "New Final Post and Capcut template/export/michelle_lyons",
   "unresolved": [
     "public_family_count_api: no actors returned for state='MI'",
-    "family_count: lookup and previous spec returned 0 — using report_count=4 as fallback"
+    "family_count: lookup and previous spec returned 0 — using report_count=3 as fallback"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
@@ -136,19 +123,11 @@
         "kind": "comment"
       },
       {
-        "body": "Doesn’t communicate with client. Refuses evidence in court",
-        "kind": "comment"
-      },
-      {
         "body": "Told me to sign over my kids & go have more babies.",
         "kind": "comment"
       },
       {
         "body": "This destroyed my family. I have lost my children. My wife and I dont get a long well.",
-        "kind": "family_report"
-      },
-      {
-        "body": "Destroyed my whole family. Can’t see my grandkids grow up!",
         "kind": "family_report"
       },
       {

@@ -12,14 +12,13 @@
     "court_or_county": "Montcalm",
     "state": "MI",
     "state_abbr": "MI",
-    "mention_count": 3,
-    "family_count": 3,
-    "public_family_count": 3,
+    "mention_count": 2,
+    "family_count": 2,
+    "public_family_count": 2,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 3,
+    "actor_report_count": 2,
     "supabase_row_ids": [
       "27d0af35-f22d-4e52-be13-a6f76f2da7b5",
-      "c872bdf3-be8b-4580-a581-8fe2d59700aa",
       "05b58ddc-1574-46a3-b977-ad1f4f736d41"
     ],
     "actor_row_id": null,
@@ -31,7 +30,7 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 145,
+    "families_approved": 144,
     "total_submissions": 183,
     "avg_financial_loss": 181109.42,
     "avg_months_lost": 36.7,
@@ -46,18 +45,12 @@
     "_pdf_state_family_count": 183,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5665,
+  "movement_total": 5669,
   "supabase": {
-    "report_count": 3,
-    "actor_report_count": 3,
-    "family_count": 3,
+    "report_count": 2,
+    "actor_report_count": 2,
+    "family_count": 2,
     "family_reports": [
-      {
-        "body": "Destroyed my whole family. Can’t see my grandkids grow up! My son in law committed suicide over the removal of his kids!",
-        "state": "MI",
-        "county": "Mntcalm",
-        "row_id": "fe7f27ec-8f68-4d76-a5c8-10339f6f761b"
-      },
       {
         "body": "Destroyed our whole lives. Drove my love to committ suicide. Robbed us of time with my kids!",
         "state": "MI",
@@ -75,26 +68,19 @@
       {
         "comment_text": "This worker supervised one of my parenting times, she was a breath of fresh air after dealing with Tasha Welch. She did however badger us on what we were doing during our unsupervised time and roll down my license plate and car making year and then it was put into the case service plan for everybody who reads it to know my license plate number.",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Montcalm"
+        "source": "court_actors.notes"
       },
       {
         "comment_text": "Said I’m losing my daughter because I lost my other kids.",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Montcalm"
-      },
-      {
-        "comment_text": "Filed to remove by child over an abnormal drug test",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Montcalm"
+        "source": "court_actors.notes"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/jennifer_lewandowski",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='MI'"
+    "public_family_count_api: no actors returned for state='MI'",
+    "pdf_public_actor: no 'Jennifer Lewandowski' in cache for MI"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
@@ -114,7 +100,7 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "This worker supervised one of my parenting times, she was a breath of fresh air…",
+        "body": "This worker supervised one of my parenting times, she was a breath of fresh air after dealing with Tasha Welch.",
         "kind": "comment"
       },
       {
@@ -122,19 +108,11 @@
         "kind": "comment"
       },
       {
-        "body": "Filed to remove by child over an abnormal drug test",
-        "kind": "comment"
-      },
-      {
-        "body": "Destroyed my whole family. Can’t see my grandkids grow up!",
+        "body": "Destroyed our whole lives. Drove my love to committ suicide. Robbed us of time with my kids!",
         "kind": "family_report"
       },
       {
-        "body": "Destroyed our whole lives. Drove my love to committ suicide.",
-        "kind": "family_report"
-      },
-      {
-        "body": "The system has exploited my mental health crisis for funding, along with keeping…",
+        "body": "The system has exploited my mental health crisis for funding, along with keeping their caseloads up.",
         "kind": "family_report"
       }
     ],

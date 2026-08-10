@@ -26,27 +26,27 @@
     "actor_bucket_key": "elaine carbucia|FL"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-wrasbp_n/New Final Post and Capcut template/export/elaine_carbuccia/image_1080.png",
+    "path": "/tmp/swm-share-pages-l4pttpaz/New Final Post and Capcut template/export/elaine_carbuccia/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 237,
-    "total_submissions": 317,
-    "avg_financial_loss": 201820.09,
+    "total_submissions": 318,
+    "avg_financial_loss": 201094.12,
     "avg_months_lost": 27.6,
     "_source_table": "movement_stats_by_state",
     "_match_value": "FL",
-    "state_family_count": 317,
+    "state_family_count": 318,
     "median_financial_loss": 176500,
     "median_burden_sample_size": 137,
     "median_months_lost": 17,
-    "pro_se_pct": 57.1,
-    "pro_se_count": 181,
-    "_pdf_state_family_count": 317,
+    "pro_se_pct": 57.2,
+    "pro_se_count": 182,
+    "_pdf_state_family_count": 318,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5656,
+  "movement_total": 5669,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,

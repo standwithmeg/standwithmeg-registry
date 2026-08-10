@@ -12,11 +12,11 @@
     "court_or_county": "Montcalm County Michigan",
     "state": "Michigan",
     "state_abbr": "MI",
-    "mention_count": 14,
-    "family_count": 10,
-    "public_family_count": 10,
+    "mention_count": 13,
+    "family_count": 9,
+    "public_family_count": 9,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 14,
+    "actor_report_count": 13,
     "supabase_row_ids": [
       "40164734-d4b3-4282-830e-d4b77787cbf3",
       "7a37ebe8-2dca-4e36-806c-8a5a2d46fc0b",
@@ -24,7 +24,6 @@
       "61eb47aa-5098-4827-88d1-3328c2646eb8",
       "b7aa1a4c-7459-4895-b631-a506d76bee16",
       "e4cf2f07-acac-4ff5-96ec-2264c8095e75",
-      "e167a3ea-c556-42ea-810c-104c311ec449",
       "cb6082cf-6e20-4dd5-9eb5-c5d6578f691f",
       "efb11a36-1906-4fbc-8a43-2dcf9fe47ca4",
       "2f4c5cff-0eea-4e52-bc46-eca01c3e08aa",
@@ -37,12 +36,12 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-4q360ne7/New Final Post and Capcut template/export/charles_simon_iii/image_1080.png",
+    "path": "/tmp/swm-share-pages-l4pttpaz/New Final Post and Capcut template/export/charles_simon_iii/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 145,
+    "families_approved": 144,
     "total_submissions": 183,
     "avg_financial_loss": 181109.42,
     "avg_months_lost": 36.7,
@@ -57,11 +56,11 @@
     "_pdf_state_family_count": 183,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5665,
+  "movement_total": 5669,
   "supabase": {
-    "report_count": 14,
-    "actor_report_count": 14,
-    "family_count": 10,
+    "report_count": 13,
+    "actor_report_count": 13,
+    "family_count": 9,
     "family_reports": [
       {
         "body": "The destruction of my family has changed every part of my life. Living through years of separation from my daughter has created a level of grief and trauma that is hard to put into words. Every holiday, birthday, school event, and milestone that passes is another reminder of everything we’ve lost. The repeated trips back to court have only added to that trauma. Each hearing brings hope that maybe this time things will change, only to leave feeling like we’re no closer to healing or being reunited. Instead of finding solutions, we’ve spent years reliving the same pain over and over. It’s emotionally exhausting, financially draining, and has left our entire family living in a constant state of uncertainty. This hasn’t only affected me. It has affected my husband, my children, my extended family, and most importantly, my daughter. Relationships that should have been built naturally have instead been replaced with distance, missed memories, and unanswered questions. We’ve missed birthdays, holidays, sporting events, family dinners, and countless everyday moments that can never be recreated. Despite everything, I have never stopped loving my daughter or hoping for the day our family can begin to heal. No family should have to endure years of separation while repeatedly returning to court without moving any closer to a resolution. The emotional toll of living in that cycle has been devastating for all of us.",
@@ -154,12 +153,6 @@
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Montcalm County Michigan"
-      },
-      {
-        "comment_text": "Doesn’t follow laws!",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Montcalm"
       }
     ]
   },
@@ -218,10 +211,6 @@
       },
       {
         "body": "He is bias?",
-        "kind": "comment"
-      },
-      {
-        "body": "Doesn’t follow laws!",
         "kind": "comment"
       },
       {

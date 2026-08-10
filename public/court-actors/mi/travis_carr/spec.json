@@ -12,11 +12,11 @@
     "court_or_county": "Montcalm",
     "state": "Michigan",
     "state_abbr": "MI",
-    "mention_count": 8,
-    "family_count": 8,
-    "public_family_count": 8,
+    "mention_count": 7,
+    "family_count": 7,
+    "public_family_count": 7,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 8,
+    "actor_report_count": 7,
     "supabase_row_ids": [
       "dd61d479-f89e-44d6-a592-b99c761b037b",
       "4ed01b4b-ea1e-4713-a00c-d8aee0abe0c0",
@@ -24,19 +24,18 @@
       "5b1c7efe-dc5c-41df-b34a-dccd3f9063b0",
       "b95054af-de66-49c2-a1af-97039b66ca0d",
       "e2d0014d-5afd-4482-b094-eddcf62c16b0",
-      "5a712e52-e82a-4164-9ae8-31457f932a33",
-      "7f7afbab-61c2-4635-be17-3d7c1d58d898"
+      "5a712e52-e82a-4164-9ae8-31457f932a33"
     ],
     "actor_row_id": "dd61d479-f89e-44d6-a592-b99c761b037b",
     "actor_bucket_key": "travis carr|MI"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-4q360ne7/New Final Post and Capcut template/export/travis_carr/image_1080.png",
+    "path": "/tmp/swm-share-pages-l4pttpaz/New Final Post and Capcut template/export/travis_carr/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 145,
+    "families_approved": 144,
     "total_submissions": 183,
     "avg_financial_loss": 181109.42,
     "avg_months_lost": 36.7,
@@ -51,11 +50,11 @@
     "_pdf_state_family_count": 183,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5665,
+  "movement_total": 5669,
   "supabase": {
-    "report_count": 8,
-    "actor_report_count": 8,
-    "family_count": 8,
+    "report_count": 7,
+    "actor_report_count": 7,
+    "family_count": 7,
     "family_reports": [
       {
         "body": "The system has did nothing but ruin my life. Try to take my kid or in the middle of trying to take my kid and some false accusations boom.",
@@ -82,16 +81,16 @@
         "row_id": "7d0a93c4-1565-4a7c-a7a3-1713bc2dde90"
       },
       {
-        "body": "Destroyed my whole family. Can’t see my grandkids grow up! My son in law committed suicide over the removal of his kids!",
-        "state": "MI",
-        "county": "Mntcalm",
-        "row_id": "fe7f27ec-8f68-4d76-a5c8-10339f6f761b"
-      },
-      {
         "body": "Destroyed our whole lives. Drove my love to committ suicide. Robbed us of time with my kids!",
         "state": "MI",
         "county": "Montcalm",
         "row_id": "9167440a-9686-4bf1-82e0-c4e69d7d428a"
+      },
+      {
+        "body": "It destroyed my family. My children are not even allowed to see each other now.",
+        "state": "MI",
+        "county": "Montcalm county",
+        "row_id": "67a60d7a-9a02-4a4d-89f0-a3accaf83c6c"
       }
     ],
     "public_comments": [
@@ -127,12 +126,6 @@
       },
       {
         "comment_text": "Told my grandson to lie in court to get charges on himself dropped",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Montcalm"
-      },
-      {
-        "comment_text": "Friends with foster care worker on case.",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Montcalm"
@@ -191,10 +184,6 @@
         "kind": "comment"
       },
       {
-        "body": "Friends with foster care worker on case.",
-        "kind": "comment"
-      },
-      {
         "body": "Tell me to leave my\\nSignificant other",
         "kind": "comment"
       },
@@ -215,11 +204,11 @@
         "kind": "family_report"
       },
       {
-        "body": "Destroyed my whole family. Can’t see my grandkids grow up!",
+        "body": "Destroyed our whole lives. Drove my love to committ suicide.",
         "kind": "family_report"
       },
       {
-        "body": "Destroyed our whole lives. Drove my love to committ suicide.",
+        "body": "It destroyed my family. My children are not even allowed to see each other now.",
         "kind": "family_report"
       }
     ],
