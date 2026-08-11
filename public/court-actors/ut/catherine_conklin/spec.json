@@ -30,27 +30,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-lxt4tu5l/New Final Post and Capcut template/export/catherine_conklin/image_1080.png",
+    "path": "/tmp/swm-share-pages-tzt3cad0/New Final Post and Capcut template/export/catherine_conklin/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 43,
-    "total_submissions": 59,
-    "avg_financial_loss": 266519.31,
-    "avg_months_lost": 19.4,
+    "total_submissions": 60,
+    "avg_financial_loss": 269984.7,
+    "avg_months_lost": 19.0,
     "_source_table": "movement_stats_by_state",
     "_match_value": "UT",
-    "state_family_count": 59,
+    "state_family_count": 60,
     "median_financial_loss": 164000,
     "median_burden_sample_size": 36,
     "median_months_lost": 6,
-    "pro_se_pct": 55.9,
-    "pro_se_count": 33,
-    "_pdf_state_family_count": 59,
+    "pro_se_pct": 56.7,
+    "pro_se_count": 34,
+    "_pdf_state_family_count": 60,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5647,
+  "movement_total": 5678,
   "supabase": {
     "report_count": 7,
     "actor_report_count": 7,
