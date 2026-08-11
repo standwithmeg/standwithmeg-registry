@@ -3,7 +3,6 @@
 import { ReactNode, useEffect } from "react";
 import { ToastProvider } from "@/lib/toast-context";
 import { WelcomeModal } from "@/components/Onboarding/WelcomeModal";
-import { AnimatePresence } from "framer-motion";
 import { createBrowserClient } from "@supabase/ssr";
 
 interface ProvidersProps {
@@ -45,9 +44,7 @@ export function Providers({ children }: ProvidersProps) {
 
   return (
     <ToastProvider>
-      <AnimatePresence mode="wait">
-        {children}
-      </AnimatePresence>
+      {children}
       <WelcomeModal />
     </ToastProvider>
   );

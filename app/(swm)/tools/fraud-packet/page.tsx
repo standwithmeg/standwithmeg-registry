@@ -92,9 +92,7 @@ export default async function FraudPacketPage({ searchParams }: PageProps) {
                 Before filing
               </h2>
               <p className="mt-2 text-sm leading-6 text-white/78">
-                Do not copy another family&apos;s allegations. Do not exaggerate. Knowingly false
-                statements to federal investigators are a separate federal crime (18 U.S.C. §1001).
-                File only what you personally know and can support.
+                {falseStatementCard.body}
               </p>
             </div>
           </section>
@@ -104,7 +102,7 @@ export default async function FraudPacketPage({ searchParams }: PageProps) {
 
         {/* The four elements + §1001 */}
         <section className="print-card mt-6 rounded-2xl border p-6" style={{ backgroundColor: "rgba(255,255,255,0.04)", borderColor: "rgba(255,255,255,0.12)" }}>
-          <h2 className="print-dark text-lg font-black" style={{ color: GOLD }}>The four things fraud needs</h2>
+          <h2 className="print-dark text-lg font-black" style={{ color: GOLD }}>Four wire-fraud elements to understand</h2>
           <p className="mt-2 text-sm leading-6 text-white/68">
             These are the legal building blocks of wire fraud. They are here to teach you what
             counts — not to label anyone.
@@ -132,9 +130,9 @@ export default async function FraudPacketPage({ searchParams }: PageProps) {
           </ul>
         </section>
 
-        {/* Copy-ready template */}
+        {/* Documentation summary template */}
         <section className="print-card mt-6 rounded-2xl border p-6" style={{ backgroundColor: "rgba(255,255,255,0.04)", borderColor: "rgba(255,255,255,0.12)" }}>
-          <h2 className="print-dark text-lg font-black" style={{ color: GOLD }}>Copy-ready template</h2>
+          <h2 className="print-dark text-lg font-black" style={{ color: GOLD }}>Documentation summary template</h2>
           <p className="mt-2 text-sm leading-6 text-white/68">
             Addressed to: <span className="font-bold text-white/85">{primaryDoor.name}</span>. {fraudDocumentationGuidance} Replace every bracketed blank with your own truthful facts.
           </p>
@@ -165,11 +163,11 @@ export default async function FraudPacketPage({ searchParams }: PageProps) {
         </section>
 
         <section className="print-card mt-6 rounded-2xl border p-6 no-print" style={{ borderColor: "rgba(201,162,39,0.35)", backgroundColor: "rgba(201,162,39,0.08)" }}>
-          <h2 className="text-lg font-black" style={{ color: GOLD }}>Want to know exactly what to say?</h2>
+          <h2 className="text-lg font-black" style={{ color: GOLD }}>Want guided help organizing the record?</h2>
           <p className="mt-2 text-sm leading-6 text-white/85">
-            This free packet organizes your facts and shows you where to file. <strong className="text-white">The Report Kit ($79 one-time)</strong> adds Shawn&apos;s step-by-step video walkthrough plus Meg&apos;s plain-English translation at every step — what to gather, what words to use, and what not to say.
+            This free packet organizes your facts and shows you current official starting points. <strong className="text-white">The Report Kit ($79 one-time)</strong> adds written lessons based on Shawn&apos;s public educational framework, source-status intake, evidence and money mapping, current routing, and private exports.
           </p>
-          <p className="mt-2 text-xs leading-5 text-white/60">6-module course · expanded worksheets · annotated examples · lifetime updates</p>
+          <p className="mt-2 text-xs leading-5 text-white/60">Written lessons · guided workspace · TXT, RTF, JSON, and print-to-PDF exports · lifetime updates</p>
           <Link href="/tools/fraud-kit" className="mt-4 inline-flex rounded-md px-4 py-2 text-xs font-black uppercase tracking-wide text-[#0F1E30]" style={{ backgroundColor: GOLD }}>
             Get The Report Kit — $79
           </Link>
@@ -184,8 +182,9 @@ export default async function FraudPacketPage({ searchParams }: PageProps) {
             first-hand record using their own facts, dates, evidence, and documents.
           </p>
           <p className="mt-3 text-sm leading-6 text-white/75">
-            Reviewed for educational accuracy by Shawn Lee, Criminal Trial Attorney. This is general
-            legal education, not legal advice, and creates no attorney-client relationship.
+            Built from Shawn Lee&apos;s public educational framework. New material has not been represented
+            as Shawn&apos;s case-specific review. This is general legal education, not legal advice, and
+            creates no attorney-client relationship.
           </p>
         </section>
       </section>

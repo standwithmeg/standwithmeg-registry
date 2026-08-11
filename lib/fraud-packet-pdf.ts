@@ -2,7 +2,6 @@ import { existsSync } from "fs";
 import path from "path";
 import PDFDocument from "pdfkit";
 import {
-  NATIONAL_FRAUD_ENFORCEMENT_CONTACT,
   factsVsConclusionsLine,
   falseStatementCard,
   fraudChecklistItems,
@@ -33,7 +32,7 @@ const MUTED = "#4B5563";
 const CREAM = "#FBF8EF";
 
 const FOOTER_DISCLAIMER =
-  "Stand With Meg does not provide legal advice and does not file complaints for families. Educational tool only. Reviewed for educational accuracy by Shawn Lee, Criminal Trial Attorney. No attorney-client relationship. Consult a licensed attorney in your state before filing.";
+  "Stand With Meg does not provide legal advice and does not file complaints for families. Educational tool only. Built from Shawn Lee's public educational framework; new material is not represented as Shawn's case-specific review. No attorney-client relationship. Consult a licensed attorney in your state before filing.";
 
 function resolveHeroImagePath(): string | null {
   const candidates = [
@@ -419,7 +418,7 @@ export async function buildFraudPacketPdf(stateCode: string): Promise<Buffer> {
     bulletList(doc, [
       'Read "Which door?" below — route by whose money was touched, not by who you blame.',
       "Gather documents first — dates, invoices, emails, e-filings, billing records, messages.",
-      "Fill in the copy-ready template using only facts you personally know.",
+      "Fill in the documentation summary using only facts you personally know.",
       "File through the correct portal — URLs and contacts are listed in this PDF.",
       "Keep a copy of everything you submit.",
     ]);
@@ -435,7 +434,7 @@ export async function buildFraudPacketPdf(stateCode: string): Promise<Buffer> {
     warningBox(
       doc,
       "Before you file anything",
-      "Do not copy another family's allegations. Do not exaggerate. Knowingly false statements to federal investigators are a separate federal crime (18 U.S.C. §1001). File only what you personally know and can support with documents."
+      falseStatementCard.body
     );
 
     heading(doc, "Which door? — quick routing guide");
@@ -463,12 +462,13 @@ export async function buildFraudPacketPdf(stateCode: string): Promise<Buffer> {
       doorCard(doc, door.name, statusLabel(door.verificationStatus), door.whenToUse, door.description, door.url);
     });
 
-    heading(doc, "National Fraud Enforcement — DOJ contact");
-    bodyText(doc, NATIONAL_FRAUD_ENFORCEMENT_CONTACT.name, { bold: true });
-    bodyText(doc, `Address: ${NATIONAL_FRAUD_ENFORCEMENT_CONTACT.address}`);
-    bodyText(doc, `Phone: ${NATIONAL_FRAUD_ENFORCEMENT_CONTACT.phone}`);
-    bodyText(doc, `Email: ${NATIONAL_FRAUD_ENFORCEMENT_CONTACT.email}`);
-    bodyText(doc, "Web: https://www.justice.gov/fraud");
+    heading(doc, "DOJ fraud-report routing guidance");
+    bodyText(doc, "DOJ — Report Fraud routing page", { bold: true });
+    bodyText(
+      doc,
+      "The current DOJ page routes reporters to the investigative agency that fits. It is not a universal complaint inbox, mailing address, or intake email."
+    );
+    bodyText(doc, "Web: https://www.justice.gov/fraud/report-fraud", { color: "#1D4ED8" });
 
     heading(doc, "More reporting resources Shawn references");
     fraudReportingResources.forEach(resource => {
@@ -479,7 +479,7 @@ export async function buildFraudPacketPdf(stateCode: string): Promise<Buffer> {
       bodyText(doc, `Link: ${resource.url}`, { size: 9, color: "#1D4ED8" });
     });
 
-    heading(doc, "The four things wire fraud needs (educational)");
+    heading(doc, "Four wire-fraud elements to understand (educational)");
     wireFraudElements.forEach(el => {
       ensureSpace(doc, 48);
       bodyText(doc, el.title, { bold: true });
@@ -500,18 +500,18 @@ export async function buildFraudPacketPdf(stateCode: string): Promise<Buffer> {
       gap(doc, 3);
     });
 
-    heading(doc, "Copy-ready complaint template");
+    heading(doc, "Documentation summary template");
     bodyText(doc, `Addressed to: ${primaryDoor.name}. ${fraudDocumentationGuidance}`);
     templateBlock(doc, template);
 
-    heading(doc, "Want to know exactly what to say?");
-    bodyText(doc, `The Report Kit — ${kitPrice} one-time (coming soon)`, { bold: true, size: 13 });
+    heading(doc, "Want guided help organizing the record?");
+    bodyText(doc, `The Report Kit — ${kitPrice} one-time`, { bold: true, size: 13 });
     bodyText(
       doc,
-      "Shawn's step-by-step video course walks you through each element, each document, and each filing door. Meg translates every step into plain English — what to gather, what words to use, and what not to say."
+      "Written lessons based on Shawn's public educational framework explain the claim ladder, source status, evidence preservation, money mapping, and current official reporting routes. The private workspace helps organize your own record without uploading evidence files."
     );
-    bodyText(doc, "Expanded worksheets, annotated examples, state door directory, lifetime updates.");
-    bodyText(doc, "Join the waitlist or prepay at: https://my.standwithmeg.com/tools/fraud-kit", { color: "#1D4ED8" });
+    bodyText(doc, "Guided workspace, source-labeled exports, current routing, and lifetime updates.");
+    bodyText(doc, "Open or purchase at: https://my.standwithmeg.com/tools/fraud-kit", { color: "#1D4ED8" });
     bodyText(doc, "This free packet organizes your facts. The Report Kit teaches you how to present them.", {
       size: 9.5,
       color: MUTED,

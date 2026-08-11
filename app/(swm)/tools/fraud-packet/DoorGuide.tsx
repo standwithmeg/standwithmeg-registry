@@ -123,16 +123,16 @@ export function DoorGuide({ doors, hasNeedsReview }: DoorGuideProps) {
               </a>
               {door.key === "fbi_tips" && (
                 <p className="mt-2 text-[11px] leading-5 text-white/50">
-                  Also consider your{" "}
+                  Unsure whether this is the right federal route? Use the{" "}
                   <button
                     type="button"
-                    onClick={() => scrollToDoor("usao")}
+                    onClick={() => scrollToDoor("doj_gateway")}
                     className="font-bold underline"
                     style={{ color: GOLD }}
                   >
-                    U.S. Attorney&apos;s Office
+                    DOJ routing page
                   </button>{" "}
-                  for the same situation.
+                  to identify the agency that fits.
                 </p>
               )}
             </div>

@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { colors, shadows } from "../../../lib/design-tokens";
+import { safeInternalNextPath } from "../../../lib/safe-next-path";
 import { createBrowserClient } from "@supabase/ssr";
 
 const GOLD = colors.gold.DEFAULT;
@@ -39,9 +40,8 @@ export default function LoginPage() {
         setError(data.error || "Could not sign in.");
       } else {
         const urlParams = new URLSearchParams(window.location.search);
-const rawNext = urlParams.get("next") || "/report";
-const safeNext = rawNext.startsWith("/") && !rawNext.startsWith("//") ? rawNext : "/report";
-window.location.href = safeNext;
+        const safeNext = safeInternalNextPath(urlParams.get("next"), "/report");
+        window.location.href = safeNext;
       }
     } catch {
       setError("Network error. Please try again.");
@@ -69,10 +69,12 @@ window.location.href = safeNext;
     setLoading(true);
     try {
       const supabaseBrowser = createBrowserClient(supabaseUrl, supabaseAnonKey);
+      const urlParams = new URLSearchParams(window.location.search);
+      const safeNext = safeInternalNextPath(urlParams.get("next"), "/report");
       const { error: otpError } = await supabaseBrowser.auth.signInWithOtp({
         email,
         options: {
-          emailRedirectTo: `${window.location.origin}/connect/auth/callback`,
+          emailRedirectTo: `${window.location.origin}/connect/auth/callback?next=${encodeURIComponent(safeNext)}`,
         },
       });
       if (otpError) {

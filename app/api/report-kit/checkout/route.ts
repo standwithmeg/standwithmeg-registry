@@ -1,7 +1,8 @@
 import { createStripeCheckoutSession } from "../../../../lib/connection-circles";
-import { REPORT_KIT_PRICE_CENTS, normalizeKitEmail } from "../../../../lib/report-kit";
+import { REPORT_KIT_PRICE_CENTS } from "../../../../lib/report-kit";
 import { rateLimit, rateLimitPresets } from "../../../../lib/rate-limit";
 import { corsJsonResponse, handleCorsPreflight } from "../../../../lib/shawn-lee-cors";
+import { createServerSupabaseClient } from "../../../../lib/supabase";
 
 export const runtime = "nodejs";
 
@@ -16,16 +17,11 @@ export async function POST(request: Request) {
   const limit = rateLimit(request, rateLimitPresets.contact);
   if (limit) return limit;
 
-  let body: { email?: string };
-  try {
-    body = await request.json();
-  } catch {
-    return corsJsonResponse(request, { error: "Invalid request." }, 400);
-  }
-
-  const email = normalizeKitEmail(body.email);
-  if (!email) {
-    return corsJsonResponse(request, { error: "A valid email is required for checkout." }, 400);
+  const supabase = await createServerSupabaseClient();
+  const { data: { user }, error: authError } = await supabase.auth.getUser();
+  const email = user?.email?.trim().toLowerCase() || "";
+  if (authError || !email) {
+    return corsJsonResponse(request, { error: "Sign in before starting Report Kit checkout." }, 401);
   }
 
   try {
@@ -41,7 +37,7 @@ export async function POST(request: Request) {
       request,
       mode: "payment",
       lineItem,
-      successPath: `/tools/fraud-kit/success?email=${encodeURIComponent(email)}`,
+      successPath: "/tools/fraud-kit/success",
       cancelPath: "/tools/fraud-kit",
       customerEmail: email,
       clientReferenceId: email,

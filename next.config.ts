@@ -33,8 +33,13 @@ const nextConfig: NextConfig = {
   // Court-actor photos/slides live under public/court-actors (~870MB). Exclude heavy
   // assets from API bundles but keep manifest.json — /api/survey/court-actors reads
   // it to attach photo_url + share_url to every public actor card.
+  // private-docs/ holds the non-deployable Shawn source archive and must never
+  // enter page or API file traces, server bundles, or static output.
   outputFileTracingExcludes: {
+    "/*": ["./private-docs/**/*"],
+    "/**/*": ["./private-docs/**/*"],
     "/api/**/*": [
+      "./private-docs/**/*",
       "./public/court-actors/**/*.jpg",
       "./public/court-actors/**/*.jpeg",
       "./public/court-actors/**/*.png",
@@ -44,6 +49,7 @@ const nextConfig: NextConfig = {
       "./public/court-actors/**/.regen-cache.json",
     ],
     "/api/*": [
+      "./private-docs/**/*",
       "./public/court-actors/**/*.jpg",
       "./public/court-actors/**/*.jpeg",
       "./public/court-actors/**/*.png",

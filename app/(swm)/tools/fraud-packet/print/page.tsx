@@ -1,7 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import {
-  NATIONAL_FRAUD_ENFORCEMENT_CONTACT,
   factsVsConclusionsLine,
   falseStatementCard,
   fraudChecklistItems,
@@ -199,7 +198,7 @@ export default async function FraudPacketPrintPage({ searchParams }: PageProps) 
             <ol className="steps">
               <li><strong>Read “Which door?” below</strong> — route by whose money was touched, not by who you blame.</li>
               <li><strong>Gather documents first</strong> — dates, invoices, emails, e-filings, billing records, messages.</li>
-              <li><strong>Fill in the copy-ready template</strong> using only facts you personally know.</li>
+              <li><strong>Fill in the documentation summary</strong> using only facts you personally know.</li>
               <li><strong>File through the correct portal</strong> — URLs and contacts are listed in this PDF.</li>
               <li><strong>Keep a copy</strong> of everything you submit.</li>
             </ol>
@@ -213,7 +212,7 @@ export default async function FraudPacketPrintPage({ searchParams }: PageProps) 
           <div className="warn">
             <strong>Before you file anything</strong>
             <p>
-              Do not copy another family&apos;s allegations. Do not exaggerate. Knowingly false statements to federal investigators are a separate federal crime (18 U.S.C. §1001). File only what you personally know and can support with documents.
+              {falseStatementCard.body}
             </p>
           </div>
 
@@ -256,13 +255,11 @@ export default async function FraudPacketPrintPage({ searchParams }: PageProps) 
           </section>
 
           <section>
-            <h2>National Fraud Enforcement — DOJ contact</h2>
+            <h2>DOJ fraud-report routing guidance</h2>
             <div className="door-card">
-              <h3>{NATIONAL_FRAUD_ENFORCEMENT_CONTACT.name}</h3>
-              <p><strong>Address:</strong> {NATIONAL_FRAUD_ENFORCEMENT_CONTACT.address}</p>
-              <p><strong>Phone:</strong> {NATIONAL_FRAUD_ENFORCEMENT_CONTACT.phone}</p>
-              <p><strong>Email:</strong> {NATIONAL_FRAUD_ENFORCEMENT_CONTACT.email}</p>
-              <p><strong>Web:</strong> <span className="url">https://www.justice.gov/fraud</span></p>
+              <h3>DOJ — Report Fraud routing page</h3>
+              <p>The current DOJ page routes reporters to the investigative agency that fits. It is not a universal complaint inbox, mailing address, or intake email.</p>
+              <p><strong>Web:</strong> <span className="url">https://www.justice.gov/fraud/report-fraud</span></p>
             </div>
           </section>
 
@@ -279,7 +276,7 @@ export default async function FraudPacketPrintPage({ searchParams }: PageProps) 
           </section>
 
           <section className="page-break">
-            <h2>The four things wire fraud needs (educational)</h2>
+            <h2>Four wire-fraud elements to understand (educational)</h2>
             <div className="grid-2">
               {wireFraudElements.map(element => (
                 <div key={element.title} className="element">
@@ -305,7 +302,7 @@ export default async function FraudPacketPrintPage({ searchParams }: PageProps) 
           </section>
 
           <section>
-            <h2>Copy-ready complaint template</h2>
+            <h2>Documentation summary template</h2>
             <p>
               Addressed to: <strong>{primaryDoor.name}</strong>. {fraudDocumentationGuidance}
             </p>
@@ -313,12 +310,12 @@ export default async function FraudPacketPrintPage({ searchParams }: PageProps) 
           </section>
 
           <section className="cta">
-            <div className="kicker" style={{ color: "#92400E" }}>Want to know exactly what to say?</div>
+            <div className="kicker" style={{ color: "#92400E" }}>Want guided help organizing the record?</div>
             <p className="price">The Report Kit — {kitPrice} one-time</p>
             <p>
-              <strong>Shawn&apos;s step-by-step video course</strong> walks you through each element, each document, and each filing door. <strong>Meg translates every step into plain English</strong> — what to gather, what words to use, and what not to say.
+              Written lessons based on <strong>Shawn&apos;s public educational framework</strong> explain the claim ladder, source status, evidence preservation, money mapping, and current official reporting routes. The private workspace helps organize your own record without uploading evidence files.
             </p>
-            <p>Expanded worksheets, annotated examples, state door directory, lifetime updates.</p>
+            <p>Guided workspace, source-labeled exports, current routing, and lifetime updates.</p>
             <p><strong>Get it at:</strong> <span className="url">https://my.standwithmeg.com/tools/fraud-kit</span></p>
             <p className="fine">This free packet organizes your facts. The Report Kit teaches you how to present them.</p>
           </section>
@@ -326,7 +323,7 @@ export default async function FraudPacketPrintPage({ searchParams }: PageProps) 
           <section>
             <h2>Disclaimer</h2>
             <p className="fine">
-              Stand With Meg does not provide legal advice and does not file complaints for families. Educational tool only. Reviewed for educational accuracy by Shawn Lee, Criminal Trial Attorney. No attorney-client relationship. Consult a licensed attorney in your state before filing.
+              Stand With Meg does not provide legal advice and does not file complaints for families. Educational tool only. Built from Shawn Lee&apos;s public educational framework; new material is not represented as Shawn&apos;s case-specific review. No attorney-client relationship. Consult a licensed attorney in your state before filing.
             </p>
             <p className="fine no-print" style={{ marginTop: "1rem" }}>
               <Link href={stateCode ? `/tools/fraud-packet?state=${stateCode}` : "/tools/fraud-packet"}>← Back to interactive packet</Link>

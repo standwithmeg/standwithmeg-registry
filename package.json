@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test:report-kit": "tsx scripts/report-kit/test-report-kit.ts",
+    "manifest:report-kit-sources": "node scripts/report-kit/build-private-source-manifest.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.92.0",
