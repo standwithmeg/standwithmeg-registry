@@ -15,19 +15,28 @@ export const metadata: Metadata = {
 };
 
 export default async function FraudKitPage() {
-  const supabase = await createServerSupabaseClient();
-  const { data: { user } } = await supabase.auth.getUser();
-  const email = user?.email?.trim().toLowerCase() || "";
-  const hasAccess = email
-    ? isAdminOrFounderEmail(email) || await hasReportKitAccess(email)
-    : false;
+  let email = "";
+  let hasAccess = false;
+  let canManageTesterAccess = false;
+
+  try {
+    const supabase = await createServerSupabaseClient();
+    const { data: { user } } = await supabase.auth.getUser();
+    email = user?.email?.trim().toLowerCase() || "";
+    if (email) {
+      canManageTesterAccess = isFounderEmail(email);
+      hasAccess = isAdminOrFounderEmail(email) || (await hasReportKitAccess(email));
+    }
+  } catch (error) {
+    console.error("Report Kit access check failed:", error);
+  }
 
   return (
     <FraudKitClient
       initialEmail={email}
       initialHasAccess={hasAccess}
       authenticated={Boolean(email)}
-      canManageTesterAccess={Boolean(email && isFounderEmail(email))}
+      canManageTesterAccess={canManageTesterAccess}
     />
   );
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { colors, shadows } from "../../../lib/design-tokens";
@@ -12,13 +12,39 @@ const RED = colors.evidence.DEFAULT;
 const INK = colors.ink.DEFAULT;
 const PAPER = colors.paper.DEFAULT;
 
+function readAuthErrorFromLocation(): string {
+  if (typeof window === "undefined") return "";
+  const params = new URLSearchParams(window.location.search);
+  const hash = window.location.hash.startsWith("#")
+    ? new URLSearchParams(window.location.hash.slice(1))
+    : new URLSearchParams();
+  const code = params.get("error_code") || hash.get("error_code") || params.get("error") || hash.get("error") || "";
+  const description = params.get("error_description") || hash.get("error_description") || "";
+  if (code === "otp_expired" || /invalid or has expired/i.test(description)) {
+    return "That magic link is invalid or expired. Request a new one on this page, open it within a few minutes, and only use a link that starts with this same website address (not my.standwithmeg.com).";
+  }
+  if (code === "access_denied" || code === "magic_link_failed" || code === "auth_failed") {
+    return "Sign-in link failed. Request a new magic link from this page, or use your password.";
+  }
+  if (description) return description.replace(/\+/g, " ");
+  return "";
+}
+
 export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [mode, setMode] = useState<"password" | "magic">("password");
+  const [mode, setMode] = useState<"password" | "magic">("magic");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [message, setMessage] = useState("");
+
+  useEffect(() => {
+    const fromUrl = readAuthErrorFromLocation();
+    if (fromUrl) {
+      setError(fromUrl);
+      setMode("magic");
+    }
+  }, []);
 
   async function handlePasswordLogin(e: React.FormEvent) {
     e.preventDefault();
@@ -40,7 +66,7 @@ export default function LoginPage() {
         setError(data.error || "Could not sign in.");
       } else {
         const urlParams = new URLSearchParams(window.location.search);
-        const safeNext = safeInternalNextPath(urlParams.get("next"), "/report");
+        const safeNext = safeInternalNextPath(urlParams.get("next"), "/tools/fraud-kit");
         window.location.href = safeNext;
       }
     } catch {
@@ -66,21 +92,32 @@ export default function LoginPage() {
       return;
     }
 
+    // Magic links must return to THIS host. my.standwithmeg.com is a different app (rebuild)
+    // and will show expired/invalid link errors for registry logins.
+    const origin = window.location.origin;
+    if (/my\.standwithmeg\.com$/i.test(new URL(origin).hostname)) {
+      setError("You are on the wrong site for Report Kit login. Open https://my-legal-tool.vercel.app/login?next=%2Ftools%2Ffraud-kit and request the magic link there.");
+      return;
+    }
+
     setLoading(true);
     try {
       const supabaseBrowser = createBrowserClient(supabaseUrl, supabaseAnonKey);
       const urlParams = new URLSearchParams(window.location.search);
-      const safeNext = safeInternalNextPath(urlParams.get("next"), "/report");
+      const safeNext = safeInternalNextPath(urlParams.get("next"), "/tools/fraud-kit");
+      const redirectTo = `${origin}/connect/auth/callback?next=${encodeURIComponent(safeNext)}`;
       const { error: otpError } = await supabaseBrowser.auth.signInWithOtp({
-        email,
+        email: email.trim().toLowerCase(),
         options: {
-          emailRedirectTo: `${window.location.origin}/connect/auth/callback?next=${encodeURIComponent(safeNext)}`,
+          emailRedirectTo: redirectTo,
         },
       });
       if (otpError) {
         setError(otpError.message || "Could not send magic link.");
       } else {
-        setMessage("Check your email for a private login link.");
+        setMessage(
+          `Check your email for a private login link. Open it within a few minutes on this device. The link must open ${origin} — ignore any link that sends you to my.standwithmeg.com.`,
+        );
       }
     } catch {
       setError("Network error. Please try again.");

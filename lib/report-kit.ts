@@ -6,19 +6,25 @@ export { normalizeKitEmail, REPORT_KIT_PRICE_CENTS };
 export async function hasReportKitAccess(email: string): Promise<boolean> {
   const normalizedEmail = normalizeKitEmail(email);
   if (!normalizedEmail) return false;
-  const sb = createAdminSupabaseClient();
-  const { data, error } = await sb
-    .from("report_kit_access")
-    .select("id")
-    .eq("email", normalizedEmail)
-    .eq("status", "active")
-    .limit(1)
-    .maybeSingle();
-  if (error) {
-    console.error("report_kit_access lookup failed:", error.message);
+  try {
+    const sb = createAdminSupabaseClient();
+    const { data, error } = await sb
+      .from("report_kit_access")
+      .select("id")
+      .eq("email", normalizedEmail)
+      .eq("status", "active")
+      .limit(1)
+      .maybeSingle();
+    if (error) {
+      console.error("report_kit_access lookup failed:", error.message);
+      return false;
+    }
+    return Boolean(data);
+  } catch (error) {
+    // Missing service-role env must not crash the Report Kit page for guests.
+    console.error("report_kit_access lookup failed:", error instanceof Error ? error.message : error);
     return false;
   }
-  return Boolean(data);
 }
 
 export async function grantReportKitAccess(args: {
