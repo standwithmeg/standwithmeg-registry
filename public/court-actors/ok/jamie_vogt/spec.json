@@ -12,11 +12,11 @@
     "court_or_county": "Tulsa County",
     "state": "Oklahoma",
     "state_abbr": "OK",
-    "mention_count": 9,
+    "mention_count": 10,
     "family_count": 6,
     "public_family_count": 6,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 9,
+    "actor_report_count": 10,
     "supabase_row_ids": [
       "f6137388-78cb-4525-8d2c-50bc99c17a45",
       "ae734f38-ab4d-4b8d-8e5a-5b1f522d3d39",
@@ -24,6 +24,7 @@
       "5cc82853-1edf-459b-82fb-08205839de8d",
       "e4abf836-635e-4759-a500-f510c57b7e90",
       "04cb40a0-1a2e-4e80-93df-f279bcf1507a",
+      "b674a215-ba5f-462b-a22c-86f953afc23c",
       "f4ef713d-011a-4b26-87e4-2716f226943c",
       "1394a1b6-f250-480b-b0c1-d2ce2deb42ef",
       "c45a062c-92f7-4e09-a1bf-c6af7687be21"
@@ -32,7 +33,7 @@
     "actor_bucket_key": "jamie vogt|OK"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-4q360ne7/New Final Post and Capcut template/export/jamie_vogt/image_1080.png",
+    "path": "/tmp/swm-share-pages-56vhhi8e/New Final Post and Capcut template/export/jamie_vogt/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -52,10 +53,10 @@
     "_pdf_state_family_count": 175,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5665,
+  "movement_total": 5686,
   "supabase": {
-    "report_count": 9,
-    "actor_report_count": 9,
+    "report_count": 10,
+    "actor_report_count": 10,
     "family_count": 6,
     "family_reports": [
       {
@@ -97,16 +98,16 @@
     ],
     "public_comments": [
       {
+        "comment_text": "She ignored obvious signs of trauma in my child and said that she seemed coached because my child's demeanor and tone changed when describing abuse. She said that my child seemed animated and lively when talking about hobbies and interests, but she became emotionally distant when discussing trauma. My child was evaluated and then diagnosed with PTSD. She discredited my daughter's abuse disclosure because of her different (monotone) tone of voice and emotional shutdown when talking about it. My daughter has PTSD. That's exactly how traumatized individuals describe trauma. They disassociate. She ruled that my daughter's disclosure of SA was coached because she had a flat affect and became emotionally distant when discussing the abuse. My daughter has PTSD. That is the typical presentation. My daughter was denied advocacy and protection as a result.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Tulsa County"
+      },
+      {
         "comment_text": "Jamie Vogt did EFE on both my children. My daughter layed in my lap in her office after not seeing me for 1 year my first time seeing her was in Jamie Vogt office for one hour. My daughter layed in my lap crying begging me not to leave saying I was the only one who can keep her safe. Jamie did noting to help my baby! Took 10 thousand dollars to see both my kids and helped paternal grandmother kidnap my daughter. Let abusers bring her to Jamie’s office and never had a visit with my daughter and her father. My daughter begged for help and was ignored. She never even mentioned this in my daughter’s report for court.",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Wagoner county"
-      },
-      {
-        "comment_text": "She discredited my daughter's abuse disclosure because of her different (monotone) tone of voice and emotional shutdown when talking about it. My daughter has PTSD. That's exactly how traumatized individuals describe trauma. They disassociate. She ruled that my daughter's disclosure of SA was coached because she had a flat affect and became emotionally distant when discussing the abuse. My daughter has PTSD. That is the typical presentation. My daughter was denied advocacy and protection as a result.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Creek County"
       },
       {
         "comment_text": "Coerced me to give details about a situation with my kids in counseling with my ex while the divorce was still taking place. I expressed that my ex was using the session to fish for information to use against me and she allowed her to do it, even telling me that if I didn’t she would report back to the GAL how difficult I was being.",
@@ -150,11 +151,11 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "My daughter begged for help and was ignored.",
+        "body": "She ignored obvious signs of trauma in my child and said that she seemed coached.",
         "kind": "comment"
       },
       {
-        "body": "My daughter was denied advocacy and protection as a result.",
+        "body": "My daughter begged for help and was ignored.",
         "kind": "comment"
       },
       {

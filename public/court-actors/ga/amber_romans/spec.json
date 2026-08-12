@@ -1,0 +1,156 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "amber_romans",
+    "display_name": "Amber Romans",
+    "title": "",
+    "first_name": "Amber",
+    "last_name": "Romans",
+    "role": "Attorney",
+    "court": "Catoosa County",
+    "county": "Catoosa County",
+    "court_or_county": "Catoosa County",
+    "state": "GA",
+    "state_abbr": "GA",
+    "mention_count": 5,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 5,
+    "supabase_row_ids": [
+      "3429bf23-adb8-4298-921d-2c76fe6dbbd7",
+      "e5ec9b51-0744-45f5-bc1f-8a2e779c23d8",
+      "6c33514c-473e-4f07-adb9-87f728745e28",
+      "dd982756-2c80-4b6f-a278-f833599a4d05",
+      "8c3af574-a152-4a66-aab7-2a5586a47c54"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "amber romans|GA"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 122,
+    "total_submissions": 159,
+    "avg_financial_loss": 208750.85,
+    "avg_months_lost": 31.7,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "GA",
+    "state_family_count": 159,
+    "median_financial_loss": 153000,
+    "median_burden_sample_size": 86,
+    "median_months_lost": 18,
+    "pro_se_pct": 42.1,
+    "pro_se_count": 67,
+    "_pdf_state_family_count": 159,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5686,
+  "supabase": {
+    "report_count": 5,
+    "actor_report_count": 5,
+    "family_count": 3,
+    "family_reports": [
+      {
+        "body": "Attempted to destroy the child bond with her mother. Altered the child’s life by denying medical treatment.",
+        "state": "GA",
+        "county": "Catoosa",
+        "row_id": "3ab71e48-9b6a-42eb-aafd-b6dd357694ba"
+      },
+      {
+        "body": "Forever altered my disabled child’s life by denying her care due to false allegations with no evidence",
+        "state": "GA",
+        "county": "Catoosa County Georgia",
+        "row_id": "6f6df047-f4ae-45ac-8752-47bcbd0d2726"
+      },
+      {
+        "body": "Stolen time and moments that can never be replaced",
+        "state": "GA",
+        "county": "Catoosa",
+        "row_id": "bb5785b1-e2b3-4939-a577-a0c25951bb88"
+      },
+      {
+        "body": "Destroyed my rights to be a mother to my only child.",
+        "state": "GA",
+        "county": "Catoosa",
+        "row_id": "8124ba31-0c53-4433-9dea-8927176d87e9"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Ex parte communication with judge and GAL, fabricated evidence, ignored evidence of abuse Submitted fabricated documents, discussed sealed information in open court, ex parte communication with the judge",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Catoosa County"
+      },
+      {
+        "comment_text": "Opposing counsel, altered medical reports, presented hearsay and sealed information, works directly with the GAL and the judge in the same jurisdiction as my case, had her client destroy evidence",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Catoosa County"
+      },
+      {
+        "comment_text": "Attempted to submit fabricated documents as evidence to remove my parental rights Fabricated evidence, aided her client in hiding the child for 154 days",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Catoosa County Superior Court"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/amber_romans",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='GA'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ga/amber_romans/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Ignored evidence of abuse Submitted fabricated documents",
+        "kind": "comment"
+      },
+      {
+        "body": "The judge in the same jurisdiction as my case, had her client destroy evidence",
+        "kind": "comment"
+      },
+      {
+        "body": "Fabricated documents as evidence to remove my parental rights Fabricated evidence",
+        "kind": "comment"
+      },
+      {
+        "body": "Attempted to destroy the child bond with her mother.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Forever altered my disabled child’s life by denying her care due to false…",
+        "kind": "family_report"
+      },
+      {
+        "body": "Stolen time and moments that can never be replaced",
+        "kind": "family_report"
+      },
+      {
+        "body": "Destroyed my rights to be a mother to my only child.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

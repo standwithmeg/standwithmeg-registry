@@ -27,27 +27,27 @@
     "actor_bucket_key": "pat galagher|NY"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-tzt3cad0/New Final Post and Capcut template/export/pat_gallagher/image_1080.png",
+    "path": "/tmp/swm-share-pages-56vhhi8e/New Final Post and Capcut template/export/pat_gallagher/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 134,
+    "families_approved": 133,
     "total_submissions": 181,
     "avg_financial_loss": 203568.15,
     "avg_months_lost": 27.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "NY",
     "state_family_count": 181,
-    "median_financial_loss": 181525,
-    "median_burden_sample_size": 68,
+    "median_financial_loss": 175000,
+    "median_burden_sample_size": 67,
     "median_months_lost": 14,
-    "pro_se_pct": 38.7,
-    "pro_se_count": 70,
+    "pro_se_pct": 38.1,
+    "pro_se_count": 69,
     "_pdf_state_family_count": 181,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5678,
+  "movement_total": 5686,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
