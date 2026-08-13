@@ -19,10 +19,10 @@
     "actor_report_count": 5,
     "supabase_row_ids": [
       "3429bf23-adb8-4298-921d-2c76fe6dbbd7",
-      "e5ec9b51-0744-45f5-bc1f-8a2e779c23d8",
       "6c33514c-473e-4f07-adb9-87f728745e28",
-      "dd982756-2c80-4b6f-a278-f833599a4d05",
-      "8c3af574-a152-4a66-aab7-2a5586a47c54"
+      "8c3af574-a152-4a66-aab7-2a5586a47c54",
+      "e5ec9b51-0744-45f5-bc1f-8a2e779c23d8",
+      "dd982756-2c80-4b6f-a278-f833599a4d05"
     ],
     "actor_row_id": null,
     "actor_bucket_key": "amber romans|GA"
@@ -34,21 +34,21 @@
   },
   "state_stats": {
     "families_approved": 122,
-    "total_submissions": 159,
-    "avg_financial_loss": 208750.85,
-    "avg_months_lost": 31.7,
+    "total_submissions": 160,
+    "avg_financial_loss": 207368.4,
+    "avg_months_lost": 31.6,
     "_source_table": "movement_stats_by_state",
     "_match_value": "GA",
-    "state_family_count": 159,
+    "state_family_count": 160,
     "median_financial_loss": 153000,
     "median_burden_sample_size": 86,
-    "median_months_lost": 18,
-    "pro_se_pct": 42.1,
+    "median_months_lost": 19,
+    "pro_se_pct": 41.9,
     "pro_se_count": 67,
-    "_pdf_state_family_count": 159,
+    "_pdf_state_family_count": 160,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5686,
+  "movement_total": 5691,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,

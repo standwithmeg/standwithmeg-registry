@@ -19,11 +19,11 @@
     "actor_report_count": 6,
     "supabase_row_ids": [
       "c6e43950-56f0-45ca-9ea9-b6c8240da442",
-      "221fdd9e-74de-49c5-97d1-c048093a83a9",
       "6f603d46-7bbf-4bae-8185-3765544f3e66",
+      "8769a8a1-835c-4535-80b8-aaf9aa8a01f8",
+      "221fdd9e-74de-49c5-97d1-c048093a83a9",
       "07f67ff3-b990-4b1a-94c3-6e8a5d429778",
-      "248809fc-bb13-434c-b047-44b1cabdb01f",
-      "8769a8a1-835c-4535-80b8-aaf9aa8a01f8"
+      "248809fc-bb13-434c-b047-44b1cabdb01f"
     ],
     "actor_row_id": null,
     "actor_bucket_key": "christopher arnt|GA"
@@ -35,21 +35,21 @@
   },
   "state_stats": {
     "families_approved": 122,
-    "total_submissions": 159,
-    "avg_financial_loss": 208750.85,
-    "avg_months_lost": 31.7,
+    "total_submissions": 160,
+    "avg_financial_loss": 207368.4,
+    "avg_months_lost": 31.6,
     "_source_table": "movement_stats_by_state",
     "_match_value": "GA",
-    "state_family_count": 159,
+    "state_family_count": 160,
     "median_financial_loss": 153000,
     "median_burden_sample_size": 86,
-    "median_months_lost": 18,
-    "pro_se_pct": 42.1,
+    "median_months_lost": 19,
+    "pro_se_pct": 41.9,
     "pro_se_count": 67,
-    "_pdf_state_family_count": 159,
+    "_pdf_state_family_count": 160,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5686,
+  "movement_total": 5691,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,

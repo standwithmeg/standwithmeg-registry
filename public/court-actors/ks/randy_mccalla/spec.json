@@ -12,18 +12,17 @@
     "court_or_county": "Johnson",
     "state": "Kansas",
     "state_abbr": "KS",
-    "mention_count": 8,
-    "family_count": 8,
-    "public_family_count": 8,
+    "mention_count": 7,
+    "family_count": 7,
+    "public_family_count": 7,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 8,
+    "actor_report_count": 7,
     "supabase_row_ids": [
       "2b80da54-7769-45ad-a6d8-005914f28a9c",
       "60c67598-fb31-4754-86b7-17de13f13639",
       "9e77829d-7d60-4298-a400-a0d42638b8b6",
       "69387a32-7fff-4072-b56e-db454d84a070",
       "f42cd393-05ff-4bcb-bd8f-e3f5f7f7bfba",
-      "ec69c9c9-fd55-49dd-b625-f2507aa011da",
       "5f91accd-45f3-4436-886a-868339149fa9",
       "54e9569c-6281-4021-9b7f-2725de6b2c27"
     ],
@@ -31,14 +30,14 @@
     "actor_bucket_key": "randy mcala|KS"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-56vhhi8e/New Final Post and Capcut template/export/randy_mccalla/image_1080.png",
+    "path": "/tmp/swm-share-pages-imfmzvpj/New Final Post and Capcut template/export/randy_mccalla/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 183,
+    "families_approved": 182,
     "total_submissions": 271,
-    "avg_financial_loss": 111184.03,
+    "avg_financial_loss": 112394.11,
     "avg_months_lost": 31.3,
     "_source_table": "movement_stats_by_state",
     "_match_value": "KS",
@@ -51,11 +50,11 @@
     "_pdf_state_family_count": 271,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5686,
+  "movement_total": 5691,
   "supabase": {
-    "report_count": 8,
-    "actor_report_count": 8,
-    "family_count": 8,
+    "report_count": 7,
+    "actor_report_count": 7,
+    "family_count": 7,
     "family_reports": [
       {
         "body": "Had I known what the family court system would put us through, I may have stayed in an abusive marriage until my children were grown. Leaving should have protected us; instead, the system prolonged the harm and made survival feel like punishment.",
@@ -82,16 +81,16 @@
         "row_id": "7f5c3fa9-849c-4376-b76f-ff0cfece5383"
       },
       {
-        "body": "This system removed my children without due process, ignored evidence that cleared me, and created financial and procedural barriers that have kept me separated from them for years. The court actors built a system where I have to pay thousands just to try to be their mom again.",
-        "state": "KS",
-        "county": "Johnson County",
-        "row_id": "79a2d570-52fe-40f1-a0c8-1f41ca10d5b6"
-      },
-      {
         "body": "This the single biggest trauma of my life. Guardian Ad Litems are the biggest threat to the family court system and their power must be checked.",
         "state": "KS",
         "county": "Johnson",
         "row_id": "3338c6ba-25d3-4621-a5d1-217a0347dc6f"
+      },
+      {
+        "body": "Corrupt judges, attorneys and other court appointed professionals abused their position to extort money from my family by issuing orders and directives for the sole purpose of causing harm to my children. These officers of the Court are intentionally committing crimes for the sole purpose of stealing money from broken families and these crimes are routinely and consistently committed by the same individuals. The Johnson County Kansas family court system is a cesspool full of narcissistic and incestuous behavior by these so-called officers of the Court.",
+        "state": "KS",
+        "county": "Yes",
+        "row_id": "2b205887-e06c-40e1-a52a-854808fb983c"
       }
     ],
     "public_comments": [
@@ -109,12 +108,6 @@
       },
       {
         "comment_text": "Randy McCalla, GAL in my custody case; ordered psychological evaluations, multiple interviews with children, but in my experience the findings/recommendations and children’s concerns were disregarded, which escalated conflict and harmed family stability. He ignored years of documented abuse.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Johnson"
-      },
-      {
-        "comment_text": "Filed the emergency motion that led to my children being taken, never spoke to me, and instead worked with my ex, his attorney, therapists, and DCF while leaving me completely out and continuing to push for me to stay separated from my kids.",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Johnson"
@@ -174,10 +167,6 @@
         "kind": "comment"
       },
       {
-        "body": "Led to my children being taken",
-        "kind": "comment"
-      },
-      {
         "body": "Functioned more as an advocate for a third-party visitation claim than as a neutral representative for the child and did not submit a formal…",
         "kind": "comment"
       },
@@ -206,11 +195,11 @@
         "kind": "family_report"
       },
       {
-        "body": "Due process, ignored evidence that cleared me, and created financial and procedural barriers that have kept me separated from them for years.",
+        "body": "This the single biggest trauma of my life. Guardian Ad Litems are the biggest threat to the family court system and their power must be checked.",
         "kind": "family_report"
       },
       {
-        "body": "This the single biggest trauma of my life. Guardian Ad Litems are the biggest threat to the family court system and their power must be checked.",
+        "body": "The Johnson County Kansas family court system is a cesspool full of narcissistic and incestuous behavior by these so-called officers of the Court.",
         "kind": "family_report"
       }
     ],

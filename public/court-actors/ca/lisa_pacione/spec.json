@@ -26,14 +26,14 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-tzt3cad0/New Final Post and Capcut template/export/lisa_pacione/image_1080.png",
+    "path": "/tmp/swm-share-pages-imfmzvpj/New Final Post and Capcut template/export/lisa_pacione/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 357,
+    "families_approved": 356,
     "total_submissions": 464,
-    "avg_financial_loss": 279804.5,
+    "avg_financial_loss": 279876.98,
     "avg_months_lost": 34.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CA",
@@ -46,7 +46,7 @@
     "_pdf_state_family_count": 464,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5678,
+  "movement_total": 5691,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,

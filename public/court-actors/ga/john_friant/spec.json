@@ -19,10 +19,10 @@
     "actor_report_count": 5,
     "supabase_row_ids": [
       "1c71b434-bc87-435e-bebc-388c4bf7e1af",
-      "8adc10ce-e6ed-468f-8be6-f3694fdac837",
       "489a336e-1dc7-4356-8a23-9caa55e0f331",
-      "0969ee96-e210-437d-a051-35ace3ecaf9a",
-      "7c0fcf0e-e48a-43d9-8e39-ff5766ee6cda"
+      "7c0fcf0e-e48a-43d9-8e39-ff5766ee6cda",
+      "8adc10ce-e6ed-468f-8be6-f3694fdac837",
+      "0969ee96-e210-437d-a051-35ace3ecaf9a"
     ],
     "actor_row_id": null,
     "actor_bucket_key": "john friant|GA"
@@ -34,21 +34,21 @@
   },
   "state_stats": {
     "families_approved": 122,
-    "total_submissions": 159,
-    "avg_financial_loss": 208750.85,
-    "avg_months_lost": 31.7,
+    "total_submissions": 160,
+    "avg_financial_loss": 207368.4,
+    "avg_months_lost": 31.6,
     "_source_table": "movement_stats_by_state",
     "_match_value": "GA",
-    "state_family_count": 159,
+    "state_family_count": 160,
     "median_financial_loss": 153000,
     "median_burden_sample_size": 86,
-    "median_months_lost": 18,
-    "pro_se_pct": 42.1,
+    "median_months_lost": 19,
+    "pro_se_pct": 41.9,
     "pro_se_count": 67,
-    "_pdf_state_family_count": 159,
+    "_pdf_state_family_count": 160,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5686,
+  "movement_total": 5691,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,

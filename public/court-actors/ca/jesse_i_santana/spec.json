@@ -12,17 +12,16 @@
     "court_or_county": "Sutter County",
     "state": "California",
     "state_abbr": "CA",
-    "mention_count": 9,
-    "family_count": 7,
-    "public_family_count": 7,
+    "mention_count": 8,
+    "family_count": 6,
+    "public_family_count": 6,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 9,
+    "actor_report_count": 8,
     "supabase_row_ids": [
       "d75c3213-cd6d-4736-842f-da2da234e063",
       "d9103b4a-e868-4fcf-80f3-0f8302780ff8",
       "848ff73e-fbcb-4d97-9d0e-9cbbb4ff60aa",
       "1f41031a-1919-4989-ae55-ed17ccd0c8c8",
-      "c1e4c256-8a42-49dc-ac3c-563872c20232",
       "6eeba191-0155-4a25-8525-fe3c402f6375",
       "4dd4db03-c1ee-4470-889b-8ce8fa2186a2",
       "8350883b-0dd7-4d95-93d4-bf61f8352100",
@@ -32,14 +31,14 @@
     "actor_bucket_key": "jese santana|CA"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-tzt3cad0/New Final Post and Capcut template/export/jesse_i_santana/image_1080.png",
+    "path": "/tmp/swm-share-pages-imfmzvpj/New Final Post and Capcut template/export/jesse_i_santana/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 357,
+    "families_approved": 356,
     "total_submissions": 464,
-    "avg_financial_loss": 279804.5,
+    "avg_financial_loss": 279876.98,
     "avg_months_lost": 34.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CA",
@@ -52,11 +51,11 @@
     "_pdf_state_family_count": 464,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5678,
+  "movement_total": 5691,
   "supabase": {
-    "report_count": 9,
-    "actor_report_count": 9,
-    "family_count": 7,
+    "report_count": 8,
+    "actor_report_count": 8,
+    "family_count": 6,
     "family_reports": [
       {
         "body": "This has torched generations ahead of me. Completely dismantling my childrens safety of what truth and good parents are supposed to be. Having their mother make such forged and false statements to take them from their very affectionate and loving father is insane. The court enables this.",
@@ -96,12 +95,6 @@
       }
     ],
     "public_comments": [
-      {
-        "comment_text": "Ignored evidence of domestic violence and allowed my ex-husband to accuse me of parental alienation and a non existent criminal record - no evidence provided. Covered up my ex-husbands criminal history, Brady listed cop - fired. Performed an in-camera interview with my 12 year old son who reported to him the abuse. Judge Santana didn’t believe him, had him hauls out of the courtroom by 3 deputies screaming and begging not to make him go. Had but been with him for over 4 1/2 years. When he returned the following Monday, 7 CPS reports were filed, evaluated out, stating it was being handled by family court. Then allowed physical and legal custody to be given to my and my child’s abuser taking away my due process and placing hard-stop dates where evidence of abuse could not be submitted. This is still continuing. I am still forced to be on supervised visits at my ex’s convenience. Unsubstantiated accusations are being made against me. My son testified again and his testimony to come home was given no weight at all.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Sutter County"
-      },
       {
         "comment_text": "Has used clear breach of proper ethics to serve default judgments, does not communicate to pro per or pro se and frequently abuses \"sharp tactics\" and dishonest practices during custody and divorce hearings. Due process does not exist here. Evidence didnt exist for DVROs and no authentic evidence was used. Heavily linked to other criminal organizations. Wife charged for forging documents on a felony level at which docs were used to gain DVRO and custody of children. Santana allows women to bankrupt men and takes children from the healthy parent. Constantly siding with the women and disregards men’s testimony and facts of evidence. Allows false evidence of texts and false allegations in and using as evidence against other party.",
         "author": "Anonymous parent",
@@ -161,10 +154,6 @@
   },
   "render": {
     "selected_quotes": [
-      {
-        "body": "Then allowed physical and legal custody to be given to my.",
-        "kind": "comment"
-      },
       {
         "body": "Used clear breach of proper ethics to serve default judgments",
         "kind": "comment"
