@@ -12,22 +12,15 @@
     "court_or_county": "Callaway",
     "state": "MO",
     "state_abbr": "MO",
-    "mention_count": 10,
-    "family_count": 8,
-    "public_family_count": 8,
+    "mention_count": 3,
+    "family_count": 7,
+    "public_family_count": 7,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 10,
+    "actor_report_count": 3,
     "supabase_row_ids": [
       "472e1e97-32d2-47ff-84b8-bea35f09516c",
       "0dc5de84-8c31-4ef2-a8f0-efaa3826076d",
-      "dc9ac677-a8ba-4812-bd87-a6855191eb0c",
-      "777173d4-0431-4624-b558-b56cd0d894ec",
-      "0ef45854-f6ec-4734-a57a-39bc6cfb59d5",
-      "53a9af75-9efe-40dc-8c8f-36db48021ae3",
-      "9e160046-0949-4a4e-8abf-841a54e7ff8c",
-      "fdbbac27-34f9-40a4-af1b-e8093bd13734",
-      "bb603d01-3ea0-44af-a556-7742f81a3c65",
-      "5dd7599a-00e1-413b-9d9c-21818ef6a2c1"
+      "dc9ac677-a8ba-4812-bd87-a6855191eb0c"
     ],
     "actor_row_id": null,
     "actor_bucket_key": "sue crane|MO"
@@ -38,118 +31,68 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 155,
-    "total_submissions": 213,
-    "avg_financial_loss": 102720.57,
-    "avg_months_lost": 41.2,
+    "families_approved": 154,
+    "total_submissions": 214,
+    "avg_financial_loss": 102468.89,
+    "avg_months_lost": 42.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "MO",
-    "state_family_count": 213,
-    "median_financial_loss": 94350,
-    "median_burden_sample_size": 94,
+    "state_family_count": 214,
+    "median_financial_loss": 94000,
+    "median_burden_sample_size": 95,
     "median_months_lost": 24,
-    "pro_se_pct": 53.5,
-    "pro_se_count": 114,
-    "_pdf_state_family_count": 213,
+    "pro_se_pct": 53.7,
+    "pro_se_count": 115,
+    "_pdf_state_family_count": 214,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5691,
+  "movement_total": 5698,
   "supabase": {
-    "report_count": 10,
-    "actor_report_count": 10,
-    "family_count": 8,
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 7,
     "family_reports": [
-      {
-        "body": "This judge put my child in a home with her father she didn’t really know and with a gf and eventually they got married. So the step mom physically, mentally, and emotionally destroyed my child along with some of her fathers family members and to this day even tho I have had her home for three years now his family members still mentally and emotionally abuses my child to the point she isn’t allowed to be around them other than her father. In order to keep the step mom out of my child’s life I had to get an ex-parte order on her for my daughter after the fact my daughter sent me a video/more of a recording because you couldn’t see what exactly was going on of her step mom mentally and physically abusing her while her father was literally right there and didn’t stick up for our child! Not only did it destroy me but it destroyed my daughter where she is in therapy classes weekly!!",
-        "state": "MO",
-        "county": "Calloway",
-        "row_id": "2096bdfc-6b0c-4d32-9668-99408b5366bc"
-      },
-      {
-        "body": "Tore it the fuck apart . My kids feel like i didn't try hard enough . I had a 4 bedroom house and they took guardianship when I choose to leave that house because there was black mold and they wanted to send my children home to a place that could make them deathly sick . I Hardly get to even speak to my kids . When they took the kids they placed them with Karen Olson who had lost her 2 kids for abuse and left them there for a month or more before ever doing a background check . The person they are with now has assault records her name is Tonya Daniels ( Shoemaker or Mena) . They dont seem to understand my children miss there mother and want to see me as I love and miss my children very much also . They put my kids with someone that talks really bad about me to my children . My children have told me multiple things said",
-        "state": "MO",
-        "county": "Callaway",
-        "row_id": "4fe3692d-d356-4ab0-8943-8c47de4d4b8f"
-      },
-      {
-        "body": "The system has failed my family. I am left in constant fear for my child's safety, and I can't trust the courts or local law enforcement. We have experienced significant trauma, and we have lost precious time that we'll never get back and we're still losing time.",
-        "state": "MO",
-        "county": "Callaway",
-        "row_id": "7ea2c713-e406-4299-a7fd-f83dfbac8ebf"
-      },
-      {
-        "body": "Court is very bias, doesn’t listen to father. Punished me for the mother withholding the child from me. I believe that she thinks fathers do not have rights.",
-        "state": "MO",
-        "county": "Callaway",
-        "row_id": "99d89bd1-3b0b-4912-bbc1-1d6aa993cbda"
-      },
-      {
-        "body": "Alienation of a parent. Been shut out of my child's life and not allowed to protect child from other psychological abusive parent.",
-        "state": "MO",
-        "county": "Callaway",
-        "row_id": "fae66699-7507-456a-9c38-5d524c1f65dc"
-      },
       {
         "body": "The system has wrecked my family. If my older children want to speak to their seven year-old brother, they have to deal with the man who abused us. I’ve lost eight months with my son. He was forced into public school. We don’t do public schools. My son is living with an abuser someone who’s tried to kill himself multiple times and someone who has tried to kill me multiple times. I’ve been harassed by law-enforcement in court officials. I had to move thousands of miles away for safety from the system. I’m not even allowed to speak to my son. My son sent me a Snapchat video where he was telling me. He loves me. He misses me. He really wants to see me. Hurry up and get my stuff done so I can see him. The court refuses to give me my final judgment since January 9 and I don’t even know what my legal last name is. There’s no way for me to know what stipulations to court have in order to see my son. I feel like my life is pointless until I can get my child away from that man. I’ve been labeled as mentally unstable for simply being a victim of domestic violence.",
         "state": "MO",
         "county": "Callaway",
         "row_id": "65f85280-5b6e-422d-8239-4456a646daa5"
+      },
+      {
+        "body": "Lied and destroyed my family along with trying to brainwash my children.",
+        "state": "MO",
+        "county": "Boone",
+        "row_id": "b49bbde5-68c6-4932-86ce-7f64f27a0bf7"
+      },
+      {
+        "body": "Completely destroyed us by tearing us apart without hearing our evidence and placing my children in the hands of a pedophile",
+        "state": "MO",
+        "county": "Callaway",
+        "row_id": "a4a8534c-612c-49fe-aca8-17ae5885dd62"
       }
     ],
     "public_comments": [
       {
-        "comment_text": "delayed unification, allowed fraud by my daughters father to gain the ability to put my daughter in a different school district, failed to document and execute court orders she had previously ordered, ignored the recommendations of the Rainbow House to complete my daughters interview for abuse, ignored evidence.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Callaway"
-      },
-      {
         "comment_text": "She’s bias, lies on the docket, refuses transcripts and court access. The clerk blocked my email and hangs up on me when I call the court. (Recorded) judge made final judgement and then backdated it 69 days later- preventing my filings. (They were already filed prior to this backdate.)",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Callaway"
-      },
-      {
-        "comment_text": "Sent my children with our abuser didn't allow evidence to be shown from my side, no other household members (3 adults) (2 minors) we spoken to about allegations. She also did my protection order against ex sister in law and ex husband as well as divorce, knew of previous abuse by him.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Callaway"
-      },
-      {
-        "comment_text": "Ignored evidence I had against the father and now ex-step mom, she handed my child over to a father that wasn’t even involved in our daughters life for 6 years without a real reason that was actually true",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Callaway"
-      },
-      {
-        "comment_text": "Sue crane told us at our first court date my kids was safe then took my 3 kids the next court date. If my kids was in harms way then why not take them the first court date .",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Callaway"
-      },
-      {
-        "comment_text": "One sided and bias. Wouldn’t listen to my side of story then told me she would “deal with me” in family court",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Callaway"
-      },
-      {
-        "comment_text": "Judge refused to review evidence of child abuse. Therefore, allowing child to live with other parent.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Callaway"
+        "source": "court_actors.notes"
       },
       {
         "comment_text": "She is the judge on my case and always rules for the other side.",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Callaway"
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Sent my children with our abuser didn't allow evidence to be shown from my side, no other household members (3 adults) (2 minors) we spoken to about allegations. She also did my protection order against ex sister in law and ex husband as well as divorce, knew of previous abuse by him.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/sue_crane",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='MO'"
+    "public_family_count_api: no actors returned for state='MO'",
+    "pdf_public_actor: no 'Sue m Crain' in cache for MO"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
@@ -169,31 +112,7 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "delayed unification, allowed fraud by my daughters father to gain the ability to…",
-        "kind": "comment"
-      },
-      {
         "body": "The clerk blocked my email and hangs up on me when I call the court.",
-        "kind": "comment"
-      },
-      {
-        "body": "Sent my children with our abuser didn't allow evidence to be shown from my side, no…",
-        "kind": "comment"
-      },
-      {
-        "body": "Ignored evidence I had against the father",
-        "kind": "comment"
-      },
-      {
-        "body": "Then took my 3 kids the next court date",
-        "kind": "comment"
-      },
-      {
-        "body": "One sided and bias.",
-        "kind": "comment"
-      },
-      {
-        "body": "Judge refused to review evidence of child abuse.",
         "kind": "comment"
       },
       {
@@ -201,31 +120,23 @@
         "kind": "comment"
       },
       {
-        "body": "Allowed to be around them other than her father",
-        "kind": "family_report"
-      },
-      {
-        "body": "Took the kids they placed them with Karen Olson who had lost her 2 kids for abuse",
-        "kind": "family_report"
-      },
-      {
-        "body": "I am left in constant fear for my child's safety.",
-        "kind": "family_report"
-      },
-      {
-        "body": "Court is very bias, doesn’t listen to father.",
-        "kind": "family_report"
-      },
-      {
-        "body": "Allowed to protect child from other psychological abusive parent",
-        "kind": "family_report"
+        "body": "Sent my children with our abuser didn't allow evidence to be shown from my side, no…",
+        "kind": "comment"
       },
       {
         "body": "I’ve lost eight months with my son. He was forced into public school.",
         "kind": "family_report"
+      },
+      {
+        "body": "Lied and destroyed my family along with trying to brainwash my children.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Completely destroyed us by tearing us apart.",
+        "kind": "family_report"
       }
     ],
-    "quote_page_count": 2
+    "quote_page_count": 1
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

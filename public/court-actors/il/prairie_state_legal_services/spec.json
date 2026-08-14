@@ -12,13 +12,12 @@
     "court_or_county": "McLean",
     "state": "Illinois",
     "state_abbr": "IL",
-    "mention_count": 3,
-    "family_count": 3,
-    "public_family_count": 3,
+    "mention_count": 2,
+    "family_count": 2,
+    "public_family_count": 2,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 3,
+    "actor_report_count": 2,
     "supabase_row_ids": [
-      "5055198c-66e5-45a2-87ab-820376d88b23",
       "b08a7283-ecc7-4ebc-a371-f28d5b1b0409",
       "9846bec9-71d0-4b95-a229-0ac0c18cbb49"
     ],
@@ -34,57 +33,51 @@
     ]
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-imfmzvpj/New Final Post and Capcut template/export/prairie_state_legal_services/image_1080.png",
+    "path": "/tmp/swm-share-pages-x2wuhcnl/New Final Post and Capcut template/export/prairie_state_legal_services/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 109,
-    "total_submissions": 160,
-    "avg_financial_loss": 222512.69,
+    "families_approved": 108,
+    "total_submissions": 161,
+    "avg_financial_loss": 221861.45,
     "avg_months_lost": 27.7,
     "_source_table": "movement_stats_by_state",
     "_match_value": "IL",
-    "state_family_count": 160,
-    "median_financial_loss": 129500,
-    "median_burden_sample_size": 100,
+    "state_family_count": 161,
+    "median_financial_loss": 127000,
+    "median_burden_sample_size": 101,
     "median_months_lost": 15,
-    "pro_se_pct": 48.8,
-    "pro_se_count": 78,
-    "_pdf_state_family_count": 160,
+    "pro_se_pct": 49.1,
+    "pro_se_count": 79,
+    "_pdf_state_family_count": 161,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5691,
+  "movement_total": 5698,
   "supabase": {
-    "report_count": 3,
-    "actor_report_count": 3,
-    "family_count": 3,
+    "report_count": 2,
+    "actor_report_count": 2,
+    "family_count": 2,
     "family_reports": [
       {
         "body": "Family court has destroyed the innocence and robbed the dreams of my children and my motherhood. Family court has become the abuser and the weapon of my abuser. Family court is responsible for creating poverty homelessness and generational trauma.",
         "state": "IL",
         "county": "Lake",
         "row_id": "67770c47-4f1a-4521-bc58-71c1512f4dde"
-      },
-      {
-        "body": "A system that is supposed to protect children, and protect survivors of domestic violence has put my daughter continuously In Harm's Way by forcing her to be with her abuser 50% of the time, regardless of the fact that she is still disclosing abuse. I have been diagnosed with complex PTSD, my other children, my other family members, close family friends, and myself have all struggled with severe depression, fear, and anxiety on a regular basis because of family court!",
-        "state": "IL",
-        "county": "Kankakee",
-        "row_id": "a6441b03-4ca2-4eea-845b-835a7c4a09bb"
       }
     ],
     "public_comments": [
       {
         "comment_text": "Useless. They only help if you have an OP and or criminal case. They then have an insane waitlist. They called me 3 yrs later and said they could take my case.",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Kankakee and Lake"
+        "source": "court_actors.notes"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/prairie_state_legal_services",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='IL'"
+    "public_family_count_api: no actors returned for state='IL'",
+    "pdf_public_actor: no 'Prairie State Legal Services' in cache for IL"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
@@ -104,11 +97,11 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "They only help if you have an OP and or criminal case. They then have an insane waitlist. They called me 3 yrs later and said they could take my case.",
+        "body": "Useless. They only help if you have an OP and or criminal case. They then have an insane waitlist. They called me 3 yrs later and said they could take my case.",
         "kind": "comment"
       },
       {
-        "body": "Family court has destroyed the innocence and robbed the dreams of my children and my motherhood. Family court has become the abuser and the weapon of my abuser.",
+        "body": "Family court has destroyed the innocence and robbed the dreams of my children and my motherhood. Family court has become the abuser and the weapon of my abuser. Family court is responsible for creating poverty homelessness and generational trauma.",
         "kind": "family_report"
       }
     ],

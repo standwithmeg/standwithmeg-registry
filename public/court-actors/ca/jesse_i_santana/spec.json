@@ -31,27 +31,27 @@
     "actor_bucket_key": "jese santana|CA"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-imfmzvpj/New Final Post and Capcut template/export/jesse_i_santana/image_1080.png",
+    "path": "/tmp/swm-share-pages-x2wuhcnl/New Final Post and Capcut template/export/jesse_i_santana/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 356,
-    "total_submissions": 464,
-    "avg_financial_loss": 279876.98,
-    "avg_months_lost": 34.8,
+    "total_submissions": 465,
+    "avg_financial_loss": 279292.55,
+    "avg_months_lost": 34.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CA",
-    "state_family_count": 464,
+    "state_family_count": 465,
     "median_financial_loss": 269200,
     "median_burden_sample_size": 205,
     "median_months_lost": 20,
-    "pro_se_pct": 58.4,
-    "pro_se_count": 271,
-    "_pdf_state_family_count": 464,
+    "pro_se_pct": 58.5,
+    "pro_se_count": 272,
+    "_pdf_state_family_count": 465,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5691,
+  "movement_total": 5698,
   "supabase": {
     "report_count": 8,
     "actor_report_count": 8,

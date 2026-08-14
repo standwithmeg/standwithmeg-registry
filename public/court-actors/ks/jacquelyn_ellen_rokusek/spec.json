@@ -30,27 +30,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-56vhhi8e/New Final Post and Capcut template/export/jacquelyn_ellen_rokusek/image_1080.png",
+    "path": "/tmp/swm-share-pages-x2wuhcnl/New Final Post and Capcut template/export/jacquelyn_ellen_rokusek/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 183,
-    "total_submissions": 271,
-    "avg_financial_loss": 111184.03,
-    "avg_months_lost": 31.3,
+    "families_approved": 182,
+    "total_submissions": 272,
+    "avg_financial_loss": 111942.73,
+    "avg_months_lost": 31.1,
     "_source_table": "movement_stats_by_state",
     "_match_value": "KS",
-    "state_family_count": 271,
+    "state_family_count": 272,
     "median_financial_loss": 97450,
     "median_burden_sample_size": 140,
-    "median_months_lost": 17,
-    "pro_se_pct": 48.3,
-    "pro_se_count": 131,
-    "_pdf_state_family_count": 271,
+    "median_months_lost": 16,
+    "pro_se_pct": 48.5,
+    "pro_se_count": 132,
+    "_pdf_state_family_count": 272,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5686,
+  "movement_total": 5698,
   "supabase": {
     "report_count": 7,
     "actor_report_count": 7,
