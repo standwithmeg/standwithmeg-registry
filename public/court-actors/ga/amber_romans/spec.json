@@ -12,13 +12,12 @@
     "court_or_county": "Catoosa County",
     "state": "GA",
     "state_abbr": "GA",
-    "mention_count": 5,
-    "family_count": 3,
-    "public_family_count": 3,
+    "mention_count": 4,
+    "family_count": 2,
+    "public_family_count": 2,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 5,
+    "actor_report_count": 4,
     "supabase_row_ids": [
-      "3429bf23-adb8-4298-921d-2c76fe6dbbd7",
       "6c33514c-473e-4f07-adb9-87f728745e28",
       "8c3af574-a152-4a66-aab7-2a5586a47c54",
       "e5ec9b51-0744-45f5-bc1f-8a2e779c23d8",
@@ -33,10 +32,10 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 122,
+    "families_approved": 121,
     "total_submissions": 160,
-    "avg_financial_loss": 207368.4,
-    "avg_months_lost": 31.6,
+    "avg_financial_loss": 207524.03,
+    "avg_months_lost": 31.7,
     "_source_table": "movement_stats_by_state",
     "_match_value": "GA",
     "state_family_count": 160,
@@ -48,11 +47,11 @@
     "_pdf_state_family_count": 160,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5691,
+  "movement_total": 5711,
   "supabase": {
-    "report_count": 5,
-    "actor_report_count": 5,
-    "family_count": 3,
+    "report_count": 4,
+    "actor_report_count": 4,
+    "family_count": 2,
     "family_reports": [
       {
         "body": "Attempted to destroy the child bond with her mother. Altered the child’s life by denying medical treatment.",
@@ -71,38 +70,30 @@
         "state": "GA",
         "county": "Catoosa",
         "row_id": "bb5785b1-e2b3-4939-a577-a0c25951bb88"
-      },
-      {
-        "body": "Destroyed my rights to be a mother to my only child.",
-        "state": "GA",
-        "county": "Catoosa",
-        "row_id": "8124ba31-0c53-4433-9dea-8927176d87e9"
       }
     ],
     "public_comments": [
       {
-        "comment_text": "Ex parte communication with judge and GAL, fabricated evidence, ignored evidence of abuse Submitted fabricated documents, discussed sealed information in open court, ex parte communication with the judge",
+        "comment_text": "Submitted fabricated documents, discussed sealed information in open court, ex parte communication with the judge",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Catoosa County"
-      },
-      {
-        "comment_text": "Opposing counsel, altered medical reports, presented hearsay and sealed information, works directly with the GAL and the judge in the same jurisdiction as my case, had her client destroy evidence",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Catoosa County"
+        "source": "court_actors.notes"
       },
       {
         "comment_text": "Attempted to submit fabricated documents as evidence to remove my parental rights Fabricated evidence, aided her client in hiding the child for 154 days",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Catoosa County Superior Court"
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Ex parte communication with judge and GAL, fabricated evidence, ignored evidence of abuse",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/amber_romans",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='GA'"
+    "public_family_count_api: no actors returned for state='GA'",
+    "pdf_public_actor: no 'Amber Romans' in cache for GA"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
@@ -122,15 +113,15 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Ignored evidence of abuse Submitted fabricated documents",
-        "kind": "comment"
-      },
-      {
-        "body": "The judge in the same jurisdiction as my case, had her client destroy evidence",
+        "body": "Submitted fabricated documents, discussed sealed information in open court, ex…",
         "kind": "comment"
       },
       {
         "body": "Fabricated documents as evidence to remove my parental rights Fabricated evidence",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored evidence of abuse",
         "kind": "comment"
       },
       {
@@ -143,10 +134,6 @@
       },
       {
         "body": "Stolen time and moments that can never be replaced",
-        "kind": "family_report"
-      },
-      {
-        "body": "Destroyed my rights to be a mother to my only child.",
         "kind": "family_report"
       }
     ],

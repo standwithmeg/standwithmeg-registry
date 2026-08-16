@@ -32,15 +32,15 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-imfmzvpj/New Final Post and Capcut template/export/ashley_wine/image_1080.png",
+    "path": "/tmp/swm-share-pages-od69grh5/New Final Post and Capcut template/export/ashley_wine/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 122,
+    "families_approved": 121,
     "total_submissions": 160,
-    "avg_financial_loss": 207368.4,
-    "avg_months_lost": 31.6,
+    "avg_financial_loss": 207524.03,
+    "avg_months_lost": 31.7,
     "_source_table": "movement_stats_by_state",
     "_match_value": "GA",
     "state_family_count": 160,
@@ -52,7 +52,7 @@
     "_pdf_state_family_count": 160,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5691,
+  "movement_total": 5711,
   "supabase": {
     "report_count": 9,
     "actor_report_count": 9,

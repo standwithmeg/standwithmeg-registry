@@ -29,27 +29,27 @@
     "actor_bucket_key": "joel yates|IA"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-yfhm15ft/New Final Post and Capcut template/export/joel_d_yates/image_1080.png",
+    "path": "/tmp/swm-share-pages-od69grh5/New Final Post and Capcut template/export/joel_d_yates/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 71,
-    "total_submissions": 101,
-    "avg_financial_loss": 109965.77,
-    "avg_months_lost": 38.7,
+    "families_approved": 70,
+    "total_submissions": 102,
+    "avg_financial_loss": 108770.49,
+    "avg_months_lost": 38.3,
     "_source_table": "movement_stats_by_state",
     "_match_value": "IA",
-    "state_family_count": 101,
+    "state_family_count": 102,
     "median_financial_loss": 180000,
     "median_burden_sample_size": 23,
-    "median_months_lost": 21,
-    "pro_se_pct": 50.5,
+    "median_months_lost": 20,
+    "pro_se_pct": 50.0,
     "pro_se_count": 51,
-    "_pdf_state_family_count": 101,
+    "_pdf_state_family_count": 102,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5704,
+  "movement_total": 5711,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
