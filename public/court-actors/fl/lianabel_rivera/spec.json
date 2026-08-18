@@ -1,0 +1,140 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "lianabel_rivera",
+    "display_name": "Lianabel Rivera",
+    "title": "",
+    "first_name": "Lianabel",
+    "last_name": "Rivera",
+    "role": "Attorney / GAL / Child Representative",
+    "court": "Osceola county",
+    "county": "Osceola county",
+    "court_or_county": "Osceola county",
+    "state": "FL",
+    "state_abbr": "FL",
+    "mention_count": 3,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "c91ff3f2-e390-4724-9339-d2023f64e326",
+      "78cbe020-a5c3-4f0e-8375-350dab23ed36",
+      "9abeb8f3-a0f5-4903-951b-410051121e09"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "lianabel rivera|FL"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 238,
+    "total_submissions": 321,
+    "avg_financial_loss": 199989.91,
+    "avg_months_lost": 27.6,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "FL",
+    "state_family_count": 321,
+    "median_financial_loss": 176500,
+    "median_burden_sample_size": 139,
+    "median_months_lost": 17,
+    "pro_se_pct": 57.6,
+    "pro_se_count": 185,
+    "_pdf_state_family_count": 321,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5729,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 3,
+    "family_reports": [
+      {
+        "body": "The systèm kidnappéd my children, destroyed my family , took everything I had fighting to get them back",
+        "state": "FL",
+        "county": "Osceola",
+        "row_id": "1d1a7e37-cf6a-430a-a63a-053a2c4470f6"
+      },
+      {
+        "body": "Courtroom corruption, fraudulent court orders, child abduction and trafficking attempt, uncooperative law enforcement, denial and restrictions for family members in making contact with child while in DCF custody",
+        "state": "NJ",
+        "county": "USA",
+        "row_id": "44d0032d-7e54-4fef-9b19-84d85ffee816"
+      },
+      {
+        "body": "Lied and conspired against us, ripping and stripping us mind , body, soul , bank account, civil rights ect. meanwhile allowing my nephew to be abused severely at 6",
+        "state": "FL",
+        "county": "Osceola County 9th Circuit Court",
+        "row_id": "298dd8f2-bdf7-433c-a607-447b0f35b7db"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "GAL representative who denies access to child involved by falsifying court documents, and not showing interest or involvement in any type of reunification of the child and family.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Osceola county"
+      },
+      {
+        "comment_text": "She lied, knew I had rights to my nephew, decided to set me up with other GALs, and thrown out of court. She was friends with case manager.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
+      },
+      {
+        "comment_text": "commits perjury to take children from families, ensuring children stay in foster care",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Osceola"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/lianabel_rivera",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='FL'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/fl/lianabel_rivera/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "GAL representative who denies access to child involved by falsifying court…",
+        "kind": "comment"
+      },
+      {
+        "body": "She was friends with case manager.",
+        "kind": "comment"
+      },
+      {
+        "body": "Commits perjury to take children from families, ensuring children stay in foster care",
+        "kind": "comment"
+      },
+      {
+        "body": "Took everything I had fighting to get them back",
+        "kind": "family_report"
+      },
+      {
+        "body": "Lied and conspired against us, ripping and stripping us mind , body, soul , bank…",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

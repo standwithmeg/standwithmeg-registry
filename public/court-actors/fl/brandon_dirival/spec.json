@@ -1,0 +1,141 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "brandon_dirival",
+    "display_name": "Brandon Dirival",
+    "title": "",
+    "first_name": "Brandon",
+    "last_name": "Dirival",
+    "role": "CPS Worker",
+    "court": "Osceola",
+    "county": "Osceola",
+    "court_or_county": "Osceola",
+    "state": "FL",
+    "state_abbr": "FL",
+    "mention_count": 4,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "edd244fa-e9b1-4bae-9024-656e55c0d299",
+      "ee21ac6a-8eab-40f3-8f82-76ebd13955ef",
+      "f0db694a-f93d-4bce-9f04-c0c6c48460f5",
+      "62c2ee71-8ed2-4cbf-96cb-9e3be495b813"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "brandon dirival|FL"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 238,
+    "total_submissions": 321,
+    "avg_financial_loss": 199989.91,
+    "avg_months_lost": 27.6,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "FL",
+    "state_family_count": 321,
+    "median_financial_loss": 176500,
+    "median_burden_sample_size": 139,
+    "median_months_lost": 17,
+    "pro_se_pct": 57.6,
+    "pro_se_count": 185,
+    "_pdf_state_family_count": 321,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5729,
+  "supabase": {
+    "report_count": 4,
+    "actor_report_count": 4,
+    "family_count": 3,
+    "family_reports": [
+      {
+        "body": "The systèm kidnappéd my children, destroyed my family , took everything I had fighting to get them back",
+        "state": "FL",
+        "county": "Osceola",
+        "row_id": "1d1a7e37-cf6a-430a-a63a-053a2c4470f6"
+      },
+      {
+        "body": "Courtroom corruption, fraudulent court orders, child abduction and trafficking attempt, uncooperative law enforcement, denial and restrictions for family members in making contact with child while in DCF custody",
+        "state": "NJ",
+        "county": "USA",
+        "row_id": "44d0032d-7e54-4fef-9b19-84d85ffee816"
+      },
+      {
+        "body": "Lied and conspired against us, ripping and stripping us mind , body, soul , bank account, civil rights ect. meanwhile allowing my nephew to be abused severely at 6",
+        "state": "FL",
+        "county": "Osceola County 9th Circuit Court",
+        "row_id": "298dd8f2-bdf7-433c-a607-447b0f35b7db"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Provided family with falsified documentation, advised family incorrectly in attempt to deter them from adoption, made no attempts to contact family members when child was in DCF care, falsified Court documents, refusal of contact with child and family members",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Osceola"
+      },
+      {
+        "comment_text": "Lies to families to keep children woth foster monsters Did everything to keep child from family, lied so bad",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Osceola"
+      },
+      {
+        "comment_text": "conspires and lies to keep children in foster care",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Osceola"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/brandon_dirival",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='FL'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/fl/brandon_dirival/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Falsified Court documents",
+        "kind": "comment"
+      },
+      {
+        "body": "Lies to families to keep children woth foster monsters Did everything to keep child…",
+        "kind": "comment"
+      },
+      {
+        "body": "Conspires and lies to keep children in foster care",
+        "kind": "comment"
+      },
+      {
+        "body": "Took everything I had fighting to get them back",
+        "kind": "family_report"
+      },
+      {
+        "body": "Lied and conspired against us, ripping and stripping us mind , body, soul , bank…",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

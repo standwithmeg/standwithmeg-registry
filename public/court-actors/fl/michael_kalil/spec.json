@@ -1,0 +1,136 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "michael_kalil",
+    "display_name": "Michael kalil",
+    "title": "",
+    "first_name": "Michael",
+    "last_name": "kalil",
+    "role": "Judge",
+    "court": "Duval",
+    "county": "Duval",
+    "court_or_county": "Duval",
+    "state": "FL",
+    "state_abbr": "FL",
+    "mention_count": 3,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "fb664839-a591-4c09-b67b-e7d1d219f9fd",
+      "a85fe77a-7a36-4874-bcc5-66d30fe02631",
+      "3290c827-d2fd-4b2b-865d-cc8c74c4592c"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "michael kalil|FL"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 238,
+    "total_submissions": 321,
+    "avg_financial_loss": 199989.91,
+    "avg_months_lost": 27.6,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "FL",
+    "state_family_count": 321,
+    "median_financial_loss": 176500,
+    "median_burden_sample_size": 139,
+    "median_months_lost": 17,
+    "pro_se_pct": 57.6,
+    "pro_se_count": 185,
+    "_pdf_state_family_count": 321,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5729,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 3,
+    "family_reports": [
+      {
+        "body": "Courtroom corruption, fraudulent court orders, child abduction and trafficking attempt, uncooperative law enforcement, denial and restrictions for family members in making contact with child while in DCF custody",
+        "state": "NJ",
+        "county": "USA",
+        "row_id": "44d0032d-7e54-4fef-9b19-84d85ffee816"
+      },
+      {
+        "body": "Has broken my trust and confidence in a system that was designed to help families, I have zero respect for authorities and im suffering from past and can't even get out of bed most days. My daughter is being raised against my own beliefs and now under the most confusion with 3 mommy's due to the gay caretakers and the social worker allowing her to reference them both as mommy.",
+        "state": "FL",
+        "county": "Duval",
+        "row_id": "275291c5-e598-44d1-9ef2-652b93b252b5"
+      },
+      {
+        "body": "Instead of incentives for taking children from the home there needs to be incentives for milestone while in their home and reunification.. my court actors had remourse you could tell the empathy In Some situations but there was nothing they could do outside of certain. Areas... but one thing in common... within the scope of any superior entities the empathy was disregarded all togwther",
+        "state": "FL",
+        "county": "Duval",
+        "row_id": "6d566cee-a475-4eea-aba9-26ebc6a75e69"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Fraudulently obtained his seat on the bench by default, he didn't even get appointed to his seat the naacp already had a field day....he also ignored evidence and hosts a adaptation earning praise for his achievements in permanency but does say where he gets his children from wrongfully terminating our rights and ruling unfair trials",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Duval"
+      },
+      {
+        "comment_text": "Ignored the contempt, and ignored evidence then told us to our face he didn't trust us so therefore terminating even thou we proved the distrust on their side and did a verbatim adoption he was super partial to the d a allowing her objections but not ours for the same thing",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Duval"
+      },
+      {
+        "comment_text": "Corrupt state attorney that doesn’t prosecute child abusers.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Duval"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/michael_kalil",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='FL'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/fl/michael_kalil/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Fraudulently obtained his seat on the bench by default, he didn't even get…",
+        "kind": "comment"
+      },
+      {
+        "body": "Not ours for the same thing",
+        "kind": "comment"
+      },
+      {
+        "body": "The social worker allowing her to reference them both as mommy.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Within the scope of any superior entities the empathy was disregarded all togwther",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

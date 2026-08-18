@@ -27,27 +27,27 @@
     "actor_bucket_key": "keith peterson|CA"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-axmobuc7/New Final Post and Capcut template/export/dr_keith_peterson/image_1080.png",
+    "path": "/tmp/swm-share-pages-6nxbtixa/New Final Post and Capcut template/export/dr_keith_peterson/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 355,
-    "total_submissions": 469,
-    "avg_financial_loss": 278035.65,
+    "total_submissions": 472,
+    "avg_financial_loss": 276901.46,
     "avg_months_lost": 34.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CA",
-    "state_family_count": 469,
-    "median_financial_loss": 265100,
-    "median_burden_sample_size": 206,
+    "state_family_count": 472,
+    "median_financial_loss": 258000,
+    "median_burden_sample_size": 209,
     "median_months_lost": 20,
-    "pro_se_pct": 58.2,
-    "pro_se_count": 273,
-    "_pdf_state_family_count": 469,
+    "pro_se_pct": 58.1,
+    "pro_se_count": 274,
+    "_pdf_state_family_count": 472,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5722,
+  "movement_total": 5729,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
