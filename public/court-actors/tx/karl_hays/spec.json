@@ -30,27 +30,27 @@
     "actor_bucket_key": "karl hays|TX"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-od69grh5/New Final Post and Capcut template/export/karl_hays/image_1080.png",
+    "path": "/tmp/swm-share-pages-7gspmaqk/New Final Post and Capcut template/export/karl_hays/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 249,
-    "total_submissions": 334,
-    "avg_financial_loss": 233377.65,
-    "avg_months_lost": 31.2,
+    "total_submissions": 335,
+    "avg_financial_loss": 232641.96,
+    "avg_months_lost": 31.1,
     "_source_table": "movement_stats_by_state",
     "_match_value": "TX",
-    "state_family_count": 334,
+    "state_family_count": 335,
     "median_financial_loss": 118900,
     "median_burden_sample_size": 159,
     "median_months_lost": 18,
-    "pro_se_pct": 48.8,
+    "pro_se_pct": 48.7,
     "pro_se_count": 163,
-    "_pdf_state_family_count": 334,
+    "_pdf_state_family_count": 335,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5711,
+  "movement_total": 5746,
   "supabase": {
     "report_count": 7,
     "actor_report_count": 7,

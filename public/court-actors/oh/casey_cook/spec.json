@@ -30,27 +30,27 @@
     "actor_bucket_key": "casey cook|OH"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-axmobuc7/New Final Post and Capcut template/export/casey_cook/image_1080.png",
+    "path": "/tmp/swm-share-pages-7gspmaqk/New Final Post and Capcut template/export/casey_cook/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 206,
-    "total_submissions": 288,
-    "avg_financial_loss": 108708.85,
-    "avg_months_lost": 34.0,
+    "total_submissions": 289,
+    "avg_financial_loss": 108315.66,
+    "avg_months_lost": 33.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OH",
-    "state_family_count": 288,
-    "median_financial_loss": 80000,
-    "median_burden_sample_size": 143,
-    "median_months_lost": 20,
-    "pro_se_pct": 53.1,
+    "state_family_count": 289,
+    "median_financial_loss": 79750,
+    "median_burden_sample_size": 144,
+    "median_months_lost": 19,
+    "pro_se_pct": 52.9,
     "pro_se_count": 153,
-    "_pdf_state_family_count": 288,
+    "_pdf_state_family_count": 289,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5722,
+  "movement_total": 5746,
   "supabase": {
     "report_count": 7,
     "actor_report_count": 7,

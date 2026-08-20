@@ -12,12 +12,13 @@
     "court_or_county": "Johnson",
     "state": "Kansas",
     "state_abbr": "KS",
-    "mention_count": 3,
-    "family_count": 3,
-    "public_family_count": 3,
+    "mention_count": 4,
+    "family_count": 4,
+    "public_family_count": 4,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 3,
+    "actor_report_count": 4,
     "supabase_row_ids": [
+      "a17e7647-a519-438e-88a7-32e3bb9ef71b",
       "7cd47d13-ff3b-4b03-ab06-db4eb0e08319",
       "27ae93b4-bd2f-499a-ba0a-35e3bc2296ac",
       "5254ca1d-b70a-4d03-8b71-ddc833692c40"
@@ -26,37 +27,43 @@
     "actor_bucket_key": "dan livingston|KS"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-x2wuhcnl/New Final Post and Capcut template/export/dan_livingston/image_1080.png",
+    "path": "/tmp/swm-share-pages-7gspmaqk/New Final Post and Capcut template/export/dan_livingston/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 182,
-    "total_submissions": 272,
-    "avg_financial_loss": 111942.73,
+    "families_approved": 185,
+    "total_submissions": 273,
+    "avg_financial_loss": 111495.56,
     "avg_months_lost": 31.1,
     "_source_table": "movement_stats_by_state",
     "_match_value": "KS",
-    "state_family_count": 272,
+    "state_family_count": 273,
     "median_financial_loss": 97450,
     "median_burden_sample_size": 140,
     "median_months_lost": 16,
-    "pro_se_pct": 48.5,
+    "pro_se_pct": 48.4,
     "pro_se_count": 132,
-    "_pdf_state_family_count": 272,
+    "_pdf_state_family_count": 273,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5698,
+  "movement_total": 5746,
   "supabase": {
-    "report_count": 3,
-    "actor_report_count": 3,
-    "family_count": 3,
+    "report_count": 4,
+    "actor_report_count": 4,
+    "family_count": 4,
     "family_reports": [
       {
         "body": "Court assigned officials in JoCo are not all fit. There MUST be a way for the very people this system is intended to “benefit” to have feedback of providers. Checks and balances of providers should be visible and traceable. JoCo is very much pro-white man privilege. Men are rewarded for providing a fraction of effort (time and money) compared to the expectation of women. Women are held to such a very different standard. Any emotion is considered to make us unreliable and crazy when really we are so exhausted from the very system not listening and changing judges or changing court assigned officials to the highest paid attorney’s demands. Men are not held accountable in family courts at JoCo. They just aren’t.",
         "state": "KS",
         "county": "Johnson County",
         "row_id": "13c6a06f-4cb4-485d-b4dd-00a60b2c0dfa"
+      },
+      {
+        "body": "This system removed my children without due process, ignored evidence that cleared me, and created financial and procedural barriers that have kept me separated from them for years. The court actors built a system where I have to pay thousands just to try to be their mom again.",
+        "state": "KS",
+        "county": "Johnson County",
+        "row_id": "79a2d570-52fe-40f1-a0c8-1f41ca10d5b6"
       }
     ],
     "public_comments": [
@@ -65,6 +72,12 @@
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "JoCo"
+      },
+      {
+        "comment_text": "Was assigned to help restore contact with my kids but allowed my ex to keep them from sessions, canceled visits over payment, made me spend over $5,000 before I could even see them, I spent over $10,000 total, and then he suddenly dropped me based on what my ex said, which stopped reunification completely.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Johnson"
       }
     ]
   },
@@ -90,11 +103,19 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Has had counseling with my daughters for eight months and will not listen to them that they do not want to return to 50% custody with their father and says that they have to go back and otherwise they have to keep coming to him.",
+        "body": "He has made a point that only stepmother is a problem and that that’s going to be fixed.",
         "kind": "comment"
       },
       {
-        "body": "Court assigned officials in JoCo are not all fit. There MUST be a way for the very people this system is intended to “benefit” to have feedback of providers. Checks and balances of providers should be visible and traceable.",
+        "body": "Was assigned to help restore contact with my kids.",
+        "kind": "comment"
+      },
+      {
+        "body": "Checks and balances of providers should be visible and traceable. JoCo is very much pro-white man privilege.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Removed my children without due process",
         "kind": "family_report"
       }
     ],

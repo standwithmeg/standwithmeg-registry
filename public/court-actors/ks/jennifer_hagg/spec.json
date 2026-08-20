@@ -12,51 +12,73 @@
     "court_or_county": "Johnson",
     "state": "Kansas",
     "state_abbr": "KS",
-    "mention_count": 3,
-    "family_count": 3,
-    "public_family_count": 3,
+    "mention_count": 7,
+    "family_count": 6,
+    "public_family_count": 6,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 3,
+    "actor_report_count": 7,
     "supabase_row_ids": [
+      "dea48589-94df-4094-8aff-a2f70b33e159",
+      "36d79edf-e2de-4fb0-bfcb-7c54fd73f36a",
       "9a63ebec-ae1c-4028-a28d-05d7fe1a65da",
       "e8057876-3bfb-4cbb-9348-54da753df3b6",
+      "cdc4011b-95f7-4ec2-8c73-ff7a3d0d3879",
+      "c54552f7-e203-4554-ad9e-76b53b969f90",
       "167bed4e-895c-4624-a8c2-ea187d23b114"
     ],
     "actor_row_id": null,
     "actor_bucket_key": "jennifer hagg|KS"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-x2wuhcnl/New Final Post and Capcut template/export/jennifer_hagg/image_1080.png",
+    "path": "/tmp/swm-share-pages-7gspmaqk/New Final Post and Capcut template/export/jennifer_hagg/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 182,
-    "total_submissions": 272,
-    "avg_financial_loss": 111942.73,
+    "families_approved": 185,
+    "total_submissions": 273,
+    "avg_financial_loss": 111495.56,
     "avg_months_lost": 31.1,
     "_source_table": "movement_stats_by_state",
     "_match_value": "KS",
-    "state_family_count": 272,
+    "state_family_count": 273,
     "median_financial_loss": 97450,
     "median_burden_sample_size": 140,
     "median_months_lost": 16,
-    "pro_se_pct": 48.5,
+    "pro_se_pct": 48.4,
     "pro_se_count": 132,
-    "_pdf_state_family_count": 272,
+    "_pdf_state_family_count": 273,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5698,
+  "movement_total": 5746,
   "supabase": {
-    "report_count": 3,
-    "actor_report_count": 3,
-    "family_count": 3,
+    "report_count": 7,
+    "actor_report_count": 7,
+    "family_count": 6,
     "family_reports": [
+      {
+        "body": "We have lost years of time with our children. Jennifer Hagg has lied, bullied, and made false reports to the court.",
+        "state": "KS",
+        "county": "johnson",
+        "row_id": "ebd004b5-9d30-409d-9757-9dfefed3e655"
+      },
+      {
+        "body": "Caused a lot of trauma.",
+        "state": "KS",
+        "county": "Johnson",
+        "row_id": "dfb6ae9b-f80f-43ee-9774-b0ac4cdd9c74"
+      },
       {
         "body": "The hardest lesson I learned in family court was that patterns do not disappear just because they are ignored. When abuse is treated as an isolated incident, evidence becomes negotiable, opinions become powerful, and accountability becomes optional. That is when I realized the abuse had not disappeared. It had simply found another face.",
         "state": "KS",
         "county": "Johnson County",
         "row_id": "155244d9-0cd7-4aac-ada0-908ccd831d2e"
+      },
+      {
+        "body": "This system removed my children without due process, ignored evidence that cleared me, and created financial and procedural barriers that have kept me separated from them for years. The court actors built a system where I have to pay thousands just to try to be their mom again.",
+        "state": "KS",
+        "county": "Johnson County",
+        "row_id": "79a2d570-52fe-40f1-a0c8-1f41ca10d5b6"
       },
       {
         "body": "It has taken my life",
@@ -66,6 +88,18 @@
       }
     ],
     "public_comments": [
+      {
+        "comment_text": "Ignored evidence, kidnapped my kids ,alienated them ,and helped my ex get them facing serious criminal charges that had to be brought up multiple times So much to write but I'll cut it short...She lied and had my kids taken from me when I was staying at a hotel from a abusive relationship I got my apartment a few days later and told my girls weren't coming back I was given less time like 2 hrs a week and only way to see them was through therapy? they have been alienated against me since by their dad and his mother their dad was facing rape allegations and going through trial and has 4 criminal charges on his record...the gal also treats people below her that are receiveing state assistance she will think that's good enough reason to take your kids she's on 2 different cases of mine",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Johnson"
+      },
+      {
+        "comment_text": "During her time representing me, she was also serving as a Guardian ad Litem (GAL) for other parents, and it became clear that she was overly familiar with others within the system. Furthermore, she failed to advocate for me, frequently accepting my ex-partner's claims without consulting or believing me. I fired her and I retained my former attorney, who has previously provided excellent representation.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Johnson"
+      },
       {
         "comment_text": "Didn’t seem to care about my case — relied on the GAL’s opinion.",
         "author": "Anonymous parent",
@@ -77,6 +111,12 @@
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Johnson"
+      },
+      {
+        "comment_text": "Blatant Bias",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
       }
     ]
   },
@@ -102,6 +142,14 @@
   "render": {
     "selected_quotes": [
       {
+        "body": "Ignored evidence, kidnapped my kids ,alienated them ,and helped my ex get them…",
+        "kind": "comment"
+      },
+      {
+        "body": "I retained my former attorney, who has previously provided excellent representation.",
+        "kind": "comment"
+      },
+      {
         "body": "Didn’t seem to care about my case — relied on the GAL’s opinion.",
         "kind": "comment"
       },
@@ -110,7 +158,19 @@
         "kind": "comment"
       },
       {
-        "body": "The hardest lesson I learned in family court was that patterns do not disappear just because they are ignored.",
+        "body": "Jennifer Hagg has lied, bullied, and made false reports to the court.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Caused a lot of trauma.",
+        "kind": "family_report"
+      },
+      {
+        "body": "They are ignored.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Removed my children without due process",
         "kind": "family_report"
       }
     ],

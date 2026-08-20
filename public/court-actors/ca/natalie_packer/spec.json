@@ -1,0 +1,145 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "natalie_packer",
+    "display_name": "Natalie Packer",
+    "title": "",
+    "first_name": "Natalie",
+    "last_name": "Packer",
+    "role": "Attorney",
+    "court": "Fresno",
+    "county": "Fresno",
+    "court_or_county": "Fresno",
+    "state": "CA",
+    "state_abbr": "CA",
+    "mention_count": 4,
+    "family_count": 4,
+    "public_family_count": 4,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "3d827749-4fe5-4657-a7d4-0b4237c97ba0",
+      "4091fd2e-dbad-4c1c-88ec-b20db4bcae66",
+      "3ba55588-028e-4795-adc7-f2432b992907",
+      "a73e838e-1d16-4567-a860-01eb69884574"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "natalie packer|CA"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 357,
+    "total_submissions": 474,
+    "avg_financial_loss": 279136.73,
+    "avg_months_lost": 34.9,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "CA",
+    "state_family_count": 474,
+    "median_financial_loss": 259500,
+    "median_burden_sample_size": 210,
+    "median_months_lost": 20,
+    "pro_se_pct": 58.0,
+    "pro_se_count": 275,
+    "_pdf_state_family_count": 474,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 5746,
+  "supabase": {
+    "report_count": 4,
+    "actor_report_count": 4,
+    "family_count": 4,
+    "family_reports": [
+      {
+        "body": "Illegally gave children to father’s girlfriend and then gave father who has three decades of violent and sexual adjudicated criminal history",
+        "state": "CA",
+        "county": "Fresno",
+        "row_id": "14edab80-6bfd-4d86-ab2a-7bcccdcb7925"
+      },
+      {
+        "body": "This system has destroyed my family, my daughter is more traumatized then anything she cries when she needs to return back to the other parent.",
+        "state": "CA",
+        "county": "Fresno",
+        "row_id": "5369700d-6e3f-4cb3-b232-47a993885e41"
+      },
+      {
+        "body": "We have lost everything because of our legal cases with convicted DV abuser and his 3rd party, including being sued for $20million. I have been obtaining help & support thru local DV shelter to help rebuild. Marjoree Mason Center, Fresno, CA",
+        "state": "CA",
+        "county": "Fresno",
+        "row_id": "62f0a1f6-04ec-4587-ae88-a312c41f090b"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Did not notify biological family members properly when minors were removed from both parents. Refused to acknowledge father’s extensive criminal history including domestic violence and child abuse. Did not properly investigate 3rd party before giving custody. Did not properly transfer custody of minors thru guardianship rules. 3rd party’s son was drug addict with multiple criminal charges & convictions. Endorced minor’s given to 3rd party girlfriend of convicted abuser. Treated 3rd party as her client rather than being minor’s counsel.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Fresno"
+      },
+      {
+        "comment_text": "Natalie Packer did not do her due diligence and vetting the Dad‘s girlfriend. Her son was having multiple arrests. She eventually got a restraining order on her son and her son is in jail for warrants and driving under the influence of narcotics. She got a CCW and Natalie Packer did not have the girlfriend sign and fill out any legal documentation for being the guardian of my children so there is no guardian paperwork, essentially trafficking, my children to the girlfriend.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Fresno"
+      },
+      {
+        "comment_text": "Ignored all communication with me, emails gone unanswered. Objected to my modification and used fathers declaration as her own using same wording, stated false statements with no evidence",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Fresno"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/natalie_packer",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='CA'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ca/natalie_packer/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Removed from both parents",
+        "kind": "comment"
+      },
+      {
+        "body": "Natalie Packer did not do her due diligence and vetting the Dad‘s girlfriend.",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored all communication with me, emails gone unanswered.",
+        "kind": "comment"
+      },
+      {
+        "body": "Illegally gave children to father’s girlfriend.",
+        "kind": "family_report"
+      },
+      {
+        "body": "This system has destroyed my family, my daughter is more traumatized then anything…",
+        "kind": "family_report"
+      },
+      {
+        "body": "I have been obtaining help & support thru local DV shelter to help rebuild.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

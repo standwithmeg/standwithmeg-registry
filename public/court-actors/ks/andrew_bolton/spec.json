@@ -12,11 +12,11 @@
     "court_or_county": "Miami",
     "state": "Kansas",
     "state_abbr": "KS",
-    "mention_count": 15,
-    "family_count": 15,
-    "public_family_count": 15,
+    "mention_count": 16,
+    "family_count": 16,
+    "public_family_count": 16,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 15,
+    "actor_report_count": 16,
     "supabase_row_ids": [
       "ddfd7d7b-8684-4a68-bd8a-9aa8bbc46147",
       "f17e6277-1a81-4d4f-b1f7-8e84f6f6ec30",
@@ -32,7 +32,8 @@
       "8b8484d0-b091-4da7-9fa8-b1a588666a12",
       "262336c7-0a95-482a-83d6-2e2c5ac9bc44",
       "222e95af-f209-402b-8d38-15c3e724dd8e",
-      "ffa86815-dbc4-47c6-beca-24388811b40f"
+      "ffa86815-dbc4-47c6-beca-24388811b40f",
+      "85264bb0-b134-4b5f-b778-e3b1a6e15c44"
     ],
     "actor_row_id": "ddfd7d7b-8684-4a68-bd8a-9aa8bbc46147",
     "actor_bucket_key": "andrew bolton|KS",
@@ -46,32 +47,38 @@
     ]
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-x2wuhcnl/New Final Post and Capcut template/export/andrew_bolton/image_1080.png",
+    "path": "/tmp/swm-share-pages-7gspmaqk/New Final Post and Capcut template/export/andrew_bolton/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 182,
-    "total_submissions": 272,
-    "avg_financial_loss": 111942.73,
+    "families_approved": 185,
+    "total_submissions": 273,
+    "avg_financial_loss": 111495.56,
     "avg_months_lost": 31.1,
     "_source_table": "movement_stats_by_state",
     "_match_value": "KS",
-    "state_family_count": 272,
+    "state_family_count": 273,
     "median_financial_loss": 97450,
     "median_burden_sample_size": 140,
     "median_months_lost": 16,
-    "pro_se_pct": 48.5,
+    "pro_se_pct": 48.4,
     "pro_se_count": 132,
-    "_pdf_state_family_count": 272,
+    "_pdf_state_family_count": 273,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5698,
+  "movement_total": 5746,
   "supabase": {
-    "report_count": 15,
-    "actor_report_count": 15,
-    "family_count": 15,
+    "report_count": 16,
+    "actor_report_count": 16,
+    "family_count": 16,
     "family_reports": [
+      {
+        "body": "We have lost years of time with our children. Jennifer Hagg has lied, bullied, and made false reports to the court.",
+        "state": "KS",
+        "county": "johnson",
+        "row_id": "ebd004b5-9d30-409d-9757-9dfefed3e655"
+      },
       {
         "body": "Children’s safety was ignored. We feel the court system is racially biased.",
         "state": "KS",
@@ -101,12 +108,6 @@
         "state": "KS",
         "county": "Miami county",
         "row_id": "8b0eaa72-5dd3-411b-9dc4-0f25f7d91268"
-      },
-      {
-        "body": "Ex parte orders issued taking away parenting time/no contact. I had sole custody, also taken away with the appointment of a new GAL on the case for a few months. No evidence presented, no witnesses and Judge delays setting evidentiary hearing. I have always been the primary caregiver. Ex husband had been found guilty during a custody trial of emotional and verbal abuse. The system has failed me and my kids. GALs and case managers have too much power.",
-        "state": "KS",
-        "county": "Johnson",
-        "row_id": "d1e4fa22-7ad4-438f-ba40-2533149dbb1b"
       }
     ],
     "public_comments": [
@@ -169,6 +170,12 @@
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Miami county"
+      },
+      {
+        "comment_text": "Puppet for the case manager",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Johnson"
       },
       {
         "comment_text": "Real life con artist",
@@ -240,6 +247,14 @@
         "kind": "comment"
       },
       {
+        "body": "Puppet for the case manager",
+        "kind": "comment"
+      },
+      {
+        "body": "Jennifer Hagg has lied, bullied, and made false reports to the court.",
+        "kind": "family_report"
+      },
+      {
         "body": "Children’s safety was ignored. We feel the court system is racially biased.",
         "kind": "family_report"
       },
@@ -258,13 +273,9 @@
       {
         "body": "Miami county doesn’t have the child best interest at all, they literally take…",
         "kind": "family_report"
-      },
-      {
-        "body": "Ex parte orders issued taking away parenting time/no contact.",
-        "kind": "family_report"
       }
     ],
-    "quote_page_count": 2
+    "quote_page_count": 3
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

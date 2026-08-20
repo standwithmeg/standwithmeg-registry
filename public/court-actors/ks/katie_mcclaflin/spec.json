@@ -12,45 +12,46 @@
     "court_or_county": "Johnson",
     "state": "Kansas",
     "state_abbr": "KS",
-    "mention_count": 3,
-    "family_count": 2,
-    "public_family_count": 2,
+    "mention_count": 4,
+    "family_count": 3,
+    "public_family_count": 3,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 3,
+    "actor_report_count": 4,
     "supabase_row_ids": [
       "6e696c5a-1bdf-4d33-89ac-ef19bdcf1569",
       "664bda65-3621-4e38-ac6c-15023bd681d6",
+      "a8d6533f-bf08-4424-9285-0b9d2733d313",
       "a7f9e738-e1cf-45e5-9199-022fc631bb0c"
     ],
     "actor_row_id": "6e696c5a-1bdf-4d33-89ac-ef19bdcf1569",
     "actor_bucket_key": "katie mclaflin|KS"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-x2wuhcnl/New Final Post and Capcut template/export/katie_mcclaflin/image_1080.png",
+    "path": "/tmp/swm-share-pages-7gspmaqk/New Final Post and Capcut template/export/katie_mcclaflin/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 182,
-    "total_submissions": 272,
-    "avg_financial_loss": 111942.73,
+    "families_approved": 185,
+    "total_submissions": 273,
+    "avg_financial_loss": 111495.56,
     "avg_months_lost": 31.1,
     "_source_table": "movement_stats_by_state",
     "_match_value": "KS",
-    "state_family_count": 272,
+    "state_family_count": 273,
     "median_financial_loss": 97450,
     "median_burden_sample_size": 140,
     "median_months_lost": 16,
-    "pro_se_pct": 48.5,
+    "pro_se_pct": 48.4,
     "pro_se_count": 132,
-    "_pdf_state_family_count": 272,
+    "_pdf_state_family_count": 273,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5698,
+  "movement_total": 5746,
   "supabase": {
-    "report_count": 3,
-    "actor_report_count": 3,
-    "family_count": 2,
+    "report_count": 4,
+    "actor_report_count": 4,
+    "family_count": 3,
     "family_reports": [
       {
         "body": "Family Court does not have fiduciary representation for the members of high-cost attorneys. The Attorneys collaborate with Judges and Social Workers for their firms best interest. Not the actual client.",
@@ -63,25 +64,38 @@
         "state": "KS",
         "county": "Johnson county",
         "row_id": "29d87f00-3f28-436e-b17b-2904016a38c1"
+      },
+      {
+        "body": "This system removed my children without due process, ignored evidence that cleared me, and created financial and procedural barriers that have kept me separated from them for years. The court actors built a system where I have to pay thousands just to try to be their mom again.",
+        "state": "KS",
+        "county": "Johnson County",
+        "row_id": "79a2d570-52fe-40f1-a0c8-1f41ca10d5b6"
       }
     ],
     "public_comments": [
       {
-        "comment_text": "Named alongside Judge Keven O'Grady and GAL Andrew Bolton. Lying sack of shit",
+        "comment_text": "Represented opposing party and advanced positions supporting continued restriction of my parenting time and separation from my children.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Johnson"
       },
       {
         "comment_text": "She clearly advised her client to lie and avoid accountability for misleading the court.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
+      },
+      {
+        "comment_text": "Named alongside Judge Keven O'Grady and GAL Andrew Bolton. Lying sack of shit",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Johnson"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/katie_mcclaflin",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='KS'",
-    "pdf_public_actor: no 'Katie mcclaflin' in cache for KS"
+    "public_family_count_api: no actors returned for state='KS'"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
@@ -101,19 +115,23 @@
   "render": {
     "selected_quotes": [
       {
+        "body": "Represented opposing party and advanced positions supporting continued restriction…",
+        "kind": "comment"
+      },
+      {
+        "body": "She clearly advised her client to lie and avoid accountability for misleading the…",
+        "kind": "comment"
+      },
+      {
         "body": "Named alongside Judge Keven O'Grady and GAL Andrew Bolton. Lying sack of shit",
         "kind": "comment"
       },
       {
-        "body": "She clearly advised her client to lie and avoid accountability for misleading the court.",
-        "kind": "comment"
-      },
-      {
-        "body": "The Attorneys collaborate with Judges and Social Workers for their firms best interest. Not the actual client.",
+        "body": "Fucked us all up",
         "kind": "family_report"
       },
       {
-        "body": "Fucked us all up",
+        "body": "Removed my children without due process",
         "kind": "family_report"
       }
     ],
