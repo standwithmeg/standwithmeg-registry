@@ -28,27 +28,27 @@
     "actor_bucket_key": "carla salvuci|MA"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-1i7tucy6/New Final Post and Capcut template/export/carla_a_salvucci/image_1080.png",
+    "path": "/tmp/swm-share-pages-2yeauxv5/New Final Post and Capcut template/export/carla_a_salvucci/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 75,
-    "total_submissions": 107,
-    "avg_financial_loss": 228732.55,
+    "total_submissions": 108,
+    "avg_financial_loss": 226446.3,
     "avg_months_lost": 25.6,
     "_source_table": "movement_stats_by_state",
     "_match_value": "MA",
-    "state_family_count": 107,
+    "state_family_count": 108,
     "median_financial_loss": 136300,
     "median_burden_sample_size": 44,
     "median_months_lost": 18,
-    "pro_se_pct": 56.1,
-    "pro_se_count": 60,
-    "_pdf_state_family_count": 107,
+    "pro_se_pct": 56.5,
+    "pro_se_count": 61,
+    "_pdf_state_family_count": 108,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5559,
+  "movement_total": 5749,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
