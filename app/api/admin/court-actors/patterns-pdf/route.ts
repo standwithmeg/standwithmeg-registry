@@ -86,6 +86,7 @@ async function fetchPatternRows(threshold: number, stateFilter: string | null): 
       .from("court_actors")
       .select("role,name,court_or_county,state_code,submission_id,survey_submissions(email,state_of_occurrence)")
       .eq("source", "form_direct")
+      .order("id", { ascending: true })
       .range(from, from + pageSize - 1);
 
     if (error) throw error;

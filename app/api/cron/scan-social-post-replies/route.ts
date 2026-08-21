@@ -83,7 +83,7 @@ function parseReplyAction(text: string, openRows: Awaited<ReturnType<typeof find
 
 export async function GET(request: Request) {
   const auth = request.headers.get("Authorization") ?? "";
-  if (auth !== `Bearer ${CRON_SECRET}`) {
+  if (!CRON_SECRET || auth !== `Bearer ${CRON_SECRET}`) {
     return Response.json({ error: "Unauthorized." }, { status: 401 });
   }
 

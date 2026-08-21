@@ -153,6 +153,7 @@ def story_quote(spec: dict) -> tuple[str, str]:
 # auto-extracted, not written by the family, so it is admin-only until promoted
 # and must never surface on a public slide. Drop the whole candidate.
 _EXTRACTION_MARKER = re.compile(r"\[extracted[\w-]*\]", re.IGNORECASE)
+_AI_EXTRACTED_PREFIX = re.compile(r"^\[AI-extracted from free-text\]", re.IGNORECASE)
 
 # A family member sometimes signs their submission ("...got nothing -Kylie T").
 # Every slide attributes quotes as "Anonymous parent", so a trailing signature
@@ -170,7 +171,7 @@ def _sanitize_quote_text(text: str) -> str:
     text = re.sub(r"\s+", " ", text).strip()
     if not text:
         return ""
-    if _EXTRACTION_MARKER.search(text):
+    if _EXTRACTION_MARKER.search(text) or _AI_EXTRACTED_PREFIX.search(text):
         return ""
     # Strip obvious PII patterns just in case
     text = re.sub(r"\b\d{2}-?\d{4,}\b", "[case #]", text)            # case numbers
@@ -1040,6 +1041,13 @@ def _is_unsupported_character_attack(sentence: str) -> bool:
     return not _has_action_verb(lower) and not _has_specific_time(sentence)
 
 
+def _quote_is_unsupported_character_attack(text: str) -> bool:
+    sentences = [part.strip() for part in re.findall(r"[^.!?]+[.!?]?", text) if part.strip()]
+    if not sentences:
+        return False
+    return all(_is_unsupported_character_attack(sentence) for sentence in sentences)
+
+
 # Common verbs (and auxiliaries) used to confirm a quote is a real statement
 # rather than a bare noun phrase ("My children"). Past-tense -ed words are
 # detected separately by regex.
@@ -1326,7 +1334,34 @@ def _quote_dedupe_keys(body: str) -> tuple[str, str]:
 # submission on the raw-notes fallback path).
 
 
-def story_quotes(spec: dict, n: int | None = 3) -> list[dict]:
+def quote_contains_minor_identifying_detail(text: str) -> bool:
+    value = re.sub(r"\s+", " ", (text or "")).strip()
+    if not value:
+        return False
+    if re.search(r"\bjust\s+turned\s+(?:1[0-7]|\d)\b", value, re.I):
+        return True
+    if re.search(r"\bturned\s+(?:1[0-7]|\d)\s*(?:years?|yrs?)\s*old\b", value, re.I):
+        return True
+    if re.search(r"\b\d{1,3}\s*-?\s*(?:months?|mos?)\s*-?\s*old\b", value, re.I):
+        return True
+    if re.search(r"\b(?:1[0-7]|\d)\s*-?\s*(?:years?|yrs?)\s*-?\s*old\b", value, re.I):
+        return True
+    if re.search(r"\b(?:age[d]?|ages)\s+(?:1[0-7]|\d)\b", value, re.I) and re.search(
+        r"\b(?:son|daughter|child|children|kid|kids|minor|juvenile)\b", value, re.I
+    ):
+        return True
+    if re.search(r"\b\d{2,3}\s*IQ\b", value, re.I) or re.search(r"\bIQ\s*(?:of\s*)?\d{2,3}\b", value, re.I):
+        return True
+    if re.search(r"\b(?:son|daughter|child|kid|kids)\b", value, re.I) and re.search(
+        r"\b(?:rare\s+genetic|genetic\s+disorder|board\s+of\s+DD|juvenile\s+detention|inpatient)\b",
+        value,
+        re.I,
+    ):
+        return True
+    return False
+
+
+def story_quotes(spec: dict, n: int | None = None) -> list[dict]:
     """Returns {body, kind} dicts for the quote frame(s).
 
     Precedence — combined sources after validation:
@@ -1344,15 +1379,20 @@ def story_quotes(spec: dict, n: int | None = 3) -> list[dict]:
     comment is paginated instead of silently capped at one frame.
     """
     sb = spec.get("supabase") or {}
+    render = spec.get("render") or {}
     comments = sb.get("public_comments") or []
     reports = sb.get("family_reports") or []
+    selected = render.get("selected_quotes") or []
+    keep_full = n is None or render.get("quote_source") == "actor_notes_v1" or render.get("keep_full_quotes") is True
 
     def _raw(source_items: list[dict], raw_field: str, kind: str) -> list[dict]:
-        return [
-            {"raw": str(item.get(raw_field) or "").strip(), "kind": kind}
-            for item in source_items
-            if str(item.get(raw_field) or "").strip()
-        ]
+        out: list[dict] = []
+        for item in source_items:
+            text = str(item.get(raw_field) or "").strip()
+            if not text or quote_contains_minor_identifying_detail(text):
+                continue
+            out.append({"raw": text, "kind": kind})
+        return out
 
     def _select(raw_items: list[dict]) -> list[dict]:
 
@@ -1367,23 +1407,30 @@ def story_quotes(spec: dict, n: int | None = 3) -> list[dict]:
         override_budget = (spec.get("render") or {}).get("quote_char_budget")
         if isinstance(override_budget, int) and override_budget > 0:
             char_budget = override_budget
+        if keep_full:
+            char_budget = max(char_budget, 100_000)
 
         out: list[dict] = []
         seen_full_keys: set[str] = set()
         seen_prefix_keys: set[str] = set()
         accepted_bodies: list[str] = []
         for item in raw_items:
-            body = select_best_quote(
-                item["raw"],
-                char_budget=char_budget,
-                prefer_substrings=(spec.get("render") or {}).get("prefer_quote_substrings"),
-            )
+            if keep_full:
+                body = _sanitize_quote_text(item["raw"])
+                if not body or _is_insult_only(body) or _quote_is_unsupported_character_attack(body) or not _is_real_statement(body):
+                    continue
+            else:
+                body = select_best_quote(
+                    item["raw"],
+                    char_budget=char_budget,
+                    prefer_substrings=(spec.get("render") or {}).get("prefer_quote_substrings"),
+                )
             if not body:
                 continue
             full_key, prefix_key = _quote_dedupe_keys(body)
-            if full_key in seen_full_keys or (prefix_key and prefix_key in seen_prefix_keys):
+            if full_key in seen_full_keys or (not keep_full and prefix_key and prefix_key in seen_prefix_keys):
                 continue
-            if any(full_key in accepted or accepted in full_key for accepted in accepted_bodies):
+            if not keep_full and any(full_key in accepted or accepted in full_key for accepted in accepted_bodies):
                 continue
             seen_full_keys.add(full_key)
             if prefix_key:
@@ -1394,23 +1441,88 @@ def story_quotes(spec: dict, n: int | None = 3) -> list[dict]:
                 break
         return out
 
-    raw_items = [
-        *_raw(comments, "comment_text", "comment"),
-        *_raw(reports, "body", "family_report"),
-    ]
+    if selected:
+        raw_items = []
+        for item in selected:
+            if isinstance(item, dict):
+                raw_items.append({"raw": str(item.get("body") or "").strip(), "kind": item.get("kind") or "family_report"})
+            elif isinstance(item, str) and item.strip():
+                raw_items.append({"raw": item.strip(), "kind": "family_report"})
+        raw_items = [item for item in raw_items if item["raw"]]
+    else:
+        raw_items = [
+            *_raw(comments, "comment_text", "comment"),
+            *_raw(reports, "body", "family_report"),
+        ]
     return _select(raw_items)
 
 
 # Max family quotes stacked on a single "What families say" frame before a
-# second page is started. The 9:16 card fits 8 short (≤14-word) quotes legibly;
-# the f4-count-* CSS rules shrink the type as the count rises so nothing
-# overflows. Actors with more than this paginate (e.g. 12 -> 8 + 4).
+# second page is started. Full-text decks pack fewer quotes per page so the
+# complete survey note stays readable; leftover quotes continue onto extra slides.
 QUOTES_PER_PAGE = 8
+QUOTE_PAGE_CHAR_BUDGET = 480
+QUOTE_SPLIT_CHARS = 520
+MAX_FULL_QUOTES_PER_PAGE = 4
+
+
+def split_full_quote(text: str, max_chars: int = QUOTE_SPLIT_CHARS) -> list[str]:
+    value = re.sub(r"\s+", " ", text or "").strip()
+    if not value:
+        return []
+    if len(value) <= max_chars:
+        return [value]
+    chunks: list[str] = []
+    remaining = value
+    while len(remaining) > max_chars:
+        window = remaining[:max_chars]
+        sentence_cut = max(window.rfind(". "), window.rfind("! "), window.rfind("? "))
+        space_cut = window.rfind(" ")
+        cut = sentence_cut + 1 if sentence_cut >= max_chars * 0.45 else space_cut
+        if cut < max_chars * 0.4:
+            cut = max_chars
+        chunks.append(remaining[:cut].strip())
+        remaining = remaining[cut:].strip()
+    if remaining:
+        chunks.append(remaining)
+    return chunks
+
+
+def paginate_full_quotes(quotes: list[dict], per_page: int = MAX_FULL_QUOTES_PER_PAGE) -> list[list[dict]]:
+    if not quotes:
+        return [[]]
+    pages: list[list[dict]] = []
+    current: list[dict] = []
+    current_chars = 0
+
+    def flush() -> None:
+        nonlocal current, current_chars
+        if not current:
+            return
+        pages.append(current)
+        current = []
+        current_chars = 0
+
+    for item in quotes:
+        body = str(item.get("body") or "")
+        for chunk in split_full_quote(body):
+            piece = {**item, "body": chunk}
+            if current and (
+                len(current) >= per_page
+                or current_chars + len(chunk) > QUOTE_PAGE_CHAR_BUDGET
+            ):
+                flush()
+            current.append(piece)
+            current_chars += len(chunk)
+    flush()
+    return pages or [[]]
 
 
 def chunk_quote_pages(quotes: list[dict], per_page: int = QUOTES_PER_PAGE) -> list[list[dict]]:
     if not quotes:
         return [[]]
+    if per_page == QUOTES_PER_PAGE:
+        return paginate_full_quotes(quotes)
     return [quotes[i:i + per_page] for i in range(0, len(quotes), per_page)]
 
 

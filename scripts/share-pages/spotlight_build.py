@@ -232,8 +232,6 @@ def first_present(candidates: list[str] | str, available: set[str]) -> str | Non
 def _is_public_shareable_submission(submission: dict | None) -> bool:
     if not submission:
         return False
-    if submission.get("approved") is not True:
-        return False
     perm = str(submission.get("permission_to_share") or "").strip()
     return perm in PUBLIC_SHARE_PERMISSIONS
 
@@ -287,37 +285,19 @@ def _is_near_duplicate_note(a: Any, b: Any) -> bool:
 
 
 def _merge_note_items_per_submission(items: list[dict]) -> list[str]:
-    """Collapse raw court_actors notes to one merged note per submission:
-    near-duplicate retellings drop (longest variant wins), the remaining
-    distinct notes join most-recent-first. One survey = one quote."""
-    by_submission: dict[str, list[dict]] = {}
-    order: list[str] = []
+    """Every distinct consented actor note becomes its own slide quote."""
+    out: list[str] = []
+    seen: set[str] = set()
     for item in items:
         note = str(item.get("note") or "").strip()
         if not note:
             continue
-        sid = str(item.get("submission_id") or "") or f"note:{_normalized_note_text(note)}"
-        if sid not in by_submission:
-            by_submission[sid] = []
-            order.append(sid)
-        by_submission[sid].append(item)
-
-    merged: list[str] = []
-    for sid in order:
-        candidates = sorted(
-            by_submission[sid],
-            key=lambda c: -len(str(c.get("note") or "")),
-        )
-        kept: list[dict] = []
-        for item in candidates:
-            if any(_is_near_duplicate_note(item.get("note"), k.get("note")) for k in kept):
-                continue
-            kept.append(item)
-        kept.sort(key=lambda c: str(c.get("created_at") or ""), reverse=True)
-        text = " ".join(str(c.get("note") or "").strip() for c in kept).strip()
-        if text:
-            merged.append(text)
-    return merged
+        key = _normalized_note_text(note)
+        if not key or key in seen:
+            continue
+        seen.add(key)
+        out.append(note)
+    return out
 
 
 def _actor_name_key(name: Any) -> str:

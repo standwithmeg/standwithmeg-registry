@@ -145,6 +145,7 @@ async function fetchQuoteCounts(adminSupabase: ReturnType<typeof createAdminSupa
       .eq("approved", true)
       .in("permission_to_share", PUBLIC_PERMISSIONS)
       .not("impact_quote", "is", null)
+      .order("id", { ascending: true })
       .range(from, from + pageSize - 1);
 
     if (error) throw error;
@@ -175,6 +176,7 @@ async function fetchDedupedViewCounts(
     const { data, error } = await adminSupabase
       .from("movement_deduped_submissions")
       .select("state")
+      .order("source_id", { ascending: true })
       .range(from, from + pageSize - 1);
     if (error) {
       // 42P01 = relation does not exist (view not deployed yet)
@@ -202,6 +204,7 @@ async function fetchPublicActorCounts(adminSupabase: ReturnType<typeof createAdm
       .from("court_actors")
       .select("role,name,state_code,submission_id,survey_submissions(email, state_of_occurrence)")
       .eq("source", "form_direct")
+      .order("id", { ascending: true })
       .range(from, from + pageSize - 1);
 
     if (error) throw error;

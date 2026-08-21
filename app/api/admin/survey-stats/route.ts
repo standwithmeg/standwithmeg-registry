@@ -41,7 +41,7 @@ async function fetchAllFinancialRows(
   const pageStarts: number[] = [];
   for (let start = 0; start < total; start += pageSize) pageStarts.push(start);
   const pages = await Promise.all(pageStarts.map(start =>
-    supabase.from(table).select(select).range(start, start + pageSize - 1)
+    supabase.from(table).select(select).order("id", { ascending: true }).range(start, start + pageSize - 1)
   ));
 
   const rows: FinancialRow[] = [];
