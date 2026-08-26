@@ -131,6 +131,15 @@ jobs:
           fi
           python scripts/pdf/verify_state_pdf_release.py "${verify_args[@]}"
 
+      - name: Preserve rejected PDFs for diagnosis
+        if: failure() && steps.activity_gate.outputs.should_run == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: rejected-state-pdfs-${{ github.run_id }}-${{ github.run_attempt }}
+          path: public/state-reports
+          if-no-files-found: error
+          retention-days: 3
+
       - name: Commit and publish PDFs immediately
         if: steps.activity_gate.outputs.should_run == 'true'
         run: |
