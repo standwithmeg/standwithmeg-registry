@@ -104,18 +104,20 @@ def _actor_heading_present(name: str, pdf_text: str) -> bool:
     expected = _normalized(name)
     lines = pdf_text.splitlines()
     for index in range(len(lines)):
-        raw_window = "\n".join(lines[index:index + 4])
-        normalized_window = _normalized(raw_window)
-        if not (
-            normalized_window == expected
-            or normalized_window.startswith(f"{expected} ")
-        ):
-            continue
-        lowered_window = raw_window.casefold()
-        if "http" in lowered_window or "complaint" in lowered_window:
-            continue
-        if "submission" in normalized_window:
-            return True
+        for end in range(index + 1, min(len(lines), index + 4) + 1):
+            raw_heading = "\n".join(lines[index:end])
+            normalized_heading = _normalized(raw_heading)
+            if "submission" not in normalized_heading:
+                continue
+            lowered_heading = raw_heading.casefold()
+            if "http" in lowered_heading or "complaint" in lowered_heading:
+                break
+            if (
+                normalized_heading == expected
+                or normalized_heading.startswith(f"{expected} ")
+            ):
+                return True
+            break
     return False
 
 

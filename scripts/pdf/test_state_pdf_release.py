@@ -128,9 +128,11 @@ class StatePdfReleaseTests(unittest.TestCase):
         url = "https://my.standwithmeg.com/reports/actors/fl-joanne-berthier/complaint-packet"
         broken = "Joanne\nBerthi\ner\nSupervisor · 3 submissions"
         readable = "Joanne\nBerthier\nSupervisor · 3 submissions"
+        readable_then_comment = f'{readable}\n"The family filed a complaint."'
         self.assertFalse(_actor_heading_present("Joanne Berthier", broken))
         self.assertFalse(_actor_heading_present("Joanne Berthier", url))
         self.assertTrue(_actor_heading_present("Joanne Berthier", readable))
+        self.assertTrue(_actor_heading_present("Joanne Berthier", readable_then_comment))
 
 
 if __name__ == "__main__":
