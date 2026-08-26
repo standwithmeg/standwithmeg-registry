@@ -890,7 +890,7 @@ html,body { background:#06070A; color:var(--white); font-family:Inter,system-ui,
 
   <div class="frame-tag">COUNTED · PUBLIC RECORD</div>
   <div class="f5-stack">
-    <div class="f5-mega-number">5,686</div>
+    <div class="f5-mega-number" data-live-national>5,790</div>
     <div class="f5-mega-label">FAMILIES<br>NATIONWIDE</div>
     <div class="f5-italic">— and now global.</div>
     <div class="f5-pattern">
@@ -1363,6 +1363,23 @@ document.getElementById('share-all-btn')?.addEventListener('click', shareAllFram
       if (match) renderCard(match); else renderEmpty();
     })
     .catch(() => renderEmpty());
+})();
+</script>
+<script>
+// Live nationwide count — refresh the baked number from the public stats API so
+// a deck rendered weeks ago never shows a stale national total. Falls back to
+// the baked value if the API is unreachable.
+(function () {
+  var els = document.querySelectorAll('[data-live-national]');
+  if (!els.length) return;
+  fetch('https://my.standwithmeg.com/api/public/marketing-stats')
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (d) {
+      if (!d || !d.total_submissions) return;
+      var n = Number(d.total_submissions).toLocaleString('en-US');
+      els.forEach(function (el) { el.textContent = n; });
+    })
+    .catch(function () {});
 })();
 </script>
 </body>
