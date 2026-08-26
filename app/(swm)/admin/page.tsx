@@ -13,11 +13,8 @@ import { AdminCommandCenter, AdminSectionShell } from "./_components/AdminComman
 const GOLD  = "#C9A227";
 const BG    = "#0F1E30";  // deep dark navy for page background
 
-// Fires a workflow_dispatch on GitHub. The workflow regenerates one location
-// PDF plus that location's public court actor share pages (or all 30+
-// locations when state is blank), commits to main, and Vercel redeploys. UI polls
-// GitHub after dispatch so admins can see whether it queued, started,
-// completed, or failed.
+// Fires the PDF-only workflow_dispatch on GitHub. Actor share pages have their
+// own workflow and schedule so a slow slide batch cannot delay PDF publication.
 type RegenerateStatus = "idle" | "pending" | "queued" | "running" | "done" | "error";
 type RegenerateResult = {
   message?: string;
@@ -81,8 +78,8 @@ function statusFromRun(result: RegenerateResult): RegenerateStatus {
 
 function regenerateMessage(result: RegenerateResult, state: string) {
   const target = state
-    ? `${state}.pdf + ${state} actor share pages`
-    : "all 30+ location PDFs + actor share pages";
+    ? `${state}.pdf`
+    : "all 30+ location PDFs";
   if (result.run_status === "completed") {
     return result.run_conclusion === "success"
       ? `GitHub Actions finished regenerating ${target}. Vercel should redeploy after the commit.`
@@ -158,7 +155,7 @@ function RegenerateStateButton({ state }: { state: string }) {
     ? "Done ✓"
     : status === "error"
     ? "failed"
-    : "Regen PDF + slides";
+    : "Regen PDF";
   const color = status === "done" ? "#22c55e" : status === "error" ? "#ef4444" : GOLD;
   return (
     <span className="inline-flex items-center gap-1">
@@ -166,7 +163,7 @@ function RegenerateStateButton({ state }: { state: string }) {
         type="button"
         onClick={click}
         disabled={status === "pending" || status === "queued" || status === "running"}
-        title={msg || (workflowUrl ? `Check ${workflowUrl}` : `Regenerate ${state}.pdf and actor share pages from live Supabase data`)}
+        title={msg || (workflowUrl ? `Check ${workflowUrl}` : `Regenerate ${state}.pdf from live Supabase data`)}
         className="text-xs px-2 py-1 rounded-md font-bold transition-opacity hover:opacity-80 disabled:opacity-50"
         style={{ backgroundColor: "rgba(201,162,39,0.15)", color, border: `1px solid ${color}40` }}
       >
@@ -194,7 +191,7 @@ function RegenerateAllButton() {
   const [workflowUrl, setWorkflowUrl] = useState<string | null>(null);
   async function click() {
     if (status === "pending") return;
-    if (!window.confirm("Regenerate PDFs and actor share pages for every location with 30+ submissions? Takes ~5-10 min.")) return;
+    if (!window.confirm("Regenerate and validate PDFs for every location with 30+ submissions?")) return;
     setStatus("pending");
     try {
       const result = await dispatchRegenerate("");
@@ -234,14 +231,14 @@ function RegenerateAllButton() {
     ? "Done ✓"
     : status === "error"
     ? "Failed"
-    : "Regenerate PDFs + actor slides";
+    : "Regenerate all PDFs";
   return (
     <span className="inline-flex items-center gap-2">
       <button
         type="button"
         onClick={click}
         disabled={status === "pending" || status === "queued" || status === "running"}
-        title={msg || (workflowUrl ? `Check ${workflowUrl}` : "Queue a workflow run that regenerates every 30+ location PDF and court actor share page")}
+        title={msg || (workflowUrl ? `Check ${workflowUrl}` : "Queue a workflow run that regenerates every 30+ location PDF")}
         className="text-xs px-3 py-2 rounded-lg font-bold transition-opacity hover:opacity-80 disabled:opacity-50"
         style={{ backgroundColor: "rgba(201,162,39,0.15)", color: GOLD, border: `1px solid rgba(201,162,39,0.4)` }}
       >
@@ -3044,7 +3041,7 @@ export default function AdminPage() {
                         disabled={isRepairingShare}
                         className="text-[10px] px-2 py-1 rounded font-bold uppercase tracking-wide disabled:opacity-45"
                         style={{ backgroundColor: "rgba(56,189,248,0.14)", color: "rgb(125,211,252)", border: "1px solid rgba(56,189,248,0.32)" }}>
-                        {isRepairingShare ? "Fixing…" : "Fix PDF + slides"}
+                        {isRepairingShare ? "Fixing…" : "Fix share + slides"}
                       </button>
                     )}
                     {canDeploy && (

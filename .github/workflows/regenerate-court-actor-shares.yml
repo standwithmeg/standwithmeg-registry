@@ -1,0 +1,187 @@
+name: Regenerate Court Actor Shares
+run-name: Regenerate actor=${{ inputs.actor || 'all' }} state=${{ inputs.state || 'all' }} force=${{ inputs.force || 'false' }}
+
+on:
+  schedule:
+    - cron: "30 10 * * *"
+  workflow_dispatch:
+    inputs:
+      state:
+        description: "Optional two-letter state code."
+        required: false
+        default: ""
+      actor:
+        description: "Optional deployed actor slug, for example andrew_ellis."
+        required: false
+        default: ""
+      actor_name:
+        description: "Optional canonical actor display name supplied by the admin."
+        required: false
+        default: ""
+      actor_bucket_key:
+        description: "Optional canonical actor bucket key supplied by the admin."
+        required: false
+        default: ""
+      force:
+        description: "Bypass the activity gate and actor share-page cache."
+        required: false
+        default: "false"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: regenerate-court-actor-shares
+  cancel-in-progress: false
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  regenerate:
+    runs-on: ubuntu-latest
+    # Full actor-share regeneration reached the former 90-minute cap. It now
+    # runs independently from PDFs with a realistic three-hour ceiling.
+    timeout-minutes: 180
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 100
+
+      - name: Check activity
+        id: activity_gate
+        env:
+          GITHUB_EVENT_NAME: ${{ github.event_name }}
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          FORCE: ${{ github.event.inputs.force || 'false' }}
+          REGENERATION_SCOPE: actor
+        run: bash scripts/ci/should-run-regeneration.sh
+
+      - name: Set up Python
+        if: steps.activity_gate.outputs.should_run == 'true'
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: scripts/pdf/requirements.txt
+
+      - name: Install Python dependencies
+        if: steps.activity_gate.outputs.should_run == 'true'
+        run: pip install -r scripts/pdf/requirements.txt
+
+      - name: Install Chromium for Playwright
+        if: steps.activity_gate.outputs.should_run == 'true'
+        run: python -m playwright install --with-deps chromium
+
+      - name: Regenerate court actor share pages
+        if: steps.activity_gate.outputs.should_run == 'true'
+        env:
+          ACTOR_INPUT: ${{ github.event.inputs.actor || '' }}
+          ACTOR_NAME: ${{ github.event.inputs.actor_name || '' }}
+          ACTOR_BUCKET_KEY: ${{ github.event.inputs.actor_bucket_key || '' }}
+          STATE_INPUT: ${{ github.event.inputs.state || '' }}
+          FORCE_INPUT: ${{ github.event.inputs.force || 'false' }}
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          SWM_PUBLIC_API_BASE: https://my.standwithmeg.com
+          VERCEL_AUTOMATION_BYPASS_SECRET: ${{ secrets.VERCEL_AUTOMATION_BYPASS_SECRET }}
+        run: |
+          force_args=()
+          if [ "$FORCE_INPUT" = "true" ]; then
+            force_args+=(--force)
+          fi
+          if [ -n "$ACTOR_INPUT" ]; then
+            if [[ ! "$ACTOR_INPUT" =~ ^[a-z0-9_]+$ ]]; then
+              echo "Invalid actor slug: $ACTOR_INPUT"
+              exit 1
+            fi
+            actor_args=(--actor "$ACTOR_INPUT" --force)
+            if [ -n "$ACTOR_NAME" ]; then
+              actor_args+=(--display-name "$ACTOR_NAME")
+            fi
+            if [ -n "$ACTOR_BUCKET_KEY" ]; then
+              actor_args+=(--actor-bucket-key "$ACTOR_BUCKET_KEY")
+            fi
+            python scripts/share-pages/regenerate_deployed_actors.py "${actor_args[@]}"
+          elif [ -n "$STATE_INPUT" ] && [[ "$STATE_INPUT" =~ ^[A-Za-z]{2}$ ]]; then
+            python scripts/share-pages/regenerate_deployed_actors.py --state "$STATE_INPUT" "${force_args[@]}"
+          elif [ -n "$STATE_INPUT" ]; then
+            echo "Skipping actor state filter for non-US location: $STATE_INPUT"
+          else
+            python scripts/share-pages/regenerate_deployed_actors.py "${force_args[@]}"
+          fi
+
+      - name: Refresh public actor cache
+        if: steps.activity_gate.outputs.should_run == 'true'
+        env:
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: python scripts/share-pages/refresh_public_actor_cache.py
+
+      - name: Verify court actor share consistency
+        if: steps.activity_gate.outputs.should_run == 'true'
+        env:
+          ACTOR_INPUT: ${{ github.event.inputs.actor || '' }}
+          STATE_INPUT: ${{ github.event.inputs.state || '' }}
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          SWM_PUBLIC_API_BASE: https://my.standwithmeg.com
+          SWM_NEXT_REPO: ${{ github.workspace }}
+          VERCEL_AUTOMATION_BYPASS_SECRET: ${{ secrets.VERCEL_AUTOMATION_BYPASS_SECRET }}
+        run: |
+          if [ -n "$ACTOR_INPUT" ]; then
+            python scripts/share-pages/verify_share_consistency.py --skip-states --actor "$ACTOR_INPUT"
+          elif [ -n "$STATE_INPUT" ] && [[ "$STATE_INPUT" =~ ^[A-Za-z]{2}$ ]]; then
+            python scripts/share-pages/verify_share_consistency.py --skip-states --states "$STATE_INPUT"
+          else
+            python scripts/share-pages/verify_share_consistency.py --asset-only
+          fi
+
+      - name: Commit and publish actor shares
+        if: steps.activity_gate.outputs.should_run == 'true'
+        run: |
+          set -euo pipefail
+          git config user.name "Meghann Miller"
+          git config user.email "founder@standwithmeg.com"
+          git add public/court-actors scripts/share-pages/actor_overrides.json
+          if git diff --staged --quiet; then
+            echo "No actor-share changes — nothing to commit."
+            exit 0
+          fi
+          changed=$(git diff --staged --name-only | wc -l | tr -d ' ')
+          git commit -m "chore: auto-regenerate ${changed} court actor share file(s)"
+
+          for attempt in 1 2 3 4 5; do
+            if git push; then
+              echo "Push succeeded on attempt ${attempt}."
+              pushed_sha="$(git rev-parse HEAD)"
+              VERCEL_AUTOMATION_BYPASS_SECRET="${{ secrets.VERCEL_AUTOMATION_BYPASS_SECRET }}" bash scripts/ci/wait-for-vercel-deploy.sh "$pushed_sha" "https://standwithmeg-registry-clean.vercel.app"
+              exit 0
+            fi
+            echo "Push rejected on attempt ${attempt}; rebasing on origin/main."
+            git fetch origin main
+            if ! git rebase origin/main; then
+              conflicts=$(git diff --name-only --diff-filter=U)
+              unexpected=$(printf '%s\n' "$conflicts" | grep -vE '^(public/court-actors/|scripts/share-pages/actor_overrides.json$)' || true)
+              if [ -n "$unexpected" ]; then
+                echo "Unexpected conflicts: $unexpected"
+                git rebase --abort
+                exit 1
+              fi
+              while IFS= read -r file; do
+                if [ -n "$file" ]; then
+                  git checkout --theirs -- "$file"
+                fi
+              done <<< "$conflicts"
+              if printf '%s\n' "$conflicts" | grep -q '^public/court-actors/manifest.json$'; then
+                python -c "import sys; sys.path.insert(0, 'scripts/share-pages'); from regenerate_deployed_actors import rewrite_manifest; rewrite_manifest()"
+              fi
+              git add $conflicts
+              GIT_EDITOR=true git rebase --continue
+            fi
+            sleep $((attempt * 3))
+          done
+          echo "Push still failing after 5 attempts."
+          exit 1

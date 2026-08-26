@@ -50,8 +50,27 @@ if [ -z "${NEXT_PUBLIC_SUPABASE_URL:-}" ] || [ -z "${SUPABASE_SERVICE_ROLE_KEY:-
   exit 0
 fi
 
+case "${REGENERATION_SCOPE:-all}" in
+  pdf)
+    generated_paths=(public/state-reports)
+    ;;
+  actor)
+    generated_paths=(public/court-actors scripts/share-pages/actor_overrides.json)
+    ;;
+  all)
+    generated_paths=(public/state-reports public/court-actors scripts/share-pages/actor_overrides.json)
+    ;;
+  *)
+    echo "Invalid REGENERATION_SCOPE: ${REGENERATION_SCOPE}" >&2
+    exit 1
+    ;;
+esac
+
+# PDF and actor-share schedules publish independently. Each gate must compare
+# source activity with its own most recent generated commit; otherwise an 08:00
+# PDF commit can hide source changes from the 10:30 actor-share run.
 last_generated_at=$(
-  git log -1 --format=%cI -- public/state-reports public/court-actors 2>/dev/null || true
+  git log -1 --format=%cI -- "${generated_paths[@]}" 2>/dev/null || true
 )
 
 if [ -z "$last_generated_at" ]; then

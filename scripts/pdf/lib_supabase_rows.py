@@ -650,7 +650,7 @@ def _row_tuple(r: dict) -> list:
       6:other_fees, 7:lost_wages, 8:asset_loss, 9:first_name, 11:permission,
       12:quote, 13:case_status, 14:system, 15:duration, 16:custody,
       17:num_kids (used by children_impact), 18:pro_se, 19:legal_rep,
-      21:months_lost, 24:allegation, 30:county.
+      21:months_lost, 24:allegation, 30:county, 31:created_at.
     Slot 0 and any unused slots stay empty.
 
     Numeric columns use _num_or_blank so NULLs are preserved as "" (which
@@ -689,6 +689,7 @@ def _row_tuple(r: dict) -> list:
     row[21] = _num_or_blank(r.get("months_lost_parenting_time"))
     row[24] = r.get("allegation_type") or ""
     row[30] = r.get("case_county") or ""
+    row[31] = r.get("created_at") or ""
     return row
 
 

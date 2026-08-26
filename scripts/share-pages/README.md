@@ -104,11 +104,11 @@ repo's `public/court-actors/<state>/<slug>/`.
   just because Supabase is slow. `/api/survey/court-actors` must return the
   generated actor snapshot (`loadStaticPublicActors()`) on read timeouts or
   other transient failures instead of an empty actor array.
-- Admin repair/regeneration guardrail. Any UI labeled as fixing PDFs and actor
-  slides must dispatch `regenerate-state-pdfs.yml` with `force: "true"` so the
-  actor share-page cache cannot skip the repair. The workflow commits generated
-  PDFs, court-actor assets, and `scripts/share-pages/actor_overrides.json` when
-  changed.
+- Admin actor repair/regeneration guardrail. Actor slide and portrait repair
+  actions must dispatch `regenerate-court-actor-shares.yml` with `force: "true"`
+  so the actor share-page cache cannot skip the repair. State PDF regeneration
+  remains independent in `regenerate-state-pdfs.yml` and publishes as soon as
+  its PDF release gates pass.
 - Targeted actor regeneration. `regenerate_deployed_actors.py` accepts repeated
   `--actor <slug>` filters, which is useful for repairing a small set of live
   share pages without regenerating an entire state. Use `--force` for quote,

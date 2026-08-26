@@ -47,7 +47,7 @@ export type ReplacePhotoResult = {
   message: string;
 };
 
-const WORKFLOW_FILE = "regenerate-state-pdfs.yml";
+const WORKFLOW_FILE = "regenerate-court-actor-shares.yml";
 const MANIFEST_PATH = "public/court-actors/manifest.json";
 
 type ActorRow = {
