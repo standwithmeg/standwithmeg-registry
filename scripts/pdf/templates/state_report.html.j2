@@ -664,6 +664,7 @@
   }
   .actor-card-header {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: baseline;
     gap: 12px;
@@ -677,8 +678,10 @@
     font-weight: 700;
     color: var(--navy);
     letter-spacing: -0.005em;
-    overflow-wrap: anywhere;
-    word-break: break-word;
+    flex: 0 0 auto;
+    max-width: 40%;
+    overflow-wrap: normal;
+    word-break: normal;
   }
   .actor-continuation {
     display: inline-block;
@@ -696,7 +699,8 @@
     text-transform: uppercase;
     letter-spacing: 0.07em;
     text-align: right;
-    flex-shrink: 0;
+    flex: 1 1 420px;
+    min-width: 0;
   }
   .actor-card-header .meta .families {
     color: var(--crimson);

@@ -19,7 +19,7 @@ from generate_state_pdf import (
     build_template_context,
     cover_image_for,
 )
-from verify_state_pdf_release import _fragment_present, _normalized
+from verify_state_pdf_release import _actor_heading_present, _fragment_present, _normalized
 
 
 def _row(location: str, created_at: str) -> list:
@@ -123,6 +123,14 @@ class StatePdfReleaseTests(unittest.TestCase):
                 _normalized("I was there to fight for placement."),
             )
         )
+
+    def test_actor_heading_gate_rejects_url_only_and_midword_wraps(self) -> None:
+        url = "https://my.standwithmeg.com/reports/actors/fl-joanne-berthier/complaint-packet"
+        broken = "Joanne\nBerthi\ner\nSupervisor · 3 submissions"
+        readable = "Joanne\nBerthier\nSupervisor · 3 submissions"
+        self.assertFalse(_actor_heading_present("Joanne Berthier", broken))
+        self.assertFalse(_actor_heading_present("Joanne Berthier", url))
+        self.assertTrue(_actor_heading_present("Joanne Berthier", readable))
 
 
 if __name__ == "__main__":

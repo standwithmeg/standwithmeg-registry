@@ -99,6 +99,26 @@ def _fragment_present(fragment: str, pdf_text: str) -> bool:
     return matched / len(tokens) >= required_ratio
 
 
+def _actor_heading_present(name: str, pdf_text: str) -> bool:
+    """Require a readable actor heading, not merely a slug in a URL."""
+    expected = _normalized(name)
+    lines = pdf_text.splitlines()
+    for index in range(len(lines)):
+        raw_window = "\n".join(lines[index:index + 4])
+        normalized_window = _normalized(raw_window)
+        if not (
+            normalized_window == expected
+            or normalized_window.startswith(f"{expected} ")
+        ):
+            continue
+        lowered_window = raw_window.casefold()
+        if "http" in lowered_window or "complaint" in lowered_window:
+            continue
+        if "submission" in normalized_window:
+            return True
+    return False
+
+
 def _read_json(path: Path) -> object:
     return json.loads(path.read_text(encoding="utf-8"))
 
@@ -238,13 +258,12 @@ def verify(expected_report_count: int | None = None, only_location: str | None =
         # Extract the full document so a renderer-created overflow page cannot
         # hide a missing actor from this content gate. The strict physical page
         # count check above still fails that overflow separately.
-        actor_text = _normalized(
-            " ".join((page.extract_text() or "") for page in reader.pages)
-        )
+        raw_pdf_text = " ".join((page.extract_text() or "") for page in reader.pages)
+        actor_text = _normalized(raw_pdf_text)
         for actor in actors:
             name = str(actor.get("name") or "")
-            if _normalized(name) not in actor_text:
-                failures.append(f"{location}: PDF missing threshold actor {name}")
+            if not _actor_heading_present(name, raw_pdf_text):
+                failures.append(f"{location}: PDF missing readable threshold actor heading {name}")
 
         for actor_page in ctx["actor_pages"]:
             for fragment in actor_page:
