@@ -19,6 +19,7 @@ from generate_state_pdf import (
     build_template_context,
     cover_image_for,
 )
+from verify_state_pdf_release import _fragment_present, _normalized
 
 
 def _row(location: str, created_at: str) -> list:
@@ -106,6 +107,22 @@ class StatePdfReleaseTests(unittest.TestCase):
         ctx = build_template_context("CA", rows)
         self.assertEqual(ctx["subdivision_label"], "County labels reported")
         self.assertEqual(ctx["subdivision_stat"], "60 submitted")
+
+    def test_comment_gate_tolerates_chromium_apostrophe_extraction(self) -> None:
+        source = "One phone call and hasn’t spoke to me since."
+        extracted = _normalized("One phone call and hasnʼt spoke to me since.")
+        self.assertTrue(_fragment_present(source, extracted))
+
+    def test_comment_gate_tolerates_only_line_wrap_hyphenation(self) -> None:
+        source = "I was there to fight for intervention and placement."
+        extracted = _normalized("I was there to fight for inter- vention and placement.")
+        self.assertTrue(_fragment_present(source, extracted))
+        self.assertFalse(
+            _fragment_present(
+                "I was there to fight for intervention and placement.",
+                _normalized("I was there to fight for placement."),
+            )
+        )
 
 
 if __name__ == "__main__":
