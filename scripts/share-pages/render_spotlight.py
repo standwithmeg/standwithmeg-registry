@@ -1897,7 +1897,7 @@ def frame_5_counted(state: str, state_abbr: str, county: str, first: str, last: 
   {state_badge(state, state_abbr, county)}
   {frame_tag("COUNTED · PUBLIC RECORD")}
   <div class="f5-stack">
-    <div class="f5-mega-number">{fmt_int(movement_total)}</div>
+    <div class="f5-mega-number" data-live-national>{fmt_int(movement_total)}</div>
     <div class="f5-mega-label">FAMILIES<br>NATIONWIDE</div>
     <div class="f5-italic">— and now global.</div>
     <div class="f5-pattern">
@@ -3022,6 +3022,23 @@ async function shareAllFrames() {{
 document.getElementById('save-all-btn')?.addEventListener('click', saveAllFrames);
 document.getElementById('share-all-btn')?.addEventListener('click', shareAllFrames);
 {SPONSOR_JS}</script>
+<script>
+// Live nationwide count — refresh the baked number from the public stats API so
+// a deck rendered weeks ago never shows a stale national total. Falls back to
+// the baked value if the API is unreachable.
+(function () {{
+  var els = document.querySelectorAll('[data-live-national]');
+  if (!els.length) return;
+  fetch('https://my.standwithmeg.com/api/public/marketing-stats')
+    .then(function (r) {{ return r.ok ? r.json() : null; }})
+    .then(function (d) {{
+      if (!d || !d.total_submissions) return;
+      var n = Number(d.total_submissions).toLocaleString('en-US');
+      els.forEach(function (el) {{ el.textContent = n; }});
+    }})
+    .catch(function () {{}});
+}})();
+</script>
 </body>
 </html>
 """
