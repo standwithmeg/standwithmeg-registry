@@ -13,6 +13,33 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  pdf-contract:
+    name: PDF Release Contract
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: scripts/pdf/requirements.txt
+
+      - name: Install PDF dependencies
+        run: pip install -r scripts/pdf/requirements.txt
+
+      - name: Compile PDF release tooling
+        run: |
+          python -m py_compile scripts/pdf/generate_state_pdf.py scripts/pdf/lib_supabase_rows.py scripts/pdf/check_actor_card_overflow.py scripts/pdf/verify_state_pdf_release.py
+          bash -n scripts/ci/should-run-regeneration.sh
+
+      - name: Run PDF pagination and threshold regressions
+        run: python -m unittest scripts/ci/test_should_run_regeneration.py scripts/pdf/test_state_pdf_release.py
+
   build:
     name: Lint, Typecheck, Build
     runs-on: ubuntu-latest

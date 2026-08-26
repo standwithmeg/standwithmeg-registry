@@ -32,7 +32,12 @@ COLS = {'state':1,'atty_fees':2,'gal_fees':3,'therapy_fees':4,'reunif_fees':5,
         'other_fees':6,'lost_wages':7,'asset_loss':8,'first_name':9,
         'permission':11,'quote':12,'case_status':13,'system':14,'duration':15,
         'custody':16,'pro_se':18,'legal_rep':19,'months_lost':21,'allegation':24,
-        'county':30}
+        'county':30,'created_at':31}
+
+ACTOR_PAGE_BUDGET_FIRST = 3400
+ACTOR_PAGE_BUDGET_REST = 3400
+ACTOR_FRAGMENT_TARGET = 2800
+ACTOR_COMMENT_CHUNK_CHARS = 1800
 
 STATE_NAMES = {
     "AL":"Alabama","AK":"Alaska","AZ":"Arizona","AR":"Arkansas","CA":"California","CO":"Colorado","CT":"Connecticut",
@@ -286,6 +291,7 @@ def report_location_name(location: str) -> str:
 # drop the matching file into scripts/pdf/assets/.
 DEFAULT_COVER_IMAGE = "meg-with-words-web.jpg"
 COVER_IMAGE_BY_LOCATION = {
+    "AUSTRIA": "cover-austria.svg",
     "CANADA": "cover-canada-web.jpg",
 }
 
@@ -725,8 +731,120 @@ def _paginate_court_actors(actors):
     """
     if not actors:
         return []
-    weights = [_court_actor_card_weight(a) for a in actors]
-    return _pack_actor_pages(actors, weights)
+
+    pages: list[list[dict]] = []
+    current: list[dict] = []
+    current_weight = 0
+
+    def flush_current() -> None:
+        nonlocal current, current_weight
+        if current:
+            pages.append(current)
+            current = []
+            current_weight = 0
+
+    for actor in actors:
+        fragments = _split_court_actor(actor)
+        if len(fragments) > 1:
+            # Oversized cards get dedicated continuation pages. This keeps the
+            # repeated actor header with its family text and guarantees every
+            # fragment fits even on the first actor page (which also has the
+            # section heading and privacy lede).
+            flush_current()
+            pages.extend([[fragment] for fragment in fragments])
+            continue
+
+        fragment = fragments[0]
+        weight = _court_actor_card_weight(fragment)
+        budget = ACTOR_PAGE_BUDGET_FIRST if not pages else ACTOR_PAGE_BUDGET_REST
+        if current and current_weight + weight > budget:
+            flush_current()
+            budget = ACTOR_PAGE_BUDGET_REST
+        current.append(fragment)
+        current_weight += weight
+
+    flush_current()
+    return pages
+
+
+def _split_comment_text(text: str, max_chars: int = ACTOR_COMMENT_CHUNK_CHARS) -> list[str]:
+    """Split a long family comment at word boundaries without dropping text."""
+    value = str(text or "")
+    if len(value) <= max_chars:
+        return [value]
+
+    chunks: list[str] = []
+    start = 0
+    while start < len(value):
+        end = min(start + max_chars, len(value))
+        if end < len(value):
+            boundary = value.rfind(" ", start, end + 1)
+            if boundary > start:
+                end = boundary
+        chunk = value[start:end].strip()
+        if chunk:
+            chunks.append(chunk)
+        start = end
+        while start < len(value) and value[start].isspace():
+            start += 1
+    return chunks or [value]
+
+
+def _split_court_actor(actor: dict) -> list[dict]:
+    """Return renderable fragments for one actor while preserving every comment.
+
+    A fixed-height PDF page cannot safely contain a card heavier than the page
+    budget. Long comments are therefore split at word boundaries and packed
+    into repeated, clearly labelled actor-card continuations. The complaint
+    packet block appears once, on the final fragment.
+    """
+    if _court_actor_card_weight(actor) <= ACTOR_FRAGMENT_TARGET:
+        single = dict(actor)
+        single["continuation_index"] = 1
+        single["continuation_total"] = 1
+        single["comments"] = [
+            {**comment, "source_comment_index": index}
+            for index, comment in enumerate(actor.get("comments", []) or [])
+        ]
+        return [single]
+
+    comment_units: list[dict] = []
+    for source_index, comment in enumerate(actor.get("comments", []) or []):
+        pieces = _split_comment_text(comment.get("note", ""))
+        for piece_index, piece in enumerate(pieces):
+            comment_units.append({
+                **comment,
+                "note": piece,
+                "source_comment_index": source_index,
+                "continued_from_previous": piece_index > 0,
+                "continues": piece_index < len(pieces) - 1,
+            })
+
+    base = dict(actor)
+    base["complaint_packet_url"] = None
+    base["complaint_agency_name"] = None
+    fragments: list[dict] = []
+    current_comments: list[dict] = []
+
+    for comment in comment_units:
+        candidate = {**base, "comments": current_comments + [comment]}
+        if current_comments and _court_actor_card_weight(candidate) > ACTOR_FRAGMENT_TARGET:
+            fragments.append({**base, "comments": current_comments})
+            current_comments = [comment]
+        else:
+            current_comments.append(comment)
+
+    if current_comments or not fragments:
+        fragments.append({**base, "comments": current_comments})
+
+    total = len(fragments)
+    for index, fragment in enumerate(fragments):
+        fragment["continuation_index"] = index + 1
+        fragment["continuation_total"] = total
+        if index == total - 1:
+            fragment["complaint_packet_url"] = actor.get("complaint_packet_url")
+            fragment["complaint_agency_name"] = actor.get("complaint_agency_name")
+    return fragments
 
 
 def _court_actor_card_weight(actor):
@@ -771,15 +889,11 @@ def _pack_actor_pages(actors, weights):
     them from spilling onto the next page, and a single very-long card
     is preferable to two overlapping ones).
     """
-    PAGE_BUDGET_FIRST = 3400  # leaves room for section heading + lede
-    PAGE_BUDGET_REST = 4600   # continuation pages — slightly tighter to
-                              # absorb the complaint-block overhead
-
     pages: list[list[dict]] = []
     current: list[dict] = []
     current_weight = 0
     for actor, weight in zip(actors, weights):
-        budget = PAGE_BUDGET_FIRST if not pages else PAGE_BUDGET_REST
+        budget = ACTOR_PAGE_BUDGET_FIRST if not pages else ACTOR_PAGE_BUDGET_REST
         if current and (current_weight + weight > budget):
             pages.append(current)
             current = [actor]
@@ -822,6 +936,28 @@ def _sponsor_context(sponsor):
     }
 
 
+def _data_as_of_date(rows: list, fallback: datetime | None = None) -> str:
+    """Return the newest source-submission date represented in the report."""
+    newest: datetime | None = None
+    for row in rows:
+        if COLS["created_at"] >= len(row):
+            continue
+        raw = safe_str(row[COLS["created_at"]])
+        if not raw:
+            continue
+        try:
+            parsed = datetime.fromisoformat(raw.replace("Z", "+00:00"))
+        except ValueError:
+            continue
+        if parsed.tzinfo is None:
+            parsed = parsed.replace(tzinfo=timezone.utc)
+        parsed = parsed.astimezone(timezone.utc)
+        if newest is None or parsed > newest:
+            newest = parsed
+    value = newest or fallback or datetime.now(timezone.utc)
+    return value.strftime("%B %d, %Y").replace(" 0", " ")
+
+
 def build_template_context(state_abbr, rows, court_actors=None, sponsor=None):
     """Build the full dict of template variables for a state."""
     court_actors = court_actors or []
@@ -838,11 +974,18 @@ def build_template_context(state_abbr, rows, court_actors=None, sponsor=None):
     subdivisions_total = STATE_COUNTIES.get(state_abbr.upper()) if is_us_state else None
     subdivision_label = "Counties represented" if is_us_state else "Regions represented"
     subdivision_heading = "Top Counties" if is_us_state else "Top Regions"
-    subdivision_stat = (
-        f"{counties_represented} of {subdivisions_total}"
-        if subdivisions_total
-        else str(counties_represented)
-    )
+    if subdivisions_total and counties_represented > subdivisions_total:
+        # County is a free-text survey field. Variants and court labels can
+        # legitimately exceed the official county count, so never print an
+        # impossible claim such as "82 of 58 counties represented."
+        subdivision_label = "County labels reported"
+        subdivision_stat = f"{counties_represented} submitted"
+    else:
+        subdivision_stat = (
+            f"{counties_represented} of {subdivisions_total}"
+            if subdivisions_total
+            else str(counties_represented)
+        )
     report_series = "State Series" if is_us_state else "Country Series"
 
     # Expense table rows
@@ -990,7 +1133,7 @@ def build_template_context(state_abbr, rows, court_actors=None, sponsor=None):
     # The list paginates across multiple pages if comments are long, so
     # actor_pages is a list of lists, one per page. When absent, the rest
     # of the report shifts up.
-    actor_pages = _paginate_court_actors(court_actors[:18])
+    actor_pages = _paginate_court_actors(court_actors)
     has_actors = bool(actor_pages)
     actor_page_count = len(actor_pages)
     actor_start_page = 2 if has_actors else None
@@ -1033,6 +1176,7 @@ def build_template_context(state_abbr, rows, court_actors=None, sponsor=None):
         'state_number': state_number,
         'total': n,
         'report_date': now.strftime('%B %d, %Y').replace(' 0', ' '),
+        'data_as_of_date': _data_as_of_date(rows, fallback=now),
         'report_month_year': now.strftime('%B %Y'),
         'total_pages': f"{total_pages:02d}",
         # Page numbers (dynamic so Court Actors can lead the report when present)

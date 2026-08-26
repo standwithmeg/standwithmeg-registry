@@ -13,8 +13,9 @@ Usage:
     python3 scripts/pdf/check_actor_card_overflow.py --state OH
     python3 scripts/pdf/check_actor_card_overflow.py --json
 
-Exits non-zero when any actor card alone would exceed the continuation
-page budget — that is the only scenario the paginator cannot fix.
+Exits non-zero when any rendered actor fragment or packed actor page exceeds
+its fixed-height budget. Oversized source cards are expected to be split into
+labelled continuation fragments; this audit verifies those fragments fit.
 """
 from __future__ import annotations
 
@@ -26,13 +27,17 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 
-from generate_state_pdf import _court_actor_card_weight, _paginate_court_actors  # noqa: E402
+from generate_state_pdf import (  # noqa: E402
+    ACTOR_PAGE_BUDGET_FIRST,
+    ACTOR_PAGE_BUDGET_REST,
+    _court_actor_card_weight,
+    _paginate_court_actors,
+)
 from lib_supabase_rows import load_public_court_actors_from_supabase  # noqa: E402
 
-# Mirror the budgets in _pack_actor_pages so we report a single source of
-# truth. If those change, change here too.
-PAGE_BUDGET_FIRST = 3400
-PAGE_BUDGET_REST = 4600
+# Import the generator budgets so the release audit has one source of truth.
+PAGE_BUDGET_FIRST = ACTOR_PAGE_BUDGET_FIRST
+PAGE_BUDGET_REST = ACTOR_PAGE_BUDGET_REST
 
 
 def audit(state_filter: str | None = None) -> list[dict]:
@@ -43,22 +48,34 @@ def audit(state_filter: str | None = None) -> list[dict]:
             continue
         weights = [_court_actor_card_weight(a) for a in actors]
         pages = _paginate_court_actors(actors)
-        per_card = sorted(
+        per_source_card = sorted(
             ({"name": a["name"], "weight": w, "comments": len(a.get("comments", []))}
              for a, w in zip(actors, weights)),
             key=lambda x: -x["weight"],
         )
-        max_w = per_card[0]["weight"] if per_card else 0
-        over_budget = max_w > PAGE_BUDGET_REST
+        rendered_cards = [actor for page in pages for actor in page]
+        rendered_weights = [_court_actor_card_weight(actor) for actor in rendered_cards]
+        page_weights = [sum(_court_actor_card_weight(actor) for actor in page) for page in pages]
+        page_overflow = [
+            weight > (PAGE_BUDGET_FIRST if index == 0 else PAGE_BUDGET_REST)
+            for index, weight in enumerate(page_weights)
+        ]
+        max_w = per_source_card[0]["weight"] if per_source_card else 0
+        max_rendered_w = max(rendered_weights, default=0)
+        over_budget = any(page_overflow)
         results.append({
             "state": state,
             "actors": len(actors),
             "pages": len(pages),
-            "max_card_weight": max_w,
-            "max_card_name": per_card[0]["name"] if per_card else None,
+            "rendered_cards": len(rendered_cards),
+            "continuation_fragments": len(rendered_cards) - len(actors),
+            "max_source_card_weight": max_w,
+            "max_rendered_card_weight": max_rendered_w,
+            "max_page_weight": max(page_weights, default=0),
+            "max_card_name": per_source_card[0]["name"] if per_source_card else None,
             "page_budget_rest": PAGE_BUDGET_REST,
             "over_budget": over_budget,
-            "heaviest": per_card[:3],
+            "heaviest": per_source_card[:3],
         })
     return results
 
@@ -74,7 +91,7 @@ def main(argv: list[str]) -> int:
         print(json.dumps(results, indent=2, default=str))
         return 1 if any(r["over_budget"] for r in results) else 0
 
-    print(f"{'STATE':<6} {'ACTORS':>7} {'PAGES':>6} {'MAX_W':>7} {'BUDGET':>7}  HEAVIEST CARD")
+    print(f"{'STATE':<6} {'ACTORS':>7} {'PAGES':>6} {'SRC_W':>7} {'RENDER':>7} {'PAGE_W':>7}  HEAVIEST CARD")
     print("-" * 80)
     failed = 0
     for r in results:
@@ -83,7 +100,8 @@ def main(argv: list[str]) -> int:
             failed += 1
         print(
             f"{r['state']:<6} {r['actors']:>7} {r['pages']:>6} "
-            f"{r['max_card_weight']:>7} {r['page_budget_rest']:>7}  "
+            f"{r['max_source_card_weight']:>7} {r['max_rendered_card_weight']:>7} "
+            f"{r['max_page_weight']:>7}  "
             f"{flag}  {r['max_card_name']}"
         )
     print("-" * 80)

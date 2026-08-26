@@ -14,7 +14,7 @@ import { after } from "next/server";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-const WORKFLOW_FILE = "regenerate-state-pdfs.yml";
+const WORKFLOW_FILE = "regenerate-court-actor-shares.yml";
 const MANIFEST_PATH = "public/court-actors/manifest.json";
 const OVERRIDES_PATH = "scripts/share-pages/actor_overrides.json";
 

@@ -680,6 +680,16 @@
     overflow-wrap: anywhere;
     word-break: break-word;
   }
+  .actor-continuation {
+    display: inline-block;
+    margin-left: 5px;
+    font-family: var(--font-display);
+    font-size: 8.5px;
+    font-weight: 600;
+    color: var(--crimson);
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+  }
   .actor-card-header .meta {
     font-size: 9.5px;
     color: var(--ink-secondary, #555);
@@ -720,6 +730,16 @@
     margin-left: 6px;
     font-style: normal;
     font-size: 9px;
+    color: var(--crimson);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 600;
+  }
+  .comment-continuation {
+    display: block;
+    margin-bottom: 2px;
+    font-style: normal;
+    font-size: 8.5px;
     color: var(--crimson);
     text-transform: uppercase;
     letter-spacing: 0.06em;
@@ -1034,7 +1054,7 @@
 
     <div class="cover-bottom">
       <div class="meta">
-        <div class="meta-item">Report generated<strong>{{ report_date }}</strong></div>
+        <div class="meta-item">Data as of<strong>{{ data_as_of_date }}</strong></div>
         <div class="meta-item">{{ subdivision_label }}<strong>{{ subdivision_stat }}</strong></div>
         <div class="meta-item">Compiled by<strong>Meg · standwithmeg.com</strong></div>
       </div>
@@ -1086,7 +1106,7 @@
     {% for actor in actor_page %}
     <div class="actor-card">
       <div class="actor-card-header">
-        <div class="name">{{ actor.name }}</div>
+        <div class="name">{{ actor.name }}{% if actor.continuation_total > 1 %}<span class="actor-continuation">continued {{ actor.continuation_index }} / {{ actor.continuation_total }}</span>{% endif %}</div>
         <div class="meta">
           {{ actor.role }}{% if actor.court_or_county %} · {{ actor.court_or_county }}{% endif %} · <span class="families">{{ actor.submission_count }} {% if actor.submission_count == 1 %}submission{% else %}submissions{% endif %}</span>
         </div>
@@ -1095,7 +1115,9 @@
       <ul class="actor-comments">
         {% for c in actor.comments %}
         <li>
+          {% if c.continued_from_previous %}<span class="comment-continuation">Family comment continued</span>{% endif %}
           <span class="comment-text">"{{ c.note }}"</span>
+          {% if c.continues %}<span class="comment-continuation">Continues on the next card</span>{% endif %}
           {% if c.court_or_county and c.court_or_county != actor.court_or_county %}<span class="comment-county">{{ c.court_or_county }}</span>{% endif %}
         </li>
         {% endfor %}

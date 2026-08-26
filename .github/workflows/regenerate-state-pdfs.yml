@@ -1,34 +1,17 @@
-name: Regenerate State PDFs and Actor Shares
-run-name: Regenerate actor=${{ inputs.actor || 'all' }} state=${{ inputs.state || 'all' }}
+name: Regenerate State PDFs
+run-name: Regenerate state=${{ inputs.state || 'all-30plus' }} force=${{ inputs.force || 'false' }}
 
-# Triggers:
-#   - Daily (reduced from every 6h) — the activity gate now also applies to manual
-#     workflow_dispatch calls (Phase 0 GitHub cost fix). Heavy Playwright work only
-#     runs when there are actual changes OR force=true.
-#   - Manual dispatch still works but will be cheap/no-op if nothing changed.
 on:
   schedule:
-    - cron: "0 8 * * *"   # once daily at 08:00 UTC (reduced from every 6h to cut costs)
+    - cron: "0 8 * * *"
   workflow_dispatch:
     inputs:
       state:
-        description: "Optional: single state code or country name (e.g. MD, Canada). Leave blank for all 30+ locations."
-        required: false
-        default: ""
-      actor:
-        description: "Optional: one deployed actor slug (for example andrew_ellis). Rebuilds only that actor's share page and slides; skips state PDFs."
-        required: false
-        default: ""
-      actor_name:
-        description: "Optional canonical actor display name supplied by the rebuild admin."
-        required: false
-        default: ""
-      actor_bucket_key:
-        description: "Optional canonical actor bucket key supplied by the rebuild admin."
+        description: "Optional single state code or country name. Leave blank for every location with 30+ families."
         required: false
         default: ""
       force:
-        description: "Bypass the activity gate AND the actor share-page cache: run even with no new data and rebuild selected actor pages with the current renderer. Use sparingly — forced full runs cost real GitHub minutes."
+        description: "Bypass the activity gate and PDF cache."
         required: false
         default: "false"
 
@@ -36,7 +19,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: regenerate-state-pdfs-and-actor-shares
+  group: regenerate-state-pdfs
   cancel-in-progress: false
 
 env:
@@ -45,25 +28,21 @@ env:
 jobs:
   regenerate:
     runs-on: ubuntu-latest
-    # Forced full-site regens (force=true) rebuild every deployed actor and
-    # need well over the old 25-minute cap — two forced runs were killed
-    # mid-"Regenerate court actor share pages" by this timeout (2026-06-11).
-    # Normal incremental runs still finish in minutes; the higher cap only
-    # matters when force is set or a run genuinely hangs.
-    timeout-minutes: 90
+    timeout-minutes: 60
     steps:
       - name: Checkout
         uses: actions/checkout@v6
         with:
           fetch-depth: 100
 
-      - name: Check activity (now also for manual dispatches unless force=true)
+      - name: Check activity
         id: activity_gate
         env:
           GITHUB_EVENT_NAME: ${{ github.event_name }}
           NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
           FORCE: ${{ github.event.inputs.force || 'false' }}
+          REGENERATION_SCOPE: pdf
         run: bash scripts/ci/should-run-regeneration.sh
 
       - name: Set up Python
@@ -74,7 +53,7 @@ jobs:
           cache: pip
           cache-dependency-path: scripts/pdf/requirements.txt
 
-      - name: Install Python deps
+      - name: Install Python dependencies
         if: steps.activity_gate.outputs.should_run == 'true'
         run: pip install -r scripts/pdf/requirements.txt
 
@@ -83,24 +62,30 @@ jobs:
         run: python -m playwright install --with-deps chromium
 
       - name: Regenerate PDFs
-        if: steps.activity_gate.outputs.should_run == 'true' && (github.event_name != 'workflow_dispatch' || github.event.inputs.actor == '')
+        if: steps.activity_gate.outputs.should_run == 'true'
         env:
           NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          STATE_INPUT: ${{ github.event.inputs.state || '' }}
+          FORCE_INPUT: ${{ github.event.inputs.force || 'false' }}
         run: |
           rm -rf scripts/pdf/outputs/state_packets_pdf
           mkdir -p scripts/pdf/outputs/state_packets_pdf
+          force_args=()
+          if [ "$FORCE_INPUT" = "true" ]; then
+            force_args+=(--force)
+          fi
           cd scripts/pdf
-          if [ -n "${{ github.event.inputs.state }}" ]; then
-            echo "Regenerating single location: ${{ github.event.inputs.state }}"
-            python generate_state_pdf.py --source=supabase "${{ github.event.inputs.state }}"
+          if [ -n "$STATE_INPUT" ]; then
+            echo "Regenerating single location: $STATE_INPUT"
+            python generate_state_pdf.py --source=supabase "${force_args[@]}" "$STATE_INPUT"
           else
-            echo "Regenerating every location with 30+ submissions"
-            python generate_state_pdf.py --source=supabase --all-30plus
+            echo "Regenerating every location with 30+ families"
+            python generate_state_pdf.py --source=supabase --all-30plus "${force_args[@]}"
           fi
 
-      - name: Copy generated PDFs into website/public/state-reports
-        if: steps.activity_gate.outputs.should_run == 'true' && (github.event_name != 'workflow_dispatch' || github.event.inputs.actor == '')
+      - name: Copy generated PDFs into the public release
+        if: steps.activity_gate.outputs.should_run == 'true'
         run: |
           mkdir -p public/state-reports
           shopt -s nullglob
@@ -111,109 +96,55 @@ jobs:
             echo "No PDFs produced."
           fi
 
-      - name: Sync public PDF index and prune stale PDFs
-        if: steps.activity_gate.outputs.should_run == 'true' && (github.event_name != 'workflow_dispatch' || github.event.inputs.actor == '')
+      - name: Sync public PDF index and prune under-threshold reports
+        if: steps.activity_gate.outputs.should_run == 'true'
         env:
           NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          STATE_INPUT: ${{ github.event.inputs.state || '' }}
         run: |
-          if [ -n "${{ github.event.inputs.state }}" ]; then
+          if [ -n "$STATE_INPUT" ]; then
             python scripts/pdf/sync_public_state_reports.py --prune
           else
             python scripts/pdf/sync_public_state_reports.py --prune --require-all
           fi
 
       - name: Refresh public report financials snapshot
-        if: steps.activity_gate.outputs.should_run == 'true' && (github.event_name != 'workflow_dispatch' || github.event.inputs.actor == '')
+        if: steps.activity_gate.outputs.should_run == 'true'
         env:
           NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: python scripts/pdf/sync_state_financials.py
 
-      - name: Regenerate court actor share pages
+      - name: Gate the PDF release
         if: steps.activity_gate.outputs.should_run == 'true'
         env:
-          ACTOR_INPUT: ${{ github.event.inputs.actor || '' }}
-          ACTOR_NAME: ${{ github.event.inputs.actor_name || '' }}
-          ACTOR_BUCKET_KEY: ${{ github.event.inputs.actor_bucket_key || '' }}
           NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
-          SWM_PUBLIC_API_BASE: https://my.standwithmeg.com
-          # Lets scripted API reads skip Vercel's bot challenge (403). Set in
-          # Vercel: Project → Settings → Deployment Protection → Protection
-          # Bypass for Automation, then mirror the value into this repo secret.
-          VERCEL_AUTOMATION_BYPASS_SECRET: ${{ secrets.VERCEL_AUTOMATION_BYPASS_SECRET }}
+          STATE_INPUT: ${{ github.event.inputs.state || '' }}
         run: |
-          force_args=""
-          if [ "${{ github.event.inputs.force }}" = "true" ]; then
-            force_args="--force"
+          python -m unittest scripts/pdf/test_state_pdf_release.py
+          python scripts/pdf/check_actor_card_overflow.py
+          verify_args=()
+          if [ -n "$STATE_INPUT" ]; then
+            verify_args+=(--state "$STATE_INPUT")
           fi
-          if [ -n "$ACTOR_INPUT" ]; then
-            if [[ ! "$ACTOR_INPUT" =~ ^[a-z0-9_]+$ ]]; then
-              echo "Invalid actor slug: $ACTOR_INPUT"
-              exit 1
-            fi
-            actor_args=(--actor "$ACTOR_INPUT" --force)
-            if [ -n "$ACTOR_NAME" ]; then
-              actor_args+=(--display-name "$ACTOR_NAME")
-            fi
-            if [ -n "$ACTOR_BUCKET_KEY" ]; then
-              actor_args+=(--actor-bucket-key "$ACTOR_BUCKET_KEY")
-            fi
-            python scripts/share-pages/regenerate_deployed_actors.py "${actor_args[@]}"
-          elif [ -n "${{ github.event.inputs.state }}" ] && [[ "${{ github.event.inputs.state }}" =~ ^[A-Za-z]{2}$ ]]; then
-            python scripts/share-pages/regenerate_deployed_actors.py --state "${{ github.event.inputs.state }}" $force_args
-          elif [ -n "${{ github.event.inputs.state }}" ]; then
-            echo "Skipping court actor share-page state filter for non-US location: ${{ github.event.inputs.state }}"
-          else
-            python scripts/share-pages/regenerate_deployed_actors.py $force_args
-          fi
+          python scripts/pdf/verify_state_pdf_release.py "${verify_args[@]}"
 
-      - name: Refresh public actor cache
+      - name: Commit and publish PDFs immediately
         if: steps.activity_gate.outputs.should_run == 'true'
-        env:
-          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
-          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
-        run: python scripts/share-pages/refresh_public_actor_cache.py
-
-      - name: Verify court actor share consistency
-        if: steps.activity_gate.outputs.should_run == 'true'
-        env:
-          ACTOR_INPUT: ${{ github.event.inputs.actor || '' }}
-          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
-          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
-          SWM_PUBLIC_API_BASE: https://my.standwithmeg.com
-          SWM_NEXT_REPO: ${{ github.workspace }}
-          VERCEL_AUTOMATION_BYPASS_SECRET: ${{ secrets.VERCEL_AUTOMATION_BYPASS_SECRET }}
-        run: |
-          if [ -n "$ACTOR_INPUT" ]; then
-            python scripts/share-pages/verify_share_consistency.py --skip-states --actor "$ACTOR_INPUT"
-          elif [ -n "${{ github.event.inputs.state }}" ] && [[ "${{ github.event.inputs.state }}" =~ ^[A-Za-z]{2}$ ]]; then
-            python scripts/share-pages/verify_share_consistency.py --skip-states --states "${{ github.event.inputs.state }}"
-          else
-            python scripts/share-pages/verify_share_consistency.py --asset-only
-          fi
-
-      - name: Commit and push if changed
-        if: steps.activity_gate.outputs.should_run == 'true'
-        # Use Meg's own GitHub identity so Vercel's Hobby-tier deploy gate
-        # (only authorized team members can trigger deploys) accepts the
-        # commit. A generic bot@ email gets rejected with "not a member".
         run: |
           set -euo pipefail
-          git config user.name  "Meghann Miller"
+          git config user.name "Meghann Miller"
           git config user.email "founder@standwithmeg.com"
-          git add public/state-reports public/court-actors scripts/share-pages/actor_overrides.json
+          git add public/state-reports
           if git diff --staged --quiet; then
-            echo "No PDF/share-page changes — nothing to commit."
+            echo "No PDF/index/financial changes — nothing to commit."
             exit 0
           fi
           changed=$(git diff --staged --name-only | wc -l | tr -d ' ')
-          git commit -m "chore: auto-regenerate ${changed} report/share file(s) from live Supabase data"
+          git commit -m "chore: auto-regenerate ${changed} state report file(s) from live Supabase data"
 
-          # Retry on push races. If main moved while we were regenerating
-          # (Vercel deploy commit, another PR merge, a parallel run), rebase
-          # our PDF-only commit on top of the latest main and try again.
           for attempt in 1 2 3 4 5; do
             if git push; then
               echo "Push succeeded on attempt ${attempt}."
@@ -225,29 +156,21 @@ jobs:
             git fetch origin main
             if ! git rebase origin/main; then
               conflicts=$(git diff --name-only --diff-filter=U)
-              unexpected_conflicts=$(printf '%s\n' "$conflicts" | grep -vE '^(public/state-reports/|public/court-actors/)' || true)
-              if [ -n "$unexpected_conflicts" ]; then
-                echo "Unexpected conflicts: $unexpected_conflicts - aborting rebase."
+              unexpected=$(printf '%s\n' "$conflicts" | grep -vE '^public/state-reports/' || true)
+              if [ -n "$unexpected" ]; then
+                echo "Unexpected conflicts: $unexpected"
                 git rebase --abort
                 exit 1
               fi
-
-              echo "Resolving generated-file conflicts:"
-              printf '%s\n' "$conflicts"
               while IFS= read -r file; do
                 if [ -n "$file" ]; then
                   git checkout --theirs -- "$file"
                 fi
               done <<< "$conflicts"
-
-              if printf '%s\n' "$conflicts" | grep -q '^public/court-actors/manifest.json$'; then
-                echo "Regenerating manifest.json from filesystem."
-                python -c "import sys; sys.path.insert(0, 'scripts/share-pages'); from regenerate_deployed_actors import rewrite_manifest; rewrite_manifest()"
-              fi
               git add $conflicts
               GIT_EDITOR=true git rebase --continue
             fi
             sleep $((attempt * 3))
           done
-          echo "Push still failing after 5 attempts — giving up so the run is visible."
+          echo "Push still failing after 5 attempts."
           exit 1

@@ -8,7 +8,7 @@ export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 export const maxDuration = 60;
 
-const WORKFLOW_FILE = "regenerate-state-pdfs.yml";
+const WORKFLOW_FILE = "regenerate-court-actor-shares.yml";
 
 type GitHubWorkflowRun = {
   id: number;
