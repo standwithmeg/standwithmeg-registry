@@ -58,8 +58,16 @@ def _load_local_env() -> None:
 
 def _normalized(value: object) -> str:
     text = unicodedata.normalize("NFKC", str(value or "")).casefold()
+    text = text.translate(str.maketrans({"ʼ": "'", "’": "'", "ʻ": "'", "＇": "'"}))
     text = re.sub(r"[^\w]+", " ", text, flags=re.UNICODE)
     return re.sub(r"\s+", " ", text).strip()
+
+
+def _compact(value: object) -> str:
+    """Ignore renderer punctuation and line-wrap hyphenation, not content."""
+    text = unicodedata.normalize("NFKC", str(value or "")).casefold()
+    text = text.translate(str.maketrans({"ʼ": "'", "’": "'", "ʻ": "'", "＇": "'"}))
+    return "".join(character for character in text if character.isalnum())
 
 
 def _fragment_present(fragment: str, pdf_text: str) -> bool:
@@ -68,6 +76,13 @@ def _fragment_present(fragment: str, pdf_text: str) -> bool:
     if not normalized:
         return True
     if normalized in pdf_text:
+        return True
+    # Chromium may extract a wrapped word as "inter- vention" and render an
+    # apostrophe as U+02BC. Comparing the complete alphanumeric stream proves
+    # every letter and number remains in order while ignoring only those
+    # renderer-level punctuation and spacing differences.
+    compact_fragment = _compact(fragment)
+    if compact_fragment and compact_fragment in _compact(pdf_text):
         return True
     stop_words = {
         "a", "an", "and", "are", "as", "at", "be", "by", "for", "from",
