@@ -1464,9 +1464,23 @@ QUOTES_PER_PAGE = 8
 QUOTE_PAGE_CHAR_BUDGET = 480
 QUOTE_SPLIT_CHARS = 520
 MAX_FULL_QUOTES_PER_PAGE = 4
+# Hard ceiling on how many slide chunks one family note may occupy. An
+# essay-length note (8,264 chars) once paginated into 17 consecutive
+# wall-of-text slides retelling one story (Tylar Tapp AR, 2026-08-28). The
+# full note stays canonical in selected_quotes and on the report page; the
+# deck shows the opening excerpt with a truncation cue. Keep in sync with
+# MAX_FULL_QUOTE_CHUNKS in the rebuild repo's lib/actor-quote-selection.ts —
+# the quote-integrity gate accepts contiguous excerpts, but page counts must
+# agree across layers.
+MAX_FULL_QUOTE_CHUNKS = 2
+FULL_QUOTE_TRUNCATION_MARKER = " …"
 
 
-def split_full_quote(text: str, max_chars: int = QUOTE_SPLIT_CHARS) -> list[str]:
+def split_full_quote(
+    text: str,
+    max_chars: int = QUOTE_SPLIT_CHARS,
+    max_chunks: int | None = MAX_FULL_QUOTE_CHUNKS,
+) -> list[str]:
     value = re.sub(r"\s+", " ", text or "").strip()
     if not value:
         return []
@@ -1485,6 +1499,9 @@ def split_full_quote(text: str, max_chars: int = QUOTE_SPLIT_CHARS) -> list[str]
         remaining = remaining[cut:].strip()
     if remaining:
         chunks.append(remaining)
+    if max_chunks is not None and len(chunks) > max_chunks:
+        chunks = chunks[:max_chunks]
+        chunks[-1] = chunks[-1] + FULL_QUOTE_TRUNCATION_MARKER
     return chunks
 
 
