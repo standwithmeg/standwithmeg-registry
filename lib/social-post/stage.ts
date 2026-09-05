@@ -13,6 +13,7 @@ import {
 } from "./db";
 import type { SocialPostStatus } from "./types";
 import { buildApprovalEmail } from "./email";
+import { inFlightSocialPlatforms } from "./in-flight";
 import { buildSocialPostPackage, type PublicActorLike } from "./package";
 import { socialPostPackageSignature } from "./signature";
 import {
@@ -100,13 +101,22 @@ function resolveQueueUpdate(args: {
   existingSignature: string | null;
   nextSignature: string;
   nextFamilyCount: number;
-}): { shouldSkip: boolean; status: SocialPostStatus; reviewNotes: string | null } {
+}): { shouldSkip: boolean; status: SocialPostStatus; reviewNotes: string | null; skipReason?: string } {
   const { existing, requeueAll, forceRequeue, existingSignature, nextSignature, nextFamilyCount } = args;
   if (!existing) {
     return { shouldSkip: false, status: "pending_review", reviewNotes: null };
   }
   if (!requeueAll && !forceRequeue && existingSignature === nextSignature) {
     return { shouldSkip: true, status: existing.status, reviewNotes: null };
+  }
+  const inFlightPlatforms = inFlightSocialPlatforms(existing.review_notes);
+  if (inFlightPlatforms.length > 0) {
+    return {
+      shouldSkip: true,
+      status: existing.status,
+      reviewNotes: null,
+      skipReason: `Package refresh deferred while ${inFlightPlatforms.join(", ")} submission${inFlightPlatforms.length === 1 ? " is" : "s are"} still publishing or scheduled.`,
+    };
   }
 
   if (existing.status === "posted" || existing.status === "rejected") {
@@ -222,6 +232,7 @@ export async function stageCourtActorSocialPosts(options: StageSocialPostsOption
       nextFamilyCount: pkg.family_count,
     });
     if (updatePlan.shouldSkip) {
+      if (updatePlan.skipReason) skipped.push({ actor: pkg.actor_name, reason: updatePlan.skipReason });
       continue;
     }
 
