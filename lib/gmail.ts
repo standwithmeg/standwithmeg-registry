@@ -1,4 +1,5 @@
 import { OAuth2Client, type Credentials } from "google-auth-library";
+import MailComposer from "nodemailer/lib/mail-composer";
 import { createAdminSupabaseClient } from "./supabase-admin";
 
 type AdminClient = ReturnType<typeof createAdminSupabaseClient>;
@@ -394,29 +395,25 @@ function formatMailboxHeader(name: string | undefined, email: string): string {
   return `"${safeName}" <${trimmed}>`;
 }
 
-function encodeEmail(payload: EmailPayload): string {
+async function encodeEmail(payload: EmailPayload): Promise<string> {
   const { to, subject, body, from, replyTo, inReplyTo, references } = payload;
   if (!from?.trim()) {
     throw new Error("Gmail send requires a From address matching the authenticated mailbox.");
   }
-  const lines = [
-    `From: ${from}`,
-    `To: ${to}`,
-    replyTo?.trim() ? `Reply-To: ${replyTo.trim()}` : "",
-    `Subject: ${subject}`,
-    inReplyTo ? `In-Reply-To: ${inReplyTo}` : "",
-    references ? `References: ${references}` : "",
-    'Content-Type: text/html; charset="UTF-8"',
-    "MIME-Version: 1.0",
-    "",
-    body,
-  ];
-  const raw = lines.filter(Boolean).join("\r\n");
-  return Buffer.from(raw)
-    .toString("base64")
-    .replace(/\+/g, "-")
-    .replace(/\//g, "_")
-    .replace(/=+$/, "");
+  // Let the MIME composer preserve the header/body separator, encode Unicode
+  // subjects and HTML, and add the Date and Message-ID required by mail clients.
+  const raw = await new MailComposer({
+    from,
+    to,
+    replyTo: replyTo?.trim() || undefined,
+    subject,
+    html: body,
+    inReplyTo,
+    references,
+    disableFileAccess: true,
+    disableUrlAccess: true,
+  }).compile().build();
+  return raw.toString("base64url");
 }
 
 export function defaultGmailFromAddress(mailboxEmail: string): string {
@@ -440,7 +437,7 @@ export async function sendEmail(client: OAuth2Client, payload: EmailPayload): Pr
   return gmailApi<GmailMessage>(client, "/users/me/messages/send", {
     method: "POST",
     body: JSON.stringify({
-      raw: encodeEmail({ ...payload, from, replyTo }),
+      raw: await encodeEmail({ ...payload, from, replyTo }),
       threadId: payload.threadId,
     }),
   });
@@ -458,7 +455,7 @@ export async function createDraft(client: OAuth2Client, payload: EmailPayload): 
     method: "POST",
     body: JSON.stringify({
       message: {
-        raw: encodeEmail({ ...payload, from }),
+        raw: await encodeEmail({ ...payload, from }),
         threadId: payload.threadId,
       },
     }),

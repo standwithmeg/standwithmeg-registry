@@ -15,7 +15,10 @@ export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const dryRun = searchParams.get("dry_run") === "true";
   const requeueAll = searchParams.get("requeue_all") === "true";
-  const skipEmail = searchParams.get("skip_email") === "true" || dryRun;
+
+  // Daily staging is reviewed in the dashboard. Never send approval mail from
+  // either cron staging path, including retries and requests with skip_email=false.
+  const skipEmail = true;
 
   try {
     const autoQueued = dryRun

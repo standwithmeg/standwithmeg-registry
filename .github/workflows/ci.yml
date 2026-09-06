@@ -61,6 +61,9 @@ jobs:
       - name: Lint
         run: npm run lint
 
+      - name: Social staging and Gmail regressions
+        run: node --test scripts/test-social-post-email.mjs
+
       - name: Typecheck
         run: npx tsc --noEmit
 
