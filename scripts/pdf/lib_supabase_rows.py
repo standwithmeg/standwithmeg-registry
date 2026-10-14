@@ -473,19 +473,23 @@ def load_public_court_actors_from_supabase(state_filter: str | None = None) -> d
     # the underlying table is missing, so this stays safe pre-migration.
     alias_resolver = _load_court_actor_alias_resolver(sb)
     review_map = _load_court_actor_row_review_map(sb)
+    hidden_submission_ids = _load_hidden_submission_ids(sb)
     comment_merge_map, comment_merge_source_map = _load_court_actor_comment_merge_map(sb)
 
     # Pre-compute which row IDs came from non-public submissions so we can
     # suppress their notes and detect merge taint.
     non_public_row_ids: set[str] = set()
     for row in rows:
-        if not _is_public_shareable_submission(_joined_submission(row)):
+        if (str(row.get("submission_id") or "") in hidden_submission_ids
+                or not _is_public_shareable_submission(_joined_submission(row))):
             rid = row.get("id")
             if rid:
                 non_public_row_ids.add(rid)
 
     buckets: dict[tuple[str, str], dict] = {}
     for row in rows:
+        if str(row.get("submission_id") or "") in hidden_submission_ids:
+            continue
         location = _actor_location(row)
         if state_filter and location != state_filter.upper():
             continue
@@ -726,6 +730,20 @@ def _paginated_select(
     return out
 
 
+def _load_hidden_submission_ids(sb: Client) -> set[str]:
+    """Exclude admin-hidden originals from public output without deleting them.
+
+    Fail closed on a moderation lookup failure, so a regeneration cannot
+    accidentally republish excluded testimony or merged text containing it.
+    """
+    reviews = _paginated_select(
+        sb, "admin_review_decisions", "source_id,decision",
+        eq_filters={"source_table": "survey_submissions"}, order_by="id",
+    )
+    return {str(row["source_id"]) for row in reviews
+            if row.get("source_id") and row.get("decision") in {"superseded", "delete"}}
+
+
 def _load_count_separately_keys(sb: Client) -> set[str]:
     """Rows manually marked as separate cases should bypass email/state dedupe."""
     try:
@@ -915,6 +933,8 @@ def load_rows_from_supabase() -> list[list]:
 
     survey = _paginated_select(sb, "survey_submissions", survey_cols, order_by="id")
     legacy = _paginated_select(sb, "legacy_submissions", legacy_cols, order_by="id")
+    hidden_submission_ids = _load_hidden_submission_ids(sb)
+    survey = [row for row in survey if str(row.get("id") or "") not in hidden_submission_ids]
     count_separately_keys = _load_count_separately_keys(sb)
 
     deduped = _dedup(survey, legacy, count_separately_keys)
