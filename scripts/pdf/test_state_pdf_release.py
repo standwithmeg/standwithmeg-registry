@@ -134,6 +134,11 @@ class StatePdfReleaseTests(unittest.TestCase):
         self.assertTrue(_actor_heading_present("Joanne Berthier", readable))
         self.assertTrue(_actor_heading_present("Joanne Berthier", readable_then_comment))
 
+    def test_actor_heading_gate_accepts_adjacent_continuation_badge(self) -> None:
+        text = "Example ActorCONTINUED 1 / 2 Judge · 3 submissions"
+        self.assertTrue(_actor_heading_present("Example Actor", text))
+        self.assertFalse(_actor_heading_present("Example Different", text))
+
 
 if __name__ == "__main__":
     unittest.main()

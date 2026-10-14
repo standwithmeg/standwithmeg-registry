@@ -38,7 +38,7 @@ jobs:
           bash -n scripts/ci/should-run-regeneration.sh
 
       - name: Run PDF pagination and threshold regressions
-        run: python -m unittest scripts/ci/test_should_run_regeneration.py scripts/pdf/test_state_pdf_release.py
+        run: python -m unittest scripts/ci/test_should_run_regeneration.py scripts/pdf/test_state_pdf_release.py scripts/pdf/test_submission_moderation.py
 
   build:
     name: Lint, Typecheck, Build

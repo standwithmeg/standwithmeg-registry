@@ -106,6 +106,9 @@ def _actor_heading_present(name: str, pdf_text: str) -> bool:
     for index in range(len(lines)):
         for end in range(index + 1, min(len(lines), index + 4) + 1):
             raw_heading = "\n".join(lines[index:end])
+            # Chromium can concatenate the separate continuation badge with
+            # the actor's last name when extracting text from the PDF.
+            raw_heading = re.sub(r"(?<=\w)(CONTINUED\s+\d+\s*/\s*\d+)", r" \1", raw_heading)
             normalized_heading = _normalized(raw_heading)
             if "submission" not in normalized_heading:
                 continue
