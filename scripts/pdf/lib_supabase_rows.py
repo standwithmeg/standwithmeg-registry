@@ -459,6 +459,8 @@ def load_public_court_actors_from_supabase(state_filter: str | None = None) -> d
             sb.table("court_actors")
             .select("id,role,name,court_or_county,state_code,location_key,notes,submission_id,created_at,survey_submissions(email,state_of_occurrence,outside_us_country,permission_to_share,approved,created_at)")
             .eq("source", "form_direct")
+            # A stable unique order keeps offset pages from losing families.
+            .order("id")
         )
         resp = q.range(offset, offset + page_size - 1).execute()
         batch = resp.data or []
