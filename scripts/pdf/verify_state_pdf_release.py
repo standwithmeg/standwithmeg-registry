@@ -70,6 +70,32 @@ def _compact(value: object) -> str:
     return "".join(character for character in text if character.isalnum())
 
 
+def _cover_failures(
+    cover_text: str, state_name: str, families: int, children: int, data_as_of: str,
+) -> list[str]:
+    """Check complete headlines despite PDF letter-spacing extraction.
+
+    pypdf can insert spaces inside CSS letter-spaced words. Compare every
+    letter and digit in order, with numeric boundaries so 30 cannot match 130.
+    """
+    compact_cover = _compact(cover_text)
+    failures = []
+    for expected_text, label in (
+        (f"{families} {state_name} families on record", "family headline"),
+        (f"{children} children impacted", "children headline"),
+        (f"data as of {data_as_of}", "data-as-of date"),
+    ):
+        compact_expected = _compact(expected_text)
+        pattern = re.escape(compact_expected)
+        if compact_expected[0].isdigit():
+            pattern = r"(?<!\d)" + pattern
+        if compact_expected[-1].isdigit():
+            pattern += r"(?!\d)"
+        if not re.search(pattern, compact_cover):
+            failures.append(f"PDF cover missing {label}")
+    return failures
+
+
 def _fragment_present(fragment: str, pdf_text: str) -> bool:
     """Tolerate renderer hyphenation while still detecting dropped text."""
     normalized = _normalized(fragment)
@@ -249,15 +275,14 @@ def verify(expected_report_count: int | None = None, only_location: str | None =
                 f"{location}: PDF has {len(reader.pages)} pages; generator expects {expected_pages}"
             )
 
-        cover_text = _normalized(reader.pages[0].extract_text() or "") if reader.pages else ""
+        cover_text = (reader.pages[0].extract_text() or "") if reader.pages else ""
         children_total = children_impact(location_rows)["total_children"]
-        for expected_text, label in (
-            (f"{state_name} families on record", "family headline"),
-            (f"{children_total} children impacted", "children headline"),
-            (f"data as of {ctx['data_as_of_date']}", "data-as-of date"),
-        ):
-            if _normalized(expected_text) not in cover_text:
-                failures.append(f"{location}: PDF cover missing {label}")
+        failures.extend(
+            f"{location}: {failure}"
+            for failure in _cover_failures(
+                cover_text, state_name, len(location_rows), children_total, ctx["data_as_of_date"],
+            )
+        )
 
         actor_page_count = int(ctx["actor_page_count"])
         # Extract the full document so a renderer-created overflow page cannot
@@ -289,17 +314,9 @@ def verify(expected_report_count: int | None = None, only_location: str | None =
             "data_as_of": ctx["data_as_of_date"],
         }
 
-    if not only_location or only_location == "KS":
-        ks_names = {_normalized(actor.get("name")) for actor in actors_by_location.get("KS", [])}
-        for required_name in ("Jennifer M. Berger", "Ashlyn L. Yarnell"):
-            if _normalized(required_name) not in ks_names:
-                failures.append(f"KS: live 3-family actor set missing {required_name}")
-    if not only_location or only_location == "FL":
-        fl_names = {_normalized(actor.get("name")) for actor in actors_by_location.get("FL", [])}
-        if _normalized("Joanne Berthier") not in fl_names:
-            failures.append("FL: live 3-family actor set missing Joanne Berthier")
-        if _normalized("Joanne") in fl_names:
-            failures.append("FL: bare Joanne remains in the live 3-family actor set")
+    # The live, moderated threshold set above is authoritative. A person can
+    # legitimately leave it after a consent, duplicate, or visibility decision;
+    # historical named-actor assertions must not block all report publication.
 
     summary = {
         "reports": len(qualifying),

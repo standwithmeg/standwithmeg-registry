@@ -4,9 +4,11 @@ from __future__ import annotations
 
 import re
 import sys
+import tempfile
 import unittest
 from datetime import datetime, timezone
 from pathlib import Path
+from unittest.mock import patch
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
@@ -19,7 +21,8 @@ from generate_state_pdf import (
     build_template_context,
     cover_image_for,
 )
-from verify_state_pdf_release import _actor_heading_present, _fragment_present, _normalized
+import verify_state_pdf_release as release
+from verify_state_pdf_release import _actor_heading_present, _cover_failures, _fragment_present
 
 
 def _row(location: str, created_at: str) -> list:
@@ -51,6 +54,45 @@ def _normalized(text: str) -> str:
 
 
 class StatePdfReleaseTests(unittest.TestCase):
+    def test_cover_gate_accepts_letter_spacing_from_pypdf(self) -> None:
+        text = (
+            "283 KANSAS FAM ILIES ON R EC OR D · 520\nC HILDR EN IM PAC TED\n"
+            "DA TA A S OF\nOCTOBER 16, 2026"
+        )
+        self.assertEqual(_cover_failures(text, "Kansas", 283, 520, "October 16, 2026"), [])
+        self.assertEqual(
+            _cover_failures(text, "Kansas", 83, 20, "October 15, 2026"),
+            ["PDF cover missing family headline", "PDF cover missing children headline",
+             "PDF cover missing data-as-of date"],
+        )
+
+    def test_cover_gate_rejects_missing_words_and_changed_digits(self) -> None:
+        text = "30 Kansas families on record · 50 children impacted · Data as of October 16, 2026"
+        for damaged in (
+            text.replace("families on record", "families"),
+            text.replace("30 Kansas", "130 Kansas"),
+            text.replace("50 children", "150 children"),
+            text.replace("2026", "20260"),
+        ):
+            with self.subTest(damaged=damaged):
+                self.assertTrue(_cover_failures(damaged, "Kansas", 30, 50, "October 16, 2026"))
+
+    def test_release_uses_current_eligible_actor_set_after_moderation(self) -> None:
+        # No historical actor is mandatory when the live source no longer
+        # qualifies them. Missing PDFs must still fail the release.
+        rows = [_row("FL", "2026-10-16T00:00:00Z") for _ in range(30)]
+        with tempfile.TemporaryDirectory() as temp, \
+                patch.object(release, "_load_local_env"), \
+                patch.object(release, "PUBLIC_STATE_REPORTS_DIR", Path(temp)), \
+                patch.object(release, "PDF_CACHE_PATH", Path(temp) / ".regen-cache.json"), \
+                patch.object(release, "load_rows_from_supabase", return_value=rows), \
+                patch.object(release, "load_public_court_actors_from_supabase", return_value={}), \
+                patch.object(release, "load_state_exclusive_sponsor", return_value=None):
+            with self.assertRaises(RuntimeError) as raised:
+                release.verify()
+        self.assertIn("missing 30-family PDFs: FL", str(raised.exception))
+        self.assertNotIn("live 3-family actor set missing", str(raised.exception))
+
     def test_all_threshold_actors_reach_template_context(self) -> None:
         actors = [_actor(f"Actor {idx:02d}", ["Short family report."]) for idx in range(25)]
         ctx = build_template_context("KS", [_row("KS", "2026-08-26T07:54:49Z")], actors)
