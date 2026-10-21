@@ -5,7 +5,7 @@ from pathlib import Path
 import sys
 from types import SimpleNamespace
 import unittest
-from unittest.mock import MagicMock, patch
+from unittest.mock import MagicMock, call, patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import lib_supabase_rows as rows
@@ -29,7 +29,7 @@ class SubmissionModerationTests(unittest.TestCase):
         source = self.actors()
         before = copy.deepcopy(source)
         client = MagicMock()
-        client.table.return_value.select.return_value.eq.return_value.range.return_value.execute.return_value = SimpleNamespace(data=source)
+        client.table.return_value.select.return_value.eq.return_value.order.return_value.range.return_value.execute.return_value = SimpleNamespace(data=source)
         with patch.object(rows, "create_client", return_value=client), \
              patch.object(rows, "_load_court_actor_alias_resolver", return_value={}), \
              patch.object(rows, "_load_court_actor_row_review_map", return_value={}), \
@@ -41,6 +41,25 @@ class SubmissionModerationTests(unittest.TestCase):
         self.assertNotIn("RETIRED TEXT", str(actor))
         self.assertIn("Family statement 0", str(actor))
         self.assertEqual(source, before)
+
+    def test_actor_pagination_orders_every_page_by_unique_id(self):
+        source = self.actors()
+        client = MagicMock()
+        filtered = client.table.return_value.select.return_value.eq.return_value
+        query = filtered.order.return_value
+        query.range.return_value.execute.side_effect = [
+            SimpleNamespace(data=[{}] * 998 + source[:2]),
+            SimpleNamespace(data=source[2:]),
+        ]
+        with patch.object(rows, "create_client", return_value=client), \
+             patch.object(rows, "_load_court_actor_alias_resolver", return_value={}), \
+             patch.object(rows, "_load_court_actor_row_review_map", return_value={}), \
+             patch.object(rows, "_load_hidden_submission_ids", return_value=set()), \
+             patch.object(rows, "_load_court_actor_comment_merge_map", return_value=({}, {})):
+            actor = rows.load_public_court_actors_from_supabase("KS")["KS"][0]
+        self.assertEqual(filtered.order.call_args_list, [call("id"), call("id")])
+        self.assertEqual(query.range.call_args_list, [call(0, 999), call(1000, 1999)])
+        self.assertEqual(actor["count"], 4)
 
     def test_hidden_survey_excluded_before_report_statistics_and_quotes(self):
         source = [{"id": "hidden", "email": "one@example.invalid", "state_of_occurrence": "KS", "impact_quote": "PRIVATE"},
