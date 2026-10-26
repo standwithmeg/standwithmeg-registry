@@ -37,6 +37,9 @@ jobs:
           python -m py_compile scripts/pdf/generate_state_pdf.py scripts/pdf/lib_supabase_rows.py scripts/pdf/check_actor_card_overflow.py scripts/pdf/verify_state_pdf_release.py
           bash -n scripts/ci/should-run-regeneration.sh
 
+      - name: Verify court actor portrait preservation
+        run: python scripts/share-pages/test_photo_preservation.py
+
       - name: Run PDF pagination and threshold regressions
         run: python -m unittest scripts/ci/test_should_run_regeneration.py scripts/pdf/test_state_pdf_release.py scripts/pdf/test_submission_moderation.py
 

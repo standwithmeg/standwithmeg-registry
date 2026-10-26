@@ -153,22 +153,25 @@ def actor_photo_wired(slug: str, state_abbr: str) -> bool:
     """Return false for cached output that still renders the photo placeholder."""
     actor_dir = PUBLIC_ACTORS_DIR / state_abbr.lower() / slug
     photo_path = actor_dir / "image_1080.png"
-    if not photo_path.exists():
-        return True
-    # If the photo file is on disk and the share.html does not contain the
-    # placeholder, the photo is wired — regardless of what spec.json says.
+    spec = read_json(actor_dir / "spec.json")
+    if not spec:
+        return False
+    photo = spec.get("photo") or {}
+    has_portrait = photo_path.is_file() and photo_path.stat().st_size > 0
+    if not has_portrait:
+        return not photo.get("exists")
+    # Published pages contain JPEG frames, so they have no placeholder HTML
+    # even when the placeholder is baked into the cover. Require the render's
+    # photo evidence as well as the persisted portrait; the temporary render
+    # path itself no longer needs to exist after publication.
+    if photo.get("exists") is not True or not photo.get("path"):
+        return False
     share_path = actor_dir / "share.html"
     try:
         share_html = share_path.read_text(errors="ignore")
     except OSError:
         return False
-    if "{{ACTOR.IMAGE_URL}}" not in share_html:
-        return True
-    # Fallback: spec.json may still say photo.exists=false even though the
-    # share.html already renders the real image. Accept it if the file exists.
-    spec = read_json(actor_dir / "spec.json") or {}
-    photo = spec.get("photo") or {}
-    return bool(photo.get("exists") and photo.get("path"))
+    return "{{ACTOR.IMAGE_URL}}" not in share_html
 
 
 def meg_intro_path(state_abbr: str) -> Path:
@@ -533,6 +536,14 @@ def build_env() -> dict[str, str]:
 def copy_generated_assets(slug: str, state_abbr: str) -> None:
     generated_dir = EXPORT_ROOT / slug
     dest_dir = PUBLIC_ACTORS_DIR / state_abbr.lower() / slug
+    generated_spec = read_json(generated_dir / "spec.json") or {}
+    previous_spec = read_json(dest_dir / "spec.json") or {}
+    previous_photo = previous_spec.get("photo") or {}
+    generated_photo_info = generated_spec.get("photo") or {}
+    if ((dest_dir / "image_1080.png").is_file() or previous_photo.get("exists")) and (
+        generated_photo_info.get("exists") is not True or not generated_photo_info.get("path")
+    ):
+        raise RuntimeError(f"Refusing to replace {slug}: the rebuild lost its existing portrait.")
     dest_dir.mkdir(parents=True, exist_ok=True)
     for filename in ("spec.json", "share.html"):
         src = generated_dir / filename
