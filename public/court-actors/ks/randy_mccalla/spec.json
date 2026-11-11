@@ -12,11 +12,11 @@
     "court_or_county": "Johnson",
     "state": "Kansas",
     "state_abbr": "KS",
-    "mention_count": 8,
-    "family_count": 8,
-    "public_family_count": 8,
+    "mention_count": 9,
+    "family_count": 9,
+    "public_family_count": 9,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 8,
+    "actor_report_count": 9,
     "supabase_row_ids": [
       "2b80da54-7769-45ad-a6d8-005914f28a9c",
       "60c67598-fb31-4754-86b7-17de13f13639",
@@ -25,38 +25,45 @@
       "f42cd393-05ff-4bcb-bd8f-e3f5f7f7bfba",
       "ec69c9c9-fd55-49dd-b625-f2507aa011da",
       "5f91accd-45f3-4436-886a-868339149fa9",
-      "54e9569c-6281-4021-9b7f-2725de6b2c27"
+      "54e9569c-6281-4021-9b7f-2725de6b2c27",
+      "6d6a82a3-907e-4cfa-9a10-fe545916d006"
     ],
     "actor_row_id": null,
     "actor_bucket_key": "randy mcala|KS"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-7gspmaqk/New Final Post and Capcut template/export/randy_mccalla/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/randy_mccalla/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 185,
-    "total_submissions": 273,
-    "avg_financial_loss": 111495.56,
-    "avg_months_lost": 31.1,
+    "families_approved": 186,
+    "total_submissions": 293,
+    "avg_financial_loss": 120206.43,
+    "avg_months_lost": 30.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "KS",
-    "state_family_count": 273,
-    "median_financial_loss": 97450,
-    "median_burden_sample_size": 140,
-    "median_months_lost": 16,
-    "pro_se_pct": 48.4,
-    "pro_se_count": 132,
-    "_pdf_state_family_count": 273,
+    "state_family_count": 293,
+    "median_financial_loss": 101500,
+    "median_burden_sample_size": 149,
+    "median_months_lost": 19,
+    "pro_se_pct": 48.3,
+    "pro_se_count": 141,
+    "_pdf_state_family_count": 292,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5746,
+  "movement_total": 6496,
   "supabase": {
-    "report_count": 8,
-    "actor_report_count": 8,
-    "family_count": 8,
+    "report_count": 9,
+    "actor_report_count": 9,
+    "family_count": 9,
     "family_reports": [
+      {
+        "body": "Randy has caused irreparable damage within my family. He has destroyed bonds between sibblings. He has ruined the mother/child bond. He has bullied and threatened his way through his agenda. Has not ben impartial at all and has torn our family apart.",
+        "state": "KS",
+        "county": "Johnson",
+        "row_id": "2d2edf6d-373e-46f5-9ec3-0a4fcb4adc98"
+      },
       {
         "body": "Had I known what the family court system would put us through, I may have stayed in an abusive marriage until my children were grown. Leaving should have protected us; instead, the system prolonged the harm and made survival feel like punishment.",
         "state": "KS",
@@ -86,12 +93,6 @@
         "state": "KS",
         "county": "Johnson County",
         "row_id": "79a2d570-52fe-40f1-a0c8-1f41ca10d5b6"
-      },
-      {
-        "body": "This the single biggest trauma of my life. Guardian Ad Litems are the biggest threat to the family court system and their power must be checked.",
-        "state": "KS",
-        "county": "Johnson",
-        "row_id": "3338c6ba-25d3-4621-a5d1-217a0347dc6f"
       }
     ],
     "public_comments": [
@@ -121,6 +122,12 @@
       },
       {
         "comment_text": "Functioned more as an advocate for a third-party visitation claim than as a neutral representative for the child and did not submit a formal written GAL report.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Johnson"
+      },
+      {
+        "comment_text": "Threatening, bullying, removed child with no evidence, only works with one party in the case.",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Johnson"
@@ -162,23 +169,27 @@
     "quote_char_budget": 150,
     "selected_quotes": [
       {
-        "body": "Randy McCalla ambushed me in court in 2013 — a standard custody hearing — claiming my rights needed to be terminated due to parental alienation.",
+        "body": "This is the single biggest trauma of my life. Guardian Ad Litems are the biggest threat to the family court system and their power must be checked. Randy McCalla ambushed me in court in 2013 — a standard custody hearing — claiming my rights needed to be terminated due to parental alienation. He presented no evidence, and I left court shocked and without my kids. Randy didn't allow me to talk to my kids for 5 weeks. He told me in his office that he knew the judge personally as if to imply she would do whatever he wanted. The therapist Randy insisted on using shared an office with him.",
         "kind": "comment"
       },
       {
-        "body": "Falsified court hearings with custody-modifying orders when no hearing ever occurred.",
+        "body": "Caused permanent and irreparable harm to my children's mental and physical health as well as to my entire family. Blackmailed by Randy McCalla. Ex parte communication between attorneys and court appointed medical professionals. Falsified court hearings with custody-modifying orders when no hearing ever occurred.",
         "kind": "comment"
       },
       {
-        "body": "Randy McCalla, GAL in my custody case; ordered psychological evaluations, multiple interviews with children.",
+        "body": "Randy McCalla, GAL in my custody case; ordered psychological evaluations, multiple interviews with children, but in my experience the findings/recommendations and children’s concerns were disregarded, which escalated conflict and harmed family stability. He ignored years of documented abuse.",
         "kind": "comment"
       },
       {
-        "body": "Led to my children being taken",
+        "body": "Filed the emergency motion that led to my children being taken, never spoke to me, and instead worked with my ex, his attorney, therapists, and DCF while leaving me completely out and continuing to push for me to stay separated from my kids.",
         "kind": "comment"
       },
       {
-        "body": "Functioned more as an advocate for a third-party visitation claim than as a neutral representative for the child and did not submit a formal…",
+        "body": "Functioned more as an advocate for a third-party visitation claim than as a neutral representative for the child and did not submit a formal written GAL report.",
+        "kind": "comment"
+      },
+      {
+        "body": "Threatening, bullying, removed child with no evidence, only works with one party in the case.",
         "kind": "comment"
       },
       {
@@ -190,15 +201,19 @@
         "kind": "comment"
       },
       {
-        "body": "Had I known what the family court system would put us through, I may have stayed in an abusive marriage until my children were grown.",
+        "body": "Randy has caused irreparable damage within my family. He has destroyed bonds between sibblings. He has ruined the mother/child bond. He has bullied and threatened his way through his agenda. Has not ben impartial at all and has torn our family apart.",
         "kind": "family_report"
       },
       {
-        "body": "The hardest lesson I learned in family court was that patterns do not disappear just because they are ignored.",
+        "body": "Had I known what the family court system would put us through, I may have stayed in an abusive marriage until my children were grown. Leaving should have protected us; instead, the system prolonged the harm and made survival feel like punishment.",
         "kind": "family_report"
       },
       {
-        "body": "The system has stripped me of my medical rights and the funds needed for the betterment of my children have been spent instead on the system.",
+        "body": "The hardest lesson I learned in family court was that patterns do not disappear just because they are ignored. When abuse is treated as an isolated incident, evidence becomes negotiable, opinions become powerful, and accountability becomes optional. That is when I realized the abuse had not disappeared. It had simply found another face.",
+        "kind": "family_report"
+      },
+      {
+        "body": "The system has caused unneeded separation from my autistic son and his service dog! The system has stripped me of my medical rights and the funds needed for the betterment of my children have been spent instead on the system.",
         "kind": "family_report"
       },
       {
@@ -206,15 +221,11 @@
         "kind": "family_report"
       },
       {
-        "body": "Due process, ignored evidence that cleared me, and created financial and procedural barriers that have kept me separated from them for years.",
-        "kind": "family_report"
-      },
-      {
-        "body": "This the single biggest trauma of my life. Guardian Ad Litems are the biggest threat to the family court system and their power must be checked.",
+        "body": "This system removed my children without due process, ignored evidence that cleared me, and created financial and procedural barriers that have kept me separated from them for years. The court actors built a system where I have to pay thousands just to try to be their mom again.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 2
+    "quote_page_count": 10
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

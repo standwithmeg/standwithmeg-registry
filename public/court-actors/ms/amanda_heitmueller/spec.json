@@ -27,27 +27,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-90yxu6ix/New Final Post and Capcut template/export/amanda_heitmueller/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/amanda_heitmueller/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 42,
-    "total_submissions": 55,
-    "avg_financial_loss": 164876.47,
-    "avg_months_lost": 39.9,
+    "families_approved": 41,
+    "total_submissions": 70,
+    "avg_financial_loss": 134291.76,
+    "avg_months_lost": 36.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "MS",
-    "state_family_count": 55,
+    "state_family_count": 70,
     "median_financial_loss": 65000,
-    "median_burden_sample_size": 19,
+    "median_burden_sample_size": 25,
     "median_months_lost": 16,
-    "pro_se_pct": 52.7,
-    "pro_se_count": 29,
-    "_pdf_state_family_count": 55,
+    "pro_se_pct": 47.1,
+    "pro_se_count": 33,
+    "_pdf_state_family_count": 70,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5516,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -115,7 +115,11 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Did not advocate for child with court as she assured the child, mother, & attorney…",
+        "body": "See my Forrest/ Lamar Complaint..I. PARTIES Plaintiff is an adult resident citizen of Lamar County, Mississippi and the biological mother of three minor children. Defendant is a licensed clinical social worker who, at all relevant times, provided court-involved therapeutic services in connection with custody proceedings involving Plaintiff’s children. II. JURISDICTION AND VENUE This Court has subject matter jurisdiction pursuant to Article 6, Section 156 of the Mississippi Constitution and Miss. Code Ann. § 9-7-81. Venue is proper in Lamar County, Mississippi because the acts and omissions giving rise to this Complaint occurred in connection with proceedings before the Lamar County Chancery Court, and the resulting harm to Plaintiff occurred in this jurisdictionIII. FACTUAL ALLEGATIONS A. Limited Scope of Appointment Defendant was appointed by the Lamar County Chancery Court to provide therapeutic counseling services to the minor children. Defendant was not appointed to conduct: a custody evaluation, a forensic evaluation, a psychological examination of either parent, or any formal assessment of parental fitness. Defendant did not evaluate Plaintiff, did not perform psychological t",
+        "kind": "comment"
+      },
+      {
+        "body": "Did not advocate for child with court as she assured the child, mother, & attorney that she would. She made excuses for not appearing at trial or emergency custody hearing like she said she would. Negligent disregard for children trapped in abusive situations & families trying to leave/heal from abuse & PTSD.",
         "kind": "comment"
       },
       {
@@ -123,19 +127,19 @@
         "kind": "comment"
       },
       {
-        "body": "Stolen my children’s childhoods. Ripped our family apart.",
+        "body": "Stolen my children’s childhoods. Ripped our family apart. Placed a child permanently with his abusive father. Aided and facilitated abuse and the abuser. Opened my eyes to the real system — it is NOT “broken”.. it’s a well oiled, smooth running.. money making, family breaking machine.",
         "kind": "family_report"
       },
       {
-        "body": "Took the children away from a loving mother based on false allegations.",
+        "body": "Took three healthy kids and emotionally abused them, along with their mother and maternal family, through repeated questioning by the court therapist, CPS, judge, and GAL. Took the children away from a loving mother based on false allegations, without due process or objective evidence. Full story is surreal. I consent to the use of my quotes as long as they do not mention or include mine or my children’s private information. I copied and pasted from some of my open claims.",
         "kind": "family_report"
       },
       {
-        "body": "Silenced their voices in the process",
+        "body": "Family court didn’t just make a ruling—it tore my children from their mother against their will and silenced their voices in the process. What was supposed to protect them broke their trust in the very system meant to help, and we’re still working to heal from that damage.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 6
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

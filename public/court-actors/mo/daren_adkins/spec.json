@@ -27,27 +27,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-7gspmaqk/New Final Post and Capcut template/export/daren_adkins/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/daren_adkins/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 154,
-    "total_submissions": 221,
-    "avg_financial_loss": 99851.19,
-    "avg_months_lost": 41.8,
+    "families_approved": 145,
+    "total_submissions": 284,
+    "avg_financial_loss": 106113.17,
+    "avg_months_lost": 38.1,
     "_source_table": "movement_stats_by_state",
     "_match_value": "MO",
-    "state_family_count": 221,
-    "median_financial_loss": 94350,
-    "median_burden_sample_size": 96,
-    "median_months_lost": 24,
-    "pro_se_pct": 53.8,
-    "pro_se_count": 119,
-    "_pdf_state_family_count": 221,
+    "state_family_count": 284,
+    "median_financial_loss": 89000,
+    "median_burden_sample_size": 131,
+    "median_months_lost": 21,
+    "pro_se_pct": 53.9,
+    "pro_se_count": 153,
+    "_pdf_state_family_count": 284,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5746,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -115,15 +115,15 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Ignored evidence at trial",
+        "body": "Ignored evidence at trial, then denied reconsideration after meeting with my attorney and opposing counsel Michelle Puckett at the reconsideration hearing. Even after my attorney showed the big mistakes that were made in figuring asset division. Show cause hearing gave me 10 days to comply with his fraudulent judgements paying 209,000+ or go to jail…",
         "kind": "comment"
       },
       {
-        "body": "Judge didn’t allow me to speak or represent myself.",
+        "body": "Judge didn’t allow me to speak or represent myself. Idk if it was illegal or wrong but he did not allow me the chance to speak. The attorney I was supposed to have didn’t appear for me the day of court. So I showed up in default. The judge wouldn’t let me speak at all on any matters.",
         "kind": "comment"
       },
       {
-        "body": "Removed by going to Missouri Supreme court",
+        "body": "He failed to follow due process, we attempted to get him removed by going to Missouri Supreme court, he had bias relationship with the previous Children Services Juvenile Attorney and the children services caseworker",
         "kind": "comment"
       },
       {
@@ -131,11 +131,11 @@
         "kind": "family_report"
       },
       {
-        "body": "False accusations removed me from family home.",
+        "body": "False accusations removed me from family home. Lost union job for a year 100,000+ in wages. Fraudulent family court dismissed my testimony and evidence in court trial filing judgements against me that ultimately allowed my ex wife to get home all 67 ac of farm by adopting her lies at trial as truth. She claimed assets owned by others failed to report marital debt all to come out with an extreme favorable judgement. False accusations required me to take 26 wk domestic violence class and 8 wk anger control. Completed 26 wk class virtual, now still trying to cause problems through court with that. Still don’t have my personal items from marital home and she has not refinanced the home as court ordered her to do over 8 months ago.At the beginning my kids were kept away from me for 6 months going through multiple attorneys until I finally got visitation a few months before trial.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 5
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

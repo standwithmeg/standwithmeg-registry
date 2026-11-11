@@ -27,27 +27,27 @@
     "actor_bucket_key": "tasha welch|MI"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-l4pttpaz/New Final Post and Capcut template/export/tasha_welch/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/tasha_welch/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 144,
-    "total_submissions": 183,
-    "avg_financial_loss": 181109.42,
-    "avg_months_lost": 36.7,
+    "families_approved": 142,
+    "total_submissions": 200,
+    "avg_financial_loss": 173525.11,
+    "avg_months_lost": 36.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "MI",
-    "state_family_count": 183,
-    "median_financial_loss": 103000,
-    "median_burden_sample_size": 80,
-    "median_months_lost": 17,
-    "pro_se_pct": 44.3,
-    "pro_se_count": 81,
-    "_pdf_state_family_count": 183,
+    "state_family_count": 200,
+    "median_financial_loss": 104500,
+    "median_burden_sample_size": 86,
+    "median_months_lost": 18,
+    "pro_se_pct": 44.0,
+    "pro_se_count": 88,
+    "_pdf_state_family_count": 200,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5669,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -127,15 +127,15 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Didn't follow the d h s book was never notified that my daughter was in the…",
+        "body": "Didn't follow the d h s book was never notified that my daughter was in the hospital when we still had medical rights",
         "kind": "comment"
       },
       {
-        "body": "While stating it was in my home with zero history of DV in my home.",
+        "body": "Hides the domestic violence in placements home, while stating it was in my home with zero history of DV in my home.",
         "kind": "comment"
       },
       {
-        "body": "She makes up things that never happened even when it's recorded.",
+        "body": "She makes up things that never happened even when it's recorded and they believe her and won't take the recording",
         "kind": "comment"
       },
       {
@@ -143,23 +143,23 @@
         "kind": "comment"
       },
       {
-        "body": "The system has did nothing but ruin my life.",
+        "body": "The system has did nothing but ruin my life. Try to take my kid or in the middle of trying to take my kid and some false accusations boom.",
         "kind": "family_report"
       },
       {
-        "body": "Instead it's ripping them apart and destroying them.",
+        "body": "The hurt is unmeasurable. Total loss of fairness and justice in the court that is supposed to serve and protect the people and children. Instead it's ripping them apart and destroying them. The trauma is coming from the court.",
         "kind": "family_report"
       },
       {
-        "body": "Destroyed our whole lives. Drove my love to committ suicide.",
+        "body": "Destroyed our whole lives. Drove my love to committ suicide. Robbed us of time with my kids!",
         "kind": "family_report"
       },
       {
-        "body": "The system has exploited my mental health crisis for funding, along with keeping…",
+        "body": "The system has exploited my mental health crisis for funding, along with keeping their caseloads up.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 3
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

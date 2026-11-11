@@ -35,22 +35,22 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 130,
-    "total_submissions": 175,
-    "avg_financial_loss": 121131.03,
-    "avg_months_lost": 24.4,
+    "families_approved": 120,
+    "total_submissions": 223,
+    "avg_financial_loss": 112707.53,
+    "avg_months_lost": 28.0,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OK",
-    "state_family_count": 175,
-    "median_financial_loss": 101500,
-    "median_burden_sample_size": 95,
-    "median_months_lost": 13,
+    "state_family_count": 223,
+    "median_financial_loss": 104250,
+    "median_burden_sample_size": 115,
+    "median_months_lost": 16,
     "pro_se_pct": 41.7,
-    "pro_se_count": 73,
-    "_pdf_state_family_count": 175,
+    "pro_se_count": 93,
+    "_pdf_state_family_count": 223,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5665,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 7,
     "actor_report_count": 7,
@@ -136,15 +136,15 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "She was the sup of the cps worker who ignored and dropped my case at her authority.",
+        "body": "She was the sup of the cps worker who ignored and dropped my case at her authority without even investigating after substantial evidence. Disgrace CPS this was the supervisor of the DHS worker Canton that investigated my claims. Nicole advised Canton to close my case before it was even investigated after I provided proof of abuse, numerous documents, proof, video, audio. Absolutely horrible.",
         "kind": "comment"
       },
       {
-        "body": "Took kids.",
+        "body": "took kids without warrants or consent and lied to judge under oath she lied under oath during my initial hearing",
         "kind": "comment"
       },
       {
-        "body": "Light on the stand in tampered with evidence and witness well also failing to vet…",
+        "body": "Light on the stand in tampered with evidence and witness well also failing to vet witnesses",
         "kind": "comment"
       },
       {
@@ -152,27 +152,27 @@
         "kind": "comment"
       },
       {
-        "body": "Help us give us words to keep moving forward to get our son back",
+        "body": "Broke us broke our hearts broke our spirits we don't know what to do or how to act without our son please somebody anybody out there help us give us words to keep moving forward to get our son back",
         "kind": "family_report"
       },
       {
-        "body": "Has caused me and my daughter ongoing trauma for the last six years.",
+        "body": "Has caused me and my daughter ongoing trauma for the last six years. I’ve had to watch my daughter, lose the light from her eyes because of these people while I try desperately to save what’s left.",
         "kind": "family_report"
       },
       {
-        "body": "Took my grandkids from their family",
+        "body": "Took my grandkids from their family and placed them into a foster home traumatizing them and my daughter",
         "kind": "family_report"
       },
       {
-        "body": "they locked my fiancé up on false accusations then used TDC to get my mom to sign a…",
+        "body": "they locked my fiancé up on false accusations then used TDC to get my mom to sign a paper giving them access to her phone cps gave me our kids back for a day and a half then showed up and snatched them all over agsin",
         "kind": "family_report"
       },
       {
-        "body": "It’s an ‘our way or no way’ system that tries to force compliance, tears families…",
+        "body": "It’s an ‘our way or no way’ system that tries to force compliance, tears families apart, and leaves lasting harm in its wake.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 2
+    "quote_page_count": 4
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

@@ -1,0 +1,124 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "carmen_bosch",
+    "display_name": "Carmen Bosch",
+    "title": "",
+    "first_name": "Carmen",
+    "last_name": "Bosch",
+    "role": "Judge",
+    "court": "Baldwin",
+    "county": "Baldwin",
+    "court_or_county": "Baldwin",
+    "state": "AL",
+    "state_abbr": "AL",
+    "mention_count": 3,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "0678250e-3a9b-417d-9d1f-920f0a086897",
+      "9ad3565b-1c89-4540-ae70-ec6c9808caee",
+      "7671ddd2-7d75-4d1d-a03f-c4ace7382cd9"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "carmen bosch|AL"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 102,
+    "total_submissions": 158,
+    "avg_financial_loss": 91268.73,
+    "avg_months_lost": 32.6,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "AL",
+    "state_family_count": 158,
+    "median_financial_loss": 52500,
+    "median_burden_sample_size": 71,
+    "median_months_lost": 13,
+    "pro_se_pct": 39.9,
+    "pro_se_count": 63,
+    "_pdf_state_family_count": 158,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6496,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 3,
+    "family_reports": [
+      {
+        "body": "Destroyed my relationship with my granddaughter.",
+        "state": "AL",
+        "county": "Baldwin County",
+        "row_id": "8309ae51-2efb-4b59-a96f-d8d8fb04bdb4"
+      },
+      {
+        "body": "It has caused financial hardship and emotional distress.",
+        "state": "AL",
+        "county": "Baldwin",
+        "row_id": "897dbb9d-1cb4-475a-9055-f27cc868fba7"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Gave joint custody to a man who was not the father or had ever been married to my daughter. He was arrested for selling drugs…. He was violent with my daughter in front of child. Police were called. This Judge awarded SIL custody at a bogus default hearing. The ruling was finally set aside but granddaughter remain with SIL until trial which was two years later.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Baldwin"
+      },
+      {
+        "comment_text": "Did not even review the psychologist’s medical report that cleared me of the false allegations of mental illness. The judge told the attorneys in chambers that she intended to side with DHR before giving full consideration to the evidence. I was denied due process thus allowing the medical kidnapping of my newborn grandson at North Baldwin Infirmary Hospital.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Baldwin"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/carmen_bosch",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='AL'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/al/carmen_bosch/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Gave joint custody to a man who was not the father or had ever been married to my daughter. He was arrested for selling drugs…. He was violent with my daughter in front of child. Police were called. This Judge awarded SIL custody at a bogus default hearing. The ruling was finally set aside but granddaughter remain with SIL until trial which was two years later.",
+        "kind": "comment"
+      },
+      {
+        "body": "Did not even review the psychologist’s medical report that cleared me of the false allegations of mental illness. The judge told the attorneys in chambers that she intended to side with DHR before giving full consideration to the evidence. I was denied due process thus allowing the medical kidnapping of my newborn grandson at North Baldwin Infirmary Hospital.",
+        "kind": "comment"
+      },
+      {
+        "body": "Destroyed my relationship with my granddaughter.",
+        "kind": "family_report"
+      },
+      {
+        "body": "It has caused financial hardship and emotional distress.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 2
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

@@ -9,7 +9,7 @@
     "role": "Judge",
     "court": "Family Court Div.",
     "county": "Family Court Div.",
-    "court_or_county": "Family Court Div.",
+    "court_or_county": "Middlesex Probate and Family Court North - Lowell",
     "state": "Massachusetts",
     "state_abbr": "MA",
     "mention_count": 4,
@@ -27,27 +27,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-2yeauxv5/New Final Post and Capcut template/export/manisha_bhatt/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/manisha_bhatt/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 75,
-    "total_submissions": 108,
-    "avg_financial_loss": 226446.3,
-    "avg_months_lost": 25.6,
+    "families_approved": 74,
+    "total_submissions": 116,
+    "avg_financial_loss": 213936.67,
+    "avg_months_lost": 24.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "MA",
-    "state_family_count": 108,
+    "state_family_count": 116,
     "median_financial_loss": 136300,
-    "median_burden_sample_size": 44,
+    "median_burden_sample_size": 46,
     "median_months_lost": 18,
-    "pro_se_pct": 56.5,
-    "pro_se_count": 61,
-    "_pdf_state_family_count": 108,
+    "pro_se_pct": 54.3,
+    "pro_se_count": 63,
+    "_pdf_state_family_count": 116,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5749,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -83,25 +83,25 @@
         "comment_text": "She's currently the judge over seeing our case. So far, she seems fair and kind. She listened to both sides and asked appropriate questions. She didn't seem to show favoritism towards either side, which honestly, is great. Family court in MA has caused me such anxiety due to my former spouse using it to as a means of control and harm towards our children. However, I have hope after our interactions with her as our judge.",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Family Court Div."
+        "court_or_county": "Middlesex Probate and Family Court North - Lowell"
       },
       {
         "comment_text": "Judge Manisha Bhatt – Currently presides over my ongoing case. She denied requests to hear testimony from a witness with firsthand knowledge of the children’s living situation, allowed the children’s father and guardian to obtain Brazilian passports and travel internationally with the children over my objection, and denied my request for regular weekly phone contact with my daughters.",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Family Court Div."
+        "court_or_county": "Middlesex Probate and Family Court North - Lowell"
       },
       {
         "comment_text": "She’s the one who allowed my son to just not come home. She never ordered anything there was no due process and it was on a contempt that I filed against my sons father a week after he stopped coming to my house.",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Family Court Div."
+        "court_or_county": "Middlesex Probate and Family Court North - Lowell"
       },
       {
         "comment_text": "Haven’t seen children in two years, contempts were not taken seriously and there were no consequences and found not guilty for continuously violating orders!",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Family Court Div."
+        "court_or_county": "Middlesex Probate and Family Court North - Lowell"
       }
     ]
   },
@@ -127,39 +127,39 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "She's currently the judge over seeing our case. So far, she seems fair and kind.",
+        "body": "She's currently the judge over seeing our case. So far, she seems fair and kind. She listened to both sides and asked appropriate questions. She didn't seem to show favoritism towards either side, which honestly, is great. Family court in MA has caused me such anxiety due to my former spouse using it to as a means of control and harm towards our children. However, I have hope after our interactions with her as our judge.",
         "kind": "comment"
       },
       {
-        "body": "Denied my request for regular weekly phone contact with my daughters",
+        "body": "Judge Manisha Bhatt – Currently presides over my ongoing case. She denied requests to hear testimony from a witness with firsthand knowledge of the children’s living situation, allowed the children’s father and guardian to obtain Brazilian passports and travel internationally with the children over my objection, and denied my request for regular weekly phone contact with my daughters.",
         "kind": "comment"
       },
       {
-        "body": "She’s the one who allowed my son to just not come home.",
+        "body": "She’s the one who allowed my son to just not come home. She never ordered anything there was no due process and it was on a contempt that I filed against my sons father a week after he stopped coming to my house.",
         "kind": "comment"
       },
       {
-        "body": "Haven’t seen children in two years, contempts were not taken seriously and there…",
+        "body": "Haven’t seen children in two years, contempts were not taken seriously and there were no consequences and found not guilty for continuously violating orders!",
         "kind": "comment"
       },
       {
-        "body": "Haven’t seen children in two years.",
+        "body": "Haven’t seen children in two years. Children have had chronic absenteeism from school and has a false reporting case pending…Bhatt has done nothing to help my children and has further helped isolate them from me!",
         "kind": "family_report"
       },
       {
-        "body": "A system that was supposed to protect my children ignored their voices, separated…",
+        "body": "A system that was supposed to protect my children ignored their voices, separated us for years, and turned motherhood into a battle for survival.",
         "kind": "family_report"
       },
       {
-        "body": "When a parent feels unheard in Court, the loss isn’t measured in legal orders-it’s…",
+        "body": "When a parent feels unheard in Court, the loss isn’t measured in legal orders-it’s measured in missed birthdays, unanswered messages, and years you never get back.. decisions I believed were shaped by false allegations in narratives, I could not overcome.",
         "kind": "family_report"
       },
       {
-        "body": "To this day, my children who are now 25, 21, 19, and 17....are still in counseling.",
+        "body": "This system has affected my children's mental health SIGNIFICANTLY. To this day, my children who are now 25, 21, 19, and 17....are still in counseling. The emotional (and some physical) abuse they experienced while with their father has affected the greatly.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 6
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

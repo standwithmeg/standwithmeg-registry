@@ -26,27 +26,27 @@
     "actor_bucket_key": "jack banas|MO"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-7gspmaqk/New Final Post and Capcut template/export/jack_p_banas/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/jack_p_banas/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 154,
-    "total_submissions": 221,
-    "avg_financial_loss": 99851.19,
-    "avg_months_lost": 41.8,
+    "families_approved": 145,
+    "total_submissions": 284,
+    "avg_financial_loss": 106113.17,
+    "avg_months_lost": 38.1,
     "_source_table": "movement_stats_by_state",
     "_match_value": "MO",
-    "state_family_count": 221,
-    "median_financial_loss": 94350,
-    "median_burden_sample_size": 96,
-    "median_months_lost": 24,
-    "pro_se_pct": 53.8,
-    "pro_se_count": 119,
-    "_pdf_state_family_count": 221,
+    "state_family_count": 284,
+    "median_financial_loss": 89000,
+    "median_burden_sample_size": 131,
+    "median_months_lost": 21,
+    "pro_se_pct": 53.9,
+    "pro_se_count": 153,
+    "_pdf_state_family_count": 284,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5746,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -114,7 +114,7 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Refused to hold my ex accountable for not following court orders",
+        "body": "He refused to enforce my custodial time for 5 years my case was open resulting in the complete alienation of my children. He refused to hold my ex accountable for not following court orders and making false accusations against me. He drug the case out for 5 years costing me 200k in legal fees while my ex was receiving free legal representation because his mother works for his attorney.",
         "kind": "comment"
       },
       {
@@ -122,11 +122,11 @@
         "kind": "comment"
       },
       {
-        "body": "St Charles County Family Court was complicit in the complete alienation of my…",
+        "body": "St Charles County Family Court was complicit in the complete alienation of my children and total financial ruin that I will likely never recover from.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 2
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

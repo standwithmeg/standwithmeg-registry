@@ -2,9 +2,9 @@
   "schema_version": 2,
   "actor": {
     "slug": "monet_pincus",
-    "display_name": "Monét S. Pincus",
+    "display_name": "Monet Stacey Pincus",
     "title": "",
-    "first_name": "Monét S.",
+    "first_name": "Monet Stacey",
     "last_name": "Pincus",
     "role": "Judge",
     "court": "Richland",
@@ -26,27 +26,27 @@
     "actor_bucket_key": "monet pincus|SC"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-6nxbtixa/New Final Post and Capcut template/export/monet_pincus/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/monet_pincus/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 85,
-    "total_submissions": 113,
-    "avg_financial_loss": 271548.16,
-    "avg_months_lost": 25.3,
+    "families_approved": 81,
+    "total_submissions": 140,
+    "avg_financial_loss": 237149.95,
+    "avg_months_lost": 25.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "SC",
-    "state_family_count": 113,
-    "median_financial_loss": 125000,
-    "median_burden_sample_size": 71,
+    "state_family_count": 140,
+    "median_financial_loss": 102000,
+    "median_burden_sample_size": 90,
     "median_months_lost": 18,
-    "pro_se_pct": 56.6,
-    "pro_se_count": 64,
-    "_pdf_state_family_count": 113,
+    "pro_se_pct": 55.0,
+    "pro_se_count": 77,
+    "_pdf_state_family_count": 140,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5729,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -114,7 +114,7 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Had no evidence to the accusations my ex claimed against me and believed everything…",
+        "body": "Had no evidence to the accusations my ex claimed against me and believed everything he said.",
         "kind": "comment"
       },
       {
@@ -126,19 +126,19 @@
         "kind": "comment"
       },
       {
-        "body": "Removed to father who don’t even take of them.",
+        "body": "Went in as a DV victim and mother who raised her 2 kids only to be subjected to half a million dollars to even see my kids. Removed to father who don’t even take of them.",
         "kind": "family_report"
       },
       {
-        "body": "He is forced to be around my abusive father against his will.",
+        "body": "It has crushed me and torn me down to pieces. I still have my belongings in the house from 3 yrs ago because my ex is that dangerous. My son is scared for his life living with his father 65% of the time. He has had to lie about things he knows are not true to the sake of his life being in danger. He is forced to be around my abusive father against his will. My son has had 3 unknown causes of injury. My ex keeps needles for illegal drugs on the counter in the bathroom next to my son’s toothbrush. My son has missed over 20 days of school majority with his father in the last 3 school years.",
         "kind": "family_report"
       },
       {
-        "body": "Richland Family Court is a chess board of paid players and you are a pawn.",
+        "body": "Richland Family Court is a chess board of paid players and you are a pawn. They bring in more actors at your expense (for no justified reason), prolonging the game and padding their \"friends\" pockets. It's sad, abusive, and has damaged my children and me financially and emotionally.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 3
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

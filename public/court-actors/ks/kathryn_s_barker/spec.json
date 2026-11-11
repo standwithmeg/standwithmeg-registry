@@ -31,22 +31,22 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 185,
-    "total_submissions": 273,
-    "avg_financial_loss": 111495.56,
-    "avg_months_lost": 31.1,
+    "families_approved": 186,
+    "total_submissions": 293,
+    "avg_financial_loss": 120206.43,
+    "avg_months_lost": 30.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "KS",
-    "state_family_count": 273,
-    "median_financial_loss": 97450,
-    "median_burden_sample_size": 140,
-    "median_months_lost": 16,
-    "pro_se_pct": 48.4,
-    "pro_se_count": 132,
-    "_pdf_state_family_count": 273,
+    "state_family_count": 293,
+    "median_financial_loss": 101500,
+    "median_burden_sample_size": 149,
+    "median_months_lost": 19,
+    "pro_se_pct": 48.3,
+    "pro_se_count": 141,
+    "_pdf_state_family_count": 292,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5746,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -114,31 +114,31 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Literally gave bi-monthly reports to the court on allegedly MY CHILDS best interest",
+        "body": "Was selected and hired even though judge attempted to explain a GAL is not necessary for our case. I had ZERO input, she literally gave bi-monthly reports to the court on allegedly MY CHILDS best interest. Probably would be beneficial if you HAD CONTACT WITH YOUR CLIENT TO MAKE THOSE RECOMMENDATIONS. Even provided another childs medical records during a hearing, stating my child had certain diagnosis. Her response when I brought it to her attention \"oops\".",
         "kind": "comment"
       },
       {
-        "body": "Ignored my daughter being suicidal if she was forced to go with her father",
+        "body": "Did not do a full investigation nor interviewed anyone on my side including siblings, she ignored my daughter being suicidal if she was forced to go with her father, she had lied about many things, biased and much more.",
         "kind": "comment"
       },
       {
-        "body": "Ignored abuse. Hostile towards me in the first meeting.",
+        "body": "Ignored abuse. Hostile towards me in the first meeting. Ignored multiple attempts to communicate with her with concerns and reports on the other party. She solved one problem, then ghosted me. I was refunded.",
         "kind": "comment"
       },
       {
-        "body": "DV doesn't stop when you leave, the abuser weaponizes the legal system.",
+        "body": "The system has retraumatized me repeatedly, increased my disability symptoms from the extra stress and trauma to the point that I can't work, caused my children to be traumatized from the acts and behaviors of the other party. It has left me bankrupt, put me back in an unsafe situation, with my children experiencing threats of harm from the other party. DV doesn't stop when you leave, the abuser weaponizes the legal system.",
         "kind": "family_report"
       },
       {
-        "body": "It had destroyed my children's mental health and mine.",
+        "body": "It had destroyed my children's mental health and mine. My youngest has became suicidal, which is everyday.",
         "kind": "family_report"
       },
       {
-        "body": "Destroyed my son mentally and emotionally, rubbed him of a childhood.",
+        "body": "Destroyed my son mentally and emotionally, rubbed him of a childhood. I'm on 4 different anxiety meds, heart failure, autistic immune disease, debilitating depression. I trust no one, don't sleep, we both live in constant fear and anxiety",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 4
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

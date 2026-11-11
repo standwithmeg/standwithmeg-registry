@@ -36,22 +36,22 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 126,
-    "total_submissions": 161,
-    "avg_financial_loss": 132780.75,
-    "avg_months_lost": 29.2,
+    "families_approved": 120,
+    "total_submissions": 198,
+    "avg_financial_loss": 222011.73,
+    "avg_months_lost": 31.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "IN",
-    "state_family_count": 161,
-    "median_financial_loss": 63875,
-    "median_burden_sample_size": 80,
-    "median_months_lost": 18,
-    "pro_se_pct": 45.3,
-    "pro_se_count": 73,
-    "_pdf_state_family_count": 161,
+    "state_family_count": 198,
+    "median_financial_loss": 68150,
+    "median_burden_sample_size": 98,
+    "median_months_lost": 20,
+    "pro_se_pct": 49.5,
+    "pro_se_count": 98,
+    "_pdf_state_family_count": 198,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5746,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 8,
     "actor_report_count": 8,
@@ -107,11 +107,11 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Took against us she downplayed the actions stating he was playing a character",
+        "body": "Brittney Obando was assigned to our case following the removal of Mary from our case to evaluate potential direct communication methods between me and my abuser dispite documented PTSD diagnosis which states isolation from my abuser was important for my recovery and already having an established third party point of contact in place. This was in December 2024 since then there has been no report submitted to date. Now in 2026 there is only an approximate time line for completion due to me filing for status update in March 2026 to which she said she needed an additional [redacted] days. It wasnt until this week that she contacted care providers for myself and my son (me for thr ptsd information my son for his play and behavioral therapist reports) ive had to resubmit disclosure permission paperwork due to previous approval expiring. When I was asked to recount the criminal action my ex husband took against us she downplayed the actions stating he was playing a character and that character was who threatened my son with harm and that character who said they would cut my breaks in an effort to dismiss action that resulted in a felony conviction in criminal court under David Bonfiglio. When I reported further attempts at parental alienation with witnesses documented and available for statement or testimonials she never contacted them instead contacting my ex husband for his opinion to which my ex basically said I was the one committing parental alienation against him and when obando contacted me to follow up said I should refrain from adult topics being discussed infront of my son. This is after discussion already documented that IF adult topics need discussed with my son it is done in the presence and guidance of his therapist to ensure my son is not negatively impacted like when my ex-husband was in jail we did not talk about it until his therapist could lead the discussion and provide materials to evaluate at home to help james grasp what was being communicated to him.",
         "kind": "comment"
       },
       {
-        "body": "The judge took a bribe from my kids' mom and her family",
+        "body": "Refused to give evidence of child abuse to judge, committed perjury, covering for the judge took a bribe from my kids' mom and her family",
         "kind": "comment"
       },
       {
@@ -119,11 +119,11 @@
         "kind": "family_report"
       },
       {
-        "body": "The system protects the false illusion of reunification while taking children and portective parents from…",
+        "body": "The system protects the false illusion of reunification while taking children and portective parents from each other. They lump all cases into one format and when you dont fit they punish protective parents in a speak out then watch out mentality.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 3
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

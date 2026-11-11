@@ -34,27 +34,27 @@
     ]
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-90yxu6ix/New Final Post and Capcut template/export/dr_gage_stermenski/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/dr_gage_stermenski/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 37,
-    "total_submissions": 44,
-    "avg_financial_loss": 180795.98,
-    "avg_months_lost": 35.0,
+    "families_approved": 36,
+    "total_submissions": 52,
+    "avg_financial_loss": 154610.27,
+    "avg_months_lost": 35.2,
     "_source_table": "movement_stats_by_state",
     "_match_value": "NE",
-    "state_family_count": 44,
-    "median_financial_loss": 240500,
-    "median_burden_sample_size": 17,
+    "state_family_count": 52,
+    "median_financial_loss": 126905,
+    "median_burden_sample_size": 20,
     "median_months_lost": 22,
-    "pro_se_pct": 47.7,
-    "pro_se_count": 21,
-    "_pdf_state_family_count": 44,
+    "pro_se_pct": 50.0,
+    "pro_se_count": 26,
+    "_pdf_state_family_count": 52,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5516,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -122,11 +122,11 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "His son is best friends with my nephew whom he blames for his son’s behaviors .",
+        "body": "This man gave a biased parent capacity evaluation, saying that I was likely to be a not safe parent when I have never been accused of abusing my kids or neglecting my kids and I’ve taken care of them by myself for over 15 years, I know there was lots of personal disputes because his son is best friends with my nephew whom he blames for his son’s behaviors .",
         "kind": "comment"
       },
       {
-        "body": "He said I was antisocial and I’m not. Never abused anyone always had a job.",
+        "body": "He said I was antisocial and I’m not. Never abused anyone always had a job. Always get along with ppl",
         "kind": "comment"
       },
       {
@@ -134,15 +134,19 @@
         "kind": "comment"
       },
       {
-        "body": "The state is making money off of destroying families",
+        "body": "Scotts Bluff County is disgustingly corrupt and you can tell that the attorneys talk to each other without their paid customers. No morals.",
         "kind": "family_report"
       },
       {
-        "body": "After working for DHHS and wanting to be the person to help me make a positive change.",
+        "body": "Juvenile court has become punitive and not rehabilitative. The state is making money off of destroying families",
+        "kind": "family_report"
+      },
+      {
+        "body": "After working for DHHS and wanting to be the person to help me make a positive change and then seeing how DHHS tore my family apart, it showed how much people care more about power and being right than what is in the right interest of children. Now as a therapist, I hope it can help others, including my own children someday heal from this trauma.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 3
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

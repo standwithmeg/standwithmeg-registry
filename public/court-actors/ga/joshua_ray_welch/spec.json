@@ -12,16 +12,15 @@
     "court_or_county": "Hall County",
     "state": "Georgia",
     "state_abbr": "GA",
-    "mention_count": 7,
+    "mention_count": 6,
     "family_count": 4,
     "public_family_count": 4,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 7,
+    "actor_report_count": 6,
     "supabase_row_ids": [
       "a0c01c30-c999-4fd7-832e-02ef12b63a9f",
       "8ee6742d-5add-4f8d-89ec-8d92946122f1",
       "03adaf80-2b54-43b3-a3df-5343737d41fb",
-      "d333e014-34df-4333-b02d-5d959fc55e6d",
       "b17e4b41-de58-48b7-9c19-0ac8c02d7ecd",
       "8da69344-088e-4c39-85e4-964a6c28de2a",
       "82ff445c-37c3-495b-8d40-9ed307247782"
@@ -30,30 +29,30 @@
     "actor_bucket_key": "joshua ray welch|GA"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-axmobuc7/New Final Post and Capcut template/export/joshua_ray_welch/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/joshua_ray_welch/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 121,
-    "total_submissions": 161,
-    "avg_financial_loss": 206416.3,
-    "avg_months_lost": 31.7,
+    "families_approved": 119,
+    "total_submissions": 192,
+    "avg_financial_loss": 189146.89,
+    "avg_months_lost": 32.6,
     "_source_table": "movement_stats_by_state",
     "_match_value": "GA",
-    "state_family_count": 161,
+    "state_family_count": 192,
     "median_financial_loss": 151000,
-    "median_burden_sample_size": 87,
+    "median_burden_sample_size": 99,
     "median_months_lost": 19,
-    "pro_se_pct": 42.2,
-    "pro_se_count": 68,
-    "_pdf_state_family_count": 161,
+    "pro_se_pct": 42.7,
+    "pro_se_count": 82,
+    "_pdf_state_family_count": 192,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5722,
+  "movement_total": 6496,
   "supabase": {
-    "report_count": 7,
-    "actor_report_count": 7,
+    "report_count": 6,
+    "actor_report_count": 6,
     "family_count": 4,
     "family_reports": [
       {
@@ -73,12 +72,6 @@
         "state": "GA",
         "county": "Dawson County",
         "row_id": "bdc9d522-b0e2-42e3-b3b0-d1efab7a07f1"
-      },
-      {
-        "body": "Its like living but being dead. It takes and takes and takes.",
-        "state": "GA",
-        "county": "Jackson",
-        "row_id": "bad4f15d-1063-4a92-bd34-a7039b8becaf"
       },
       {
         "body": "Family court took my children without ever hearing the full truth, and it shattered something in me I can never get back. It drained me financially and emotionally until I was standing there with nothing left but the proof that I survived it.",
@@ -101,7 +94,7 @@
         "court_or_county": "Hall county"
       },
       {
-        "comment_text": "Didn't interview mom, step dad, kids therapist. Ignored concerns of mom's witnesses to emotional abuse and coercive control. Refused to acknowledge his claim of mental health that was cleared by HIS psych evaluator. Ignored years of evidence. Ignored alienation. Handed kids over to the abuser. Took my kids way, refused to do a investigation, refused to interview moms side of things including mom and husband. Refused to show up to be questioned. Bias, and fear driven.",
+        "comment_text": "Took my kids way, refused to do a investigation, refused to interview moms side of things including mom and husband. Refused to show up to be questioned. Bias, and fear driven.",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Hall County"
@@ -136,43 +129,35 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Traumatically removed child by the police.",
+        "body": "Performed zero investigation into false allegations and lies, recommended the proven self admitted abuser have full custody of my daughter. Briefly spoke w my daughter on 2 occasions in 4 years. Wrote a 29 page report of thoughts and feelings vs facts and evidence as the basis of his recommendations. Chose traumatic immediate removal from me by the police prior to any investigation of claims against me. Didn’t investigate lies and false accusations. Final report based on thoughts and feelings, zero evidence. Traumatically removed child by the police without doing any investigation into false allegations. Placed child with father who self admitted to sexual act of repeatedly putting his tongue in my daughters mouth for more than a year. Lies on the stand to cover up for the abuser Took my mother’s affidavit at face value and completely turned against me. Wrote a 29 page report of feelings and thoughts about why I shouldn’t have custody, zero evidence. Falsified a paper I wrote to my daughter’s 5th grade teacher, twisting my words. Chose immediate removal vs investigating. Never interviewed any of my witnesses. In 4 years he briefly spoke to my daughter twice. Colluded with my daughter’s therapist to remove her from me immediately, by the police, and give her to her father that only had supervised visits with her because of his admitted and proven abuse. Lies on the stand about her fathers sexual act",
         "kind": "comment"
       },
       {
-        "body": "Disregarded relevant criminal history",
+        "body": "Took my kids way, refused to do a investigation, refused to interview moms side of things including mom and husband. Refused to show up to be questioned. Bias, and fear driven.",
         "kind": "comment"
       },
       {
-        "body": "Ignored years of evidence. Ignored alienation. Handed kids over to the abuser.",
+        "body": "My daughter's attorney. He has been amazing. He is the only one that will hold dfacs accountable for their wrongs or short comings",
         "kind": "comment"
       },
       {
-        "body": "He is the only one that will hold dfacs accountable for their wrongs or short comings",
-        "kind": "comment"
-      },
-      {
-        "body": "My family has become irrevocably broken with children encouraged to hate and lie to…",
+        "body": "My family has become irrevocably broken with children encouraged to hate and lie to a mother trying to protect them from an abusive father.",
         "kind": "family_report"
       },
       {
-        "body": "This system has done nothing other than cause irreversible damage to myself.",
+        "body": "This system has done nothing other than cause irreversible damage to myself and my kids and taken time away that we can never get back. This system is a complete FAILURE!!",
         "kind": "family_report"
       },
       {
-        "body": "I apart while covering the truth about the real abuser, 5 years of hell.",
+        "body": "False allegations and lies against me from the beginning, wrongfully ripping my daughter and I apart while covering the truth about the real abuser, 5 years of hell. Pure wickedness and evil BUT GOD WILL PREVAIL!",
         "kind": "family_report"
       },
       {
-        "body": "Its like living but being dead. It takes and takes and takes.",
-        "kind": "family_report"
-      },
-      {
-        "body": "Family court took my children.",
+        "body": "Family court took my children without ever hearing the full truth, and it shattered something in me I can never get back. It drained me financially and emotionally until I was standing there with nothing left but the proof that I survived it.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 2
+    "quote_page_count": 5
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

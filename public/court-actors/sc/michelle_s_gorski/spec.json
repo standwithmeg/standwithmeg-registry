@@ -29,27 +29,27 @@
     "actor_bucket_key": "michele gorski|SC"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-6nxbtixa/New Final Post and Capcut template/export/michelle_s_gorski/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/michelle_s_gorski/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 85,
-    "total_submissions": 113,
-    "avg_financial_loss": 271548.16,
-    "avg_months_lost": 25.3,
+    "families_approved": 81,
+    "total_submissions": 140,
+    "avg_financial_loss": 237149.95,
+    "avg_months_lost": 25.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "SC",
-    "state_family_count": 113,
-    "median_financial_loss": 125000,
-    "median_burden_sample_size": 71,
+    "state_family_count": 140,
+    "median_financial_loss": 102000,
+    "median_burden_sample_size": 90,
     "median_months_lost": 18,
-    "pro_se_pct": 56.6,
-    "pro_se_count": 64,
-    "_pdf_state_family_count": 113,
+    "pro_se_pct": 55.0,
+    "pro_se_count": 77,
+    "_pdf_state_family_count": 140,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5729,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
@@ -87,7 +87,12 @@
         "source": "court_actors.notes"
       },
       {
-        "comment_text": "Husband represented father in his divorce. On recording OC told her to stay in her lane and make me look worse. Didn’t protect my child. Hired as 3rd gal and her husband represented father in previous divorce. Recorded her telling me Brian Dumas said to stay in her lane and make me look worse.",
+        "comment_text": "Husband represented father in his divorce. On recording OC told her to stay in her lane and make me look worse. Didn’t protect my child.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Hired as 3rd gal and her husband represented father in previous divorce. Recorded her telling me Brian Dumas said to stay in her lane and make me look worse.",
         "author": "Anonymous parent",
         "source": "court_actors.notes"
       },
@@ -126,15 +131,19 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Billed for obtained medical records",
+        "body": "Submitted false information in reports, misquoted others in order to mislead the court, agreed to “make me look bad” I found out from an attorney and billed for obtained medical records, but the doctor’s office confirmed they didn’t charge her?",
         "kind": "comment"
       },
       {
-        "body": "On recording OC told her to stay in her lane and make me look worse.",
+        "body": "Husband represented father in his divorce. On recording OC told her to stay in her lane and make me look worse. Didn’t protect my child.",
         "kind": "comment"
       },
       {
-        "body": "Primary concern is money not the children she represents or the lifelong…",
+        "body": "Hired as 3rd gal and her husband represented father in previous divorce. Recorded her telling me Brian Dumas said to stay in her lane and make me look worse.",
+        "kind": "comment"
+      },
+      {
+        "body": "Primary concern is money not the children she represents or the lifelong devastating effects her report will have on them.",
         "kind": "comment"
       },
       {
@@ -142,23 +151,23 @@
         "kind": "comment"
       },
       {
-        "body": "Removed to father who don’t even take of them.",
+        "body": "Went in as a DV victim and mother who raised her 2 kids only to be subjected to half a million dollars to even see my kids. Removed to father who don’t even take of them.",
         "kind": "family_report"
       },
       {
-        "body": "Traumatized the children, destroyed their childhoods and bankrupt me all in the…",
+        "body": "Traumatized the children, destroyed their childhoods and bankrupt me all in the name of greed.",
         "kind": "family_report"
       },
       {
-        "body": "Richland Family Court is a chess board of paid players and you are a pawn.",
+        "body": "Richland Family Court is a chess board of paid players and you are a pawn. They bring in more actors at your expense (for no justified reason), prolonging the game and padding their \"friends\" pockets. It's sad, abusive, and has damaged my children and me financially and emotionally.",
         "kind": "family_report"
       },
       {
-        "body": "Everyone close to me has been affectedband are at a lose.",
+        "body": "It has taken everything from me, torn my family apart at a cost/debt that will be paid ultimately by my children. Everyone close to me has been affectedband are at a lose.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 4
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

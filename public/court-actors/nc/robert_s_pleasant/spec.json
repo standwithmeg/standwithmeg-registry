@@ -27,27 +27,27 @@
     "actor_bucket_key": "robert pleasant|NC"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-yfhm15ft/New Final Post and Capcut template/export/robert_s_pleasant/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/robert_s_pleasant/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 159,
-    "total_submissions": 221,
-    "avg_financial_loss": 181528.75,
-    "avg_months_lost": 36.0,
+    "families_approved": 157,
+    "total_submissions": 239,
+    "avg_financial_loss": 168081.76,
+    "avg_months_lost": 36.2,
     "_source_table": "movement_stats_by_state",
     "_match_value": "NC",
-    "state_family_count": 221,
-    "median_financial_loss": 137332,
-    "median_burden_sample_size": 74,
-    "median_months_lost": 17,
-    "pro_se_pct": 49.8,
-    "pro_se_count": 110,
-    "_pdf_state_family_count": 221,
+    "state_family_count": 239,
+    "median_financial_loss": 140000,
+    "median_burden_sample_size": 77,
+    "median_months_lost": 18,
+    "pro_se_pct": 48.5,
+    "pro_se_count": 116,
+    "_pdf_state_family_count": 239,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5704,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -121,31 +121,31 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "He just walked in and said it should be dismissed.",
+        "body": "I was there the entire day for a hearing and got the last five minutes of the day. I gave evidence that I was in the emergency room the day before with my son to prove that I was telling the truth. This attorney just came in there talking about he was in the emergency room with his dad, but was not required to have any proof. He just walked in and said it should be dismissed. The judge looked over the paper and dismissed it without hearing my evidence.",
         "kind": "comment"
       },
       {
-        "body": "I am including this attorney.",
+        "body": "Opposing counsel represented the children’s father throughout the custody and child welfare proceedings. I am including this attorney because of their direct involvement in litigation, motions, court proceedings, and decisions that contributed to the ongoing separation from my children.",
         "kind": "comment"
       },
       {
-        "body": "Failed to file a motion to modify a pre trial order after consultation with client…",
+        "body": "Failed to file a motion to modify a pre trial order after consultation with client during mediation resulting in tens of thousands of dollars lost.",
         "kind": "comment"
       },
       {
-        "body": "They have systematically degraded my relationship with my children, and enabled the…",
+        "body": "They have systematically degraded my relationship with my children, and enabled the parallel parent to alienate me and caused untold damage to the children resulting in mental health issues and prescriptions that are normally reserved for severe mental disorders.",
         "kind": "family_report"
       },
       {
-        "body": "My mental health is severely destroyed and struggling to maintain hope.",
+        "body": "This experience has left me carrying a level of grief that is difficult to put into words. I have spent nearly three years mourning children who are still alive, missing moments I can never get back, and living with a pain that follows me from the moment I wake up until I go to sleep. I’m no longer the same woman and my mental health is severely destroyed and struggling to maintain hope. I feel as if I no longer have a purpose in life and I’m not sure how much longer I can continue to hold on.",
         "kind": "family_report"
       },
       {
-        "body": "I will keep choosing documentation over drama, boundaries over bitterness.",
+        "body": "This custody battle has taught me that protecting children is not about winning against the other parent; it is about preserving stability, truth, and peace when conflict tries to rewrite the story. I will keep choosing documentation over drama, boundaries over bitterness, and my children’s well-being over public revenge.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 5
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

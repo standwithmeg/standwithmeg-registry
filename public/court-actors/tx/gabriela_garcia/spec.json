@@ -20,36 +20,36 @@
     "supabase_row_ids": [
       "0ec83b05-c952-4f38-88e6-24c5a27e1954",
       "3cf1956d-616e-4fe3-ae96-3439e0a3f30f",
-      "408e53a4-58ba-4df5-af58-bdaa1bba84e9",
       "805177e6-b670-432f-84db-dc9df8082286",
       "239f0ed9-59b5-46b0-b0a4-4037841b9ad8",
-      "e1f7efd2-f17b-4b6a-8af8-b90869c39426"
+      "e1f7efd2-f17b-4b6a-8af8-b90869c39426",
+      "408e53a4-58ba-4df5-af58-bdaa1bba84e9"
     ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-7gspmaqk/New Final Post and Capcut template/export/gabriela_garcia/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/gabriela_garcia/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 249,
-    "total_submissions": 335,
-    "avg_financial_loss": 232641.96,
-    "avg_months_lost": 31.1,
+    "families_approved": 243,
+    "total_submissions": 369,
+    "avg_financial_loss": 221381.58,
+    "avg_months_lost": 29.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "TX",
-    "state_family_count": 335,
-    "median_financial_loss": 118900,
-    "median_burden_sample_size": 159,
+    "state_family_count": 369,
+    "median_financial_loss": 122000,
+    "median_burden_sample_size": 177,
     "median_months_lost": 18,
-    "pro_se_pct": 48.7,
-    "pro_se_count": 163,
-    "_pdf_state_family_count": 335,
+    "pro_se_pct": 46.6,
+    "pro_se_count": 172,
+    "_pdf_state_family_count": 369,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5746,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
@@ -117,15 +117,15 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Biased since the beginning. Told me that all the DV I suffer was not relevant",
+        "body": "Due process violation and biased. Didn’t ruled mistrial when my lawyer asked her to because the other party declared that information was given to people outside the court which was one of her rules for mistrial. Also aided my ex during the trial and told him how to make my text evidence not to be admitted. Let lies to be presented as evidence when evidence proving them as false was presented. Violations of rights and due process. Biased. Let my ex stayed with kids south out ant proof after he kept them after visitations She groomed my kids and was acting like she was my ex’s attorneys helper even sitting in court next to him and consulting him all the time. Biased since the beginning. Told me that all the DV I suffer was not relevant",
         "kind": "comment"
       },
       {
-        "body": "They take your kids away and put them in the alleged abusers home",
+        "body": "Fraud/ Corruption/ Money Greed. They take your kids away and put them in the alleged abusers home",
         "kind": "comment"
       },
       {
-        "body": "No due process/ no fairness Cited with father, denied motions, ignored evidence.",
+        "body": "No due process/ no fairness Cited with father, denied motions, ignored evidence. No due process.",
         "kind": "comment"
       },
       {
@@ -133,15 +133,15 @@
         "kind": "family_report"
       },
       {
-        "body": "Has destroyed my daughter and I.",
+        "body": "Has destroyed my daughter and I. Left me bankrupt and to top it off need to pay Child support to the father so he can pay his debt and have no work.",
         "kind": "family_report"
       },
       {
-        "body": "They took all that mattered to me",
+        "body": "They have destroyed my life to the point that sometimes I feel I don’t want to be in this World anymore, they took all that mattered to me",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 3
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

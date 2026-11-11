@@ -30,27 +30,27 @@
     "actor_bucket_key": "diana rusel|TN"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-mwjh1ox2/New Final Post and Capcut template/export/dianna_russell/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/dianna_russell/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 91,
-    "total_submissions": 124,
-    "avg_financial_loss": 107303.78,
-    "avg_months_lost": 37.4,
+    "families_approved": 90,
+    "total_submissions": 138,
+    "avg_financial_loss": 97715.76,
+    "avg_months_lost": 35.3,
     "_source_table": "movement_stats_by_state",
     "_match_value": "TN",
-    "state_family_count": 124,
+    "state_family_count": 138,
     "median_financial_loss": 83375,
-    "median_burden_sample_size": 52,
-    "median_months_lost": 18,
-    "pro_se_pct": 44.4,
-    "pro_se_count": 55,
-    "_pdf_state_family_count": 124,
+    "median_burden_sample_size": 56,
+    "median_months_lost": 17,
+    "pro_se_pct": 44.2,
+    "pro_se_count": 61,
+    "_pdf_state_family_count": 138,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5641,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 7,
     "actor_report_count": 7,
@@ -123,7 +123,7 @@
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 2
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

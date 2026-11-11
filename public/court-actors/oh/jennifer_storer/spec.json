@@ -2,10 +2,10 @@
   "schema_version": 2,
   "actor": {
     "slug": "jennifer_storer",
-    "display_name": "Jennifer Stopper",
+    "display_name": "Jennifer Storer",
     "title": "",
     "first_name": "Jennifer",
-    "last_name": "Stopper",
+    "last_name": "Storer",
     "role": "CPS Worker",
     "court": "Highland",
     "county": "Highland",
@@ -30,27 +30,27 @@
     "actor_bucket_key": "jenifer storer|OH"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-2yeauxv5/New Final Post and Capcut template/export/jennifer_storer/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/jennifer_storer/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 206,
-    "total_submissions": 291,
-    "avg_financial_loss": 107575.92,
-    "avg_months_lost": 33.8,
+    "families_approved": 207,
+    "total_submissions": 315,
+    "avg_financial_loss": 102311.34,
+    "avg_months_lost": 32.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OH",
-    "state_family_count": 291,
-    "median_financial_loss": 79500,
-    "median_burden_sample_size": 145,
+    "state_family_count": 315,
+    "median_financial_loss": 77750,
+    "median_burden_sample_size": 154,
     "median_months_lost": 18,
-    "pro_se_pct": 52.9,
-    "pro_se_count": 154,
-    "_pdf_state_family_count": 291,
+    "pro_se_pct": 52.4,
+    "pro_se_count": 165,
+    "_pdf_state_family_count": 315,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5749,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 7,
     "actor_report_count": 7,
@@ -154,31 +154,39 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Denied motion and ignored evidence!!",
+        "body": "Denied motion and ignored evidence!! None of them did their job they made up everything. The judge didn’t want to listen to us whatsoever that we gave him evidence and they didn’t show him any evidence and that he ruled with them over us. He delayed hearings gave them more time biased, he didn’t sign half of his records he had to click record sign it things like that you can put well. She really really wasn’t on our case that much it was mainly James he was the one he was his assistant prosecutor. Please help me!!!!",
         "kind": "comment"
       },
       {
-        "body": "Living with the prosecutor.",
+        "body": "Living with the prosecutor and she’s the one who got the rule 6 from him to take my daughter Get the hospital to discharge me because I won’t speak to her without a Lawyer present she lies in comes back rooms and just then she gets double six but I got the hospital record saying a totally completely different story where she called and had the rule six when she got there before speaking to us The first caseworker",
         "kind": "comment"
       },
       {
-        "body": "The first caseworker Get the hospital to discharge me.",
+        "body": "The first caseworker Get the hospital to discharge me because I won’t speak to her without a Lawyer present she lies in comes back rooms and just then she gets double six but I got the hospital record saying a totally completely different story where she called and had the rule six when she got there before speaking to us",
         "kind": "comment"
       },
       {
-        "body": "Obtained a rule 6 based on false information and filed a false complaint.",
+        "body": "Obtained a rule 6 based on false information and filed a false complaint. Was in a relationship and living with the assistant prosecutor that was on the case.",
         "kind": "comment"
       },
       {
-        "body": "Lied to me about giving my daughter back to me",
+        "body": "Delayed reunification, lied to me about giving my daughter back to me, refused to listen to my side.",
         "kind": "comment"
       },
       {
-        "body": "I am the alienated parent, this has caused me to have PTSD.",
+        "body": "I am the alienated parent, this has caused me to have PTSD and the total loss of custody, my parenting time and my parental rights now my daughter is an adult. The damage is already done but I have been through unimaginable stress and loss grieving my daughter that is still alive because of the lies and decisions of someone else. I missed out on so much of my daughter's life, memories and her graduation from high school that I can never replace or get back because of this system that chose to turn their back on me as a loving mother.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Denied motion and ignored evidence!! None of them did their job they made up everything. The judge didn’t want to listen to us whatsoever that we gave him evidence and they didn’t show him any evidence and that he ruled with them over us. He delayed hearings gave them more time biased, he didn’t sign half of his records he had to click record sign it things like that you can put well. She really really wasn’t on our case that much it was mainly James he was the one he was his assistant prosecutor. They have kept me away from my daughter since she was born. Have false documents and have been proven but no one will listen to me. Please help me!!!!",
         "kind": "family_report"
       },
       {
         "body": "This system has lied and tore my family apart causing emotional damage",
+        "kind": "family_report"
+      },
+      {
+        "body": "The system has destroyed my entire family and when I asked the corrupt judge greer to tell me why, he simply told me he don't have to explain why he made the decision to terminate my rights. Let that sink in....",
         "kind": "family_report"
       },
       {
@@ -190,7 +198,7 @@
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 2
+    "quote_page_count": 9
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

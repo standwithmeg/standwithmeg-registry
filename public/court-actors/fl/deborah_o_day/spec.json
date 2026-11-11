@@ -28,27 +28,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-axmobuc7/New Final Post and Capcut template/export/deborah_o_day/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/deborah_o_day/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 237,
-    "total_submissions": 321,
-    "avg_financial_loss": 199989.91,
-    "avg_months_lost": 27.6,
+    "total_submissions": 355,
+    "avg_financial_loss": 191015.67,
+    "avg_months_lost": 26.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "FL",
-    "state_family_count": 321,
-    "median_financial_loss": 176500,
-    "median_burden_sample_size": 139,
+    "state_family_count": 355,
+    "median_financial_loss": 176000,
+    "median_burden_sample_size": 153,
     "median_months_lost": 17,
-    "pro_se_pct": 57.6,
-    "pro_se_count": 185,
-    "_pdf_state_family_count": 321,
+    "pro_se_pct": 57.2,
+    "pro_se_count": 203,
+    "_pdf_state_family_count": 355,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5722,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -67,7 +67,7 @@
         "row_id": "1cd29cb9-59c2-4bf6-8fed-494a287cb004"
       },
       {
-        "body": "My family was destroyed by family court and Dr. Deborah O. Day. Dr. Day dismissed and ignored credible evidence of child sexual abuse and gave my daughter a false diagnosis and recommended custody be given to her father, who she identified as her perpetrator. I was erased from their lives. We were a loving family and I was their mom! My daughters were removed from my care in a hearing that the 5th District Court of Appeals said that Judge Shawn L. Briese denied Mother's due process and the hearing to determine custody should never have taken place as Mother's hand written Motion for Continuance was legally sufficient and should never have been denied. How can this happen in the United States of America? This is happening all over the US and this is a travesty of justice. Linda Marie Sacks",
+        "body": "My family was destroyed by family court and Dr. Deborah O. Day. Dr. Day dismissed and ignored credible evidence of child sexual abuse and gave my daughter a false diagnosis and recommended custody be given to her father, who she identified as her perpetrator. I was erased from their lives. We were a loving family and I was their mom! My daughters were removed from my care in a hearing that the 5th District Court of Appeals said that Judge Shawn L. Briese denied Mother's due process and the hearing to determine custody should never have taken place as Mother's hand written Motion for Continuance was legally sufficient and should never have been denied. How can this happen in the United States of America? This is happening all over the US and this is a travesty of justice.",
         "state": "FL",
         "county": "Volusia",
         "row_id": "ec7876bd-e4a4-4400-abd2-66fdc569a92c"
@@ -116,11 +116,7 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Then helped the family court give sole custody to their identified perpetrator",
-        "kind": "comment"
-      },
-      {
-        "body": "Ignored and/or minimized facts",
+        "body": "Conducted Social Investigation which ignored and/or minimized facts and evidence which led to a biased opinion (in favor of the party paying her bill).",
         "kind": "comment"
       },
       {
@@ -128,19 +124,19 @@
         "kind": "comment"
       },
       {
-        "body": "Used to undermine protective parents",
+        "body": "Attorney Derek Allison Folds has become a deeply controversial figure in Florida’s family court system. Critics argue that her legal career is less a result of merit and more the product of deep-rooted nepotism — allegedly benefiting from her father’s longstanding connections with local politicians, judges, court-appointed mental health professionals, and appellate courts. According to numerous families — particularly survivors of domestic violence — Folds has been accused of working against her own clients’ interests and frequently representing alleged abusers. Rather than advocating for justice or protection, she is reportedly aligned with court-appointed professionals and attorneys who have been accused of unethical behavior, including manipulation and bias. These connections are seen by many as tools used to undermine protective parents and influence case outcomes behind closed doors. Her legal work is often described by critics as careless, sloppy, and allegedly plagiarized — with claims that she recycles arguments from other attorneys and files documents that fail to meet basic professional standards. Despite this, she reportedly maintains a high success rate in appellate courts, raising serious concerns among families and advocates about the fairness and impartiality of those rulings. Folds currently serves as Vice President of the Eighth Judicial Circuit Bar Association — a voluntary bar group in North Florida. While this role does not grant her disciplinary authority through The Florida Bar, it does place her in a position of influence over local legal culture, networking, and public recognition — which some see as a serious conflict of interest. When serving as opposing counsel, Folds has been described by families and litigants as aggressive, unethical, and unprofessional. Multiple reports claim she engages in reckless tactics that retraumatize survivors and escalate conflict in already fragile legal proceedings. Her conduct, according to those who have encountered her, appears to disregard the best interests of Florida’s children and families. This growing body of allegations has fueled concerns of favoritism, judicial networking, and backroom deals — where legal outcomes are allegedly influenced by who you know rather than what is true, just, or safe. Advocates believe Folds represents a deeper problem in Florida’s family court system — one that resembles a cash-for-kids pipeline, where collusion, corruption, and cronyism override child welfare. Protective parents are being silenced. Children are reportedly being placed in harm’s way. And the people tasked with ensuring fairness and justice are allegedly using their power to protect themselves instead. The public deserves transparency, accountability, and an urgent investigation into how roles of influence — like the one held by Folds — are being used within Florida’s family courts.",
         "kind": "family_report"
       },
       {
-        "body": "I’ve been dragged in and out of family court for nearly ten years.",
+        "body": "I’ve been dragged in and out of family court for nearly ten years. I’ve faced false allegations and not been able to receive justice for me or my kids related to contempt issues.",
         "kind": "family_report"
       },
       {
-        "body": "Briese denied Mother's due process.",
+        "body": "My family was destroyed by family court and Dr. Deborah O. Day. Dr. Day dismissed and ignored credible evidence of child sexual abuse and gave my daughter a false diagnosis and recommended custody be given to her father, who she identified as her perpetrator. I was erased from their lives. We were a loving family and I was their mom! My daughters were removed from my care in a hearing that the 5th District Court of Appeals said that Judge Shawn L. Briese denied Mother's due process and the hearing to determine custody should never have taken place as Mother's hand written Motion for Continuance was legally sufficient and should never have been denied. How can this happen in the United States of America? This is happening all over the US and this is a travesty of justice.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 6
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

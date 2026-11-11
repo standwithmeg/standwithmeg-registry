@@ -32,21 +32,21 @@
   },
   "state_stats": {
     "families_approved": 29,
-    "total_submissions": 40,
-    "avg_financial_loss": 169989.74,
-    "avg_months_lost": 33.2,
+    "total_submissions": 43,
+    "avg_financial_loss": 169197.8,
+    "avg_months_lost": 33.6,
     "_source_table": "movement_stats_by_state",
     "_match_value": "NH",
-    "state_family_count": 40,
+    "state_family_count": 43,
     "median_financial_loss": 97850,
-    "median_burden_sample_size": 22,
+    "median_burden_sample_size": 24,
     "median_months_lost": 14,
-    "pro_se_pct": 47.5,
-    "pro_se_count": 19,
-    "_pdf_state_family_count": 40,
+    "pro_se_pct": 48.8,
+    "pro_se_count": 21,
+    "_pdf_state_family_count": 43,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5656,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -114,7 +114,7 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Has denied my right to be a mother to my 2 boys.",
+        "body": "Denied me my time to speak in hearings, denied my right to call my witnesses, denied all my evidence of complying with court orders from evaluations to certificates I had submitted to this court. Has denied my right to be a mother to my 2 boys. Has accepted all the hearsay made up allegations from the father without any evidence to back up anything he has stated.",
         "kind": "comment"
       },
       {
@@ -126,19 +126,19 @@
         "kind": "comment"
       },
       {
-        "body": "The court has robbed my kids of co parenting.",
+        "body": "The court has robbed my kids of co parenting. The judge stamps freely on female statements",
         "kind": "family_report"
       },
       {
-        "body": "GAL Nancy Tierney has not been in the best interest of the boys at all.",
+        "body": "Family court has cost me my children, where hearsay is accepted and facts and evidence is ignored and not allowed. My boys are deteriorating mentally and miss me and don’t understand why they can’t see me. GAL Nancy Tierney has not been in the best interest of the boys at all. My boys are growing up without their mother and family members and their close cousins they loved dearly.",
         "kind": "family_report"
       },
       {
-        "body": "Forced to hold my kids hands while they moved onto a life without me",
+        "body": "They dangled my children in front of me and said if I complied with orders they would come back to me. This lie was to keep me under control while the whole time i felt like I was forced to hold my kids hands while they moved onto a life without me, and everyone knew it. And i had to do it with a smile because if i tried to talk to them they'd take away unsupervised time. Every small change, every disappointment made it easier for them to move on without me. Eventually I was tossed away like nothing more than a piece of garbage.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 5
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

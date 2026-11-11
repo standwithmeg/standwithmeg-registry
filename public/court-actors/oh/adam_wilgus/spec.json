@@ -12,46 +12,54 @@
     "court_or_county": "Tuscarawas",
     "state": "Ohio",
     "state_abbr": "OH",
-    "mention_count": 3,
-    "family_count": 3,
-    "public_family_count": 3,
+    "mention_count": 5,
+    "family_count": 4,
+    "public_family_count": 4,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 3,
+    "actor_report_count": 5,
     "supabase_row_ids": [
       "01fd1b99-bbcf-4743-a6e2-506508651a75",
       "2b919510-6a70-41a7-be3c-b390ce2c7c31",
-      "40522d16-bb83-4ffb-9ac2-5b7c984faac2"
+      "40522d16-bb83-4ffb-9ac2-5b7c984faac2",
+      "efdba0e7-d865-4ffe-a17a-4d4cfd8e7305",
+      "f08b3e0d-0616-4f1c-8a2f-dd49477368bf"
     ],
     "actor_row_id": null,
     "actor_bucket_key": "adam wilgus|OH"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-2yeauxv5/New Final Post and Capcut template/export/adam_wilgus/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/adam_wilgus/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 206,
-    "total_submissions": 291,
-    "avg_financial_loss": 107575.92,
-    "avg_months_lost": 33.8,
+    "families_approved": 207,
+    "total_submissions": 315,
+    "avg_financial_loss": 102311.34,
+    "avg_months_lost": 32.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OH",
-    "state_family_count": 291,
-    "median_financial_loss": 79500,
-    "median_burden_sample_size": 145,
+    "state_family_count": 315,
+    "median_financial_loss": 77750,
+    "median_burden_sample_size": 154,
     "median_months_lost": 18,
-    "pro_se_pct": 52.9,
-    "pro_se_count": 154,
-    "_pdf_state_family_count": 291,
+    "pro_se_pct": 52.4,
+    "pro_se_count": 165,
+    "_pdf_state_family_count": 315,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5749,
+  "movement_total": 6496,
   "supabase": {
-    "report_count": 3,
-    "actor_report_count": 3,
-    "family_count": 3,
+    "report_count": 5,
+    "actor_report_count": 5,
+    "family_count": 4,
     "family_reports": [
+      {
+        "body": "They lied cheated and refused due process did everything they could to take our grandson.",
+        "state": "OH",
+        "county": "Tuscarawas county",
+        "row_id": "a57d7f8d-09f7-4579-90af-0218ed402998"
+      },
       {
         "body": "The system has introduced violence, manipulation, conditional love, ugliness, and worries we've never known. ALL THAT WE THOUGHT WAS A POSSIBLE NIGHTMARE HAS BECOME OUR REALITY. The 4th of July used to be our favorite holiday to celebrate. This year? We cried inside our house because when we go in public, people hurt us. We have no safe place to go. We have never known a life where we cannot move freely in the world. But now it's all we worry about, because ANYONE can misinterpret our actions, generate a rumor, and actually have a child abducted. IT IS THE SCARIEST EXPERIENCE OF OUR LIVES.",
         "state": "OH",
@@ -79,16 +87,22 @@
         "court_or_county": "Tuscarawas"
       },
       {
+        "comment_text": "He allowed Lies in his court from the Tuscarawas County JFS, ignored physical Proof, ignored JFS coercion statements, allowed a legally disabled child to go years without ADA accomodations and continued to deny motions requesting it. CROOKED AF. He allowed lies and hearsay in the permenancy trial",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Tuscarawas"
+      },
+      {
         "comment_text": "Ignored my son bruised every visit and evidence from my parents and my dad collapsed in their parking lot they let jfs continue court where my dad couldn't cross examine and made me stay there while my dad died twice",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Tuscarawas"
       },
       {
-        "comment_text": "He allowed lies and hearsay in the permenancy trial",
+        "comment_text": "He ignored facts took my wife's first amendment my 5th and 14th amendment my daughter 13th amendment",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Tuscarawas"
+        "court_or_county": "Tuscarawas county"
       }
     ]
   },
@@ -114,27 +128,39 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "My case is based on rumors started by people who USED TO CONTROL MY LIFE.",
+        "body": "He assured me that I would be offered communication accommodations due to being autistic. IT NEVER HAPPENED. CPS is DEMANDING I change myself to suit their communication styles. I HAVE AUTISM and I AM RIGID. THAT DOES NOT MEAN I AM INEPT. IT MEANS I AM DIFFERENT. I have the right to fully participate in this case but I haven't been given the chance. Things are happening TO ME, without letting me be apart of the conversation. My case is based on rumors started by people who USED TO CONTROL MY LIFE.",
         "kind": "comment"
       },
       {
-        "body": "Ignored my son bruised every visit and evidence from my parents.",
+        "body": "He allowed Lies in his court from the Tuscarawas County JFS, ignored physical Proof, ignored JFS coercion statements, allowed a legally disabled child to go years without ADA accomodations and continued to deny motions requesting it. CROOKED AF. He allowed lies and hearsay in the permenancy trial",
         "kind": "comment"
       },
       {
-        "body": "He allowed lies and hearsay in the permenancy trial",
+        "body": "Ignored my son bruised every visit and evidence from my parents and my dad collapsed in their parking lot they let jfs continue court where my dad couldn't cross examine and made me stay there while my dad died twice",
         "kind": "comment"
       },
       {
-        "body": "The 4th of July used to be our favorite holiday to celebrate. This year?",
+        "body": "He ignored facts took my wife's first amendment my 5th and 14th amendment my daughter 13th amendment",
+        "kind": "comment"
+      },
+      {
+        "body": "They lied cheated and refused due process did everything they could to take our grandson.",
         "kind": "family_report"
       },
       {
-        "body": "I am on depression and anxiety pills my dad had full blown pneumonia and heart…",
+        "body": "The system has introduced violence, manipulation, conditional love, ugliness, and worries we've never known. ALL THAT WE THOUGHT WAS A POSSIBLE NIGHTMARE HAS BECOME OUR REALITY. The 4th of July used to be our favorite holiday to celebrate. This year? We cried inside our house because when we go in public, people hurt us. We have no safe place to go. We have never known a life where we cannot move freely in the world. But now it's all we worry about, because ANYONE can misinterpret our actions, generate a rumor, and actually have a child abducted. IT IS THE SCARIEST EXPERIENCE OF OUR LIVES.",
+        "kind": "family_report"
+      },
+      {
+        "body": "I am on depression and anxiety pills my dad had full blown pneumonia and heart problems from stress",
+        "kind": "family_report"
+      },
+      {
+        "body": "A corrupt system doesn’t fear evil, they already possess that, it fears witnesses.. of which my family and I have been and well documented our experiences during the months and months I filed every motion and in sept of 2024 was granted the compel to care order against the Tuscarawas JFS.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 6
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

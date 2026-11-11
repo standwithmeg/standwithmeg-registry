@@ -12,11 +12,11 @@
     "court_or_county": "Hancock",
     "state": "Ohio",
     "state_abbr": "OH",
-    "mention_count": 12,
-    "family_count": 10,
-    "public_family_count": 10,
+    "mention_count": 13,
+    "family_count": 11,
+    "public_family_count": 11,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 12,
+    "actor_report_count": 13,
     "supabase_row_ids": [
       "02012677-e69a-4ba3-b2bf-635b3acfa3f5",
       "fa918d31-ec10-4615-9ac2-586c88dffcf7",
@@ -29,37 +29,38 @@
       "4f35e5bb-7769-45f0-b160-b10f82eae430",
       "91ca9e6d-5bca-4fe6-9414-94aef7dad70b",
       "03578dd3-8afa-474e-9bb5-a032935e9ec4",
-      "c3ca2584-80ba-4d89-958e-7c5f94a099e1"
+      "c3ca2584-80ba-4d89-958e-7c5f94a099e1",
+      "e1fc45c4-7223-4f89-89aa-77cece52745e"
     ],
     "actor_row_id": "02012677-e69a-4ba3-b2bf-635b3acfa3f5",
     "actor_bucket_key": "kristen johnson|OH"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-2yeauxv5/New Final Post and Capcut template/export/kristen_k_johnson/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/kristen_k_johnson/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 206,
-    "total_submissions": 291,
-    "avg_financial_loss": 107575.92,
-    "avg_months_lost": 33.8,
+    "families_approved": 207,
+    "total_submissions": 315,
+    "avg_financial_loss": 102311.34,
+    "avg_months_lost": 32.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OH",
-    "state_family_count": 291,
-    "median_financial_loss": 79500,
-    "median_burden_sample_size": 145,
+    "state_family_count": 315,
+    "median_financial_loss": 77750,
+    "median_burden_sample_size": 154,
     "median_months_lost": 18,
-    "pro_se_pct": 52.9,
-    "pro_se_count": 154,
-    "_pdf_state_family_count": 291,
+    "pro_se_pct": 52.4,
+    "pro_se_count": 165,
+    "_pdf_state_family_count": 315,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5749,
+  "movement_total": 6496,
   "supabase": {
-    "report_count": 12,
-    "actor_report_count": 12,
-    "family_count": 10,
+    "report_count": 13,
+    "actor_report_count": 13,
+    "family_count": 11,
     "family_reports": [
       {
         "body": "This system allows legal kidnapping, because there are no checks and balances for Juvenile Court Judges. Judge Kristen Johnson has caused tremendous trauma to not only me and my son but our entire family. Director Randall Galbraith and Supervisor Karmen Lauth intentionally delayed the process of developing a caseplan for me to obtain custody. Then lied under oath about my contact with the agency",
@@ -100,10 +101,10 @@
     ],
     "public_comments": [
       {
-        "comment_text": "She refused to admit my emails with CPS as evidence in my trial for custody. However during appeal the Ohio Thrid District court of Appeals did accept jurisdiction of my emails but still upheld her judgment. Denied due process. Failed to accept my emails (that proved i was in contact with the agency) as evidence saying they looked copy and pasted. Appointed me a lawyer without my consent and allowed that lawyer to represent me in a motions hearing i had notification of",
+        "comment_text": "Denied due process. Failed to accept my emails (that proved i was in contact with the agency) as evidence saying they looked copy and pasted. Appointed me a lawyer without my consent and allowed that lawyer to represent me in a motions hearing i had notification of She refused to admit my emails with CPS as evidence in my trial for custody. However during appeal the Ohio Thrid District court of Appeals did accept jurisdiction of my emails but still upheld her judgment.",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Hancock County"
+        "court_or_county": "Hancock"
       },
       {
         "comment_text": "She never once spoke to me. I was never given due process nor aware of my first court date the day they where removed. Wasn't till after the court date susan from cps told me I had a chance to speak and wasn't there. They fumbled bad with my case. And still to this date the man that rapped my daughter walks free. Never once questioned or brought in. Because she was 16 just turned 16 they said it was consensual and brushed it under the rug",
@@ -183,67 +184,67 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "She refused to admit my emails with CPS as evidence in my trial for custody.",
+        "body": "Denied due process. Failed to accept my emails (that proved i was in contact with the agency) as evidence saying they looked copy and pasted. Appointed me a lawyer without my consent and allowed that lawyer to represent me in a motions hearing i had notification of She refused to admit my emails with CPS as evidence in my trial for custody. However during appeal the Ohio Thrid District court of Appeals did accept jurisdiction of my emails but still upheld her judgment.",
         "kind": "comment"
       },
       {
-        "body": "She never once spoke to me.",
+        "body": "Used blanket statements on all family not there to represent themselves. Allows Kelli Millet to lie on the stand. Overruled many objections. Cherry picked the lines she wanted to deny and progress with family.",
         "kind": "comment"
       },
       {
-        "body": "Allows Kelli Millet to lie on the stand. Overruled many objections.",
+        "body": "She refused to admit my emails with CPS as evidence in my trial for custody. However during appeal the Ohio Thrid District court of Appeals did accept jurisdiction of my emails but still upheld her judgment.",
         "kind": "comment"
       },
       {
-        "body": "Cherry picked evidence and twisted it to fit the narrative .",
+        "body": "Prior cps prosecuting attorney, no due process, denied intervention, kinship, supervised visits, and custody. Cherry picked evidence and twisted it to fit the narrative .",
         "kind": "comment"
       },
       {
-        "body": "Took my children away from a mother based off false information",
+        "body": "She added and listened to false information. She took my children away from a mother based off false information and continues to keep them away for absolutely no reason!",
         "kind": "comment"
       },
       {
-        "body": "She refuses kinship makes up false allegations makes doin anything requested by the…",
+        "body": "She refuses kinship makes up false allegations makes doin anything requested by the court impossible or looses an doesnt submitt paper work or evidence",
         "kind": "comment"
       },
       {
-        "body": "Looking at evidence and blatantly ignored eveidence in court",
+        "body": "She didn’t look at my case at all and just decided the mother was the best choice without looking at evidence and blatantly ignored eveidence in court",
         "kind": "comment"
       },
       {
-        "body": "stepped in hours before mediation to rule dad (Indicated forensic interview) would…",
+        "body": "stepped in hours before mediation to rule dad (Indicated forensic interview) would get next day over night weekends.",
         "kind": "comment"
       },
       {
-        "body": "Didnt show up for court",
+        "body": "didnt show up for court",
         "kind": "comment"
       },
       {
-        "body": "Then lied under oath about my contact with the agency",
+        "body": "This system allows legal kidnapping, because there are no checks and balances for Juvenile Court Judges. Judge Kristen Johnson has caused tremendous trauma to not only me and my son but our entire family. Director Randall Galbraith and Supervisor Karmen Lauth intentionally delayed the process of developing a caseplan for me to obtain custody. Then lied under oath about my contact with the agency",
         "kind": "family_report"
       },
       {
-        "body": "Stripped away our stability",
+        "body": "“This system tore our family apart, stripped away our stability, and left us living through years of silence, fear, and unanswered pain while we fought to hold onto hope and each other.”",
         "kind": "family_report"
       },
       {
-        "body": "Torn apart a mom from her kids and alienated a mom for 4+ years while a sex…",
+        "body": "Torn apart a mom from her kids and alienated a mom for 4+ years while a sex offender has had access to them Broken a mamas heart day in and day out",
         "kind": "family_report"
       },
       {
-        "body": "They lied to my oldest son to take him from the school.",
+        "body": "It cost me my entire life. Caused my kids to have ptsd and trust issues with law enforcement. They where scared to go to school because they lied to my oldest son to take him from the school. This has caused trauma and we are 6 years free from them and still live in fear",
         "kind": "family_report"
       },
       {
-        "body": "By ignoring evidence, they allowed my child to be molested again.",
+        "body": "by ignoring evidence, they allowed my child to be molested again.",
         "kind": "family_report"
       },
       {
-        "body": "There are no checks and balances for Juvenile Court Judges.",
+        "body": "This system allows legal kidnapping, because there are no checks and balances for Juvenile Court Judges. Judge Kristen Johnson has caused tremendous trauma to not only me and my son but our entire family.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 2
+    "quote_page_count": 8
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

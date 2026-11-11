@@ -27,27 +27,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-7gspmaqk/New Final Post and Capcut template/export/steve_ellis/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/steve_ellis/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 185,
-    "total_submissions": 273,
-    "avg_financial_loss": 111495.56,
-    "avg_months_lost": 31.1,
+    "families_approved": 186,
+    "total_submissions": 293,
+    "avg_financial_loss": 120206.43,
+    "avg_months_lost": 30.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "KS",
-    "state_family_count": 273,
-    "median_financial_loss": 97450,
-    "median_burden_sample_size": 140,
-    "median_months_lost": 16,
-    "pro_se_pct": 48.4,
-    "pro_se_count": 132,
-    "_pdf_state_family_count": 273,
+    "state_family_count": 293,
+    "median_financial_loss": 101500,
+    "median_burden_sample_size": 149,
+    "median_months_lost": 19,
+    "pro_se_pct": 48.3,
+    "pro_se_count": 141,
+    "_pdf_state_family_count": 292,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5746,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -115,7 +115,7 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Never met with children despite claiming to represent them in court.",
+        "body": "Never met with children despite claiming to represent them in court. Believed the fathers statements against mother. Made decisions about her education without speaking to her teacher.",
         "kind": "comment"
       },
       {
@@ -123,15 +123,19 @@
         "kind": "comment"
       },
       {
-        "body": "Further traumatized my daughter and demonized mother.",
+        "body": "Further traumatized my daughter and demonized mother despite mother consistently doing what I was told to do and providing for the children's needs.",
         "kind": "family_report"
       },
       {
-        "body": "Miami county doesn’t have the child best interest at all, they literally take…",
+        "body": "My ex-husband and I filed pro se to divorce and I just remember judge Montgomery telling us that our daughter did not ask to be brought into this world and we better behave accordingly to not be back in front of him and to do right by her.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Miami county doesn’t have the child best interest at all, they literally take children away from a parent who wants to protect them from abuse and drugs and tells the parent that wants to keep them safe that they are a vindictive ex who is mad!",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 3
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

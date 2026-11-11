@@ -31,22 +31,22 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 145,
-    "total_submissions": 183,
-    "avg_financial_loss": 181109.42,
-    "avg_months_lost": 36.7,
+    "families_approved": 142,
+    "total_submissions": 200,
+    "avg_financial_loss": 173525.11,
+    "avg_months_lost": 36.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "MI",
-    "state_family_count": 183,
-    "median_financial_loss": 103000,
-    "median_burden_sample_size": 80,
-    "median_months_lost": 17,
-    "pro_se_pct": 44.3,
-    "pro_se_count": 81,
-    "_pdf_state_family_count": 183,
+    "state_family_count": 200,
+    "median_financial_loss": 104500,
+    "median_burden_sample_size": 86,
+    "median_months_lost": 18,
+    "pro_se_pct": 44.0,
+    "pro_se_count": 88,
+    "_pdf_state_family_count": 200,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5665,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -114,23 +114,23 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Lies about literally everything doesn't fight for any reunification whatsoever, she…",
+        "body": "Lies about literally everything doesn't fight for any reunification whatsoever, she will sit there and be so nice to you and she will tell you that you're doing so good in that she wouldn't lie to you and that you're going to get your kids back soon because you're doing awesome but then she'll go back and put in the paperwork nothing good that you did she'll go in the paperwork and lie and just write a bunch of bad things that happen that never actually happened.",
         "kind": "comment"
       },
       {
-        "body": "Falsifys evidence, lies about children's wants and needs.",
+        "body": "Falsifys evidence, lies about children's wants and needs. Lies to the children about the case. Puts children into dangerous situons/homes,rather then Return them to there safenvironment. Perjurs herself repeatly.",
         "kind": "comment"
       },
       {
-        "body": "She consistantly lied to us and on reports to the judge. Impeded our progress.",
+        "body": "Emily Davidson was our CPS case worker that was supposed to be helping us get the kids back. She consistantly lied to us and on reports to the judge. Impeded our progress.",
         "kind": "comment"
       },
       {
-        "body": "The court took that all away from you.",
+        "body": "Safety is when you know you are safe, it's when you know that your parents are safe, it's when you can lay your head down at night and go to bed peacefully it's when you can tell your parents that you love them and give them a hug but once foster care takes you, you never know when you'll be safe again, you don't know when you will be able to lay your head down at night and fall asleep peacefully you don't know if your parents are okay and your biggest worry is your parents and your siblings at the end of the day but you're also so angry because the court took that all away from you.",
         "kind": "family_report"
       },
       {
-        "body": "This destroyed my family. I have lost my children. My wife and I dont get a long well.",
+        "body": "This destroyed my family. I have lost my children. My wife and I dont get a long well. Our married may beyond repair. I miss my babies.",
         "kind": "family_report"
       },
       {
@@ -138,7 +138,7 @@
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 4
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

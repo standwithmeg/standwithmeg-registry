@@ -12,16 +12,15 @@
     "court_or_county": "Gulf Coast Jewish/Family Partnerships",
     "state": "FL",
     "state_abbr": "FL",
-    "mention_count": 4,
-    "family_count": 3,
-    "public_family_count": 3,
+    "mention_count": 3,
+    "family_count": 2,
+    "public_family_count": 2,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 4,
+    "actor_report_count": 3,
     "supabase_row_ids": [
       "c4adb1bd-32c0-461e-bcf0-2e050e99499a",
       "7523c907-ce30-4b53-bb5c-7c5cbd4fddee",
-      "4cc8975c-58da-4458-a44a-707d7bf5e48a",
-      "5cee5ad3-d712-4a06-a664-ce4def8a35a3"
+      "4cc8975c-58da-4458-a44a-707d7bf5e48a"
     ],
     "actor_row_id": null,
     "actor_bucket_key": "joane berthier|FL"
@@ -32,26 +31,26 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 238,
-    "total_submissions": 321,
-    "avg_financial_loss": 199989.91,
-    "avg_months_lost": 27.6,
+    "families_approved": 237,
+    "total_submissions": 355,
+    "avg_financial_loss": 191015.67,
+    "avg_months_lost": 26.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "FL",
-    "state_family_count": 321,
-    "median_financial_loss": 176500,
-    "median_burden_sample_size": 139,
+    "state_family_count": 355,
+    "median_financial_loss": 176000,
+    "median_burden_sample_size": 153,
     "median_months_lost": 17,
-    "pro_se_pct": 57.6,
-    "pro_se_count": 185,
-    "_pdf_state_family_count": 321,
+    "pro_se_pct": 57.2,
+    "pro_se_count": 203,
+    "_pdf_state_family_count": 355,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5729,
+  "movement_total": 6496,
   "supabase": {
-    "report_count": 4,
-    "actor_report_count": 4,
-    "family_count": 3,
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 2,
     "family_reports": [
       {
         "body": "The systèm kidnappéd my children, destroyed my family , took everything I had fighting to get them back",
@@ -64,38 +63,30 @@
         "state": "NJ",
         "county": "USA",
         "row_id": "44d0032d-7e54-4fef-9b19-84d85ffee816"
-      },
-      {
-        "body": "Lied and conspired against us, ripping and stripping us mind , body, soul , bank account, civil rights ect. meanwhile allowing my nephew to be abused severely at 6",
-        "state": "FL",
-        "county": "Osceola County 9th Circuit Court",
-        "row_id": "298dd8f2-bdf7-433c-a607-447b0f35b7db"
       }
     ],
     "public_comments": [
       {
-        "comment_text": "Causes families confusion instead of helping. Provides families with fraudulent information in regards to civil rights, doesn’t show interest in family concerns in regards to the child in their care.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Gulf Coast Jewish/Family Partnerships"
-      },
-      {
-        "comment_text": "Supervisor whom lies and conspires against families. Ensures the kids are over medicated, so her company can let their protected foster daddy’s rape children.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Gulf Coast Jewish/Family Partnerships"
-      },
-      {
         "comment_text": "supervisor of a company whom les to family to keep children in foster care",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Gulf Coast Jewish/Family Partnerships"
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Supervisor at Gulf Coast that dismisses families needs to be involved with the child.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Causes families confusion instead of helping. Provides families with fraudulent information in regards to civil rights, doesn’t show interest in family concerns in regards to the child in their care.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/joanne_berthier",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='FL'"
+    "public_family_count_api: no actors returned for state='FL'",
+    "pdf_public_actor: no 'Joanne Berthier' in cache for FL"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
@@ -115,23 +106,19 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Causes families confusion instead of helping.",
+        "body": "supervisor of a company whom les to family to keep children in foster care",
         "kind": "comment"
       },
       {
-        "body": "Supervisor whom lies and conspires against families.",
+        "body": "Supervisor at Gulf Coast that dismisses families needs to be involved with the child.",
         "kind": "comment"
       },
       {
-        "body": "Supervisor of a company whom les to family to keep children in foster care",
+        "body": "Causes families confusion instead of helping. Provides families with fraudulent information in regards to civil rights, doesn’t show interest in family concerns in regards to the child in their care.",
         "kind": "comment"
       },
       {
-        "body": "Took everything I had fighting to get them back",
-        "kind": "family_report"
-      },
-      {
-        "body": "Lied and conspired against us, ripping and stripping us mind , body, soul , bank…",
+        "body": "The systèm kidnappéd my children, destroyed my family , took everything I had fighting to get them back",
         "kind": "family_report"
       }
     ],

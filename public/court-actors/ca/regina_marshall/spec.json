@@ -1,0 +1,125 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "regina_marshall",
+    "display_name": "Regina Marshall",
+    "title": "",
+    "first_name": "Regina",
+    "last_name": "Marshall",
+    "role": "Mediator",
+    "court": "Monterey",
+    "county": "Monterey",
+    "court_or_county": "Monterey",
+    "state": "CA",
+    "state_abbr": "CA",
+    "mention_count": 4,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "5528ba96-f7cc-49ba-87d0-cf189cb670cd",
+      "38d8789b-6b5b-41b8-ab09-f40aee5190f8",
+      "e9df8c02-bfac-4523-bbf8-380b9795766c",
+      "72d2c951-4c72-411b-a989-818f9abb535b"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "regina marshal|CA"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 356,
+    "total_submissions": 529,
+    "avg_financial_loss": 263721.3,
+    "avg_months_lost": 34.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "CA",
+    "state_family_count": 529,
+    "median_financial_loss": 237750,
+    "median_burden_sample_size": 232,
+    "median_months_lost": 20,
+    "pro_se_pct": 58.4,
+    "pro_se_count": 309,
+    "_pdf_state_family_count": 529,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6496,
+  "supabase": {
+    "report_count": 4,
+    "actor_report_count": 4,
+    "family_count": 3,
+    "family_reports": [
+      {
+        "body": "The system has emotionally damaged my two little girls and drained me financially. The court system continues to not protect my children from abuse because “ kids need both parents “ and told me I’m Not a survivor of DV",
+        "state": "CA",
+        "county": "Monterey",
+        "row_id": "96c9839b-dcd3-4adc-8acc-cdf347b577c1"
+      },
+      {
+        "body": "Turned out lives upside down.",
+        "state": "CA",
+        "county": "Monterey County",
+        "row_id": "fb6c349e-7c04-42a1-b093-3901e855eb48"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "This evaluator has moved from office to office charges $40,000 for evaluations, then contradict her own evaluations changes the story Biased and favors abuser",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Monterey"
+      },
+      {
+        "comment_text": "She wanted to punish me for believing in Jesus. She wanted my kids to be taken from me. She is LGBTQ and I’m Christian.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Monterey Co"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/regina_marshall",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='CA'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ca/regina_marshall/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "This evaluator has moved from office to office charges $40,000 for evaluations, then contradict her own evaluations changes the story Biased and favors abuser",
+        "kind": "comment"
+      },
+      {
+        "body": "She wanted to punish me for believing in Jesus. She wanted my kids to be taken from me. She is LGBTQ and I’m Christian.",
+        "kind": "comment"
+      },
+      {
+        "body": "The system has emotionally damaged my two little girls and drained me financially. The court system continues to not protect my children from abuse because “ kids need both parents “ and told me I’m Not a survivor of DV",
+        "kind": "family_report"
+      },
+      {
+        "body": "Turned out lives upside down.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 2
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

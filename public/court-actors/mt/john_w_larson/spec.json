@@ -1,0 +1,125 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "john_w_larson",
+    "display_name": "John W. Larson",
+    "title": "",
+    "first_name": "John W.",
+    "last_name": "Larson",
+    "role": "Judge",
+    "court": "Missoula",
+    "county": "Missoula",
+    "court_or_county": "Missoula",
+    "state": "MT",
+    "state_abbr": "MT",
+    "mention_count": 4,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "15d5813c-ad40-42e6-991e-8e33b9356804",
+      "aa6321de-44fc-4601-90cc-dd68347207a4",
+      "3e99b102-ebb4-4203-806d-98759bec08be",
+      "3e479148-bfa6-420c-80b0-233fd071cee9"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "john larson|MT"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 39,
+    "total_submissions": 76,
+    "avg_financial_loss": 170095.33,
+    "avg_months_lost": 41.2,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "MT",
+    "state_family_count": 76,
+    "median_financial_loss": 135250,
+    "median_burden_sample_size": 34,
+    "median_months_lost": 19,
+    "pro_se_pct": 60.5,
+    "pro_se_count": 46,
+    "_pdf_state_family_count": 76,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6496,
+  "supabase": {
+    "report_count": 4,
+    "actor_report_count": 4,
+    "family_count": 3,
+    "family_reports": [
+      {
+        "body": "By endorsing factually impossible recommendations and ignoring documented non-compliance, the current legal process has systematically deprived my children of stability and safety while allowing their developmental milestones to be traded for high-conflict trauma.",
+        "state": "MT",
+        "county": "Sanders",
+        "row_id": "db3a8f34-d99d-46f0-9b26-032586b4d4e8"
+      },
+      {
+        "body": "It destroyed me ruined my quality of life . The constant targeting has made me feel unsafe . And in constant worry for my children's safety. I miss my children so much. It's caused intense grief because of the intense powerlessness. I almost went to prison and I was all over the news for a crime I didn't commit I lost my animals as well. I was getting death threats and constant harassment.",
+        "state": "MT",
+        "county": "Missoula",
+        "row_id": "574e850f-388a-432f-91aa-f47296dea78d"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "He was my youth judge when I was a minor as a foster kid . And he was the judge that had my kids in the system when they were taken at birth. And while I was pregnant with my 2nd child they orchestrated a criminal case against me falsely to discredit me when I had my 2nd child. They forced me to sign legal documents so I wouldn't go to prison but they used my false confession to take my kid . And I was all over the news . They removed it from the internet but it was there at one point. This judge never cared about proof . He only cared if cps filed the right paperwork and agreed with everything cps said. And wouldn't let me defend myself.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Missoula"
+      },
+      {
+        "comment_text": "Ongoing- Told me I couldn’t object this isn’t TV and turned to the opposing counsel and said “this is your show, take it away” Denied TOP said it was a \"ploy to keep dad from parenting time\" denied without being heard. Then turned to opposing council and said \"this is your show, take it away\"",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Missoula"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/john_w_larson",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='MT'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/mt/john_w_larson/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "He was my youth judge when I was a minor as a foster kid . And he was the judge that had my kids in the system when they were taken at birth. And while I was pregnant with my 2nd child they orchestrated a criminal case against me falsely to discredit me when I had my 2nd child. They forced me to sign legal documents so I wouldn't go to prison but they used my false confession to take my kid . And I was all over the news . They removed it from the internet but it was there at one point. This judge never cared about proof . He only cared if cps filed the right paperwork and agreed with everything cps said. And wouldn't let me defend myself.",
+        "kind": "comment"
+      },
+      {
+        "body": "Ongoing- Told me I couldn’t object this isn’t TV and turned to the opposing counsel and said “this is your show, take it away” Denied TOP said it was a \"ploy to keep dad from parenting time\" denied without being heard. Then turned to opposing council and said \"this is your show, take it away\"",
+        "kind": "comment"
+      },
+      {
+        "body": "By endorsing factually impossible recommendations and ignoring documented non-compliance, the current legal process has systematically deprived my children of stability and safety while allowing their developmental milestones to be traded for high-conflict trauma.",
+        "kind": "family_report"
+      },
+      {
+        "body": "It destroyed me ruined my quality of life . The constant targeting has made me feel unsafe . And in constant worry for my children's safety. I miss my children so much. It's caused intense grief because of the intense powerlessness. I almost went to prison and I was all over the news for a crime I didn't commit I lost my animals as well. I was getting death threats and constant harassment.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 4
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

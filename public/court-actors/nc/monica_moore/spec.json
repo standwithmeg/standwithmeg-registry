@@ -33,22 +33,22 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 159,
-    "total_submissions": 221,
-    "avg_financial_loss": 181528.75,
-    "avg_months_lost": 36.0,
+    "families_approved": 157,
+    "total_submissions": 239,
+    "avg_financial_loss": 168081.76,
+    "avg_months_lost": 36.2,
     "_source_table": "movement_stats_by_state",
     "_match_value": "NC",
-    "state_family_count": 221,
-    "median_financial_loss": 137332,
-    "median_burden_sample_size": 74,
-    "median_months_lost": 17,
-    "pro_se_pct": 49.8,
-    "pro_se_count": 110,
-    "_pdf_state_family_count": 221,
+    "state_family_count": 239,
+    "median_financial_loss": 140000,
+    "median_burden_sample_size": 77,
+    "median_months_lost": 18,
+    "pro_se_pct": 48.5,
+    "pro_se_count": 116,
+    "_pdf_state_family_count": 239,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5704,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -123,11 +123,11 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Lied about it in court reports",
+        "body": "My daughter disclosed to her and GAL of SA by her dad. They lied about it in court reports and never did what was mandated by NC 7b laws which is to contact law enforcement and have a CME within 24 hours. Not long after the Oct 8, 2021 hearing she quit HCDSS and went to Sampson /county DSS in NC",
         "kind": "comment"
       },
       {
-        "body": "Currently she is on my case in Sampson.",
+        "body": "Added her, because I saw her name on a nearby county complaint and know it's common for caseworkers to go to other neighboring counties. Currently she is on my case in Sampson, but I haven't dealt with her too much yet Not dealt with her too much yet.",
         "kind": "comment"
       },
       {
@@ -135,19 +135,19 @@
         "kind": "comment"
       },
       {
-        "body": "I completed everything they asked if me and more. Separated my boys into foster homes.",
+        "body": "Torn us apart. I completed everything they asked if me and more. Separated my boys into foster homes. My youngest is in group home misbehaving the whole time he's been in the system. I still have parental rights but I can see them or speak to them. October will be a year since I have spoken with them. I finally was able to get them to let me write them letters. I have had 25 caseworkers at this point.",
         "kind": "family_report"
       },
       {
-        "body": "I can not put a dollar amount on what has been done.",
+        "body": "I can not put a dollar amount on what has been done. I'm currently fighting to keep my home, and I am not able to find a job that I'm qualified for due to false charges that the attorneys and judge's refuse to dismiss due to lack of evidence. Due to the false charge it is more difficult to support my children while they're in custody, but I believe that this was the plan.",
         "kind": "family_report"
       },
       {
-        "body": "I have learned that the truth does not prevail.",
+        "body": "I have learned that the truth does not prevail. The only thing that previails is the agenda and that is done at any cost. My children are now alienated from me; essentially they have nothing to do with ne. During the three years DSS kept this case open with no services my son (14) became addicted to drugs, selling drugs, went from A/B honor roll to being on an IEP, both my kids got suspended from school, both became quite the experts at stealing from stores, my son had a sex tape that was leaked. The system anhilated my family!",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 6
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

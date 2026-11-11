@@ -30,27 +30,27 @@
     "actor_bucket_key": "landon popleton|OR"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-56vhhi8e/New Final Post and Capcut template/export/landon_poppleton/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/landon_poppleton/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 60,
-    "total_submissions": 76,
-    "avg_financial_loss": 163867.99,
-    "avg_months_lost": 33.0,
+    "families_approved": 57,
+    "total_submissions": 85,
+    "avg_financial_loss": 163736.75,
+    "avg_months_lost": 35.2,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OR",
-    "state_family_count": 76,
+    "state_family_count": 85,
     "median_financial_loss": 185000,
-    "median_burden_sample_size": 27,
-    "median_months_lost": 22,
-    "pro_se_pct": 55.3,
-    "pro_se_count": 42,
-    "_pdf_state_family_count": 76,
+    "median_burden_sample_size": 29,
+    "median_months_lost": 24,
+    "pro_se_pct": 56.5,
+    "pro_se_count": 48,
+    "_pdf_state_family_count": 85,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5686,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 7,
     "actor_report_count": 7,
@@ -142,15 +142,15 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Refused to communicate directly with Mother about concerns with the evaluation",
+        "body": "Supervising psychologist at NW Family Psychology and Jessica McBride's supervisor. Admitted to Mother over the phone that psychological evaluation reports are used as a mechanism to get evidence into court that could not otherwise be admitted through normal evidentiary procedures. Stated in writing that \"the court is the client,\" not the person being evaluated, confirming the evaluation was conducted to serve the court's interests rather than as an independent clinical assessment. Looped Rachel Finn into email communications and referred to her as \"counsel for a party,\" despite Finn being the child's attorney, not counsel for either parent. Refused to communicate directly with Mother about concerns with the evaluation, requiring all communication go through counsel, effectively cutting off the evaluated party's ability to challenge the methodology. Initially offered Mother a phone call but then reversed course and refused to take one without counsel present.",
         "kind": "comment"
       },
       {
-        "body": "That made him not able to be my expert.",
+        "body": "He is a hired hand. Dr Poppleton was hired to be an expert on my case, unfortunately my attorney guided me to meet with him prior to the hearing. That made him not able to be my expert. And his findings were that it was in fact an abusive relationship and he tried to convey that to the other court actors including the child’s attorney Sandy Faber. And it was all used against me during our hearing.",
         "kind": "comment"
       },
       {
-        "body": "reviewed case and determined there was a high likelihood of psychological abuse…",
+        "body": "reviewed case and determined there was a high likelihood of psychological abuse, took payment but never testified, never reported abuse as mandatory reporter, talked to opposing counsel",
         "kind": "comment"
       },
       {
@@ -162,7 +162,7 @@
         "kind": "family_report"
       },
       {
-        "body": "Ignored every piece of evidence that favored me",
+        "body": "The court took my daughter from me based on an emergency order that was neither jurisdictionally valid nor supported by anything more than a hearsay written statement, kept temporary orders in place for three years during the most important formative years of her life, ignored every piece of evidence that favored me, turned a mother fighting for her child into the problem for fighting at all, and has stolen her childhood since this began.",
         "kind": "family_report"
       },
       {
@@ -170,15 +170,11 @@
         "kind": "family_report"
       },
       {
-        "body": "When I filed for the court to enforce the existing parenting plan due to documented…",
-        "kind": "family_report"
-      },
-      {
-        "body": "The family court is hurting him and forcing him to be where he is afraid and unsafe.",
+        "body": "When I filed for the court to enforce the existing parenting plan due to documented custodial interference and and to protect my child from abuse, the court rewarded my ex's perjury and retaliation by reversing custody and giving full custody and 100% parenting time to my ex. The court severed my relationship with my child and caused more harm than had already occurred before court. My child is now legally trapped with an abusive parent and has lost access to our whole side of the family.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 2
+    "quote_page_count": 7
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

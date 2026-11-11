@@ -27,27 +27,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-yfhm15ft/New Final Post and Capcut template/export/h_jay_white_sr/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/h_jay_white_sr/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 159,
-    "total_submissions": 221,
-    "avg_financial_loss": 181528.75,
-    "avg_months_lost": 36.0,
+    "families_approved": 157,
+    "total_submissions": 239,
+    "avg_financial_loss": 168081.76,
+    "avg_months_lost": 36.2,
     "_source_table": "movement_stats_by_state",
     "_match_value": "NC",
-    "state_family_count": 221,
-    "median_financial_loss": 137332,
-    "median_burden_sample_size": 74,
-    "median_months_lost": 17,
-    "pro_se_pct": 49.8,
-    "pro_se_count": 110,
-    "_pdf_state_family_count": 221,
+    "state_family_count": 239,
+    "median_financial_loss": 140000,
+    "median_burden_sample_size": 77,
+    "median_months_lost": 18,
+    "pro_se_pct": 48.5,
+    "pro_se_count": 116,
+    "_pdf_state_family_count": 239,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5704,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -127,7 +127,7 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Allowed to care for our children",
+        "body": "Says things that aren’t true and is either allowing DSS to lie or telling them to lie . He’s the most powerful man in Cabarrus County no one will go against him. He’s asking me to stop taking my prescribed medication that I’ve been taking for over 20 years and the foster mom is on the same medication and is allowed to care for our children but he’s stating I can’t.",
         "kind": "comment"
       },
       {
@@ -135,27 +135,31 @@
         "kind": "comment"
       },
       {
+        "body": "https://recorder.google.com/d429d183-e30f-4023-b14a-f071dafe0a70",
+        "kind": "comment"
+      },
+      {
         "body": "Withheld evidence",
         "kind": "comment"
       },
       {
-        "body": "God will help you stand for justice.",
+        "body": "Decades of lost time, legal abuse, financial abuse, and emotional abuse to those that were the victims of domestic violence. Silence is death do not stop fighting for your children no matter the threats or the attacks because God will help you stand for justice.",
         "kind": "family_report"
       },
       {
-        "body": "My family was torn apart and all the trama and lies and hurt myself and kids have…",
+        "body": "My family was torn apart and all the trama and lies and hurt myself and kids have had to endure is so wrong",
         "kind": "family_report"
       },
       {
-        "body": "Every government board im there to speak for justice.",
+        "body": "Every government board im there to speak for justice. I been put in jail, charged and retailiated against for telling this veterans story",
         "kind": "family_report"
       },
       {
-        "body": "Ignored documented corruption",
+        "body": "The system has systematically torn apart our loving family under the guise of ‘best interests of the children,’ while the court and DSS—driven by profit, not justice—have violated our constitutional rights, ignored documented corruption and perjury, and now illegally demand that I abandon my own home for six months to a year as a condition for reunification, forcing us to choose between our rights and our children! UNITED WE STAND AND UNITED WE FIGHT!",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 4
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

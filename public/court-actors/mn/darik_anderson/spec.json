@@ -33,21 +33,21 @@
   },
   "state_stats": {
     "families_approved": 57,
-    "total_submissions": 82,
-    "avg_financial_loss": 145161.53,
-    "avg_months_lost": 33.0,
+    "total_submissions": 88,
+    "avg_financial_loss": 142566.78,
+    "avg_months_lost": 31.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "MN",
-    "state_family_count": 82,
+    "state_family_count": 88,
     "median_financial_loss": 111300,
-    "median_burden_sample_size": 35,
-    "median_months_lost": 17,
-    "pro_se_pct": 58.5,
-    "pro_se_count": 48,
-    "_pdf_state_family_count": 82,
+    "median_burden_sample_size": 37,
+    "median_months_lost": 14,
+    "pro_se_pct": 56.8,
+    "pro_se_count": 50,
+    "_pdf_state_family_count": 88,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5746,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -115,7 +115,7 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Not conducting an independent study, filling false documentation into court, Lying…",
+        "body": "Not conducting an independent study, filling false documentation into court, Lying on the stand.",
         "kind": "comment"
       },
       {
@@ -127,19 +127,19 @@
         "kind": "comment"
       },
       {
-        "body": "It has broken a special bond between a grandmother and grandchild.",
+        "body": "It has broken a special bond between a grandmother and grandchild. It has caused mental harm to the child and our family suffers every day missing him.",
         "kind": "family_report"
       },
       {
-        "body": "He was SOLD, The county's make more money.",
+        "body": "As a party to my grandson's case, and other stories in this county I was able to see the TRUTH of what CPS really is. Through the documents of CPS there are clear patterns on what these people do to family's most importantly to our children. The harm that was caused to my family is indescribable. I have not seen my grandson in a year and a half, there is clear evidence that he would never return to his family. He was SOLD, The county's make more money if children are adopted out to non-family members. I pray daily that I will see this child again soon, until then, I vow to get the documents that I have into the right hands. I pray for justice for all family's experiencing CPS / Corrupt profiting system.",
         "kind": "family_report"
       },
       {
-        "body": "My whole body shakes and now I have GAD which causes issues like going to the post…",
+        "body": "My whole body shakes and now I have GAD which causes issues like going to the post office, answering phone, checking emails, fear of a knock at the door and these agents Violated our Liberty and to top it off non of them have a lawful oath of office.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 3
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

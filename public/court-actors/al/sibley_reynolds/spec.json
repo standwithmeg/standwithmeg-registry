@@ -2,9 +2,9 @@
   "schema_version": 2,
   "actor": {
     "slug": "sibley_reynolds",
-    "display_name": "Sibley Reynolds",
+    "display_name": "Sibley G. Reynolds",
     "title": "",
-    "first_name": "Sibley",
+    "first_name": "Sibley G.",
     "last_name": "Reynolds",
     "role": "Judge",
     "court": "Chilton",
@@ -28,27 +28,27 @@
     "actor_bucket_key": "sibley reynolds|AL"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-7gspmaqk/New Final Post and Capcut template/export/sibley_reynolds/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/sibley_reynolds/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 103,
-    "total_submissions": 143,
-    "avg_financial_loss": 84215.55,
-    "avg_months_lost": 34.0,
+    "families_approved": 102,
+    "total_submissions": 158,
+    "avg_financial_loss": 91268.73,
+    "avg_months_lost": 32.6,
     "_source_table": "movement_stats_by_state",
     "_match_value": "AL",
-    "state_family_count": 143,
-    "median_financial_loss": 55000,
-    "median_burden_sample_size": 63,
-    "median_months_lost": 12,
-    "pro_se_pct": 42.7,
-    "pro_se_count": 61,
-    "_pdf_state_family_count": 143,
+    "state_family_count": 158,
+    "median_financial_loss": 52500,
+    "median_burden_sample_size": 71,
+    "median_months_lost": 13,
+    "pro_se_pct": 39.9,
+    "pro_se_count": 63,
+    "_pdf_state_family_count": 158,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5746,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -116,11 +116,11 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "He then allowed the GAL to say that the children spoke with him.",
+        "body": "Changed hearing date several times. The children wanted to testify on their own behalf. Grandfather did not want this to happen. Changed hearing to a date mother would not have them. He then allowed the GAL to say that the children spoke with him and he could confidently say they were safe and happy with Grandfather. Refused to look at messages I had from the children disproving this statement. The judge knew my case was heavily dependent on audio and video since he would not allow the children to testify in person. Moved our hearing to a room that had no audio visual capabilities. Allowed my father to submit the childrens report cards as evidence of their \"well-being\" and dismissed the entire case.",
         "kind": "comment"
       },
       {
-        "body": "He dismissed everything. Evidence, subpoenas, contempt charges, everything.",
+        "body": "I moved 23 miles away from the marital house. My ex objected. The judge agreed and stopped the mood. Finally got approved to move but my children had to continue going to the previous school system for a year and a half. I had to drive 35 to 45 minutes twice a day to take my kids to and from school for a whole school year and a half of another. He dismissed everything. Evidence, subpoenas, contempt charges, everything.",
         "kind": "comment"
       },
       {
@@ -132,15 +132,15 @@
         "kind": "family_report"
       },
       {
-        "body": "Autauga County family court has failed my children and me over and over again.",
+        "body": "Autauga County family court has failed my children and me over and over again. More than 30 years of mental and physchological abuse has been legally perpetuated at the hands of the court system.",
         "kind": "family_report"
       },
       {
-        "body": "I was not allowed to change their school.",
+        "body": "They have dragged this out and kept me in a wreck over all the lies. I moved 23 miles away from our marital home the father objected to the move and the judge agreed. We were allowed to move but I had to drive 35 to 45 minutes two times a day for a year and a half for my children for school because I was not allowed to change their school.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 5
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

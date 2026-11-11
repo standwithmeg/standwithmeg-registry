@@ -27,27 +27,27 @@
     "actor_bucket_key": "ri dcyf|RI"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-662bvq1w/New Final Post and Capcut template/export/ri_dcyf/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/ri_dcyf/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 16,
-    "total_submissions": 20,
-    "avg_financial_loss": 277798.61,
-    "avg_months_lost": 28.5,
+    "families_approved": 15,
+    "total_submissions": 21,
+    "avg_financial_loss": 264546.05,
+    "avg_months_lost": 27.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "RI",
-    "state_family_count": 20,
+    "state_family_count": 21,
     "median_financial_loss": 164000,
     "median_burden_sample_size": 9,
-    "median_months_lost": 25,
-    "pro_se_pct": 45.0,
-    "pro_se_count": 9,
-    "_pdf_state_family_count": 20,
+    "median_months_lost": 24,
+    "pro_se_pct": 47.6,
+    "pro_se_count": 10,
+    "_pdf_state_family_count": 21,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5650,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -115,11 +115,11 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Took them against every law",
+        "body": "From regional director to supervisors to case workers all ignored evidence and continued with a false case and violate rights to abuse their power instead of help reunify families They came saw my children were in a family shelter with supervised case workers with federal Marshalls don’t know why they came but they spoke with my children saw the suite we were in at the extended stay where Amos house was running their family shelter from said they are healthy safe and looks like very loved after speaking to them but DCYF still took them against every law and policy",
         "kind": "comment"
       },
       {
-        "body": "She even admitted she smacks her own son.",
+        "body": "Jessica from DCYF could have cared less about my children and how my child’s father threw my child into a wall. She even admitted she smacks her own son.",
         "kind": "comment"
       },
       {
@@ -127,11 +127,11 @@
         "kind": "comment"
       },
       {
-        "body": "Proof, silenced my voice without due process, and called it justice.",
+        "body": "They took my children without proof, silenced my voice without due process, and called it justice. Family court and DCYF didn’t just break laws they broke my family. They gave me a life sentence to live and the punishment doesn’t fit the crime.",
         "kind": "family_report"
       },
       {
-        "body": "She refuses to see her father due to ongoing abuse. The court doesn’t care.",
+        "body": "It has ruined my children by placing them in the care of an abuser. My youngest child suffers from mental illnesses and has to take medication. She refuses to see her father due to ongoing abuse. The court doesn’t care.",
         "kind": "family_report"
       },
       {
@@ -139,7 +139,7 @@
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 4
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

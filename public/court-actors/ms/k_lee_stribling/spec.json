@@ -1,0 +1,126 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "k_lee_stribling",
+    "display_name": "K. Lee Stribling",
+    "title": "",
+    "first_name": "K. Lee",
+    "last_name": "Stribling",
+    "role": "Attorney / GAL / Child Representative",
+    "court": "Forrest",
+    "county": "Lamar",
+    "court_or_county": "Forrest",
+    "state": "MS",
+    "state_abbr": "MS",
+    "mention_count": 5,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 5,
+    "supabase_row_ids": [
+      "706732da-cda8-45ba-9f56-66cf3e6c161d",
+      "4b8bfa4b-863a-4edc-8f07-35db942addfc",
+      "54cc5bfc-d2b0-4db9-9787-f2ede426cc9c",
+      "ddd49804-9332-4af1-bfdc-1a7697596ade",
+      "344699ed-c851-4090-9d46-f5ea612d33fe"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "k lee stribling|MS"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 41,
+    "total_submissions": 70,
+    "avg_financial_loss": 134291.76,
+    "avg_months_lost": 36.4,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "MS",
+    "state_family_count": 70,
+    "median_financial_loss": 65000,
+    "median_burden_sample_size": 25,
+    "median_months_lost": 16,
+    "pro_se_pct": 47.1,
+    "pro_se_count": 33,
+    "_pdf_state_family_count": 70,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6496,
+  "supabase": {
+    "report_count": 5,
+    "actor_report_count": 5,
+    "family_count": 3,
+    "family_reports": [
+      {
+        "body": "Stolen my children’s childhoods. Ripped our family apart. Placed a child permanently with his abusive father. Aided and facilitated abuse and the abuser. Opened my eyes to the real system — it is NOT “broken”.. it’s a well oiled, smooth running.. money making, family breaking machine.",
+        "state": "MS",
+        "county": "Lamar",
+        "row_id": "fe1cc797-35b9-4a6c-b90b-49c1e7504444"
+      },
+      {
+        "body": "Took three healthy kids and emotionally abused them, along with their mother and maternal family, through repeated questioning by the court therapist, CPS, judge, and GAL. Took the children away from a loving mother based on false allegations, without due process or objective evidence. Full story is surreal. I consent to the use of my quotes as long as they do not mention or include mine or my children’s private information. I copied and pasted from some of my open claims.",
+        "state": "MS",
+        "county": "Lamar",
+        "row_id": "5c1a2f45-f174-4a04-aba5-70ce8e363fb6"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Ignored evidence, demonstrated bias, and relied on tampered documentation. He reviewed a CPS report and met with counsel but took no action. Nineteen months later, at trial, he claimed that what I had done was \"so horrific and I was abusive,\" even though he had already reviewed the same records months earlier. The evidence is in his itemized billing. His actions ultimately cost me custody. The judge ordered both parties to undergo psychological evaluations. My ex-husband never completed a psychological evaluation, but I did, and mine was used against me. The GAL justified my ex-husband's failure to complete the evaluation while using mine against me while he called me crazy. I also have a recording of the CPS worker stating that someone falsified documentation. In addition, I have a recording of the court-appointed therapist saying, \"They gave me your psychological evaluation right before I got on the stand and told me to focus on that.\" Former GAL (permanently withdrew), did not investigate, biased, absolutely unprofessional. Taking CPS allegations and claiming them as facts; CPS caseworker stated there were falsified documents in a recorded conversation; ignoring serious medical concerns; tampering with medical documents; traveling from New Orleans to Hattiesburg, Mississippi, which appears strange; aggressive emails; withdrawing, then coming back for a hearing, and then permanently withdrawing from the case; and much more as well.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lamar"
+      },
+      {
+        "comment_text": "Absolutely awful. Unilaterally raised his rates and billed for 3 years with a higher rate than the court order granted him when appointing him. Ignored evidence. Suppressed evidence. Told my ex I was on meth. Called me a liar. Kicked my youngest son out of his office. Sent that son home with his abusive father the night of trial day #2 — immediately following that son testifying against his dad in court — which went against the GAL’s narrative. And so much more. My bar complaint (which was ignored) had 30+ exhibits of evidence attached.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lamar"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/k_lee_stribling",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='MS'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ms/k_lee_stribling/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Ignored evidence, demonstrated bias, and relied on tampered documentation. He reviewed a CPS report and met with counsel but took no action. Nineteen months later, at trial, he claimed that what I had done was \"so horrific and I was abusive,\" even though he had already reviewed the same records months earlier. The evidence is in his itemized billing. His actions ultimately cost me custody. The judge ordered both parties to undergo psychological evaluations. My ex-husband never completed a psychological evaluation, but I did, and mine was used against me. The GAL justified my ex-husband's failure to complete the evaluation while using mine against me while he called me crazy. I also have a recording of the CPS worker stating that someone falsified documentation. In addition, I have a recording of the court-appointed therapist saying, \"They gave me your psychological evaluation right before I got on the stand and told me to focus on that.\" Former GAL (permanently withdrew), did not investigate, biased, absolutely unprofessional. Taking CPS allegations and claiming them as facts; CPS caseworker stated there were falsified documents in a recorded conversation; ignoring serious medical concerns; tampering with medical documents; traveling from New Orleans to Hattiesburg, Mississippi, which appears strange; aggressive emails; withdrawing, then coming back for a hearing, and then permanently withdrawing from the case; and much more as well.",
+        "kind": "comment"
+      },
+      {
+        "body": "Absolutely awful. Unilaterally raised his rates and billed for 3 years with a higher rate than the court order granted him when appointing him. Ignored evidence. Suppressed evidence. Told my ex I was on meth. Called me a liar. Kicked my youngest son out of his office. Sent that son home with his abusive father the night of trial day #2 — immediately following that son testifying against his dad in court — which went against the GAL’s narrative. And so much more. My bar complaint (which was ignored) had 30+ exhibits of evidence attached.",
+        "kind": "comment"
+      },
+      {
+        "body": "Stolen my children’s childhoods. Ripped our family apart. Placed a child permanently with his abusive father. Aided and facilitated abuse and the abuser. Opened my eyes to the real system — it is NOT “broken”.. it’s a well oiled, smooth running.. money making, family breaking machine.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Took three healthy kids and emotionally abused them, along with their mother and maternal family, through repeated questioning by the court therapist, CPS, judge, and GAL. Took the children away from a loving mother based on false allegations, without due process or objective evidence. Full story is surreal. I consent to the use of my quotes as long as they do not mention or include mine or my children’s private information. I copied and pasted from some of my open claims.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 5
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

@@ -29,27 +29,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-7gspmaqk/New Final Post and Capcut template/export/kelly_stephen/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/kelly_stephen/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 108,
-    "total_submissions": 162,
-    "avg_financial_loss": 220670.5,
-    "avg_months_lost": 27.5,
+    "families_approved": 100,
+    "total_submissions": 188,
+    "avg_financial_loss": 203187.49,
+    "avg_months_lost": 26.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "IL",
-    "state_family_count": 162,
-    "median_financial_loss": 126875,
-    "median_burden_sample_size": 102,
+    "state_family_count": 188,
+    "median_financial_loss": 126200,
+    "median_burden_sample_size": 114,
     "median_months_lost": 15,
-    "pro_se_pct": 48.8,
-    "pro_se_count": 79,
-    "_pdf_state_family_count": 162,
+    "pro_se_pct": 48.4,
+    "pro_se_count": 91,
+    "_pdf_state_family_count": 188,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5746,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
@@ -123,11 +123,11 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Refused to investigate children to include their home(s)",
+        "body": "Refused to investigate children to include their home(s), friends, people at their school. Ignored vital information submitted. Did not investigate children, not any calls to me, no home visits, didn’t talk to teachers. She told my attorney that me not agreeing to 50/50 custody on a Friday forced an interruption on his Disney trip and I was told v cause of that my children would be moved to their fathers. They were moved the next court date",
         "kind": "comment"
       },
       {
-        "body": "Denied my due process for her personal vacation.",
+        "body": "Denied my due process for her personal vacation. Running court continuance to keep the case open to take money from hurting parents. She charges $8500 to hire for family court because she controls family court without her position.",
         "kind": "comment"
       },
       {
@@ -135,23 +135,23 @@
         "kind": "comment"
       },
       {
-        "body": "Led to extreme uncertainty",
+        "body": "The level of stress and anxiety caused by this case has led to extreme uncertainty and has taken a lot of time away from my work and family. I have lost so much trust in attorney's and the system.",
         "kind": "family_report"
       },
       {
-        "body": "Nothing is the same anymore. NOTHING",
+        "body": "What happened cost me depression, thousands of dollars and above all time with my children I will NEVER get back. Nothing is the same anymore. NOTHING",
         "kind": "family_report"
       },
       {
-        "body": "Separated a two parent family from a child over false allegations.",
+        "body": "Separated a two parent family from a child over false allegations. I am an indigent american veteran with not income for over a year fighting for my benefits. They have destroyed me financially knowing I have no income.",
         "kind": "family_report"
       },
       {
-        "body": "I was told that I monitor her to closely and was told I could not monitor them.",
+        "body": "The system has destroyed two children and maybe more as a sexual predator has access to the children's friends who he has started giving gifts to which he hides in his room. The GAL threaten my withness with fostercare if she didnt go back to her abuser now my child talks sexually with adult men online and I was told that I monitor her to closely and was told I could not monitor them. I am a cyber security engineer who has worked on child monitoring apps for fortune 10 companies.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 4
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

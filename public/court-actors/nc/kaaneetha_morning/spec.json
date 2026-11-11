@@ -34,22 +34,22 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 159,
-    "total_submissions": 221,
-    "avg_financial_loss": 181528.75,
-    "avg_months_lost": 36.0,
+    "families_approved": 157,
+    "total_submissions": 239,
+    "avg_financial_loss": 168081.76,
+    "avg_months_lost": 36.2,
     "_source_table": "movement_stats_by_state",
     "_match_value": "NC",
-    "state_family_count": 221,
-    "median_financial_loss": 137332,
-    "median_burden_sample_size": 74,
-    "median_months_lost": 17,
-    "pro_se_pct": 49.8,
-    "pro_se_count": 110,
-    "_pdf_state_family_count": 221,
+    "state_family_count": 239,
+    "median_financial_loss": 140000,
+    "median_burden_sample_size": 77,
+    "median_months_lost": 18,
+    "pro_se_pct": 48.5,
+    "pro_se_count": 116,
+    "_pdf_state_family_count": 239,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5704,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
@@ -129,15 +129,15 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Denied my visit on my baby's bday at first",
+        "body": "Kaaneetha likes to degrade families and talk down to them like we are lesser of a person. She tries to turn every situation around to make the parent look bad. Since she became supervisor she hasmade my caseworker Shy-Kendra Lawson stop communicating with me completely and Kaaneetha has stopped all supervised visits with my children without a court order. She is disrespectful and has pushed for adoption and away from reunification since she started a few months ago. The last supervisor got up in the middle of work left everything at his desk, quit, and walked out. I believe that he couldn't go along with the orders he was being pushed to do to me. He had denied my visit on my baby's bday at first and then he called me the morning of my visit to tell me he was going to allow my visit after sleeping on it all night. He had started having compassion near the end and relating with me more and then he got up and just walked out and quit. Suspended my court-ordered visits with my children and told me visits would not resume unless I completed a hair follicle test, despite my prior negative drug screens and no new court order being shown to me. She is so unprofessional and acts ghetto!! Kaaneetha Morning informed me my visits were suspended, which further delayed reunification and caused continued separation from my children. She is really rude and degrades me every chance she gets.",
         "kind": "comment"
       },
       {
-        "body": "Was rude and tried degrading me every chance she got.",
+        "body": "Restricted my visitation, ignored evidence and concerns I raised, and supported continued separation from my child in foster care. Was rude and tried degrading me every chance she got.",
         "kind": "comment"
       },
       {
-        "body": "Li3s, under oath, tampered srugs screena, not baving children's best interests at…",
+        "body": "Li3s, under oath, tampered srugs screena, not baving children's best interests at forefront",
         "kind": "comment"
       },
       {
@@ -145,19 +145,23 @@
         "kind": "comment"
       },
       {
-        "body": "Took my kids for false report",
+        "body": "They took my kids for false report and now I'm gonna go to court Tuesday the 16 and I was told I was gonna get unsupervised visit but not they asking for me to have supervised visit",
         "kind": "family_report"
       },
       {
-        "body": "The pain of being separated from my child has affected every part of my life.",
+        "body": "I have missed moments with my baby that I will never get back, and the pain of being separated from my child has affected every part of my life. I want people to know that parents and children should not be torn apart without real evidence, fairness, and due process.",
         "kind": "family_report"
       },
       {
-        "body": "It was sanctioned harm.",
+        "body": "It has stole my natural right as a mother to build bond with child qnd the wmotional stress on the children and the mother.. in the be batudal qorkd what effecta does it have on aby other mother that has its baby taken or hurt...",
+        "kind": "family_report"
+      },
+      {
+        "body": "This system didn’t just fail my family — it systematically punished me for protecting my children, tore them from their mother, and caused irreversible trauma under the guise of ‘justice.’ What was done to us wasn’t protection; it was sanctioned harm.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 5
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

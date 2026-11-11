@@ -27,27 +27,27 @@
     "actor_bucket_key": "samantha kech|NC"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-yfhm15ft/New Final Post and Capcut template/export/samantha_keech/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/samantha_keech/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 159,
-    "total_submissions": 221,
-    "avg_financial_loss": 181528.75,
-    "avg_months_lost": 36.0,
+    "families_approved": 157,
+    "total_submissions": 239,
+    "avg_financial_loss": 168081.76,
+    "avg_months_lost": 36.2,
     "_source_table": "movement_stats_by_state",
     "_match_value": "NC",
-    "state_family_count": 221,
-    "median_financial_loss": 137332,
-    "median_burden_sample_size": 74,
-    "median_months_lost": 17,
-    "pro_se_pct": 49.8,
-    "pro_se_count": 110,
-    "_pdf_state_family_count": 221,
+    "state_family_count": 239,
+    "median_financial_loss": 140000,
+    "median_burden_sample_size": 77,
+    "median_months_lost": 18,
+    "pro_se_pct": 48.5,
+    "pro_se_count": 116,
+    "_pdf_state_family_count": 239,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5704,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -128,11 +128,11 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "She told me to make a bed on the floor.",
+        "body": "She stayed with me some when I had to sleep in the office at DSS. I told her the loveseats weren’t long enough for me to sleep and she told me to make a bed on the floor. I also had no breakfast on two occasions and when I asked she said she would get me something soon. Soon was lunch and she d order pizza for lunch and that was also my dinner to. It was like that each time she was with me when I had to stay in the office.",
         "kind": "comment"
       },
       {
-        "body": "Heard recording I have and did not investigate anything also acts dumb when it…",
+        "body": "Heard recording I have and did not investigate anything also acts dumb when it comes to the funding for foster care",
         "kind": "comment"
       },
       {
@@ -154,13 +154,9 @@
       {
         "body": "Former pissed off foster kid",
         "kind": "family_report"
-      },
-      {
-        "body": "Gave my 8 year old daughter to our abuser",
-        "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 3
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

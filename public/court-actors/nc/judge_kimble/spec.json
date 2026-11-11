@@ -29,27 +29,27 @@
     "actor_bucket_key": "kimble|NC"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-yfhm15ft/New Final Post and Capcut template/export/judge_kimble/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/judge_kimble/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 159,
-    "total_submissions": 221,
-    "avg_financial_loss": 181528.75,
-    "avg_months_lost": 36.0,
+    "families_approved": 157,
+    "total_submissions": 239,
+    "avg_financial_loss": 168081.76,
+    "avg_months_lost": 36.2,
     "_source_table": "movement_stats_by_state",
     "_match_value": "NC",
-    "state_family_count": 221,
-    "median_financial_loss": 137332,
-    "median_burden_sample_size": 74,
-    "median_months_lost": 17,
-    "pro_se_pct": 49.8,
-    "pro_se_count": 110,
-    "_pdf_state_family_count": 221,
+    "state_family_count": 239,
+    "median_financial_loss": 140000,
+    "median_burden_sample_size": 77,
+    "median_months_lost": 18,
+    "pro_se_pct": 48.5,
+    "pro_se_count": 116,
+    "_pdf_state_family_count": 239,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5704,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
@@ -129,15 +129,15 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "The father had zero case against the mother. All his accusations were proved false.",
+        "body": "He dragged the case out over months and months because he kept claiming he didn’t have time to listen to the testimonies. It cost our family tens of thousands of dollars. He claimed he lost his notes and extended the case yet another day for the father to say his piece all over again. Pushed and pushed his decision as far as he possible could. The father had zero case against the mother. All his accusations were proved false. The entire thing was weird and suspicious and showed favoritism towards the father. Justice was not served. Seemed the entire time the judge did not give a care at all about the case.",
         "kind": "comment"
       },
       {
-        "body": "He allowed heresay numerous times for her client.",
+        "body": "Very inappropriate comments during the trial. He joked about himself not knowing when to stop drinking alcohol - knowing that he was arrested for a DUI from picking up his kids from school. He also was talking inappropriately with the attorney - he allowed heresay numerous times for her client. Didn’t ask for proof. Discarded all evidence of her client being abusive and neglected to make a ruling several times until it was far enough out to claim comfort.",
         "kind": "comment"
       },
       {
-        "body": "Took my son from me with no evidence Made a ruling with no evidence.",
+        "body": "Ruled on emergency ex parte, never had an emergency hearing. Took my son from me with no evidence Made a ruling with no evidence. Left child with abuser. Took months and months to make a ruling on emergency ex parte order",
         "kind": "comment"
       },
       {
@@ -145,15 +145,23 @@
         "kind": "comment"
       },
       {
-        "body": "This has cost my parents their retirement savings.",
+        "body": "This has cost my parents their retirement savings. They will now have to work until they die because the judge did not handle it in a reasonable or even remotely timely manner. It has cost my sister and her children a lot of trauma and sadness over the last year because the judge showed favoritism. It is absolutely mind boggling that the case when the way it did. Unheard of.",
         "kind": "family_report"
       },
       {
-        "body": "After domestic violence testimony and tons of evidence the judge still took my babies.",
+        "body": "Due to the emergency case being drug out for entirely too long, there has been lost time with the child. The system has proved to be incredible corrupt with this judge and attorney.",
+        "kind": "family_report"
+      },
+      {
+        "body": "I’ve witnessed a very unfair and concerning amount of corruption in this court room as a witness. I am deeply concerned for the justice system in this county and have lost faith in honorable decision making.",
+        "kind": "family_report"
+      },
+      {
+        "body": "My boys that I raised alone were instantly ripped from their mother and have been told horrible untrue things about me to try and turn them against me. After domestic violence testimony and tons of evidence the judge still took my babies.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 7
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

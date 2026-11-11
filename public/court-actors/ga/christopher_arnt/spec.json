@@ -13,14 +13,14 @@
     "state": "GA",
     "state_abbr": "GA",
     "mention_count": 5,
-    "family_count": 2,
-    "public_family_count": 2,
+    "family_count": 3,
+    "public_family_count": 3,
     "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 5,
     "supabase_row_ids": [
       "6f603d46-7bbf-4bae-8185-3765544f3e66",
       "8769a8a1-835c-4535-80b8-aaf9aa8a01f8",
-      "221fdd9e-74de-49c5-97d1-c048093a83a9",
+      "be190880-e271-4e96-ab49-1f84741e5990",
       "07f67ff3-b990-4b1a-94c3-6e8a5d429778",
       "248809fc-bb13-434c-b047-44b1cabdb01f"
     ],
@@ -33,33 +33,27 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 121,
-    "total_submissions": 161,
-    "avg_financial_loss": 206416.3,
-    "avg_months_lost": 31.7,
+    "families_approved": 119,
+    "total_submissions": 192,
+    "avg_financial_loss": 189146.89,
+    "avg_months_lost": 32.6,
     "_source_table": "movement_stats_by_state",
     "_match_value": "GA",
-    "state_family_count": 161,
+    "state_family_count": 192,
     "median_financial_loss": 151000,
-    "median_burden_sample_size": 87,
+    "median_burden_sample_size": 99,
     "median_months_lost": 19,
-    "pro_se_pct": 42.2,
-    "pro_se_count": 68,
-    "_pdf_state_family_count": 161,
+    "pro_se_pct": 42.7,
+    "pro_se_count": 82,
+    "_pdf_state_family_count": 192,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5722,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
-    "family_count": 2,
+    "family_count": 3,
     "family_reports": [
-      {
-        "body": "Attempted to destroy the child bond with her mother. Altered the child’s life by denying medical treatment.",
-        "state": "GA",
-        "county": "Catoosa",
-        "row_id": "3ab71e48-9b6a-42eb-aafd-b6dd357694ba"
-      },
       {
         "body": "Forever altered my disabled child’s life by denying her care due to false allegations with no evidence",
         "state": "GA",
@@ -75,26 +69,22 @@
     ],
     "public_comments": [
       {
-        "comment_text": "Removed my child with no evidence, denied due process, accepted fabricated documents from opposing counsel",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
         "comment_text": "Ex parte communication with GAL and opposing counsel, denied due process, threw away a doctor’s affidavit Removed my child with no evidence just personal opinion of the GAL Granted ex parte hearing with no evidence, refuses to view evidence of abuse, ex parte communications with GAL",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Catoosa County"
       },
       {
-        "comment_text": "Ignored evidence, signed illegal order for child removal, ex parte communication",
+        "comment_text": "Removed my child with no evidence, denied due process, accepted fabricated documents from opposing counsel",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Superior Court Catoosa County"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/christopher_arnt",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='GA'",
-    "pdf_public_actor: no 'Christopher Arnt' in cache for GA"
+    "public_family_count_api: no actors returned for state='GA'"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
@@ -114,23 +104,15 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Removed my child with no evidence",
+        "body": "Ex parte communication with GAL and opposing counsel, denied due process, threw away a doctor’s affidavit Removed my child with no evidence just personal opinion of the GAL Granted ex parte hearing with no evidence, refuses to view evidence of abuse, ex parte communications with GAL",
         "kind": "comment"
       },
       {
-        "body": "Ex parte communication with GAL and opposing counsel, denied due process, threw…",
+        "body": "Removed my child with no evidence, denied due process, accepted fabricated documents from opposing counsel",
         "kind": "comment"
       },
       {
-        "body": "Ignored evidence, signed illegal order for child removal, ex parte communication",
-        "kind": "comment"
-      },
-      {
-        "body": "Attempted to destroy the child bond with her mother.",
-        "kind": "family_report"
-      },
-      {
-        "body": "Forever altered my disabled child’s life by denying her care due to false…",
+        "body": "Forever altered my disabled child’s life by denying her care due to false allegations with no evidence",
         "kind": "family_report"
       },
       {
@@ -138,7 +120,7 @@
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 2
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

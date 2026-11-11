@@ -32,22 +32,22 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 249,
-    "total_submissions": 335,
-    "avg_financial_loss": 232641.96,
-    "avg_months_lost": 31.1,
+    "families_approved": 243,
+    "total_submissions": 369,
+    "avg_financial_loss": 221381.58,
+    "avg_months_lost": 29.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "TX",
-    "state_family_count": 335,
-    "median_financial_loss": 118900,
-    "median_burden_sample_size": 159,
+    "state_family_count": 369,
+    "median_financial_loss": 122000,
+    "median_burden_sample_size": 177,
     "median_months_lost": 18,
-    "pro_se_pct": 48.7,
-    "pro_se_count": 163,
-    "_pdf_state_family_count": 335,
+    "pro_se_pct": 46.6,
+    "pro_se_count": 172,
+    "_pdf_state_family_count": 369,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5746,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -115,11 +115,11 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "The judge hated me and she will give them everything they were asking for and she did.",
+        "body": "He is my ex attorney. He told me and my lawyer at the moment that we needed to get to an agreement with them because the judge hated me and she will give them everything they were asking for and she did. I also consulted him and paid him (he returned the money when i told him I was not going to have him as a lawyer because he changed from one time fee to per hour) and he didn’t want to leave the case and judge permitted it",
         "kind": "comment"
       },
       {
-        "body": "Just took my monies Lazy / didn’t fight / cited with the other party",
+        "body": "Didn’t help ; just took my monies Lazy / didn’t fight / cited with the other party and took my monies. He has done it to others.",
         "kind": "comment"
       },
       {
@@ -127,15 +127,15 @@
         "kind": "family_report"
       },
       {
-        "body": "Has destroyed my daughter and I.",
+        "body": "Has destroyed my daughter and I. Left me bankrupt and to top it off need to pay Child support to the father so he can pay his debt and have no work.",
         "kind": "family_report"
       },
       {
-        "body": "They took all that mattered to me",
+        "body": "They have destroyed my life to the point that sometimes I feel I don’t want to be in this World anymore, they took all that mattered to me",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 2
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

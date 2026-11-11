@@ -9,7 +9,7 @@
     "role": "CPS Worker",
     "court": "marion",
     "county": "marion",
-    "court_or_county": "marion",
+    "court_or_county": "Perry",
     "state": "Indiana",
     "state_abbr": "IN",
     "mention_count": 3,
@@ -26,27 +26,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-7gspmaqk/New Final Post and Capcut template/export/indiana_department_of_child_services/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/indiana_department_of_child_services/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 126,
-    "total_submissions": 161,
-    "avg_financial_loss": 132780.75,
-    "avg_months_lost": 29.2,
+    "families_approved": 120,
+    "total_submissions": 198,
+    "avg_financial_loss": 222011.73,
+    "avg_months_lost": 31.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "IN",
-    "state_family_count": 161,
-    "median_financial_loss": 63875,
-    "median_burden_sample_size": 80,
-    "median_months_lost": 18,
-    "pro_se_pct": 45.3,
-    "pro_se_count": 73,
-    "_pdf_state_family_count": 161,
+    "state_family_count": 198,
+    "median_financial_loss": 68150,
+    "median_burden_sample_size": 98,
+    "median_months_lost": 20,
+    "pro_se_pct": 49.5,
+    "pro_se_count": 98,
+    "_pdf_state_family_count": 198,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5746,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -114,11 +114,11 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Lindsey from dcs send Ohio in to do her work.",
+        "body": "Lindsey from dcs send Ohio in to do her work and then wouldn’t listen to their recommendations blocking them from keeping my child home with me and safe after being beaten severely. Attempted to meet with her after preparing hours worth of evidence and driving the hour and 45 minutes she wouldn’t drive and she canceled the meeting five minutes before it pitiful. Do your job.",
         "kind": "comment"
       },
       {
-        "body": "Delayed reunification, acted out of convenience and made rules up as they went…",
+        "body": "Delayed reunification, acted out of convenience and made rules up as they went theough the case",
         "kind": "comment"
       },
       {
@@ -126,7 +126,7 @@
         "kind": "comment"
       },
       {
-        "body": "Are ok with my child entering a strangers vehicle.",
+        "body": "Taken away parenting time, almost severed a parental bond, refuse to listen, states its about safety of my child but are ok with my child entering a strangers vehicle. Misinformation, miscommunication and decietful behavior time after time.",
         "kind": "family_report"
       },
       {
@@ -134,7 +134,7 @@
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 2
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

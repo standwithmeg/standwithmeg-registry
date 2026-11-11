@@ -1,0 +1,124 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "barry_l_hafar",
+    "display_name": "Barry L. Hafar",
+    "title": "",
+    "first_name": "Barry L.",
+    "last_name": "Hafar",
+    "role": "Judge",
+    "court": "Oklahoma County",
+    "county": "Oklahoma County",
+    "court_or_county": "Oklahoma County",
+    "state": "OK",
+    "state_abbr": "OK",
+    "mention_count": 3,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "50a6468a-6691-4231-850e-daf6e1b658b2",
+      "43a6571c-2148-47c0-9cdb-b3ede94447b6",
+      "c78653f3-1c85-424e-af76-8c8c8d844fa7"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "bary hafar|OK"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 120,
+    "total_submissions": 223,
+    "avg_financial_loss": 112707.53,
+    "avg_months_lost": 28.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OK",
+    "state_family_count": 223,
+    "median_financial_loss": 104250,
+    "median_burden_sample_size": 115,
+    "median_months_lost": 16,
+    "pro_se_pct": 41.7,
+    "pro_se_count": 93,
+    "_pdf_state_family_count": 223,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6496,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 3,
+    "family_reports": [
+      {
+        "body": "I was ghosted as a parent from my children by the district court of Oklahoma County against state law. The relationships with my children suffered a lot but we persevered.",
+        "state": "OK",
+        "county": "Oklahoma",
+        "row_id": "d5df3db8-ad09-4649-a921-74970e0d36bf"
+      },
+      {
+        "body": "It has caused a tremendous amount of stress on my family. It has taken a lot of parenting away from me where I have missed a lot of important milestones.",
+        "state": "OK",
+        "county": "Oklahoma",
+        "row_id": "ffd4a092-82b4-4647-87cc-095e813390e1"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Suppressed evidence of racketeering activity by attorneys representing Oklahoma Department of Human Services and my ex.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Oklahoma County"
+      },
+      {
+        "comment_text": "Delayed trial",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Oklahoma"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/barry_l_hafar",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='OK'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ok/barry_l_hafar/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Suppressed evidence of racketeering activity by attorneys representing Oklahoma Department of Human Services and my ex.",
+        "kind": "comment"
+      },
+      {
+        "body": "Delayed trial",
+        "kind": "comment"
+      },
+      {
+        "body": "I was ghosted as a parent from my children by the district court of Oklahoma County against state law. The relationships with my children suffered a lot but we persevered.",
+        "kind": "family_report"
+      },
+      {
+        "body": "It has caused a tremendous amount of stress on my family. It has taken a lot of parenting away from me where I have missed a lot of important milestones.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

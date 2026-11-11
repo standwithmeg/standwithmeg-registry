@@ -26,27 +26,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-90yxu6ix/New Final Post and Capcut template/export/guy_e_bradberry/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/guy_e_bradberry/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 48,
-    "total_submissions": 64,
-    "avg_financial_loss": 167916.76,
-    "avg_months_lost": 38.0,
+    "families_approved": 45,
+    "total_submissions": 68,
+    "avg_financial_loss": 175806.37,
+    "avg_months_lost": 37.5,
     "_source_table": "movement_stats_by_state",
     "_match_value": "LA",
-    "state_family_count": 64,
-    "median_financial_loss": 193450,
-    "median_burden_sample_size": 32,
+    "state_family_count": 68,
+    "median_financial_loss": 185300,
+    "median_burden_sample_size": 33,
     "median_months_lost": 24,
-    "pro_se_pct": 51.6,
-    "pro_se_count": 33,
-    "_pdf_state_family_count": 64,
+    "pro_se_pct": 51.5,
+    "pro_se_count": 35,
+    "_pdf_state_family_count": 68,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5516,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -101,19 +101,19 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "He sees him again, “he better bring a tooth brush” 😂",
+        "body": "Very strict judge, he didn’t do anything to me, just told our child’s father that if he sees him again, “he better bring a tooth brush” 😂",
         "kind": "comment"
       },
       {
-        "body": "Allowed opposing party to proceed in trial without me being properly represented in custody hearings.",
+        "body": "Allowed opposing party to proceed in trial without me being properly represented in custody hearings. Allowed testimony for matters not related to the matters of the case being held.",
         "kind": "comment"
       },
       {
-        "body": "Separated my children from one another",
+        "body": "The family court system has separated my children from one another, completely ruined us financially and prevented any future plans of time together from ever happening. It has left us traumatized, fearful for our lives at times, terrified of being served and court hearings, shaken their trust in authorities, police and our justice system.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 2
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

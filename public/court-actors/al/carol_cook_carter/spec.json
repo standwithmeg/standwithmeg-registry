@@ -28,27 +28,27 @@
     "actor_bucket_key": "carol cook carter|AL"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-7gspmaqk/New Final Post and Capcut template/export/carol_cook_carter/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/carol_cook_carter/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 103,
-    "total_submissions": 143,
-    "avg_financial_loss": 84215.55,
-    "avg_months_lost": 34.0,
+    "families_approved": 102,
+    "total_submissions": 158,
+    "avg_financial_loss": 91268.73,
+    "avg_months_lost": 32.6,
     "_source_table": "movement_stats_by_state",
     "_match_value": "AL",
-    "state_family_count": 143,
-    "median_financial_loss": 55000,
-    "median_burden_sample_size": 63,
-    "median_months_lost": 12,
-    "pro_se_pct": 42.7,
-    "pro_se_count": 61,
-    "_pdf_state_family_count": 143,
+    "state_family_count": 158,
+    "median_financial_loss": 52500,
+    "median_burden_sample_size": 71,
+    "median_months_lost": 13,
+    "pro_se_pct": 39.9,
+    "pro_se_count": 63,
+    "_pdf_state_family_count": 158,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5746,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -128,11 +128,11 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "She still advocated for the father and he ultimately received joint custody.",
+        "body": "Saw the evidence presented where my child’s father was threatening to harm both me and my child. She still advocated for the father and he ultimately received joint custody. I fully believe this is because she was, and is, very close friends with the father’s attorney.",
         "kind": "comment"
       },
       {
-        "body": "Told me she would get her money one way or the other.",
+        "body": "Told me she would get her money one way or the other. Had me jailed with no way out but to pay. Ex husband still hasn't paid her.",
         "kind": "comment"
       },
       {
@@ -148,19 +148,19 @@
         "kind": "family_report"
       },
       {
-        "body": "My child’s, and they still sided for him to receive joint custody of our child.",
+        "body": "Carol Cook Carter and Joy Booth both put my child’s life in danger. They both looked at evidence showing where my child’s father was abusive to me during our relationship and also where he had threatened both my life and my child’s, and they still sided for him to receive joint custody of our child.",
         "kind": "family_report"
       },
       {
-        "body": "Autauga County family court has failed my children and me over and over again.",
+        "body": "Autauga County family court has failed my children and me over and over again. More than 30 years of mental and physchological abuse has been legally perpetuated at the hands of the court system.",
         "kind": "family_report"
       },
       {
-        "body": "This is family court and it’s destroying the heart and soul of our children",
+        "body": "If you wanted to destroy a powerful woman... you wouldn't go after her directly. You'd go after her heart. Her children. Her sanity. This is family court and it’s destroying the heart and soul of our children",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 3
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

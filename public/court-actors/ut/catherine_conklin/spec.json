@@ -30,27 +30,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-7gspmaqk/New Final Post and Capcut template/export/catherine_conklin/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/catherine_conklin/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 41,
-    "total_submissions": 61,
-    "avg_financial_loss": 257610.59,
-    "avg_months_lost": 18.9,
+    "total_submissions": 69,
+    "avg_financial_loss": 257962.66,
+    "avg_months_lost": 19.2,
     "_source_table": "movement_stats_by_state",
     "_match_value": "UT",
-    "state_family_count": 61,
-    "median_financial_loss": 162000,
-    "median_burden_sample_size": 37,
+    "state_family_count": 69,
+    "median_financial_loss": 157200,
+    "median_burden_sample_size": 41,
     "median_months_lost": 6,
-    "pro_se_pct": 57.4,
-    "pro_se_count": 35,
-    "_pdf_state_family_count": 61,
+    "pro_se_pct": 52.2,
+    "pro_se_count": 36,
+    "_pdf_state_family_count": 69,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5746,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 7,
     "actor_report_count": 7,
@@ -118,7 +118,7 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Kept delaying hearings to give abuser more chance for custody of kids.",
+        "body": "Same person... so the same reason. Kept delaying hearings to give abuser more chance for custody of kids.",
         "kind": "comment"
       },
       {
@@ -134,15 +134,15 @@
         "kind": "family_report"
       },
       {
-        "body": "My kids are still at risk.",
+        "body": "My kids are still at risk and I have to come up with more money to make sure he cant have custody as he is a abusive, addict with mental issues. If something were to happen to me they would have to go with him and he will ruin them.",
         "kind": "family_report"
       },
       {
-        "body": "He threatened to with the exception of the lives of the children and I.",
+        "body": "My ex husband has taken everything he threatened to with the exception of the lives of the children and I. I am terrified to fight back because I recognize all prior threats made were followed through on. I have to choose between staying silent or risking him ending our lives. It’s no place for any parent or child to exist in.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 3
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

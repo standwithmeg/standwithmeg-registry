@@ -2,9 +2,9 @@
   "schema_version": 2,
   "actor": {
     "slug": "julie_doss",
-    "display_name": "Julie Doss",
+    "display_name": "Julie Ann Doss",
     "title": "",
-    "first_name": "Julie",
+    "first_name": "Julie Ann",
     "last_name": "Doss",
     "role": "Judge",
     "court": "Tulsa",
@@ -31,22 +31,22 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 130,
-    "total_submissions": 175,
-    "avg_financial_loss": 121131.03,
-    "avg_months_lost": 24.4,
+    "families_approved": 120,
+    "total_submissions": 223,
+    "avg_financial_loss": 112707.53,
+    "avg_months_lost": 28.0,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OK",
-    "state_family_count": 175,
-    "median_financial_loss": 101500,
-    "median_burden_sample_size": 95,
-    "median_months_lost": 13,
+    "state_family_count": 223,
+    "median_financial_loss": 104250,
+    "median_burden_sample_size": 115,
+    "median_months_lost": 16,
     "pro_se_pct": 41.7,
-    "pro_se_count": 73,
-    "_pdf_state_family_count": 175,
+    "pro_se_count": 93,
+    "_pdf_state_family_count": 223,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5665,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -110,11 +110,15 @@
         "kind": "comment"
       },
       {
-        "body": "The court system has allowed a multi-offender DV abuser to weaponize the court system.",
+        "body": "Family court is a circus and for all of the lip service to “children’s best interest”, my kids are BY FAR, worse off today because of it.",
+        "kind": "family_report"
+      },
+      {
+        "body": "The aftermath of these proceedings affected not only me, but my children, their mental health and well-being, my livelihood, and the overall stability of my family. The court system has allowed a multi-offender DV abuser to weaponize the court system.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 2
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

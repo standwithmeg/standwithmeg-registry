@@ -25,34 +25,34 @@
       "cb5c413d-20d9-438d-99c7-299c10b3b1c6",
       "b4927d24-2ded-4e53-9174-d7b09d55e533",
       "b0002bf0-4dd3-483d-aad7-3e1aa84d4aaa",
-      "d46148c3-fb72-4d4f-b402-42f7cb7e3001",
-      "4f4b4f8c-5a4a-4cd5-9caf-547869fe1487"
+      "4f4b4f8c-5a4a-4cd5-9caf-547869fe1487",
+      "d46148c3-fb72-4d4f-b402-42f7cb7e3001"
     ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-4q360ne7/New Final Post and Capcut template/export/jordan_dalgleish/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/jordan_dalgleish/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 130,
-    "total_submissions": 175,
-    "avg_financial_loss": 121131.03,
-    "avg_months_lost": 24.4,
+    "families_approved": 120,
+    "total_submissions": 223,
+    "avg_financial_loss": 112707.53,
+    "avg_months_lost": 28.0,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OK",
-    "state_family_count": 175,
-    "median_financial_loss": 101500,
-    "median_burden_sample_size": 95,
-    "median_months_lost": 13,
+    "state_family_count": 223,
+    "median_financial_loss": 104250,
+    "median_burden_sample_size": 115,
+    "median_months_lost": 16,
     "pro_se_pct": 41.7,
-    "pro_se_count": 73,
-    "_pdf_state_family_count": 175,
+    "pro_se_count": 93,
+    "_pdf_state_family_count": 223,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5665,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 9,
     "actor_report_count": 9,
@@ -162,23 +162,23 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "I’m supposed to be there or not.",
+        "body": "Claims to mail things out (ie: motion for status conf, I never served with anything until I reached out to my judges court clerk and asked if I’m supposed to be there or not. Right after that I was surprisingly served suddenly 2 days after my call to judges office.",
         "kind": "comment"
       },
       {
-        "body": "Effectively helped my ex’s side throughout the divorce process.",
+        "body": "Spent countless hours with my ex and the kids during our divorce. Spent less than an hour with me and the kids. Never objectively considered both parent’s roles and value in the kids lives. Effectively helped my ex’s side throughout the divorce process.",
         "kind": "comment"
       },
       {
-        "body": "Allowed the case to move forward and my child to be removed from my care.",
+        "body": "Failed to follow through with investigations and meetings with the children, she knew of lies being told by the opposing party but allowed the case to move forward and my child to be removed from my care.",
         "kind": "comment"
       },
       {
-        "body": "Conflict of interest with opposing counsel Atty discussed client details outside of…",
+        "body": "Conflict of interest with opposing counsel Atty discussed client details outside of case facts with opposing council and vice versa Talked client out of VPO",
         "kind": "comment"
       },
       {
-        "body": "Failure to report abuse, bias, failure to provide evidence, removal of custody.",
+        "body": "Failure to report abuse, bias, failure to provide evidence, removal of custody without basis",
         "kind": "comment"
       },
       {
@@ -190,27 +190,31 @@
         "kind": "comment"
       },
       {
-        "body": "Jordan Dalgleish is a snake who will lie, cheat, & manipulate anyone.",
+        "body": "Jordan Dalgleish is a snake who will lie, cheat, & manipulate anyone and she is the last person who should be representing any child. Ever.",
         "kind": "family_report"
       },
       {
-        "body": "The family court system has cost me precious time with my children, furthered our…",
+        "body": "The family court system has cost me precious time with my children, furthered our traumatic experiences, favors reunification over safety, and continues to horrify me",
         "kind": "family_report"
       },
       {
-        "body": "The family court system wrongfully removed my child at Jordan Dalgleish’s…",
+        "body": "The family court system wrongfully removed my child at Jordan Dalgleish’s suggestion after accepting a fraudulent document as fact, DHS involvement and still I am missing out on important things in my child’s life, my child is extremely depressed.",
         "kind": "family_report"
       },
       {
-        "body": "The court system has allowed lies told by one side.",
+        "body": "The court system has allowed lies told by one side without evidence to be the sole decision in allowing one of my children to be taken. It has caused significant damage to my relationship with my child and the relationship with the child’s siblings.",
         "kind": "family_report"
       },
       {
-        "body": "I knew what would happen to us in okmulgee county",
+        "body": "Family court is a circus and for all of the lip service to “children’s best interest”, my kids are BY FAR, worse off today because of it.",
+        "kind": "family_report"
+      },
+      {
+        "body": "They tore us apart, they are the reason I stayed in the abuse until he finally tried to kill me because I knew what would happen to us in okmulgee county",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 2
+    "quote_page_count": 7
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

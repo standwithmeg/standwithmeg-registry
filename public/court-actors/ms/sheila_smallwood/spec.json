@@ -1,0 +1,124 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "sheila_smallwood",
+    "display_name": "Sheila Smallwood",
+    "title": "",
+    "first_name": "Sheila",
+    "last_name": "Smallwood",
+    "role": "Judge",
+    "court": "Forrest County",
+    "county": "Lamar",
+    "court_or_county": "Forrest County",
+    "state": "MS",
+    "state_abbr": "MS",
+    "mention_count": 3,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "78aba905-5502-4d3b-8d91-0d95083305a2",
+      "f87dbdfe-0110-4f4b-8d8d-1165df453281",
+      "58da800b-b1c7-494c-b081-2b1f820b26fc"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "sheila smalwod|MS"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 41,
+    "total_submissions": 70,
+    "avg_financial_loss": 134291.76,
+    "avg_months_lost": 36.4,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "MS",
+    "state_family_count": 70,
+    "median_financial_loss": 65000,
+    "median_burden_sample_size": 25,
+    "median_months_lost": 16,
+    "pro_se_pct": 47.1,
+    "pro_se_count": 33,
+    "_pdf_state_family_count": 70,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6496,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 3,
+    "family_reports": [
+      {
+        "body": "Stolen my children’s childhoods. Ripped our family apart. Placed a child permanently with his abusive father. Aided and facilitated abuse and the abuser. Opened my eyes to the real system — it is NOT “broken”.. it’s a well oiled, smooth running.. money making, family breaking machine.",
+        "state": "MS",
+        "county": "Lamar",
+        "row_id": "fe1cc797-35b9-4a6c-b90b-49c1e7504444"
+      },
+      {
+        "body": "Took three healthy kids and emotionally abused them, along with their mother and maternal family, through repeated questioning by the court therapist, CPS, judge, and GAL. Took the children away from a loving mother based on false allegations, without due process or objective evidence. Full story is surreal. I consent to the use of my quotes as long as they do not mention or include mine or my children’s private information. I copied and pasted from some of my open claims.",
+        "state": "MS",
+        "county": "Lamar",
+        "row_id": "5c1a2f45-f174-4a04-aba5-70ce8e363fb6"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Lacked due process, child endangerment, ignoring Father’s failure to comply, removing children for seeking medical help, “no transcripts,” speaking to a child under the state age requirement with the transcript missing, allowing medical neglect, allowing Father to refuse to communicate despite joint legal custody, holding hearings without proper notice on one end, improper balance of treatment, ignoring self-harm and suicide threats, and plenty more.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lamar"
+      },
+      {
+        "comment_text": "Heard my initial filing. Granted DAPO on the spot based on all the evidence I brought with me. Made me promise I would never go back to my ex. Told me to get my kids and go to my parents for safety until things could be legally figured out.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lamar county 10th district"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/sheila_smallwood",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='MS'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ms/sheila_smallwood/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Lacked due process, child endangerment, ignoring Father’s failure to comply, removing children for seeking medical help, “no transcripts,” speaking to a child under the state age requirement with the transcript missing, allowing medical neglect, allowing Father to refuse to communicate despite joint legal custody, holding hearings without proper notice on one end, improper balance of treatment, ignoring self-harm and suicide threats, and plenty more.",
+        "kind": "comment"
+      },
+      {
+        "body": "Heard my initial filing. Granted DAPO on the spot based on all the evidence I brought with me. Made me promise I would never go back to my ex. Told me to get my kids and go to my parents for safety until things could be legally figured out.",
+        "kind": "comment"
+      },
+      {
+        "body": "Stolen my children’s childhoods. Ripped our family apart. Placed a child permanently with his abusive father. Aided and facilitated abuse and the abuser. Opened my eyes to the real system — it is NOT “broken”.. it’s a well oiled, smooth running.. money making, family breaking machine.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Took three healthy kids and emotionally abused them, along with their mother and maternal family, through repeated questioning by the court therapist, CPS, judge, and GAL. Took the children away from a loving mother based on false allegations, without due process or objective evidence. Full story is surreal. I consent to the use of my quotes as long as they do not mention or include mine or my children’s private information. I copied and pasted from some of my open claims.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 4
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

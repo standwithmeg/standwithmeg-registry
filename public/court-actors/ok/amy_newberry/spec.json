@@ -12,52 +12,66 @@
     "court_or_county": "Oklahoma",
     "state": "OK",
     "state_abbr": "OK",
-    "mention_count": 4,
-    "family_count": 4,
-    "public_family_count": 4,
+    "mention_count": 12,
+    "family_count": 5,
+    "public_family_count": 5,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 4,
+    "actor_report_count": 12,
     "supabase_row_ids": [
       "7a212f28-eee2-44a7-b388-865f7ad874c4",
       "cb12f9e4-14c6-41a9-8f4f-4105d0a19f24",
+      "6ec8293d-1e05-47a1-8b6b-177d5cd0d641",
       "7fea4acd-b209-4d51-99cb-503f34808623",
-      "8b16f991-a593-4d08-811a-51ba4f7c04a6"
+      "8b16f991-a593-4d08-811a-51ba4f7c04a6",
+      "17b364ff-ca86-4355-9275-b5feda86c073",
+      "2c03d23e-0a32-4ecb-9c8d-148cf2a84e36",
+      "72bb919d-d0a4-424f-b935-faa34f5ca10a",
+      "46167d61-9673-405f-bf0a-3880903a784a",
+      "6069718e-a5e0-40ba-8e5b-e4fffe4558f8",
+      "2bfc3ee1-f76d-40e0-82cf-88d26955aec4",
+      "120757ce-64b5-40bb-8595-10a82aebba4d"
     ],
     "actor_row_id": null,
     "actor_bucket_key": "amy newbery|OK"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-4q360ne7/New Final Post and Capcut template/export/amy_newberry/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/amy_newberry/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 130,
-    "total_submissions": 175,
-    "avg_financial_loss": 121131.03,
-    "avg_months_lost": 24.4,
+    "families_approved": 120,
+    "total_submissions": 223,
+    "avg_financial_loss": 112707.53,
+    "avg_months_lost": 28.0,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OK",
-    "state_family_count": 175,
-    "median_financial_loss": 101500,
-    "median_burden_sample_size": 95,
-    "median_months_lost": 13,
+    "state_family_count": 223,
+    "median_financial_loss": 104250,
+    "median_burden_sample_size": 115,
+    "median_months_lost": 16,
     "pro_se_pct": 41.7,
-    "pro_se_count": 73,
-    "_pdf_state_family_count": 175,
+    "pro_se_count": 93,
+    "_pdf_state_family_count": 223,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5665,
+  "movement_total": 6496,
   "supabase": {
-    "report_count": 4,
-    "actor_report_count": 4,
-    "family_count": 4,
+    "report_count": 12,
+    "actor_report_count": 12,
+    "family_count": 5,
     "family_reports": [
       {
         "body": "Corrupt",
         "state": "OK",
         "county": "Oklahoma",
         "row_id": "b9f15e13-9f70-412c-97ad-c13104888877"
+      },
+      {
+        "body": "Life has never been the same. The injustice is heavy",
+        "state": "OK",
+        "county": "Oklahoma",
+        "row_id": "bd145df0-b4cf-4560-83b7-e6254b7e8fd0"
       },
       {
         "body": "It is psychologically messing up my children.",
@@ -73,6 +87,12 @@
       }
     ],
     "public_comments": [
+      {
+        "comment_text": "Filed aggressively false DHS report against me. She was sued twice in 2022 by others. Allegations appear to include misrepresenting professional credentials and qualifications; presenting opinions beyond the scope of licensure or expertise; failing to maintain professional records; ethical obligation concerns; exceeding the appropriate role of a treating therapist in family court matters; providing information or opinions that influenced custody and psych evaluations; making reports or recommendations alleged to be false or misleading. In my own case, I experienced many of the same, and am connected with others who did too. Cancelled several appointments at the last minute to attend other emergency court hearings. Allowed associate to provide court ordered anger management to the father while she provided therapy to the kids so they could work together and share notes. Graduated him despite documentation of continued harassment and concerning behaviors. Years lost that could have been dedicated to kids healing instead of additional trauma. My experience left serious concerns about this pattern of practice when working with traumatized children. It is discouraging that, despite the harm caused, laws like Oklahoma’s Citizen Participation Act (anti-SLAPP) can prevent meaningful accountability and allow damaging behavior to persist for people like this. Amy Newberry initially instructed everyone involved to address her as Dr. Newberry. Months later, she corrected us and had us start calling her Amy (around the time of the two lawsuits). The institution where she received her",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Oklahoma"
+      },
       {
         "comment_text": "Hired by Rob Hopkins to force my male child to believe my ex was a man. Has personal relationships as their children go to same private school. Forced my son on visits that he repeatedly told her violated the rules of that visit.",
         "author": "Anonymous parent",
@@ -115,27 +135,35 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Forced my son on visits that he repeatedly told her violated the rules of that visit.",
+        "body": "Filed aggressively false DHS report against me. She was sued twice in 2022 by others. Allegations appear to include misrepresenting professional credentials and qualifications; presenting opinions beyond the scope of licensure or expertise; failing to maintain professional records; ethical obligation concerns; exceeding the appropriate role of a treating therapist in family court matters; providing information or opinions that influenced custody and psych evaluations; making reports or recommendations alleged to be false or misleading. In my own case, I experienced many of the same, and am connected with others who did too. Cancelled several appointments at the last minute to attend other emergency court hearings. Allowed associate to provide court ordered anger management to the father while she provided therapy to the kids so they could work together and share notes. Graduated him despite documentation of continued harassment and concerning behaviors. Years lost that could have been dedicated to kids healing instead of additional trauma. My experience left serious concerns about this pattern of practice when working with traumatized children. It is discouraging that, despite the harm caused, laws like Oklahoma’s Citizen Participation Act (anti-SLAPP) can prevent meaningful accountability and allow damaging behavior to persist for people like this. Amy Newberry initially instructed everyone involved to address her as Dr. Newberry. Months later, she corrected us and had us start calling her Amy (around the time of the two lawsuits). The institution where she received her",
         "kind": "comment"
       },
       {
-        "body": "The few safe parents I know that she’s lied about fit the same profile.",
+        "body": "Hired by Rob Hopkins to force my male child to believe my ex was a man. Has personal relationships as their children go to same private school. Forced my son on visits that he repeatedly told her violated the rules of that visit.",
         "kind": "comment"
       },
       {
-        "body": "Was in the same office with Larissa and fed the drama of false allegations by…",
+        "body": "The few safe parents I know that she’s lied about fit the same profile. She seems to have a type she goes after. Similar appearance, financial status, education level, with very young kids whose words can be twisted.",
         "kind": "comment"
+      },
+      {
+        "body": "Was in the same office with Larissa and fed the drama of false allegations by making up her own",
+        "kind": "comment"
+      },
+      {
+        "body": "Life has never been the same. The injustice is heavy",
+        "kind": "family_report"
       },
       {
         "body": "It is psychologically messing up my children.",
         "kind": "family_report"
       },
       {
-        "body": "Being a low income single black mother in Oklahoma is apparently cause to be deemed…",
+        "body": "Being a low income single black mother in Oklahoma is apparently cause to be deemed unfit.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 4
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

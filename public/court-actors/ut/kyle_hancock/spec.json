@@ -28,27 +28,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-7gspmaqk/New Final Post and Capcut template/export/kyle_hancock/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/kyle_hancock/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 41,
-    "total_submissions": 61,
-    "avg_financial_loss": 257610.59,
-    "avg_months_lost": 18.9,
+    "total_submissions": 69,
+    "avg_financial_loss": 257962.66,
+    "avg_months_lost": 19.2,
     "_source_table": "movement_stats_by_state",
     "_match_value": "UT",
-    "state_family_count": 61,
-    "median_financial_loss": 162000,
-    "median_burden_sample_size": 37,
+    "state_family_count": 69,
+    "median_financial_loss": 157200,
+    "median_burden_sample_size": 41,
     "median_months_lost": 6,
-    "pro_se_pct": 57.4,
-    "pro_se_count": 35,
-    "_pdf_state_family_count": 61,
+    "pro_se_pct": 52.2,
+    "pro_se_count": 36,
+    "_pdf_state_family_count": 69,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5746,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -116,27 +116,31 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "He thinks it’s a good idea to question a child victim in a comfortable setting.",
+        "body": "He lied in one of his letters to the court by stating his job is to evaluate both homes with my child. That never happened. He then stated in a hearing that he only evaluated one home as that was all he needed to do. Evaluator only evaluated my son with the petitioner’s family at their home but never evaluated my son at our home with his only sibling. He questioned my son so the Petitioners home about the abuse they did while they were present. He thinks it’s a good idea to question a child victim in a comfortable setting. How can it be a comfortable setting when the child is being questioned in the very place the abuse occurred?",
         "kind": "comment"
       },
       {
-        "body": "The custody evaluator and GAL are very inter related.",
+        "body": "Dr. Kyle Hancock completely abandoned his role as an objective psychologist and court investigator to act as a private advocate for a parent who has engaged in documented written perjury, severe medical neglect, asset spoliation, financial fraud, and systemic parental alienation.",
         "kind": "comment"
       },
       {
-        "body": "He broke the system to protect the abuser, forcing me into a legal minefield where…",
+        "body": "Has never presented the crimes of which my abuser has committed. My son continues to be injured but the custody evaluator and GAL are very inter related.",
+        "kind": "comment"
+      },
+      {
+        "body": "He broke the system to protect the abuser, forcing me into a legal minefield where my child's physical and biological safety is traded for an abuser's convenience, turning a system meant to protect a toddler into the very mechanism that endangers his life",
         "kind": "family_report"
       },
       {
-        "body": "He has lost hope for not being abused and knows that what is going on is wrong.",
+        "body": "They have stolen the voice of an innocent child who has only shown bravery to stand up to his abuser. He has lost hope for not being abused and knows that what is going on is wrong. Anyone touching his penis, butt or forcing him to touch anyone else's is child sex abuse. The adults are too deaf to hear from my special needs child.",
         "kind": "family_report"
       },
       {
-        "body": "We have done absolutely nothing that should have had my child removed.",
+        "body": "It has caused serious emotional and psychological damage to both siblings as well as myself and our family. We have done absolutely nothing that should have had my child removed.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 5
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

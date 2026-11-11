@@ -31,22 +31,22 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 70,
-    "total_submissions": 102,
-    "avg_financial_loss": 108770.49,
+    "families_approved": 68,
+    "total_submissions": 113,
+    "avg_financial_loss": 102623.16,
     "avg_months_lost": 38.3,
     "_source_table": "movement_stats_by_state",
     "_match_value": "IA",
-    "state_family_count": 102,
-    "median_financial_loss": 180000,
-    "median_burden_sample_size": 23,
-    "median_months_lost": 20,
-    "pro_se_pct": 50.0,
-    "pro_se_count": 51,
-    "_pdf_state_family_count": 102,
+    "state_family_count": 113,
+    "median_financial_loss": 229000,
+    "median_burden_sample_size": 25,
+    "median_months_lost": 21,
+    "pro_se_pct": 47.8,
+    "pro_se_count": 54,
+    "_pdf_state_family_count": 113,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5711,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -114,11 +114,11 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "He was the initial attorney on my case and did not report to the judge the facts…",
+        "body": "He was the initial attorney on my case and did not report to the judge the facts about my ex and the abuse towards my children and I and did not disclose to the judge the violation of my rights just because I went to the courthouse to get my child from my ex who had already won contempt from and my DHS case was closed none of this was brought up in court",
         "kind": "comment"
       },
       {
-        "body": "He couldn't show content on joint legal custody and got me child support for 4 kids.",
+        "body": "He couldn't show content on joint legal custody and got me child support for 4 kids and I only have 3. Didn't fight to remove the dual order and then withdrew after the money ran out. He cost me over $15,000 due to his incompetence and still going up monthly",
         "kind": "comment"
       },
       {
@@ -130,15 +130,15 @@
         "kind": "family_report"
       },
       {
-        "body": "Allowed to violate every constitutional protected right of parent",
+        "body": "The courts were allowed to violate every constitutional protected right of parent and children. Record everything, video footage, audio, document.",
         "kind": "family_report"
       },
       {
-        "body": "We lost precious years and time we will never gain back!",
+        "body": "Ruined my children’s quality of life. We lost precious years and time we will never gain back!",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 3
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

@@ -26,27 +26,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-2yeauxv5/New Final Post and Capcut template/export/maureen_monks/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/maureen_monks/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 75,
-    "total_submissions": 108,
-    "avg_financial_loss": 226446.3,
-    "avg_months_lost": 25.6,
+    "families_approved": 74,
+    "total_submissions": 116,
+    "avg_financial_loss": 213936.67,
+    "avg_months_lost": 24.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "MA",
-    "state_family_count": 108,
+    "state_family_count": 116,
     "median_financial_loss": 136300,
-    "median_burden_sample_size": 44,
+    "median_burden_sample_size": 46,
     "median_months_lost": 18,
-    "pro_se_pct": 56.5,
-    "pro_se_count": 61,
-    "_pdf_state_family_count": 108,
+    "pro_se_pct": 54.3,
+    "pro_se_count": 63,
+    "_pdf_state_family_count": 116,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5749,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -114,11 +114,11 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "The judge denied a continuance.",
+        "body": "The judge denied a continuance despite missing evidence, imposed restrictions neither parent requested, and justified them with unsupported safety concerns that contradicted the GAL’s findings.",
         "kind": "comment"
       },
       {
-        "body": "Original judge from 2020 supported seriousness of sexual abuse allegations and most…",
+        "body": "Original judge from 2020 supported seriousness of sexual abuse allegations and most protective of children. She was replaced in 2023 by Christine Anthony who was replace by Elena tier in 2026",
         "kind": "comment"
       },
       {
@@ -126,19 +126,19 @@
         "kind": "comment"
       },
       {
-        "body": "Years of abusive litigation by my ex -- that has gone unchecked by multiple courts…",
+        "body": "Years of abusive litigation by my ex -- that has gone unchecked by multiple courts in multiple jurisdictions -- destroyed my employment, savings, and mental health.",
         "kind": "family_report"
       },
       {
-        "body": "Destroyed by the system built to protect us.",
+        "body": "Destroyed by the system built to protect us. Safety and our voice doesn’t matter as much as you income in the family system.",
         "kind": "family_report"
       },
       {
-        "body": "Impacts will remain part of our emotional landscape forever. Anonymous, Utah",
+        "body": "This situation has caused long term emotional confusion, insecurity, and distress due to the sudden, unjust disruption of a primary bond at a young age, (4) compounded by years of instability and unsubstantiated, conflicting narratives that deprived us of a normal relationship for 4 years. Both my daughter, our extended family, and I continue to experience lingering grief, anxiety, and separation anxiety, with the pain of missing each other persisting through long stretches of time apart ... impacts will remain part of our emotional landscape forever. -Anonymous, Utah",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 4
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

@@ -9,18 +9,17 @@
     "role": "Judge",
     "court": "Osceola",
     "county": "Osceola",
-    "court_or_county": "Osceola",
+    "court_or_county": "Orange",
     "state": "FL",
     "state_abbr": "FL",
-    "mention_count": 3,
-    "family_count": 3,
-    "public_family_count": 3,
+    "mention_count": 2,
+    "family_count": 2,
+    "public_family_count": 2,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 3,
+    "actor_report_count": 2,
     "supabase_row_ids": [
       "2d783297-ece0-404f-8e8d-34fee8fe0a40",
-      "cf5a4382-bc3a-4598-a792-1b7713e75350",
-      "f59bcd46-9009-423e-b8cb-09c5f936554c"
+      "cf5a4382-bc3a-4598-a792-1b7713e75350"
     ],
     "actor_row_id": null,
     "actor_bucket_key": "laura shafer|FL"
@@ -31,26 +30,26 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 238,
-    "total_submissions": 321,
-    "avg_financial_loss": 199989.91,
-    "avg_months_lost": 27.6,
+    "families_approved": 237,
+    "total_submissions": 355,
+    "avg_financial_loss": 191015.67,
+    "avg_months_lost": 26.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "FL",
-    "state_family_count": 321,
-    "median_financial_loss": 176500,
-    "median_burden_sample_size": 139,
+    "state_family_count": 355,
+    "median_financial_loss": 176000,
+    "median_burden_sample_size": 153,
     "median_months_lost": 17,
-    "pro_se_pct": 57.6,
-    "pro_se_count": 185,
-    "_pdf_state_family_count": 321,
+    "pro_se_pct": 57.2,
+    "pro_se_count": 203,
+    "_pdf_state_family_count": 355,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5729,
+  "movement_total": 6496,
   "supabase": {
-    "report_count": 3,
-    "actor_report_count": 3,
-    "family_count": 3,
+    "report_count": 2,
+    "actor_report_count": 2,
+    "family_count": 2,
     "family_reports": [
       {
         "body": "The systèm kidnappéd my children, destroyed my family , took everything I had fighting to get them back",
@@ -63,38 +62,25 @@
         "state": "NJ",
         "county": "USA",
         "row_id": "44d0032d-7e54-4fef-9b19-84d85ffee816"
-      },
-      {
-        "body": "Lied and conspired against us, ripping and stripping us mind , body, soul , bank account, civil rights ect. meanwhile allowing my nephew to be abused severely at 6",
-        "state": "FL",
-        "county": "Osceola County 9th Circuit Court",
-        "row_id": "298dd8f2-bdf7-433c-a607-447b0f35b7db"
       }
     ],
     "public_comments": [
       {
-        "comment_text": "She denied me as a participant to the case, and threw me out of court. Then threatened me I’d never get my nephew because J don’t know where to sit in her courtroom. 🖕🏼well he’s home❤️ He was being sexually abused by State protected teacher foster fathers at that same time. SMH",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Osceola County 9th Circuit"
-      },
-      {
         "comment_text": "she is in favor of taking children from families, ignores evidence",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Osceola"
+        "source": "court_actors.notes"
       },
       {
         "comment_text": "Courtroom, corruption, denial of child and family time",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Osceola"
+        "source": "court_actors.notes"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/laura_shaffer",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='FL'"
+    "public_family_count_api: no actors returned for state='FL'",
+    "pdf_public_actor: no 'Laura Shaffer' in cache for FL"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
@@ -114,19 +100,11 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "She denied me as a participant to the case, and threw me out of court.",
+        "body": "she is in favor of taking children from families, ignores evidence",
         "kind": "comment"
       },
       {
-        "body": "She is in favor of taking children from families, ignores evidence",
-        "kind": "comment"
-      },
-      {
-        "body": "Took everything I had fighting to get them back",
-        "kind": "family_report"
-      },
-      {
-        "body": "Lied and conspired against us, ripping and stripping us mind , body, soul , bank…",
+        "body": "The systèm kidnappéd my children, destroyed my family , took everything I had fighting to get them back",
         "kind": "family_report"
       }
     ],

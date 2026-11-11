@@ -6,7 +6,7 @@
     "title": "",
     "first_name": "Susan Renee",
     "last_name": "Corwin-Cripe",
-    "role": "Attorney (Opposing)",
+    "role": "Attorney (Mine)",
     "court": "Elkhart",
     "county": "Elkhart",
     "court_or_county": "Elkhart",
@@ -27,22 +27,22 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 126,
-    "total_submissions": 161,
-    "avg_financial_loss": 132780.75,
-    "avg_months_lost": 29.2,
+    "families_approved": 120,
+    "total_submissions": 198,
+    "avg_financial_loss": 222011.73,
+    "avg_months_lost": 31.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "IN",
-    "state_family_count": 161,
-    "median_financial_loss": 63875,
-    "median_burden_sample_size": 80,
-    "median_months_lost": 18,
-    "pro_se_pct": 45.3,
-    "pro_se_count": 73,
-    "_pdf_state_family_count": 161,
+    "state_family_count": 198,
+    "median_financial_loss": 68150,
+    "median_burden_sample_size": 98,
+    "median_months_lost": 20,
+    "pro_se_pct": 49.5,
+    "pro_se_count": 98,
+    "_pdf_state_family_count": 198,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5746,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -92,7 +92,7 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "She will wait till the court date to tell what she needs.",
+        "body": "She will wait till the court date to tell what she needs. I then send her the information and never hear anything else on what she needs until the next court date where she states to the judge I did not send what was told. Making me look in compliment with requests",
         "kind": "comment"
       },
       {
@@ -104,7 +104,7 @@
         "kind": "comment"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 2
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

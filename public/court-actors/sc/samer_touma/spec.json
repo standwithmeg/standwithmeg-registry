@@ -12,58 +12,51 @@
     "court_or_county": "Lexington",
     "state": "South Carolina",
     "state_abbr": "SC",
-    "mention_count": 4,
-    "family_count": 4,
-    "public_family_count": 4,
+    "mention_count": 3,
+    "family_count": 3,
+    "public_family_count": 3,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 4,
+    "actor_report_count": 3,
     "supabase_row_ids": [
       "19ac5e36-c975-4c85-bbdc-c70790f9ab5b",
       "7b22112c-d4e3-4710-aa15-1eeaf1af47ed",
-      "c5460832-9bef-415a-9d75-7f1a3d6f7fbf",
-      "36a16d66-93da-4b8a-a629-a8e2d917100a"
+      "c5460832-9bef-415a-9d75-7f1a3d6f7fbf"
     ],
     "actor_row_id": "19ac5e36-c975-4c85-bbdc-c70790f9ab5b",
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-6nxbtixa/New Final Post and Capcut template/export/samer_touma/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/samer_touma/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 85,
-    "total_submissions": 113,
-    "avg_financial_loss": 271548.16,
-    "avg_months_lost": 25.3,
+    "families_approved": 81,
+    "total_submissions": 140,
+    "avg_financial_loss": 237149.95,
+    "avg_months_lost": 25.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "SC",
-    "state_family_count": 113,
-    "median_financial_loss": 125000,
-    "median_burden_sample_size": 71,
+    "state_family_count": 140,
+    "median_financial_loss": 102000,
+    "median_burden_sample_size": 90,
     "median_months_lost": 18,
-    "pro_se_pct": 56.6,
-    "pro_se_count": 64,
-    "_pdf_state_family_count": 113,
+    "pro_se_pct": 55.0,
+    "pro_se_count": 77,
+    "_pdf_state_family_count": 140,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5729,
+  "movement_total": 6496,
   "supabase": {
-    "report_count": 4,
-    "actor_report_count": 4,
-    "family_count": 4,
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 3,
     "family_reports": [
       {
         "body": "The family court system has singlehandedly destroyed my family. We have been separated for years and only see them a few times a year. It will probably cause my younger kids to go through therapy at some point.",
         "state": "SC",
         "county": "Richland",
         "row_id": "0f147f67-5318-4fd3-a19e-ab8b39fccf68"
-      },
-      {
-        "body": "The system has taken my oldest son from a large, loving family with over 30+ extended family members including three siblings that miss him dearly, and given him to a mentally sick chronically single woman who lives with her mentally sick chronically single mother. It has robbed us of every penny my wife of 12 years and I had in our retirement, savings, and bank accounts. It continues to pull us back and impose extra fines for inability to pay previous fines. We have three small children and are now forced to give up our home due to financial ruin.",
-        "state": "SC",
-        "county": "Richland",
-        "row_id": "f99b24e0-92ca-44ef-9d60-7f82f0be24da"
       }
     ],
     "public_comments": [
@@ -72,12 +65,6 @@
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Richland"
-      },
-      {
-        "comment_text": "Extremely unqualified. Dr. Touma was unable to detect a severe mental disorder that every other therapist detected immediately. Either that or he was turning a blind eye to obvious facts and evidence that was presented",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Lexington"
       }
     ]
   },
@@ -107,23 +94,15 @@
     ],
     "selected_quotes": [
       {
-        "body": "Completely sided with my husband and bullied me relentlessly. It was torturous. He would brag about his kids the whole time.",
+        "body": "Completely sided with my husband and bullied me relentlessly. It was torturous. He would brag about his kids the whole time. “If I can get along with my ex, I don’t see why you can’t,” was his basic principle. He became very impatient if I would not agree to things on the spot under pressure from him and my ex husband. A horrible person. WAY overpriced!",
         "kind": "comment"
       },
       {
-        "body": "Either that or he was turning a blind eye to obvious facts and evidence that was presented",
-        "kind": "comment"
-      },
-      {
-        "body": "The family court system has singlehandedly destroyed my family. We have been separated for years and only see them a few times a year.",
-        "kind": "family_report"
-      },
-      {
-        "body": "We have three small children and are now forced to give up our home due to financial ruin.",
+        "body": "The family court system has singlehandedly destroyed my family. We have been separated for years and only see them a few times a year. It will probably cause my younger kids to go through therapy at some point.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 2
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

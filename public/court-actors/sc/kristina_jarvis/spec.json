@@ -29,27 +29,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-6nxbtixa/New Final Post and Capcut template/export/kristina_jarvis/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/kristina_jarvis/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 85,
-    "total_submissions": 113,
-    "avg_financial_loss": 271548.16,
-    "avg_months_lost": 25.3,
+    "families_approved": 81,
+    "total_submissions": 140,
+    "avg_financial_loss": 237149.95,
+    "avg_months_lost": 25.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "SC",
-    "state_family_count": 113,
-    "median_financial_loss": 125000,
-    "median_burden_sample_size": 71,
+    "state_family_count": 140,
+    "median_financial_loss": 102000,
+    "median_burden_sample_size": 90,
     "median_months_lost": 18,
-    "pro_se_pct": 56.6,
-    "pro_se_count": 64,
-    "_pdf_state_family_count": 113,
+    "pro_se_pct": 55.0,
+    "pro_se_count": 77,
+    "_pdf_state_family_count": 140,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5729,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
@@ -87,7 +87,17 @@
         "source": "court_actors.notes"
       },
       {
-        "comment_text": "Destroyed my case Horrible! Negligent, Condescending, Coercive, Cannot Communicate to save her life, Destroyed my family and my financials Multiple acts of negligence, Bad Faith Behavior,",
+        "comment_text": "Destroyed my case",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Horrible! Negligent, Condescending, Coercive, Cannot Communicate to save her life, Destroyed my family and my financials",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Multiple acts of negligence, Bad Faith Behavior,",
         "author": "Anonymous parent",
         "source": "court_actors.notes"
       },
@@ -126,15 +136,23 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Used harsh tactics on me by encouraging my ex to file for full custody",
+        "body": "This attorney used harsh tactics on me by encouraging my ex to file for full custody and to limit their communication and my son’s communication with me she encourage him to not let me see or let me spend time with my son into use false allegations and dramatized it so she could get away with him getting full custody. She has always escalated the situation rather than the escalated. They want to delete me out of my son‘s life, and this lawyer does not care who she hurts to make it possible.",
         "kind": "comment"
       },
       {
-        "body": "Destroyed my case Horrible!",
+        "body": "Destroyed my case",
         "kind": "comment"
       },
       {
-        "body": "My child, rather than steps toward reunification or a timely resolution.",
+        "body": "Horrible! Negligent, Condescending, Coercive, Cannot Communicate to save her life, Destroyed my family and my financials",
+        "kind": "comment"
+      },
+      {
+        "body": "Multiple acts of negligence, Bad Faith Behavior,",
+        "kind": "comment"
+      },
+      {
+        "body": "I have serious concerns about the conduct of attorney Kristina Jarvis in my custody case. From my experience, she has taken an adversarial and aggressive approach that has contributed to increased hostility between the parties rather than supporting a resolution that prioritizes the best interest of my child. I believe her actions and legal strategy have supported and encouraged the restriction of communication between my son and me, resulting in continued and prolonged separation. As the mother, I have made continuous efforts to maintain a relationship with my child. However, the positions taken by opposing counsel have contributed to the ongoing breakdown of communication and co-parenting stability. This approach has resulted in extended conflict, increased legal pressure, and further separation between me and my child, rather than steps toward reunification or a timely resolution. My concern is that the focus of the case has shifted away from the child’s best interest and toward an ongoing adversarial process that continues to deepen the separation. I am seeking a resolution that prioritizes my relationship with my child and reduces unnecessary hostility in this case moving forward.",
         "kind": "comment"
       },
       {
@@ -142,23 +160,23 @@
         "kind": "comment"
       },
       {
-        "body": "I was the primary parent, and they are with an abuser and have been for 11 month.",
+        "body": "Absolute familial and financial destruction. I was the primary parent, and they are with an abuser and have been for 11 month. This is the most corrupt system I have ever seen.",
         "kind": "family_report"
       },
       {
-        "body": "My ability to function normally.",
+        "body": "This system has taken my child from me and left me fighting through delays, legal barriers, and financial strain that have drained my savings, my mental health, and my ability to function normally. It has cost me years of time with my children and caused deep emotional harm to my family, including my daughter losing precious time with her brother.",
         "kind": "family_report"
       },
       {
-        "body": "“I went from being my son’s primary and only caregiver to suddenly losing him…",
+        "body": "“I went from being my son’s primary and only caregiver to suddenly losing him through a court process I was not properly able to participate in, and years later I am still fighting to rebuild the bond that separation damaged. This system cost me precious time with my child, my financial stability, and years of emotional pain no parent should have to endure. I believe my ex-partner Kenneth latchford has used custody and separation as a way to punish and exclude me from my son’s life, and I have felt that prejudice and hostility toward me and my Latina family played a role in how we were treated and pushed aside by him and his mother April Plummer enabled by the court system including the GAL Leslie Armstrong.”",
         "kind": "family_report"
       },
       {
-        "body": "It’s all a racketeering scheme. It’s truly disgraceful.",
+        "body": "Family court is where justice goes to die. All judges, attorneys, guardians ad litem, evaluators, law enforcement, child protection agencies, and anyone involved in this process in any way should be thoroughly trained and have a complete understanding of trauma and coercive control. The danger being imposed on children and families due to the family court crisis and lack of knowledge is unimaginable. There is nothing I have seen yet that is in the best interest of the child in this court system. It needs to be held accountable, scrutinized, reviewed, and reformed! My kids will be in therapy for life after the hell we are going through. It’s all a racketeering scheme. It’s truly disgraceful. More needless families will be torn apart, people will continue to lose their lives, or their livelihoods until there is real change!",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 10
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

@@ -27,27 +27,27 @@
     "actor_bucket_key": "katie mclaflin|KS"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-7gspmaqk/New Final Post and Capcut template/export/katie_mcclaflin/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/katie_mcclaflin/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 185,
-    "total_submissions": 273,
-    "avg_financial_loss": 111495.56,
-    "avg_months_lost": 31.1,
+    "families_approved": 186,
+    "total_submissions": 293,
+    "avg_financial_loss": 120206.43,
+    "avg_months_lost": 30.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "KS",
-    "state_family_count": 273,
-    "median_financial_loss": 97450,
-    "median_burden_sample_size": 140,
-    "median_months_lost": 16,
-    "pro_se_pct": 48.4,
-    "pro_se_count": 132,
-    "_pdf_state_family_count": 273,
+    "state_family_count": 293,
+    "median_financial_loss": 101500,
+    "median_burden_sample_size": 149,
+    "median_months_lost": 19,
+    "pro_se_pct": 48.3,
+    "pro_se_count": 141,
+    "_pdf_state_family_count": 292,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5746,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -115,11 +115,11 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Represented opposing party and advanced positions supporting continued restriction…",
+        "body": "Represented opposing party and advanced positions supporting continued restriction of my parenting time and separation from my children.",
         "kind": "comment"
       },
       {
-        "body": "She clearly advised her client to lie and avoid accountability for misleading the…",
+        "body": "She clearly advised her client to lie and avoid accountability for misleading the court.",
         "kind": "comment"
       },
       {
@@ -127,15 +127,19 @@
         "kind": "comment"
       },
       {
+        "body": "Family Court does not have fiduciary representation for the members of high-cost attorneys. The Attorneys collaborate with Judges and Social Workers for their firms best interest. Not the actual client.",
+        "kind": "family_report"
+      },
+      {
         "body": "Fucked us all up",
         "kind": "family_report"
       },
       {
-        "body": "Removed my children without due process",
+        "body": "This system removed my children without due process, ignored evidence that cleared me, and created financial and procedural barriers that have kept me separated from them for years. The court actors built a system where I have to pay thousands just to try to be their mom again.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 3
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

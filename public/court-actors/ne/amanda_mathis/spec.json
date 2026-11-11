@@ -9,7 +9,7 @@
     "role": "CPS Worker",
     "court": "Caseworker",
     "county": "Caseworker",
-    "court_or_county": "Caseworker",
+    "court_or_county": "Scottsbluff",
     "state": "NE",
     "state_abbr": "NE",
     "mention_count": 3,
@@ -31,22 +31,22 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 37,
-    "total_submissions": 44,
-    "avg_financial_loss": 180795.98,
-    "avg_months_lost": 35.0,
+    "families_approved": 36,
+    "total_submissions": 52,
+    "avg_financial_loss": 154610.27,
+    "avg_months_lost": 35.2,
     "_source_table": "movement_stats_by_state",
     "_match_value": "NE",
-    "state_family_count": 44,
-    "median_financial_loss": 240500,
-    "median_burden_sample_size": 17,
+    "state_family_count": 52,
+    "median_financial_loss": 126905,
+    "median_burden_sample_size": 20,
     "median_months_lost": 22,
-    "pro_se_pct": 47.7,
-    "pro_se_count": 21,
-    "_pdf_state_family_count": 44,
+    "pro_se_pct": 50.0,
+    "pro_se_count": 26,
+    "_pdf_state_family_count": 52,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5516,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -114,11 +114,11 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "She had lied many times in court.",
+        "body": "She’s a brand new Caseworker that started in October 2024 and was transferred to my case in March 2025 and was already at the process of removing my children without knowing who I was or who my children are and continued to say that I wouldn’t work with family support workers. When I told her it was a conflict of interest because I had worked for those family support workers. She had lied many times in court.",
         "kind": "comment"
       },
       {
-        "body": "She was friendly with my ex and listened and believed everything she said.",
+        "body": "She was friendly with my ex and listened and believed everything she said without any evidence.",
         "kind": "comment"
       },
       {
@@ -126,15 +126,19 @@
         "kind": "comment"
       },
       {
-        "body": "The state is making money off of destroying families",
+        "body": "Scotts Bluff County is disgustingly corrupt and you can tell that the attorneys talk to each other without their paid customers. No morals.",
         "kind": "family_report"
       },
       {
-        "body": "After working for DHHS and wanting to be the person to help me make a positive change.",
+        "body": "Juvenile court has become punitive and not rehabilitative. The state is making money off of destroying families",
+        "kind": "family_report"
+      },
+      {
+        "body": "After working for DHHS and wanting to be the person to help me make a positive change and then seeing how DHHS tore my family apart, it showed how much people care more about power and being right than what is in the right interest of children. Now as a therapist, I hope it can help others, including my own children someday heal from this trauma.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 3
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

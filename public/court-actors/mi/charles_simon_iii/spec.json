@@ -36,27 +36,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-l4pttpaz/New Final Post and Capcut template/export/charles_simon_iii/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/charles_simon_iii/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 144,
-    "total_submissions": 183,
-    "avg_financial_loss": 181109.42,
-    "avg_months_lost": 36.7,
+    "families_approved": 142,
+    "total_submissions": 200,
+    "avg_financial_loss": 173525.11,
+    "avg_months_lost": 36.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "MI",
-    "state_family_count": 183,
-    "median_financial_loss": 103000,
-    "median_burden_sample_size": 80,
-    "median_months_lost": 17,
-    "pro_se_pct": 44.3,
-    "pro_se_count": 81,
-    "_pdf_state_family_count": 183,
+    "state_family_count": 200,
+    "median_financial_loss": 104500,
+    "median_burden_sample_size": 86,
+    "median_months_lost": 18,
+    "pro_se_pct": 44.0,
+    "pro_se_count": 88,
+    "_pdf_state_family_count": 200,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5669,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 13,
     "actor_report_count": 13,
@@ -131,16 +131,16 @@
         "court_or_county": "Montcalm County Michigan"
       },
       {
-        "comment_text": "He did not listen to childrens wishes or needs, did not let my parents speak, did an ex parte to take visits away.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Montcalm County Michigan"
-      },
-      {
         "comment_text": "He has violated my rights and been overturned by the court of appeals. His biggest goal is to delay, delay, delay.",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Montcalm"
+      },
+      {
+        "comment_text": "He did not listen to childrens wishes or needs, did not let my parents speak, did an ex parte to take visits away.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Montcalm County Michigan"
       },
       {
         "comment_text": "Ignored evidence and denied reunification.we have not seen or heard from our child in 4 years",
@@ -178,67 +178,67 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "He makes decisions in his chambers before court proceedings happens.",
+        "body": "He makes decisions in his chambers before court proceedings happens. Before hearing any thing. He slanders the parents in court, tells you how much he thinks your a piece of crap.",
         "kind": "comment"
       },
       {
-        "body": "After that he removed himself from my case admitting bias.",
+        "body": "Sent a detective to my home to question my about a tik tok repost that he was informed about by “ one of his minions”. After that he removed himself from my case admitting bias.",
         "kind": "comment"
       },
       {
-        "body": "Doesn’t allow evidence or you to defend yourself. Biased. Not for families Biased.",
+        "body": "Doesn’t allow evidence or you to defend yourself. Biased. Not for families Biased. Not for families He’s a biased lying judge who is against families",
         "kind": "comment"
       },
       {
-        "body": "Judge Simons Rude, judgemental, prejudice. Talked down to us in open court.",
+        "body": "Very prejudiced against my family, talked down to us in court. Judge Simons Rude, judgemental, prejudice. Talked down to us in open court.",
         "kind": "comment"
       },
       {
-        "body": "He lied and said my daughter threatened to kill him.",
+        "body": "He lied and said my daughter threatened to kill him. To get himself off the case because he broke so many laws and rules.",
         "kind": "comment"
       },
       {
-        "body": "He did not listen to childrens wishes or needs, did not let my parents speak, did…",
+        "body": "He has violated my rights and been overturned by the court of appeals. His biggest goal is to delay, delay, delay.",
         "kind": "comment"
       },
       {
-        "body": "He has violated my rights and been overturned by the court of appeals.",
+        "body": "He did not listen to childrens wishes or needs, did not let my parents speak, did an ex parte to take visits away.",
         "kind": "comment"
       },
       {
-        "body": "Ignored evidence and denied reunification.we have not seen or heard from our child…",
+        "body": "Ignored evidence and denied reunification.we have not seen or heard from our child in 4 years",
         "kind": "comment"
       },
       {
-        "body": "He is bias?",
+        "body": "He is bias? And has a drug problem",
         "kind": "comment"
       },
       {
-        "body": "The destruction of my family has changed every part of my life.",
+        "body": "The destruction of my family has changed every part of my life. Living through years of separation from my daughter has created a level of grief and trauma that is hard to put into words. Every holiday, birthday, school event, and milestone that passes is another reminder of everything we’ve lost. The repeated trips back to court have only added to that trauma. Each hearing brings hope that maybe this time things will change, only to leave feeling like we’re no closer to healing or being reunited. Instead of finding solutions, we’ve spent years reliving the same pain over and over. It’s emotionally exhausting, financially draining, and has left our entire family living in a constant state of uncertainty. This hasn’t only affected me. It has affected my husband, my children, my extended family, and most importantly, my daughter. Relationships that should have been built naturally have instead been replaced with distance, missed memories, and unanswered questions. We’ve missed birthdays, holidays, sporting events, family dinners, and countless everyday moments that can never be recreated. Despite everything, I have never stopped loving my daughter or hoping for the day our family can begin to heal. No family should have to endure years of separation while repeatedly returning to court without moving any closer to a resolution. The emotional toll of living in that cycle has been devastating for all of us.",
         "kind": "family_report"
       },
       {
-        "body": "The system has did nothing but ruin my life.",
+        "body": "The system has did nothing but ruin my life. Try to take my kid or in the middle of trying to take my kid and some false accusations boom.",
         "kind": "family_report"
       },
       {
-        "body": "The court took that all away from you.",
+        "body": "Safety is when you know you are safe, it's when you know that your parents are safe, it's when you can lay your head down at night and go to bed peacefully it's when you can tell your parents that you love them and give them a hug but once foster care takes you, you never know when you'll be safe again, you don't know when you will be able to lay your head down at night and fall asleep peacefully you don't know if your parents are okay and your biggest worry is your parents and your siblings at the end of the day but you're also so angry because the court took that all away from you.",
         "kind": "family_report"
       },
       {
-        "body": "Instead it's ripping them apart and destroying them.",
+        "body": "The hurt is unmeasurable. Total loss of fairness and justice in the court that is supposed to serve and protect the people and children. Instead it's ripping them apart and destroying them. The trauma is coming from the court.",
         "kind": "family_report"
       },
       {
-        "body": "The system tore our family apart and made us look like monsters.",
+        "body": "The system tore our family apart and made us look like monsters. All we wanted was safety in our home.tgrre has been four years of heartache and fear due to unjust court system",
         "kind": "family_report"
       },
       {
-        "body": "This destroyed my family. I have lost my children. My wife and I dont get a long well.",
+        "body": "This destroyed my family. I have lost my children. My wife and I dont get a long well. Our married may beyond repair. I miss my babies.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 2
+    "quote_page_count": 9
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

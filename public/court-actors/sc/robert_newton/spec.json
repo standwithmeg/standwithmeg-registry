@@ -26,27 +26,27 @@
     "actor_bucket_key": "robert newton|SC"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-6nxbtixa/New Final Post and Capcut template/export/robert_newton/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/robert_newton/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 85,
-    "total_submissions": 113,
-    "avg_financial_loss": 271548.16,
-    "avg_months_lost": 25.3,
+    "families_approved": 81,
+    "total_submissions": 140,
+    "avg_financial_loss": 237149.95,
+    "avg_months_lost": 25.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "SC",
-    "state_family_count": 113,
-    "median_financial_loss": 125000,
-    "median_burden_sample_size": 71,
+    "state_family_count": 140,
+    "median_financial_loss": 102000,
+    "median_burden_sample_size": 90,
     "median_months_lost": 18,
-    "pro_se_pct": 56.6,
-    "pro_se_count": 64,
-    "_pdf_state_family_count": 113,
+    "pro_se_pct": 55.0,
+    "pro_se_count": 77,
+    "_pdf_state_family_count": 140,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5729,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -102,7 +102,7 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Renoved me from court room per DSS attorneys request.",
+        "body": "Renoved me from court room per DSS attorneys request, despite knowing I was at emergency hearing and knowing I was there to fight for intervention and placement.",
         "kind": "comment"
       },
       {
@@ -114,11 +114,11 @@
         "kind": "family_report"
       },
       {
-        "body": "Took my grandsons out of our families life",
+        "body": "Ripped my heart out and took my grandsons out of our families life, the only famiky they ever known and traumatized my grandsons emotionally and placed them in a dangerous situation despite me asking how they slept at night and why was this happening. Our lives will never be the same. Had i not actually lived this, I would never believe a system designed to care for the best interest of the children has turned into what is in the best interest of themselves and then promoted to director the same day temp custody was ordered and they had closed their case all in less than 6 months.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 3
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

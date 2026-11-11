@@ -12,50 +12,47 @@
     "court_or_county": "Chilton",
     "state": "Alabama",
     "state_abbr": "AL",
-    "mention_count": 8,
-    "family_count": 5,
-    "public_family_count": 5,
+    "mention_count": 5,
+    "family_count": 4,
+    "public_family_count": 4,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 8,
+    "actor_report_count": 5,
     "supabase_row_ids": [
       "947f7d13-6184-4bb7-b636-55540c778e04",
-      "0ad63d41-1c2a-4e8c-914c-5dff26b257a6",
       "d40ed405-9396-4a14-ba38-b162f9d7daf5",
-      "547469d6-7459-4c97-a052-6592f0194bb8",
       "f8d30676-d545-4cc6-9c42-814f4365fbfb",
       "087c5ca8-6a1f-45eb-9f8d-d420280a7d90",
-      "98e34d79-e1c0-4c0d-aad6-92d89e5c8533",
       "983a8ad8-46f4-4f9b-93b0-df4819ee2dcf"
     ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-7gspmaqk/New Final Post and Capcut template/export/deanne_dee_dee_calhoon/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/deanne_dee_dee_calhoon/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 103,
-    "total_submissions": 143,
-    "avg_financial_loss": 84215.55,
-    "avg_months_lost": 34.0,
+    "families_approved": 102,
+    "total_submissions": 158,
+    "avg_financial_loss": 91268.73,
+    "avg_months_lost": 32.6,
     "_source_table": "movement_stats_by_state",
     "_match_value": "AL",
-    "state_family_count": 143,
-    "median_financial_loss": 55000,
-    "median_burden_sample_size": 63,
-    "median_months_lost": 12,
-    "pro_se_pct": 42.7,
-    "pro_se_count": 61,
-    "_pdf_state_family_count": 143,
+    "state_family_count": 158,
+    "median_financial_loss": 52500,
+    "median_burden_sample_size": 71,
+    "median_months_lost": 13,
+    "pro_se_pct": 39.9,
+    "pro_se_count": 63,
+    "_pdf_state_family_count": 158,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5746,
+  "movement_total": 6496,
   "supabase": {
-    "report_count": 8,
-    "actor_report_count": 8,
-    "family_count": 5,
+    "report_count": 5,
+    "actor_report_count": 5,
+    "family_count": 4,
     "family_reports": [
       {
         "body": "Caused detrimental emotional and financial hardship, stolen years of our lives and forcing us to Fight for our constitutional rights and Justice.",
@@ -70,12 +67,6 @@
         "row_id": "42f38311-aa7b-40fb-8b1c-d016074bc870"
       },
       {
-        "body": "The system has allowed continuous \"emergency\" motions to cloud the original filing, and has temporarily placed my child with other parent that has a documented history of neglect, emotional abuse, abuse of process, and placing child in harm's way on multiple occasions",
-        "state": "AL",
-        "county": "Elmore",
-        "row_id": "5ce45d9a-435b-4c8e-ab74-9afd83682a5b"
-      },
-      {
         "body": "This court has aided in the psychological abuse and alienation of two children from their life long family support network of grandparents, cousins, and aunts and uncles that they have had no contact with, with no reason stated by parents and absolutely no evidence of harm in any fashion.",
         "state": "AL",
         "county": "Elmore County",
@@ -88,12 +79,6 @@
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Chilton"
-      },
-      {
-        "comment_text": "the name on this should be DEE DEE calhoon Did not require any actual proof from opposing side as to why special-needs child should be removed from their primary home. Child now placed with opposing side despite allegations of abuse, substance issues, and child endangerment.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Elmore County"
       },
       {
         "comment_text": "Cold and creul to the mother. Imediately made an assumption and would never admit that maybe she was wrong.Mother provided proof of abuse by the grandfather, she ignored.",
@@ -131,39 +116,31 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Allowed Father 7 days to respond",
+        "body": "Proceeds where jurisdiction does not allow. Failure to follow rules of court, ignores state statues, failure to acknowledge jurisdiction. Motion filed, Judge Calhoun allowed Father 7 days to respond, his response did not acknowledge statue or jurisdiction limits, Judge Calhoun then ignored all and left motions hanging. Subjected children to re visit trauma in therapy in spite of previously completing therapy, therapist recommended no contact, GAL recommended no contact. Father has been convicted of sex crimes with children the named victims and contact supervised or not would violate state statue. Judge does not Have jurisdiction to rule or consider ruling in violation of state law, doing so would be a violation of due process and equal protection under the law .",
         "kind": "comment"
       },
       {
-        "body": "Removed from their primary home",
+        "body": "Cold and creul to the mother. Imediately made an assumption and would never admit that maybe she was wrong.Mother provided proof of abuse by the grandfather, she ignored.",
         "kind": "comment"
       },
       {
-        "body": "She ignored.",
+        "body": "She ignored obvious crucial evidence and testimony and denied a plea for family counseling",
         "kind": "comment"
       },
       {
-        "body": "Ignored obvious crucial evidence",
-        "kind": "comment"
-      },
-      {
-        "body": "Caused detrimental emotional and financial hardship, stolen years of our lives and…",
+        "body": "Caused detrimental emotional and financial hardship, stolen years of our lives and forcing us to Fight for our constitutional rights and Justice.",
         "kind": "family_report"
       },
       {
-        "body": "Autauga County family court has failed my children and me over and over again.",
+        "body": "Autauga County family court has failed my children and me over and over again. More than 30 years of mental and physchological abuse has been legally perpetuated at the hands of the court system.",
         "kind": "family_report"
       },
       {
-        "body": "Allowed continuous \"emergency\" motions to cloud the original filing",
-        "kind": "family_report"
-      },
-      {
-        "body": "This court has aided in the psychological abuse and alienation of two children from…",
+        "body": "This court has aided in the psychological abuse and alienation of two children from their life long family support network of grandparents, cousins, and aunts and uncles that they have had no contact with, with no reason stated by parents and absolutely no evidence of harm in any fashion.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 4
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

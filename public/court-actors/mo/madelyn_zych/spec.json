@@ -9,7 +9,7 @@
     "role": "CPS Worker",
     "court": "Jefferson",
     "county": "Jefferson",
-    "court_or_county": "Jefferson",
+    "court_or_county": "Jefferson County",
     "state": "MO",
     "state_abbr": "MO",
     "mention_count": 3,
@@ -18,7 +18,7 @@
     "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 3,
     "supabase_row_ids": [
-      "12a11483-690c-40b4-9ebf-d700dcd6dfb2",
+      "8585ab39-eafb-4fe2-a6b0-f2c632fc41e9",
       "53ded84b-a554-45dc-980a-debd47efe7c3",
       "4c04e4bb-8f02-4d06-972c-dfc970016030"
     ],
@@ -31,33 +31,27 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 154,
-    "total_submissions": 221,
-    "avg_financial_loss": 99851.19,
-    "avg_months_lost": 41.8,
+    "families_approved": 145,
+    "total_submissions": 284,
+    "avg_financial_loss": 106113.17,
+    "avg_months_lost": 38.1,
     "_source_table": "movement_stats_by_state",
     "_match_value": "MO",
-    "state_family_count": 221,
-    "median_financial_loss": 94350,
-    "median_burden_sample_size": 96,
-    "median_months_lost": 24,
-    "pro_se_pct": 53.8,
-    "pro_se_count": 119,
-    "_pdf_state_family_count": 221,
+    "state_family_count": 284,
+    "median_financial_loss": 89000,
+    "median_burden_sample_size": 131,
+    "median_months_lost": 21,
+    "pro_se_pct": 53.9,
+    "pro_se_count": 153,
+    "_pdf_state_family_count": 284,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5746,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
     "family_count": 3,
     "family_reports": [
-      {
-        "body": "The system has caused a severe amount of trauma to my entire family. especially my daughter they came in and took my daughter away from a perfectly safe home perfectly safe parent and placed her with a rapist she was raped at gunpoint for 3 months sometimes several times each day",
-        "state": "MO",
-        "county": "Jefferson County",
-        "row_id": "f342a1df-68d3-47eb-b38f-f530681d967e"
-      },
       {
         "body": "The system is trying to destroy my family for profit. Evil tyrants need to be stopped.",
         "state": "MO",
@@ -72,12 +66,6 @@
       }
     ],
     "public_comments": [
-      {
-        "comment_text": "She submitted false information to the court and told me I had no Civil rights",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Jefferson"
-      },
       {
         "comment_text": "Made it impossible to see child because she ordered a no contact order",
         "author": "Anonymous parent",
@@ -114,10 +102,6 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "She submitted false information to the court and told me I had no Civil rights",
-        "kind": "comment"
-      },
-      {
         "body": "Made it impossible to see child because she ordered a no contact order",
         "kind": "comment"
       },
@@ -126,15 +110,11 @@
         "kind": "comment"
       },
       {
-        "body": "Took my daughter away from a perfectly safe home perfectly safe parent",
+        "body": "The system is trying to destroy my family for profit. Evil tyrants need to be stopped.",
         "kind": "family_report"
       },
       {
-        "body": "The system is trying to destroy my family for profit.",
-        "kind": "family_report"
-      },
-      {
-        "body": "They are trying to destroy my family for no reason just so they can have a kid for…",
+        "body": "They are trying to destroy my family for no reason just so they can have a kid for the federal funds.",
         "kind": "family_report"
       }
     ],

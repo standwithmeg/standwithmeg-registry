@@ -27,27 +27,27 @@
     "actor_bucket_key": "dina richman|CA"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-7gspmaqk/New Final Post and Capcut template/export/dina_richman/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/dina_richman/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 357,
-    "total_submissions": 474,
-    "avg_financial_loss": 279136.73,
-    "avg_months_lost": 34.9,
+    "families_approved": 356,
+    "total_submissions": 529,
+    "avg_financial_loss": 263721.3,
+    "avg_months_lost": 34.0,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CA",
-    "state_family_count": 474,
-    "median_financial_loss": 259500,
-    "median_burden_sample_size": 210,
+    "state_family_count": 529,
+    "median_financial_loss": 237750,
+    "median_burden_sample_size": 232,
     "median_months_lost": 20,
-    "pro_se_pct": 58.0,
-    "pro_se_count": 275,
-    "_pdf_state_family_count": 474,
+    "pro_se_pct": 58.4,
+    "pro_se_count": 309,
+    "_pdf_state_family_count": 529,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5746,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -115,11 +115,11 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "This led to me losing custody and having to eventually go on visitations.",
+        "body": "Denied my DVRO request after father falsely accused me of child abuse multiple times and was allowing father to violate orders. This led to me losing custody and having to eventually go on visitations even though there was no safety concerns by any social worker, SVU detective or parenting plan evaluator. This judge doesn’t review anything and simply relies on hear say from a minors counsel that doesn’t even do an investigation and lies under oath.",
         "kind": "comment"
       },
       {
-        "body": "Didn’t read any of the Declarations with solid proof and statements that…",
+        "body": "Didn’t read any of the Declarations with solid proof and statements that corroborated with my innocence was removed from my child and placed on monitored visits.",
         "kind": "comment"
       },
       {
@@ -127,19 +127,19 @@
         "kind": "comment"
       },
       {
-        "body": "They took our rights, freedom and justice and handed to our abuser we courageously…",
+        "body": "They took our rights, freedom and justice and handed to our abuser we courageously attempted to escape the home and had and threw away the keys leaving us in the dark and freightened.",
         "kind": "family_report"
       },
       {
-        "body": "I’ve lost so much time with my child.",
+        "body": "I’ve lost so much time with my child, but the worst part is that they have put him with a man that left me to bleed out and die after a reconstructive surgery. Now my son is begging to come home and I’m the only one that understands why. I never wanted our son to see this side of his father.",
         "kind": "family_report"
       },
       {
-        "body": "The Judge and MC should be punished for all of the damages caused.",
+        "body": "Sabotaged my long loving relationship with my child. The Judge and MC should be punished for all of the damages caused.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 3
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

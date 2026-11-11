@@ -27,27 +27,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-7gspmaqk/New Final Post and Capcut template/export/kimberly_b_schutt/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/kimberly_b_schutt/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 82,
-    "total_submissions": 114,
-    "avg_financial_loss": 258790.19,
-    "avg_months_lost": 33.4,
+    "families_approved": 80,
+    "total_submissions": 130,
+    "avg_financial_loss": 250216.5,
+    "avg_months_lost": 31.7,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CO",
-    "state_family_count": 114,
+    "state_family_count": 130,
     "median_financial_loss": 232000,
-    "median_burden_sample_size": 54,
+    "median_burden_sample_size": 62,
     "median_months_lost": 18,
-    "pro_se_pct": 60.5,
-    "pro_se_count": 69,
-    "_pdf_state_family_count": 114,
+    "pro_se_pct": 59.2,
+    "pro_se_count": 77,
+    "_pdf_state_family_count": 130,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5746,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -115,11 +115,11 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "AppClose communications were used against the father.",
+        "body": "The court’s permanent orders rewarded obstruction and parental alienation rather than protecting and restoring the father-child relationship. Despite repeated evidence of denied phone calls, withheld parenting time, gatekeeping, scheduling conflicts placed over parenting time, and lack of cooperation from the mother, the Court still awarded her sole decision-making authority over medical, education, therapy, extracurricular activities, and major parenting decisions. The Court relied heavily on historical domestic violence allegations even after the permanent protection order was denied and replaced with only a mutual limited-contact order, using those same allegations to justify denying equal parenting time and joint decision-making. The Court also criticized the lack of family therapy while ignoring that a restraining order and communication barriers made family therapy difficult to initiate, and that the children’s therapists and related recommendations were not meaningfully considered. AppClose communications were used against the father despite his efforts to document concerns professionally, while the mother’s withholding, interference, and controlling behavior were largely minimized. Independent third-party witness testimony, subcontractor financial records, therapist concerns, and corroborating statements were discounted or ignored, while the Court accepted the mother’s narrative with little accountability placed on her conduct. The result was reduced parenting time, removal of midweek parenting, sole decision-making to the parent creating barriers, and financial orders built on unsupported credibility findings rather than balanced evidence and the best interests of the children.",
         "kind": "comment"
       },
       {
-        "body": "Was extremely new to family court and not well versed in high conflict parenting.",
+        "body": "Was extremely new to family court and not well versed in high conflict parenting. Opened a CPS case falsely using educational neglect as a way to start a CPS investigation that lasted 4 years and thousands of dollars.",
         "kind": "comment"
       },
       {
@@ -127,15 +127,19 @@
         "kind": "comment"
       },
       {
-        "body": "This situation has affected our daughter and her siblings relationship which should…",
+        "body": "This situation has affected our daughter and her siblings relationship which should never happen with Family First in place.",
         "kind": "family_report"
       },
       {
-        "body": "Evidence of withheld parenting time, denied contact, and gatekeeping.",
+        "body": "Weld County CPS is full of bad actors and corruption. A literal threat made by a caseworker to myself, \"I am the end all, be all of this case. \"",
+        "kind": "family_report"
+      },
+      {
+        "body": "This family court rewarded parental alienation, restricted my relationship with my children, and gave sole decision-making authority to the parent creating barriers to our bond, despite evidence of withheld parenting time, denied contact, and gatekeeping. At the same time, it imposed financial orders based on unsupported income assumptions that created impossible obligations, pushing me into debt while weakening my ability to remain a stable and present father in my children’s lives.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 5
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

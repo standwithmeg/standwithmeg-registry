@@ -29,27 +29,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-yfhm15ft/New Final Post and Capcut template/export/ward_scott/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/ward_scott/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 159,
-    "total_submissions": 221,
-    "avg_financial_loss": 181528.75,
-    "avg_months_lost": 36.0,
+    "families_approved": 157,
+    "total_submissions": 239,
+    "avg_financial_loss": 168081.76,
+    "avg_months_lost": 36.2,
     "_source_table": "movement_stats_by_state",
     "_match_value": "NC",
-    "state_family_count": 221,
-    "median_financial_loss": 137332,
-    "median_burden_sample_size": 74,
-    "median_months_lost": 17,
-    "pro_se_pct": 49.8,
-    "pro_se_count": 110,
-    "_pdf_state_family_count": 221,
+    "state_family_count": 239,
+    "median_financial_loss": 140000,
+    "median_burden_sample_size": 77,
+    "median_months_lost": 18,
+    "pro_se_pct": 48.5,
+    "pro_se_count": 116,
+    "_pdf_state_family_count": 239,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5704,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
@@ -97,6 +97,11 @@
         "source": "court_actors.notes"
       },
       {
+        "comment_text": "Terminated my parental rights",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
         "comment_text": "He laughed when he saw an evidence photo of a hole punched in a door by my ex, then looked at my ex and said “you know they make keys, don’t you?”",
         "author": "Anonymous parent",
         "source": "court_actors.notes"
@@ -126,7 +131,7 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "I find you unbelievable,\" threatened to imprison me.",
+        "body": "Ward exhibited clear bias from the inception of the case; sustained every objection to all my evidence of harm and trauma caused to my children by their father, then told me, \"Looks like you have no evidence of any of this. I find you unbelievable,\" threatened to imprison me if I did not reveal the name of my attorney who advised me to flee this jurisdiction to keep my boys safe, then decided I was lying when I refused to give him the name; violates many of the Rules of Judicial Procedure but threatened to sanction me when I pointed this out; pretended not to understand what a conflict of interest was, and decided that the wisest action to take to determine the existence of a conflict was for *the conflicted person* to make this determination; withheld that he had a conflict of interest due to his former employment with NC's DSS, even after I mentioned numerous times that DSS behaved unethically and perhaps illegally, and that I've been told that DSS is trying to harm me; has a fantastical ego that is a major danger to anyone entering family court in Buncombe County, particularly if you are a woman and your children have suffered abuse caused by a man.",
         "kind": "comment"
       },
       {
@@ -134,31 +139,35 @@
         "kind": "comment"
       },
       {
-        "body": "Terminated my parental rights and they called me to court that morning.",
+        "body": "Terminated my parental rights and they called me to court that morning without notice and I was in class at the local technical College not sure why I wasn't informed on this hearing that I knew NOTHING ABOUT",
         "kind": "comment"
       },
       {
-        "body": "He laughed when he saw an evidence photo of a hole punched in a door by my ex, then…",
+        "body": "Terminated my parental rights",
         "kind": "comment"
       },
       {
-        "body": "Removed them from safety",
+        "body": "He laughed when he saw an evidence photo of a hole punched in a door by my ex, then looked at my ex and said “you know they make keys, don’t you?”",
+        "kind": "comment"
+      },
+      {
+        "body": "This dark, greedy, ego-driven system has crushed my children's innocence, obviated their ability to trust any adult, removed them from safety, and delivered them into the home of their predator. Instead of protecting my children from a manipulative, coercive, abusive parent, this system has invested its resources into gaslighting my young children and severing them from the only adult who has been brave enough to advocate for them in the face of years of threats and harm.",
         "kind": "family_report"
       },
       {
-        "body": "This system re-traumatized myself.",
+        "body": "This system re-traumatized myself and my children in an unnecessarily cruel manner that one would never anticipate experiencing in a democratic, law-abiding society.",
         "kind": "family_report"
       },
       {
-        "body": "I can’t protect my kids from their abusive father.",
+        "body": "I can’t protect my kids from their abusive father. It was very clear to me in family court that because I was accusing my ex of being violent, I was immediately seen to be the problem, as though I was making accusations simply to get full custody of my kids.",
         "kind": "family_report"
       },
       {
-        "body": "They destroyed my family abused my children and sold them for bonuses and profit…",
+        "body": "They destroyed my family abused my children and sold them for bonuses and profit from me and adopted them out to strangers",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 6
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

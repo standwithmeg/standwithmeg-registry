@@ -29,22 +29,22 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 91,
-    "total_submissions": 124,
-    "avg_financial_loss": 107303.78,
-    "avg_months_lost": 37.4,
+    "families_approved": 90,
+    "total_submissions": 138,
+    "avg_financial_loss": 97715.76,
+    "avg_months_lost": 35.3,
     "_source_table": "movement_stats_by_state",
     "_match_value": "TN",
-    "state_family_count": 124,
+    "state_family_count": 138,
     "median_financial_loss": 83375,
-    "median_burden_sample_size": 52,
-    "median_months_lost": 18,
-    "pro_se_pct": 44.4,
-    "pro_se_count": 55,
-    "_pdf_state_family_count": 124,
+    "median_burden_sample_size": 56,
+    "median_months_lost": 17,
+    "pro_se_pct": 44.2,
+    "pro_se_count": 61,
+    "_pdf_state_family_count": 138,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5641,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 1,
     "actor_report_count": 1,
@@ -101,23 +101,23 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "I know that there was a court reporter in that room, but yet they are claiming that there wasn't.",
+        "body": "He made several false allegations against me never proved anything or he would try to take something and twist it. He is very manipulative and conniving. I know that there was a court reporter in that room, but yet they are claiming that there wasn't.",
         "kind": "comment"
       },
       {
-        "body": "Uses manipulation tactics by making a statement and then asking questions so you get trapped.",
+        "body": "Abusive litigator, tricky aggrements, files false documents and money hungry. Uses manipulation tactics by making a statement and then asking questions so you get trapped.",
         "kind": "comment"
       },
       {
-        "body": "Plays golf with judges.",
+        "body": "Plays golf with judges. Litigated while another state had jurisdiction and did not catch on until a few months and several thousands in.",
         "kind": "comment"
       },
       {
-        "body": "The family court process moves at the speed of procedure, but childhood moves at the speed of time.",
+        "body": "The family court process moves at the speed of procedure, but childhood moves at the speed of time. While hearings, appeals, and delays continue, my son and I are the ones paying the price—through distance, missed moments, impeded communication, and a relationship that requires thousands of miles and thousands of dollars just to preserve. I have spent over six years being a stay at home mother and over $18,000 fighting simply to remain in his life after the judge awarded primary custody to the father last year.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 3
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

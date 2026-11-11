@@ -27,27 +27,27 @@
     "actor_bucket_key": "robert nastri|CT"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-mwjh1ox2/New Final Post and Capcut template/export/robert_nastri/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/robert_nastri/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 48,
-    "total_submissions": 69,
-    "avg_financial_loss": 377362.58,
-    "avg_months_lost": 32.2,
+    "families_approved": 46,
+    "total_submissions": 72,
+    "avg_financial_loss": 344739.86,
+    "avg_months_lost": 31.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CT",
-    "state_family_count": 69,
-    "median_financial_loss": 215000,
+    "state_family_count": 72,
+    "median_financial_loss": 211500,
     "median_burden_sample_size": 39,
     "median_months_lost": 24,
-    "pro_se_pct": 69.6,
+    "pro_se_pct": 66.7,
     "pro_se_count": 48,
-    "_pdf_state_family_count": 69,
+    "_pdf_state_family_count": 72,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5641,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -115,7 +115,7 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Suppressed evidence at trial, issued an ambiguous court order that incites on-going…",
+        "body": "Suppressed evidence at trial, issued an ambiguous court order that incites on-going conflict.",
         "kind": "comment"
       },
       {
@@ -127,19 +127,19 @@
         "kind": "comment"
       },
       {
-        "body": "Five years in court has stolen precious time that my daughter.",
+        "body": "Five years in court has stolen precious time that my daughter and I will never get back. Instead of finding protection and justice, we found a system that left us feeling powerless while enabling continued abuse. The greatest cost has not been financial, but the childhood my daughter deserved.",
         "kind": "family_report"
       },
       {
-        "body": "While navigating a devastating emotional and financial toll.",
+        "body": "This agonizing separation has deeply fractured my family, leaving me to endure years of heartbreaking alienation from my son, while navigating a devastating emotional and financial toll. This systemic battle against the courts has exhausted and traumatized me while simultaneously needing to muster strength to fight to protect my son from the founded abuse and to have a safe return home.",
         "kind": "family_report"
       },
       {
-        "body": "Cpstd. No trust in the legal system. Which is extremely scary.",
+        "body": "Cpstd. No trust in the legal system. Which is extremely scary. Don't trust the legislators",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 3
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

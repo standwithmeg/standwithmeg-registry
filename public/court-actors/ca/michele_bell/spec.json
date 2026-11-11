@@ -30,27 +30,27 @@
     "actor_bucket_key": "michele bell|CA"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-7gspmaqk/New Final Post and Capcut template/export/michele_bell/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/michele_bell/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 357,
-    "total_submissions": 474,
-    "avg_financial_loss": 279136.73,
-    "avg_months_lost": 34.9,
+    "families_approved": 356,
+    "total_submissions": 529,
+    "avg_financial_loss": 263721.3,
+    "avg_months_lost": 34.0,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CA",
-    "state_family_count": 474,
-    "median_financial_loss": 259500,
-    "median_burden_sample_size": 210,
+    "state_family_count": 529,
+    "median_financial_loss": 237750,
+    "median_burden_sample_size": 232,
     "median_months_lost": 20,
-    "pro_se_pct": 58.0,
-    "pro_se_count": 275,
-    "_pdf_state_family_count": 474,
+    "pro_se_pct": 58.4,
+    "pro_se_count": 309,
+    "_pdf_state_family_count": 529,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5746,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 7,
     "actor_report_count": 7,
@@ -109,6 +109,11 @@
         "source": "court_actors.notes"
       },
       {
+        "comment_text": "Issued unlawful orders. Prejudiced. Ignored or forgot standard court procedures.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
         "comment_text": "Issued prejudiced orders, ignored/forgot standard cost procedures, ignored evidence,",
         "author": "Anonymous parent",
         "source": "court_actors.notes"
@@ -138,7 +143,7 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Ignored 730 evaluators report in move away",
+        "body": "Ignored 730 evaluators report in move away, ignore income documentation, issued orders without considering evidence, issued $80k in sanctions and attorney fees and support orders that I cannot afford.",
         "kind": "comment"
       },
       {
@@ -146,27 +151,35 @@
         "kind": "comment"
       },
       {
-        "body": "Refused to consider evidence contradicting Income",
+        "body": "• Denied ex parte request • Awarded ex-wife sole legal custody based on allegations later acknowledged during the ruling to be false or unsupported • Failure to review and/or properly weigh all evidence presented • Failure to award sanctions against opposing counsel despite documented concerns • Ordered reimbursement of 20% of ex-wife’s legal fees based on allegedly false Income and Expense Declaration • Refused to consider evidence contradicting Income and Expense Declaration claims • Applied incorrect legal standard in custody ruling, resulting in reversal by the Court of Appeal",
         "kind": "comment"
       },
       {
-        "body": "Does not look into the history of cases, illegal/out of jurisdiction orders…",
+        "body": "Does not look into the history of cases, illegal/out of jurisdiction orders, misconduct.",
         "kind": "comment"
       },
       {
-        "body": "Ignored all factual evidence in its rulings",
+        "body": "Issued unlawful orders. Prejudiced. Ignored or forgot standard court procedures.",
+        "kind": "comment"
+      },
+      {
+        "body": "Issued prejudiced orders, ignored/forgot standard cost procedures, ignored evidence,",
+        "kind": "comment"
+      },
+      {
+        "body": "This system has wrongfully ripped away two children from a loving/involved father. The system has repeatedly violated my due process and ignored all factual evidence in its rulings.",
         "kind": "family_report"
       },
       {
-        "body": "This system has destroyed my once healthy relationship with our son.",
+        "body": "This system has destroyed my once healthy relationship with our son. The life long negative effects have yet to be realized in our son. Has taken me many years to recover from this abuse.",
         "kind": "family_report"
       },
       {
-        "body": "Used the courts to turn a present",
+        "body": "They used the courts to turn a present, involved father into a visitor in his own children’s lives — and every professional appointed to protect those kids either looked the other way or made it worse. My children grew up primarily in my care, and now the parent who functioned more as a visitor has been elevated to full custody based on allegations that were false, misleading, or later contradicted by evidence. The emotional damage this has caused my children and our family is impossible to fully describe.",
         "kind": "family_report"
       },
       {
-        "body": "Permanent fracturing of child-mother bond.",
+        "body": "Permanent fracturing of child-mother bond. Orange County, CA = Complete Corruption!",
         "kind": "family_report"
       },
       {
@@ -174,7 +187,7 @@
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 2
+    "quote_page_count": 6
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

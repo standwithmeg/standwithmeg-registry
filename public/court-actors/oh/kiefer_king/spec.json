@@ -26,27 +26,27 @@
     "actor_bucket_key": "kiefer king|OH"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-2yeauxv5/New Final Post and Capcut template/export/kiefer_king/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/kiefer_king/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 206,
-    "total_submissions": 291,
-    "avg_financial_loss": 107575.92,
-    "avg_months_lost": 33.8,
+    "families_approved": 207,
+    "total_submissions": 315,
+    "avg_financial_loss": 102311.34,
+    "avg_months_lost": 32.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OH",
-    "state_family_count": 291,
-    "median_financial_loss": 79500,
-    "median_burden_sample_size": 145,
+    "state_family_count": 315,
+    "median_financial_loss": 77750,
+    "median_burden_sample_size": 154,
     "median_months_lost": 18,
-    "pro_se_pct": 52.9,
-    "pro_se_count": 154,
-    "_pdf_state_family_count": 291,
+    "pro_se_pct": 52.4,
+    "pro_se_count": 165,
+    "_pdf_state_family_count": 315,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5749,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -114,7 +114,11 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Failed to file things in time, spent more time with the other party, refused to do…",
+        "body": "Admitted in open court to not accurately reporting his time spent with the Plaintiff so things would appear more even. Admitted to taking the expert advice from a witness and claiming her to be an expert witness even though evidence was shown the person was not who they said they were (posing as a therapist but unlicensed and practicing without a license)",
+        "kind": "comment"
+      },
+      {
+        "body": "Failed to file things in time, spent more time with the other party, refused to do research and accepted false statements about medical diagnoses to make me look bad",
         "kind": "comment"
       },
       {
@@ -122,19 +126,19 @@
         "kind": "comment"
       },
       {
-        "body": "Lost time and crucial relationship with my kids and has destroyed my reputation…",
+        "body": "Lost time and crucial relationship with my kids and has destroyed my reputation with anyone in this town or County and made me lose a job due to the pressure",
         "kind": "family_report"
       },
       {
-        "body": "Removed valuable time with my children",
+        "body": "Removed valuable time with my children and broken their mental health and mine, caused more problems than i had in the abusive marriage",
         "kind": "family_report"
       },
       {
-        "body": "Gave custody of my son to a man actively under investigation for molesting a minor",
+        "body": "This system is a joke. They gave custody of my son to a man actively under investigation for molesting a minor and who admitted on the stand to 3 felonies and having a child porn problem.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 3
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

@@ -27,27 +27,27 @@
     "actor_bucket_key": "mindy zimerman|SC"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-6nxbtixa/New Final Post and Capcut template/export/mindy_zimmerman/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/mindy_zimmerman/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 85,
-    "total_submissions": 113,
-    "avg_financial_loss": 271548.16,
-    "avg_months_lost": 25.3,
+    "families_approved": 81,
+    "total_submissions": 140,
+    "avg_financial_loss": 237149.95,
+    "avg_months_lost": 25.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "SC",
-    "state_family_count": 113,
-    "median_financial_loss": 125000,
-    "median_burden_sample_size": 71,
+    "state_family_count": 140,
+    "median_financial_loss": 102000,
+    "median_burden_sample_size": 90,
     "median_months_lost": 18,
-    "pro_se_pct": 56.6,
-    "pro_se_count": 64,
-    "_pdf_state_family_count": 113,
+    "pro_se_pct": 55.0,
+    "pro_se_count": 77,
+    "_pdf_state_family_count": 140,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5729,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -115,31 +115,31 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Entered contempt findings and rulings that suspended my financial support and…",
+        "body": "Entered contempt findings and rulings that suspended my financial support and transferred future medical appointment authority for my children solely to the other parent while I was self-represented in court",
         "kind": "comment"
       },
       {
-        "body": "Was assigned to portions of your case at different times.",
+        "body": "Was assigned to portions of your case at different times. You have raised concerns about scheduling, notice, and procedural issues during the litigation.",
         "kind": "comment"
       },
       {
-        "body": "DENIED ME THE RIGHT TO KNOW WHERE MY CHILDREN WHERE AT FOR CHRISTMAS THEY WERE OUT…",
+        "body": "DENIED ME THE RIGHT TO KNOW WHERE MY CHILDREN WHERE AT FOR CHRISTMAS THEY WERE OUT OF STATE WITH FOSTER CARE",
         "kind": "comment"
       },
       {
-        "body": "Temporary custody proceedings turned my children, medical hardship, and parental…",
+        "body": "Temporary custody proceedings turned my children, medical hardship, and parental rights into a system I could barely recognize. Instead of protecting stability and communication, the process escalated conflict, isolated me from important decisions involving my daughters, and caused severe emotional and financial harm to our family",
         "kind": "family_report"
       },
       {
-        "body": "This is not even all of it",
+        "body": "MANIPULATED INVADED MY PRIVACY EMBARRASSED ME IN MY NEIGHBORHOOD VIOLATED MY HUMAN RIGHTS ALIENATED ME RUINED MY MARRIAGE. This is not even all of it",
         "kind": "family_report"
       },
       {
-        "body": "I have literally lost everything became homeless.",
+        "body": "I have literally lost everything became homeless. Lost my special needs child due Domestic Violence and narcissist",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 3
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

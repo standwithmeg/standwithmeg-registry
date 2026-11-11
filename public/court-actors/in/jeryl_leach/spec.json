@@ -2,10 +2,10 @@
   "schema_version": 2,
   "actor": {
     "slug": "jeryl_leach",
-    "display_name": "Jeryl Leach",
-    "title": "",
-    "first_name": "Jeryl",
-    "last_name": "Leach",
+    "display_name": "Judge jeryl leach",
+    "title": "Judge",
+    "first_name": "jeryl",
+    "last_name": "leach",
     "role": "Judge",
     "court": "Newton County",
     "county": "Newton County",
@@ -27,27 +27,27 @@
     "actor_bucket_key": "jeryl leach|IN"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-7gspmaqk/New Final Post and Capcut template/export/jeryl_leach/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/jeryl_leach/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 126,
-    "total_submissions": 161,
-    "avg_financial_loss": 132780.75,
-    "avg_months_lost": 29.2,
+    "families_approved": 120,
+    "total_submissions": 198,
+    "avg_financial_loss": 222011.73,
+    "avg_months_lost": 31.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "IN",
-    "state_family_count": 161,
-    "median_financial_loss": 63875,
-    "median_burden_sample_size": 80,
-    "median_months_lost": 18,
-    "pro_se_pct": 45.3,
-    "pro_se_count": 73,
-    "_pdf_state_family_count": 161,
+    "state_family_count": 198,
+    "median_financial_loss": 68150,
+    "median_burden_sample_size": 98,
+    "median_months_lost": 20,
+    "pro_se_pct": 49.5,
+    "pro_se_count": 98,
+    "_pdf_state_family_count": 198,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5746,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -121,19 +121,23 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "We paid her retainer fee of 1,500.00 and she turned in her report 2 days before court.",
+        "body": "Miss Harris was appointed to us by the court as a Guardian Ad Litem to our daughter during a custody issue. We paid her retainer fee of 1,500.00 and she turned in her report 2 days before court. Court rules are that reports need to be turned in 10 days before court. My ex-husband asked for the report to be thrown out because it was turned in late which forced the judge to r e c u s e himself a n d w e h a d to wait for a n o t h e r court date as well as a new judge. Miss Harris was very upset and charged us an additional 3,000.00 without doing any additional work.",
         "kind": "comment"
       },
       {
-        "body": "Tried to communicate and got nothing but attitude.",
+        "body": "Continued conspiracies to commit murders and attempts, extortion, misappropriation of funds and government programs, embezzlement, harassment, intimidation, falsification of the record, fraud upon the Courts, trafficking, mail fraud, continued public corruption, health care fraud, fiduciary breaches, tampering with the record, witnesses, and victims, RICO, conflicts of interests, quid pro quo Did nothing to her. Tried to communicate and got nothing but attitude. I didn’t think professionals spoke to other humans the way she spoke to me.",
         "kind": "comment"
       },
       {
-        "body": "Racketeering, conspiracyies to commit murders, attempted and threats for…",
+        "body": "Racketeering, conspiracyies to commit murders, attempted and threats for guardianship, tampering with record, harassment and intimidation, suppression, due process violations, extortion, theft, laundering, trafficking of human and children (“CHINS”, “adoption”, “juvenile delinquency”, “TPR”, paternity, identity theft, etc.), mail fraud, RICO",
         "kind": "comment"
       },
       {
-        "body": "Murderous saboteurs and traffickers for profit, denied motherhood and transferred…",
+        "body": "Did nothing to her. Tried to communicate and got nothing but attitude. I didn’t think professionals spoke to other humans the way she spoke to me.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Murderous saboteurs and traffickers for profit, denied motherhood and transferred custody to infertile perpetrator, ex-husband, whom is not the biological father, destroyed countless extended families, relationships, career and survivor of attempted incapacitation and murder via healthcare fraud inside and outside of the Courts",
         "kind": "family_report"
       },
       {
@@ -141,7 +145,7 @@
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 6
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

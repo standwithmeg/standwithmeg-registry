@@ -26,27 +26,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-4q360ne7/New Final Post and Capcut template/export/lisa_langton/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/lisa_langton/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 145,
-    "total_submissions": 183,
-    "avg_financial_loss": 181109.42,
-    "avg_months_lost": 36.7,
+    "families_approved": 142,
+    "total_submissions": 200,
+    "avg_financial_loss": 173525.11,
+    "avg_months_lost": 36.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "MI",
-    "state_family_count": 183,
-    "median_financial_loss": 103000,
-    "median_burden_sample_size": 80,
-    "median_months_lost": 17,
-    "pro_se_pct": 44.3,
-    "pro_se_count": 81,
-    "_pdf_state_family_count": 183,
+    "state_family_count": 200,
+    "median_financial_loss": 104500,
+    "median_burden_sample_size": 86,
+    "median_months_lost": 18,
+    "pro_se_pct": 44.0,
+    "pro_se_count": 88,
+    "_pdf_state_family_count": 200,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5665,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -96,19 +96,19 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Refused to hear other testimony and group 2 different people together based on three other children’s removal",
+        "body": "Failed to review current situations with girls focused on half brothers case more. Refused to hear other testimony and group 2 different people together based on three other children’s removal",
         "kind": "comment"
       },
       {
-        "body": "Denied my motions on several occasions",
+        "body": "Denied my motions on several occasions, is on record stating “I don’t care what the child wants I will not interview them” “I don’t owe you an explanation” “I am the end all be all “",
         "kind": "comment"
       },
       {
-        "body": "This system has kept my family apart and kept my children from knowing each other and growing up together.",
+        "body": "This system has kept my family apart and kept my children from knowing each other and growing up together. The judges and the front of the court need to be held accountable for keeping families apart for no reason other than they don’t wanna do their job and see the evidence.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 2
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

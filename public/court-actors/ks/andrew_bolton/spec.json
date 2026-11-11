@@ -12,11 +12,11 @@
     "court_or_county": "Miami",
     "state": "Kansas",
     "state_abbr": "KS",
-    "mention_count": 16,
+    "mention_count": 17,
     "family_count": 16,
     "public_family_count": 16,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 16,
+    "actor_report_count": 17,
     "supabase_row_ids": [
       "ddfd7d7b-8684-4a68-bd8a-9aa8bbc46147",
       "f17e6277-1a81-4d4f-b1f7-8e84f6f6ec30",
@@ -33,6 +33,7 @@
       "262336c7-0a95-482a-83d6-2e2c5ac9bc44",
       "222e95af-f209-402b-8d38-15c3e724dd8e",
       "ffa86815-dbc4-47c6-beca-24388811b40f",
+      "2783d23d-8b43-4e5a-ba6a-1367f35c964f",
       "85264bb0-b134-4b5f-b778-e3b1a6e15c44"
     ],
     "actor_row_id": "ddfd7d7b-8684-4a68-bd8a-9aa8bbc46147",
@@ -47,32 +48,38 @@
     ]
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-7gspmaqk/New Final Post and Capcut template/export/andrew_bolton/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/andrew_bolton/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 185,
-    "total_submissions": 273,
-    "avg_financial_loss": 111495.56,
-    "avg_months_lost": 31.1,
+    "families_approved": 186,
+    "total_submissions": 293,
+    "avg_financial_loss": 120206.43,
+    "avg_months_lost": 30.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "KS",
-    "state_family_count": 273,
-    "median_financial_loss": 97450,
-    "median_burden_sample_size": 140,
-    "median_months_lost": 16,
-    "pro_se_pct": 48.4,
-    "pro_se_count": 132,
-    "_pdf_state_family_count": 273,
+    "state_family_count": 293,
+    "median_financial_loss": 101500,
+    "median_burden_sample_size": 149,
+    "median_months_lost": 19,
+    "pro_se_pct": 48.3,
+    "pro_se_count": 141,
+    "_pdf_state_family_count": 292,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5746,
+  "movement_total": 6496,
   "supabase": {
-    "report_count": 16,
-    "actor_report_count": 16,
+    "report_count": 17,
+    "actor_report_count": 17,
     "family_count": 16,
     "family_reports": [
+      {
+        "body": "Doubled down on the abuse to the victim, failed the child, extorted the protective parent while letting the perpetrators alienate the child from a loving fit parent.",
+        "state": "KS",
+        "county": "Miami",
+        "row_id": "3f5261a7-2c1f-4e14-9a9c-32f6012c2da0"
+      },
       {
         "body": "We have lost years of time with our children. Jennifer Hagg has lied, bullied, and made false reports to the court.",
         "state": "KS",
@@ -102,12 +109,6 @@
         "state": "KS",
         "county": "Linn",
         "row_id": "7f9d2880-2c07-4255-88a1-eeb2880f95d6"
-      },
-      {
-        "body": "Miami county doesn’t have the child best interest at all, they literally take children away from a parent who wants to protect them from abuse and drugs and tells the parent that wants to keep them safe that they are a vindictive ex who is mad!",
-        "state": "KS",
-        "county": "Miami county",
-        "row_id": "8b0eaa72-5dd3-411b-9dc4-0f25f7d91268"
       }
     ],
     "public_comments": [
@@ -152,6 +153,12 @@
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Miami"
+      },
+      {
+        "comment_text": "Heard he’s not allowed in Miami county now, but is still on cases in neighboring counties",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "6th District / Miami county"
       },
       {
         "comment_text": "Didn’t interview witnesses or children involved. Was aggressive towards us, yelling.",
@@ -207,31 +214,31 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Refused to speak with me in person. Told me he always meets the first time via Zoom.",
+        "body": "Has not spoken to anyone I asked him to speak to, including people whom are in direct contact with my children in school. Set a separate hearing inregards to his fees not being paid, which I had paid 50% of his fees. Refused to speak with me in person. Told me he always meets the first time via Zoom. I attempted to reach out to him after our Zoom call and was told that all future communications would be dealt with between attorneys.",
         "kind": "comment"
       },
       {
-        "body": "Hand-picked by Judge Richard Fisher. Refuses to review my evidence.",
+        "body": "Hand-picked by Judge Richard Fisher. Refuses to review my evidence. Believes all allegations against me. Won't allow me to choose my own reintegration therapist — required to use his buddy Naomi Catadella. I lost my kids to the REAL abuser and Andy Bolton and Richard Fisher painted me as crazy, took my voice.",
         "kind": "comment"
       },
       {
-        "body": "The system has stripped me of any belief that leaving my abuser was the right choice.",
+        "body": "The system allowed my abuser to escape all consequences to the point of his criminal charges being dismissed and helped Dad turning me into the abuser. The system has stripped me of any belief that leaving my abuser was the right choice. I wish I would have stayed — at least I would still have my children.",
         "kind": "comment"
       },
       {
-        "body": "Gave 50/50 custody to my ex",
+        "body": "Ignored evidence. Did not investigate. Sided with bias due to ex communicating and me going through my lawyer. Literally yelled at me in court, misconduct and the judge even called him out.",
         "kind": "comment"
       },
       {
-        "body": "Ignored evidence. Did not investigate.",
+        "body": "GAL. Did nothing. Was a puppet for the case manager. Kept trying to get off our case and was finally dismissed by the judge.",
         "kind": "comment"
       },
       {
-        "body": "Kept trying to get off our case and was finally dismissed by the judge.",
+        "body": "Accused me of being wrong for being in an abusive relationship and didn’t talk to any witnesses I provided.",
         "kind": "comment"
       },
       {
-        "body": "Accused me of being wrong for being in an abusive relationship and didn’t talk to…",
+        "body": "Heard he’s not allowed in Miami county now, but is still on cases in neighboring counties",
         "kind": "comment"
       },
       {
@@ -251,7 +258,11 @@
         "kind": "comment"
       },
       {
-        "body": "Jennifer Hagg has lied, bullied, and made false reports to the court.",
+        "body": "Doubled down on the abuse to the victim, failed the child, extorted the protective parent while letting the perpetrators alienate the child from a loving fit parent.",
+        "kind": "family_report"
+      },
+      {
+        "body": "We have lost years of time with our children. Jennifer Hagg has lied, bullied, and made false reports to the court.",
         "kind": "family_report"
       },
       {
@@ -259,23 +270,19 @@
         "kind": "family_report"
       },
       {
-        "body": "Her dad has threatened to leave with her and go off grid if I ever reported the abuse.",
+        "body": "Time with my daughter as well as putting my daughter at risk. Her dad has threatened to leave with her and go off grid if I ever reported the abuse.",
         "kind": "family_report"
       },
       {
-        "body": "My child has to be with her alleged abuser 50% of the time that breaks my heart.",
+        "body": "I was falsely accused of physical abuse on my child and lost my visitation for over 2 months, this has created a fear in my child that she’s going to go for her scheduled parenting time with her father and never get to see me again. My child has to be with her alleged abuser 50% of the time that breaks my heart, but what can I do to fix it?",
         "kind": "family_report"
       },
       {
-        "body": "I was ordered to do counseling, of which my children seldomly attended.",
-        "kind": "family_report"
-      },
-      {
-        "body": "Miami county doesn’t have the child best interest at all, they literally take…",
+        "body": "I have not seen my children in over 16 months. I was ordered to do counseling, of which my children seldomly attended. My children are suffering in school, failing classes, suspensions, and etc and GAL hasn't spoken to anyone of importance or done his job. Children's mother falsely accused me of abuse and has bought my children's love all while telling them lies about me. After years of fighting to do what is best for my children......I have finally given up. Once you understand how the system works, only a fool would believe they could win going against it.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 3
+    "quote_page_count": 10
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

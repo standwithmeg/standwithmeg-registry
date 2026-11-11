@@ -2,10 +2,10 @@
   "schema_version": 2,
   "actor": {
     "slug": "jamie_vogt",
-    "display_name": "Jamie Vogt",
+    "display_name": "Jamie Vogt - Custody Evaluator",
     "title": "",
-    "first_name": "Jamie",
-    "last_name": "Vogt",
+    "first_name": "Jamie Vogt - Custody",
+    "last_name": "Evaluator",
     "role": "Therapist / Counselor",
     "court": "Tulsa County",
     "county": "Tulsa County",
@@ -33,27 +33,27 @@
     "actor_bucket_key": "jamie vogt|OK"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-56vhhi8e/New Final Post and Capcut template/export/jamie_vogt/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/jamie_vogt/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 130,
-    "total_submissions": 175,
-    "avg_financial_loss": 121131.03,
-    "avg_months_lost": 24.4,
+    "families_approved": 120,
+    "total_submissions": 223,
+    "avg_financial_loss": 112707.53,
+    "avg_months_lost": 28.0,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OK",
-    "state_family_count": 175,
-    "median_financial_loss": 101500,
-    "median_burden_sample_size": 95,
-    "median_months_lost": 13,
+    "state_family_count": 223,
+    "median_financial_loss": 104250,
+    "median_burden_sample_size": 115,
+    "median_months_lost": 16,
     "pro_se_pct": 41.7,
-    "pro_se_count": 73,
-    "_pdf_state_family_count": 175,
+    "pro_se_count": 93,
+    "_pdf_state_family_count": 223,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5686,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 10,
     "actor_report_count": 10,
@@ -151,47 +151,51 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "She ignored obvious signs of trauma in my child and said that she seemed coached.",
+        "body": "She ignored obvious signs of trauma in my child and said that she seemed coached because my child's demeanor and tone changed when describing abuse. She said that my child seemed animated and lively when talking about hobbies and interests, but she became emotionally distant when discussing trauma. My child was evaluated and then diagnosed with PTSD. She discredited my daughter's abuse disclosure because of her different (monotone) tone of voice and emotional shutdown when talking about it. My daughter has PTSD. That's exactly how traumatized individuals describe trauma. They disassociate. She ruled that my daughter's disclosure of SA was coached because she had a flat affect and became emotionally distant when discussing the abuse. My daughter has PTSD. That is the typical presentation. My daughter was denied advocacy and protection as a result.",
         "kind": "comment"
       },
       {
-        "body": "My daughter begged for help and was ignored.",
+        "body": "Jamie Vogt did EFE on both my children. My daughter layed in my lap in her office after not seeing me for 1 year my first time seeing her was in Jamie Vogt office for one hour. My daughter layed in my lap crying begging me not to leave saying I was the only one who can keep her safe. Jamie did noting to help my baby! Took 10 thousand dollars to see both my kids and helped paternal grandmother kidnap my daughter. Let abusers bring her to Jamie’s office and never had a visit with my daughter and her father. My daughter begged for help and was ignored. She never even mentioned this in my daughter’s report for court.",
         "kind": "comment"
       },
       {
-        "body": "I didn’t she would report back to the GAL how difficult I was being.",
+        "body": "Coerced me to give details about a situation with my kids in counseling with my ex while the divorce was still taking place. I expressed that my ex was using the session to fish for information to use against me and she allowed her to do it, even telling me that if I didn’t she would report back to the GAL how difficult I was being.",
         "kind": "comment"
       },
       {
-        "body": "The judge dismissed all as evidence.",
+        "body": "To be disclosed if my testimony is required. I have paper, digital, and video evidence of all of my above statements. The judge dismissed all as evidence.",
         "kind": "comment"
       },
       {
-        "body": "Ignored evidence Failed to report domestic violence to DHS Manipulative of kids’…",
+        "body": "Ignored evidence Failed to report domestic violence to DHS Manipulative of kids’ emotions Encourages contact with abusers and their children Lies",
         "kind": "comment"
       },
       {
-        "body": "The family court system has cost me precious time with my children, furthered our…",
+        "body": "The family court system has cost me precious time with my children, furthered our traumatic experiences, favors reunification over safety, and continues to horrify me",
         "kind": "family_report"
       },
       {
-        "body": "Took years from me.",
+        "body": "Destroyed my faith in child court and what is supposed to be the absolute wellbeing of our kids as a priority. Took years from me and my kids/family we will never get back and has caused trauma to my kids they may never recover from.",
         "kind": "family_report"
       },
       {
-        "body": "Destroyed my family for over 6 years now!",
+        "body": "Family court is a circus and for all of the lip service to “children’s best interest”, my kids are BY FAR, worse off today because of it.",
         "kind": "family_report"
       },
       {
-        "body": "I reported abuse. My family has been destroyed as a result.",
+        "body": "Destroyed my family for over 6 years now! Took every penny we have down to savings and retirement fighting for justice for my two small children! Traumatized my children so bad they will be in therapy rest of their lives!! Because of wagoner county Oklahoma family courts my son was SA by TWO different people while at his dads for 2 years and alienated from me! I find out 2 years later when I finally get my first visit with him! His dad never reported! Never called police nor cps and did not take my son for medical treatment… he called my son a liar and went about life!! He admitted on stand to all this and walks away with no consequences!! This is on the record! Literally destroying my kids, family and my life still to this day! My son has light he’s sent to come to me full sole custody [redacted] there is no light for my daughter to this day! I’m on supervised visits for no reason!!",
         "kind": "family_report"
       },
       {
-        "body": "Family court has shown me that children and families come last.",
+        "body": "My biggest regret in life is telling the truth and following the law. I reported abuse. My family has been destroyed as a result.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Family court has shown me that children and families come last. They have facilitated and enabled conflict that has cost me and my daughter years and tens of thousands of dollars.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 2
+    "quote_page_count": 9
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

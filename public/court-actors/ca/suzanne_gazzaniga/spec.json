@@ -26,27 +26,27 @@
     "actor_bucket_key": "suzanne gazzaniga|CA"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-7gspmaqk/New Final Post and Capcut template/export/suzanne_gazzaniga/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/suzanne_gazzaniga/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 357,
-    "total_submissions": 474,
-    "avg_financial_loss": 279136.73,
-    "avg_months_lost": 34.9,
+    "families_approved": 356,
+    "total_submissions": 529,
+    "avg_financial_loss": 263721.3,
+    "avg_months_lost": 34.0,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CA",
-    "state_family_count": 474,
-    "median_financial_loss": 259500,
-    "median_burden_sample_size": 210,
+    "state_family_count": 529,
+    "median_financial_loss": 237750,
+    "median_burden_sample_size": 232,
     "median_months_lost": 20,
-    "pro_se_pct": 58.0,
-    "pro_se_count": 275,
-    "_pdf_state_family_count": 474,
+    "pro_se_pct": 58.4,
+    "pro_se_count": 309,
+    "_pdf_state_family_count": 529,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5746,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -114,31 +114,31 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Included for the complete court-actor timeline.",
+        "body": "Appears in the case record as a judicial officer and order signer in [redacted] family-court proceedings. Included for the complete court-actor timeline.",
         "kind": "comment"
       },
       {
-        "body": "Recuesed herself from my case sighting conflict which she never described what the…",
+        "body": "Recuesed herself from my case sighting conflict which she never described what the conflict was so another judge (Civil) could step in.",
         "kind": "comment"
       },
       {
-        "body": "This judge denied my timely request to set aside Michael Jacques orders.",
+        "body": "This judge denied my timely request to set aside Michael Jacques orders despite the reasons why he was removed from my case.",
         "kind": "comment"
       },
       {
-        "body": "After disputed allegations I denied on the record, Placer County Family Court…",
+        "body": "After disputed allegations I denied on the record, Placer County Family Court issued a five-year restraining order and custody restrictions that left me with only supervised video calls. My concern is that major decisions were made through a process with serious record and due-process questions, including disputed child testimony, unclear evidence rulings, Family Code 3044 findings, and a trial day with no court reporter.",
         "kind": "family_report"
       },
       {
-        "body": "Losing your children in Family Court is like mourning the death of a child.",
+        "body": "Losing your children in Family Court is like mourning the death of a child. However there is light at the end of the tunnel. Patience will be your friend and children mature & grow mentally and emotionally. Sooner or later they’ll see the truth. Pray for Patience.",
         "kind": "family_report"
       },
       {
-        "body": "My life will never be the same.",
+        "body": "This court system has kidnapped my child under the color of law and destroyed my entire life. My life will never be the same.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 3
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

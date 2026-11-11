@@ -18,9 +18,9 @@
     "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 4,
     "supabase_row_ids": [
-      "57459aaa-5bb6-4d70-b0d6-963d629b460b",
       "979a23e2-9ba0-4154-a0bd-43a8be673efc",
       "91df16ee-d2a5-43e5-be9f-97c41dd69a05",
+      "12f12bb6-2807-4f17-ac8a-a893a3d52322",
       "749e9452-52d5-4778-80ed-7d683df03135"
     ],
     "actor_row_id": null,
@@ -32,33 +32,27 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 121,
-    "total_submissions": 161,
-    "avg_financial_loss": 206416.3,
-    "avg_months_lost": 31.7,
+    "families_approved": 119,
+    "total_submissions": 192,
+    "avg_financial_loss": 189146.89,
+    "avg_months_lost": 32.6,
     "_source_table": "movement_stats_by_state",
     "_match_value": "GA",
-    "state_family_count": 161,
+    "state_family_count": 192,
     "median_financial_loss": 151000,
-    "median_burden_sample_size": 87,
+    "median_burden_sample_size": 99,
     "median_months_lost": 19,
-    "pro_se_pct": 42.2,
-    "pro_se_count": 68,
-    "_pdf_state_family_count": 161,
+    "pro_se_pct": 42.7,
+    "pro_se_count": 82,
+    "_pdf_state_family_count": 192,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5722,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
     "family_count": 3,
     "family_reports": [
-      {
-        "body": "Attempted to destroy the child bond with her mother. Altered the child’s life by denying medical treatment.",
-        "state": "GA",
-        "county": "Catoosa",
-        "row_id": "3ab71e48-9b6a-42eb-aafd-b6dd357694ba"
-      },
       {
         "body": "Stolen time and moments that can never be replaced",
         "state": "GA",
@@ -75,12 +69,6 @@
     "public_comments": [
       {
         "comment_text": "Did not hold my spouse accountable for violating supervised visitation orders. Assigned a deputy court clerk in the same jurisdiction to be the GAL, conflict of interest",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Catoosa County"
-      },
-      {
-        "comment_text": "Appointed a juvenile court clerk in the same jurisdiction as my case. Ignored admission of domestic violence that caused the child to be harm.",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Catoosa County"
@@ -115,20 +103,12 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Did not hold my spouse accountable for violating supervised visitation orders.",
+        "body": "Did not hold my spouse accountable for violating supervised visitation orders. Assigned a deputy court clerk in the same jurisdiction to be the GAL, conflict of interest",
         "kind": "comment"
       },
       {
-        "body": "Ignored admission of domestic violence that caused the child to be harm.",
+        "body": "Signed warrants without any evidence of abuse. Issued warrants without any evidence of a crime only CPS invalidated statements.",
         "kind": "comment"
-      },
-      {
-        "body": "Issued warrants without any evidence of a crime only CPS invalidated statements.",
-        "kind": "comment"
-      },
-      {
-        "body": "Attempted to destroy the child bond with her mother.",
-        "kind": "family_report"
       },
       {
         "body": "Stolen time and moments that can never be replaced",

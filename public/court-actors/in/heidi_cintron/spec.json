@@ -30,27 +30,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-7gspmaqk/New Final Post and Capcut template/export/heidi_cintron/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/heidi_cintron/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 126,
-    "total_submissions": 161,
-    "avg_financial_loss": 132780.75,
-    "avg_months_lost": 29.2,
+    "families_approved": 120,
+    "total_submissions": 198,
+    "avg_financial_loss": 222011.73,
+    "avg_months_lost": 31.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "IN",
-    "state_family_count": 161,
-    "median_financial_loss": 63875,
-    "median_burden_sample_size": 80,
-    "median_months_lost": 18,
-    "pro_se_pct": 45.3,
-    "pro_se_count": 73,
-    "_pdf_state_family_count": 161,
+    "state_family_count": 198,
+    "median_financial_loss": 68150,
+    "median_burden_sample_size": 98,
+    "median_months_lost": 20,
+    "pro_se_pct": 49.5,
+    "pro_se_count": 98,
+    "_pdf_state_family_count": 198,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5746,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 7,
     "actor_report_count": 7,
@@ -99,7 +99,12 @@
         "source": "court_actors.notes"
       },
       {
-        "comment_text": "This magistrate compelled parties to agree on unsupervised visitation which resulted in the children being exposed to substance abuse, domestic violence, constant police presence, and physical and psychological abuse to the children. Ordered parties to settle on Unsupervised Visitation resulting in the children being exposed to drug and alcohol usage, domestic violence, constant police presence, and physical abuse to themselves. Magistrate denied Safe Parents to speak without threat of ,\"Not ending well.\" For the parties and attorney.",
+        "comment_text": "This magistrate compelled parties to agree on unsupervised visitation which resulted in the children being exposed to substance abuse, domestic violence, constant police presence, and physical and psychological abuse to the children.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Ordered parties to settle on Unsupervised Visitation resulting in the children being exposed to drug and alcohol usage, domestic violence, constant police presence, and physical abuse to themselves. Magistrate denied Safe Parents to speak without threat of ,\"Not ending well.\" For the parties and attorney.",
         "author": "Anonymous parent",
         "source": "court_actors.notes"
       },
@@ -133,11 +138,11 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Magistrate denied Safe Parents to speak.",
+        "body": "This magistrate compelled parties to agree on unsupervised visitation which resulted in the children being exposed to substance abuse, domestic violence, constant police presence, and physical and psychological abuse to the children. Ordered parties to settle on Unsupervised Visitation resulting in the children being exposed to drug and alcohol usage, domestic violence, constant police presence, and physical abuse to themselves. Magistrate denied Safe Parents to speak without threat of ,\"Not ending well.\" For the parties and attorney.",
         "kind": "comment"
       },
       {
-        "body": "Refused to let me speak denied evidence of abuse",
+        "body": "Refused to let me speak denied evidence of abuse, denied due process, didn't allow discovery, took away my ability to be with my children, only lets me have supervised visits for one hour a week. Allows mother and her family tto speak negatively in front of my children, threaten my life in front of my children, refuses to look at visit reports, only takes the mother's side",
         "kind": "comment"
       },
       {
@@ -145,7 +150,15 @@
         "kind": "comment"
       },
       {
-        "body": "Dismissed dispite my request documented the Issues in the reccomendations",
+        "body": "This magistrate compelled parties to agree on unsupervised visitation which resulted in the children being exposed to substance abuse, domestic violence, constant police presence, and physical and psychological abuse to the children.",
+        "kind": "comment"
+      },
+      {
+        "body": "Ordered parties to settle on Unsupervised Visitation resulting in the children being exposed to drug and alcohol usage, domestic violence, constant police presence, and physical abuse to themselves. Magistrate denied Safe Parents to speak without threat of ,\"Not ending well.\" For the parties and attorney.",
+        "kind": "comment"
+      },
+      {
+        "body": "Hidie cintron is either a judge or referee im not sure the distinction. When my ex-husband filed contempt allegations against me citing atleast 7 issues only two where addressed in the hearing 1. I didnt provide tball information to my ex husband and 2. My ex didnt like my husband being court ordered point of contact claiming \"rudeness\" and saying he wanted direct access to me. She disregarded every other complaint and when asked about Tball I told her the schedule for Tball fell outside of the visitation schedule and per the order his visitation was once a week for 4 hours Supervised at the paternal grandmother's home. The active (still today) protective order states he cannot be where we frequent including city parks down town valparaiso james school, and other locations in or around our residences. Tball both fell out of the visitation order and protected by protection order as a place we frequent. Due to the GAL Mary raatz saying my ex should try whenever possible to attend extra curricular activities with no amendments to the visitation order she intentionally created a Grey area. When I attempted to object to the GAL report for that reason a clerk gave me I correct information I missed the court date as a result and my attempts to try and reschedule where dismissed dispite my request documented the Issues in the reccomendations. When I explained to the judge I talk to clerks following the hearing my victim assistant the local police no one could provide guidance on what to do. We decided given the criminal behavior and relocation due to safety we would error on the side of caution. When I attempted to explain this submit evidence or have my husband speak as a witness and also support when my anxiety from ptsd in the same room as my abuser he was instructed he was not allowed to stand or speak and had to remain seated also dipite him being the court ordered point of contact who fielded all communication with my ex on the topic to aid recovery. Cintron in addition to not wanting to see my evidence to address all the issues claimed against me and my husband also continued to interrupt me and state she had only alloted 15 minutes for our hearing and we where already over that and holding up other cases. When I requested re evaluation of the GAl reports due to failure to comply with multiple GAL guidelines and also due to the conflict reports created it was cintron who denied due to lack of \"timeliness\" in my filing which was made after repeated requests for my GAL case file where delayed by Mary raatz and had to threaten her with a civil lawsuit to attain compliance. I was ordered in the contempt hearing to appear to court under threat of warrant for my arrest and no accommodation was made given my diagnosis which is court record and documented she had me in the same room 5 feet from my abuser and the lack of accommodation is not an isolated issue.",
         "kind": "comment"
       },
       {
@@ -153,19 +166,19 @@
         "kind": "family_report"
       },
       {
-        "body": "It has caused more damage to the children and the safe parent.",
+        "body": "It has caused more damage to the children and the safe parent. Then the substantiated abusers.",
         "kind": "family_report"
       },
       {
-        "body": "This high conflict divorce with children case has lasted nearly 8 years now, has…",
+        "body": "This high conflict divorce with children case has lasted nearly 8 years now, has cost the children and I over 40k, too much wasted time with failing Family Case Managers, and poor decision making skills from a newly promoted Magistrate. The failure of this system has caused the need for therapy and has caused the children not to trust adults in authority positions.",
         "kind": "family_report"
       },
       {
-        "body": "The system protects the false illusion of reunification while taking children and…",
+        "body": "The system protects the false illusion of reunification while taking children and portective parents from each other. They lump all cases into one format and when you dont fit they punish protective parents in a speak out then watch out mentality.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 10
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

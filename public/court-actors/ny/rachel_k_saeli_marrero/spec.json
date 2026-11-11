@@ -29,27 +29,27 @@
     "actor_bucket_key": "rachel saeli (marero)|NY"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-56vhhi8e/New Final Post and Capcut template/export/rachel_k_saeli_marrero/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/rachel_k_saeli_marrero/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 133,
-    "total_submissions": 181,
-    "avg_financial_loss": 203568.15,
-    "avg_months_lost": 27.8,
+    "families_approved": 132,
+    "total_submissions": 198,
+    "avg_financial_loss": 201612.06,
+    "avg_months_lost": 28.0,
     "_source_table": "movement_stats_by_state",
     "_match_value": "NY",
-    "state_family_count": 181,
+    "state_family_count": 198,
     "median_financial_loss": 175000,
-    "median_burden_sample_size": 67,
-    "median_months_lost": 14,
-    "pro_se_pct": 38.1,
-    "pro_se_count": 69,
-    "_pdf_state_family_count": 181,
+    "median_burden_sample_size": 73,
+    "median_months_lost": 15,
+    "pro_se_pct": 39.9,
+    "pro_se_count": 79,
+    "_pdf_state_family_count": 198,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5686,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
@@ -117,11 +117,11 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Refused to file motions on my behalf. Lied about filing motions.",
+        "body": "She goes by 2 names Rachel saeli and Rachel marrero her maden name. Refused to file motions on my behalf. Lied about filing motions. Had multiple exparte communications with opposing counsel. Telling me to shut my mouth about appeal because opposing counsel goes to her for help and she can sway her to our side. Lied on record stating she filed a motion that was never filed. Told me dss attorney goes to her for help so keep my mouth shut and she might be able to get dss to change their minds. Refused to file appeals. Refused to give me documents regarding my case. Spoke with judge many time ex parte while refusing to speak with me.",
         "kind": "comment"
       },
       {
-        "body": "Ignored evidence Was my first assigned counsel",
+        "body": "ignored evidence Was my first assigned counsel, motioned to withdraw falsely claiming I was not respecting her vacation time",
         "kind": "comment"
       },
       {
@@ -129,19 +129,19 @@
         "kind": "comment"
       },
       {
-        "body": "This system has destroyed my family when all I was asking for was help.",
+        "body": "This system has destroyed my family when all I was asking for was help. It has cost me my mental health, my children’s sense of security, and feeling a loss so big that it hurts us all. It has hurt innocent children and left them with unanswered questions and where their “mom” is.",
         "kind": "family_report"
       },
       {
-        "body": "Forced to muster up the strength to keep going",
+        "body": "The family court system deprived me of my life, liberty and the persuit of happiness. I never thought I would experience grieving the loss of my children while knowing they're still alive and being abused on a daily basis without being able to heal and live a normal childhood. Going from tucking them in at a night to crying myself to sleep, I am forced to muster up the strength to keep going and I feel as if I'm fighting for my life every single day, this has truly been the most excruciatingly painful thing I could ever imagine, and I would not wish this upon anyone.",
         "kind": "family_report"
       },
       {
-        "body": "This system has caused irreparable damage to my children and I.",
+        "body": "This system has caused irreparable damage to my children and I. Their lives have been negatively impacted due to the inability of the system to function properly!",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 5
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

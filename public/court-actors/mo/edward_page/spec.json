@@ -21,6 +21,7 @@
       "3ca5899d-f0ed-4ac2-9e08-cc2b58bccd94",
       "48d73d85-b9ed-4026-8068-a431d2169f76",
       "2bd1d062-e959-4e4c-9ff3-1ae3f9f7e543",
+      "d5a989e0-8852-4d8c-893c-0e876573d1cc",
       "fc43844d-d975-471c-9c89-a477041f67ca",
       "c9991fb7-7fff-461a-9bcb-11fbb7741acb",
       "f8c07d7e-498e-4c1f-ac3d-84c35afc895c",
@@ -28,45 +29,38 @@
       "443e2194-1c1d-4c57-9b01-b48516d7dd11",
       "780cc888-8857-4418-94fe-18e41466a3bc",
       "ceac56b0-84fc-425b-bab4-1aa6476c6827",
-      "c21eac02-1912-43a0-a5d6-a0cf0be3d2f9",
-      "b484818f-b7a5-44e6-b5ee-5ffa13d2e6c0"
+      "c21eac02-1912-43a0-a5d6-a0cf0be3d2f9"
     ],
     "actor_row_id": "3ca5899d-f0ed-4ac2-9e08-cc2b58bccd94",
     "actor_bucket_key": "edward page|MO"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-7gspmaqk/New Final Post and Capcut template/export/edward_page/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/edward_page/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 154,
-    "total_submissions": 221,
-    "avg_financial_loss": 99851.19,
-    "avg_months_lost": 41.8,
+    "families_approved": 145,
+    "total_submissions": 284,
+    "avg_financial_loss": 106113.17,
+    "avg_months_lost": 38.1,
     "_source_table": "movement_stats_by_state",
     "_match_value": "MO",
-    "state_family_count": 221,
-    "median_financial_loss": 94350,
-    "median_burden_sample_size": 96,
-    "median_months_lost": 24,
-    "pro_se_pct": 53.8,
-    "pro_se_count": 119,
-    "_pdf_state_family_count": 221,
+    "state_family_count": 284,
+    "median_financial_loss": 89000,
+    "median_burden_sample_size": 131,
+    "median_months_lost": 21,
+    "pro_se_pct": 53.9,
+    "pro_se_count": 153,
+    "_pdf_state_family_count": 284,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5746,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 12,
     "actor_report_count": 12,
     "family_count": 4,
     "family_reports": [
-      {
-        "body": "The system has caused a severe amount of trauma to my entire family. especially my daughter they came in and took my daughter away from a perfectly safe home perfectly safe parent and placed her with a rapist she was raped at gunpoint for 3 months sometimes several times each day",
-        "state": "MO",
-        "county": "Jefferson County",
-        "row_id": "f342a1df-68d3-47eb-b38f-f530681d967e"
-      },
       {
         "body": "The system is trying to destroy my family for profit. Evil tyrants need to be stopped.",
         "state": "MO",
@@ -110,12 +104,6 @@
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Jefferson County"
-      },
-      {
-        "comment_text": "He told me that the violation and deprivation of my Civil Rights were water under the bridge and there's nothing we could do about it because we can't go back in time.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Jefferson County MO"
       }
     ]
   },
@@ -141,43 +129,35 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Tyrant loves destroying families. Total tyrant ignoring subpoenas, evidence and facts.",
+        "body": "He kidnapped my son for profit and spite after husband told him to his face CPS is a childtrafficking ring. Ignored Constitution, due process and did not enforce prosecuting attorney David Casey's subpoena which required a continuance a month later. Tyrant loves destroying families. Total tyrant ignoring subpoenas, evidence and facts. Tyrant using power to destroy American families. Ignored Constitution, subpoena and evidence. Ignored Constitution, ignored subpoenas and motions ruled on hearsay Ignored Constitution, ruled by feelings, ignored subpoenas from Prosecuting Attorney, ignored evidence",
         "kind": "comment"
       },
       {
-        "body": "Ignored the Constitution",
+        "body": "Ignored the Constitution and told us to take the issues to a higher court, ignored evidence, invoked stronger supervised visitation because of our beliefs, ignored a lawful subpoena, delaying the case further, and ignored the best interest of the child.",
         "kind": "comment"
       },
       {
-        "body": "Denied motions, made threats of contempt, denied evidence. Did not follow MO §452.375.",
+        "body": "Denied motions, made threats of contempt, denied evidence. Did not follow MO §452.375. Refused to revised or correct judgment that did not follow this statute. He's currently retiring after just announcing re-election.",
         "kind": "comment"
       },
       {
-        "body": "We can't go back in time.",
-        "kind": "comment"
-      },
-      {
-        "body": "Took my daughter away from a perfectly safe home perfectly safe parent",
+        "body": "The system is trying to destroy my family for profit. Evil tyrants need to be stopped.",
         "kind": "family_report"
       },
       {
-        "body": "The system is trying to destroy my family for profit.",
+        "body": "CPS and all related agencies need to be abolished for destroying American families for no just reason.",
         "kind": "family_report"
       },
       {
-        "body": "CPS and all related agencies need to be abolished for destroying American families…",
+        "body": "They are trying to destroy my family for no reason just so they can have a kid for the federal funds.",
         "kind": "family_report"
       },
       {
-        "body": "They are trying to destroy my family for no reason just so they can have a kid for…",
-        "kind": "family_report"
-      },
-      {
-        "body": "The Jefferson County Court system under Edward Page had created fear of speaking…",
+        "body": "The Jefferson County Court system under Edward Page had created fear of speaking out for truth and transparency while fighting for the safety and well-being of my infant child by dismissing drug use, domestic violence and proven false testimonies.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 2
+    "quote_page_count": 4
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

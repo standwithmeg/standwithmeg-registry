@@ -12,48 +12,49 @@
     "court_or_county": "Greenville",
     "state": "South Carolina",
     "state_abbr": "SC",
-    "mention_count": 6,
-    "family_count": 4,
-    "public_family_count": 4,
+    "mention_count": 7,
+    "family_count": 5,
+    "public_family_count": 5,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 6,
+    "actor_report_count": 7,
     "supabase_row_ids": [
       "ba4d3c2b-c975-477c-814d-56506c1ba188",
       "099c9d0f-718e-4aec-bdfe-061b9ee0a354",
       "28d37c6e-b3f5-4040-ab3d-07759e06998d",
       "7802e04d-353b-442a-958e-58ae5b2cb564",
       "1660956e-6242-41d2-94b6-b081628981da",
-      "c41e87f8-3a1d-4cfe-9437-086a65b9f822"
+      "c41e87f8-3a1d-4cfe-9437-086a65b9f822",
+      "41b4900c-5237-4cdb-9a5c-90ce87e63d74"
     ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-6nxbtixa/New Final Post and Capcut template/export/rochelle_conits/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/rochelle_conits/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 85,
-    "total_submissions": 113,
-    "avg_financial_loss": 271548.16,
-    "avg_months_lost": 25.3,
+    "families_approved": 81,
+    "total_submissions": 140,
+    "avg_financial_loss": 237149.95,
+    "avg_months_lost": 25.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "SC",
-    "state_family_count": 113,
-    "median_financial_loss": 125000,
-    "median_burden_sample_size": 71,
+    "state_family_count": 140,
+    "median_financial_loss": 102000,
+    "median_burden_sample_size": 90,
     "median_months_lost": 18,
-    "pro_se_pct": 56.6,
-    "pro_se_count": 64,
-    "_pdf_state_family_count": 113,
+    "pro_se_pct": 55.0,
+    "pro_se_count": 77,
+    "_pdf_state_family_count": 140,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5729,
+  "movement_total": 6496,
   "supabase": {
-    "report_count": 6,
-    "actor_report_count": 6,
-    "family_count": 4,
+    "report_count": 7,
+    "actor_report_count": 7,
+    "family_count": 5,
     "family_reports": [
       {
         "body": "Absolute familial and financial destruction. I was the primary parent, and they are with an abuser and have been for 11 month. This is the most corrupt system I have ever seen.",
@@ -111,7 +112,7 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Allowed my attorney to withdraw right before a critical financial hearing",
+        "body": "she allowed my attorney to withdraw just a couple weeks before a highly critical financial hearing that had been continued for months. I had to proceed pro se against the top lawyer in Charleston thanks to this visiting judge's decision, and now have filed an appeal due to another unbelievable ruling. Allowed my attorney to withdraw right before a critical financial hearing, so I was left to appear pro se",
         "kind": "comment"
       },
       {
@@ -119,11 +120,11 @@
         "kind": "comment"
       },
       {
-        "body": "I was the primary parent, and they are with an abuser and have been for 11 month.",
+        "body": "Absolute familial and financial destruction. I was the primary parent, and they are with an abuser and have been for 11 month. This is the most corrupt system I have ever seen.",
         "kind": "family_report"
       },
       {
-        "body": "We were great for 3 years, and then in the final hearing so many lies. DSS turned on us.",
+        "body": "Multiple people in the DSS system repeatedly apologized and said this should never happen. I don't trust DSS leadership, I learned they are a love, hate relationship. We were great for 3 years, and then in the final hearing so many lies. DSS turned on us. In the end our grandaughter has been adopted. We see her all the time.......She asks us all the time why she could not live with us. Greenville SCDSS is evil, they lie and manipulate, they create orders, (not always legal) and then Cherry Pick how the order outcome should be--its not about the child!",
         "kind": "family_report"
       },
       {
@@ -131,7 +132,7 @@
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 4
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

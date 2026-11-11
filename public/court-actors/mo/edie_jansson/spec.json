@@ -27,27 +27,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-7gspmaqk/New Final Post and Capcut template/export/edie_jansson/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/edie_jansson/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 154,
-    "total_submissions": 221,
-    "avg_financial_loss": 99851.19,
-    "avg_months_lost": 41.8,
+    "families_approved": 145,
+    "total_submissions": 284,
+    "avg_financial_loss": 106113.17,
+    "avg_months_lost": 38.1,
     "_source_table": "movement_stats_by_state",
     "_match_value": "MO",
-    "state_family_count": 221,
-    "median_financial_loss": 94350,
-    "median_burden_sample_size": 96,
-    "median_months_lost": 24,
-    "pro_se_pct": 53.8,
-    "pro_se_count": 119,
-    "_pdf_state_family_count": 221,
+    "state_family_count": 284,
+    "median_financial_loss": 89000,
+    "median_burden_sample_size": 131,
+    "median_months_lost": 21,
+    "pro_se_pct": 53.9,
+    "pro_se_count": 153,
+    "_pdf_state_family_count": 284,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5746,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -68,12 +68,17 @@
     ],
     "public_comments": [
       {
-        "comment_text": "Ignored evidence of safety concerns, prolonged process under temporary orders that were unworkable for over three years, ultimately recommended relocation under threat of loss of primary custody",
+        "comment_text": "Ignored evidence of safety concerns, prolonged proceedings for over three years, and recommended relocation under threat of loss of primary custody.",
         "author": "Anonymous parent",
         "source": "court_actors.notes"
       },
       {
         "comment_text": "Fathers rights GAL Friends with OP Andrew Pynn",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Ignored evidence of safety concerns, prolonged process under temporary orders that were unworkable for over three years, ultimately recommended relocation under threat of loss of primary custody",
         "author": "Anonymous parent",
         "source": "court_actors.notes"
       }
@@ -102,7 +107,7 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Ignored evidence of safety concerns",
+        "body": "Ignored evidence of safety concerns, prolonged proceedings for over three years, and recommended relocation under threat of loss of primary custody.",
         "kind": "comment"
       },
       {
@@ -110,11 +115,15 @@
         "kind": "comment"
       },
       {
-        "body": "Took years of my children’s childhood",
+        "body": "Ignored evidence of safety concerns, prolonged process under temporary orders that were unworkable for over three years, ultimately recommended relocation under threat of loss of primary custody",
+        "kind": "comment"
+      },
+      {
+        "body": "This system took years of my children’s childhood and forced our family to live in a constant state of fear, instability, and financial hardship while we waited for protection and resolution that never came. The emotional, financial, and developmental costs to our family have been immeasurable.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 2
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

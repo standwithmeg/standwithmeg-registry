@@ -27,27 +27,27 @@
     "actor_bucket_key": "natalie jones|AL"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-7gspmaqk/New Final Post and Capcut template/export/natalie_jones/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/natalie_jones/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 103,
-    "total_submissions": 143,
-    "avg_financial_loss": 84215.55,
-    "avg_months_lost": 34.0,
+    "families_approved": 102,
+    "total_submissions": 158,
+    "avg_financial_loss": 91268.73,
+    "avg_months_lost": 32.6,
     "_source_table": "movement_stats_by_state",
     "_match_value": "AL",
-    "state_family_count": 143,
-    "median_financial_loss": 55000,
-    "median_burden_sample_size": 63,
-    "median_months_lost": 12,
-    "pro_se_pct": 42.7,
-    "pro_se_count": 61,
-    "_pdf_state_family_count": 143,
+    "state_family_count": 158,
+    "median_financial_loss": 52500,
+    "median_burden_sample_size": 71,
+    "median_months_lost": 13,
+    "pro_se_pct": 39.9,
+    "pro_se_count": 63,
+    "_pdf_state_family_count": 158,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5746,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -115,19 +115,19 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Used to support my daughter’s care",
+        "body": "I believe the litigation strategy prioritized continued conflict over timely resolution. The prolonged proceedings consumed resources that could have been used to support my daughter’s care, treatment, housing, and stability. My daughter has special needs and depends on consistent services and routine. The ongoing litigation contributed to disruption, instability, and hardship during a critical period of her development. Repeatedly litigated custody issues while domestic violence issues remained unresolved. Positions taken during the case contributed to prolonged proceedings, escalating legal expenses exceeding $100,000, and significant delays in achieving stability for my child. Used delay tactics, and imposed costly mediations and proposals.",
         "kind": "comment"
       },
       {
-        "body": "Refuses to listen to my children regardless of video evidence.",
+        "body": "Refuses to listen to my children regardless of video evidence. Refuses to meet with child often, calls my child manipulative, dismisses video after video of mental and emotional abuse my child sends her, has had relations with parties in my case yet refuses to recuse herself, tells me I can’t attend public events, allows my child to be switched over and over for medical providers",
         "kind": "comment"
       },
       {
-        "body": "My child has sent numerous videos of their other parent abusing them.",
+        "body": "My child has sent numerous videos of their other parent abusing them and the GAL has never addressed it.",
         "kind": "comment"
       },
       {
-        "body": "Helped us instead made it harder to keep her safe",
+        "body": "I spent years trying to protect my family, only to watch prolonged litigation drain our finances, destroy our stability, and leave us homeless. My daughter has special needs, and the system that should have helped us instead made it harder to keep her safe, housed, and connected to the services she needs.",
         "kind": "family_report"
       },
       {
@@ -139,7 +139,7 @@
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 5
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

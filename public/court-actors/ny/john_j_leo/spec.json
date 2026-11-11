@@ -29,27 +29,27 @@
     "actor_bucket_key": "john leo|NY"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-56vhhi8e/New Final Post and Capcut template/export/john_j_leo/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/john_j_leo/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 133,
-    "total_submissions": 181,
-    "avg_financial_loss": 203568.15,
-    "avg_months_lost": 27.8,
+    "families_approved": 132,
+    "total_submissions": 198,
+    "avg_financial_loss": 201612.06,
+    "avg_months_lost": 28.0,
     "_source_table": "movement_stats_by_state",
     "_match_value": "NY",
-    "state_family_count": 181,
+    "state_family_count": 198,
     "median_financial_loss": 175000,
-    "median_burden_sample_size": 67,
-    "median_months_lost": 14,
-    "pro_se_pct": 38.1,
-    "pro_se_count": 69,
-    "_pdf_state_family_count": 181,
+    "median_burden_sample_size": 73,
+    "median_months_lost": 15,
+    "pro_se_pct": 39.9,
+    "pro_se_count": 79,
+    "_pdf_state_family_count": 198,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5686,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
@@ -117,7 +117,7 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Ignored evidence Yelled in the court room Would not let attorney speak Appointed…",
+        "body": "Ignored evidence Yelled in the court room Would not let attorney speak Appointed afc who he has a relationship with Threatened child custody to father Pre judged case before trail Unfair throughout this entire process Screaming yelling throwing hands during court hearings only listening to one side Refusing to let my attorney speak Threatening me with custody of children Pre judging my case before trial",
         "kind": "comment"
       },
       {
@@ -137,11 +137,11 @@
         "kind": "family_report"
       },
       {
-        "body": "Effected my mental health, extreme stress, depression and ruined my relationship…",
+        "body": "Effected my mental health, extreme stress, depression and ruined my relationship with my children",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 2
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

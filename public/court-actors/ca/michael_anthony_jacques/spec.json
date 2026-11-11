@@ -12,12 +12,13 @@
     "court_or_county": "Placer",
     "state": "California",
     "state_abbr": "CA",
-    "mention_count": 7,
+    "mention_count": 8,
     "family_count": 5,
     "public_family_count": 5,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 7,
+    "actor_report_count": 8,
     "supabase_row_ids": [
+      "21ac13be-2065-4378-8cc6-2bb3e7deae72",
       "2d436cba-5e9c-4be5-8e8a-8c457be07aa4",
       "b3469ca7-ba18-48fd-af13-5df0cd099696",
       "e7a47623-ad4a-41e6-a662-3ea1af3ff6b0",
@@ -30,30 +31,30 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-7gspmaqk/New Final Post and Capcut template/export/michael_anthony_jacques/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/michael_anthony_jacques/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 357,
-    "total_submissions": 474,
-    "avg_financial_loss": 279136.73,
-    "avg_months_lost": 34.9,
+    "families_approved": 356,
+    "total_submissions": 529,
+    "avg_financial_loss": 263721.3,
+    "avg_months_lost": 34.0,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CA",
-    "state_family_count": 474,
-    "median_financial_loss": 259500,
-    "median_burden_sample_size": 210,
+    "state_family_count": 529,
+    "median_financial_loss": 237750,
+    "median_burden_sample_size": 232,
     "median_months_lost": 20,
-    "pro_se_pct": 58.0,
-    "pro_se_count": 275,
-    "_pdf_state_family_count": 474,
+    "pro_se_pct": 58.4,
+    "pro_se_count": 309,
+    "_pdf_state_family_count": 529,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5746,
+  "movement_total": 6496,
   "supabase": {
-    "report_count": 7,
-    "actor_report_count": 7,
+    "report_count": 8,
+    "actor_report_count": 8,
     "family_count": 5,
     "family_reports": [
       {
@@ -95,6 +96,12 @@
         "court_or_county": "Placer"
       },
       {
+        "comment_text": "Ignored conviction of DV, made fun of me being a victim, stated that just because he abused me doesn’t mean he would abuse my children, no due process, sanctioned me when I had no means to pay and when I asked what I was being sanctioned for he refused to explain. Not a judge but a commissioner - ignored domestic violence, ignored abuse evidence, sanctioned victim for documenting and he himself was going through a bitter divorce while on the stand",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Placer"
+      },
+      {
         "comment_text": "This judge first made outstanding orders of Child Support that was impossible for me to comply with then made a no visitation order and sent a Simmons to get me to the incorrect address knowing that I had the correct address on file with the court. This judge was removed from my case.",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
@@ -105,12 +112,6 @@
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Placer County Superior Court"
-      },
-      {
-        "comment_text": "Not a judge but a commissioner - ignored domestic violence, ignored abuse evidence, sanctioned victim for documenting and he himself was going through a bitter divorce while on the stand",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Placer"
       },
       {
         "comment_text": "commissioner. Yells at Mothers. Orders support without summons after DCSS freezes support to mother prior to request for order. Ignores evidence of fraud and domestic violence.",
@@ -142,47 +143,47 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Refused to let me have equal time with witnesses in trial.",
+        "body": "Refused to let me have equal time with witnesses in trial. OC got over and hour, I got maybe 13 minutes. He announced before trial start and before letting transcriptionist in court, ‘I have already made my decision, I am granting dads request, we are just here to determine if you will be blacked out from contact or not. Temp order for two months, last almost 4 years. He also fell asleep twice in 2022 trial. Wouldn’t allow me to speak, no opening argument or response. Fell asleep during trial, announced he had made his decision regarding trial before trial began, denied evidence during trial, punished me for speaking about ex’s conviction of felony child abuse (set child support to zero from two years back to current day- I had full custody- as punishment for speaking about convictions, continues false allegations of alienation. Announced before transcriptionist arrived he had already made his decision on the trial, banned me from submitting evidence, fell asleep twice during trial, falsely alleged parent alienation, wouldn’t let me speak opening argument or response, limited my time cross examining witness.",
         "kind": "comment"
       },
       {
-        "body": "This judge was removed from my case.",
+        "body": "Ignored conviction of DV, made fun of me being a victim, stated that just because he abused me doesn’t mean he would abuse my children, no due process, sanctioned me when I had no means to pay and when I asked what I was being sanctioned for he refused to explain. Not a judge but a commissioner - ignored domestic violence, ignored abuse evidence, sanctioned victim for documenting and he himself was going through a bitter divorce while on the stand",
         "kind": "comment"
       },
       {
-        "body": "Father believes Jacques recognized some concerns in the case.",
+        "body": "This judge first made outstanding orders of Child Support that was impossible for me to comply with then made a no visitation order and sent a Simmons to get me to the incorrect address knowing that I had the correct address on file with the court. This judge was removed from my case.",
         "kind": "comment"
       },
       {
-        "body": "Ignored domestic violence",
+        "body": "Older commissioner/temporary-judge authority history. Father believes Jacques recognized some concerns in the case but moved them aside or did not resolve them, leaving commissioner-authority and fairness concerns unresolved.",
         "kind": "comment"
       },
       {
-        "body": "Summons after DCSS freezes support to mother prior to request for order.",
+        "body": "commissioner. Yells at Mothers. Orders support without summons after DCSS freezes support to mother prior to request for order. Ignores evidence of fraud and domestic violence.",
         "kind": "comment"
       },
       {
-        "body": "After disputed allegations I denied on the record, Placer County Family Court…",
+        "body": "After disputed allegations I denied on the record, Placer County Family Court issued a five-year restraining order and custody restrictions that left me with only supervised video calls. My concern is that major decisions were made through a process with serious record and due-process questions, including disputed child testimony, unclear evidence rulings, Family Code 3044 findings, and a trial day with no court reporter.",
         "kind": "family_report"
       },
       {
-        "body": "My life will never be the same.",
+        "body": "This court system has kidnapped my child under the color of law and destroyed my entire life. My life will never be the same.",
         "kind": "family_report"
       },
       {
-        "body": "Even my seeking help thru federal entities has backfired on them.",
+        "body": "The amount of dirty hands involved in this case is truly disgusting and demonic. There's many not mentioned since not entered into the court. There has been a very clear intent to deprive, knowingly putting such precious, innocent little ones in harm's way who cannot protect themselves. Even my seeking help thru federal entities has backfired on them. The lack of integrity in these local systems and beyond is disgraceful; and devastating. They're doing a great job of robbing children of the childhood they deserve, with their sister and family and the Motherhood I deserve. The crimes and abduction must cease and desist.",
         "kind": "family_report"
       },
       {
-        "body": "Facilitated and empowered my ex to abuse us physically/emotionally.",
+        "body": "-Facilitated and empowered my ex to abuse us physically/emotionally. -Sucked the life out of us (praying for death to come for me), my children are now battling court induced trauma along with their fathers’ induced trauma.",
         "kind": "family_report"
       },
       {
-        "body": "Destroyed my children in every aspect, mentally, emotionally.",
+        "body": "Destroyed my children in every aspect, mentally, emotionally. They were never heard, and simply no one cared what my ex did to me in front of them nor do they care how he abused my children in multiple ways.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 2
+    "quote_page_count": 10
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

@@ -26,27 +26,27 @@
     "actor_bucket_key": "susan steinhauer|OH"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-2yeauxv5/New Final Post and Capcut template/export/susan_steinhauer/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/susan_steinhauer/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 206,
-    "total_submissions": 291,
-    "avg_financial_loss": 107575.92,
-    "avg_months_lost": 33.8,
+    "families_approved": 207,
+    "total_submissions": 315,
+    "avg_financial_loss": 102311.34,
+    "avg_months_lost": 32.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OH",
-    "state_family_count": 291,
-    "median_financial_loss": 79500,
-    "median_burden_sample_size": 145,
+    "state_family_count": 315,
+    "median_financial_loss": 77750,
+    "median_burden_sample_size": 154,
     "median_months_lost": 18,
-    "pro_se_pct": 52.9,
-    "pro_se_count": 154,
-    "_pdf_state_family_count": 291,
+    "pro_se_pct": 52.4,
+    "pro_se_count": 165,
+    "_pdf_state_family_count": 315,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5749,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -102,23 +102,23 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Stripped me of custody without due process, breaking countless laws and procedures.",
+        "body": "collusion between opposing counsel and judge to secure the judge a partner position at opposing counsels firm. Stripped me of custody without due process, breaking countless laws and procedures. retaliated for me speaking out by filing a frivolous protection order",
         "kind": "comment"
       },
       {
-        "body": "She was the judge in my case, that initiated father having permanent residential soul custody of my child and…",
+        "body": "She was the judge in my case, that initiated father having permanent residential soul custody of my child and me having supervised visits based on a false mental health allegation",
         "kind": "comment"
       },
       {
-        "body": "The court system has destroyed my family, the relationship with my son and his brothers.",
+        "body": "The court system has destroyed my family, the relationship with my son and his brothers. They have walked all over my constitutional rights to parent my child.",
         "kind": "family_report"
       },
       {
-        "body": "There are no words that can adequately describe what the system has cost us.",
+        "body": "there are no words that can adequately describe what the system has cost us.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 2
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

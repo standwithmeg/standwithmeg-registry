@@ -32,22 +32,22 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 126,
-    "total_submissions": 161,
-    "avg_financial_loss": 132780.75,
-    "avg_months_lost": 29.2,
+    "families_approved": 120,
+    "total_submissions": 198,
+    "avg_financial_loss": 222011.73,
+    "avg_months_lost": 31.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "IN",
-    "state_family_count": 161,
-    "median_financial_loss": 63875,
-    "median_burden_sample_size": 80,
-    "median_months_lost": 18,
-    "pro_se_pct": 45.3,
-    "pro_se_count": 73,
-    "_pdf_state_family_count": 161,
+    "state_family_count": 198,
+    "median_financial_loss": 68150,
+    "median_burden_sample_size": 98,
+    "median_months_lost": 20,
+    "pro_se_pct": 49.5,
+    "pro_se_count": 98,
+    "_pdf_state_family_count": 198,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5746,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -115,23 +115,23 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "He is directly a part of the collusion and trafficking, “adoption”.",
+        "body": "Discrimination, intimidation, harassment, coercion, theft. He is directly a part of the collusion and trafficking, “adoption”; the black market of transferring or disposing of human and assets for profit,",
         "kind": "comment"
       },
       {
-        "body": "he is the opposing attoerney, lost custody, subsequently threatened with an…",
+        "body": "he is the opposing attoerney, lost custody, subsequently threatened with an ultimatum using a flawed justification for exercising my rights to post a review",
         "kind": "comment"
       },
       {
-        "body": "Orchestrated intentional child abuse & neglect, trafficking, elderly abuse, legal…",
+        "body": "Orchestrated intentional child abuse & neglect, trafficking, elderly abuse, legal abuse financial abuse: laundering, extortion, mail fraud, attempted murder, sabotage, discrimination, torture, consumer fraud",
         "kind": "family_report"
       },
       {
-        "body": "lost custody to father, given supervision, subsequently threatened with an…",
+        "body": "lost custody to father, given supervision, subsequently threatened with an ultimiatum and flawed justification to remove the negative review or face legal action to force removal",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 2
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

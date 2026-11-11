@@ -12,52 +12,59 @@
     "court_or_county": "Count my attorney",
     "state": "NE",
     "state_abbr": "NE",
-    "mention_count": 4,
-    "family_count": 4,
-    "public_family_count": 4,
+    "mention_count": 5,
+    "family_count": 5,
+    "public_family_count": 5,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 4,
+    "actor_report_count": 5,
     "supabase_row_ids": [
       "0eac92f9-c25a-4608-ba28-d2530cb22c4f",
       "cb5cc500-fc0c-42b5-9ee1-3a3a8de37846",
       "424f1af5-c5c5-42e7-a0f3-d8b049dfe046",
-      "fed78dc2-e7f0-4bc7-9965-4a78d8bd5da1"
+      "fed78dc2-e7f0-4bc7-9965-4a78d8bd5da1",
+      "add2eb85-5a0e-4398-85cc-5c90dd626f60"
     ],
     "actor_row_id": null,
     "actor_bucket_key": "kirk felhoelter|NE"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-90yxu6ix/New Final Post and Capcut template/export/kirk_m_fellhoelter/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/kirk_m_fellhoelter/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 37,
-    "total_submissions": 44,
-    "avg_financial_loss": 180795.98,
-    "avg_months_lost": 35.0,
+    "families_approved": 36,
+    "total_submissions": 52,
+    "avg_financial_loss": 154610.27,
+    "avg_months_lost": 35.2,
     "_source_table": "movement_stats_by_state",
     "_match_value": "NE",
-    "state_family_count": 44,
-    "median_financial_loss": 240500,
-    "median_burden_sample_size": 17,
+    "state_family_count": 52,
+    "median_financial_loss": 126905,
+    "median_burden_sample_size": 20,
     "median_months_lost": 22,
-    "pro_se_pct": 47.7,
-    "pro_se_count": 21,
-    "_pdf_state_family_count": 44,
+    "pro_se_pct": 50.0,
+    "pro_se_count": 26,
+    "_pdf_state_family_count": 52,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5516,
+  "movement_total": 6496,
   "supabase": {
-    "report_count": 4,
-    "actor_report_count": 4,
-    "family_count": 4,
+    "report_count": 5,
+    "actor_report_count": 5,
+    "family_count": 5,
     "family_reports": [
       {
         "body": "Scotts Bluff County is disgustingly corrupt and you can tell that the attorneys talk to each other without their paid customers. No morals.",
         "state": "NE",
         "county": "SCOTTS BLUFF",
         "row_id": "283ff0a6-52d9-4609-a3ad-10cfb9423b34"
+      },
+      {
+        "body": "someone told that the attorney is the guardian ad litem, and the judge talk together outside of the support room and I didn’t believe it. It’s until I went through this case myself. It was almost like the hearings were rehearsed, my own attorney included.",
+        "state": "NE",
+        "county": "Scott’s bluff",
+        "row_id": "ed7418a0-845a-4a3a-a834-5e40544e7bf8"
       },
       {
         "body": "I hate to admit, but I gave up because I haven’t seen anyone else win in this “good ole boy” town. I’m hoping one day my son will understand I don’t want him to have to go through watching me lose him",
@@ -127,15 +134,15 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "This was allowed and I was ignored.",
+        "body": "He laughed at all of my concerns, and when I would talk about my children’s special needs, tell me that I didn’t know what I was talking about. He laughed at me quite a bit in court, and I asked the judge if this was allowed and I was ignored.",
         "kind": "comment"
       },
       {
-        "body": "This man doesn't seem educated at all and always talks negative about everyone and…",
+        "body": "This man doesn't seem educated at all and always talks negative about everyone and doesn't care to find evidence to prove someone actually is a bad mom or dad",
         "kind": "comment"
       },
       {
-        "body": "He was so condescending when he looked at me and just didn’t care what evidence…",
+        "body": "He was so condescending when he looked at me and just didn’t care what evidence there was",
         "kind": "comment"
       },
       {
@@ -143,19 +150,27 @@
         "kind": "comment"
       },
       {
-        "body": "I hate to admit, but I gave up.",
+        "body": "Scotts Bluff County is disgustingly corrupt and you can tell that the attorneys talk to each other without their paid customers. No morals.",
         "kind": "family_report"
       },
       {
-        "body": "The state is making money off of destroying families",
+        "body": "someone told that the attorney is the guardian ad litem, and the judge talk together outside of the support room and I didn’t believe it. It’s until I went through this case myself. It was almost like the hearings were rehearsed, my own attorney included.",
         "kind": "family_report"
       },
       {
-        "body": "After working for DHHS and wanting to be the person to help me make a positive change.",
+        "body": "I hate to admit, but I gave up because I haven’t seen anyone else win in this “good ole boy” town. I’m hoping one day my son will understand I don’t want him to have to go through watching me lose him",
+        "kind": "family_report"
+      },
+      {
+        "body": "Juvenile court has become punitive and not rehabilitative. The state is making money off of destroying families",
+        "kind": "family_report"
+      },
+      {
+        "body": "After working for DHHS and wanting to be the person to help me make a positive change and then seeing how DHHS tore my family apart, it showed how much people care more about power and being right than what is in the right interest of children. Now as a therapist, I hope it can help others, including my own children someday heal from this trauma.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 4
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

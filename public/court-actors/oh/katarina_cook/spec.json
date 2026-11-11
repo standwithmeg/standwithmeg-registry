@@ -12,14 +12,13 @@
     "court_or_county": "Summit",
     "state": "Ohio",
     "state_abbr": "OH",
-    "mention_count": 4,
-    "family_count": 4,
-    "public_family_count": 4,
+    "mention_count": 3,
+    "family_count": 3,
+    "public_family_count": 3,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 4,
+    "actor_report_count": 3,
     "supabase_row_ids": [
       "d9624e15-15e3-4a6d-b6b4-714ee085ce81",
-      "c59163ad-f61d-4905-87c2-e77f4e398b5c",
       "7076730e-62ab-4d5f-943f-7de40a5b0473",
       "4bbde9c7-8507-4dc6-b53a-57c73f82680a"
     ],
@@ -27,54 +26,42 @@
     "actor_bucket_key": "katarina cook|OH"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-2yeauxv5/New Final Post and Capcut template/export/katarina_cook/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/katarina_cook/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 206,
-    "total_submissions": 291,
-    "avg_financial_loss": 107575.92,
-    "avg_months_lost": 33.8,
+    "families_approved": 207,
+    "total_submissions": 315,
+    "avg_financial_loss": 102311.34,
+    "avg_months_lost": 32.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OH",
-    "state_family_count": 291,
-    "median_financial_loss": 79500,
-    "median_burden_sample_size": 145,
+    "state_family_count": 315,
+    "median_financial_loss": 77750,
+    "median_burden_sample_size": 154,
     "median_months_lost": 18,
-    "pro_se_pct": 52.9,
-    "pro_se_count": 154,
-    "_pdf_state_family_count": 291,
+    "pro_se_pct": 52.4,
+    "pro_se_count": 165,
+    "_pdf_state_family_count": 315,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5749,
+  "movement_total": 6496,
   "supabase": {
-    "report_count": 4,
-    "actor_report_count": 4,
-    "family_count": 4,
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 3,
     "family_reports": [
       {
         "body": "Destroyed my family, eroded the finances, dragged on three years, children in Civil war against each other and alienation of Parents. Children’s relationship with Parents forever destroyed.",
         "state": "OH",
         "county": "Summit",
         "row_id": "72fb3409-9c38-4e8b-9cc8-560a77085dc1"
-      },
-      {
-        "body": "Took my 4 children from a mother they all 4 testified to stay with in an in-camera interview-to retaliate, the court covered it up as MOOT and said I coached OLDER TEENAGERS and SEALED THE DOCKET to cover it up. They allow dad to get away with murder while forcing me to take punishments for lies and false allegations that have never been proven! Dad has a DV record and a diagnosed personality disorder and allowed him to commit felonies while I remain childless. This is damaging my kids and confusing them. It is beyond criminal and illegal! Thank God for appeals but this judge purposely withholds cases so they don’t go to appellate court!",
-        "state": "OH",
-        "county": "Summit",
-        "row_id": "cbf138c8-7987-4ad2-9bca-1890c2024819"
       }
     ],
     "public_comments": [
       {
         "comment_text": "Denied hearings for over 21 months, while significant decisions were made in unrecorded status conferences with attorneys only, regarding finances, visitation and custody, and involvement of legal and mental health professionals and payment without my knowledge or consent. encouraged alienation. Allowed non-court appointed GAL to influence decisions; remove me from the marital home without any hearing based on false allegations of opposing council, denied financial support to stay at home parent, and gave minor children, after being alienated from me because of absence and only influence of the other parent, visitation authority over me.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Summit"
-      },
-      {
-        "comment_text": "Senior judge-she sucks and allows the lying and keeps known liar GALS, including the director Randy Flick who is gay and wears it proudly-so am I but it’s innapropriate when you are representing a county as a whole-she told me if I emailed him again, she would press charges from the court-completely insane when you call out their corruption!",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Summit"
@@ -103,19 +90,15 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Denied hearings for over 21 months.",
+        "body": "Denied hearings for over 21 months, while significant decisions were made in unrecorded status conferences with attorneys only, regarding finances, visitation and custody, and involvement of legal and mental health professionals and payment without my knowledge or consent. encouraged alienation. Allowed non-court appointed GAL to influence decisions; remove me from the marital home without any hearing based on false allegations of opposing council, denied financial support to stay at home parent, and gave minor children, after being alienated from me because of absence and only influence of the other parent, visitation authority over me.",
         "kind": "comment"
       },
       {
-        "body": "Children’s relationship with Parents forever destroyed.",
-        "kind": "family_report"
-      },
-      {
-        "body": "Took my 4 children from a mother they all 4 testified to stay with in an in-camera interview-to retaliate",
+        "body": "Destroyed my family, eroded the finances, dragged on three years, children in Civil war against each other and alienation of Parents. Children’s relationship with Parents forever destroyed.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 3
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

@@ -1,0 +1,124 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "mary_warlop",
+    "display_name": "Mary Warlop",
+    "title": "",
+    "first_name": "Mary",
+    "last_name": "Warlop",
+    "role": "GAL / Child Representative",
+    "court": "Stark county",
+    "county": "Stark county family court",
+    "court_or_county": "Stark county",
+    "state": "OH",
+    "state_abbr": "OH",
+    "mention_count": 3,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "98c9a09d-9d04-4db5-afea-b59c488dbe63",
+      "539ea9a5-07ac-423a-a98a-47843f02470d",
+      "53e1be99-c15d-49cf-b784-3f8288202b1a"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "mary warlop|OH"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 207,
+    "total_submissions": 315,
+    "avg_financial_loss": 102311.34,
+    "avg_months_lost": 32.9,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OH",
+    "state_family_count": 315,
+    "median_financial_loss": 77750,
+    "median_burden_sample_size": 154,
+    "median_months_lost": 18,
+    "pro_se_pct": 52.4,
+    "pro_se_count": 165,
+    "_pdf_state_family_count": 315,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6496,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 3,
+    "family_reports": [
+      {
+        "body": "This system that was intended to \"protect\" children ultimately put my children into the hands of real abusers. My oldest son and daughter were forced to destroy items that they brought with them (security baby blanket, stuffed animals etc), they were punished for speaking positive about me and praised for anything negative. To this day my son still suffers from the trauma he endured.",
+        "state": "OH",
+        "county": "Stark",
+        "row_id": "9189b8a6-b469-401b-a3d8-d32d2c7d0bbb"
+      },
+      {
+        "body": "Family Court is the battlefield of psychological warfare. They are causing lifetime traumas with no accountability or oversight!",
+        "state": "OH",
+        "county": "Stark",
+        "row_id": "90797f86-ad03-492c-897e-8f59ad0cbc54"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Ignored all evidence in the whole case. Says the same thing opposing counsel says no investigation and life threatening to a child.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Stark"
+      },
+      {
+        "comment_text": "She never met me with as she was required to and she only viewed a brief 30 minute interaction with my children and I.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Stark county"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/mary_warlop",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='OH'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/oh/mary_warlop/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Ignored all evidence in the whole case. Says the same thing opposing counsel says no investigation and life threatening to a child.",
+        "kind": "comment"
+      },
+      {
+        "body": "She never met me with as she was required to and she only viewed a brief 30 minute interaction with my children and I.",
+        "kind": "comment"
+      },
+      {
+        "body": "This system that was intended to \"protect\" children ultimately put my children into the hands of real abusers. My oldest son and daughter were forced to destroy items that they brought with them (security baby blanket, stuffed animals etc), they were punished for speaking positive about me and praised for anything negative. To this day my son still suffers from the trauma he endured.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Family Court is the battlefield of psychological warfare. They are causing lifetime traumas with no accountability or oversight!",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 3
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

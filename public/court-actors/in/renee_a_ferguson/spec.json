@@ -1,0 +1,124 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "renee_a_ferguson",
+    "display_name": "Renee Allen Ferguson",
+    "title": "",
+    "first_name": "Renee Allen",
+    "last_name": "Ferguson",
+    "role": "Judge",
+    "court": "Vandebugh",
+    "county": "Vandebugh",
+    "court_or_county": "Vandebugh",
+    "state": "IN",
+    "state_abbr": "IN",
+    "mention_count": 3,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "81734cec-246a-4a3d-9439-b0f5bb41b4c3",
+      "946829d6-1690-4cc9-9954-5ac6369ad27f",
+      "2437c9b5-b2b4-4b9a-8e8b-b1357f87a573"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "rene ferguson|IN"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 120,
+    "total_submissions": 198,
+    "avg_financial_loss": 222011.73,
+    "avg_months_lost": 31.8,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "IN",
+    "state_family_count": 198,
+    "median_financial_loss": 68150,
+    "median_burden_sample_size": 98,
+    "median_months_lost": 20,
+    "pro_se_pct": 49.5,
+    "pro_se_count": 98,
+    "_pdf_state_family_count": 198,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6496,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 3,
+    "family_reports": [
+      {
+        "body": "I have had 40 open and close assessments, no findings, then one evening after calling my boys dad and telling him to come pick them because they kept fighting he called the police on me and said I made marks on them that I specifically had just told him they had done to them self’s after 3 long days on spring break of fighting, so anyways I got arrested off hearsay and a boy that was trying to stay with his daddy a little longer and was mad because I took all their electronics away as they kept fighting etc so dcs did an immediate removal and I told them I had camera footage and they didn’t care didn’t even ask to look at it they just reacted because dad had them already, not to mention he just tried to kill me 3 years before this and served a year in jail and I won a civil tort for mental anguish the day before all of this happened he tried texting my attorney to get out of missing it on purpose… I’ve spent/lost 25,000$ all together in 3 months and I’m already exhausted, after 40 open and close assessments since becoming a mother it’s been horrific and traumatic, constantly scared to death my kids will be snatched out of school etc and for no reason my son now is begging to talk to the judge and his dad won’t let him..",
+        "state": "IN",
+        "county": "Vanderburgh",
+        "row_id": "082fe379-c7cf-4216-a69d-0fb45730871b"
+      },
+      {
+        "body": "Ruined our family bond made father out to be a villain my daughters think we can't protect them and don't love them mother has disabilities and can't see her kids they are her entire world. Since I am the leader of the family they have told my girls I don't love them and can't protect them constant threats and retaliation and I was forced to get my own place simply to put my children in foster care 5 hrs away and not giving me proper notice complete nightmare deny me from giving my daughters attention she needs after suicide attempts and not properly notifying me of events",
+        "state": "IN",
+        "county": "Vandebugh",
+        "row_id": "a8bf0cff-0797-45ed-8170-c257903413f7"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "So the prior times I’ve had my open and close assessments she has violated my rights telling me I can not speak at all made me do an over the phone court hearing while we were on very first vacation just me and the kids finally no man to boss us and try and make us feel any type of way about doing stuff!! Made us come home early and my 18 year worked her asss off to pay for this trip",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Vandebugh"
+      },
+      {
+        "comment_text": "Told my wife I was a animal and threatened to lick her up for letting me see my children",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Vandebugh"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/renee_a_ferguson",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='IN'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/in/renee_a_ferguson/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "So the prior times I’ve had my open and close assessments she has violated my rights telling me I can not speak at all made me do an over the phone court hearing while we were on very first vacation just me and the kids finally no man to boss us and try and make us feel any type of way about doing stuff!! Made us come home early and my 18 year worked her asss off to pay for this trip",
+        "kind": "comment"
+      },
+      {
+        "body": "Told my wife I was a animal and threatened to lick her up for letting me see my children",
+        "kind": "comment"
+      },
+      {
+        "body": "I have had 40 open and close assessments, no findings, then one evening after calling my boys dad and telling him to come pick them because they kept fighting he called the police on me and said I made marks on them that I specifically had just told him they had done to them self’s after 3 long days on spring break of fighting, so anyways I got arrested off hearsay and a boy that was trying to stay with his daddy a little longer and was mad because I took all their electronics away as they kept fighting etc so dcs did an immediate removal and I told them I had camera footage and they didn’t care didn’t even ask to look at it they just reacted because dad had them already, not to mention he just tried to kill me 3 years before this and served a year in jail and I won a civil tort for mental anguish the day before all of this happened he tried texting my attorney to get out of missing it on purpose… I’ve spent/lost 25,000$ all together in 3 months and I’m already exhausted, after 40 open and close assessments since becoming a mother it’s been horrific and traumatic, constantly scared to death my kids will be snatched out of school etc and for no reason my son now is begging to talk to the judge and his dad won’t let him..",
+        "kind": "family_report"
+      },
+      {
+        "body": "Ruined our family bond made father out to be a villain my daughters think we can't protect them and don't love them mother has disabilities and can't see her kids they are her entire world. Since I am the leader of the family they have told my girls I don't love them and can't protect them constant threats and retaliation and I was forced to get my own place simply to put my children in foster care 5 hrs away and not giving me proper notice complete nightmare deny me from giving my daughters attention she needs after suicide attempts and not properly notifying me of events",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 5
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

@@ -34,22 +34,22 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 108,
-    "total_submissions": 162,
-    "avg_financial_loss": 220670.5,
-    "avg_months_lost": 27.5,
+    "families_approved": 100,
+    "total_submissions": 188,
+    "avg_financial_loss": 203187.49,
+    "avg_months_lost": 26.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "IL",
-    "state_family_count": 162,
-    "median_financial_loss": 126875,
-    "median_burden_sample_size": 102,
+    "state_family_count": 188,
+    "median_financial_loss": 126200,
+    "median_burden_sample_size": 114,
     "median_months_lost": 15,
-    "pro_se_pct": 48.8,
-    "pro_se_count": 79,
-    "_pdf_state_family_count": 162,
+    "pro_se_pct": 48.4,
+    "pro_se_count": 91,
+    "_pdf_state_family_count": 188,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5746,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
@@ -99,7 +99,7 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "No, due process, ignored evidence, unethical, harassment, denied motions, defamation of professionals publicly.",
+        "body": "No, due process, ignored evidence, unethical, harassment, denied motions, defamation of professionals publicly. Denied hearings, denied my emotions, defamation of medical professionals Denied hearing, and ignored evidence, delayed notification, not the call, bias, edited documents, dismiss motions, unprofessional, no due process Denied motion without hearing without due process",
         "kind": "comment"
       },
       {
@@ -107,11 +107,11 @@
         "kind": "family_report"
       },
       {
-        "body": "I have NEVER lost my faith in God and he has carried me through.",
+        "body": "I have made it to the other side, my fear is that it will take my son a long time to heal from the emotional damage. I have NEVER lost my faith in God and he has carried me through.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 2
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

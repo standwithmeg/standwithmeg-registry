@@ -9,15 +9,16 @@
     "role": "Judge",
     "court": "Miami",
     "county": "Miami county",
-    "court_or_county": "Miami",
+    "court_or_county": "6th District / Miami county",
     "state": "Kansas",
     "state_abbr": "KS",
-    "mention_count": 4,
-    "family_count": 3,
-    "public_family_count": 3,
+    "mention_count": 5,
+    "family_count": 4,
+    "public_family_count": 4,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 4,
+    "actor_report_count": 5,
     "supabase_row_ids": [
+      "a1af03bf-ad75-47b2-b020-fbbf176022b6",
       "20222c29-9b1f-4068-9100-dc842cd67a1f",
       "61176c16-66bc-4b29-8508-887fabc16f0b",
       "1c564663-bcd0-4017-a2f7-c5da556c978f",
@@ -27,32 +28,38 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-7gspmaqk/New Final Post and Capcut template/export/steven_montgomery/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/steven_montgomery/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 185,
-    "total_submissions": 273,
-    "avg_financial_loss": 111495.56,
-    "avg_months_lost": 31.1,
+    "families_approved": 186,
+    "total_submissions": 293,
+    "avg_financial_loss": 120206.43,
+    "avg_months_lost": 30.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "KS",
-    "state_family_count": 273,
-    "median_financial_loss": 97450,
-    "median_burden_sample_size": 140,
-    "median_months_lost": 16,
-    "pro_se_pct": 48.4,
-    "pro_se_count": 132,
-    "_pdf_state_family_count": 273,
+    "state_family_count": 293,
+    "median_financial_loss": 101500,
+    "median_burden_sample_size": 149,
+    "median_months_lost": 19,
+    "pro_se_pct": 48.3,
+    "pro_se_count": 141,
+    "_pdf_state_family_count": 292,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5746,
+  "movement_total": 6496,
   "supabase": {
-    "report_count": 4,
-    "actor_report_count": 4,
-    "family_count": 3,
+    "report_count": 5,
+    "actor_report_count": 5,
+    "family_count": 4,
     "family_reports": [
+      {
+        "body": "Doubled down on the abuse to the victim, failed the child, extorted the protective parent while letting the perpetrators alienate the child from a loving fit parent.",
+        "state": "KS",
+        "county": "Miami",
+        "row_id": "3f5261a7-2c1f-4e14-9a9c-32f6012c2da0"
+      },
       {
         "body": "Allowed the gal and judge too much power to make a decision to separate a mother from her children with no evidence or ability to defend her self due to the unethical court process. Judge allowed a conflict of interest and did not allow any evidence to be provided. Respondent was tokd he filed first and this was the reason I was given every other weekend. This is not an ethical reason to separate a mother from her children. This case was about who had the money, not what was best for the children.",
         "state": "KS",
@@ -86,6 +93,12 @@
         "court_or_county": "Miami county"
       },
       {
+        "comment_text": "He fled the state to CO to avoid being served lawsuits",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "6th District / Miami county"
+      },
+      {
         "comment_text": "Told me I was a vindictive ex wife",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
@@ -115,7 +128,15 @@
   "render": {
     "selected_quotes": [
       {
+        "body": "Allowed an expate to remove a parent from the home eith only the information given from the petitioners filing. Was never given any evidence such as police reports to state the mother was not safe to stay in the home.",
+        "kind": "comment"
+      },
+      {
         "body": "Judge over divorce case involving one child Judge in divorce case",
+        "kind": "comment"
+      },
+      {
+        "body": "He fled the state to CO to avoid being served lawsuits",
         "kind": "comment"
       },
       {
@@ -123,15 +144,23 @@
         "kind": "comment"
       },
       {
-        "body": "Judge allowed a conflict of interest and did not allow any evidence to be provided.",
+        "body": "Doubled down on the abuse to the victim, failed the child, extorted the protective parent while letting the perpetrators alienate the child from a loving fit parent.",
         "kind": "family_report"
       },
       {
-        "body": "Miami county doesn’t have the child best interest at all, they literally take…",
+        "body": "Allowed the gal and judge too much power to make a decision to separate a mother from her children with no evidence or ability to defend her self due to the unethical court process. Judge allowed a conflict of interest and did not allow any evidence to be provided. Respondent was tokd he filed first and this was the reason I was given every other weekend. This is not an ethical reason to separate a mother from her children. This case was about who had the money, not what was best for the children.",
+        "kind": "family_report"
+      },
+      {
+        "body": "My ex-husband and I filed pro se to divorce and I just remember judge Montgomery telling us that our daughter did not ask to be brought into this world and we better behave accordingly to not be back in front of him and to do right by her.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Miami county doesn’t have the child best interest at all, they literally take children away from a parent who wants to protect them from abuse and drugs and tells the parent that wants to keep them safe that they are a vindictive ex who is mad!",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 5
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

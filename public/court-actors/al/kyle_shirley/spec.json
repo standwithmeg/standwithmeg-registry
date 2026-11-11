@@ -31,27 +31,27 @@
     "actor_bucket_key": "kyle shirley|AL"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-7gspmaqk/New Final Post and Capcut template/export/kyle_shirley/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/kyle_shirley/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 103,
-    "total_submissions": 143,
-    "avg_financial_loss": 84215.55,
-    "avg_months_lost": 34.0,
+    "families_approved": 102,
+    "total_submissions": 158,
+    "avg_financial_loss": 91268.73,
+    "avg_months_lost": 32.6,
     "_source_table": "movement_stats_by_state",
     "_match_value": "AL",
-    "state_family_count": 143,
-    "median_financial_loss": 55000,
-    "median_burden_sample_size": 63,
-    "median_months_lost": 12,
-    "pro_se_pct": 42.7,
-    "pro_se_count": 61,
-    "_pdf_state_family_count": 143,
+    "state_family_count": 158,
+    "median_financial_loss": 52500,
+    "median_burden_sample_size": 71,
+    "median_months_lost": 13,
+    "pro_se_pct": 39.9,
+    "pro_se_count": 63,
+    "_pdf_state_family_count": 158,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5746,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 8,
     "actor_report_count": 8,
@@ -131,35 +131,39 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "He has repeatedly helped a rapist and kidnapper get custody.",
+        "body": "He has repeatedly helped a rapist and kidnapper get custody. He persisted in pushing charges on me for interference with custody when I tried to get my children to the hospital covered in bruises & welts. My children cried out that their dad beat them with belts. Attorney to my ex-husband who has continuously defended a documented abuser and has repeatedly reported false accusations. Opposing party attorney helping to mask the abuse.",
         "kind": "comment"
       },
       {
-        "body": "He hid evidence, we subpoenaed her medical records.",
+        "body": "He hid evidence, we subpoenaed her medical records. He said he never received so I went to the medical office, pretending to be from his office. They confirmed they had sent them and provided me with another copy. He colluded with the other side against me opposing attorney is it was his best friend in high school. They are all in it together.",
         "kind": "comment"
       },
       {
-        "body": "Not a phone call or meeting with me.",
+        "body": "GAL didn’t interview, talk or visit with me concerning my parenting and relationship with my child. Not a phone call or meeting with me. He played a huge role in the decision in court and the court of civil appeals.",
         "kind": "comment"
       },
       {
-        "body": "Represented the other party. Had undisclosed personal and familial ties to his client.",
+        "body": "Represented the other party. Had undisclosed personal and familial ties to his client. Conflict of interest.",
         "kind": "comment"
+      },
+      {
+        "body": "This system has ripped me apart and taken advantage of my children and myself in every conceivable way. Every actor in it is corrupt, they are all in it together and seeking only personal gain and satisfaction rather than justice for the children. It’s evil , sick and killing our children and community.",
+        "kind": "family_report"
       },
       {
         "body": "It cost me everything.",
         "kind": "family_report"
       },
       {
-        "body": "Autauga County family court has failed my children and me over and over again.",
+        "body": "Autauga County family court has failed my children and me over and over again. More than 30 years of mental and physchological abuse has been legally perpetuated at the hands of the court system.",
         "kind": "family_report"
       },
       {
-        "body": "Refused all documented evidence",
+        "body": "Judge has placed my two children right back into the hands of our abuser who has many prior convictions, refused all documented evidence, ripped us all out of the protection program and destroyed my family.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 5
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

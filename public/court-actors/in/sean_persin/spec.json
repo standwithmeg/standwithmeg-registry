@@ -2,9 +2,9 @@
   "schema_version": 2,
   "actor": {
     "slug": "sean_persin",
-    "display_name": "Sean Persin",
+    "display_name": "Sean M Persin",
     "title": "",
-    "first_name": "Sean",
+    "first_name": "Sean M",
     "last_name": "Persin",
     "role": "Judge",
     "court": "Tippecanoe",
@@ -30,27 +30,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-7gspmaqk/New Final Post and Capcut template/export/sean_persin/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/sean_persin/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 126,
-    "total_submissions": 161,
-    "avg_financial_loss": 132780.75,
-    "avg_months_lost": 29.2,
+    "families_approved": 120,
+    "total_submissions": 198,
+    "avg_financial_loss": 222011.73,
+    "avg_months_lost": 31.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "IN",
-    "state_family_count": 161,
-    "median_financial_loss": 63875,
-    "median_burden_sample_size": 80,
-    "median_months_lost": 18,
-    "pro_se_pct": 45.3,
-    "pro_se_count": 73,
-    "_pdf_state_family_count": 161,
+    "state_family_count": 198,
+    "median_financial_loss": 68150,
+    "median_burden_sample_size": 98,
+    "median_months_lost": 20,
+    "pro_se_pct": 49.5,
+    "pro_se_count": 98,
+    "_pdf_state_family_count": 198,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5746,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 7,
     "actor_report_count": 7,
@@ -92,7 +92,7 @@
         "comment_text": "Judge Persin ignored evidence from two forensic interviews, expert testimony, and a medical exam that the father sexually molested our two children. He gave the father sole custody after one hearing.",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "County not listed"
+        "court_or_county": "Tippecanoe"
       },
       {
         "comment_text": "Ignored evidence, exparte communication with perpetrator who sexually molested a minor then dismissed the protective order, no due process, ignored professionals testimony",
@@ -130,35 +130,39 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Judge Sean Persin dropped the PO after the child’s therapist explained the child is…",
+        "body": "Judge Sean Persin dropped the PO after the child’s therapist explained the child is diagnosed with PTSD due to sexual abuse and trauma, and the child’s teacher testified that the child is suffering from anxiety and other sexual abuse side effects and there is an active sexual abuse case at the DAs office",
         "kind": "comment"
       },
       {
-        "body": "He gave the father sole custody after one hearing.",
+        "body": "Judge Persin ignored evidence from two forensic interviews, expert testimony, and a medical exam that the father sexually molested our two children. He gave the father sole custody after one hearing.",
         "kind": "comment"
       },
       {
-        "body": "Then dismissed the protective order",
+        "body": "Ignored evidence, exparte communication with perpetrator who sexually molested a minor then dismissed the protective order, no due process, ignored professionals testimony",
         "kind": "comment"
       },
       {
-        "body": "Failed to act in a problem solving capacity or hold other party accountable for…",
+        "body": "Failed to act in a problem solving capacity or hold other party accountable for their continued harm to the children and contemptuous actions.",
         "kind": "comment"
       },
       {
-        "body": "I begged the court to intervene and act in a protective and problem solving capacity.",
+        "body": "I begged the court to intervene and act in a protective and problem solving capacity. It failed to do so, causing tremendous emotional, mental, and financial harm to our entire family.",
         "kind": "family_report"
       },
       {
-        "body": "Enough is enough.",
+        "body": "Judge Persin ignored evidence from two forensic interviews and a medical exam that the father sexually molested our two children. He gave the father sole custody after one hearing. This has destroyed two children's lives. Judge Persin endangered children and decided to ruin their lives despite evidence and expert testimony. One child has made another disclosure of sexual abuse since being forced to live with their abuser.",
         "kind": "family_report"
       },
       {
-        "body": "The child was taken by the father who received sole custody.",
+        "body": "Sean Persin has endangered enough children and needs to be held accountable for destroying families. He sides with abusers and rules against the female regardless of the heinous crime the man has committed including abusing an innocent child. Enough is enough.",
+        "kind": "family_report"
+      },
+      {
+        "body": "The Guardian ad Litem, Sybil Sharvelle, appears to have been brainwashed by the father and claimed the mother is psychologically abusing the child after the child disclosed sexual abuse by the father for the second time and a PO was issued by a preponderance of the evidence by one judge, then transferred to another judge who dropped the PO and the child was taken by the father who received sole custody.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 6
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

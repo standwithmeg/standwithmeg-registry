@@ -26,27 +26,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-fpp0lnsx/New Final Post and Capcut template/export/jodi_christiansen/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/jodi_christiansen/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 40,
-    "total_submissions": 57,
-    "avg_financial_loss": 187330.73,
-    "avg_months_lost": 46.2,
+    "families_approved": 39,
+    "total_submissions": 76,
+    "avg_financial_loss": 170095.33,
+    "avg_months_lost": 41.2,
     "_source_table": "movement_stats_by_state",
     "_match_value": "MT",
-    "state_family_count": 57,
-    "median_financial_loss": 150500,
-    "median_burden_sample_size": 27,
-    "median_months_lost": 21,
-    "pro_se_pct": 56.1,
-    "pro_se_count": 32,
-    "_pdf_state_family_count": 57,
+    "state_family_count": 76,
+    "median_financial_loss": 135250,
+    "median_burden_sample_size": 34,
+    "median_months_lost": 19,
+    "pro_se_pct": 60.5,
+    "pro_se_count": 46,
+    "_pdf_state_family_count": 76,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5543,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -114,19 +114,19 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Ahe is the cps supervisor. She neglects to supervise.",
+        "body": "Ahe is the cps supervisor. She neglects to supervise. She lets all the workers under her play God and just goes along with it.",
         "kind": "comment"
       },
       {
-        "body": "Cps supervisor. Lets all the workers under her go rogue and do what they want.",
+        "body": "Cps supervisor. Lets all the workers under her go rogue and do what they want. Will not return calls.",
         "kind": "comment"
       },
       {
-        "body": "She is the CPS supervisor she allows the people under her to go rogue and do…",
+        "body": "She is the CPS supervisor she allows the people under her to go rogue and do whatever they want.",
         "kind": "comment"
       },
       {
-        "body": "Lots of new allegations of abuse.",
+        "body": "Our nephews and niece have been removed from our care, and placed back into an extremely abusive home. Lots of new allegations of abuse.",
         "kind": "family_report"
       },
       {
@@ -138,7 +138,7 @@
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 2
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

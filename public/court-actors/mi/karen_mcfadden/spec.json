@@ -2,9 +2,9 @@
   "schema_version": 2,
   "actor": {
     "slug": "karen_mcfadden",
-    "display_name": "Karen McFadden",
+    "display_name": "Karen S. McFadden",
     "title": "",
-    "first_name": "Karen",
+    "first_name": "Karen S.",
     "last_name": "McFadden",
     "role": "GAL / Child Representative",
     "court": "Montcalm",
@@ -12,11 +12,11 @@
     "court_or_county": "Montcalm",
     "state": "Michigan",
     "state_abbr": "MI",
-    "mention_count": 8,
-    "family_count": 8,
-    "public_family_count": 8,
+    "mention_count": 9,
+    "family_count": 9,
+    "public_family_count": 9,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 8,
+    "actor_report_count": 9,
     "supabase_row_ids": [
       "fdaf5b2f-6d0c-4fb3-9f19-147ec6df94d6",
       "9af4c3b7-e996-4d8b-95c9-048e19ac25a1",
@@ -25,37 +25,38 @@
       "9d4ff726-5528-4be5-9d1c-a31b3a6b6665",
       "dfaa435d-d1df-4eca-8ae3-4d840d7c17ee",
       "c823ef0b-043f-4777-b852-166aac1edd3f",
-      "39573451-bc95-45e5-ae14-b9d1202adc92"
+      "39573451-bc95-45e5-ae14-b9d1202adc92",
+      "c7efde10-0c6e-417e-9911-2e3284c424cb"
     ],
     "actor_row_id": "fdaf5b2f-6d0c-4fb3-9f19-147ec6df94d6",
     "actor_bucket_key": "karen mcfaden|MI"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-l4pttpaz/New Final Post and Capcut template/export/karen_mcfadden/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/karen_mcfadden/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 144,
-    "total_submissions": 183,
-    "avg_financial_loss": 181109.42,
-    "avg_months_lost": 36.7,
+    "families_approved": 142,
+    "total_submissions": 200,
+    "avg_financial_loss": 173525.11,
+    "avg_months_lost": 36.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "MI",
-    "state_family_count": 183,
-    "median_financial_loss": 103000,
-    "median_burden_sample_size": 80,
-    "median_months_lost": 17,
-    "pro_se_pct": 44.3,
-    "pro_se_count": 81,
-    "_pdf_state_family_count": 183,
+    "state_family_count": 200,
+    "median_financial_loss": 104500,
+    "median_burden_sample_size": 86,
+    "median_months_lost": 18,
+    "pro_se_pct": 44.0,
+    "pro_se_count": 88,
+    "_pdf_state_family_count": 200,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5669,
+  "movement_total": 6496,
   "supabase": {
-    "report_count": 8,
-    "actor_report_count": 8,
-    "family_count": 8,
+    "report_count": 9,
+    "actor_report_count": 9,
+    "family_count": 9,
     "family_reports": [
       {
         "body": "The destruction of my family has changed every part of my life. Living through years of separation from my daughter has created a level of grief and trauma that is hard to put into words. Every holiday, birthday, school event, and milestone that passes is another reminder of everything we’ve lost. The repeated trips back to court have only added to that trauma. Each hearing brings hope that maybe this time things will change, only to leave feeling like we’re no closer to healing or being reunited. Instead of finding solutions, we’ve spent years reliving the same pain over and over. It’s emotionally exhausting, financially draining, and has left our entire family living in a constant state of uncertainty. This hasn’t only affected me. It has affected my husband, my children, my extended family, and most importantly, my daughter. Relationships that should have been built naturally have instead been replaced with distance, missed memories, and unanswered questions. We’ve missed birthdays, holidays, sporting events, family dinners, and countless everyday moments that can never be recreated. Despite everything, I have never stopped loving my daughter or hoping for the day our family can begin to heal. No family should have to endure years of separation while repeatedly returning to court without moving any closer to a resolution. The emotional toll of living in that cycle has been devastating for all of us.",
@@ -167,27 +168,27 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "She would trash talk my parents to me, she lied in court paperwork",
+        "body": "Told me she would fight for me to come home in court but then also told me that she would not fight for my siblings because I was treated differently and that my parents had no right to have their other kids back and she would trash talk my parents to me, she lied in court paperwork",
         "kind": "comment"
       },
       {
-        "body": "Lied about what the children said. Still misrepresting children.",
+        "body": "Misrepresented children, lied about what they really wanted. Lied about what the children said. Still misrepresting children. Keeps children away from there siblings. Lied to children about the case.",
         "kind": "comment"
       },
       {
-        "body": "Supports and defends the department when their own attorney is not present.",
+        "body": "Cyber stalks me and submits shared posts to the court about my outcry of unjust actions. Supports and defends the department when their own attorney is not present.",
         "kind": "comment"
       },
       {
-        "body": "She was cruel and didn't listen to what my children had to say.",
+        "body": "Karen McFadden was the 3rd GAL my family had in the 2 years we went threw Montcalm county. She was cruel and didn't listen to what my children had to say.",
         "kind": "comment"
       },
       {
-        "body": "She lis Everytime she opens her mouth. She said I prostituted my daughter as a child.",
+        "body": "She lis Everytime she opens her mouth. She said I prostituted my daughter as a child. That is a lie and could have had me on charges.",
         "kind": "comment"
       },
       {
-        "body": "The GAL has tried to get me fired from every job I’ve worked at since the…",
+        "body": "The GAL has tried to get me fired from every job I’ve worked at since the proceeding began.",
         "kind": "comment"
       },
       {
@@ -199,31 +200,31 @@
         "kind": "comment"
       },
       {
-        "body": "The destruction of my family has changed every part of my life.",
+        "body": "The destruction of my family has changed every part of my life. Living through years of separation from my daughter has created a level of grief and trauma that is hard to put into words. Every holiday, birthday, school event, and milestone that passes is another reminder of everything we’ve lost. The repeated trips back to court have only added to that trauma. Each hearing brings hope that maybe this time things will change, only to leave feeling like we’re no closer to healing or being reunited. Instead of finding solutions, we’ve spent years reliving the same pain over and over. It’s emotionally exhausting, financially draining, and has left our entire family living in a constant state of uncertainty. This hasn’t only affected me. It has affected my husband, my children, my extended family, and most importantly, my daughter. Relationships that should have been built naturally have instead been replaced with distance, missed memories, and unanswered questions. We’ve missed birthdays, holidays, sporting events, family dinners, and countless everyday moments that can never be recreated. Despite everything, I have never stopped loving my daughter or hoping for the day our family can begin to heal. No family should have to endure years of separation while repeatedly returning to court without moving any closer to a resolution. The emotional toll of living in that cycle has been devastating for all of us.",
         "kind": "family_report"
       },
       {
-        "body": "The system has did nothing but ruin my life.",
+        "body": "The system has did nothing but ruin my life. Try to take my kid or in the middle of trying to take my kid and some false accusations boom.",
         "kind": "family_report"
       },
       {
-        "body": "The court took that all away from you.",
+        "body": "Safety is when you know you are safe, it's when you know that your parents are safe, it's when you can lay your head down at night and go to bed peacefully it's when you can tell your parents that you love them and give them a hug but once foster care takes you, you never know when you'll be safe again, you don't know when you will be able to lay your head down at night and fall asleep peacefully you don't know if your parents are okay and your biggest worry is your parents and your siblings at the end of the day but you're also so angry because the court took that all away from you.",
         "kind": "family_report"
       },
       {
-        "body": "Instead it's ripping them apart and destroying them.",
+        "body": "The hurt is unmeasurable. Total loss of fairness and justice in the court that is supposed to serve and protect the people and children. Instead it's ripping them apart and destroying them. The trauma is coming from the court.",
         "kind": "family_report"
       },
       {
-        "body": "This destroyed my family. I have lost my children. My wife and I dont get a long well.",
+        "body": "This destroyed my family. I have lost my children. My wife and I dont get a long well. Our married may beyond repair. I miss my babies.",
         "kind": "family_report"
       },
       {
-        "body": "Destroyed our whole lives. Drove my love to committ suicide.",
+        "body": "Destroyed our whole lives. Drove my love to committ suicide. Robbed us of time with my kids!",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 2
+    "quote_page_count": 10
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

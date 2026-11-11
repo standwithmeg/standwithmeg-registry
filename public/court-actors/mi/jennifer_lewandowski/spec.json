@@ -30,22 +30,22 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 144,
-    "total_submissions": 183,
-    "avg_financial_loss": 181109.42,
-    "avg_months_lost": 36.7,
+    "families_approved": 142,
+    "total_submissions": 200,
+    "avg_financial_loss": 173525.11,
+    "avg_months_lost": 36.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "MI",
-    "state_family_count": 183,
-    "median_financial_loss": 103000,
-    "median_burden_sample_size": 80,
-    "median_months_lost": 17,
-    "pro_se_pct": 44.3,
-    "pro_se_count": 81,
-    "_pdf_state_family_count": 183,
+    "state_family_count": 200,
+    "median_financial_loss": 104500,
+    "median_burden_sample_size": 86,
+    "median_months_lost": 18,
+    "pro_se_pct": 44.0,
+    "pro_se_count": 88,
+    "_pdf_state_family_count": 200,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5669,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 2,
     "actor_report_count": 2,
@@ -100,7 +100,7 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "This worker supervised one of my parenting times, she was a breath of fresh air after dealing with Tasha Welch.",
+        "body": "This worker supervised one of my parenting times, she was a breath of fresh air after dealing with Tasha Welch. She did however badger us on what we were doing during our unsupervised time and roll down my license plate and car making year and then it was put into the case service plan for everybody who reads it to know my license plate number.",
         "kind": "comment"
       },
       {
@@ -116,7 +116,7 @@
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 2
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

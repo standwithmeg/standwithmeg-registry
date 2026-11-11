@@ -9,7 +9,7 @@
     "role": "GAL / Child Representative",
     "court": "Gal/ educational surrogate",
     "county": "Gal/ educational surrogate",
-    "court_or_county": "Gal/ educational surrogate",
+    "court_or_county": null,
     "state": "Nebraska",
     "state_abbr": "NE",
     "mention_count": 8,
@@ -31,27 +31,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-90yxu6ix/New Final Post and Capcut template/export/audrey_long/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/audrey_long/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 37,
-    "total_submissions": 44,
-    "avg_financial_loss": 180795.98,
-    "avg_months_lost": 35.0,
+    "families_approved": 36,
+    "total_submissions": 52,
+    "avg_financial_loss": 154610.27,
+    "avg_months_lost": 35.2,
     "_source_table": "movement_stats_by_state",
     "_match_value": "NE",
-    "state_family_count": 44,
-    "median_financial_loss": 240500,
-    "median_burden_sample_size": 17,
+    "state_family_count": 52,
+    "median_financial_loss": 126905,
+    "median_burden_sample_size": 20,
     "median_months_lost": 22,
-    "pro_se_pct": 47.7,
-    "pro_se_count": 21,
-    "_pdf_state_family_count": 44,
+    "pro_se_pct": 50.0,
+    "pro_se_count": 26,
+    "_pdf_state_family_count": 52,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5516,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 8,
     "actor_report_count": 8,
@@ -99,49 +99,49 @@
         "comment_text": "She refused to listen to my children and their wants and need for their mother, she never attempted to unify me and my children. Even when I accomplished tasks, they asked me, nothing lived forward in a direction to me getting my children back..",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Gal/ educational surrogate"
+        "court_or_county": ""
       },
       {
         "comment_text": "Was my court appointed attorney but never fought for me, asked the judge to extra time like I asked because I was post partum and had to walk everywhere",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Gal/ educational surrogate"
+        "court_or_county": ""
       },
       {
         "comment_text": "She never listened to any of the concerns. The children told her about with their father and continue to be biased against myself.",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Gal/ educational surrogate"
+        "court_or_county": ""
       },
       {
         "comment_text": "She never used the evidence I gave her, or called anyone to testify on my behalf, she saw me as a crimnal and not a father.",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Gal/ educational surrogate"
+        "court_or_county": ""
       },
       {
         "comment_text": "She didn’t even believe my toddler was autistic because she said she knows what autistic kids look like.",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Gal/ educational surrogate"
+        "court_or_county": ""
       },
       {
         "comment_text": "She didn’t even try to represent me. She filed nothing in my case for me",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Gal/ educational surrogate"
+        "court_or_county": ""
       },
       {
         "comment_text": "Was court appointed and didn’t help once or try to help me get my kids",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Gal/ educational surrogate"
+        "court_or_county": ""
       },
       {
         "comment_text": "DID NOT listen to my oldest daughter when she said she was abused!",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Gal/ educational surrogate"
+        "court_or_county": ""
       }
     ]
   },
@@ -167,23 +167,23 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Refused to listen to my children",
+        "body": "She refused to listen to my children and their wants and need for their mother, she never attempted to unify me and my children. Even when I accomplished tasks, they asked me, nothing lived forward in a direction to me getting my children back..",
         "kind": "comment"
       },
       {
-        "body": "I was post partum and had to walk everywhere",
+        "body": "Was my court appointed attorney but never fought for me, asked the judge to extra time like I asked because I was post partum and had to walk everywhere",
         "kind": "comment"
       },
       {
-        "body": "She never listened to any of the concerns.",
+        "body": "She never listened to any of the concerns. The children told her about with their father and continue to be biased against myself.",
         "kind": "comment"
       },
       {
-        "body": "Called anyone to testify on my behalf",
+        "body": "She never used the evidence I gave her, or called anyone to testify on my behalf, she saw me as a crimnal and not a father.",
         "kind": "comment"
       },
       {
-        "body": "She didn’t even believe my toddler was autistic.",
+        "body": "She didn’t even believe my toddler was autistic because she said she knows what autistic kids look like.",
         "kind": "comment"
       },
       {
@@ -203,23 +203,27 @@
         "kind": "family_report"
       },
       {
-        "body": "Someone told that the attorney is the guardian ad litem.",
+        "body": "Scotts Bluff County is disgustingly corrupt and you can tell that the attorneys talk to each other without their paid customers. No morals.",
         "kind": "family_report"
       },
       {
-        "body": "Having your newborn taken away and given false hope that if you recover and get…",
+        "body": "someone told that the attorney is the guardian ad litem, and the judge talk together outside of the support room and I didn’t believe it. It’s until I went through this case myself. It was almost like the hearings were rehearsed, my own attorney included.",
         "kind": "family_report"
       },
       {
-        "body": "I hate to admit, but I gave up.",
+        "body": "Having your newborn taken away and given false hope that if you recover and get better that you’ll get your child back, I’ve never felt so hopeless, helpless and angry.",
         "kind": "family_report"
       },
       {
-        "body": "Scottsbluff just wants to keep funding the sick individuals who think taking kids…",
+        "body": "I hate to admit, but I gave up because I haven’t seen anyone else win in this “good ole boy” town. I’m hoping one day my son will understand I don’t want him to have to go through watching me lose him",
+        "kind": "family_report"
+      },
+      {
+        "body": "Scottsbluff just wants to keep funding the sick individuals who think taking kids is “in their best interest” when they have loving parents",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 2
+    "quote_page_count": 5
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

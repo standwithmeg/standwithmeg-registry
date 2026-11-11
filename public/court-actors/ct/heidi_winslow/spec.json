@@ -26,27 +26,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-mwjh1ox2/New Final Post and Capcut template/export/heidi_winslow/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/heidi_winslow/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 48,
-    "total_submissions": 69,
-    "avg_financial_loss": 377362.58,
-    "avg_months_lost": 32.2,
+    "families_approved": 46,
+    "total_submissions": 72,
+    "avg_financial_loss": 344739.86,
+    "avg_months_lost": 31.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CT",
-    "state_family_count": 69,
-    "median_financial_loss": 215000,
+    "state_family_count": 72,
+    "median_financial_loss": 211500,
     "median_burden_sample_size": 39,
     "median_months_lost": 24,
-    "pro_se_pct": 69.6,
+    "pro_se_pct": 66.7,
     "pro_se_count": 48,
-    "_pdf_state_family_count": 69,
+    "_pdf_state_family_count": 72,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5641,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -114,31 +114,31 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "(She is now retired)",
+        "body": "Delayed reunification, taking in to account ex-parte statements and used off the record statements made by defense council and GAL, as facts without myself present, nor any sworn testimony from myself/petitioner. (She is now retired)",
         "kind": "comment"
       },
       {
-        "body": "Ignored my son and my rights. She is now retired.",
+        "body": "ignored my son and my rights. She is now retired. I filed the appropriate paperwork for a complaint in a timely manner, yet they denied my request. I filed a FOIA request that they ignored, and now I go to FOIC for a hearing.",
         "kind": "comment"
       },
       {
-        "body": "She gave the father full custody.",
+        "body": "She gave the father full custody and the right to decide my visitation after saying it was a tragedy that the children allegedly did not want to see me. I appealed and won, but nothing changed. The delays were intentional.",
         "kind": "comment"
       },
       {
-        "body": "Tarnished my favorable opinion of the court/justice system.",
+        "body": "Tarnished my favorable opinion of the court/justice system. My distrust is immeasurable and my belief of absolute corruption is steadfast. Both kids had to deal with the stress of alienation and displaced family.",
         "kind": "family_report"
       },
       {
-        "body": "Refused to speak with me the first 3 months of therapy",
+        "body": "My son no longer speaks with my side of the family. The court set things up so my communication with our son was so limited. Then she selects a therapist who doesn't use me for onboarding our son, refused to speak with me the first 3 months of therapy, includes my ex in therapy and never me, then terminates care, blaming me for his issues. My ex was given what she originally intended with a complicit court, to erase my son's father and his family from his life.",
         "kind": "family_report"
       },
       {
-        "body": "Instead, they were left with anger, division, and loss.",
+        "body": "The system cost my children a mother, grandmother, cousins, and a future surrounded by people who loved them. Instead, they were left with anger, division, and loss.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 4
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

@@ -37,27 +37,27 @@
     ]
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-4q360ne7/New Final Post and Capcut template/export/kimberly_walson/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/kimberly_walson/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 72,
-    "total_submissions": 93,
-    "avg_financial_loss": 159178.63,
-    "avg_months_lost": 33.5,
+    "families_approved": 71,
+    "total_submissions": 107,
+    "avg_financial_loss": 140502.82,
+    "avg_months_lost": 31.7,
     "_source_table": "movement_stats_by_state",
     "_match_value": "KY",
-    "state_family_count": 93,
-    "median_financial_loss": 101075,
-    "median_burden_sample_size": 42,
-    "median_months_lost": 15,
-    "pro_se_pct": 45.2,
-    "pro_se_count": 42,
-    "_pdf_state_family_count": 93,
+    "state_family_count": 107,
+    "median_financial_loss": 97000,
+    "median_burden_sample_size": 45,
+    "median_months_lost": 13,
+    "pro_se_pct": 43.9,
+    "pro_se_count": 47,
+    "_pdf_state_family_count": 107,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5665,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
@@ -131,15 +131,15 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Took kids over unrelated incidents to child safety",
+        "body": "Bias, took kids over unrelated incidents to child safety, didn’t let me speak and hear my evidence. Biased, didn’t hear evidence but from one party, delayed reunification, took children over allegations",
         "kind": "comment"
       },
       {
-        "body": "Very biased.",
+        "body": "I have been told by both attorneys and others that she is “very tough” on “alcoholics” because she “grew up with an alcoholic father” Does not require any proof from other party. Very biased.",
         "kind": "comment"
       },
       {
-        "body": "Prior reasons Biased, delayed reunification, ignored evidence",
+        "body": "Biased, immediately gave my kids to other party without prior reasons Biased, delayed reunification, ignored evidence",
         "kind": "comment"
       },
       {
@@ -159,7 +159,7 @@
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 3
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

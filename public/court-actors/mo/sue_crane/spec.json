@@ -31,22 +31,22 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 154,
-    "total_submissions": 221,
-    "avg_financial_loss": 99851.19,
-    "avg_months_lost": 41.8,
+    "families_approved": 145,
+    "total_submissions": 284,
+    "avg_financial_loss": 106113.17,
+    "avg_months_lost": 38.1,
     "_source_table": "movement_stats_by_state",
     "_match_value": "MO",
-    "state_family_count": 221,
-    "median_financial_loss": 94350,
-    "median_burden_sample_size": 96,
-    "median_months_lost": 24,
-    "pro_se_pct": 53.8,
-    "pro_se_count": 119,
-    "_pdf_state_family_count": 221,
+    "state_family_count": 284,
+    "median_financial_loss": 89000,
+    "median_burden_sample_size": 131,
+    "median_months_lost": 21,
+    "pro_se_pct": 53.9,
+    "pro_se_count": 153,
+    "_pdf_state_family_count": 284,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5746,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -112,7 +112,7 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "The clerk blocked my email and hangs up on me when I call the court.",
+        "body": "She’s bias, lies on the docket, refuses transcripts and court access. The clerk blocked my email and hangs up on me when I call the court. (Recorded) judge made final judgement and then backdated it 69 days later- preventing my filings. (They were already filed prior to this backdate.)",
         "kind": "comment"
       },
       {
@@ -120,11 +120,11 @@
         "kind": "comment"
       },
       {
-        "body": "Sent my children with our abuser didn't allow evidence to be shown from my side, no…",
+        "body": "Sent my children with our abuser didn't allow evidence to be shown from my side, no other household members (3 adults) (2 minors) we spoken to about allegations. She also did my protection order against ex sister in law and ex husband as well as divorce, knew of previous abuse by him.",
         "kind": "comment"
       },
       {
-        "body": "I’ve lost eight months with my son. He was forced into public school.",
+        "body": "The system has wrecked my family. If my older children want to speak to their seven year-old brother, they have to deal with the man who abused us. I’ve lost eight months with my son. He was forced into public school. We don’t do public schools. My son is living with an abuser someone who’s tried to kill himself multiple times and someone who has tried to kill me multiple times. I’ve been harassed by law-enforcement in court officials. I had to move thousands of miles away for safety from the system. I’m not even allowed to speak to my son. My son sent me a Snapchat video where he was telling me. He loves me. He misses me. He really wants to see me. Hurry up and get my stuff done so I can see him. The court refuses to give me my final judgment since January 9 and I don’t even know what my legal last name is. There’s no way for me to know what stipulations to court have in order to see my son. I feel like my life is pointless until I can get my child away from that man. I’ve been labeled as mentally unstable for simply being a victim of domestic violence.",
         "kind": "family_report"
       },
       {
@@ -132,11 +132,11 @@
         "kind": "family_report"
       },
       {
-        "body": "Completely destroyed us by tearing us apart.",
+        "body": "Completely destroyed us by tearing us apart without hearing our evidence and placing my children in the hands of a pedophile",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 5
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

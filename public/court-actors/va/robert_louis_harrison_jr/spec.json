@@ -36,22 +36,22 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 104,
-    "total_submissions": 144,
-    "avg_financial_loss": 174683.38,
+    "families_approved": 101,
+    "total_submissions": 156,
+    "avg_financial_loss": 177721.59,
     "avg_months_lost": 31.7,
     "_source_table": "movement_stats_by_state",
     "_match_value": "VA",
-    "state_family_count": 144,
-    "median_financial_loss": 146000,
-    "median_burden_sample_size": 56,
+    "state_family_count": 156,
+    "median_financial_loss": 151650,
+    "median_burden_sample_size": 59,
     "median_months_lost": 22,
-    "pro_se_pct": 63.9,
-    "pro_se_count": 92,
-    "_pdf_state_family_count": 144,
+    "pro_se_pct": 63.5,
+    "pro_se_count": 99,
+    "_pdf_state_family_count": 156,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5665,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 8,
     "actor_report_count": 8,
@@ -107,23 +107,23 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Dismissed 3 motions to amend child support since then",
+        "body": "Decided the case before I stepped foot in the court room. Entertains all false allegations if they’re made by the mother in the case. Dad is guilty until proven innocent. Even the local attorneys call this fraud a squirrel and don’t know what to expect when they step into his court room. He doesn’t listen. Manipulates CS guideline calculations to maximize support obligations with zero evidence to support the claims. Suppressed evidence at the first trial. Didn’t provide clear order at the second. Mother’s interpretation of the written order provided her more time. After a motion to rehear, it became evident the judges intent was to increase my time, as 50/50 was granted but the judge has dismissed 3 motions to amend child support since then and manipulated numbers each time to dismiss as “insufficient” change. Guy was indicted on wire fraud charges prior to presiding over J&DR when he was an attorney for a grant related to a local but national memorial. Paid his way out of jail. No surprise he’s out to collect IV D funding if it means falsifying guideline calculations to do so.",
         "kind": "comment"
       },
       {
-        "body": "Made disparaging remarks on the record and issued a contempt ruling over a custody time dispute.",
+        "body": "Was called a gatekeeping dumbass + charged with contempt for not giving my parenting time to my abuser (who harasses me daily for MY court ordered time with the kids). ZERO accountability for men. Judge Harrison engaged in conduct raising serious due process concerns, including hostile courtroom behavior, profanity toward mom, and repeated contempt proceedings based on allegations contradicted by documented evidence. Made disparaging remarks on the record and issued a contempt ruling over a custody time dispute, despite the time being explicitly granted to me under the standing court order.",
         "kind": "comment"
       },
       {
-        "body": "In Bedford J&DR, fatherhood is a purchase, not a right.",
+        "body": "In Bedford J&DR, fatherhood is a purchase, not a right. Mother’s statements are taken as fact and father is guilty until proven innocent. It’s clear the Bedford J&DR courts “best interest standard” is not about the child, but about the title IV D funding.",
         "kind": "family_report"
       },
       {
-        "body": "I will still spend every single breath fighting for my kids",
+        "body": "The court system's terrifying disregard for my family's safety has trapped us in a never-ending hell of harassment and fear. It has cost us absolutely everything, destroying a well-paying career and leaving us in debt and barely making it, but I will still spend every single breath fighting for my kids",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 5
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

@@ -12,15 +12,14 @@
     "court_or_county": "Catoosa County",
     "state": "GA",
     "state_abbr": "GA",
-    "mention_count": 4,
+    "mention_count": 3,
     "family_count": 2,
     "public_family_count": 2,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 4,
+    "actor_report_count": 3,
     "supabase_row_ids": [
       "6c33514c-473e-4f07-adb9-87f728745e28",
       "8c3af574-a152-4a66-aab7-2a5586a47c54",
-      "e5ec9b51-0744-45f5-bc1f-8a2e779c23d8",
       "dd982756-2c80-4b6f-a278-f833599a4d05"
     ],
     "actor_row_id": null,
@@ -32,33 +31,27 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 121,
-    "total_submissions": 161,
-    "avg_financial_loss": 206416.3,
-    "avg_months_lost": 31.7,
+    "families_approved": 119,
+    "total_submissions": 192,
+    "avg_financial_loss": 189146.89,
+    "avg_months_lost": 32.6,
     "_source_table": "movement_stats_by_state",
     "_match_value": "GA",
-    "state_family_count": 161,
+    "state_family_count": 192,
     "median_financial_loss": 151000,
-    "median_burden_sample_size": 87,
+    "median_burden_sample_size": 99,
     "median_months_lost": 19,
-    "pro_se_pct": 42.2,
-    "pro_se_count": 68,
-    "_pdf_state_family_count": 161,
+    "pro_se_pct": 42.7,
+    "pro_se_count": 82,
+    "_pdf_state_family_count": 192,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5722,
+  "movement_total": 6496,
   "supabase": {
-    "report_count": 4,
-    "actor_report_count": 4,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 2,
     "family_reports": [
-      {
-        "body": "Attempted to destroy the child bond with her mother. Altered the child’s life by denying medical treatment.",
-        "state": "GA",
-        "county": "Catoosa",
-        "row_id": "3ab71e48-9b6a-42eb-aafd-b6dd357694ba"
-      },
       {
         "body": "Forever altered my disabled child’s life by denying her care due to false allegations with no evidence",
         "state": "GA",
@@ -79,12 +72,12 @@
         "source": "court_actors.notes"
       },
       {
-        "comment_text": "Attempted to submit fabricated documents as evidence to remove my parental rights Fabricated evidence, aided her client in hiding the child for 154 days",
+        "comment_text": "Fabricated evidence, aided her client in hiding the child for 154 days",
         "author": "Anonymous parent",
         "source": "court_actors.notes"
       },
       {
-        "comment_text": "Ex parte communication with judge and GAL, fabricated evidence, ignored evidence of abuse",
+        "comment_text": "Attempted to submit fabricated documents as evidence to remove my parental rights",
         "author": "Anonymous parent",
         "source": "court_actors.notes"
       }
@@ -113,23 +106,19 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Submitted fabricated documents, discussed sealed information in open court, ex…",
+        "body": "Submitted fabricated documents, discussed sealed information in open court, ex parte communication with the judge",
         "kind": "comment"
       },
       {
-        "body": "Fabricated documents as evidence to remove my parental rights Fabricated evidence",
+        "body": "Fabricated evidence, aided her client in hiding the child for 154 days",
         "kind": "comment"
       },
       {
-        "body": "Ignored evidence of abuse",
+        "body": "Attempted to submit fabricated documents as evidence to remove my parental rights",
         "kind": "comment"
       },
       {
-        "body": "Attempted to destroy the child bond with her mother.",
-        "kind": "family_report"
-      },
-      {
-        "body": "Forever altered my disabled child’s life by denying her care due to false…",
+        "body": "Forever altered my disabled child’s life by denying her care due to false allegations with no evidence",
         "kind": "family_report"
       },
       {
@@ -137,7 +126,7 @@
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 2
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

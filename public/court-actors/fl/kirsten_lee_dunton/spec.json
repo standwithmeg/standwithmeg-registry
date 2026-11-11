@@ -29,27 +29,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-axmobuc7/New Final Post and Capcut template/export/kirsten_lee_dunton/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/kirsten_lee_dunton/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 237,
-    "total_submissions": 321,
-    "avg_financial_loss": 199989.91,
-    "avg_months_lost": 27.6,
+    "total_submissions": 355,
+    "avg_financial_loss": 191015.67,
+    "avg_months_lost": 26.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "FL",
-    "state_family_count": 321,
-    "median_financial_loss": 176500,
-    "median_burden_sample_size": 139,
+    "state_family_count": 355,
+    "median_financial_loss": 176000,
+    "median_burden_sample_size": 153,
     "median_months_lost": 17,
-    "pro_se_pct": 57.6,
-    "pro_se_count": 185,
-    "_pdf_state_family_count": 321,
+    "pro_se_pct": 57.2,
+    "pro_se_count": 203,
+    "_pdf_state_family_count": 355,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5722,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
@@ -129,19 +129,19 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "At the same time, the report reportedly recommended a reverse custody provision.",
+        "body": "The Guardian ad Litem appeared to place significant emphasis on relatively minor school attendance concerns, including a small number of tardies, while giving comparatively limited attention to more serious allegations involving the father’s history and conduct. According to the information available, the father had previously experienced a removal/loss of custody involving other children. There were also allegations involving the father’s association with an individual described as a pedophile who was reportedly attempting to gain access to the child, as well as allegations concerning large handprint bruises observed on the child and attributed to the father. These issues were not meaningfully addressed or emphasized in the Guardian ad Litem’s report. At the same time, the report reportedly recommended a reverse custody provision if the child accumulated more than two tardies for any reason. There are also concerns regarding imbalance in the investigative process. The Guardian ad Litem reportedly conducted extensive communication with individuals aligned with the father while failing to contact or meaningfully engage with collateral sources identified by the mother. Taken together, these circumstances raise concerns regarding proportionality, neutrality, and the consistency with which allegations and risk factors were evaluated.",
         "kind": "comment"
       },
       {
-        "body": "Dismissed without meaningful investigation",
+        "body": "There are concerns regarding this Guardian ad Litem’s pattern of involvement in cases connected to the same attorney representing fathers in family law matters. In multiple cases, serious allegations involving the fathers appear to receive limited scrutiny, while allegations against mothers are amplified and emphasized. A recurring issue raised by several mothers involves accusations related to eating disorders and nutritional concerns, despite questions regarding the Guardian ad Litem’s qualifications to make clinical or nutritional assessments. There are also concerns that allegations involving sexual abuse by fathers are minimized or dismissed without meaningful investigation. Additionally, the Guardian ad Litem appears to place significant weight on collateral sources aligned with the father, while responding negatively or dismissively when collateral witnesses supporting the mother provide conflicting information or perspectives. Taken together, these patterns raise concerns regarding neutrality, investigative balance, and the consistent treatment of allegations across cases.",
         "kind": "comment"
       },
       {
-        "body": "The report does not favor her preferred parent.",
+        "body": "This guardian ad litem is incredibly biased and ignores child abuse reports by mandatory reports if the report does not favor her preferred parent. Her preferred parents are consistently represented by the same law firm. This woman needs to be stopped before she ruins more lives.",
         "kind": "comment"
       },
       {
-        "body": "Called DCF on the Father after speaking to the child once",
+        "body": "She allowed a complete violation of time-sharing and decision making and didn't budge when a therapist called DCF on the Father after speaking to the child once.",
         "kind": "comment"
       },
       {
@@ -153,7 +153,7 @@
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 6
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

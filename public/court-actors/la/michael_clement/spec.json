@@ -28,27 +28,27 @@
     "actor_bucket_key": "michael clement|LA"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-90yxu6ix/New Final Post and Capcut template/export/michael_clement/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/michael_clement/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 48,
-    "total_submissions": 64,
-    "avg_financial_loss": 167916.76,
-    "avg_months_lost": 38.0,
+    "families_approved": 45,
+    "total_submissions": 68,
+    "avg_financial_loss": 175806.37,
+    "avg_months_lost": 37.5,
     "_source_table": "movement_stats_by_state",
     "_match_value": "LA",
-    "state_family_count": 64,
-    "median_financial_loss": 193450,
-    "median_burden_sample_size": 32,
+    "state_family_count": 68,
+    "median_financial_loss": 185300,
+    "median_burden_sample_size": 33,
     "median_months_lost": 24,
-    "pro_se_pct": 51.6,
-    "pro_se_count": 33,
-    "_pdf_state_family_count": 64,
+    "pro_se_pct": 51.5,
+    "pro_se_count": 35,
+    "_pdf_state_family_count": 68,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5516,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -140,47 +140,47 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "The judge made a ruling that I had to live with my dad who molested me.",
+        "body": "The judge made a ruling that I had to live with my dad who molested me. I know there is evidence, I had to talk to the police and I was in therapy so they had to have said something but it didn't matter.",
         "kind": "comment"
       },
       {
-        "body": "Ignored evidence from the child’s teacher about sexual abuse disclosure",
+        "body": "Ignored evidence from the child’s teacher about sexual abuse disclosure, then refused her affidavit after refusing to allow her to testify",
         "kind": "comment"
       },
       {
-        "body": "Allowed opposing counsel to call witnesses you never spoke with child or mother",
+        "body": "Ignored evidence, allowed opposing counsel to call witnesses you never spoke with child or mother, no best interest factors in ruling.",
         "kind": "comment"
       },
       {
-        "body": "Unethical, endgangered children, Ignored evidence, improper courtroom behavior…",
+        "body": "Unethical, endgangered children, Ignored evidence, improper courtroom behavior, bias, retaliatory conduct, improper use of authority",
         "kind": "comment"
       },
       {
-        "body": "Denied my evidence that perjured ex’s witnesses",
+        "body": "Denied my evidence that perjured ex’s witnesses, refused to allow my professionals to testify",
         "kind": "comment"
       },
       {
-        "body": "Judge Michael Clement ignored evidence that the father abused our two children.",
+        "body": "Judge Michael Clement ignored evidence that the father abused our two children and he awarded the father sole custody when he only had supervised visitation for the past three years. Judge Clement also ignored the documented history of domestic violence, photographs, 911 calls, and expert testimony. This court has destroyed two children's lives.",
         "kind": "family_report"
       },
       {
-        "body": "The judge took me away from my mom who I love and was safe with her.",
+        "body": "the court made me live with my dad who sexually molested me and the judge took me away from my mom who I love and was safe with her.",
         "kind": "family_report"
       },
       {
-        "body": "The system worked with the father to take my children away from their loving mother.",
+        "body": "The system worked with the father to take my children away from their loving mother because father hates mom.",
         "kind": "family_report"
       },
       {
-        "body": "Forced her to live with her abuser",
+        "body": "The family court specifically judge Michael Clement ruled against a child’s safety and forced her to live with her abuser.",
         "kind": "family_report"
       },
       {
-        "body": "Walking through family court felt less like seeking protection and more like trying…",
+        "body": "Walking through family court felt less like seeking protection and more like trying to survive a system that abuses protective parents. I entered the process believing the truth alone would be enough, and left realizing how complicated and devastating these cases can become for families and children.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 2
+    "quote_page_count": 5
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

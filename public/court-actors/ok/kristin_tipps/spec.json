@@ -27,27 +27,27 @@
     "actor_bucket_key": "kristin tips|OK"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-4q360ne7/New Final Post and Capcut template/export/kristin_tipps/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/kristin_tipps/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 130,
-    "total_submissions": 175,
-    "avg_financial_loss": 121131.03,
-    "avg_months_lost": 24.4,
+    "families_approved": 120,
+    "total_submissions": 223,
+    "avg_financial_loss": 112707.53,
+    "avg_months_lost": 28.0,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OK",
-    "state_family_count": 175,
-    "median_financial_loss": 101500,
-    "median_burden_sample_size": 95,
-    "median_months_lost": 13,
+    "state_family_count": 223,
+    "median_financial_loss": 104250,
+    "median_burden_sample_size": 115,
+    "median_months_lost": 16,
     "pro_se_pct": 41.7,
-    "pro_se_count": 73,
-    "_pdf_state_family_count": 175,
+    "pro_se_count": 93,
+    "_pdf_state_family_count": 223,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5665,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -115,7 +115,7 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Did not listen to any concerns. Would only meet with child 30 minutes.",
+        "body": "Did not listen to any concerns. Would only meet with child 30 minutes. Didn't listen to any worries and directly told me not to tell my husband anything that happened in session. She never completed a full session with my son.",
         "kind": "comment"
       },
       {
@@ -127,7 +127,7 @@
         "kind": "comment"
       },
       {
-        "body": "The family court system wrongfully removed my child at Jordan Dalgleish’s…",
+        "body": "The family court system wrongfully removed my child at Jordan Dalgleish’s suggestion after accepting a fraudulent document as fact, DHS involvement and still I am missing out on important things in my child’s life, my child is extremely depressed.",
         "kind": "family_report"
       },
       {
@@ -135,11 +135,11 @@
         "kind": "family_report"
       },
       {
-        "body": "Stripped me of my role as a mother",
+        "body": "This system has torn my family apart, stripped me of my role as a mother, and forced me into a relentless fight against abusive exes, distortion, imbalance, and Court decisions that have harmed both me and my child.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 3
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

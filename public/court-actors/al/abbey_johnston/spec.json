@@ -1,0 +1,141 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "abbey_johnston",
+    "display_name": "Abbey Johnston",
+    "title": "",
+    "first_name": "Abbey",
+    "last_name": "Johnston",
+    "role": "Other",
+    "court": "Baldwin",
+    "county": "Baldwin",
+    "court_or_county": "Baldwin",
+    "state": "AL",
+    "state_abbr": "AL",
+    "mention_count": 4,
+    "family_count": 4,
+    "public_family_count": 4,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "6062d7a4-605b-4f9e-bb74-2315e260747a",
+      "56d8bc2e-af3f-41e7-96b9-2b8fa22cf997",
+      "725191ee-fb67-4997-92f6-d022947806c7",
+      "0204f6dc-fa87-4aee-912f-476ffb0c5233"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "abey johnston|AL"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 102,
+    "total_submissions": 158,
+    "avg_financial_loss": 91268.73,
+    "avg_months_lost": 32.6,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "AL",
+    "state_family_count": 158,
+    "median_financial_loss": 52500,
+    "median_burden_sample_size": 71,
+    "median_months_lost": 13,
+    "pro_se_pct": 39.9,
+    "pro_se_count": 63,
+    "_pdf_state_family_count": 158,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6496,
+  "supabase": {
+    "report_count": 4,
+    "actor_report_count": 4,
+    "family_count": 4,
+    "family_reports": [
+      {
+        "body": "William E Scully is deleting documents from the record. Siding with dhr although there is no evidence just false accusations that has never been proven to be true. Terminating my parental rights instead of reunification to families",
+        "state": "AL",
+        "county": "Baldwin",
+        "row_id": "169ff0bf-4039-4595-9334-0179e96c3282"
+      },
+      {
+        "body": "The system has broke my family down to the point that it is past the point of being repaired. They have destroyed everything we’ve worked for and I will never get that back.",
+        "state": "AL",
+        "county": "Baldwin County",
+        "row_id": "8d635be3-d43b-42e5-b448-388d6366b5e0"
+      },
+      {
+        "body": "It has caused financial hardship and emotional distress.",
+        "state": "AL",
+        "county": "Baldwin",
+        "row_id": "897dbb9d-1cb4-475a-9055-f27cc868fba7"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Abbey did not want to listen to me even with me having proof. She continued to support my ex-husband even when I showed her evidence of him alienating the kids from me. Once I paid her fees she just stopped talking to me. I reached out to her multiple times about my kids welfare and she never responded. She now will not meet with me or communicate with me at all. She allows kids to suffer and does not have their best interest at all. Works hand in hand with DHR and does not listen to things right in front of her.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Baldwin"
+      },
+      {
+        "comment_text": "Simultaneously argues against reunification of a sober parent while representing the grandparent seeking to adopt who self admits he’s a “functioning alcoholic”.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Baldwin County AL"
+      },
+      {
+        "comment_text": "She gave a false report on me without evidence.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Baldwin"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/abbey_johnston",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='AL'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/al/abbey_johnston/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Abbey did not want to listen to me even with me having proof. She continued to support my ex-husband even when I showed her evidence of him alienating the kids from me. Once I paid her fees she just stopped talking to me. I reached out to her multiple times about my kids welfare and she never responded. She now will not meet with me or communicate with me at all. She allows kids to suffer and does not have their best interest at all. Works hand in hand with DHR and does not listen to things right in front of her.",
+        "kind": "comment"
+      },
+      {
+        "body": "She gave a false report on me without evidence.",
+        "kind": "comment"
+      },
+      {
+        "body": "William E Scully is deleting documents from the record. Siding with dhr although there is no evidence just false accusations that has never been proven to be true. Terminating my parental rights instead of reunification to families",
+        "kind": "family_report"
+      },
+      {
+        "body": "The system has broke my family down to the point that it is past the point of being repaired. They have destroyed everything we’ve worked for and I will never get that back.",
+        "kind": "family_report"
+      },
+      {
+        "body": "It has caused financial hardship and emotional distress.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 3
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

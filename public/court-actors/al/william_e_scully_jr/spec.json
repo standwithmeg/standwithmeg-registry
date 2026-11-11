@@ -12,11 +12,11 @@
     "court_or_county": "Baldwin",
     "state": "Alabama",
     "state_abbr": "AL",
-    "mention_count": 20,
+    "mention_count": 21,
     "family_count": 16,
     "public_family_count": 16,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 20,
+    "actor_report_count": 21,
     "supabase_row_ids": [
       "c1ad63c0-0458-4e7d-80b8-1a20ff40ed7a",
       "00e75318-ba1f-4fff-9a7f-ac4239e19cfe",
@@ -33,6 +33,7 @@
       "a1e4adf7-f55c-45c4-b52e-681a95a15bed",
       "9032f55b-de9a-499b-8370-bb2cc71edd25",
       "41bdabcf-5d48-47c1-8232-2c775505c744",
+      "099e320f-b65b-4081-a1e4-338e93b942fb",
       "ca96865d-0139-4e46-94e8-4954abc58176",
       "8a0c4ae8-490f-4105-98d6-72737772d7f7",
       "aa0d7e05-a35e-409b-9a22-49cecf55bdc3",
@@ -43,32 +44,38 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-7gspmaqk/New Final Post and Capcut template/export/william_e_scully_jr/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/william_e_scully_jr/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 103,
-    "total_submissions": 143,
-    "avg_financial_loss": 84215.55,
-    "avg_months_lost": 34.0,
+    "families_approved": 102,
+    "total_submissions": 158,
+    "avg_financial_loss": 91268.73,
+    "avg_months_lost": 32.6,
     "_source_table": "movement_stats_by_state",
     "_match_value": "AL",
-    "state_family_count": 143,
-    "median_financial_loss": 55000,
-    "median_burden_sample_size": 63,
-    "median_months_lost": 12,
-    "pro_se_pct": 42.7,
-    "pro_se_count": 61,
-    "_pdf_state_family_count": 143,
+    "state_family_count": 158,
+    "median_financial_loss": 52500,
+    "median_burden_sample_size": 71,
+    "median_months_lost": 13,
+    "pro_se_pct": 39.9,
+    "pro_se_count": 63,
+    "_pdf_state_family_count": 158,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5746,
+  "movement_total": 6496,
   "supabase": {
-    "report_count": 20,
-    "actor_report_count": 20,
+    "report_count": 21,
+    "actor_report_count": 21,
     "family_count": 16,
     "family_reports": [
+      {
+        "body": "William E Scully is deleting documents from the record. Siding with dhr although there is no evidence just false accusations that has never been proven to be true. Terminating my parental rights instead of reunification to families",
+        "state": "AL",
+        "county": "Baldwin",
+        "row_id": "169ff0bf-4039-4595-9334-0179e96c3282"
+      },
       {
         "body": "Destroyed my relationship with my granddaughter.",
         "state": "AL",
@@ -98,23 +105,11 @@
         "state": "AL",
         "county": "BALDWIN",
         "row_id": "acacbdc3-bf36-4f68-86ea-80574715cf55"
-      },
-      {
-        "body": "Tore my family apart. I haven't talked to my son in months",
-        "state": "AL",
-        "county": "Baldwin",
-        "row_id": "ea8b8e6f-a6cb-4666-9eea-cb0861c6afdc"
       }
     ],
     "public_comments": [
       {
         "comment_text": "The custody case remained stayed for an extended period while related criminal proceedings were pending. During a related hearing, evidence was presented but the court indicated the issues should be addressed through family court proceedings.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Baldwin"
-      },
-      {
-        "comment_text": "He has been my judge for my 6 previous accusations of abuse by my coparent in attempts to modify custody. He has always awarded me primary physical custody of my children. He has always upheld the law but did sway towards DHR recommendations.",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Baldwin"
@@ -174,6 +169,12 @@
         "court_or_county": "Baldwin"
       },
       {
+        "comment_text": "Deleting documents from the record. Will not allow me to speak. Sides with dhr",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Baldwin"
+      },
+      {
         "comment_text": "ONLY LISTENING TO DHR NOT LETTIN ME SPEAK NOR WAS DHR LETTIN ME TALK",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
@@ -221,47 +222,47 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "The court indicated the issues should be addressed through family court proceedings.",
+        "body": "The custody case remained stayed for an extended period while related criminal proceedings were pending. During a related hearing, evidence was presented but the court indicated the issues should be addressed through family court proceedings.",
         "kind": "comment"
       },
       {
-        "body": "He has always awarded me primary physical custody of my children.",
+        "body": "He wouldn't except none of my drug test i paid for and it was like he had his mind up already he didn't care to listen to what i had and everyone was so against me and I have never abused my kids or anything it didn't make sense",
         "kind": "comment"
       },
       {
-        "body": "I have never abused my kids or anything it didn't make sense",
+        "body": "Another judge that doesn’t want listen to evidence just wants to listen to what DHR says no matter that they don’t have proof. All just “feelings” and what they think a person might do.",
         "kind": "comment"
       },
       {
-        "body": "All just “feelings” and what they think a person might do.",
+        "body": "I had to get on the ladder and he will take her side punish me get onto me without listening to any facts and and believe her lies in her attorneys, fabricated instances",
         "kind": "comment"
       },
       {
-        "body": "Listening to any facts and and believe her lies in her attorneys, fabricated instances",
+        "body": "Violated my civil rights and never considered the best interest of my daughter Dismissed case without following proper procedures and violated my civil rights",
         "kind": "comment"
       },
       {
-        "body": "Dismissed case without following proper procedures",
+        "body": "Repeatedly ignored evidence, engages in ex parte comms, ignores domestic violence, blames victims, denies notice and due process",
         "kind": "comment"
       },
       {
-        "body": "Repeatedly ignored evidence, engages in ex parte comms, ignores domestic violence…",
+        "body": "Dismissed a long-standing protective order without reviewing documentary evidence I had submitted or requested to present.",
         "kind": "comment"
       },
       {
-        "body": "Dismissed a long-standing protective order.",
+        "body": "Didn’t care to hear me plead my case believed everything he was told knowing it was lies n defamation of character",
         "kind": "comment"
       },
       {
-        "body": "Didn’t care to hear me plead my case believed everything he was told knowing it was…",
+        "body": "Did not listen to my testimony. Lied and said my daughter had left rehab. She was still there.",
         "kind": "comment"
       },
       {
-        "body": "Did not listen to my testimony. Lied and said my daughter had left rehab.",
+        "body": "He took away my children with no evidence hearing Has never been given an evidentiary hearing.",
         "kind": "comment"
       },
       {
-        "body": "He took away my children with no evidence hearing Has never been given an…",
+        "body": "Deleting documents from the record. Will not allow me to speak. Sides with dhr",
         "kind": "comment"
       },
       {
@@ -281,15 +282,19 @@
         "kind": "comment"
       },
       {
+        "body": "William E Scully is deleting documents from the record. Siding with dhr although there is no evidence just false accusations that has never been proven to be true. Terminating my parental rights instead of reunification to families",
+        "kind": "family_report"
+      },
+      {
         "body": "Destroyed my relationship with my granddaughter.",
         "kind": "family_report"
       },
       {
-        "body": "They have destroyed everything we’ve worked for and I will never get that back.",
+        "body": "The system has broke my family down to the point that it is past the point of being repaired. They have destroyed everything we’ve worked for and I will never get that back.",
         "kind": "family_report"
       },
       {
-        "body": "Helped us instead made it harder to keep her safe",
+        "body": "I spent years trying to protect my family, only to watch prolonged litigation drain our finances, destroy our stability, and leave us homeless. My daughter has special needs, and the system that should have helped us instead made it harder to keep her safe, housed, and connected to the services she needs.",
         "kind": "family_report"
       },
       {
@@ -299,13 +304,9 @@
       {
         "body": "TORE UP OUR HAPPY HOME AN DESTROYED MY TWINS EMOTIONALLY AND MENTALLY",
         "kind": "family_report"
-      },
-      {
-        "body": "Tore my family apart. I haven't talked to my son in months",
-        "kind": "family_report"
       }
     ],
-    "quote_page_count": 3
+    "quote_page_count": 7
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

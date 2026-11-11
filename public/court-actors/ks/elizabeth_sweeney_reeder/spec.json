@@ -12,46 +12,53 @@
     "court_or_county": "Miami",
     "state": "KS",
     "state_abbr": "KS",
-    "mention_count": 3,
-    "family_count": 3,
-    "public_family_count": 3,
+    "mention_count": 4,
+    "family_count": 4,
+    "public_family_count": 4,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 3,
+    "actor_report_count": 4,
     "supabase_row_ids": [
       "d9f621e4-3da5-45a2-a059-20dc0c05a1b7",
       "8dd3106b-e8e9-44fb-b416-f3b380abc13f",
-      "2d840b6d-9a79-41d1-94f4-81291367d0e3"
+      "2d840b6d-9a79-41d1-94f4-81291367d0e3",
+      "3c04a36d-bf2f-467b-9b15-92ff1073bdaf"
     ],
     "actor_row_id": null,
     "actor_bucket_key": "elizabeth sweney-reder|KS"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-7gspmaqk/New Final Post and Capcut template/export/elizabeth_sweeney_reeder/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/elizabeth_sweeney_reeder/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 185,
-    "total_submissions": 273,
-    "avg_financial_loss": 111495.56,
-    "avg_months_lost": 31.1,
+    "families_approved": 186,
+    "total_submissions": 293,
+    "avg_financial_loss": 120206.43,
+    "avg_months_lost": 30.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "KS",
-    "state_family_count": 273,
-    "median_financial_loss": 97450,
-    "median_burden_sample_size": 140,
-    "median_months_lost": 16,
-    "pro_se_pct": 48.4,
-    "pro_se_count": 132,
-    "_pdf_state_family_count": 273,
+    "state_family_count": 293,
+    "median_financial_loss": 101500,
+    "median_burden_sample_size": 149,
+    "median_months_lost": 19,
+    "pro_se_pct": 48.3,
+    "pro_se_count": 141,
+    "_pdf_state_family_count": 292,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5746,
+  "movement_total": 6496,
   "supabase": {
-    "report_count": 3,
-    "actor_report_count": 3,
-    "family_count": 3,
+    "report_count": 4,
+    "actor_report_count": 4,
+    "family_count": 4,
     "family_reports": [
+      {
+        "body": "Doubled down on the abuse to the victim, failed the child, extorted the protective parent while letting the perpetrators alienate the child from a loving fit parent.",
+        "state": "KS",
+        "county": "Miami",
+        "row_id": "3f5261a7-2c1f-4e14-9a9c-32f6012c2da0"
+      },
       {
         "body": "Miami county doesn’t have the child best interest at all, they literally take children away from a parent who wants to protect them from abuse and drugs and tells the parent that wants to keep them safe that they are a vindictive ex who is mad!",
         "state": "KS",
@@ -114,11 +121,11 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Children and parent would say it was false Only listen to the therapy people",
+        "body": "She would only listen to therapy reports never any other side just what they wrote even though children and parent would say it was false Only listen to the therapy people",
         "kind": "comment"
       },
       {
-        "body": "The judge ignored all evidence, refused to allow me testimony, denied my rights.",
+        "body": "The judge ignored all evidence, refused to allow me testimony, denied my rights and my child’s rights and removed custody without reason.",
         "kind": "comment"
       },
       {
@@ -126,19 +133,23 @@
         "kind": "comment"
       },
       {
-        "body": "Miami county doesn’t have the child best interest at all, they literally take…",
+        "body": "Doubled down on the abuse to the victim, failed the child, extorted the protective parent while letting the perpetrators alienate the child from a loving fit parent.",
         "kind": "family_report"
       },
       {
-        "body": "The system took my kids a whole year without due process.",
+        "body": "Miami county doesn’t have the child best interest at all, they literally take children away from a parent who wants to protect them from abuse and drugs and tells the parent that wants to keep them safe that they are a vindictive ex who is mad!",
         "kind": "family_report"
       },
       {
-        "body": "The relationship between siblings based upon nothing more than their personal biases",
+        "body": "The system took my kids a whole year without due process. It cost me everything that I value. I'm sharing this because I want people to know that this is immoral, illegal, and unconstitutional. These people need to be held accountable for all their actions. Meg I need your help please.",
+        "kind": "family_report"
+      },
+      {
+        "body": "The system and those in it s have systematically and meticulously destroyed the relationship I had with my son and the relationship between siblings based upon nothing more than their personal biases",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 4
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

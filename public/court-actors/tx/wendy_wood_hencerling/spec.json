@@ -30,27 +30,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-7gspmaqk/New Final Post and Capcut template/export/wendy_wood_hencerling/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/wendy_wood_hencerling/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 249,
-    "total_submissions": 335,
-    "avg_financial_loss": 232641.96,
-    "avg_months_lost": 31.1,
+    "families_approved": 243,
+    "total_submissions": 369,
+    "avg_financial_loss": 221381.58,
+    "avg_months_lost": 29.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "TX",
-    "state_family_count": 335,
-    "median_financial_loss": 118900,
-    "median_burden_sample_size": 159,
+    "state_family_count": 369,
+    "median_financial_loss": 122000,
+    "median_burden_sample_size": 177,
     "median_months_lost": 18,
-    "pro_se_pct": 48.7,
-    "pro_se_count": 163,
-    "_pdf_state_family_count": 335,
+    "pro_se_pct": 46.6,
+    "pro_se_count": 172,
+    "_pdf_state_family_count": 369,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5746,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 7,
     "actor_report_count": 7,
@@ -130,19 +130,19 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Denied my indigency without even looking at one paper",
+        "body": "Ignored evidence, repeatedly mimicked me or spoke down to me, constantly made side bar comments, ignored all facts and evidence that I presented and only acknowledged the word of mouth that the opposing attorney put forth, delayed all hearings ,denied my indigency without even looking at one paper, one paycheck, one anything from me, gave false legal definitions, retaliated when I filed for appeal by taking even more time from me.",
         "kind": "comment"
       },
       {
-        "body": "Denied my due process as she allowed my ex-wife 40 minutes to testify",
+        "body": "Denied my due process as she allowed my ex-wife 40 minutes to testify and allowed me 8 minutes to testify.",
         "kind": "comment"
       },
       {
-        "body": "It was her previous court case that was being appealed",
+        "body": "- day of court appeal judge got changed to her court room (with her stepping in as Judge) even though it was her previous court case that was being appealed",
         "kind": "comment"
       },
       {
-        "body": "Called my brother a pervert based off allegations that were proven false",
+        "body": "Put me on supervised visits and called my brother a pervert based off allegations that were proven false.",
         "kind": "comment"
       },
       {
@@ -150,19 +150,19 @@
         "kind": "family_report"
       },
       {
-        "body": "Weaponized while being financially",
+        "body": "I lost precious years with my children, my successful business, and my reputation while fighting a system that too often rewards conflict and turns children into leverage. No parent should have to watch their children weaponized while being financially and emotionally destroyed just to remain in their lives.",
         "kind": "family_report"
       },
       {
-        "body": "Used to believe in the law",
+        "body": "This has destroyed us. The one thing the kids could count on is that no matter what I was there. And now I just watch more and more as they become the little girls that I've become due to the constant mental and emotional warfare that they are subjected to daily. As a cop's daughter and somebody that used to believe in the law, I have absolutely no faith whatsoever that any of the system is anything but broken.",
         "kind": "family_report"
       },
       {
-        "body": "This has had a lasting impact on my family’s stability and well-being.",
+        "body": "The Brazos County court system has left my family deeply fractured after I was ordered with only 24 hours’ notice to relocate my four children to the same town as their father, forcing immediate school changes, housing decisions, and major financial disruption. I was told the alternative was incarceration and that my children would be placed in their father’s sole custody. This has had a lasting impact on my family’s stability and well-being.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 5
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

@@ -26,27 +26,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-56vhhi8e/New Final Post and Capcut template/export/kristina_kitty_karle/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/kristina_kitty_karle/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 133,
-    "total_submissions": 181,
-    "avg_financial_loss": 203568.15,
-    "avg_months_lost": 27.8,
+    "families_approved": 132,
+    "total_submissions": 198,
+    "avg_financial_loss": 201612.06,
+    "avg_months_lost": 28.0,
     "_source_table": "movement_stats_by_state",
     "_match_value": "NY",
-    "state_family_count": 181,
+    "state_family_count": 198,
     "median_financial_loss": 175000,
-    "median_burden_sample_size": 67,
-    "median_months_lost": 14,
-    "pro_se_pct": 38.1,
-    "pro_se_count": 69,
-    "_pdf_state_family_count": 181,
+    "median_burden_sample_size": 73,
+    "median_months_lost": 15,
+    "pro_se_pct": 39.9,
+    "pro_se_count": 79,
+    "_pdf_state_family_count": 198,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5686,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -67,12 +67,17 @@
     ],
     "public_comments": [
       {
-        "comment_text": "Making damaging statements to assigned council and on the record that are not backed by any factual evidence. Multiple damaging statements made to my assigned council and on the courts record that are damaging to me, my parental rights and my character - the statements she has made are not based on any factual evidence as no evidence was ever seen by the judge. She’s attacked my financial situation and stated she would personally look into my outright abuse of the system. There’s many more statements, but I’ll stop here. Upcoming hearing on Oct 15 and I have no idea what will happen or if she will hold me in contempt which will ruin my career as a Federal Aviation Safety Inspector and Helicopter Pilot.",
+        "comment_text": "Making damaging statements to assigned council and on the record that are not backed by any factual evidence.",
         "author": "Anonymous parent",
         "source": "court_actors.notes"
       },
       {
         "comment_text": "Denied due process and review of evidence, defamation of character, slander, bias and favoritism towards opposing party and council.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Multiple damaging statements made to my assigned council and on the courts record that are damaging to me, my parental rights and my character - the statements she has made are not based on any factual evidence as no evidence was ever seen by the judge. She’s attacked my financial situation and stated she would personally look into my outright abuse of the system. There’s many more statements, but I’ll stop here. Upcoming hearing on Oct 15 and I have no idea what will happen or if she will hold me in contempt which will ruin my career as a Federal Aviation Safety Inspector and Helicopter Pilot.",
         "author": "Anonymous parent",
         "source": "court_actors.notes"
       }
@@ -105,15 +110,19 @@
         "kind": "comment"
       },
       {
-        "body": "Denied due process and review of evidence, defamation of character, slander, bias and favoritism towards…",
+        "body": "Denied due process and review of evidence, defamation of character, slander, bias and favoritism towards opposing party and council.",
         "kind": "comment"
       },
       {
-        "body": "I felt ignored, humiliated, and dehumanized by the judge - while the conflict still continues!",
+        "body": "Multiple damaging statements made to my assigned council and on the courts record that are damaging to me, my parental rights and my character - the statements she has made are not based on any factual evidence as no evidence was ever seen by the judge. She’s attacked my financial situation and stated she would personally look into my outright abuse of the system. There’s many more statements, but I’ll stop here. Upcoming hearing on Oct 15 and I have no idea what will happen or if she will hold me in contempt which will ruin my career as a Federal Aviation Safety Inspector and Helicopter Pilot.",
+        "kind": "comment"
+      },
+      {
+        "body": "The family court system didn’t just drain my savings—it robbed my children of years of stability, holidays, memories, and opportunities that can never be replaced. Instead of addressing high-conflict abuse, the system prolonged it -enabled it, leaving me, a single and hard working and capable Mama- financially, emotionally, and psychologically exhausted. I felt ignored, humiliated, and dehumanized by the judge - while the conflict still continues! The judge’s behavior is as if she lives to see this fight - by increasing conflict, stress and drama in the courtroom. The greatest loss has been the irreplaceable years of my children’s childhood.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 5
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

@@ -31,22 +31,22 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 159,
-    "total_submissions": 221,
-    "avg_financial_loss": 181528.75,
-    "avg_months_lost": 36.0,
+    "families_approved": 157,
+    "total_submissions": 239,
+    "avg_financial_loss": 168081.76,
+    "avg_months_lost": 36.2,
     "_source_table": "movement_stats_by_state",
     "_match_value": "NC",
-    "state_family_count": 221,
-    "median_financial_loss": 137332,
-    "median_burden_sample_size": 74,
-    "median_months_lost": 17,
-    "pro_se_pct": 49.8,
-    "pro_se_count": 110,
-    "_pdf_state_family_count": 221,
+    "state_family_count": 239,
+    "median_financial_loss": 140000,
+    "median_burden_sample_size": 77,
+    "median_months_lost": 18,
+    "pro_se_pct": 48.5,
+    "pro_se_count": 116,
+    "_pdf_state_family_count": 239,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5704,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -101,23 +101,23 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Denied my due process, acted illegally, and shamed me",
+        "body": "denied my due process, acted illegally, and shamed me",
         "kind": "comment"
       },
       {
-        "body": "Denied reviewing the current hundreds of contempts against my ex and called my charges “tit for tat”.",
+        "body": "Denied reviewing the current hundreds of contempts against my ex and called my charges “tit for tat” despite me having a lifetime DVRO!",
         "kind": "comment"
       },
       {
-        "body": "The Charlotte North Carolina Court system is incredibly corrupt. They would rather standby a repeated felon…",
+        "body": "The Charlotte North Carolina Court system is incredibly corrupt. They would rather standby a repeated felon, then help a victim with a lifetime domestic violence restraining order.",
         "kind": "family_report"
       },
       {
-        "body": "(Is there an email I can provide with all of my story that I sent to ACLU?)",
+        "body": "The Charlotte-Mecklenburg Judiciary has cost me over 6 years of an already horrific, adjudicated system of ABUSE. Irena Zarutska put this county on the map with it's bad behavior and sadly, that women, who lost her life has seemingly crossed over to a better place than this town. This town should be exposed for its injustice. (Is there an email I can provide with all of my story that I sent to ACLU?)",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 2
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

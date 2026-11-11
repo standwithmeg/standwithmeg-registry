@@ -26,27 +26,27 @@
     "actor_bucket_key": "wendy bowen|SC"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-6nxbtixa/New Final Post and Capcut template/export/wendy_bowen/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/wendy_bowen/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 85,
-    "total_submissions": 113,
-    "avg_financial_loss": 271548.16,
-    "avg_months_lost": 25.3,
+    "families_approved": 81,
+    "total_submissions": 140,
+    "avg_financial_loss": 237149.95,
+    "avg_months_lost": 25.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "SC",
-    "state_family_count": 113,
-    "median_financial_loss": 125000,
-    "median_burden_sample_size": 71,
+    "state_family_count": 140,
+    "median_financial_loss": 102000,
+    "median_burden_sample_size": 90,
     "median_months_lost": 18,
-    "pro_se_pct": 56.6,
-    "pro_se_count": 64,
-    "_pdf_state_family_count": 113,
+    "pro_se_pct": 55.0,
+    "pro_se_count": 77,
+    "_pdf_state_family_count": 140,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5729,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -102,11 +102,11 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "She was listed as an option the attorneys were reviewing.",
+        "body": "She was listed as an option the attorneys were reviewing, but was clearly following an agenda and aligning with the other attorney we came to learn. She showed extreme bias during first contact and we later found out she had an undisclosed conflict of interest which explained things. Very unethical",
         "kind": "comment"
       },
       {
-        "body": "First meeting told me “those abuse allegations aren’t going to hold up in court”.",
+        "body": "First meeting told me “those abuse allegations aren’t going to hold up in court”. Asked me about DV history, wouldn’t let me answer. When my son tested pos for marijuana, she advised I “stop pointing fingers at one person”. Her L.O.V.E. Lounge Substack/podcast is hysterical.",
         "kind": "comment"
       },
       {
@@ -114,11 +114,11 @@
         "kind": "family_report"
       },
       {
-        "body": "Praise God for His renewal and peace in the midst of our persecutions and suffering!",
+        "body": "I rebuilt my life in 4 years from nothing when we left our abuser to 6 figure salary, purchased two homes, children had security, and I was healing and thriving. Alienation claims and a notoriously corrupt attorney have taken it all away to punish us but despite the gift of PTSD they expect us to continue to suffer from, we have found our hope in God’s love, justice, and mercy. Praise God for His renewal and peace in the midst of our persecutions and suffering!",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 3
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

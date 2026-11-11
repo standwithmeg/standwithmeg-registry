@@ -26,27 +26,27 @@
     "actor_bucket_key": "michele lyons|MI"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-l4pttpaz/New Final Post and Capcut template/export/michelle_lyons/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/michelle_lyons/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 144,
-    "total_submissions": 183,
-    "avg_financial_loss": 181109.42,
-    "avg_months_lost": 36.7,
+    "families_approved": 142,
+    "total_submissions": 200,
+    "avg_financial_loss": 173525.11,
+    "avg_months_lost": 36.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "MI",
-    "state_family_count": 183,
-    "median_financial_loss": 103000,
-    "median_burden_sample_size": 80,
-    "median_months_lost": 17,
-    "pro_se_pct": 44.3,
-    "pro_se_count": 81,
-    "_pdf_state_family_count": 183,
+    "state_family_count": 200,
+    "median_financial_loss": 104500,
+    "median_burden_sample_size": 86,
+    "median_months_lost": 18,
+    "pro_se_pct": 44.0,
+    "pro_se_count": 88,
+    "_pdf_state_family_count": 200,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5669,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -115,11 +115,11 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Did not present evidence we had to the courts.",
+        "body": "Did not present evidence we had to the courts. Asked that lawyer represent my family the way a lawyer is supposed to. It was not done.",
         "kind": "comment"
       },
       {
-        "body": "Represented my wife, lied, falysfied evidence.",
+        "body": "Represented my wife, lied, falysfied evidence. Held Ex parte hearings without wife present.",
         "kind": "comment"
       },
       {
@@ -127,11 +127,11 @@
         "kind": "comment"
       },
       {
-        "body": "This destroyed my family. I have lost my children. My wife and I dont get a long well.",
+        "body": "This destroyed my family. I have lost my children. My wife and I dont get a long well. Our married may beyond repair. I miss my babies.",
         "kind": "family_report"
       },
       {
-        "body": "Destroyed our whole lives. Drove my love to committ suicide.",
+        "body": "Destroyed our whole lives. Drove my love to committ suicide. Robbed us of time with my kids!",
         "kind": "family_report"
       },
       {
@@ -139,7 +139,7 @@
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 2
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

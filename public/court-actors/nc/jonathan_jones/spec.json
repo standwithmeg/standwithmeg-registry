@@ -31,22 +31,22 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 159,
-    "total_submissions": 221,
-    "avg_financial_loss": 181528.75,
-    "avg_months_lost": 36.0,
+    "families_approved": 157,
+    "total_submissions": 239,
+    "avg_financial_loss": 168081.76,
+    "avg_months_lost": 36.2,
     "_source_table": "movement_stats_by_state",
     "_match_value": "NC",
-    "state_family_count": 221,
-    "median_financial_loss": 137332,
-    "median_burden_sample_size": 74,
-    "median_months_lost": 17,
-    "pro_se_pct": 49.8,
-    "pro_se_count": 110,
-    "_pdf_state_family_count": 221,
+    "state_family_count": 239,
+    "median_financial_loss": 140000,
+    "median_burden_sample_size": 77,
+    "median_months_lost": 18,
+    "pro_se_pct": 48.5,
+    "pro_se_count": 116,
+    "_pdf_state_family_count": 239,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5704,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -112,15 +112,15 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Was also a lawyer representing another in a case against me.",
+        "body": "Put me in jail for 30 days over birth certificate issue that was never mentioned in any petitions or orders. Was also a lawyer representing another in a case against me.",
         "kind": "comment"
       },
       {
-        "body": "He allowed \"witnesses\" to lie on the stand.",
+        "body": "He allowed \"witnesses\" to lie on the stand. Denied me ADA access, the list goes on and on.",
         "kind": "comment"
       },
       {
-        "body": "This man came in on the tail end of my case as a new judge appointed.",
+        "body": "This man came in on the tail end of my case as a new judge appointed. I truly do not think he knew or understood what he was up against. He had no reason at that time to disbelieve the dss or gal attorney. He did sign orders that were unconstitutional. He did not verify facts nor speak with parents or allow them to speak on the record or verify the order in court. Six months later in 50 b custody court he undid everything that was put in that original order giving full n sole custody of two of our children back to my husband, their father, after a full trial and him understanding much was hidden and kept from the record in dss court and the kids had in fact been placed with their abuser. This should buy him grace is my book. At great risk to himself and his career here he made it right.",
         "kind": "comment"
       },
       {
@@ -128,15 +128,11 @@
         "kind": "family_report"
       },
       {
-        "body": "Gave my 8 year old daughter to our abuser",
-        "kind": "family_report"
-      },
-      {
-        "body": "The system tried to destroy and break our family simply for money.",
+        "body": "The system tried to destroy and break our family simply for money because three of our children have disabilities they could cash in on. That same system tried to silence us l, paint us as liars, when the proof didn’t match the story they were telling. WE WILL NEVER STOP TELLING OUR STORY!!! If we help and save just one other family it was not for nothing. We are together. Our family fights together. They chose the wrong ones. All of my children are home because our voices, our proof, MATTERED.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 4
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

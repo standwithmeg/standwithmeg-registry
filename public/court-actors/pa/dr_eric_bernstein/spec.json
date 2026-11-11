@@ -28,27 +28,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-7gspmaqk/New Final Post and Capcut template/export/dr_eric_bernstein/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/dr_eric_bernstein/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 116,
-    "total_submissions": 154,
-    "avg_financial_loss": 137460.54,
-    "avg_months_lost": 31.1,
+    "families_approved": 114,
+    "total_submissions": 170,
+    "avg_financial_loss": 132549.8,
+    "avg_months_lost": 29.3,
     "_source_table": "movement_stats_by_state",
     "_match_value": "PA",
-    "state_family_count": 154,
-    "median_financial_loss": 129750,
-    "median_burden_sample_size": 62,
+    "state_family_count": 170,
+    "median_financial_loss": 131300,
+    "median_burden_sample_size": 69,
     "median_months_lost": 18,
-    "pro_se_pct": 51.9,
-    "pro_se_count": 80,
-    "_pdf_state_family_count": 154,
+    "pro_se_pct": 52.4,
+    "pro_se_count": 89,
+    "_pdf_state_family_count": 170,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5746,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -116,11 +116,11 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "He made a report based on opinion and ex’s sabotage.",
+        "body": "He made a lot of assumptions that needed litigated, repeated the other party’s false accusations and didn’t listen to my children’s attorney or the family counselor’s research who both were working closely with my children, their dad and I. In our “high conflict” “contentious” case where I was told the court system is “not equipped” to handle our case. He made a report based on opinion and ex’s sabotage. Didn’t investigate but made a statement there was not abuse or alienation— which both were happening.",
         "kind": "comment"
       },
       {
-        "body": "Complete misrepresentation of administered MMPI in order to benefit opposing counsel.",
+        "body": "Complete misrepresentation of administered MMPI in order to benefit opposing counsel. Was not available for rebuttal, only offered written testimony during trial. Administered an MMPI and then completely misrepresented the results and subsequent conversations in a skewed fashion to benefit only opposing side. Has been accused of this several times over 15 years.",
         "kind": "comment"
       },
       {
@@ -132,15 +132,15 @@
         "kind": "family_report"
       },
       {
-        "body": "Has sabotaged 10 years and precious time with my children living in survival mode…",
+        "body": "Has sabotaged 10 years and precious time with my children living in survival mode, constant stress, fear and torture while family court helped and abuser commit pure psychological warfare and coercive control.",
         "kind": "family_report"
       },
       {
-        "body": "My children have been told a vicious lie about me that I may never undo.",
+        "body": "I waited, I worked, I behaved, I paid, I was told \"the kids will see the truth in the end\". It's almost to the end and my children have been told a vicious lie about me that I may never undo.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 3
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

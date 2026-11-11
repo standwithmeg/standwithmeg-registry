@@ -9,7 +9,7 @@
     "role": "Judge",
     "court": "White county",
     "county": null,
-    "court_or_county": "White Co family court",
+    "court_or_county": "White County District Court",
     "state": "Arkansas",
     "state_abbr": "AR",
     "mention_count": 4,
@@ -27,27 +27,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-wrasbp_n/New Final Post and Capcut template/export/craig_hannah/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/craig_hannah/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 42,
-    "total_submissions": 62,
-    "avg_financial_loss": 116725.57,
-    "avg_months_lost": 35.7,
+    "total_submissions": 80,
+    "avg_financial_loss": 143270.28,
+    "avg_months_lost": 33.1,
     "_source_table": "movement_stats_by_state",
     "_match_value": "AR",
-    "state_family_count": 62,
-    "median_financial_loss": 74750,
-    "median_burden_sample_size": 25,
-    "median_months_lost": 24,
-    "pro_se_pct": 40.3,
-    "pro_se_count": 25,
-    "_pdf_state_family_count": 62,
+    "state_family_count": 80,
+    "median_financial_loss": 116000,
+    "median_burden_sample_size": 36,
+    "median_months_lost": 22,
+    "pro_se_pct": 37.5,
+    "pro_se_count": 30,
+    "_pdf_state_family_count": 80,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5656,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -113,7 +113,7 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "He didn’t listen to me or the evidence I had.",
+        "body": "He didn’t listen to me or the evidence I had. He fell asleep during the first round of hearings",
         "kind": "comment"
       },
       {
@@ -125,19 +125,19 @@
         "kind": "comment"
       },
       {
-        "body": "Nobody cared.",
+        "body": "Kept me alienated for several years from my child, judges and attorneys let my abuser keep the control I was trying to escape with my child. Nobody cared.",
         "kind": "family_report"
       },
       {
-        "body": "Exposed what happens In Arkansas.",
+        "body": "It has destroyed my family, my piece of mind, made me fear the police and DHS, permanently injured my spine, but exposed what happens In Arkansas.",
         "kind": "family_report"
       },
       {
-        "body": "Wmy kids survived being abused for 12 years I am still unable to keep employment…",
+        "body": "Wmy kids survived being abused for 12 years I am still unable to keep employment cause child support enforcement keeps my driver's licence",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 2
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

@@ -30,27 +30,27 @@
     "actor_bucket_key": "shy-kendra lawson|NC"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-yfhm15ft/New Final Post and Capcut template/export/shy_kendra_lawson/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/shy_kendra_lawson/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 159,
-    "total_submissions": 221,
-    "avg_financial_loss": 181528.75,
-    "avg_months_lost": 36.0,
+    "families_approved": 157,
+    "total_submissions": 239,
+    "avg_financial_loss": 168081.76,
+    "avg_months_lost": 36.2,
     "_source_table": "movement_stats_by_state",
     "_match_value": "NC",
-    "state_family_count": 221,
-    "median_financial_loss": 137332,
-    "median_burden_sample_size": 74,
-    "median_months_lost": 17,
-    "pro_se_pct": 49.8,
-    "pro_se_count": 110,
-    "_pdf_state_family_count": 221,
+    "state_family_count": 239,
+    "median_financial_loss": 140000,
+    "median_burden_sample_size": 77,
+    "median_months_lost": 18,
+    "pro_se_pct": 48.5,
+    "pro_se_count": 116,
+    "_pdf_state_family_count": 239,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5704,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 7,
     "actor_report_count": 7,
@@ -154,15 +154,15 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "My continued requests for my children to be safely placed with family.",
+        "body": "Shy-Kendra Lawson delayed reunification and failed to properly support kinship placement despite an approved relative option and my continued requests for my children to be safely placed with family. Cleaner, stronger version for the form, because apparently forms want trauma squeezed into one tiny bureaucratic sentence: Shy-Kendra Lawson delayed reunification, failed to support approved kinship placement, and contributed to my children remaining in foster care instead of being placed with safe family.",
         "kind": "comment"
       },
       {
-        "body": "Ignored evidence in my favor",
+        "body": "Made or relied on false and misleading claims, ignored evidence in my favor, and supported keeping my child in foster care.",
         "kind": "comment"
       },
       {
-        "body": "Delayed reunification by interfering with visitation and failing to support…",
+        "body": "Delayed reunification by interfering with visitation and failing to support reasonable family placement options.",
         "kind": "comment"
       },
       {
@@ -178,23 +178,27 @@
         "kind": "comment"
       },
       {
-        "body": "The pain of being separated from my child has affected every part of my life.",
+        "body": "I have missed moments with my baby that I will never get back, and the pain of being separated from my child has affected every part of my life. I want people to know that parents and children should not be torn apart without real evidence, fairness, and due process.",
         "kind": "family_report"
       },
       {
-        "body": "I have personally seen Holly do everything she can to advocate for herself and her…",
+        "body": "I have personally seen Holly do everything she can to advocate for herself and her children, only to feel silenced and treated unfairly. I have seen the damage caused by the system and how much the separation from her girls have hurt her in many ways.",
         "kind": "family_report"
       },
       {
-        "body": "This system took my children, our time, our milestones, and our peace.",
+        "body": "It has stole my natural right as a mother to build bond with child qnd the wmotional stress on the children and the mother.. in the be batudal qorkd what effecta does it have on aby other mother that has its baby taken or hurt...",
         "kind": "family_report"
       },
       {
-        "body": "It was sanctioned harm.",
+        "body": "This system took my children, our time, our milestones, and our peace, while forcing me to fight to prove the love and bond that never should have been questioned. I want people to know that family separation is not just a court case, it is lifelong harm to children and parents.",
+        "kind": "family_report"
+      },
+      {
+        "body": "This system didn’t just fail my family — it systematically punished me for protecting my children, tore them from their mother, and caused irreversible trauma under the guise of ‘justice.’ What was done to us wasn’t protection; it was sanctioned harm.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 2
+    "quote_page_count": 6
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

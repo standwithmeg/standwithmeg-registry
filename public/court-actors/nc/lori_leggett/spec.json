@@ -28,27 +28,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-yfhm15ft/New Final Post and Capcut template/export/lori_leggett/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/lori_leggett/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 159,
-    "total_submissions": 221,
-    "avg_financial_loss": 181528.75,
-    "avg_months_lost": 36.0,
+    "families_approved": 157,
+    "total_submissions": 239,
+    "avg_financial_loss": 168081.76,
+    "avg_months_lost": 36.2,
     "_source_table": "movement_stats_by_state",
     "_match_value": "NC",
-    "state_family_count": 221,
-    "median_financial_loss": 137332,
-    "median_burden_sample_size": 74,
-    "median_months_lost": 17,
-    "pro_se_pct": 49.8,
-    "pro_se_count": 110,
-    "_pdf_state_family_count": 221,
+    "state_family_count": 239,
+    "median_financial_loss": 140000,
+    "median_burden_sample_size": 77,
+    "median_months_lost": 18,
+    "pro_se_pct": 48.5,
+    "pro_se_count": 116,
+    "_pdf_state_family_count": 239,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5704,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -140,11 +140,15 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "I kept asking to speak to someone because I wasn’t allowed to see my family at all.",
+        "body": "She is the director. I kept asking to speak to someone because I wasn’t allowed to see my family at all. She also told me my family did not wish to see me right now and no one was willing to take me. I later found this to not be true as many family members, my girlfriend, and even my friends had asked to see me and some to take me in. I also told her what Abby Williams had wrote and said in court was not true and she just kept saying I know her and she would not lie. It’s like it didn’t matter what I said. Lori Leggett is also who made me go to the first locked facility saying it was there or she would go for a petition to have me placed in juvie. I reported the abuse to her also at one facility and she did nothing. I also told her I did not like sleeping in their office and their couches weren’t even long enough to hold me and she said I could always make a bed on the floor. She does not care.",
         "kind": "comment"
       },
       {
-        "body": "When challenged she hides behind very general statements vs.",
+        "body": "There is a gross lack of oversight based on her lack of knowledge of decisions and actions being taken by her own employees. When challenged she hides behind very general statements vs. taking accountability for their actions.",
+        "kind": "comment"
+      },
+      {
+        "body": "She's the director. She has been stealing children for 25 years now, I will run out of room in this box to name everything she has allowed to happen.",
         "kind": "comment"
       },
       {
@@ -152,7 +156,7 @@
         "kind": "comment"
       },
       {
-        "body": "NCDHHS should be appalled at the gross oversight and atrocities being committed.",
+        "body": "I have never experienced such heartbreak and distrust in individuals and a system built to protect children. NCDHHS should be appalled at the gross oversight and atrocities being committed.",
         "kind": "family_report"
       },
       {
@@ -160,19 +164,15 @@
         "kind": "family_report"
       },
       {
-        "body": "HE IS NOW 12",
+        "body": "Took our autistic nephew form is caused depression caused him to to sneek ways to communicate we have not seen or heard from him in 3 years HE WAS 8 2 DAYS FORM BEING 9 AND HE IS NOW 12",
         "kind": "family_report"
       },
       {
         "body": "Former pissed off foster kid",
         "kind": "family_report"
-      },
-      {
-        "body": "Gave my 8 year old daughter to our abuser",
-        "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 4
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

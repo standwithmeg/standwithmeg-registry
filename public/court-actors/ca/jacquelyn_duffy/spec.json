@@ -31,22 +31,22 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 357,
-    "total_submissions": 474,
-    "avg_financial_loss": 279136.73,
-    "avg_months_lost": 34.9,
+    "families_approved": 356,
+    "total_submissions": 529,
+    "avg_financial_loss": 263721.3,
+    "avg_months_lost": 34.0,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CA",
-    "state_family_count": 474,
-    "median_financial_loss": 259500,
-    "median_burden_sample_size": 210,
+    "state_family_count": 529,
+    "median_financial_loss": 237750,
+    "median_burden_sample_size": 232,
     "median_months_lost": 20,
-    "pro_se_pct": 58.0,
-    "pro_se_count": 275,
-    "_pdf_state_family_count": 474,
+    "pro_se_pct": 58.4,
+    "pro_se_count": 309,
+    "_pdf_state_family_count": 529,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5746,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -114,7 +114,7 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Thought my reactions to physical, sexual, mental and emotional abuse was more…",
+        "body": "Thought my reactions to physical, sexual, mental and emotional abuse was more dangerous than the abuse the abuser inflicted, that the abuser was the safer parent, when the abuser never accused the safe parent of anything abusive except yelling, throwing things and being mentally unstable no accusation of violence towards anyone or of harm on someone.",
         "kind": "comment"
       },
       {
@@ -126,7 +126,7 @@
         "kind": "comment"
       },
       {
-        "body": "\"The system\" has abused my child and I more than any of our abusers.",
+        "body": "\"The system\" has abused my child and I more than any of our abusers; \"the system\" has every legal right to trap your children in an abusive life with no escape while taking every legal right you have to raise your child, protect your child and speak for your child away. \"The system\" forces you to remain silent even though the silence is literally killing you/harming your child = how the \"the system\" has gotten away with it for so long- I say fuck with this momma's baby you better hope she never gets back up, well I always get back up never quit and no longer fear anyone.",
         "kind": "family_report"
       },
       {
@@ -134,11 +134,11 @@
         "kind": "family_report"
       },
       {
-        "body": "Knowingly participated in parental alienation, denial of due process, denial of…",
+        "body": "Knowingly participated in parental alienation, denial of due process, denial of relief, accepting perjerous testimony as the truth and basing all outcomes on misrepresentation of facts.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 4
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

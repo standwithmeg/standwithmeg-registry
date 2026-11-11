@@ -12,14 +12,16 @@
     "court_or_county": "Whittier",
     "state": "CA",
     "state_abbr": "CA",
-    "mention_count": 3,
-    "family_count": 3,
-    "public_family_count": 3,
+    "mention_count": 5,
+    "family_count": 5,
+    "public_family_count": 5,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 3,
+    "actor_report_count": 5,
     "supabase_row_ids": [
       "d5ceb605-ce26-4cba-90eb-fb5ef89c6f78",
+      "5a07a333-1ebe-4d9e-8c31-2deaa224fa0f",
       "c4f07140-9f4a-4ed6-b551-c61b9d9a762e",
+      "996e1ee9-8bca-4d5e-af1a-553d3bdc55ce",
       "d7c8816d-510f-4f22-9a2b-56255e17d113"
     ],
     "actor_row_id": null,
@@ -31,27 +33,39 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 357,
-    "total_submissions": 474,
-    "avg_financial_loss": 279136.73,
-    "avg_months_lost": 34.9,
+    "families_approved": 356,
+    "total_submissions": 529,
+    "avg_financial_loss": 263721.3,
+    "avg_months_lost": 34.0,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CA",
-    "state_family_count": 474,
-    "median_financial_loss": 259500,
-    "median_burden_sample_size": 210,
+    "state_family_count": 529,
+    "median_financial_loss": 237750,
+    "median_burden_sample_size": 232,
     "median_months_lost": 20,
-    "pro_se_pct": 58.0,
-    "pro_se_count": 275,
-    "_pdf_state_family_count": 474,
+    "pro_se_pct": 58.4,
+    "pro_se_count": 309,
+    "_pdf_state_family_count": 529,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5746,
+  "movement_total": 6496,
   "supabase": {
-    "report_count": 3,
-    "actor_report_count": 3,
-    "family_count": 3,
+    "report_count": 5,
+    "actor_report_count": 5,
+    "family_count": 5,
     "family_reports": [
+      {
+        "body": "Failure of multiple systems including law enforcement, DCFS, and the judicial system has placed the wellbeing and safety of my daughter and myself at risk including financial, physical, and emotional devastation.",
+        "state": "CA",
+        "county": "Los Angeles",
+        "row_id": "3c76e48e-4123-4bb4-86a1-43ac9fb48b02"
+      },
+      {
+        "body": "The judge does not maked decisions on the kids best interest. She does not look at facts or proof. is one sided and bias when making decisions.",
+        "state": "CA",
+        "county": "Los Angeles",
+        "row_id": "61092a76-734c-4401-89c8-0bd7bc814d13"
+      },
       {
         "body": "This judge stole my kids and didn’t care.",
         "state": "CA",
@@ -78,7 +92,17 @@
         "source": "court_actors.notes"
       },
       {
+        "comment_text": "Judge failed to consider evidence, failed to grant evidentiary hearing. Judge is biased towards opposing council, who is her friend. Denied ex parte without a hearing. Judge ignored evidence and documentation provided by third party professionals including pediatrician, multiple child therapists, and daycare providers.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
         "comment_text": "This judge is bias and works with the lawyer s in that court house, my brother asked my lawyer do you guys all get together at the bar after work to see who you can screw over? She said I'm to busy for that. So it does happen. Sauceda never took any of my evidences or any of my information. She had her mind set up and went with it. I",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Unfair and bias",
         "author": "Anonymous parent",
         "source": "court_actors.notes"
       },
@@ -116,7 +140,11 @@
         "kind": "comment"
       },
       {
-        "body": "Sauceda never took any of my evidences or any of my information.",
+        "body": "Judge failed to consider evidence, failed to grant evidentiary hearing. Judge is biased towards opposing council, who is her friend. Denied ex parte without a hearing. Judge ignored evidence and documentation provided by third party professionals including pediatrician, multiple child therapists, and daycare providers.",
+        "kind": "comment"
+      },
+      {
+        "body": "This judge is bias and works with the lawyer s in that court house, my brother asked my lawyer do you guys all get together at the bar after work to see who you can screw over? She said I'm to busy for that. So it does happen. Sauceda never took any of my evidences or any of my information. She had her mind set up and went with it. I",
         "kind": "comment"
       },
       {
@@ -124,19 +152,27 @@
         "kind": "comment"
       },
       {
+        "body": "Failure of multiple systems including law enforcement, DCFS, and the judicial system has placed the wellbeing and safety of my daughter and myself at risk including financial, physical, and emotional devastation.",
+        "kind": "family_report"
+      },
+      {
+        "body": "The judge does not maked decisions on the kids best interest. She does not look at facts or proof. is one sided and bias when making decisions.",
+        "kind": "family_report"
+      },
+      {
         "body": "This judge stole my kids and didn’t care.",
         "kind": "family_report"
       },
       {
-        "body": "I can't help.",
+        "body": "The judge's orders has cost me several years without being able to see my son in person. Time that we'll never get back. I can't help but wonder how this has changed both my son's personality and mine and how he must be hurting because his mom isn't there for him everyday. This has caused so much pain and irreversible damage.",
         "kind": "family_report"
       },
       {
-        "body": "The court has stolen my kids childhood from me.",
+        "body": "The court has stolen my kids childhood from me. Have prolonged each and every court hearing.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 4
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

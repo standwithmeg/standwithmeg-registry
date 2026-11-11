@@ -2,10 +2,10 @@
   "schema_version": 2,
   "actor": {
     "slug": "joy_booth",
-    "display_name": "Joy Pace Booth",
+    "display_name": "Joy Pace Boothe",
     "title": "",
     "first_name": "Joy Pace",
-    "last_name": "Booth",
+    "last_name": "Boothe",
     "role": "Judge",
     "court": "Autauga",
     "county": "Autauga",
@@ -33,27 +33,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-7gspmaqk/New Final Post and Capcut template/export/joy_booth/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/joy_booth/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 103,
-    "total_submissions": 143,
-    "avg_financial_loss": 84215.55,
-    "avg_months_lost": 34.0,
+    "families_approved": 102,
+    "total_submissions": 158,
+    "avg_financial_loss": 91268.73,
+    "avg_months_lost": 32.6,
     "_source_table": "movement_stats_by_state",
     "_match_value": "AL",
-    "state_family_count": 143,
-    "median_financial_loss": 55000,
-    "median_burden_sample_size": 63,
-    "median_months_lost": 12,
-    "pro_se_pct": 42.7,
-    "pro_se_count": 61,
-    "_pdf_state_family_count": 143,
+    "state_family_count": 158,
+    "median_financial_loss": 52500,
+    "median_burden_sample_size": 71,
+    "median_months_lost": 13,
+    "pro_se_pct": 39.9,
+    "pro_se_count": 63,
+    "_pdf_state_family_count": 158,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5746,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 10,
     "actor_report_count": 10,
@@ -157,27 +157,23 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Refused Forensic Interview",
+        "body": "Refused Forensic Interview, Hospital Reports, Police Reports, & Therapy Reports into evidence. No due process. Ex-husband tested positive in court for Methamphetamine & Amphetamines, has 7 current warrents, and was on probation. He got full custody. All my rights have been taken. She refused forensic interview, hospital reports, therapy and psychiatric reports on children into evidence. The opposing party tested positive for Amphetamines & Methamphetamine. Oppsing party was on probation with 6 warrents and got given full custody.",
         "kind": "comment"
       },
       {
-        "body": "Denied rights. Jailed me for not paying Gal. My ex husband still hasn't paid Gal.",
+        "body": "Denied rights. Jailed me for not paying Gal. My ex husband still hasn't paid Gal. Judged me to pay my ex husband's attorney fees. Took my children with no explanation Took my visitation with no hearing. Forced vaccines on my children. Allowed my attorney to quit after 2 years, a month before trial. Denied my right to fair trial. Denied motion to continue for time to get attorney. Etc!",
         "kind": "comment"
       },
       {
-        "body": "The threats were made after he was born.",
+        "body": "Failed to uphold requirements of a safety plan. Declined to accept testimony on Mother's behalf. Discussed details of the case to people that were outside of the case and made her judgement without ever seeing the mother.",
         "kind": "comment"
       },
       {
-        "body": "Failed to uphold requirements of a safety plan.",
+        "body": "Completely ignored the constitution, deprived me and my daughter of our rights, no due process. Friends with my ex and his new wife. She’s a horrible judge.",
         "kind": "comment"
       },
       {
-        "body": "Completely ignored the constitution, deprived me.",
-        "kind": "comment"
-      },
-      {
-        "body": "Blocked my attempts to get in front of her with the evidence in question",
+        "body": "Ignored evidence, denied my rights and blocked my attempts to get in front of her with the evidence in question",
         "kind": "comment"
       },
       {
@@ -185,7 +181,11 @@
         "kind": "family_report"
       },
       {
-        "body": "My child’s, and they still sided for him to receive joint custody of our child.",
+        "body": "Carol Cook Carter and Joy Booth both put my child’s life in danger. They both looked at evidence showing where my child’s father was abusive to me during our relationship and also where he had threatened both my life and my child’s, and they still sided for him to receive joint custody of our child.",
+        "kind": "family_report"
+      },
+      {
+        "body": "This system has ripped me apart and taken advantage of my children and myself in every conceivable way. Every actor in it is corrupt, they are all in it together and seeking only personal gain and satisfaction rather than justice for the children. It’s evil , sick and killing our children and community.",
         "kind": "family_report"
       },
       {
@@ -193,11 +193,11 @@
         "kind": "family_report"
       },
       {
-        "body": "Autauga County family court has failed my children and me over and over again.",
+        "body": "Autauga County family court has failed my children and me over and over again. More than 30 years of mental and physchological abuse has been legally perpetuated at the hands of the court system.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 2
+    "quote_page_count": 6
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

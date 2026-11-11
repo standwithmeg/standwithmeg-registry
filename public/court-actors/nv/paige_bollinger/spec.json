@@ -19,11 +19,11 @@
     "actor_report_count": 6,
     "supabase_row_ids": [
       "f3cfaacd-7b7f-4a18-924e-42f1716af515",
-      "1e502a02-980c-4ce4-90cc-ba5b93582766",
       "fede59f1-bf4c-47a7-be86-ed64e92ba8e9",
       "385ed76b-e03c-419d-9e98-704bcd98255f",
       "a3f2fb4b-c3ec-4ae7-bccb-b93daf5db7c6",
-      "2cece675-0a10-4360-a2c1-766cfd01f949"
+      "2cece675-0a10-4360-a2c1-766cfd01f949",
+      "1e502a02-980c-4ce4-90cc-ba5b93582766"
     ],
     "actor_row_id": null,
     "actor_bucket_key": "paige bolinger|NV"
@@ -35,21 +35,21 @@
   },
   "state_stats": {
     "families_approved": 37,
-    "total_submissions": 52,
-    "avg_financial_loss": 160746.49,
+    "total_submissions": 56,
+    "avg_financial_loss": 151264.45,
     "avg_months_lost": 27.7,
     "_source_table": "movement_stats_by_state",
     "_match_value": "NV",
-    "state_family_count": 52,
-    "median_financial_loss": 216500,
-    "median_burden_sample_size": 17,
-    "median_months_lost": 11,
-    "pro_se_pct": 55.8,
-    "pro_se_count": 29,
-    "_pdf_state_family_count": 52,
+    "state_family_count": 56,
+    "median_financial_loss": 177358,
+    "median_burden_sample_size": 18,
+    "median_months_lost": 12,
+    "pro_se_pct": 57.1,
+    "pro_se_count": 32,
+    "_pdf_state_family_count": 56,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5722,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
@@ -93,17 +93,27 @@
         "source": "court_actors.notes"
       },
       {
-        "comment_text": "Made custody and case decisions despite unresolved disputes regarding evidence and due process concerns.\" Ignored evidence",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
         "comment_text": "Ignored all court filings relied solely on CPs’ word",
         "author": "Anonymous parent",
         "source": "court_actors.notes"
       },
       {
+        "comment_text": "Solely relied on CPs testimony. Ignore all filings",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Made custody and case decisions despite unresolved disputes regarding evidence and due process concerns.\"",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
         "comment_text": "She has upheld perjury from the case worker in my case and ignored extenuating circumstances for my case like the fact that im disabled and and crippled. Still working. And have provided ample medical care for my daughter her entire life.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Ignored evidence",
         "author": "Anonymous parent",
         "source": "court_actors.notes"
       }
@@ -132,19 +142,23 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "She has allowed my daughters predator reunification with her.",
-        "kind": "comment"
-      },
-      {
-        "body": "Unresolved disputes regarding evidence and due process concerns.\" Ignored evidence",
-        "kind": "comment"
-      },
-      {
         "body": "Ignored all court filings relied solely on CPs’ word",
         "kind": "comment"
       },
       {
-        "body": "Ignored extenuating circumstances for my case like the fact that im disabled",
+        "body": "Solely relied on CPs testimony. Ignore all filings",
+        "kind": "comment"
+      },
+      {
+        "body": "Made custody and case decisions despite unresolved disputes regarding evidence and due process concerns.\"",
+        "kind": "comment"
+      },
+      {
+        "body": "She has upheld perjury from the case worker in my case and ignored extenuating circumstances for my case like the fact that im disabled and and crippled. Still working. And have provided ample medical care for my daughter her entire life.",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored evidence",
         "kind": "comment"
       },
       {
@@ -156,15 +170,15 @@
         "kind": "family_report"
       },
       {
-        "body": "She knows he system is just using her being in the hospital for their own gains",
+        "body": "My family is completely torn apart now. My daughter was supposed to be helped in the hospital and instead she is worse now than ever with absolutely no self worth or value. She knows he system is just using her being in the hospital for their own gains",
         "kind": "family_report"
       },
       {
-        "body": "The washoe county courts has made it exceedingly clear that they operate in cohorts…",
+        "body": "The washoe county courts has made it exceedingly clear that they operate in cohorts with Reno Behaviroal health hospital to deny parents theur rights to fair medical treatment and rights to.medicateour own children the best way we see fit for them. They have also made it abundantly clear that complaints against this hospital or any other hospital will result in retaliation and that retaliation will be upheld",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 3
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

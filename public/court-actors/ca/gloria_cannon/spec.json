@@ -26,27 +26,27 @@
     "actor_bucket_key": "gloria cannon|CA"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-7gspmaqk/New Final Post and Capcut template/export/gloria_cannon/image_1080.png",
+    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/gloria_cannon/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 357,
-    "total_submissions": 474,
-    "avg_financial_loss": 279136.73,
-    "avg_months_lost": 34.9,
+    "families_approved": 356,
+    "total_submissions": 529,
+    "avg_financial_loss": 263721.3,
+    "avg_months_lost": 34.0,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CA",
-    "state_family_count": 474,
-    "median_financial_loss": 259500,
-    "median_burden_sample_size": 210,
+    "state_family_count": 529,
+    "median_financial_loss": 237750,
+    "median_burden_sample_size": 232,
     "median_months_lost": 20,
-    "pro_se_pct": 58.0,
-    "pro_se_count": 275,
-    "_pdf_state_family_count": 474,
+    "pro_se_pct": 58.4,
+    "pro_se_count": 309,
+    "_pdf_state_family_count": 529,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 5746,
+  "movement_total": 6496,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -114,31 +114,27 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "My children's trauma is partly Gloria cannons fault.",
+        "body": "Handled issue unfairly, would not allow my evidence of abuse to be shown, would not allow kids in the court to speak the truth on what was happening in the home. My children's trauma is partly Gloria cannons fault. My children never should have found Dad dead, if she only listened and didn't side with the one with the lawyer.",
         "kind": "comment"
       },
       {
-        "body": "Allowed custody interference without action",
+        "body": "Removed minors from father’s permanent custody to mother in violation of California family code 3044 without proper hearing. Failed to medically protect minors after giving mother custody. Allowed custody interference without action",
         "kind": "comment"
       },
       {
-        "body": "Remove Fathers Custody to the mother who is not eligible to assume Custody.",
+        "body": "Remove Fathers Custody to the mother who is not eligible to assume Custody without due process",
         "kind": "comment"
       },
       {
-        "body": "The system ruined our spirits",
+        "body": "System failed us, we have life long trauma, my kids have issues sleeping, and day to day activity, my daughter had suicidal thoughts . The system ruined our spirits",
         "kind": "family_report"
       },
       {
-        "body": "Allowed to defend myself after numerous false allegations",
-        "kind": "family_report"
-      },
-      {
-        "body": "I now have two emotionally damaged children and have been barred from helping them.",
+        "body": "On false allegations with no evidence, I was reduced from full physical and legal custody to a 15 minute phone call once a month. I have never been adjudicated of doing any harm to anyone and never been allowed to defend myself after numerous false allegations.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 3
   },
   "cta": "STANDWITHMEG.COM ↗"
 }
