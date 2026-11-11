@@ -40,6 +40,9 @@ jobs:
       - name: Verify court actor portrait preservation
         run: python scripts/share-pages/test_photo_preservation.py
 
+      - name: Verify share quote consistency gate
+        run: python scripts/share-pages/test_share_consistency.py
+
       - name: Run PDF pagination and threshold regressions
         run: python -m unittest scripts/ci/test_should_run_regeneration.py scripts/pdf/test_state_pdf_release.py scripts/pdf/test_submission_moderation.py
 
