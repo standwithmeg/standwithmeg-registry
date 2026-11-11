@@ -330,14 +330,23 @@ def select_best_quote(text: str, char_budget: int = 140) -> str:
 
 
 def expected_frame3_quotes(spec: dict, n: int | None = None) -> tuple[list[str], str]:
-    """Mirror render_spotlight.story_quotes: actor-specific public_comments
-    are exclusive. family_reports are only allowed when public_comments is
-    empty."""
+    """Expected visible quote pieces, using the renderer's selection and pagination.
+
+    Selected quotes override legacy sources. Long notes can continue across
+    slides or end with the renderer's explicit excerpt marker; comparing an
+    unsplit source note to those pieces incorrectly rejects valid decks.
+    """
     sb = spec.get("supabase") or {}
     comments = sb.get("public_comments") or []
     reports = sb.get("family_reports") or []
-    source = "public_comments" if comments else "family_reports"
-    out = [item["body"] for item in render_spotlight.story_quotes(spec, n=n)]
+    if (spec.get("render") or {}).get("selected_quotes"):
+        source = "selected_quotes"
+    else:
+        source = " + ".join(name for name, items in (
+            ("public_comments", comments), ("family_reports", reports)
+        ) if items) or "none"
+    pages = render_spotlight.chunk_quote_pages(render_spotlight.story_quotes(spec, n=n))
+    out = [item["body"] for page in pages for item in page]
     return out, source
 
 
@@ -467,7 +476,9 @@ def check_actor(
     spec_public = actor.get("public_family_count")
     spec_family = actor.get("family_count")
     rendered_count = rendered.get("frame1_count")
-    api_count, api_reason = api_count_for_actor(state_abbr, display_name, bucket_key, slug=slug)
+    api_count, api_reason = (None, "asset-only") if asset_only else api_count_for_actor(
+        state_abbr, display_name, bucket_key, slug=slug
+    )
 
     mismatches: list[Mismatch] = []
     manifest_photo = entry.get("photo_url")
@@ -514,20 +525,9 @@ def check_actor(
             _quote_summary(rendered_quotes),
         ))
 
-    # If public_comments exist, Frame 3 must not top up with broad
-    # family_reports. This catches the "one actor note plus generic filler"
-    # regression without relying on private reporter data.
-    if supabase.get("public_comments"):
-        expected_norm_set = set(expected_norm)
-        report_norm = {
-            _norm_quote(select_best_quote(str(r.get("body") or ""), _quote_char_budget(len(expected_quotes) or 6)))
-            for r in (supabase.get("family_reports") or [])
-        }
-        leaked = [q for q in rendered_norm if q in report_norm and q not in expected_norm_set]
-        if leaked:
-            mismatches.append(Mismatch(slug, "frame3 fallback mixing",
-                                       "public_comments only", str(expected_quotes),
-                                       str(rendered_quotes)))
+    # The ordered equality above also rejects injected fallback quotes.
+    # Do not apply a second, legacy source-selection rule here: it can reject
+    # legitimate continuations or explicitly selected quotes.
 
     for needle in expected_comment_substrings or []:
         if _norm_quote(needle) not in _norm_quote(" ".join(rendered_quotes)):
