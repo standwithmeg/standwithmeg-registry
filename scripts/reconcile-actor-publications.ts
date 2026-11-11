@@ -36,7 +36,40 @@ function loadDotEnvLocal() {
 }
 loadDotEnvLocal();
 
-import { reconcileFromLiveApi } from "../lib/actor-publications";
+// Must come before any transitive `server-only` import (supabase-admin,
+// court-actor-buckets) so this script can run under tsx outside Next.js.
+import "./_register-server-only-stub";
+import { reconcileActorPublications, type LiveActorInput } from "../lib/actor-publications";
+import { createAdminSupabaseClient } from "../lib/supabase-admin";
+// The SAME live computation the old public API ran (canonical buckets, 3-family
+// threshold, manifest photo/share merge) — imported straight from the route so
+// script and web can never disagree about who is public.
+import { computePublicActorsDirect } from "../app/api/survey/court-actors/route";
+
+/**
+ * The old source — GET my.standwithmeg.com/api/survey/court-actors — was
+ * removed by the July 2026 site rebuild, and the snapshot fallback still
+ * served by the legacy deployment is frozen at old counts (every actor at 3
+ * families), which would DOWNGRADE live counts if reconciled against. So the
+ * script computes the live public list itself, from the same Supabase tables,
+ * with the same code the endpoint uses.
+ */
+async function fetchLiveActors(): Promise<LiveActorInput[]> {
+  const sb = createAdminSupabaseClient();
+  const actors = await computePublicActorsDirect(sb, null, null, {
+    readTimeoutMs: 55_000,
+    bypassRowCache: true,
+  });
+  return actors.map((a) => ({
+    name: a.name,
+    role: a.role,
+    state_code: a.state_code,
+    location_key: a.location_key,
+    count: a.count,
+    photo_url: a.photo_url,
+    latest_reported_at: a.latest_reported_at,
+  }));
+}
 
 async function main() {
   const apply = process.argv.includes("--apply");
@@ -51,7 +84,9 @@ async function main() {
   console.log(banner);
   console.log("=".repeat(banner.length));
 
-  const r = await reconcileFromLiveApi({ dryRun });
+  const live = await fetchLiveActors();
+  console.log(`Computed live public actors from Supabase: ${live.length}`);
+  const r = await reconcileActorPublications(live, { dryRun });
   console.log(`\nLive actors:            ${r.total}`);
   console.log(`Would promote (new):    ${r.promoted}`);
   console.log(`Would update counts:    ${r.countUpdated}`);

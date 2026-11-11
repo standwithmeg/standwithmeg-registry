@@ -228,13 +228,12 @@ export async function reconcileActorPublications(actors: LiveActorInput[], opts:
   return result;
 }
 
-/** Production wrapper: fetch the live public actor list and reconcile. */
-export async function reconcileFromLiveApi(
-  opts: { dryRun?: boolean; apiBase?: string } = {},
-): Promise<ReconcileResult> {
-  const apiBase = opts.apiBase ?? process.env.NEXT_PUBLIC_APP_URL ?? "https://my.standwithmeg.com";
-  const res = await fetch(`${apiBase}/api/survey/court-actors?limit=1000`);
-  if (!res.ok) throw new Error(`reconcileFromLiveApi: court-actors ${res.status}`);
-  const data = (await res.json()) as { actors?: LiveActorInput[] };
-  return reconcileActorPublications(data.actors ?? [], { dryRun: opts.dryRun });
-}
+/**
+ * REMOVED 2026-11-11: reconcileFromLiveApi fetched
+ * `/api/survey/court-actors` from the deployed site — an endpoint the July
+ * 2026 site rebuild deleted, which failed the daily Reconcile workflow every
+ * morning for four months. The reconcile SCRIPT now computes the live public
+ * list itself via computePublicActorsDirect (same code the old endpoint ran).
+ * Do not reintroduce an HTTP hop here: the legacy deployment's snapshot
+ * fallback serves frozen counts and would downgrade live family counts.
+ */

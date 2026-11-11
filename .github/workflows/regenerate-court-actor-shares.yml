@@ -92,6 +92,13 @@ jobs:
           if [ "$FORCE_INPUT" = "true" ]; then
             force_args+=(--force)
           fi
+          # Scheduled runs commit however many actors regenerated and annotate
+          # the failures; a single bad actor used to fail the run and discard
+          # every other actor's fresh share pages (2026-08-28 → 2026-11-11).
+          # Manual dispatches stay strict so admins see every failure loudly.
+          if [ "${GITHUB_EVENT_NAME}" = "schedule" ]; then
+            force_args+=(--allow-partial)
+          fi
           if [ -n "$ACTOR_INPUT" ]; then
             if [[ ! "$ACTOR_INPUT" =~ ^[a-z0-9_]+$ ]]; then
               echo "Invalid actor slug: $ACTOR_INPUT"

@@ -613,6 +613,17 @@ def main(argv: list[str]) -> int:
     parser.add_argument("--actor-bucket-key", help="Canonical actor bucket key override for a single --actor rebuild.")
     parser.add_argument("--skip-frames", action="store_true", help="Regenerate share.html/spec.json only.")
     parser.add_argument("--force", action="store_true", help="Bypass .regen-cache.json and regenerate every selected actor.")
+    parser.add_argument(
+        "--allow-partial",
+        action="store_true",
+        help=(
+            "Exit 0 when at least one actor succeeded even if others failed; "
+            "failures are still printed and annotated. Used by the scheduled "
+            "nightly run so one bad actor cannot discard every other actor's "
+            "freshly regenerated share pages (and fail the run for months). "
+            "Manual dispatches stay strict by default."
+        ),
+    )
     parser.add_argument("--changed-only", action="store_true", default=True, help="Regenerate only changed actors. Default unless --force is set.")
     args = parser.parse_args(argv)
 
@@ -822,6 +833,18 @@ def main(argv: list[str]) -> int:
     print("------|-------|------------------|------------------|-------")
     for r in results:
         print(f"{r.label} | {r.state} | {r.old_count} | {r.new_count} | {r.status}")
+        if r.status.endswith("failed"):
+            # Visible in the Actions annotations without failing the run.
+            print(f"::warning::share regeneration failed for {r.label} ({r.state}): {r.status}")
+    if failed:
+        succeeded = sum(1 for r in results if not r.status.endswith("failed"))
+        if args.allow_partial and succeeded > 0:
+            print(
+                f"\nPartial success: {succeeded} actor(s) regenerated, "
+                f"{len(results) - succeeded} failed (annotated above). "
+                "The failed actor(s) keep their previously deployed share pages."
+            )
+            return 0
     return 1 if failed else 0
 
 

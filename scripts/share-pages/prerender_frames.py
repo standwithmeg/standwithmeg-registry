@@ -47,6 +47,42 @@ def missing_local_frame_sources(share_path: Path) -> list[str]:
     return missing
 
 
+def load_page(page, share_path: Path) -> None:
+    """Load a share page for screenshotting WITHOUT waiting for `networkidle`.
+
+    networkidle demands 500ms of zero in-flight requests. The share pages pull
+    Google Fonts and a CDN script (jszip, used only by the interactive download
+    button — irrelevant to screenshots); when one of those CDN connections
+    stalls without erroring, networkidle never fires and Playwright's goto
+    TimeoutError killed the whole nightly run (camisha_sawtelle, 2026-11-11:
+    55 minutes of rendering discarded by one hung page).
+
+    Instead: reach DOMContentLoaded (local file — immediate), then wait BEST
+    EFFORT for every <img> to finish (complete is set on success AND error, so
+    a broken asset cannot hang it) and for fonts (screenshots need the real
+    faces). Any of those waits timing out still leaves a screenshotable page —
+    degraded beats nothing. jszip is blocked outright.
+    """
+    def _abort_jszip(route):
+        route.abort()
+
+    page.route("**/jszip*.js", _abort_jszip)
+    try:
+        page.goto(share_path.as_uri(), wait_until="domcontentloaded", timeout=30000)
+        for expression, timeout_ms in (
+            ("Array.from(document.images).every(img => img.complete)", 30000),
+            ("document.fonts && document.fonts.ready.then(() => true)", 15000),
+        ):
+            try:
+                page.wait_for_function(expression, timeout=timeout_ms)
+            except PlaywrightError:
+                # Best effort — proceed with whatever loaded.
+                pass
+        page.wait_for_timeout(300)
+    finally:
+        page.unroute("**/jszip*.js", _abort_jszip)
+
+
 def prerender_one(slug: str, page) -> tuple[bool, str]:
     actor_dir = EXPORT_ROOT / slug
     share_path = actor_dir / "share.html"
@@ -56,9 +92,7 @@ def prerender_one(slug: str, page) -> tuple[bool, str]:
     if missing_sources:
         return False, "; ".join(missing_sources)
 
-    page.goto(share_path.as_uri(), wait_until="networkidle", timeout=30000)
-    page.wait_for_function("document.fonts && document.fonts.ready.then(() => true)", timeout=15000)
-    page.wait_for_timeout(300)
+    load_page(page, share_path)
 
     frame_ids = frame_ids_from_html(share_path)
     saved = 0
@@ -130,7 +164,17 @@ def main(argv: list[str]) -> int:
         page = context.new_page()
         success = 0
         for slug in targets:
-            ok, msg = prerender_one(slug, page)
+            try:
+                ok, msg = prerender_one(slug, page)
+            except PlaywrightError as e:
+                # One actor must never crash the whole run (a hung or poisoned
+                # page previously escaped as an uncaught TimeoutError).
+                ok, msg = False, f"render error: {e}"
+                try:
+                    page.close()
+                except Exception:
+                    pass
+                page = context.new_page()
             print(f"  {'✓' if ok else '✗'} {slug}: {msg}")
             if ok:
                 success += 1
