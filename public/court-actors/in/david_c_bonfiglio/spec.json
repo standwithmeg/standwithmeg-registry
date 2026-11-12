@@ -9,7 +9,7 @@
     "role": "Judge",
     "court": "Elkhart County",
     "county": "Elkhart",
-    "court_or_county": "Ellhart Superior Court 6",
+    "court_or_county": "Elkhart county superior court 6",
     "state": "Indiana",
     "state_abbr": "IN",
     "mention_count": 24,
@@ -18,10 +18,14 @@
     "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 24,
     "supabase_row_ids": [
-      "558cc1d8-3a89-4066-bee1-4aad93635779",
+      "c114aabf-d2ad-4db6-ad90-ad5cdc96ed1d",
+      "ffde1178-eeb1-4dd1-a53c-0f32eb29ac5f",
+      "18aeb5a7-359e-46f8-9680-85696021de36",
+      "f9b6c8a7-607d-4a20-a08e-17d0f069ddc2",
       "a776eab9-2e3d-412d-93f1-3f2e1dbb6858",
       "7a5c932e-fdca-4623-992f-7c3c13ba8edc",
       "98042a5b-9a24-473f-a1d5-9941839e2002",
+      "558cc1d8-3a89-4066-bee1-4aad93635779",
       "d3a06e3f-441f-43f1-8660-dacd93977c34",
       "21176fad-0127-480e-a2ba-c7b6543b345c",
       "c7b2eb0b-b32d-4a60-b960-183dfc3a34c5",
@@ -37,24 +41,20 @@
       "440dc061-d6eb-4cc3-b998-957375a7dab0",
       "c1d230f0-15f1-4de3-ae36-48bb10e6bd12",
       "e3e5fe8e-4da3-42f8-83a5-6c5b2e8fd81a",
-      "76d5fc96-393b-421b-b5bb-ffaf8e6078b4",
-      "c114aabf-d2ad-4db6-ad90-ad5cdc96ed1d",
-      "ffde1178-eeb1-4dd1-a53c-0f32eb29ac5f",
-      "18aeb5a7-359e-46f8-9680-85696021de36",
-      "f9b6c8a7-607d-4a20-a08e-17d0f069ddc2"
+      "76d5fc96-393b-421b-b5bb-ffaf8e6078b4"
     ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/david_c_bonfiglio/image_1080.png",
+    "path": "/tmp/swm-share-pages-7jh_hs8h/New Final Post and Capcut template/export/david_c_bonfiglio/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 120,
+    "families_approved": 119,
     "total_submissions": 198,
-    "avg_financial_loss": 222011.73,
+    "avg_financial_loss": 222090.99,
     "avg_months_lost": 31.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "IN",
@@ -67,7 +67,7 @@
     "_pdf_state_family_count": 198,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6496,
+  "movement_total": 6500,
   "supabase": {
     "report_count": 24,
     "actor_report_count": 24,

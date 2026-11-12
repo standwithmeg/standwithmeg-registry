@@ -45,7 +45,7 @@
     "_pdf_state_family_count": 72,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6496,
+  "movement_total": 6500,
   "supabase": {
     "report_count": 2,
     "actor_report_count": 2,
@@ -69,7 +69,7 @@
   "export_dir": "New Final Post and Capcut template/export/steven_richard_dembo",
   "unresolved": [
     "public_family_count_api: no actors returned for state='CT'",
-    "pdf_public_actor: no 'Steven Richard Dembo' in cache for CT"
+    "pdf_public_actor: no 'Steven R. Dembo' in cache for CT"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",

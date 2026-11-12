@@ -19,9 +19,9 @@
     "actor_report_count": 4,
     "supabase_row_ids": [
       "2fd21470-0439-4bd5-a006-c787e430d702",
+      "9f829ed5-6ce8-442a-8fc6-1635925cb690",
       "5ae2043d-2764-4598-b871-f76f68662a34",
-      "9ccef2a5-5db6-4291-a17a-1093310ccda1",
-      "9f829ed5-6ce8-442a-8fc6-1635925cb690"
+      "9ccef2a5-5db6-4291-a17a-1093310ccda1"
     ],
     "actor_row_id": null,
     "actor_bucket_key": "marc croteau|MI"
@@ -32,14 +32,14 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 142,
+    "families_approved": 140,
     "total_submissions": 200,
-    "avg_financial_loss": 173525.11,
-    "avg_months_lost": 36.4,
+    "avg_financial_loss": 173263.13,
+    "avg_months_lost": 39.0,
     "_source_table": "movement_stats_by_state",
     "_match_value": "MI",
     "state_family_count": 200,
-    "median_financial_loss": 104500,
+    "median_financial_loss": 105500,
     "median_burden_sample_size": 86,
     "median_months_lost": 18,
     "pro_se_pct": 44.0,
@@ -47,7 +47,7 @@
     "_pdf_state_family_count": 200,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6496,
+  "movement_total": 6500,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,

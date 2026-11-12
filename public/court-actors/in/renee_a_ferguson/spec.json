@@ -9,7 +9,7 @@
     "role": "Judge",
     "court": "Vandebugh",
     "county": "Vandebugh",
-    "court_or_county": "Vandebugh",
+    "court_or_county": "Vanderburgh",
     "state": "IN",
     "state_abbr": "IN",
     "mention_count": 3,
@@ -31,9 +31,9 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 120,
+    "families_approved": 119,
     "total_submissions": 198,
-    "avg_financial_loss": 222011.73,
+    "avg_financial_loss": 222090.99,
     "avg_months_lost": 31.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "IN",
@@ -46,7 +46,7 @@
     "_pdf_state_family_count": 198,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6496,
+  "movement_total": 6500,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,

@@ -9,7 +9,7 @@
     "role": "Judge",
     "court": "Tippecanoe",
     "county": "County not listed",
-    "court_or_county": "County not listed",
+    "court_or_county": "Tippecanoe Circuit Court",
     "state": "Indiana",
     "state_abbr": "IN",
     "mention_count": 7,
@@ -22,22 +22,22 @@
       "5bed22ea-b8c4-4f93-988d-ee89a424ebc8",
       "1ec1de4c-4e9b-425a-8970-01343f761ed3",
       "9a4d49f1-1138-4527-b89d-d36242be423a",
+      "f7b3454b-08ab-4905-9afc-3fe1fc361e90",
       "21ce4670-25b5-44dc-9f62-23eabd4564f8",
-      "4d3d7531-ec62-4968-9154-b4e88b447b74",
-      "f7b3454b-08ab-4905-9afc-3fe1fc361e90"
+      "4d3d7531-ec62-4968-9154-b4e88b447b74"
     ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/sean_persin/image_1080.png",
+    "path": "/tmp/swm-share-pages-7jh_hs8h/New Final Post and Capcut template/export/sean_persin/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 120,
+    "families_approved": 119,
     "total_submissions": 198,
-    "avg_financial_loss": 222011.73,
+    "avg_financial_loss": 222090.99,
     "avg_months_lost": 31.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "IN",
@@ -50,7 +50,7 @@
     "_pdf_state_family_count": 198,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6496,
+  "movement_total": 6500,
   "supabase": {
     "report_count": 7,
     "actor_report_count": 7,

@@ -9,7 +9,7 @@
     "role": "Judge",
     "court": "Autauga",
     "county": "Autauga",
-    "court_or_county": "Autauga",
+    "court_or_county": null,
     "state": "Alabama",
     "state_abbr": "AL",
     "mention_count": 10,
@@ -18,22 +18,22 @@
     "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 10,
     "supabase_row_ids": [
-      "e758a26d-c1bf-4d0d-b365-ff35caeeff9b",
-      "47ff05e0-c220-48ed-855e-141837b27e00",
-      "443d9066-4669-49f5-8e28-2289ff053868",
-      "f7dabf3e-9325-4a45-969f-23f7922071c5",
       "5197bb5e-b1cf-4ee7-b6dd-9f872bc3c8f8",
       "9a957b10-5045-4feb-93ed-9656c1b597e4",
       "e87a4576-fabd-4087-bbe4-258d83f727c2",
       "8decafae-00d9-4bdb-8526-673dd01d2308",
       "ebabebe1-a858-4e29-8d33-33e12f961afa",
-      "ab4d37c8-1730-453d-877c-d49c4a0a016c"
+      "ab4d37c8-1730-453d-877c-d49c4a0a016c",
+      "e758a26d-c1bf-4d0d-b365-ff35caeeff9b",
+      "47ff05e0-c220-48ed-855e-141837b27e00",
+      "443d9066-4669-49f5-8e28-2289ff053868",
+      "f7dabf3e-9325-4a45-969f-23f7922071c5"
     ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/joy_booth/image_1080.png",
+    "path": "/tmp/swm-share-pages-7jh_hs8h/New Final Post and Capcut template/export/joy_booth/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -53,7 +53,7 @@
     "_pdf_state_family_count": 158,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6496,
+  "movement_total": 6500,
   "supabase": {
     "report_count": 10,
     "actor_report_count": 10,
@@ -98,46 +98,51 @@
     ],
     "public_comments": [
       {
-        "comment_text": "Refused Forensic Interview, Hospital Reports, Police Reports, & Therapy Reports into evidence. No due process. Ex-husband tested positive in court for Methamphetamine & Amphetamines, has 7 current warrents, and was on probation. He got full custody. All my rights have been taken. She refused forensic interview, hospital reports, therapy and psychiatric reports on children into evidence. The opposing party tested positive for Amphetamines & Methamphetamine. Oppsing party was on probation with 6 warrents and got given full custody.",
+        "comment_text": "Nothing. Still a judge",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Autauga"
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Denied rights",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
       },
       {
         "comment_text": "Denied rights. Jailed me for not paying Gal. My ex husband still hasn't paid Gal. Judged me to pay my ex husband's attorney fees. Took my children with no explanation Took my visitation with no hearing. Forced vaccines on my children. Allowed my attorney to quit after 2 years, a month before trial. Denied my right to fair trial. Denied motion to continue for time to get attorney. Etc!",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Autauga"
+        "source": "court_actors.notes"
       },
       {
         "comment_text": "Evidence was presented that showed that my child’s father was threatening to harm both me and my child. She said “this was in the past and is irrelevant.” My child was approximately 9 months old at the time and the threats were made after he was born.",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Autauga"
-      },
-      {
-        "comment_text": "Failed to uphold requirements of a safety plan. Declined to accept testimony on Mother's behalf. Discussed details of the case to people that were outside of the case and made her judgement without ever seeing the mother.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Autauga"
-      },
-      {
-        "comment_text": "Completely ignored the constitution, deprived me and my daughter of our rights, no due process. Friends with my ex and his new wife. She’s a horrible judge.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Autauga"
+        "source": "court_actors.notes"
       },
       {
         "comment_text": "Ignored evidence, denied my rights and blocked my attempts to get in front of her with the evidence in question",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Autauga"
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Completely ignored the constitution, deprived me and my daughter of our rights, no due process. Friends with my ex and his new wife. She’s a horrible judge.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Failed to uphold requirements of a safety plan. Declined to accept testimony on Mother's behalf. Discussed details of the case to people that were outside of the case and made her judgement without ever seeing the mother.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Refused Forensic Interview, Hospital Reports, Police Reports, & Therapy Reports into evidence. No due process. Ex-husband tested positive in court for Methamphetamine & Amphetamines, has 7 current warrents, and was on probation. He got full custody. All my rights have been taken.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/joy_booth",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='AL'"
+    "public_family_count_api: no actors returned for state='AL'",
+    "pdf_public_actor: no 'Joy Pace Boothe' in cache for AL"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
@@ -157,7 +162,11 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Refused Forensic Interview, Hospital Reports, Police Reports, & Therapy Reports into evidence. No due process. Ex-husband tested positive in court for Methamphetamine & Amphetamines, has 7 current warrents, and was on probation. He got full custody. All my rights have been taken. She refused forensic interview, hospital reports, therapy and psychiatric reports on children into evidence. The opposing party tested positive for Amphetamines & Methamphetamine. Oppsing party was on probation with 6 warrents and got given full custody.",
+        "body": "Nothing. Still a judge",
+        "kind": "comment"
+      },
+      {
+        "body": "Denied rights",
         "kind": "comment"
       },
       {
@@ -165,7 +174,7 @@
         "kind": "comment"
       },
       {
-        "body": "Failed to uphold requirements of a safety plan. Declined to accept testimony on Mother's behalf. Discussed details of the case to people that were outside of the case and made her judgement without ever seeing the mother.",
+        "body": "Ignored evidence, denied my rights and blocked my attempts to get in front of her with the evidence in question",
         "kind": "comment"
       },
       {
@@ -173,7 +182,11 @@
         "kind": "comment"
       },
       {
-        "body": "Ignored evidence, denied my rights and blocked my attempts to get in front of her with the evidence in question",
+        "body": "Failed to uphold requirements of a safety plan. Declined to accept testimony on Mother's behalf. Discussed details of the case to people that were outside of the case and made her judgement without ever seeing the mother.",
+        "kind": "comment"
+      },
+      {
+        "body": "Refused Forensic Interview, Hospital Reports, Police Reports, & Therapy Reports into evidence. No due process. Ex-husband tested positive in court for Methamphetamine & Amphetamines, has 7 current warrents, and was on probation. He got full custody. All my rights have been taken.",
         "kind": "comment"
       },
       {
@@ -197,7 +210,7 @@
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 6
+    "quote_page_count": 7
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

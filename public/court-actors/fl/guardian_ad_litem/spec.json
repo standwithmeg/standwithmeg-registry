@@ -32,7 +32,7 @@
   "state_stats": {
     "families_approved": 237,
     "total_submissions": 355,
-    "avg_financial_loss": 191015.67,
+    "avg_financial_loss": 191016.7,
     "avg_months_lost": 26.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "FL",
@@ -45,7 +45,7 @@
     "_pdf_state_family_count": 355,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6496,
+  "movement_total": 6500,
   "supabase": {
     "report_count": 2,
     "actor_report_count": 2,
@@ -80,7 +80,7 @@
   "export_dir": "New Final Post and Capcut template/export/guardian_ad_litem",
   "unresolved": [
     "public_family_count_api: no actors returned for state='FL'",
-    "pdf_public_actor: no 'Guardian ad Litem' in cache for FL"
+    "pdf_public_actor: no 'Sherry Thaden Young' in cache for FL"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
