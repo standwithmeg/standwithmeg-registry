@@ -27,27 +27,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/scott_kimberly/image_1080.png",
+    "path": "/tmp/swm-share-pages-27yylo6i/New Final Post and Capcut template/export/scott_kimberly/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 90,
-    "total_submissions": 138,
-    "avg_financial_loss": 97715.76,
-    "avg_months_lost": 35.3,
+    "total_submissions": 141,
+    "avg_financial_loss": 98894.3,
+    "avg_months_lost": 35.2,
     "_source_table": "movement_stats_by_state",
     "_match_value": "TN",
-    "state_family_count": 138,
+    "state_family_count": 141,
     "median_financial_loss": 83375,
-    "median_burden_sample_size": 56,
-    "median_months_lost": 17,
-    "pro_se_pct": 44.2,
-    "pro_se_count": 61,
-    "_pdf_state_family_count": 138,
+    "median_burden_sample_size": 58,
+    "median_months_lost": 18,
+    "pro_se_pct": 44.0,
+    "pro_se_count": 62,
+    "_pdf_state_family_count": 141,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6496,
+  "movement_total": 6537,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,

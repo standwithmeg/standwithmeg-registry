@@ -20,8 +20,8 @@
     "supabase_row_ids": [
       "a23c4562-4a4c-4b24-9134-848cd7e83bc6",
       "d096de7f-a7f7-4b8d-875d-bbb6ed706bc5",
-      "3169feef-c25d-4c9e-9a86-b019adf84ece",
-      "00143871-3265-48f0-aef0-ed6b5b07204c"
+      "00143871-3265-48f0-aef0-ed6b5b07204c",
+      "3169feef-c25d-4c9e-9a86-b019adf84ece"
     ],
     "actor_row_id": null,
     "actor_bucket_key": "mary mativi|KS"
@@ -32,22 +32,22 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 186,
-    "total_submissions": 293,
-    "avg_financial_loss": 120206.43,
+    "families_approved": 185,
+    "total_submissions": 294,
+    "avg_financial_loss": 119884.06,
     "avg_months_lost": 30.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "KS",
-    "state_family_count": 293,
-    "median_financial_loss": 101500,
-    "median_burden_sample_size": 149,
-    "median_months_lost": 19,
-    "pro_se_pct": 48.3,
+    "state_family_count": 294,
+    "median_financial_loss": 99400,
+    "median_burden_sample_size": 151,
+    "median_months_lost": 20,
+    "pro_se_pct": 48.1,
     "pro_se_count": 141,
-    "_pdf_state_family_count": 292,
+    "_pdf_state_family_count": 293,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6496,
+  "movement_total": 6537,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,

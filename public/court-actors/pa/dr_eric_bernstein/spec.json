@@ -28,27 +28,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/dr_eric_bernstein/image_1080.png",
+    "path": "/tmp/swm-share-pages-27yylo6i/New Final Post and Capcut template/export/dr_eric_bernstein/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 114,
-    "total_submissions": 170,
-    "avg_financial_loss": 132549.8,
-    "avg_months_lost": 29.3,
+    "total_submissions": 172,
+    "avg_financial_loss": 132663.76,
+    "avg_months_lost": 29.0,
     "_source_table": "movement_stats_by_state",
     "_match_value": "PA",
-    "state_family_count": 170,
+    "state_family_count": 172,
     "median_financial_loss": 131300,
-    "median_burden_sample_size": 69,
+    "median_burden_sample_size": 71,
     "median_months_lost": 18,
-    "pro_se_pct": 52.4,
-    "pro_se_count": 89,
-    "_pdf_state_family_count": 170,
+    "pro_se_pct": 52.3,
+    "pro_se_count": 90,
+    "_pdf_state_family_count": 172,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6496,
+  "movement_total": 6537,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
