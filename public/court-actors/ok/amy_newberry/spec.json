@@ -35,27 +35,27 @@
     "actor_bucket_key": "amy newbery|OK"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-27yylo6i/New Final Post and Capcut template/export/amy_newberry/image_1080.png",
+    "path": "/tmp/swm-share-pages-a9qn51im/New Final Post and Capcut template/export/amy_newberry/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 120,
-    "total_submissions": 233,
-    "avg_financial_loss": 115267.6,
-    "avg_months_lost": 28.0,
+    "total_submissions": 236,
+    "avg_financial_loss": 115211.61,
+    "avg_months_lost": 27.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OK",
-    "state_family_count": 233,
+    "state_family_count": 236,
     "median_financial_loss": 105000,
-    "median_burden_sample_size": 123,
+    "median_burden_sample_size": 125,
     "median_months_lost": 16,
-    "pro_se_pct": 42.5,
+    "pro_se_pct": 41.9,
     "pro_se_count": 99,
-    "_pdf_state_family_count": 233,
+    "_pdf_state_family_count": 236,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6537,
+  "movement_total": 6555,
   "supabase": {
     "report_count": 12,
     "actor_report_count": 12,

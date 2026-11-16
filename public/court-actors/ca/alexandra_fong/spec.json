@@ -26,27 +26,27 @@
     "actor_bucket_key": "alexandra fong|CA"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-27yylo6i/New Final Post and Capcut template/export/alexandra_fong/image_1080.png",
+    "path": "/tmp/swm-share-pages-a9qn51im/New Final Post and Capcut template/export/alexandra_fong/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 356,
-    "total_submissions": 532,
-    "avg_financial_loss": 263225.89,
-    "avg_months_lost": 33.9,
+    "total_submissions": 536,
+    "avg_financial_loss": 261385.96,
+    "avg_months_lost": 33.7,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CA",
-    "state_family_count": 532,
-    "median_financial_loss": 240000,
-    "median_burden_sample_size": 233,
+    "state_family_count": 536,
+    "median_financial_loss": 235500,
+    "median_burden_sample_size": 235,
     "median_months_lost": 20,
-    "pro_se_pct": 58.5,
-    "pro_se_count": 311,
-    "_pdf_state_family_count": 532,
+    "pro_se_pct": 58.8,
+    "pro_se_count": 315,
+    "_pdf_state_family_count": 536,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6537,
+  "movement_total": 6555,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,

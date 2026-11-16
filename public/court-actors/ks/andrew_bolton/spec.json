@@ -48,27 +48,27 @@
     ]
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-27yylo6i/New Final Post and Capcut template/export/andrew_bolton/image_1080.png",
+    "path": "/tmp/swm-share-pages-a9qn51im/New Final Post and Capcut template/export/andrew_bolton/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 185,
-    "total_submissions": 294,
-    "avg_financial_loss": 119884.06,
+    "total_submissions": 295,
+    "avg_financial_loss": 119452.25,
     "avg_months_lost": 30.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "KS",
-    "state_family_count": 294,
+    "state_family_count": 295,
     "median_financial_loss": 99400,
     "median_burden_sample_size": 151,
     "median_months_lost": 20,
-    "pro_se_pct": 48.1,
-    "pro_se_count": 141,
-    "_pdf_state_family_count": 293,
+    "pro_se_pct": 48.3,
+    "pro_se_count": 142,
+    "_pdf_state_family_count": 294,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6537,
+  "movement_total": 6555,
   "supabase": {
     "report_count": 17,
     "actor_report_count": 17,
