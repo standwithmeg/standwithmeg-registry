@@ -31,27 +31,27 @@
     "actor_bucket_key": "cynthia pickering|OK"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-a9qn51im/New Final Post and Capcut template/export/cynthia_pickering/image_1080.png",
+    "path": "/tmp/swm-share-pages-n0ood0ab/New Final Post and Capcut template/export/cynthia_pickering/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 120,
-    "total_submissions": 236,
-    "avg_financial_loss": 115211.61,
-    "avg_months_lost": 27.9,
+    "total_submissions": 238,
+    "avg_financial_loss": 114200.98,
+    "avg_months_lost": 27.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OK",
-    "state_family_count": 236,
+    "state_family_count": 238,
     "median_financial_loss": 105000,
     "median_burden_sample_size": 125,
     "median_months_lost": 16,
-    "pro_se_pct": 41.9,
+    "pro_se_pct": 41.6,
     "pro_se_count": 99,
-    "_pdf_state_family_count": 236,
+    "_pdf_state_family_count": 238,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6555,
+  "movement_total": 6569,
   "supabase": {
     "report_count": 8,
     "actor_report_count": 8,

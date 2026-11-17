@@ -26,27 +26,27 @@
     "actor_bucket_key": "diana hewit ladd|AR"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-a9qn51im/New Final Post and Capcut template/export/dianna_hewitt_ladd/image_1080.png",
+    "path": "/tmp/swm-share-pages-n0ood0ab/New Final Post and Capcut template/export/dianna_hewitt_ladd/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 42,
+    "families_approved": 43,
     "total_submissions": 84,
-    "avg_financial_loss": 136787.2,
-    "avg_months_lost": 31.9,
+    "avg_financial_loss": 142988.8,
+    "avg_months_lost": 31.5,
     "_source_table": "movement_stats_by_state",
     "_match_value": "AR",
     "state_family_count": 84,
     "median_financial_loss": 117000,
     "median_burden_sample_size": 35,
-    "median_months_lost": 22,
+    "median_months_lost": 20,
     "pro_se_pct": 39.3,
     "pro_se_count": 33,
     "_pdf_state_family_count": 84,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6555,
+  "movement_total": 6569,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,

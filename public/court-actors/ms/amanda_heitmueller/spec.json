@@ -27,27 +27,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-7jh_hs8h/New Final Post and Capcut template/export/amanda_heitmueller/image_1080.png",
+    "path": "/tmp/swm-share-pages-n0ood0ab/New Final Post and Capcut template/export/amanda_heitmueller/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 41,
-    "total_submissions": 71,
-    "avg_financial_loss": 132699.83,
-    "avg_months_lost": 36.4,
+    "total_submissions": 72,
+    "avg_financial_loss": 130777.95,
+    "avg_months_lost": 35.7,
     "_source_table": "movement_stats_by_state",
     "_match_value": "MS",
-    "state_family_count": 71,
-    "median_financial_loss": 49500,
-    "median_burden_sample_size": 26,
+    "state_family_count": 72,
+    "median_financial_loss": 34000,
+    "median_burden_sample_size": 27,
     "median_months_lost": 16,
-    "pro_se_pct": 46.5,
+    "pro_se_pct": 45.8,
     "pro_se_count": 33,
-    "_pdf_state_family_count": 71,
+    "_pdf_state_family_count": 72,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6500,
+  "movement_total": 6569,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
