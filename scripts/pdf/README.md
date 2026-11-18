@@ -6,6 +6,9 @@ the name and comments. Chromium measures each complete card at Letter page
 width and keeps it together whenever it fits; only oversized cards split.
 Measured page counts are recorded with the rebuild cache. Actor names retain the
 three-family public threshold. Reports retain the 30-family location threshold.
+The detailed name-grouping note lives on the methodology page so it does not
+push the final actor onto an otherwise unnecessary page. Reporting-profile
+charts use compact row spacing while retaining their existing type sizes.
 
 The cover includes the location count, registry-wide counted survey total,
 and the actual rebuild date in America/Chicago. The registry total uses the
@@ -64,7 +67,8 @@ python scripts/pdf/generate_state_pdf.py --source=supabase --force KS
 python scripts/pdf/verify_state_pdf_release.py --state KS
 ```
 
-Chromium checks image loading and actor/cover overflow before writing a PDF.
+Chromium checks image loading, actor/cover overflow, and every text range against
+the page and footer boundaries before writing a PDF, including charts and quotes.
 The release verifier checks pagination, cover snapshots, section order,
 eligible actor names, family-comment coverage, and input hashes before release.
 Every printed actor submission total is checked against the current source too.

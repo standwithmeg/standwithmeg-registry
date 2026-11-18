@@ -491,6 +491,10 @@
     gap: 8px;
   }
   .grid-2 .bar-row .bar-label { font-size: 10px; }
+  /* Six charts share the reporting profile page; leave room for wrapped labels. */
+  .profile-page .data-block { margin-bottom: 8px; }
+  .profile-page .subsection { margin-top: 12px; }
+  .profile-page .bar-row { padding-top: 5px; padding-bottom: 5px; }
   .bar-row:last-child { border-bottom: none; }
   .bar-row .bar-label {
     color: var(--ink);
@@ -1248,7 +1252,7 @@
 </section>
 
 {# ━━━━━━━━━━━━━━ PAGE 4. WHO IS REPORTING + GEOGRAPHY + ALLEGATIONS ━━━━━━━━━━━━━━ #}
-<section class="page">
+<section class="page profile-page">
   <div class="runhead">
     <div><span class="r-state">{{ state_name }}</span> · Family Court Data Report</div>
     <div class="r-page">Stand With Meg · {{ "%02d"|format(who_page_number) }} / {{ total_pages }}</div>
@@ -1336,12 +1340,6 @@
     {% include 'actor_card.html.j2' %}
     {% endfor %}
   </div>
-
-  {% if loop.last %}
-  <div class="footnote" style="margin-top: 16px;">
-    <strong>Public threshold rule:</strong> Names are grouped conservatively by normalized spelling, role, and location. Common titles, punctuation, casing, and middle initials collapse together. Close misspellings are not auto-merged without admin review. Only family-direct submissions count toward the public threshold.
-  </div>
-  {% endif %}
 
   <div class="page-foot">
     <div class="credit"><span class="star">★</span><span>A <strong>StandWithMeg.com</strong> Report · Family Rights Registry</span></div>
@@ -1467,6 +1465,9 @@
     <p>Data in this report was collected April 2024 – {{ report_month_year }} through standwithmeg.com/family-rights-survey. Submissions are timestamped. Duplicate-submission heuristics use normalized email + location, with direct survey rows preferred over legacy rows and the newest row retained within each source. Categorical responses from multi-select and short-answer fields are normalized monthly.</p>
     <p>Dollar fields exclude blank, negative, and obvious data-entry artifact values above the report's field caps. When asset-loss values contain a strong statistical outlier, the asset-loss mean and total are suppressed and only the median is reported. Lost-wage, attorney-fee, and asset-loss entries are self-reported and not corroborated against tax records or court filings.</p>
     <p>Geographic reporting uses the county or regional field as submitted, with light normalization (e.g. "Butte silverbow" → "Butte–Silver Bow"). Court actor names require {{ court_actor_threshold }} independent families. Actor totals count distinct valid submissions, including data-only responses. Approval and sharing permission govern publication of comments separately. Hidden and duplicate records are excluded.</p>
+    {% if court_actor_count %}
+    <p><strong>Public threshold rule:</strong> Names are grouped conservatively by normalized spelling, role, and location. Common titles, punctuation, casing, and middle initials collapse together. Close misspellings are not auto-merged without admin review. Only family-direct submissions count toward the public threshold.</p>
+    {% endif %}
     <div class="site">standwithmeg.com · courage to stand, power to change</div>
   </div>
 

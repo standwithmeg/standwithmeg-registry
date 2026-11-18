@@ -907,20 +907,33 @@ def _measure_actor_pagination(page, env, actors):
       const footerTop = first.querySelector('.page-foot').getBoundingClientRect().top;
       const cardsTop = first.querySelector('.actor-cards').getBoundingClientRect().top;
       const note = sections[sections.length - 1].querySelector('.footnote');
-      const reserve = note ? note.getBoundingClientRect().height + 22 : 22;
+      const reserve = note ? note.getBoundingClientRect().height + 22 : 0;
       const extra = intro ? intro.getBoundingClientRect().height + parseFloat(getComputedStyle(intro).marginBottom) : 0;
       return {first: footerTop - cardsTop - 8, rest: footerTop - cardsTop - 8 + extra, reserve};
     }""")
     template = env.get_template("actor_card.html.j2")
+    # A card measured alone has both the first-card top rule and the
+    # last-card bottom rule. Charge those edges once per page, rather than
+    # once per actor, so several small cards can use the available space.
+    edge_extra = page.evaluate("""html => {
+      const slot = document.querySelector('.actor-page .actor-cards');
+      slot.innerHTML = html;
+      const card = slot.querySelector('.actor-card');
+      const singleHeight = card.getBoundingClientRect().height;
+      card.before(document.createElement('div'));
+      card.after(document.createElement('div'));
+      return singleHeight - card.getBoundingClientRect().height;
+    }""", template.render(actor={"continuation_index": 1, "continuation_total": 1, **actors[0]}))
     def measure(actor):
         actor = {"continuation_index": 1, "continuation_total": 1, **actor}
         html = template.render(actor=actor)
         return page.evaluate("""html => {
           const slot = document.querySelector('.actor-page .actor-cards');
-          slot.innerHTML = html;
+          slot.innerHTML = '<div></div>' + html + '<div></div>';
           return slot.querySelector('.actor-card').getBoundingClientRect().height;
         }""", html)
-    return _paginate_measured_actors(actors, measure, bounds["first"], bounds["rest"], bounds["reserve"])
+    return _paginate_measured_actors(actors, measure, bounds["first"] - edge_extra,
+                                     bounds["rest"] - edge_extra, bounds["reserve"])
 
 
 def _court_actor_card_weight(actor):
@@ -1385,6 +1398,24 @@ def generate_pdf(state_abbr, rows, output_path=None, browser=None, court_actors=
                     section.querySelectorAll('.actor-card, .footnote, .cover-bottom').forEach(block => {
                       if (block.getBoundingClientRect().bottom > limit) problems.push(`Page ${index + 1}: content crosses bottom boundary`);
                     });
+                    // Charts and quote text must fit too, even when their
+                    // fixed-height page would otherwise hide the overflow.
+                    const bounds = section.getBoundingClientRect();
+                    const textLimit = footer ? footer.getBoundingClientRect().top - 2 : bounds.bottom;
+                    const walker = document.createTreeWalker(section, NodeFilter.SHOW_TEXT);
+                    let textOutside = false;
+                    while (walker.nextNode()) {
+                      const node = walker.currentNode;
+                      if (!node.textContent.trim() || node.parentElement.closest('.page-foot, script, style')) continue;
+                      const range = document.createRange();
+                      range.selectNodeContents(node);
+                      for (const box of range.getClientRects()) {
+                        if (!box.width || !box.height) continue;
+                        if (box.left < bounds.left - 1 || box.right > bounds.right + 1 ||
+                            box.top < bounds.top - 1 || box.bottom > textLimit) textOutside = true;
+                      }
+                    }
+                    if (textOutside) problems.push(`Page ${index + 1}: text crosses page or footer boundary`);
                   });
                   return problems;
                 }""")
