@@ -86,12 +86,12 @@ def _matching_entries(actor: dict, state: str, entries: list[dict]) -> list[dict
     def name_key(value: str) -> str:
         return _actor_name_key(value).replace("-", " ")
 
-    name = name_key(actor["name"])
+    names = {name_key(value) for value in [actor["name"], *(actor.get("name_aliases") or [])] if value}
     return [entry for entry in entries
                if str(entry.get("state_abbr", "")).upper() == state.upper()
-               and name in {name_key(entry.get("canonical_name") or ""),
+               and names.intersection({name_key(entry.get("canonical_name") or ""),
                             name_key(entry.get("display_name") or ""),
-                            name_key(str(entry.get("actor_bucket_key") or "").partition("|")[0])}]
+                            name_key(str(entry.get("actor_bucket_key") or "").partition("|")[0])})]
 
 
 def _match_actor(actor: dict, state: str, entries: list[dict]) -> dict | None:
@@ -132,14 +132,27 @@ def _approved_portrait(actor: dict, state: str, entries: list[dict], selected: d
     return dated[-1][1]
 
 
-def _slide_contains_portrait(entry: dict, state: str, portrait_path: str, portrait_body: bytes) -> bool:
+def _slide_spec(entry: dict, state: str) -> dict:
     try:
         body, _ = _download(_asset_path(entry, state, "spec.json"))
     except HTTPError as error:
         if error.code in (404, 410):
-            return False
+            return {}
         raise
-    photo = json.loads(body).get("photo") or {}
+    return json.loads(body)
+
+
+def _slide_count_matches(spec: dict, submission_count: int | None) -> bool:
+    if submission_count is None:
+        return True
+    actor = spec.get("actor") or {}
+    recorded_count = next((actor[key] for key in ("actor_report_count", "submission_count", "mention_count", "family_count")
+                           if actor.get(key) is not None), None)
+    return recorded_count == submission_count
+
+
+def _slide_contains_portrait(entry: dict, state: str, portrait_path: str, portrait_body: bytes, spec: dict) -> bool:
+    photo = spec.get("photo") or {}
     # A share page can be newer than its JPEGs. Only the render input proves
     # the downloaded deck contained a portrait; unknown evidence uses the photo.
     if photo.get("exists") is not True:
@@ -167,8 +180,14 @@ def _attach_slide(actor: dict, state: str, entries: list[dict]) -> dict:
         if mime != "image/jpeg" or not body.startswith(b"\xff\xd8\xff"):
             raise ValueError(f"Invalid actor slide: {path}")
         kind = "slide"
-        if portrait and not _slide_contains_portrait(entry, state, portrait_path, portrait[0]):
+        spec = _slide_spec(entry, state) if portrait or actor.get("submission_count") is not None else {}
+        count_matches = _slide_count_matches(spec, actor.get("submission_count"))
+        if portrait and (not count_matches or not _slide_contains_portrait(entry, state, portrait_path, portrait[0], spec)):
             path, (body, mime), kind = portrait_path, portrait, "portrait"
+        elif not count_matches:
+            # Never embed a conflicting number when no approved replacement
+            # photo exists. The readable report heading remains authoritative.
+            return result
     except HTTPError as error:
         # A retired election deck or an actor without a deck can still have
         # an approved public portrait. Other network errors must fail visibly.

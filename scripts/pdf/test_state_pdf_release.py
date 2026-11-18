@@ -59,6 +59,19 @@ def _normalized(text: str) -> str:
 
 
 class StatePdfReleaseTests(unittest.TestCase):
+    def test_actor_heading_count_gate_rejects_a_stale_total(self) -> None:
+        text = "Dan Livingston\nREUNIFICATION THERAPIST · JOCO · 4 SUBMISSIONS\nFamily report."
+        self.assertTrue(_actor_heading_present("Dan Livingston", text))
+        self.assertTrue(_actor_heading_present("Dan Livingston", text, 4))
+        self.assertFalse(_actor_heading_present("Dan Livingston", text, 5))
+        self.assertFalse(_actor_heading_present("Dan Livingston", text + "\nThe slide says 5 submissions.", 5))
+        self.assertFalse(_actor_heading_present("Dan Livingston", text.replace("4 SUBMISSIONS", "14 SUBMISSIONS"), 4))
+
+    def test_actor_count_gate_tolerates_pdf_glyph_spacing_inside_name(self) -> None:
+        text = "Joann M. Woltm an\nJUDGE · JOHNSON · 3 SUBMISSIONS"
+        self.assertTrue(_actor_heading_present("Joann M. Woltman", text, 3))
+        self.assertFalse(_actor_heading_present("Joann M. Woltman", text, 4))
+
     def test_measured_layout_keeps_all_comments_on_one_page_when_they_fit(self) -> None:
         actor = {**_actor("Example Actor", ["Family experience. " * 20 for _ in range(8)]),
                  "artwork_uri": "data:image/jpeg;base64,TEST"}
@@ -164,6 +177,28 @@ class StatePdfReleaseTests(unittest.TestCase):
                  "photo_url": "/court-actors/ks/different_person/image_1080.png"}
         with self.assertRaisesRegex(ValueError, "manifest identity"):
             _attach_slide({"name": "Example Actor"}, "KS", [entry])
+
+    def test_reviewed_source_alias_preserves_the_correct_artwork(self) -> None:
+        entry = {"state_abbr": "KS", "slug": "alison_hibler", "display_name": "Allison Maxwell Hibler"}
+        self.assertIsNone(_match_actor({"name": "Allison Hibler"}, "KS", [entry]))
+        self.assertEqual(_match_actor({"name": "Allison Hibler", "name_aliases": ["Allison Maxwell Hibler"]}, "KS", [entry]), entry)
+
+    def test_stale_slide_number_uses_approved_portrait(self) -> None:
+        entry = {"state_abbr": "KS", "slug": "example_actor", "display_name": "Example Actor",
+                 "photo_url": "/court-actors/ks/example_actor/image_1080.png"}
+        assets = [(b"photo", "image/png"), (b"\xff\xd8\xffslide", "image/jpeg"),
+                  (b'{"actor":{"actor_report_count":4},"photo":{"exists":true}}', "application/json")]
+        with patch("actor_slides._download", side_effect=assets):
+            actor = _attach_slide({"name": "Example Actor", "submission_count": 5}, "KS", [entry])
+        self.assertEqual(actor["artwork_kind"], "portrait")
+
+    def test_stale_slide_without_portrait_cannot_publish_a_conflicting_number(self) -> None:
+        entry = {"state_abbr": "KS", "slug": "example_actor", "display_name": "Example Actor"}
+        assets = [(b"\xff\xd8\xffslide", "image/jpeg"),
+                  (b'{"actor":{"actor_report_count":4}}', "application/json")]
+        with patch("actor_slides._download", side_effect=assets):
+            actor = _attach_slide({"name": "Example Actor", "submission_count": 5}, "KS", [entry])
+        self.assertNotIn("artwork_uri", actor)
 
     def test_alias_versions_choose_latest_publication_not_highest_count(self) -> None:
         old = {"state_abbr": "MO", "slug": "sue_m_crane", "display_name": "Sue Crane", "family_count": 50}

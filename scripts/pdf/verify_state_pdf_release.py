@@ -133,7 +133,7 @@ def _fragment_present(fragment: str, pdf_text: str) -> bool:
     return matched / len(tokens) >= required_ratio
 
 
-def _actor_heading_present(name: str, pdf_text: str) -> bool:
+def _actor_heading_present(name: str, pdf_text: str, submission_count: int | None = None) -> bool:
     """Require a readable actor heading, not merely a slug in a URL."""
     expected = _normalized(name)
     lines = pdf_text.splitlines()
@@ -152,8 +152,15 @@ def _actor_heading_present(name: str, pdf_text: str) -> bool:
             if (
                 normalized_heading == expected
                 or normalized_heading.startswith(f"{expected} ")
+                # Some embedded display-font glyph positions make pypdf
+                # insert a space inside a surname (e.g. "Woltm an"). Require
+                # the complete name before the metadata, ignoring that space.
+                or _compact(lines[index]) == _compact(name)
             ):
-                return True
+                if submission_count is None:
+                    return True
+                printed = re.search(r"\b(\d+)\s+submissions?\b", normalized_heading)
+                return printed is not None and int(printed.group(1)) == submission_count
             break
     return False
 
@@ -324,6 +331,8 @@ def verify(expected_report_count: int | None = None, only_location: str | None =
             name = str(actor.get("name") or "")
             if not _actor_heading_present(name, raw_pdf_text):
                 failures.append(f"{location}: PDF missing readable threshold actor heading {name}")
+            elif not _actor_heading_present(name, raw_pdf_text, actor["submission_count"]):
+                failures.append(f"{location}: PDF submission count for {name} does not match {actor['submission_count']}")
 
         for actor_page in ctx["actor_pages"]:
             for fragment in actor_page:

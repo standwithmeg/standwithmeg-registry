@@ -1326,7 +1326,7 @@
 
   {% if loop.first %}
   <h2 class="section-head"><span class="num">{{ actor_section_num }}</span>Named Court Actors · {{ state_name }}</h2>
-  <p class="lede" style="margin-bottom: 18px;">Names appear after {{ court_actor_threshold }} independent families name an actor in {{ state_name }}. Comments are family reports, one per family, not established findings. Submitter names and contact details are withheld.</p>
+  <p class="lede" style="margin-bottom: 18px;">Names appear after {{ court_actor_threshold }} independent families name an actor. Totals count distinct survey submissions. Comments are family reports, one per family, not established findings. Submitter names and contact details are withheld.</p>
   {% else %}
   <h2 class="section-head"><span class="num">{{ actor_section_num }}</span>Named Court Actors, continued</h2>
   {% endif %}
@@ -1452,7 +1452,7 @@
   <div class="grid-2">
     <div>
       <h3 style="font-family: var(--font-display); text-transform: uppercase; letter-spacing: 0.09em; font-weight: 600; font-size: 12px; color: var(--navy); margin: 0 0 10px;">What this is</h3>
-      <p class="body-text">The Family Rights Registry is a public, parent-reported data collection run by Stand With Meg. Every figure in this {{ state_name }} report comes from {{ state_name }} respondents who voluntarily submitted survey entries about their experience inside family court and/or CPS.</p>
+      <p class="body-text">The Family Rights Registry is a public, parent-reported data collection run by Stand With Meg. State statistics come from {{ state_name }} respondents. Reviewed actor identities may combine reports across states, as labeled beside the actor's name. The cover also records the registry-wide survey total.</p>
       <p class="body-text" style="margin-top: 10px;">This report is built to help families, advocates, reporters, and legislators see the patterns emerging in {{ state_name }}, not to replace formal research, and not to name individual judges or counties as responsible parties.</p>
     </div>
     <div>
@@ -1466,7 +1466,7 @@
     <h3>Methodology · Family Rights Registry</h3>
     <p>Data in this report was collected April 2024 – {{ report_month_year }} through standwithmeg.com/family-rights-survey. Submissions are timestamped. Duplicate-submission heuristics use normalized email + location, with direct survey rows preferred over legacy rows and the newest row retained within each source. Categorical responses from multi-select and short-answer fields are normalized monthly.</p>
     <p>Dollar fields exclude blank, negative, and obvious data-entry artifact values above the report's field caps. When asset-loss values contain a strong statistical outlier, the asset-loss mean and total are suppressed and only the median is reported. Lost-wage, attorney-fee, and asset-loss entries are self-reported and not corroborated against tax records or court filings.</p>
-    <p>Geographic reporting uses the county or regional field as submitted, with light normalization (e.g. "Butte silverbow" → "Butte–Silver Bow"). Quotes carry one of three public permission states: <em>Anonymous</em>, <em>First-name only</em>, or <em>Full attribution with consent to public use</em>. Court actor names appear only after {{ court_actor_threshold }} independent families name the same actor.</p>
+    <p>Geographic reporting uses the county or regional field as submitted, with light normalization (e.g. "Butte silverbow" → "Butte–Silver Bow"). Court actor names require {{ court_actor_threshold }} independent families. Actor totals count distinct valid submissions, including data-only responses. Approval and sharing permission govern publication of comments separately. Hidden and duplicate records are excluded.</p>
     <div class="site">standwithmeg.com · courage to stand, power to change</div>
   </div>
 
