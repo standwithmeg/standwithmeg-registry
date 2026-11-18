@@ -710,6 +710,8 @@
     color: var(--crimson);
     font-weight: 700;
   }
+  .actor-card.has-artwork { display: grid; grid-template-columns: 132px minmax(0, 1fr); gap: 22px; align-items: start; }
+  .actor-card-content { min-width: 0; }
   .actor-card-header { flex-wrap: nowrap; align-items: center; gap: 22px; }
   .actor-artwork { flex: 0 0 132px; }
   .actor-artwork img { display: block; width: 132px; height: 235px; object-fit: contain; background: var(--navy); }
@@ -1316,7 +1318,7 @@
 {# ━━━━━━━━━━━━━━ NAMED COURT ACTORS. paginates across multiple pages ━━━━━━━━━━━━━━ #}
 {% for actor_page in actor_pages %}
 {% set this_page_number = actor_start_page + loop.index0 %}
-<section class="page">
+<section class="page actor-page">
   <div class="runhead">
     <div><span class="r-state">{{ state_name }}</span> · Family Court Data Report</div>
     <div class="r-page">Stand With Meg · {{ "%02d"|format(this_page_number) }} / {{ total_pages }}</div>
@@ -1324,46 +1326,14 @@
 
   {% if loop.first %}
   <h2 class="section-head"><span class="num">{{ actor_section_num }}</span>Named Court Actors · {{ state_name }}</h2>
-  <p class="lede" style="margin-bottom: 18px;">A name appears below only after {{ court_actor_threshold }} or more independent families have named the same actor in {{ state_name }}. Submitter names, emails, and contact details are never published. Comments below are family reports, one per family, and are not independently established findings. Personal contact details are withheld.</p>
+  <p class="lede" style="margin-bottom: 18px;">Names appear after {{ court_actor_threshold }} independent families name an actor in {{ state_name }}. Comments are family reports, one per family, not established findings. Submitter names and contact details are withheld.</p>
   {% else %}
   <h2 class="section-head"><span class="num">{{ actor_section_num }}</span>Named Court Actors, continued</h2>
   {% endif %}
 
   <div class="actor-cards">
     {% for actor in actor_page %}
-    <div class="actor-card">
-      <div class="actor-card-header{% if actor.artwork_uri %} has-artwork{% endif %}">
-        {% if actor.artwork_uri %}<a class="actor-artwork" href="{{ actor.artwork_url }}"><img src="{{ actor.artwork_uri }}" alt="{{ actor.name }} {{ actor.artwork_kind }}"></a>{% endif %}
-        <div class="actor-identity">
-        <div class="name">{{ actor.name }}{% if actor.continuation_total > 1 %}<span class="actor-continuation">continued {{ actor.continuation_index }} / {{ actor.continuation_total }}</span>{% endif %}</div>
-        <div class="meta">
-          {{ actor.role }}{% if actor.court_or_county %} · {{ actor.court_or_county }}{% endif %} · <span class="families">{{ actor.submission_count }} {% if actor.submission_count == 1 %}submission{% else %}submissions{% endif %}</span>
-        </div>
-        {% if actor.artwork_kind == 'slide' %}<p class="artwork-note">Latest published actor slide at rebuild. Numbers within the slide reflect its own snapshot. The report counts are updated separately.</p>{% elif not actor.artwork_uri %}<p class="artwork-note">Public actor slide not available at rebuild.</p>{% endif %}
-        </div>
-      </div>
-      {% if actor.comments %}
-      <ul class="actor-comments">
-        {% for c in actor.comments %}
-        <li>
-          {% if c.continued_from_previous %}<span class="comment-continuation">Family comment continued</span>{% endif %}
-          <span class="comment-text">"{{ c.note }}"</span>
-          {% if c.continues %}<span class="comment-continuation">Continues on the next card</span>{% endif %}
-          {% if c.court_or_county and c.court_or_county != actor.court_or_county %}<span class="comment-county">{{ c.court_or_county }}</span>{% endif %}
-        </li>
-        {% endfor %}
-      </ul>
-      {% endif %}
-      {% if actor.complaint_packet_url %}
-      <div class="actor-complaint">
-        <strong>Create Complaint Packet:</strong>
-        {% if actor.complaint_agency_name %}{{ actor.complaint_agency_name }} · {% endif %}
-        <a href="{{ actor.complaint_packet_url }}">{{ actor.complaint_packet_url }}</a>
-        <br>
-        Family-reported pattern context only. Each person must file only their own truthful, first-hand complaint using their own facts, dates, evidence, orders, transcripts, and documents.
-      </div>
-      {% endif %}
-    </div>
+    {% include 'actor_card.html.j2' %}
     {% endfor %}
   </div>
 

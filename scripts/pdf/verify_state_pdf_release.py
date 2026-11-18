@@ -290,7 +290,11 @@ def verify(expected_report_count: int | None = None, only_location: str | None =
         except Exception as exc:
             failures.append(f"{location}: PDF cannot be opened: {exc}")
             continue
-        expected_pages = int(ctx["total_pages"])
+        actor_page_count = cached.get("actor_page_count")
+        if not isinstance(actor_page_count, int) or actor_page_count < 0 or (actors and actor_page_count == 0):
+            failures.append(f"{location}: missing measured actor page count")
+            actor_page_count = int(ctx["actor_page_count"])
+        expected_pages = int(ctx["total_pages"]) - int(ctx["actor_page_count"]) + actor_page_count
         if len(reader.pages) != expected_pages:
             failures.append(
                 f"{location}: PDF has {len(reader.pages)} pages; generator expects {expected_pages}"
@@ -306,7 +310,6 @@ def verify(expected_report_count: int | None = None, only_location: str | None =
             )
         )
 
-        actor_page_count = int(ctx["actor_page_count"])
         if len(reader.pages) >= 4:
             for index, heading in ((1, f"{state_name} at a glance"), (2, f"The cost of {state_name} family court"),
                                    (3, f"Who is reporting {state_name}")):

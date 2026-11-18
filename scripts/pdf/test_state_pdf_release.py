@@ -21,6 +21,7 @@ from generate_state_pdf import (
     build_template_context,
     cover_image_for,
     state_input_hash,
+    _paginate_measured_actors,
 )
 from actor_slides import _match_actor, _attach_slide
 import verify_state_pdf_release as release
@@ -56,6 +57,23 @@ def _normalized(text: str) -> str:
 
 
 class StatePdfReleaseTests(unittest.TestCase):
+    def test_measured_layout_keeps_all_comments_on_one_page_when_they_fit(self) -> None:
+        actor = {**_actor("Example Actor", ["Family experience. " * 20 for _ in range(8)]),
+                 "artwork_uri": "data:image/jpeg;base64,TEST"}
+        self.assertGreater(_court_actor_card_weight(actor), 2800)
+        def measure(card):
+            return 200 + sum(len(c["note"]) for c in card["comments"]) / 10
+        pages = _paginate_measured_actors([actor], measure, 700, 800)
+        self.assertEqual(len(pages), 1)
+        self.assertEqual(len(pages[0][0]["comments"]), 8)
+        self.assertEqual(pages[0][0]["continuation_total"], 1)
+
+    def test_measured_layout_moves_whole_actor_instead_of_splitting_at_page_end(self) -> None:
+        actors = [_actor("First Actor", ["First comment"]), _actor("Second Actor", ["Second comment"])]
+        pages = _paginate_measured_actors(actors, lambda actor: 400, 700, 800)
+        self.assertEqual([[a["name"] for a in page] for page in pages], [["First Actor"], ["Second Actor"]])
+        self.assertTrue(all(a["continuation_total"] == 1 for page in pages for a in page))
+
     def test_statistics_lead_with_or_without_actors(self) -> None:
         for actors in ([], [_actor("Example Actor", ["Family report."]) ]):
             ctx = build_template_context("KS", [_row("KS", "2026-11-18")], actors, registry_total=6603,

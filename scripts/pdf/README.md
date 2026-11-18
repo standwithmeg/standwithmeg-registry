@@ -1,7 +1,10 @@
 # State PDF reports
 
 Reports open with the cover, then three statistics pages, then public court
-actors, parent voices, full comments, and methodology. Actor names retain the
+actors, parent voices, full comments, and methodology. The slide sits beside
+the name and comments. Chromium measures each complete card at Letter page
+width and keeps it together whenever it fits; only oversized cards split.
+Measured page counts are recorded with the rebuild cache. Actor names retain the
 three-family public threshold. Reports retain the 30-family location threshold.
 
 The cover includes the location count, registry-wide counted survey total,
