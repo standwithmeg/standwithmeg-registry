@@ -13,13 +13,18 @@ same deduplicated, visibility-filtered source rows as the report, rather than
 the raw number of form submissions. An unchanged PDF keeps the registry total
 and date from its own rebuild; a new survey elsewhere does not rewrite it.
 
-At each rebuild, `actor_slides.py` reads the current public actor manifest and
-downloads `frame-01.jpg` through the site's public asset route. That route
+At each rebuild, `actor_slides.py` merges the current, bundled, and archive
+public actor manifests so a slide manifest's stale null cannot hide an approved
+portrait. It downloads `frame-01.jpg` through the site's public asset route. That route
 selects the current published version. Existing canonical bucket aliases and
 punctuation normalization match identities within the same state. If duplicate
 published aliases exist, the newest Last-Modified timestamp wins; counts are
-never used to infer freshness. A retired or absent slide can fall back to an
-available public portrait. Unmatched actors remain in the report with an
+never used to infer freshness. A retired, absent, or placeholder slide uses the
+available approved portrait. The render spec must prove that a slide contains
+the current photo, using its recorded content hash or asset timestamps. Unknown
+evidence uses the approved portrait, preserving the full image without cropping.
+Approved photo aliases resolve only within the same matched identity and state.
+Unmatched actors remain in the report with an
 explicit image-unavailable label. Network failures do not silently replace
 current artwork with an old local copy.
 

@@ -12,16 +12,18 @@ import re
 from concurrent.futures import ThreadPoolExecutor
 from email.utils import parsedate_to_datetime
 from urllib.error import HTTPError
+from urllib.parse import urlsplit
 from urllib.request import Request, urlopen
 
 from lib_supabase_rows import _actor_name_key
 
 PUBLIC_ORIGIN = "https://my.standwithmeg.com"
+ARCHIVE_ORIGIN = "https://standwithmeg-registry-clean.vercel.app"
 MAX_ASSET_BYTES = 12 * 1024 * 1024
 
 
-def _download(path: str) -> tuple[bytes, str]:
-    request = Request(PUBLIC_ORIGIN + path, headers={"Cache-Control": "no-cache"})
+def _download(path: str, *, origin: str = PUBLIC_ORIGIN, headers: dict | None = None) -> tuple[bytes, str]:
+    request = Request(origin + path, headers={"Cache-Control": "no-cache", **(headers or {})})
     with urlopen(request, timeout=45) as response:
         body = response.read(MAX_ASSET_BYTES + 1)
         if len(body) > MAX_ASSET_BYTES:
@@ -30,11 +32,31 @@ def _download(path: str) -> tuple[bytes, str]:
 
 
 def load_slide_manifest() -> list[dict]:
-    body, _ = _download("/court-actors/manifest.json")
-    entries = json.loads(body).get("actors")
-    if not isinstance(entries, list):
-        raise ValueError("Public actor manifest has no actors list")
-    return entries
+    # The portrait publisher updates the archive/bundled manifest independently
+    # of R2 slide rendering. A null in the slide manifest must not hide its photo.
+    sources = [(PUBLIC_ORIGIN, {}), (PUBLIC_ORIGIN, {"x-swm-raw-asset": "1"}),
+               (ARCHIVE_ORIGIN, {})]
+    def fetch(source):
+        origin, headers = source
+        body, _ = _download("/court-actors/manifest.json", origin=origin, headers=headers)
+        entries = json.loads(body).get("actors")
+        if not isinstance(entries, list):
+            raise ValueError(f"Public actor manifest has no actors list: {origin}")
+        return entries
+    with ThreadPoolExecutor(max_workers=3) as pool:
+        return _merge_manifests(*pool.map(fetch, sources))
+
+
+def _merge_manifests(*groups: list[dict]) -> list[dict]:
+    entries = {}
+    for group in groups:
+        for entry in group:
+            key = (str(entry.get("state_abbr", "")).upper(), entry.get("slug"))
+            if key not in entries:
+                entries[key] = dict(entry)
+            elif not entries[key].get("photo_url") and entry.get("photo_url"):
+                entries[key]["photo_url"] = entry["photo_url"]
+    return list(entries.values())
 
 
 def _asset_path(entry: dict, state: str, filename: str) -> str:
@@ -45,7 +67,10 @@ def _asset_path(entry: dict, state: str, filename: str) -> str:
 
 
 def _published_timestamp(entry: dict, state: str) -> float:
-    path = _asset_path(entry, state, "frame-01.jpg")
+    return _asset_timestamp(_asset_path(entry, state, "frame-01.jpg"))
+
+
+def _asset_timestamp(path: str) -> float:
     request = Request(PUBLIC_ORIGIN + path, method="HEAD", headers={"Cache-Control": "no-cache"})
     try:
         with urlopen(request, timeout=45) as response:
@@ -57,17 +82,20 @@ def _published_timestamp(entry: dict, state: str) -> float:
         raise
 
 
-def _match_actor(actor: dict, state: str, entries: list[dict]) -> dict | None:
+def _matching_entries(actor: dict, state: str, entries: list[dict]) -> list[dict]:
     def name_key(value: str) -> str:
         return _actor_name_key(value).replace("-", " ")
 
     name = name_key(actor["name"])
-    matches = [entry for entry in entries
+    return [entry for entry in entries
                if str(entry.get("state_abbr", "")).upper() == state.upper()
                and name in {name_key(entry.get("canonical_name") or ""),
                             name_key(entry.get("display_name") or ""),
                             name_key(str(entry.get("actor_bucket_key") or "").partition("|")[0])}]
-    paths = {str(entry.get("slug")): entry for entry in matches}
+
+
+def _match_actor(actor: dict, state: str, entries: list[dict]) -> dict | None:
+    paths = {str(entry.get("slug")): entry for entry in _matching_entries(actor, state, entries)}
     if len(paths) > 1:
         # The public manifest can retain two approved spellings for the same
         # normalized person. Compare publication times, never family counts
@@ -80,29 +108,75 @@ def _match_actor(actor: dict, state: str, entries: list[dict]) -> dict | None:
     return next(iter(paths.values()), None)
 
 
+def _portrait_path(entry: dict, state: str) -> str:
+    value = urlsplit(str(entry["photo_url"]))
+    if value.netloc and value.netloc not in {urlsplit(PUBLIC_ORIGIN).netloc, urlsplit(ARCHIVE_ORIGIN).netloc}:
+        raise ValueError("Untrusted public actor portrait origin")
+    expected = _asset_path(entry, state, "image_1080.png")
+    if value.path != expected or value.query or value.fragment:
+        raise ValueError("Public actor portrait does not match its manifest identity")
+    return expected
+
+
+def _approved_portrait(actor: dict, state: str, entries: list[dict], selected: dict) -> str | None:
+    if selected.get("photo_url"):
+        return _portrait_path(selected, state)
+    # An approved name correction may use a different slug from the older deck.
+    paths = {_portrait_path(entry, state) for entry in _matching_entries(actor, state, entries)
+             if entry.get("photo_url")}
+    if len(paths) <= 1:
+        return next(iter(paths), None)
+    dated = sorted((_asset_timestamp(path), path) for path in paths)
+    if dated[-1][0] <= 0 or dated[-1][0] == dated[-2][0]:
+        raise ValueError(f"Cannot establish current approved portrait for {actor['name']} in {state}")
+    return dated[-1][1]
+
+
+def _slide_contains_portrait(entry: dict, state: str, portrait_path: str, portrait_body: bytes) -> bool:
+    try:
+        body, _ = _download(_asset_path(entry, state, "spec.json"))
+    except HTTPError as error:
+        if error.code in (404, 410):
+            return False
+        raise
+    photo = json.loads(body).get("photo") or {}
+    # A share page can be newer than its JPEGs. Only the render input proves
+    # the downloaded deck contained a portrait; unknown evidence uses the photo.
+    if photo.get("exists") is not True:
+        return False
+    recorded_hash = photo.get("content_sha256")
+    if recorded_hash:
+        return recorded_hash == hashlib.sha256(portrait_body).hexdigest()
+    frame_time = _published_timestamp(entry, state)
+    photo_time = _asset_timestamp(portrait_path)
+    return frame_time > 0 and photo_time > 0 and photo_time <= frame_time + 1
+
+
 def _attach_slide(actor: dict, state: str, entries: list[dict]) -> dict:
     result = {key: value for key, value in actor.items() if not key.startswith("artwork_")}
     entry = _match_actor(actor, state, entries)
     if entry is None:
         return result
+    portrait_path = _approved_portrait(actor, state, entries, entry)
+    portrait = _download(portrait_path) if portrait_path else None
+    if portrait and portrait[1] not in ("image/png", "image/jpeg", "image/webp"):
+        raise ValueError(f"Invalid actor portrait: {portrait_path}")
     path = _asset_path(entry, state, "frame-01.jpg")
     try:
         body, mime = _download(path)
         if mime != "image/jpeg" or not body.startswith(b"\xff\xd8\xff"):
             raise ValueError(f"Invalid actor slide: {path}")
         kind = "slide"
+        if portrait and not _slide_contains_portrait(entry, state, portrait_path, portrait[0]):
+            path, (body, mime), kind = portrait_path, portrait, "portrait"
     except HTTPError as error:
         # A retired election deck or an actor without a deck can still have
         # an approved public portrait. Other network errors must fail visibly.
         if error.code not in (404, 410):
             raise
-        if not entry.get("photo_url"):
+        if not portrait:
             return result
-        path = _asset_path(entry, state, "image_1080.png")
-        body, mime = _download(path)
-        if mime not in ("image/png", "image/jpeg", "image/webp"):
-            raise ValueError(f"Invalid actor portrait: {path}")
-        kind = "portrait"
+        path, (body, mime), kind = portrait_path, portrait, "portrait"
     result.update({
         "artwork_uri": f"data:{mime};base64," + base64.b64encode(body).decode("ascii"),
         "artwork_sha256": hashlib.sha256(body).hexdigest(),
