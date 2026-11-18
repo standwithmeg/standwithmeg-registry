@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<title>{{ state_name }} — Family Court Data Report</title>
+<title>{{ state_name }}. Family Court Data Report</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&family=Inter:wght@400;500;600;700;800&display=swap">
@@ -189,7 +189,8 @@
   body[data-cover="banner"] .cover { background: var(--navy); color: #fff; }
   body[data-cover="banner"] .cover-banner-img {
     display: block;
-    height: 4.2in;
+    height: 3.35in;
+    flex: 0 0 3.35in;
     background-image: url('../assets/{{ cover_image }}');
     background-size: contain;
     background-position: center center;
@@ -211,13 +212,13 @@
     flex-direction: column;
   }
   body[data-cover="banner"] .cover-inner {
-    padding: 0.55in 0.75in 0.7in;
+    padding: 0.3in 0.65in 0.35in;
     min-height: 0;
     flex: 1;
     color: #fff;
   }
-  body[data-cover="banner"] .cover h1 { color: #fff; font-size: 88px; margin-top: 12px; }
-  body[data-cover="banner"] .cover h1 .state-accent { color: var(--gold); font-size: 48px; margin-top: 6px; }
+  body[data-cover="banner"] .cover h1 { color: #fff; font-size: 76px; margin-top: 12px; }
+  body[data-cover="banner"] .cover h1 .state-accent { color: var(--gold); font-size: 40px; margin-top: 6px; }
   body[data-cover="banner"] .cover .tagline { color: rgba(255,255,255,0.88); text-shadow: none; }
   body[data-cover="banner"] .cover .cover-eyebrow { color: var(--gold); }
   body[data-cover="banner"] .cover .key-figure { color: #fff; border-color: rgba(255,255,255,0.2); }
@@ -272,17 +273,17 @@
     margin: 26px 0 0;
     text-shadow: 0 2px 12px rgba(0,0,0,0.5);
   }
-  .cover .gold-rule { width: 60px; height: 3px; background: var(--gold); margin: 26px 0; }
+  .cover .gold-rule { width: 60px; height: 3px; background: var(--gold); margin: 16px 0; }
   .cover .key-figure {
     display: flex;
     align-items: baseline;
     gap: 18px;
-    margin-top: 32px;
+    margin-top: 18px;
   }
   .cover .key-figure .num {
     font-family: var(--font-display);
     font-weight: 700;
-    font-size: 96px;
+    font-size: 80px;
     color: var(--gold);
     line-height: 0.9;
   }
@@ -317,7 +318,10 @@
     font-weight: 600;
   }
 
-  /* COVER SPONSOR BAND — State Exclusive sponsor lockup (only logo in the PDF) */
+  /* COVER SPONSOR BAND. State Exclusive sponsor lockup (only logo in the PDF) */
+  .registry-snapshot { padding: 12px 0; font-size: 13px; color: #fff; }
+  .registry-snapshot strong { font-family: var(--font-display); font-size: 26px; color: var(--gold); }
+  .registry-snapshot span { color: rgba(255,255,255,0.75); font-size: 10px; }
   .cover-bottom { display: flex; flex-direction: column; gap: 0; }
   .sponsor-band {
     display: flex; align-items: center; justify-content: space-between;
@@ -644,7 +648,7 @@
     white-space: nowrap;
   }
 
-  /* COURT ACTOR CARDS — name, role, county header + anonymized family comments below */
+  /* COURT ACTOR CARDS. name, role, county header + anonymized family comments below */
   .actor-cards { margin-top: 14px; }
   .actor-card {
     border-top: 1px solid var(--hairline);
@@ -706,6 +710,16 @@
     color: var(--crimson);
     font-weight: 700;
   }
+  .actor-card.has-artwork { display: grid; grid-template-columns: 132px minmax(0, 1fr); gap: 22px; align-items: start; }
+  .actor-card-content { min-width: 0; }
+  .actor-card-header { flex-wrap: nowrap; align-items: center; gap: 22px; }
+  .actor-artwork { flex: 0 0 132px; }
+  .actor-artwork img { display: block; width: 132px; height: 235px; object-fit: contain; background: var(--navy); }
+  .actor-identity { flex: 1; min-width: 0; }
+  .actor-card-header .name { max-width: none; }
+  .actor-card-header.has-artwork .name { font-size: 25px; }
+  .actor-card-header .meta { text-align: left; margin-top: 6px; }
+  .artwork-note { font-size: 9px; color: var(--ink-muted); max-width: 330px; margin: 10px 0 0; }
   .actor-comments {
     list-style: none;
     margin: 0;
@@ -1019,7 +1033,7 @@
 </head>
 <body data-cover="banner">
 
-{# ━━━━━━━━━━━━━━ PAGE 1 — COVER ━━━━━━━━━━━━━━ #}
+{# ━━━━━━━━━━━━━━ PAGE 1. COVER ━━━━━━━━━━━━━━ #}
 <section class="page cover">
   <div class="cover-portrait"></div>
 
@@ -1046,7 +1060,7 @@
       <div>
         <div class="cover-eyebrow">Family Court Data Report · {{ report_series }}{% if state_number %} · No. {{ state_number }}{% endif %}</div>
         <h1>{{ state_name }}<span class="state-accent">what families are reporting.</span></h1>
-        <p class="tagline">Pulled from the Family Rights Registry — a cross-location dataset on what pro se parents are actually experiencing inside {{ state_name }}'s family courts and child-welfare system.</p>
+        <p class="tagline">Pulled from the Family Rights Registry, a cross-location dataset on what parents are reporting about {{ state_name }}'s family courts and child-welfare system.</p>
         <div class="gold-rule"></div>
 
         <div class="key-figure">
@@ -1057,6 +1071,9 @@
     </div>
 
     <div class="cover-bottom">
+      {% if registry_total is not none %}
+      <div class="registry-snapshot"><strong>{{ "{:,}".format(registry_total) }}</strong> total surveys across the registry<br><span>Report rebuilt {{ report_date }} · Counted survey records after duplicate and visibility review</span></div>
+      {% endif %}
       <div class="meta">
         <div class="meta-item">Data as of<strong>{{ data_as_of_date }}</strong></div>
         <div class="meta-item">{{ subdivision_label }}<strong>{{ subdivision_stat }}</strong></div>
@@ -1068,7 +1085,7 @@
         <div class="sponsor-band-left">This {{ state_name }} report is<strong>made possible by</strong></div>
         <div class="sponsor-band-right">
           {% if sponsor.logo_path %}
-          <div class="sponsor-logo-chip"><img src="file://{{ sponsor.logo_path }}" alt="{{ sponsor.business_name }} — {{ state_name }} sponsor"></div>
+          <div class="sponsor-logo-chip"><img src="file://{{ sponsor.logo_path }}" alt="{{ sponsor.business_name }}. {{ state_name }} sponsor"></div>
           {% else %}
           <div class="sponsor-band-name">{{ sponsor.business_name }}</div>
           {% endif %}
@@ -1089,69 +1106,6 @@
     </div>
   </div>
 </section>
-
-{# ━━━━━━━━━━━━━━ NAMED COURT ACTORS — paginates across multiple pages ━━━━━━━━━━━━━━ #}
-{% for actor_page in actor_pages %}
-{% set this_page_number = actor_start_page + loop.index0 %}
-<section class="page">
-  <div class="runhead">
-    <div><span class="r-state">{{ state_name }}</span> · Family Court Data Report</div>
-    <div class="r-page">Stand With Meg · {{ "%02d"|format(this_page_number) }} / {{ total_pages }}</div>
-  </div>
-
-  {% if loop.first %}
-  <h2 class="section-head"><span class="num">{{ actor_section_num }}</span>Named Court Actors · {{ state_name }}</h2>
-  <p class="lede" style="margin-bottom: 18px;">A name appears below only after {{ court_actor_threshold }} or more independent families have named the same actor in {{ state_name }}. Submitter names, emails, and contact details are never published. Comments below are direct family reports — one per family — with all identifying information removed.</p>
-  {% else %}
-  <h2 class="section-head"><span class="num">{{ actor_section_num }}</span>Named Court Actors, continued</h2>
-  {% endif %}
-
-  <div class="actor-cards">
-    {% for actor in actor_page %}
-    <div class="actor-card">
-      <div class="actor-card-header">
-        <div class="name">{{ actor.name }}{% if actor.continuation_total > 1 %}<span class="actor-continuation">continued {{ actor.continuation_index }} / {{ actor.continuation_total }}</span>{% endif %}</div>
-        <div class="meta">
-          {{ actor.role }}{% if actor.court_or_county %} · {{ actor.court_or_county }}{% endif %} · <span class="families">{{ actor.submission_count }} {% if actor.submission_count == 1 %}submission{% else %}submissions{% endif %}</span>
-        </div>
-      </div>
-      {% if actor.comments %}
-      <ul class="actor-comments">
-        {% for c in actor.comments %}
-        <li>
-          {% if c.continued_from_previous %}<span class="comment-continuation">Family comment continued</span>{% endif %}
-          <span class="comment-text">"{{ c.note }}"</span>
-          {% if c.continues %}<span class="comment-continuation">Continues on the next card</span>{% endif %}
-          {% if c.court_or_county and c.court_or_county != actor.court_or_county %}<span class="comment-county">{{ c.court_or_county }}</span>{% endif %}
-        </li>
-        {% endfor %}
-      </ul>
-      {% endif %}
-      {% if actor.complaint_packet_url %}
-      <div class="actor-complaint">
-        <strong>Create Complaint Packet:</strong>
-        {% if actor.complaint_agency_name %}{{ actor.complaint_agency_name }} · {% endif %}
-        <a href="{{ actor.complaint_packet_url }}">{{ actor.complaint_packet_url }}</a>
-        <br>
-        Family-reported pattern context only. Each person must file only their own truthful, first-hand complaint using their own facts, dates, evidence, orders, transcripts, and documents.
-      </div>
-      {% endif %}
-    </div>
-    {% endfor %}
-  </div>
-
-  {% if loop.last %}
-  <div class="footnote" style="margin-top: 16px;">
-    <strong>Public threshold rule:</strong> Names are grouped conservatively by normalized spelling, role, and location. Common titles, punctuation, casing, and middle initials collapse together. Close misspellings are not auto-merged without admin review. Only family-direct submissions count toward the public threshold.
-  </div>
-  {% endif %}
-
-  <div class="page-foot">
-    <div class="credit"><span class="star">★</span><span>A <strong>StandWithMeg.com</strong> Report · Family Rights Registry</span></div>
-    <div class="pg">{{ state_name }} · {{ "%02d"|format(this_page_number) }} / {{ total_pages }}</div>
-  </div>
-</section>
-{% endfor %}
 
 {# ━━━━━━━━━━━━━━ AT A GLANCE ━━━━━━━━━━━━━━ #}
 <section class="page">
@@ -1204,8 +1158,8 @@
         <li>No substantiated abuse.</li>
       </ul>
       <div class="divider"></div>
-      <p>It took only a signature on an ex parte emergency order to erase a mother. I refused to disappear. I fought back, and built the Family Rights Registry so {{ state_name }} families — and families across every represented location — would stop being invisible to the data. This report is their record.</p>
-      <div class="signoff">— Meg · StandWithMeg.com</div>
+      <p>It took only a signature on an ex parte emergency order to erase a mother. I refused to disappear. I fought back, and built the Family Rights Registry so {{ state_name }} families. and families across every represented location. would stop being invisible to the data. This report is their record.</p>
+      <div class="signoff">;  Meg · StandWithMeg.com</div>
     </div>
   </div>
   <div class="page-foot">
@@ -1214,7 +1168,7 @@
   </div>
 </section>
 
-{# ━━━━━━━━━━━━━━ PAGE 3 — FINANCIAL ━━━━━━━━━━━━━━ #}
+{# ━━━━━━━━━━━━━━ PAGE 3. FINANCIAL ━━━━━━━━━━━━━━ #}
 <section class="page">
   <div class="runhead">
     <div><span class="r-state">{{ state_name }}</span> · Family Court Data Report</div>
@@ -1223,7 +1177,7 @@
 
   <h2 class="section-head"><span class="num">{{ financial_section_num }}</span>The Cost of {{ state_name }} Family Court</h2>
 
-  <p class="lede" style="margin-bottom: 18px;">Legal fees are the largest reported expense, but they are not the only one. Lost wages, evaluation costs, and reunification services compound the financial loss — pushing most families toward pro se representation once their savings run out.</p>
+  <p class="lede" style="margin-bottom: 18px;">Legal fees are the largest reported expense, but they are not the only one. Lost wages, evaluation costs, and reunification services compound the financial loss. pushing most families toward pro se representation once their savings run out.</p>
 
   <table class="expense-table">
     <thead>
@@ -1247,17 +1201,17 @@
       {% endfor %}
       <tr class="total-row">
         <td class="headline">Median Family Burden{% if family_burden_n %} ({{ family_burden_n }} {% if family_burden_n == 1 %}family{% else %}families{% endif %} reporting {{ family_burden_min_cats }}+ categories){% endif %}</td>
-        <td class="num">—</td>
+        <td class="num">; </td>
         <td class="num">{{ median_family_impact }}</td>
-        <td class="num">—</td>
-        <td class="num">—</td>
+        <td class="num">; </td>
+        <td class="num">; </td>
       </tr>
     </tbody>
   </table>
 
 
   <div class="footnote">
-    <strong>Median vs. mean:</strong> Median is the middle reported amount, so it better reflects the typical reporting family when a few very large expenses appear. Mean is the average across reporting families and can be pulled higher by outliers. <strong>Median Family Burden</strong> is the median of total reported expenses across families who reported costs in {{ family_burden_min_cats }} or more expense categories with a combined total of at least $1,000 — a true median of real family totals, restricted to families who filled out enough of the financial section to characterize their case and excluding obvious data-entry artifacts.
+    <strong>Median vs. mean:</strong> Median is the middle reported amount, so it better reflects the typical reporting family when a few very large expenses appear. Mean is the average across reporting families and can be pulled higher by outliers. <strong>Median Family Burden</strong> is the median of total reported expenses across families who reported costs in {{ family_burden_min_cats }} or more expense categories with a combined total of at least $1,000. a true median of real family totals, restricted to families who filled out enough of the financial section to characterize their case and excluding obvious data-entry artifacts.
   </div>
 
   {% if has_asset_footnote %}
@@ -1293,7 +1247,7 @@
   </div>
 </section>
 
-{# ━━━━━━━━━━━━━━ PAGE 4 — WHO IS REPORTING + GEOGRAPHY + ALLEGATIONS ━━━━━━━━━━━━━━ #}
+{# ━━━━━━━━━━━━━━ PAGE 4. WHO IS REPORTING + GEOGRAPHY + ALLEGATIONS ━━━━━━━━━━━━━━ #}
 <section class="page">
   <div class="runhead">
     <div><span class="r-state">{{ state_name }}</span> · Family Court Data Report</div>
@@ -1361,6 +1315,41 @@
 </section>
 
 
+{# ━━━━━━━━━━━━━━ NAMED COURT ACTORS. paginates across multiple pages ━━━━━━━━━━━━━━ #}
+{% for actor_page in actor_pages %}
+{% set this_page_number = actor_start_page + loop.index0 %}
+<section class="page actor-page">
+  <div class="runhead">
+    <div><span class="r-state">{{ state_name }}</span> · Family Court Data Report</div>
+    <div class="r-page">Stand With Meg · {{ "%02d"|format(this_page_number) }} / {{ total_pages }}</div>
+  </div>
+
+  {% if loop.first %}
+  <h2 class="section-head"><span class="num">{{ actor_section_num }}</span>Named Court Actors · {{ state_name }}</h2>
+  <p class="lede" style="margin-bottom: 18px;">Names appear after {{ court_actor_threshold }} independent families name an actor in {{ state_name }}. Comments are family reports, one per family, not established findings. Submitter names and contact details are withheld.</p>
+  {% else %}
+  <h2 class="section-head"><span class="num">{{ actor_section_num }}</span>Named Court Actors, continued</h2>
+  {% endif %}
+
+  <div class="actor-cards">
+    {% for actor in actor_page %}
+    {% include 'actor_card.html.j2' %}
+    {% endfor %}
+  </div>
+
+  {% if loop.last %}
+  <div class="footnote" style="margin-top: 16px;">
+    <strong>Public threshold rule:</strong> Names are grouped conservatively by normalized spelling, role, and location. Common titles, punctuation, casing, and middle initials collapse together. Close misspellings are not auto-merged without admin review. Only family-direct submissions count toward the public threshold.
+  </div>
+  {% endif %}
+
+  <div class="page-foot">
+    <div class="credit"><span class="star">★</span><span>A <strong>StandWithMeg.com</strong> Report · Family Rights Registry</span></div>
+    <div class="pg">{{ state_name }} · {{ "%02d"|format(this_page_number) }} / {{ total_pages }}</div>
+  </div>
+</section>
+{% endfor %}
+
 {# ━━━━━━━━━━━━━━ PARENT VOICES ━━━━━━━━━━━━━━ #}
 {% for voice_page in voice_pages %}
 <section class="page">
@@ -1370,7 +1359,7 @@
   </div>
 
   {% if loop.first %}
-  <h2 class="section-head"><span class="num">{{ voices_section_num }}</span>Parent Voices — {{ state_name }}</h2>
+  <h2 class="section-head"><span class="num">{{ voices_section_num }}</span>Parent Voices. {{ state_name }}</h2>
   <p class="lede" style="margin-bottom: 18px;">Selected voice excerpts appear here for readability. Every approved, shareable {{ state_name }} comment is printed in full in the appendix that follows.</p>
   {% else %}
   <h2 class="section-head"><span class="num">{{ voices_section_num }}</span>Parent Voices, continued</h2>
@@ -1380,7 +1369,7 @@
   <div class="pullquote">
     <span class="mark">"</span>
     <blockquote>{{ voice_page.pullquote.quote }}</blockquote>
-    <cite>— {{ voice_page.pullquote.attribution }}</cite>
+    <cite>{{ voice_page.pullquote.attribution }}</cite>
   </div>
   {% endif %}
 
@@ -1388,7 +1377,7 @@
   <div class="subsection" style="color: var(--crimson); border-bottom-color: rgba(185,28,28,0.35); margin-top: 18px;">On the Reported Allegations</div>
   <div class="voice-card" style="margin-bottom: 14px;">
     <blockquote>{{ allegation_quote.quote }}</blockquote>
-    <cite>— {{ allegation_quote.attribution }}</cite>
+    <cite>{{ allegation_quote.attribution }}</cite>
   </div>
   <div class="subsection">More Voices from {{ state_name }}</div>
   {% endif %}
@@ -1397,7 +1386,7 @@
     {% for v in voice_page.cards %}
     <div class="voice-card">
       <blockquote>{{ v.quote }}</blockquote>
-      <cite>— {{ v.attribution }}</cite>
+      <cite>{{ v.attribution }}</cite>
     </div>
     {% endfor %}
   </div>
@@ -1423,7 +1412,7 @@
   </div>
 
   {% if loop.first %}
-  <h2 class="section-head"><span class="num">{{ full_comments_section_num }}</span>Full Parent Comments — {{ state_name }}</h2>
+  <h2 class="section-head"><span class="num">{{ full_comments_section_num }}</span>Full Parent Comments. {{ state_name }}</h2>
   <p class="lede" style="margin-bottom: 14px;">The comments below are the full approved, publicly shareable survey comments from {{ state_name }} families. Data-only and do-not-share submissions are excluded from this public appendix.</p>
   {% else %}
   <h2 class="section-head"><span class="num">{{ full_comments_section_num }}</span>Full Parent Comments, continued</h2>
@@ -1433,7 +1422,7 @@
     {% for v in quote_page.cards %}
     <div class="full-comment-card">
       <blockquote>{{ v.quote }}</blockquote>
-      <cite>— {{ v.attribution }}</cite>
+      <cite>{{ v.attribution }}</cite>
     </div>
     {% endfor %}
   </div>
@@ -1451,7 +1440,7 @@
 </section>
 {% endfor %}
 
-{# ━━━━━━━━━━━━━━ LAST PAGE — METHODOLOGY / CLOSING ━━━━━━━━━━━━━━ #}
+{# ━━━━━━━━━━━━━━ LAST PAGE. METHODOLOGY / CLOSING ━━━━━━━━━━━━━━ #}
 <section class="page">
   <div class="runhead">
     <div><span class="r-state">{{ state_name }}</span> · Family Court Data Report</div>
@@ -1464,11 +1453,11 @@
     <div>
       <h3 style="font-family: var(--font-display); text-transform: uppercase; letter-spacing: 0.09em; font-weight: 600; font-size: 12px; color: var(--navy); margin: 0 0 10px;">What this is</h3>
       <p class="body-text">The Family Rights Registry is a public, parent-reported data collection run by Stand With Meg. Every figure in this {{ state_name }} report comes from {{ state_name }} respondents who voluntarily submitted survey entries about their experience inside family court and/or CPS.</p>
-      <p class="body-text" style="margin-top: 10px;">This report is built to help families, advocates, reporters, and legislators see the patterns emerging in {{ state_name }} — not to replace formal research, and not to name individual judges or counties as responsible parties.</p>
+      <p class="body-text" style="margin-top: 10px;">This report is built to help families, advocates, reporters, and legislators see the patterns emerging in {{ state_name }}, not to replace formal research, and not to name individual judges or counties as responsible parties.</p>
     </div>
     <div>
       <h3 style="font-family: var(--font-display); text-transform: uppercase; letter-spacing: 0.09em; font-weight: 600; font-size: 12px; color: var(--navy); margin: 0 0 10px;">What it isn't</h3>
-      <p class="body-text">This is not a representative sample. Respondents self-select. The {{ total }} {{ state_name }} families reporting here are not the universe of {{ state_name }} families in court — they are the families who found the survey, trusted it enough to submit, and told us what happened to them.</p>
+      <p class="body-text">This is not a representative sample. Respondents self-select. The {{ total }} {{ state_name }} families reporting here are not the universe of {{ state_name }} families in court. They are the families who found the survey, trusted it enough to submit, and told us what happened to them.</p>
       <p class="body-text" style="margin-top: 10px;">Financial figures are self-reported. Response counts and percentages use the number of families who answered that specific topic or financial field. The Median Family Burden headline is the median of total reported expenses across families who reported in three or more expense categories. Quotes are minimally edited.</p>
     </div>
   </div>

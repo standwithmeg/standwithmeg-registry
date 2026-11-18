@@ -13,7 +13,10 @@ from __future__ import annotations
 import hashlib, json, os, sys, statistics
 from pathlib import Path
 from collections import Counter, defaultdict
-from datetime import datetime, timezone, timedelta
+from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
+
+from actor_slides import attach_actor_slides, load_slide_manifest
 
 import openpyxl
 from jinja2 import Environment, FileSystemLoader
@@ -88,7 +91,9 @@ def pdf_template_version() -> str:
     files = [
         BASE_DIR / "generate_state_pdf.py",
         BASE_DIR / "lib_supabase_rows.py",
+        BASE_DIR / "actor_slides.py",
         TEMPLATE_DIR / "state_report.html.j2",
+        TEMPLATE_DIR / "actor_card.html.j2",
     ]
     assets_dir = BASE_DIR / "assets"
     if assets_dir.exists():
@@ -120,7 +125,7 @@ def state_input_hash(state_abbr: str, rows: list, court_actors: list, version_ha
     payload = {
         "state_abbr": state_abbr,
         "rows": rows,
-        "court_actors": court_actors,
+        "court_actors": [{k: v for k, v in actor.items() if k != "artwork_uri"} for actor in court_actors],
         "template_version": version_hash,
         "source": source,
         # Regenerate when the cover sponsor changes (added/removed/edited).
@@ -790,7 +795,7 @@ def _split_comment_text(text: str, max_chars: int = ACTOR_COMMENT_CHUNK_CHARS) -
     return chunks or [value]
 
 
-def _split_court_actor(actor: dict) -> list[dict]:
+def _split_court_actor(actor: dict, weight_fn=None, target=None) -> list[dict]:
     """Return renderable fragments for one actor while preserving every comment.
 
     A fixed-height PDF page cannot safely contain a card heavier than the page
@@ -798,7 +803,9 @@ def _split_court_actor(actor: dict) -> list[dict]:
     into repeated, clearly labelled actor-card continuations. The complaint
     packet block appears once, on the final fragment.
     """
-    if _court_actor_card_weight(actor) <= ACTOR_FRAGMENT_TARGET:
+    weight_fn = weight_fn or _court_actor_card_weight
+    target = ACTOR_FRAGMENT_TARGET if target is None else target
+    if weight_fn(actor) <= target:
         single = dict(actor)
         single["continuation_index"] = 1
         single["continuation_total"] = 1
@@ -810,7 +817,7 @@ def _split_court_actor(actor: dict) -> list[dict]:
 
     comment_units: list[dict] = []
     for source_index, comment in enumerate(actor.get("comments", []) or []):
-        pieces = _split_comment_text(comment.get("note", ""))
+        pieces = _split_comment_text(comment.get("note", ""), max_chars=1050 if actor.get("artwork_uri") else ACTOR_COMMENT_CHUNK_CHARS)
         for piece_index, piece in enumerate(pieces):
             comment_units.append({
                 **comment,
@@ -828,7 +835,10 @@ def _split_court_actor(actor: dict) -> list[dict]:
 
     for comment in comment_units:
         candidate = {**base, "comments": current_comments + [comment]}
-        if current_comments and _court_actor_card_weight(candidate) > ACTOR_FRAGMENT_TARGET:
+        measured_candidate = {**candidate, "complaint_packet_url": actor.get("complaint_packet_url"),
+                              "complaint_agency_name": actor.get("complaint_agency_name"),
+                              "continuation_index": 1, "continuation_total": 2}
+        if current_comments and weight_fn(measured_candidate) > target:
             fragments.append({**base, "comments": current_comments})
             current_comments = [comment]
         else:
@@ -845,6 +855,72 @@ def _split_court_actor(actor: dict) -> list[dict]:
             fragment["complaint_packet_url"] = actor.get("complaint_packet_url")
             fragment["complaint_agency_name"] = actor.get("complaint_agency_name")
     return fragments
+
+
+def _paginate_measured_actors(actors, measure, first_budget, rest_budget, ending_reserve=0):
+    """Pack actual rendered card heights; split only cards too tall for a page."""
+    pages = []
+    current = []
+    used = 0
+    for actor_index, actor in enumerate(actors):
+        reserve = ending_reserve if actor_index == len(actors) - 1 else 0
+        whole = {**actor, "continuation_index": 1, "continuation_total": 1,
+                 "comments": [{**comment, "source_comment_index": index}
+                              for index, comment in enumerate(actor.get("comments", []))]}
+        height = measure(whole)
+        budget = (rest_budget if pages else first_budget) - reserve
+        # Prefer keeping the entire actor together on the next page over
+        # splitting comments just to fill the end of the current page.
+        if current and height > budget - used:
+            pages.append(current)
+            current = []
+            used = 0
+            budget = rest_budget - reserve
+        if height <= budget:
+            fragments = [whole]
+        else:
+            # Reserve the final complaint block and continuation badge while
+            # measuring fragments, so neither can create a late overflow.
+            fragments = _split_court_actor(whole, measure, budget - 8)
+        for fragment in fragments:
+            height = measure(fragment)
+            budget = (rest_budget if pages else first_budget) - reserve
+            if current and used + height > budget:
+                pages.append(current)
+                current = []
+                used = 0
+                budget = rest_budget - reserve
+            if height > budget:
+                raise ValueError(f"Actor card cannot fit the printable page: {actor['name']}")
+            current.append(fragment)
+            used += height
+    if current:
+        pages.append(current)
+    return pages
+
+
+def _measure_actor_pagination(page, env, actors):
+    bounds = page.evaluate("""() => {
+      const sections = [...document.querySelectorAll('.actor-page')];
+      const first = sections[0];
+      const intro = first.querySelector('.lede');
+      const footerTop = first.querySelector('.page-foot').getBoundingClientRect().top;
+      const cardsTop = first.querySelector('.actor-cards').getBoundingClientRect().top;
+      const note = sections[sections.length - 1].querySelector('.footnote');
+      const reserve = note ? note.getBoundingClientRect().height + 22 : 22;
+      const extra = intro ? intro.getBoundingClientRect().height + parseFloat(getComputedStyle(intro).marginBottom) : 0;
+      return {first: footerTop - cardsTop - 8, rest: footerTop - cardsTop - 8 + extra, reserve};
+    }""")
+    template = env.get_template("actor_card.html.j2")
+    def measure(actor):
+        actor = {"continuation_index": 1, "continuation_total": 1, **actor}
+        html = template.render(actor=actor)
+        return page.evaluate("""html => {
+          const slot = document.querySelector('.actor-page .actor-cards');
+          slot.innerHTML = html;
+          return slot.querySelector('.actor-card').getBoundingClientRect().height;
+        }""", html)
+    return _paginate_measured_actors(actors, measure, bounds["first"], bounds["rest"], bounds["reserve"])
 
 
 def _court_actor_card_weight(actor):
@@ -868,7 +944,7 @@ def _court_actor_card_weight(actor):
     LONG_COMMENT_WRAP = 260    # chars that fit on one .actor-comments li line
     LONG_COMMENT_PENALTY = 40  # added weight per extra wrapped line
 
-    weight = PER_ACTOR_OVERHEAD
+    weight = PER_ACTOR_OVERHEAD + (1250 if actor.get("artwork_uri") else 0)
     for c in actor.get('comments', []) or []:
         text_len = len(c.get('note', '') or '')
         weight += text_len + PER_COMMENT_OVERHEAD
@@ -958,7 +1034,7 @@ def _data_as_of_date(rows: list, fallback: datetime | None = None) -> str:
     return value.strftime("%B %d, %Y").replace(" 0", " ")
 
 
-def build_template_context(state_abbr, rows, court_actors=None, sponsor=None):
+def build_template_context(state_abbr, rows, court_actors=None, sponsor=None, registry_total=None, rebuilt_at=None, actor_pages_override=None):
     """Build the full dict of template variables for a state."""
     court_actors = court_actors or []
     d = state_stats(rows)
@@ -968,7 +1044,7 @@ def build_template_context(state_abbr, rows, court_actors=None, sponsor=None):
     ml = d['months_lost']
     is_us_state = is_us_state_location(state_abbr)
     state_name = report_location_name(state_abbr)
-    now = datetime.now(timezone(timedelta(hours=-5)))
+    now = rebuilt_at or datetime.now(ZoneInfo("America/Chicago"))
 
     counties_represented = d.get('counties_unique', len(d['counties']))
     subdivisions_total = STATE_COUNTIES.get(state_abbr.upper()) if is_us_state else None
@@ -1129,39 +1205,25 @@ def build_template_context(state_abbr, rows, court_actors=None, sponsor=None):
     full_comment_pages = full_quote_pages(all_quotes)
     num_full_comment_pages = len(full_comment_pages)
 
-    # Court Actors moved to Page 2 (right after cover) when present.
-    # The list paginates across multiple pages if comments are long, so
-    # actor_pages is a list of lists, one per page. When absent, the rest
-    # of the report shifts up.
-    actor_pages = _paginate_court_actors(court_actors)
+    # Statistics lead every report; actor pages follow the three data pages.
+    actor_pages = _paginate_court_actors(court_actors) if actor_pages_override is None else actor_pages_override
     has_actors = bool(actor_pages)
     actor_page_count = len(actor_pages)
-    actor_start_page = 2 if has_actors else None
-    glance_page_number = 2 + actor_page_count  # always lands directly after the cover + actor pages
-    financial_page_number = glance_page_number + 1
-    who_page_number = financial_page_number + 1
-    voices_start_page = who_page_number + 1
+    glance_page_number = 2
+    financial_page_number = 3
+    who_page_number = 4
+    actor_start_page = 5 if has_actors else None
+    voices_start_page = 5 + actor_page_count
     full_comments_start_page = voices_start_page + num_voice_pages
     methodology_page_number = full_comments_start_page + num_full_comment_pages
-    total_pages = methodology_page_number  # cover + actor_pages + glance + financial + who + voices + full comments + methodology
-
-    # Section numbers shift when Court Actors becomes section 01.
-    if has_actors:
-        actor_section_num = "01"
-        glance_section_num = "02"
-        financial_section_num = "03"
-        who_section_num = "04"
-        voices_section_num = "05"
-        full_comments_section_num = "06"
-        methodology_section_num = "07"
-    else:
-        actor_section_num = None
-        glance_section_num = "01"
-        financial_section_num = "02"
-        who_section_num = "03"
-        voices_section_num = "04"
-        full_comments_section_num = "05"
-        methodology_section_num = "06"
+    total_pages = methodology_page_number
+    glance_section_num = "01"
+    financial_section_num = "02"
+    who_section_num = "03"
+    actor_section_num = "04" if has_actors else None
+    voices_section_num = "05" if has_actors else "04"
+    full_comments_section_num = "06" if has_actors else "05"
+    methodology_section_num = "07" if has_actors else "06"
 
     # State number (alphabetical order of state abbreviation)
     sorted_states = sorted(STATE_NAMES.keys())
@@ -1175,11 +1237,12 @@ def build_template_context(state_abbr, rows, court_actors=None, sponsor=None):
         'report_series': report_series,
         'state_number': state_number,
         'total': n,
+        'registry_total': registry_total,
         'report_date': now.strftime('%B %d, %Y').replace(' 0', ' '),
         'data_as_of_date': _data_as_of_date(rows, fallback=now),
         'report_month_year': now.strftime('%B %Y'),
         'total_pages': f"{total_pages:02d}",
-        # Page numbers (dynamic so Court Actors can lead the report when present)
+        # Page numbers (statistics first, followed by court actors)
         'actor_start_page': actor_start_page,
         'actor_page_count': actor_page_count,
         'glance_page_number': glance_page_number,
@@ -1188,7 +1251,7 @@ def build_template_context(state_abbr, rows, court_actors=None, sponsor=None):
         'voices_start_page': voices_start_page,
         'full_comments_start_page': full_comments_start_page,
         'methodology_page_number': methodology_page_number,
-        # Section labels (also shift when Court Actors becomes section 01)
+        # Section labels
         'actor_section_num': actor_section_num,
         'glance_section_num': glance_section_num,
         'financial_section_num': financial_section_num,
@@ -1269,11 +1332,11 @@ def build_template_context(state_abbr, rows, court_actors=None, sponsor=None):
     }
 
 
-def generate_pdf(state_abbr, rows, output_path=None, browser=None, court_actors=None, sponsor=None):
+def generate_pdf(state_abbr, rows, output_path=None, browser=None, court_actors=None, sponsor=None, registry_total=None, rebuilt_at=None, layout_metadata=None):
     """Render the Jinja2 template and convert to PDF via Playwright."""
-    ctx = build_template_context(state_abbr, rows, court_actors=court_actors, sponsor=sponsor)
+    ctx = build_template_context(state_abbr, rows, court_actors=court_actors, sponsor=sponsor, registry_total=registry_total, rebuilt_at=rebuilt_at)
 
-    env = Environment(loader=FileSystemLoader(str(TEMPLATE_DIR)))
+    env = Environment(loader=FileSystemLoader(str(TEMPLATE_DIR)), autoescape=True)
     template = env.get_template('state_report.html.j2')
     html_str = template.render(**ctx)
 
@@ -1297,8 +1360,36 @@ def generate_pdf(state_abbr, rows, output_path=None, browser=None, court_actors=
                 if own_browser:
                     pw = sync_playwright().start()
                     browser = pw.chromium.launch()
-                page = browser.new_page()
+                # Print CSS uses width:100%; measure at Letter's actual CSS
+                # width, not Playwright's wider default browser viewport.
+                page = browser.new_page(viewport={"width": 816, "height": 1056})
                 page.goto(f"file://{tmp.name}", wait_until="networkidle")
+                page.emulate_media(media="print")
+                page.evaluate("document.fonts.ready")
+                if court_actors:
+                    measured_pages = _measure_actor_pagination(page, env, court_actors)
+                    ctx = build_template_context(state_abbr, rows, court_actors=court_actors, sponsor=sponsor,
+                                                 registry_total=registry_total, rebuilt_at=rebuilt_at,
+                                                 actor_pages_override=measured_pages)
+                    Path(tmp.name).write_text(template.render(**ctx), encoding="utf-8")
+                    page.reload(wait_until="networkidle")
+                    page.evaluate("document.fonts.ready")
+                problems = page.evaluate("""() => {
+                  const problems = [];
+                  document.querySelectorAll('img').forEach(image => {
+                    if (!image.complete || image.naturalWidth === 0) problems.push('Missing image');
+                  });
+                  document.querySelectorAll('.page').forEach((section, index) => {
+                    const footer = section.querySelector('.page-foot');
+                    const limit = footer ? footer.getBoundingClientRect().top - 6 : section.getBoundingClientRect().bottom - 8;
+                    section.querySelectorAll('.actor-card, .footnote, .cover-bottom').forEach(block => {
+                      if (block.getBoundingClientRect().bottom > limit) problems.push(`Page ${index + 1}: content crosses bottom boundary`);
+                    });
+                  });
+                  return problems;
+                }""")
+                if problems:
+                    raise ValueError("PDF layout validation failed: " + "; ".join(problems))
                 page.pdf(
                     path=str(output_path),
                     format="Letter",
@@ -1307,6 +1398,8 @@ def generate_pdf(state_abbr, rows, output_path=None, browser=None, court_actors=
                 )
                 page.close()
         except Exception as playwright_err:
+            if isinstance(playwright_err, ValueError):
+                raise
             # Local Codex/macOS sandboxes can block Chromium's Mach port
             # registration. GitHub Actions should use Playwright; this fallback
             # keeps local external-drive runs usable when WeasyPrint is present.
@@ -1327,6 +1420,8 @@ def generate_pdf(state_abbr, rows, output_path=None, browser=None, court_actors=
             pw.stop()
 
     print(f"  PDF written: {output_path} ({output_path.stat().st_size / 1024:.0f} KB, {used_renderer})")
+    if layout_metadata is not None:
+        layout_metadata.update(actor_page_count=ctx["actor_page_count"], page_count=int(ctx["total_pages"]))
     return output_path
 
 
@@ -1400,6 +1495,7 @@ def main():
     source_name = "supabase" if use_supabase else "xlsx"
     generated = 0
     skipped = 0
+    slide_manifest = load_slide_manifest() if use_supabase else []
     for state in states:
         if state not in by_state:
             print(f"  {state}: not found in data, skipping")
@@ -1408,7 +1504,7 @@ def main():
         if len(sr) < 30:
             print(f"  {state}: {len(sr)} submissions, below 30-family threshold; skipping")
             continue
-        court_actors = public_actors_by_state.get(state, [])
+        court_actors = attach_actor_slides(public_actors_by_state.get(state, []), state, slide_manifest)
         sponsor = load_state_exclusive_sponsor(state) if load_state_exclusive_sponsor else None
         input_hash = state_input_hash(state, sr, court_actors, version_hash, source_name, sponsor)
         cached = cache.get(state) if isinstance(cache.get(state), dict) else None
@@ -1419,9 +1515,14 @@ def main():
         if sponsor:
             print(f"    Sponsor: {sponsor.get('business_name')} (State Exclusive)")
         print(f"\n  Generating {report_location_name(state)} ({state}) — {len(sr)} submissions")
-        generate_pdf(state, sr, court_actors=court_actors, sponsor=sponsor)
+        rebuilt_at = datetime.now(ZoneInfo("America/Chicago"))
+        layout = {}
+        generate_pdf(state, sr, court_actors=court_actors, sponsor=sponsor, registry_total=len(rows), rebuilt_at=rebuilt_at, layout_metadata=layout)
         cache[state] = {
             "input_hash": input_hash,
+            "registry_total": len(rows),
+            **layout,
+            "rebuilt_at": rebuilt_at.isoformat(),
             "last_regen": datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z"),
             "template_version": version_hash,
         }
