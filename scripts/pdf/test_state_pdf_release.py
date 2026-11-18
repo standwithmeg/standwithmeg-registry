@@ -3,6 +3,8 @@
 from __future__ import annotations
 
 import re
+import json
+import hashlib
 import sys
 import tempfile
 import unittest
@@ -23,7 +25,7 @@ from generate_state_pdf import (
     state_input_hash,
     _paginate_measured_actors,
 )
-from actor_slides import _match_actor, _attach_slide
+from actor_slides import _match_actor, _attach_slide, _merge_manifests
 import verify_state_pdf_release as release
 from verify_state_pdf_release import _actor_heading_present, _cover_failures, _fragment_present
 
@@ -105,11 +107,63 @@ class StatePdfReleaseTests(unittest.TestCase):
 
     def test_retired_slide_uses_public_portrait(self) -> None:
         from urllib.error import HTTPError
-        entry = {"state_abbr": "KS", "slug": "example_actor", "display_name": "Example Actor", "photo_url": "/public/photo.png"}
-        with patch("actor_slides._download", side_effect=[HTTPError("url", 410, "Gone", {}, None), (b"photo", "image/png")]):
+        entry = {"state_abbr": "KS", "slug": "example_actor", "display_name": "Example Actor", "photo_url": "/court-actors/ks/example_actor/image_1080.png"}
+        with patch("actor_slides._download", side_effect=[(b"photo", "image/png"), HTTPError("url", 410, "Gone", {}, None)]):
             actor = _attach_slide({"name": "Example Actor"}, "KS", [entry])
         self.assertEqual(actor["artwork_kind"], "portrait")
         self.assertTrue(actor["artwork_url"].endswith("/example_actor/image_1080.png"))
+
+    def test_archive_photo_is_not_hidden_by_current_manifest_null(self) -> None:
+        current = {"state_abbr": "KS", "slug": "example_actor", "photo_url": None, "family_count": 4}
+        archived = {**current, "photo_url": "/court-actors/ks/example_actor/image_1080.png", "family_count": 3}
+        merged = _merge_manifests([current], [archived])
+        self.assertEqual(merged, [{**current, "photo_url": archived["photo_url"]}])
+        self.assertIsNone(current["photo_url"])
+
+    def _attach_with_photo_evidence(self, photo, timestamps=(100, 100)):
+        entry = {"state_abbr": "KS", "slug": "example_actor", "display_name": "Example Actor",
+                 "photo_url": "/court-actors/ks/example_actor/image_1080.png"}
+        assets = [(b"approved photo", "image/png"), (b"\xff\xd8\xffslide", "image/jpeg"),
+                  (json.dumps({"photo": photo}).encode(), "application/json")]
+        with patch("actor_slides._download", side_effect=assets), \
+                patch("actor_slides._asset_timestamp", side_effect=timestamps):
+            return _attach_slide({"name": "Example Actor"}, "KS", [entry])
+
+    def test_placeholder_deck_uses_approved_photo(self) -> None:
+        actor = self._attach_with_photo_evidence({"exists": False})
+        self.assertEqual(actor["artwork_kind"], "portrait")
+        self.assertEqual(actor["artwork_sha256"], hashlib.sha256(b"approved photo").hexdigest())
+
+    def test_unknown_render_evidence_uses_approved_photo(self) -> None:
+        self.assertEqual(self._attach_with_photo_evidence(None)["artwork_kind"], "portrait")
+
+    def test_verified_current_slide_keeps_original_slide(self) -> None:
+        self.assertEqual(self._attach_with_photo_evidence({"exists": True})["artwork_kind"], "slide")
+
+    def test_newer_approved_photo_replaces_stale_deck(self) -> None:
+        self.assertEqual(self._attach_with_photo_evidence({"exists": True}, (100, 200))["artwork_kind"], "portrait")
+
+    def test_rendered_photo_hash_detects_replacement_even_with_equal_timestamps(self) -> None:
+        self.assertEqual(self._attach_with_photo_evidence({"exists": True, "content_sha256": "old"})["artwork_kind"], "portrait")
+        current = hashlib.sha256(b"approved photo").hexdigest()
+        self.assertEqual(self._attach_with_photo_evidence({"exists": True, "content_sha256": current})["artwork_kind"], "slide")
+
+    def test_approved_alias_portrait_fills_older_deck_without_cross_state_match(self) -> None:
+        old = {"state_abbr": "KS", "slug": "jennifer_anne_passiglia", "display_name": "Jennifer Anne Passiglia"}
+        photo = {**old, "slug": "jennifer_passiglia", "photo_url": "/court-actors/ks/jennifer_passiglia/image_1080.png"}
+        assets = [(b"photo", "image/png"), (b"\xff\xd8\xffslide", "image/jpeg"),
+                  (b'{"photo":{"exists":false}}', "application/json")]
+        with patch("actor_slides._published_timestamp", side_effect=[200, 100]), \
+                patch("actor_slides._download", side_effect=assets):
+            actor = _attach_slide({"name": "Jennifer Anne Passiglia"}, "KS", [old, photo])
+        self.assertEqual(actor["artwork_kind"], "portrait")
+        self.assertTrue(actor["artwork_url"].endswith("/jennifer_passiglia/image_1080.png"))
+
+    def test_portrait_url_must_match_manifest_identity(self) -> None:
+        entry = {"state_abbr": "KS", "slug": "example_actor", "display_name": "Example Actor",
+                 "photo_url": "/court-actors/ks/different_person/image_1080.png"}
+        with self.assertRaisesRegex(ValueError, "manifest identity"):
+            _attach_slide({"name": "Example Actor"}, "KS", [entry])
 
     def test_alias_versions_choose_latest_publication_not_highest_count(self) -> None:
         old = {"state_abbr": "MO", "slug": "sue_m_crane", "display_name": "Sue Crane", "family_count": 50}
