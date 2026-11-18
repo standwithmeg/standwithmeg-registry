@@ -115,11 +115,9 @@ PERMISSION_REVERSE = {
 
 PUBLIC_ACTOR_THRESHOLD = 3
 
-# Mirrors lib/submission-public-visibility.ts. A survey submission only
-# contributes to public court-actor aggregates when the reporter explicitly
-# consented to public display AND an admin has approved the row. data_only
-# submissions never feed public counts, names, or notes — even if other
-# admin signals would otherwise let the cluster through.
+# Approval controls quoted words. All recognized consent levels contribute
+# to counts, after hidden/duplicate decisions are applied. Keep this aligned
+# with lib/submission-public-visibility.ts and the current registry app.
 _PUBLIC_SHARE_PERMISSIONS = {"public", "anonymous", "first_name"}
 
 
@@ -136,11 +134,7 @@ def _is_countable_submission(submission: dict | None) -> bool:
     if not submission:
         return False
     perm = str(submission.get("permission_to_share") or "").strip()
-    if perm == "data_only":
-        return True
-    if submission.get("approved") is not True:
-        return False
-    return perm in _PUBLIC_SHARE_PERMISSIONS
+    return perm in _PUBLIC_SHARE_PERMISSIONS or perm == "data_only"
 
 
 def _normalized_note_text(note: Any) -> str:
@@ -257,6 +251,37 @@ _GIVEN_NAME_ALIASES = {
     "andy": "andrew",
     "drew": "andrew",
     "keven": "kevin",
+    "anika": "anneka",
+    "aneka": "anneka",
+    "jonathan": "johnathan",
+    "johnathan": "johnathan",
+    "colins": "collins",
+}
+
+# Existing owner-reviewed identity from the live app's
+# lib/reviewed-actor-identities.ts. Never infer a cross-state merge by surname.
+_REVIEWED_ACTOR_IDENTITIES = ({
+    "canonical_name": 'Milfred "Bud" Dale',
+    "primary_location": "KS",
+    "role": "Attorney and Psychologist",
+    "court_or_county": "Reports from KS and TX",
+    "source_keys": ["bud dale|KS", "milfred dale|KS", "milfred bud dale|KS",
+                    "mildred dale|KS", "milfred bud dale|TX", "bud dale|TX"],
+},)
+
+_ROLE_ONLY_NAME_KEYS = {
+    "guardian ad litem", "gal", "guardian", "judge", "the judge", "justice", "magistrate",
+    "commissioner", "referee", "all judges", "judges", "attorney", "the attorney", "lawyer",
+    "counsel", "minors counsel", "child representative", "public defender", "prosecutor",
+    "cps", "cps worker", "case worker", "caseworker", "case manager", "social worker",
+    "investigator", "supervisor", "therapist", "counselor", "psychologist", "evaluator",
+    "custody evaluator", "mediator", "parenting coordinator", "visitation supervisor",
+    "foster parent", "police", "police officer", "sheriff", "deputy", "officer", "dcf",
+    "dcfs", "dhs", "dss", "dhr", "cys", "dfps", "dfcs", "acs", "dcyf", "family court",
+    "court", "the court", "court clerk", "clerk", "court staff", "unknown", "n/a", "na",
+    "none", "not sure", "unsure", "unnamed", "no name", "multiple", "many", "several",
+    "all", "all of them", "everyone", "various", "dont know", "don know", "do not know",
+    "dont remember", "don remember", "do not remember", "cant remember", "can remember",
 }
 
 
@@ -273,9 +298,19 @@ def _actor_name_key(name: Any) -> str:
     if len(tokens) >= 2:
         tokens[0] = _GIVEN_NAME_ALIASES.get(tokens[0], tokens[0])
     return " ".join(
-        re.sub(r"([a-z])\1+", r"\1", token) if len(token) >= 5 else token
+        # Preserve legitimate doubles, matching actorLooseNameKey. Collapsing
+        # them broke reviewed aliases such as Mattivi, Allison and Sweeney.
+        re.sub(r"([a-z])\1{2,}", r"\1", token) if len(token) >= 5 else token
         for token in tokens
     )
+
+
+def _reviewed_actor_identity(name: str, location: str) -> dict | None:
+    key = f"{_actor_name_key(name)}|{location.upper()}"
+    for identity in _REVIEWED_ACTOR_IDENTITIES:
+        if key in identity["source_keys"]:
+            return identity
+    return None
 
 
 def _most_common(counter: Counter):
@@ -314,7 +349,7 @@ def _actor_location(row: dict) -> str:
     return str(sub.get("outside_us_country") or "").strip().upper()
 
 
-def _actor_family_key(row: dict, review_map: dict[str, str] | None = None) -> str | None:
+def _actor_family_key(row: dict, review_map: dict[str, str] | None = None, location_override: str | None = None) -> str | None:
     """Family-dedupe key for one court_actors row. Mirrors resolveFamilyKey
     in lib/court-actors.ts so PDF counts match /api/survey/court-actors.
 
@@ -332,7 +367,7 @@ def _actor_family_key(row: dict, review_map: dict[str, str] | None = None) -> st
             return None
         if decision == "count_separately":
             return f"row:{row['id']}"
-    location = _actor_location(row)
+    location = location_override or _actor_location(row)
     joined = _joined_submission(row)
     email = str(joined.get("email") or "").strip().lower()
     return f"{email}|{location}" if email else f"submission:{row.get('submission_id')}"
@@ -493,12 +528,12 @@ def load_public_court_actors_from_supabase(state_filter: str | None = None) -> d
         if str(row.get("submission_id") or "") in hidden_submission_ids:
             continue
         location = _actor_location(row)
-        if state_filter and location != state_filter.upper():
-            continue
         role = str(row.get("role") or "").strip()
         name = str(row.get("name") or "").strip()
         name_key = _actor_name_key(name)
         if not location or not role or not name_key:
+            continue
+        if name_key in _ROLE_ONLY_NAME_KEYS or name_key.startswith("unknown "):
             continue
 
         # Count data_only submissions toward family totals (they consented
@@ -506,12 +541,17 @@ def load_public_court_actors_from_supabase(state_filter: str | None = None) -> d
         if not _is_countable_submission(_joined_submission(row)):
             continue
 
-        family_key = _actor_family_key(row, review_map)
-        if family_key is None:
-            continue
-
         alias_hit = alias_resolver.get(f"{name_key}|{location}")
         effective_name = alias_hit["canonical_name"] if alias_hit else name
+        reviewed_identity = _reviewed_actor_identity(effective_name, location)
+        if reviewed_identity:
+            effective_name = reviewed_identity["canonical_name"]
+            location = reviewed_identity["primary_location"]
+        if state_filter and location != state_filter.upper():
+            continue
+        family_key = _actor_family_key(row, review_map, location)
+        if family_key is None:
+            continue
         effective_name_key = _actor_name_key(effective_name)
         key_tuple = (location, effective_name_key)
         bucket = buckets.setdefault(
@@ -520,15 +560,18 @@ def load_public_court_actors_from_supabase(state_filter: str | None = None) -> d
                 "location_key": location,
                 "role_counts": Counter(),
                 "name_counts": Counter(),
+                "name_aliases": set(),
                 "court_counts": Counter(),
                 "families": set(),
                 "submission_ids": set(),
                 "comments": [],
                 "family_latest": {},
+                "reviewed_identity": reviewed_identity,
             },
         )
         bucket["role_counts"][role] += 1
         bucket["name_counts"][effective_name] += 1
+        bucket["name_aliases"].add(name)
         court = str(row.get("court_or_county") or "").strip()
         if court:
             bucket["court_counts"][court] += 1
@@ -590,7 +633,8 @@ def load_public_court_actors_from_supabase(state_filter: str | None = None) -> d
             key=lambda c: -len(c["note"]),
         )
         actor_name = _most_common(bucket["name_counts"]) or "Named actor"
-        display_override = _display_override_for_actor(actor_name)
+        display_override = {**(bucket.get("reviewed_identity") or {}),
+                            **_display_override_for_actor(actor_name)}
         # Honor the same comment safety overrides the slide builder applies so
         # the PDF can never expose text the share page suppressed.
         comments = _apply_comment_safety_overrides(comments, display_override)
@@ -606,6 +650,7 @@ def load_public_court_actors_from_supabase(state_filter: str | None = None) -> d
         by_state[location].append({
             "role": display_role,
             "name": display_name,
+            "name_aliases": sorted(bucket["name_aliases"]),
             "court_or_county": display_court,
             "count": count,
             "submission_count": submission_count,

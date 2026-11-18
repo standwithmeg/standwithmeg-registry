@@ -24,6 +24,8 @@ available approved portrait. The render spec must prove that a slide contains
 the current photo, using its recorded content hash or asset timestamps. Unknown
 evidence uses the approved portrait, preserving the full image without cropping.
 Approved photo aliases resolve only within the same matched identity and state.
+Slide actor totals must also match the current submission total. An outdated
+number uses the approved portrait; without a portrait the stale slide is omitted.
 Unmatched actors remain in the report with an
 explicit image-unavailable label. Network failures do not silently replace
 current artwork with an old local copy.
@@ -31,6 +33,14 @@ current artwork with an old local copy.
 Artwork is embedded in the PDF and its SHA-256 is included in the state input
 hash. Embedded slide counts are the slide's own snapshot, as labeled beside
 the image. The report's surrounding figures come from the fresh survey read.
+
+Actor headings count distinct valid survey submissions. Quote approval affects
+which words may be published, not whether a consented submission counts.
+Hidden/duplicate reviews still exclude records. The publication threshold stays
+at three distinct families, even when one family submits more than once.
+Name normalization preserves legitimate double letters so reviewed aliases
+resolve exactly as in the registry. The existing reviewed Bud Dale KS/TX identity
+is combined under Kansas, with original submission locations left unchanged.
 
 ## Current refresh schedule
 
@@ -57,5 +67,6 @@ python scripts/pdf/verify_state_pdf_release.py --state KS
 Chromium checks image loading and actor/cover overflow before writing a PDF.
 The release verifier checks pagination, cover snapshots, section order,
 eligible actor names, family-comment coverage, and input hashes before release.
+Every printed actor submission total is checked against the current source too.
 Use the existing environment configuration; do not commit source survey rows
 or credentials. Local production exports belong on the mounted production drive.
