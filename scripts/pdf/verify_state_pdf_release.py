@@ -14,6 +14,7 @@ import os
 import re
 import sys
 import unicodedata
+from datetime import datetime
 from pathlib import Path
 
 from pypdf import PdfReader
@@ -42,6 +43,7 @@ from lib_supabase_rows import (  # noqa: E402
     load_rows_from_supabase,
     load_state_exclusive_sponsor,
 )
+from actor_slides import attach_actor_slides, load_slide_manifest  # noqa: E402
 
 
 def _load_local_env() -> None:
@@ -72,6 +74,7 @@ def _compact(value: object) -> str:
 
 def _cover_failures(
     cover_text: str, state_name: str, families: int, children: int, data_as_of: str,
+    registry_total: int | None = None, rebuilt_date: str | None = None,
 ) -> list[str]:
     """Check complete headlines despite PDF letter-spacing extraction.
 
@@ -80,11 +83,16 @@ def _cover_failures(
     """
     compact_cover = _compact(cover_text)
     failures = []
-    for expected_text, label in (
+    expected = [
         (f"{families} {state_name} families on record", "family headline"),
         (f"{children} children impacted", "children headline"),
         (f"data as of {data_as_of}", "data-as-of date"),
-    ):
+    ]
+    if registry_total is not None:
+        expected.append((f"{registry_total} total surveys across the registry", "registry survey total"))
+    if rebuilt_date is not None:
+        expected.append((f"Report rebuilt {rebuilt_date}", "rebuild date"))
+    for expected_text, label in expected:
         compact_expected = _compact(expected_text)
         pattern = re.escape(compact_expected)
         if compact_expected[0].isdigit():
@@ -218,11 +226,12 @@ def verify(expected_report_count: int | None = None, only_location: str | None =
         for location, actors in load_public_court_actors_from_supabase().items()
     }
     version_hash = pdf_template_version()
+    slide_manifest = load_slide_manifest() if any(actors_by_location.values()) else []
     results: dict[str, dict] = {}
 
     for location, location_rows in sorted(verify_locations.items()):
         state_name = report_location_name(location)
-        actors = actors_by_location.get(location, [])
+        actors = attach_actor_slides(actors_by_location.get(location, []), location, slide_manifest)
         sponsor = load_state_exclusive_sponsor(location)
         expected_hash = state_input_hash(
             location,
@@ -245,7 +254,19 @@ def verify(expected_report_count: int | None = None, only_location: str | None =
                 f"!= generator {len(location_rows)}"
             )
 
-        ctx = build_template_context(location, location_rows, court_actors=actors, sponsor=sponsor)
+        # Unchanged reports retain the registry total recorded at their own
+        # rebuild, not the total on this later verification date.
+        registry_total = cached.get("registry_total")
+        rebuilt_at = None
+        try:
+            rebuilt_at = datetime.fromisoformat(cached.get("rebuilt_at", ""))
+        except (TypeError, ValueError):
+            failures.append(f"{location}: missing rebuild timestamp")
+        if not isinstance(registry_total, int) or registry_total < len(location_rows):
+            failures.append(f"{location}: invalid registry survey snapshot")
+            registry_total = None
+        ctx = build_template_context(location, location_rows, court_actors=actors, sponsor=sponsor,
+                                     registry_total=registry_total, rebuilt_at=rebuilt_at)
         for page_index, actor_page in enumerate(ctx["actor_pages"]):
             budget = ACTOR_PAGE_BUDGET_FIRST if page_index == 0 else ACTOR_PAGE_BUDGET_REST
             page_weight = sum(_court_actor_card_weight(actor) for actor in actor_page)
@@ -281,10 +302,16 @@ def verify(expected_report_count: int | None = None, only_location: str | None =
             f"{location}: {failure}"
             for failure in _cover_failures(
                 cover_text, state_name, len(location_rows), children_total, ctx["data_as_of_date"],
+                registry_total, ctx["report_date"],
             )
         )
 
         actor_page_count = int(ctx["actor_page_count"])
+        if len(reader.pages) >= 4:
+            for index, heading in ((1, f"{state_name} at a glance"), (2, f"The cost of {state_name} family court"),
+                                   (3, f"Who is reporting {state_name}")):
+                if _compact(heading) not in _compact(reader.pages[index].extract_text() or ""):
+                    failures.append(f"{location}: statistics out of order on page {index + 1}")
         # Extract the full document so a renderer-created overflow page cannot
         # hide a missing actor from this content gate. The strict physical page
         # count check above still fails that overflow separately.

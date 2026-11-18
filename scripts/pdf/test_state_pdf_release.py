@@ -20,7 +20,9 @@ from generate_state_pdf import (
     _paginate_court_actors,
     build_template_context,
     cover_image_for,
+    state_input_hash,
 )
+from actor_slides import _match_actor, _attach_slide
 import verify_state_pdf_release as release
 from verify_state_pdf_release import _actor_heading_present, _cover_failures, _fragment_present
 
@@ -54,6 +56,57 @@ def _normalized(text: str) -> str:
 
 
 class StatePdfReleaseTests(unittest.TestCase):
+    def test_statistics_lead_with_or_without_actors(self) -> None:
+        for actors in ([], [_actor("Example Actor", ["Family report."]) ]):
+            ctx = build_template_context("KS", [_row("KS", "2026-11-18")], actors, registry_total=6603,
+                                         rebuilt_at=datetime(2026, 11, 18, tzinfo=timezone.utc))
+            self.assertEqual([ctx[key] for key in ("glance_page_number", "financial_page_number", "who_page_number")], [2, 3, 4])
+            self.assertEqual(ctx["actor_start_page"], 5 if actors else None)
+            self.assertEqual(ctx["registry_total"], 6603)
+            self.assertEqual(ctx["report_date"], "November 18, 2026")
+
+    def test_artwork_pagination_preserves_long_comments_within_budget(self) -> None:
+        actor = {**_actor("Photo Actor", ["Family report detail. " * 200]), "artwork_uri": "data:image/jpeg;base64,TEST"}
+        pages = _paginate_court_actors([actor])
+        for page in pages:
+            self.assertLessEqual(sum(_court_actor_card_weight(fragment) for fragment in page), ACTOR_PAGE_BUDGET_FIRST)
+        notes = [c["note"] for page in pages for fragment in page for c in fragment["comments"]]
+        self.assertEqual(_normalized(" ".join(notes)), _normalized(actor["comments"][0]["note"]))
+
+    def test_artwork_changes_invalidate_cache_without_local_file_paths(self) -> None:
+        actor = _actor("Example Actor", [])
+        old = state_input_hash("KS", [], [{**actor, "artwork_sha256": "old"}], "v1", "supabase")
+        new = state_input_hash("KS", [], [{**actor, "artwork_sha256": "new"}], "v1", "supabase")
+        self.assertNotEqual(old, new)
+
+    def test_slide_matches_existing_bucket_alias_but_not_another_state(self) -> None:
+        entry = {"state_abbr": "KS", "slug": "bud_dale", "display_name": 'Milfred "Bud" Dale', "actor_bucket_key": "bud dale|KS"}
+        self.assertEqual(_match_actor({"name": "Bud Dale"}, "KS", [entry]), entry)
+        self.assertIsNone(_match_actor({"name": "Bud Dale"}, "MO", [entry]))
+        self.assertIsNone(_match_actor({"name": "Bud Daly"}, "KS", [entry]))
+
+    def test_retired_slide_uses_public_portrait(self) -> None:
+        from urllib.error import HTTPError
+        entry = {"state_abbr": "KS", "slug": "example_actor", "display_name": "Example Actor", "photo_url": "/public/photo.png"}
+        with patch("actor_slides._download", side_effect=[HTTPError("url", 410, "Gone", {}, None), (b"photo", "image/png")]):
+            actor = _attach_slide({"name": "Example Actor"}, "KS", [entry])
+        self.assertEqual(actor["artwork_kind"], "portrait")
+        self.assertTrue(actor["artwork_url"].endswith("/example_actor/image_1080.png"))
+
+    def test_alias_versions_choose_latest_publication_not_highest_count(self) -> None:
+        old = {"state_abbr": "MO", "slug": "sue_m_crane", "display_name": "Sue Crane", "family_count": 50}
+        new = {"state_abbr": "MO", "slug": "sue_crane", "display_name": "Sue Crane", "family_count": 3}
+        with patch("actor_slides._published_timestamp", side_effect=[100, 200]):
+            self.assertEqual(_match_actor({"name": "Sue Crane"}, "MO", [old, new]), new)
+        with patch("actor_slides._published_timestamp", return_value=0):
+            with self.assertRaises(ValueError):
+                _match_actor({"name": "Sue Crane"}, "MO", [old, new])
+
+    def test_cover_gate_checks_registry_total_and_actual_rebuild_date(self) -> None:
+        text = "295 Kansas families on record 538 children impacted Registry snapshot 6,603 total surveys across the registry Report rebuilt November 18, 2026 Data as of November 16, 2026"
+        self.assertEqual(_cover_failures(text, "Kansas", 295, 538, "November 16, 2026", 6603, "November 18, 2026"), [])
+        self.assertEqual(_cover_failures(text, "Kansas", 295, 538, "November 16, 2026", 6604, "November 17, 2026"), ["PDF cover missing registry survey total", "PDF cover missing rebuild date"])
+
     def test_cover_gate_accepts_letter_spacing_from_pypdf(self) -> None:
         text = (
             "283 KANSAS FAM ILIES ON R EC OR D · 520\nC HILDR EN IM PAC TED\n"
