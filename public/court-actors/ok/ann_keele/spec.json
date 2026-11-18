@@ -27,27 +27,27 @@
     "actor_bucket_key": "ann kele|OK"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-n0ood0ab/New Final Post and Capcut template/export/ann_keele/image_1080.png",
+    "path": "/tmp/swm-share-pages-0giaxxiy/New Final Post and Capcut template/export/ann_keele/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 120,
-    "total_submissions": 238,
-    "avg_financial_loss": 114200.98,
-    "avg_months_lost": 27.8,
+    "total_submissions": 240,
+    "avg_financial_loss": 113903.58,
+    "avg_months_lost": 27.7,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OK",
-    "state_family_count": 238,
+    "state_family_count": 240,
     "median_financial_loss": 105000,
-    "median_burden_sample_size": 125,
+    "median_burden_sample_size": 127,
     "median_months_lost": 16,
-    "pro_se_pct": 41.6,
+    "pro_se_pct": 41.2,
     "pro_se_count": 99,
-    "_pdf_state_family_count": 238,
+    "_pdf_state_family_count": 240,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6569,
+  "movement_total": 6592,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
