@@ -35,11 +35,14 @@ const nextConfig: NextConfig = {
   // it to attach photo_url + share_url to every public actor card.
   // private-docs/ holds the non-deployable Shawn source archive and must never
   // enter page or API file traces, server bundles, or static output.
+  // State PDFs are CDN-served downloads. Keep their JSON indexes available to
+  // server routes without copying the entire PDF collection into functions.
   outputFileTracingExcludes: {
-    "/*": ["./private-docs/**/*"],
-    "/**/*": ["./private-docs/**/*"],
+    "/*": ["./private-docs/**/*", "./public/state-reports/**/*.pdf"],
+    "/**/*": ["./private-docs/**/*", "./public/state-reports/**/*.pdf"],
     "/api/**/*": [
       "./private-docs/**/*",
+      "./public/state-reports/**/*.pdf",
       "./public/court-actors/**/*.jpg",
       "./public/court-actors/**/*.jpeg",
       "./public/court-actors/**/*.png",
@@ -50,6 +53,7 @@ const nextConfig: NextConfig = {
     ],
     "/api/*": [
       "./private-docs/**/*",
+      "./public/state-reports/**/*.pdf",
       "./public/court-actors/**/*.jpg",
       "./public/court-actors/**/*.jpeg",
       "./public/court-actors/**/*.png",
