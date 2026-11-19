@@ -25,7 +25,8 @@ from generate_state_pdf import (
     state_input_hash,
     _paginate_measured_actors,
 )
-from actor_slides import _match_actor, _attach_slide, _merge_manifests
+from actor_slides import _match_actor, _attach_slide, _merge_manifests, _slide_count_matches
+from actor_cover_renderer import _cover_html
 import verify_state_pdf_release as release
 from verify_state_pdf_release import _actor_heading_present, _cover_failures, _fragment_present
 
@@ -59,6 +60,48 @@ def _normalized(text: str) -> str:
 
 
 class StatePdfReleaseTests(unittest.TestCase):
+    def test_missing_deck_still_queues_a_named_slide(self) -> None:
+        actor = _attach_slide(_actor("New Actor", []), "KS", [], state_total=297)
+        self.assertIn("_cover_pending", actor)
+        self.assertIsNone(actor["_cover_pending"]["portrait"])
+        self.assertEqual(actor["_cover_pending"]["state_total"], 297)
+
+    def test_cover_count_check_follows_the_actual_website_renderer(self) -> None:
+        spec = {"actor": {"public_family_count": 4, "actor_report_count": 5}}
+        self.assertTrue(_slide_count_matches(spec, 4))
+        self.assertFalse(_slide_count_matches(spec, 5))
+
+    def test_rebuilt_cover_has_current_name_title_and_submissions_without_a_photo(self) -> None:
+        actor = {**_actor("New Actor", []), "submission_count": 5, "count": 3}
+        html = _cover_html(actor, "KS", {"state_total": 297}, None)
+        self.assertIn('NEW<br><span class="gold">ACTOR</span>', html)
+        self.assertIn('class="f1-role">Judge', html)
+        self.assertIn('<b>5</b>', html)
+        self.assertIn('submissions naming this person', html)
+        self.assertIn('Photo not available', html)
+        self.assertNotIn('{{ACTOR.IMAGE_URL}}', html)
+
+    def test_cover_preserves_matched_online_name_and_title_with_new_count(self) -> None:
+        actor = {**_actor("Allison Hibler", []), "name_aliases": ["Allison Maxwell Hibler"], "submission_count": 5}
+        pending = {"spec": {"actor": {"display_name": "Allison Maxwell Hibler", "first_name": "Allison Maxwell",
+                                       "last_name": "Hibler", "role": "Attorney", "public_family_count": 4}}}
+        html = _cover_html(actor, "KS", pending, None)
+        self.assertIn('ALLISON MAXWELL<br>', html)
+        self.assertIn('class="f1-role">Attorney', html)
+        self.assertIn('<b>5</b>', html)
+
+    def test_cover_cannot_borrow_an_unmatched_persons_name_or_title(self) -> None:
+        html = _cover_html(_actor("Example Actor", []), "KS",
+                           {"spec": {"actor": {"display_name": "Different Person", "role": "Attorney"}}}, None)
+        self.assertIn('class="f1-role">Judge', html)
+        self.assertNotIn('DIFFERENT', html)
+
+    def test_shared_cover_works_outside_kansas_and_uses_the_website_role_fallback(self) -> None:
+        for state, state_name in [("FL", "FLORIDA"), ("OH", "OHIO"), ("Canada", "CANADA")]:
+            html = _cover_html({**_actor("Example Actor", []), "role": "Other"}, state, {}, None)
+            self.assertIn(state_name, html)
+            self.assertIn('class="f1-role">Public court actor', html)
+
     def test_actor_heading_count_gate_rejects_a_stale_total(self) -> None:
         text = "Dan Livingston\nREUNIFICATION THERAPIST · JOCO · 4 SUBMISSIONS\nFamily report."
         self.assertTrue(_actor_heading_present("Dan Livingston", text))
@@ -118,13 +161,13 @@ class StatePdfReleaseTests(unittest.TestCase):
         self.assertIsNone(_match_actor({"name": "Bud Dale"}, "MO", [entry]))
         self.assertIsNone(_match_actor({"name": "Bud Daly"}, "KS", [entry]))
 
-    def test_retired_slide_uses_public_portrait(self) -> None:
+    def test_retired_slide_queues_full_cover_with_approved_portrait(self) -> None:
         from urllib.error import HTTPError
         entry = {"state_abbr": "KS", "slug": "example_actor", "display_name": "Example Actor", "photo_url": "/court-actors/ks/example_actor/image_1080.png"}
         with patch("actor_slides._download", side_effect=[(b"photo", "image/png"), HTTPError("url", 410, "Gone", {}, None)]):
             actor = _attach_slide({"name": "Example Actor"}, "KS", [entry])
-        self.assertEqual(actor["artwork_kind"], "portrait")
-        self.assertTrue(actor["artwork_url"].endswith("/example_actor/image_1080.png"))
+        self.assertIn("_cover_pending", actor)
+        self.assertTrue(actor["_cover_pending"]["portrait_url"].endswith("/example_actor/image_1080.png"))
 
     def test_archive_photo_is_not_hidden_by_current_manifest_null(self) -> None:
         current = {"state_abbr": "KS", "slug": "example_actor", "photo_url": None, "family_count": 4}
@@ -137,27 +180,28 @@ class StatePdfReleaseTests(unittest.TestCase):
         entry = {"state_abbr": "KS", "slug": "example_actor", "display_name": "Example Actor",
                  "photo_url": "/court-actors/ks/example_actor/image_1080.png"}
         assets = [(b"approved photo", "image/png"), (b"\xff\xd8\xffslide", "image/jpeg"),
-                  (json.dumps({"photo": photo}).encode(), "application/json")]
+                  (json.dumps({"photo": photo, "actor": {"display_name": "Example Actor"}}).encode(), "application/json")]
         with patch("actor_slides._download", side_effect=assets), \
                 patch("actor_slides._asset_timestamp", side_effect=timestamps):
             return _attach_slide({"name": "Example Actor"}, "KS", [entry])
 
     def test_placeholder_deck_uses_approved_photo(self) -> None:
         actor = self._attach_with_photo_evidence({"exists": False})
-        self.assertEqual(actor["artwork_kind"], "portrait")
-        self.assertEqual(actor["artwork_sha256"], hashlib.sha256(b"approved photo").hexdigest())
+        self.assertIn("_cover_pending", actor)
+        self.assertEqual(actor["_cover_pending"]["portrait"][0], b"approved photo")
 
     def test_unknown_render_evidence_uses_approved_photo(self) -> None:
-        self.assertEqual(self._attach_with_photo_evidence(None)["artwork_kind"], "portrait")
+        self.assertIn("_cover_pending", self._attach_with_photo_evidence(None))
 
     def test_verified_current_slide_keeps_original_slide(self) -> None:
-        self.assertEqual(self._attach_with_photo_evidence({"exists": True})["artwork_kind"], "slide")
+        current = hashlib.sha256(b"approved photo").hexdigest()
+        self.assertEqual(self._attach_with_photo_evidence({"exists": True, "content_sha256": current})["artwork_kind"], "slide")
 
     def test_newer_approved_photo_replaces_stale_deck(self) -> None:
-        self.assertEqual(self._attach_with_photo_evidence({"exists": True}, (100, 200))["artwork_kind"], "portrait")
+        self.assertIn("_cover_pending", self._attach_with_photo_evidence({"exists": True}, (100, 200)))
 
     def test_rendered_photo_hash_detects_replacement_even_with_equal_timestamps(self) -> None:
-        self.assertEqual(self._attach_with_photo_evidence({"exists": True, "content_sha256": "old"})["artwork_kind"], "portrait")
+        self.assertIn("_cover_pending", self._attach_with_photo_evidence({"exists": True, "content_sha256": "old"}))
         current = hashlib.sha256(b"approved photo").hexdigest()
         self.assertEqual(self._attach_with_photo_evidence({"exists": True, "content_sha256": current})["artwork_kind"], "slide")
 
@@ -169,8 +213,8 @@ class StatePdfReleaseTests(unittest.TestCase):
         with patch("actor_slides._published_timestamp", side_effect=[200, 100]), \
                 patch("actor_slides._download", side_effect=assets):
             actor = _attach_slide({"name": "Jennifer Anne Passiglia"}, "KS", [old, photo])
-        self.assertEqual(actor["artwork_kind"], "portrait")
-        self.assertTrue(actor["artwork_url"].endswith("/jennifer_passiglia/image_1080.png"))
+        self.assertIn("_cover_pending", actor)
+        self.assertTrue(actor["_cover_pending"]["portrait_url"].endswith("/jennifer_passiglia/image_1080.png"))
 
     def test_portrait_url_must_match_manifest_identity(self) -> None:
         entry = {"state_abbr": "KS", "slug": "example_actor", "display_name": "Example Actor",
@@ -190,7 +234,7 @@ class StatePdfReleaseTests(unittest.TestCase):
                   (b'{"actor":{"actor_report_count":4},"photo":{"exists":true}}', "application/json")]
         with patch("actor_slides._download", side_effect=assets):
             actor = _attach_slide({"name": "Example Actor", "submission_count": 5}, "KS", [entry])
-        self.assertEqual(actor["artwork_kind"], "portrait")
+        self.assertIn("_cover_pending", actor)
 
     def test_stale_slide_without_portrait_cannot_publish_a_conflicting_number(self) -> None:
         entry = {"state_abbr": "KS", "slug": "example_actor", "display_name": "Example Actor"}
@@ -198,7 +242,8 @@ class StatePdfReleaseTests(unittest.TestCase):
                   (b'{"actor":{"actor_report_count":4}}', "application/json")]
         with patch("actor_slides._download", side_effect=assets):
             actor = _attach_slide({"name": "Example Actor", "submission_count": 5}, "KS", [entry])
-        self.assertNotIn("artwork_uri", actor)
+        self.assertIn("_cover_pending", actor)
+        self.assertIsNone(actor["_cover_pending"]["portrait"])
 
     def test_alias_versions_choose_latest_publication_not_highest_count(self) -> None:
         old = {"state_abbr": "MO", "slug": "sue_m_crane", "display_name": "Sue Crane", "family_count": 50}
