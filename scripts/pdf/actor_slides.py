@@ -15,6 +15,7 @@ from urllib.error import HTTPError
 from urllib.parse import urlsplit
 from urllib.request import Request, urlopen
 
+from actor_cover_renderer import render_pending_covers
 from lib_supabase_rows import _actor_name_key
 
 PUBLIC_ORIGIN = "https://my.standwithmeg.com"
@@ -146,7 +147,8 @@ def _slide_count_matches(spec: dict, submission_count: int | None) -> bool:
     if submission_count is None:
         return True
     actor = spec.get("actor") or {}
-    recorded_count = next((actor[key] for key in ("actor_report_count", "submission_count", "mention_count", "family_count")
+    # This is the order the website renderer uses for the visible cover count.
+    recorded_count = next((actor[key] for key in ("public_family_count", "family_count", "actor_report_count", "submission_count", "mention_count")
                            if actor.get(key) is not None), None)
     return recorded_count == submission_count
 
@@ -154,57 +156,72 @@ def _slide_count_matches(spec: dict, submission_count: int | None) -> bool:
 def _slide_contains_portrait(entry: dict, state: str, portrait_path: str, portrait_body: bytes, spec: dict) -> bool:
     photo = spec.get("photo") or {}
     # A share page can be newer than its JPEGs. Only the render input proves
-    # the downloaded deck contained a portrait; unknown evidence uses the photo.
+    # the downloaded deck contained a portrait; unknown evidence rebuilds it.
     if photo.get("exists") is not True:
         return False
     recorded_hash = photo.get("content_sha256")
     if recorded_hash:
         return recorded_hash == hashlib.sha256(portrait_body).hexdigest()
-    frame_time = _published_timestamp(entry, state)
-    photo_time = _asset_timestamp(portrait_path)
-    return frame_time > 0 and photo_time > 0 and photo_time <= frame_time + 1
+    # A deployment can assign the same timestamp to a new photo and an old JPEG.
+    # Without recorded photo bytes, rebuild the cover instead of assuming a match.
+    return False
 
 
-def _attach_slide(actor: dict, state: str, entries: list[dict]) -> dict:
+def _attach_slide(actor: dict, state: str, entries: list[dict], *, state_total: int | None = None) -> dict:
     result = {key: value for key, value in actor.items() if not key.startswith("artwork_")}
     entry = _match_actor(actor, state, entries)
-    if entry is None:
-        return result
-    portrait_path = _approved_portrait(actor, state, entries, entry)
+    portrait_path = _approved_portrait(actor, state, entries, entry) if entry else None
     portrait = _download(portrait_path) if portrait_path else None
     if portrait and portrait[1] not in ("image/png", "image/jpeg", "image/webp"):
         raise ValueError(f"Invalid actor portrait: {portrait_path}")
+    spec = {}
+
+    def rebuild():
+        result["artwork_url"] = PUBLIC_ORIGIN + (_asset_path(entry, state, "share.html") if entry else f"/report/{state}")
+        result["_cover_pending"] = {"portrait": portrait, "portrait_url": PUBLIC_ORIGIN + portrait_path if portrait_path else None,
+                                    "spec": spec, "state_total": state_total}
+        return result
+
+    if entry is None:
+        return rebuild()
     path = _asset_path(entry, state, "frame-01.jpg")
     try:
         body, mime = _download(path)
         if mime != "image/jpeg" or not body.startswith(b"\xff\xd8\xff"):
             raise ValueError(f"Invalid actor slide: {path}")
-        kind = "slide"
-        spec = _slide_spec(entry, state) if portrait or actor.get("submission_count") is not None else {}
+        spec = _slide_spec(entry, state)
         count_matches = _slide_count_matches(spec, actor.get("submission_count"))
-        if portrait and (not count_matches or not _slide_contains_portrait(entry, state, portrait_path, portrait[0], spec)):
-            path, (body, mime), kind = portrait_path, portrait, "portrait"
-        elif not count_matches:
-            # Never embed a conflicting number when no approved replacement
-            # photo exists. The readable report heading remains authoritative.
-            return result
+        published_actor = spec.get("actor") or {}
+        role_matches = not actor.get("role") or published_actor.get("role") == actor["role"]
+        names = {_actor_name_key(name) for name in [actor["name"], *(actor.get("name_aliases") or [])]}
+        name_matches = _actor_name_key(published_actor.get("display_name") or "") in names
+        stats = spec.get("state_stats") or {}
+        state_count_matches = state_total is None or stats.get("state_family_count", stats.get("total_submissions")) == state_total
+        if not count_matches or not role_matches or not name_matches or not state_count_matches:
+            return rebuild()
+        if portrait and not _slide_contains_portrait(entry, state, portrait_path, portrait[0], spec):
+            return rebuild()
+        if not portrait and (spec.get("photo") or {}).get("exists"):
+            return rebuild()
     except HTTPError as error:
-        # A retired election deck or an actor without a deck can still have
-        # an approved public portrait. Other network errors must fail visibly.
+        # Missing or retired decks still receive a complete current cover.
+        # Other network failures must fail visibly instead of using stale media.
         if error.code not in (404, 410):
             raise
-        if not portrait:
-            return result
-        path, (body, mime), kind = portrait_path, portrait, "portrait"
+        return rebuild()
     result.update({
         "artwork_uri": f"data:{mime};base64," + base64.b64encode(body).decode("ascii"),
         "artwork_sha256": hashlib.sha256(body).hexdigest(),
         "artwork_url": PUBLIC_ORIGIN + path,
-        "artwork_kind": kind,
+        "artwork_kind": "slide", "artwork_source": "published",
+        "artwork_photo_sha256": hashlib.sha256(portrait[0]).hexdigest() if portrait else None,
+        "artwork_photo_url": PUBLIC_ORIGIN + portrait_path if portrait_path else None,
+        "artwork_submission_count": actor.get("submission_count"),
     })
     return result
 
 
-def attach_actor_slides(actors: list[dict], state: str, entries: list[dict]) -> list[dict]:
+def attach_actor_slides(actors: list[dict], state: str, entries: list[dict], *, state_total: int | None = None) -> list[dict]:
     with ThreadPoolExecutor(max_workers=6) as pool:
-        return list(pool.map(lambda actor: _attach_slide(actor, state, entries), actors))
+        resolved = list(pool.map(lambda actor: _attach_slide(actor, state, entries, state_total=state_total), actors))
+    return render_pending_covers(resolved, state)

@@ -7,7 +7,7 @@
         <div class="meta">
           {{ actor.role }}{% if actor.court_or_county %} · {{ actor.court_or_county }}{% endif %} · <span class="families">{{ actor.submission_count }} {% if actor.submission_count == 1 %}submission{% else %}submissions{% endif %}</span>
         </div>
-        {% if actor.artwork_kind == 'slide' %}<p class="artwork-note">Latest published actor slide matching this submission total. State and registry totals within the slide reflect its own snapshot.</p>{% elif not actor.artwork_uri %}<p class="artwork-note">Current actor artwork not available at rebuild.</p>{% endif %}
+        {% if actor.artwork_source == 'published' %}<p class="artwork-note">Current published actor slide. State and registry totals within the slide reflect its own snapshot.</p>{% endif %}
         </div>
       </div>
       {% if actor.comments %}

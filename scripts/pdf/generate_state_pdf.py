@@ -92,6 +92,8 @@ def pdf_template_version() -> str:
         BASE_DIR / "generate_state_pdf.py",
         BASE_DIR / "lib_supabase_rows.py",
         BASE_DIR / "actor_slides.py",
+        BASE_DIR / "actor_cover_renderer.py",
+        WEBSITE_ROOT / "scripts/share-pages/render_spotlight.py",
         TEMPLATE_DIR / "state_report.html.j2",
         TEMPLATE_DIR / "actor_card.html.j2",
     ]
@@ -1535,7 +1537,7 @@ def main():
         if len(sr) < 30:
             print(f"  {state}: {len(sr)} submissions, below 30-family threshold; skipping")
             continue
-        court_actors = attach_actor_slides(public_actors_by_state.get(state, []), state, slide_manifest)
+        court_actors = attach_actor_slides(public_actors_by_state.get(state, []), state, slide_manifest, state_total=len(sr))
         sponsor = load_state_exclusive_sponsor(state) if load_state_exclusive_sponsor else None
         input_hash = state_input_hash(state, sr, court_actors, version_hash, source_name, sponsor)
         cached = cache.get(state) if isinstance(cache.get(state), dict) else None

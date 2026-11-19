@@ -238,7 +238,9 @@ def verify(expected_report_count: int | None = None, only_location: str | None =
 
     for location, location_rows in sorted(verify_locations.items()):
         state_name = report_location_name(location)
-        actors = attach_actor_slides(actors_by_location.get(location, []), location, slide_manifest)
+        actors = attach_actor_slides(actors_by_location.get(location, []), location, slide_manifest, state_total=len(location_rows))
+        if any(actor.get("artwork_kind") != "slide" or not actor.get("artwork_uri") for actor in actors):
+            failures.append(f"{location}: actor missing a complete slide")
         sponsor = load_state_exclusive_sponsor(location)
         expected_hash = state_input_hash(
             location,

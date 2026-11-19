@@ -17,25 +17,23 @@ the raw number of form submissions. An unchanged PDF keeps the registry total
 and date from its own rebuild; a new survey elsewhere does not rewrite it.
 
 At each rebuild, `actor_slides.py` merges the current, bundled, and archive
-public actor manifests so a slide manifest's stale null cannot hide an approved
-portrait. It downloads `frame-01.jpg` through the site's public asset route. That route
-selects the current published version. Existing canonical bucket aliases and
-punctuation normalization match identities within the same state. If duplicate
-published aliases exist, the newest Last-Modified timestamp wins; counts are
-never used to infer freshness. A retired, absent, or placeholder slide uses the
-available approved portrait. The render spec must prove that a slide contains
-the current photo, using its recorded content hash or asset timestamps. Unknown
-evidence uses the approved portrait, preserving the full image without cropping.
-Approved photo aliases resolve only within the same matched identity and state.
-Slide actor totals must also match the current submission total. An outdated
-number uses the approved portrait; without a portrait the stale slide is omitted.
-Unmatched actors remain in the report with an
-explicit image-unavailable label. Network failures do not silently replace
-current artwork with an old local copy.
+public actor manifests and resolves approved pictures only within the same
+reviewed identity and state. A current published cover can be reused when its
+visible count, title, and recorded portrait hash match the fresh report source.
+A shared deployment timestamp alone cannot establish that an old JPEG contains
+the latest portrait.
 
-Artwork is embedded in the PDF and its SHA-256 is included in the state input
-hash. Embedded slide counts are the slide's own snapshot, as labeled beside
-the image. The report's surrounding figures come from the fresh survey read.
+Every actor receives a complete slide with their name, title, and current
+submission count. Missing, outdated, or unverifiable covers are rebuilt through
+`actor_cover_renderer.py` using the website's actual `render_spotlight.py` cover
+component and styles. The approved portrait remains inside that slide; a bare
+portrait is never substituted. Without an approved photo, the actor receives a
+named slide with a photo-unavailable label. Browser checks reject unloaded fonts,
+invalid images, and cover text overflow. Network errors fail visibly.
+
+Artwork bytes, current portrait hashes, and the shared cover renderer version
+participate in the PDF cache. Full family comments remain alongside the slide
+and retain their existing moderation and sharing-permission checks.
 
 Actor headings count distinct valid survey submissions. Quote approval affects
 which words may be published, not whether a consented submission counts.
