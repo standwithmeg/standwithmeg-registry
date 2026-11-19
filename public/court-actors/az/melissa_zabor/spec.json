@@ -1,0 +1,102 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "melissa_zabor",
+    "display_name": "Judge Melissa Zabor",
+    "title": "Judge",
+    "first_name": "Melissa",
+    "last_name": "Zabor",
+    "role": "Judge",
+    "court": "Superior Court",
+    "county": "Maricopa County",
+    "court_or_county": "Superior Court",
+    "state": "AZ",
+    "state_abbr": "AZ",
+    "mention_count": 1,
+    "family_count": 1,
+    "public_family_count": 1,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 1,
+    "supabase_row_ids": [
+      "4d398831-4ae0-48e2-b908-1b9ec37f637b"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "melisa zabor|AZ"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 70,
+    "total_submissions": 100,
+    "avg_financial_loss": 187006.51,
+    "avg_months_lost": 27.1,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "AZ",
+    "state_family_count": 100,
+    "median_financial_loss": 153330,
+    "median_burden_sample_size": 52,
+    "median_months_lost": 15,
+    "pro_se_pct": 51.0,
+    "pro_se_count": 51,
+    "_pdf_state_family_count": 100,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6620,
+  "supabase": {
+    "report_count": 1,
+    "actor_report_count": 1,
+    "family_count": 1,
+    "family_reports": [
+      {
+        "body": "I watched my happy, healthy, beautiful children become shells of themselves as they slowly lost faith that they would ever be saved from the darkness the system entrusted to protect them placed them in. My boys lost their childhood, their innocence and their belief in humanity at the hands of bad actors who saw my children as opportunities to profit.",
+        "state": "AZ",
+        "county": "Maricopa",
+        "row_id": "dca2901c-9f99-412c-ab40-7a757e2dd714"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Suppressed evidence to hide the ongoing abuse of four children.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Maricopa County"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/melissa_zabor",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='AZ'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/az/melissa_zabor/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Suppressed evidence to hide the ongoing abuse of four children.",
+        "kind": "comment"
+      },
+      {
+        "body": "I watched my happy, healthy, beautiful children become shells of themselves as they slowly lost faith that they would ever be saved from the darkness the system entrusted to protect them placed them in. My boys lost their childhood, their innocence and their belief in humanity at the hands of bad actors who saw my children as opportunities to profit.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

@@ -1,0 +1,103 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "heidi_whilden",
+    "display_name": "Heidi Whilden",
+    "title": "",
+    "first_name": "Heidi",
+    "last_name": "Whilden",
+    "role": "Judge",
+    "court": "Monterey",
+    "county": "Monterey",
+    "court_or_county": "Monterey",
+    "state": "CA",
+    "state_abbr": "CA",
+    "mention_count": 2,
+    "family_count": 1,
+    "public_family_count": 1,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 2,
+    "supabase_row_ids": [
+      "3bbf5951-6a37-476f-8062-d62c01090bac",
+      "1503587a-67dd-4af1-88df-376138dedbfa"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "heidi whilden|CA"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 356,
+    "total_submissions": 540,
+    "avg_financial_loss": 261239.82,
+    "avg_months_lost": 33.7,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "CA",
+    "state_family_count": 540,
+    "median_financial_loss": 228400,
+    "median_burden_sample_size": 238,
+    "median_months_lost": 20,
+    "pro_se_pct": 58.9,
+    "pro_se_count": 318,
+    "_pdf_state_family_count": 540,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6620,
+  "supabase": {
+    "report_count": 2,
+    "actor_report_count": 2,
+    "family_count": 1,
+    "family_reports": [
+      {
+        "body": "The system has emotionally damaged my two little girls and drained me financially. The court system continues to not protect my children from abuse because “ kids need both parents “ and told me I’m Not a survivor of DV",
+        "state": "CA",
+        "county": "Monterey",
+        "row_id": "96c9839b-dcd3-4adc-8acc-cdf347b577c1"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "During my custody trial on the third date when I couldn’t longer represent an attorney and was released, the judge, Wilden said that she was already ready to decide on this case, but she has to give my the abuser my expose. They’re right for processing president their case so when the evaluation came out in my favor, she completely discredit it and this was the $40,000 evaluation and didn’t follow with the eval recommended because the evaluator recommended that the children should be with me and I was a safe parent and the children were happy and stabilize with me while the other Parent there was domestic vines with the new spouse. There was no emotional connection to the children, the children are being abused by the other parent, but judge Wilden still gave back [redacted] to the other parent and took away my final scene in a medical education took away my soul physical custody so even though the evaluation came out of my favor, she did not care she wanted to just to go back to [redacted]. Ignoring my children continue to witness DV and abused from other parents and states children need both parents",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Monterey"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/heidi_whilden",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='CA'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ca/heidi_whilden/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "During my custody trial on the third date when I couldn’t longer represent an attorney and was released, the judge, Wilden said that she was already ready to decide on this case, but she has to give my the abuser my expose. They’re right for processing president their case so when the evaluation came out in my favor, she completely discredit it and this was the $40,000 evaluation and didn’t follow with the eval recommended because the evaluator recommended that the children should be with me and I was a safe parent and the children were happy and stabilize with me while the other Parent there was domestic vines with the new spouse. There was no emotional connection to the children, the children are being abused by the other parent, but judge Wilden still gave back [redacted] to the other parent and took away my final scene in a medical education took away my soul physical custody so even though the evaluation came out of my favor, she did not care she wanted to just to go back to [redacted]. Ignoring my children continue to witness DV and abused from other parents and states children need both parents",
+        "kind": "comment"
+      },
+      {
+        "body": "The system has emotionally damaged my two little girls and drained me financially. The court system continues to not protect my children from abuse because “ kids need both parents “ and told me I’m Not a survivor of DV",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 3
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

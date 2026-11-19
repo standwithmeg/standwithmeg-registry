@@ -1,0 +1,104 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "dawn_amacker",
+    "display_name": "Dawn Amacker",
+    "title": "",
+    "first_name": "Dawn",
+    "last_name": "Amacker",
+    "role": "Judge",
+    "court": "St Tammany/Washington Parish",
+    "county": "St Tammany Parish",
+    "court_or_county": "St Tammany/Washington Parish",
+    "state": "LA",
+    "state_abbr": "LA",
+    "mention_count": 3,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "9bce5973-e82a-4a43-9aeb-c3d6ec1455c7",
+      "d19f8709-780a-403c-b4db-4577dd6904be",
+      "1dcc7d95-7faa-4621-bae7-d4bd97aadbd6"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "dawn amacker|LA"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 45,
+    "total_submissions": 69,
+    "avg_financial_loss": 176312.0,
+    "avg_months_lost": 37.3,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "LA",
+    "state_family_count": 69,
+    "median_financial_loss": 193450,
+    "median_burden_sample_size": 34,
+    "median_months_lost": 24,
+    "pro_se_pct": 52.2,
+    "pro_se_count": 36,
+    "_pdf_state_family_count": 69,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "The last time I saw my daughters was on their first day of preschool and kindergarten, my ex (a bailiff) filed an unjust emergency order. They are now 21 years old and 22 years old.",
+        "state": "LA",
+        "county": "St Tammany",
+        "row_id": "1cea3853-eaf8-4608-b527-7e304e74dc20"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Denied all submissions of my ex husband’s history of domestic violence and child neglect, my ex was a bailiff at the time.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "St Tammany Parish"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/dawn_amacker",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='LA'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/la/dawn_amacker/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Denied all submissions of my ex husband’s history of domestic violence and child neglect, my ex was a bailiff at the time.",
+        "kind": "comment"
+      },
+      {
+        "body": "The last time I saw my daughters was on their first day of preschool and kindergarten, my ex (a bailiff) filed an unjust emergency order. They are now 21 years old and 22 years old.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

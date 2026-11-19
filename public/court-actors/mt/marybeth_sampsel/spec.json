@@ -1,0 +1,123 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "marybeth_sampsel",
+    "display_name": "Marybeth Marguerite Sampsel",
+    "title": "",
+    "first_name": "Marybeth Marguerite",
+    "last_name": "Sampsel",
+    "role": "Attorney",
+    "court": "Flathead County",
+    "county": "Flathead County",
+    "court_or_county": "Flathead County",
+    "state": "MT",
+    "state_abbr": "MT",
+    "mention_count": 2,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 2,
+    "supabase_row_ids": [
+      "cb885c8d-6c64-4625-ac93-a6368942bc66",
+      "0497861f-ba44-4fd6-8468-c0c963bb7c81"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "marybeth sampsel|MT"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 39,
+    "total_submissions": 76,
+    "avg_financial_loss": 170095.33,
+    "avg_months_lost": 41.2,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "MT",
+    "state_family_count": 76,
+    "median_financial_loss": 135250,
+    "median_burden_sample_size": 34,
+    "median_months_lost": 19,
+    "pro_se_pct": 60.5,
+    "pro_se_count": 46,
+    "_pdf_state_family_count": 76,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 2,
+    "actor_report_count": 2,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "It has destroyed my mental Health. I have PTSD and CPTSD from domestic abuse as well as litigation, financial, and medical abuse. My records were published publicly as were my children’s by the Court allowing others to misuse my records and data for further financial harm and legal proceedings. It has cost me my financial stability, income and ability to care for my medical needs and safety of me and my children and taken from my business.",
+        "state": "MT",
+        "county": "Glacier",
+        "row_id": "6e34d385-8ec6-4d77-93f1-bae6f2c8409a"
+      },
+      {
+        "body": "They have bypassed every guideline put into place to prevent third party take over. What they did was a**backwards. Amy Eddy. Failed our children. And she preaches she loves our constitution. Really?? Certainly not the part about parents and their children. And Marybeth Sampsel Advocate for families?! That is a really cute way of saying predator.",
+        "state": "MT",
+        "county": "Flathead",
+        "row_id": "a1ac5892-636b-4251-8d14-04605c580c37"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Suppressed evidence, coerced signatures, relied on children’s statements in spite of knowledge of child coaching by other parent, ignored emails, false statements of fact in reports, singling one parent out in reports, refused mental Health of the children and did not conduct a evaluation prior to intake or them or the other parent to show baseline nor after to show affects of investigation, made diagnosis of me and children having no medical stance to do so in reports, refused to communicate with me and instead gave the other party exparte communications of the questions I was directed to ask her by my attorney. I did not nor did others she stated she got back to did she email. I was charged for services not done. She automated responses to the emails not answered to charge me. This can be verified by timestamps and dates. She also sent an email to my now husband that she would be out of town months after he asked a basic question which the response was given to opposing party. At no point did she give me the information she gave opposing counsel or the opposing party but gave them the information I asked her to answer or the concerns I had. That was not what I agreed to or what any contract stated would occur.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
+      },
+      {
+        "comment_text": "Asking for stuff she shouldn’t be! Discovery in a guardianship. Lying about it. Asking for irrelevant information. Didn’t prove threshold. Knows my parents are lying helping them commit perjury. Lied to the court about what I produced. Harassing and practically stalking me. Ambulance attorney. Lied about paperwork not received. Never mailed me my documents half the time when she was supposed to! I’ve heard she had done this to others! And that she lies and doesn’t play fair! Horrible person! Pretending to care! She doesn’t!",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Flathead County"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/marybeth_sampsel",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='MT'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/mt/marybeth_sampsel/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Suppressed evidence, coerced signatures, relied on children’s statements in spite of knowledge of child coaching by other parent, ignored emails, false statements of fact in reports, singling one parent out in reports, refused mental Health of the children and did not conduct a evaluation prior to intake or them or the other parent to show baseline nor after to show affects of investigation, made diagnosis of me and children having no medical stance to do so in reports, refused to communicate with me and instead gave the other party exparte communications of the questions I was directed to ask her by my attorney. I did not nor did others she stated she got back to did she email. I was charged for services not done. She automated responses to the emails not answered to charge me. This can be verified by timestamps and dates. She also sent an email to my now husband that she would be out of town months after he asked a basic question which the response was given to opposing party. At no point did she give me the information she gave opposing counsel or the opposing party but gave them the information I asked her to answer or the concerns I had. That was not what I agreed to or what any contract stated would occur.",
+        "kind": "comment"
+      },
+      {
+        "body": "Asking for stuff she shouldn’t be! Discovery in a guardianship. Lying about it. Asking for irrelevant information. Didn’t prove threshold. Knows my parents are lying helping them commit perjury. Lied to the court about what I produced. Harassing and practically stalking me. Ambulance attorney. Lied about paperwork not received. Never mailed me my documents half the time when she was supposed to! I’ve heard she had done this to others! And that she lies and doesn’t play fair! Horrible person! Pretending to care! She doesn’t!",
+        "kind": "comment"
+      },
+      {
+        "body": "It has destroyed my mental Health. I have PTSD and CPTSD from domestic abuse as well as litigation, financial, and medical abuse. My records were published publicly as were my children’s by the Court allowing others to misuse my records and data for further financial harm and legal proceedings. It has cost me my financial stability, income and ability to care for my medical needs and safety of me and my children and taken from my business.",
+        "kind": "family_report"
+      },
+      {
+        "body": "They have bypassed every guideline put into place to prevent third party take over. What they did was a**backwards. Amy Eddy. Failed our children. And she preaches she loves our constitution. Really?? Certainly not the part about parents and their children. And Marybeth Sampsel Advocate for families?! That is a really cute way of saying predator.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 5
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

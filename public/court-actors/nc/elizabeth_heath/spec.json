@@ -28,7 +28,7 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/elizabeth_heath/image_1080.png",
+    "path": "/tmp/swm-share-pages-pauilms9/New Final Post and Capcut template/export/elizabeth_heath/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -48,7 +48,7 @@
     "_pdf_state_family_count": 239,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6496,
+  "movement_total": 6620,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -81,12 +81,6 @@
         "court_or_county": "Lenoir"
       },
       {
-        "comment_text": "Silently retaliate against misusing her authority, bias abusive court proceedings Asisted in the kidnapping of my minor child. Ignored evidence, collusion. Enabling child abuse, domestic violence an parental alienating.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Lenior county  Kinston NC"
-      },
-      {
         "comment_text": "She refused to listen to any evidence from our side. She strictly went by the court report from DSS in the Guardian at Leitem.",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
@@ -115,10 +109,6 @@
   },
   "render": {
     "selected_quotes": [
-      {
-        "body": "Silently retaliate against misusing her authority, bias abusive court proceedings Asisted in the kidnapping of my minor child. Ignored evidence, collusion. Enabling child abuse, domestic violence an parental alienating.",
-        "kind": "comment"
-      },
       {
         "body": "She refused to listen to any evidence from our side. She strictly went by the court report from DSS in the Guardian at Leitem.",
         "kind": "comment"

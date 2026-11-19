@@ -1,0 +1,103 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "julia_pelc",
+    "display_name": "Julia Pelc",
+    "title": "",
+    "first_name": "Julia",
+    "last_name": "Pelc",
+    "role": "Judge",
+    "court": "spokane",
+    "county": "Spokane",
+    "court_or_county": "spokane",
+    "state": "WA",
+    "state_abbr": "WA",
+    "mention_count": 2,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 2,
+    "supabase_row_ids": [
+      "0197bb7a-8bde-43d8-b8f1-4e1d25acc6df",
+      "07e76fd2-5edf-4cb1-8125-b96e5ee1d929"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "julia pelc|WA"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 91,
+    "total_submissions": 161,
+    "avg_financial_loss": 294350.96,
+    "avg_months_lost": 30.5,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "WA",
+    "state_family_count": 161,
+    "median_financial_loss": 126700,
+    "median_burden_sample_size": 87,
+    "median_months_lost": 18,
+    "pro_se_pct": 59.6,
+    "pro_se_count": 96,
+    "_pdf_state_family_count": 161,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 2,
+    "actor_report_count": 2,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "DCYF Brought 160 children over from a different county and placed them in foster care in spokane county. It added 30 extra cases on to the workers already thirty caseloads , which doubled their load and gives them no time for reunification efforts. The removals from another county is suspicious. The workers are not being transparent.They have been scrutinized multiple times in court recently for providing false information , and I witnessed the judge do nothing",
+        "state": "WA",
+        "county": "Spokane",
+        "row_id": "939026cb-1def-4a2a-a36d-884864ac2e98"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Signing off on unlawful removals not allowing a parent first hearing",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Spokane"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/julia_pelc",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='WA'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/wa/julia_pelc/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Signing off on unlawful removals not allowing a parent first hearing",
+        "kind": "comment"
+      },
+      {
+        "body": "DCYF Brought 160 children over from a different county and placed them in foster care in spokane county. It added 30 extra cases on to the workers already thirty caseloads , which doubled their load and gives them no time for reunification efforts. The removals from another county is suspicious. The workers are not being transparent.They have been scrutinized multiple times in court recently for providing false information , and I witnessed the judge do nothing",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 2
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

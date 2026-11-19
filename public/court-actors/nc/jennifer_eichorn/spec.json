@@ -28,7 +28,7 @@
     "actor_bucket_key": "jenifer eichorn|NC"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/jennifer_eichorn/image_1080.png",
+    "path": "/tmp/swm-share-pages-pauilms9/New Final Post and Capcut template/export/jennifer_eichorn/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -48,7 +48,7 @@
     "_pdf_state_family_count": 239,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6496,
+  "movement_total": 6620,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -86,12 +86,6 @@
       }
     ],
     "public_comments": [
-      {
-        "comment_text": "Jennifer Eichorn provided questionable drug test documentation, including a positive result before a sample was submitted, which affected my visitation. She lied on a lot of parents and treated them badly.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Lenoir County Courthouse Recovery Court Coordinator"
-      },
       {
         "comment_text": "Presented a positive drug test result before I gave a urine sample, causing my visitation and reunification progress to be harmed.",
         "author": "Anonymous parent",
@@ -141,10 +135,6 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Jennifer Eichorn provided questionable drug test documentation, including a positive result before a sample was submitted, which affected my visitation. She lied on a lot of parents and treated them badly.",
-        "kind": "comment"
-      },
-      {
         "body": "Presented a positive drug test result before I gave a urine sample, causing my visitation and reunification progress to be harmed.",
         "kind": "comment"
       },
@@ -181,7 +171,7 @@
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 6
+    "quote_page_count": 5
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

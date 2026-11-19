@@ -1,0 +1,102 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "rachel_platt",
+    "display_name": "Rachel Platt",
+    "title": "",
+    "first_name": "Rachel",
+    "last_name": "Platt",
+    "role": "GAL / Child Representative",
+    "court": "Forsyth County, Georgia",
+    "county": "Forsyth county",
+    "court_or_county": "Forsyth County, Georgia",
+    "state": "GA",
+    "state_abbr": "GA",
+    "mention_count": 1,
+    "family_count": 1,
+    "public_family_count": 1,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 1,
+    "supabase_row_ids": [
+      "0ef94bcc-804a-4a7d-8647-3f1ed0302e83"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "rachel plat|GA"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 119,
+    "total_submissions": 193,
+    "avg_financial_loss": 189567.29,
+    "avg_months_lost": 32.5,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "GA",
+    "state_family_count": 193,
+    "median_financial_loss": 151000,
+    "median_burden_sample_size": 99,
+    "median_months_lost": 19,
+    "pro_se_pct": 43.0,
+    "pro_se_count": 83,
+    "_pdf_state_family_count": 193,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6620,
+  "supabase": {
+    "report_count": 1,
+    "actor_report_count": 1,
+    "family_count": 1,
+    "family_reports": [
+      {
+        "body": "Absolutely destroyed, our lives taken away every sense of self and safety and security at the my children have they have ruined my life they ruined my children’s life. They have ungodly amounts of money. I truly believe that Forsyth County is trafficking children through the family court I believe that Judge Bagley has a lot to do with it. He’s the head of the superior court. He’s also on board of Bank chairs, which is the umbrella company for the Forsyth County bank in Georgia which he also has jurisdiction over divorce in property proceeding, the rotary club has a lot of these actors in it Rachel Platt the guardian at Leham is known for giving children to abusers mainly fathers regardless of the evidence Christine Seidel is in this as well. They are in this industry to make money in their crafting off of our children Forsyth County Georgia needs to be investigated. It is the most corrupt County on the planet and judge Bagley needs to be in prison along with Keith Brandon along with Rachel Platt along with Christine Seidel and every other person that they associate with in their business because they are what family court corruption is about.",
+        "state": "GA",
+        "county": "Forsyth county",
+        "row_id": "4c66c3c2-f654-4945-aab1-b27b55f6c52e"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Made up lies about me, accused me of trying to switch my children’s school that I will never have a meaningful relationship with my children ignored when my daughter said that she’s being molested by her dad to this school counselor and said that mom is just coaching refuse to see evidence refuse to prove refuse to do anything in her description of a guardian and mainly put my children in harm in danger, repeatedly the point of now they live in it full-time she should be in prison. He is the biggest piece of shit on the planet. She along with the counselor Christine Zidell, manipulated and narrated so many things made me switch. My counselors refused to acknowledge that I do not have a mental illness refuse to do so I have a doctors note clearly for the opposing council was trying to take custody for me, even though there’s no reason when it’s far to say on the stand, which I have in writing that now that Miss Griffin is out of the picture, Mr. Donnelly doesn’t have a reason to pull a gun on anybody anymore because he did to my face in front of my kids while I was holding one of them and says that she’s not worried about that anymore on the stand in front of Bagley",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/rachel_platt",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='GA'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ga/rachel_platt/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Made up lies about me, accused me of trying to switch my children’s school that I will never have a meaningful relationship with my children ignored when my daughter said that she’s being molested by her dad to this school counselor and said that mom is just coaching refuse to see evidence refuse to prove refuse to do anything in her description of a guardian and mainly put my children in harm in danger, repeatedly the point of now they live in it full-time she should be in prison. He is the biggest piece of shit on the planet. She along with the counselor Christine Zidell, manipulated and narrated so many things made me switch. My counselors refused to acknowledge that I do not have a mental illness refuse to do so I have a doctors note clearly for the opposing council was trying to take custody for me, even though there’s no reason when it’s far to say on the stand, which I have in writing that now that Miss Griffin is out of the picture, Mr. Donnelly doesn’t have a reason to pull a gun on anybody anymore because he did to my face in front of my kids while I was holding one of them and says that she’s not worried about that anymore on the stand in front of Bagley",
+        "kind": "comment"
+      },
+      {
+        "body": "Absolutely destroyed, our lives taken away every sense of self and safety and security at the my children have they have ruined my life they ruined my children’s life. They have ungodly amounts of money. I truly believe that Forsyth County is trafficking children through the family court I believe that Judge Bagley has a lot to do with it. He’s the head of the superior court. He’s also on board of Bank chairs, which is the umbrella company for the Forsyth County bank in Georgia which he also has jurisdiction over divorce in property proceeding, the rotary club has a lot of these actors in it Rachel Platt the guardian at Leham is known for giving children to abusers mainly fathers regardless of the evidence Christine Seidel is in this as well. They are in this industry to make money in their crafting off of our children Forsyth County Georgia needs to be investigated. It is the most corrupt County on the planet and judge Bagley needs to be in prison along with Keith Brandon along with Rachel Platt along with Christine Seidel and every other person that they associate with in their business because they are what family court corruption is about.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 4
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

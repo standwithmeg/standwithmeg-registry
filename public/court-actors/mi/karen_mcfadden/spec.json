@@ -32,7 +32,7 @@
     "actor_bucket_key": "karen mcfaden|MI"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-7jh_hs8h/New Final Post and Capcut template/export/karen_mcfadden/image_1080.png",
+    "path": "/tmp/swm-share-pages-pauilms9/New Final Post and Capcut template/export/karen_mcfadden/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -52,7 +52,7 @@
     "_pdf_state_family_count": 200,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6500,
+  "movement_total": 6620,
   "supabase": {
     "report_count": 9,
     "actor_report_count": 9,
@@ -137,12 +137,6 @@
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Montcalm"
-      },
-      {
-        "comment_text": "Gave false information",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Montcalm"
       }
     ]
   },
@@ -196,10 +190,6 @@
         "kind": "comment"
       },
       {
-        "body": "Gave false information",
-        "kind": "comment"
-      },
-      {
         "body": "The destruction of my family has changed every part of my life. Living through years of separation from my daughter has created a level of grief and trauma that is hard to put into words. Every holiday, birthday, school event, and milestone that passes is another reminder of everything we’ve lost. The repeated trips back to court have only added to that trauma. Each hearing brings hope that maybe this time things will change, only to leave feeling like we’re no closer to healing or being reunited. Instead of finding solutions, we’ve spent years reliving the same pain over and over. It’s emotionally exhausting, financially draining, and has left our entire family living in a constant state of uncertainty. This hasn’t only affected me. It has affected my husband, my children, my extended family, and most importantly, my daughter. Relationships that should have been built naturally have instead been replaced with distance, missed memories, and unanswered questions. We’ve missed birthdays, holidays, sporting events, family dinners, and countless everyday moments that can never be recreated. Despite everything, I have never stopped loving my daughter or hoping for the day our family can begin to heal. No family should have to endure years of separation while repeatedly returning to court without moving any closer to a resolution. The emotional toll of living in that cycle has been devastating for all of us.",
         "kind": "family_report"
       },
@@ -224,7 +214,7 @@
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 10
+    "quote_page_count": 9
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

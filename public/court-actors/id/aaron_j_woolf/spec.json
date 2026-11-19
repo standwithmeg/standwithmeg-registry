@@ -1,0 +1,124 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "aaron_j_woolf",
+    "display_name": "Aaron J. Woolf",
+    "title": "",
+    "first_name": "Aaron J.",
+    "last_name": "Woolf",
+    "role": "Attorney",
+    "court": "Bonneville County in Idaho Idaho Falls",
+    "county": "Bonneville",
+    "court_or_county": "Bonneville County in Idaho Idaho Falls",
+    "state": "ID",
+    "state_abbr": "ID",
+    "mention_count": 3,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "ecf04e66-d376-40a8-aa7a-15dacb7c753b",
+      "36561b47-ff97-4e47-9063-704a4434ca38",
+      "a95b0032-a4ea-40f6-8a61-37f1d680c957"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "aron wolf|ID"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 29,
+    "total_submissions": 51,
+    "avg_financial_loss": 306496.0,
+    "avg_months_lost": 22.4,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "ID",
+    "state_family_count": 51,
+    "median_financial_loss": 202150,
+    "median_burden_sample_size": 32,
+    "median_months_lost": 18,
+    "pro_se_pct": 45.1,
+    "pro_se_count": 23,
+    "_pdf_state_family_count": 51,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "The Idaho family court system has taken valuable time away from me and my son, and from him and his siblings. It has profoundly changed the course of all of our lives.The system does not care about facts or the law, Judges and attorneys make decisions based on their personal feelings and beliefs.",
+        "state": "ID",
+        "county": "Bingham",
+        "row_id": "3d5c80d2-556a-4a18-a157-2cf2325ae197"
+      },
+      {
+        "body": "I went to the court for help protecting myself and my children after my abuser almost killed me. Instead we got more exposure and abuse. I feel more helpless than I did when I was living with him.",
+        "state": "ID",
+        "county": "Lemhi",
+        "row_id": "bf7f4399-9f4e-4ea7-b99d-746029082fb8"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Ignored evidence Refuses to submit abuse allegations to court, request a modification, pressured me into taking a visitation schedule minutes before our trial.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "County not listed"
+      },
+      {
+        "comment_text": "Delays setting hearings, accusations with no evidence, files irrelevant motions to create delays.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Bonneville"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/aaron_j_woolf",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='ID'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/id/aaron_j_woolf/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Ignored evidence Refuses to submit abuse allegations to court, request a modification, pressured me into taking a visitation schedule minutes before our trial.",
+        "kind": "comment"
+      },
+      {
+        "body": "Delays setting hearings, accusations with no evidence, files irrelevant motions to create delays.",
+        "kind": "comment"
+      },
+      {
+        "body": "The Idaho family court system has taken valuable time away from me and my son, and from him and his siblings. It has profoundly changed the course of all of our lives.The system does not care about facts or the law, Judges and attorneys make decisions based on their personal feelings and beliefs.",
+        "kind": "family_report"
+      },
+      {
+        "body": "I went to the court for help protecting myself and my children after my abuser almost killed me. Instead we got more exposure and abuse. I feel more helpless than I did when I was living with him.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 3
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

@@ -1,0 +1,124 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "todd_prevett",
+    "display_name": "Todd H. Prevett",
+    "title": "",
+    "first_name": "Todd H.",
+    "last_name": "Prevett",
+    "role": "Judge",
+    "court": "9th Circuit Court - Family Div.",
+    "county": "9th Circuit Court - Family Div.",
+    "court_or_county": "9th Circuit Court - Family Div.",
+    "state": "NH",
+    "state_abbr": "NH",
+    "mention_count": 3,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "35e55688-be8c-4162-9fc8-09fe0329c604",
+      "835b1ec2-ca4e-4a3d-9e6e-31eb2a31ac17",
+      "0be0bc30-ab07-48c4-a382-e10c0f4a96f2"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "todd prevet|NH"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 29,
+    "total_submissions": 43,
+    "avg_financial_loss": 169197.8,
+    "avg_months_lost": 33.6,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "NH",
+    "state_family_count": 43,
+    "median_financial_loss": 97850,
+    "median_burden_sample_size": 24,
+    "median_months_lost": 14,
+    "pro_se_pct": 48.8,
+    "pro_se_count": 21,
+    "_pdf_state_family_count": 43,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "They have STOLEN my boys childhood. Once happy and healthy kids, now just look lost",
+        "state": "NH",
+        "county": "Hillsborough",
+        "row_id": "7c0a3f40-ab75-4867-8159-d04511d80f3e"
+      },
+      {
+        "body": "Many nights I have sat in defeat praying for a miracle. My little girl may never have a chance to meet her siblings, my children will grow up without their mother, I'm not sure which breaks my heart more. I just know I have to stay here, fighting a corrupt unjust system designed to destroy families for profit.",
+        "state": "NH",
+        "county": "Hillsborough",
+        "row_id": "b26b264b-e796-42c8-bb0c-eb23554109d0"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Was reprimanded by NH Judicial Conduct Committee for asking for \"favors\" same time frame as my case. He does whatever he wants. All deadlines blown. Just the worst of the worst. Judge Prevett had a reprimand from the judicial conduct committee during the same time frame",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "9th Circuit Court - Merrimack"
+      },
+      {
+        "comment_text": "Denied multiple motions for clarification, refused acknowledgment of false allegations made towards me, and failure to aknowledge proven falsification of evidence, denied motions without a hearing.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Milford"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/todd_prevett",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='NH'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/nh/todd_prevett/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Was reprimanded by NH Judicial Conduct Committee for asking for \"favors\" same time frame as my case. He does whatever he wants. All deadlines blown. Just the worst of the worst. Judge Prevett had a reprimand from the judicial conduct committee during the same time frame",
+        "kind": "comment"
+      },
+      {
+        "body": "Denied multiple motions for clarification, refused acknowledgment of false allegations made towards me, and failure to aknowledge proven falsification of evidence, denied motions without a hearing.",
+        "kind": "comment"
+      },
+      {
+        "body": "They have STOLEN my boys childhood. Once happy and healthy kids, now just look lost",
+        "kind": "family_report"
+      },
+      {
+        "body": "Many nights I have sat in defeat praying for a miracle. My little girl may never have a chance to meet her siblings, my children will grow up without their mother, I'm not sure which breaks my heart more. I just know I have to stay here, fighting a corrupt unjust system designed to destroy families for profit.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 2
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

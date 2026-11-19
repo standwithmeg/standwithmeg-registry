@@ -1,0 +1,102 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "sharon_wigdor_byers",
+    "display_name": "Sharon Wigdor Byers",
+    "title": "",
+    "first_name": "Sharon Wigdor",
+    "last_name": "Byers",
+    "role": "Judge",
+    "court": "Family",
+    "county": "Oklahoma County",
+    "court_or_county": "Family",
+    "state": "OK",
+    "state_abbr": "OK",
+    "mention_count": 1,
+    "family_count": 1,
+    "public_family_count": 1,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 1,
+    "supabase_row_ids": [
+      "b0dc972d-4c39-4c4e-8c34-386d755549aa"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "sharon wigdor byers|OK"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 120,
+    "total_submissions": 241,
+    "avg_financial_loss": 113410.49,
+    "avg_months_lost": 27.7,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OK",
+    "state_family_count": 241,
+    "median_financial_loss": 105000,
+    "median_burden_sample_size": 127,
+    "median_months_lost": 16,
+    "pro_se_pct": 41.5,
+    "pro_se_count": 100,
+    "_pdf_state_family_count": 241,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 1,
+    "actor_report_count": 1,
+    "family_count": 1,
+    "family_reports": [
+      {
+        "body": "My child was apart of a very close family she has multiple siblings, grand parents nieces&nephews that she spent time with daily bonds that were thought to be unbreakable.all my child has every known is this side of her family mother family wasn't in the picture for child or mother.My child and I went from me being primary care giver physically and financially to seeing me once a week for 1 hour in a room locked up with a total stranger I have to watch my kid break every week when that hour up and I seem to be the only one who cares my child mental health is being wrecked but they tell me she 4 good thing she won't remember wth",
+        "state": "OK",
+        "county": "Oklahoma county",
+        "row_id": "1b0e9e68-3205-407b-9380-2da7e41b694c"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "She Took into her own authority to strip me of my parental rights without any legal standing just a supposed victim with and ever changing story and no actually evidence ,put me on supervised visit 4 hours a month but signed off the court date before this court date to exchange child every other 3 days did that 8 times no incidents reported by mother but first time I got to see my child after 3 weeks of them keeping her from me she came home with a black eye and bruises on her body I reported to courts and dhs multiple times nothing happen.i have /had photo evidence reported it within 24hrs but nothing my child mother has no home of her own and minimal income and this judge didn't care to hear it how can you take someone child when the child never was even a topic of discussion during court not once was my child spoken of except for the part she took her from me crazy part is I turned in a video of a pick between me and mom I had to talk my child into going video show her refusing to go with mom and running and crying I did the right thing being a dad talk to my child placed her in the car and made sure she understood it would be ok see her in a few days and that counts for nothing words of the child",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Oklahoma county"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/sharon_wigdor_byers",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='OK'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ok/sharon_wigdor_byers/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "She Took into her own authority to strip me of my parental rights without any legal standing just a supposed victim with and ever changing story and no actually evidence ,put me on supervised visit 4 hours a month but signed off the court date before this court date to exchange child every other 3 days did that 8 times no incidents reported by mother but first time I got to see my child after 3 weeks of them keeping her from me she came home with a black eye and bruises on her body I reported to courts and dhs multiple times nothing happen.i have /had photo evidence reported it within 24hrs but nothing my child mother has no home of her own and minimal income and this judge didn't care to hear it how can you take someone child when the child never was even a topic of discussion during court not once was my child spoken of except for the part she took her from me crazy part is I turned in a video of a pick between me and mom I had to talk my child into going video show her refusing to go with mom and running and crying I did the right thing being a dad talk to my child placed her in the car and made sure she understood it would be ok see her in a few days and that counts for nothing words of the child",
+        "kind": "comment"
+      },
+      {
+        "body": "My child was apart of a very close family she has multiple siblings, grand parents nieces&nephews that she spent time with daily bonds that were thought to be unbreakable.all my child has every known is this side of her family mother family wasn't in the picture for child or mother.My child and I went from me being primary care giver physically and financially to seeing me once a week for 1 hour in a room locked up with a total stranger I have to watch my kid break every week when that hour up and I seem to be the only one who cares my child mental health is being wrecked but they tell me she 4 good thing she won't remember wth",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 4
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

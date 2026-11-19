@@ -1,0 +1,103 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "sheri_kessler",
+    "display_name": "Sheri Kessler",
+    "title": "",
+    "first_name": "Sheri",
+    "last_name": "Kessler",
+    "role": "Parenting Coordinator",
+    "court": "cook",
+    "county": "Cook",
+    "court_or_county": "cook",
+    "state": "IL",
+    "state_abbr": "IL",
+    "mention_count": 1,
+    "family_count": 1,
+    "public_family_count": 0,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 1,
+    "supabase_row_ids": [
+      "0fbb66cb-af95-462e-9ea8-26b7b7fe595b"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "sheri kesler|IL"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 100,
+    "total_submissions": 190,
+    "avg_financial_loss": 201852.04,
+    "avg_months_lost": 27.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "IL",
+    "state_family_count": 190,
+    "median_financial_loss": 126750,
+    "median_burden_sample_size": 115,
+    "median_months_lost": 15,
+    "pro_se_pct": 48.1,
+    "pro_se_count": 91,
+    "_pdf_state_family_count": 189,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 1,
+    "actor_report_count": 1,
+    "family_count": 1,
+    "family_reports": [
+      {
+        "body": "My little family was destroyed. Instead of stepping up and taking some of the burden off my raising my kids 99% alone, dad came after me when I was in a vulnerable spot and essentially scammed the system to steal my kids from me.",
+        "state": "IL",
+        "county": "Cook",
+        "row_id": "137e2e02-1e87-43c0-a445-50b065006e94"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "She immediately sided with the father and refused to consider or even look at evidence that showed a pattern of bad parenting decisions, allegations of abuse from two other women and allowing our child to be around his childhood best friend who is a registered sex offender.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Cook"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/sheri_kessler",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='IL'",
+    "family_count: lookup and previous spec returned 0 — using report_count=1 as fallback"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/il/sheri_kessler/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "She immediately sided with the father and refused to consider or even look at evidence that showed a pattern of bad parenting decisions, allegations of abuse from two other women and allowing our child to be around his childhood best friend who is a registered sex offender.",
+        "kind": "comment"
+      },
+      {
+        "body": "My little family was destroyed. Instead of stepping up and taking some of the burden off my raising my kids 99% alone, dad came after me when I was in a vulnerable spot and essentially scammed the system to steal my kids from me.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 2
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

@@ -1,0 +1,124 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "ayana_k_young",
+    "display_name": "Ayana K. Young",
+    "title": "",
+    "first_name": "Ayana K.",
+    "last_name": "Young",
+    "role": "Judge",
+    "court": "Contra Costa County",
+    "county": "Contra Costa County",
+    "court_or_county": "Contra Costa County",
+    "state": "CA",
+    "state_abbr": "CA",
+    "mention_count": 3,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "c19c7768-e59d-47b0-b622-b9aa3eed0b89",
+      "1f3f5b54-f2d5-445c-bb91-e46914e4321b",
+      "991f56a1-8420-40a4-8b0b-7849d043a0e8"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "ayana young|CA"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 356,
+    "total_submissions": 540,
+    "avg_financial_loss": 261239.82,
+    "avg_months_lost": 33.7,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "CA",
+    "state_family_count": 540,
+    "median_financial_loss": 228400,
+    "median_burden_sample_size": 238,
+    "median_months_lost": 20,
+    "pro_se_pct": 58.9,
+    "pro_se_count": 318,
+    "_pdf_state_family_count": 540,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6620,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "“There is no pain like watching your children suffer and knowing the very system you begged to protect them is the system that took them from you. My evidence was ignored. Their cries for help were dismissed. They were placed with someone I had repeatedly raised concerns about for abuse and domestic violence, and we were forced into reunification therapy that caused more harm than healing. Now I watch my children break down mentally and emotionally while those with the power to protect them look the other way. This is not justice. This is what happens when protecting decisions and reputations becomes more important than protecting children.”",
+        "state": "CA",
+        "county": "Contra Costa",
+        "row_id": "ded48be3-b751-44a4-90b0-0108556e2fa9"
+      },
+      {
+        "body": "Stolen money and has taken so much time away from me and my children.",
+        "state": "CA",
+        "county": "contra costa",
+        "row_id": "6e6aa8bc-19ca-41ce-ba5e-fe58aff91be9"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "This is the judge that I routinely see during my hearings. Her supervisor is the other judge I have named, Palvar Shoker. This judge has refused to look at evidence on numerous hearings. They stretch goes off record a lot with court reporters and says things that are in my favor but is not reflected on the record. This judge has given no good reason as to why children should not be returned to my care and I believe that she is being influenced by her superior judge, palvar shoker. This judge has also rushed me to judgment without giving me an opportunity to speak on numerous occasions and admittedly does not even read any of the filings or declarations before most of the hearing begins.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Spinetta Family law center Superior Court of California Contra Costa County"
+      },
+      {
+        "comment_text": "Refused to look at any of my evidence to defend myself of false restraining order. Extended it due to the courts scheduling the wrong type of hearing. Ignored evidence.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Contra Costa County"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/ayana_k_young",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='CA'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ca/ayana_k_young/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "This is the judge that I routinely see during my hearings. Her supervisor is the other judge I have named, Palvar Shoker. This judge has refused to look at evidence on numerous hearings. They stretch goes off record a lot with court reporters and says things that are in my favor but is not reflected on the record. This judge has given no good reason as to why children should not be returned to my care and I believe that she is being influenced by her superior judge, palvar shoker. This judge has also rushed me to judgment without giving me an opportunity to speak on numerous occasions and admittedly does not even read any of the filings or declarations before most of the hearing begins.",
+        "kind": "comment"
+      },
+      {
+        "body": "Refused to look at any of my evidence to defend myself of false restraining order. Extended it due to the courts scheduling the wrong type of hearing. Ignored evidence.",
+        "kind": "comment"
+      },
+      {
+        "body": "“There is no pain like watching your children suffer and knowing the very system you begged to protect them is the system that took them from you. My evidence was ignored. Their cries for help were dismissed. They were placed with someone I had repeatedly raised concerns about for abuse and domestic violence, and we were forced into reunification therapy that caused more harm than healing. Now I watch my children break down mentally and emotionally while those with the power to protect them look the other way. This is not justice. This is what happens when protecting decisions and reputations becomes more important than protecting children.”",
+        "kind": "family_report"
+      },
+      {
+        "body": "Stolen money and has taken so much time away from me and my children.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 4
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

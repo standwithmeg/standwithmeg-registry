@@ -33,7 +33,7 @@
   "state_stats": {
     "families_approved": 119,
     "total_submissions": 193,
-    "avg_financial_loss": 189526.53,
+    "avg_financial_loss": 189567.29,
     "avg_months_lost": 32.5,
     "_source_table": "movement_stats_by_state",
     "_match_value": "GA",
@@ -46,7 +46,7 @@
     "_pdf_state_family_count": 193,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6592,
+  "movement_total": 6620,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,

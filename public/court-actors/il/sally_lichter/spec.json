@@ -1,0 +1,124 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "sally_lichter",
+    "display_name": "Sally Lichter",
+    "title": "",
+    "first_name": "Sally",
+    "last_name": "Lichter",
+    "role": "Other",
+    "court": "Waukegan. Lake county",
+    "county": "Waukegan. Lake county",
+    "court_or_county": "Waukegan. Lake county",
+    "state": "IL",
+    "state_abbr": "IL",
+    "mention_count": 3,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "3006865b-a731-452a-9927-d4a5dd5e8550",
+      "2487407f-6ac9-41f2-9ee7-ebf34d3b4d15",
+      "03ccd990-0cb8-4234-adea-20521a392da8"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "saly lichter|IL"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 100,
+    "total_submissions": 190,
+    "avg_financial_loss": 201852.04,
+    "avg_months_lost": 27.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "IL",
+    "state_family_count": 190,
+    "median_financial_loss": 126750,
+    "median_burden_sample_size": 115,
+    "median_months_lost": 15,
+    "pro_se_pct": 48.1,
+    "pro_se_count": 91,
+    "_pdf_state_family_count": 189,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "The psychological and financial abuse should be considered family terrorism because thats EXACTLY what it is. They terrorize you mentally then extort your hard earned money and savings on the \"best interest of the child.\" The years of therapy I have been through has only made it somewhat bearable.",
+        "state": "IL",
+        "county": "Lake",
+        "row_id": "188c0f39-0317-4d16-9421-dbe17f51e1b5"
+      },
+      {
+        "body": "Family court has destroyed the innocence and robbed the dreams of my children and my motherhood. Family court has become the abuser and the weapon of my abuser. Family court is responsible for creating poverty homelessness and generational trauma.",
+        "state": "IL",
+        "county": "Lake",
+        "row_id": "67770c47-4f1a-4521-bc58-71c1512f4dde"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "I have observed Sally for years in the court system. She is a bully. She is disorganized. She is speaks out of turn and on topics that are not her area of understanding. She is bias towards the PAYOR she cares about getting paid. She is often appointed as GAL and PC it makes me wonder if she gets any clients on her own bc the majority of her work is court appointed. I notice she doesnt do or get recognized for pro bono work despite all the FREE SPOON FED to her clients the court gives her. She is disorganized she is rude and she has dozens of reviews over decades saying this is a patttern for her. She must have sent people to give five stars be her only positive reviews are all within 2 weeks of july 2023. the rest of her reviews are 1 star and say the same thing from recent to 12 yrs ago. Believe the bad review and pay attention no one is really hiring her they are being forced to use her by the courts. Wrote unsubstantiated claims in my report that are another woman and continues to call the other woman my name this woman is unrelated to my case we found each other happenstance.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Waukegan. Lake county"
+      },
+      {
+        "comment_text": "Misandrist 1st and foremost. Hates men and fathers \"phoney victims advocate\" used excuses to minimize my parenting time. Said if I come back to court after my 2018 round, I would get 50/50. Went back, brought the autism diagnosis and flat out denied the neuropsych evaluation and said the \"mom didnt participate\" Sandbagged my case from 2012 till 2025.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Waukegan. Lake county"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/sally_lichter",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='IL'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/il/sally_lichter/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "I have observed Sally for years in the court system. She is a bully. She is disorganized. She is speaks out of turn and on topics that are not her area of understanding. She is bias towards the PAYOR she cares about getting paid. She is often appointed as GAL and PC it makes me wonder if she gets any clients on her own bc the majority of her work is court appointed. I notice she doesnt do or get recognized for pro bono work despite all the FREE SPOON FED to her clients the court gives her. She is disorganized she is rude and she has dozens of reviews over decades saying this is a patttern for her. She must have sent people to give five stars be her only positive reviews are all within 2 weeks of july 2023. the rest of her reviews are 1 star and say the same thing from recent to 12 yrs ago. Believe the bad review and pay attention no one is really hiring her they are being forced to use her by the courts. Wrote unsubstantiated claims in my report that are another woman and continues to call the other woman my name this woman is unrelated to my case we found each other happenstance.",
+        "kind": "comment"
+      },
+      {
+        "body": "Misandrist 1st and foremost. Hates men and fathers \"phoney victims advocate\" used excuses to minimize my parenting time. Said if I come back to court after my 2018 round, I would get 50/50. Went back, brought the autism diagnosis and flat out denied the neuropsych evaluation and said the \"mom didnt participate\" Sandbagged my case from 2012 till 2025.",
+        "kind": "comment"
+      },
+      {
+        "body": "The psychological and financial abuse should be considered family terrorism because thats EXACTLY what it is. They terrorize you mentally then extort your hard earned money and savings on the \"best interest of the child.\" The years of therapy I have been through has only made it somewhat bearable.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Family court has destroyed the innocence and robbed the dreams of my children and my motherhood. Family court has become the abuser and the weapon of my abuser. Family court is responsible for creating poverty homelessness and generational trauma.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 5
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

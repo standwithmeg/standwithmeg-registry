@@ -1,0 +1,123 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "heidi_ulbricht",
+    "display_name": "Hiedi ulbricht",
+    "title": "",
+    "first_name": "Hiedi",
+    "last_name": "ulbricht",
+    "role": "Judge",
+    "court": "Flathead",
+    "county": "Flathead District Court",
+    "court_or_county": "Flathead",
+    "state": "MT",
+    "state_abbr": "MT",
+    "mention_count": 2,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 2,
+    "supabase_row_ids": [
+      "68aa241e-8607-419e-b527-e5e350494f57",
+      "091e144a-bf35-40d1-b169-648be3344f0d"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "heidi ulbricht|MT"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 39,
+    "total_submissions": 76,
+    "avg_financial_loss": 170095.33,
+    "avg_months_lost": 41.2,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "MT",
+    "state_family_count": 76,
+    "median_financial_loss": 135250,
+    "median_burden_sample_size": 34,
+    "median_months_lost": 19,
+    "pro_se_pct": 60.5,
+    "pro_se_count": 46,
+    "_pdf_state_family_count": 76,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 2,
+    "actor_report_count": 2,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "Our nephews and niece have been removed from our care, and placed back into an extremely abusive home. Lots of new allegations of abuse.",
+        "state": "MT",
+        "county": "Flathead",
+        "row_id": "a24a81cb-b146-49a8-99ec-f9fa0003ba28"
+      },
+      {
+        "body": "We are in constant worry mode for the safety of the children.",
+        "state": "MT",
+        "county": "Flathead",
+        "row_id": "d2151ba0-6fd5-497e-ba18-f07168f156cf"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "I don't believe she even looks at the cases, just does whatever CPS says to do.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Flathead District Court"
+      },
+      {
+        "comment_text": "She goes along with whatever CPS says.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Flathead District Court"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/heidi_ulbricht",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='MT'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/mt/heidi_ulbricht/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "I don't believe she even looks at the cases, just does whatever CPS says to do.",
+        "kind": "comment"
+      },
+      {
+        "body": "She goes along with whatever CPS says.",
+        "kind": "comment"
+      },
+      {
+        "body": "Our nephews and niece have been removed from our care, and placed back into an extremely abusive home. Lots of new allegations of abuse.",
+        "kind": "family_report"
+      },
+      {
+        "body": "We are in constant worry mode for the safety of the children.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

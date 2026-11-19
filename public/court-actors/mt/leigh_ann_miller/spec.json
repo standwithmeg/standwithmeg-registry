@@ -1,0 +1,102 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "leigh_ann_miller",
+    "display_name": "Leigh Ann miller",
+    "title": "",
+    "first_name": "Leigh Ann",
+    "last_name": "miller",
+    "role": "Custody Evaluator/ Family Court Supervisor",
+    "court": "Family Court services",
+    "county": "Family Court services",
+    "court_or_county": "Family Court services",
+    "state": "MT",
+    "state_abbr": "MT",
+    "mention_count": 1,
+    "family_count": 1,
+    "public_family_count": 1,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 1,
+    "supabase_row_ids": [
+      "28fd4105-dbca-492a-9bc1-39e95bbede6a"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "leigh ann miler|MT"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 39,
+    "total_submissions": 76,
+    "avg_financial_loss": 170095.33,
+    "avg_months_lost": 41.2,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "MT",
+    "state_family_count": 76,
+    "median_financial_loss": 135250,
+    "median_burden_sample_size": 34,
+    "median_months_lost": 19,
+    "pro_se_pct": 60.5,
+    "pro_se_count": 46,
+    "_pdf_state_family_count": 76,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 1,
+    "actor_report_count": 1,
+    "family_count": 1,
+    "family_reports": [
+      {
+        "body": "The system stole time that can't be given back deprived of making memories that should of been remembered in stories later told that would help you feel sense of belonging, rooted with sense of family unity. Instead of feelings of loneliness worthlessness abandonment, looking for brief comfort in drugs ECT after being deprived ability to give and receive love to rebuild strengthen parent/child relationships,",
+        "state": "MT",
+        "county": "Flathead County",
+        "row_id": "a3e3e58c-81e3-4c5e-aae6-399a03a97b43"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Nothing yet I'm still seeking Justice and trying to expose what all they had done in violating my rights in multiple ways. As well as falsifying information in between documents that were submitted and signed by judge amy Eddie",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Family Court services"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/leigh_ann_miller",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='MT'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/mt/leigh_ann_miller/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Nothing yet I'm still seeking Justice and trying to expose what all they had done in violating my rights in multiple ways. As well as falsifying information in between documents that were submitted and signed by judge amy Eddie",
+        "kind": "comment"
+      },
+      {
+        "body": "The system stole time that can't be given back deprived of making memories that should of been remembered in stories later told that would help you feel sense of belonging, rooted with sense of family unity. Instead of feelings of loneliness worthlessness abandonment, looking for brief comfort in drugs ECT after being deprived ability to give and receive love to rebuild strengthen parent/child relationships,",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 2
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

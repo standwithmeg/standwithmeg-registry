@@ -1,0 +1,109 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "lindsey_anne_waits",
+    "display_name": "Lyndsey waits",
+    "title": "",
+    "first_name": "Lyndsey",
+    "last_name": "waits",
+    "role": "Attorney",
+    "court": "Jackson county MO",
+    "county": "Jackson",
+    "court_or_county": "Jackson county MO",
+    "state": "MO",
+    "state_abbr": "MO",
+    "mention_count": 2,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 2,
+    "supabase_row_ids": [
+      "e77cb0da-dd5f-4377-8983-0849d3d39c67",
+      "d8a3b981-ad1b-47e7-b59d-46b320861691"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "lindsey anne waits|MO"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 144,
+    "total_submissions": 306,
+    "avg_financial_loss": 104962.18,
+    "avg_months_lost": 37.4,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "MO",
+    "state_family_count": 306,
+    "median_financial_loss": 80885,
+    "median_burden_sample_size": 142,
+    "median_months_lost": 21,
+    "pro_se_pct": 51.3,
+    "pro_se_count": 157,
+    "_pdf_state_family_count": 306,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 2,
+    "actor_report_count": 2,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "They have destroyed my life getting an opportunity to raise my children right.",
+        "state": "MO",
+        "county": "Cass",
+        "row_id": "deac0196-3ae3-4c24-b185-fd78c75c5953"
+      },
+      {
+        "body": "It has been unfair and corrupt causing undue stress, financial hardship, panic and anxiety attacks, ptsd, and a total loss of trust in the legal system.",
+        "state": "MO",
+        "county": "Jackson",
+        "row_id": "bd7f7771-b640-4dd8-aefb-892ead42f263"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "She had her client falsely accuse me of many accusations.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Jackson"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/lindsey_anne_waits",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='MO'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/mo/lindsey_anne_waits/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "She had her client falsely accuse me of many accusations.",
+        "kind": "comment"
+      },
+      {
+        "body": "They have destroyed my life getting an opportunity to raise my children right.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

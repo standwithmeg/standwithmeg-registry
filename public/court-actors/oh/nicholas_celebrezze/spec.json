@@ -1,0 +1,137 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "nicholas_celebrezze",
+    "display_name": "Calbrezze (this is actually spelled Celebrezze)",
+    "title": "",
+    "first_name": "Calbrezze (this is actually spelled",
+    "last_name": "Celebrezze)",
+    "role": "Judge",
+    "court": "Cuyahoga County",
+    "county": "Cuyahoga",
+    "court_or_county": "Cuyahoga County",
+    "state": "OH",
+    "state_abbr": "OH",
+    "mention_count": 4,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "65609511-8d05-489a-ac2f-c3b965812ea2",
+      "a0fb81aa-98a6-4120-a785-766d18380809",
+      "a9e97fa2-79d6-4c70-8422-3a4855279ce5",
+      "893fe909-a9d7-4cc1-8da7-dd9e827dc244"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "nicholas celebreze|OH"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 205,
+    "total_submissions": 316,
+    "avg_financial_loss": 100328.09,
+    "avg_months_lost": 32.9,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OH",
+    "state_family_count": 316,
+    "median_financial_loss": 73000,
+    "median_burden_sample_size": 157,
+    "median_months_lost": 18,
+    "pro_se_pct": 52.5,
+    "pro_se_count": 166,
+    "_pdf_state_family_count": 316,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 4,
+    "actor_report_count": 4,
+    "family_count": 3,
+    "family_reports": [
+      {
+        "body": "I am living in absolute H 3// right now. My son has a rare genetic disorder and had a bit of an episode that was unusual for him. A traumatic experience triggered him to act out of character and lock me out of my house. The police were called (not by me) and the short of it is they charged him criminally. He just turned 14 and has a 72 IQ. He is kind and has a great personality. Since i was the alleged \"victim \" of the \"crime\" i figured it would be easy to get him out of juvenile detention. His attorney, my attorney, we are both fighting to have him freed. The GAL and judge want him to go to an institution!!!! It's insanity, absolute insanity. They had the board of DD and our whole team try to get him placed inpatient. It was denied and the appeal was denied because he isn't remotely even CLOSE to needing that level of care!!! So their genius idea was to have CPS take temporary custody. I absolutely REFUSED. They held a pretend hearing (pretended that it mattered what I wanted or what my son's therapist wanted), granted CPS temporary custody, even THEY can't get him in patient and they're using juvenile detention as a day care. Meanwhile my son has been assaulted THREE TIMES, moved 3 times to different pods, and has been fed dairy every single day even though he is medically allergic to it. We are living in an unbelievable nightmare. There is no end in sight. GAL on the case Ohio Lawyer Suspended From Practice Over Mishandling of Guardianship - Tucson Elder Law Attorney https://share.google/8YU34sAHXYx1Hbt91 My disabled son cries every day and just wants to come home to his stuffed animals and family. He is being abused and can't comprehend everything. CPS worker lied so many times I've lost count. I don't drink, do drugs, I live in a nice suburban area and own my condo.",
+        "state": "OH",
+        "county": "Cuyahoga",
+        "row_id": "2c94e62a-9b98-4f96-9024-364747ffc9ee"
+      },
+      {
+        "body": "I have been stripped of my legal rights and majority parenting time to my children through false allegations of parental alienation and unscrupulous actors in the family court system aiding my abusers to weaponize our children to continue patterns of post separation abuse and coercive control.",
+        "state": "OH",
+        "county": "Cuyahoga",
+        "row_id": "988cb0bb-6900-4fc3-820f-3aece5703dca"
+      },
+      {
+        "body": "Court systems has no integrity and most of all have hurt children and even children have died, they abuse their power and authority.",
+        "state": "OH",
+        "county": "Cuyahoga",
+        "row_id": "cd070946-832c-48a6-9677-2fe7cfd6b7fb"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "I am living in absolute H 3// right now. My son has a rare genetic disorder and had a bit of an episode that was unusual for him. A traumatic experience triggered him to act out of character and lock me out of my house. The police were called (not by me) and the short of it is they charged him criminally. He just turned 14 and has a 72 IQ. He is kind and has a great personality. Since i was the alleged \"victim \" of the \"crime\" i figured it would be easy to get him out of juvenile detention. His attorney, my attorney, we are both fighting to have him freed. The GAL and judge want him to go to an institution!!!! It's insanity, absolute insanity. They had the board of DD and our whole team try to get him placed inpatient. It was denied and the appeal was denied because he isn't remotely even CLOSE to needing that level of care!!! So their genius idea was to have CPS take temporary custody. I absolutely REFUSED. They held a pretend hearing (pretended that it mattered what I wanted or what my son's therapist wanted), granted CPS temporary custody, even THEY can't get him in patient and they're using juvenile detention as a day care. Meanwhile my son has been assaulted THREE TIMES, moved 3 times to different pods, and has been fed dairy every single day even though he is medically allergic to it. We are living in an unbelievable nightmare. There is no end in sight. Believe me when i say they are coming for your disabled children!!!!",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Cuyahoga"
+      },
+      {
+        "comment_text": "Approved decisions removing custody based off of heresay. Has denied objections before supplementation and made decisions without fully hearing objections. Has denied subpoenas while simultaneously alllwing opposing parties filings He has approved decisions that contained unfounded allegations and did not comply with local rules. He has refused my subpeonas while simultaneously allowing opposing parties. Has allowed a GAL to remain in a case that expressed explicit bias",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Cuyahoga"
+      },
+      {
+        "comment_text": "Ignore evidence of child abuse/ making false statements in order.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Cuyahoga"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/nicholas_celebrezze",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='OH'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/oh/nicholas_celebrezze/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Approved decisions removing custody based off of heresay. Has denied objections before supplementation and made decisions without fully hearing objections. Has denied subpoenas while simultaneously alllwing opposing parties filings He has approved decisions that contained unfounded allegations and did not comply with local rules. He has refused my subpeonas while simultaneously allowing opposing parties. Has allowed a GAL to remain in a case that expressed explicit bias",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignore evidence of child abuse/ making false statements in order.",
+        "kind": "comment"
+      },
+      {
+        "body": "I have been stripped of my legal rights and majority parenting time to my children through false allegations of parental alienation and unscrupulous actors in the family court system aiding my abusers to weaponize our children to continue patterns of post separation abuse and coercive control.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Court systems has no integrity and most of all have hurt children and even children have died, they abuse their power and authority.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 3
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

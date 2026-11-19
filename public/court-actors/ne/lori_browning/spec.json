@@ -1,0 +1,102 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "lori_browning",
+    "display_name": "Lori Browning",
+    "title": "",
+    "first_name": "Lori",
+    "last_name": "Browning",
+    "role": "Attorney",
+    "court": "Scottsbluff",
+    "county": "Scottsbluff",
+    "court_or_county": "Scottsbluff",
+    "state": "NE",
+    "state_abbr": "NE",
+    "mention_count": 1,
+    "family_count": 1,
+    "public_family_count": 1,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 1,
+    "supabase_row_ids": [
+      "ddfca0c3-0e22-4a01-8f35-ad37c7e0072f"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "lori browning|NE"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 36,
+    "total_submissions": 52,
+    "avg_financial_loss": 154610.27,
+    "avg_months_lost": 35.2,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "NE",
+    "state_family_count": 52,
+    "median_financial_loss": 126905,
+    "median_burden_sample_size": 20,
+    "median_months_lost": 22,
+    "pro_se_pct": 50.0,
+    "pro_se_count": 26,
+    "_pdf_state_family_count": 52,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 1,
+    "actor_report_count": 1,
+    "family_count": 1,
+    "family_reports": [
+      {
+        "body": "After working for DHHS and wanting to be the person to help me make a positive change and then seeing how DHHS tore my family apart, it showed how much people care more about power and being right than what is in the right interest of children. Now as a therapist, I hope it can help others, including my own children someday heal from this trauma.",
+        "state": "NE",
+        "county": "Scotts Bluff County",
+        "row_id": "2d798e82-c2a8-467c-aa70-124a1eefa288"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "DHHS had their attorney present the whole time and the caseworkers would not talk to me because I asked them why they didn’t do a capstone interview for my children when they expressed abuse. Their father had recently done while he was in their care. She was completely biased saying that I had no insight and she could not say anything else about me. Besides, my kids missing school and I am fully responsible regardless of my kids special needs.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "DHHS attorney"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/lori_browning",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='NE'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ne/lori_browning/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "DHHS had their attorney present the whole time and the caseworkers would not talk to me because I asked them why they didn’t do a capstone interview for my children when they expressed abuse. Their father had recently done while he was in their care. She was completely biased saying that I had no insight and she could not say anything else about me. Besides, my kids missing school and I am fully responsible regardless of my kids special needs.",
+        "kind": "comment"
+      },
+      {
+        "body": "After working for DHHS and wanting to be the person to help me make a positive change and then seeing how DHHS tore my family apart, it showed how much people care more about power and being right than what is in the right interest of children. Now as a therapist, I hope it can help others, including my own children someday heal from this trauma.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 2
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

@@ -1,0 +1,123 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "heidi_m_chandler",
+    "display_name": "Heidi chandler",
+    "title": "",
+    "first_name": "Heidi",
+    "last_name": "chandler",
+    "role": "Judge",
+    "court": "Itasca county",
+    "county": "Itasca county",
+    "court_or_county": "Itasca county",
+    "state": "MN",
+    "state_abbr": "MN",
+    "mention_count": 2,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 2,
+    "supabase_row_ids": [
+      "e9745bf7-f465-4a7f-9cd4-8509ffd18883",
+      "6f9180ec-06b4-426f-93a7-e34e790842b9"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "heidi chandler|MN"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 57,
+    "total_submissions": 88,
+    "avg_financial_loss": 142566.78,
+    "avg_months_lost": 31.4,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "MN",
+    "state_family_count": 88,
+    "median_financial_loss": 111300,
+    "median_burden_sample_size": 37,
+    "median_months_lost": 14,
+    "pro_se_pct": 56.8,
+    "pro_se_count": 50,
+    "_pdf_state_family_count": 88,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 2,
+    "actor_report_count": 2,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "This fraudulent system is a cash for kids profiteering system. Sick!",
+        "state": "MN",
+        "county": "Itasca County",
+        "row_id": "4016edf8-3fcf-4620-ba9d-aa9c99ef3eef"
+      },
+      {
+        "body": "For more than a decade, multiple agencies and actors — courts, CPS, law enforcement, GAL programs, school systems, and county services — have failed to follow their own required procedures, leaving your family unprotected while allowing an abusive parent to avoid accountability. Instead of providing safety, the system repeatedly: - Ignored or minimized documented domestic abuse, even when evidence was provided. - Delayed or obstructed court processes, leaving your family in long-term limbo. - Denied meaningful representation and due process, including inconsistent enforcement of orders. - Shifted financial burdens onto you, including child support, GAL fees, and supervised visitation costs, even when the system’s own failures created the need for those services. - Failed to provide ADA/Section 504 accommodations, despite clear eligibility and repeated requests. - Allowed viewpoint discrimination, treating you differently because you challenged misconduct and demanded transparency. - Left your children to emotionally support each other, because mandated protections were not enforced. These failures weren’t isolated mistakes — they formed a pattern of institutional neglect that harmed your family’s stability, safety, and constitutional rights. Due Process Violations Fourteenth Amendment; Minnesota Constitution Art. I, Sec. 7 (Procedural fairness, timely hearings, consistent enforcement of orders) - Equal Protection / Viewpoint Discrimination Fourteenth Amendment; Minnesota Constitution Art. I, Sec. 2 (Unequal treatment because you challenged officials or demanded transparency) - Failure to Protect / Negligent Oversight Minn. Stat. § 626.556 (mandated reporting); agency duty-of-care standards - ADA & Section 504 Violations (Failure to provide accommodations; discriminatory access to government processes) - Minnesota Government Data Practices Act (MGDPA) (Withholding records, inconsistent documentation, selective transparency) - Open Meeting Law Issues (Opaque decision-making, lack of public access, refusal to record meetings) - Financial Exploitation of a Vulnerable Adult / Coercive Control Patterns Minn. Stat. § 609.2335; Minn. Stat. § 518B.01 (When systems force a safe parent into financial hardship while enabling an abuser) - Failure to Enforce Court Orders (Judicial and agency inaction that results in harm to children) My family was harmed not by one bad decision, but by a systemic pattern of delays, discrimination, ignored evidence, ADA failures, and procedural violations that stripped you of protection while enabling the person who harmed you.",
+        "state": "MN",
+        "county": "Koochiching",
+        "row_id": "13feb47a-4112-4240-9fd5-9741e7fa09db"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Made biased decisions when my paid attorney Jesse Powell was on the run for 7 sexual assault charges. She would not let that be heard in court along about domestic violence issues like my ex's hro was an ofps were denied. My doctor's therapist and mental health providers were denied so she could claim her agenda that I was unstable",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Ninth district courts"
+      },
+      {
+        "comment_text": "Exparte communications, proceeded without due process",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Itasca"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/heidi_m_chandler",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='MN'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/mn/heidi_m_chandler/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Made biased decisions when my paid attorney Jesse Powell was on the run for 7 sexual assault charges. She would not let that be heard in court along about domestic violence issues like my ex's hro was an ofps were denied. My doctor's therapist and mental health providers were denied so she could claim her agenda that I was unstable",
+        "kind": "comment"
+      },
+      {
+        "body": "Exparte communications, proceeded without due process",
+        "kind": "comment"
+      },
+      {
+        "body": "This fraudulent system is a cash for kids profiteering system. Sick!",
+        "kind": "family_report"
+      },
+      {
+        "body": "For more than a decade, multiple agencies and actors — courts, CPS, law enforcement, GAL programs, school systems, and county services — have failed to follow their own required procedures, leaving your family unprotected while allowing an abusive parent to avoid accountability. Instead of providing safety, the system repeatedly: - Ignored or minimized documented domestic abuse, even when evidence was provided. - Delayed or obstructed court processes, leaving your family in long-term limbo. - Denied meaningful representation and due process, including inconsistent enforcement of orders. - Shifted financial burdens onto you, including child support, GAL fees, and supervised visitation costs, even when the system’s own failures created the need for those services. - Failed to provide ADA/Section 504 accommodations, despite clear eligibility and repeated requests. - Allowed viewpoint discrimination, treating you differently because you challenged misconduct and demanded transparency. - Left your children to emotionally support each other, because mandated protections were not enforced. These failures weren’t isolated mistakes — they formed a pattern of institutional neglect that harmed your family’s stability, safety, and constitutional rights. Due Process Violations Fourteenth Amendment; Minnesota Constitution Art. I, Sec. 7 (Procedural fairness, timely hearings, consistent enforcement of orders) - Equal Protection / Viewpoint Discrimination Fourteenth Amendment; Minnesota Constitution Art. I, Sec. 2 (Unequal treatment because you challenged officials or demanded transparency) - Failure to Protect / Negligent Oversight Minn. Stat. § 626.556 (mandated reporting); agency duty-of-care standards - ADA & Section 504 Violations (Failure to provide accommodations; discriminatory access to government processes) - Minnesota Government Data Practices Act (MGDPA) (Withholding records, inconsistent documentation, selective transparency) - Open Meeting Law Issues (Opaque decision-making, lack of public access, refusal to record meetings) - Financial Exploitation of a Vulnerable Adult / Coercive Control Patterns Minn. Stat. § 609.2335; Minn. Stat. § 518B.01 (When systems force a safe parent into financial hardship while enabling an abuser) - Failure to Enforce Court Orders (Judicial and agency inaction that results in harm to children) My family was harmed not by one bad decision, but by a systemic pattern of delays, discrimination, ignored evidence, ADA failures, and procedural violations that stripped you of protection while enabling the person who harmed you.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 3
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

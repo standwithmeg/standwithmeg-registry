@@ -1,0 +1,102 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "richard_craig_tatterson",
+    "display_name": "Richard Craig Tatterson",
+    "title": "",
+    "first_name": "Richard Craig",
+    "last_name": "Tatterson",
+    "role": "Judge",
+    "court": "Mason county",
+    "county": "Mason county",
+    "court_or_county": "Mason county",
+    "state": "WV",
+    "state_abbr": "WV",
+    "mention_count": 1,
+    "family_count": 1,
+    "public_family_count": 1,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 1,
+    "supabase_row_ids": [
+      "c26a1e67-60a8-46f5-aad7-333a61d43d89"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "richard craig taterson|WV"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 49,
+    "total_submissions": 70,
+    "avg_financial_loss": 95065.76,
+    "avg_months_lost": 39.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "WV",
+    "state_family_count": 70,
+    "median_financial_loss": 110880,
+    "median_burden_sample_size": 18,
+    "median_months_lost": 25,
+    "pro_se_pct": 47.1,
+    "pro_se_count": 33,
+    "_pdf_state_family_count": 70,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 1,
+    "actor_report_count": 1,
+    "family_count": 1,
+    "family_reports": [
+      {
+        "body": "Made-up accusations to gain custudy,many fees such as drug testing,child transport visits,many more",
+        "state": "WV",
+        "county": "Mason",
+        "row_id": "a6431d5c-484e-4b8a-9cfb-87801376a43b"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Upheld everything even though proved fit from day one",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Mason"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/richard_craig_tatterson",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='WV'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/wv/richard_craig_tatterson/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Upheld everything even though proved fit from day one",
+        "kind": "comment"
+      },
+      {
+        "body": "Made-up accusations to gain custudy,many fees such as drug testing,child transport visits,many more",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

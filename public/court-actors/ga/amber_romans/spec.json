@@ -33,7 +33,7 @@
   "state_stats": {
     "families_approved": 119,
     "total_submissions": 193,
-    "avg_financial_loss": 189526.53,
+    "avg_financial_loss": 189567.29,
     "avg_months_lost": 32.5,
     "_source_table": "movement_stats_by_state",
     "_match_value": "GA",
@@ -46,7 +46,7 @@
     "_pdf_state_family_count": 193,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6591,
+  "movement_total": 6620,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -67,26 +67,16 @@
     ],
     "public_comments": [
       {
-        "comment_text": "Submitted fabricated documents, discussed sealed information in open court, ex parte communication with the judge",
+        "comment_text": "Attempted to submit fabricated documents as evidence to remove my parental rights Fabricated evidence, aided her client in hiding the child for 154 days",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "Fabricated evidence, aided her client in hiding the child for 154 days",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "Attempted to submit fabricated documents as evidence to remove my parental rights",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Catoosa County Superior Court"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/amber_romans",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='GA'",
-    "pdf_public_actor: no 'Amber Romans' in cache for GA"
+    "public_family_count_api: no actors returned for state='GA'"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
@@ -106,15 +96,7 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Submitted fabricated documents, discussed sealed information in open court, ex parte communication with the judge",
-        "kind": "comment"
-      },
-      {
-        "body": "Fabricated evidence, aided her client in hiding the child for 154 days",
-        "kind": "comment"
-      },
-      {
-        "body": "Attempted to submit fabricated documents as evidence to remove my parental rights",
+        "body": "Attempted to submit fabricated documents as evidence to remove my parental rights Fabricated evidence, aided her client in hiding the child for 154 days",
         "kind": "comment"
       },
       {
@@ -126,7 +108,7 @@
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 2
+    "quote_page_count": 1
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

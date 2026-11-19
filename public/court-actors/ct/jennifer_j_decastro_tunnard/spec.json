@@ -26,27 +26,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-n0ood0ab/New Final Post and Capcut template/export/jennifer_j_decastro_tunnard/image_1080.png",
+    "path": "/tmp/swm-share-pages-pauilms9/New Final Post and Capcut template/export/jennifer_j_decastro_tunnard/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 46,
-    "total_submissions": 73,
-    "avg_financial_loss": 341386.43,
+    "total_submissions": 74,
+    "avg_financial_loss": 339747.18,
     "avg_months_lost": 31.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CT",
-    "state_family_count": 73,
-    "median_financial_loss": 211500,
-    "median_burden_sample_size": 39,
+    "state_family_count": 74,
+    "median_financial_loss": 213250,
+    "median_burden_sample_size": 40,
     "median_months_lost": 22,
-    "pro_se_pct": 65.8,
-    "pro_se_count": 48,
-    "_pdf_state_family_count": 73,
+    "pro_se_pct": 66.2,
+    "pro_se_count": 49,
+    "_pdf_state_family_count": 74,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6569,
+  "movement_total": 6620,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -74,12 +74,6 @@
     "public_comments": [
       {
         "comment_text": "After already 10 years, this judge came in New. It was my contempt hearing for ongoing non-payment of child support and alimony. No new exhibits no new information and literally dismantled a six-figure judgment and Order stating that my ex must not have any money and doesn't need to pay except for small monthly payments over the course of many many years in the future. The most insane ruling ever had in all these years. I have filed numerous motions because her order was void at Livio pending appellate decision which completely Vindicated and verified my position yet no judge has ruled that I get this money and it's been over 2 years. It's the goddamn Wild Wild West. And I was told by Insiders she never should have been appointed. Our governor appoints all the judges. Insane and no accountability as always.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Stamford"
-      },
-      {
-        "comment_text": "Made sua sponte orders on custody with no hearing or evidence. Made me pay legal fees of ex despite zero income and immense debt and no wrongdoing on my part.",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Stamford"
@@ -118,10 +112,6 @@
         "kind": "comment"
       },
       {
-        "body": "Made sua sponte orders on custody with no hearing or evidence. Made me pay legal fees of ex despite zero income and immense debt and no wrongdoing on my part.",
-        "kind": "comment"
-      },
-      {
         "body": "Honestly, too much to write about her, but she wears her bias on her sleeve and makes unfounded sua sponte decisions",
         "kind": "comment"
       },
@@ -138,7 +128,7 @@
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 6
+    "quote_page_count": 5
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

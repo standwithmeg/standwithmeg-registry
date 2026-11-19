@@ -1,0 +1,101 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "kristopher_piereth",
+    "display_name": "Kristopher Piereth",
+    "title": "",
+    "first_name": "Kristopher",
+    "last_name": "Piereth",
+    "role": "GAL/Attorney",
+    "court": "Kendall county",
+    "county": "Kendall county",
+    "court_or_county": "Kendall county",
+    "state": "IL",
+    "state_abbr": "IL",
+    "mention_count": 1,
+    "family_count": 1,
+    "public_family_count": 1,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 1,
+    "supabase_row_ids": [
+      "01d4e7e1-d698-4565-8468-64bbb17c95e0"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "kristopher piereth|IL"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 100,
+    "total_submissions": 190,
+    "avg_financial_loss": 201852.04,
+    "avg_months_lost": 27.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "IL",
+    "state_family_count": 190,
+    "median_financial_loss": 126750,
+    "median_burden_sample_size": 115,
+    "median_months_lost": 15,
+    "pro_se_pct": 48.1,
+    "pro_se_count": 91,
+    "_pdf_state_family_count": 189,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 1,
+    "actor_report_count": 1,
+    "family_count": 1,
+    "family_reports": [
+      {
+        "body": "My daughters grades dropped at school significantky and her self confidence wiped out and has missed so much school from the stress.",
+        "state": "IL",
+        "county": "Kendall county",
+        "row_id": "7d6b3211-bd26-41f6-a8da-09bbac1b301d"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Perjurized all motions",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/kristopher_piereth",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='IL'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/il/kristopher_piereth/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Perjurized all motions",
+        "kind": "comment"
+      },
+      {
+        "body": "My daughters grades dropped at school significantky and her self confidence wiped out and has missed so much school from the stress.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

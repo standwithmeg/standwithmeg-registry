@@ -1,0 +1,123 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "amber_gibson",
+    "display_name": "Amber Gibson",
+    "title": "",
+    "first_name": "Amber",
+    "last_name": "Gibson",
+    "role": "CPS Worker",
+    "court": "Montcalm",
+    "county": "Montcalm",
+    "court_or_county": "Montcalm",
+    "state": "MI",
+    "state_abbr": "MI",
+    "mention_count": 2,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 2,
+    "supabase_row_ids": [
+      "c247c6fe-e235-4f3c-8cfa-b97f117e93b3",
+      "a1512fca-2f80-4f08-b944-71e71266873c"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "amber gibson|MI"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 140,
+    "total_submissions": 200,
+    "avg_financial_loss": 173263.13,
+    "avg_months_lost": 39.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "MI",
+    "state_family_count": 200,
+    "median_financial_loss": 105500,
+    "median_burden_sample_size": 86,
+    "median_months_lost": 18,
+    "pro_se_pct": 44.0,
+    "pro_se_count": 88,
+    "_pdf_state_family_count": 200,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 2,
+    "actor_report_count": 2,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "Safety is when you know you are safe, it's when you know that your parents are safe, it's when you can lay your head down at night and go to bed peacefully it's when you can tell your parents that you love them and give them a hug but once foster care takes you, you never know when you'll be safe again, you don't know when you will be able to lay your head down at night and fall asleep peacefully you don't know if your parents are okay and your biggest worry is your parents and your siblings at the end of the day but you're also so angry because the court took that all away from you.",
+        "state": "MI",
+        "county": "Edmore",
+        "row_id": "f75c3366-f0b5-4a81-8c9f-e836672a6778"
+      },
+      {
+        "body": "This destroyed my family. I have lost my children. My wife and I dont get a long well. Our married may beyond repair. I miss my babies.",
+        "state": "MI",
+        "county": "Montcalm",
+        "row_id": "7d0a93c4-1565-4a7c-a7a3-1713bc2dde90"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "She allowed Emily to lie on reports She would not let us see kids when Emily was out of office. She also lied on statements. Allowed us to be in unsafe environments instead of a safe loving home with there mother and father.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Montcalm"
+      },
+      {
+        "comment_text": "Supervisor on our case. Lies and falsifys evidence.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Montcalm County Michigan"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/amber_gibson",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='MI'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/mi/amber_gibson/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "She allowed Emily to lie on reports She would not let us see kids when Emily was out of office. She also lied on statements. Allowed us to be in unsafe environments instead of a safe loving home with there mother and father.",
+        "kind": "comment"
+      },
+      {
+        "body": "Supervisor on our case. Lies and falsifys evidence.",
+        "kind": "comment"
+      },
+      {
+        "body": "Safety is when you know you are safe, it's when you know that your parents are safe, it's when you can lay your head down at night and go to bed peacefully it's when you can tell your parents that you love them and give them a hug but once foster care takes you, you never know when you'll be safe again, you don't know when you will be able to lay your head down at night and fall asleep peacefully you don't know if your parents are okay and your biggest worry is your parents and your siblings at the end of the day but you're also so angry because the court took that all away from you.",
+        "kind": "family_report"
+      },
+      {
+        "body": "This destroyed my family. I have lost my children. My wife and I dont get a long well. Our married may beyond repair. I miss my babies.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 3
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

@@ -1,0 +1,103 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "gerard_i_adelman",
+    "display_name": "Gerard I. Adelman",
+    "title": "",
+    "first_name": "Gerard I.",
+    "last_name": "Adelman",
+    "role": "Judge",
+    "court": "Middletown",
+    "county": "Middletown",
+    "court_or_county": "Middletown",
+    "state": "CT",
+    "state_abbr": "CT",
+    "mention_count": 2,
+    "family_count": 1,
+    "public_family_count": 1,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 2,
+    "supabase_row_ids": [
+      "d3cce8bf-2f52-4293-a805-e369021a82ab",
+      "bfc05a8d-36ff-46f4-9ded-d5bcfb63e96a"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "gerard adelman|CT"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 46,
+    "total_submissions": 74,
+    "avg_financial_loss": 339747.18,
+    "avg_months_lost": 31.4,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "CT",
+    "state_family_count": 74,
+    "median_financial_loss": 213250,
+    "median_burden_sample_size": 40,
+    "median_months_lost": 22,
+    "pro_se_pct": 66.2,
+    "pro_se_count": 49,
+    "_pdf_state_family_count": 74,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6620,
+  "supabase": {
+    "report_count": 2,
+    "actor_report_count": 2,
+    "family_count": 1,
+    "family_reports": [
+      {
+        "body": "The system never protected my children even when the GAL filed motions with the court. 6 years of financial abuse and got away with it all. The system needs a complete rework and consider coercive control a real issue.",
+        "state": "CT",
+        "county": "middletown",
+        "row_id": "bbc7bb66-667a-41fd-b4bf-caa92b162c44"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "in several instances- never even heard my testimony in contempt for 120k QRDO. Evidence seems to not be documented in final judgement and would not match the actual evidence on file. listed below",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "middletown"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/gerard_i_adelman",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='CT'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ct/gerard_i_adelman/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "in several instances- never even heard my testimony in contempt for 120k QRDO. Evidence seems to not be documented in final judgement and would not match the actual evidence on file. listed below",
+        "kind": "comment"
+      },
+      {
+        "body": "The system never protected my children even when the GAL filed motions with the court. 6 years of financial abuse and got away with it all. The system needs a complete rework and consider coercive control a real issue.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

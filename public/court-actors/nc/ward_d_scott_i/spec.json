@@ -1,0 +1,120 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "ward_d_scott_i",
+    "display_name": "Ward D. Scott i",
+    "title": "",
+    "first_name": "Ward D. Scott",
+    "last_name": "i",
+    "role": "Judge",
+    "court": "Buncombe",
+    "county": "Buncombe",
+    "court_or_county": "Buncombe",
+    "state": "NC",
+    "state_abbr": "NC",
+    "mention_count": null,
+    "family_count": 5,
+    "public_family_count": 5,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 7,
+    "supabase_row_ids": null,
+    "actor_row_id": null,
+    "actor_bucket_key": "ward scot i|NC"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 157,
+    "total_submissions": 239,
+    "avg_financial_loss": 168081.76,
+    "avg_months_lost": 36.2,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "NC",
+    "state_family_count": 239,
+    "median_financial_loss": 140000,
+    "median_burden_sample_size": 77,
+    "median_months_lost": 18,
+    "pro_se_pct": 48.5,
+    "pro_se_count": 116,
+    "_pdf_state_family_count": 239,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 7,
+    "actor_report_count": 7,
+    "family_count": 5,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Ward exhibited clear bias from the inception of the case; sustained every objection to all my evidence of harm and trauma caused to my children by their father, then told me, \"Looks like you have no evidence of any of this. I find you unbelievable,\" threatened to imprison me if I did not reveal the name of my attorney who advised me to flee this jurisdiction to keep my boys safe, then decided I was lying when I refused to give him the name; violates many of the Rules of Judicial Procedure but threatened to sanction me when I pointed this out; pretended not to understand what a conflict of interest was, and decided that the wisest action to take to determine the existence of a conflict was for *the conflicted person* to make this determination; withheld that he had a conflict of interest due to his former employment with NC's DSS, even after I mentioned numerous times that DSS behaved unethically and perhaps illegally, and that I've been told that DSS is trying to harm me; has a fantastical ego that is a major danger to anyone entering family court in Buncombe County, particularly if you are a woman and your children have suffered abuse caused by a man.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Buncombe"
+      },
+      {
+        "comment_text": "Terminated my parental rights and they called me to court that morning without notice and I was in class at the local technical College not sure why I wasn't informed on this hearing that I knew NOTHING ABOUT",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Buncombe"
+      },
+      {
+        "comment_text": "He laughed when he saw an evidence photo of a hole punched in a door by my ex, then looked at my ex and said “you know they make keys, don’t you?”",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
+      },
+      {
+        "comment_text": "Ignored Evidence",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Buncombe"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/ward_d_scott_i",
+  "unresolved": [
+    "court_actors: no rows match name~'Ward D. Scott i' state='NC'",
+    "public_family_count_api: no actors returned for state='NC'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/nc/ward_d_scott_i/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Ward exhibited clear bias from the inception of the case; sustained every objection to all my evidence of harm and trauma caused to my children by their father, then told me, \"Looks like you have no evidence of any of this. I find you unbelievable,\" threatened to imprison me if I did not reveal the name of my attorney who advised me to flee this jurisdiction to keep my boys safe, then decided I was lying when I refused to give him the name; violates many of the Rules of Judicial Procedure but threatened to sanction me when I pointed this out; pretended not to understand what a conflict of interest was, and decided that the wisest action to take to determine the existence of a conflict was for *the conflicted person* to make this determination; withheld that he had a conflict of interest due to his former employment with NC's DSS, even after I mentioned numerous times that DSS behaved unethically and perhaps illegally, and that I've been told that DSS is trying to harm me; has a fantastical ego that is a major danger to anyone entering family court in Buncombe County, particularly if you are a woman and your children have suffered abuse caused by a man.",
+        "kind": "comment"
+      },
+      {
+        "body": "Terminated my parental rights and they called me to court that morning without notice and I was in class at the local technical College not sure why I wasn't informed on this hearing that I knew NOTHING ABOUT",
+        "kind": "comment"
+      },
+      {
+        "body": "He laughed when he saw an evidence photo of a hole punched in a door by my ex, then looked at my ex and said “you know they make keys, don’t you?”",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored Evidence",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 3
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

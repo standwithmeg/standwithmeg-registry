@@ -28,27 +28,27 @@
     "actor_bucket_key": "bridget childers|OK"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-0giaxxiy/New Final Post and Capcut template/export/bridget_childers/image_1080.png",
+    "path": "/tmp/swm-share-pages-pauilms9/New Final Post and Capcut template/export/bridget_childers/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 120,
-    "total_submissions": 240,
-    "avg_financial_loss": 113903.58,
+    "total_submissions": 241,
+    "avg_financial_loss": 113410.49,
     "avg_months_lost": 27.7,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OK",
-    "state_family_count": 240,
+    "state_family_count": 241,
     "median_financial_loss": 105000,
     "median_burden_sample_size": 127,
     "median_months_lost": 16,
-    "pro_se_pct": 41.2,
-    "pro_se_count": 99,
-    "_pdf_state_family_count": 240,
+    "pro_se_pct": 41.5,
+    "pro_se_count": 100,
+    "_pdf_state_family_count": 241,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6592,
+  "movement_total": 6620,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,

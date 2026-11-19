@@ -25,7 +25,7 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-0giaxxiy/New Final Post and Capcut template/export/lisa_metcalf/image_1080.png",
+    "path": "/tmp/swm-share-pages-pauilms9/New Final Post and Capcut template/export/lisa_metcalf/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -45,7 +45,7 @@
     "_pdf_state_family_count": 540,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6591,
+  "movement_total": 6620,
   "supabase": {
     "report_count": 2,
     "actor_report_count": 2,
@@ -66,21 +66,22 @@
     ],
     "public_comments": [
       {
-        "comment_text": "She was chosen by opposing party council to be daughter’s therapist. Mediator admitted to her being a biased party because father chose her to be his personal therapist. Mediator doesn’t see a need to change child therapist.",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
         "comment_text": "Took our money and did nothing. Six months went by and all she got completed was our psych evaluations ( she refused to let me see my results) She asked for a $8,500 retainer and once the case was sent over to CPS she said she couldn’t do anything with the evaluation until the case in CPS was closed",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Sutter county"
+      },
+      {
+        "comment_text": "She was chosen by opposing party council to be daughter’s therapist. Mediator admitted to her being a biased party because father chose her to be his personal therapist. Mediator doesn’t see a need to change child therapist.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Sutter county"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/lisa_metcalf",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='CA'",
-    "pdf_public_actor: no 'Lisa Metcalf' in cache for CA"
+    "public_family_count_api: no actors returned for state='CA'"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
@@ -100,11 +101,11 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "She was chosen by opposing party council to be daughter’s therapist. Mediator admitted to her being a biased party because father chose her to be his personal therapist. Mediator doesn’t see a need to change child therapist.",
+        "body": "Took our money and did nothing. Six months went by and all she got completed was our psych evaluations ( she refused to let me see my results) She asked for a $8,500 retainer and once the case was sent over to CPS she said she couldn’t do anything with the evaluation until the case in CPS was closed",
         "kind": "comment"
       },
       {
-        "body": "Took our money and did nothing. Six months went by and all she got completed was our psych evaluations ( she refused to let me see my results) She asked for a $8,500 retainer and once the case was sent over to CPS she said she couldn’t do anything with the evaluation until the case in CPS was closed",
+        "body": "She was chosen by opposing party council to be daughter’s therapist. Mediator admitted to her being a biased party because father chose her to be his personal therapist. Mediator doesn’t see a need to change child therapist.",
         "kind": "comment"
       },
       {

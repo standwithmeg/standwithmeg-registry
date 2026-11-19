@@ -1,0 +1,123 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "duane_dougherty",
+    "display_name": "Duane C. Dougherty",
+    "title": "",
+    "first_name": "Duane C.",
+    "last_name": "Dougherty",
+    "role": "Judge",
+    "court": "District Court Douglas County",
+    "county": "Douglas",
+    "court_or_county": "District Court Douglas County",
+    "state": "NE",
+    "state_abbr": "NE",
+    "mention_count": 2,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 2,
+    "supabase_row_ids": [
+      "865fd736-1c7c-4b67-b81d-dff5c22fd44a",
+      "9cd272af-2b82-4fce-8003-18ae450cb134"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "duane dougherty|NE"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 36,
+    "total_submissions": 52,
+    "avg_financial_loss": 154610.27,
+    "avg_months_lost": 35.2,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "NE",
+    "state_family_count": 52,
+    "median_financial_loss": 126905,
+    "median_burden_sample_size": 20,
+    "median_months_lost": 22,
+    "pro_se_pct": 50.0,
+    "pro_se_count": 26,
+    "_pdf_state_family_count": 52,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 2,
+    "actor_report_count": 2,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "The greatest tragedy is that the abuse didn’t end at home—it continued through the system, leaving us trapped in a cycle of harm that the very institutions meant to protect us only deepened. Five years of litigation has left our family with lasting psychological trauma. We have lived in survival mode for so long that fear, uncertainty, and chronic stress became our normal. The financial devastation, emotional scars, and years we lost can never be restored. What began as a custody case changed every part of our lives, and its impact will remain with our family long after the case is over.",
+        "state": "NE",
+        "county": "Douglas County",
+        "row_id": "22921cc5-5134-4368-a3f0-a817354c1e22"
+      },
+      {
+        "body": "It has stolen memories and time with my children also my money",
+        "state": "NE",
+        "county": "Douglas",
+        "row_id": "7fc01240-2e7b-41ec-a5af-3b4fb1e58dcb"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Denied motions, wouldn’t set hearings or hear motions filed by plaintiff. Gag orders. Punishment of not being able to see daughters games. It appears the judge and the attorneys all know each other and have a well played out system that destroys families.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "District Court Douglas County"
+      },
+      {
+        "comment_text": "Always denies my motions",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Douglas"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/duane_dougherty",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='NE'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ne/duane_dougherty/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Denied motions, wouldn’t set hearings or hear motions filed by plaintiff. Gag orders. Punishment of not being able to see daughters games. It appears the judge and the attorneys all know each other and have a well played out system that destroys families.",
+        "kind": "comment"
+      },
+      {
+        "body": "Always denies my motions",
+        "kind": "comment"
+      },
+      {
+        "body": "The greatest tragedy is that the abuse didn’t end at home—it continued through the system, leaving us trapped in a cycle of harm that the very institutions meant to protect us only deepened. Five years of litigation has left our family with lasting psychological trauma. We have lived in survival mode for so long that fear, uncertainty, and chronic stress became our normal. The financial devastation, emotional scars, and years we lost can never be restored. What began as a custody case changed every part of our lives, and its impact will remain with our family long after the case is over.",
+        "kind": "family_report"
+      },
+      {
+        "body": "It has stolen memories and time with my children also my money",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 3
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

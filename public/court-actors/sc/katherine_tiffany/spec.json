@@ -1,0 +1,103 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "katherine_tiffany",
+    "display_name": "Katherine Tiffany",
+    "title": "",
+    "first_name": "Katherine",
+    "last_name": "Tiffany",
+    "role": "Judge",
+    "court": "Greenville SC",
+    "county": "Greenville",
+    "court_or_county": "Greenville SC",
+    "state": "SC",
+    "state_abbr": "SC",
+    "mention_count": 2,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 2,
+    "supabase_row_ids": [
+      "beaf75b0-511a-444f-b64d-9783140be34f",
+      "a14a5cc2-0ab5-4fd1-aa7c-6f5d3995f5b7"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "katherine tifany|SC"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 81,
+    "total_submissions": 141,
+    "avg_financial_loss": 242002.54,
+    "avg_months_lost": 25.8,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "SC",
+    "state_family_count": 141,
+    "median_financial_loss": 105000,
+    "median_burden_sample_size": 91,
+    "median_months_lost": 18,
+    "pro_se_pct": 55.3,
+    "pro_se_count": 78,
+    "_pdf_state_family_count": 141,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 2,
+    "actor_report_count": 2,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "The family court system has failed myself and my daughter greatly by turning the abuser into the victim an giving him full power over our lives. Ten years in and my daughter’s meantal health will be impacted forever.",
+        "state": "SC",
+        "county": "Greenville",
+        "row_id": "0c2f1f06-af44-4c39-8dd8-2b22808319aa"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Took away 50% of my child time, I had sole custody before. Took away my day in medical and education for my child to a known drug user and Highschool drop out. Disregarded evidence of wiping hard drives looking for child pornography. Added interest to fees and threatened jail over failure to pay because I didn’t have the income.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Greenville"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/katherine_tiffany",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='SC'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/sc/katherine_tiffany/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Took away 50% of my child time, I had sole custody before. Took away my day in medical and education for my child to a known drug user and Highschool drop out. Disregarded evidence of wiping hard drives looking for child pornography. Added interest to fees and threatened jail over failure to pay because I didn’t have the income.",
+        "kind": "comment"
+      },
+      {
+        "body": "The family court system has failed myself and my daughter greatly by turning the abuser into the victim an giving him full power over our lives. Ten years in and my daughter’s meantal health will be impacted forever.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 2
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

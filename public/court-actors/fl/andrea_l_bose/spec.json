@@ -1,0 +1,93 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "andrea_l_bose",
+    "display_name": "Andrea L Bose",
+    "title": "",
+    "first_name": "Andrea L",
+    "last_name": "Bose",
+    "role": "GAL / Child Representative",
+    "court": "Osceola",
+    "county": "Osceola",
+    "court_or_county": "Osceola",
+    "state": "FL",
+    "state_abbr": "FL",
+    "mention_count": 1,
+    "family_count": 1,
+    "public_family_count": 1,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 1,
+    "supabase_row_ids": [
+      "cc32de51-7e8d-428a-b1b7-17b32ba70d37"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "andrea bose|FL"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 236,
+    "total_submissions": 358,
+    "avg_financial_loss": 190520.48,
+    "avg_months_lost": 27.2,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "FL",
+    "state_family_count": 358,
+    "median_financial_loss": 174000,
+    "median_burden_sample_size": 154,
+    "median_months_lost": 17,
+    "pro_se_pct": 57.5,
+    "pro_se_count": 206,
+    "_pdf_state_family_count": 358,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6620,
+  "supabase": {
+    "report_count": 1,
+    "actor_report_count": 1,
+    "family_count": 1,
+    "family_reports": [
+      {
+        "body": "Courtroom corruption, fraudulent court orders, child abduction and trafficking attempt, uncooperative law enforcement, denial and restrictions for family members in making contact with child while in DCF custody",
+        "state": "NJ",
+        "county": "USA",
+        "row_id": "44d0032d-7e54-4fef-9b19-84d85ffee816"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "GAL attorney that works against families and is involved in court corruption",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Osceola"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/andrea_l_bose",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='FL'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/fl/andrea_l_bose/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

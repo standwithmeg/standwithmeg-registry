@@ -29,7 +29,7 @@
   "state_stats": {
     "families_approved": 205,
     "total_submissions": 316,
-    "avg_financial_loss": 100327.06,
+    "avg_financial_loss": 100328.09,
     "avg_months_lost": 32.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OH",
@@ -42,7 +42,7 @@
     "_pdf_state_family_count": 316,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6555,
+  "movement_total": 6620,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -56,10 +56,10 @@
         "court_or_county": "Cuyahoga"
       },
       {
-        "comment_text": "He has approved decisions that contained unfounded allegations and did not comply with local rules. He has refused my subpeonas while simultaneously allowing opposing parties. Has allowed a GAL to remain in a case that expressed explicit bias",
+        "comment_text": "Approved decisions removing custody based off of heresay. Has denied objections before supplementation and made decisions without fully hearing objections. Has denied subpoenas while simultaneously alllwing opposing parties filings He has approved decisions that contained unfounded allegations and did not comply with local rules. He has refused my subpeonas while simultaneously allowing opposing parties. Has allowed a GAL to remain in a case that expressed explicit bias",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Cuyahoga County"
+        "court_or_county": "Cuyahoga"
       },
       {
         "comment_text": "Ignore evidence of child abuse/ making false statements in order.",
@@ -93,7 +93,7 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "He has approved decisions that contained unfounded allegations and did not comply with local rules. He has refused my subpeonas while simultaneously allowing opposing parties. Has allowed a GAL to remain in a case that expressed explicit bias",
+        "body": "Approved decisions removing custody based off of heresay. Has denied objections before supplementation and made decisions without fully hearing objections. Has denied subpoenas while simultaneously alllwing opposing parties filings He has approved decisions that contained unfounded allegations and did not comply with local rules. He has refused my subpeonas while simultaneously allowing opposing parties. Has allowed a GAL to remain in a case that expressed explicit bias",
         "kind": "comment"
       },
       {
@@ -101,7 +101,7 @@
         "kind": "comment"
       }
     ],
-    "quote_page_count": 1
+    "quote_page_count": 2
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

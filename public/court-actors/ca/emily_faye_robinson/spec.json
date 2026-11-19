@@ -1,0 +1,123 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "emily_faye_robinson",
+    "display_name": "Emily Faye Robinson",
+    "title": "",
+    "first_name": "Emily Faye",
+    "last_name": "Robinson",
+    "role": "Attorney / GAL / Child Representative",
+    "court": "Chatsworth Supreme courthouse",
+    "county": "Chatsworth Supreme courthouse",
+    "court_or_county": "Chatsworth Supreme courthouse",
+    "state": "CA",
+    "state_abbr": "CA",
+    "mention_count": 2,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 2,
+    "supabase_row_ids": [
+      "44af05e1-921e-4e12-9f3b-ced099c55ca9",
+      "c9a7b869-e6a3-44c6-bf78-1dc09ea1f7ff"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "emily faye robinson|CA"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 356,
+    "total_submissions": 540,
+    "avg_financial_loss": 261239.82,
+    "avg_months_lost": 33.7,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "CA",
+    "state_family_count": 540,
+    "median_financial_loss": 228400,
+    "median_burden_sample_size": 238,
+    "median_months_lost": 20,
+    "pro_se_pct": 58.9,
+    "pro_se_count": 318,
+    "_pdf_state_family_count": 540,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6620,
+  "supabase": {
+    "report_count": 2,
+    "actor_report_count": 2,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "They took our rights, freedom and justice and handed to our abuser we courageously attempted to escape the home and had and threw away the keys leaving us in the dark and freightened.",
+        "state": "CA",
+        "county": "Chatsworth",
+        "row_id": "197ccce6-993a-41eb-b365-b26bb16e9f95"
+      },
+      {
+        "body": "Sabotaged my long loving relationship with my child. The Judge and MC should be punished for all of the damages caused.",
+        "state": "CA",
+        "county": "Los Angeles",
+        "row_id": "01af0266-0ad3-40f6-b18a-b25e8af34e8b"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Lied several times to judge about receiving emails and texts I was paranoid and needed medical attention. I also reported abuse found on court ordered talking app I got hacked and locked out due to video showing facial abuse and she claimed she would make inperson visit and never had. LAPD wouldn't create cps case due to children saying he walked into wall. No child will tell on daddy next to them after seeing mommy removed and never return.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Chatsworth Supreme courthouse"
+      },
+      {
+        "comment_text": "Made false allegations against me and retaliated once, I provided her paper trail to prove my innocence.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Chatsworth"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/emily_faye_robinson",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='CA'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ca/emily_faye_robinson/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Lied several times to judge about receiving emails and texts I was paranoid and needed medical attention. I also reported abuse found on court ordered talking app I got hacked and locked out due to video showing facial abuse and she claimed she would make inperson visit and never had. LAPD wouldn't create cps case due to children saying he walked into wall. No child will tell on daddy next to them after seeing mommy removed and never return.",
+        "kind": "comment"
+      },
+      {
+        "body": "Made false allegations against me and retaliated once, I provided her paper trail to prove my innocence.",
+        "kind": "comment"
+      },
+      {
+        "body": "They took our rights, freedom and justice and handed to our abuser we courageously attempted to escape the home and had and threw away the keys leaving us in the dark and freightened.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Sabotaged my long loving relationship with my child. The Judge and MC should be punished for all of the damages caused.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 2
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

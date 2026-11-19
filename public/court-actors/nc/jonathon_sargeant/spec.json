@@ -36,7 +36,7 @@
     ]
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/jonathon_sargeant/image_1080.png",
+    "path": "/tmp/swm-share-pages-pauilms9/New Final Post and Capcut template/export/jonathon_sargeant/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -56,7 +56,7 @@
     "_pdf_state_family_count": 239,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6496,
+  "movement_total": 6620,
   "supabase": {
     "report_count": 7,
     "actor_report_count": 7,
@@ -94,12 +94,6 @@
       }
     ],
     "public_comments": [
-      {
-        "comment_text": "Judge Johnathan Sargeant ignored my due process concerns and allowed the case to proceed without fully addressing pending constitutional, ADA, visitation, and placement issues. Judge Johnathan Sargeant laughed at me in open court with the GAL attorney and CPS attorney while comments were made in front of the courtroom audience suggesting I did not know who my children’s fathers were, despite the fact that I had provided that information. He laughed during my hearing with opposing attorneys after they made a humiliating statement about my children’s fathers, then failed to meaningfully hear my evidence and due process concerns.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Lenoir County Courthouse"
-      },
       {
         "comment_text": "Ignored evidence, denied due process, prevented reunification without evidence Ignored evidence, went along with whatever CPS claimed without giving me a chance to defend myself, no due process.",
         "author": "Anonymous parent",
@@ -148,10 +142,6 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Judge Johnathan Sargeant ignored my due process concerns and allowed the case to proceed without fully addressing pending constitutional, ADA, visitation, and placement issues. Judge Johnathan Sargeant laughed at me in open court with the GAL attorney and CPS attorney while comments were made in front of the courtroom audience suggesting I did not know who my children’s fathers were, despite the fact that I had provided that information. He laughed during my hearing with opposing attorneys after they made a humiliating statement about my children’s fathers, then failed to meaningfully hear my evidence and due process concerns.",
-        "kind": "comment"
-      },
-      {
         "body": "Ignored evidence, denied due process, prevented reunification without evidence Ignored evidence, went along with whatever CPS claimed without giving me a chance to defend myself, no due process.",
         "kind": "comment"
       },
@@ -188,7 +178,7 @@
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 7
+    "quote_page_count": 6
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

@@ -1,0 +1,102 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "larry_heiser",
+    "display_name": "Larry Heiser",
+    "title": "",
+    "first_name": "Larry",
+    "last_name": "Heiser",
+    "role": "Judge",
+    "court": "Marion, Ohio",
+    "county": "Marion",
+    "court_or_county": "Marion, Ohio",
+    "state": "OH",
+    "state_abbr": "OH",
+    "mention_count": 1,
+    "family_count": 1,
+    "public_family_count": 1,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 1,
+    "supabase_row_ids": [
+      "2837ead8-8dd3-4b1a-89c9-507d0700c7f3"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "lary heiser|OH"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 205,
+    "total_submissions": 316,
+    "avg_financial_loss": 100328.09,
+    "avg_months_lost": 32.9,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OH",
+    "state_family_count": 316,
+    "median_financial_loss": 73000,
+    "median_burden_sample_size": 157,
+    "median_months_lost": 18,
+    "pro_se_pct": 52.5,
+    "pro_se_count": 166,
+    "_pdf_state_family_count": 316,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 1,
+    "actor_report_count": 1,
+    "family_count": 1,
+    "family_reports": [
+      {
+        "body": "An assistant prosecuting attorney acting as a civil custody lawyer al fight and suppressed a 25 year violent criminal history for his private client. Attorneys judges, GALCPS and even neighboring counties are working together, not in the best interest of the child, but in the best interest of themselves.",
+        "state": "OH",
+        "county": "Marion",
+        "row_id": "8456dbe7-1fbd-4d1a-819f-2a1b0e9ed538"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Judge Heiser took over after a filed a disqualification of the magistrate and ask for vacatur of all orders issued under conflict. He falsely stated that this was a waivable conflict that I waited too long to address, despite being represented by council previously and ignored the father‘s extensive criminal history and did not force him to correct his false and fraudulent affidavit disclosing his multiple charges.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Marion"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/larry_heiser",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='OH'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/oh/larry_heiser/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Judge Heiser took over after a filed a disqualification of the magistrate and ask for vacatur of all orders issued under conflict. He falsely stated that this was a waivable conflict that I waited too long to address, despite being represented by council previously and ignored the father‘s extensive criminal history and did not force him to correct his false and fraudulent affidavit disclosing his multiple charges.",
+        "kind": "comment"
+      },
+      {
+        "body": "An assistant prosecuting attorney acting as a civil custody lawyer al fight and suppressed a 25 year violent criminal history for his private client. Attorneys judges, GALCPS and even neighboring counties are working together, not in the best interest of the child, but in the best interest of themselves.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 2
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

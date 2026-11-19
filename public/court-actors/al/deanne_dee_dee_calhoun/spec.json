@@ -19,10 +19,10 @@
     "actor_report_count": 5,
     "supabase_row_ids": [
       "983a8ad8-46f4-4f9b-93b0-df4819ee2dcf",
-      "f8d30676-d545-4cc6-9c42-814f4365fbfb",
-      "087c5ca8-6a1f-45eb-9f8d-d420280a7d90",
       "947f7d13-6184-4bb7-b636-55540c778e04",
-      "d40ed405-9396-4a14-ba38-b162f9d7daf5"
+      "d40ed405-9396-4a14-ba38-b162f9d7daf5",
+      "f8d30676-d545-4cc6-9c42-814f4365fbfb",
+      "087c5ca8-6a1f-45eb-9f8d-d420280a7d90"
     ],
     "actor_row_id": null,
     "actor_bucket_key": "deane dee dee calhoun|AL"
@@ -34,21 +34,21 @@
   },
   "state_stats": {
     "families_approved": 102,
-    "total_submissions": 162,
-    "avg_financial_loss": 91695.36,
+    "total_submissions": 176,
+    "avg_financial_loss": 87963.09,
     "avg_months_lost": 32.2,
     "_source_table": "movement_stats_by_state",
     "_match_value": "AL",
-    "state_family_count": 162,
-    "median_financial_loss": 53750,
-    "median_burden_sample_size": 74,
+    "state_family_count": 176,
+    "median_financial_loss": 51000,
+    "median_burden_sample_size": 79,
     "median_months_lost": 13,
-    "pro_se_pct": 39.5,
-    "pro_se_count": 64,
-    "_pdf_state_family_count": 162,
+    "pro_se_pct": 40.9,
+    "pro_se_count": 72,
+    "_pdf_state_family_count": 176,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6591,
+  "movement_total": 6620,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -75,31 +75,28 @@
     ],
     "public_comments": [
       {
-        "comment_text": "Cold and creul to the mother. Imediately made an assumption and would never admit that maybe she was wrong.Mother provided proof of abuse by the grandfather, she ignored.",
+        "comment_text": "She ignored crucial evidence and denied the request for a professional mental health opinion to weigh in on a case of comeplete family alienation by parents where psychological abuse was an obvious concerns as two children were removed from a whole family network when their mother alienated from her family that helped house and riase her and the children their entire lives for no good cause other than weaponizing the children due to a minor conflict between the mother and grandmother. The whole family testified to the obvious emotioanl instibility of the mother of the two children and the judge further ignored that and testimony that cohesion was witnessed by the childrens grandfather. Counseling was denied twice, by this judge as a plea for help from the family. Visitation was denied based on a photo posted on facebook by grandmother for childs birthday against mothers wishes as a sign that grandmother was no cooperating, when the childrens school regularly posted pictures on facebook. This judge completely ignored what was best for the children in this case, and they now live isolated from all family and have no interaction with other children except at school. She ignored obvious crucial evidence and testimony and denied a plea for family counseling",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "She ignored crucial evidence and denied the request for a professional mental health opinion to weigh in on a case of comeplete family alienation by parents where psychological abuse was an obvious concerns as two children were removed from a whole family network when their mother alienated from her family that helped house and riase her and the children their entire lives for no good cause other than weaponizing the children due to a minor conflict between the mother and grandmother. The whole family testified to the obvious emotioanl instibility of the mother of the two children and the judge further ignored that and testimony that cohesion was witnessed by the childrens grandfather. Counseling was denied twice, by this judge as a plea for help from the family. Visitation was denied based on a photo posted on facebook by grandmother for childs birthday against mothers wishes as a sign that grandmother was no cooperating, when the childrens school regularly posted pictures on facebook. This judge completely ignored what was best for the children in this case, and they now live isolated from all family and have no interaction with other children except at school.",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Elmore"
       },
       {
         "comment_text": "Proceeds where jurisdiction does not allow. Failure to follow rules of court, ignores state statues, failure to acknowledge jurisdiction. Motion filed, Judge Calhoun allowed Father 7 days to respond, his response did not acknowledge statue or jurisdiction limits, Judge Calhoun then ignored all and left motions hanging. Subjected children to re visit trauma in therapy in spite of previously completing therapy, therapist recommended no contact, GAL recommended no contact. Father has been convicted of sex crimes with children the named victims and contact supervised or not would violate state statue. Judge does not Have jurisdiction to rule or consider ruling in violation of state law, doing so would be a violation of due process and equal protection under the law .",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Chilton"
       },
       {
-        "comment_text": "She ignored obvious crucial evidence and testimony and denied a plea for family counseling",
+        "comment_text": "Cold and creul to the mother. Imediately made an assumption and would never admit that maybe she was wrong.Mother provided proof of abuse by the grandfather, she ignored.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Elmore County"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/deanne_dee_dee_calhoun",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='AL'",
-    "pdf_public_actor: no 'DeAnne \"Dee Dee\" Calhoun' in cache for AL"
+    "public_family_count_api: no actors returned for state='AL'"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
@@ -119,11 +116,7 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Cold and creul to the mother. Imediately made an assumption and would never admit that maybe she was wrong.Mother provided proof of abuse by the grandfather, she ignored.",
-        "kind": "comment"
-      },
-      {
-        "body": "She ignored crucial evidence and denied the request for a professional mental health opinion to weigh in on a case of comeplete family alienation by parents where psychological abuse was an obvious concerns as two children were removed from a whole family network when their mother alienated from her family that helped house and riase her and the children their entire lives for no good cause other than weaponizing the children due to a minor conflict between the mother and grandmother. The whole family testified to the obvious emotioanl instibility of the mother of the two children and the judge further ignored that and testimony that cohesion was witnessed by the childrens grandfather. Counseling was denied twice, by this judge as a plea for help from the family. Visitation was denied based on a photo posted on facebook by grandmother for childs birthday against mothers wishes as a sign that grandmother was no cooperating, when the childrens school regularly posted pictures on facebook. This judge completely ignored what was best for the children in this case, and they now live isolated from all family and have no interaction with other children except at school.",
+        "body": "She ignored crucial evidence and denied the request for a professional mental health opinion to weigh in on a case of comeplete family alienation by parents where psychological abuse was an obvious concerns as two children were removed from a whole family network when their mother alienated from her family that helped house and riase her and the children their entire lives for no good cause other than weaponizing the children due to a minor conflict between the mother and grandmother. The whole family testified to the obvious emotioanl instibility of the mother of the two children and the judge further ignored that and testimony that cohesion was witnessed by the childrens grandfather. Counseling was denied twice, by this judge as a plea for help from the family. Visitation was denied based on a photo posted on facebook by grandmother for childs birthday against mothers wishes as a sign that grandmother was no cooperating, when the childrens school regularly posted pictures on facebook. This judge completely ignored what was best for the children in this case, and they now live isolated from all family and have no interaction with other children except at school. She ignored obvious crucial evidence and testimony and denied a plea for family counseling",
         "kind": "comment"
       },
       {
@@ -131,7 +124,7 @@
         "kind": "comment"
       },
       {
-        "body": "She ignored obvious crucial evidence and testimony and denied a plea for family counseling",
+        "body": "Cold and creul to the mother. Imediately made an assumption and would never admit that maybe she was wrong.Mother provided proof of abuse by the grandfather, she ignored.",
         "kind": "comment"
       },
       {
@@ -147,7 +140,7 @@
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 7
+    "quote_page_count": 6
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

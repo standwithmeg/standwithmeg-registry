@@ -1,0 +1,102 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "cynthia_moody",
+    "display_name": "Cynthia Moody",
+    "title": "",
+    "first_name": "Cynthia",
+    "last_name": "Moody",
+    "role": "Attorney / GAL / Child Representative",
+    "court": "Faulkner county",
+    "county": "Pulaski",
+    "court_or_county": "Faulkner county",
+    "state": "AR",
+    "state_abbr": "AR",
+    "mention_count": 1,
+    "family_count": 1,
+    "public_family_count": 1,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 1,
+    "supabase_row_ids": [
+      "8ce0bec2-e8a1-494b-a109-838d65353247"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "cynthia mody|AR"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 43,
+    "total_submissions": 86,
+    "avg_financial_loss": 139487.99,
+    "avg_months_lost": 31.3,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "AR",
+    "state_family_count": 86,
+    "median_financial_loss": 117000,
+    "median_burden_sample_size": 35,
+    "median_months_lost": 20,
+    "pro_se_pct": 39.5,
+    "pro_se_count": 34,
+    "_pdf_state_family_count": 86,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6620,
+  "supabase": {
+    "report_count": 1,
+    "actor_report_count": 1,
+    "family_count": 1,
+    "family_reports": [
+      {
+        "body": "Destroying the children. Making a new generation of abusers. Ignoring EVIDENCE OF RAPE, SEXUAL MOLESTATION, sibling abuse, self-harm, neglect, physical, psychological, &’emotional abuse. EVIDENCE IS COMPLETELY NOT RECOGNIZED whatsoever. Therapists have tried but ended up ignored or threatened by other party & completely dismissed children. Meaning kids had to be sent back this terror & abuse. TERRORIZES THE ENTIRE FAMILY.",
+        "state": "AR",
+        "county": "Pulaski",
+        "row_id": "eec6e905-c353-46a1-a1ee-8566623a395a"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Ignored evidence that pertained to child safety",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Pulaski"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/cynthia_moody",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='AR'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ar/cynthia_moody/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Ignored evidence that pertained to child safety",
+        "kind": "comment"
+      },
+      {
+        "body": "Destroying the children. Making a new generation of abusers. Ignoring EVIDENCE OF RAPE, SEXUAL MOLESTATION, sibling abuse, self-harm, neglect, physical, psychological, &’emotional abuse. EVIDENCE IS COMPLETELY NOT RECOGNIZED whatsoever. Therapists have tried but ended up ignored or threatened by other party & completely dismissed children. Meaning kids had to be sent back this terror & abuse. TERRORIZES THE ENTIRE FAMILY.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

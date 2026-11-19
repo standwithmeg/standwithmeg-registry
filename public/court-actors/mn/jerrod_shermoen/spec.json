@@ -1,0 +1,134 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "jerrod_shermoen",
+    "display_name": "Jerrod Shermone",
+    "title": "",
+    "first_name": "Jerrod",
+    "last_name": "Shermone",
+    "role": "Judge",
+    "court": "Itasca",
+    "county": "Koochiching county",
+    "court_or_county": "Itasca",
+    "state": "MN",
+    "state_abbr": "MN",
+    "mention_count": 3,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "32010b3a-5be4-477e-a8f8-140281051546",
+      "671271cc-3ac4-4627-9b4c-2e66cc36ba39",
+      "ac0ba84f-a9a8-4e1e-8db0-021c96337c3b"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "jerod shermoen|MN"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 57,
+    "total_submissions": 88,
+    "avg_financial_loss": 142566.78,
+    "avg_months_lost": 31.4,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "MN",
+    "state_family_count": 88,
+    "median_financial_loss": 111300,
+    "median_burden_sample_size": 37,
+    "median_months_lost": 14,
+    "pro_se_pct": 56.8,
+    "pro_se_count": 50,
+    "_pdf_state_family_count": 88,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 3,
+    "family_reports": [
+      {
+        "body": "Cps showed up at more door accusing me of using drugs demanding and telling me i have to take a UA for them. I kept telling no. cause they did not have any proof cause they did no investigating into the reports they got. They took me to court where it was order to do a hair test, which came back negative for all drugs but they had already taking my kid from me a day before his 12th birthday and was away from me for 14 days. And even with the negative hair test results to this day they are still harassing me. Be cause the on case they opened in September 30 2025 was closed march 27, 2026 and 4 days later they repetitioned the court open another case against me as of april 14th and they continue to accuse me of using and they did a home visit cause hailey timms said she hadn't been in my house. Which she was multiple times. And shes even tried getting in my house when i was at work.",
+        "state": "MN",
+        "county": "Koochiching county",
+        "row_id": "1eb4b731-3658-4341-8f73-2c3506852c78"
+      },
+      {
+        "body": "This fraudulent system is a cash for kids profiteering system. Sick!",
+        "state": "MN",
+        "county": "Itasca County",
+        "row_id": "4016edf8-3fcf-4620-ba9d-aa9c99ef3eef"
+      },
+      {
+        "body": "For more than a decade, multiple agencies and actors — courts, CPS, law enforcement, GAL programs, school systems, and county services — have failed to follow their own required procedures, leaving your family unprotected while allowing an abusive parent to avoid accountability. Instead of providing safety, the system repeatedly: - Ignored or minimized documented domestic abuse, even when evidence was provided. - Delayed or obstructed court processes, leaving your family in long-term limbo. - Denied meaningful representation and due process, including inconsistent enforcement of orders. - Shifted financial burdens onto you, including child support, GAL fees, and supervised visitation costs, even when the system’s own failures created the need for those services. - Failed to provide ADA/Section 504 accommodations, despite clear eligibility and repeated requests. - Allowed viewpoint discrimination, treating you differently because you challenged misconduct and demanded transparency. - Left your children to emotionally support each other, because mandated protections were not enforced. These failures weren’t isolated mistakes — they formed a pattern of institutional neglect that harmed your family’s stability, safety, and constitutional rights. Due Process Violations Fourteenth Amendment; Minnesota Constitution Art. I, Sec. 7 (Procedural fairness, timely hearings, consistent enforcement of orders) - Equal Protection / Viewpoint Discrimination Fourteenth Amendment; Minnesota Constitution Art. I, Sec. 2 (Unequal treatment because you challenged officials or demanded transparency) - Failure to Protect / Negligent Oversight Minn. Stat. § 626.556 (mandated reporting); agency duty-of-care standards - ADA & Section 504 Violations (Failure to provide accommodations; discriminatory access to government processes) - Minnesota Government Data Practices Act (MGDPA) (Withholding records, inconsistent documentation, selective transparency) - Open Meeting Law Issues (Opaque decision-making, lack of public access, refusal to record meetings) - Financial Exploitation of a Vulnerable Adult / Coercive Control Patterns Minn. Stat. § 609.2335; Minn. Stat. § 518B.01 (When systems force a safe parent into financial hardship while enabling an abuser) - Failure to Enforce Court Orders (Judicial and agency inaction that results in harm to children) My family was harmed not by one bad decision, but by a systemic pattern of delays, discrimination, ignored evidence, ADA failures, and procedural violations that stripped you of protection while enabling the person who harmed you.",
+        "state": "MN",
+        "county": "Koochiching",
+        "row_id": "13feb47a-4112-4240-9fd5-9741e7fa09db"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Filed an ex parte to remove my children and he had to be removed for biased decisions because he was working with his brother on my case against me",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Ninth district"
+      },
+      {
+        "comment_text": "Ignored evidence, proceeded without due process",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Itasca"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/jerrod_shermoen",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='MN'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/mn/jerrod_shermoen/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Filed an ex parte to remove my children and he had to be removed for biased decisions because he was working with his brother on my case against me",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored evidence, proceeded without due process",
+        "kind": "comment"
+      },
+      {
+        "body": "Cps showed up at more door accusing me of using drugs demanding and telling me i have to take a UA for them. I kept telling no. cause they did not have any proof cause they did no investigating into the reports they got. They took me to court where it was order to do a hair test, which came back negative for all drugs but they had already taking my kid from me a day before his 12th birthday and was away from me for 14 days. And even with the negative hair test results to this day they are still harassing me. Be cause the on case they opened in September 30 2025 was closed march 27, 2026 and 4 days later they repetitioned the court open another case against me as of april 14th and they continue to accuse me of using and they did a home visit cause hailey timms said she hadn't been in my house. Which she was multiple times. And shes even tried getting in my house when i was at work.",
+        "kind": "family_report"
+      },
+      {
+        "body": "This fraudulent system is a cash for kids profiteering system. Sick!",
+        "kind": "family_report"
+      },
+      {
+        "body": "For more than a decade, multiple agencies and actors — courts, CPS, law enforcement, GAL programs, school systems, and county services — have failed to follow their own required procedures, leaving your family unprotected while allowing an abusive parent to avoid accountability. Instead of providing safety, the system repeatedly: - Ignored or minimized documented domestic abuse, even when evidence was provided. - Delayed or obstructed court processes, leaving your family in long-term limbo. - Denied meaningful representation and due process, including inconsistent enforcement of orders. - Shifted financial burdens onto you, including child support, GAL fees, and supervised visitation costs, even when the system’s own failures created the need for those services. - Failed to provide ADA/Section 504 accommodations, despite clear eligibility and repeated requests. - Allowed viewpoint discrimination, treating you differently because you challenged misconduct and demanded transparency. - Left your children to emotionally support each other, because mandated protections were not enforced. These failures weren’t isolated mistakes — they formed a pattern of institutional neglect that harmed your family’s stability, safety, and constitutional rights. Due Process Violations Fourteenth Amendment; Minnesota Constitution Art. I, Sec. 7 (Procedural fairness, timely hearings, consistent enforcement of orders) - Equal Protection / Viewpoint Discrimination Fourteenth Amendment; Minnesota Constitution Art. I, Sec. 2 (Unequal treatment because you challenged officials or demanded transparency) - Failure to Protect / Negligent Oversight Minn. Stat. § 626.556 (mandated reporting); agency duty-of-care standards - ADA & Section 504 Violations (Failure to provide accommodations; discriminatory access to government processes) - Minnesota Government Data Practices Act (MGDPA) (Withholding records, inconsistent documentation, selective transparency) - Open Meeting Law Issues (Opaque decision-making, lack of public access, refusal to record meetings) - Financial Exploitation of a Vulnerable Adult / Coercive Control Patterns Minn. Stat. § 609.2335; Minn. Stat. § 518B.01 (When systems force a safe parent into financial hardship while enabling an abuser) - Failure to Enforce Court Orders (Judicial and agency inaction that results in harm to children) My family was harmed not by one bad decision, but by a systemic pattern of delays, discrimination, ignored evidence, ADA failures, and procedural violations that stripped you of protection while enabling the person who harmed you.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 5
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

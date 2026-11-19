@@ -1,0 +1,124 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "dustin_garris",
+    "display_name": "Dustin Garrison",
+    "title": "",
+    "first_name": "Dustin",
+    "last_name": "Garrison",
+    "role": "GAL / Child Representative",
+    "court": "Baldwin County",
+    "county": "Baldwin",
+    "court_or_county": "Baldwin County",
+    "state": "AL",
+    "state_abbr": "AL",
+    "mention_count": 3,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "8d46fbf6-98fa-45a0-91d5-e3e741e1f1fd",
+      "39de1e8d-e273-4575-bf59-e7b981ccad42",
+      "1a6dc955-c7ed-45aa-b134-e4acf4aae16e"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "dustin garis|AL"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 102,
+    "total_submissions": 176,
+    "avg_financial_loss": 87963.09,
+    "avg_months_lost": 32.2,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "AL",
+    "state_family_count": 176,
+    "median_financial_loss": 51000,
+    "median_burden_sample_size": 79,
+    "median_months_lost": 13,
+    "pro_se_pct": 40.9,
+    "pro_se_count": 72,
+    "_pdf_state_family_count": 176,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6620,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "It has caused financial hardship and emotional distress.",
+        "state": "AL",
+        "county": "Baldwin",
+        "row_id": "897dbb9d-1cb4-475a-9055-f27cc868fba7"
+      },
+      {
+        "body": "Tore my family apart. I haven't talked to my son in months",
+        "state": "AL",
+        "county": "Baldwin",
+        "row_id": "ea8b8e6f-a6cb-4666-9eea-cb0861c6afdc"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "This is Dustin Garrison. Please update this person’s last name to Garrison and merge. Has been made aware the grandparent with temporary custody is an alcoholic and is addicted to pornography yet does not advocate for removing the children to a safer environment.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Baldwin"
+      },
+      {
+        "comment_text": "They granted custody to my child father and his record is so bad. He lives w a lady name Michelle she lost her job working with children. Because she started sleeping w him as teenager",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Baldwin"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/dustin_garris",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='AL'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/al/dustin_garris/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "This is Dustin Garrison. Please update this person’s last name to Garrison and merge. Has been made aware the grandparent with temporary custody is an alcoholic and is addicted to pornography yet does not advocate for removing the children to a safer environment.",
+        "kind": "comment"
+      },
+      {
+        "body": "They granted custody to my child father and his record is so bad. He lives w a lady name Michelle she lost her job working with children. Because she started sleeping w him as teenager",
+        "kind": "comment"
+      },
+      {
+        "body": "It has caused financial hardship and emotional distress.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Tore my family apart. I haven't talked to my son in months",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 2
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

@@ -26,14 +26,14 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-a9qn51im/New Final Post and Capcut template/export/christine_sayre/image_1080.png",
+    "path": "/tmp/swm-share-pages-pauilms9/New Final Post and Capcut template/export/christine_sayre/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 205,
     "total_submissions": 316,
-    "avg_financial_loss": 100327.06,
+    "avg_financial_loss": 100328.09,
     "avg_months_lost": 32.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OH",
@@ -46,7 +46,7 @@
     "_pdf_state_family_count": 316,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6555,
+  "movement_total": 6620,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -63,14 +63,14 @@
       {
         "comment_text": "Diagnosed my child with an unknown trauma knowing exactly what that trauma was… ABUSE! Just another actor protecting the system!",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Stark"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/christine_sayre",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='OH'",
-    "pdf_public_actor: no 'Christine Sayre' in cache for OH"
+    "public_family_count_api: no actors returned for state='OH'"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",

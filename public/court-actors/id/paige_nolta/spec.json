@@ -1,0 +1,131 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "paige_nolta",
+    "display_name": "Paige Nolta",
+    "title": "",
+    "first_name": "Paige",
+    "last_name": "Nolta",
+    "role": "Judge",
+    "court": "Latah",
+    "county": "Idaho",
+    "court_or_county": "Latah",
+    "state": "ID",
+    "state_abbr": "ID",
+    "mention_count": 10,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 10,
+    "supabase_row_ids": [
+      "880dfdb3-ab15-4bcb-bbf2-fabffe6cd897",
+      "7881fc27-46ee-4bd5-a88d-d2717a40c6e6",
+      "2460d7ee-016d-4864-bab1-dfc37a2af573",
+      "ce3d3ee2-44d1-4058-9eba-5b2dc151ac27",
+      "3e9964b8-6694-49c8-b785-9665b42feb7f",
+      "37fe1501-a815-4fe7-a72c-246571683c9e",
+      "6e7153a1-e382-4c47-8e33-c5176f0b9c76",
+      "ff6d5404-1cb2-4974-bf7d-2ac74829113d",
+      "493a1078-4325-4c9c-b693-bb75ff21081a",
+      "192aa3bf-bd16-4e0e-a0dd-205696d2103f"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "paige nolta|ID"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 29,
+    "total_submissions": 51,
+    "avg_financial_loss": 306496.0,
+    "avg_months_lost": 22.4,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "ID",
+    "state_family_count": 51,
+    "median_financial_loss": 202150,
+    "median_burden_sample_size": 32,
+    "median_months_lost": 18,
+    "pro_se_pct": 45.1,
+    "pro_se_count": 23,
+    "_pdf_state_family_count": 51,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 10,
+    "actor_report_count": 10,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "The family court system has removed a full time father and allows the mother to alienate and abuse both the children and father unlawfully. I once trusted in the judicial system until I got involved and now I truly understand the abuse of authority with no accountability. Treason",
+        "state": "ID",
+        "county": "Latah",
+        "row_id": "39a3f421-d3c6-4a63-a204-4f337961630a"
+      },
+      {
+        "body": "Perpetually in my family and home",
+        "state": "ID",
+        "county": "Idaho",
+        "row_id": "479604b4-85fb-4d80-ad79-071a4d9a8cac"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Nolta will violate due process, constitutional rights and fail to uphold her oath of office while abandoning the judicial code of conduct. Treason Nolta has failed to uphold due process, constitutional rights, judicial code of conduct. She takes sides to exhaust the parties resources and make the court profitable. Treason Failed to uphold Constitutional rights, due process, and has without a doubt taken sides in the case, failed to uphold the judicial code of conduct multiple times. Filed a vexatious case against me, preventing me from defending myself and my kids. I gave filed many motions and petitions with a 60% acceptance but Paige Nolta refuses to uphold my constitutional rights and acknowledge the material facts. This magistrate has failed due process, failed to uphold constitutional rights, failed to uphold judicial code of conduct. Treason",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Idaho"
+      },
+      {
+        "comment_text": "Very biased and allows testimony without evidence This judge relies on hearsay and manipulates procedures Refuses to step down due to disqualification Ex parte action removed all custody with no evidence of abuse Judge just doesnt follow the law",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Idaho"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/paige_nolta",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='ID'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/id/paige_nolta/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Nolta will violate due process, constitutional rights and fail to uphold her oath of office while abandoning the judicial code of conduct. Treason Nolta has failed to uphold due process, constitutional rights, judicial code of conduct. She takes sides to exhaust the parties resources and make the court profitable. Treason Failed to uphold Constitutional rights, due process, and has without a doubt taken sides in the case, failed to uphold the judicial code of conduct multiple times. Filed a vexatious case against me, preventing me from defending myself and my kids. I gave filed many motions and petitions with a 60% acceptance but Paige Nolta refuses to uphold my constitutional rights and acknowledge the material facts. This magistrate has failed due process, failed to uphold constitutional rights, failed to uphold judicial code of conduct. Treason",
+        "kind": "comment"
+      },
+      {
+        "body": "Very biased and allows testimony without evidence This judge relies on hearsay and manipulates procedures Refuses to step down due to disqualification Ex parte action removed all custody with no evidence of abuse Judge just doesnt follow the law",
+        "kind": "comment"
+      },
+      {
+        "body": "The family court system has removed a full time father and allows the mother to alienate and abuse both the children and father unlawfully. I once trusted in the judicial system until I got involved and now I truly understand the abuse of authority with no accountability. Treason",
+        "kind": "family_report"
+      },
+      {
+        "body": "Perpetually in my family and home",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 4
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

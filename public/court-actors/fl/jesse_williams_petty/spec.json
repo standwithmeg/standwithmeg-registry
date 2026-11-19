@@ -1,0 +1,119 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "jesse_williams_petty",
+    "display_name": "Jesse Williams Petty",
+    "title": "",
+    "first_name": "Jesse Williams",
+    "last_name": "Petty",
+    "role": "School / District",
+    "court": "Osceola County",
+    "county": "County not listed",
+    "court_or_county": "Osceola County",
+    "state": "FL",
+    "state_abbr": "FL",
+    "mention_count": 2,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 2,
+    "supabase_row_ids": [
+      "f21c552b-d0b9-47db-9a63-695d12fb8246",
+      "3808b5fb-b403-49ac-a771-bb81dd347715"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "jese wiliams pety|FL"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 236,
+    "total_submissions": 358,
+    "avg_financial_loss": 190520.48,
+    "avg_months_lost": 27.2,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "FL",
+    "state_family_count": 358,
+    "median_financial_loss": 174000,
+    "median_burden_sample_size": 154,
+    "median_months_lost": 17,
+    "pro_se_pct": 57.5,
+    "pro_se_count": 206,
+    "_pdf_state_family_count": 358,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6620,
+  "supabase": {
+    "report_count": 2,
+    "actor_report_count": 2,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "The systèm kidnappéd my children, destroyed my family , took everything I had fighting to get them back",
+        "state": "FL",
+        "county": "Osceola",
+        "row_id": "1d1a7e37-cf6a-430a-a63a-053a2c4470f6"
+      },
+      {
+        "body": "Courtroom corruption, fraudulent court orders, child abduction and trafficking attempt, uncooperative law enforcement, denial and restrictions for family members in making contact with child while in DCF custody",
+        "state": "NJ",
+        "county": "USA",
+        "row_id": "44d0032d-7e54-4fef-9b19-84d85ffee816"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "teacher/foster father whom is able to alienate children from families and abuse them",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Osceola"
+      },
+      {
+        "comment_text": "School teacher and foster parent that is a child abuser",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Osceola County"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/jesse_williams_petty",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='FL'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/fl/jesse_williams_petty/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "teacher/foster father whom is able to alienate children from families and abuse them",
+        "kind": "comment"
+      },
+      {
+        "body": "School teacher and foster parent that is a child abuser",
+        "kind": "comment"
+      },
+      {
+        "body": "The systèm kidnappéd my children, destroyed my family , took everything I had fighting to get them back",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

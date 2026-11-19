@@ -1,0 +1,135 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "julia_butler",
+    "display_name": "Julia Butler-case manager",
+    "title": "",
+    "first_name": "Julia Butler-case",
+    "last_name": "manager",
+    "role": "Supervised Visitation Supervisor",
+    "court": null,
+    "county": null,
+    "court_or_county": null,
+    "state": "KS",
+    "state_abbr": "KS",
+    "mention_count": 4,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "2f13179a-351a-40d6-b62d-688af7614204",
+      "773a1649-699c-41a5-93b7-d55fb05aeaf6",
+      "01351a9b-c329-45db-b6a9-a34e29fdd1c6",
+      "17c7d1cb-33f8-42d7-b86c-ee1fb982cfd2"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "julia butler|KS"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 184,
+    "total_submissions": 298,
+    "avg_financial_loss": 118858.78,
+    "avg_months_lost": 30.8,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "KS",
+    "state_family_count": 298,
+    "median_financial_loss": 98800,
+    "median_burden_sample_size": 153,
+    "median_months_lost": 18,
+    "pro_se_pct": 47.8,
+    "pro_se_count": 142,
+    "_pdf_state_family_count": 297,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 4,
+    "actor_report_count": 4,
+    "family_count": 3,
+    "family_reports": [
+      {
+        "body": "My kids are being mentally destroyed and ruined due to false accusations, inappropriate sexual behavior, and no guidance or protection. The system is pushing and taking our children’s voices away by forcing them to lie and speak to protect one person and teaching them to put that person first even when it hurts them.",
+        "state": "KS",
+        "county": "Franklin County",
+        "row_id": "6c630632-d985-45ea-9a16-95ee85f8f7e7"
+      },
+      {
+        "body": "The system has retraumatized me repeatedly, increased my disability symptoms from the extra stress and trauma to the point that I can't work, caused my children to be traumatized from the acts and behaviors of the other party. It has left me bankrupt, put me back in an unsafe situation, with my children experiencing threats of harm from the other party. DV doesn't stop when you leave, the abuser weaponizes the legal system.",
+        "state": "KS",
+        "county": "Douglas",
+        "row_id": "9d3bdeb1-88bb-495a-8bd4-1f1887403fd3"
+      },
+      {
+        "body": "My children’s childhood was stolen from them. They were taken on false allegations over 3 years. Which were all determined unsubstantiated- they still have not returned home. They have been withheld court ordered therapy treatment for 3 years with no enforcement that could help them heal",
+        "state": "KS",
+        "county": "Shawnee",
+        "row_id": "c9ca7851-1cad-40da-b1d2-5c9dd4622db9"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "was a Case Manager: Ignored therapist's recommendations regarding contact with other party. Stated therapist approved of plan in court. resulted in increased health problems, unable to communicate with ex. She gave him legal custody. then She told me if I could do the communications my therapist originally wanted instead of what she placed, she'd reverse her decision, I had this conversation with a 3rd party present, who wrote everything down we agreed on, sent it to her, myself, and my attorney. She doubled down and stated he could have full legal custody at the next hearing. Refused to review my evidence the first meeting, I brought a huge folder. Ignored abuse. She was more worried about getting paid, her contract seemed predatory. It allows her to auto charge your bank account/credit card $500 if the retainer gets too low. $1500 retainer gone in less than 2 months. When you make less than $20k a year, this is impossible to do. She claimed there was no report of trauma or abuse in the divorce papers or the GAL report. It's in the first couple of pages in the report.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
+      },
+      {
+        "comment_text": "Said the child wanted more parenting time with dad but in front of the judge recommended dad loose parenting time.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/julia_butler",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='KS'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ks/julia_butler/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "was a Case Manager: Ignored therapist's recommendations regarding contact with other party. Stated therapist approved of plan in court. resulted in increased health problems, unable to communicate with ex. She gave him legal custody. then She told me if I could do the communications my therapist originally wanted instead of what she placed, she'd reverse her decision, I had this conversation with a 3rd party present, who wrote everything down we agreed on, sent it to her, myself, and my attorney. She doubled down and stated he could have full legal custody at the next hearing. Refused to review my evidence the first meeting, I brought a huge folder. Ignored abuse. She was more worried about getting paid, her contract seemed predatory. It allows her to auto charge your bank account/credit card $500 if the retainer gets too low. $1500 retainer gone in less than 2 months. When you make less than $20k a year, this is impossible to do. She claimed there was no report of trauma or abuse in the divorce papers or the GAL report. It's in the first couple of pages in the report.",
+        "kind": "comment"
+      },
+      {
+        "body": "Said the child wanted more parenting time with dad but in front of the judge recommended dad loose parenting time.",
+        "kind": "comment"
+      },
+      {
+        "body": "My kids are being mentally destroyed and ruined due to false accusations, inappropriate sexual behavior, and no guidance or protection. The system is pushing and taking our children’s voices away by forcing them to lie and speak to protect one person and teaching them to put that person first even when it hurts them.",
+        "kind": "family_report"
+      },
+      {
+        "body": "The system has retraumatized me repeatedly, increased my disability symptoms from the extra stress and trauma to the point that I can't work, caused my children to be traumatized from the acts and behaviors of the other party. It has left me bankrupt, put me back in an unsafe situation, with my children experiencing threats of harm from the other party. DV doesn't stop when you leave, the abuser weaponizes the legal system.",
+        "kind": "family_report"
+      },
+      {
+        "body": "My children’s childhood was stolen from them. They were taken on false allegations over 3 years. Which were all determined unsubstantiated- they still have not returned home. They have been withheld court ordered therapy treatment for 3 years with no enforcement that could help them heal",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 5
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

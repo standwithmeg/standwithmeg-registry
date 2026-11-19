@@ -1,0 +1,98 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "lauren_cole",
+    "display_name": "Lauren a cole",
+    "title": "",
+    "first_name": "Lauren a",
+    "last_name": "cole",
+    "role": "Attorney",
+    "court": "Lynchburg va",
+    "county": "Lynchburg va",
+    "court_or_county": "Lynchburg va",
+    "state": "VA",
+    "state_abbr": "VA",
+    "mention_count": 1,
+    "family_count": 1,
+    "public_family_count": 1,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 1,
+    "supabase_row_ids": [
+      "4c099191-a2fb-45d4-8f98-40b353ef740d"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "lauren cole|VA"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 101,
+    "total_submissions": 158,
+    "avg_financial_loss": 175492.97,
+    "avg_months_lost": 32.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "VA",
+    "state_family_count": 158,
+    "median_financial_loss": 139000,
+    "median_burden_sample_size": 61,
+    "median_months_lost": 24,
+    "pro_se_pct": 63.9,
+    "pro_se_count": 101,
+    "_pdf_state_family_count": 158,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 1,
+    "actor_report_count": 1,
+    "family_count": 1,
+    "family_reports": [
+      {
+        "body": "This system has failed my young daughter and myself, “time always tells the truth” a has clearly proven that corruption is prominent and rampant. This system has proven that is it more profitable to be unlawful and corrupt vs upholding or practicing lawfully to protect children and parents from the abusive individuals that are somehow very able to exploit the power in system that seems to side with child trafficking rather to honor the sworn oath these individuals have taken which has proven to mean nothing anymore because these individuals ability to look away and allowing a child to be abused say it all.",
+        "state": "VA",
+        "county": "Westmoreland County",
+        "row_id": "11d4ed14-01c4-4604-bb70-3dc6b231e82b"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Never investigated the abuse of the child or question or interviewed me. Lied on stand.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Westmoreland"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/lauren_cole",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='VA'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/va/lauren_cole/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Never investigated the abuse of the child or question or interviewed me. Lied on stand.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

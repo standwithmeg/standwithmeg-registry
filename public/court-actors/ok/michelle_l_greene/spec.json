@@ -1,0 +1,100 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "michelle_l_greene",
+    "display_name": "Michelle L. Greene",
+    "title": "",
+    "first_name": "Michelle L.",
+    "last_name": "Greene",
+    "role": "GAL / Child Representative",
+    "court": "Oklahoma",
+    "county": "Oklahoma",
+    "court_or_county": "Oklahoma",
+    "state": "OK",
+    "state_abbr": "OK",
+    "mention_count": 2,
+    "family_count": 2,
+    "public_family_count": 0,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 2,
+    "supabase_row_ids": [
+      "e04e64b9-cb08-4ad4-a8eb-8e6b1d4c41f6",
+      "8f4a3b14-23c1-4564-8e77-bd3968f78b53"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "michele grene|OK"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 120,
+    "total_submissions": 241,
+    "avg_financial_loss": 113410.49,
+    "avg_months_lost": 27.7,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OK",
+    "state_family_count": 241,
+    "median_financial_loss": 105000,
+    "median_burden_sample_size": 127,
+    "median_months_lost": 16,
+    "pro_se_pct": 41.5,
+    "pro_se_count": 100,
+    "_pdf_state_family_count": 241,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 2,
+    "actor_report_count": 2,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "My child has been gaslit and mental/emotionally abused by my ex wife since he was 2 years old. He is 9. That is how long I have been fighting to save him from that abuse from this system. It might not seem lik alot or THAT damaging from an outsiders perspective, but my child is broken. I am his only voice and I keep getting silenced. They will not win. This system is so incredibly fucked and I will not stop fighting any kind of change.",
+        "state": "OK",
+        "county": "Cleveland",
+        "row_id": "48079ac4-df23-46ba-b7a1-03924e4cc04e"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Ignored CLEAR evidence that would ensure the safety and stop emotional abuse to my child. She told me I was overreacting to my child being gaslit on a daily basis from my extreme narcissistic ex. She kept my child in a home where his emotional well being has been distroyed since he was 2.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/michelle_l_greene",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='OK'",
+    "family_count: lookup and previous spec returned 0 — using report_count=2 as fallback"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ok/michelle_l_greene/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Ignored CLEAR evidence that would ensure the safety and stop emotional abuse to my child. She told me I was overreacting to my child being gaslit on a daily basis from my extreme narcissistic ex. She kept my child in a home where his emotional well being has been distroyed since he was 2.",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

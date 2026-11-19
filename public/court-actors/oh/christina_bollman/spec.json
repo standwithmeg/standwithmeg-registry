@@ -1,0 +1,82 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "christina_bollman",
+    "display_name": "Christina R Bollman",
+    "title": "",
+    "first_name": "Christina R",
+    "last_name": "Bollman",
+    "role": "Parenting Coordinator",
+    "court": "Summit",
+    "county": "Summit county",
+    "court_or_county": "Summit",
+    "state": "OH",
+    "state_abbr": "OH",
+    "mention_count": 2,
+    "family_count": 2,
+    "public_family_count": 0,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 2,
+    "supabase_row_ids": [
+      "ea369790-2769-45f5-be35-61dde6bd24b5",
+      "24c2a32c-4814-4b39-b07d-1cbcef9ce35d"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "christina bolman|OH"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 205,
+    "total_submissions": 316,
+    "avg_financial_loss": 100328.09,
+    "avg_months_lost": 32.9,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OH",
+    "state_family_count": 316,
+    "median_financial_loss": 73000,
+    "median_burden_sample_size": 157,
+    "median_months_lost": 18,
+    "pro_se_pct": 52.5,
+    "pro_se_count": 166,
+    "_pdf_state_family_count": 316,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 2,
+    "actor_report_count": 2,
+    "family_count": 2,
+    "family_reports": [],
+    "public_comments": []
+  },
+  "export_dir": "New Final Post and Capcut template/export/christina_bollman",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='OH'",
+    "public_comments: no merged comments or raw notes available",
+    "family_count: lookup and previous spec returned 0 — using report_count=2 as fallback"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/oh/christina_bollman/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

@@ -1,0 +1,123 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "child_welfare_services_cws",
+    "display_name": "Child Welfare Services (CWS)",
+    "title": "",
+    "first_name": "Child Welfare Services",
+    "last_name": "(CWS)",
+    "role": "Government Agency",
+    "court": "San Diego County",
+    "county": "San Diego County",
+    "court_or_county": "San Diego County",
+    "state": "CA",
+    "state_abbr": "CA",
+    "mention_count": 2,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 2,
+    "supabase_row_ids": [
+      "6ba6aa70-4e97-4446-b95b-c6b3608d89f5",
+      "a47f697e-3788-4081-9f9e-11ad28510ddb"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "child welfare services (cws)|CA"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 356,
+    "total_submissions": 540,
+    "avg_financial_loss": 261239.82,
+    "avg_months_lost": 33.7,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "CA",
+    "state_family_count": 540,
+    "median_financial_loss": 228400,
+    "median_burden_sample_size": 238,
+    "median_months_lost": 20,
+    "pro_se_pct": 58.9,
+    "pro_se_count": 318,
+    "_pdf_state_family_count": 540,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6620,
+  "supabase": {
+    "report_count": 2,
+    "actor_report_count": 2,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "San Diego County, San Diego County Sheriff Dept, Health and Human Services Child Welfare Services and the Juvenile Depenancy & Deliquency Courtroom 10 Meadowlark Location Made me Homeless for the First time in my life, took away the housing help I had for our family, THEN denied to offer services requested in order to not be homeless, Ignored a Childs Metal Health Disabilities, are letting CHILDREN make their own mental health decisions. THE COUNTY OF SAN DIEGO is teaching our children its okay to hit thier parents and its okay to hit inocent people in our county. That its okay to lie to police, judges, Social workers, family, and that our own children don't have to listen to their mother or father. #CPSMadeMeHomeless",
+        "state": "CA",
+        "county": "San Diego",
+        "row_id": "52a16a4d-9bf7-4974-9661-68e84e33dd8a"
+      },
+      {
+        "body": "The system has taken us completely back in time, I FEEL LIKE A SLAVE! It feels as though my daughter is being auctioned off to the highest bidder.",
+        "state": "CA",
+        "county": "San Joaquin",
+        "row_id": "c2133c93-48c5-4e2f-a0f1-82770272eca4"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "The Child Welfare Services in San Diego County let their employees commit perjury, kidnap children, ignore and do not protect the Consitutional rights of children or families, they let children who have mental health disabilities, make there own medical decisions, the employees do not follow their own policies, laws, code of ethics, constitutional rights, and duties they all have to these families. They make families homeless while they profit from our tax payers and federal government funding instead of using those funds to help families have housing, have mental health care, and help families stay together.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "San Diego County"
+      },
+      {
+        "comment_text": "They agency as a whole is helping and orchestrating the misuse of power over our family. Supervisors, deputy supervisors, and literally every in the agency is helping lie, violate our rights, and cover up the truth.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "San Joaquin"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/child_welfare_services_cws",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='CA'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ca/child_welfare_services_cws/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "The Child Welfare Services in San Diego County let their employees commit perjury, kidnap children, ignore and do not protect the Consitutional rights of children or families, they let children who have mental health disabilities, make there own medical decisions, the employees do not follow their own policies, laws, code of ethics, constitutional rights, and duties they all have to these families. They make families homeless while they profit from our tax payers and federal government funding instead of using those funds to help families have housing, have mental health care, and help families stay together.",
+        "kind": "comment"
+      },
+      {
+        "body": "They agency as a whole is helping and orchestrating the misuse of power over our family. Supervisors, deputy supervisors, and literally every in the agency is helping lie, violate our rights, and cover up the truth.",
+        "kind": "comment"
+      },
+      {
+        "body": "San Diego County, San Diego County Sheriff Dept, Health and Human Services Child Welfare Services and the Juvenile Depenancy & Deliquency Courtroom 10 Meadowlark Location Made me Homeless for the First time in my life, took away the housing help I had for our family, THEN denied to offer services requested in order to not be homeless, Ignored a Childs Metal Health Disabilities, are letting CHILDREN make their own mental health decisions. THE COUNTY OF SAN DIEGO is teaching our children its okay to hit thier parents and its okay to hit inocent people in our county. That its okay to lie to police, judges, Social workers, family, and that our own children don't have to listen to their mother or father. #CPSMadeMeHomeless",
+        "kind": "family_report"
+      },
+      {
+        "body": "The system has taken us completely back in time, I FEEL LIKE A SLAVE! It feels as though my daughter is being auctioned off to the highest bidder.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 4
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

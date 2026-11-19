@@ -1,0 +1,123 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "kameshia_gant",
+    "display_name": "Kameshia D. Gant",
+    "title": "",
+    "first_name": "Kameshia D.",
+    "last_name": "Gant",
+    "role": "Judge",
+    "court": "Oakland",
+    "county": "Oakland",
+    "court_or_county": "Oakland",
+    "state": "MI",
+    "state_abbr": "MI",
+    "mention_count": 2,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 2,
+    "supabase_row_ids": [
+      "bb662c6d-a5ff-4559-a8a3-39385ec281a7",
+      "5bdf6840-be45-4fec-9f87-8e2eaff7d8d8"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "kameshia gant|MI"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 140,
+    "total_submissions": 200,
+    "avg_financial_loss": 173263.13,
+    "avg_months_lost": 39.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "MI",
+    "state_family_count": 200,
+    "median_financial_loss": 105500,
+    "median_burden_sample_size": 86,
+    "median_months_lost": 18,
+    "pro_se_pct": 44.0,
+    "pro_se_count": 88,
+    "_pdf_state_family_count": 200,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 2,
+    "actor_report_count": 2,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "The system, paid by our taxes, should protect victims of assault, however there is a funnel of money going towards trafficking kids instead because they know you'll do anything to try to get them back. Its been impossible to hold them accountable. They ruined my life and family relationships.",
+        "state": "MI",
+        "county": "Oakland County",
+        "row_id": "e1f05c77-7c39-4c25-ac08-79773464363a"
+      },
+      {
+        "body": "The decisions made in my case destroyed the life I had spent years building. I lost my home, my career, my family support network, and significant time with my son, suffering consequences that no parent should endure without a fair and lawful process.",
+        "state": "MI",
+        "county": "Oakland County",
+        "row_id": "aa9827e0-6e13-4b04-acab-18e9c929ba63"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "In my experience, Judge Gant has repeatedly issued decisions that I believe were not supported by the law or the facts presented. Her conduct toward me has often felt dismissive and disrespectful, and the consequences of her rulings have been devastating. In my case alone, the Michigan Court of Appeals reversed her decisions five separate times. Despite appellate intervention, she ultimately ordered that my son be relocated from Florida to Michigan with only 24 hours’ notice. As a result, I lost my home, my career, my support system, and the life I had built in Florida. My case has become one of the most heavily litigated custody matters in Oakland County, fueled in large part by the vast financial disparity between myself and my former partner. The emotional, professional, and financial toll has been extraordinary. What has been particularly difficult is that despite receiving 50% parenting time, my former partner often does not personally care for our son during significant portions of that time. I raised concerns about the amount of time our son was spending with third-party caregivers instead of a parent. When I brought this issue before the court, Judge Gant’s response was, “I shall mind my own business.” As a mother, it was deeply troubling to hear the court express no interest in examining how much time a young child was actually spending with a parent versus paid caregivers. Most troubling, when my son was younger, emergency room physicians documented injuries to his private area that raised concerns of abuse. Yet no meaningful protection was put in place. The explanation accepted by the court was that responsibility could not be determined because multiple caregivers had access to my son. As a mother, being told that no one could be held accountable under those circumstances was heartbreaking. Today, my son is about to turn five years old. Instead of celebrating his birthday with him, I will miss part of that milestone because of court-ordered parenting time arrangements. The cumulative effect of these decisions has profoundly altered my life, my career, my financial stability, and my relationship with my child. I do not believe any parent should lose their home, livelihood, family support, and precious time with their child without decisions being firmly grounded in the law and focused on the child’s best interests. The damage caused by these rulings has been immeasurable, and I continue to live with the consequences every day.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "6th Judicial Circuit (Oakland County)"
+      },
+      {
+        "comment_text": "Took away custody/parenting time without a hearing, one a one page declaration with backdoor conversations no evidence",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Oakland"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/kameshia_gant",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='MI'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/mi/kameshia_gant/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "In my experience, Judge Gant has repeatedly issued decisions that I believe were not supported by the law or the facts presented. Her conduct toward me has often felt dismissive and disrespectful, and the consequences of her rulings have been devastating. In my case alone, the Michigan Court of Appeals reversed her decisions five separate times. Despite appellate intervention, she ultimately ordered that my son be relocated from Florida to Michigan with only 24 hours’ notice. As a result, I lost my home, my career, my support system, and the life I had built in Florida. My case has become one of the most heavily litigated custody matters in Oakland County, fueled in large part by the vast financial disparity between myself and my former partner. The emotional, professional, and financial toll has been extraordinary. What has been particularly difficult is that despite receiving 50% parenting time, my former partner often does not personally care for our son during significant portions of that time. I raised concerns about the amount of time our son was spending with third-party caregivers instead of a parent. When I brought this issue before the court, Judge Gant’s response was, “I shall mind my own business.” As a mother, it was deeply troubling to hear the court express no interest in examining how much time a young child was actually spending with a parent versus paid caregivers. Most troubling, when my son was younger, emergency room physicians documented injuries to his private area that raised concerns of abuse. Yet no meaningful protection was put in place. The explanation accepted by the court was that responsibility could not be determined because multiple caregivers had access to my son. As a mother, being told that no one could be held accountable under those circumstances was heartbreaking. Today, my son is about to turn five years old. Instead of celebrating his birthday with him, I will miss part of that milestone because of court-ordered parenting time arrangements. The cumulative effect of these decisions has profoundly altered my life, my career, my financial stability, and my relationship with my child. I do not believe any parent should lose their home, livelihood, family support, and precious time with their child without decisions being firmly grounded in the law and focused on the child’s best interests. The damage caused by these rulings has been immeasurable, and I continue to live with the consequences every day.",
+        "kind": "comment"
+      },
+      {
+        "body": "Took away custody/parenting time without a hearing, one a one page declaration with backdoor conversations no evidence",
+        "kind": "comment"
+      },
+      {
+        "body": "The system, paid by our taxes, should protect victims of assault, however there is a funnel of money going towards trafficking kids instead because they know you'll do anything to try to get them back. Its been impossible to hold them accountable. They ruined my life and family relationships.",
+        "kind": "family_report"
+      },
+      {
+        "body": "The decisions made in my case destroyed the life I had spent years building. I lost my home, my career, my family support network, and significant time with my son, suffering consequences that no parent should endure without a fair and lawful process.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 4
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

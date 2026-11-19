@@ -27,7 +27,7 @@
     "actor_bucket_key": "john whitbeck|VA"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-0giaxxiy/New Final Post and Capcut template/export/john_whitbeck/image_1080.png",
+    "path": "/tmp/swm-share-pages-pauilms9/New Final Post and Capcut template/export/john_whitbeck/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -47,7 +47,7 @@
     "_pdf_state_family_count": 158,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6592,
+  "movement_total": 6620,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -84,12 +84,6 @@
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Loudoun county"
-      },
-      {
-        "comment_text": "Opposing counsel",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Loudoun county"
       }
     ]
   },
@@ -120,10 +114,6 @@
       },
       {
         "body": "Is literal drinking bunnies with plowman and Fisher and my attorneys the Graham law firm and Miriam Ibrahimi both owned by John Whitbeck.",
-        "kind": "comment"
-      },
-      {
-        "body": "Opposing counsel",
         "kind": "comment"
       },
       {

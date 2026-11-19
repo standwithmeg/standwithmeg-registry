@@ -35,7 +35,7 @@
   "state_stats": {
     "families_approved": 119,
     "total_submissions": 193,
-    "avg_financial_loss": 189526.53,
+    "avg_financial_loss": 189567.29,
     "avg_months_lost": 32.5,
     "_source_table": "movement_stats_by_state",
     "_match_value": "GA",
@@ -48,7 +48,7 @@
     "_pdf_state_family_count": 193,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6591,
+  "movement_total": 6620,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -73,12 +73,6 @@
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Catoosa County"
-      },
-      {
-        "comment_text": "Removed my child with no evidence, denied due process, accepted fabricated documents from opposing counsel",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Superior Court Catoosa County"
       }
     ]
   },
@@ -108,10 +102,6 @@
         "kind": "comment"
       },
       {
-        "body": "Removed my child with no evidence, denied due process, accepted fabricated documents from opposing counsel",
-        "kind": "comment"
-      },
-      {
         "body": "Forever altered my disabled child’s life by denying her care due to false allegations with no evidence",
         "kind": "family_report"
       },
@@ -120,7 +110,7 @@
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 2
+    "quote_page_count": 1
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

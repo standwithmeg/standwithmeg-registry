@@ -1,0 +1,113 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "kate_schaefer",
+    "display_name": "Kate Schaefer",
+    "title": "",
+    "first_name": "Kate",
+    "last_name": "Schaefer",
+    "role": "Judge",
+    "court": "Buchanan",
+    "county": "Buchanan county",
+    "court_or_county": "Buchanan",
+    "state": "MO",
+    "state_abbr": "MO",
+    "mention_count": 2,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 2,
+    "supabase_row_ids": [
+      "f20550ea-16ea-432f-9e85-8637744111ea",
+      "82e704cd-1610-4212-835f-f1eb83fc1aaa"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "kate schaefer|MO"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 144,
+    "total_submissions": 306,
+    "avg_financial_loss": 104962.18,
+    "avg_months_lost": 37.4,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "MO",
+    "state_family_count": 306,
+    "median_financial_loss": 80885,
+    "median_burden_sample_size": 142,
+    "median_months_lost": 21,
+    "pro_se_pct": 51.3,
+    "pro_se_count": 157,
+    "_pdf_state_family_count": 306,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 2,
+    "actor_report_count": 2,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "This is the most corrupt legal system here in Northwest Missouri. The good ol boys club is alive and well. There's so many more bad actors that I need to add but need to come back as this has already taken me several hours. I hope I can up date later. They all deserve to be in prison. The ones supposed to uphold the law are the ones breaking it daily!!!",
+        "state": "MO",
+        "county": "Andrew County",
+        "row_id": "fa6a6108-6992-450c-bfbd-ac86665acc20"
+      },
+      {
+        "body": "Ripped my son completely away from his home and ALL of his family and ordered him to move to Alaska with strangers. (His father and step mom) My son was a 4.0 student and now barely passing his freshman year of high school due to the forced move. We will never trust any court official ever again.",
+        "state": "MO",
+        "county": "Buchanan County",
+        "row_id": "4343e225-0b4a-451d-93c7-bceb8d28bb08"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Not listening to both sides of the testimony and not allowing me to speak on factual events.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Buchanan county"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/kate_schaefer",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='MO'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/mo/kate_schaefer/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Not listening to both sides of the testimony and not allowing me to speak on factual events.",
+        "kind": "comment"
+      },
+      {
+        "body": "This is the most corrupt legal system here in Northwest Missouri. The good ol boys club is alive and well. There's so many more bad actors that I need to add but need to come back as this has already taken me several hours. I hope I can up date later. They all deserve to be in prison. The ones supposed to uphold the law are the ones breaking it daily!!!",
+        "kind": "family_report"
+      },
+      {
+        "body": "Ripped my son completely away from his home and ALL of his family and ordered him to move to Alaska with strangers. (His father and step mom) My son was a 4.0 student and now barely passing his freshman year of high school due to the forced move. We will never trust any court official ever again.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 2
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

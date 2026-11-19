@@ -1,0 +1,123 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "barb_kiffmeyer",
+    "display_name": "Barb Kiffmeyer",
+    "title": "",
+    "first_name": "Barb",
+    "last_name": "Kiffmeyer",
+    "role": "Custody Evaluator",
+    "court": "Maricopa",
+    "county": "Maricopa",
+    "court_or_county": "Maricopa",
+    "state": "AZ",
+    "state_abbr": "AZ",
+    "mention_count": 2,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 2,
+    "supabase_row_ids": [
+      "6f37c186-4098-4a92-9d11-66c6bbab4ff3",
+      "b8d6a6f7-73b8-4eda-b3dd-401a66c5cc1f"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "barb kifmeyer|AZ"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 70,
+    "total_submissions": 100,
+    "avg_financial_loss": 187006.51,
+    "avg_months_lost": 27.1,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "AZ",
+    "state_family_count": 100,
+    "median_financial_loss": 153330,
+    "median_burden_sample_size": 52,
+    "median_months_lost": 15,
+    "pro_se_pct": 51.0,
+    "pro_se_count": 51,
+    "_pdf_state_family_count": 100,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6620,
+  "supabase": {
+    "report_count": 2,
+    "actor_report_count": 2,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "This cost me two years of no contact my son, and it has subjected my son to abuse and has caused him tremendous strain and anxiety",
+        "state": "AZ",
+        "county": "Maricopa County",
+        "row_id": "e4fbb7a5-ec20-4fb3-8181-fe1c2eee21a0"
+      },
+      {
+        "body": "Decimated!",
+        "state": "AZ",
+        "county": "Maricopa",
+        "row_id": "d4cedead-dab1-4a9d-b185-5704121a60f3"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "She was a court advisor for My Son, whom she met with for less than 10 minutes, My Son had a speech impediment, and she did take a time to try to understand him. Which ultimately led to detrimental consequences.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Maricopa County"
+      },
+      {
+        "comment_text": "Falsely reported facts of the case. Lied under oath. Did not review case or evidence and took biased approach and dealing with a case.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/barb_kiffmeyer",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='AZ'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/az/barb_kiffmeyer/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "She was a court advisor for My Son, whom she met with for less than 10 minutes, My Son had a speech impediment, and she did take a time to try to understand him. Which ultimately led to detrimental consequences.",
+        "kind": "comment"
+      },
+      {
+        "body": "Falsely reported facts of the case. Lied under oath. Did not review case or evidence and took biased approach and dealing with a case.",
+        "kind": "comment"
+      },
+      {
+        "body": "This cost me two years of no contact my son, and it has subjected my son to abuse and has caused him tremendous strain and anxiety",
+        "kind": "family_report"
+      },
+      {
+        "body": "Decimated!",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 2
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

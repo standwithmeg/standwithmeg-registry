@@ -27,7 +27,7 @@
     "actor_bucket_key": "sadia upright|SC"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-27yylo6i/New Final Post and Capcut template/export/sadia_upright/image_1080.png",
+    "path": "/tmp/swm-share-pages-pauilms9/New Final Post and Capcut template/export/sadia_upright/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -47,7 +47,7 @@
     "_pdf_state_family_count": 141,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6537,
+  "movement_total": 6620,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -64,14 +64,14 @@
       {
         "comment_text": "Kickbacks to attys for referring clients and then provides favorable outcome to highest paying atty.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lexington, SC"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/sadia_upright",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='SC'",
-    "pdf_public_actor: no 'Sadia Upright' in cache for SC"
+    "public_family_count_api: no actors returned for state='SC'"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",

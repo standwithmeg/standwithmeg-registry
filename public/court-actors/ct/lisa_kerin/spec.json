@@ -1,0 +1,120 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "lisa_kerin",
+    "display_name": "Lisa Kerin",
+    "title": "",
+    "first_name": "Lisa",
+    "last_name": "Kerin",
+    "role": "Reunification Therapist",
+    "court": "Fairfield",
+    "county": "Fairfield",
+    "court_or_county": "Fairfield",
+    "state": "CT",
+    "state_abbr": "CT",
+    "mention_count": 3,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "c3df5d0b-fc66-4a07-b2a6-513efcfc5a9c",
+      "c9aefe8b-302f-4356-ba7a-c46110538cc2",
+      "0f80dbc5-06f4-45b6-8c57-d5c61ddb81e2"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "lisa kerin|CT"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 46,
+    "total_submissions": 74,
+    "avg_financial_loss": 339747.18,
+    "avg_months_lost": 31.4,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "CT",
+    "state_family_count": 74,
+    "median_financial_loss": 213250,
+    "median_burden_sample_size": 40,
+    "median_months_lost": 22,
+    "pro_se_pct": 66.2,
+    "pro_se_count": 49,
+    "_pdf_state_family_count": 74,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6620,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "Being coerced into cooperating with child services a decade ago taught me that speaking out about abuse only leads to endless court battles where money matters more than the truth. Over the past ten years, this nightmare has cost me my peace and millions in assets, leaving me with nothing but debt and sleepless nights.",
+        "state": "CT",
+        "county": "Fairfield",
+        "row_id": "611eb305-6a2b-4a71-a528-6714f5b4df20"
+      },
+      {
+        "body": "Made matters worse!",
+        "state": "CT",
+        "county": "New Haven",
+        "row_id": "b6a14596-b135-4976-bd39-b27ed7bc8109"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Complete nightmare. Made matters worse. Antagonized issues between me and my spouse. Worked outside the parameters and agreements behind my back. Totally unprofessional, arrogant and more harmful than helpful.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
+      },
+      {
+        "comment_text": "Easily the most corrupt and dishonest court related professional much less person who I have ever met. She is by far the most dishonest and corrupt family Court related “expert” I have ever encountered",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Fairfield"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/lisa_kerin",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='CT'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ct/lisa_kerin/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Complete nightmare. Made matters worse. Antagonized issues between me and my spouse. Worked outside the parameters and agreements behind my back. Totally unprofessional, arrogant and more harmful than helpful.",
+        "kind": "comment"
+      },
+      {
+        "body": "Being coerced into cooperating with child services a decade ago taught me that speaking out about abuse only leads to endless court battles where money matters more than the truth. Over the past ten years, this nightmare has cost me my peace and millions in assets, leaving me with nothing but debt and sleepless nights.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Made matters worse!",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 2
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

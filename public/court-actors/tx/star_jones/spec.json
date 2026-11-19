@@ -1,0 +1,111 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "star_jones",
+    "display_name": "Star Jones",
+    "title": "",
+    "first_name": "Star",
+    "last_name": "Jones",
+    "role": "GAL / Child Representative",
+    "court": "Cameron County",
+    "county": "Cameron County",
+    "court_or_county": "Cameron County",
+    "state": "TX",
+    "state_abbr": "TX",
+    "mention_count": 2,
+    "family_count": 1,
+    "public_family_count": 1,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 2,
+    "supabase_row_ids": [
+      "620758a8-c736-43ed-ba2c-9c28a34fbd3f",
+      "e9a55f27-6988-4a5f-a666-2cfd17252149"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "star jones|TX"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 243,
+    "total_submissions": 370,
+    "avg_financial_loss": 223729.43,
+    "avg_months_lost": 29.7,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "TX",
+    "state_family_count": 370,
+    "median_financial_loss": 123500,
+    "median_burden_sample_size": 178,
+    "median_months_lost": 18,
+    "pro_se_pct": 46.5,
+    "pro_se_count": 172,
+    "_pdf_state_family_count": 370,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 2,
+    "actor_report_count": 2,
+    "family_count": 1,
+    "family_reports": [
+      {
+        "body": "Has destroyed my daughter and I. Left me bankrupt and to top it off need to pay Child support to the father so he can pay his debt and have no work.",
+        "state": "TX",
+        "county": "Cameron",
+        "row_id": "bcdee06a-4757-4a5e-8aeb-5bc595860881"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "No due process/ false statements/ have cited with father/heard she is given money to retain my daughter.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Ignored evidence and cited with father. Lied, defamed, and false statements. Manipulated my daughter.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/star_jones",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='TX'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/tx/star_jones/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "No due process/ false statements/ have cited with father/heard she is given money to retain my daughter.",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored evidence and cited with father. Lied, defamed, and false statements. Manipulated my daughter.",
+        "kind": "comment"
+      },
+      {
+        "body": "Has destroyed my daughter and I. Left me bankrupt and to top it off need to pay Child support to the father so he can pay his debt and have no work.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

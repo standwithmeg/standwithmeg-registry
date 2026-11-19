@@ -1,0 +1,80 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "tom_young",
+    "display_name": "Tom Young",
+    "title": "",
+    "first_name": "Tom",
+    "last_name": "Young",
+    "role": "Judge",
+    "court": "Osceola",
+    "county": "Osceola",
+    "court_or_county": "Osceola",
+    "state": "FL",
+    "state_abbr": "FL",
+    "mention_count": 1,
+    "family_count": 1,
+    "public_family_count": 1,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 1,
+    "supabase_row_ids": [
+      "4623885d-a035-4363-a930-25b1163458bd"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "tom young|FL"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 236,
+    "total_submissions": 358,
+    "avg_financial_loss": 190520.48,
+    "avg_months_lost": 27.2,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "FL",
+    "state_family_count": 358,
+    "median_financial_loss": 174000,
+    "median_burden_sample_size": 154,
+    "median_months_lost": 17,
+    "pro_se_pct": 57.5,
+    "pro_se_count": 206,
+    "_pdf_state_family_count": 358,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6620,
+  "supabase": {
+    "report_count": 1,
+    "actor_report_count": 1,
+    "family_count": 1,
+    "family_reports": [],
+    "public_comments": []
+  },
+  "export_dir": "New Final Post and Capcut template/export/tom_young",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='FL'",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/fl/tom_young/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

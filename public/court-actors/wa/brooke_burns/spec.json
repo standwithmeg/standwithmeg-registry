@@ -1,0 +1,125 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "brooke_burns",
+    "display_name": "Judge Brooke burns",
+    "title": "Judge",
+    "first_name": "Brooke",
+    "last_name": "burns",
+    "role": "Judge",
+    "court": "Garfield",
+    "county": "Garfield County",
+    "court_or_county": "Garfield",
+    "state": "WA",
+    "state_abbr": "WA",
+    "mention_count": 3,
+    "family_count": 3,
+    "public_family_count": 0,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "d30089a7-922a-4d55-91bd-43ef6dc5bfcb",
+      "84ba2fa1-1457-419d-86bf-18ad320118ed",
+      "f23bca7a-a43b-40b7-a367-5fdb93130721"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "broke burns|WA"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 91,
+    "total_submissions": 161,
+    "avg_financial_loss": 294350.96,
+    "avg_months_lost": 30.5,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "WA",
+    "state_family_count": 161,
+    "median_financial_loss": 126700,
+    "median_burden_sample_size": 87,
+    "median_months_lost": 18,
+    "pro_se_pct": 59.6,
+    "pro_se_count": 96,
+    "_pdf_state_family_count": 161,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 3,
+    "family_reports": [
+      {
+        "body": "Ruined my littles childhood, cause severe trust issues, trauma. They have failed my littles future, they have allowed someone to harm my littles for their pleasure!",
+        "state": "WA",
+        "county": "Asotin",
+        "row_id": "7688b805-6338-4c93-acc3-3beb69719a2a"
+      },
+      {
+        "body": "Destroyed us completely and our future",
+        "state": "WA",
+        "county": "Ferry County, Garfield County",
+        "row_id": "ebeb3e64-6762-424f-9754-1d0172340911"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Recused herself in 2022 for conflict of instrest (she worked on our 1st divorce in 2012) and came back in 2025 without my knowledge and ignored me bringing it up. Allowed false evidence without proof and ignored judge cox and lawyer Chapmans and our mediation agreement, ignored cps reports against ex husband, court ordered me not to talk about my case and won't allow me to file or receive transcripts",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Asotin county"
+      },
+      {
+        "comment_text": "Granted a protection order violating existing parenting plan and sustained it despite almost evidence of previous false allegations and coaching Issued a protection order that violated the existing parenting plan",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Garfield County"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/brooke_burns",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='WA'",
+    "family_count: lookup and previous spec returned 0 — using report_count=3 as fallback"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/wa/brooke_burns/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Recused herself in 2022 for conflict of instrest (she worked on our 1st divorce in 2012) and came back in 2025 without my knowledge and ignored me bringing it up. Allowed false evidence without proof and ignored judge cox and lawyer Chapmans and our mediation agreement, ignored cps reports against ex husband, court ordered me not to talk about my case and won't allow me to file or receive transcripts",
+        "kind": "comment"
+      },
+      {
+        "body": "Granted a protection order violating existing parenting plan and sustained it despite almost evidence of previous false allegations and coaching Issued a protection order that violated the existing parenting plan",
+        "kind": "comment"
+      },
+      {
+        "body": "Ruined my littles childhood, cause severe trust issues, trauma. They have failed my littles future, they have allowed someone to harm my littles for their pleasure!",
+        "kind": "family_report"
+      },
+      {
+        "body": "Destroyed us completely and our future",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 2
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

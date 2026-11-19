@@ -8,7 +8,7 @@
     "last_name": "ellis",
     "role": "Judge",
     "court": "Ada",
-    "county": null,
+    "county": "Ada",
     "court_or_county": "Ada",
     "state": "Idaho",
     "state_abbr": "ID",
@@ -26,27 +26,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/andrew_ellis/image_1080.png",
+    "path": "/tmp/swm-share-pages-pauilms9/New Final Post and Capcut template/export/andrew_ellis/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 29,
-    "total_submissions": 48,
-    "avg_financial_loss": 320302.42,
-    "avg_months_lost": 22.3,
+    "total_submissions": 51,
+    "avg_financial_loss": 306496.0,
+    "avg_months_lost": 22.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "ID",
-    "state_family_count": 48,
-    "median_financial_loss": 200000,
-    "median_burden_sample_size": 31,
+    "state_family_count": 51,
+    "median_financial_loss": 202150,
+    "median_burden_sample_size": 32,
     "median_months_lost": 18,
-    "pro_se_pct": 47.9,
+    "pro_se_pct": 45.1,
     "pro_se_count": 23,
-    "_pdf_state_family_count": 48,
+    "_pdf_state_family_count": 51,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6496,
+  "movement_total": 6620,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -73,26 +73,28 @@
     ],
     "public_comments": [
       {
-        "comment_text": "Still on case",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
         "comment_text": "I applied for an oder of protection to be put in place to protect my kids and I from my abusive ex husband harassing me through emails and stalking us in Idaho. My ex husband lives in Oklahoma and still won't stop litigating, harassing, and stalking me and my kids through other people. Judge Ellis said that the Superior court in Washington State had already through a ex parte filed by my ex husband, signed an emergency ordered that the emails weren't real and that they gave my ex husband a order for protection against me as well. Judge Ellis allowed my ex husbands Washington state attorney, Selby Lighthill to attend the Idaho hearing via zoom and represent my ex husband Aaron V. Tucker. The attorney Selby Lighthill can only represent and litigate in Washington State and California, not in Idaho. Judge Ellis did NOT and would not allow me to see this \"Washington State order\" and dismissed the case. On another occasion I came back to to Ada County Court house with harassment proof through text messages, phone logs, and pictures of a threatening note dropped off at my residence. Judge Ellis denied my request for protection again! Infact Judge Ellis told me that I DIDN'T HAVE ENOUGH EV",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Ada County Court, ID"
       },
       {
         "comment_text": "DIsmissed evidence that worked in my favor. Allowed perjury during testimony and allowed testimony to reflect my illegal \"objection\" and the story changed mid testimony. Told me to pass a class that taught dangerous doctrine (child sex assault is the parents/child's fault, and if you don't thing child predators can be rehabilitated, you are the problem) and because I didn't prescribe to their doctrine and refused extra \"therapy\" to get on the same page, I didn't learn anything and my rights were teminated. Retaliated when I told other parents in the class to put alleged in written statements to the court about what brought them to the class.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Ada"
+      },
+      {
+        "comment_text": "Still on case",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Ada"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/andrew_ellis",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='ID'",
-    "pdf_public_actor: no 'Andrew ellis' in cache for ID"
+    "public_family_count_api: no actors returned for state='ID'"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",

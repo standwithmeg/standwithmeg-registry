@@ -1,0 +1,123 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "amanda_hall",
+    "display_name": "Amanda Hall",
+    "title": "",
+    "first_name": "Amanda",
+    "last_name": "Hall",
+    "role": "Therapist / Counselor",
+    "court": "Tulsa",
+    "county": "Tulsa County",
+    "court_or_county": "Tulsa",
+    "state": "OK",
+    "state_abbr": "OK",
+    "mention_count": 2,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 2,
+    "supabase_row_ids": [
+      "b2f047c5-ca25-4fd2-856e-b9090c4d719a",
+      "333c6f76-2411-4e17-8ec4-d6ac6a3700ef"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "amanda hall|OK"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 120,
+    "total_submissions": 241,
+    "avg_financial_loss": 113410.49,
+    "avg_months_lost": 27.7,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OK",
+    "state_family_count": 241,
+    "median_financial_loss": 105000,
+    "median_burden_sample_size": 127,
+    "median_months_lost": 16,
+    "pro_se_pct": 41.5,
+    "pro_se_count": 100,
+    "_pdf_state_family_count": 241,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 2,
+    "actor_report_count": 2,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "They have cost me over $60,000, they’ve created more trauma on top of already substantial trauma from my abusive ex-husband husband and they have a ignored evidence and not upheld court orders which has allowed abuse to continue, and unfortunately not only myself, but primarily my children have suffered major lifelong consequences because of the way the court system handled my abusive ex-husband",
+        "state": "OK",
+        "county": "Tulsa",
+        "row_id": "28f5027b-2e72-4f30-ab10-e6aac2ad45a0"
+      },
+      {
+        "body": "My biggest regret in life is telling the truth and following the law. I reported abuse. My family has been destroyed as a result.",
+        "state": "OK",
+        "county": "Creek County",
+        "row_id": "d96a7040-db92-4c65-bacf-32372cd3e6f0"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "She admitted to my attorney & supervised visitation specialist that she had evidence of my child being held from me and was concerned about false allegations & refused to report them to judge.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Tulsa County"
+      },
+      {
+        "comment_text": "She told me and my daughter that she would be sent to live with her father if she didn't forgive him for abusing her.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Tulsa County"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/amanda_hall",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='OK'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ok/amanda_hall/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "She admitted to my attorney & supervised visitation specialist that she had evidence of my child being held from me and was concerned about false allegations & refused to report them to judge.",
+        "kind": "comment"
+      },
+      {
+        "body": "She told me and my daughter that she would be sent to live with her father if she didn't forgive him for abusing her.",
+        "kind": "comment"
+      },
+      {
+        "body": "They have cost me over $60,000, they’ve created more trauma on top of already substantial trauma from my abusive ex-husband husband and they have a ignored evidence and not upheld court orders which has allowed abuse to continue, and unfortunately not only myself, but primarily my children have suffered major lifelong consequences because of the way the court system handled my abusive ex-husband",
+        "kind": "family_report"
+      },
+      {
+        "body": "My biggest regret in life is telling the truth and following the law. I reported abuse. My family has been destroyed as a result.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 3
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

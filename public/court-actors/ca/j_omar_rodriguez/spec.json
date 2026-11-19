@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "j_omar_rodriguez",
+    "display_name": "J. Omar Rodriguez",
+    "title": "",
+    "first_name": "J. Omar",
+    "last_name": "Rodriguez",
+    "role": "Judge",
+    "court": "San Benito",
+    "county": "San Benito",
+    "court_or_county": "San Benito",
+    "state": "CA",
+    "state_abbr": "CA",
+    "mention_count": null,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 3,
+    "supabase_row_ids": null,
+    "actor_row_id": null,
+    "actor_bucket_key": "j omar rodriguez|CA"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 356,
+    "total_submissions": 540,
+    "avg_financial_loss": 261239.82,
+    "avg_months_lost": 33.7,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "CA",
+    "state_family_count": 540,
+    "median_financial_loss": 228400,
+    "median_burden_sample_size": 238,
+    "median_months_lost": 20,
+    "pro_se_pct": 58.9,
+    "pro_se_count": 318,
+    "_pdf_state_family_count": 540,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6620,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 2,
+    "family_reports": [],
+    "public_comments": [
+      {
+        "comment_text": "Interfered in a trial that was granted and after two court postponements for covid a new judge johnson came in and dismissed the trial on the day i was to call my first witness",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "San Benito"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/j_omar_rodriguez",
+  "unresolved": [
+    "court_actors: no rows match name~'J. Omar Rodriguez' state='CA'",
+    "public_family_count_api: no actors returned for state='CA'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ca/j_omar_rodriguez/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Interfered in a trial that was granted and after two court postponements for covid a new judge johnson came in and dismissed the trial on the day i was to call my first witness",
+        "kind": "comment"
+      }
+    ],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

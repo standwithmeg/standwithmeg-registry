@@ -1,0 +1,102 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "tina_hilpert",
+    "display_name": "Tina hilpert",
+    "title": "",
+    "first_name": "Tina",
+    "last_name": "hilpert",
+    "role": "CPS Worker",
+    "court": "Spokane",
+    "county": "Spokane",
+    "court_or_county": "Spokane",
+    "state": "WA",
+    "state_abbr": "WA",
+    "mention_count": 1,
+    "family_count": 1,
+    "public_family_count": 1,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 1,
+    "supabase_row_ids": [
+      "241efb4e-6e0b-4c6d-b62a-2dfaa3512cf6"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "tina hilpert|WA"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 91,
+    "total_submissions": 161,
+    "avg_financial_loss": 294350.96,
+    "avg_months_lost": 30.5,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "WA",
+    "state_family_count": 161,
+    "median_financial_loss": 126700,
+    "median_burden_sample_size": 87,
+    "median_months_lost": 18,
+    "pro_se_pct": 59.6,
+    "pro_se_count": 96,
+    "_pdf_state_family_count": 161,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 1,
+    "actor_report_count": 1,
+    "family_count": 1,
+    "family_reports": [
+      {
+        "body": "DCYF Brought 160 children over from a different county and placed them in foster care in spokane county. It added 30 extra cases on to the workers already thirty caseloads , which doubled their load and gives them no time for reunification efforts. The removals from another county is suspicious. The workers are not being transparent.They have been scrutinized multiple times in court recently for providing false information , and I witnessed the judge do nothing",
+        "state": "WA",
+        "county": "Spokane",
+        "row_id": "939026cb-1def-4a2a-a36d-884864ac2e98"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "She falsified documents, lied to a commissioner about a mother committing a dangerous crime with her son on her hip and claimed imminent danger due to this.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Spokane"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/tina_hilpert",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='WA'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/wa/tina_hilpert/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "She falsified documents, lied to a commissioner about a mother committing a dangerous crime with her son on her hip and claimed imminent danger due to this.",
+        "kind": "comment"
+      },
+      {
+        "body": "DCYF Brought 160 children over from a different county and placed them in foster care in spokane county. It added 30 extra cases on to the workers already thirty caseloads , which doubled their load and gives them no time for reunification efforts. The removals from another county is suspicious. The workers are not being transparent.They have been scrutinized multiple times in court recently for providing false information , and I witnessed the judge do nothing",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 2
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

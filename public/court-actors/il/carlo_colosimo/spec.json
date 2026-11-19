@@ -26,7 +26,7 @@
     "actor_bucket_key": "carlo colosimo|IL"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-0giaxxiy/New Final Post and Capcut template/export/carlo_colosimo/image_1080.png",
+    "path": "/tmp/swm-share-pages-pauilms9/New Final Post and Capcut template/export/carlo_colosimo/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -46,7 +46,7 @@
     "_pdf_state_family_count": 189,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6592,
+  "movement_total": 6620,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -63,8 +63,7 @@
       {
         "comment_text": "Denied many motions eithout reviewing my facts. Total bias!",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Kendall county"
+        "source": "court_actors.notes"
       }
     ]
   },

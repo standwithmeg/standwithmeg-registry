@@ -1,0 +1,123 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "frank_joseph",
+    "display_name": "Frank Joseph",
+    "title": "",
+    "first_name": "Frank",
+    "last_name": "Joseph",
+    "role": "Judge",
+    "court": "Silverbow district court",
+    "county": "Silverbow district court",
+    "court_or_county": "Silverbow district court",
+    "state": "MT",
+    "state_abbr": "MT",
+    "mention_count": 2,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 2,
+    "supabase_row_ids": [
+      "f157b26b-603f-4580-999b-6f6c4e61e587",
+      "86ead890-71f1-48da-9944-77346696d317"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "frank joseph|MT"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 39,
+    "total_submissions": 76,
+    "avg_financial_loss": 170095.33,
+    "avg_months_lost": 41.2,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "MT",
+    "state_family_count": 76,
+    "median_financial_loss": 135250,
+    "median_burden_sample_size": 34,
+    "median_months_lost": 19,
+    "pro_se_pct": 60.5,
+    "pro_se_count": 46,
+    "_pdf_state_family_count": 76,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 2,
+    "actor_report_count": 2,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "It is totally destroyed the relationship between my child and I they have told him lies about me",
+        "state": "MT",
+        "county": "Silver Bow",
+        "row_id": "d9ab7a68-6004-4fab-9356-59ceed80e671"
+      },
+      {
+        "body": "This system has ripped my family apart, and has done immeasurable damage. The time it will take to heal and finishing fixing what they have done, will take a lifetime.",
+        "state": "MT",
+        "county": "Silverbow",
+        "row_id": "44ddeade-49d2-4424-89c8-851041f9d0e1"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "He is suppressing evidence and extremely biased",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Silverbow county"
+      },
+      {
+        "comment_text": "Ignoring timelines.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/frank_joseph",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='MT'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/mt/frank_joseph/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "He is suppressing evidence and extremely biased",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignoring timelines.",
+        "kind": "comment"
+      },
+      {
+        "body": "It is totally destroyed the relationship between my child and I they have told him lies about me",
+        "kind": "family_report"
+      },
+      {
+        "body": "This system has ripped my family apart, and has done immeasurable damage. The time it will take to heal and finishing fixing what they have done, will take a lifetime.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

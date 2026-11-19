@@ -1,0 +1,124 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "thomas_j_lo",
+    "display_name": "Thomas J Lo",
+    "title": "",
+    "first_name": "Thomas J",
+    "last_name": "Lo",
+    "role": "Judge",
+    "court": "Chatworth Courthouse",
+    "county": "Orange County",
+    "court_or_county": "Chatworth Courthouse",
+    "state": "CA",
+    "state_abbr": "CA",
+    "mention_count": 3,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "ae614bf4-ef80-4393-b2a4-1077b49d77c7",
+      "e724a766-952b-4f24-a6d1-47ff37358281",
+      "33af505a-57e6-464f-8c05-4f436ca8ed88"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "thomas lo|CA"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 356,
+    "total_submissions": 540,
+    "avg_financial_loss": 261239.82,
+    "avg_months_lost": 33.7,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "CA",
+    "state_family_count": 540,
+    "median_financial_loss": 228400,
+    "median_burden_sample_size": 238,
+    "median_months_lost": 20,
+    "pro_se_pct": 58.9,
+    "pro_se_count": 318,
+    "_pdf_state_family_count": 540,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6620,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "Believed the abuser. Multiple dvtro’s filed. A user does not follow own court order. Puts children’s lives in danger. Multiple CPS investigations with one outcome confirming child neglect and abuse. Drug addiction. Petitioner will not seek help and has drug induced psychosis",
+        "state": "CA",
+        "county": "Orange County",
+        "row_id": "c0e9e6a2-51a9-4a5e-b841-4436a8b9433a"
+      },
+      {
+        "body": "Family court operates in secrecy with no audio, video or jury to ensure the ongoing corruption to abuse children; profiteering schemes and the kidnapping and trafficking of vulnerable children. As a teacher and school Principal of 23 years, I've been protecting children and families. This is why I'm running for public office (Board of Supervisors) to ensure children are no longer kidnapped, abused and trafficked.",
+        "state": "CA",
+        "county": "Orange County",
+        "row_id": "4fb8e0ae-8e2d-42a7-9e20-d84527e80392"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Kidnapped my son; medically abused my son; endorsed rape; denied visitation; sanctioned me; endorsed perjury; denied my constitutional right to parent (14th Amendment)",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Orange County"
+      },
+      {
+        "comment_text": "Bias and admonishes people for rolling their eyes or being emotional. Does not read evidence and favors abusers Corrupt and bias",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Orange County"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/thomas_j_lo",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='CA'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ca/thomas_j_lo/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Kidnapped my son; medically abused my son; endorsed rape; denied visitation; sanctioned me; endorsed perjury; denied my constitutional right to parent (14th Amendment)",
+        "kind": "comment"
+      },
+      {
+        "body": "Bias and admonishes people for rolling their eyes or being emotional. Does not read evidence and favors abusers Corrupt and bias",
+        "kind": "comment"
+      },
+      {
+        "body": "Believed the abuser. Multiple dvtro’s filed. A user does not follow own court order. Puts children’s lives in danger. Multiple CPS investigations with one outcome confirming child neglect and abuse. Drug addiction. Petitioner will not seek help and has drug induced psychosis",
+        "kind": "family_report"
+      },
+      {
+        "body": "Family court operates in secrecy with no audio, video or jury to ensure the ongoing corruption to abuse children; profiteering schemes and the kidnapping and trafficking of vulnerable children. As a teacher and school Principal of 23 years, I've been protecting children and families. This is why I'm running for public office (Board of Supervisors) to ensure children are no longer kidnapped, abused and trafficked.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 3
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

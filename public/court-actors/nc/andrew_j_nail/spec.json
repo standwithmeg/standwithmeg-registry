@@ -1,0 +1,123 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "andrew_j_nail",
+    "display_name": "Andrew J. Nail",
+    "title": "",
+    "first_name": "Andrew J.",
+    "last_name": "Nail",
+    "role": "Attorney",
+    "court": "Lenoir County Courthouse",
+    "county": "Lenoir County Courthouse",
+    "court_or_county": "Lenoir County Courthouse",
+    "state": "NC",
+    "state_abbr": "NC",
+    "mention_count": 2,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 2,
+    "supabase_row_ids": [
+      "4684ef6a-adb3-4855-b4f6-af80d8292a51",
+      "616de028-9863-4f74-b26f-b6b079d3a6d4"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "andrew nail|NC"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 157,
+    "total_submissions": 239,
+    "avg_financial_loss": 168081.76,
+    "avg_months_lost": 36.2,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "NC",
+    "state_family_count": 239,
+    "median_financial_loss": 140000,
+    "median_burden_sample_size": 77,
+    "median_months_lost": 18,
+    "pro_se_pct": 48.5,
+    "pro_se_count": 116,
+    "_pdf_state_family_count": 239,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 2,
+    "actor_report_count": 2,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "It has stole my natural right as a mother to build bond with child qnd the wmotional stress on the children and the mother.. in the be batudal qorkd what effecta does it have on aby other mother that has its baby taken or hurt...",
+        "state": "NC",
+        "county": "Lenoir",
+        "row_id": "6e34d8fc-75be-4232-a5c5-24861713b993"
+      },
+      {
+        "body": "This system took my children, our time, our milestones, and our peace, while forcing me to fight to prove the love and bond that never should have been questioned. I want people to know that family separation is not just a court case, it is lifelong harm to children and parents.",
+        "state": "NC",
+        "county": "Lenoir",
+        "row_id": "0b0ff1a5-9314-4a68-8dc4-21f4137cffd3"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Delayed reunification, did not fight for me bc he was court appointed, refused to let me get on the stand to defend myself, didn't present evidence during my hearing.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lenoir County Courthouse"
+      },
+      {
+        "comment_text": "Didnt tey and then quit",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lenoir"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/andrew_j_nail",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='NC'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/nc/andrew_j_nail/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Delayed reunification, did not fight for me bc he was court appointed, refused to let me get on the stand to defend myself, didn't present evidence during my hearing.",
+        "kind": "comment"
+      },
+      {
+        "body": "Didnt tey and then quit",
+        "kind": "comment"
+      },
+      {
+        "body": "It has stole my natural right as a mother to build bond with child qnd the wmotional stress on the children and the mother.. in the be batudal qorkd what effecta does it have on aby other mother that has its baby taken or hurt...",
+        "kind": "family_report"
+      },
+      {
+        "body": "This system took my children, our time, our milestones, and our peace, while forcing me to fight to prove the love and bond that never should have been questioned. I want people to know that family separation is not just a court case, it is lifelong harm to children and parents.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 2
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

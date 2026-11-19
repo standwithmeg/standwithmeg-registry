@@ -33,14 +33,14 @@
     "actor_bucket_key": "kevin grer|OH"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-a9qn51im/New Final Post and Capcut template/export/kevin_greer/image_1080.png",
+    "path": "/tmp/swm-share-pages-pauilms9/New Final Post and Capcut template/export/kevin_greer/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 205,
     "total_submissions": 316,
-    "avg_financial_loss": 100327.06,
+    "avg_financial_loss": 100328.09,
     "avg_months_lost": 32.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OH",
@@ -53,7 +53,7 @@
     "_pdf_state_family_count": 316,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6555,
+  "movement_total": 6620,
   "supabase": {
     "report_count": 10,
     "actor_report_count": 10,
@@ -102,12 +102,6 @@
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Highland"
-      },
-      {
-        "comment_text": "The night motions with clearing convicted evidence that we were telling the truth we had proof of everything house pay rent all the time it took receipts look presentable all that, and he still decided to go with them He ignored my evidence and motions with my evidence attached to them, and believed the prosecutor and the hospital",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Highland county"
       },
       {
         "comment_text": "Ignored evidence, agreed with prosecutors, looked at me in a bad light no matter my attorney evidence and much more Denied visitation, listened to prosecutors instead of me and my attorney evidence, assumed my side was lying no matter the statements",
@@ -167,10 +161,6 @@
         "kind": "comment"
       },
       {
-        "body": "The night motions with clearing convicted evidence that we were telling the truth we had proof of everything house pay rent all the time it took receipts look presentable all that, and he still decided to go with them He ignored my evidence and motions with my evidence attached to them, and believed the prosecutor and the hospital",
-        "kind": "comment"
-      },
-      {
         "body": "Ignored evidence, agreed with prosecutors, looked at me in a bad light no matter my attorney evidence and much more Denied visitation, listened to prosecutors instead of me and my attorney evidence, assumed my side was lying no matter the statements",
         "kind": "comment"
       },
@@ -215,7 +205,7 @@
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 8
+    "quote_page_count": 7
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

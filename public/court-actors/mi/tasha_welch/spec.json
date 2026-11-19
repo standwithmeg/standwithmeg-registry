@@ -27,7 +27,7 @@
     "actor_bucket_key": "tasha welch|MI"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-7jh_hs8h/New Final Post and Capcut template/export/tasha_welch/image_1080.png",
+    "path": "/tmp/swm-share-pages-pauilms9/New Final Post and Capcut template/export/tasha_welch/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -47,7 +47,7 @@
     "_pdf_state_family_count": 200,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6500,
+  "movement_total": 6620,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -79,12 +79,6 @@
       }
     ],
     "public_comments": [
-      {
-        "comment_text": "Didn't follow the d h s book was never notified that my daughter was in the hospital when we still had medical rights",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Montcalm"
-      },
       {
         "comment_text": "Hides the domestic violence in placements home, while stating it was in my home with zero history of DV in my home.",
         "author": "Anonymous parent",
@@ -127,10 +121,6 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Didn't follow the d h s book was never notified that my daughter was in the hospital when we still had medical rights",
-        "kind": "comment"
-      },
-      {
         "body": "Hides the domestic violence in placements home, while stating it was in my home with zero history of DV in my home.",
         "kind": "comment"
       },
@@ -159,7 +149,7 @@
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 3
+    "quote_page_count": 2
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

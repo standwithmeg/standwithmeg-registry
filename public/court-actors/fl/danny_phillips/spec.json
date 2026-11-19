@@ -26,7 +26,7 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-0giaxxiy/New Final Post and Capcut template/export/danny_phillips/image_1080.png",
+    "path": "/tmp/swm-share-pages-pauilms9/New Final Post and Capcut template/export/danny_phillips/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -46,7 +46,7 @@
     "_pdf_state_family_count": 358,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6591,
+  "movement_total": 6620,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -67,26 +67,22 @@
     ],
     "public_comments": [
       {
+        "comment_text": "Conspired with psychologist (Rachel Scharlepp) to attempt to incarcerate mother for alienation. Danny is close friends with Rachel Scharlepp. Danny conspired with opposing counsel (John Kenny) to threaten mother with losing her children if she didn’t sign a contract. He filed motions without notifying parties. He contacted the judges assistant ex parte. He conspired with Rosie Harkness to facilitate further abuse to 6 children. He conspired to withhold evidence from the court when emails were subpoenaed. He took the case after the mother consulted with his colleague Toby Norris, which was a conflict of interest having previous knowledge of opposing party consultation. Works with other court actors to be profitable and he uses people in a position of power to threaten victims",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Leon"
+      },
+      {
         "comment_text": "Concerns have been raised regarding this attorney’s candor and professional conduct in court proceedings, including allegations that statements made in litigation have at times been inconsistent with the likely facts of the situation. Additional concerns relate to the attorney’s personal relationship with a former client whom he previously represented before later marrying. Critics argue that this history raises questions regarding professional boundaries, judgment, and potential ethical considerations surrounding attorney-client relationships. Taken together, these issues have contributed to broader concerns regarding credibility, professionalism, and adherence to the ethical standards expected of attorneys practicing within sensitive family law matters.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "Conspired with psychologist (Rachel Scharlepp) to attempt to incarcerate mother for alienation. Danny is close friends with Rachel Scharlepp. Danny conspired with opposing counsel (John Kenny) to threaten mother with losing her children if she didn’t sign a contract. He filed motions without notifying parties. He contacted the judges assistant ex parte. He conspired with Rosie Harkness to facilitate further abuse to 6 children. He conspired to withhold evidence from the court when emails were subpoenaed. He took the case after the mother consulted with his colleague Toby Norris, which was a conflict of interest having previous knowledge of opposing party consultation.",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "Works with other court actors to be profitable and he uses people in a position of power to threaten victims",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Leon"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/danny_phillips",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='FL'",
-    "pdf_public_actor: no 'Danny Phillips' in cache for FL"
+    "public_family_count_api: no actors returned for state='FL'"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
@@ -106,15 +102,11 @@
   "render": {
     "selected_quotes": [
       {
+        "body": "Conspired with psychologist (Rachel Scharlepp) to attempt to incarcerate mother for alienation. Danny is close friends with Rachel Scharlepp. Danny conspired with opposing counsel (John Kenny) to threaten mother with losing her children if she didn’t sign a contract. He filed motions without notifying parties. He contacted the judges assistant ex parte. He conspired with Rosie Harkness to facilitate further abuse to 6 children. He conspired to withhold evidence from the court when emails were subpoenaed. He took the case after the mother consulted with his colleague Toby Norris, which was a conflict of interest having previous knowledge of opposing party consultation. Works with other court actors to be profitable and he uses people in a position of power to threaten victims",
+        "kind": "comment"
+      },
+      {
         "body": "Concerns have been raised regarding this attorney’s candor and professional conduct in court proceedings, including allegations that statements made in litigation have at times been inconsistent with the likely facts of the situation. Additional concerns relate to the attorney’s personal relationship with a former client whom he previously represented before later marrying. Critics argue that this history raises questions regarding professional boundaries, judgment, and potential ethical considerations surrounding attorney-client relationships. Taken together, these issues have contributed to broader concerns regarding credibility, professionalism, and adherence to the ethical standards expected of attorneys practicing within sensitive family law matters.",
-        "kind": "comment"
-      },
-      {
-        "body": "Conspired with psychologist (Rachel Scharlepp) to attempt to incarcerate mother for alienation. Danny is close friends with Rachel Scharlepp. Danny conspired with opposing counsel (John Kenny) to threaten mother with losing her children if she didn’t sign a contract. He filed motions without notifying parties. He contacted the judges assistant ex parte. He conspired with Rosie Harkness to facilitate further abuse to 6 children. He conspired to withhold evidence from the court when emails were subpoenaed. He took the case after the mother consulted with his colleague Toby Norris, which was a conflict of interest having previous knowledge of opposing party consultation.",
-        "kind": "comment"
-      },
-      {
-        "body": "Works with other court actors to be profitable and he uses people in a position of power to threaten victims",
         "kind": "comment"
       },
       {

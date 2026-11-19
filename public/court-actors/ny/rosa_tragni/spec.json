@@ -1,0 +1,123 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "rosa_tragni",
+    "display_name": "Rosa Tragni",
+    "title": "",
+    "first_name": "Rosa",
+    "last_name": "Tragni",
+    "role": "GAL / Child Representative",
+    "court": "Richmond",
+    "county": "Richmond county family court",
+    "court_or_county": "Richmond",
+    "state": "NY",
+    "state_abbr": "NY",
+    "mention_count": 2,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 2,
+    "supabase_row_ids": [
+      "272f1d23-ff25-438a-b223-770ea917465f",
+      "988fc109-444e-4265-a9b6-f814f85b7161"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "rosa tragni|NY"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 131,
+    "total_submissions": 200,
+    "avg_financial_loss": 199102.53,
+    "avg_months_lost": 29.2,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "NY",
+    "state_family_count": 200,
+    "median_financial_loss": 181525,
+    "median_burden_sample_size": 72,
+    "median_months_lost": 18,
+    "pro_se_pct": 40.0,
+    "pro_se_count": 80,
+    "_pdf_state_family_count": 200,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 2,
+    "actor_report_count": 2,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "Destroyed it completely and utterly. I am homeless, no money to live off of and it has wrecked my side of the family where it will never be what it once was",
+        "state": "NY",
+        "county": "Richmond",
+        "row_id": "b3296504-8a8b-413b-a6ad-337538159f48"
+      },
+      {
+        "body": "The system failed to do the one thing it was supposed to do: protect my child. I lost my home, my life in America, and years with my son, and now I am facing an arrest warrant after a court ordered my daughter into the custody of a man who is the subject of an INTERPOL Red Notice relating to pedophilia-related crimes.",
+        "state": "NY",
+        "county": "Richmond",
+        "row_id": "ec207954-f8aa-4ce7-986a-4ee7eb6518ad"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Another lawyer that did not represent me in the proper manner.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Richmond county family court"
+      },
+      {
+        "comment_text": "Hid evidence of SA, committed perjury",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Tragni"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/rosa_tragni",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='NY'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ny/rosa_tragni/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Another lawyer that did not represent me in the proper manner.",
+        "kind": "comment"
+      },
+      {
+        "body": "Hid evidence of SA, committed perjury",
+        "kind": "comment"
+      },
+      {
+        "body": "Destroyed it completely and utterly. I am homeless, no money to live off of and it has wrecked my side of the family where it will never be what it once was",
+        "kind": "family_report"
+      },
+      {
+        "body": "The system failed to do the one thing it was supposed to do: protect my child. I lost my home, my life in America, and years with my son, and now I am facing an arrest warrant after a court ordered my daughter into the custody of a man who is the subject of an INTERPOL Red Notice relating to pedophilia-related crimes.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 2
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

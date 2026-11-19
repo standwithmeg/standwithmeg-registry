@@ -1,0 +1,103 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "diane_walker",
+    "display_name": "Diane Walker",
+    "title": "",
+    "first_name": "Diane",
+    "last_name": "Walker",
+    "role": "Judge",
+    "court": "Ada",
+    "county": "Ada",
+    "court_or_county": "Ada",
+    "state": "ID",
+    "state_abbr": "ID",
+    "mention_count": 2,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 2,
+    "supabase_row_ids": [
+      "e9375942-7d1b-4558-9045-e54298433d8d",
+      "a6170599-67ff-4ca0-8a10-31b477a44530"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "diane walker|ID"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 29,
+    "total_submissions": 51,
+    "avg_financial_loss": 306496.0,
+    "avg_months_lost": 22.4,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "ID",
+    "state_family_count": 51,
+    "median_financial_loss": 202150,
+    "median_burden_sample_size": 32,
+    "median_months_lost": 18,
+    "pro_se_pct": 45.1,
+    "pro_se_count": 23,
+    "_pdf_state_family_count": 51,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 2,
+    "actor_report_count": 2,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "Between P.D. lack of enforcement of custody orders as part of their job, interference with rights because they think they know what's best, listening to children make a false statement \"my mom told me\" and passing judgements from a lie rehearsed with a minor, falsification of reports, it's time all of these heartless people are held accountable for their voluntary ignorance and deliberate meddling in places they don't belong!",
+        "state": "ID",
+        "county": "Ada",
+        "row_id": "1ea1a706-68d0-4a3d-8f03-881777db72c2"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Allows false protection orders through without any evidence. My count is 3 since 2019.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Ada"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/diane_walker",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='ID'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/id/diane_walker/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Allows false protection orders through without any evidence. My count is 3 since 2019.",
+        "kind": "comment"
+      },
+      {
+        "body": "Between P.D. lack of enforcement of custody orders as part of their job, interference with rights because they think they know what's best, listening to children make a false statement \"my mom told me\" and passing judgements from a lie rehearsed with a minor, falsification of reports, it's time all of these heartless people are held accountable for their voluntary ignorance and deliberate meddling in places they don't belong!",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 2
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

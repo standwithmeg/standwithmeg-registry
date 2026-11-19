@@ -1,0 +1,103 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "thomas_alley",
+    "display_name": "Thomas Alley",
+    "title": "",
+    "first_name": "Thomas",
+    "last_name": "Alley",
+    "role": "Judge",
+    "court": "Grundy",
+    "county": "Putnam county",
+    "court_or_county": "Grundy",
+    "state": "MO",
+    "state_abbr": "MO",
+    "mention_count": 1,
+    "family_count": 1,
+    "public_family_count": 0,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 1,
+    "supabase_row_ids": [
+      "c60da8c2-0bea-47bc-bdb4-b19b8ee25dac"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "thomas aley|MO"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 144,
+    "total_submissions": 306,
+    "avg_financial_loss": 104962.18,
+    "avg_months_lost": 37.4,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "MO",
+    "state_family_count": 306,
+    "median_financial_loss": 80885,
+    "median_burden_sample_size": 142,
+    "median_months_lost": 21,
+    "pro_se_pct": 51.3,
+    "pro_se_count": 157,
+    "_pdf_state_family_count": 306,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 1,
+    "actor_report_count": 1,
+    "family_count": 1,
+    "family_reports": [
+      {
+        "body": "This system has isolated, an alienated, a daughter and a mother from having a relationship when I could’ve died from cancer, they allowed a father to kidnap a child from her home state and for me and her brother and sister and take her to another state to be held like a prisoner while they made profits off of my daughter, put her on medication and kept her away from me for four years I still haven’t talked to her or seen her since September 9 of 2024. I got one visit after the custody order was issued because he’s on drugs. He refuses to let me see my child and I filed the contempt in the state of Iowa, and they still keep denying my contempt and are not allowing me to see my child. This is ruined my family, my life they’ve harassed me they’ve hacked into my phones. They drove me out of the state of Iowa and now I live in a different state because I could no longer live there anymore after all of this psychological warfare.",
+        "state": "MO",
+        "county": "Putnam county/ unionville",
+        "row_id": "2cc2193b-4aaf-4ce0-859d-98aeae2cdfa7"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "This judge was the first presiding judge all my daughter’s case that allegedly signed her into custody that was the same presiding judge on my mom’s wrongful death lawsuit case in the same city at the same time four months after our case opened this judge died, and his name was still being used in court and all my papers for months afterwards! And then after the custody was issued, and she was placed in her dad‘s primary care. I have a paper showing that his name was stamped on the release papers, stating I was noncompliant for the court case in Missouri a year to two years after he died his name and signature was signed on that paper",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Putnam county"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/thomas_alley",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='MO'",
+    "family_count: lookup and previous spec returned 0 — using report_count=1 as fallback"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/mo/thomas_alley/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "This judge was the first presiding judge all my daughter’s case that allegedly signed her into custody that was the same presiding judge on my mom’s wrongful death lawsuit case in the same city at the same time four months after our case opened this judge died, and his name was still being used in court and all my papers for months afterwards! And then after the custody was issued, and she was placed in her dad‘s primary care. I have a paper showing that his name was stamped on the release papers, stating I was noncompliant for the court case in Missouri a year to two years after he died his name and signature was signed on that paper",
+        "kind": "comment"
+      },
+      {
+        "body": "This system has isolated, an alienated, a daughter and a mother from having a relationship when I could’ve died from cancer, they allowed a father to kidnap a child from her home state and for me and her brother and sister and take her to another state to be held like a prisoner while they made profits off of my daughter, put her on medication and kept her away from me for four years I still haven’t talked to her or seen her since September 9 of 2024. I got one visit after the custody order was issued because he’s on drugs. He refuses to let me see my child and I filed the contempt in the state of Iowa, and they still keep denying my contempt and are not allowing me to see my child. This is ruined my family, my life they’ve harassed me they’ve hacked into my phones. They drove me out of the state of Iowa and now I live in a different state because I could no longer live there anymore after all of this psychological warfare.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 4
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

@@ -1,0 +1,79 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "christi_chesley",
+    "display_name": "Christi L. Chesley",
+    "title": "",
+    "first_name": "Christi L.",
+    "last_name": "Chesley",
+    "role": "GAL / Child Representative",
+    "court": "Oklahoma County",
+    "county": "Oklahoma County",
+    "court_or_county": "Oklahoma County",
+    "state": "OK",
+    "state_abbr": "OK",
+    "mention_count": 0,
+    "family_count": 0,
+    "public_family_count": 0,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": "christi chesley|OK"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 120,
+    "total_submissions": 241,
+    "avg_financial_loss": 113410.49,
+    "avg_months_lost": 27.7,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OK",
+    "state_family_count": 241,
+    "median_financial_loss": 105000,
+    "median_burden_sample_size": 127,
+    "median_months_lost": 16,
+    "pro_se_pct": 41.5,
+    "pro_se_count": 100,
+    "_pdf_state_family_count": 241,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 0,
+    "family_reports": [],
+    "public_comments": []
+  },
+  "export_dir": "New Final Post and Capcut template/export/christi_chesley",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='OK'",
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ok/christi_chesley/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

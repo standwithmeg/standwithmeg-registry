@@ -1,0 +1,93 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "emma_stockwin",
+    "display_name": "EMMA STOCKWIN",
+    "title": "",
+    "first_name": "EMMA",
+    "last_name": "STOCKWIN",
+    "role": "CPS Worker",
+    "court": "NEWCASTLE",
+    "county": "New Castle county",
+    "court_or_county": "NEWCASTLE",
+    "state": "DE",
+    "state_abbr": "DE",
+    "mention_count": 2,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 2,
+    "supabase_row_ids": [
+      "48bd6ab6-0256-4899-ab8c-f2ab500830a1",
+      "de3d84f6-8a28-43e6-a8c3-c748c94bee4f"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "emma stockwin|DE"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 5,
+    "total_submissions": 12,
+    "avg_financial_loss": 69911.0,
+    "avg_months_lost": 20.1,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "DE",
+    "state_family_count": 12,
+    "median_financial_loss": 175900,
+    "median_burden_sample_size": 2,
+    "median_months_lost": 14,
+    "pro_se_pct": 75.0,
+    "pro_se_count": 9,
+    "_pdf_state_family_count": 12,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6620,
+  "supabase": {
+    "report_count": 2,
+    "actor_report_count": 2,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "children allowed visitation with their abuser",
+        "state": "DE",
+        "county": "New Castle",
+        "row_id": "ac1e2345-05cd-4b63-9a68-d26df61103de"
+      }
+    ],
+    "public_comments": []
+  },
+  "export_dir": "New Final Post and Capcut template/export/emma_stockwin",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='DE'",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/de/emma_stockwin/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "children allowed visitation with their abuser",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

@@ -1,0 +1,123 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "leo_v_diana",
+    "display_name": "Leo V. Diana",
+    "title": "",
+    "first_name": "Leo V.",
+    "last_name": "Diana",
+    "role": "Judge",
+    "court": "Hartford",
+    "county": "Hartford",
+    "court_or_county": "Hartford",
+    "state": "CT",
+    "state_abbr": "CT",
+    "mention_count": 2,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 2,
+    "supabase_row_ids": [
+      "27e117c7-dad6-4b29-ad52-e8d5370974f1",
+      "38606a0d-0005-4759-97d9-a5decf365f86"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "leo diana|CT"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 46,
+    "total_submissions": 74,
+    "avg_financial_loss": 339747.18,
+    "avg_months_lost": 31.4,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "CT",
+    "state_family_count": 74,
+    "median_financial_loss": 213250,
+    "median_burden_sample_size": 40,
+    "median_months_lost": 22,
+    "pro_se_pct": 66.2,
+    "pro_se_count": 49,
+    "_pdf_state_family_count": 74,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6620,
+  "supabase": {
+    "report_count": 2,
+    "actor_report_count": 2,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "This system took me away from my four-year-old son on his birthday and my one-year-old-infant based on allegations the court itself later rejected. One hundred and twenty-eight days later, my boys remain without their father — not because of any finding of harm, but because in a high-net-worth divorce the legal process itself, asymmetrically applied, became the instrument of our separation.",
+        "state": "CT",
+        "county": "Stamford/Norwalk",
+        "row_id": "fd07227a-da15-4f13-858f-1297bc9bb3ca"
+      },
+      {
+        "body": "They have taken my daughter childhood and my happiness and life from me only because I fought against abuse, this demonic system must end. Now!!!",
+        "state": "CT",
+        "county": "Hartford",
+        "row_id": "5ab65451-caf7-4a62-986d-128b054f8195"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Leo Diana kept me on supervised visitation without and lawful reason and ignored evidence dismissed all my motions and held me in contempt based off of lies.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Hartford"
+      },
+      {
+        "comment_text": "Is in direct communication with opposing counsel, who helps formulate the law and rules.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/leo_v_diana",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='CT'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ct/leo_v_diana/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Leo Diana kept me on supervised visitation without and lawful reason and ignored evidence dismissed all my motions and held me in contempt based off of lies.",
+        "kind": "comment"
+      },
+      {
+        "body": "Is in direct communication with opposing counsel, who helps formulate the law and rules.",
+        "kind": "comment"
+      },
+      {
+        "body": "This system took me away from my four-year-old son on his birthday and my one-year-old-infant based on allegations the court itself later rejected. One hundred and twenty-eight days later, my boys remain without their father — not because of any finding of harm, but because in a high-net-worth divorce the legal process itself, asymmetrically applied, became the instrument of our separation.",
+        "kind": "family_report"
+      },
+      {
+        "body": "They have taken my daughter childhood and my happiness and life from me only because I fought against abuse, this demonic system must end. Now!!!",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 3
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

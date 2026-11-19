@@ -29,7 +29,7 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-0giaxxiy/New Final Post and Capcut template/export/kyle_hancock/image_1080.png",
+    "path": "/tmp/swm-share-pages-pauilms9/New Final Post and Capcut template/export/kyle_hancock/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -49,7 +49,7 @@
     "_pdf_state_family_count": 70,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6592,
+  "movement_total": 6620,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
@@ -75,12 +75,6 @@
       }
     ],
     "public_comments": [
-      {
-        "comment_text": "He lied in one of his letters to the court by stating his job is to evaluate both homes with my child. That never happened. He then stated in a hearing that he only evaluated one home as that was all he needed to do. Evaluator only evaluated my son with the petitioner’s family at their home but never evaluated my son at our home with his only sibling. He questioned my son so the Petitioners home about the abuse they did while they were present. He thinks it’s a good idea to question a child victim in a comfortable setting. How can it be a comfortable setting when the child is being questioned in the very place the abuse occurred?",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Cache"
-      },
       {
         "comment_text": "Dr. Kyle Hancock completely abandoned his role as an objective psychologist and court investigator to act as a private advocate for a parent who has engaged in documented written perjury, severe medical neglect, asset spoliation, financial fraud, and systemic parental alienation.",
         "author": "Anonymous parent",
@@ -117,10 +111,6 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "He lied in one of his letters to the court by stating his job is to evaluate both homes with my child. That never happened. He then stated in a hearing that he only evaluated one home as that was all he needed to do. Evaluator only evaluated my son with the petitioner’s family at their home but never evaluated my son at our home with his only sibling. He questioned my son so the Petitioners home about the abuse they did while they were present. He thinks it’s a good idea to question a child victim in a comfortable setting. How can it be a comfortable setting when the child is being questioned in the very place the abuse occurred?",
-        "kind": "comment"
-      },
-      {
         "body": "Dr. Kyle Hancock completely abandoned his role as an objective psychologist and court investigator to act as a private advocate for a parent who has engaged in documented written perjury, severe medical neglect, asset spoliation, financial fraud, and systemic parental alienation.",
         "kind": "comment"
       },
@@ -141,7 +131,7 @@
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 5
+    "quote_page_count": 4
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

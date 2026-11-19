@@ -1,0 +1,114 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "beth_owens",
+    "display_name": "Beth Allen owens",
+    "title": "",
+    "first_name": "Beth Allen",
+    "last_name": "owens",
+    "role": "Judge",
+    "court": "Richland County",
+    "county": "Domestic court",
+    "court_or_county": "Richland County",
+    "state": "OH",
+    "state_abbr": "OH",
+    "mention_count": 3,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "c7e229a8-bcb1-449c-ac6c-bce28aae8b9b",
+      "22eeef30-ac5d-4c86-8bd9-06ffd8b52a8f",
+      "2a5956f2-9515-45dc-9f3f-a3352c61793d"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "beth owens|OH"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 205,
+    "total_submissions": 316,
+    "avg_financial_loss": 100328.09,
+    "avg_months_lost": 32.9,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OH",
+    "state_family_count": 316,
+    "median_financial_loss": 73000,
+    "median_burden_sample_size": 157,
+    "median_months_lost": 18,
+    "pro_se_pct": 52.5,
+    "pro_se_count": 166,
+    "_pdf_state_family_count": 316,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "Family court has taken a child from her mother and has taken all rights from the mother so she cannot raise her own child; done by force, without compliance, without reason. Family court is the opposite of what is good. It’s harmful, callous, malicious, unlawful, and evil. We the people must protect our children from family court.",
+        "state": "OH",
+        "county": "Richland County",
+        "row_id": "d2c43651-50be-48c2-b38e-46953d09c857"
+      },
+      {
+        "body": "It impacted me seriously in my life and my family severely. No amount of money will ever filled the lost. The system failed. The judge failed. Our family is heartbroken of the corruption in court would not allow evidence and not enough time to prove it.. the judge and Attorney had involvement together and talking about cases and meeting each other in restaurants.",
+        "state": "OH",
+        "county": "Richland County",
+        "row_id": "b2e592f3-f9f7-4849-b88a-07a2b284cefa"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Denied evidence and didn’t give enough time am I Lawyer didn’t speak up for more evidence that I had in court.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Domestic court"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/beth_owens",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='OH'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/oh/beth_owens/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Denied evidence and didn’t give enough time am I Lawyer didn’t speak up for more evidence that I had in court.",
+        "kind": "comment"
+      },
+      {
+        "body": "Family court has taken a child from her mother and has taken all rights from the mother so she cannot raise her own child; done by force, without compliance, without reason. Family court is the opposite of what is good. It’s harmful, callous, malicious, unlawful, and evil. We the people must protect our children from family court.",
+        "kind": "family_report"
+      },
+      {
+        "body": "It impacted me seriously in my life and my family severely. No amount of money will ever filled the lost. The system failed. The judge failed. Our family is heartbroken of the corruption in court would not allow evidence and not enough time to prove it.. the judge and Attorney had involvement together and talking about cases and meeting each other in restaurants.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 2
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

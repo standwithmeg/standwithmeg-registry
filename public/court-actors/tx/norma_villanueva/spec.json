@@ -1,0 +1,124 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "norma_villanueva",
+    "display_name": "Norma Villanueva",
+    "title": "",
+    "first_name": "Norma",
+    "last_name": "Villanueva",
+    "role": "Psychological Evaluator",
+    "court": "Hidalgo",
+    "county": "Hidalgo",
+    "court_or_county": "Hidalgo",
+    "state": "TX",
+    "state_abbr": "TX",
+    "mention_count": 3,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "8b4dac8a-6cd6-4dd1-920d-b4d9f56945f1",
+      "20df8d1c-0018-4b98-a515-e72a501aaec1",
+      "2b1d609f-5bd8-45f9-8b99-84f2678c2a2a"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "norma vilanueva|TX"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 243,
+    "total_submissions": 370,
+    "avg_financial_loss": 223729.43,
+    "avg_months_lost": 29.7,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "TX",
+    "state_family_count": 370,
+    "median_financial_loss": 123500,
+    "median_burden_sample_size": 178,
+    "median_months_lost": 18,
+    "pro_se_pct": 46.5,
+    "pro_se_count": 172,
+    "_pdf_state_family_count": 370,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "Has destroyed my daughter and I. Left me bankrupt and to top it off need to pay Child support to the father so he can pay his debt and have no work.",
+        "state": "TX",
+        "county": "Cameron",
+        "row_id": "bcdee06a-4757-4a5e-8aeb-5bc595860881"
+      },
+      {
+        "body": "They have destroyed my life to the point that sometimes I feel I don’t want to be in this World anymore, they took all that mattered to me",
+        "state": "TX",
+        "county": "Cameron County",
+        "row_id": "c34803e1-2fda-4f34-a6fd-a4ae6c81d4c7"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "She prolonged 1.3 by not presenting to court in 5 occasions and not having a report that she testified took her only 3 hours total of interviews at the beginning of everything to complete, presented a biased report stating as true all that my ex’s said, diagnosed me and said she didn’t get my evidence when it was bcc’d to my lawyer as well.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "138th Cameron County"
+      },
+      {
+        "comment_text": "Lied/ changed the psychological evaluation Lies on the psychological reports/ cited with the father/ changes the Documentation to take away the child from the good fit parent.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Hidalgo"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/norma_villanueva",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='TX'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/tx/norma_villanueva/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "She prolonged 1.3 by not presenting to court in 5 occasions and not having a report that she testified took her only 3 hours total of interviews at the beginning of everything to complete, presented a biased report stating as true all that my ex’s said, diagnosed me and said she didn’t get my evidence when it was bcc’d to my lawyer as well.",
+        "kind": "comment"
+      },
+      {
+        "body": "Lied/ changed the psychological evaluation Lies on the psychological reports/ cited with the father/ changes the Documentation to take away the child from the good fit parent.",
+        "kind": "comment"
+      },
+      {
+        "body": "Has destroyed my daughter and I. Left me bankrupt and to top it off need to pay Child support to the father so he can pay his debt and have no work.",
+        "kind": "family_report"
+      },
+      {
+        "body": "They have destroyed my life to the point that sometimes I feel I don’t want to be in this World anymore, they took all that mattered to me",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 2
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

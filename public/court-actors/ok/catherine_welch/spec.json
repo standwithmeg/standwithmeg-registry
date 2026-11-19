@@ -1,0 +1,125 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "catherine_welch",
+    "display_name": "Catherine welch",
+    "title": "",
+    "first_name": "Catherine",
+    "last_name": "welch",
+    "role": "Attorney",
+    "court": "Tulsa county",
+    "county": "Tulsa county",
+    "court_or_county": "Tulsa county",
+    "state": "OK",
+    "state_abbr": "OK",
+    "mention_count": 4,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "5837884f-e4af-4fd1-bae6-33ab44721c64",
+      "d25fedcc-80d5-41ab-b16b-3603bf7596a8",
+      "68bf6d4c-76b9-49a2-a290-65e310e6e2a7",
+      "76ec0c15-8551-4d6a-86ad-2603d217611e"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "catherine welch|OK"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 120,
+    "total_submissions": 241,
+    "avg_financial_loss": 113410.49,
+    "avg_months_lost": 27.7,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OK",
+    "state_family_count": 241,
+    "median_financial_loss": 105000,
+    "median_burden_sample_size": 127,
+    "median_months_lost": 16,
+    "pro_se_pct": 41.5,
+    "pro_se_count": 100,
+    "_pdf_state_family_count": 241,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 4,
+    "actor_report_count": 4,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "Taken my children with zero contact for an entire without due process for 10 months. Exposed my children to mental and physical abuse by guardians.",
+        "state": "OK",
+        "county": "Tulsa county",
+        "row_id": "797639ef-0bec-4b8e-acb7-cd45fbf55933"
+      },
+      {
+        "body": "The family court system in Tulsa county is a joke and completely corrupt. Attorneys have been allowed to drag this case out for over 5 years, then a joke of a GAL is assigned. The GAL has been unapologetically one sided with the mother. She is known around the town as anti-father, has made sexist comments, and will not listen to what the father has to say.",
+        "state": "OK",
+        "county": "Tulsa",
+        "row_id": "34f7a72b-6841-4207-bb0f-0ee021ea14c9"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Filed emergency guardianship with false accusations and included zero contact in the order. Procrastinated hearings so I never had due process. After 10 months they simply just dropped the guardianship realized they would finally have to have the emergency hearing and I had performed all tasks and services asked of me like a BEAST!!!! I am a pretty high ranking professional and very dedicated mother. I never should have lost my kids from the beginning!!! She works in the guardianship circuit. It’s all she does. She is often GAL and goes HARD after parents with zero ethics. She is corrupt and taking kids is how she makes a living.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Tulsa county"
+      },
+      {
+        "comment_text": "This GAL is completely anti-father/ male. If you are a dad trying to be involved with your kids she will work with the mother against you. She also is a terrible communicator and will lie about it False accusations, sexism, siding with one parent over another",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Tulsa county"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/catherine_welch",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='OK'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ok/catherine_welch/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Filed emergency guardianship with false accusations and included zero contact in the order. Procrastinated hearings so I never had due process. After 10 months they simply just dropped the guardianship realized they would finally have to have the emergency hearing and I had performed all tasks and services asked of me like a BEAST!!!! I am a pretty high ranking professional and very dedicated mother. I never should have lost my kids from the beginning!!! She works in the guardianship circuit. It’s all she does. She is often GAL and goes HARD after parents with zero ethics. She is corrupt and taking kids is how she makes a living.",
+        "kind": "comment"
+      },
+      {
+        "body": "This GAL is completely anti-father/ male. If you are a dad trying to be involved with your kids she will work with the mother against you. She also is a terrible communicator and will lie about it False accusations, sexism, siding with one parent over another",
+        "kind": "comment"
+      },
+      {
+        "body": "Taken my children with zero contact for an entire without due process for 10 months. Exposed my children to mental and physical abuse by guardians.",
+        "kind": "family_report"
+      },
+      {
+        "body": "The family court system in Tulsa county is a joke and completely corrupt. Attorneys have been allowed to drag this case out for over 5 years, then a joke of a GAL is assigned. The GAL has been unapologetically one sided with the mother. She is known around the town as anti-father, has made sexist comments, and will not listen to what the father has to say.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 4
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

@@ -1,0 +1,123 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "stasia_warren",
+    "display_name": "Stasia Warren",
+    "title": "",
+    "first_name": "Stasia",
+    "last_name": "Warren",
+    "role": "Judge",
+    "court": "Volusia",
+    "county": "Volusia",
+    "court_or_county": "Volusia",
+    "state": "FL",
+    "state_abbr": "FL",
+    "mention_count": 2,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 2,
+    "supabase_row_ids": [
+      "11b6687d-9383-44f0-8b2b-8935b6159602",
+      "cace2ff7-8eea-4489-9639-fb8545fff2a1"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "stasia waren|FL"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 236,
+    "total_submissions": 358,
+    "avg_financial_loss": 190520.48,
+    "avg_months_lost": 27.2,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "FL",
+    "state_family_count": 358,
+    "median_financial_loss": 174000,
+    "median_burden_sample_size": 154,
+    "median_months_lost": 17,
+    "pro_se_pct": 57.5,
+    "pro_se_count": 206,
+    "_pdf_state_family_count": 358,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6620,
+  "supabase": {
+    "report_count": 2,
+    "actor_report_count": 2,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "Volusia County, DCF, Judge S. Warren, case worker Ashley Saunders, case worker Chantel Smith- two little boys are permanently traumatized and have been in therapy for years because of your little Eichmann kidnappings and trafficking of innocent children. You all are pure evil. I make sure to mention you all and how you hurt children any chance I get to the public. Say Hi to your child trafficking friends in Tel Aviv for us, Warren!",
+        "state": "FL",
+        "county": "Volusia",
+        "row_id": "53a08b07-b90c-4599-b943-00945833635e"
+      },
+      {
+        "body": "Took children from their safe and protective parent, ignored the children’s (teenagers) welfare and desires, slandered, arrested for helping kids, financially drained.",
+        "state": "FL",
+        "county": "Volusia County",
+        "row_id": "1c73c4ad-1a09-4ae4-bf49-c579964da973"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Ignored evidence, allowed emergency shelter based on lying under oath from case workers without looking at evidence. Granted home study for placing them back in family’s care- we had multiple family members willing to take my children and it took her weeks to grant it and then the case workers just didn’t do it!",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Volusia"
+      },
+      {
+        "comment_text": "Ex parte child pickup order, no due process, recused herself a few days later meaning no hearing for nearly a month.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Volusia County"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/stasia_warren",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='FL'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/fl/stasia_warren/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Ignored evidence, allowed emergency shelter based on lying under oath from case workers without looking at evidence. Granted home study for placing them back in family’s care- we had multiple family members willing to take my children and it took her weeks to grant it and then the case workers just didn’t do it!",
+        "kind": "comment"
+      },
+      {
+        "body": "Ex parte child pickup order, no due process, recused herself a few days later meaning no hearing for nearly a month.",
+        "kind": "comment"
+      },
+      {
+        "body": "Volusia County, DCF, Judge S. Warren, case worker Ashley Saunders, case worker Chantel Smith- two little boys are permanently traumatized and have been in therapy for years because of your little Eichmann kidnappings and trafficking of innocent children. You all are pure evil. I make sure to mention you all and how you hurt children any chance I get to the public. Say Hi to your child trafficking friends in Tel Aviv for us, Warren!",
+        "kind": "family_report"
+      },
+      {
+        "body": "Took children from their safe and protective parent, ignored the children’s (teenagers) welfare and desires, slandered, arrested for helping kids, financially drained.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 3
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

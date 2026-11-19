@@ -1,0 +1,124 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "deanne_m_tripi",
+    "display_name": "Deanne M. Tripi",
+    "title": "",
+    "first_name": "Deanne M.",
+    "last_name": "Tripi",
+    "role": "Judge",
+    "court": "Erie County Family Court",
+    "county": "Erie",
+    "court_or_county": "Erie County Family Court",
+    "state": "NY",
+    "state_abbr": "NY",
+    "mention_count": 3,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "b49a89c8-93ca-4f47-a8de-5519af08bc73",
+      "c6894503-2790-4f0d-807e-69e28c5a9dd2",
+      "04ca07f5-e539-4833-8eb5-6026da87b37c"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "deane tripi|NY"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 131,
+    "total_submissions": 200,
+    "avg_financial_loss": 199102.53,
+    "avg_months_lost": 29.2,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "NY",
+    "state_family_count": 200,
+    "median_financial_loss": 181525,
+    "median_burden_sample_size": 72,
+    "median_months_lost": 18,
+    "pro_se_pct": 40.0,
+    "pro_se_count": 80,
+    "_pdf_state_family_count": 200,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "What happened in family court cost me years with my daughter, drained my finances, and left lasting emotional scars. When a judge’s undisclosed connections create questions about impartiality, families like mine are the ones who pay the price!",
+        "state": "NY",
+        "county": "Erie",
+        "row_id": "555a810a-ec5b-497b-9956-15cdc7faa39b"
+      },
+      {
+        "body": "Judge ignored Domestic violence evidence and arrests. Allowed unsupervised visits, ordered joint custody and forcing me to let him take our child at his leisure.",
+        "state": "NY",
+        "county": "Erie",
+        "row_id": "db710aa2-48ef-4393-9ce9-98b6476ea475"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "For years, Judge Deanne Tripi presided over my family court cases while failing to disclose serious conflicts of interest. She and members of her family maintained personal and social relationships with my ex and his family through multiple Italian organizations, events, and private gatherings. I have documented over 350 photographs showing their overlapping involvement at parties, banquets, community functions, and social events — all during the time my case was before her court. A judge is required to avoid not only actual bias, but even the appearance of impropriety. What happened in my case raises profound concerns about fairness, transparency, and the integrity of the judicial process. My cases are in Erie County, Buffalo New York.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Erie County Family Court"
+      },
+      {
+        "comment_text": "Ignored my domestic violence evidence and his arrests. Forced me to allow my abuser to continue controlling my time by allowing him to have visits when ever he wants. I'm in contempt if I deny him. Judge ignored evidence of domestic abuse and DV arrests of my child's father.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Erie"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/deanne_m_tripi",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='NY'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ny/deanne_m_tripi/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "For years, Judge Deanne Tripi presided over my family court cases while failing to disclose serious conflicts of interest. She and members of her family maintained personal and social relationships with my ex and his family through multiple Italian organizations, events, and private gatherings. I have documented over 350 photographs showing their overlapping involvement at parties, banquets, community functions, and social events — all during the time my case was before her court. A judge is required to avoid not only actual bias, but even the appearance of impropriety. What happened in my case raises profound concerns about fairness, transparency, and the integrity of the judicial process. My cases are in Erie County, Buffalo New York.",
+        "kind": "comment"
+      },
+      {
+        "body": "Ignored my domestic violence evidence and his arrests. Forced me to allow my abuser to continue controlling my time by allowing him to have visits when ever he wants. I'm in contempt if I deny him. Judge ignored evidence of domestic abuse and DV arrests of my child's father.",
+        "kind": "comment"
+      },
+      {
+        "body": "What happened in family court cost me years with my daughter, drained my finances, and left lasting emotional scars. When a judge’s undisclosed connections create questions about impartiality, families like mine are the ones who pay the price!",
+        "kind": "family_report"
+      },
+      {
+        "body": "Judge ignored Domestic violence evidence and arrests. Allowed unsupervised visits, ordered joint custody and forcing me to let him take our child at his leisure.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 4
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

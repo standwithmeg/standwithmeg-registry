@@ -1,0 +1,123 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "lashawnda_k_jackson",
+    "display_name": "LaShawnda K. Jackson",
+    "title": "",
+    "first_name": "LaShawnda K.",
+    "last_name": "Jackson",
+    "role": "Judge",
+    "court": "Family Court. Orange county",
+    "county": "Orange County",
+    "court_or_county": "Family Court. Orange county",
+    "state": "FL",
+    "state_abbr": "FL",
+    "mention_count": 2,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 2,
+    "supabase_row_ids": [
+      "b2cb61a5-86f4-4ad9-a338-6f3bb12ac843",
+      "e4494232-77d9-4978-bee2-1eed0ed4360e"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "lashawnda jackson|FL"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 236,
+    "total_submissions": 358,
+    "avg_financial_loss": 190520.48,
+    "avg_months_lost": 27.2,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "FL",
+    "state_family_count": 358,
+    "median_financial_loss": 174000,
+    "median_burden_sample_size": 154,
+    "median_months_lost": 17,
+    "pro_se_pct": 57.5,
+    "pro_se_count": 206,
+    "_pdf_state_family_count": 358,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6620,
+  "supabase": {
+    "report_count": 2,
+    "actor_report_count": 2,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "This broken system has cost me my peace, time with my family, and my entire savings for my future!",
+        "state": "FL",
+        "county": "orange",
+        "row_id": "62056e82-2802-4a02-88bc-2035e506e1f8"
+      },
+      {
+        "body": "Minor Children harmed and deprived of School and Healthcare over 16 months due to FL BAR Cover up of 5 attorneys /crimes and the Court' s due process violation and Failure to provide hearing for Enforcement/Contempt of Divorce Judgment.",
+        "state": "FL",
+        "county": "Orange",
+        "row_id": "21a2fa22-29cd-4505-8789-a7f78b079006"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Over 16 months of my case that I filed as pro se, no hearing or enforcement took place, the judge denied all my motions, allowing the wealthy absent father continue to abuse my children, and depriving them of school enrollement, healthcare over 10 months while owing me more than $100k in child support add-ons and arrears. This delay and lack of money led me to lose my car, getting into home forbearance plan, and be court approved indigent. This case became no only a factual case of violation of due process, father's abuse that harmed the children and sabotage my access to court hearings, but also involves factual and evidenced malpractice of 5 FL attys (from opposing party and my former attys) including coercion attempt, my former atty filling incorrect motions giving more rights to the WEALTHY and 7 yrs absent father, filling incorrect motion invalidating my valid 2014 judgment of divorce that clearly stated all financial and parental obligations of the parties, unreasonable prolonged delay favoring the wealthy father,other attys neglect of my case not filling any motion over 4 months that should had filed.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Orange county court"
+      },
+      {
+        "comment_text": "denied motions without a hearing, gave some visitation to my abuser while the children's therapist has shared that it would hurt the children,",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Orange County"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/lashawnda_k_jackson",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='FL'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/fl/lashawnda_k_jackson/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Over 16 months of my case that I filed as pro se, no hearing or enforcement took place, the judge denied all my motions, allowing the wealthy absent father continue to abuse my children, and depriving them of school enrollement, healthcare over 10 months while owing me more than $100k in child support add-ons and arrears. This delay and lack of money led me to lose my car, getting into home forbearance plan, and be court approved indigent. This case became no only a factual case of violation of due process, father's abuse that harmed the children and sabotage my access to court hearings, but also involves factual and evidenced malpractice of 5 FL attys (from opposing party and my former attys) including coercion attempt, my former atty filling incorrect motions giving more rights to the WEALTHY and 7 yrs absent father, filling incorrect motion invalidating my valid 2014 judgment of divorce that clearly stated all financial and parental obligations of the parties, unreasonable prolonged delay favoring the wealthy father,other attys neglect of my case not filling any motion over 4 months that should had filed.",
+        "kind": "comment"
+      },
+      {
+        "body": "denied motions without a hearing, gave some visitation to my abuser while the children's therapist has shared that it would hurt the children,",
+        "kind": "comment"
+      },
+      {
+        "body": "This broken system has cost me my peace, time with my family, and my entire savings for my future!",
+        "kind": "family_report"
+      },
+      {
+        "body": "Minor Children harmed and deprived of School and Healthcare over 16 months due to FL BAR Cover up of 5 attorneys /crimes and the Court' s due process violation and Failure to provide hearing for Enforcement/Contempt of Divorce Judgment.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 3
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

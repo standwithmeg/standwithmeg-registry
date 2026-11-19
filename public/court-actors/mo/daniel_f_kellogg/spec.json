@@ -1,0 +1,126 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "daniel_f_kellogg",
+    "display_name": "Daniel F. Kellogg",
+    "title": "",
+    "first_name": "Daniel F.",
+    "last_name": "Kellogg",
+    "role": "Judge",
+    "court": "Andrew and Buchanan counties",
+    "county": "Andrew and Buchanan counties",
+    "court_or_county": "Andrew and Buchanan counties",
+    "state": "MO",
+    "state_abbr": "MO",
+    "mention_count": 5,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 5,
+    "supabase_row_ids": [
+      "69685835-964b-46ff-9c3f-7049d4b7dc88",
+      "ef75e6fa-d041-4167-8082-0e22c2ed9d53",
+      "2604b6c3-0879-43eb-a4f3-e9c1ed3d017d",
+      "be1a52e3-cd90-485f-8b58-524c3f3483a6",
+      "eee3c0ad-988b-48cb-9a8b-ac9fda5b6207"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "daniel kelog|MO"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 144,
+    "total_submissions": 306,
+    "avg_financial_loss": 104962.18,
+    "avg_months_lost": 37.4,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "MO",
+    "state_family_count": 306,
+    "median_financial_loss": 80885,
+    "median_burden_sample_size": 142,
+    "median_months_lost": 21,
+    "pro_se_pct": 51.3,
+    "pro_se_count": 157,
+    "_pdf_state_family_count": 306,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 5,
+    "actor_report_count": 5,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "This judge and system has destroyed this famly and all families that are related to this case.",
+        "state": "MO",
+        "county": "Andrew and Buchanan counties",
+        "row_id": "90dc01f4-515c-4f37-a6b5-7157bc53cfd1"
+      },
+      {
+        "body": "This is the most corrupt legal system here in Northwest Missouri. The good ol boys club is alive and well. There's so many more bad actors that I need to add but need to come back as this has already taken me several hours. I hope I can up date later. They all deserve to be in prison. The ones supposed to uphold the law are the ones breaking it daily!!!",
+        "state": "MO",
+        "county": "Andrew County",
+        "row_id": "fa6a6108-6992-450c-bfbd-ac86665acc20"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Does not adhere to case law and does not enforce his own orders. Corrupt Judge that needs disbarred!!! Makes the rules up as he goes along to suit himself. Lies in court. Covers up for illegal things the Sheriff and prosecutor do. Breaks the law himself. Used drugs for years with other local judges and puts people in jail for drugs. Total corruption. Ignored motions, weaponized a psychological evaluation to delay case, ignored evidence, violated due process many times... a long list of bad behavior. Failed to recuse himself after being the judge over previous cases involving myself and my daughter. Refused to take up motions I filed. Dismissed motions my public defender filed. Allowed my daughters unsupervised contact to continue unchecked after he's the one who ordered it. Allowed prosecutor to proceed under the color of law and keep changing her filings and charges with out a shred of evidence of abuse of any kind. Other then they said so as my daughter convinced them it was only was they could be with her.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Andrew and Buchanan counties"
+      },
+      {
+        "comment_text": "Not following the law. Allowing case to drag on without evidence. Blocking hearings. Suppressing records. Allowing clerks to alter records and instructing the clerks to block filings and not put them on the courtd docket.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Andrew and Buchanan counties"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/daniel_f_kellogg",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='MO'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/mo/daniel_f_kellogg/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Does not adhere to case law and does not enforce his own orders. Corrupt Judge that needs disbarred!!! Makes the rules up as he goes along to suit himself. Lies in court. Covers up for illegal things the Sheriff and prosecutor do. Breaks the law himself. Used drugs for years with other local judges and puts people in jail for drugs. Total corruption. Ignored motions, weaponized a psychological evaluation to delay case, ignored evidence, violated due process many times... a long list of bad behavior. Failed to recuse himself after being the judge over previous cases involving myself and my daughter. Refused to take up motions I filed. Dismissed motions my public defender filed. Allowed my daughters unsupervised contact to continue unchecked after he's the one who ordered it. Allowed prosecutor to proceed under the color of law and keep changing her filings and charges with out a shred of evidence of abuse of any kind. Other then they said so as my daughter convinced them it was only was they could be with her.",
+        "kind": "comment"
+      },
+      {
+        "body": "Not following the law. Allowing case to drag on without evidence. Blocking hearings. Suppressing records. Allowing clerks to alter records and instructing the clerks to block filings and not put them on the courtd docket.",
+        "kind": "comment"
+      },
+      {
+        "body": "This judge and system has destroyed this famly and all families that are related to this case.",
+        "kind": "family_report"
+      },
+      {
+        "body": "This is the most corrupt legal system here in Northwest Missouri. The good ol boys club is alive and well. There's so many more bad actors that I need to add but need to come back as this has already taken me several hours. I hope I can up date later. They all deserve to be in prison. The ones supposed to uphold the law are the ones breaking it daily!!!",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 4
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

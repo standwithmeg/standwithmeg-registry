@@ -1,0 +1,102 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "amyra_c_cobb_hampton",
+    "display_name": "Amyra C. Cobb-Hampton",
+    "title": "",
+    "first_name": "Amyra C.",
+    "last_name": "Cobb-Hampton",
+    "role": "Judge",
+    "court": "Solano",
+    "county": "Solano",
+    "court_or_county": "Solano",
+    "state": "CA",
+    "state_abbr": "CA",
+    "mention_count": 1,
+    "family_count": 1,
+    "public_family_count": 1,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 1,
+    "supabase_row_ids": [
+      "67d512d0-b91f-4929-9f21-b9704b4f53d1"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "amyra cob-hampton|CA"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 356,
+    "total_submissions": 540,
+    "avg_financial_loss": 261239.82,
+    "avg_months_lost": 33.7,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "CA",
+    "state_family_count": 540,
+    "median_financial_loss": 228400,
+    "median_burden_sample_size": 238,
+    "median_months_lost": 20,
+    "pro_se_pct": 58.9,
+    "pro_se_count": 318,
+    "_pdf_state_family_count": 540,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6620,
+  "supabase": {
+    "report_count": 1,
+    "actor_report_count": 1,
+    "family_count": 1,
+    "family_reports": [
+      {
+        "body": "He bullied and lied his way to getting full custody; it was legalized kidnapping by a controlling abuser. my older kids are devastated to lost their brother and we worry about him constantly.",
+        "state": "CA",
+        "county": "Solano",
+        "row_id": "67aa0e0c-cb6a-4a0c-a25f-fee146ee1307"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Ignored child abuse investigation and my other kids declarations RE child abuse, gave him full custody with no evidence and vacated jurisdiction hearing even though we moved out of California 10 months prior.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Solano County, California"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/amyra_c_cobb_hampton",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='CA'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ca/amyra_c_cobb_hampton/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Ignored child abuse investigation and my other kids declarations RE child abuse, gave him full custody with no evidence and vacated jurisdiction hearing even though we moved out of California 10 months prior.",
+        "kind": "comment"
+      },
+      {
+        "body": "He bullied and lied his way to getting full custody; it was legalized kidnapping by a controlling abuser. my older kids are devastated to lost their brother and we worry about him constantly.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

@@ -45,7 +45,7 @@
     "_pdf_state_family_count": 200,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6500,
+  "movement_total": 6620,
   "supabase": {
     "report_count": 2,
     "actor_report_count": 2,
@@ -68,19 +68,20 @@
       {
         "comment_text": "This worker supervised one of my parenting times, she was a breath of fresh air after dealing with Tasha Welch. She did however badger us on what we were doing during our unsupervised time and roll down my license plate and car making year and then it was put into the case service plan for everybody who reads it to know my license plate number.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Montcalm"
       },
       {
         "comment_text": "Said I’m losing my daughter because I lost my other kids.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Montcalm"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/jennifer_lewandowski",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='MI'",
-    "pdf_public_actor: no 'Jennifer Lewandowski' in cache for MI"
+    "public_family_count_api: no actors returned for state='MI'"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",

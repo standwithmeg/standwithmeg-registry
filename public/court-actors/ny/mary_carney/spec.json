@@ -1,0 +1,124 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "mary_carney",
+    "display_name": "Mary carney",
+    "title": "",
+    "first_name": "Mary",
+    "last_name": "carney",
+    "role": "Judge",
+    "court": "Erie county family court",
+    "county": "Erie",
+    "court_or_county": "Erie county family court",
+    "state": "NY",
+    "state_abbr": "NY",
+    "mention_count": 3,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "eeadf078-bc07-4c5c-928b-6059a03f7dcf",
+      "54188cd9-a752-4dc5-b973-9d77006ceab3",
+      "fa2164c7-a472-4f6d-aa33-342f625e5eab"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "mary carney|NY"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 131,
+    "total_submissions": 200,
+    "avg_financial_loss": 199102.53,
+    "avg_months_lost": 29.2,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "NY",
+    "state_family_count": 200,
+    "median_financial_loss": 181525,
+    "median_burden_sample_size": 72,
+    "median_months_lost": 18,
+    "pro_se_pct": 40.0,
+    "pro_se_count": 80,
+    "_pdf_state_family_count": 200,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "This system has caused me to lose time with my children and the only thing keeping me alive is my trust in God because I have to trust in the court.",
+        "state": "NY",
+        "county": "Erie",
+        "row_id": "34611db6-59b8-48d4-a78c-9a0ddce10d20"
+      },
+      {
+        "body": "Removed my children from me violated my rights to parent.",
+        "state": "NY",
+        "county": "Erie",
+        "row_id": "550e0891-00d7-4d81-9832-2004c20895eb"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Denied motions, Denied violation of reunification. Delayed reunification. Ignored, and refused evidence. Ignored expert letters Denied motions , petitions without explanations, enabling alienation and ignore the on going harm. Ignoring my violation of reunification filings.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Erie"
+      },
+      {
+        "comment_text": "Only believes mother’s accusation. Told me if I went to trial I would never see my children.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/mary_carney",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='NY'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ny/mary_carney/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Denied motions, Denied violation of reunification. Delayed reunification. Ignored, and refused evidence. Ignored expert letters Denied motions , petitions without explanations, enabling alienation and ignore the on going harm. Ignoring my violation of reunification filings.",
+        "kind": "comment"
+      },
+      {
+        "body": "Only believes mother’s accusation. Told me if I went to trial I would never see my children.",
+        "kind": "comment"
+      },
+      {
+        "body": "This system has caused me to lose time with my children and the only thing keeping me alive is my trust in God because I have to trust in the court.",
+        "kind": "family_report"
+      },
+      {
+        "body": "Removed my children from me violated my rights to parent.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 2
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

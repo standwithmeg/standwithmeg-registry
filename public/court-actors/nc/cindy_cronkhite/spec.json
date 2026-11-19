@@ -49,7 +49,7 @@
     "_pdf_state_family_count": 239,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6496,
+  "movement_total": 6620,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
@@ -89,12 +89,6 @@
     "public_comments": [
       {
         "comment_text": "Provided or relied on false and misleading information while ignoring evidence supporting reunification and my relationship with my child. Appeared to favor the foster placement while minimizing my parental bond, my evidence, and reunification efforts. Cindy failed to fully investigate my child’s best interests, ignored key evidence, and supported continued separation from me.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Lenoir County Courthouse"
-      },
-      {
-        "comment_text": "Submitted reports and recommendations that ignored key evidence supporting reunification, including my negative drug screens, approved kinship placement, and concerns about visits being suspended. Cindy Cronkhite failed to include important facts in GAL reports, did not support safe family placement, and contributed to continued separation from my children.",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Lenoir County Courthouse"
@@ -145,10 +139,6 @@
         "kind": "comment"
       },
       {
-        "body": "Submitted reports and recommendations that ignored key evidence supporting reunification, including my negative drug screens, approved kinship placement, and concerns about visits being suspended. Cindy Cronkhite failed to include important facts in GAL reports, did not support safe family placement, and contributed to continued separation from my children.",
-        "kind": "comment"
-      },
-      {
         "body": "Nothing she has done has been in the best interest of the children, she has kept the mother from seeing her girls as well as been untruthful",
         "kind": "comment"
       },
@@ -181,7 +171,7 @@
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 7
+    "quote_page_count": 6
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

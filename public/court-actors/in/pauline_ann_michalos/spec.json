@@ -1,0 +1,123 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "pauline_ann_michalos",
+    "display_name": "Pauline Ann Michalos",
+    "title": "",
+    "first_name": "Pauline Ann",
+    "last_name": "Michalos",
+    "role": "GAL / Child Representative",
+    "court": "Elkhart",
+    "county": "Elkhart",
+    "court_or_county": "Elkhart",
+    "state": "IN",
+    "state_abbr": "IN",
+    "mention_count": 2,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 2,
+    "supabase_row_ids": [
+      "38b7d603-aeca-4612-82f6-79e55c9a539a",
+      "70f7e4c4-4cd0-4689-b7e0-b7870377eb5b"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "pauline ann michalos|IN"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 119,
+    "total_submissions": 202,
+    "avg_financial_loss": 218244.19,
+    "avg_months_lost": 31.6,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "IN",
+    "state_family_count": 202,
+    "median_financial_loss": 69800,
+    "median_burden_sample_size": 99,
+    "median_months_lost": 20,
+    "pro_se_pct": 49.5,
+    "pro_se_count": 100,
+    "_pdf_state_family_count": 202,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 2,
+    "actor_report_count": 2,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "You get as much justice as you can afford.",
+        "state": "IN",
+        "county": "Elkhart",
+        "row_id": "4ba6b134-957d-49cd-974a-943eb95dd2ac"
+      },
+      {
+        "body": "They are not just putting a mother and child through trauma; they are shaking an entire family. As a grandmother, watching my grandchild's sense of safety, routine, and connection be disrupted during critical developmental periods, while feeling powerless to protect them has been heartbreaking. This system does not only impact parents, but it also impacts the generations standing behind them trying to hold a strong and loving Christ loving family together.",
+        "state": "IN",
+        "county": "Elkhart County Indiana",
+        "row_id": "ca112cad-efbe-4b0e-936a-768203698d66"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "This is not my case, It is my daughters. The GAL lied on report about what was stated by my family. In one of the cases, we have the actual recorded call. She was Bias towards the father and stepmother which is easily read in the report. I am the maternal grandmother, a former child protection investigator, a former Guardian ad Litem child advocate manager, and social worker. There are ZERO safety concerns for the mother - the father doesn't want to pay child support and the mother advocated 10 months ago at the same court and was featured in the news after DHS let a child die on their watch when the mother repeatedly called in safety concerns that were never taken seriously. Look up Justice for Justin in Elkhart County Indiana. I believe this is retaliation for the publicity. The GAL just submitted a report recommending full custody to the father and step mother which is ludicrous. We are now having to pay another attorney who is reported to have more experience overturning a GAL recommendation. This will of course require thousands of more dollars that could be put into a college fund for the child rather than being extorted by the courts. Elkhart Indiana has a history of violating parental rights especially in regards to GAL's.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
+      },
+      {
+        "comment_text": "Was supposed to come do a home inspection directly after court and give a verbal report to the judge. She refused to inspect my home without $500 cash. Showed up 4 days later and never inspected my home. Did a full report claiming me as emotional and toxic for the children",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Elkhart"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/pauline_ann_michalos",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='IN'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/in/pauline_ann_michalos/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "This is not my case, It is my daughters. The GAL lied on report about what was stated by my family. In one of the cases, we have the actual recorded call. She was Bias towards the father and stepmother which is easily read in the report. I am the maternal grandmother, a former child protection investigator, a former Guardian ad Litem child advocate manager, and social worker. There are ZERO safety concerns for the mother - the father doesn't want to pay child support and the mother advocated 10 months ago at the same court and was featured in the news after DHS let a child die on their watch when the mother repeatedly called in safety concerns that were never taken seriously. Look up Justice for Justin in Elkhart County Indiana. I believe this is retaliation for the publicity. The GAL just submitted a report recommending full custody to the father and step mother which is ludicrous. We are now having to pay another attorney who is reported to have more experience overturning a GAL recommendation. This will of course require thousands of more dollars that could be put into a college fund for the child rather than being extorted by the courts. Elkhart Indiana has a history of violating parental rights especially in regards to GAL's.",
+        "kind": "comment"
+      },
+      {
+        "body": "Was supposed to come do a home inspection directly after court and give a verbal report to the judge. She refused to inspect my home without $500 cash. Showed up 4 days later and never inspected my home. Did a full report claiming me as emotional and toxic for the children",
+        "kind": "comment"
+      },
+      {
+        "body": "You get as much justice as you can afford.",
+        "kind": "family_report"
+      },
+      {
+        "body": "They are not just putting a mother and child through trauma; they are shaking an entire family. As a grandmother, watching my grandchild's sense of safety, routine, and connection be disrupted during critical developmental periods, while feeling powerless to protect them has been heartbreaking. This system does not only impact parents, but it also impacts the generations standing behind them trying to hold a strong and loving Christ loving family together.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 4
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

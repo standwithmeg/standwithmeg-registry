@@ -1,0 +1,103 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "dusty_clements",
+    "display_name": "Dusty Clement’s",
+    "title": "",
+    "first_name": "Dusty",
+    "last_name": "Clement’s",
+    "role": "Attorney",
+    "court": "Marshall County",
+    "county": "Wapello County",
+    "court_or_county": "Marshall County",
+    "state": "IA",
+    "state_abbr": "IA",
+    "mention_count": 2,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 2,
+    "supabase_row_ids": [
+      "f3bfc2e3-17c6-41dd-81c8-f448142f3da1",
+      "d7fe35fd-a021-4616-82ed-640ffce7fbe9"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "dusty clements|IA"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 68,
+    "total_submissions": 115,
+    "avg_financial_loss": 102468.12,
+    "avg_months_lost": 37.9,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "IA",
+    "state_family_count": 115,
+    "median_financial_loss": 180000,
+    "median_burden_sample_size": 27,
+    "median_months_lost": 20,
+    "pro_se_pct": 47.0,
+    "pro_se_count": 54,
+    "_pdf_state_family_count": 115,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 2,
+    "actor_report_count": 2,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "Caused severe P.T.S.D. as well as put a major damper on my personal relationship with my daughters as well as my current relationship & my social life due to D.H.H.S. coming to my home weekly.",
+        "state": "IA",
+        "county": "Wapello",
+        "row_id": "5d39910d-6e5f-45d3-ba8c-b5b4c59a964d"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Dusty Clements is a lousy court appointment attorney that refuses to file the appropriate documents we continuously ask her to file in my C.I.N.A. case, she is very dismissive and only wants to take calls when its the day of my court hearings which is very unprofessional.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Wapello County"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/dusty_clements",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='IA'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ia/dusty_clements/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Dusty Clements is a lousy court appointment attorney that refuses to file the appropriate documents we continuously ask her to file in my C.I.N.A. case, she is very dismissive and only wants to take calls when its the day of my court hearings which is very unprofessional.",
+        "kind": "comment"
+      },
+      {
+        "body": "Caused severe P.T.S.D. as well as put a major damper on my personal relationship with my daughters as well as my current relationship & my social life due to D.H.H.S. coming to my home weekly.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

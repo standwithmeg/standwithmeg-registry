@@ -1,0 +1,114 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "dr_robert_shapiro",
+    "display_name": "Dr Robert Shapiro",
+    "title": "Dr",
+    "first_name": "Robert",
+    "last_name": "Shapiro",
+    "role": "Psychological Evaluator",
+    "court": "Kendall",
+    "county": "Dupage",
+    "court_or_county": "Kendall",
+    "state": "IL",
+    "state_abbr": "IL",
+    "mention_count": 3,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "33d9b7f3-06a6-4050-b426-de608c0466a5",
+      "915521ec-4db7-4fe5-a993-c80b7554c395",
+      "a12a6ac5-0a3d-493b-b616-edb422ea449c"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "robert shapiro|IL"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 100,
+    "total_submissions": 190,
+    "avg_financial_loss": 201852.04,
+    "avg_months_lost": 27.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "IL",
+    "state_family_count": 190,
+    "median_financial_loss": 126750,
+    "median_burden_sample_size": 115,
+    "median_months_lost": 15,
+    "pro_se_pct": 48.1,
+    "pro_se_count": 91,
+    "_pdf_state_family_count": 189,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "I have provided sufficient evidence from how my children were not wanting to see their father due to emotional neglect, verbal abuse, blamed children for the conflict between him and his girlfriend. Children left stranded by the girlfriend when my ex husband and girlfriend got into an argument and ex husband proceeded to yell at the children that it is the kids fault kept the children in the cold yelling outside. Children called the police and there is a police report that the kids stated that they were afraid. and threatened. statement from my son stating that father was doing drugs such as shrooms GAL was notified and ignored. Son was administrated marijuana and statement was given by my son to the principal that his father gave him weed.",
+        "state": "IL",
+        "county": "Cook County",
+        "row_id": "2822a22b-97f3-4093-a19e-149a847932ae"
+      },
+      {
+        "body": "This crooked system paints a false picture of scarcity, and then throws a meaty bone between two parties who used to care about each other, profiting from them tearing each other apart over it. My wife and I are kind people who love Jesus and love our kids. That hasn’t helped us, it has hurt us. We maintain traditional biblical values for the family and our marriage, and those values were literally painted as dangerous by a guardian ad litem who got custody flipped on a sham temporary hearing with no proof of harm and actually testifying that our son is thriving. We have three cases in the system between us and our five children. Every experience has been vile. We have watched dishonest people get away with murder, and it not even matter when they get caught. Documented perjury has meant nothing. What could’ve been generational wealth has been destroyed. All while each children are used as pawns in a game purely played for money and control. Either the Constitution and the rights of guarantees mean everything, or they mean nothing. To the family court system, they mean nothing. There will be a lot of bad actors who have to stand before the Lord of Jesus one day and answer for the lives they have destroyed here on Earth. The family law system is the civil rights crisis of our time.",
+        "state": "GA",
+        "county": "Cherokee",
+        "row_id": "55d4d44c-4750-4fdc-8129-49bef8f500bc"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Dr. Shapiro seems like a good man with a good heart. He has good insight, and did point out some things in me that are clear growth opportunities while calling me a good father. With that said, it does not seem that he reviews all evidence or speaks to all witnesses before making his decision. My ex is the most manipulative person I have ever met, and her test scored in the range where it flagged that she may be trying to beat the test. Because she is successful in her life outside family court and our coparenting relationship, she was given the benefit of the doubt in a way I wasn't. Isn't that literally where Netflix specials come from? \"They seemed so normal, charming, and successful. Who knew what was really going on?\" I feel a little betrayed by the system because that is exactly the sort of person you hire a psychological evaluator to catch, and he was SO close. But - I cannot overly fault him because someone who is a master manipulator has learned to evade detection. Good man, kind mannerisms, but if you are dealing with someone who seems like a psychopath trying to triangulate the legal system against you, he may fall for it and not be your best ally.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Dupage"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/dr_robert_shapiro",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='IL'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/il/dr_robert_shapiro/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Dr. Shapiro seems like a good man with a good heart. He has good insight, and did point out some things in me that are clear growth opportunities while calling me a good father. With that said, it does not seem that he reviews all evidence or speaks to all witnesses before making his decision. My ex is the most manipulative person I have ever met, and her test scored in the range where it flagged that she may be trying to beat the test. Because she is successful in her life outside family court and our coparenting relationship, she was given the benefit of the doubt in a way I wasn't. Isn't that literally where Netflix specials come from? \"They seemed so normal, charming, and successful. Who knew what was really going on?\" I feel a little betrayed by the system because that is exactly the sort of person you hire a psychological evaluator to catch, and he was SO close. But - I cannot overly fault him because someone who is a master manipulator has learned to evade detection. Good man, kind mannerisms, but if you are dealing with someone who seems like a psychopath trying to triangulate the legal system against you, he may fall for it and not be your best ally.",
+        "kind": "comment"
+      },
+      {
+        "body": "I have provided sufficient evidence from how my children were not wanting to see their father due to emotional neglect, verbal abuse, blamed children for the conflict between him and his girlfriend. Children left stranded by the girlfriend when my ex husband and girlfriend got into an argument and ex husband proceeded to yell at the children that it is the kids fault kept the children in the cold yelling outside. Children called the police and there is a police report that the kids stated that they were afraid. and threatened. statement from my son stating that father was doing drugs such as shrooms GAL was notified and ignored. Son was administrated marijuana and statement was given by my son to the principal that his father gave him weed.",
+        "kind": "family_report"
+      },
+      {
+        "body": "This crooked system paints a false picture of scarcity, and then throws a meaty bone between two parties who used to care about each other, profiting from them tearing each other apart over it. My wife and I are kind people who love Jesus and love our kids. That hasn’t helped us, it has hurt us. We maintain traditional biblical values for the family and our marriage, and those values were literally painted as dangerous by a guardian ad litem who got custody flipped on a sham temporary hearing with no proof of harm and actually testifying that our son is thriving. We have three cases in the system between us and our five children. Every experience has been vile. We have watched dishonest people get away with murder, and it not even matter when they get caught. Documented perjury has meant nothing. What could’ve been generational wealth has been destroyed. All while each children are used as pawns in a game purely played for money and control. Either the Constitution and the rights of guarantees mean everything, or they mean nothing. To the family court system, they mean nothing. There will be a lot of bad actors who have to stand before the Lord of Jesus one day and answer for the lives they have destroyed here on Earth. The family law system is the civil rights crisis of our time.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 6
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

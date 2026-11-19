@@ -30,7 +30,7 @@
     "actor_bucket_key": "travis carr|MI"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-7jh_hs8h/New Final Post and Capcut template/export/travis_carr/image_1080.png",
+    "path": "/tmp/swm-share-pages-pauilms9/New Final Post and Capcut template/export/travis_carr/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -50,7 +50,7 @@
     "_pdf_state_family_count": 200,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6500,
+  "movement_total": 6620,
   "supabase": {
     "report_count": 7,
     "actor_report_count": 7,
@@ -129,12 +129,6 @@
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Montcalm"
-      },
-      {
-        "comment_text": "Tell me to leave my\\nSignificant other",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Montcalm"
       }
     ]
   },
@@ -181,10 +175,6 @@
       },
       {
         "body": "Told my grandson to lie in court to get charges on himself dropped",
-        "kind": "comment"
-      },
-      {
-        "body": "Tell me to leave my\\nSignificant other",
         "kind": "comment"
       },
       {

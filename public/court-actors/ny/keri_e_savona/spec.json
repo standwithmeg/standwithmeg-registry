@@ -1,0 +1,119 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "keri_e_savona",
+    "display_name": "Keri E. Savona",
+    "title": "",
+    "first_name": "Keri E.",
+    "last_name": "Savona",
+    "role": "Judge",
+    "court": "Ulster county",
+    "county": "Ulster county",
+    "court_or_county": "Ulster county",
+    "state": "NY",
+    "state_abbr": "NY",
+    "mention_count": 2,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 2,
+    "supabase_row_ids": [
+      "3cf66b21-2e77-4036-9aa0-f23213932730",
+      "475b4eb0-247a-40f6-9f02-d264b129eec6"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "keri savona|NY"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 131,
+    "total_submissions": 200,
+    "avg_financial_loss": 199102.53,
+    "avg_months_lost": 29.2,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "NY",
+    "state_family_count": 200,
+    "median_financial_loss": 181525,
+    "median_burden_sample_size": 72,
+    "median_months_lost": 18,
+    "pro_se_pct": 40.0,
+    "pro_se_count": 80,
+    "_pdf_state_family_count": 200,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 2,
+    "actor_report_count": 2,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "Was never told what allegations were,was drug into court and threatened by my own attorney to give up the children. No paperwork was ever provided until a week after being taken into court. My 18 month old granddaughter nearly died from a broken heart and my 4 year old granddaughter nearly drowned at her foster house from not being watched. She saved herself because we had taught her Early on about swimming and drowning and what to do.",
+        "state": "NY",
+        "county": "Ulster county",
+        "row_id": "4aea5797-30cd-4f0e-b9bd-6c39a4fd2e2e"
+      },
+      {
+        "body": "The system destroyed my family",
+        "state": "NY",
+        "county": "Saratoga",
+        "row_id": "ccc0f658-012e-455a-9b3e-6016bb27ab1e"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Threatened me several times with CONTEMPT each time I tried to speak up about the false allegations",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Ulster county"
+      },
+      {
+        "comment_text": "She was brought in as an independent judge and is no longer on my case but destroyed my family.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Ulster county"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/keri_e_savona",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='NY'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ny/keri_e_savona/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Threatened me several times with CONTEMPT each time I tried to speak up about the false allegations",
+        "kind": "comment"
+      },
+      {
+        "body": "She was brought in as an independent judge and is no longer on my case but destroyed my family.",
+        "kind": "comment"
+      },
+      {
+        "body": "The system destroyed my family",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

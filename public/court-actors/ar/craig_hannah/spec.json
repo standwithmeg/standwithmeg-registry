@@ -8,7 +8,7 @@
     "last_name": "Hannah",
     "role": "Judge",
     "court": "White county",
-    "county": null,
+    "county": "White",
     "court_or_county": "White County District Court",
     "state": "Arkansas",
     "state_abbr": "AR",
@@ -27,7 +27,7 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-0giaxxiy/New Final Post and Capcut template/export/craig_hannah/image_1080.png",
+    "path": "/tmp/swm-share-pages-pauilms9/New Final Post and Capcut template/export/craig_hannah/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -47,7 +47,7 @@
     "_pdf_state_family_count": 86,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6591,
+  "movement_total": 6620,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -76,24 +76,26 @@
       {
         "comment_text": "He didn’t listen to me or the evidence I had. He fell asleep during the first round of hearings",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
       },
       {
         "comment_text": "Did not let me present my evidence cut the court hearing short. Has ignored evidence",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "White county"
       },
       {
         "comment_text": "Kept my kids split from each other for a year",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "White"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/craig_hannah",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='AR'",
-    "pdf_public_actor: no 'Craig Hannah' in cache for AR"
+    "public_family_count_api: no actors returned for state='AR'"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",

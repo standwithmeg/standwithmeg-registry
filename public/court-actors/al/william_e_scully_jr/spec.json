@@ -44,27 +44,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-0giaxxiy/New Final Post and Capcut template/export/william_e_scully_jr/image_1080.png",
+    "path": "/tmp/swm-share-pages-pauilms9/New Final Post and Capcut template/export/william_e_scully_jr/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 102,
-    "total_submissions": 162,
-    "avg_financial_loss": 91695.36,
+    "total_submissions": 176,
+    "avg_financial_loss": 87963.09,
     "avg_months_lost": 32.2,
     "_source_table": "movement_stats_by_state",
     "_match_value": "AL",
-    "state_family_count": 162,
-    "median_financial_loss": 53750,
-    "median_burden_sample_size": 74,
+    "state_family_count": 176,
+    "median_financial_loss": 51000,
+    "median_burden_sample_size": 79,
     "median_months_lost": 13,
-    "pro_se_pct": 39.5,
-    "pro_se_count": 64,
-    "_pdf_state_family_count": 162,
+    "pro_se_pct": 40.9,
+    "pro_se_count": 72,
+    "_pdf_state_family_count": 176,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6591,
+  "movement_total": 6620,
   "supabase": {
     "report_count": 21,
     "actor_report_count": 21,
@@ -134,12 +134,6 @@
       },
       {
         "comment_text": "Violated my civil rights and never considered the best interest of my daughter Dismissed case without following proper procedures and violated my civil rights",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Baldwin"
-      },
-      {
-        "comment_text": "Repeatedly ignored evidence, engages in ex parte comms, ignores domestic violence, blames victims, denies notice and due process",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Baldwin"
@@ -239,10 +233,6 @@
       },
       {
         "body": "Violated my civil rights and never considered the best interest of my daughter Dismissed case without following proper procedures and violated my civil rights",
-        "kind": "comment"
-      },
-      {
-        "body": "Repeatedly ignored evidence, engages in ex parte comms, ignores domestic violence, blames victims, denies notice and due process",
         "kind": "comment"
       },
       {

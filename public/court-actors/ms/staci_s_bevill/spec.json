@@ -1,0 +1,119 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "staci_s_bevill",
+    "display_name": "Stacy Beville",
+    "title": "",
+    "first_name": "Stacy",
+    "last_name": "Beville",
+    "role": "Judge",
+    "court": "Lee",
+    "county": "Lee",
+    "court_or_county": "Lee",
+    "state": "MS",
+    "state_abbr": "MS",
+    "mention_count": 2,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 2,
+    "supabase_row_ids": [
+      "6d63b351-0c1b-4e2d-9eb4-b6276c9d9fdc",
+      "0c06b049-be0e-4ba1-b46d-38fa0bcd36e6"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "staci bevil|MS"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 41,
+    "total_submissions": 73,
+    "avg_financial_loss": 129355.98,
+    "avg_months_lost": 35.7,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "MS",
+    "state_family_count": 73,
+    "median_financial_loss": 36175,
+    "median_burden_sample_size": 28,
+    "median_months_lost": 16,
+    "pro_se_pct": 45.2,
+    "pro_se_count": 33,
+    "_pdf_state_family_count": 73,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 2,
+    "actor_report_count": 2,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "Child Protection Services are suppose to protect children and if able under circumstances of reportance help in every way to keep families together. Their legal duty is to investigate, listen to children and family and do what they can to keep a family together, reunify, or place children where they are safe and can live a happy, healthy safe life to ensure a beautiful future. Instead this system takes their authority to in fact do the exact opposite. A mother of 4 that was very unprotected as a daughter resulting in being an overprotective mother, I will not let this system take that away from me for an anonymous report, laziness and their authority. I will fight until my kids are home and this systematic agency is broken, like they have done so many families !",
+        "state": "MS",
+        "county": "Lee",
+        "row_id": "62e85c01-bade-4d6d-840a-3c1f585d29bf"
+      },
+      {
+        "body": "Its caused and continues to cause extreme trauma to me and my children.",
+        "state": "MS",
+        "county": "Lee",
+        "row_id": "c10986fa-ffa2-4d36-8fae-bc5a57d759a3"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Fell asleep at bench, gave non compliant convicted felon my child’s drug test, no service plan until permanency, multiple case workers, cps removed kids and gained custody off just mothers failed hair follicle, no imminent danger, knows I did not have a service plan until permancy hearing 5/12/26 when second case worker brought in plan at court 5/12 asked for continuance granted still proceeded at court, kids have had no therapy and family therapy has not been assessed either as required",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lee"
+      },
+      {
+        "comment_text": "Judge bevil was very distant and distracted on her computer during adjudication.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lee"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/staci_s_bevill",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='MS'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ms/staci_s_bevill/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Fell asleep at bench, gave non compliant convicted felon my child’s drug test, no service plan until permanency, multiple case workers, cps removed kids and gained custody off just mothers failed hair follicle, no imminent danger, knows I did not have a service plan until permancy hearing 5/12/26 when second case worker brought in plan at court 5/12 asked for continuance granted still proceeded at court, kids have had no therapy and family therapy has not been assessed either as required",
+        "kind": "comment"
+      },
+      {
+        "body": "Child Protection Services are suppose to protect children and if able under circumstances of reportance help in every way to keep families together. Their legal duty is to investigate, listen to children and family and do what they can to keep a family together, reunify, or place children where they are safe and can live a happy, healthy safe life to ensure a beautiful future. Instead this system takes their authority to in fact do the exact opposite. A mother of 4 that was very unprotected as a daughter resulting in being an overprotective mother, I will not let this system take that away from me for an anonymous report, laziness and their authority. I will fight until my kids are home and this systematic agency is broken, like they have done so many families !",
+        "kind": "family_report"
+      },
+      {
+        "body": "Its caused and continues to cause extreme trauma to me and my children.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 3
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

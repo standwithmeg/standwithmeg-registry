@@ -1,0 +1,92 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "sandra_brewer",
+    "display_name": "Sandra Brewer",
+    "title": "",
+    "first_name": "Sandra",
+    "last_name": "Brewer",
+    "role": "Judge",
+    "court": "Shannon",
+    "county": "Shannon",
+    "court_or_county": "Shannon",
+    "state": "MO",
+    "state_abbr": "MO",
+    "mention_count": 1,
+    "family_count": 1,
+    "public_family_count": 1,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 1,
+    "supabase_row_ids": [
+      "cb126f7c-edda-4266-8041-6617109a6b35"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "sandra brewer|MO"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 144,
+    "total_submissions": 306,
+    "avg_financial_loss": 104962.18,
+    "avg_months_lost": 37.4,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "MO",
+    "state_family_count": 306,
+    "median_financial_loss": 80885,
+    "median_burden_sample_size": 142,
+    "median_months_lost": 21,
+    "pro_se_pct": 51.3,
+    "pro_se_count": 157,
+    "_pdf_state_family_count": 306,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 1,
+    "actor_report_count": 1,
+    "family_count": 1,
+    "family_reports": [
+      {
+        "body": "All of our kids were so loved. They were never abused or neglected. In our Petition and amended petition 3 months later, It states Mathew was not in the home when search warrant was served, Mathew is not in judicial custody. That in a lie. Chief of police came and took Mathew the day after search warrant was served. Leaving no paperwork whatsoever. 4 days after he was taken Children's Division was applying for federal funding for Mathew.",
+        "state": "MO",
+        "county": "Shannon",
+        "row_id": "3892273d-d669-4493-9833-d103b6e4aae7"
+      }
+    ],
+    "public_comments": []
+  },
+  "export_dir": "New Final Post and Capcut template/export/sandra_brewer",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='MO'",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/mo/sandra_brewer/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "All of our kids were so loved. They were never abused or neglected. In our Petition and amended petition 3 months later, It states Mathew was not in the home when search warrant was served, Mathew is not in judicial custody. That in a lie. Chief of police came and took Mathew the day after search warrant was served. Leaving no paperwork whatsoever. 4 days after he was taken Children's Division was applying for federal funding for Mathew.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

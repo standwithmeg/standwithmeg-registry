@@ -1,0 +1,103 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "dr_stacey_hoffmann",
+    "display_name": "Dr. Stacey Hoffman",
+    "title": "Dr.",
+    "first_name": "Stacey",
+    "last_name": "Hoffman",
+    "role": "Psychological Evaluator",
+    "court": "Loudoun",
+    "county": "Loudoun",
+    "court_or_county": "Loudoun",
+    "state": "VA",
+    "state_abbr": "VA",
+    "mention_count": 2,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 2,
+    "supabase_row_ids": [
+      "edb32802-cece-4417-b232-d741275610cb",
+      "94923f19-a9cd-4bba-987c-9c5ace0efd78"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "stacey hofman|VA"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 101,
+    "total_submissions": 158,
+    "avg_financial_loss": 175492.97,
+    "avg_months_lost": 32.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "VA",
+    "state_family_count": 158,
+    "median_financial_loss": 139000,
+    "median_burden_sample_size": 61,
+    "median_months_lost": 24,
+    "pro_se_pct": 63.9,
+    "pro_se_count": 101,
+    "_pdf_state_family_count": 158,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 2,
+    "actor_report_count": 2,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "Robed me of time and money. My children are forever damaged. Worst mistake to get married. Ruined me.",
+        "state": "VA",
+        "county": "Prince William County",
+        "row_id": "d2662cd9-5d8f-41ca-83cc-2bac196fddc5"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Board complaint. Nothing yet but letter reprimand. Under review.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/dr_stacey_hoffmann",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='VA'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/va/dr_stacey_hoffmann/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Board complaint. Nothing yet but letter reprimand. Under review.",
+        "kind": "comment"
+      },
+      {
+        "body": "Robed me of time and money. My children are forever damaged. Worst mistake to get married. Ruined me.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

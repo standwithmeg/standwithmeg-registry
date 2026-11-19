@@ -34,7 +34,7 @@
     ]
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-0giaxxiy/New Final Post and Capcut template/export/anthony_mcginty/image_1080.png",
+    "path": "/tmp/swm-share-pages-pauilms9/New Final Post and Capcut template/export/anthony_mcginty/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -48,13 +48,13 @@
     "state_family_count": 200,
     "median_financial_loss": 181525,
     "median_burden_sample_size": 72,
-    "median_months_lost": 17,
-    "pro_se_pct": 39.7,
-    "pro_se_count": 79,
-    "_pdf_state_family_count": 199,
+    "median_months_lost": 18,
+    "pro_se_pct": 40.0,
+    "pro_se_count": 80,
+    "_pdf_state_family_count": 200,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6592,
+  "movement_total": 6620,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,

@@ -1,0 +1,102 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "shannon_prescott",
+    "display_name": "Shannon prescott",
+    "title": "",
+    "first_name": "Shannon",
+    "last_name": "prescott",
+    "role": "GAL / Child Representative",
+    "court": "Creek",
+    "county": "Okmulgee",
+    "court_or_county": "Creek",
+    "state": "OK",
+    "state_abbr": "OK",
+    "mention_count": 1,
+    "family_count": 1,
+    "public_family_count": 1,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 1,
+    "supabase_row_ids": [
+      "7ea00e97-92f3-440b-9026-5d094877d43b"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "shanon prescot|OK"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 120,
+    "total_submissions": 241,
+    "avg_financial_loss": 113410.49,
+    "avg_months_lost": 27.7,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OK",
+    "state_family_count": 241,
+    "median_financial_loss": 105000,
+    "median_burden_sample_size": 127,
+    "median_months_lost": 16,
+    "pro_se_pct": 41.5,
+    "pro_se_count": 100,
+    "_pdf_state_family_count": 241,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 1,
+    "actor_report_count": 1,
+    "family_count": 1,
+    "family_reports": [
+      {
+        "body": "They tore us apart, they are the reason I stayed in the abuse until he finally tried to kill me because I knew what would happen to us in okmulgee county",
+        "state": "OK",
+        "county": "Okmulgee county district court",
+        "row_id": "96ab0232-dd64-4875-8986-16b8967c5f89"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Refused to interview any of my witnesses, won't speak to the kids she's supposed to represent, lied in the report and to the psych evaluator about the 15 minute interview we had, delayed court from July to Sept as she wasn't available to meet with the kids until then, never actually met with my kids until they were taken in the ex parte",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Okmulgee county"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/shannon_prescott",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='OK'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ok/shannon_prescott/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Refused to interview any of my witnesses, won't speak to the kids she's supposed to represent, lied in the report and to the psych evaluator about the 15 minute interview we had, delayed court from July to Sept as she wasn't available to meet with the kids until then, never actually met with my kids until they were taken in the ex parte",
+        "kind": "comment"
+      },
+      {
+        "body": "They tore us apart, they are the reason I stayed in the abuse until he finally tried to kill me because I knew what would happen to us in okmulgee county",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 2
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

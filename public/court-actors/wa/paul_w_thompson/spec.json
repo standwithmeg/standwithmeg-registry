@@ -1,0 +1,123 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "paul_w_thompson",
+    "display_name": "Paul W. Thompson",
+    "title": "",
+    "first_name": "Paul W.",
+    "last_name": "Thompson",
+    "role": "Judge",
+    "court": "Superior court of Snohomish, WA",
+    "county": "Superior court of Snohomish, WA",
+    "court_or_county": "Superior court of Snohomish, WA",
+    "state": "WA",
+    "state_abbr": "WA",
+    "mention_count": 2,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 2,
+    "supabase_row_ids": [
+      "dbfaa6b4-3e49-40aa-a81f-a133fc80aca1",
+      "06d2c44b-e848-4e5e-9c58-305d36dc11ad"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "paul thompson|WA"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 91,
+    "total_submissions": 161,
+    "avg_financial_loss": 294350.96,
+    "avg_months_lost": 30.5,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "WA",
+    "state_family_count": 161,
+    "median_financial_loss": 126700,
+    "median_burden_sample_size": 87,
+    "median_months_lost": 18,
+    "pro_se_pct": 59.6,
+    "pro_se_count": 96,
+    "_pdf_state_family_count": 161,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 2,
+    "actor_report_count": 2,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "The court and system has depleted everything out of my daughter and I. By the grace of God, we are alive, but we both lost our hair from stress , but prescription hair growth has helped us at least",
+        "state": "WA",
+        "county": "Snohomish",
+        "row_id": "b97646a3-99e3-4cc0-ac6e-647b68eb9431"
+      },
+      {
+        "body": "Mine is the same story as yours, if you are reading this statement you have either been a victim of family court or are someone who can help change this system. Silencing adult and child victims to extract maximum compensation in a broken system causes Irreparable harm to loving parent child relationships. This occurs daily in the pay-to-play family court horror show in America and globally. Protective parents are vilified and silenced while the abusers get custody. Same story, different family, different state, same type of actors across the board all for profit. The best interest of the child is just a slogan; not reality. I will tell our story in my upcoming book, I will never be silenced by a cold hearted system that profited on our misery and abuse.",
+        "state": "WA",
+        "county": "Snohomish",
+        "row_id": "1eea4d00-132f-4108-8e1e-b9fc0a8f5beb"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "He is the judge who ordered me to take tests that cost me over $15,000, once I provided those test and he ignored them and did not hold the evidentiary hearing. He ruled based off of my ex-husband’s allegations about me and took my daughter for me full custody only giving me two months out of the summer. He alienated me for my daughter and ignored the 40+ year experience psychologist who said I had none of the allegations of much my ex-husband had said about me the same judge refused to require my ex-husband to get any therapy or alcohol Counseling, even after he assaulted a woman and went to jail exactly one week before our divorce trial which the arresting officer testified in our trial and Judge Thompson ignored it and still gave him custody, but took my daughter for me and I don’t even have a speeding ticket on my record nor any diagnosis or findings or arrest",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Snohomish County Court"
+      },
+      {
+        "comment_text": "Refused to continue trial while criminal charges were pending with prosecutors. They knew the charges would be declined because the prosecutors were talking to the attorneys for the abuser not the victims. All coordinated and victims were never protected only vilified and silenced.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Superior court of Snohomish, WA"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/paul_w_thompson",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='WA'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/wa/paul_w_thompson/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "He is the judge who ordered me to take tests that cost me over $15,000, once I provided those test and he ignored them and did not hold the evidentiary hearing. He ruled based off of my ex-husband’s allegations about me and took my daughter for me full custody only giving me two months out of the summer. He alienated me for my daughter and ignored the 40+ year experience psychologist who said I had none of the allegations of much my ex-husband had said about me the same judge refused to require my ex-husband to get any therapy or alcohol Counseling, even after he assaulted a woman and went to jail exactly one week before our divorce trial which the arresting officer testified in our trial and Judge Thompson ignored it and still gave him custody, but took my daughter for me and I don’t even have a speeding ticket on my record nor any diagnosis or findings or arrest",
+        "kind": "comment"
+      },
+      {
+        "body": "Refused to continue trial while criminal charges were pending with prosecutors. They knew the charges would be declined because the prosecutors were talking to the attorneys for the abuser not the victims. All coordinated and victims were never protected only vilified and silenced.",
+        "kind": "comment"
+      },
+      {
+        "body": "The court and system has depleted everything out of my daughter and I. By the grace of God, we are alive, but we both lost our hair from stress , but prescription hair growth has helped us at least",
+        "kind": "family_report"
+      },
+      {
+        "body": "Mine is the same story as yours, if you are reading this statement you have either been a victim of family court or are someone who can help change this system. Silencing adult and child victims to extract maximum compensation in a broken system causes Irreparable harm to loving parent child relationships. This occurs daily in the pay-to-play family court horror show in America and globally. Protective parents are vilified and silenced while the abusers get custody. Same story, different family, different state, same type of actors across the board all for profit. The best interest of the child is just a slogan; not reality. I will tell our story in my upcoming book, I will never be silenced by a cold hearted system that profited on our misery and abuse.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 5
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

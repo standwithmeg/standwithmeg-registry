@@ -1,0 +1,104 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "debra_hale",
+    "display_name": "Debra Hale",
+    "title": "",
+    "first_name": "Debra",
+    "last_name": "Hale",
+    "role": "Attorney / GAL / Child Representative",
+    "court": "Gwinnett",
+    "county": "Gwinnett",
+    "court_or_county": "Gwinnett",
+    "state": "GA",
+    "state_abbr": "GA",
+    "mention_count": 3,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "9fb06113-5ab9-4b8c-9c87-666c6c2925f7",
+      "fc091be3-3eb5-43c9-9246-2f39087a3e72",
+      "4b9c9b3d-718c-4361-a25d-21bff9b1933a"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "debra hale|GA"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 119,
+    "total_submissions": 193,
+    "avg_financial_loss": 189567.29,
+    "avg_months_lost": 32.5,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "GA",
+    "state_family_count": 193,
+    "median_financial_loss": 151000,
+    "median_burden_sample_size": 99,
+    "median_months_lost": 19,
+    "pro_se_pct": 43.0,
+    "pro_se_count": 83,
+    "_pdf_state_family_count": 193,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6620,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "I went from being the primary parent of my children to watching them grow up from a distance. I've missed my oldest son's entire high school, and now he is entering his 2nd year of college. On track to miss my other two children's high school years as well.",
+        "state": "GA",
+        "county": "Gwinnett",
+        "row_id": "a252007a-3d00-423b-b7f6-c126e8fb4860"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "She based results on her opinions and failed to do thorough investigation. I had different GAL review her work, and have an entire report of what she failed to do. GAL ignored when my husband abused or neglected my children.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Gwinnett"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/debra_hale",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='GA'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ga/debra_hale/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "She based results on her opinions and failed to do thorough investigation. I had different GAL review her work, and have an entire report of what she failed to do. GAL ignored when my husband abused or neglected my children.",
+        "kind": "comment"
+      },
+      {
+        "body": "I went from being the primary parent of my children to watching them grow up from a distance. I've missed my oldest son's entire high school, and now he is entering his 2nd year of college. On track to miss my other two children's high school years as well.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 2
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

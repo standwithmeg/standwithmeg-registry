@@ -1,0 +1,123 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "jasmyne_kohler",
+    "display_name": "Jasmyne Kohler",
+    "title": "",
+    "first_name": "Jasmyne",
+    "last_name": "Kohler",
+    "role": "CPS Worker",
+    "court": "Lake & Newton",
+    "county": "Lake County",
+    "court_or_county": "Lake & Newton",
+    "state": "IN",
+    "state_abbr": "IN",
+    "mention_count": 2,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 2,
+    "supabase_row_ids": [
+      "3cec5754-ba21-41ec-af46-928269838afe",
+      "5e7b7e0e-7127-48ec-aa9d-9a2d7cbb90fb"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "jasmyne kohler|IN"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 119,
+    "total_submissions": 202,
+    "avg_financial_loss": 218244.19,
+    "avg_months_lost": 31.6,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "IN",
+    "state_family_count": 202,
+    "median_financial_loss": 69800,
+    "median_burden_sample_size": 99,
+    "median_months_lost": 20,
+    "pro_se_pct": 49.5,
+    "pro_se_count": 100,
+    "_pdf_state_family_count": 202,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 2,
+    "actor_report_count": 2,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "Orchestrated intentional child abuse & neglect, trafficking, elderly abuse, legal abuse financial abuse: laundering, extortion, mail fraud, attempted murder, sabotage, discrimination, torture, consumer fraud",
+        "state": "IN",
+        "county": "Newton County",
+        "row_id": "1d0d552a-e6a4-4a9c-a886-8569742b46ff"
+      },
+      {
+        "body": "Murderous saboteurs and traffickers for profit, denied motherhood and transferred custody to infertile perpetrator, ex-husband, whom is not the biological father, destroyed countless extended families, relationships, career and survivor of attempted incapacitation and murder via healthcare fraud inside and outside of the Courts",
+        "state": "IN",
+        "county": "Newton County, Lake County and Tippecanoe County",
+        "row_id": "865fd202-7964-401c-b8ab-8196f59d9db9"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Racketeering, conspiracies to commit murders, attempted and threats for guardianship, tampering with record, falsification, harassment and intimidation, suppression, due process violations, extortion, theft, laundering, trafficking of human and children (“CHINS”, “adoption”, “juvenile delinquency”, “TPR”, paternity, identity theft, etc.), mail fraud, RICO RECORDED",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lake County"
+      },
+      {
+        "comment_text": "Colluded, suppressed evidence and falsified an unsubstantiated report in favor of the perpetrators.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Lake County"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/jasmyne_kohler",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='IN'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/in/jasmyne_kohler/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Racketeering, conspiracies to commit murders, attempted and threats for guardianship, tampering with record, falsification, harassment and intimidation, suppression, due process violations, extortion, theft, laundering, trafficking of human and children (“CHINS”, “adoption”, “juvenile delinquency”, “TPR”, paternity, identity theft, etc.), mail fraud, RICO RECORDED",
+        "kind": "comment"
+      },
+      {
+        "body": "Colluded, suppressed evidence and falsified an unsubstantiated report in favor of the perpetrators.",
+        "kind": "comment"
+      },
+      {
+        "body": "Orchestrated intentional child abuse & neglect, trafficking, elderly abuse, legal abuse financial abuse: laundering, extortion, mail fraud, attempted murder, sabotage, discrimination, torture, consumer fraud",
+        "kind": "family_report"
+      },
+      {
+        "body": "Murderous saboteurs and traffickers for profit, denied motherhood and transferred custody to infertile perpetrator, ex-husband, whom is not the biological father, destroyed countless extended families, relationships, career and survivor of attempted incapacitation and murder via healthcare fraud inside and outside of the Courts",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 3
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

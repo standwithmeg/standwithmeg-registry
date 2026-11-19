@@ -45,7 +45,7 @@
     "_pdf_state_family_count": 358,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6591,
+  "movement_total": 6620,
   "supabase": {
     "report_count": 2,
     "actor_report_count": 2,
@@ -68,19 +68,20 @@
       {
         "comment_text": "Provided family with falsified documentation, advised family incorrectly in attempt to deter them from adoption, made no attempts to contact family members when child was in DCF care, falsified Court documents, refusal of contact with child and family members",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Osceola"
       },
       {
         "comment_text": "conspires and lies to keep children in foster care",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Osceola"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/brandon_dirival",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='FL'",
-    "pdf_public_actor: no 'Brandon Dirival' in cache for FL"
+    "public_family_count_api: no actors returned for state='FL'"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",

@@ -27,27 +27,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-n0ood0ab/New Final Post and Capcut template/export/amanda_heitmueller/image_1080.png",
+    "path": "/tmp/swm-share-pages-pauilms9/New Final Post and Capcut template/export/amanda_heitmueller/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 41,
-    "total_submissions": 72,
-    "avg_financial_loss": 130777.95,
+    "total_submissions": 73,
+    "avg_financial_loss": 129355.98,
     "avg_months_lost": 35.7,
     "_source_table": "movement_stats_by_state",
     "_match_value": "MS",
-    "state_family_count": 72,
-    "median_financial_loss": 34000,
-    "median_burden_sample_size": 27,
+    "state_family_count": 73,
+    "median_financial_loss": 36175,
+    "median_burden_sample_size": 28,
     "median_months_lost": 16,
-    "pro_se_pct": 45.8,
+    "pro_se_pct": 45.2,
     "pro_se_count": 33,
-    "_pdf_state_family_count": 72,
+    "_pdf_state_family_count": 73,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6569,
+  "movement_total": 6620,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -74,28 +74,31 @@
     ],
     "public_comments": [
       {
-        "comment_text": "See my Forrest/ Lamar Complaint..I. PARTIES Plaintiff is an adult resident citizen of Lamar County, Mississippi and the biological mother of three minor children. Defendant is a licensed clinical social worker who, at all relevant times, provided court-involved therapeutic services in connection with custody proceedings involving Plaintiff’s children. II. JURISDICTION AND VENUE This Court has subject matter jurisdiction pursuant to Article 6, Section 156 of the Mississippi Constitution and Miss. Code Ann. § 9-7-81. Venue is proper in Lamar County, Mississippi because the acts and omissions giving rise to this Complaint occurred in connection with proceedings before the Lamar County Chancery Court, and the resulting harm to Plaintiff occurred in this jurisdictionIII. FACTUAL ALLEGATIONS A. Limited Scope of Appointment Defendant was appointed by the Lamar County Chancery Court to provide therapeutic counseling services to the minor children. Defendant was not appointed to conduct: a custody evaluation, a forensic evaluation, a psychological examination of either parent, or any formal assessment of parental fitness. Defendant did not evaluate Plaintiff, did not perform psychological t",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Forrest"
-      },
-      {
         "comment_text": "Did not advocate for child with court as she assured the child, mother, & attorney that she would. She made excuses for not appearing at trial or emergency custody hearing like she said she would. Negligent disregard for children trapped in abusive situations & families trying to leave/heal from abuse & PTSD.",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Lamar"
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "See my Forrest/ Lamar Complaint..I. PARTIES Plaintiff is an adult resident citizen of Lamar County, Mississippi and the biological mother of three minor children. Defendant is a licensed clinical social worker who, at all relevant times, provided court-involved therapeutic services in connection with custody proceedings involving Plaintiff’s children. II. JURISDICTION AND VENUE This Court has subject matter jurisdiction pursuant to Article 6, Section 156 of the Mississippi Constitution and Miss. Code Ann. § 9-7-81. Venue is proper in Lamar County, Mississippi because the acts and omissions giving rise to this Complaint occurred in connection with proceedings before the Lamar County Chancery Court, and the resulting harm to Plaintiff occurred in this jurisdictionIII. FACTUAL ALLEGATIONS A. Limited Scope of Appointment Defendant was appointed by the Lamar County Chancery Court to provide therapeutic counseling services to the minor children. Defendant was not appointed to conduct: a custody evaluation, a forensic evaluation, a psychological examination of either parent, or any formal assessment of parental fitness. Defendant did not evaluate Plaintiff, did not perform psychological t",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
       },
       {
         "comment_text": "Ignored evidence",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Forrest"
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "COMPLAINT COMES NOW the Plaintiff, Jessica L. Henderson, proceeding pro se, and files this Complaint against Defendant Amanda Heitmuller, LCSW, and respectfully states as follows: I. PARTIES Plaintiff is an adult resident citizen of Lamar County, Mississippi and the biological mother of three minor children. Defendant is a licensed clinical social worker who, at all relevant times, provided court-involved therapeutic services in connection with custody proceedings involving Plaintiff’s children. II. JURISDICTION AND VENUE This Court has subject matter jurisdiction pursuant to Article 6, Section 156 of the Mississippi Constitution and Miss. Code Ann. § 9-7-81. Venue is proper in Lamar County, Mississippi because the acts and omissions giving rise to this Complaint occurred in connection with proceedings before the Lamar County Chancery Court, and the resulting harm to Plaintiff occurred in this jurisdictionIII. FACTUAL ALLEGATIONS A. Limited Scope of Appointment Defendant was appointed by the Lamar County Chancery Court to provide therapeutic counseling services to the minor children. Defendant was not appointed to conduct: a custody evaluation, a forensic evaluation, a psychological examination of either parent, or any formal assessment of parental fitness. Defendant did not evaluate Plaintiff, did not perform psychological testing, and did not conduct any forensic or custody-related assessment.B. Testimony Affecting Custody and Parental Rights Despite the limited scope of her role, Defendant provided sworn testimony in court in which she: offered opinions regarding Plaintiff’s mental health; opined on Plaintiff’s parental fitness; supported restrictions on Plaintiff’s custody and visitation; and endorsed recommendations impacting custody and decision-making authority. Defendant’s testimony was presented in a manner that conveyed professional authority and evaluative weight. C. Opinions Without Evaluation or Foundation Defendant rendered these opinions without: conducting any psychological evaluation of Plaintiff; performing any standardized testing; completing any forensic assessment; or gathering sufficient information to support custody-related conclusions. Such opinions are ordinarily reserved for qualified professionals performing formal evaluations. D. Acknowledged Limitations and Contradictions Following her testimony, Defendant admitted in recorded communications and related discussions that: she was not a custody evaluator; she had not evaluated either parent; she was not qualified to determine custody; she does not diagnose individuals in this context; and her role was limited to that of a fact witness reporting observations. These admissions directly contradict the nature and scope of the opinions she provided under oath. E. Judicial Recognition of Overreach Subsequently, the Court determined that Defendant had been placed in a role beyond the scope of her authority as a clinical social worker, and removed her from the case. This judicial determination confirms that Defendant’s conduct exceeded the bounds of her professional role and court-appointed function. F. Reliance and Resulting Harm Defendant’s testimony and recommendations were relied upon by the Court and the Guardian ad Litem. As a direct and foreseeable result: custody of the minor children was modified; Plaintiff’s parenting time was restricted; supervised visitation was imposed; and Plaintiff’s parental fitness was negatively impacted in judicial findings. The restrictions imposed by the Court were consistent with, and influenced by, the positions supported by Defendant.G. Conduct Outside Protected Scope Defendant’s actions were not limited to neutral therapeutic reporting. Instead, Defendant: exceeded the scope of her appointment; provided opinions requiring evaluations she did not perform; and acted beyond the bounds of her professional role. Accordingly, Defendant is not entitled to quasi-judicial immunity for such conduct. IV. COUNT I – PROFESSIONAL NEGLIGENCE / MALPRACTICE Defendant owed Plaintiff a duty to act within the standard of care applicable to licensed clinical social workers operating in a court-involved setting. Defendant breached that duty by: acting outside the scope of her appointment; offering custody-related and evaluative opinions without conducting evaluations; providing opinions without sufficient factual or professional foundation; and failing to adhere to accepted professional standards. Defendant’s conduct was a proximate cause of harm to Plaintiff. V. COUNT II – NEGLIGENT MISREPRESENTATION Defendant supplied information and opinions to the Court in the course of her professional role. Defendant failed to exercise reasonable care in obtaining and communicating that information. Defendant’s statements created the appearance of professional authority beyond what her role supported. The Court and Guardian ad Litem relied upon these representations. Plaintiff suffered damages as a direct and proximate result. VI. COUNT III – RECKLESS DISREGARD Defendant acted with reckless disregard for the foreseeable consequences of her actions by: providing custody-impacting opinions without evaluation; disregarding the limitations of her role; and offering recommendations affecting parental rights without adequate basis. Such conduct created a substantial risk of harm to Plaintiff’s parental relationship, which in fact Occurred. VII. DAMAGES As a direct and proximate result of Defendant’s conduct, Plaintiff has suffered: loss of meaningful parenting time; disruption of the parent-child relationship; emotional distress and mental anguish; financial damages, including legal and therapeutic expenses; costs associated with reunification; and loss of enjoyment of life. Plaintiff seeks all compensatory damages permitted by law. VIII. JURY DEMAND Plaintiff demands trial by jury on all issues so triable.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/amanda_heitmueller",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='MS'"
+    "public_family_count_api: no actors returned for state='MS'",
+    "pdf_public_actor: no 'Amanda Heitmueller' in cache for MS"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
@@ -115,15 +118,19 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "See my Forrest/ Lamar Complaint..I. PARTIES Plaintiff is an adult resident citizen of Lamar County, Mississippi and the biological mother of three minor children. Defendant is a licensed clinical social worker who, at all relevant times, provided court-involved therapeutic services in connection with custody proceedings involving Plaintiff’s children. II. JURISDICTION AND VENUE This Court has subject matter jurisdiction pursuant to Article 6, Section 156 of the Mississippi Constitution and Miss. Code Ann. § 9-7-81. Venue is proper in Lamar County, Mississippi because the acts and omissions giving rise to this Complaint occurred in connection with proceedings before the Lamar County Chancery Court, and the resulting harm to Plaintiff occurred in this jurisdictionIII. FACTUAL ALLEGATIONS A. Limited Scope of Appointment Defendant was appointed by the Lamar County Chancery Court to provide therapeutic counseling services to the minor children. Defendant was not appointed to conduct: a custody evaluation, a forensic evaluation, a psychological examination of either parent, or any formal assessment of parental fitness. Defendant did not evaluate Plaintiff, did not perform psychological t",
-        "kind": "comment"
-      },
-      {
         "body": "Did not advocate for child with court as she assured the child, mother, & attorney that she would. She made excuses for not appearing at trial or emergency custody hearing like she said she would. Negligent disregard for children trapped in abusive situations & families trying to leave/heal from abuse & PTSD.",
         "kind": "comment"
       },
       {
+        "body": "See my Forrest/ Lamar Complaint..I. PARTIES Plaintiff is an adult resident citizen of Lamar County, Mississippi and the biological mother of three minor children. Defendant is a licensed clinical social worker who, at all relevant times, provided court-involved therapeutic services in connection with custody proceedings involving Plaintiff’s children. II. JURISDICTION AND VENUE This Court has subject matter jurisdiction pursuant to Article 6, Section 156 of the Mississippi Constitution and Miss. Code Ann. § 9-7-81. Venue is proper in Lamar County, Mississippi because the acts and omissions giving rise to this Complaint occurred in connection with proceedings before the Lamar County Chancery Court, and the resulting harm to Plaintiff occurred in this jurisdictionIII. FACTUAL ALLEGATIONS A. Limited Scope of Appointment Defendant was appointed by the Lamar County Chancery Court to provide therapeutic counseling services to the minor children. Defendant was not appointed to conduct: a custody evaluation, a forensic evaluation, a psychological examination of either parent, or any formal assessment of parental fitness. Defendant did not evaluate Plaintiff, did not perform psychological t",
+        "kind": "comment"
+      },
+      {
         "body": "Ignored evidence",
+        "kind": "comment"
+      },
+      {
+        "body": "COMPLAINT COMES NOW the Plaintiff, Jessica L. Henderson, proceeding pro se, and files this Complaint against Defendant Amanda Heitmuller, LCSW, and respectfully states as follows: I. PARTIES Plaintiff is an adult resident citizen of Lamar County, Mississippi and the biological mother of three minor children. Defendant is a licensed clinical social worker who, at all relevant times, provided court-involved therapeutic services in connection with custody proceedings involving Plaintiff’s children. II. JURISDICTION AND VENUE This Court has subject matter jurisdiction pursuant to Article 6, Section 156 of the Mississippi Constitution and Miss. Code Ann. § 9-7-81. Venue is proper in Lamar County, Mississippi because the acts and omissions giving rise to this Complaint occurred in connection with proceedings before the Lamar County Chancery Court, and the resulting harm to Plaintiff occurred in this jurisdictionIII. FACTUAL ALLEGATIONS A. Limited Scope of Appointment Defendant was appointed by the Lamar County Chancery Court to provide therapeutic counseling services to the minor children. Defendant was not appointed to conduct: a custody evaluation, a forensic evaluation, a psychological examination of either parent, or any formal assessment of parental fitness. Defendant did not evaluate Plaintiff, did not perform psychological testing, and did not conduct any forensic or custody-related assessment.B. Testimony Affecting Custody and Parental Rights Despite the limited scope of her role, Defendant provided sworn testimony in court in which she: offered opinions regarding Plaintiff’s mental health; opined on Plaintiff’s parental fitness; supported restrictions on Plaintiff’s custody and visitation; and endorsed recommendations impacting custody and decision-making authority. Defendant’s testimony was presented in a manner that conveyed professional authority and evaluative weight. C. Opinions Without Evaluation or Foundation Defendant rendered these opinions without: conducting any psychological evaluation of Plaintiff; performing any standardized testing; completing any forensic assessment; or gathering sufficient information to support custody-related conclusions. Such opinions are ordinarily reserved for qualified professionals performing formal evaluations. D. Acknowledged Limitations and Contradictions Following her testimony, Defendant admitted in recorded communications and related discussions that: she was not a custody evaluator; she had not evaluated either parent; she was not qualified to determine custody; she does not diagnose individuals in this context; and her role was limited to that of a fact witness reporting observations. These admissions directly contradict the nature and scope of the opinions she provided under oath. E. Judicial Recognition of Overreach Subsequently, the Court determined that Defendant had been placed in a role beyond the scope of her authority as a clinical social worker, and removed her from the case. This judicial determination confirms that Defendant’s conduct exceeded the bounds of her professional role and court-appointed function. F. Reliance and Resulting Harm Defendant’s testimony and recommendations were relied upon by the Court and the Guardian ad Litem. As a direct and foreseeable result: custody of the minor children was modified; Plaintiff’s parenting time was restricted; supervised visitation was imposed; and Plaintiff’s parental fitness was negatively impacted in judicial findings. The restrictions imposed by the Court were consistent with, and influenced by, the positions supported by Defendant.G. Conduct Outside Protected Scope Defendant’s actions were not limited to neutral therapeutic reporting. Instead, Defendant: exceeded the scope of her appointment; provided opinions requiring evaluations she did not perform; and acted beyond the bounds of her professional role. Accordingly, Defendant is not entitled to quasi-judicial immunity for such conduct. IV. COUNT I – PROFESSIONAL NEGLIGENCE / MALPRACTICE Defendant owed Plaintiff a duty to act within the standard of care applicable to licensed clinical social workers operating in a court-involved setting. Defendant breached that duty by: acting outside the scope of her appointment; offering custody-related and evaluative opinions without conducting evaluations; providing opinions without sufficient factual or professional foundation; and failing to adhere to accepted professional standards. Defendant’s conduct was a proximate cause of harm to Plaintiff. V. COUNT II – NEGLIGENT MISREPRESENTATION Defendant supplied information and opinions to the Court in the course of her professional role. Defendant failed to exercise reasonable care in obtaining and communicating that information. Defendant’s statements created the appearance of professional authority beyond what her role supported. The Court and Guardian ad Litem relied upon these representations. Plaintiff suffered damages as a direct and proximate result. VI. COUNT III – RECKLESS DISREGARD Defendant acted with reckless disregard for the foreseeable consequences of her actions by: providing custody-impacting opinions without evaluation; disregarding the limitations of her role; and offering recommendations affecting parental rights without adequate basis. Such conduct created a substantial risk of harm to Plaintiff’s parental relationship, which in fact Occurred. VII. DAMAGES As a direct and proximate result of Defendant’s conduct, Plaintiff has suffered: loss of meaningful parenting time; disruption of the parent-child relationship; emotional distress and mental anguish; financial damages, including legal and therapeutic expenses; costs associated with reunification; and loss of enjoyment of life. Plaintiff seeks all compensatory damages permitted by law. VIII. JURY DEMAND Plaintiff demands trial by jury on all issues so triable.",
         "kind": "comment"
       },
       {
@@ -139,7 +146,7 @@
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 6
+    "quote_page_count": 8
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

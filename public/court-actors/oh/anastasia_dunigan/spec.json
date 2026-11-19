@@ -1,0 +1,102 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "anastasia_dunigan",
+    "display_name": "Anastasia Dunagan",
+    "title": "",
+    "first_name": "Anastasia",
+    "last_name": "Dunagan",
+    "role": "GAL / Child Representative",
+    "court": "Stark",
+    "county": "Tuscarawas",
+    "court_or_county": "Stark",
+    "state": "OH",
+    "state_abbr": "OH",
+    "mention_count": 1,
+    "family_count": 1,
+    "public_family_count": 1,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 1,
+    "supabase_row_ids": [
+      "820e1f5c-52a9-431f-b885-b6906b80a7d7"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "anastasia dunigan|OH"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 205,
+    "total_submissions": 316,
+    "avg_financial_loss": 100328.09,
+    "avg_months_lost": 32.9,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "OH",
+    "state_family_count": 316,
+    "median_financial_loss": 73000,
+    "median_burden_sample_size": 157,
+    "median_months_lost": 18,
+    "pro_se_pct": 52.5,
+    "pro_se_count": 166,
+    "_pdf_state_family_count": 316,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 1,
+    "actor_report_count": 1,
+    "family_count": 1,
+    "family_reports": [
+      {
+        "body": "A corrupt system doesn’t fear evil, they already possess that, it fears witnesses.. of which my family and I have been and well documented our experiences during the months and months I filed every motion and in sept of 2024 was granted the compel to care order against the Tuscarawas JFS.",
+        "state": "OH",
+        "county": "Tuscarawas",
+        "row_id": "e94fc7ea-04d4-4003-8ef2-4a0a497b126f"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "She relied primarily on hearsay and lied in her court reports",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Tuscarawas"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/anastasia_dunigan",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='OH'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/oh/anastasia_dunigan/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "She relied primarily on hearsay and lied in her court reports",
+        "kind": "comment"
+      },
+      {
+        "body": "A corrupt system doesn’t fear evil, they already possess that, it fears witnesses.. of which my family and I have been and well documented our experiences during the months and months I filed every motion and in sept of 2024 was granted the compel to care order against the Tuscarawas JFS.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

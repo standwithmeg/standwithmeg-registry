@@ -1,0 +1,102 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "rodney_mcneal",
+    "display_name": "Dr. Rodney McNeal",
+    "title": "Dr.",
+    "first_name": "Rodney",
+    "last_name": "McNeal",
+    "role": "Psychological Evaluator",
+    "court": "Johnson",
+    "county": "Johnson",
+    "court_or_county": "Johnson",
+    "state": "KS",
+    "state_abbr": "KS",
+    "mention_count": 1,
+    "family_count": 1,
+    "public_family_count": 1,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 1,
+    "supabase_row_ids": [
+      "3e90afc9-07e1-4c61-bcf3-af4cd58e9b03"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "rodney mcneal|KS"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 184,
+    "total_submissions": 298,
+    "avg_financial_loss": 118858.78,
+    "avg_months_lost": 30.8,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "KS",
+    "state_family_count": 298,
+    "median_financial_loss": 98800,
+    "median_burden_sample_size": 153,
+    "median_months_lost": 18,
+    "pro_se_pct": 47.8,
+    "pro_se_count": 142,
+    "_pdf_state_family_count": 297,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 1,
+    "actor_report_count": 1,
+    "family_count": 1,
+    "family_reports": [
+      {
+        "body": "Wore out. Detrimental to children’s mental, emotional, psychological health by ignoring what’s best for the children.",
+        "state": "KS",
+        "county": "Osage",
+        "row_id": "da936fa6-adbd-4673-90d0-a48e516d82b3"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Recommended one parent to do multiple hair follicle tests for drugs and alcohol with zero evidence of drug and alcohol abuse.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Osage"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/rodney_mcneal",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='KS'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ks/rodney_mcneal/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Recommended one parent to do multiple hair follicle tests for drugs and alcohol with zero evidence of drug and alcohol abuse.",
+        "kind": "comment"
+      },
+      {
+        "body": "Wore out. Detrimental to children’s mental, emotional, psychological health by ignoring what’s best for the children.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

@@ -27,27 +27,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-0giaxxiy/New Final Post and Capcut template/export/edie_jansson/image_1080.png",
+    "path": "/tmp/swm-share-pages-pauilms9/New Final Post and Capcut template/export/edie_jansson/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 144,
-    "total_submissions": 302,
-    "avg_financial_loss": 105966.43,
-    "avg_months_lost": 37.5,
+    "total_submissions": 306,
+    "avg_financial_loss": 104962.18,
+    "avg_months_lost": 37.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "MO",
-    "state_family_count": 302,
-    "median_financial_loss": 83510,
-    "median_burden_sample_size": 140,
+    "state_family_count": 306,
+    "median_financial_loss": 80885,
+    "median_burden_sample_size": 142,
     "median_months_lost": 21,
-    "pro_se_pct": 51.7,
-    "pro_se_count": 156,
-    "_pdf_state_family_count": 302,
+    "pro_se_pct": 51.3,
+    "pro_se_count": 157,
+    "_pdf_state_family_count": 306,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6592,
+  "movement_total": 6620,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,

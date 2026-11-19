@@ -1,0 +1,79 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "jay_minor",
+    "display_name": "Jay Minor",
+    "title": "",
+    "first_name": "Jay",
+    "last_name": "Minor",
+    "role": "CPS Worker",
+    "court": "Pickens co",
+    "county": "Pickens co ga",
+    "court_or_county": "Pickens co",
+    "state": "GA",
+    "state_abbr": "GA",
+    "mention_count": 0,
+    "family_count": 0,
+    "public_family_count": 0,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": "jay minor|GA"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 119,
+    "total_submissions": 193,
+    "avg_financial_loss": 189567.29,
+    "avg_months_lost": 32.5,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "GA",
+    "state_family_count": 193,
+    "median_financial_loss": 151000,
+    "median_burden_sample_size": 99,
+    "median_months_lost": 19,
+    "pro_se_pct": 43.0,
+    "pro_se_count": 83,
+    "_pdf_state_family_count": 193,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6620,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 0,
+    "family_reports": [],
+    "public_comments": []
+  },
+  "export_dir": "New Final Post and Capcut template/export/jay_minor",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='GA'",
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ga/jay_minor/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

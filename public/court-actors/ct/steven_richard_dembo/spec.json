@@ -31,21 +31,21 @@
   },
   "state_stats": {
     "families_approved": 46,
-    "total_submissions": 73,
-    "avg_financial_loss": 341386.43,
+    "total_submissions": 74,
+    "avg_financial_loss": 339747.18,
     "avg_months_lost": 31.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CT",
-    "state_family_count": 73,
-    "median_financial_loss": 211500,
-    "median_burden_sample_size": 39,
+    "state_family_count": 74,
+    "median_financial_loss": 213250,
+    "median_burden_sample_size": 40,
     "median_months_lost": 22,
-    "pro_se_pct": 65.8,
-    "pro_se_count": 48,
-    "_pdf_state_family_count": 73,
+    "pro_se_pct": 66.2,
+    "pro_se_count": 49,
+    "_pdf_state_family_count": 74,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6569,
+  "movement_total": 6620,
   "supabase": {
     "report_count": 2,
     "actor_report_count": 2,
@@ -62,14 +62,14 @@
       {
         "comment_text": "Judge Stephen Dembo has presided over my case during an extremely difficult and prolonged period of litigation. In my experience, the proceedings under his courtroom have often felt highly procedural and rigid, with insufficient consideration given to the practical and emotional realities affecting my relationship with my daughter and the broader family dynamics involved. I have struggled with what I perceive to be a system that prioritizes technical procedure and ongoing litigation over meaningful resolution and restoration of the parent-child relationship. At times, I felt that the court process lacked flexibility and failed to adequately account for the cumulative impact that years of restrictions, delays, conflict, and litigation have had on both me and my child. As a result, I have experienced the family court process as emotionally exhausting, financially devastating, and increasingly disconnected from what I believe would genuinely serve the long-term best interests of my daughter and our relationship.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Bridgeport CT"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/steven_richard_dembo",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='CT'",
-    "pdf_public_actor: no 'Steven R. Dembo' in cache for CT"
+    "public_family_count_api: no actors returned for state='CT'"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",

@@ -1,0 +1,123 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "joann_m_woltman",
+    "display_name": "Joann M. Woltman",
+    "title": "",
+    "first_name": "Joann M.",
+    "last_name": "Woltman",
+    "role": "Judge",
+    "court": "Johnson",
+    "county": "Johnson",
+    "court_or_county": "Johnson",
+    "state": "KS",
+    "state_abbr": "KS",
+    "mention_count": 2,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 2,
+    "supabase_row_ids": [
+      "41ed7ed9-de90-42d9-b9f1-c92a260d6ee8",
+      "805317d6-2738-4b67-a130-39f57803a707"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "joan woltman|KS"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 184,
+    "total_submissions": 298,
+    "avg_financial_loss": 118858.78,
+    "avg_months_lost": 30.8,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "KS",
+    "state_family_count": 298,
+    "median_financial_loss": 98800,
+    "median_burden_sample_size": 153,
+    "median_months_lost": 18,
+    "pro_se_pct": 47.8,
+    "pro_se_count": 142,
+    "_pdf_state_family_count": 297,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 2,
+    "actor_report_count": 2,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "Court assigned officials in JoCo are not all fit. There MUST be a way for the very people this system is intended to “benefit” to have feedback of providers. Checks and balances of providers should be visible and traceable. JoCo is very much pro-white man privilege. Men are rewarded for providing a fraction of effort (time and money) compared to the expectation of women. Women are held to such a very different standard. Any emotion is considered to make us unreliable and crazy when really we are so exhausted from the very system not listening and changing judges or changing court assigned officials to the highest paid attorney’s demands. Men are not held accountable in family courts at JoCo. They just aren’t.",
+        "state": "KS",
+        "county": "Johnson County",
+        "row_id": "13c6a06f-4cb4-485d-b4dd-00a60b2c0dfa"
+      },
+      {
+        "body": "My family and life were ripped apart to keep USD 232 from consequences, and the lies told by multiple bad actors only impact me since there is no accountability for them.The only evidence available is the same evidence that would exonerate me but it would require unbiased court actors to look at it that way.",
+        "state": "KS",
+        "county": "Johnson County",
+        "row_id": "93d75118-1a41-46b0-91c0-f43a3386ff40"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "She removed custody of my ex husband twice but now I can’t get in front of her because Sarah Carmody shoots down any chance to get back to the judge for a year and a half.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "JoCo"
+      },
+      {
+        "comment_text": "Is the truancy judge that escalated this to cinc",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Johnson 10th Judicial"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/joann_m_woltman",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='KS'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ks/joann_m_woltman/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "She removed custody of my ex husband twice but now I can’t get in front of her because Sarah Carmody shoots down any chance to get back to the judge for a year and a half.",
+        "kind": "comment"
+      },
+      {
+        "body": "Is the truancy judge that escalated this to cinc",
+        "kind": "comment"
+      },
+      {
+        "body": "Court assigned officials in JoCo are not all fit. There MUST be a way for the very people this system is intended to “benefit” to have feedback of providers. Checks and balances of providers should be visible and traceable. JoCo is very much pro-white man privilege. Men are rewarded for providing a fraction of effort (time and money) compared to the expectation of women. Women are held to such a very different standard. Any emotion is considered to make us unreliable and crazy when really we are so exhausted from the very system not listening and changing judges or changing court assigned officials to the highest paid attorney’s demands. Men are not held accountable in family courts at JoCo. They just aren’t.",
+        "kind": "family_report"
+      },
+      {
+        "body": "My family and life were ripped apart to keep USD 232 from consequences, and the lies told by multiple bad actors only impact me since there is no accountability for them.The only evidence available is the same evidence that would exonerate me but it would require unbiased court actors to look at it that way.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 4
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

@@ -1,0 +1,125 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "richard_a_merola",
+    "display_name": "Richard Merolla",
+    "title": "",
+    "first_name": "Richard",
+    "last_name": "Merolla",
+    "role": "Judge",
+    "court": "Providence",
+    "county": "Providence",
+    "court_or_county": "Providence",
+    "state": "RI",
+    "state_abbr": "RI",
+    "mention_count": 4,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 4,
+    "supabase_row_ids": [
+      "72d65316-64d5-465d-96c7-c3ea2ec1e86a",
+      "48ace520-fdaa-49e2-9ab5-068b317cb32c",
+      "85a377df-92a1-429f-a2f0-fb991322c9b4",
+      "dc24e9d1-06ea-43ec-b3ad-4f9fb587a257"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "richard merola|RI"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 15,
+    "total_submissions": 21,
+    "avg_financial_loss": 264546.05,
+    "avg_months_lost": 27.4,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "RI",
+    "state_family_count": 21,
+    "median_financial_loss": 164000,
+    "median_burden_sample_size": 9,
+    "median_months_lost": 24,
+    "pro_se_pct": 47.6,
+    "pro_se_count": 10,
+    "_pdf_state_family_count": 21,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 4,
+    "actor_report_count": 4,
+    "family_count": 3,
+    "family_reports": [
+      {
+        "body": "I walked into family court believing the truth would matter. Years later, I’m still learning that truth and justice are not always the same thing.",
+        "state": "RI",
+        "county": "Providence",
+        "row_id": "e2864932-4f88-410d-9092-8cfbeabee833"
+      },
+      {
+        "body": "The Family Court system stole irreplaceable time from my children and destroyed parts of our family that can never be given back, while the very people charged with protecting them ignored their pain, silenced their voices, and allowed emotional abuse and trauma to continue unchecked. My children have cried, suffered, and lost their sense of safety and trust, and I have lived the nightmare of being forced to watch my children break apart while powerless to save them from the people and system that were supposed to protect them.",
+        "state": "RI",
+        "county": "Providence",
+        "row_id": "98417616-4264-4ef6-aca3-9553ce64f8e6"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "What hasn’t he done: He has believed false narratives with no evidence. He has denied me access to my child and denied any review of my case. He ignores contempt filings and allows my husband to continue to violate all orders with no consequences. He is doing things that are illegal and saying things that I won’t get my one son back until my older son sees his father. He ordered my older son go to his dads and my son ran away. There is video of 3 grown man man-handling my child so he is now having others make false claims against me bc if the video gets out he is screwed. He has violated my due process civil and constitutional rights and those of my children He only allows back room conferences with attorneys and wont put things on the record He removed my youngest from me with no evidence He doesn’t use actual law in his court room - I could go on and on",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
+      },
+      {
+        "comment_text": "Constantly denied contempt charges Blamed the victim Broke due process laws Always finds against me no matter what. Only believes my ex husband. Refuses to find my ex in contempt despite him being obviously in contempt on many occasions.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "County not listed"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/richard_a_merola",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='RI'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ri/richard_a_merola/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "What hasn’t he done: He has believed false narratives with no evidence. He has denied me access to my child and denied any review of my case. He ignores contempt filings and allows my husband to continue to violate all orders with no consequences. He is doing things that are illegal and saying things that I won’t get my one son back until my older son sees his father. He ordered my older son go to his dads and my son ran away. There is video of 3 grown man man-handling my child so he is now having others make false claims against me bc if the video gets out he is screwed. He has violated my due process civil and constitutional rights and those of my children He only allows back room conferences with attorneys and wont put things on the record He removed my youngest from me with no evidence He doesn’t use actual law in his court room - I could go on and on",
+        "kind": "comment"
+      },
+      {
+        "body": "Constantly denied contempt charges Blamed the victim Broke due process laws Always finds against me no matter what. Only believes my ex husband. Refuses to find my ex in contempt despite him being obviously in contempt on many occasions.",
+        "kind": "comment"
+      },
+      {
+        "body": "I walked into family court believing the truth would matter. Years later, I’m still learning that truth and justice are not always the same thing.",
+        "kind": "family_report"
+      },
+      {
+        "body": "The Family Court system stole irreplaceable time from my children and destroyed parts of our family that can never be given back, while the very people charged with protecting them ignored their pain, silenced their voices, and allowed emotional abuse and trauma to continue unchecked. My children have cried, suffered, and lost their sense of safety and trust, and I have lived the nightmare of being forced to watch my children break apart while powerless to save them from the people and system that were supposed to protect them.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 5
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

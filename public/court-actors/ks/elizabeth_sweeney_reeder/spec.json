@@ -27,27 +27,27 @@
     "actor_bucket_key": "elizabeth sweney-reder|KS"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-n0ood0ab/New Final Post and Capcut template/export/elizabeth_sweeney_reeder/image_1080.png",
+    "path": "/tmp/swm-share-pages-pauilms9/New Final Post and Capcut template/export/elizabeth_sweeney_reeder/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 185,
-    "total_submissions": 296,
-    "avg_financial_loss": 119373.95,
+    "families_approved": 184,
+    "total_submissions": 298,
+    "avg_financial_loss": 118858.78,
     "avg_months_lost": 30.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "KS",
-    "state_family_count": 296,
-    "median_financial_loss": 99100,
-    "median_burden_sample_size": 152,
-    "median_months_lost": 19,
-    "pro_se_pct": 48.1,
+    "state_family_count": 298,
+    "median_financial_loss": 98800,
+    "median_burden_sample_size": 153,
+    "median_months_lost": 18,
+    "pro_se_pct": 47.8,
     "pro_se_count": 142,
-    "_pdf_state_family_count": 295,
+    "_pdf_state_family_count": 297,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6569,
+  "movement_total": 6620,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,
@@ -96,6 +96,12 @@
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Miami"
+      },
+      {
+        "comment_text": "Still on the bench",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "6th District / Miami County"
       }
     ]
   },

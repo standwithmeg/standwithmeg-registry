@@ -1,0 +1,109 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "george_galanos",
+    "display_name": "George Galanos and secretary",
+    "title": "",
+    "first_name": "George Galanos and",
+    "last_name": "secretary",
+    "role": "Attorney",
+    "court": "Lake & Newton",
+    "county": "Lake & Newton",
+    "court_or_county": "Lake & Newton",
+    "state": "IN",
+    "state_abbr": "IN",
+    "mention_count": 2,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 2,
+    "supabase_row_ids": [
+      "f5d0db43-a9c8-47c8-ac02-0e53cbf082ff",
+      "7b140c86-1eb0-4678-87e4-ca89ca9253dd"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "george galanos|IN"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 119,
+    "total_submissions": 202,
+    "avg_financial_loss": 218244.19,
+    "avg_months_lost": 31.6,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "IN",
+    "state_family_count": 202,
+    "median_financial_loss": 69800,
+    "median_burden_sample_size": 99,
+    "median_months_lost": 20,
+    "pro_se_pct": 49.5,
+    "pro_se_count": 100,
+    "_pdf_state_family_count": 202,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 2,
+    "actor_report_count": 2,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "Continued conspiracies to commit murders and attempts, extortion, misappropriation of funds & government programs, embezzlement, harassment, intimidation, falsification of the record, fraud upon the Courts, human and child trafficking, mail fraud, public corruption, health care fraud, perjury, fiduciary breaches, tampering with, suppression of the record, evidence, targets, witnesses, and victims, RICO violations, due process and civil rights violations, conflicts of interests, quid pro quo, sabotage, organized violence, covert government programs, theft, laundering, stalking, identity theft, death threats, discrimination, bias, endangerment, aidiing and abetting,",
+        "state": "IN",
+        "county": "Lake and Newton County",
+        "row_id": "3f5a4867-f78d-42a9-9543-c59549296f2d"
+      },
+      {
+        "body": "Orchestrated intentional child abuse & neglect, trafficking, elderly abuse, legal abuse financial abuse: laundering, extortion, mail fraud, attempted murder, sabotage, discrimination, torture, consumer fraud",
+        "state": "IN",
+        "county": "Newton County",
+        "row_id": "1d0d552a-e6a4-4a9c-a886-8569742b46ff"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "He is directly a part of the collusion and trafficking, “adoption”; the black market of transferring or disposing of human assets for profit, Falsified pleadings, extortion, laundering, theft.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Newton County"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/george_galanos",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='IN'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/in/george_galanos/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "He is directly a part of the collusion and trafficking, “adoption”; the black market of transferring or disposing of human assets for profit, Falsified pleadings, extortion, laundering, theft.",
+        "kind": "comment"
+      },
+      {
+        "body": "Orchestrated intentional child abuse & neglect, trafficking, elderly abuse, legal abuse financial abuse: laundering, extortion, mail fraud, attempted murder, sabotage, discrimination, torture, consumer fraud",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

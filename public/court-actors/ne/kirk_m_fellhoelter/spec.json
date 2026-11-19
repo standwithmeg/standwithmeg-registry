@@ -28,7 +28,7 @@
     "actor_bucket_key": "kirk felhoelter|NE"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-b_a91qrh/New Final Post and Capcut template/export/kirk_m_fellhoelter/image_1080.png",
+    "path": "/tmp/swm-share-pages-pauilms9/New Final Post and Capcut template/export/kirk_m_fellhoelter/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -48,7 +48,7 @@
     "_pdf_state_family_count": 52,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6496,
+  "movement_total": 6620,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -93,6 +93,12 @@
         "court_or_county": "Count my attorney"
       },
       {
+        "comment_text": "He talked about me in a condescending tone and negatively in front of my children, and acted as if he knew me, although I’ve never talked with him a day in my life. The judge didn’t care about his negative and disgusting behavior..",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": ""
+      },
+      {
         "comment_text": "This man doesn't seem educated at all and always talks negative about everyone and doesn't care to find evidence to prove someone actually is a bad mom or dad",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
@@ -135,6 +141,10 @@
     "selected_quotes": [
       {
         "body": "He laughed at all of my concerns, and when I would talk about my children’s special needs, tell me that I didn’t know what I was talking about. He laughed at me quite a bit in court, and I asked the judge if this was allowed and I was ignored.",
+        "kind": "comment"
+      },
+      {
+        "body": "He talked about me in a condescending tone and negatively in front of my children, and acted as if he knew me, although I’ve never talked with him a day in my life. The judge didn’t care about his negative and disgusting behavior..",
         "kind": "comment"
       },
       {

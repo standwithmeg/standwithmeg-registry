@@ -45,7 +45,7 @@
     "_pdf_state_family_count": 358,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6591,
+  "movement_total": 6620,
   "supabase": {
     "report_count": 2,
     "actor_report_count": 2,
@@ -68,19 +68,20 @@
       {
         "comment_text": "GAL representative who denies access to child involved by falsifying court documents, and not showing interest or involvement in any type of reunification of the child and family.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Osceola county"
       },
       {
         "comment_text": "commits perjury to take children from families, ensuring children stay in foster care",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Osceola"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/lianabel_rivera",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='FL'",
-    "pdf_public_actor: no 'Lianabel Rivera' in cache for FL"
+    "public_family_count_api: no actors returned for state='FL'"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",

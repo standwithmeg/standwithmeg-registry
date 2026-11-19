@@ -1,0 +1,124 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "dr_david_finn",
+    "display_name": "Dr. David Finn",
+    "title": "Dr.",
+    "first_name": "David",
+    "last_name": "Finn",
+    "role": "Custody Evaluator",
+    "court": "Cook County, Illinois - Daily Center",
+    "county": "Cook County, Illinois - Daily Center",
+    "court_or_county": "Cook County, Illinois - Daily Center",
+    "state": "IL",
+    "state_abbr": "IL",
+    "mention_count": 3,
+    "family_count": 2,
+    "public_family_count": 2,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "967293f1-83a3-4424-bf0f-f6ff3239ca57",
+      "89872530-ba9d-4ebd-b844-8ff3dd3fe8a1",
+      "f475ca90-d1d0-4dda-8436-1e73171d7eec"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "david finn|IL"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 100,
+    "total_submissions": 190,
+    "avg_financial_loss": 201852.04,
+    "avg_months_lost": 27.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "IL",
+    "state_family_count": 190,
+    "median_financial_loss": 126750,
+    "median_burden_sample_size": 115,
+    "median_months_lost": 15,
+    "pro_se_pct": 48.1,
+    "pro_se_count": 91,
+    "_pdf_state_family_count": 189,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 2,
+    "family_reports": [
+      {
+        "body": "The court system allowed years of costly, endless interventions and unchecked abuses of power that destroyed my relationship with my son and fractured my family beyond repair. I was forced to navigate an exhausting maze of custody evaluations, therapy, supervised visits, and ever-changing requirements that ultimately deprived me of my son and the irreplaceable milestones of his childhood. What was presented as a system designed to protect children instead became a system that isolated me from my son, exhausted my resources, and robbed our family of years we can never get back.” The abuse of power I experienced through the family court system left me emotionally devastated, financially drained, and permanently separated from the everyday joys and milestones of my son’s life",
+        "state": "IL",
+        "county": "Cook",
+        "row_id": "99405956-bcdd-4d23-8f2d-e4e74929757e"
+      },
+      {
+        "body": "Destroyed lives",
+        "state": "IL",
+        "county": "Lake",
+        "row_id": "2a52e968-165e-4272-9025-ca4ce6bc0ff1"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Dr. David Finn, psychologist was hand picked by Judge Jeanne Cleveland Bernstein for post decree custody evaluation by my Ex husband. Ex paid up to $20K cash for a damning report so tightly crafted for a desired objective that had me jumping through hoops indefinitely! Weekly visits with reunification therapist (his friend Terry McNicholas) 215 Custody Evaluation with Clinical Psychologist (My choice Dr. Michael DeVires, Ph.D - HE saw through the B.S.) Supervised paid one hour weekly visits 1.5 hours away - after I could not afford - indefinitely, found a psychologist on insurance - then Covid came. No physical - just zoom wire where my son didn't have to join if he didn't want each week. Some times Ex would say that my son forgot about it or had other things more important. There was no end. The therapist ended up getting cancer after Covid and passed away!! Ex stated that my son no longer wanted to attend zoom calls or visits. So it ended. Following the divorce, the Court appointed a post-decree custody evaluator. My former husband paid for the evaluation, and I believe the resulting report was structured to support a predetermined outcome rather than provide an objective assessment. As a result of the recommendations, I was required to attend weekly reunification therapy and was limited to supervised parenting time. The supervised visits were one hour per week and required me to travel approximately 1.5 hours each way, at my own expense. The arrangement had no clearly defined end point. When I could no longer afford the supervised visitation provider, I located a psychologist through my insurance. Shortly thereafter, the [redacted] pandemic changed all visitation to Zoom. During this period, I was informed that my son did not have to participate if he did not wish to do so. On numerous occasions, I was told that he had forgotten, had other plans, or simply did not want to attend. Over time, the virtual visits became less frequent until they stopped entirely. I was later informed by my former husband that my son no longer wished to participate in Zoom calls or visits. The result was devastating. I lost years of my son’s life. I missed birthdays, holidays, Mother’s Days, Christmases, Thanksgivings, Easters, prom, celebrations, and the ordinary moments that build a parent-child relationship. I have lived with the grief of watching my son grow up from a distance while others shared in the milestones I longed to experience as his mother. Those lost years cannot be replaced, and the memories we never made can never be recovered.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Cook County, Illinois - Daily Center"
+      },
+      {
+        "comment_text": "Committed forensic fraud and handed an ADa protected child to the abuser in order to silence her Manufactured false diagnosis to remove all parenting time",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Cook County, Illinois - Daily Center"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/dr_david_finn",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='IL'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/il/dr_david_finn/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Dr. David Finn, psychologist was hand picked by Judge Jeanne Cleveland Bernstein for post decree custody evaluation by my Ex husband. Ex paid up to $20K cash for a damning report so tightly crafted for a desired objective that had me jumping through hoops indefinitely! Weekly visits with reunification therapist (his friend Terry McNicholas) 215 Custody Evaluation with Clinical Psychologist (My choice Dr. Michael DeVires, Ph.D - HE saw through the B.S.) Supervised paid one hour weekly visits 1.5 hours away - after I could not afford - indefinitely, found a psychologist on insurance - then Covid came. No physical - just zoom wire where my son didn't have to join if he didn't want each week. Some times Ex would say that my son forgot about it or had other things more important. There was no end. The therapist ended up getting cancer after Covid and passed away!! Ex stated that my son no longer wanted to attend zoom calls or visits. So it ended. Following the divorce, the Court appointed a post-decree custody evaluator. My former husband paid for the evaluation, and I believe the resulting report was structured to support a predetermined outcome rather than provide an objective assessment. As a result of the recommendations, I was required to attend weekly reunification therapy and was limited to supervised parenting time. The supervised visits were one hour per week and required me to travel approximately 1.5 hours each way, at my own expense. The arrangement had no clearly defined end point. When I could no longer afford the supervised visitation provider, I located a psychologist through my insurance. Shortly thereafter, the [redacted] pandemic changed all visitation to Zoom. During this period, I was informed that my son did not have to participate if he did not wish to do so. On numerous occasions, I was told that he had forgotten, had other plans, or simply did not want to attend. Over time, the virtual visits became less frequent until they stopped entirely. I was later informed by my former husband that my son no longer wished to participate in Zoom calls or visits. The result was devastating. I lost years of my son’s life. I missed birthdays, holidays, Mother’s Days, Christmases, Thanksgivings, Easters, prom, celebrations, and the ordinary moments that build a parent-child relationship. I have lived with the grief of watching my son grow up from a distance while others shared in the milestones I longed to experience as his mother. Those lost years cannot be replaced, and the memories we never made can never be recovered.",
+        "kind": "comment"
+      },
+      {
+        "body": "Committed forensic fraud and handed an ADa protected child to the abuser in order to silence her Manufactured false diagnosis to remove all parenting time",
+        "kind": "comment"
+      },
+      {
+        "body": "The court system allowed years of costly, endless interventions and unchecked abuses of power that destroyed my relationship with my son and fractured my family beyond repair. I was forced to navigate an exhausting maze of custody evaluations, therapy, supervised visits, and ever-changing requirements that ultimately deprived me of my son and the irreplaceable milestones of his childhood. What was presented as a system designed to protect children instead became a system that isolated me from my son, exhausted my resources, and robbed our family of years we can never get back.” The abuse of power I experienced through the family court system left me emotionally devastated, financially drained, and permanently separated from the everyday joys and milestones of my son’s life",
+        "kind": "family_report"
+      },
+      {
+        "body": "Destroyed lives",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 5
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

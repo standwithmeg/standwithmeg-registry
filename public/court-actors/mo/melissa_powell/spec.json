@@ -1,0 +1,102 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "melissa_powell",
+    "display_name": "Melissa Powell AKA Mel Powell",
+    "title": "",
+    "first_name": "Melissa Powell AKA Mel",
+    "last_name": "Powell",
+    "role": "CPS Worker",
+    "court": "Putnam",
+    "county": "Putnam",
+    "court_or_county": "Putnam",
+    "state": "MO",
+    "state_abbr": "MO",
+    "mention_count": 1,
+    "family_count": 1,
+    "public_family_count": 1,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 1,
+    "supabase_row_ids": [
+      "41c99617-1914-4518-b051-bdfd4a72bd4e"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "melisa powel|MO"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 144,
+    "total_submissions": 306,
+    "avg_financial_loss": 104962.18,
+    "avg_months_lost": 37.4,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "MO",
+    "state_family_count": 306,
+    "median_financial_loss": 80885,
+    "median_burden_sample_size": 142,
+    "median_months_lost": 21,
+    "pro_se_pct": 51.3,
+    "pro_se_count": 157,
+    "_pdf_state_family_count": 306,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6621,
+  "supabase": {
+    "report_count": 1,
+    "actor_report_count": 1,
+    "family_count": 1,
+    "family_reports": [
+      {
+        "body": "This system has isolated, an alienated, a daughter and a mother from having a relationship when I could’ve died from cancer, they allowed a father to kidnap a child from her home state and for me and her brother and sister and take her to another state to be held like a prisoner while they made profits off of my daughter, put her on medication and kept her away from me for four years I still haven’t talked to her or seen her since September 9 of 2024. I got one visit after the custody order was issued because he’s on drugs. He refuses to let me see my child and I filed the contempt in the state of Iowa, and they still keep denying my contempt and are not allowing me to see my child. This is ruined my family, my life they’ve harassed me they’ve hacked into my phones. They drove me out of the state of Iowa and now I live in a different state because I could no longer live there anymore after all of this psychological warfare.",
+        "state": "MO",
+        "county": "Putnam county/ unionville",
+        "row_id": "2cc2193b-4aaf-4ce0-859d-98aeae2cdfa7"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "She’s the CPS worker that used to be a CPS worker in the state of Iowa before my case was opened- then when will he took Ella out of the state of Iowa she miraculously became the head of the Missouri division in Unionville- this individual lied and obstructed justice violated our due process- they pumped out a letter in the mail saying that there was gonna be no CPS child services case opened when I reported him to the state of Missouri in the state of Iowa for kidnapping my child and removing her from my hair and then turned around 12 days later and took her into custody when he failed his drug test at his felony court date the day I was called to come and get her the court document that I have is a copied off the Internet fake document with no state seal- then all the documents that I got during my case have the Missouri state seal on them. I have proof that the document is fraudulent and I have no idea whose office that came from because she states that it did not come from her office.! I also have a forgery on a paper where she is stating that I am to be mentally evaluated. One of the documents has a state seal on it and the other one doesn’t one of them is assigned by her and the other one was signed by somebody else.!",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Putnam"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/melissa_powell",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='MO'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/mo/melissa_powell/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "She’s the CPS worker that used to be a CPS worker in the state of Iowa before my case was opened- then when will he took Ella out of the state of Iowa she miraculously became the head of the Missouri division in Unionville- this individual lied and obstructed justice violated our due process- they pumped out a letter in the mail saying that there was gonna be no CPS child services case opened when I reported him to the state of Missouri in the state of Iowa for kidnapping my child and removing her from my hair and then turned around 12 days later and took her into custody when he failed his drug test at his felony court date the day I was called to come and get her the court document that I have is a copied off the Internet fake document with no state seal- then all the documents that I got during my case have the Missouri state seal on them. I have proof that the document is fraudulent and I have no idea whose office that came from because she states that it did not come from her office.! I also have a forgery on a paper where she is stating that I am to be mentally evaluated. One of the documents has a state seal on it and the other one doesn’t one of them is assigned by her and the other one was signed by somebody else.!",
+        "kind": "comment"
+      },
+      {
+        "body": "This system has isolated, an alienated, a daughter and a mother from having a relationship when I could’ve died from cancer, they allowed a father to kidnap a child from her home state and for me and her brother and sister and take her to another state to be held like a prisoner while they made profits off of my daughter, put her on medication and kept her away from me for four years I still haven’t talked to her or seen her since September 9 of 2024. I got one visit after the custody order was issued because he’s on drugs. He refuses to let me see my child and I filed the contempt in the state of Iowa, and they still keep denying my contempt and are not allowing me to see my child. This is ruined my family, my life they’ve harassed me they’ve hacked into my phones. They drove me out of the state of Iowa and now I live in a different state because I could no longer live there anymore after all of this psychological warfare.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 4
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}
