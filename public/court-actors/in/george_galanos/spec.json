@@ -9,7 +9,7 @@
     "role": "Attorney",
     "court": "Lake & Newton",
     "county": "Lake & Newton",
-    "court_or_county": "Lake & Newton",
+    "court_or_county": null,
     "state": "IN",
     "state_abbr": "IN",
     "mention_count": 2,
@@ -45,7 +45,7 @@
     "_pdf_state_family_count": 202,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6621,
+  "movement_total": 6637,
   "supabase": {
     "report_count": 2,
     "actor_report_count": 2,
@@ -66,16 +66,21 @@
     ],
     "public_comments": [
       {
+        "comment_text": "Continued conspiracies to commit murders and attempts, extortion, misappropriation of funds and government programs, embezzlement, harassment, intimidation, falsification of the record, fraud upon the Courts, trafficking, mail fraud, continued public corruption, health care fraud, fiduciary breaches, tampering with the record, witnesses, and victims, RICO, conflicts of interests, quid pro quo",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
         "comment_text": "He is directly a part of the collusion and trafficking, “adoption”; the black market of transferring or disposing of human assets for profit, Falsified pleadings, extortion, laundering, theft.",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Newton County"
+        "source": "court_actors.notes"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/george_galanos",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='IN'"
+    "public_family_count_api: no actors returned for state='IN'",
+    "pdf_public_actor: no 'George Galanos and secretary' in cache for IN"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",

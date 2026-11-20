@@ -18,9 +18,6 @@
     "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 24,
     "supabase_row_ids": [
-      "ffde1178-eeb1-4dd1-a53c-0f32eb29ac5f",
-      "18aeb5a7-359e-46f8-9680-85696021de36",
-      "f9b6c8a7-607d-4a20-a08e-17d0f069ddc2",
       "a776eab9-2e3d-412d-93f1-3f2e1dbb6858",
       "7a5c932e-fdca-4623-992f-7c3c13ba8edc",
       "98042a5b-9a24-473f-a1d5-9941839e2002",
@@ -41,13 +38,16 @@
       "c1d230f0-15f1-4de3-ae36-48bb10e6bd12",
       "e3e5fe8e-4da3-42f8-83a5-6c5b2e8fd81a",
       "76d5fc96-393b-421b-b5bb-ffaf8e6078b4",
+      "ffde1178-eeb1-4dd1-a53c-0f32eb29ac5f",
+      "18aeb5a7-359e-46f8-9680-85696021de36",
+      "f9b6c8a7-607d-4a20-a08e-17d0f069ddc2",
       "c114aabf-d2ad-4db6-ad90-ad5cdc96ed1d"
     ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-pauilms9/New Final Post and Capcut template/export/david_c_bonfiglio/image_1080.png",
+    "path": "/tmp/swm-share-pages-_m3syql0/New Final Post and Capcut template/export/david_c_bonfiglio/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
@@ -67,7 +67,7 @@
     "_pdf_state_family_count": 202,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6620,
+  "movement_total": 6637,
   "supabase": {
     "report_count": 24,
     "actor_report_count": 24,

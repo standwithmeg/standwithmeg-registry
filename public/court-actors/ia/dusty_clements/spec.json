@@ -9,7 +9,7 @@
     "role": "Attorney",
     "court": "Marshall County",
     "county": "Wapello County",
-    "court_or_county": "Marshall County",
+    "court_or_county": "Wapello court appointed",
     "state": "IA",
     "state_abbr": "IA",
     "mention_count": 2,
@@ -45,7 +45,7 @@
     "_pdf_state_family_count": 115,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6621,
+  "movement_total": 6637,
   "supabase": {
     "report_count": 2,
     "actor_report_count": 2,
@@ -62,14 +62,14 @@
       {
         "comment_text": "Dusty Clements is a lousy court appointment attorney that refuses to file the appropriate documents we continuously ask her to file in my C.I.N.A. case, she is very dismissive and only wants to take calls when its the day of my court hearings which is very unprofessional.",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Wapello County"
+        "source": "court_actors.notes"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/dusty_clements",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='IA'"
+    "public_family_count_api: no actors returned for state='IA'",
+    "pdf_public_actor: no 'Dusty Clement’s' in cache for IA"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",

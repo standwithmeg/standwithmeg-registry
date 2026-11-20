@@ -1,0 +1,82 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "dianne_voss_atteberry",
+    "display_name": "Dianne Voss Atteberry",
+    "title": "",
+    "first_name": "Dianne Voss",
+    "last_name": "Atteberry",
+    "role": "Therapist / Counselor",
+    "court": "Johnson",
+    "county": "Johnson",
+    "court_or_county": "Johnson",
+    "state": "KS",
+    "state_abbr": "KS",
+    "mention_count": 3,
+    "family_count": 1,
+    "public_family_count": 1,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "292c326a-c7f1-4799-a9f2-dbb9d7f6a2f6",
+      "11b4a327-d96f-4b41-9c3c-8e7d9035c960",
+      "7cf62f10-4691-4de5-9142-919011602f44"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "diane voss atebery|KS"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 183,
+    "total_submissions": 298,
+    "avg_financial_loss": 120095.41,
+    "avg_months_lost": 30.8,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "KS",
+    "state_family_count": 298,
+    "median_financial_loss": 98800,
+    "median_burden_sample_size": 153,
+    "median_months_lost": 18,
+    "pro_se_pct": 47.8,
+    "pro_se_count": 142,
+    "_pdf_state_family_count": 297,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6637,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 1,
+    "family_reports": [],
+    "public_comments": []
+  },
+  "export_dir": "New Final Post and Capcut template/export/dianne_voss_atteberry",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='KS'",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ks/dianne_voss_atteberry/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

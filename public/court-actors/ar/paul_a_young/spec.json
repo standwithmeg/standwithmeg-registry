@@ -42,7 +42,7 @@
     "_pdf_state_family_count": 86,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6620,
+  "movement_total": 6637,
   "supabase": {
     "report_count": 0,
     "actor_report_count": 0,
@@ -54,7 +54,8 @@
   "unresolved": [
     "public_family_count_api: no actors returned for state='AR'",
     "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
+    "public_comments: no merged comments or raw notes available",
+    "pdf_public_actor: no 'Paul Allen Young' in cache for AR"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",

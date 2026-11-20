@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T12:23:17.414484+00:00",
+  "generated_at": "2026-11-20T11:52:10.816997+00:00",
   "actors": [
     {
       "slug": "abbey_johnston",
@@ -31,8 +31,8 @@
     {
       "slug": "carmen_bosch",
       "state_abbr": "AL",
-      "display_name": "Carmen Bosch",
-      "canonical_name": "Carmen Bosch",
+      "display_name": "Judge Carmen Bosche",
+      "canonical_name": "Judge Carmen Bosche",
       "actor_bucket_key": "carmen bosch|AL",
       "photo_url": null,
       "share_url": "/court-actors/al/carmen_bosch/share.html"
@@ -72,6 +72,15 @@
       "actor_bucket_key": "dustin garis|AL",
       "photo_url": null,
       "share_url": "/court-actors/al/dustin_garris/share.html"
+    },
+    {
+      "slug": "jason_k_spry",
+      "state_abbr": "AL",
+      "display_name": "Jason Keith Spry",
+      "canonical_name": "Jason Keith Spry",
+      "actor_bucket_key": "jason spry|AL",
+      "photo_url": null,
+      "share_url": "/court-actors/al/jason_k_spry/share.html"
     },
     {
       "slug": "john_tyler_winans",
@@ -1640,6 +1649,15 @@
       "share_url": "/court-actors/ks/dan_livingston/share.html"
     },
     {
+      "slug": "dianne_voss_atteberry",
+      "state_abbr": "KS",
+      "display_name": "Dianne Voss Atteberry",
+      "canonical_name": "Dianne Voss Atteberry",
+      "actor_bucket_key": "diane voss atebery|KS",
+      "photo_url": null,
+      "share_url": "/court-actors/ks/dianne_voss_atteberry/share.html"
+    },
+    {
       "slug": "elizabeth_sweeney_reeder",
       "state_abbr": "KS",
       "display_name": "Elizabeth Sweeney Reeder",
@@ -2344,8 +2362,8 @@
     {
       "slug": "janet_larison",
       "state_abbr": "MO",
-      "display_name": "Janet Larison",
-      "canonical_name": "Janet Larison",
+      "display_name": "Janet larrison",
+      "canonical_name": "Janet larrison",
       "actor_bucket_key": "janet larison|MO",
       "photo_url": null,
       "share_url": "/court-actors/mo/janet_larison/share.html"

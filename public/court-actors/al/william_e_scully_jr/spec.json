@@ -44,27 +44,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-pauilms9/New Final Post and Capcut template/export/william_e_scully_jr/image_1080.png",
+    "path": "/tmp/swm-share-pages-_m3syql0/New Final Post and Capcut template/export/william_e_scully_jr/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 102,
-    "total_submissions": 176,
-    "avg_financial_loss": 87963.09,
-    "avg_months_lost": 32.2,
+    "total_submissions": 183,
+    "avg_financial_loss": 84590.06,
+    "avg_months_lost": 32.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "AL",
-    "state_family_count": 176,
-    "median_financial_loss": 51000,
-    "median_burden_sample_size": 79,
+    "state_family_count": 183,
+    "median_financial_loss": 50000,
+    "median_burden_sample_size": 81,
     "median_months_lost": 13,
-    "pro_se_pct": 40.9,
-    "pro_se_count": 72,
-    "_pdf_state_family_count": 176,
+    "pro_se_pct": 39.9,
+    "pro_se_count": 73,
+    "_pdf_state_family_count": 183,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6620,
+  "movement_total": 6637,
   "supabase": {
     "report_count": 21,
     "actor_report_count": 21,

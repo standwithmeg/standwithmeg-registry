@@ -1,0 +1,101 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "jason_k_spry",
+    "display_name": "Jason Keith Spry",
+    "title": "",
+    "first_name": "Jason Keith",
+    "last_name": "Spry",
+    "role": "Attorney",
+    "court": "Baldwin",
+    "county": "Baldwin",
+    "court_or_county": "Baldwin",
+    "state": "AL",
+    "state_abbr": "AL",
+    "mention_count": 1,
+    "family_count": 1,
+    "public_family_count": 1,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 1,
+    "supabase_row_ids": [
+      "cc37151e-ae62-49c8-9649-aa77368cc6e5"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "jason spry|AL"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 102,
+    "total_submissions": 183,
+    "avg_financial_loss": 84590.06,
+    "avg_months_lost": 32.4,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "AL",
+    "state_family_count": 183,
+    "median_financial_loss": 50000,
+    "median_burden_sample_size": 81,
+    "median_months_lost": 13,
+    "pro_se_pct": 39.9,
+    "pro_se_count": 73,
+    "_pdf_state_family_count": 183,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6637,
+  "supabase": {
+    "report_count": 1,
+    "actor_report_count": 1,
+    "family_count": 1,
+    "family_reports": [
+      {
+        "body": "This system has destroyed my family and our belief in justice, hope, and humanity.",
+        "state": "AL",
+        "county": "Baldwin",
+        "row_id": "7c9b80e6-3e34-4ff9-805e-c4b7b27b5e8d"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Ignored abuse disclosures, acted as adversary against safe parent, used court resources to collect his fees, ignored kids and their interests, suppressed evidence and abuse disclosures. Accepted bond money from court without process. Files motions without authority, overs for advocacy outside the scope of appointment. Acts line debt collector. Is clearly not neutral and says he doesn’t have to be",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/jason_k_spry",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='AL'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/al/jason_k_spry/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Ignored abuse disclosures, acted as adversary against safe parent, used court resources to collect his fees, ignored kids and their interests, suppressed evidence and abuse disclosures. Accepted bond money from court without process. Files motions without authority, overs for advocacy outside the scope of appointment. Acts line debt collector. Is clearly not neutral and says he doesn’t have to be",
+        "kind": "comment"
+      },
+      {
+        "body": "This system has destroyed my family and our belief in justice, hope, and humanity.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 2
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

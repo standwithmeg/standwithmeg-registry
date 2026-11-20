@@ -12,13 +12,12 @@
     "court_or_county": "Leon",
     "state": "Florida",
     "state_abbr": "FL",
-    "mention_count": 3,
-    "family_count": 2,
-    "public_family_count": 2,
+    "mention_count": 2,
+    "family_count": 1,
+    "public_family_count": 1,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 3,
+    "actor_report_count": 2,
     "supabase_row_ids": [
-      "3ce69a55-7139-454f-be01-b6e9f7d63b78",
       "461d976c-22ed-418b-8808-c9a9580cfb5f",
       "a1e59325-8ae5-4da6-9267-66a9550ba224"
     ],
@@ -26,12 +25,12 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-pauilms9/New Final Post and Capcut template/export/danny_phillips/image_1080.png",
+    "path": "/tmp/swm-share-pages-_m3syql0/New Final Post and Capcut template/export/danny_phillips/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 236,
+    "families_approved": 235,
     "total_submissions": 358,
     "avg_financial_loss": 190520.48,
     "avg_months_lost": 27.2,
@@ -46,34 +45,22 @@
     "_pdf_state_family_count": 358,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6620,
+  "movement_total": 6637,
   "supabase": {
-    "report_count": 3,
-    "actor_report_count": 3,
-    "family_count": 2,
+    "report_count": 2,
+    "actor_report_count": 2,
+    "family_count": 1,
     "family_reports": [
       {
         "body": "I expected the system to save me and my 6 children from 17 years of abuse and domestic violence, knowing how dangerous my ex with a history of law enforcement is, after multiple attempts at my life and finding confessions on his phone of “a man that got tired of waiting for his wife to sleep with another man, so he came up with a plan to drug her and posted an ad on Craigslist…”. The court didn’t save us, they didn’t even protect us. The court found a way to make money off of our desperate pleas to break free from abuse—by keeping us in a place of abuse…and that’s what we became—a story, a number, and a dollar sign.",
         "state": "FL",
         "county": "Leon",
         "row_id": "e1db8870-7b51-4ef3-b79d-2599f5713349"
-      },
-      {
-        "body": "Family court has destroyed my children.",
-        "state": "FL",
-        "county": "Leon",
-        "row_id": "a01ca4a6-5047-4e42-a626-709059f29e2d"
       }
     ],
     "public_comments": [
       {
         "comment_text": "Conspired with psychologist (Rachel Scharlepp) to attempt to incarcerate mother for alienation. Danny is close friends with Rachel Scharlepp. Danny conspired with opposing counsel (John Kenny) to threaten mother with losing her children if she didn’t sign a contract. He filed motions without notifying parties. He contacted the judges assistant ex parte. He conspired with Rosie Harkness to facilitate further abuse to 6 children. He conspired to withhold evidence from the court when emails were subpoenaed. He took the case after the mother consulted with his colleague Toby Norris, which was a conflict of interest having previous knowledge of opposing party consultation. Works with other court actors to be profitable and he uses people in a position of power to threaten victims",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Leon"
-      },
-      {
-        "comment_text": "Concerns have been raised regarding this attorney’s candor and professional conduct in court proceedings, including allegations that statements made in litigation have at times been inconsistent with the likely facts of the situation. Additional concerns relate to the attorney’s personal relationship with a former client whom he previously represented before later marrying. Critics argue that this history raises questions regarding professional boundaries, judgment, and potential ethical considerations surrounding attorney-client relationships. Taken together, these issues have contributed to broader concerns regarding credibility, professionalism, and adherence to the ethical standards expected of attorneys practicing within sensitive family law matters.",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Leon"
@@ -106,19 +93,11 @@
         "kind": "comment"
       },
       {
-        "body": "Concerns have been raised regarding this attorney’s candor and professional conduct in court proceedings, including allegations that statements made in litigation have at times been inconsistent with the likely facts of the situation. Additional concerns relate to the attorney’s personal relationship with a former client whom he previously represented before later marrying. Critics argue that this history raises questions regarding professional boundaries, judgment, and potential ethical considerations surrounding attorney-client relationships. Taken together, these issues have contributed to broader concerns regarding credibility, professionalism, and adherence to the ethical standards expected of attorneys practicing within sensitive family law matters.",
-        "kind": "comment"
-      },
-      {
         "body": "I expected the system to save me and my 6 children from 17 years of abuse and domestic violence, knowing how dangerous my ex with a history of law enforcement is, after multiple attempts at my life and finding confessions on his phone of “a man that got tired of waiting for his wife to sleep with another man, so he came up with a plan to drug her and posted an ad on Craigslist…”. The court didn’t save us, they didn’t even protect us. The court found a way to make money off of our desperate pleas to break free from abuse—by keeping us in a place of abuse…and that’s what we became—a story, a number, and a dollar sign.",
-        "kind": "family_report"
-      },
-      {
-        "body": "Family court has destroyed my children.",
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 6
+    "quote_page_count": 4
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

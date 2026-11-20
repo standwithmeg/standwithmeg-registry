@@ -12,27 +12,26 @@
     "court_or_county": "Leon",
     "state": "Florida",
     "state_abbr": "FL",
-    "mention_count": 4,
-    "family_count": 4,
+    "mention_count": 3,
+    "family_count": 3,
     "public_family_count": 0,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 4,
+    "actor_report_count": 3,
     "supabase_row_ids": [
       "49f43fa2-eb12-43ca-86cf-c9a7e98c68a4",
       "b8c94c4b-7352-49b2-b016-031451ece4c9",
-      "497f36d8-bf70-4971-84fc-370e91629e26",
       "12e2cf03-8192-48a7-84ef-a84a812b2f7c"
     ],
     "actor_row_id": "49f43fa2-eb12-43ca-86cf-c9a7e98c68a4",
     "actor_bucket_key": "anthony miler|FL"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-pauilms9/New Final Post and Capcut template/export/anthony_miller/image_1080.png",
+    "path": "/tmp/swm-share-pages-_m3syql0/New Final Post and Capcut template/export/anthony_miller/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 236,
+    "families_approved": 235,
     "total_submissions": 358,
     "avg_financial_loss": 190520.48,
     "avg_months_lost": 27.2,
@@ -47,11 +46,11 @@
     "_pdf_state_family_count": 358,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6620,
+  "movement_total": 6637,
   "supabase": {
-    "report_count": 4,
-    "actor_report_count": 4,
-    "family_count": 4,
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 3,
     "family_reports": [
       {
         "body": "Family court destroyed my family.",
@@ -64,23 +63,11 @@
         "state": "FL",
         "county": "Leon",
         "row_id": "e1db8870-7b51-4ef3-b79d-2599f5713349"
-      },
-      {
-        "body": "Family court has destroyed my children.",
-        "state": "FL",
-        "county": "Leon",
-        "row_id": "a01ca4a6-5047-4e42-a626-709059f29e2d"
       }
     ],
     "public_comments": [
       {
         "comment_text": "Continued to have a hearing without me present while I attended a funeral of a close family member, forced reunification of 6 minor children exposed to domestic violence and abuse with an active injunction in place, would not allow testimony from witnesses including counselors, social workers, family members. Would not allow the children to testify even though they requested to. Denied motions before they were heard regarding incompetence of the therapist “Rosie Harkness” who I later discovered is a convicted felon with a conviction of domestic battery, charges of child abuse, and a 14 year restraining order against her by her own children. Allowed all parties, including witnesses to sit in the whole hearing instead of making them wait for their testimony outside the courtroom. Made witnesses wait outside the court until they were called to testify and then did not allow them to testify. Placed orders that violate the injunction. Listened to testimony from Rosie Harkness falsely accusing the mother of filing 9 false reports of abuse to DCF, when the mother did not file any of the reports and they were all filed by different mandatory reporters (parents of the children’s friends, gu Would not allow children to testify. When one child did testify it was off the record for 45 minutes. When a motion was filed by the Gaurdian Ad Litem to remove custody from the father due to abuse, the judge spent the time in court listening to the testimony of the court therapist disputing who filed reports to DCF instead of the information filed in the report regarding the safety of the children. The judge continued to listen to the court therapist after multiple complaints of bias and would not allow testimony from many witnesses. The judge denied motions without hearing evidence. The judge had private meetings with attorneys before hearings were held off camera. The judge allowed the court therapist to sit in and listen to testimony of other witnesses when she was listed as a witness.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Leon"
-      },
-      {
-        "comment_text": "Concerns have been raised regarding the handling of allegations of child abuse Specifically, despite a report made by a mental health provider concerning suspected abuse, no emergency hearing was scheduled following the report. Additional concerns relate to this judge's apparent reliance on hearsay testimony during proceedings. It is alleged that significant decisions affecting custody and related matters were made based on statements that were not subject to direct testimony or cross-examination. The handling of these matters including the combination of delayed judicial response to abuse allegations and reliance on hearsay evidence undermine confidence in the fairness and thoroughness of this judge's process, particularly given the seriousness of the concerns raised regarding child safety.",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
         "court_or_county": "Leon"
@@ -96,7 +83,7 @@
   "export_dir": "New Final Post and Capcut template/export/anthony_miller",
   "unresolved": [
     "public_family_count_api: no actors returned for state='FL'",
-    "family_count: lookup and previous spec returned 0 — using report_count=4 as fallback"
+    "family_count: lookup and previous spec returned 0 — using report_count=3 as fallback"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
@@ -120,10 +107,6 @@
         "kind": "comment"
       },
       {
-        "body": "Concerns have been raised regarding the handling of allegations of child abuse Specifically, despite a report made by a mental health provider concerning suspected abuse, no emergency hearing was scheduled following the report. Additional concerns relate to this judge's apparent reliance on hearsay testimony during proceedings. It is alleged that significant decisions affecting custody and related matters were made based on statements that were not subject to direct testimony or cross-examination. The handling of these matters including the combination of delayed judicial response to abuse allegations and reliance on hearsay evidence undermine confidence in the fairness and thoroughness of this judge's process, particularly given the seriousness of the concerns raised regarding child safety.",
-        "kind": "comment"
-      },
-      {
         "body": "This judge ruled based on hearsay testimony of a guardian ad litem who was ill informed of the facts of the situation. Florida law does not allow guardian ad litems to give hearsay testimony.",
         "kind": "comment"
       },
@@ -134,13 +117,9 @@
       {
         "body": "I expected the system to save me and my 6 children from 17 years of abuse and domestic violence, knowing how dangerous my ex with a history of law enforcement is, after multiple attempts at my life and finding confessions on his phone of “a man that got tired of waiting for his wife to sleep with another man, so he came up with a plan to drug her and posted an ad on Craigslist…”. The court didn’t save us, they didn’t even protect us. The court found a way to make money off of our desperate pleas to break free from abuse—by keeping us in a place of abuse…and that’s what we became—a story, a number, and a dollar sign.",
         "kind": "family_report"
-      },
-      {
-        "body": "Family court has destroyed my children.",
-        "kind": "family_report"
       }
     ],
-    "quote_page_count": 7
+    "quote_page_count": 5
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

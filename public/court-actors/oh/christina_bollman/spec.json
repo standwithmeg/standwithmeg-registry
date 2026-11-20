@@ -9,7 +9,7 @@
     "role": "Parenting Coordinator",
     "court": "Summit",
     "county": "Summit county",
-    "court_or_county": "Summit",
+    "court_or_county": "Summit county",
     "state": "OH",
     "state_abbr": "OH",
     "mention_count": 2,
@@ -18,8 +18,8 @@
     "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 2,
     "supabase_row_ids": [
-      "ea369790-2769-45f5-be35-61dde6bd24b5",
-      "24c2a32c-4814-4b39-b07d-1cbcef9ce35d"
+      "24c2a32c-4814-4b39-b07d-1cbcef9ce35d",
+      "ea369790-2769-45f5-be35-61dde6bd24b5"
     ],
     "actor_row_id": null,
     "actor_bucket_key": "christina bolman|OH"
@@ -45,7 +45,7 @@
     "_pdf_state_family_count": 316,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6621,
+  "movement_total": 6637,
   "supabase": {
     "report_count": 2,
     "actor_report_count": 2,

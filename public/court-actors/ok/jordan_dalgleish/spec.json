@@ -25,34 +25,34 @@
       "cb5c413d-20d9-438d-99c7-299c10b3b1c6",
       "b4927d24-2ded-4e53-9174-d7b09d55e533",
       "b0002bf0-4dd3-483d-aad7-3e1aa84d4aaa",
-      "d46148c3-fb72-4d4f-b402-42f7cb7e3001",
-      "4f4b4f8c-5a4a-4cd5-9caf-547869fe1487"
+      "4f4b4f8c-5a4a-4cd5-9caf-547869fe1487",
+      "d46148c3-fb72-4d4f-b402-42f7cb7e3001"
     ],
     "actor_row_id": null,
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-pauilms9/New Final Post and Capcut template/export/jordan_dalgleish/image_1080.png",
+    "path": "/tmp/swm-share-pages-_m3syql0/New Final Post and Capcut template/export/jordan_dalgleish/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 120,
-    "total_submissions": 241,
-    "avg_financial_loss": 113410.49,
+    "total_submissions": 242,
+    "avg_financial_loss": 112921.66,
     "avg_months_lost": 27.7,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OK",
-    "state_family_count": 241,
+    "state_family_count": 242,
     "median_financial_loss": 105000,
     "median_burden_sample_size": 127,
     "median_months_lost": 16,
-    "pro_se_pct": 41.5,
-    "pro_se_count": 100,
-    "_pdf_state_family_count": 241,
+    "pro_se_pct": 41.7,
+    "pro_se_count": 101,
+    "_pdf_state_family_count": 242,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6620,
+  "movement_total": 6637,
   "supabase": {
     "report_count": 9,
     "actor_report_count": 9,

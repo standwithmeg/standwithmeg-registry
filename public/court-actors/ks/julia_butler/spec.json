@@ -12,15 +12,14 @@
     "court_or_county": null,
     "state": "KS",
     "state_abbr": "KS",
-    "mention_count": 4,
+    "mention_count": 3,
     "family_count": 3,
     "public_family_count": 3,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 4,
+    "actor_report_count": 3,
     "supabase_row_ids": [
       "2f13179a-351a-40d6-b62d-688af7614204",
       "773a1649-699c-41a5-93b7-d55fb05aeaf6",
-      "01351a9b-c329-45db-b6a9-a34e29fdd1c6",
       "17c7d1cb-33f8-42d7-b86c-ee1fb982cfd2"
     ],
     "actor_row_id": null,
@@ -32,9 +31,9 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 184,
+    "families_approved": 183,
     "total_submissions": 298,
-    "avg_financial_loss": 118858.78,
+    "avg_financial_loss": 120095.41,
     "avg_months_lost": 30.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "KS",
@@ -47,10 +46,10 @@
     "_pdf_state_family_count": 297,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6621,
+  "movement_total": 6637,
   "supabase": {
-    "report_count": 4,
-    "actor_report_count": 4,
+    "report_count": 3,
+    "actor_report_count": 3,
     "family_count": 3,
     "family_reports": [
       {
@@ -74,22 +73,26 @@
     ],
     "public_comments": [
       {
-        "comment_text": "was a Case Manager: Ignored therapist's recommendations regarding contact with other party. Stated therapist approved of plan in court. resulted in increased health problems, unable to communicate with ex. She gave him legal custody. then She told me if I could do the communications my therapist originally wanted instead of what she placed, she'd reverse her decision, I had this conversation with a 3rd party present, who wrote everything down we agreed on, sent it to her, myself, and my attorney. She doubled down and stated he could have full legal custody at the next hearing. Refused to review my evidence the first meeting, I brought a huge folder. Ignored abuse. She was more worried about getting paid, her contract seemed predatory. It allows her to auto charge your bank account/credit card $500 if the retainer gets too low. $1500 retainer gone in less than 2 months. When you make less than $20k a year, this is impossible to do. She claimed there was no report of trauma or abuse in the divorce papers or the GAL report. It's in the first couple of pages in the report.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": ""
-      },
-      {
         "comment_text": "Said the child wanted more parenting time with dad but in front of the judge recommended dad loose parenting time.",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": ""
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "was a Case Manager: Ignored therapist's recommendations regarding contact with other party. Stated therapist approved of plan in court. resulted in increased health problems, unable to communicate with ex. She gave him legal custody. then She told me if I could do the communications my therapist originally wanted instead of what she placed, she'd reverse her decision, I had this conversation with a 3rd party present, who wrote everything down we agreed on, sent it to her, myself, and my attorney. She doubled down and stated he could have full legal custody at the next hearing. Refused to review my evidence the first meeting, I brought a huge folder. Ignored abuse. She was more worried about getting paid, her contract seemed predatory. It allows her to auto charge your bank account/credit card $500 if the retainer gets too low. $1500 retainer gone in less than 2 months. When you make less than $20k a year, this is impossible to do. She claimed there was no report of trauma or abuse in the divorce papers or the GAL report. It's in the first couple of pages in the report.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "I have submitted over 140 counts of contempt violations to the court orders. Submitted extensive patterns of documented abuse. She has received therapy reports in which refer that father needs to attend batter’s intervention program. Still no enforcement. She has failed to report and or enforce. Still waiting on a response from December.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/julia_butler",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='KS'"
+    "public_family_count_api: no actors returned for state='KS'",
+    "pdf_public_actor: no 'Julia Butler-case manager' in cache for KS"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
@@ -109,11 +112,15 @@
   "render": {
     "selected_quotes": [
       {
+        "body": "Said the child wanted more parenting time with dad but in front of the judge recommended dad loose parenting time.",
+        "kind": "comment"
+      },
+      {
         "body": "was a Case Manager: Ignored therapist's recommendations regarding contact with other party. Stated therapist approved of plan in court. resulted in increased health problems, unable to communicate with ex. She gave him legal custody. then She told me if I could do the communications my therapist originally wanted instead of what she placed, she'd reverse her decision, I had this conversation with a 3rd party present, who wrote everything down we agreed on, sent it to her, myself, and my attorney. She doubled down and stated he could have full legal custody at the next hearing. Refused to review my evidence the first meeting, I brought a huge folder. Ignored abuse. She was more worried about getting paid, her contract seemed predatory. It allows her to auto charge your bank account/credit card $500 if the retainer gets too low. $1500 retainer gone in less than 2 months. When you make less than $20k a year, this is impossible to do. She claimed there was no report of trauma or abuse in the divorce papers or the GAL report. It's in the first couple of pages in the report.",
         "kind": "comment"
       },
       {
-        "body": "Said the child wanted more parenting time with dad but in front of the judge recommended dad loose parenting time.",
+        "body": "I have submitted over 140 counts of contempt violations to the court orders. Submitted extensive patterns of documented abuse. She has received therapy reports in which refer that father needs to attend batter’s intervention program. Still no enforcement. She has failed to report and or enforce. Still waiting on a response from December.",
         "kind": "comment"
       },
       {
@@ -129,7 +136,7 @@
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 5
+    "quote_page_count": 7
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

@@ -9,7 +9,7 @@
     "role": "Judge",
     "court": "Providence",
     "county": "Providence",
-    "court_or_county": "Providence",
+    "court_or_county": "County not listed",
     "state": "RI",
     "state_abbr": "RI",
     "mention_count": 4,
@@ -18,10 +18,10 @@
     "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 4,
     "supabase_row_ids": [
-      "72d65316-64d5-465d-96c7-c3ea2ec1e86a",
-      "48ace520-fdaa-49e2-9ab5-068b317cb32c",
       "85a377df-92a1-429f-a2f0-fb991322c9b4",
-      "dc24e9d1-06ea-43ec-b3ad-4f9fb587a257"
+      "dc24e9d1-06ea-43ec-b3ad-4f9fb587a257",
+      "48ace520-fdaa-49e2-9ab5-068b317cb32c",
+      "72d65316-64d5-465d-96c7-c3ea2ec1e86a"
     ],
     "actor_row_id": null,
     "actor_bucket_key": "richard merola|RI"
@@ -47,7 +47,7 @@
     "_pdf_state_family_count": 21,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6621,
+  "movement_total": 6637,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,

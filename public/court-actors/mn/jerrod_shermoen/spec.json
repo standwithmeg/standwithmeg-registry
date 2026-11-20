@@ -9,7 +9,7 @@
     "role": "Judge",
     "court": "Itasca",
     "county": "Koochiching county",
-    "court_or_county": "Itasca",
+    "court_or_county": "Ninth district",
     "state": "MN",
     "state_abbr": "MN",
     "mention_count": 3,
@@ -18,9 +18,9 @@
     "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 3,
     "supabase_row_ids": [
+      "ac0ba84f-a9a8-4e1e-8db0-021c96337c3b",
       "32010b3a-5be4-477e-a8f8-140281051546",
-      "671271cc-3ac4-4627-9b4c-2e66cc36ba39",
-      "ac0ba84f-a9a8-4e1e-8db0-021c96337c3b"
+      "671271cc-3ac4-4627-9b4c-2e66cc36ba39"
     ],
     "actor_row_id": null,
     "actor_bucket_key": "jerod shermoen|MN"
@@ -46,7 +46,7 @@
     "_pdf_state_family_count": 88,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6621,
+  "movement_total": 6637,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -75,20 +75,24 @@
       {
         "comment_text": "Filed an ex parte to remove my children and he had to be removed for biased decisions because he was working with his brother on my case against me",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Ninth district"
+        "source": "court_actors.notes"
       },
       {
         "comment_text": "Ignored evidence, proceeded without due process",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Itasca"
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Is allowing cps to continue to the witch hunt even after a negative hair follicle test",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/jerrod_shermoen",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='MN'"
+    "public_family_count_api: no actors returned for state='MN'",
+    "pdf_public_actor: no 'Jerrod Shermone' in cache for MN"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
@@ -113,6 +117,10 @@
       },
       {
         "body": "Ignored evidence, proceeded without due process",
+        "kind": "comment"
+      },
+      {
+        "body": "Is allowing cps to continue to the witch hunt even after a negative hair follicle test",
         "kind": "comment"
       },
       {

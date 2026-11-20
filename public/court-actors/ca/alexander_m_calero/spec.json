@@ -26,27 +26,27 @@
     "actor_bucket_key": "alexander calero|CA"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-pauilms9/New Final Post and Capcut template/export/alexander_m_calero/image_1080.png",
+    "path": "/tmp/swm-share-pages-_m3syql0/New Final Post and Capcut template/export/alexander_m_calero/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 356,
-    "total_submissions": 540,
-    "avg_financial_loss": 261239.82,
+    "total_submissions": 541,
+    "avg_financial_loss": 260712.06,
     "avg_months_lost": 33.7,
     "_source_table": "movement_stats_by_state",
     "_match_value": "CA",
-    "state_family_count": 540,
+    "state_family_count": 541,
     "median_financial_loss": 228400,
     "median_burden_sample_size": 238,
     "median_months_lost": 20,
-    "pro_se_pct": 58.9,
-    "pro_se_count": 318,
-    "_pdf_state_family_count": 540,
+    "pro_se_pct": 59.0,
+    "pro_se_count": 319,
+    "_pdf_state_family_count": 541,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6620,
+  "movement_total": 6637,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,

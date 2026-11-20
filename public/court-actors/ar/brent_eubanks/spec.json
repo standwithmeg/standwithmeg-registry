@@ -9,7 +9,7 @@
     "role": "Judge",
     "court": "17th division/ Pulaski",
     "county": "Pulaski",
-    "court_or_county": "17th division/ Pulaski",
+    "court_or_county": "Pulaski",
     "state": "AR",
     "state_abbr": "AR",
     "mention_count": 0,
@@ -42,7 +42,7 @@
     "_pdf_state_family_count": 86,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6620,
+  "movement_total": 6637,
   "supabase": {
     "report_count": 0,
     "actor_report_count": 0,

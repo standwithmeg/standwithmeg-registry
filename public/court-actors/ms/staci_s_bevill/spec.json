@@ -31,21 +31,21 @@
   },
   "state_stats": {
     "families_approved": 41,
-    "total_submissions": 73,
-    "avg_financial_loss": 129355.98,
-    "avg_months_lost": 35.7,
+    "total_submissions": 76,
+    "avg_financial_loss": 123901.24,
+    "avg_months_lost": 36.2,
     "_source_table": "movement_stats_by_state",
     "_match_value": "MS",
-    "state_family_count": 73,
-    "median_financial_loss": 36175,
-    "median_burden_sample_size": 28,
+    "state_family_count": 76,
+    "median_financial_loss": 34000,
+    "median_burden_sample_size": 29,
     "median_months_lost": 16,
-    "pro_se_pct": 45.2,
+    "pro_se_pct": 43.4,
     "pro_se_count": 33,
-    "_pdf_state_family_count": 73,
+    "_pdf_state_family_count": 76,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6621,
+  "movement_total": 6637,
   "supabase": {
     "report_count": 2,
     "actor_report_count": 2,
@@ -68,20 +68,19 @@
       {
         "comment_text": "Fell asleep at bench, gave non compliant convicted felon my child’s drug test, no service plan until permanency, multiple case workers, cps removed kids and gained custody off just mothers failed hair follicle, no imminent danger, knows I did not have a service plan until permancy hearing 5/12/26 when second case worker brought in plan at court 5/12 asked for continuance granted still proceeded at court, kids have had no therapy and family therapy has not been assessed either as required",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Lee"
+        "source": "court_actors.notes"
       },
       {
         "comment_text": "Judge bevil was very distant and distracted on her computer during adjudication.",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Lee"
+        "source": "court_actors.notes"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/staci_s_bevill",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='MS'"
+    "public_family_count_api: no actors returned for state='MS'",
+    "pdf_public_actor: no 'Stacy Beville' in cache for MS"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",

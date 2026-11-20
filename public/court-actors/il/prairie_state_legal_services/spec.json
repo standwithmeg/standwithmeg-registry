@@ -33,27 +33,27 @@
     ]
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-pauilms9/New Final Post and Capcut template/export/prairie_state_legal_services/image_1080.png",
+    "path": "/tmp/swm-share-pages-_m3syql0/New Final Post and Capcut template/export/prairie_state_legal_services/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 100,
-    "total_submissions": 189,
-    "avg_financial_loss": 202998.93,
+    "total_submissions": 190,
+    "avg_financial_loss": 201852.04,
     "avg_months_lost": 27.0,
     "_source_table": "movement_stats_by_state",
     "_match_value": "IL",
-    "state_family_count": 189,
+    "state_family_count": 190,
     "median_financial_loss": 126750,
     "median_burden_sample_size": 115,
     "median_months_lost": 15,
-    "pro_se_pct": 48.1,
+    "pro_se_pct": 47.9,
     "pro_se_count": 91,
-    "_pdf_state_family_count": 189,
+    "_pdf_state_family_count": 190,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6620,
+  "movement_total": 6637,
   "supabase": {
     "report_count": 2,
     "actor_report_count": 2,

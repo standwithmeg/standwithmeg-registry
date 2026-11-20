@@ -6,10 +6,10 @@
     "title": "Dr.",
     "first_name": "Stacey",
     "last_name": "Hoffman",
-    "role": "Psychological Evaluator",
+    "role": "Reunification Therapist",
     "court": "Loudoun",
     "county": "Loudoun",
-    "court_or_county": "Loudoun",
+    "court_or_county": "Fairfax",
     "state": "VA",
     "state_abbr": "VA",
     "mention_count": 2,
@@ -18,8 +18,8 @@
     "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 2,
     "supabase_row_ids": [
-      "edb32802-cece-4417-b232-d741275610cb",
-      "94923f19-a9cd-4bba-987c-9c5ace0efd78"
+      "94923f19-a9cd-4bba-987c-9c5ace0efd78",
+      "edb32802-cece-4417-b232-d741275610cb"
     ],
     "actor_row_id": null,
     "actor_bucket_key": "stacey hofman|VA"
@@ -45,7 +45,7 @@
     "_pdf_state_family_count": 158,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6621,
+  "movement_total": 6637,
   "supabase": {
     "report_count": 2,
     "actor_report_count": 2,
@@ -62,14 +62,14 @@
       {
         "comment_text": "Board complaint. Nothing yet but letter reprimand. Under review.",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": ""
+        "source": "court_actors.notes"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/dr_stacey_hoffmann",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='VA'"
+    "public_family_count_api: no actors returned for state='VA'",
+    "pdf_public_actor: no 'Dr. Stacey Hoffman' in cache for VA"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",

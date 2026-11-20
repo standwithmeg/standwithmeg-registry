@@ -27,9 +27,9 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 184,
+    "families_approved": 183,
     "total_submissions": 298,
-    "avg_financial_loss": 118858.78,
+    "avg_financial_loss": 120095.41,
     "avg_months_lost": 30.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "KS",
@@ -42,44 +42,20 @@
     "_pdf_state_family_count": 297,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6621,
+  "movement_total": 6637,
   "supabase": {
     "report_count": 0,
     "actor_report_count": 0,
     "family_count": 0,
     "family_reports": [],
-    "public_comments": [
-      {
-        "comment_text": "Bud Dale is an AFCC deceptive professional that has ruined children's lives across the country in numerous states. He ignores abuse evidence, psychiatric drugging by the father, physical abuse (strangulation) and focuses on painting the mother as crazy in any way he can. If he can't find a diagnosis, he asks references about speculation and then writes in the report that he \"discussed the diagnosis\" with a honest therapist who said no, she saw no signs, and then tries to entrap them in acting as if they contemplated the diagnosis when they did not. He is deceptive, dangerous and a criminal.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Dallas County"
-      },
-      {
-        "comment_text": "I hired him initially to be my attorney for divorce and child custody. I want to try to get my money back from Bud Dale. He collected the retainer and never did anything. I even had to submit ALL paperwork twice because he lost it! Had to hire other counsel because he disappeared and kept my $. He never filed the paperwork he was hired to and missed crucial deadlines which harmed my child. After creating a much bigger mess. He is not who he portrays on his website is not what he practices. He is a fraud. He never provided itemized billing for my retainer he took and then disappeared.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Shawnee"
-      },
-      {
-        "comment_text": "Was replaced after refusing to allow one party to submit evidence, refused to allow my attorney to submit a significant amount of evidence. Was quicky replaced from being on our case. Refused to allow myself or my attorney to submit evidence to him. He refused it, after learning he met with me as counsel 9 months prior. He then retaliated after my attorney exposed his behavior on the record. He was then replaced the next day.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Shawnee"
-      },
-      {
-        "comment_text": "Makes personal opinion to form decision making. Does not hold parties to the court order/allows unilateral decision making. Creates hostile environment; cussing. Challenges the party as if on trial. Mocked the capabilities of my child’s spelling ability. Attempted to discourage a legitimate report being made on a crime as that would make coparenting “more difficult”.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": ""
-      }
-    ]
+    "public_comments": []
   },
   "export_dir": "New Final Post and Capcut template/export/milfred_bud_dale",
   "unresolved": [
     "public_family_count_api: no actors returned for state='KS'",
     "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
+    "public_comments: no merged comments or raw notes available",
+    "pdf_public_actor: no 'Mildred Dale' in cache for KS"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
@@ -97,25 +73,8 @@
     "draft_only": true
   },
   "render": {
-    "selected_quotes": [
-      {
-        "body": "Bud Dale is an AFCC deceptive professional that has ruined children's lives across the country in numerous states. He ignores abuse evidence, psychiatric drugging by the father, physical abuse (strangulation) and focuses on painting the mother as crazy in any way he can. If he can't find a diagnosis, he asks references about speculation and then writes in the report that he \"discussed the diagnosis\" with a honest therapist who said no, she saw no signs, and then tries to entrap them in acting as if they contemplated the diagnosis when they did not. He is deceptive, dangerous and a criminal.",
-        "kind": "comment"
-      },
-      {
-        "body": "I hired him initially to be my attorney for divorce and child custody. I want to try to get my money back from Bud Dale. He collected the retainer and never did anything. I even had to submit ALL paperwork twice because he lost it! Had to hire other counsel because he disappeared and kept my $. He never filed the paperwork he was hired to and missed crucial deadlines which harmed my child. After creating a much bigger mess. He is not who he portrays on his website is not what he practices. He is a fraud. He never provided itemized billing for my retainer he took and then disappeared.",
-        "kind": "comment"
-      },
-      {
-        "body": "Was replaced after refusing to allow one party to submit evidence, refused to allow my attorney to submit a significant amount of evidence. Was quicky replaced from being on our case. Refused to allow myself or my attorney to submit evidence to him. He refused it, after learning he met with me as counsel 9 months prior. He then retaliated after my attorney exposed his behavior on the record. He was then replaced the next day.",
-        "kind": "comment"
-      },
-      {
-        "body": "Makes personal opinion to form decision making. Does not hold parties to the court order/allows unilateral decision making. Creates hostile environment; cussing. Challenges the party as if on trial. Mocked the capabilities of my child’s spelling ability. Attempted to discourage a legitimate report being made on a crime as that would make coparenting “more difficult”.",
-        "kind": "comment"
-      }
-    ],
-    "quote_page_count": 6
+    "selected_quotes": [],
+    "quote_page_count": 1
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

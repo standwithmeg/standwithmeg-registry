@@ -18,9 +18,9 @@
     "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 3,
     "supabase_row_ids": [
+      "0be0bc30-ab07-48c4-a382-e10c0f4a96f2",
       "35e55688-be8c-4162-9fc8-09fe0329c604",
-      "835b1ec2-ca4e-4a3d-9e6e-31eb2a31ac17",
-      "0be0bc30-ab07-48c4-a382-e10c0f4a96f2"
+      "835b1ec2-ca4e-4a3d-9e6e-31eb2a31ac17"
     ],
     "actor_row_id": null,
     "actor_bucket_key": "todd prevet|NH"
@@ -46,7 +46,7 @@
     "_pdf_state_family_count": 43,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6621,
+  "movement_total": 6637,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,

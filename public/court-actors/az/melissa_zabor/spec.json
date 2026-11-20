@@ -9,7 +9,7 @@
     "role": "Judge",
     "court": "Superior Court",
     "county": "Maricopa County",
-    "court_or_county": "Superior Court",
+    "court_or_county": "Maricopa Family Court",
     "state": "AZ",
     "state_abbr": "AZ",
     "mention_count": 1,
@@ -44,7 +44,7 @@
     "_pdf_state_family_count": 100,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6620,
+  "movement_total": 6637,
   "supabase": {
     "report_count": 1,
     "actor_report_count": 1,
