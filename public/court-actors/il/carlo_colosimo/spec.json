@@ -12,12 +12,13 @@
     "court_or_county": "Kendall",
     "state": "Illinois",
     "state_abbr": "IL",
-    "mention_count": 3,
-    "family_count": 3,
-    "public_family_count": 3,
+    "mention_count": 4,
+    "family_count": 4,
+    "public_family_count": 4,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 3,
+    "actor_report_count": 4,
     "supabase_row_ids": [
+      "3a7c666d-0d5e-4a57-af6e-f2f17c532352",
       "f5e550d1-b5f9-4460-983a-38c00fb7786f",
       "ea46d285-dc98-4fc1-a0ca-32289bcbb840",
       "5f1e75da-17e9-47ef-89a3-e651ece3bf6e"
@@ -26,31 +27,31 @@
     "actor_bucket_key": "carlo colosimo|IL"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-_m3syql0/New Final Post and Capcut template/export/carlo_colosimo/image_1080.png",
+    "path": "/tmp/swm-share-pages-hhicnwuj/New Final Post and Capcut template/export/carlo_colosimo/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 100,
+    "families_approved": 99,
     "total_submissions": 190,
-    "avg_financial_loss": 201852.04,
-    "avg_months_lost": 27.0,
+    "avg_financial_loss": 201484.53,
+    "avg_months_lost": 26.7,
     "_source_table": "movement_stats_by_state",
     "_match_value": "IL",
     "state_family_count": 190,
-    "median_financial_loss": 126750,
-    "median_burden_sample_size": 115,
+    "median_financial_loss": 126875,
+    "median_burden_sample_size": 114,
     "median_months_lost": 15,
     "pro_se_pct": 47.9,
     "pro_se_count": 91,
     "_pdf_state_family_count": 190,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6637,
+  "movement_total": 6653,
   "supabase": {
-    "report_count": 3,
-    "actor_report_count": 3,
-    "family_count": 3,
+    "report_count": 4,
+    "actor_report_count": 4,
+    "family_count": 4,
     "family_reports": [
       {
         "body": "My daughters grades dropped at school significantky and her self confidence wiped out and has missed so much school from the stress.",

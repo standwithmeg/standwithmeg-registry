@@ -29,27 +29,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-_m3syql0/New Final Post and Capcut template/export/kelly_stephen/image_1080.png",
+    "path": "/tmp/swm-share-pages-hhicnwuj/New Final Post and Capcut template/export/kelly_stephen/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 100,
+    "families_approved": 99,
     "total_submissions": 190,
-    "avg_financial_loss": 201852.04,
-    "avg_months_lost": 27.0,
+    "avg_financial_loss": 201484.53,
+    "avg_months_lost": 26.7,
     "_source_table": "movement_stats_by_state",
     "_match_value": "IL",
     "state_family_count": 190,
-    "median_financial_loss": 126750,
-    "median_burden_sample_size": 115,
+    "median_financial_loss": 126875,
+    "median_burden_sample_size": 114,
     "median_months_lost": 15,
     "pro_se_pct": 47.9,
     "pro_se_count": 91,
     "_pdf_state_family_count": 190,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6637,
+  "movement_total": 6653,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,

@@ -30,21 +30,21 @@
   },
   "state_stats": {
     "families_approved": 144,
-    "total_submissions": 308,
-    "avg_financial_loss": 104457.58,
-    "avg_months_lost": 37.3,
+    "total_submissions": 310,
+    "avg_financial_loss": 104080.81,
+    "avg_months_lost": 37.2,
     "_source_table": "movement_stats_by_state",
     "_match_value": "MO",
-    "state_family_count": 308,
-    "median_financial_loss": 78650,
-    "median_burden_sample_size": 143,
+    "state_family_count": 310,
+    "median_financial_loss": 77650,
+    "median_burden_sample_size": 145,
     "median_months_lost": 21,
     "pro_se_pct": 51.3,
-    "pro_se_count": 158,
-    "_pdf_state_family_count": 308,
+    "pro_se_count": 159,
+    "_pdf_state_family_count": 310,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6637,
+  "movement_total": 6653,
   "supabase": {
     "report_count": 1,
     "actor_report_count": 1,
@@ -61,14 +61,14 @@
       {
         "comment_text": "This GAL- stated before Ella was placed with her father that she was not ready to see placement yet because her father had been lying before his drug test and telling them that he was clean and then he would test positive for THC or alcohol so he was testing dirty for piss test and they were allowing him to even though during our FST meeting, she stated that Willie was not being honest about being dirty they allowed the placement anyway this was before the custody order was issued. She was placed in temporary custody of her grandma and grandpa she’d never met for a year in the state of Missouri and then they placed her with her father until the custody court case was underway in Iowa.",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Grundy county gal"
+        "source": "court_actors.notes"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/janet_larison",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='MO'"
+    "public_family_count_api: no actors returned for state='MO'",
+    "pdf_public_actor: no 'Janet larrison' in cache for MO"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",

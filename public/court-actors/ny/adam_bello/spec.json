@@ -28,27 +28,27 @@
     "actor_bucket_key": "adam belo|NY"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-_m3syql0/New Final Post and Capcut template/export/adam_bello/image_1080.png",
+    "path": "/tmp/swm-share-pages-hhicnwuj/New Final Post and Capcut template/export/adam_bello/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 131,
-    "total_submissions": 200,
-    "avg_financial_loss": 199102.53,
-    "avg_months_lost": 29.2,
+    "total_submissions": 201,
+    "avg_financial_loss": 203399.77,
+    "avg_months_lost": 29.5,
     "_source_table": "movement_stats_by_state",
     "_match_value": "NY",
-    "state_family_count": 200,
-    "median_financial_loss": 181525,
-    "median_burden_sample_size": 72,
+    "state_family_count": 201,
+    "median_financial_loss": 188050,
+    "median_burden_sample_size": 73,
     "median_months_lost": 18,
-    "pro_se_pct": 40.0,
-    "pro_se_count": 80,
-    "_pdf_state_family_count": 200,
+    "pro_se_pct": 40.3,
+    "pro_se_count": 81,
+    "_pdf_state_family_count": 201,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6637,
+  "movement_total": 6653,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,

@@ -30,27 +30,27 @@
     "actor_bucket_key": "teri campesta|LA"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-_m3syql0/New Final Post and Capcut template/export/terri_campesta/image_1080.png",
+    "path": "/tmp/swm-share-pages-hhicnwuj/New Final Post and Capcut template/export/terri_campesta/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 45,
-    "total_submissions": 69,
-    "avg_financial_loss": 176312.0,
-    "avg_months_lost": 37.3,
+    "total_submissions": 70,
+    "avg_financial_loss": 175890.84,
+    "avg_months_lost": 37.1,
     "_source_table": "movement_stats_by_state",
     "_match_value": "LA",
-    "state_family_count": 69,
+    "state_family_count": 70,
     "median_financial_loss": 193450,
     "median_burden_sample_size": 34,
     "median_months_lost": 24,
-    "pro_se_pct": 52.2,
-    "pro_se_count": 36,
-    "_pdf_state_family_count": 69,
+    "pro_se_pct": 52.9,
+    "pro_se_count": 37,
+    "_pdf_state_family_count": 70,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6637,
+  "movement_total": 6653,
   "supabase": {
     "report_count": 7,
     "actor_report_count": 7,
