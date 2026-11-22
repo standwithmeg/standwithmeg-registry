@@ -1,0 +1,124 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "nanci_house",
+    "display_name": "Nanci House",
+    "title": "",
+    "first_name": "Nanci",
+    "last_name": "House",
+    "role": "GAL / Child Representative",
+    "court": "Family court, clark county",
+    "county": "Family court, clark county",
+    "court_or_county": "Family court, clark county",
+    "state": "KY",
+    "state_abbr": "KY",
+    "mention_count": 3,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "2be7bf20-f4d8-4bb5-8d79-2bc72fd0bda7",
+      "35921508-097e-4fe5-ae11-cc5f8714503f",
+      "88564cea-be08-45b1-997e-823a548bf6b5"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "nanci house|KY"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 71,
+    "total_submissions": 109,
+    "avg_financial_loss": 137875.44,
+    "avg_months_lost": 32.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "KY",
+    "state_family_count": 109,
+    "median_financial_loss": 92000,
+    "median_burden_sample_size": 46,
+    "median_months_lost": 14,
+    "pro_se_pct": 43.1,
+    "pro_se_count": 47,
+    "_pdf_state_family_count": 109,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6675,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 3,
+    "family_reports": [
+      {
+        "body": "The family court system has destroyed my and my daughter’s life as we knew it.",
+        "state": "KY",
+        "county": "Clark County",
+        "row_id": "75c75e63-ce64-4180-aff8-bc0b352a652f"
+      },
+      {
+        "body": "The system is broken, it’s destroyed 4 children’s lives",
+        "state": "KY",
+        "county": "Clark",
+        "row_id": "f47207a8-f60e-46be-a198-be8c693b27b4"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Got joint custody and then just fell off, continued to charge me attorneys fees then withdrew. Believe she wouldn’t speak up or out due to conflict of interest not disclosed",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Clark"
+      },
+      {
+        "comment_text": "Friends with jugde. Will not challenge judge.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Clark County"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/nanci_house",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='KY'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ky/nanci_house/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Got joint custody and then just fell off, continued to charge me attorneys fees then withdrew. Believe she wouldn’t speak up or out due to conflict of interest not disclosed",
+        "kind": "comment"
+      },
+      {
+        "body": "Friends with jugde. Will not challenge judge.",
+        "kind": "comment"
+      },
+      {
+        "body": "The family court system has destroyed my and my daughter’s life as we knew it.",
+        "kind": "family_report"
+      },
+      {
+        "body": "The system is broken, it’s destroyed 4 children’s lives",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

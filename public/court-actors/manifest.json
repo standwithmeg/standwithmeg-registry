@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T11:18:17.796758+00:00",
+  "generated_at": "2026-11-22T11:12:32.312712+00:00",
   "actors": [
     {
       "slug": "abbey_johnston",
@@ -1944,6 +1944,15 @@
       "actor_bucket_key": null,
       "photo_url": "/court-actors/ky/kimberly_walson/image_1080.png",
       "share_url": "/court-actors/ky/kimberly_walson/share.html"
+    },
+    {
+      "slug": "nanci_house",
+      "state_abbr": "KY",
+      "display_name": "Nanci House",
+      "canonical_name": "Nanci House",
+      "actor_bucket_key": "nanci house|KY",
+      "photo_url": null,
+      "share_url": "/court-actors/ky/nanci_house/share.html"
     },
     {
       "slug": "dawn_amacker",
