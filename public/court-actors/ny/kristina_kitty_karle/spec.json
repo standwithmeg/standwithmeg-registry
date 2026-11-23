@@ -26,27 +26,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-hhicnwuj/New Final Post and Capcut template/export/kristina_kitty_karle/image_1080.png",
+    "path": "/tmp/swm-share-pages-4bxinjbd/New Final Post and Capcut template/export/kristina_kitty_karle/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 131,
-    "total_submissions": 201,
-    "avg_financial_loss": 203399.77,
-    "avg_months_lost": 29.5,
+    "total_submissions": 202,
+    "avg_financial_loss": 202496.49,
+    "avg_months_lost": 29.6,
     "_source_table": "movement_stats_by_state",
     "_match_value": "NY",
-    "state_family_count": 201,
-    "median_financial_loss": 188050,
-    "median_burden_sample_size": 73,
+    "state_family_count": 202,
+    "median_financial_loss": 181525,
+    "median_burden_sample_size": 74,
     "median_months_lost": 18,
-    "pro_se_pct": 40.3,
+    "pro_se_pct": 40.1,
     "pro_se_count": 81,
-    "_pdf_state_family_count": 201,
+    "_pdf_state_family_count": 202,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6653,
+  "movement_total": 6709,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,

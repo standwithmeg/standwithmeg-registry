@@ -28,27 +28,27 @@
     "actor_bucket_key": "ryane seyba|FL"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-cp3hqnjq/New Final Post and Capcut template/export/ryanne_seyba/image_1080.png",
+    "path": "/tmp/swm-share-pages-4bxinjbd/New Final Post and Capcut template/export/ryanne_seyba/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 234,
+    "families_approved": 232,
     "total_submissions": 358,
-    "avg_financial_loss": 187202.91,
-    "avg_months_lost": 27.1,
+    "avg_financial_loss": 187257.59,
+    "avg_months_lost": 27.2,
     "_source_table": "movement_stats_by_state",
     "_match_value": "FL",
     "state_family_count": 358,
-    "median_financial_loss": 170000,
-    "median_burden_sample_size": 155,
+    "median_financial_loss": 171000,
+    "median_burden_sample_size": 156,
     "median_months_lost": 17,
     "pro_se_pct": 57.5,
     "pro_se_count": 206,
     "_pdf_state_family_count": 358,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6675,
+  "movement_total": 6709,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,

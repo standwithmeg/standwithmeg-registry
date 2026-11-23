@@ -33,22 +33,22 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 102,
-    "total_submissions": 189,
-    "avg_financial_loss": 86463.98,
-    "avg_months_lost": 32.4,
+    "families_approved": 101,
+    "total_submissions": 190,
+    "avg_financial_loss": 86447.23,
+    "avg_months_lost": 33.1,
     "_source_table": "movement_stats_by_state",
     "_match_value": "AL",
-    "state_family_count": 189,
+    "state_family_count": 190,
     "median_financial_loss": 51000,
-    "median_burden_sample_size": 83,
-    "median_months_lost": 13,
-    "pro_se_pct": 39.7,
-    "pro_se_count": 75,
-    "_pdf_state_family_count": 189,
+    "median_burden_sample_size": 85,
+    "median_months_lost": 14,
+    "pro_se_pct": 38.9,
+    "pro_se_count": 74,
+    "_pdf_state_family_count": 190,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6674,
+  "movement_total": 6709,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
@@ -69,21 +69,22 @@
     ],
     "public_comments": [
       {
-        "comment_text": "Did not even review the psychologist’s medical report that cleared me of the false allegations of mental illness. The judge told the attorneys in chambers that she intended to side with DHR before giving full consideration to the evidence. I was denied due process thus allowing the medical kidnapping of my newborn grandson at North Baldwin Infirmary Hospital.",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
         "comment_text": "Gave joint custody to a man who was not the father or had ever been married to my daughter. He was arrested for selling drugs…. He was violent with my daughter in front of child. Police were called. This Judge awarded SIL custody at a bogus default hearing. The ruling was finally set aside but granddaughter remain with SIL until trial which was two years later.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Baldwin"
+      },
+      {
+        "comment_text": "Did not even review the psychologist’s medical report that cleared me of the false allegations of mental illness. The judge told the attorneys in chambers that she intended to side with DHR before giving full consideration to the evidence. I was denied due process thus allowing the medical kidnapping of my newborn grandson at North Baldwin Infirmary Hospital.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Baldwin"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/carmen_bosch",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='AL'",
-    "pdf_public_actor: no 'Judge Carmen Bosche' in cache for AL"
+    "public_family_count_api: no actors returned for state='AL'"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
@@ -103,11 +104,11 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Did not even review the psychologist’s medical report that cleared me of the false allegations of mental illness. The judge told the attorneys in chambers that she intended to side with DHR before giving full consideration to the evidence. I was denied due process thus allowing the medical kidnapping of my newborn grandson at North Baldwin Infirmary Hospital.",
+        "body": "Gave joint custody to a man who was not the father or had ever been married to my daughter. He was arrested for selling drugs…. He was violent with my daughter in front of child. Police were called. This Judge awarded SIL custody at a bogus default hearing. The ruling was finally set aside but granddaughter remain with SIL until trial which was two years later.",
         "kind": "comment"
       },
       {
-        "body": "Gave joint custody to a man who was not the father or had ever been married to my daughter. He was arrested for selling drugs…. He was violent with my daughter in front of child. Police were called. This Judge awarded SIL custody at a bogus default hearing. The ruling was finally set aside but granddaughter remain with SIL until trial which was two years later.",
+        "body": "Did not even review the psychologist’s medical report that cleared me of the false allegations of mental illness. The judge told the attorneys in chambers that she intended to side with DHR before giving full consideration to the evidence. I was denied due process thus allowing the medical kidnapping of my newborn grandson at North Baldwin Infirmary Hospital.",
         "kind": "comment"
       },
       {

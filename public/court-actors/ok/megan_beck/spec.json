@@ -27,27 +27,27 @@
     "actor_bucket_key": "megan beck|OK"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-cp3hqnjq/New Final Post and Capcut template/export/megan_beck/image_1080.png",
+    "path": "/tmp/swm-share-pages-4bxinjbd/New Final Post and Capcut template/export/megan_beck/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 120,
-    "total_submissions": 244,
-    "avg_financial_loss": 123409.5,
+    "total_submissions": 245,
+    "avg_financial_loss": 122884.36,
     "avg_months_lost": 28.6,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OK",
-    "state_family_count": 244,
+    "state_family_count": 245,
     "median_financial_loss": 112500,
     "median_burden_sample_size": 128,
     "median_months_lost": 16,
-    "pro_se_pct": 41.4,
+    "pro_se_pct": 41.2,
     "pro_se_count": 101,
-    "_pdf_state_family_count": 244,
+    "_pdf_state_family_count": 245,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6675,
+  "movement_total": 6709,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,

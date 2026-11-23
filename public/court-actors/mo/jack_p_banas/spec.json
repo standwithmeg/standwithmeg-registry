@@ -26,27 +26,27 @@
     "actor_bucket_key": "jack banas|MO"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-cp3hqnjq/New Final Post and Capcut template/export/jack_p_banas/image_1080.png",
+    "path": "/tmp/swm-share-pages-4bxinjbd/New Final Post and Capcut template/export/jack_p_banas/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 144,
-    "total_submissions": 314,
-    "avg_financial_loss": 103963.72,
+    "total_submissions": 316,
+    "avg_financial_loss": 104596.1,
     "avg_months_lost": 37.3,
     "_source_table": "movement_stats_by_state",
     "_match_value": "MO",
-    "state_family_count": 314,
-    "median_financial_loss": 80885,
-    "median_burden_sample_size": 148,
+    "state_family_count": 316,
+    "median_financial_loss": 83120,
+    "median_burden_sample_size": 151,
     "median_months_lost": 21,
-    "pro_se_pct": 51.0,
-    "pro_se_count": 160,
-    "_pdf_state_family_count": 314,
+    "pro_se_pct": 50.9,
+    "pro_se_count": 161,
+    "_pdf_state_family_count": 316,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6675,
+  "movement_total": 6709,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,

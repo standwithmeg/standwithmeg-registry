@@ -27,14 +27,14 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-_m3syql0/New Final Post and Capcut template/export/lori_shearer/image_1080.png",
+    "path": "/tmp/swm-share-pages-4bxinjbd/New Final Post and Capcut template/export/lori_shearer/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 140,
     "total_submissions": 200,
-    "avg_financial_loss": 173263.13,
+    "avg_financial_loss": 173269.69,
     "avg_months_lost": 39.0,
     "_source_table": "movement_stats_by_state",
     "_match_value": "MI",
@@ -42,12 +42,12 @@
     "median_financial_loss": 105500,
     "median_burden_sample_size": 86,
     "median_months_lost": 18,
-    "pro_se_pct": 44.0,
-    "pro_se_count": 88,
+    "pro_se_pct": 43.5,
+    "pro_se_count": 87,
     "_pdf_state_family_count": 200,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6637,
+  "movement_total": 6709,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,

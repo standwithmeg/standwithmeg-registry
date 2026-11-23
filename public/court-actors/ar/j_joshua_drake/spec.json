@@ -1,0 +1,79 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "j_joshua_drake",
+    "display_name": "J. Joshua Drake",
+    "title": "",
+    "first_name": "J. Joshua",
+    "last_name": "Drake",
+    "role": "Attorney / GAL / Child Representative",
+    "court": "Garland",
+    "county": "Garland",
+    "court_or_county": "Garland",
+    "state": "AR",
+    "state_abbr": "AR",
+    "mention_count": null,
+    "family_count": 4,
+    "public_family_count": 0,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 4,
+    "supabase_row_ids": null,
+    "actor_row_id": null,
+    "actor_bucket_key": "j joshua drake|AR"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 43,
+    "total_submissions": 90,
+    "avg_financial_loss": 134632.38,
+    "avg_months_lost": 34.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "AR",
+    "state_family_count": 90,
+    "median_financial_loss": 81148,
+    "median_burden_sample_size": 39,
+    "median_months_lost": 20,
+    "pro_se_pct": 38.9,
+    "pro_se_count": 35,
+    "_pdf_state_family_count": 90,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6710,
+  "supabase": {
+    "report_count": 4,
+    "actor_report_count": 4,
+    "family_count": 4,
+    "family_reports": [],
+    "public_comments": []
+  },
+  "export_dir": "New Final Post and Capcut template/export/j_joshua_drake",
+  "unresolved": [
+    "court_actors: no rows match name~'J. Joshua Drake' state='AR'",
+    "public_family_count_api: no actors returned for state='AR'",
+    "family_count: lookup and previous spec returned 0 — using report_count=4 as fallback"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ar/j_joshua_drake/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}
