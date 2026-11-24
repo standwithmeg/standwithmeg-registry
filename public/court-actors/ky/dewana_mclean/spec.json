@@ -13,17 +13,17 @@
     "state": "KY",
     "state_abbr": "KY",
     "mention_count": 6,
-    "family_count": 3,
-    "public_family_count": 3,
+    "family_count": 4,
+    "public_family_count": 4,
     "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 6,
     "supabase_row_ids": [
       "960142ad-0ac4-40d2-9b5a-fbe6d1fcd615",
       "43f7528d-13e2-4171-818d-2e4068421384",
       "7e784810-400d-40b4-9e08-7d06268315e6",
+      "f521e01e-2740-4a81-946f-601f2a83415c",
       "10ac078c-24b4-4056-9cb1-25f276342047",
-      "27c41448-a062-41fb-b3b5-ac3277d96e55",
-      "f521e01e-2740-4a81-946f-601f2a83415c"
+      "27c41448-a062-41fb-b3b5-ac3277d96e55"
     ],
     "actor_row_id": null,
     "actor_bucket_key": "dewana mclean|KY"
@@ -34,26 +34,26 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 70,
-    "total_submissions": 120,
-    "avg_financial_loss": 124662.04,
-    "avg_months_lost": 32.1,
+    "families_approved": 69,
+    "total_submissions": 124,
+    "avg_financial_loss": 120515.89,
+    "avg_months_lost": 31.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "KY",
-    "state_family_count": 120,
-    "median_financial_loss": 86099,
-    "median_burden_sample_size": 49,
+    "state_family_count": 124,
+    "median_financial_loss": 85000,
+    "median_burden_sample_size": 51,
     "median_months_lost": 15,
-    "pro_se_pct": 42.5,
-    "pro_se_count": 51,
-    "_pdf_state_family_count": 120,
+    "pro_se_pct": 41.9,
+    "pro_se_count": 52,
+    "_pdf_state_family_count": 124,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6709,
+  "movement_total": 6731,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
-    "family_count": 3,
+    "family_count": 4,
     "family_reports": [
       {
         "body": "Destroyed my family",
@@ -76,22 +76,31 @@
     ],
     "public_comments": [
       {
-        "comment_text": "Lied in petitions, biased. Didn’t investigate properly, favored mom over dad despite same allegations in both homes.",
+        "comment_text": "Falsifying documents",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Clark"
+        "source": "court_actors.notes"
       },
       {
-        "comment_text": "Biased, didn’t properly investigate Falsifying documents",
+        "comment_text": "Didn’t investigate properly, favored mom over dad despite same allegations in both homes.",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Clark"
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Biased, didn’t properly investigate",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
+      },
+      {
+        "comment_text": "Lied in petitions, biased.",
+        "author": "Anonymous parent",
+        "source": "court_actors.notes"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/dewana_mclean",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='KY'"
+    "public_family_count_api: no actors returned for state='KY'",
+    "pdf_public_actor: no 'Dewanna Mclean' in cache for KY"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
@@ -111,11 +120,19 @@
   "render": {
     "selected_quotes": [
       {
-        "body": "Lied in petitions, biased. Didn’t investigate properly, favored mom over dad despite same allegations in both homes.",
+        "body": "Falsifying documents",
         "kind": "comment"
       },
       {
-        "body": "Biased, didn’t properly investigate Falsifying documents",
+        "body": "Didn’t investigate properly, favored mom over dad despite same allegations in both homes.",
+        "kind": "comment"
+      },
+      {
+        "body": "Biased, didn’t properly investigate",
+        "kind": "comment"
+      },
+      {
+        "body": "Lied in petitions, biased.",
         "kind": "comment"
       },
       {

@@ -27,27 +27,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-_m3syql0/New Final Post and Capcut template/export/manisha_bhatt/image_1080.png",
+    "path": "/tmp/swm-share-pages-e3c4f2r7/New Final Post and Capcut template/export/manisha_bhatt/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 74,
-    "total_submissions": 116,
-    "avg_financial_loss": 213936.67,
-    "avg_months_lost": 24.8,
+    "total_submissions": 117,
+    "avg_financial_loss": 212295.05,
+    "avg_months_lost": 24.5,
     "_source_table": "movement_stats_by_state",
     "_match_value": "MA",
-    "state_family_count": 116,
+    "state_family_count": 117,
     "median_financial_loss": 136300,
     "median_burden_sample_size": 46,
     "median_months_lost": 18,
-    "pro_se_pct": 54.3,
-    "pro_se_count": 63,
-    "_pdf_state_family_count": 116,
+    "pro_se_pct": 54.7,
+    "pro_se_count": 64,
+    "_pdf_state_family_count": 117,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6637,
+  "movement_total": 6731,
   "supabase": {
     "report_count": 4,
     "actor_report_count": 4,

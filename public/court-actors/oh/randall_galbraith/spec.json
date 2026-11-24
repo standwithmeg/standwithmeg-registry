@@ -28,27 +28,27 @@
     "actor_bucket_key": "randal galbraith|OH"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-_m3syql0/New Final Post and Capcut template/export/randall_galbraith/image_1080.png",
+    "path": "/tmp/swm-share-pages-e3c4f2r7/New Final Post and Capcut template/export/randall_galbraith/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 205,
-    "total_submissions": 316,
-    "avg_financial_loss": 100328.09,
-    "avg_months_lost": 32.9,
+    "total_submissions": 317,
+    "avg_financial_loss": 100028.51,
+    "avg_months_lost": 32.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OH",
-    "state_family_count": 316,
-    "median_financial_loss": 73000,
-    "median_burden_sample_size": 157,
+    "state_family_count": 317,
+    "median_financial_loss": 72350,
+    "median_burden_sample_size": 158,
     "median_months_lost": 18,
-    "pro_se_pct": 52.5,
+    "pro_se_pct": 52.4,
     "pro_se_count": 166,
-    "_pdf_state_family_count": 316,
+    "_pdf_state_family_count": 317,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6637,
+  "movement_total": 6731,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,

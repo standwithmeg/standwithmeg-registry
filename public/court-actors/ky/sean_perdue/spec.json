@@ -1,0 +1,124 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "sean_perdue",
+    "display_name": "Sean Perdue",
+    "title": "",
+    "first_name": "Sean",
+    "last_name": "Perdue",
+    "role": "Attorney / GAL / Child Representative",
+    "court": "Clark",
+    "county": "Clark",
+    "court_or_county": "Clark",
+    "state": "KY",
+    "state_abbr": "KY",
+    "mention_count": 3,
+    "family_count": 3,
+    "public_family_count": 3,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 3,
+    "supabase_row_ids": [
+      "98f30050-6a21-429e-9fc0-533d559969c7",
+      "46c0fa30-0e70-4ada-8f1f-03a6cbabf959",
+      "df212944-61b3-4be0-8299-e0e264518d2a"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "sean perdue|KY"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 69,
+    "total_submissions": 124,
+    "avg_financial_loss": 120515.89,
+    "avg_months_lost": 31.4,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "KY",
+    "state_family_count": 124,
+    "median_financial_loss": 85000,
+    "median_burden_sample_size": 51,
+    "median_months_lost": 15,
+    "pro_se_pct": 41.9,
+    "pro_se_count": 52,
+    "_pdf_state_family_count": 124,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6731,
+  "supabase": {
+    "report_count": 3,
+    "actor_report_count": 3,
+    "family_count": 3,
+    "family_reports": [
+      {
+        "body": "Destroyed my family",
+        "state": "KY",
+        "county": "Clark",
+        "row_id": "ff3e8294-b900-4779-8507-98464d9c5ee8"
+      },
+      {
+        "body": "The system is broken, it’s destroyed 4 children’s lives",
+        "state": "KY",
+        "county": "Clark",
+        "row_id": "f47207a8-f60e-46be-a198-be8c693b27b4"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Acted as judge, didn’t do what’s best for children.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Clark"
+      },
+      {
+        "comment_text": "Biased, ignored evidence",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Madison"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/sean_perdue",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='KY'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ky/sean_perdue/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Acted as judge, didn’t do what’s best for children.",
+        "kind": "comment"
+      },
+      {
+        "body": "Biased, ignored evidence",
+        "kind": "comment"
+      },
+      {
+        "body": "Destroyed my family",
+        "kind": "family_report"
+      },
+      {
+        "body": "The system is broken, it’s destroyed 4 children’s lives",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}
