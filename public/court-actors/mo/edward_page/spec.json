@@ -35,27 +35,27 @@
     "actor_bucket_key": "edward page|MO"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-e3c4f2r7/New Final Post and Capcut template/export/edward_page/image_1080.png",
+    "path": "/tmp/swm-share-pages-ymqppwyk/New Final Post and Capcut template/export/edward_page/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 144,
+    "families_approved": 143,
     "total_submissions": 317,
-    "avg_financial_loss": 104346.62,
+    "avg_financial_loss": 104367.38,
     "avg_months_lost": 37.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "MO",
     "state_family_count": 317,
-    "median_financial_loss": 83120,
-    "median_burden_sample_size": 151,
+    "median_financial_loss": 80885,
+    "median_burden_sample_size": 152,
     "median_months_lost": 21,
-    "pro_se_pct": 50.8,
-    "pro_se_count": 161,
+    "pro_se_pct": 51.1,
+    "pro_se_count": 162,
     "_pdf_state_family_count": 317,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6731,
+  "movement_total": 6746,
   "supabase": {
     "report_count": 12,
     "actor_report_count": 12,

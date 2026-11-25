@@ -28,27 +28,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-_m3syql0/New Final Post and Capcut template/export/phillip_journey/image_1080.png",
+    "path": "/tmp/swm-share-pages-ymqppwyk/New Final Post and Capcut template/export/phillip_journey/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 183,
-    "total_submissions": 298,
-    "avg_financial_loss": 120095.41,
+    "families_approved": 182,
+    "total_submissions": 299,
+    "avg_financial_loss": 119854.27,
     "avg_months_lost": 30.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "KS",
-    "state_family_count": 298,
-    "median_financial_loss": 98800,
-    "median_burden_sample_size": 153,
+    "state_family_count": 299,
+    "median_financial_loss": 98400,
+    "median_burden_sample_size": 154,
     "median_months_lost": 18,
-    "pro_se_pct": 47.8,
+    "pro_se_pct": 47.7,
     "pro_se_count": 142,
-    "_pdf_state_family_count": 297,
+    "_pdf_state_family_count": 298,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6637,
+  "movement_total": 6746,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,

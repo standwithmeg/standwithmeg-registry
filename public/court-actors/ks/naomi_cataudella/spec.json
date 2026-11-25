@@ -12,11 +12,11 @@
     "court_or_county": "Johnson",
     "state": "Kansas",
     "state_abbr": "KS",
-    "mention_count": 12,
-    "family_count": 11,
-    "public_family_count": 11,
+    "mention_count": 11,
+    "family_count": 10,
+    "public_family_count": 10,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 12,
+    "actor_report_count": 11,
     "supabase_row_ids": [
       "50984d0b-c81b-4756-bd0e-20873e3791c7",
       "43d878a4-385f-41f3-99bd-3abfe7cae4c7",
@@ -27,7 +27,6 @@
       "380d12c9-22bd-40df-9859-e5aa65f08e21",
       "5580a201-fcf4-476c-bab1-f50ac7e86414",
       "84e401d5-8d8e-4cb6-a245-765bced77b14",
-      "4bff0d2a-b069-4f2e-8f01-eebff3fe268d",
       "02dcabd7-63ff-44f3-b70a-91f939a2fa0b",
       "88c9fffc-636b-4a19-9cdf-6d16bc7f92a7"
     ],
@@ -39,31 +38,31 @@
     ]
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-_m3syql0/New Final Post and Capcut template/export/naomi_cataudella/image_1080.png",
+    "path": "/tmp/swm-share-pages-ymqppwyk/New Final Post and Capcut template/export/naomi_cataudella/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 183,
-    "total_submissions": 298,
-    "avg_financial_loss": 120095.41,
+    "families_approved": 182,
+    "total_submissions": 299,
+    "avg_financial_loss": 119854.27,
     "avg_months_lost": 30.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "KS",
-    "state_family_count": 298,
-    "median_financial_loss": 98800,
-    "median_burden_sample_size": 153,
+    "state_family_count": 299,
+    "median_financial_loss": 98400,
+    "median_burden_sample_size": 154,
     "median_months_lost": 18,
-    "pro_se_pct": 47.8,
+    "pro_se_pct": 47.7,
     "pro_se_count": 142,
-    "_pdf_state_family_count": 297,
+    "_pdf_state_family_count": 298,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6637,
+  "movement_total": 6746,
   "supabase": {
-    "report_count": 12,
-    "actor_report_count": 12,
-    "family_count": 11,
+    "report_count": 11,
+    "actor_report_count": 11,
+    "family_count": 10,
     "family_reports": [
       {
         "body": "The system ultimately failed my kids. My kids had to deal with years of harassment, lies, manipulation from their father, and the court still hasn’t held him accountable for it. Now myself and children are in therapy, I still have to make my 2 youngest go [redacted] with him. He lost custody of our oldest 1.5 years ago due to GAL recommendations. I’ve been put into financial hardships from paying for attorneys, therapists, and other fees only for him to get away with the horrible things he’s done. They don’t care about families. They care about lining their pockets.",
@@ -134,12 +133,6 @@
         "court_or_county": "Johnson"
       },
       {
-        "comment_text": "She gave me 1 hour and then issued a report to my detriment. Never saw me with our kids. In my opinion is part of a corrupt system used in Johnson County KS.",
-        "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Johnson"
-      },
-      {
         "comment_text": "Complete waste of time. Nothing accomplished. 2 years going almost weekly to Naomi. No progress.",
         "author": "Anonymous parent",
         "source": "scripts/pdf/lib_supabase_rows.py",
@@ -195,10 +188,6 @@
         "kind": "comment"
       },
       {
-        "body": "She gave me 1 hour and then issued a report to my detriment. Never saw me with our kids. In my opinion is part of a corrupt system used in Johnson County KS.",
-        "kind": "comment"
-      },
-      {
         "body": "Complete waste of time. Nothing accomplished. 2 years going almost weekly to Naomi. No progress.",
         "kind": "comment"
       },
@@ -231,7 +220,7 @@
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 16
+    "quote_page_count": 15
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

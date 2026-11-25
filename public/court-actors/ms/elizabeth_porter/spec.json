@@ -1,0 +1,80 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "elizabeth_porter",
+    "display_name": "Elizabeth Porter",
+    "title": "",
+    "first_name": "Elizabeth",
+    "last_name": "Porter",
+    "role": "Attorney / GAL / Child Representative",
+    "court": "Forrest",
+    "county": "Lamar County",
+    "court_or_county": "Forrest",
+    "state": "MS",
+    "state_abbr": "MS",
+    "mention_count": 1,
+    "family_count": 1,
+    "public_family_count": 1,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 1,
+    "supabase_row_ids": [
+      "f6a1a26a-55fc-4db2-a306-23b7bfd47c90"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "elizabeth porter|MS"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 38,
+    "total_submissions": 91,
+    "avg_financial_loss": 106266.78,
+    "avg_months_lost": 37.7,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "MS",
+    "state_family_count": 91,
+    "median_financial_loss": 36060,
+    "median_burden_sample_size": 36,
+    "median_months_lost": 18,
+    "pro_se_pct": 41.8,
+    "pro_se_count": 38,
+    "_pdf_state_family_count": 91,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6747,
+  "supabase": {
+    "report_count": 1,
+    "actor_report_count": 1,
+    "family_count": 1,
+    "family_reports": [],
+    "public_comments": []
+  },
+  "export_dir": "New Final Post and Capcut template/export/elizabeth_porter",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='MS'",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ms/elizabeth_porter/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

@@ -32,21 +32,21 @@
   },
   "state_stats": {
     "families_approved": 205,
-    "total_submissions": 317,
-    "avg_financial_loss": 100028.51,
+    "total_submissions": 318,
+    "avg_financial_loss": 100554.1,
     "avg_months_lost": 32.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "OH",
-    "state_family_count": 317,
+    "state_family_count": 318,
     "median_financial_loss": 72350,
     "median_burden_sample_size": 158,
     "median_months_lost": 18,
-    "pro_se_pct": 52.4,
+    "pro_se_pct": 52.2,
     "pro_se_count": 166,
-    "_pdf_state_family_count": 317,
+    "_pdf_state_family_count": 318,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6731,
+  "movement_total": 6746,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -69,19 +69,14 @@
       {
         "comment_text": "Denied evidence and didn’t give enough time am I Lawyer didn’t speak up for more evidence that I had in court.",
         "author": "Anonymous parent",
-        "source": "court_actors.notes"
-      },
-      {
-        "comment_text": "Took custody and rights from a mother without a reason. Ignored facts of divorce case. Privileged the father with full custody even though he was our abuser.",
-        "author": "Anonymous parent",
-        "source": "court_actors.notes"
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Domestic court"
       }
     ]
   },
   "export_dir": "New Final Post and Capcut template/export/beth_owens",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='OH'",
-    "pdf_public_actor: no 'Beth Allen owens' in cache for OH"
+    "public_family_count_api: no actors returned for state='OH'"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",
@@ -105,10 +100,6 @@
         "kind": "comment"
       },
       {
-        "body": "Took custody and rights from a mother without a reason. Ignored facts of divorce case. Privileged the father with full custody even though he was our abuser.",
-        "kind": "comment"
-      },
-      {
         "body": "Family court has taken a child from her mother and has taken all rights from the mother so she cannot raise her own child; done by force, without compliance, without reason. Family court is the opposite of what is good. It’s harmful, callous, malicious, unlawful, and evil. We the people must protect our children from family court.",
         "kind": "family_report"
       },
@@ -117,7 +108,7 @@
         "kind": "family_report"
       }
     ],
-    "quote_page_count": 3
+    "quote_page_count": 2
   },
   "cta": "STANDWITHMEG.COM ↗"
 }

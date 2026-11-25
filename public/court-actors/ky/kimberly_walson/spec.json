@@ -12,11 +12,11 @@
     "court_or_county": "Clark",
     "state": "Kentucky",
     "state_abbr": "KY",
-    "mention_count": 8,
-    "family_count": 6,
-    "public_family_count": 6,
+    "mention_count": 9,
+    "family_count": 7,
+    "public_family_count": 7,
     "public_family_count_source": "local_resolver_fallback",
-    "actor_report_count": 8,
+    "actor_report_count": 9,
     "supabase_row_ids": [
       "1afeeb7b-f193-4267-857c-33c9d64aebb1",
       "c4586eb2-3e83-4b34-8c5a-9ec4ab9eac71",
@@ -25,6 +25,7 @@
       "ea054209-9c56-4385-a4df-8f584164184a",
       "b8405d45-ea33-42bb-8542-5c58f131bc75",
       "f031684b-777b-4a20-a63d-fed7809bfa2a",
+      "0b5ced1e-eea2-40e8-8009-9b17365fc82e",
       "bf838b19-0c77-406c-87eb-d61050c527b8"
     ],
     "actor_row_id": null,
@@ -39,31 +40,31 @@
     ]
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-e3c4f2r7/New Final Post and Capcut template/export/kimberly_walson/image_1080.png",
+    "path": "/tmp/swm-share-pages-ymqppwyk/New Final Post and Capcut template/export/kimberly_walson/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 69,
-    "total_submissions": 124,
-    "avg_financial_loss": 120515.89,
+    "total_submissions": 126,
+    "avg_financial_loss": 118448.07,
     "avg_months_lost": 31.4,
     "_source_table": "movement_stats_by_state",
     "_match_value": "KY",
-    "state_family_count": 124,
+    "state_family_count": 126,
     "median_financial_loss": 85000,
     "median_burden_sample_size": 51,
     "median_months_lost": 15,
-    "pro_se_pct": 41.9,
+    "pro_se_pct": 41.3,
     "pro_se_count": 52,
-    "_pdf_state_family_count": 124,
+    "_pdf_state_family_count": 126,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6731,
+  "movement_total": 6746,
   "supabase": {
-    "report_count": 8,
-    "actor_report_count": 8,
-    "family_count": 6,
+    "report_count": 9,
+    "actor_report_count": 9,
+    "family_count": 7,
     "family_reports": [
       {
         "body": "The family court system has destroyed my and my daughter’s life as we knew it.",

@@ -19,10 +19,10 @@
     "actor_report_count": 5,
     "supabase_row_ids": [
       "983a8ad8-46f4-4f9b-93b0-df4819ee2dcf",
-      "947f7d13-6184-4bb7-b636-55540c778e04",
-      "d40ed405-9396-4a14-ba38-b162f9d7daf5",
       "f8d30676-d545-4cc6-9c42-814f4365fbfb",
-      "087c5ca8-6a1f-45eb-9f8d-d420280a7d90"
+      "087c5ca8-6a1f-45eb-9f8d-d420280a7d90",
+      "947f7d13-6184-4bb7-b636-55540c778e04",
+      "d40ed405-9396-4a14-ba38-b162f9d7daf5"
     ],
     "actor_row_id": null,
     "actor_bucket_key": "deane dee dee calhoun|AL"
@@ -34,21 +34,21 @@
   },
   "state_stats": {
     "families_approved": 101,
-    "total_submissions": 190,
-    "avg_financial_loss": 86447.23,
-    "avg_months_lost": 33.1,
+    "total_submissions": 191,
+    "avg_financial_loss": 85989.66,
+    "avg_months_lost": 32.9,
     "_source_table": "movement_stats_by_state",
     "_match_value": "AL",
-    "state_family_count": 190,
+    "state_family_count": 191,
     "median_financial_loss": 51000,
     "median_burden_sample_size": 85,
-    "median_months_lost": 14,
-    "pro_se_pct": 38.9,
+    "median_months_lost": 13,
+    "pro_se_pct": 38.7,
     "pro_se_count": 74,
-    "_pdf_state_family_count": 190,
+    "_pdf_state_family_count": 191,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6709,
+  "movement_total": 6746,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
