@@ -18,10 +18,10 @@
     "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 24,
     "supabase_row_ids": [
+      "c114aabf-d2ad-4db6-ad90-ad5cdc96ed1d",
       "ffde1178-eeb1-4dd1-a53c-0f32eb29ac5f",
       "18aeb5a7-359e-46f8-9680-85696021de36",
       "f9b6c8a7-607d-4a20-a08e-17d0f069ddc2",
-      "c114aabf-d2ad-4db6-ad90-ad5cdc96ed1d",
       "a776eab9-2e3d-412d-93f1-3f2e1dbb6858",
       "7a5c932e-fdca-4623-992f-7c3c13ba8edc",
       "98042a5b-9a24-473f-a1d5-9941839e2002",
@@ -47,27 +47,27 @@
     "actor_bucket_key": null
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-e3c4f2r7/New Final Post and Capcut template/export/david_c_bonfiglio/image_1080.png",
+    "path": "/tmp/swm-share-pages-5uthj08q/New Final Post and Capcut template/export/david_c_bonfiglio/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 119,
-    "total_submissions": 207,
-    "avg_financial_loss": 213383.78,
-    "avg_months_lost": 31.7,
+    "total_submissions": 209,
+    "avg_financial_loss": 213639.66,
+    "avg_months_lost": 31.5,
     "_source_table": "movement_stats_by_state",
     "_match_value": "IN",
-    "state_family_count": 207,
+    "state_family_count": 209,
     "median_financial_loss": 72400,
-    "median_burden_sample_size": 100,
+    "median_burden_sample_size": 102,
     "median_months_lost": 20,
     "pro_se_pct": 49.8,
-    "pro_se_count": 103,
-    "_pdf_state_family_count": 207,
+    "pro_se_count": 104,
+    "_pdf_state_family_count": 209,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6731,
+  "movement_total": 6757,
   "supabase": {
     "report_count": 24,
     "actor_report_count": 24,

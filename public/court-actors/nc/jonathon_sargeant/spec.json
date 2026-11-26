@@ -9,7 +9,7 @@
     "role": "Judge",
     "court": "Lenoir County",
     "county": "Lenoir County Courthouse",
-    "court_or_county": "Lenoir",
+    "court_or_county": "Lenoir County Juvenile Court",
     "state": "North Carolina",
     "state_abbr": "NC",
     "mention_count": 7,
@@ -36,12 +36,12 @@
     ]
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-_m3syql0/New Final Post and Capcut template/export/jonathon_sargeant/image_1080.png",
+    "path": "/tmp/swm-share-pages-5uthj08q/New Final Post and Capcut template/export/jonathon_sargeant/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 157,
+    "families_approved": 156,
     "total_submissions": 239,
     "avg_financial_loss": 168081.76,
     "avg_months_lost": 36.2,
@@ -56,7 +56,7 @@
     "_pdf_state_family_count": 239,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6637,
+  "movement_total": 6757,
   "supabase": {
     "report_count": 7,
     "actor_report_count": 7,

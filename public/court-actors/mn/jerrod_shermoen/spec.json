@@ -19,8 +19,8 @@
     "actor_report_count": 3,
     "supabase_row_ids": [
       "ac0ba84f-a9a8-4e1e-8db0-021c96337c3b",
-      "671271cc-3ac4-4627-9b4c-2e66cc36ba39",
-      "32010b3a-5be4-477e-a8f8-140281051546"
+      "32010b3a-5be4-477e-a8f8-140281051546",
+      "671271cc-3ac4-4627-9b4c-2e66cc36ba39"
     ],
     "actor_row_id": null,
     "actor_bucket_key": "jerod shermoen|MN"
@@ -32,21 +32,21 @@
   },
   "state_stats": {
     "families_approved": 57,
-    "total_submissions": 92,
-    "avg_financial_loss": 136749.72,
+    "total_submissions": 94,
+    "avg_financial_loss": 135005.41,
     "avg_months_lost": 31.6,
     "_source_table": "movement_stats_by_state",
     "_match_value": "MN",
-    "state_family_count": 92,
+    "state_family_count": 94,
     "median_financial_loss": 111300,
     "median_burden_sample_size": 37,
-    "median_months_lost": 16,
-    "pro_se_pct": 56.5,
-    "pro_se_count": 52,
-    "_pdf_state_family_count": 92,
+    "median_months_lost": 18,
+    "pro_se_pct": 56.4,
+    "pro_se_count": 53,
+    "_pdf_state_family_count": 94,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6746,
+  "movement_total": 6757,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,
@@ -78,12 +78,12 @@
         "source": "court_actors.notes"
       },
       {
-        "comment_text": "Is allowing cps to continue to the witch hunt even after a negative hair follicle test",
+        "comment_text": "Ignored evidence, proceeded without due process",
         "author": "Anonymous parent",
         "source": "court_actors.notes"
       },
       {
-        "comment_text": "Ignored evidence, proceeded without due process",
+        "comment_text": "Is allowing cps to continue to the witch hunt even after a negative hair follicle test",
         "author": "Anonymous parent",
         "source": "court_actors.notes"
       }
@@ -116,11 +116,11 @@
         "kind": "comment"
       },
       {
-        "body": "Is allowing cps to continue to the witch hunt even after a negative hair follicle test",
+        "body": "Ignored evidence, proceeded without due process",
         "kind": "comment"
       },
       {
-        "body": "Ignored evidence, proceeded without due process",
+        "body": "Is allowing cps to continue to the witch hunt even after a negative hair follicle test",
         "kind": "comment"
       },
       {
