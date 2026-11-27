@@ -1,0 +1,79 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "nora_shepherd",
+    "display_name": "Nora J. Shepard",
+    "title": "",
+    "first_name": "Nora J.",
+    "last_name": "Shepard",
+    "role": "Judge",
+    "court": "Clark",
+    "county": "Madison",
+    "court_or_county": "Clark",
+    "state": "KY",
+    "state_abbr": "KY",
+    "mention_count": 0,
+    "family_count": 0,
+    "public_family_count": 0,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": "nora shepherd|KY"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 69,
+    "total_submissions": 129,
+    "avg_financial_loss": 123839.91,
+    "avg_months_lost": 32.0,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "KY",
+    "state_family_count": 129,
+    "median_financial_loss": 85550,
+    "median_burden_sample_size": 54,
+    "median_months_lost": 18,
+    "pro_se_pct": 41.1,
+    "pro_se_count": 53,
+    "_pdf_state_family_count": 129,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6765,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 0,
+    "family_reports": [],
+    "public_comments": []
+  },
+  "export_dir": "New Final Post and Capcut template/export/nora_shepherd",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='KY'",
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ky/nora_shepherd/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

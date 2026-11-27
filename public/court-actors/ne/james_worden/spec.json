@@ -28,27 +28,27 @@
     "actor_bucket_key": "james worden|NE"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-_m3syql0/New Final Post and Capcut template/export/james_worden/image_1080.png",
+    "path": "/tmp/swm-share-pages-3xukgia9/New Final Post and Capcut template/export/james_worden/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 36,
-    "total_submissions": 52,
-    "avg_financial_loss": 154610.27,
-    "avg_months_lost": 35.2,
+    "total_submissions": 54,
+    "avg_financial_loss": 202374.57,
+    "avg_months_lost": 33.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "NE",
-    "state_family_count": 52,
-    "median_financial_loss": 126905,
-    "median_burden_sample_size": 20,
-    "median_months_lost": 22,
+    "state_family_count": 54,
+    "median_financial_loss": 140810,
+    "median_burden_sample_size": 21,
+    "median_months_lost": 20,
     "pro_se_pct": 50.0,
-    "pro_se_count": 26,
-    "_pdf_state_family_count": 52,
+    "pro_se_count": 27,
+    "_pdf_state_family_count": 54,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6637,
+  "movement_total": 6765,
   "supabase": {
     "report_count": 5,
     "actor_report_count": 5,
