@@ -26,27 +26,27 @@
     "actor_bucket_key": "andrea starkey|NC"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-_m3syql0/New Final Post and Capcut template/export/andrea_starkey/image_1080.png",
+    "path": "/tmp/swm-share-pages-grts58ih/New Final Post and Capcut template/export/andrea_starkey/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 157,
-    "total_submissions": 239,
-    "avg_financial_loss": 168081.76,
-    "avg_months_lost": 36.2,
+    "families_approved": 156,
+    "total_submissions": 240,
+    "avg_financial_loss": 167314.26,
+    "avg_months_lost": 36.5,
     "_source_table": "movement_stats_by_state",
     "_match_value": "NC",
-    "state_family_count": 239,
+    "state_family_count": 240,
     "median_financial_loss": 140000,
     "median_burden_sample_size": 77,
     "median_months_lost": 18,
-    "pro_se_pct": 48.5,
-    "pro_se_count": 116,
-    "_pdf_state_family_count": 239,
+    "pro_se_pct": 48.8,
+    "pro_se_count": 117,
+    "_pdf_state_family_count": 240,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6637,
+  "movement_total": 6778,
   "supabase": {
     "report_count": 3,
     "actor_report_count": 3,

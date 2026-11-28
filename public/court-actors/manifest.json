@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T11:02:12.197784+00:00",
+  "generated_at": "2026-11-28T11:10:09.623745+00:00",
   "actors": [
     {
       "slug": "abbey_johnston",
@@ -225,6 +225,15 @@
       "actor_bucket_key": "paul young|AR",
       "photo_url": null,
       "share_url": "/court-actors/ar/paul_a_young/share.html"
+    },
+    {
+      "slug": "sky_tapp",
+      "state_abbr": "AR",
+      "display_name": "Sky Tapp",
+      "canonical_name": "Sky Tapp",
+      "actor_bucket_key": "sky tapp|AR",
+      "photo_url": null,
+      "share_url": "/court-actors/ar/sky_tapp/share.html"
     },
     {
       "slug": "tylar_tapp",
@@ -2576,6 +2585,15 @@
       "share_url": "/court-actors/ms/amanda_heitmueller/share.html"
     },
     {
+      "slug": "chase_ford_morgan",
+      "state_abbr": "MS",
+      "display_name": "Chase Ford Morgan",
+      "canonical_name": "Chase Ford Morgan",
+      "actor_bucket_key": "chase ford morgan|MS",
+      "photo_url": null,
+      "share_url": "/court-actors/ms/chase_ford_morgan/share.html"
+    },
+    {
       "slug": "chereka_witherspoon",
       "state_abbr": "MS",
       "display_name": "Chereka Witherspoon",
@@ -2677,8 +2695,8 @@
     {
       "slug": "hon_amy_poehling_eddy",
       "state_abbr": "MT",
-      "display_name": "Hon. Amy Poehling Eddy",
-      "canonical_name": "Hon. Amy Poehling Eddy",
+      "display_name": "Judge Amy Poehling Eddy",
+      "canonical_name": "Judge Amy Poehling Eddy",
       "actor_bucket_key": "amy poehling eddy|MT",
       "photo_url": "/court-actors/mt/hon_amy_poehling_eddy/image_1080.png",
       "share_url": "/court-actors/mt/hon_amy_poehling_eddy/share.html"
@@ -2704,8 +2722,8 @@
     {
       "slug": "leigh_ann_miller",
       "state_abbr": "MT",
-      "display_name": "Leigh Ann miller",
-      "canonical_name": "Leigh Ann miller",
+      "display_name": "Leigh ann miller",
+      "canonical_name": "Leigh ann miller",
       "actor_bucket_key": "leigh ann miler|MT",
       "photo_url": null,
       "share_url": "/court-actors/mt/leigh_ann_miller/share.html"
@@ -4149,6 +4167,15 @@
       "actor_bucket_key": "diana rusel|TN",
       "photo_url": "/court-actors/tn/dianna_russell/image_1080.png",
       "share_url": "/court-actors/tn/dianna_russell/share.html"
+    },
+    {
+      "slug": "jessica_ramsey",
+      "state_abbr": "TN",
+      "display_name": "Jessica Ramsey",
+      "canonical_name": "Jessica Ramsey",
+      "actor_bucket_key": "jesica ramsey|TN",
+      "photo_url": null,
+      "share_url": "/court-actors/tn/jessica_ramsey/share.html"
     },
     {
       "slug": "jessica_white",

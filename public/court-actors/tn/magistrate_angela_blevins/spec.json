@@ -25,35 +25,35 @@
       "f2a53602-eded-42fd-a18e-69af5f7ccd36",
       "8f70d0f2-9b87-4917-87bb-f2d378ef51ad",
       "2e54b868-d845-472a-94b4-c4f162e80bd9",
-      "21699d0b-7e0b-454d-bc28-0e7fd44455c2",
       "97a8e81a-df31-4561-b27f-e7160550f23d",
-      "79c80151-1f65-4618-9420-86ae843ea47b"
+      "79c80151-1f65-4618-9420-86ae843ea47b",
+      "21699d0b-7e0b-454d-bc28-0e7fd44455c2"
     ],
     "actor_row_id": "40c00084-1caf-485b-add0-b8da57212a86",
     "actor_bucket_key": "angela blevins|TN"
   },
   "photo": {
-    "path": "/tmp/swm-share-pages-3xukgia9/New Final Post and Capcut template/export/magistrate_angela_blevins/image_1080.png",
+    "path": "/tmp/swm-share-pages-grts58ih/New Final Post and Capcut template/export/magistrate_angela_blevins/image_1080.png",
     "exists": true,
     "policy": "covers_only"
   },
   "state_stats": {
     "families_approved": 89,
-    "total_submissions": 159,
-    "avg_financial_loss": 91337.36,
+    "total_submissions": 161,
+    "avg_financial_loss": 90204.43,
     "avg_months_lost": 34.0,
     "_source_table": "movement_stats_by_state",
     "_match_value": "TN",
-    "state_family_count": 159,
+    "state_family_count": 161,
     "median_financial_loss": 86750,
     "median_burden_sample_size": 65,
-    "median_months_lost": 15,
-    "pro_se_pct": 40.9,
+    "median_months_lost": 16,
+    "pro_se_pct": 40.4,
     "pro_se_count": 65,
-    "_pdf_state_family_count": 159,
+    "_pdf_state_family_count": 161,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6765,
+  "movement_total": 6778,
   "supabase": {
     "report_count": 10,
     "actor_report_count": 10,

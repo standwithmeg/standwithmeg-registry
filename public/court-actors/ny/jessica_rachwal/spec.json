@@ -13,8 +13,8 @@
     "state": "NY",
     "state_abbr": "NY",
     "mention_count": 6,
-    "family_count": 6,
-    "public_family_count": 0,
+    "family_count": 5,
+    "public_family_count": 5,
     "public_family_count_source": "local_resolver_fallback",
     "actor_report_count": 6,
     "supabase_row_ids": [
@@ -35,25 +35,25 @@
   },
   "state_stats": {
     "families_approved": 131,
-    "total_submissions": 202,
-    "avg_financial_loss": 202496.49,
+    "total_submissions": 203,
+    "avg_financial_loss": 201395.97,
     "avg_months_lost": 29.6,
     "_source_table": "movement_stats_by_state",
     "_match_value": "NY",
-    "state_family_count": 202,
+    "state_family_count": 203,
     "median_financial_loss": 181525,
     "median_burden_sample_size": 74,
     "median_months_lost": 18,
-    "pro_se_pct": 40.1,
+    "pro_se_pct": 39.9,
     "pro_se_count": 81,
-    "_pdf_state_family_count": 202,
+    "_pdf_state_family_count": 203,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6709,
+  "movement_total": 6778,
   "supabase": {
     "report_count": 6,
     "actor_report_count": 6,
-    "family_count": 6,
+    "family_count": 5,
     "family_reports": [
       {
         "body": "They have trauma where trauma wasn’t and they have destroyed my life. Make me feel hopeless and in fear for my babies",
@@ -121,8 +121,7 @@
   },
   "export_dir": "New Final Post and Capcut template/export/jessica_rachwal",
   "unresolved": [
-    "public_family_count_api: no actors returned for state='NY'",
-    "family_count: lookup and previous spec returned 0 — using report_count=6 as fallback"
+    "public_family_count_api: no actors returned for state='NY'"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",

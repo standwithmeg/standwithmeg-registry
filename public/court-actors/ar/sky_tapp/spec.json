@@ -1,0 +1,79 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "sky_tapp",
+    "display_name": "Sky Tapp",
+    "title": "",
+    "first_name": "Sky",
+    "last_name": "Tapp",
+    "role": "Attorney",
+    "court": "Garland",
+    "county": "Garland",
+    "court_or_county": "Garland",
+    "state": "AR",
+    "state_abbr": "AR",
+    "mention_count": 0,
+    "family_count": 0,
+    "public_family_count": 0,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 0,
+    "supabase_row_ids": [],
+    "actor_row_id": null,
+    "actor_bucket_key": "sky tapp|AR"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 43,
+    "total_submissions": 97,
+    "avg_financial_loss": 148168.9,
+    "avg_months_lost": 33.3,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "AR",
+    "state_family_count": 97,
+    "median_financial_loss": 115000,
+    "median_burden_sample_size": 43,
+    "median_months_lost": 20,
+    "pro_se_pct": 38.1,
+    "pro_se_count": 37,
+    "_pdf_state_family_count": 97,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6778,
+  "supabase": {
+    "report_count": 0,
+    "actor_report_count": 0,
+    "family_count": 0,
+    "family_reports": [],
+    "public_comments": []
+  },
+  "export_dir": "New Final Post and Capcut template/export/sky_tapp",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='AR'",
+    "family_reports: no submission_ids on actor",
+    "public_comments: no merged comments or raw notes available"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ar/sky_tapp/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [],
+    "quote_page_count": 1
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

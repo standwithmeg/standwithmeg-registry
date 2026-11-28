@@ -28,21 +28,21 @@
   },
   "state_stats": {
     "families_approved": 69,
-    "total_submissions": 129,
-    "avg_financial_loss": 123839.91,
-    "avg_months_lost": 32.0,
+    "total_submissions": 132,
+    "avg_financial_loss": 130652.67,
+    "avg_months_lost": 31.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "KY",
-    "state_family_count": 129,
-    "median_financial_loss": 85550,
-    "median_burden_sample_size": 54,
+    "state_family_count": 132,
+    "median_financial_loss": 87000,
+    "median_burden_sample_size": 57,
     "median_months_lost": 18,
-    "pro_se_pct": 41.1,
-    "pro_se_count": 53,
-    "_pdf_state_family_count": 129,
+    "pro_se_pct": 40.9,
+    "pro_se_count": 54,
+    "_pdf_state_family_count": 132,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6765,
+  "movement_total": 6778,
   "supabase": {
     "report_count": 0,
     "actor_report_count": 0,
@@ -54,7 +54,8 @@
   "unresolved": [
     "public_family_count_api: no actors returned for state='KY'",
     "family_reports: no submission_ids on actor",
-    "public_comments: no merged comments or raw notes available"
+    "public_comments: no merged comments or raw notes available",
+    "pdf_public_actor: no 'Nora J. Shepard' in cache for KY"
   ],
   "guardrails": {
     "voice": "families reported / submitted / alleged — never 'this person did X'",

@@ -1,0 +1,102 @@
+{
+  "schema_version": 2,
+  "actor": {
+    "slug": "chase_ford_morgan",
+    "display_name": "Chase Ford Morgan",
+    "title": "",
+    "first_name": "Chase Ford",
+    "last_name": "Morgan",
+    "role": "Judge",
+    "court": "Pearl River",
+    "county": "Pearl River",
+    "court_or_county": "Pearl River",
+    "state": "MS",
+    "state_abbr": "MS",
+    "mention_count": 1,
+    "family_count": 1,
+    "public_family_count": 1,
+    "public_family_count_source": "local_resolver_fallback",
+    "actor_report_count": 1,
+    "supabase_row_ids": [
+      "38da7773-7d50-4f8b-9fc7-0672748e53cb"
+    ],
+    "actor_row_id": null,
+    "actor_bucket_key": "chase ford morgan|MS"
+  },
+  "photo": {
+    "path": null,
+    "exists": false,
+    "policy": "covers_only"
+  },
+  "state_stats": {
+    "families_approved": 38,
+    "total_submissions": 95,
+    "avg_financial_loss": 102979.8,
+    "avg_months_lost": 35.9,
+    "_source_table": "movement_stats_by_state",
+    "_match_value": "MS",
+    "state_family_count": 95,
+    "median_financial_loss": 35120,
+    "median_burden_sample_size": 39,
+    "median_months_lost": 16,
+    "pro_se_pct": 41.1,
+    "pro_se_count": 39,
+    "_pdf_state_family_count": 95,
+    "_stats_source": "scripts/pdf/state_stats_for_share.py"
+  },
+  "movement_total": 6778,
+  "supabase": {
+    "report_count": 1,
+    "actor_report_count": 1,
+    "family_count": 1,
+    "family_reports": [
+      {
+        "body": "Stolen my children’s childhoods. Ripped our family apart. Placed a child permanently with his abusive father. Aided and facilitated abuse and the abuser. Opened my eyes to the real system — it is NOT “broken”.. it’s a well oiled, smooth running.. money making, family breaking machine.",
+        "state": "MS",
+        "county": "Lamar",
+        "row_id": "fe1cc797-35b9-4a6c-b90b-49c1e7504444"
+      }
+    ],
+    "public_comments": [
+      {
+        "comment_text": "Was my attorney. Did nothing. Charged outrageous fees. Ignored me. A year after becoming my attorney — she withdrew to be a judge on the bench with the other two mentioned above. But she said she was withdrawing because I would not agree to irreconcilable differences divorce.",
+        "author": "Anonymous parent",
+        "source": "scripts/pdf/lib_supabase_rows.py",
+        "court_or_county": "Pearl River"
+      }
+    ]
+  },
+  "export_dir": "New Final Post and Capcut template/export/chase_ford_morgan",
+  "unresolved": [
+    "public_family_count_api: no actors returned for state='MS'"
+  ],
+  "guardrails": {
+    "voice": "families reported / submitted / alleged — never 'this person did X'",
+    "footer": "Family-reported submissions.",
+    "strike_through_reserved_for": [
+      "isolated",
+      "dismissed",
+      "ignored"
+    ],
+    "no_minors": true,
+    "no_case_numbers": true
+  },
+  "public_share": {
+    "recommended_route": "/court-actors/ms/chase_ford_morgan/share.html",
+    "draft_only": true
+  },
+  "render": {
+    "selected_quotes": [
+      {
+        "body": "Was my attorney. Did nothing. Charged outrageous fees. Ignored me. A year after becoming my attorney — she withdrew to be a judge on the bench with the other two mentioned above. But she said she was withdrawing because I would not agree to irreconcilable differences divorce.",
+        "kind": "comment"
+      },
+      {
+        "body": "Stolen my children’s childhoods. Ripped our family apart. Placed a child permanently with his abusive father. Aided and facilitated abuse and the abuser. Opened my eyes to the real system — it is NOT “broken”.. it’s a well oiled, smooth running.. money making, family breaking machine.",
+        "kind": "family_report"
+      }
+    ],
+    "quote_page_count": 2
+  },
+  "cta": "STANDWITHMEG.COM ↗"
+}

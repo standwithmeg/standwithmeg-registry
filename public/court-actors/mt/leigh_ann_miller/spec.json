@@ -2,14 +2,14 @@
   "schema_version": 2,
   "actor": {
     "slug": "leigh_ann_miller",
-    "display_name": "Leigh Ann miller",
+    "display_name": "Leigh ann miller",
     "title": "",
-    "first_name": "Leigh Ann",
+    "first_name": "Leigh ann",
     "last_name": "miller",
-    "role": "Custody Evaluator/ Family Court Supervisor",
+    "role": "Other",
     "court": "Family Court services",
     "county": "Family Court services",
-    "court_or_county": "Family Court services",
+    "court_or_county": "Flathead County",
     "state": "MT",
     "state_abbr": "MT",
     "mention_count": 1,
@@ -29,10 +29,10 @@
     "policy": "covers_only"
   },
   "state_stats": {
-    "families_approved": 39,
+    "families_approved": 38,
     "total_submissions": 77,
-    "avg_financial_loss": 168685.54,
-    "avg_months_lost": 41.2,
+    "avg_financial_loss": 168361.59,
+    "avg_months_lost": 41.8,
     "_source_table": "movement_stats_by_state",
     "_match_value": "MT",
     "state_family_count": 77,
@@ -44,7 +44,7 @@
     "_pdf_state_family_count": 77,
     "_stats_source": "scripts/pdf/state_stats_for_share.py"
   },
-  "movement_total": 6675,
+  "movement_total": 6778,
   "supabase": {
     "report_count": 1,
     "actor_report_count": 1,
@@ -61,8 +61,7 @@
       {
         "comment_text": "Nothing yet I'm still seeking Justice and trying to expose what all they had done in violating my rights in multiple ways. As well as falsifying information in between documents that were submitted and signed by judge amy Eddie",
         "author": "Anonymous parent",
-        "source": "scripts/pdf/lib_supabase_rows.py",
-        "court_or_county": "Family Court services"
+        "source": "court_actors.notes"
       }
     ]
   },
